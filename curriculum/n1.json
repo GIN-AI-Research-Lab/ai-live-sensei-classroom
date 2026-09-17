@@ -1,0 +1,1502 @@
+[
+  {
+    "level": "N1",
+    "lessonNumber": 1,
+    "title": "Bài 1: Cực hạn trạng thái (極まりない & 極まる & の極み)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "vocabList": [
+      {
+        "id": "voc-n1-1-1",
+        "word": "重要語彙 (N1)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 1",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n1-1-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n1-l1-s0",
+        "title": "Trọng tâm: Cực hạn trạng thái (極まりない & 極まる & の極み)",
+        "grammarFormula": "Na (bỏ な) / A-い + こと + 極まりない / N + の極み",
+        "explanation": "Đạt đến giới hạn tột cùng của cảm xúc hoặc sự việc (vô lễ tột độ, vinh dự tột cùng).",
+        "examples": [
+          {
+            "id": "ex-n1-l1-1",
+            "tokens": [
+              {
+                "id": "tok-n1-l1-1",
+                "text": "彼の態度は ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n1-l1-2",
+                "text": "無礼極まりない。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Thái độ của anh ta vô lễ đến tột cùng."
+          }
+        ],
+        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n1-1-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n1-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n1-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n1-1-1",
+        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Cực hạn trạng thái (極まりない & 極まる & の極み)'",
+        "options": [
+          "Na (bỏ な)",
+          "V-た + ところで",
+          "N + にかこつけて",
+          "V-る + べく"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: Na (bỏ な) / A-い + こと + 極まりない / N + の極み",
+        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+      }
+    ]
+  },
+  {
+    "level": "N1",
+    "lessonNumber": 2,
+    "title": "Bài 2: Cảm xúc không thể kìm nén (にたえない & を禁じ得ない)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "vocabList": [
+      {
+        "id": "voc-n1-2-1",
+        "word": "重要語彙 (N1)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 2",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n1-2-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n1-l2-s0",
+        "title": "Trọng tâm: Cảm xúc không thể kìm nén (にたえない & を禁じ得ない)",
+        "grammarFormula": "N / V-る + にたえない / N + を禁じ得ない",
+        "explanation": "Cảm xúc dâng trào không kìm nổi (vô cùng biết ơn, không khỏi cảm động, không nỡ nhìn).",
+        "examples": [
+          {
+            "id": "ex-n1-l2-1",
+            "tokens": [
+              {
+                "id": "tok-n1-l2-1",
+                "text": "皆様の 温情",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n1-l2-2",
+                "text": "に 感謝にたえません。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi vô cùng biết ơn tấm thịnh tình ấm áp của mọi người."
+          }
+        ],
+        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n1-2-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n1-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n1-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n1-2-1",
+        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Cảm xúc không thể kìm nén (にたえない & を禁じ得ない)'",
+        "options": [
+          "N",
+          "V-た + ところで",
+          "N + にかこつけて",
+          "V-る + べく"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: N / V-る + にたえない / N + を禁じ得ない",
+        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+      }
+    ]
+  },
+  {
+    "level": "N1",
+    "lessonNumber": 3,
+    "title": "Bài 3: Bất kể & Dù là (であれ〜であれ & といい〜といい)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "vocabList": [
+      {
+        "id": "voc-n1-3-1",
+        "word": "重要語彙 (N1)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 3",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n1-3-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n1-l3-s0",
+        "title": "Trọng tâm: Bất kể & Dù là (であれ〜であれ & といい〜といい)",
+        "grammarFormula": "N1 + であれ + N2 + であれ",
+        "explanation": "Dù là A hay là B thì kết quả hoặc phán đoán vẫn không thay đổi.",
+        "examples": [
+          {
+            "id": "ex-n1-l3-1",
+            "tokens": [
+              {
+                "id": "tok-n1-l3-1",
+                "text": "大人であれ ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n1-l3-2",
+                "text": "子供であれ、ルールは 守るべきだ。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Dù là người lớn hay trẻ con thì đều phải tuân thủ luật lệ."
+          }
+        ],
+        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n1-3-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n1-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n1-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n1-3-1",
+        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Bất kể & Dù là (であれ〜であれ & といい〜といい)'",
+        "options": [
+          "N1 + であれ + N2 + であれ",
+          "V-た + ところで",
+          "N + にかこつけて",
+          "V-る + べく"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: N1 + であれ + N2 + であれ",
+        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+      }
+    ]
+  },
+  {
+    "level": "N1",
+    "lessonNumber": 4,
+    "title": "Bài 4: Coi nhẹ & Huống chi (はおろか & をものともせず)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "vocabList": [
+      {
+        "id": "voc-n1-4-1",
+        "word": "重要語彙 (N1)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 4",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n1-4-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n1-l4-s0",
+        "title": "Trọng tâm: Coi nhẹ & Huống chi (はおろか & をものともせず)",
+        "grammarFormula": "N + はおろか",
+        "explanation": "Đến cả mức độ thấp hơn còn chưa làm được huống chi là mức độ cao hơn.",
+        "examples": [
+          {
+            "id": "ex-n1-l4-1",
+            "tokens": [
+              {
+                "id": "tok-n1-l4-1",
+                "text": "彼は 漢字は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n1-l4-2",
+                "text": "おろか、ひらがなも 読めない。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Anh ta đến chữ Hiragana còn chẳng đọc được huống chi là chữ Hán."
+          }
+        ],
+        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n1-4-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n1-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n1-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n1-4-1",
+        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Coi nhẹ & Huống chi (はおろか & をものともせず)'",
+        "options": [
+          "N + はおろか",
+          "V-た + ところで",
+          "N + にかこつけて",
+          "V-る + べく"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: N + はおろか",
+        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+      }
+    ]
+  },
+  {
+    "level": "N1",
+    "lessonNumber": 5,
+    "title": "Bài 5: Diễn biến tiêu cực & Kết cục (に至る & に至っては & 始末だ)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "vocabList": [
+      {
+        "id": "voc-n1-5-1",
+        "word": "重要語彙 (N1)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 5",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n1-5-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n1-l5-s0",
+        "title": "Trọng tâm: Diễn biến tiêu cực & Kết cục (に至る & に至っては & 始末だ)",
+        "grammarFormula": "N / V-る + に至る / に至っては / V-る + 始末だ",
+        "explanation": "Sự việc xấu đi dần dần cho đến khi rơi vào tình trạng nghiêm trọng.",
+        "examples": [
+          {
+            "id": "ex-n1-l5-1",
+            "tokens": [
+              {
+                "id": "tok-n1-l5-1",
+                "text": "事ここに至っ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n1-l5-2",
+                "text": "ては、もはや 打つ手がない。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Sự việc một khi đã đến bước này rồi thì không còn phương cứu chữa nữa."
+          }
+        ],
+        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n1-5-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n1-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n1-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n1-5-1",
+        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Diễn biến tiêu cực & Kết cục (に至る & に至っては & 始末だ)'",
+        "options": [
+          "N",
+          "V-た + ところで",
+          "N + にかこつけて",
+          "V-る + べく"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: N / V-る + に至る / に至っては / V-る + 始末だ",
+        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+      }
+    ]
+  },
+  {
+    "level": "N1",
+    "lessonNumber": 6,
+    "title": "Bài 6: Không được phép & Đạo đức cương vị (まじき & あるまじき)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "vocabList": [
+      {
+        "id": "voc-n1-6-1",
+        "word": "重要語彙 (N1)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 6",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n1-6-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n1-l6-s0",
+        "title": "Trọng tâm: Không được phép & Đạo đức cương vị (まじき & あるまじき)",
+        "grammarFormula": "V-る + まじき + N (する -> すまじき)",
+        "explanation": "Không thể chấp nhận được đối với một người mang cương vị đó.",
+        "examples": [
+          {
+            "id": "ex-n1-l6-1",
+            "tokens": [
+              {
+                "id": "tok-n1-l6-1",
+                "text": "それは プロ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n1-l6-2",
+                "text": "の選手として あるまじき 行為だ。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Đó là hành vi không thể chấp nhận được đối với một vận động viên chuyên nghiệp."
+          }
+        ],
+        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n1-6-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n1-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n1-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n1-6-1",
+        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Không được phép & Đạo đức cương vị (まじき & あるまじき)'",
+        "options": [
+          "V-る + まじき + N (する -> すまじき)",
+          "V-た + ところで",
+          "N + にかこつけて",
+          "V-る + べく"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: V-る + まじき + N (する -> すまじき)",
+        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+      }
+    ]
+  },
+  {
+    "level": "N1",
+    "lessonNumber": 7,
+    "title": "Bài 7: Khẳng định đanh thép (にほかならない & に相違ない)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "vocabList": [
+      {
+        "id": "voc-n1-7-1",
+        "word": "重要語彙 (N1)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 7",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n1-7-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n1-l7-s0",
+        "title": "Trọng tâm: Khẳng định đanh thép (にほかならない & に相違ない)",
+        "grammarFormula": "Thể thông thường + にほかならない (chính là, không gì khác ngoài)",
+        "explanation": "Khẳng định tuyệt đối nguyên nhân hoặc bản chất vấn đề.",
+        "examples": [
+          {
+            "id": "ex-n1-l7-1",
+            "tokens": [
+              {
+                "id": "tok-n1-l7-1",
+                "text": "今回の成功は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n1-l7-2",
+                "text": " 努力の結晶に ほかならない。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Thành công lần này không gì khác ngoài chính là kết tinh của sự nỗ lực."
+          }
+        ],
+        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n1-7-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n1-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n1-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n1-7-1",
+        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Khẳng định đanh thép (にほかならない & に相違ない)'",
+        "options": [
+          "Thể thông thường + にほかならない (chính là, không gì khác ngoài)",
+          "V-た + ところで",
+          "N + にかこつけて",
+          "V-る + べく"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: Thể thông thường + にほかならない (chính là, không gì khác ngoài)",
+        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+      }
+    ]
+  },
+  {
+    "level": "N1",
+    "lessonNumber": 8,
+    "title": "Bài 8: Nguyện cầu tha thiết (てやまない & 願ってやまない)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "vocabList": [
+      {
+        "id": "voc-n1-8-1",
+        "word": "重要語彙 (N1)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 8",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n1-8-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n1-l8-s0",
+        "title": "Trọng tâm: Nguyện cầu tha thiết (てやまない & 願ってやまない)",
+        "grammarFormula": "V-て + やまない",
+        "explanation": "Tình cảm chân thành từ tận đáy lòng luôn luôn hướng về (cầu chúc, kỳ vọng).",
+        "examples": [
+          {
+            "id": "ex-n1-l8-1",
+            "tokens": [
+              {
+                "id": "tok-n1-l8-1",
+                "text": "世界の平和を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n1-l8-2",
+                "text": " 願ってやまない。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi không ngừng nguyện cầu cho nền hòa bình của thế giới."
+          }
+        ],
+        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n1-8-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n1-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n1-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n1-8-1",
+        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Nguyện cầu tha thiết (てやまない & 願ってやまない)'",
+        "options": [
+          "V-て + やまない",
+          "V-た + ところで",
+          "N + にかこつけて",
+          "V-る + べく"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: V-て + やまない",
+        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+      }
+    ]
+  },
+  {
+    "level": "N1",
+    "lessonNumber": 9,
+    "title": "Bài 9: Bắt buộc từ lương tâm (ずにはおかない & ないではすまない)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "vocabList": [
+      {
+        "id": "voc-n1-9-1",
+        "word": "重要語彙 (N1)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 9",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n1-9-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n1-l9-s0",
+        "title": "Trọng tâm: Bắt buộc từ lương tâm (ずにはおかない & ないではすまない)",
+        "grammarFormula": "V-ない (bỏ ない) + ずにはおかない",
+        "explanation": "Nhất định sẽ khiến cho xảy ra / Lương tâm không cho phép nếu không làm.",
+        "examples": [
+          {
+            "id": "ex-n1-l9-1",
+            "tokens": [
+              {
+                "id": "tok-n1-l9-1",
+                "text": "彼の演技は ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n1-l9-2",
+                "text": "観客を 感動させずにはおかない。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Diễn xuất của anh ấy nhất định sẽ làm rung động toàn bộ khán giả."
+          }
+        ],
+        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n1-9-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n1-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n1-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n1-9-1",
+        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Bắt buộc từ lương tâm (ずにはおかない & ないではすまない)'",
+        "options": [
+          "V-ない (bỏ ない) + ずにはおかない",
+          "V-た + ところで",
+          "N + にかこつけて",
+          "V-る + べく"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: V-ない (bỏ ない) + ずにはおかない",
+        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+      }
+    ]
+  },
+  {
+    "level": "N1",
+    "lessonNumber": 10,
+    "title": "Bài 10: Khởi đầu & Cột mốc lịch sử (を皮切りにして & を限りに)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "vocabList": [
+      {
+        "id": "voc-n1-10-1",
+        "word": "重要語彙 (N1)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 10",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n1-10-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n1-l10-s0",
+        "title": "Trọng tâm: Khởi đầu & Cột mốc lịch sử (を皮切りにして & を限りに)",
+        "grammarFormula": "N + を皮切りに / を限りに (lần cuối cùng)",
+        "explanation": "Bắt đầu bằng một sự kiện tiêu biểu rồi lan tỏa rầm rộ sau đó.",
+        "examples": [
+          {
+            "id": "ex-n1-l10-1",
+            "tokens": [
+              {
+                "id": "tok-n1-l10-1",
+                "text": "東京公演を皮",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n1-l10-2",
+                "text": "切りに、全国ツアーが 始まる。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Bắt đầu với buổi diễn tại Tokyo, chuyến lưu diễn toàn quốc sẽ chính thức khởi động."
+          }
+        ],
+        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n1-10-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n1-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n1-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n1-10-1",
+        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Khởi đầu & Cột mốc lịch sử (を皮切りにして & を限りに)'",
+        "options": [
+          "N + を皮切りに",
+          "V-た + ところで",
+          "N + にかこつけて",
+          "V-る + べく"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: N + を皮切りに / を限りに (lần cuối cùng)",
+        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+      }
+    ]
+  },
+  {
+    "level": "N1",
+    "lessonNumber": 11,
+    "title": "Bài 11: Căn cứ pháp lý & Chuẩn mực (に即して & に則って)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "vocabList": [
+      {
+        "id": "voc-n1-11-1",
+        "word": "重要語彙 (N1)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 11",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n1-11-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n1-l11-s0",
+        "title": "Trọng tâm: Căn cứ pháp lý & Chuẩn mực (に即して & に則って)",
+        "grammarFormula": "N + に即して (theo sát thực tế) / に則って (theo luật lệ)",
+        "explanation": "Hành động tuân thủ nghiêm ngặt theo quy tắc, truyền thống, pháp luật.",
+        "examples": [
+          {
+            "id": "ex-n1-l11-1",
+            "tokens": [
+              {
+                "id": "tok-n1-l11-1",
+                "text": "法律に則って",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n1-l11-2",
+                "text": "、厳正に 処罰される。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Sẽ bị xử phạt nghiêm minh theo đúng quy định của pháp luật."
+          }
+        ],
+        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n1-11-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n1-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n1-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n1-11-1",
+        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Căn cứ pháp lý & Chuẩn mực (に即して & に則って)'",
+        "options": [
+          "N + に即して (theo sát thực tế)",
+          "V-た + ところで",
+          "N + にかこつけて",
+          "V-る + べく"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: N + に即して (theo sát thực tế) / に則って (theo luật lệ)",
+        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+      }
+    ]
+  },
+  {
+    "level": "N1",
+    "lessonNumber": 12,
+    "title": "Bài 12: Điều kiện tiên quyết sinh tử (なくしては & なしには)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "vocabList": [
+      {
+        "id": "voc-n1-12-1",
+        "word": "重要語彙 (N1)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 12",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n1-12-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n1-l12-s0",
+        "title": "Trọng tâm: Điều kiện tiên quyết sinh tử (なくしては & なしには)",
+        "grammarFormula": "N + なくしては / なしには + Phủ định",
+        "explanation": "Nếu không có điều kiện cốt lõi này thì tuyệt đối không thể thành hiện thực.",
+        "examples": [
+          {
+            "id": "ex-n1-l12-1",
+            "tokens": [
+              {
+                "id": "tok-n1-l12-1",
+                "text": "皆様の 協力",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n1-l12-2",
+                "text": "なくしては、成功は あり得ない。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Nếu không có sự hợp tác của quý vị thì thành công tuyệt đối không thể xảy ra."
+          }
+        ],
+        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n1-12-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n1-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n1-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n1-12-1",
+        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Điều kiện tiên quyết sinh tử (なくしては & なしには)'",
+        "options": [
+          "N + なくしては",
+          "V-た + ところで",
+          "N + にかこつけて",
+          "V-る + べく"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: N + なくしては / なしには + Phủ định",
+        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+      }
+    ]
+  },
+  {
+    "level": "N1",
+    "lessonNumber": 13,
+    "title": "Bài 13: Cương vị đáng kính (ともあろう者が & ならいざ知らず)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "vocabList": [
+      {
+        "id": "voc-n1-13-1",
+        "word": "重要語彙 (N1)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 13",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n1-13-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n1-l13-s0",
+        "title": "Trọng tâm: Cương vị đáng kính (ともあろう者が & ならいざ知らず)",
+        "grammarFormula": "N + ともあろう者が",
+        "explanation": "Đường đường là một người ở vị thế cao như thế mà lại làm hành động đáng hổ thẹn.",
+        "examples": [
+          {
+            "id": "ex-n1-l13-1",
+            "tokens": [
+              {
+                "id": "tok-n1-l13-1",
+                "text": "大学教授とも",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n1-l13-2",
+                "text": "あろう者が、剽窃をするとは。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Đường đường là một giáo sư đại học mà lại đi đạo văn như vậy ư!"
+          }
+        ],
+        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n1-13-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n1-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n1-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n1-13-1",
+        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Cương vị đáng kính (ともあろう者が & ならいざ知らず)'",
+        "options": [
+          "N + ともあろう者が",
+          "V-た + ところで",
+          "N + にかこつけて",
+          "V-る + べく"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: N + ともあろう者が",
+        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+      }
+    ]
+  },
+  {
+    "level": "N1",
+    "lessonNumber": 14,
+    "title": "Bài 14: Xu hướng tiêu cực thường thấy (きらいがある)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "vocabList": [
+      {
+        "id": "voc-n1-14-1",
+        "word": "重要語彙 (N1)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 14",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n1-14-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n1-l14-s0",
+        "title": "Trọng tâm: Xu hướng tiêu cực thường thấy (きらいがある)",
+        "grammarFormula": "V-る / Nの + きらいがある",
+        "explanation": "Thường có tật xấu, xu hướng tiêu cực không tốt.",
+        "examples": [
+          {
+            "id": "ex-n1-l14-1",
+            "tokens": [
+              {
+                "id": "tok-n1-l14-1",
+                "text": "彼は 物事を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n1-l14-2",
+                "text": " 悲観的に 考えるきらいがある。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Anh ấy thường có xu hướng nhìn nhận mọi việc một cách bi quan."
+          }
+        ],
+        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n1-14-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n1-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n1-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n1-14-1",
+        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Xu hướng tiêu cực thường thấy (きらいがある)'",
+        "options": [
+          "V-る",
+          "V-た + ところで",
+          "N + にかこつけて",
+          "V-る + べく"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: V-る / Nの + きらいがある",
+        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+      }
+    ]
+  },
+  {
+    "level": "N1",
+    "lessonNumber": 15,
+    "title": "Bài 15: Tổng kết văn phong hàn lâm & Diễn thuyết N1",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "vocabList": [
+      {
+        "id": "voc-n1-15-1",
+        "word": "重要語彙 (N1)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 15",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n1-15-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n1-l15-s0",
+        "title": "Trọng tâm: Tổng kết văn phong hàn lâm & Diễn thuyết N1",
+        "grammarFormula": "Tổng hợp tinh hoa cấu trúc ngữ pháp cao cấp N1",
+        "explanation": "Chinh phục điểm tuyệt đối phần ngữ pháp và đọc hiểu JLPT N1.",
+        "examples": [
+          {
+            "id": "ex-n1-l15-1",
+            "tokens": [
+              {
+                "id": "tok-n1-l15-1",
+                "text": "大義名分に ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n1-l15-2",
+                "text": "即した 行動を 取るべきである。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Cần phải hành động theo đúng lý tưởng chính nghĩa."
+          }
+        ],
+        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n1-15-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n1-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n1-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n1-15-1",
+        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Tổng kết văn phong hàn lâm & Diễn thuyết N1'",
+        "options": [
+          "Tổng hợp tinh hoa cấu trúc ngữ pháp cao cấp N1",
+          "V-た + ところで",
+          "N + にかこつけて",
+          "V-る + べく"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: Tổng hợp tinh hoa cấu trúc ngữ pháp cao cấp N1",
+        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+      }
+    ]
+  }
+]

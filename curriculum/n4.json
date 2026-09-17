@@ -1,0 +1,2502 @@
+[
+  {
+    "level": "N4",
+    "lessonNumber": 26,
+    "title": "Bài 26: Giải thích lý do & Nhấn mạnh (〜んです)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-26-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 26",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-26-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l26-s0",
+        "title": "Trọng tâm: Giải thích lý do & Nhấn mạnh (〜んです)",
+        "grammarFormula": "Thể thông thường (Na/Nな) + んです",
+        "explanation": "Dùng để giải thích nguyên nhân, bày tỏ sự tò mò hoặc mở đầu câu nhờ vả.",
+        "examples": [
+          {
+            "id": "ex-n4-l26-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l26-1",
+                "text": "わたしは",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l26-2",
+                "text": "わたしは 頭が 痛いんです。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi bị đau đầu (giải thích lý do)."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-26-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-26-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Giải thích lý do & Nhấn mạnh (〜んです)",
+        "options": [
+          "Thể thông thường (Na/Nな) + んです",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Thể thông thường (Na/Nな) + んです",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 27,
+    "title": "Bài 27: Động từ thể khả năng (可能形)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-27-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 27",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-27-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l27-s0",
+        "title": "Trọng tâm: Động từ thể khả năng (可能形)",
+        "grammarFormula": "Nhóm 1: う->える / Nhóm 2: られる / Nhóm 3: できる, こられる",
+        "explanation": "Biểu thị năng lực hoặc điều kiện cho phép thực hiện hành động. Trợ từ を thường đổi thành が.",
+        "examples": [
+          {
+            "id": "ex-n4-l27-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l27-1",
+                "text": "わたしは",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l27-2",
+                "text": "わたしは 日本語が 話せます。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi có thể nói tiếng Nhật."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-27-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-27-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Động từ thể khả năng (可能形)",
+        "options": [
+          "Nhóm 1: う->える",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Nhóm 1: う->える / Nhóm 2: られる / Nhóm 3: できる, こられる",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 28,
+    "title": "Bài 28: Hành động đồng thời (〜ながら) & Thói quen (〜ています)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-28-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 28",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-28-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l28-s0",
+        "title": "Trọng tâm: Hành động đồng thời (〜ながら) & Thói quen (〜ています)",
+        "grammarFormula": "V1-ます (bỏ ます) + ながら + V2",
+        "explanation": "Thực hiện hai hành động cùng một lúc (hành động sau là trọng tâm).",
+        "examples": [
+          {
+            "id": "ex-n4-l28-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l28-1",
+                "text": "音楽を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l28-2",
+                "text": "音楽を 聞きながら 勉強します。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi vừa nghe nhạc vừa học bài."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-28-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-28-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Hành động đồng thời (〜ながら) & Thói quen (〜ています)",
+        "options": [
+          "V1-ます (bỏ ます) + ながら + V2",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: V1-ます (bỏ ます) + ながら + V2",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 29,
+    "title": "Bài 29: Tự động từ & Tha động từ, Trạng thái (V-ています)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-29-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 29",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-29-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l29-s0",
+        "title": "Trọng tâm: Tự động từ & Tha động từ, Trạng thái (V-ています)",
+        "grammarFormula": "Tự động từ + ています (kết quả còn lưu lại)",
+        "explanation": "Biểu thị trạng thái của sự vật hiện hữu trước mắt.",
+        "examples": [
+          {
+            "id": "ex-n4-l29-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l29-1",
+                "text": "窓が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l29-2",
+                "text": "窓が 開いています。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Cửa sổ đang mở."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-29-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-29-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Tự động từ & Tha động từ, Trạng thái (V-ています)",
+        "options": [
+          "Tự động từ + ています (kết quả còn lưu lại)",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Tự động từ + ています (kết quả còn lưu lại)",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 30,
+    "title": "Bài 30: Trạng thái có chủ đích (てあります) & Chuẩn bị (ておきます)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-30-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 30",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-30-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l30-s0",
+        "title": "Trọng tâm: Trạng thái có chủ đích (てあります) & Chuẩn bị (ておきます)",
+        "grammarFormula": "Tha động từ + てあります / V-ておきます",
+        "explanation": "てあります chỉ trạng thái do con người chủ ý tạo ra. ておきます là làm sẵn để chuẩn bị.",
+        "examples": [
+          {
+            "id": "ex-n4-l30-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l30-1",
+                "text": "壁に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l30-2",
+                "text": "壁に カレンダーが はってあります。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Trên tường có dán sẵn tờ lịch."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-30-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-30-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Trạng thái có chủ đích (てあります) & Chuẩn bị (ておきます)",
+        "options": [
+          "Tha động từ + てあります",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Tha động từ + てあります / V-ておきます",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 31,
+    "title": "Bài 31: Thể ý chí (意向形) & Dự định (〜と思っています)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-31-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 31",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-31-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l31-s0",
+        "title": "Trọng tâm: Thể ý chí (意向形) & Dự định (〜と思っています)",
+        "grammarFormula": "V-意向形 + と思っています",
+        "explanation": "Bày tỏ ý chí, dự định muốn làm gì của bản thân.",
+        "examples": [
+          {
+            "id": "ex-n4-l31-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l31-1",
+                "text": "将来",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l31-2",
+                "text": "将来 自分の会社を 作ろうと思っています。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tương lai tôi dự định sẽ mở công ty riêng."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-31-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-31-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Thể ý chí (意向形) & Dự định (〜と思っています)",
+        "options": [
+          "V-意向形 + と思っています",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: V-意向形 + と思っています",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 32,
+    "title": "Bài 32: Lời khuyên (〜ほうがいい) & Dự đoán (〜でしょう / かもしれません)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-32-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 32",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-32-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l32-s0",
+        "title": "Trọng tâm: Lời khuyên (〜ほうがいい) & Dự đoán (〜でしょう / かもしれません)",
+        "grammarFormula": "V-た / V-ない + ほうがいいです",
+        "explanation": "Khuyên ai đó nên hoặc không nên làm điều gì.",
+        "examples": [
+          {
+            "id": "ex-n4-l32-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l32-1",
+                "text": "無理を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l32-2",
+                "text": "無理を しないほうが いいですよ。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Bạn không nên làm việc quá sức đâu đấy."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-32-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-32-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Lời khuyên (〜ほうがいい) & Dự đoán (〜でしょう / かもしれません)",
+        "options": [
+          "V-た",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: V-た / V-ない + ほうがいいです",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 33,
+    "title": "Bài 33: Thể mệnh lệnh (命令形) & Cấm chỉ (禁止形)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-33-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 33",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-33-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l33-s0",
+        "title": "Trọng tâm: Thể mệnh lệnh (命令形) & Cấm chỉ (禁止形)",
+        "grammarFormula": "Nhóm 1: う->え / V-る + な (Cấm chỉ)",
+        "explanation": "Dùng trong trường hợp khẩn cấp, chỉ huy, hoặc cổ vũ thể thao.",
+        "examples": [
+          {
+            "id": "ex-n4-l33-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l33-1",
+                "text": "頑張れ！",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l33-2",
+                "text": "頑張れ！ (Cố lên!) / 触るな！ (Cấm sờ!)",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Cố lên! / Không được chạm vào!"
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-33-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-33-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Thể mệnh lệnh (命令形) & Cấm chỉ (禁止形)",
+        "options": [
+          "Nhóm 1: う->え",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Nhóm 1: う->え / V-る + な (Cấm chỉ)",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 34,
+    "title": "Bài 34: Làm theo mẫu (〜とおりに) & Sau khi (〜あとで)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-34-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 34",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-34-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l34-s0",
+        "title": "Trọng tâm: Làm theo mẫu (〜とおりに) & Sau khi (〜あとで)",
+        "grammarFormula": "V-る / Nの + とおりに / V-た + あとで",
+        "explanation": "Thực hiện một hành động đúng y hệt như hướng dẫn.",
+        "examples": [
+          {
+            "id": "ex-n4-l34-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l34-1",
+                "text": "説明書の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l34-2",
+                "text": "説明書の とおりに 組み立ててください。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Hãy lắp ráp theo đúng như sách hướng dẫn."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-34-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-34-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Làm theo mẫu (〜とおりに) & Sau khi (〜あとで)",
+        "options": [
+          "V-る",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: V-る / Nの + とおりに / V-た + あとで",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 35,
+    "title": "Bài 35: Thể điều kiện (〜ば / 〜なら)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-35-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 35",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-35-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l35-s0",
+        "title": "Trọng tâm: Thể điều kiện (〜ば / 〜なら)",
+        "grammarFormula": "Động từ: え + ば / Tính từ: ければ / Nなら",
+        "explanation": "Biểu thị điều kiện để một kết quả tốt hoặc sự việc xảy ra.",
+        "examples": [
+          {
+            "id": "ex-n4-l35-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l35-1",
+                "text": "安ければ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l35-2",
+                "text": "安ければ 買います。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Nếu rẻ thì tôi sẽ mua."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-35-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-35-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Thể điều kiện (〜ば / 〜なら)",
+        "options": [
+          "Động từ: え + ば",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Động từ: え + ば / Tính từ: ければ / Nなら",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 36,
+    "title": "Bài 36: Mục đích (〜ように) & Biến đổi (〜ようになる)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-36-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 36",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-36-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l36-s0",
+        "title": "Trọng tâm: Mục đích (〜ように) & Biến đổi (〜ようになる)",
+        "grammarFormula": "V-る / V-ない (không chủ ý) + ように",
+        "explanation": "Làm hành động V2 để đạt được mục tiêu V1.",
+        "examples": [
+          {
+            "id": "ex-n4-l36-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l36-1",
+                "text": "忘れないように",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l36-2",
+                "text": "忘れないように メモを します。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi ghi chú lại để không bị quên."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-36-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-36-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Mục đích (〜ように) & Biến đổi (〜ようになる)",
+        "options": [
+          "V-る",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: V-る / V-ない (không chủ ý) + ように",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 37,
+    "title": "Bài 37: Thể bị động (受身形: V-られる)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-37-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 37",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-37-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l37-s0",
+        "title": "Trọng tâm: V-られる)",
+        "grammarFormula": "Nhóm 1: あ + れる / Nhóm 2: られる / Nhóm 3: される, こられる",
+        "explanation": "Biểu thị hành động bị tác động bởi người khác (thường mang cảm xúc phiền toái hoặc trung lập).",
+        "examples": [
+          {
+            "id": "ex-n4-l37-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l37-1",
+                "text": "先生に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l37-2",
+                "text": "先生に 褒められました。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi đã được thầy giáo khen ngợi."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-37-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-37-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: V-られる)",
+        "options": [
+          "Nhóm 1: あ + れる",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Nhóm 1: あ + れる / Nhóm 2: られる / Nhóm 3: される, こられる",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 38,
+    "title": "Bài 38: Danh từ hóa (V-るのは, V-るのが, V-るのを忘れました)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-38-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 38",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-38-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l38-s0",
+        "title": "Trọng tâm: Danh từ hóa (V-るのは, V-るのが, V-るのを忘れました)",
+        "grammarFormula": "V-る + のは / のが / のを",
+        "explanation": "Biến động từ thành danh từ để làm chủ ngữ, bổ ngữ trong câu.",
+        "examples": [
+          {
+            "id": "ex-n4-l38-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l38-1",
+                "text": "テニスを",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l38-2",
+                "text": "テニスを するのは 面白いです。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Chơi tennis thật là thú vị."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-38-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-38-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Danh từ hóa (V-るのは, V-るのが, V-るのを忘れました)",
+        "options": [
+          "V-る + のは",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: V-る + のは / のが / のを",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 39,
+    "title": "Bài 39: Nguyên nhân lý do khách quan (〜ので / V-て)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-39-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 39",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-39-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l39-s0",
+        "title": "Trọng tâm: Nguyên nhân lý do khách quan (〜ので / V-て)",
+        "grammarFormula": "Thể thông thường (Na/Nな) + ので",
+        "explanation": "Giải thích nguyên nhân khách quan, mang tính lịch sự hơn から.",
+        "examples": [
+          {
+            "id": "ex-n4-l39-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l39-1",
+                "text": "雨が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l39-2",
+                "text": "雨が 降ったので、遅刻しました。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Vì trời mưa nên tôi đã bị muộn."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-39-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-39-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Nguyên nhân lý do khách quan (〜ので / V-て)",
+        "options": [
+          "Thể thông thường (Na/Nな) + ので",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Thể thông thường (Na/Nな) + ので",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 40,
+    "title": "Bài 40: Nghi vấn lồng (〜か, 〜かどうか) & Thử làm (〜てみます)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-40-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 40",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-40-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l40-s0",
+        "title": "Trọng tâm: Nghi vấn lồng (〜か, 〜かどうか) & Thử làm (〜てみます)",
+        "grammarFormula": "Thể thông thường + か / かどうか + V",
+        "explanation": "Lồng câu hỏi vào trong một câu phức.",
+        "examples": [
+          {
+            "id": "ex-n4-l40-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l40-1",
+                "text": "彼が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l40-2",
+                "text": "彼が 来るかどうか 分かりません。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi không biết anh ấy có đến hay không."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-40-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-40-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Nghi vấn lồng (〜か, 〜かどうか) & Thử làm (〜てみます)",
+        "options": [
+          "Thể thông thường + か",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Thể thông thường + か / かどうか + V",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 41,
+    "title": "Bài 41: Kính ngữ cho nhận (やる / あげる / さしあげる, いただく, くださる)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-41-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 41",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-41-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l41-s0",
+        "title": "Trọng tâm: Kính ngữ cho nhận (やる / あげる / さしあげる, いただく, くださる)",
+        "grammarFormula": "Nに 差し上げます / いただきます / くださいます",
+        "explanation": "Dùng khi đối phương là người có địa vị cao hơn, người trên.",
+        "examples": [
+          {
+            "id": "ex-n4-l41-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l41-1",
+                "text": "社長に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l41-2",
+                "text": "社長に お土産を いただきました。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi đã được giám đốc cho quà."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-41-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-41-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Kính ngữ cho nhận (やる / あげる / さしあげる, いただく, くださる)",
+        "options": [
+          "Nに 差し上げます",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Nに 差し上げます / いただきます / くださいます",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 42,
+    "title": "Bài 42: Mục đích vì ai/cái gì (〜ために) & Dùng vào việc gì (〜のに)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-42-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 42",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-42-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l42-s0",
+        "title": "Trọng tâm: Mục đích vì ai/cái gì (〜ために) & Dùng vào việc gì (〜のに)",
+        "grammarFormula": "V-る / Nの + ために / V-る + のに 使います",
+        "explanation": "ために thể hiện mục đích có ý chí rõ rệt.",
+        "examples": [
+          {
+            "id": "ex-n4-l42-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l42-1",
+                "text": "家を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l42-2",
+                "text": "家を 買うために、貯金しています。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi đang tiết kiệm tiền để mua nhà."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-42-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-42-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Mục đích vì ai/cái gì (〜ために) & Dùng vào việc gì (〜のに)",
+        "options": [
+          "V-る",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: V-る / Nの + ために / V-る + のに 使います",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 43,
+    "title": "Bài 43: Dự đoán sắp xảy ra (V-そう) & Trông có vẻ (A-そう)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-43-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 43",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-43-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l43-s0",
+        "title": "Trọng tâm: Dự đoán sắp xảy ra (V-そう) & Trông có vẻ (A-そう)",
+        "grammarFormula": "V-ます (bỏ ます) / A (bỏ い/な) + そうです",
+        "explanation": "Đoán dựa trên quan sát bằng mắt trực quan tại thời điểm nói.",
+        "examples": [
+          {
+            "id": "ex-n4-l43-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l43-1",
+                "text": "雨が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l43-2",
+                "text": "雨が 降りそうです。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Trời trông có vẻ sắp mưa rồi."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-43-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-43-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Dự đoán sắp xảy ra (V-そう) & Trông có vẻ (A-そう)",
+        "options": [
+          "V-ます (bỏ ます)",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: V-ます (bỏ ます) / A (bỏ い/な) + そうです",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 44,
+    "title": "Bài 44: Quá mức (〜すぎます) & Dễ/Khó làm (〜やすい / 〜にくい)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-44-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 44",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-44-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l44-s0",
+        "title": "Trọng tâm: Quá mức (〜すぎます) & Dễ/Khó làm (〜やすい / 〜にくい)",
+        "grammarFormula": "V-ます (bỏ ます) + すぎます / やすい / にくい",
+        "explanation": "Hành động vượt quá giới hạn hoặc đặc tính dễ/khó.",
+        "examples": [
+          {
+            "id": "ex-n4-l44-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l44-1",
+                "text": "この本は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l44-2",
+                "text": "この本は 分かりやすいです。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Cuốn sách này rất dễ hiểu."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-44-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-44-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Quá mức (〜すぎます) & Dễ/Khó làm (〜やすい / 〜にくい)",
+        "options": [
+          "V-ます (bỏ ます) + すぎます",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: V-ます (bỏ ます) + すぎます / やすい / にくい",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 45,
+    "title": "Bài 45: Trường hợp (〜場合は) & Mặc dù (〜のに)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-45-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 45",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-45-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l45-s0",
+        "title": "Trọng tâm: Trường hợp (〜場合は) & Mặc dù (〜のに)",
+        "grammarFormula": "Thể thông thường (Na/Nな) + 場合は / のに",
+        "explanation": "のに biểu thị sự bất mãn, kết quả trái ngược với kỳ vọng.",
+        "examples": [
+          {
+            "id": "ex-n4-l45-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l45-1",
+                "text": "約束したのに、彼は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l45-2",
+                "text": "約束したのに、彼は 来ませんでした。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Đã hẹn rồi thế mà anh ấy lại không đến."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-45-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-45-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Trường hợp (〜場合は) & Mặc dù (〜のに)",
+        "options": [
+          "Thể thông thường (Na/Nな) + 場合は",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Thể thông thường (Na/Nな) + 場合は / のに",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 46,
+    "title": "Bài 46: Thời điểm chính xác (V-ところ) & Vừa mới (〜たばかり)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-46-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 46",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-46-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l46-s0",
+        "title": "Trọng tâm: Thời điểm chính xác (V-ところ) & Vừa mới (〜たばかり)",
+        "grammarFormula": "V-る (sắp) / V-ている (đang) / V-た (vừa xong) + ところ",
+        "explanation": "Nhấn mạnh chính xác giai đoạn của hành động.",
+        "examples": [
+          {
+            "id": "ex-n4-l46-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l46-1",
+                "text": "今から",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l46-2",
+                "text": "今から ご飯を 食べるところです。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Bây giờ tôi chuẩn bị ăn cơm đây."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-46-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-46-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Thời điểm chính xác (V-ところ) & Vừa mới (〜たばかり)",
+        "options": [
+          "V-る (sắp)",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: V-る (sắp) / V-ている (đang) / V-た (vừa xong) + ところ",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 47,
+    "title": "Bài 47: Nghe nói (〜そうです) & Dường như (〜ようです)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-47-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 47",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-47-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l47-s0",
+        "title": "Trọng tâm: Nghe nói (〜そうです) & Dường như (〜ようです)",
+        "grammarFormula": "Thể thông thường + そうです (truyền văn)",
+        "explanation": "Dẫn lại thông tin nghe được từ nguồn khác mà không thêm bớt ý kiến.",
+        "examples": [
+          {
+            "id": "ex-n4-l47-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l47-1",
+                "text": "天気予報に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l47-2",
+                "text": "天気予報に よると、明日は 寒くなるそうです。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Theo dự báo thời tiết thì ngày mai nghe nói sẽ trở lạnh."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-47-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-47-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Nghe nói (〜そうです) & Dường như (〜ようです)",
+        "options": [
+          "Thể thông thường + そうです (truyền văn)",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Thể thông thường + そうです (truyền văn)",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 48,
+    "title": "Bài 48: Thể sai khiến (使役形: V-させる)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-48-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 48",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-48-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l48-s0",
+        "title": "Trọng tâm: V-させる)",
+        "grammarFormula": "Nhóm 1: あ + せる / Nhóm 2: させる / Nhóm 3: させる, こさせる",
+        "explanation": "Cho phép hoặc bắt buộc ai đó làm việc gì.",
+        "examples": [
+          {
+            "id": "ex-n4-l48-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l48-1",
+                "text": "子供に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l48-2",
+                "text": "子供に ピアノを 習わせます。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi cho con học đàn piano."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-48-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-48-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: V-させる)",
+        "options": [
+          "Nhóm 1: あ + せる",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Nhóm 1: あ + せる / Nhóm 2: させる / Nhóm 3: させる, こさせる",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 49,
+    "title": "Bài 49: Kính ngữ tôn kính (尊敬語 - Sonkeigo)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-49-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 49",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-49-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l49-s0",
+        "title": "Trọng tâm: Kính ngữ tôn kính (尊敬語 - Sonkeigo)",
+        "grammarFormula": "お + V-ます(bỏ) + になります / Thể bị động / Động từ đặc biệt",
+        "explanation": "Nâng cao vị thế và sự tôn trọng đối với hành động của đối phương.",
+        "examples": [
+          {
+            "id": "ex-n4-l49-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l49-1",
+                "text": "先生は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l49-2",
+                "text": "先生は もう お帰りに なりました。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Thầy giáo đã về rồi ạ."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-49-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-49-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Kính ngữ tôn kính (尊敬語 - Sonkeigo)",
+        "options": [
+          "お + V-ます(bỏ) + になります",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: お + V-ます(bỏ) + になります / Thể bị động / Động từ đặc biệt",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  },
+  {
+    "level": "N4",
+    "lessonNumber": 50,
+    "title": "Bài 50: Khiêm nhường ngữ (謙譲語 - Kenjougo)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "vocabList": [
+      {
+        "id": "voc-n4-50-1",
+        "word": "重要語彙 (N4)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 50",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n4-50-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n4-l50-s0",
+        "title": "Trọng tâm: Khiêm nhường ngữ (謙譲語 - Kenjougo)",
+        "grammarFormula": "お + V-ます(bỏ) + します / Động từ khiêm nhường đặc biệt",
+        "explanation": "Hạ thấp hành động của bản thân để biểu thị sự tôn kính với người nghe.",
+        "examples": [
+          {
+            "id": "ex-n4-l50-1",
+            "tokens": [
+              {
+                "id": "tok-n4-l50-1",
+                "text": "わたしが",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n4-l50-2",
+                "text": "わたしが 荷物を お持ちします。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Để tôi mang hành lý giúp quý khách ạ."
+          }
+        ],
+        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n4-50-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n4-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n4-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n4-50-1",
+        "question": "Chọn cách kết hợp đúng cho cấu trúc: Khiêm nhường ngữ (謙譲語 - Kenjougo)",
+        "options": [
+          "お + V-ます(bỏ) + します",
+          "Thể ý chí + だ",
+          "Thể cấm chỉ",
+          "V-ない + です"
+        ],
+        "correctIndex": 0,
+        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: お + V-ます(bỏ) + します / Động từ khiêm nhường đặc biệt",
+        "hint": "Chú ý dạng thể liên kết của động từ."
+      }
+    ]
+  }
+]

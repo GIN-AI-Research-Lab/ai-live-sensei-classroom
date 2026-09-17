@@ -1,0 +1,14 @@
+# Bi mat — KHONG BAO GIO commit
+.env
+env.js
+
+# Ban sao truoc khi thiet ke lai
+.backup-before-redesign/
+
+# Thu vien tai ve
+vendor/
+
+__pycache__/
+*.pyc
+cert.pem
+key.pem

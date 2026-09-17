@@ -1,0 +1,1502 @@
+[
+  {
+    "level": "N2",
+    "lessonNumber": 1,
+    "title": "Bài 1: Thời điểm & Nghi thức trang trọng (に際して & に先立って)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N2.",
+    "vocabList": [
+      {
+        "id": "voc-n2-1-1",
+        "word": "重要語彙 (N2)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 1",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n2-1-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n2-l1-s0",
+        "title": "Trọng tâm: Thời điểm & Nghi thức trang trọng (に際して & に先立って)",
+        "grammarFormula": "N / V-る + に際して / に先立って",
+        "explanation": "Dùng trong các sự kiện nghi thức trọng đại (khi bắt đầu / chuẩn bị trước khi).",
+        "examples": [
+          {
+            "id": "ex-n2-l1-1",
+            "tokens": [
+              {
+                "id": "tok-n2-l1-1",
+                "text": "新事業を 始",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n2-l1-2",
+                "text": "めるに際して、計画を 見直した。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Nhân dịp bắt đầu dự án mới, chúng tôi đã rà soát lại kế hoạch."
+          }
+        ],
+        "culturalNotes": "Ngữ pháp trình độ N2 dùng nhiều trong báo chí, kinh doanh và văn bản học thuật."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n2-1-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n2-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n2-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n2-1-1",
+        "question": "Chọn mẫu ngữ pháp phù hợp biểu thị: 'Thời điểm & Nghi thức trang trọng (に際して & に先立って)'",
+        "options": [
+          "N",
+          "V-る + べきではない",
+          "N + からして",
+          "V-ます + 次第"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc chính xác: N / V-る + に際して / に先立って",
+        "hint": "Xem công thức liên kết đặc trưng của N2."
+      }
+    ]
+  },
+  {
+    "level": "N2",
+    "lessonNumber": 2,
+    "title": "Bài 2: Bất đắc dĩ & Đành lòng (ざるを得ない & を余儀なくされる)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N2.",
+    "vocabList": [
+      {
+        "id": "voc-n2-2-1",
+        "word": "重要語彙 (N2)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 2",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n2-2-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n2-l2-s0",
+        "title": "Trọng tâm: Bất đắc dĩ & Đành lòng (ざるを得ない & を余儀なくされる)",
+        "grammarFormula": "V-ない (bỏ ない) + ざるを得ない (する->せざるを得ない)",
+        "explanation": "Dù không muốn nhưng do hoàn cảnh bắt buộc nên đành phải làm.",
+        "examples": [
+          {
+            "id": "ex-n2-l2-1",
+            "tokens": [
+              {
+                "id": "tok-n2-l2-1",
+                "text": "この状況では",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n2-l2-2",
+                "text": "、計画を 中止せざるを得ない。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Trong tình thế này thì đành phải hủy bỏ kế hoạch mà thôi."
+          }
+        ],
+        "culturalNotes": "Ngữ pháp trình độ N2 dùng nhiều trong báo chí, kinh doanh và văn bản học thuật."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n2-2-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n2-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n2-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n2-2-1",
+        "question": "Chọn mẫu ngữ pháp phù hợp biểu thị: 'Bất đắc dĩ & Đành lòng (ざるを得ない & を余儀なくされる)'",
+        "options": [
+          "V-ない (bỏ ない) + ざるを得ない (する->せざるを得ない)",
+          "V-る + べきではない",
+          "N + からして",
+          "V-ます + 次第"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc chính xác: V-ない (bỏ ない) + ざるを得ない (する->せざるを得ない)",
+        "hint": "Xem công thức liên kết đặc trưng của N2."
+      }
+    ]
+  },
+  {
+    "level": "N2",
+    "lessonNumber": 3,
+    "title": "Bài 3: Tuyệt đối không thể (っこない & かねる & ようがない)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N2.",
+    "vocabList": [
+      {
+        "id": "voc-n2-3-1",
+        "word": "重要語彙 (N2)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 3",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n2-3-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n2-l3-s0",
+        "title": "Trọng tâm: Tuyệt đối không thể (っこない & かねる & ようがない)",
+        "grammarFormula": "V-ます (bỏ ます) + っこない / かねる / ようがない",
+        "explanation": "Nhấn mạnh niềm tin chủ quan rằng không thể nào làm được.",
+        "examples": [
+          {
+            "id": "ex-n2-l3-1",
+            "tokens": [
+              {
+                "id": "tok-n2-l3-1",
+                "text": "そんなこと、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n2-l3-2",
+                "text": "誰にも できっこない。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Việc như thế thì làm sao ai có thể làm được chứ!"
+          }
+        ],
+        "culturalNotes": "Ngữ pháp trình độ N2 dùng nhiều trong báo chí, kinh doanh và văn bản học thuật."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n2-3-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n2-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n2-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n2-3-1",
+        "question": "Chọn mẫu ngữ pháp phù hợp biểu thị: 'Tuyệt đối không thể (っこない & かねる & ようがない)'",
+        "options": [
+          "V-ます (bỏ ます) + っこない",
+          "V-る + べきではない",
+          "N + からして",
+          "V-ます + 次第"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc chính xác: V-ます (bỏ ます) + っこない / かねる / ようがない",
+        "hint": "Xem công thức liên kết đặc trưng của N2."
+      }
+    ]
+  },
+  {
+    "level": "N2",
+    "lessonNumber": 4,
+    "title": "Bài 4: Nguy cơ & Khả năng xấu (かねない & おそれがある)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N2.",
+    "vocabList": [
+      {
+        "id": "voc-n2-4-1",
+        "word": "重要語彙 (N2)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 4",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n2-4-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n2-l4-s0",
+        "title": "Trọng tâm: Nguy cơ & Khả năng xấu (かねない & おそれがある)",
+        "grammarFormula": "V-ます (bỏ ます) + かねない / Nの + おそれがある",
+        "explanation": "Có nguy cơ dẫn tới một kết cục tai hại nghiêm trọng.",
+        "examples": [
+          {
+            "id": "ex-n2-l4-1",
+            "tokens": [
+              {
+                "id": "tok-n2-l4-1",
+                "text": "スピードを ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n2-l4-2",
+                "text": "出しすぎると、事故を 起こしかねない。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Nếu chạy quá tốc độ thì rất dễ gây ra tai nạn."
+          }
+        ],
+        "culturalNotes": "Ngữ pháp trình độ N2 dùng nhiều trong báo chí, kinh doanh và văn bản học thuật."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n2-4-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n2-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n2-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n2-4-1",
+        "question": "Chọn mẫu ngữ pháp phù hợp biểu thị: 'Nguy cơ & Khả năng xấu (かねない & おそれがある)'",
+        "options": [
+          "V-ます (bỏ ます) + かねない",
+          "V-る + べきではない",
+          "N + からして",
+          "V-ます + 次第"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc chính xác: V-ます (bỏ ます) + かねない / Nの + おそれがある",
+        "hint": "Xem công thức liên kết đặc trưng của N2."
+      }
+    ]
+  },
+  {
+    "level": "N2",
+    "lessonNumber": 5,
+    "title": "Bài 5: Tỉ lệ thuận & Càng ngày càng (にしたがって & につれて & 一方だ)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N2.",
+    "vocabList": [
+      {
+        "id": "voc-n2-5-1",
+        "word": "重要語彙 (N2)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 5",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n2-5-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n2-l5-s0",
+        "title": "Trọng tâm: Tỉ lệ thuận & Càng ngày càng (にしたがって & につれて & 一方だ)",
+        "grammarFormula": "N / V-る + にしたがって / につれて",
+        "explanation": "Sự việc A biến đổi kéo theo sự việc B biến đổi theo.",
+        "examples": [
+          {
+            "id": "ex-n2-l5-1",
+            "tokens": [
+              {
+                "id": "tok-n2-l5-1",
+                "text": "年を取るにつ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n2-l5-2",
+                "text": "れて、体力が 衰えてくる。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Càng có tuổi thì thể lực càng suy giảm."
+          }
+        ],
+        "culturalNotes": "Ngữ pháp trình độ N2 dùng nhiều trong báo chí, kinh doanh và văn bản học thuật."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n2-5-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n2-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n2-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n2-5-1",
+        "question": "Chọn mẫu ngữ pháp phù hợp biểu thị: 'Tỉ lệ thuận & Càng ngày càng (にしたがって & につれて & 一方だ)'",
+        "options": [
+          "N",
+          "V-る + べきではない",
+          "N + からして",
+          "V-ます + 次第"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc chính xác: N / V-る + にしたがって / につれて",
+        "hint": "Xem công thức liên kết đặc trưng của N2."
+      }
+    ]
+  },
+  {
+    "level": "N2",
+    "lessonNumber": 6,
+    "title": "Bài 6: Khởi điểm & Cột mốc (を契機に & を皮切りに)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N2.",
+    "vocabList": [
+      {
+        "id": "voc-n2-6-1",
+        "word": "重要語彙 (N2)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 6",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n2-6-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n2-l6-s0",
+        "title": "Trọng tâm: Khởi điểm & Cột mốc (を契機に & を皮切りに)",
+        "grammarFormula": "N + を契機に / をきっかけに",
+        "explanation": "Nhân dịp, lấy một sự kiện làm bước ngoặt chuyển biến lớn.",
+        "examples": [
+          {
+            "id": "ex-n2-l6-1",
+            "tokens": [
+              {
+                "id": "tok-n2-l6-1",
+                "text": "オリンピック",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n2-l6-2",
+                "text": "を契機に、街の再開発が 進んだ。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Lấy Thế vận hội làm bước ngoặt, việc tái thiết đô thị đã được đẩy mạnh."
+          }
+        ],
+        "culturalNotes": "Ngữ pháp trình độ N2 dùng nhiều trong báo chí, kinh doanh và văn bản học thuật."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n2-6-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n2-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n2-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n2-6-1",
+        "question": "Chọn mẫu ngữ pháp phù hợp biểu thị: 'Khởi điểm & Cột mốc (を契機に & を皮切りに)'",
+        "options": [
+          "N + を契機に",
+          "V-る + べきではない",
+          "N + からして",
+          "V-ます + 次第"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc chính xác: N + を契機に / をきっかけに",
+        "hint": "Xem công thức liên kết đặc trưng của N2."
+      }
+    ]
+  },
+  {
+    "level": "N2",
+    "lessonNumber": 7,
+    "title": "Bài 7: Nhấn mạnh mở rộng (のみならず & ばかりか)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N2.",
+    "vocabList": [
+      {
+        "id": "voc-n2-7-1",
+        "word": "重要語彙 (N2)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 7",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n2-7-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n2-l7-s0",
+        "title": "Trọng tâm: Nhấn mạnh mở rộng (のみならず & ばかりか)",
+        "grammarFormula": "Thể thông thường (Na/Nである) + のみならず",
+        "explanation": "Không chỉ dừng lại ở phạm vi đó mà còn lan rộng hơn.",
+        "examples": [
+          {
+            "id": "ex-n2-l7-1",
+            "tokens": [
+              {
+                "id": "tok-n2-l7-1",
+                "text": "この薬は 効",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n2-l7-2",
+                "text": "果があるのみならず、副作用も 少ない。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Loại thuốc này không chỉ có hiệu quả cao mà tác dụng phụ cũng rất ít."
+          }
+        ],
+        "culturalNotes": "Ngữ pháp trình độ N2 dùng nhiều trong báo chí, kinh doanh và văn bản học thuật."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n2-7-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n2-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n2-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n2-7-1",
+        "question": "Chọn mẫu ngữ pháp phù hợp biểu thị: 'Nhấn mạnh mở rộng (のみならず & ばかりか)'",
+        "options": [
+          "Thể thông thường (Na/Nである) + のみならず",
+          "V-る + べきではない",
+          "N + からして",
+          "V-ます + 次第"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc chính xác: Thể thông thường (Na/Nである) + のみならず",
+        "hint": "Xem công thức liên kết đặc trưng của N2."
+      }
+    ]
+  },
+  {
+    "level": "N2",
+    "lessonNumber": 8,
+    "title": "Bài 8: Tranh cãi & Vấn đề xoay quanh (をめぐって & を巡る)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N2.",
+    "vocabList": [
+      {
+        "id": "voc-n2-8-1",
+        "word": "重要語彙 (N2)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 8",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n2-8-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n2-l8-s0",
+        "title": "Trọng tâm: Tranh cãi & Vấn đề xoay quanh (をめぐって & を巡る)",
+        "grammarFormula": "N + をめぐって / をめぐる + N",
+        "explanation": "Xoay quanh một mâu thuẫn, tranh chấp giữa nhiều bên.",
+        "examples": [
+          {
+            "id": "ex-n2-l8-1",
+            "tokens": [
+              {
+                "id": "tok-n2-l8-1",
+                "text": "遺産相続をめ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n2-l8-2",
+                "text": "ぐって、兄弟が 争っている。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Xoay quanh việc thừa kế tài sản, anh em đang tranh chấp nhau."
+          }
+        ],
+        "culturalNotes": "Ngữ pháp trình độ N2 dùng nhiều trong báo chí, kinh doanh và văn bản học thuật."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n2-8-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n2-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n2-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n2-8-1",
+        "question": "Chọn mẫu ngữ pháp phù hợp biểu thị: 'Tranh cãi & Vấn đề xoay quanh (をめぐって & を巡る)'",
+        "options": [
+          "N + をめぐって",
+          "V-る + べきではない",
+          "N + からして",
+          "V-ます + 次第"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc chính xác: N + をめぐって / をめぐる + N",
+        "hint": "Xem công thức liên kết đặc trưng của N2."
+      }
+    ]
+  },
+  {
+    "level": "N2",
+    "lessonNumber": 9,
+    "title": "Bài 9: Bất chấp gian khó (をものともせずに & をよそに)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N2.",
+    "vocabList": [
+      {
+        "id": "voc-n2-9-1",
+        "word": "重要語彙 (N2)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 9",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n2-9-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n2-l9-s0",
+        "title": "Trọng tâm: Bất chấp gian khó (をものともせずに & をよそに)",
+        "grammarFormula": "N + をものともせずに",
+        "explanation": "Bất chấp khó khăn, nguy hiểm, dư luận để tiến về phía trước.",
+        "examples": [
+          {
+            "id": "ex-n2-l9-1",
+            "tokens": [
+              {
+                "id": "tok-n2-l9-1",
+                "text": "彼は プレッ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n2-l9-2",
+                "text": "シャーをものともせずに、見事 優勝した。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Anh ấy đã vượt qua áp lực một cách xuất sắc để giành chức vô địch."
+          }
+        ],
+        "culturalNotes": "Ngữ pháp trình độ N2 dùng nhiều trong báo chí, kinh doanh và văn bản học thuật."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n2-9-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n2-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n2-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n2-9-1",
+        "question": "Chọn mẫu ngữ pháp phù hợp biểu thị: 'Bất chấp gian khó (をものともせずに & をよそに)'",
+        "options": [
+          "N + をものともせずに",
+          "V-る + べきではない",
+          "N + からして",
+          "V-ます + 次第"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc chính xác: N + をものともせずに",
+        "hint": "Xem công thức liên kết đặc trưng của N2."
+      }
+    ]
+  },
+  {
+    "level": "N2",
+    "lessonNumber": 10,
+    "title": "Bài 10: Căn cứ & Dựa trên (に基づいて & をもとに)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N2.",
+    "vocabList": [
+      {
+        "id": "voc-n2-10-1",
+        "word": "重要語彙 (N2)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 10",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n2-10-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n2-l10-s0",
+        "title": "Trọng tâm: Căn cứ & Dựa trên (に基づいて & をもとに)",
+        "grammarFormula": "N + に基づいて / に基づく + N",
+        "explanation": "Dựa trên cơ sở dữ liệu, sự thật, tiêu chuẩn cụ thể.",
+        "examples": [
+          {
+            "id": "ex-n2-l10-1",
+            "tokens": [
+              {
+                "id": "tok-n2-l10-1",
+                "text": "最新のデータ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n2-l10-2",
+                "text": "に基づいて、分析を 行った。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Chúng tôi đã tiến hành phân tích dựa trên dữ liệu mới nhất."
+          }
+        ],
+        "culturalNotes": "Ngữ pháp trình độ N2 dùng nhiều trong báo chí, kinh doanh và văn bản học thuật."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n2-10-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n2-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n2-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n2-10-1",
+        "question": "Chọn mẫu ngữ pháp phù hợp biểu thị: 'Căn cứ & Dựa trên (に基づいて & をもとに)'",
+        "options": [
+          "N + に基づいて",
+          "V-る + べきではない",
+          "N + からして",
+          "V-ます + 次第"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc chính xác: N + に基づいて / に基づく + N",
+        "hint": "Xem công thức liên kết đặc trưng của N2."
+      }
+    ]
+  },
+  {
+    "level": "N2",
+    "lessonNumber": 11,
+    "title": "Bài 11: Đặc trưng riêng biệt (ならではの & にふさわしい)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N2.",
+    "vocabList": [
+      {
+        "id": "voc-n2-11-1",
+        "word": "重要語彙 (N2)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 11",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n2-11-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n2-l11-s0",
+        "title": "Trọng tâm: Đặc trưng riêng biệt (ならではの & にふさわしい)",
+        "grammarFormula": "N + ならではの + N / N + にふさわしい",
+        "explanation": "Chỉ có ở đối tượng đó mới có được phẩm chất tuyệt vời này.",
+        "examples": [
+          {
+            "id": "ex-n2-l11-1",
+            "tokens": [
+              {
+                "id": "tok-n2-l11-1",
+                "text": "京都ならでは",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n2-l11-2",
+                "text": "の 伝統的な 街並み。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Khung cảnh phố phường truyền thống chỉ có riêng ở Kyoto."
+          }
+        ],
+        "culturalNotes": "Ngữ pháp trình độ N2 dùng nhiều trong báo chí, kinh doanh và văn bản học thuật."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n2-11-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n2-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n2-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n2-11-1",
+        "question": "Chọn mẫu ngữ pháp phù hợp biểu thị: 'Đặc trưng riêng biệt (ならではの & にふさわしい)'",
+        "options": [
+          "N + ならではの + N",
+          "V-る + べきではない",
+          "N + からして",
+          "V-ます + 次第"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc chính xác: N + ならではの + N / N + にふさわしい",
+        "hint": "Xem công thức liên kết đặc trưng của N2."
+      }
+    ]
+  },
+  {
+    "level": "N2",
+    "lessonNumber": 12,
+    "title": "Bài 12: Kết cục sau quá trình dài (末に & あげく)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N2.",
+    "vocabList": [
+      {
+        "id": "voc-n2-12-1",
+        "word": "重要語彙 (N2)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 12",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n2-12-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n2-l12-s0",
+        "title": "Trọng tâm: Kết cục sau quá trình dài (末に & あげく)",
+        "grammarFormula": "V-た / Nの + 末に (すえに) / あげく (tiêu cực)",
+        "explanation": "Sau một quá trình đắn đo gian nan thì đi đến kết quả cuối cùng.",
+        "examples": [
+          {
+            "id": "ex-n2-l12-1",
+            "tokens": [
+              {
+                "id": "tok-n2-l12-1",
+                "text": "悩んだ末に、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n2-l12-2",
+                "text": "留学することを 決意した。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Sau bao trăn trở, tôi đã quyết định đi du học."
+          }
+        ],
+        "culturalNotes": "Ngữ pháp trình độ N2 dùng nhiều trong báo chí, kinh doanh và văn bản học thuật."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n2-12-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n2-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n2-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n2-12-1",
+        "question": "Chọn mẫu ngữ pháp phù hợp biểu thị: 'Kết cục sau quá trình dài (末に & あげく)'",
+        "options": [
+          "V-た",
+          "V-る + べきではない",
+          "N + からして",
+          "V-ます + 次第"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc chính xác: V-た / Nの + 末に (すえに) / あげく (tiêu cực)",
+        "hint": "Xem công thức liên kết đặc trưng của N2."
+      }
+    ]
+  },
+  {
+    "level": "N2",
+    "lessonNumber": 13,
+    "title": "Bài 13: Vượt ngoài giới hạn (にとどまらず)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N2.",
+    "vocabList": [
+      {
+        "id": "voc-n2-13-1",
+        "word": "重要語彙 (N2)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 13",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n2-13-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n2-l13-s0",
+        "title": "Trọng tâm: Vượt ngoài giới hạn (にとどまらず)",
+        "grammarFormula": "N / V-る + にとどまらず",
+        "explanation": "Không chỉ dừng lại ở phạm vi hẹp mà lan sang quy mô lớn hơn nhiều.",
+        "examples": [
+          {
+            "id": "ex-n2-l13-1",
+            "tokens": [
+              {
+                "id": "tok-n2-l13-1",
+                "text": "被害は 国内",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n2-l13-2",
+                "text": "にとどまらず、海外にも 及んだ。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Thiệt hại không chỉ dừng lại trong nước mà còn lan ra quốc tế."
+          }
+        ],
+        "culturalNotes": "Ngữ pháp trình độ N2 dùng nhiều trong báo chí, kinh doanh và văn bản học thuật."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n2-13-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n2-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n2-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n2-13-1",
+        "question": "Chọn mẫu ngữ pháp phù hợp biểu thị: 'Vượt ngoài giới hạn (にとどまらず)'",
+        "options": [
+          "N",
+          "V-る + べきではない",
+          "N + からして",
+          "V-ます + 次第"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc chính xác: N / V-る + にとどまらず",
+        "hint": "Xem công thức liên kết đặc trưng của N2."
+      }
+    ]
+  },
+  {
+    "level": "N2",
+    "lessonNumber": 14,
+    "title": "Bài 14: Khó lòng mà làm được (がたい & かねる)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N2.",
+    "vocabList": [
+      {
+        "id": "voc-n2-14-1",
+        "word": "重要語彙 (N2)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 14",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n2-14-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n2-l14-s0",
+        "title": "Trọng tâm: Khó lòng mà làm được (がたい & かねる)",
+        "grammarFormula": "V-ます (bỏ ます) + がたい (về mặt tâm lý) / かねる (từ chối khéo)",
+        "explanation": "Về mặt tình cảm hay tâm lý thì rất khó chấp nhận.",
+        "examples": [
+          {
+            "id": "ex-n2-l14-1",
+            "tokens": [
+              {
+                "id": "tok-n2-l14-1",
+                "text": "信じがたい ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n2-l14-2",
+                "text": "出来事が 起こった。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Một sự việc khó tin đã xảy ra."
+          }
+        ],
+        "culturalNotes": "Ngữ pháp trình độ N2 dùng nhiều trong báo chí, kinh doanh và văn bản học thuật."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n2-14-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n2-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n2-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n2-14-1",
+        "question": "Chọn mẫu ngữ pháp phù hợp biểu thị: 'Khó lòng mà làm được (がたい & かねる)'",
+        "options": [
+          "V-ます (bỏ ます) + がたい (về mặt tâm lý)",
+          "V-る + べきではない",
+          "N + からして",
+          "V-ます + 次第"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc chính xác: V-ます (bỏ ます) + がたい (về mặt tâm lý) / かねる (từ chối khéo)",
+        "hint": "Xem công thức liên kết đặc trưng của N2."
+      }
+    ]
+  },
+  {
+    "level": "N2",
+    "lessonNumber": 15,
+    "title": "Bài 15: Tổng kết chiến lược đọc hiểu & ngữ pháp N2",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N2.",
+    "vocabList": [
+      {
+        "id": "voc-n2-15-1",
+        "word": "重要語彙 (N2)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 15",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n2-15-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n2-l15-s0",
+        "title": "Trọng tâm: Tổng kết chiến lược đọc hiểu & ngữ pháp N2",
+        "grammarFormula": "Nắm vững toàn diện văn phong nghị luận N2",
+        "explanation": "Luyện phản xạ cấu trúc câu phức trong kỳ thi JLPT N2.",
+        "examples": [
+          {
+            "id": "ex-n2-l15-1",
+            "tokens": [
+              {
+                "id": "tok-n2-l15-1",
+                "text": "状況に 即し",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n2-l15-2",
+                "text": "て、適切な 判断を 下すべきだ。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Cần đưa ra phán đoán phù hợp theo sát tình hình thực tế."
+          }
+        ],
+        "culturalNotes": "Ngữ pháp trình độ N2 dùng nhiều trong báo chí, kinh doanh và văn bản học thuật."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n2-15-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n2-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n2-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n2-15-1",
+        "question": "Chọn mẫu ngữ pháp phù hợp biểu thị: 'Tổng kết chiến lược đọc hiểu & ngữ pháp N2'",
+        "options": [
+          "Nắm vững toàn diện văn phong nghị luận N2",
+          "V-る + べきではない",
+          "N + からして",
+          "V-ます + 次第"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấu trúc chính xác: Nắm vững toàn diện văn phong nghị luận N2",
+        "hint": "Xem công thức liên kết đặc trưng của N2."
+      }
+    ]
+  }
+]

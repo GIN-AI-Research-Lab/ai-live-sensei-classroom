@@ -1,0 +1,2002 @@
+[
+  {
+    "level": "N3",
+    "lessonNumber": 1,
+    "title": "Bài 1: Phán đoán chắc chắn (わけがない & わけではない)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-1-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 1",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-1-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l1-s0",
+        "title": "Trọng tâm: Phán đoán chắc chắn (わけがない & わけではない)",
+        "grammarFormula": "Thể thông thường (Naな/Nの) + わけがない / わけではない",
+        "explanation": "わけがない: Tuyệt đối không có lý nào. わけではない: Không hẳn là, không hoàn toàn là.",
+        "examples": [
+          {
+            "id": "ex-n3-l1-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l1-1",
+                "text": "そんな難",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l1-2",
+                "text": "しいこと、私にできるわけがない。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Chuyện khó như thế thì làm sao tôi có thể làm được chứ!"
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-1-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-1-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Phán đoán chắc chắn (わけがない & わけではない)'?",
+        "options": [
+          "Thể thông thường (Naな/Nの) + わけがない",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: Thể thông thường (Naな/Nの) + わけがない / わけではない",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 2,
+    "title": "Bài 2: Thói quen & Biến đổi (ようにする & ようになる)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-2-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 2",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-2-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l2-s0",
+        "title": "Trọng tâm: Thói quen & Biến đổi (ようにする & ようになる)",
+        "grammarFormula": "V-る / V-ない + ようにする / ようになる",
+        "explanation": "ようにする: Nỗ lực duy trì thói quen tốt. ようになる: Biến đổi từ không thể sang có thể.",
+        "examples": [
+          {
+            "id": "ex-n3-l2-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l2-1",
+                "text": "毎日 漢",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l2-2",
+                "text": "字を 練習するようにしています。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi luôn cố gắng luyện viết chữ Hán mỗi ngày."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-2-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-2-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Thói quen & Biến đổi (ようにする & ようになる)'?",
+        "options": [
+          "V-る",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: V-る / V-ない + ようにする / ようになる",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 3,
+    "title": "Bài 3: Quy định & Dự định (ことになっている & ことにする)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-3-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 3",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-3-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l3-s0",
+        "title": "Trọng tâm: Quy định & Dự định (ことになっている & ことにする)",
+        "grammarFormula": "V-る / V-ない + ことになっている / ことにする",
+        "explanation": "ことになっている: Quy định tập thể, luật lệ. ことにする: Quyết định của bản thân.",
+        "examples": [
+          {
+            "id": "ex-n3-l3-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l3-1",
+                "text": "この寮で",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l3-2",
+                "text": "は 11時に 門限ということに なっている。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Ký túc xá này có quy định đóng cửa lúc 11 giờ."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-3-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-3-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Quy định & Dự định (ことになっている & ことにする)'?",
+        "options": [
+          "V-る",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: V-る / V-ない + ことになっている / ことにする",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 4,
+    "title": "Bài 4: Nguyên nhân lý do (おかげで & せいで & ばかりに)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-4-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 4",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-4-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l4-s0",
+        "title": "Trọng tâm: Nguyên nhân lý do (おかげで & せいで & ばかりに)",
+        "grammarFormula": "Thể thông thường + おかげで (tốt) / せいで (xấu) / ばかりに (hối tiếc)",
+        "explanation": "おかげで mang lại kết quả tích cực. せいで mang lại kết quả tiêu cực.",
+        "examples": [
+          {
+            "id": "ex-n3-l4-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l4-1",
+                "text": "先生のお",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l4-2",
+                "text": "かげで、合格できました。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Nhờ có thầy mà em đã đỗ kỳ thi."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-4-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-4-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Nguyên nhân lý do (おかげで & せいで & ばかりに)'?",
+        "options": [
+          "Thể thông thường + おかげで (tốt)",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: Thể thông thường + おかげで (tốt) / せいで (xấu) / ばかりに (hối tiếc)",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 5,
+    "title": "Bài 5: So sánh & Tương quan (に比べて & に対して)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-5-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 5",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-5-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l5-s0",
+        "title": "Trọng tâm: So sánh & Tương quan (に比べて & に対して)",
+        "grammarFormula": "N + に比べて / N + に対して",
+        "explanation": "に比べて: So sánh giữa hai đối tượng. に対して: Đối lập tương phản rõ rệt.",
+        "examples": [
+          {
+            "id": "ex-n3-l5-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l5-1",
+                "text": "兄に比べ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l5-2",
+                "text": "て、弟は よく勉強する。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "So với anh trai thì người em học chăm hơn nhiều."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-5-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-5-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'So sánh & Tương quan (に比べて & に対して)'?",
+        "options": [
+          "N + に比べて",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: N + に比べて / N + に対して",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 6,
+    "title": "Bài 6: Mục đích & Đối tượng (向けに & ために)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-6-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 6",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-6-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l6-s0",
+        "title": "Trọng tâm: Mục đích & Đối tượng (向けに & ために)",
+        "grammarFormula": "N + 向けに / 向けだ / V-る + ために",
+        "explanation": "向け: Thiết kế chuyên biệt dành riêng cho một đối tượng.",
+        "examples": [
+          {
+            "id": "ex-n3-l6-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l6-1",
+                "text": "この本は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l6-2",
+                "text": " 子供向けに 書かれています。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Cuốn sách này được viết dành riêng cho trẻ em."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-6-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-6-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Mục đích & Đối tượng (向けに & ために)'?",
+        "options": [
+          "N + 向けに",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: N + 向けに / 向けだ / V-る + ために",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 7,
+    "title": "Bài 7: Phạm vi & Giới hạn (を通して & にわたって & に限って)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-7-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 7",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-7-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l7-s0",
+        "title": "Trọng tâm: Phạm vi & Giới hạn (を通して & にわたって & に限って)",
+        "grammarFormula": "N + を通して / N + にわたって",
+        "explanation": "を通して: Thông qua phương tiện, thời gian. にわたって: Trải rộng trên toàn bộ không gian/thời gian.",
+        "examples": [
+          {
+            "id": "ex-n3-l7-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l7-1",
+                "text": "四季を通",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l7-2",
+                "text": "じて、様々な花が 咲きます。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Suốt bốn mùa, đủ loại hoa khoe sắc."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-7-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-7-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Phạm vi & Giới hạn (を通して & にわたって & に限って)'?",
+        "options": [
+          "N + を通して",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: N + を通して / N + にわたって",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 8,
+    "title": "Bài 8: Điều kiện & Giả định (さえ〜ば & としたら)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-8-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 8",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-8-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l8-s0",
+        "title": "Trọng tâm: Điều kiện & Giả định (さえ〜ば & としたら)",
+        "grammarFormula": "N + さえ + V-ば / Thể thông thường + としたら",
+        "explanation": "さえ〜ば: Chỉ cần... là đủ. としたら: Giả sử nếu chuyện đó xảy ra...",
+        "examples": [
+          {
+            "id": "ex-n3-l8-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l8-1",
+                "text": "体さえ ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l8-2",
+                "text": "丈夫なら、何でも できる。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Chỉ cần cơ thể khỏe mạnh thì làm gì cũng được."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-8-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-8-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Điều kiện & Giả định (さえ〜ば & としたら)'?",
+        "options": [
+          "N + さえ + V-ば",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: N + さえ + V-ば / Thể thông thường + としたら",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 9,
+    "title": "Bài 9: Xu hướng & Khởi đầu (〜かける & 〜がち & 〜気味)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-9-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 9",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-9-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l9-s0",
+        "title": "Trọng tâm: Xu hướng & Khởi đầu (〜かける & 〜がち & 〜気味)",
+        "grammarFormula": "V-ます (bỏ ます) + かける / がち / 気味 (ぎみ)",
+        "explanation": "かける: Đang làm dở dang. がち: Thường hay có xu hướng xấu. 気味: Cảm giác hơi hơi...",
+        "examples": [
+          {
+            "id": "ex-n3-l9-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l9-1",
+                "text": "風邪気味",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l9-2",
+                "text": "なので、早く寝ます。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Vì hơi có triệu chứng cảm nên tôi sẽ đi ngủ sớm."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-9-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-9-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Xu hướng & Khởi đầu (〜かける & 〜がち & 〜気味)'?",
+        "options": [
+          "V-ます (bỏ ます) + かける",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: V-ます (bỏ ます) + かける / がち / 気味 (ぎみ)",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 10,
+    "title": "Bài 10: Nhượng bộ bất ngờ (にもかかわらず & くせに)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-10-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 10",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-10-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l10-s0",
+        "title": "Trọng tâm: Nhượng bộ bất ngờ (にもかかわらず & くせに)",
+        "grammarFormula": "Thể thông thường (Na/Nである) + にもかかわらず / くせに",
+        "explanation": "にもかかわらず: Mặc dù... nhưng vẫn. くせに: Dù... thế mà (mang ý mỉa mai, trách móc).",
+        "examples": [
+          {
+            "id": "ex-n3-l10-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l10-1",
+                "text": "雨にもか",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l10-2",
+                "text": "かわらず、多くの人が 集まった。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Mặc cho trời mưa, rất nhiều người vẫn tập trung lại."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-10-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-10-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Nhượng bộ bất ngờ (にもかかわらず & くせに)'?",
+        "options": [
+          "Thể thông thường (Na/Nである) + にもかかわらず",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: Thể thông thường (Na/Nである) + にもかかわらず / くせに",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 11,
+    "title": "Bài 11: Cảm xúc mãnh liệt (たまらない & しょうがない & てならない)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-11-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 11",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-11-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l11-s0",
+        "title": "Trọng tâm: Cảm xúc mãnh liệt (たまらない & しょうがない & てならない)",
+        "grammarFormula": "V-て / A-くて + たまらない / てならない",
+        "explanation": "Diễn tả cảm xúc hoặc trạng thái sinh lý không thể kiềm chế nổi (rất... / vô cùng...).",
+        "examples": [
+          {
+            "id": "ex-n3-l11-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l11-1",
+                "text": "家族に ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l11-2",
+                "text": "会いたくて たまらない。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi nhớ gia đình đến cồn cào không chịu nổi."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-11-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-11-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Cảm xúc mãnh liệt (たまらない & しょうがない & てならない)'?",
+        "options": [
+          "V-て",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: V-て / A-くて + たまらない / てならない",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 12,
+    "title": "Bài 12: Đánh giá chắc chắn (に違いない & はずだ & はずがない)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-12-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 12",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-12-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l12-s0",
+        "title": "Trọng tâm: Đánh giá chắc chắn (に違いない & はずだ & はずがない)",
+        "grammarFormula": "Thể thông thường + に違いない / はずだ",
+        "explanation": "に違いない: Chắc chắn là (trực giác mạnh). はずだ: Chắc chắn là (dựa trên căn cứ logic).",
+        "examples": [
+          {
+            "id": "ex-n3-l12-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l12-1",
+                "text": "犯人は ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l12-2",
+                "text": "あの人に 違いない。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Thủ phạm chắc chắn là người đó."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-12-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-12-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Đánh giá chắc chắn (に違いない & はずだ & はずがない)'?",
+        "options": [
+          "Thể thông thường + に違いない",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: Thể thông thường + に違いない / はずだ",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 13,
+    "title": "Bài 13: Khả năng tiềm tàng (得る / 得ない - うる / えない)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-13-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 13",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-13-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l13-s0",
+        "title": "Trọng tâm: Khả năng tiềm tàng (得る / 得ない - うる / えない)",
+        "grammarFormula": "V-ます (bỏ ます) + 得る / 得ない",
+        "explanation": "Có khả năng xảy ra hoặc không thể có khả năng xảy ra trong thực tế.",
+        "examples": [
+          {
+            "id": "ex-n3-l13-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l13-1",
+                "text": "事故は ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l13-2",
+                "text": "いつでも 起こり得ます。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tai nạn có thể xảy ra bất cứ lúc nào."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-13-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-13-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Khả năng tiềm tàng (得る / 得ない - うる / えない)'?",
+        "options": [
+          "V-ます (bỏ ます) + 得る",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: V-ます (bỏ ます) + 得る / 得ない",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 14,
+    "title": "Bài 14: Biến đổi liên tục (一方だ & ばかりだ)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-14-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 14",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-14-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l14-s0",
+        "title": "Trọng tâm: Biến đổi liên tục (一方だ & ばかりだ)",
+        "grammarFormula": "V-る + 一方だ / ばかりだ",
+        "explanation": "Trạng thái đang liên tục tiến triển theo một chiều hướng (thường là tiêu cực).",
+        "examples": [
+          {
+            "id": "ex-n3-l14-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l14-1",
+                "text": "物価は ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l14-2",
+                "text": "上がる一方だ。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Giá cả hàng hóa cứ không ngừng tăng lên."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-14-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-14-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Biến đổi liên tục (一方だ & ばかりだ)'?",
+        "options": [
+          "V-る + 一方だ",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: V-る + 一方だ / ばかりだ",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 15,
+    "title": "Bài 15: Mở rộng phạm vi (だけでなく & ばかりか)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-15-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 15",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-15-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l15-s0",
+        "title": "Trọng tâm: Mở rộng phạm vi (だけでなく & ばかりか)",
+        "grammarFormula": "Thể thông thường + ばかりか (không chỉ mà còn)",
+        "explanation": "Không những ở mức độ này mà còn tiến tới mức độ cao hơn.",
+        "examples": [
+          {
+            "id": "ex-n3-l15-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l15-1",
+                "text": "彼は 英",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l15-2",
+                "text": "語ばかりか、フランス語も 話せる。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Anh ấy không chỉ tiếng Anh mà ngay cả tiếng Pháp cũng nói được."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-15-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-15-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Mở rộng phạm vi (だけでなく & ばかりか)'?",
+        "options": [
+          "Thể thông thường + ばかりか (không chỉ mà còn)",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: Thể thông thường + ばかりか (không chỉ mà còn)",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 16,
+    "title": "Bài 16: Thay thế (代わりに & に代わって)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-16-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 16",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-16-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l16-s0",
+        "title": "Trọng tâm: Thay thế (代わりに & に代わって)",
+        "grammarFormula": "Nの / V-る + 代わりに / N + に代わって",
+        "explanation": "Làm một việc để bù đắp, đổi lại, hoặc đại diện cho ai đó.",
+        "examples": [
+          {
+            "id": "ex-n3-l16-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l16-1",
+                "text": "父の代わ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l16-2",
+                "text": "りに、私が 出席します。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi sẽ đi dự thay cho cha tôi."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-16-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-16-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Thay thế (代わりに & に代わって)'?",
+        "options": [
+          "Nの",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: Nの / V-る + 代わりに / N + に代わって",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 17,
+    "title": "Bài 17: Về vấn đề (に関して & について)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-17-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 17",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-17-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l17-s0",
+        "title": "Trọng tâm: Về vấn đề (に関して & について)",
+        "grammarFormula": "N + に関して / N + について",
+        "explanation": "Nói về, liên quan đến chủ đề nào đó (に関して trang trọng hơn について).",
+        "examples": [
+          {
+            "id": "ex-n3-l17-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l17-1",
+                "text": "環境問題",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l17-2",
+                "text": "に関して、議論を行った。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Chúng tôi đã tiến hành thảo luận về vấn đề môi trường."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-17-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-17-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Về vấn đề (に関して & について)'?",
+        "options": [
+          "N + に関して",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: N + に関して / N + について",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 18,
+    "title": "Bài 18: Truyền đạt thông tin chính thức (ということだ & とのことだ)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-18-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 18",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-18-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l18-s0",
+        "title": "Trọng tâm: Truyền đạt thông tin chính thức (ということだ & とのことだ)",
+        "grammarFormula": "Thể thông thường + ということだ / とのことだ",
+        "explanation": "Nghe nói là, nội dung thông báo là...",
+        "examples": [
+          {
+            "id": "ex-n3-l18-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l18-1",
+                "text": "事故の原",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l18-2",
+                "text": "因は 調査中とのことです。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Nghe thông báo là nguyên nhân vụ tai nạn đang trong quá trình điều tra."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-18-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-18-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Truyền đạt thông tin chính thức (ということだ & とのことだ)'?",
+        "options": [
+          "Thể thông thường + ということだ",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: Thể thông thường + ということだ / とのことだ",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 19,
+    "title": "Bài 19: Bổn phận đạo đức (べきだ & べきではない)",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-19-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 19",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-19-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l19-s0",
+        "title": "Trọng tâm: Bổn phận đạo đức (べきだ & べきではない)",
+        "grammarFormula": "V-る + べきだ (する -> すべきだ)",
+        "explanation": "Nên làm / Không nên làm theo quan niệm đạo lý xã hội.",
+        "examples": [
+          {
+            "id": "ex-n3-l19-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l19-1",
+                "text": "約束は ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l19-2",
+                "text": "守るべきだ。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Đã hứa thì đương nhiên phải giữ lời."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-19-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-19-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Bổn phận đạo đức (べきだ & べきではない)'?",
+        "options": [
+          "V-る + べきだ (する -> すべきだ)",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: V-る + べきだ (する -> すべきだ)",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  },
+  {
+    "level": "N3",
+    "lessonNumber": 20,
+    "title": "Bài 20: Tổng kết ngữ pháp đàm thoại thực chiến N3",
+    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "vocabList": [
+      {
+        "id": "voc-n3-20-1",
+        "word": "重要語彙 (N3)",
+        "kanji": "語彙",
+        "furigana": "ごい",
+        "romaji": "goi",
+        "wordType": "noun",
+        "meaningVi": "Từ vựng then chốt của bài 20",
+        "accentNote": "Nắm vững phát âm."
+      }
+    ],
+    "kanjiList": [
+      {
+        "id": "kan-n3-20-1",
+        "character": "語",
+        "hanViet": "NGỮ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ"
+        ],
+        "kunyomi": [
+          "かたる"
+        ],
+        "meaningVi": "Ngôn ngữ",
+        "commonWords": [
+          {
+            "word": "言語",
+            "furigana": "げんご",
+            "meaningVi": "Ngôn ngữ"
+          }
+        ]
+      }
+    ],
+    "slides": [
+      {
+        "slideId": "n3-l20-s0",
+        "title": "Trọng tâm: Tổng kết ngữ pháp đàm thoại thực chiến N3",
+        "grammarFormula": "Tổng hợp các mẫu câu JLPT N3 trọng tâm",
+        "explanation": "Ôn luyện phối hợp cấu trúc trong đọc hiểu và nghe hiểu.",
+        "examples": [
+          {
+            "id": "ex-n3-l20-1",
+            "tokens": [
+              {
+                "id": "tok-n3-l20-1",
+                "text": "合格でき",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "tok-n3-l20-2",
+                "text": "るように、最後まで 頑張るべきだ。",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Để có thể đỗ kỳ thi, bạn nên nỗ lực đến cùng."
+          }
+        ],
+        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+      }
+    ],
+    "dialogue": [
+      {
+        "id": "dia-n3-20-1",
+        "speaker": "Sensei",
+        "speakerRole": "sensei",
+        "tokens": [
+          {
+            "id": "tok-n3-d1",
+            "text": "この文法のポイントを"
+          },
+          {
+            "id": "tok-n3-d2",
+            "text": "復習しましょう。"
+          }
+        ],
+        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "ex-q-n3-20-1",
+        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Tổng kết ngữ pháp đàm thoại thực chiến N3'?",
+        "options": [
+          "Tổng hợp các mẫu câu JLPT N3 trọng tâm",
+          "V-た + まま",
+          "N + に沿って",
+          "V-る + 途端に"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đáp án chính xác: Tổng hợp các mẫu câu JLPT N3 trọng tâm",
+        "hint": "Xem lại công thức chia ở slide lý thuyết."
+      }
+    ]
+  }
+]
