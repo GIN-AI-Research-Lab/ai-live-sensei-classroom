@@ -30188,8 +30188,8 @@
   {
     "level": "N5",
     "lessonNumber": 22,
-    "title": "Bài 22: Mệnh đề định ngữ bổ nghĩa cho Danh từ (Định ngữ trong tiếng Nhật)",
-    "description": "Nắm vững kỹ thuật ghép cả một mệnh đề câu làm tính từ đứng trước bổ nghĩa cho một Danh từ chính.",
+    "title": "Bài 22: Mệnh đề định ngữ bổ nghĩa cho Danh từ (連体修飾)",
+    "description": "Ghép cả một câu ở thể thông thường làm định ngữ đứng trước danh từ chính (không cần trợ từ nối), chọn thì trong mệnh đề định ngữ độc lập với thì câu chính, quy tắc chủ ngữ が bên trong mệnh đề, và tính từ な vẫn giữ な khi bổ nghĩa trực tiếp cho danh từ dù trong mệnh đề phức.",
     "vocabList": [
       {
         "id": "voc-n5-22-1",
@@ -30198,18 +30198,18 @@
         "furigana": "きます",
         "romaji": "kimasu",
         "wordType": "verb",
-        "meaningVi": "Mặc (áo sơ mi, áo khoác)",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "meaningVi": "Mặc (áo, đồ phía trên eo)",
+        "accentNote": "Thể từ điển: 着る. Nhóm II. 眼鏡をかける (đeo kính) dùng động từ khác."
       },
       {
         "id": "voc-n5-22-2",
-        "word": "はきます",
-        "kanji": "履きます",
-        "furigana": "はきます",
-        "romaji": "hakimasu",
+        "word": "かけます",
+        "kanji": "掛けます",
+        "furigana": "かけます",
+        "romaji": "kakemasu",
         "wordType": "verb",
-        "meaningVi": "Đi, mặc (quần, giày, tất)",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "meaningVi": "Đeo (kính), treo",
+        "accentNote": "眼鏡を かけます = đeo kính. Nhóm II."
       },
       {
         "id": "voc-n5-22-3",
@@ -30218,38 +30218,38 @@
         "furigana": "かぶります",
         "romaji": "kaburimasu",
         "wordType": "verb",
-        "meaningVi": "Đội (mũ)",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "meaningVi": "Đội (mũ, nón)",
+        "accentNote": "帽子を かぶります = đội mũ. Nhóm I."
       },
       {
         "id": "voc-n5-22-4",
-        "word": "かけます",
-        "kanji": "掛けます",
-        "furigana": "かけます",
-        "romaji": "kakemasu",
+        "word": "たてます",
+        "kanji": "建てます",
+        "furigana": "たてます",
+        "romaji": "tatemasu",
         "wordType": "verb",
-        "meaningVi": "Đeo (kính)",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "meaningVi": "Xây dựng",
+        "accentNote": "Nhóm II. あの 建物を 建てました = đã xây tòa nhà đó."
       },
       {
         "id": "voc-n5-22-5",
-        "word": "うまれます",
-        "kanji": "生まれます",
-        "furigana": "うまれます",
-        "romaji": "umaremasu",
+        "word": "かきます",
+        "kanji": "書きます",
+        "furigana": "かきます",
+        "romaji": "kakimasu",
         "wordType": "verb",
-        "meaningVi": "Sinh ra",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "meaningVi": "Viết",
+        "accentNote": "Đã gặp bài 6 — nay dùng làm mệnh đề định ngữ (sách do ai viết)."
       },
       {
         "id": "voc-n5-22-6",
-        "word": "ぼうし",
-        "kanji": "帽子",
-        "furigana": "ぼうし",
-        "romaji": "boushi",
-        "wordType": "noun",
-        "meaningVi": "Mũ, nón",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "word": "つくります",
+        "kanji": "作ります",
+        "furigana": "つくります",
+        "romaji": "tsukurimasu",
+        "wordType": "verb",
+        "meaningVi": "Làm, chế tạo, nấu",
+        "accentNote": "Đã gặp bài 6 — nay dùng làm mệnh đề định ngữ (món ăn do ai nấu)."
       },
       {
         "id": "voc-n5-22-7",
@@ -30259,7 +30259,137 @@
         "romaji": "megane",
         "wordType": "noun",
         "meaningVi": "Kính mắt",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "accentNote": "眼鏡を かけている人 = người đang đeo kính."
+      },
+      {
+        "id": "voc-n5-22-8",
+        "word": "ぼうし",
+        "kanji": "帽子",
+        "furigana": "ぼうし",
+        "romaji": "boushi",
+        "wordType": "noun",
+        "meaningVi": "Mũ, nón",
+        "accentNote": "帽子を かぶっている人 = người đang đội mũ."
+      },
+      {
+        "id": "voc-n5-22-9",
+        "word": "ふく",
+        "kanji": "服",
+        "furigana": "ふく",
+        "romaji": "fuku",
+        "wordType": "noun",
+        "meaningVi": "Quần áo",
+        "accentNote": "赤い 服を 着ている人 = người đang mặc đồ đỏ."
+      },
+      {
+        "id": "voc-n5-22-10",
+        "word": "ようふく",
+        "kanji": "洋服",
+        "furigana": "ようふく",
+        "romaji": "youfuku",
+        "wordType": "noun",
+        "meaningVi": "Trang phục kiểu Tây",
+        "accentNote": "Phân biệt với 着物 (kimono, trang phục truyền thống)."
+      },
+      {
+        "id": "voc-n5-22-11",
+        "word": "たてもの",
+        "kanji": "建物",
+        "furigana": "たてもの",
+        "romaji": "tatemono",
+        "wordType": "noun",
+        "meaningVi": "Tòa nhà, công trình",
+        "accentNote": "あそこに ある 建物 = tòa nhà ở đằng kia."
+      },
+      {
+        "id": "voc-n5-22-12",
+        "word": "みせ",
+        "kanji": "店",
+        "furigana": "みせ",
+        "romaji": "mise",
+        "wordType": "noun",
+        "meaningVi": "Cửa hàng",
+        "accentNote": "駅の 近くに ある 店 = cửa hàng gần ga."
+      },
+      {
+        "id": "voc-n5-22-13",
+        "word": "レストラン",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "resutoran",
+        "wordType": "noun",
+        "meaningVi": "Nhà hàng",
+        "accentNote": "先週 行った レストラン = nhà hàng tuần trước đã đi."
+      },
+      {
+        "id": "voc-n5-22-14",
+        "word": "きっさてん",
+        "kanji": "喫茶店",
+        "furigana": "きっさてん",
+        "romaji": "kissaten",
+        "wordType": "noun",
+        "meaningVi": "Quán cà phê kiểu cổ điển",
+        "accentNote": "Đã gặp bài 6."
+      },
+      {
+        "id": "voc-n5-22-15",
+        "word": "えいが",
+        "kanji": "映画",
+        "furigana": "えいが",
+        "romaji": "eiga",
+        "wordType": "noun",
+        "meaningVi": "Phim, điện ảnh",
+        "accentNote": "去年 見た 映画 = bộ phim đã xem năm ngoái."
+      },
+      {
+        "id": "voc-n5-22-16",
+        "word": "ひと",
+        "kanji": "人",
+        "furigana": "ひと",
+        "romaji": "hito",
+        "wordType": "noun",
+        "meaningVi": "Người",
+        "accentNote": "あそこに いる 人 = người đang ở đằng kia."
+      },
+      {
+        "id": "voc-n5-22-17",
+        "word": "つくえ",
+        "kanji": "机",
+        "furigana": "つくえ",
+        "romaji": "tsukue",
+        "wordType": "noun",
+        "meaningVi": "Cái bàn",
+        "accentNote": "Đã gặp bài 2 — nay dùng làm ví dụ mệnh đề định ngữ nơi chốn."
+      },
+      {
+        "id": "voc-n5-22-18",
+        "word": "いす",
+        "kanji": "椅子",
+        "furigana": "いす",
+        "romaji": "isu",
+        "wordType": "noun",
+        "meaningVi": "Cái ghế",
+        "accentNote": "Đã gặp bài 2."
+      },
+      {
+        "id": "voc-n5-22-19",
+        "word": "おんがく",
+        "kanji": "音楽",
+        "furigana": "おんがく",
+        "romaji": "ongaku",
+        "wordType": "noun",
+        "meaningVi": "Âm nhạc",
+        "accentNote": "Đã gặp bài 6 — nay dùng làm nội dung sở thích trong định ngữ."
+      },
+      {
+        "id": "voc-n5-22-20",
+        "word": "しんせつ",
+        "kanji": "親切",
+        "furigana": "しんせつ",
+        "romaji": "shinsetsu",
+        "wordType": "adjective",
+        "meaningVi": "Tốt bụng, ân cần",
+        "accentNote": "Đã gặp bài 16."
       }
     ],
     "kanjiList": [
@@ -30269,18 +30399,28 @@
         "hanViet": "TRƯỚC",
         "strokeCount": 12,
         "onyomi": [
-          "チャク"
+          "チャク (chaku)"
         ],
         "kunyomi": [
-          "き・る",
-          "つ・く"
+          "き(る)",
+          "つ(く)"
         ],
-        "meaningVi": "Mặc áo, đến nơi",
+        "meaningVi": "Mặc; đến nơi.",
         "commonWords": [
           {
-            "word": "着",
-            "furigana": "き・る",
-            "meaningVi": "Mặc áo, đến nơi"
+            "word": "着ます",
+            "furigana": "きます",
+            "meaningVi": "Mặc"
+          },
+          {
+            "word": "到着",
+            "furigana": "とうちゃく",
+            "meaningVi": "Đến nơi"
+          },
+          {
+            "word": "着物",
+            "furigana": "きもの",
+            "meaningVi": "Kimono"
           }
         ]
       },
@@ -30290,105 +30430,1257 @@
         "hanViet": "PHỤC",
         "strokeCount": 8,
         "onyomi": [
-          "フク"
+          "フク (fuku)"
         ],
         "kunyomi": [],
-        "meaningVi": "Quần áo, y phục",
+        "meaningVi": "Quần áo, trang phục.",
         "commonWords": [
           {
             "word": "服",
-            "furigana": "フク",
-            "meaningVi": "Quần áo, y phục"
+            "furigana": "ふく",
+            "meaningVi": "Quần áo"
+          },
+          {
+            "word": "洋服",
+            "furigana": "ようふく",
+            "meaningVi": "Trang phục Tây"
+          },
+          {
+            "word": "制服",
+            "furigana": "せいふく",
+            "meaningVi": "Đồng phục"
           }
         ]
       },
       {
         "id": "kan-n5-22-3",
-        "character": "産",
-        "hanViet": "SẢN",
-        "strokeCount": 11,
+        "character": "建",
+        "hanViet": "KIẾN",
+        "strokeCount": 9,
         "onyomi": [
-          "サン"
+          "ケン (ken)"
         ],
         "kunyomi": [
-          "う・む",
-          "う・まれる"
+          "た(てる)"
         ],
-        "meaningVi": "Sinh sản, tài sản",
+        "meaningVi": "Xây dựng.",
         "commonWords": [
           {
-            "word": "産",
-            "furigana": "う・む",
-            "meaningVi": "Sinh sản, tài sản"
+            "word": "建物",
+            "furigana": "たてもの",
+            "meaningVi": "Tòa nhà"
+          },
+          {
+            "word": "建てます",
+            "furigana": "たてます",
+            "meaningVi": "Xây dựng"
+          },
+          {
+            "word": "建築",
+            "furigana": "けんちく",
+            "meaningVi": "Kiến trúc"
+          }
+        ]
+      },
+      {
+        "id": "kan-n5-22-4",
+        "character": "店",
+        "hanViet": "ĐIẾM",
+        "strokeCount": 8,
+        "onyomi": [
+          "テン (ten)"
+        ],
+        "kunyomi": [
+          "みせ"
+        ],
+        "meaningVi": "Cửa hàng.",
+        "commonWords": [
+          {
+            "word": "店",
+            "furigana": "みせ",
+            "meaningVi": "Cửa hàng"
+          },
+          {
+            "word": "店員",
+            "furigana": "てんいん",
+            "meaningVi": "Nhân viên cửa hàng"
+          },
+          {
+            "word": "喫茶店",
+            "furigana": "きっさてん",
+            "meaningVi": "Quán cà phê"
+          }
+        ]
+      },
+      {
+        "id": "kan-n5-22-5",
+        "character": "作",
+        "hanViet": "TÁC",
+        "strokeCount": 7,
+        "onyomi": [
+          "サク (saku)"
+        ],
+        "kunyomi": [
+          "つく(る)"
+        ],
+        "meaningVi": "Làm, sáng tác. Đã gặp ở bài 6.",
+        "commonWords": [
+          {
+            "word": "作ります",
+            "furigana": "つくります",
+            "meaningVi": "Làm"
+          },
+          {
+            "word": "作品",
+            "furigana": "さくひん",
+            "meaningVi": "Tác phẩm"
+          },
+          {
+            "word": "作文",
+            "furigana": "さくぶん",
+            "meaningVi": "Bài văn"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n5-l22-s0",
+        "slideId": "n5-l22-s1",
         "slideType": "grammar",
-        "title": "Mẫu câu trọng tâm: Mệnh đề định ngữ bổ nghĩa cho Danh từ",
-        "grammarFormula": "[Mệnh đề thể thông thường] + Danh từ (Chủ ngữ trong mệnh đề định ngữ dùng が thay vì は)",
-        "explanation": "Trong tiếng Nhật, mệnh đề bổ nghĩa luôn đặt TRƯỚC danh từ được bổ nghĩa. Ví dụ: わたしが 作った ケーキ (Chiếc bánh mà tôi đã làm).",
-        "teacherTips": "Hãy chú ý cách chia trợ từ và thể của động từ trong mẫu câu này nhé.",
+        "title": "1. Mệnh đề định ngữ: [Câu thể thông thường] + N",
+        "grammarFormula": "[Câu ở thể thông thường] + [Danh từ chính]",
+        "explanation": "Muốn bổ nghĩa cho một danh từ bằng CẢ MỘT CÂU (không chỉ một tính từ), đặt câu đó ở thể thông thường ngay TRƯỚC danh từ — không cần trợ từ nối như の đã học ở bài 2.",
+        "teacherTips": "Toàn bộ mệnh đề định ngữ (kể cả tân ngữ, trợ từ を bên trong) đứng NGUYÊN VẸN trước danh từ chính — không đảo trật tự như tiếng Việt.",
+        "culturalNotes": "Cấu trúc này cực kỳ phổ biến khi mô tả người lạ trong đám đông: 「赤い 帽子を かぶっている人」 = người đội mũ đỏ kia.",
         "examples": [
           {
-            "id": "ex-n5-l22-1",
+            "id": "ex-n5-l22-s1-1",
             "tokens": [
               {
-                "id": "tok-n5-22-1",
-                "text": "あそこで 本を 読んでいる 人は ミラーさんです。",
+                "id": "t-l22s1-1",
+                "text": "あの",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s1-2",
+                "text": "めがね",
+                "isKeyGrammar": true,
+                "kanji": "眼鏡",
+                "furigana": "めがね"
+              },
+              {
+                "id": "t-l22s1-3",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s1-4",
+                "text": "かけている",
+                "isKeyGrammar": true,
+                "kanji": "掛けている",
+                "furigana": "かけている"
+              },
+              {
+                "id": "t-l22s1-5",
+                "text": "ひと",
+                "isKeyGrammar": false,
+                "kanji": "人",
+                "furigana": "ひと"
+              },
+              {
+                "id": "t-l22s1-6",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s1-7",
+                "text": "だれ",
+                "isKeyGrammar": false,
+                "kanji": "誰",
+                "furigana": "だれ"
+              },
+              {
+                "id": "t-l22s1-8",
+                "text": "ですか",
                 "isKeyGrammar": false
               }
             ],
-            "meaningVi": "Người đang đọc sách ở đằng kia là anh Miller."
+            "meaningVi": "Người đang đeo kính kia là ai vậy?"
+          },
+          {
+            "id": "ex-n5-l22-s1-2",
+            "tokens": [
+              {
+                "id": "t-l22s1-9",
+                "text": "きのう",
+                "isKeyGrammar": false,
+                "kanji": "昨日",
+                "furigana": "きのう"
+              },
+              {
+                "id": "t-l22s1-10",
+                "text": "みた",
+                "isKeyGrammar": true,
+                "kanji": "見た",
+                "furigana": "みた"
+              },
+              {
+                "id": "t-l22s1-11",
+                "text": "えいが",
+                "isKeyGrammar": false,
+                "kanji": "映画",
+                "furigana": "えいが"
+              },
+              {
+                "id": "t-l22s1-12",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s1-13",
+                "text": "おもしろかった",
+                "isKeyGrammar": false,
+                "kanji": "面白かった",
+                "furigana": "おもしろかった"
+              },
+              {
+                "id": "t-l22s1-14",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Bộ phim tôi xem hôm qua rất thú vị."
           }
-        ],
-        "culturalNotes": "Trong tiếng Nhật giao tiếp, ngữ điệu và sắc thái kính ngữ là yếu tố thể hiện sự tôn trọng đối phương."
+        ]
+      },
+      {
+        "slideId": "n5-l22-s2",
+        "slideType": "grammar",
+        "title": "2. Định ngữ với động từ ở các thì khác nhau",
+        "grammarFormula": "V(từ điển)+N (sắp/thường làm) — V(た)+N (đã làm) — Vている+N (đang làm)",
+        "explanation": "Thì của động từ trong mệnh đề định ngữ HOÀN TOÀN ĐỘC LẬP với thì của câu chính — chọn theo đúng thời điểm của hành động được miêu tả, không theo thì câu chính.",
+        "teacherTips": "山田さんが作った (山田さん LÀ chủ ngữ của mệnh đề định ngữ, dùng が chứ không phải は khi ở bên trong định ngữ).",
+        "culturalNotes": "Chủ ngữ trong mệnh đề định ngữ hầu như luôn dùng が, kể cả khi câu bên ngoài dùng は — đây là quy tắc riêng của cấu trúc này.",
+        "examples": [
+          {
+            "id": "ex-n5-l22-s2-1",
+            "tokens": [
+              {
+                "id": "t-l22s2-1",
+                "text": "やまださん",
+                "isKeyGrammar": false,
+                "kanji": "山田さん",
+                "furigana": "やまださん"
+              },
+              {
+                "id": "t-l22s2-2",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s2-3",
+                "text": "つくった",
+                "isKeyGrammar": true,
+                "kanji": "作った",
+                "furigana": "つくった"
+              },
+              {
+                "id": "t-l22s2-4",
+                "text": "りょうり",
+                "isKeyGrammar": false,
+                "kanji": "料理",
+                "furigana": "りょうり"
+              },
+              {
+                "id": "t-l22s2-5",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s2-6",
+                "text": "おいしい",
+                "isKeyGrammar": false,
+                "kanji": "美味しい",
+                "furigana": "おいしい"
+              },
+              {
+                "id": "t-l22s2-7",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Món ăn anh Yamada đã nấu rất ngon."
+          },
+          {
+            "id": "ex-n5-l22-s2-2",
+            "tokens": [
+              {
+                "id": "t-l22s2-8",
+                "text": "あそこ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s2-9",
+                "text": "で",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s2-10",
+                "text": "はなしている",
+                "isKeyGrammar": true,
+                "kanji": "話している",
+                "furigana": "はなしている"
+              },
+              {
+                "id": "t-l22s2-11",
+                "text": "ひと",
+                "isKeyGrammar": false,
+                "kanji": "人",
+                "furigana": "ひと"
+              },
+              {
+                "id": "t-l22s2-12",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s2-13",
+                "text": "だれ",
+                "isKeyGrammar": false,
+                "kanji": "誰",
+                "furigana": "だれ"
+              },
+              {
+                "id": "t-l22s2-14",
+                "text": "ですか",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Người đang nói chuyện đằng kia là ai vậy?"
+          }
+        ]
+      },
+      {
+        "slideId": "n5-l22-s3",
+        "slideType": "grammar",
+        "title": "3. Định ngữ chỉ nơi chốn/vật cụ thể",
+        "grammarFormula": "[Câu miêu tả nơi chốn ở thể thông thường] + N",
+        "explanation": "Ứng dụng để chỉ rõ MỘT VẬT/NƠI CỤ THỂ trong số nhiều lựa chọn — rất hữu ích khi giới thiệu địa điểm hoặc phân biệt đồ vật giống nhau.",
+        "teacherTips": "ある/いる (tồn tại, bài 10) rất hay xuất hiện trong định ngữ chỉ vị trí — vì bản chất là miêu tả 'vật NẰM Ở đâu'.",
+        "culturalNotes": "Chỉ đường ở Nhật hay dùng cấu trúc này: 「あの、白い 建物の 隣に ある 店」 = cửa hàng bên cạnh tòa nhà trắng kia.",
+        "examples": [
+          {
+            "id": "ex-n5-l22-s3-1",
+            "tokens": [
+              {
+                "id": "t-l22s3-1",
+                "text": "えき",
+                "isKeyGrammar": false,
+                "kanji": "駅",
+                "furigana": "えき"
+              },
+              {
+                "id": "t-l22s3-2",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s3-3",
+                "text": "ちかく",
+                "isKeyGrammar": false,
+                "kanji": "近く",
+                "furigana": "ちかく"
+              },
+              {
+                "id": "t-l22s3-4",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s3-5",
+                "text": "ある",
+                "isKeyGrammar": true,
+                "kanji": "有る",
+                "furigana": "ある"
+              },
+              {
+                "id": "t-l22s3-6",
+                "text": "レストラン",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s3-7",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s3-8",
+                "text": "やすい",
+                "isKeyGrammar": false,
+                "kanji": "安い",
+                "furigana": "やすい"
+              },
+              {
+                "id": "t-l22s3-9",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Nhà hàng ở gần ga thì rẻ."
+          },
+          {
+            "id": "ex-n5-l22-s3-2",
+            "tokens": [
+              {
+                "id": "t-l22s3-10",
+                "text": "つくえ",
+                "isKeyGrammar": false,
+                "kanji": "机",
+                "furigana": "つくえ"
+              },
+              {
+                "id": "t-l22s3-11",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s3-12",
+                "text": "うえ",
+                "isKeyGrammar": false,
+                "kanji": "上",
+                "furigana": "うえ"
+              },
+              {
+                "id": "t-l22s3-13",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s3-14",
+                "text": "ある",
+                "isKeyGrammar": true,
+                "kanji": "有る",
+                "furigana": "ある"
+              },
+              {
+                "id": "t-l22s3-15",
+                "text": "ほん",
+                "isKeyGrammar": false,
+                "kanji": "本",
+                "furigana": "ほん"
+              },
+              {
+                "id": "t-l22s3-16",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s3-17",
+                "text": "とって",
+                "isKeyGrammar": false,
+                "kanji": "取って",
+                "furigana": "とって"
+              },
+              {
+                "id": "t-l22s3-18",
+                "text": "ください",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Xin hãy lấy giúp quyển sách ở trên bàn."
+          }
+        ]
+      },
+      {
+        "slideId": "n5-l22-s4",
+        "slideType": "grammar",
+        "title": "4. Định ngữ với tính từ và mệnh đề phức",
+        "grammarFormula": "[Tính từ/mệnh đề い/な ở thể thông thường] + N",
+        "explanation": "Tính từ い giữ nguyên trong định ngữ (đã quen từ bài 2: この本). Tính từ な PHẢI GIỮ な khi đứng trước danh từ (đã học ở bài 8) — nguyên tắc này áp dụng cả khi mệnh đề dài hơn.",
+        "teacherTips": "好きな人 (người thích) — dù 好き là tính từ đặc biệt dùng が, khi bổ nghĩa danh từ vẫn PHẢI thêm な như mọi tính từ な khác.",
+        "culturalNotes": "音楽が好きな人 là mẫu câu thường thấy trong thông báo tuyển thành viên câu lạc bộ ở trường học Nhật.",
+        "examples": [
+          {
+            "id": "ex-n5-l22-s4-1",
+            "tokens": [
+              {
+                "id": "t-l22s4-1",
+                "text": "しんせつ",
+                "isKeyGrammar": true,
+                "kanji": "親切",
+                "furigana": "しんせつ"
+              },
+              {
+                "id": "t-l22s4-2",
+                "text": "な",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l22s4-3",
+                "text": "ひと",
+                "isKeyGrammar": false,
+                "kanji": "人",
+                "furigana": "ひと"
+              },
+              {
+                "id": "t-l22s4-4",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s4-5",
+                "text": "あいました",
+                "isKeyGrammar": false,
+                "kanji": "会いました",
+                "furigana": "あいました"
+              }
+            ],
+            "meaningVi": "Tôi đã gặp một người tốt bụng."
+          },
+          {
+            "id": "ex-n5-l22-s4-2",
+            "tokens": [
+              {
+                "id": "t-l22s4-6",
+                "text": "おんがく",
+                "isKeyGrammar": true,
+                "kanji": "音楽",
+                "furigana": "おんがく"
+              },
+              {
+                "id": "t-l22s4-7",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s4-8",
+                "text": "すき",
+                "isKeyGrammar": false,
+                "kanji": "好き",
+                "furigana": "すき"
+              },
+              {
+                "id": "t-l22s4-9",
+                "text": "な",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l22s4-10",
+                "text": "ひと",
+                "isKeyGrammar": false,
+                "kanji": "人",
+                "furigana": "ひと"
+              },
+              {
+                "id": "t-l22s4-11",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l22s4-12",
+                "text": "あつまって",
+                "isKeyGrammar": false,
+                "kanji": "集まって",
+                "furigana": "あつまって"
+              },
+              {
+                "id": "t-l22s4-13",
+                "text": "ください",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Những ai thích âm nhạc xin hãy tập hợp lại."
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n5-22-1",
-        "speaker": "A (Người hỏi)",
-        "speakerRole": "personA",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
         "tokens": [
           {
-            "id": "tok-d22-1",
-            "text": "あそこで 本を 読んでいる 人は ミラーさんです。",
+            "id": "d-l22-1",
+            "text": "あの",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-2",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-3",
+            "text": "ぼうし",
+            "isKeyGrammar": true,
+            "kanji": "帽子",
+            "furigana": "ぼうし"
+          },
+          {
+            "id": "d-l22-4",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-5",
+            "text": "かぶっている",
+            "isKeyGrammar": true,
+            "kanji": "被っている",
+            "furigana": "かぶっている"
+          },
+          {
+            "id": "d-l22-6",
+            "text": "ひと",
+            "isKeyGrammar": false,
+            "kanji": "人",
+            "furigana": "ひと"
+          },
+          {
+            "id": "d-l22-7",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-8",
+            "text": "だれ",
+            "isKeyGrammar": false,
+            "kanji": "誰",
+            "furigana": "だれ"
+          },
+          {
+            "id": "d-l22-9",
+            "text": "ですか",
             "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Người đang đọc sách ở đằng kia là anh Miller."
+        "meaningVi": "Người đang đội mũ kia là ai vậy?"
       },
       {
         "id": "dia-n5-22-2",
-        "speaker": "B (Người đáp)",
-        "speakerRole": "personB",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
         "tokens": [
           {
-            "id": "tok-d22-2",
-            "text": "これは 母が 作った 料理です。",
+            "id": "d-l22-10",
+            "text": "あの",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-11",
+            "text": "ひと",
+            "isKeyGrammar": false,
+            "kanji": "人",
+            "furigana": "ひと"
+          },
+          {
+            "id": "d-l22-12",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-13",
+            "text": "あたらしい",
+            "isKeyGrammar": false,
+            "kanji": "新しい",
+            "furigana": "あたらしい"
+          },
+          {
+            "id": "d-l22-14",
+            "text": "せんせい",
+            "isKeyGrammar": false,
+            "kanji": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "id": "d-l22-15",
+            "text": "です",
             "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Đây là món ăn mà mẹ tôi đã nấu."
+        "meaningVi": "Người đó là thầy giáo mới."
+      },
+      {
+        "id": "dia-n5-22-3",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l22-16",
+            "text": "そうですか",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-17",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-18",
+            "text": "しんせつ",
+            "isKeyGrammar": true,
+            "kanji": "親切",
+            "furigana": "しんせつ"
+          },
+          {
+            "id": "d-l22-19",
+            "text": "な",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l22-20",
+            "text": "せんせい",
+            "isKeyGrammar": false,
+            "kanji": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "id": "d-l22-21",
+            "text": "ですか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vậy à. Có phải là thầy giáo tốt bụng không?"
+      },
+      {
+        "id": "dia-n5-22-4",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l22-22",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-23",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-24",
+            "text": "とても",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-25",
+            "text": "しんせつ",
+            "isKeyGrammar": false,
+            "kanji": "親切",
+            "furigana": "しんせつ"
+          },
+          {
+            "id": "d-l22-26",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-27",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-28",
+            "text": "ところで",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-29",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-30",
+            "text": "きのう",
+            "isKeyGrammar": false,
+            "kanji": "昨日",
+            "furigana": "きのう"
+          },
+          {
+            "id": "d-l22-31",
+            "text": "みた",
+            "isKeyGrammar": true,
+            "kanji": "見た",
+            "furigana": "みた"
+          },
+          {
+            "id": "d-l22-32",
+            "text": "えいが",
+            "isKeyGrammar": true,
+            "kanji": "映画",
+            "furigana": "えいが"
+          },
+          {
+            "id": "d-l22-33",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-34",
+            "text": "どうでしたか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vâng, rất tốt bụng. À mà, bộ phim cậu xem hôm qua thế nào?"
+      },
+      {
+        "id": "dia-n5-22-5",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l22-35",
+            "text": "とても",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-36",
+            "text": "おもしろかった",
+            "isKeyGrammar": false,
+            "kanji": "面白かった",
+            "furigana": "おもしろかった"
+          },
+          {
+            "id": "d-l22-37",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-38",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-39",
+            "text": "サントスさん",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-40",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-41",
+            "text": "すすめた",
+            "isKeyGrammar": true,
+            "kanji": "勧めた",
+            "furigana": "すすめた"
+          },
+          {
+            "id": "d-l22-42",
+            "text": "レストラン",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-43",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-44",
+            "text": "とても",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-45",
+            "text": "よかった",
+            "isKeyGrammar": false,
+            "kanji": "良かった",
+            "furigana": "よかった"
+          }
+        ],
+        "meaningVi": "Rất thú vị. Nhà hàng cậu giới thiệu cũng rất tốt nữa."
+      },
+      {
+        "id": "dia-n5-22-6",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l22-46",
+            "text": "あの",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-47",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-48",
+            "text": "えき",
+            "isKeyGrammar": false,
+            "kanji": "駅",
+            "furigana": "えき"
+          },
+          {
+            "id": "d-l22-49",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-50",
+            "text": "ちかく",
+            "isKeyGrammar": false,
+            "kanji": "近く",
+            "furigana": "ちかく"
+          },
+          {
+            "id": "d-l22-51",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-52",
+            "text": "ある",
+            "isKeyGrammar": true,
+            "kanji": "有る",
+            "furigana": "ある"
+          },
+          {
+            "id": "d-l22-53",
+            "text": "みせ",
+            "isKeyGrammar": true,
+            "kanji": "店",
+            "furigana": "みせ"
+          },
+          {
+            "id": "d-l22-54",
+            "text": "ですか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Cửa hàng gần ga đấy à?"
+      },
+      {
+        "id": "dia-n5-22-7",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l22-55",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-56",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-57",
+            "text": "あの",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-58",
+            "text": "みせ",
+            "isKeyGrammar": false,
+            "kanji": "店",
+            "furigana": "みせ"
+          },
+          {
+            "id": "d-l22-59",
+            "text": "で",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-60",
+            "text": "つくって",
+            "isKeyGrammar": true,
+            "kanji": "作って",
+            "furigana": "つくって"
+          },
+          {
+            "id": "d-l22-61",
+            "text": "いる",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-62",
+            "text": "りょうり",
+            "isKeyGrammar": false,
+            "kanji": "料理",
+            "furigana": "りょうり"
+          },
+          {
+            "id": "d-l22-63",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-64",
+            "text": "ぜんぶ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-65",
+            "text": "おいしい",
+            "isKeyGrammar": false,
+            "kanji": "美味しい",
+            "furigana": "おいしい"
+          },
+          {
+            "id": "d-l22-66",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vâng. Món ăn cửa hàng đó làm đều ngon cả."
+      },
+      {
+        "id": "dia-n5-22-8",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l22-67",
+            "text": "こんど",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-68",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-69",
+            "text": "いっしょに",
+            "isKeyGrammar": false,
+            "kanji": "一緒に",
+            "furigana": "いっしょに"
+          },
+          {
+            "id": "d-l22-70",
+            "text": "いきましょう",
+            "isKeyGrammar": false,
+            "kanji": "行きましょう",
+            "furigana": "いきましょう"
+          }
+        ],
+        "meaningVi": "Lần sau mình cùng đi nhé."
+      },
+      {
+        "id": "dia-n5-22-9",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l22-71",
+            "text": "いいですね",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-72",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-73",
+            "text": "あの",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-74",
+            "text": "たてもの",
+            "isKeyGrammar": true,
+            "kanji": "建物",
+            "furigana": "たてもの"
+          },
+          {
+            "id": "d-l22-75",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-76",
+            "text": "となり",
+            "isKeyGrammar": false,
+            "kanji": "隣",
+            "furigana": "となり"
+          },
+          {
+            "id": "d-l22-77",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-78",
+            "text": "ある",
+            "isKeyGrammar": true,
+            "kanji": "有る",
+            "furigana": "ある"
+          },
+          {
+            "id": "d-l22-79",
+            "text": "みせ",
+            "isKeyGrammar": false,
+            "kanji": "店",
+            "furigana": "みせ"
+          },
+          {
+            "id": "d-l22-80",
+            "text": "ですね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Hay đó. Là cửa hàng bên cạnh tòa nhà kia phải không?"
+      },
+      {
+        "id": "dia-n5-22-10",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l22-81",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-82",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l22-83",
+            "text": "そうです",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Ừ, đúng vậy."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n5-22-1",
-        "question": "あそこに ___ 車は 田中さんのです。(Chiếc xe đang đỗ ở đằng kia)",
+        "question": "「眼鏡を かけている 人」 nghĩa là:",
         "options": [
-          "止まっている",
-          "止まります",
-          "止まるです",
-          "止まって"
+          "Người đang đeo kính",
+          "Người đang bán kính",
+          "Kính của người đó",
+          "Người không đeo kính"
         ],
         "correctIndex": 0,
-        "explanation": "Bổ nghĩa cho danh từ '車' bắt buộc dùng mệnh đề ở thể thông thường: 止まっている 車.",
-        "hint": "Gợi ý: Hãy quan sát kỹ trợ từ hoặc thể của động từ đứng trước."
+        "explanation": "Mệnh đề [眼鏡をかけている] bổ nghĩa trực tiếp cho danh từ 人 — 'người [đang đeo kính]'.",
+        "hint": "Đọc toàn bộ cụm từ như một khối bổ nghĩa cho 人."
+      },
+      {
+        "id": "ex-q-n5-22-2",
+        "question": "「昨日 見た 映画」 — 見た ở thì nào và tại sao?",
+        "options": [
+          "Thì quá khứ, vì hành động xem phim đã xảy ra trước đó",
+          "Thì hiện tại, vì câu chính ở hiện tại",
+          "Thì tương lai",
+          "Không có thì cụ thể"
+        ],
+        "correctIndex": 0,
+        "explanation": "Thì trong mệnh đề định ngữ chọn theo THỜI ĐIỂM của hành động được miêu tả, độc lập với thì câu chính.",
+        "hint": "Xem lại nguyên tắc chọn thì ở slide 2."
+      },
+      {
+        "id": "ex-q-n5-22-3",
+        "question": "「山田さんが 作った 料理」 — vì sao dùng が cho 山田さん?",
+        "options": [
+          "Chủ ngữ trong mệnh đề định ngữ dùng が, không dùng は",
+          "は là lỗi chính tả",
+          "が chỉ dùng cho câu hỏi",
+          "Cả は và が đều sai, phải dùng の"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đây là quy tắc riêng: chủ ngữ BÊN TRONG mệnh đề định ngữ hầu như luôn dùng が.",
+        "hint": "Xem ghi chú văn hóa/ngữ pháp ở slide 2."
+      },
+      {
+        "id": "ex-q-n5-22-4",
+        "question": "「音楽が 好きな 人」 — vì sao có な sau 好き?",
+        "options": [
+          "好き là tính từ な, bổ nghĩa danh từ trực tiếp phải giữ な",
+          "な là lỗi thừa, phải bỏ đi",
+          "な chỉ dùng cho câu hỏi",
+          "好き không phải tính từ nên không cần quy tắc gì"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dù 好き dùng が cho đối tượng, khi ĐỨNG TRƯỚC DANH TỪ nó vẫn là tính từ な nên cần thêm な.",
+        "hint": "Áp dụng lại quy tắc tính từ な từ bài 8."
+      },
+      {
+        "id": "ex-q-n5-22-5",
+        "question": "「駅の近くに ある レストラン」 nghĩa là:",
+        "options": [
+          "Nhà hàng nằm ở gần ga",
+          "Ga nằm gần nhà hàng",
+          "Nhà hàng xa ga",
+          "Không có nhà hàng nào gần ga"
+        ],
+        "correctIndex": 0,
+        "explanation": "ある (tồn tại, bài 10) trong mệnh đề định ngữ miêu tả VỊ TRÍ của danh từ chính (nhà hàng).",
+        "hint": "Xem lại cấu trúc あります đã học ở bài 10."
+      },
+      {
+        "id": "ex-q-n5-22-6",
+        "question": "Câu nào ĐÚNG ngữ pháp?",
+        "options": [
+          "机の上に ある 本",
+          "机の上に あります 本",
+          "机の上に あるの 本",
+          "机の上に あって 本"
+        ],
+        "correctIndex": 0,
+        "explanation": "Trong mệnh đề định ngữ, động từ chia ở thể THÔNG THƯỜNG (ある), không chia ます hay thể て đứng riêng trước danh từ.",
+        "hint": "So sánh bốn cách chia được đưa ra."
+      },
+      {
+        "id": "ex-q-n5-22-7",
+        "question": "「あそこで 話している 人」 và 「あそこで 話した 人」 khác nhau ở:",
+        "options": [
+          "Một đang nói (hiện tại), một đã nói xong (quá khứ)",
+          "Hoàn toàn giống nhau",
+          "話している sai ngữ pháp",
+          "話した chỉ dùng cho câu hỏi"
+        ],
+        "correctIndex": 0,
+        "explanation": "ている diễn tả hành động ĐANG diễn ra; た diễn tả hành động ĐÃ hoàn tất — khác biệt về thì như đã học ở bài 14, 19.",
+        "hint": "Áp dụng kiến thức Vています và Vた đã học trước đó."
+      },
+      {
+        "id": "ex-q-n5-22-8",
+        "question": "Trợ từ nào KHÔNG cần thiết khi ghép mệnh đề định ngữ với danh từ chính?",
+        "options": [
+          "の (không cần thêm の giữa mệnh đề và danh từ)",
+          "を (bên trong mệnh đề)",
+          "が (chủ ngữ bên trong mệnh đề)",
+          "に (nếu có trong mệnh đề)"
+        ],
+        "correctIndex": 0,
+        "explanation": "Khác の nối hai danh từ (bài 2), mệnh đề định ngữ ghép TRỰC TIẾP vào danh từ chính, không cần trợ từ nối thêm.",
+        "hint": "Đừng nhầm với cấu trúc N1のN2 đã học ở bài 2."
+      },
+      {
+        "id": "ex-q-n5-22-9",
+        "question": "Trong hội thoại, người đội mũ là ai?",
+        "options": [
+          "Thầy giáo mới",
+          "Bạn học cùng lớp",
+          "Nhân viên nhà hàng",
+          "Không được nhắc tới"
+        ],
+        "correctIndex": 0,
+        "explanation": "サントス trả lời 「あの人は 新しい先生です」.",
+        "hint": "Xem câu thoại thứ 2."
+      },
+      {
+        "id": "ex-q-n5-22-10",
+        "question": "Cửa hàng được nhắc tới nằm ở đâu?",
+        "options": [
+          "Gần ga, bên cạnh một tòa nhà",
+          "Trong công viên",
+          "Xa trung tâm thành phố",
+          "Không được miêu tả vị trí"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cửa hàng được miêu tả là 「駅の近くに ある店」 và sau đó xác nhận là 「あの建物の隣にある店」.",
+        "hint": "Xem các câu thoại về vị trí cửa hàng."
       }
     ]
   },
