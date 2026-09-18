@@ -175,9 +175,14 @@
       person(28, 48, INK, .8) + person(72, 48, ACCENT, .8) +
       `<path d="M40 62 a10 8 0 0 1 20 0" stroke="${SAGE}" stroke-width="3"/>` +
       `<text x="50" y="92" font-size="10" fill="${INK}" font-weight="600" text-anchor="middle" stroke="none">chào lần đầu</text>`),
+
+    'ひと': art(
+      person(50, 46, INK, 1.2) +
+      `<text x="50" y="92" font-size="13" fill="${ACCENT}" font-weight="700" text-anchor="middle" stroke="none">người</text>`),
   };
 
   // Một số từ dùng chung hình
+  ART['人'] = ART['ひと'];
   ART['私'] = ART['わたし'];
   ART['貴方'] = ART['あなた'];
   ART['あの人'] = ART['あのひと'];
