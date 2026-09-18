@@ -19512,77 +19512,207 @@
     "level": "N5",
     "lessonNumber": 14,
     "title": "Bài 14: Nhóm động từ & Thể て (Vてください / Vています / Vましょうか)",
-    "description": "Bài bản lề quan trọng nhất N5: Quy tắc chia 3 nhóm động từ sang thể て, câu yêu cầu lịch sự, hành động đang diễn ra và đề nghị giúp đỡ.",
+    "description": "Nhận diện ba nhóm động từ (I: 5 kiểu biến âm う/つ/る→って, ぬ/ぶ/む→んで, く→いて, ぐ→いで, す→して; II: bỏ ます thêm て; III bất quy tắc), và ba cách dùng thể て: yêu cầu Vてください, hành động/trạng thái đang diễn ra Vています, đề nghị giúp đỡ Vましょうか.",
     "vocabList": [
       {
         "id": "voc-n5-14-1",
-        "word": "つけます",
-        "kanji": "点けます",
-        "furigana": "つけます",
-        "romaji": "tsukemasu",
+        "word": "かいます",
+        "kanji": "買います",
+        "furigana": "かいます",
+        "romaji": "kaimasu",
         "wordType": "verb",
-        "meaningVi": "Bật (đèn, điện)",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "meaningVi": "Mua",
+        "accentNote": "Đuôi う → って. Nhóm I. Đã gặp bài 6."
       },
       {
         "id": "voc-n5-14-2",
-        "word": "けします",
-        "kanji": "消します",
-        "furigana": "けします",
-        "romaji": "keshimasu",
-        "wordType": "verb",
-        "meaningVi": "Tắt (điện)",
-        "accentNote": "Phát âm chuẩn Tokyo."
-      },
-      {
-        "id": "voc-n5-14-3",
-        "word": "あけます",
-        "kanji": "開けます",
-        "furigana": "あけます",
-        "romaji": "akemasu",
-        "wordType": "verb",
-        "meaningVi": "Mở (cửa)",
-        "accentNote": "Phát âm chuẩn Tokyo."
-      },
-      {
-        "id": "voc-n5-14-4",
-        "word": "しめます",
-        "kanji": "閉めます",
-        "furigana": "しめます",
-        "romaji": "shimemasu",
-        "wordType": "verb",
-        "meaningVi": "Đóng (cửa)",
-        "accentNote": "Phát âm chuẩn Tokyo."
-      },
-      {
-        "id": "voc-n5-14-5",
-        "word": "いそぎます",
-        "kanji": "急ぎます",
-        "furigana": "いそぎます",
-        "romaji": "isogimasu",
-        "wordType": "verb",
-        "meaningVi": "Vội vã, gấp",
-        "accentNote": "Phát âm chuẩn Tokyo."
-      },
-      {
-        "id": "voc-n5-14-6",
         "word": "まちます",
         "kanji": "待ちます",
         "furigana": "まちます",
         "romaji": "machimasu",
         "wordType": "verb",
         "meaningVi": "Chờ, đợi",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "accentNote": "Đuôi つ → って. Nhóm I."
+      },
+      {
+        "id": "voc-n5-14-3",
+        "word": "しにます",
+        "kanji": "死にます",
+        "furigana": "しにます",
+        "romaji": "shinimasu",
+        "wordType": "verb",
+        "meaningVi": "Chết, mất",
+        "accentNote": "Đuôi ぬ → んで. Nhóm I. Động từ DUY NHẤT có đuôi ぬ trong tiếng Nhật hiện đại."
+      },
+      {
+        "id": "voc-n5-14-4",
+        "word": "あそびます",
+        "kanji": "遊びます",
+        "furigana": "あそびます",
+        "romaji": "asobimasu",
+        "wordType": "verb",
+        "meaningVi": "Chơi, đi chơi",
+        "accentNote": "Đuôi ぶ → んで. Nhóm I. Đã gặp bài 13."
+      },
+      {
+        "id": "voc-n5-14-5",
+        "word": "すみます",
+        "kanji": "住みます",
+        "furigana": "すみます",
+        "romaji": "sumimasu",
+        "wordType": "verb",
+        "meaningVi": "Sống, cư trú",
+        "accentNote": "Đuôi む → んで. Nhóm I."
+      },
+      {
+        "id": "voc-n5-14-6",
+        "word": "はなします",
+        "kanji": "話します",
+        "furigana": "はなします",
+        "romaji": "hanashimasu",
+        "wordType": "verb",
+        "meaningVi": "Nói, trò chuyện",
+        "accentNote": "Đuôi す → して (KHÔNG âm tiện, ngoại lệ trong nhóm I). Đã gặp bài 7."
       },
       {
         "id": "voc-n5-14-7",
+        "word": "いそぎます",
+        "kanji": "急ぎます",
+        "furigana": "いそぎます",
+        "romaji": "isogimasu",
+        "wordType": "verb",
+        "meaningVi": "Vội, gấp",
+        "accentNote": "Đuôi ぐ → いで. Nhóm I."
+      },
+      {
+        "id": "voc-n5-14-8",
+        "word": "つくります",
+        "kanji": "作ります",
+        "furigana": "つくります",
+        "romaji": "tsukurimasu",
+        "wordType": "verb",
+        "meaningVi": "Làm, chế tạo, nấu",
+        "accentNote": "Đuôi る (nhóm I) → って. Đã gặp bài 6."
+      },
+      {
+        "id": "voc-n5-14-9",
+        "word": "たちます",
+        "kanji": "立ちます",
+        "furigana": "たちます",
+        "romaji": "tachimasu",
+        "wordType": "verb",
+        "meaningVi": "Đứng dậy",
+        "accentNote": "Đuôi つ → って. Nhóm I."
+      },
+      {
+        "id": "voc-n5-14-10",
+        "word": "すわります",
+        "kanji": "座ります",
+        "furigana": "すわります",
+        "romaji": "suwarimasu",
+        "wordType": "verb",
+        "meaningVi": "Ngồi xuống",
+        "accentNote": "Đuôi る (nhóm I) → って."
+      },
+      {
+        "id": "voc-n5-14-11",
+        "word": "もちます",
+        "kanji": "持ちます",
+        "furigana": "もちます",
+        "romaji": "mochimasu",
+        "wordType": "verb",
+        "meaningVi": "Cầm, mang, sở hữu",
+        "accentNote": "Đuôi つ → って."
+      },
+      {
+        "id": "voc-n5-14-12",
+        "word": "しります",
+        "kanji": "知ります",
+        "furigana": "しります",
+        "romaji": "shirimasu",
+        "wordType": "verb",
+        "meaningVi": "Biết (bắt đầu biết)",
+        "accentNote": "Đuôi る (nhóm I) → って. 知っています = đã biết (trạng thái)."
+      },
+      {
+        "id": "voc-n5-14-13",
+        "word": "あけます",
+        "kanji": "開けます",
+        "furigana": "あけます",
+        "romaji": "akemasu",
+        "wordType": "verb",
+        "meaningVi": "Mở (tha động từ)",
+        "accentNote": "Nhóm II: bỏ ます thêm て → 開けて."
+      },
+      {
+        "id": "voc-n5-14-14",
+        "word": "しめます",
+        "kanji": "閉めます",
+        "furigana": "しめます",
+        "romaji": "shimemasu",
+        "wordType": "verb",
+        "meaningVi": "Đóng (tha động từ)",
+        "accentNote": "Nhóm II."
+      },
+      {
+        "id": "voc-n5-14-15",
+        "word": "けします",
+        "kanji": "消します",
+        "furigana": "けします",
+        "romaji": "keshimasu",
+        "wordType": "verb",
+        "meaningVi": "Tắt, xóa",
+        "accentNote": "Đuôi す → して. Nhóm I."
+      },
+      {
+        "id": "voc-n5-14-16",
         "word": "てつだいます",
         "kanji": "手伝います",
         "furigana": "てつだいます",
         "romaji": "tetsudaimasu",
         "wordType": "verb",
-        "meaningVi": "Giúp đỡ",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "meaningVi": "Giúp đỡ, phụ giúp",
+        "accentNote": "Đuôi う → って. Nhóm I."
+      },
+      {
+        "id": "voc-n5-14-17",
+        "word": "けっこんします",
+        "kanji": "結婚します",
+        "furigana": "けっこんします",
+        "romaji": "kekkonshimasu",
+        "wordType": "verb",
+        "meaningVi": "Kết hôn",
+        "accentNote": "Nhóm III (します). 結婚しています = đã kết hôn (trạng thái, không phải đang cưới)."
+      },
+      {
+        "id": "voc-n5-14-18",
+        "word": "きます",
+        "kanji": "来ます",
+        "furigana": "きます",
+        "romaji": "kimasu",
+        "wordType": "verb",
+        "meaningVi": "Đến",
+        "accentNote": "Nhóm II bất quy tắc: 来て. Đã gặp bài 5."
+      },
+      {
+        "id": "voc-n5-14-19",
+        "word": "します",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "shimasu",
+        "wordType": "verb",
+        "meaningVi": "Làm",
+        "accentNote": "Nhóm III bất quy tắc: して. Đã gặp bài 6."
+      },
+      {
+        "id": "voc-n5-14-20",
+        "word": "しごと",
+        "kanji": "仕事",
+        "furigana": "しごと",
+        "romaji": "shigoto",
+        "wordType": "noun",
+        "meaningVi": "Công việc",
+        "accentNote": "Đã gặp bài 9 — nay dùng làm chủ đề của Vています (đang làm việc)."
       }
     ],
     "kanjiList": [
@@ -19592,126 +19722,1015 @@
         "hanViet": "ĐÃI",
         "strokeCount": 9,
         "onyomi": [
-          "タイ"
+          "タイ (tai)"
         ],
         "kunyomi": [
-          "ま・つ"
+          "ま(つ)"
         ],
-        "meaningVi": "Chờ đợi",
+        "meaningVi": "Chờ đợi.",
         "commonWords": [
           {
-            "word": "待",
-            "furigana": "ま・つ",
-            "meaningVi": "Chờ đợi"
+            "word": "待ちます",
+            "furigana": "まちます",
+            "meaningVi": "Chờ"
+          },
+          {
+            "word": "待合室",
+            "furigana": "まちあいしつ",
+            "meaningVi": "Phòng chờ"
+          },
+          {
+            "word": "期待",
+            "furigana": "きたい",
+            "meaningVi": "Kỳ vọng"
           }
         ]
       },
       {
         "id": "kan-n5-14-2",
-        "character": "話",
-        "hanViet": "THOẠI",
-        "strokeCount": 13,
+        "character": "住",
+        "hanViet": "TRÚ",
+        "strokeCount": 7,
         "onyomi": [
-          "ワ"
+          "ジュウ (juu)"
         ],
         "kunyomi": [
-          "はな・す"
+          "す(む)"
         ],
-        "meaningVi": "Nói chuyện",
+        "meaningVi": "Ở, cư trú.",
         "commonWords": [
           {
-            "word": "話",
-            "furigana": "はな・す",
-            "meaningVi": "Nói chuyện"
+            "word": "住みます",
+            "furigana": "すみます",
+            "meaningVi": "Sống"
+          },
+          {
+            "word": "住所",
+            "furigana": "じゅうしょ",
+            "meaningVi": "Địa chỉ"
+          },
+          {
+            "word": "住民",
+            "furigana": "じゅうみん",
+            "meaningVi": "Cư dân"
           }
         ]
       },
       {
         "id": "kan-n5-14-3",
+        "character": "知",
+        "hanViet": "TRI",
+        "strokeCount": 8,
+        "onyomi": [
+          "チ (chi)"
+        ],
+        "kunyomi": [
+          "し(る)"
+        ],
+        "meaningVi": "Biết.",
+        "commonWords": [
+          {
+            "word": "知ります",
+            "furigana": "しります",
+            "meaningVi": "Biết"
+          },
+          {
+            "word": "知らせます",
+            "furigana": "しらせます",
+            "meaningVi": "Thông báo"
+          },
+          {
+            "word": "案内",
+            "furigana": "あんない",
+            "meaningVi": "Hướng dẫn (từ ghép khác)"
+          }
+        ]
+      },
+      {
+        "id": "kan-n5-14-4",
         "character": "開",
         "hanViet": "KHAI",
         "strokeCount": 12,
         "onyomi": [
-          "カイ"
+          "カイ (kai)"
         ],
         "kunyomi": [
-          "あ・ける"
+          "あ(ける)",
+          "ひら(く)"
         ],
-        "meaningVi": "Mở ra",
+        "meaningVi": "Mở.",
         "commonWords": [
           {
-            "word": "開",
-            "furigana": "あ・ける",
-            "meaningVi": "Mở ra"
+            "word": "開けます",
+            "furigana": "あけます",
+            "meaningVi": "Mở"
+          },
+          {
+            "word": "開きます",
+            "furigana": "ひらきます",
+            "meaningVi": "Mở (tự động)"
+          },
+          {
+            "word": "公開",
+            "furigana": "こうかい",
+            "meaningVi": "Công khai"
+          }
+        ]
+      },
+      {
+        "id": "kan-n5-14-5",
+        "character": "閉",
+        "hanViet": "BẾ",
+        "strokeCount": 11,
+        "onyomi": [
+          "ヘイ (hei)"
+        ],
+        "kunyomi": [
+          "し(める)"
+        ],
+        "meaningVi": "Đóng.",
+        "commonWords": [
+          {
+            "word": "閉めます",
+            "furigana": "しめます",
+            "meaningVi": "Đóng"
+          },
+          {
+            "word": "閉店",
+            "furigana": "へいてん",
+            "meaningVi": "Đóng cửa hàng"
+          },
+          {
+            "word": "閉じます",
+            "furigana": "とじます",
+            "meaningVi": "Khép lại"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n5-l14-s0",
+        "slideId": "n5-l14-s1",
         "slideType": "grammar",
-        "title": "Mẫu câu trọng tâm: Nhóm động từ & Thể て",
-        "grammarFormula": "Quy tắc chia thể て: Nhóm 1 (い・ち・り -> って, み・び・に -> んで, き -> いて, ぎ -> いで, し -> して) / Nhóm 2 (+て) / Nhóm 3 (して, きて)",
-        "explanation": "Vてください (Xin hãy làm V). Vています (Đang diễn ra). Vましょうか (Tôi giúp bạn nhé?).",
-        "teacherTips": "Hãy chú ý cách chia trợ từ và thể của động từ trong mẫu câu này nhé.",
+        "title": "1. Ba nhóm động từ tiếng Nhật",
+        "grammarFormula": "Nhóm I (五段) / Nhóm II (一段) / Nhóm III (bất quy tắc: する, 来る)",
+        "explanation": "Nhóm I: gốc kết thúc bằng âm う (う/つ/る/む/ぶ/ぬ/ぐ/す). Nhóm II: gốc kết thúc bằng え/い + る (ăn, xem…). Nhóm III: chỉ có đúng 2 từ しますvà来ます, chia hoàn toàn riêng.",
+        "teacherTips": "Nhận nhóm SAI sẽ chia thể て SAI hoàn toàn — đây là kỹ năng nền tảng của mọi ngữ pháp N5 còn lại.",
+        "culturalNotes": "帰ります trông giống nhóm II (kết thúc ります) nhưng THỰC RA là nhóm I — một trong vài ngoại lệ hình thức cần nhớ riêng.",
         "examples": [
           {
-            "id": "ex-n5-l14-1",
+            "id": "ex-n5-l14-s1-1",
             "tokens": [
               {
-                "id": "tok-n5-14-1",
-                "text": "ちょっと 待って ください。",
+                "id": "t-l14s1-1",
+                "text": "かいます",
+                "isKeyGrammar": true,
+                "kanji": "買います",
+                "furigana": "かいます"
+              },
+              {
+                "id": "t-l14s1-2",
+                "text": "→",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s1-3",
+                "text": "かう",
+                "isKeyGrammar": false,
+                "kanji": "買う",
+                "furigana": "かう"
+              }
+            ],
+            "meaningVi": "買います (nhóm I) — gốc từ điển 買う kết thúc bằng う."
+          },
+          {
+            "id": "ex-n5-l14-s1-2",
+            "tokens": [
+              {
+                "id": "t-l14s1-4",
+                "text": "あけます",
+                "isKeyGrammar": true,
+                "kanji": "開けます",
+                "furigana": "あけます"
+              },
+              {
+                "id": "t-l14s1-5",
+                "text": "→",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s1-6",
+                "text": "あける",
+                "isKeyGrammar": false,
+                "kanji": "開ける",
+                "furigana": "あける"
+              }
+            ],
+            "meaningVi": "開けます (nhóm II) — gốc từ điển 開ける kết thúc bằng ける."
+          },
+          {
+            "id": "ex-n5-l14-s1-3",
+            "tokens": [
+              {
+                "id": "t-l14s1-7",
+                "text": "きます",
+                "isKeyGrammar": true,
+                "kanji": "来ます",
+                "furigana": "きます"
+              },
+              {
+                "id": "t-l14s1-8",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s1-9",
+                "text": "します",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "来ます, します — hai động từ nhóm III, chia hoàn toàn riêng, phải học thuộc."
+          }
+        ]
+      },
+      {
+        "slideId": "n5-l14-s2",
+        "slideType": "grammar",
+        "title": "2. Chia thể て — Nhóm I (5 kiểu biến âm)",
+        "grammarFormula": "う/つ/る→って　　ぬ/ぶ/む→んで　　く→いて　　ぐ→いで　　す→して",
+        "explanation": "Nhóm I có NĂM kiểu biến âm theo âm cuối của gốc từ điển. Đây là phần khó nhớ nhất — phải luyện qua nhiều động từ mẫu để phản xạ tự nhiên, không suy nghĩ từng bước.",
+        "teacherTips": "死にます (chết) là động từ DUY NHẤT có đuôi ぬ trong tiếng Nhật — học nó cũng là học luôn quy tắc ぬ→んで.",
+        "culturalNotes": "Nhóm す không bao giờ biến âm thành っ hay ん — đây là 'lối thoát' dễ nhớ nhất trong 5 kiểu biến âm.",
+        "examples": [
+          {
+            "id": "ex-n5-l14-s2-1",
+            "tokens": [
+              {
+                "id": "t-l14s2-1",
+                "text": "まって",
+                "isKeyGrammar": true,
+                "kanji": "待って",
+                "furigana": "まって"
+              },
+              {
+                "id": "t-l14s2-2",
+                "text": "ください",
                 "isKeyGrammar": false
               }
             ],
-            "meaningVi": "Xin hãy đợi một chút."
+            "meaningVi": "Xin hãy chờ. (待つ: つ → って)"
+          },
+          {
+            "id": "ex-n5-l14-s2-2",
+            "tokens": [
+              {
+                "id": "t-l14s2-3",
+                "text": "あそんで",
+                "isKeyGrammar": true,
+                "kanji": "遊んで",
+                "furigana": "あそんで"
+              },
+              {
+                "id": "t-l14s2-4",
+                "text": "ください",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Xin hãy chơi thoải mái. (遊ぶ: ぶ → んで)"
+          },
+          {
+            "id": "ex-n5-l14-s2-3",
+            "tokens": [
+              {
+                "id": "t-l14s2-5",
+                "text": "はなして",
+                "isKeyGrammar": true,
+                "kanji": "話して",
+                "furigana": "はなして"
+              },
+              {
+                "id": "t-l14s2-6",
+                "text": "ください",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Xin hãy nói. (話す: す → して, KHÔNG biến âm như nhóm ぬぶむ)"
           }
-        ],
-        "culturalNotes": "Trong tiếng Nhật giao tiếp, ngữ điệu và sắc thái kính ngữ là yếu tố thể hiện sự tôn trọng đối phương."
+        ]
+      },
+      {
+        "slideId": "n5-l14-s3",
+        "slideType": "grammar",
+        "title": "3. Chia thể て — Nhóm II và Nhóm III",
+        "grammarFormula": "Nhóm II: bỏ ます, thêm て   /   します→して   /   来ます→来て",
+        "explanation": "Nhóm II ĐƠN GIẢN NHẤT: chỉ cần bỏ ます, thêm て — không có biến âm nào cả. Nhóm III chỉ có hai từ, chia riêng và phải học thuộc lòng.",
+        "teacherTips": "Nhóm II dễ chia nhất — nếu nhận diện SAI một động từ nhóm I thành nhóm II, cả câu sẽ sai theo.",
+        "culturalNotes": "Ghi nhớ ba từ nhóm I dễ nhầm với nhóm II vì đều kết thúc bằng ります: 帰ります、要ります、走ります.",
+        "examples": [
+          {
+            "id": "ex-n5-l14-s3-1",
+            "tokens": [
+              {
+                "id": "t-l14s3-1",
+                "text": "しめて",
+                "isKeyGrammar": true,
+                "kanji": "閉めて",
+                "furigana": "しめて"
+              },
+              {
+                "id": "t-l14s3-2",
+                "text": "ください",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Xin hãy đóng lại. (閉めます nhóm II: bỏ ます, thêm て)"
+          },
+          {
+            "id": "ex-n5-l14-s3-2",
+            "tokens": [
+              {
+                "id": "t-l14s3-3",
+                "text": "けっこん",
+                "isKeyGrammar": false,
+                "kanji": "結婚",
+                "furigana": "けっこん"
+              },
+              {
+                "id": "t-l14s3-4",
+                "text": "して",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l14s3-5",
+                "text": "います",
+                "isKeyGrammar": false,
+                "kanji": "居ます",
+                "furigana": "います"
+              }
+            ],
+            "meaningVi": "Anh ấy đã kết hôn. (結婚します nhóm III: します → して)"
+          }
+        ]
+      },
+      {
+        "slideId": "n5-l14-s4",
+        "slideType": "grammar",
+        "title": "4. Ba cách dùng thể て đã học được",
+        "grammarFormula": "Vて ください (yêu cầu) / Vて います (đang…) / Vましょうか (đề nghị giúp)",
+        "explanation": "Vて ください: yêu cầu lịch sự. Vて います: hành động ĐANG DIỄN RA, hoặc TRẠNG THÁI đã xác lập (結婚しています, 住んでいます — không dịch là 'đang', mà là 'đã'/'hiện đang là').",
+        "teacherTips": "Vています với động từ TRẠNG THÁI (住む, 結婚する, 知る) luôn dịch là 'đã/hiện' — KHÔNG dịch 'đang' như hành động thường.",
+        "culturalNotes": "手伝いましょうか là câu đề nghị giúp đỡ xã giao rất thường gặp — từ chối lịch sự bằng いいえ、大丈夫です。",
+        "examples": [
+          {
+            "id": "ex-n5-l14-s4-1",
+            "tokens": [
+              {
+                "id": "t-l14s4-1",
+                "text": "ここ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s4-2",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s4-3",
+                "text": "すわって",
+                "isKeyGrammar": true,
+                "kanji": "座って",
+                "furigana": "すわって"
+              },
+              {
+                "id": "t-l14s4-4",
+                "text": "ください",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Xin mời ngồi ở đây."
+          },
+          {
+            "id": "ex-n5-l14-s4-2",
+            "tokens": [
+              {
+                "id": "t-l14s4-5",
+                "text": "いま",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s4-6",
+                "text": "しごと",
+                "isKeyGrammar": false,
+                "kanji": "仕事",
+                "furigana": "しごと"
+              },
+              {
+                "id": "t-l14s4-7",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s4-8",
+                "text": "して",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l14s4-9",
+                "text": "います",
+                "isKeyGrammar": false,
+                "kanji": "居ます",
+                "furigana": "います"
+              }
+            ],
+            "meaningVi": "Bây giờ tôi đang làm việc."
+          },
+          {
+            "id": "ex-n5-l14-s4-3",
+            "tokens": [
+              {
+                "id": "t-l14s4-10",
+                "text": "にもつ",
+                "isKeyGrammar": false,
+                "kanji": "荷物",
+                "furigana": "にもつ"
+              },
+              {
+                "id": "t-l14s4-11",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s4-12",
+                "text": "もちましょうか",
+                "isKeyGrammar": true,
+                "kanji": "持ちましょうか",
+                "furigana": "もちましょうか"
+              }
+            ],
+            "meaningVi": "Để tôi cầm đồ giúp anh nhé?"
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n5-14-1",
-        "speaker": "A (Người hỏi)",
-        "speakerRole": "personA",
+        "speaker": "ミラー",
+        "speakerRole": "Nhân viên công ty",
         "tokens": [
           {
-            "id": "tok-d14-1",
-            "text": "ちょっと 待って ください。",
+            "id": "d-l14-1",
+            "text": "すみません",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-2",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-3",
+            "text": "まど",
+            "isKeyGrammar": false,
+            "kanji": "窓",
+            "furigana": "まど"
+          },
+          {
+            "id": "d-l14-4",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-5",
+            "text": "あけて",
+            "isKeyGrammar": true,
+            "kanji": "開けて",
+            "furigana": "あけて"
+          },
+          {
+            "id": "d-l14-6",
+            "text": "ください",
             "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Xin hãy đợi một chút."
+        "meaningVi": "Xin lỗi, làm ơn mở cửa sổ giúp tôi."
       },
       {
         "id": "dia-n5-14-2",
-        "speaker": "B (Người đáp)",
-        "speakerRole": "personB",
+        "speaker": "グプタ",
+        "speakerRole": "Đồng nghiệp",
         "tokens": [
           {
-            "id": "tok-d14-2",
-            "text": "今 雨が 降っています。",
+            "id": "d-l14-7",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-8",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-9",
+            "text": "わかりました",
+            "isKeyGrammar": false,
+            "kanji": "分かりました",
+            "furigana": "わかりました"
+          }
+        ],
+        "meaningVi": "Vâng, tôi hiểu rồi."
+      },
+      {
+        "id": "dia-n5-14-3",
+        "speaker": "ミラー",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d-l14-10",
+            "text": "グプタさん",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-11",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-12",
+            "text": "どこ",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l14-13",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-14",
+            "text": "すんで",
+            "isKeyGrammar": true,
+            "kanji": "住んで",
+            "furigana": "すんで"
+          },
+          {
+            "id": "d-l14-15",
+            "text": "いますか",
+            "isKeyGrammar": false,
+            "kanji": "居ますか",
+            "furigana": "いますか"
+          }
+        ],
+        "meaningVi": "Anh Gupta hiện sống ở đâu vậy?"
+      },
+      {
+        "id": "dia-n5-14-4",
+        "speaker": "グプタ",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d-l14-16",
+            "text": "とうきょう",
+            "isKeyGrammar": false,
+            "kanji": "東京",
+            "furigana": "とうきょう"
+          },
+          {
+            "id": "d-l14-17",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-18",
+            "text": "すんで",
+            "isKeyGrammar": true,
+            "kanji": "住んで",
+            "furigana": "すんで"
+          },
+          {
+            "id": "d-l14-19",
+            "text": "います",
+            "isKeyGrammar": false,
+            "kanji": "居ます",
+            "furigana": "います"
+          }
+        ],
+        "meaningVi": "Tôi đang sống ở Tokyo."
+      },
+      {
+        "id": "dia-n5-14-5",
+        "speaker": "ミラー",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d-l14-20",
+            "text": "けっこん",
+            "isKeyGrammar": true,
+            "kanji": "結婚",
+            "furigana": "けっこん"
+          },
+          {
+            "id": "d-l14-21",
+            "text": "して",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l14-22",
+            "text": "いますか",
+            "isKeyGrammar": false,
+            "kanji": "居ますか",
+            "furigana": "いますか"
+          }
+        ],
+        "meaningVi": "Anh đã kết hôn chưa?"
+      },
+      {
+        "id": "dia-n5-14-6",
+        "speaker": "グプタ",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d-l14-23",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-24",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-25",
+            "text": "けっこん",
+            "isKeyGrammar": false,
+            "kanji": "結婚",
+            "furigana": "けっこん"
+          },
+          {
+            "id": "d-l14-26",
+            "text": "して",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l14-27",
+            "text": "います",
+            "isKeyGrammar": false,
+            "kanji": "居ます",
+            "furigana": "います"
+          }
+        ],
+        "meaningVi": "Vâng, tôi đã kết hôn."
+      },
+      {
+        "id": "dia-n5-14-7",
+        "speaker": "ミラー",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d-l14-28",
+            "text": "そうですか",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-29",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-30",
+            "text": "あ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-31",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-32",
+            "text": "にもつ",
+            "isKeyGrammar": false,
+            "kanji": "荷物",
+            "furigana": "にもつ"
+          },
+          {
+            "id": "d-l14-33",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-34",
+            "text": "おおい",
+            "isKeyGrammar": false,
+            "kanji": "多い",
+            "furigana": "おおい"
+          },
+          {
+            "id": "d-l14-35",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-36",
+            "text": "ね",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-37",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-38",
+            "text": "てつだいましょうか",
+            "isKeyGrammar": true,
+            "kanji": "手伝いましょうか",
+            "furigana": "てつだいましょうか"
+          }
+        ],
+        "meaningVi": "Vậy à. À, đồ đạc nhiều quá nhỉ. Để tôi giúp anh nhé?"
+      },
+      {
+        "id": "dia-n5-14-8",
+        "speaker": "グプタ",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d-l14-39",
+            "text": "ありがとう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-40",
+            "text": "ございます",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-41",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-42",
+            "text": "じゃ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-43",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-44",
+            "text": "この",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-45",
+            "text": "はこ",
+            "isKeyGrammar": false,
+            "kanji": "箱",
+            "furigana": "はこ"
+          },
+          {
+            "id": "d-l14-46",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-47",
+            "text": "もって",
+            "isKeyGrammar": true,
+            "kanji": "持って",
+            "furigana": "もって"
+          },
+          {
+            "id": "d-l14-48",
+            "text": "ください",
             "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Bây giờ trời đang mưa."
+        "meaningVi": "Cảm ơn anh nhiều. Vậy thì, làm ơn cầm giúp cái hộp này."
+      },
+      {
+        "id": "dia-n5-14-9",
+        "speaker": "ミラー",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d-l14-49",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-50",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-51",
+            "text": "わかりました",
+            "isKeyGrammar": false,
+            "kanji": "分かりました",
+            "furigana": "わかりました"
+          },
+          {
+            "id": "d-l14-52",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-53",
+            "text": "ここ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-54",
+            "text": "で",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-55",
+            "text": "まって",
+            "isKeyGrammar": true,
+            "kanji": "待って",
+            "furigana": "まって"
+          },
+          {
+            "id": "d-l14-56",
+            "text": "いて",
+            "isKeyGrammar": false,
+            "kanji": "いて",
+            "furigana": "いて"
+          },
+          {
+            "id": "d-l14-57",
+            "text": "ください",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vâng, tôi hiểu rồi. Anh đợi ở đây nhé."
+      },
+      {
+        "id": "dia-n5-14-10",
+        "speaker": "グプタ",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d-l14-58",
+            "text": "ありがとう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-59",
+            "text": "ございます",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-60",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l14-61",
+            "text": "たすかりました",
+            "isKeyGrammar": false,
+            "kanji": "助かりました",
+            "furigana": "たすかりました"
+          }
+        ],
+        "meaningVi": "Cảm ơn anh nhiều. Anh giúp tôi nhiều quá."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n5-14-1",
-        "question": "ここに 名前を 書___ ください。(Chia động từ 書きます sang thể て)",
+        "question": "買います thuộc nhóm động từ nào?",
         "options": [
-          "いて",
-          "って",
-          "んで",
-          "して"
+          "Nhóm I (gốc 買う kết thúc bằng う)",
+          "Nhóm II",
+          "Nhóm III",
+          "Không thuộc nhóm nào"
         ],
         "correctIndex": 0,
-        "explanation": "Động từ nhóm 1 tận cùng là き chuyển sang thể て thành いて: 書きます -> 書いて.",
-        "hint": "Gợi ý: Hãy quan sát kỹ trợ từ hoặc thể của động từ đứng trước."
+        "explanation": "買う kết thúc bằng âm う, thuộc nhóm I (五段動詞).",
+        "hint": "Xem đuôi của thể từ điển."
+      },
+      {
+        "id": "ex-q-n5-14-2",
+        "question": "帰ります trông giống nhóm II nhưng thực ra là:",
+        "options": [
+          "Nhóm I (ngoại lệ hình thức)",
+          "Nhóm II thật sự",
+          "Nhóm III",
+          "Không phải động từ"
+        ],
+        "correctIndex": 0,
+        "explanation": "帰る là một trong vài động từ đặc biệt: hình thức giống nhóm II (kết thúc ります) nhưng chia theo quy tắc nhóm I.",
+        "hint": "Đây là ngoại lệ cần nhớ riêng, đã nhắc ở slide 3."
+      },
+      {
+        "id": "ex-q-n5-14-3",
+        "question": "Thể て của 待ちます (nhóm I, đuôi つ) là:",
+        "options": [
+          "待って",
+          "待んで",
+          "待いて",
+          "待して"
+        ],
+        "correctIndex": 0,
+        "explanation": "Nhóm I có đuôi う/つ/る đều biến thành って khi chia thể て.",
+        "hint": "つ nằm trong nhóm biến âm って."
+      },
+      {
+        "id": "ex-q-n5-14-4",
+        "question": "Thể て của 遊びます (nhóm I, đuôi ぶ) là:",
+        "options": [
+          "遊んで",
+          "遊って",
+          "遊いて",
+          "遊して"
+        ],
+        "correctIndex": 0,
+        "explanation": "Nhóm I có đuôi ぬ/ぶ/む đều biến thành んで.",
+        "hint": "ぶ nằm trong nhóm biến âm んで."
+      },
+      {
+        "id": "ex-q-n5-14-5",
+        "question": "Thể て của 話します (nhóm I, đuôi す) là:",
+        "options": [
+          "話して",
+          "話んで",
+          "話って",
+          "話いて"
+        ],
+        "correctIndex": 0,
+        "explanation": "Nhóm I có đuôi す biến thành して — KHÔNG biến âm っ hay ん như các đuôi khác.",
+        "hint": "す là 'lối thoát' dễ nhớ nhất trong 5 kiểu biến âm."
+      },
+      {
+        "id": "ex-q-n5-14-6",
+        "question": "Thể て của 閉めます (nhóm II) là:",
+        "options": [
+          "閉めて",
+          "閉めって",
+          "閉めんで",
+          "閉まって"
+        ],
+        "correctIndex": 0,
+        "explanation": "Nhóm II chỉ cần bỏ ます, thêm て — không có biến âm nào.",
+        "hint": "Đây là nhóm dễ chia nhất."
+      },
+      {
+        "id": "ex-q-n5-14-7",
+        "question": "「東京に 住んでいます」 dịch đúng là:",
+        "options": [
+          "Tôi hiện đang sống ở Tokyo (trạng thái)",
+          "Tôi đang đi đến Tokyo",
+          "Tôi đã từng sống ở Tokyo nhưng giờ không còn",
+          "Tôi sẽ sống ở Tokyo"
+        ],
+        "correctIndex": 0,
+        "explanation": "住んでいます với động từ TRẠNG THÁI (住む) diễn tả tình trạng HIỆN TẠI, không phải hành động đang xảy ra từng khoảnh khắc.",
+        "hint": "So sánh với 食べています (đang ăn, hành động tức thời)."
+      },
+      {
+        "id": "ex-q-n5-14-8",
+        "question": "「結婚しています」 khác 「結婚します」 ở chỗ:",
+        "options": [
+          "結婚しています = đã kết hôn (trạng thái); 結婚します = sẽ kết hôn (hành động tương lai)",
+          "Hoàn toàn giống nhau",
+          "結婚しています sai ngữ pháp",
+          "結婚します là quá khứ"
+        ],
+        "correctIndex": 0,
+        "explanation": "結婚する là động từ TỨC THỜI — làm xong là chuyển trạng thái ngay, nên ています diễn tả trạng thái ĐÃ kết hôn.",
+        "hint": "Đây là điểm ngữ pháp tinh tế của nhóm động từ tức thời."
+      },
+      {
+        "id": "ex-q-n5-14-9",
+        "question": "「手伝いましょうか」 dùng để làm gì?",
+        "options": [
+          "Đề nghị giúp đỡ ai đó",
+          "Ra lệnh ai đó giúp mình",
+          "Hỏi ai đã giúp chưa",
+          "Từ chối giúp đỡ"
+        ],
+        "correctIndex": 0,
+        "explanation": "Vましょうか là cấu trúc đề nghị chủ động giúp đỡ, khác Vませんか (mời làm cùng, bài 6).",
+        "hint": "So sánh với Vませんか đã học ở bài 6."
+      },
+      {
+        "id": "ex-q-n5-14-10",
+        "question": "死にます là động từ đặc biệt vì:",
+        "options": [
+          "Là động từ DUY NHẤT có đuôi ぬ trong thể từ điển",
+          "Không chia được thể て",
+          "Thuộc nhóm II",
+          "Không có nghĩa"
+        ],
+        "correctIndex": 0,
+        "explanation": "死ぬ là động từ duy nhất còn lại có đuôi ぬ trong tiếng Nhật hiện đại — học nó gắn liền với quy tắc ぬ→んで.",
+        "hint": "Xem lại ghi chú từ vựng của từ này."
       }
     ]
   },
