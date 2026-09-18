@@ -16977,99 +16977,1748 @@
     "level": "N1",
     "lessonNumber": 13,
     "title": "Bài 13: Cương vị đáng kính (ともあろう者が & ならいざ知らず)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "description": "ともあろう者が chỉ trích MẠNH một người/tổ chức ở ĐỊA VỊ/TƯ CÁCH CAO QUÝ, ĐÁNG KÍNH mà lại có hành vi KHÔNG XỨNG ĐÁNG — thể hiện sự NGẠC NHIÊN kết hợp THẤT VỌNG sâu sắc. ならいざ知らず dùng để SO SÁNH hai trường hợp: nếu là A thì còn chấp nhận được, nhưng B (trường hợp đang bàn) thì không thể chấp nhận — ngụ ý B nghiêm trọng hơn A rất nhiều. Hội thoại: phóng viên phỏng vấn một nhà bình luận về vụ một thanh tra hình sự bị bắt giữ do nghi vấn phản bội niềm tin của người dân, kết hợp cả hai cấu trúc để phê phán nhiều tầng lớp.",
     "vocabList": [
       {
         "id": "voc-n1-13-1",
-        "word": "重要語彙 (N1)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "ぎわく",
+        "kanji": "疑惑",
+        "furigana": "ぎわく",
+        "romaji": "giwaku",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 13",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Sự nghi ngờ, mối nghi hoặc",
+        "accentNote": "疑惑が 持たれています = đang bị nghi hoặc."
+      },
+      {
+        "id": "voc-n1-13-2",
+        "word": "しんじん",
+        "kanji": "新人",
+        "furigana": "しんじん",
+        "romaji": "shinjin",
+        "wordType": "noun",
+        "meaningVi": "Người mới, tân binh",
+        "accentNote": "新人には 難しいです = khó đối với người mới."
+      },
+      {
+        "id": "voc-n1-13-3",
+        "word": "はじ",
+        "kanji": "恥",
+        "furigana": "はじ",
+        "romaji": "haji",
+        "wordType": "noun",
+        "meaningVi": "Sự xấu hổ, nỗi nhục",
+        "accentNote": "恥を 知ります = biết xấu hổ."
+      },
+      {
+        "id": "voc-n1-13-4",
+        "word": "しんよう",
+        "kanji": "信用",
+        "furigana": "しんよう",
+        "romaji": "shinyou",
+        "wordType": "noun",
+        "meaningVi": "Sự tín nhiệm, uy tín",
+        "accentNote": "信用を 失います = đánh mất sự tín nhiệm."
+      },
+      {
+        "id": "voc-n1-13-5",
+        "word": "うらぎります",
+        "kanji": "裏切ります",
+        "furigana": "うらぎります",
+        "romaji": "uragirimasu",
+        "wordType": "verb",
+        "meaningVi": "Phản bội",
+        "accentNote": "期待を 裏切ります = phản bội kỳ vọng."
+      },
+      {
+        "id": "voc-n1-13-6",
+        "word": "きたい",
+        "kanji": "期待",
+        "furigana": "きたい",
+        "romaji": "kitai",
+        "wordType": "noun",
+        "meaningVi": "Sự kỳ vọng, mong đợi",
+        "accentNote": "皆の 期待に 応えます = đáp lại kỳ vọng của mọi người."
+      },
+      {
+        "id": "voc-n1-13-7",
+        "word": "けいじ",
+        "kanji": "刑事",
+        "furigana": "けいじ",
+        "romaji": "keiji",
+        "wordType": "noun",
+        "meaningVi": "Thanh tra hình sự, cảnh sát điều tra",
+        "accentNote": "刑事が 事件を 調べます = thanh tra hình sự điều tra vụ việc."
+      },
+      {
+        "id": "voc-n1-13-8",
+        "word": "たいほ",
+        "kanji": "逮捕",
+        "furigana": "たいほ",
+        "romaji": "taiho",
+        "wordType": "noun",
+        "meaningVi": "Sự bắt giữ",
+        "accentNote": "犯人が 逮捕されました = phạm nhân đã bị bắt giữ."
+      },
+      {
+        "id": "voc-n1-13-9",
+        "word": "はんざい",
+        "kanji": "犯罪",
+        "furigana": "はんざい",
+        "romaji": "hanzai",
+        "wordType": "noun",
+        "meaningVi": "Tội ác, tội phạm",
+        "accentNote": "Đã gặp N1 bài 6."
+      },
+      {
+        "id": "voc-n1-13-10",
+        "word": "たちば",
+        "kanji": "立場",
+        "furigana": "たちば",
+        "romaji": "tachiba",
+        "wordType": "noun",
+        "meaningVi": "Lập trường, vị trí, cương vị",
+        "accentNote": "Đã gặp N1 bài 3."
+      },
+      {
+        "id": "voc-n1-13-11",
+        "word": "しかく",
+        "kanji": "資格",
+        "furigana": "しかく",
+        "romaji": "shikaku",
+        "wordType": "noun",
+        "meaningVi": "Tư cách, chứng chỉ",
+        "accentNote": "Đã gặp N3 bài 8."
+      },
+      {
+        "id": "voc-n1-13-12",
+        "word": "きしゃ",
+        "kanji": "記者",
+        "furigana": "きしゃ",
+        "romaji": "kisha",
+        "wordType": "noun",
+        "meaningVi": "Phóng viên",
+        "accentNote": "Đã gặp N1 bài 9."
+      },
+      {
+        "id": "voc-n1-13-13",
+        "word": "もんだい",
+        "kanji": "問題",
+        "furigana": "もんだい",
+        "romaji": "mondai",
+        "wordType": "noun",
+        "meaningVi": "Vấn đề",
+        "accentNote": "Đã gặp N3 bài 13."
+      },
+      {
+        "id": "voc-n1-13-14",
+        "word": "せきにん",
+        "kanji": "責任",
+        "furigana": "せきにん",
+        "romaji": "sekinin",
+        "wordType": "noun",
+        "meaningVi": "Trách nhiệm",
+        "accentNote": "Đã gặp N1 bài 5."
+      },
+      {
+        "id": "voc-n1-13-15",
+        "word": "しゃちょう",
+        "kanji": "社長",
+        "furigana": "しゃちょう",
+        "romaji": "shachou",
+        "wordType": "noun",
+        "meaningVi": "Giám đốc",
+        "accentNote": "Đã gặp N4 bài 41."
+      },
+      {
+        "id": "voc-n1-13-16",
+        "word": "ぎいん",
+        "kanji": "議員",
+        "furigana": "ぎいん",
+        "romaji": "giin",
+        "wordType": "noun",
+        "meaningVi": "Nghị sĩ",
+        "accentNote": "Đã gặp N1 bài 6."
+      },
+      {
+        "id": "voc-n1-13-17",
+        "word": "ふせい",
+        "kanji": "不正",
+        "furigana": "ふせい",
+        "romaji": "fusei",
+        "wordType": "noun",
+        "meaningVi": "Sự bất chính, gian lận",
+        "accentNote": "Đã gặp N1 bài 6."
+      },
+      {
+        "id": "voc-n1-13-18",
+        "word": "しんらい",
+        "kanji": "信頼",
+        "furigana": "しんらい",
+        "romaji": "shinrai",
+        "wordType": "noun",
+        "meaningVi": "Sự tin cậy",
+        "accentNote": "Đã gặp N1 bài 6."
+      },
+      {
+        "id": "voc-n1-13-19",
+        "word": "あやまります",
+        "kanji": "謝ります",
+        "furigana": "あやまります",
+        "romaji": "ayamarimasu",
+        "wordType": "verb",
+        "meaningVi": "Xin lỗi",
+        "accentNote": "Đã gặp N1 bài 9."
+      },
+      {
+        "id": "voc-n1-13-20",
+        "word": "じけん",
+        "kanji": "事件",
+        "furigana": "じけん",
+        "romaji": "jiken",
+        "wordType": "noun",
+        "meaningVi": "Vụ việc, sự kiện",
+        "accentNote": "Đã gặp N1 bài 2."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n1-13-1",
-        "character": "語",
-        "hanViet": "NGỮ",
+        "character": "疑",
+        "hanViet": "NGHI",
         "strokeCount": 14,
         "onyomi": [
-          "ゴ"
+          "ギ (gi)"
         ],
         "kunyomi": [
-          "かたる"
+          "うたが(う)"
         ],
-        "meaningVi": "Ngôn ngữ",
+        "meaningVi": "Nghi ngờ.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "疑惑",
+            "furigana": "ぎわく",
+            "meaningVi": "Nghi hoặc"
+          },
+          {
+            "word": "疑問",
+            "furigana": "ぎもん",
+            "meaningVi": "Nghi vấn, thắc mắc"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-13-2",
+        "character": "惑",
+        "hanViet": "HOẶC",
+        "strokeCount": 12,
+        "onyomi": [
+          "ワク (waku)"
+        ],
+        "kunyomi": [
+          "まど(う)"
+        ],
+        "meaningVi": "Mê hoặc, hoang mang.",
+        "commonWords": [
+          {
+            "word": "疑惑",
+            "furigana": "ぎわく",
+            "meaningVi": "Nghi hoặc"
+          },
+          {
+            "word": "迷惑",
+            "furigana": "めいわく",
+            "meaningVi": "Phiền toái, làm phiền"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-13-3",
+        "character": "恥",
+        "hanViet": "SỈ",
+        "strokeCount": 10,
+        "onyomi": [
+          "チ (chi)"
+        ],
+        "kunyomi": [
+          "は(じる)"
+        ],
+        "meaningVi": "Xấu hổ, sỉ nhục.",
+        "commonWords": [
+          {
+            "word": "恥",
+            "furigana": "はじ",
+            "meaningVi": "Sự xấu hổ"
+          },
+          {
+            "word": "恥ずかしい",
+            "furigana": "はずかしい",
+            "meaningVi": "Xấu hổ (tính từ)"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-13-4",
+        "character": "裏",
+        "hanViet": "LÝ",
+        "strokeCount": 13,
+        "onyomi": [
+          "リ (ri)"
+        ],
+        "kunyomi": [
+          "うら"
+        ],
+        "meaningVi": "Mặt trái, đằng sau.",
+        "commonWords": [
+          {
+            "word": "裏切ります",
+            "furigana": "うらぎります",
+            "meaningVi": "Phản bội"
+          },
+          {
+            "word": "裏側",
+            "furigana": "うらがわ",
+            "meaningVi": "Mặt sau, phía sau"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-13-5",
+        "character": "逮",
+        "hanViet": "ĐÃI",
+        "strokeCount": 11,
+        "onyomi": [
+          "タイ (tai)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Đuổi kịp, bắt giữ.",
+        "commonWords": [
+          {
+            "word": "逮捕",
+            "furigana": "たいほ",
+            "meaningVi": "Bắt giữ"
+          },
+          {
+            "word": "逮捕状",
+            "furigana": "たいほじょう",
+            "meaningVi": "Lệnh bắt giữ"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n1-l13-s0",
-        "title": "Trọng tâm: Cương vị đáng kính (ともあろう者が & ならいざ知らず)",
-        "grammarFormula": "N + ともあろう者が",
-        "explanation": "Đường đường là một người ở vị thế cao như thế mà lại làm hành động đáng hổ thẹn.",
+        "slideId": "n1-l13-s1",
+        "slideType": "grammar",
+        "title": "1. Một người ở địa vị đáng kính như thế mà lại...: N(địa vị cao quý)ともあろう者が",
+        "grammarFormula": "N(địa vị/tư cách cao quý, đáng kính) + ともあろう者が、[hành vi không xứng đáng]",
+        "explanation": "ともあろう者が dùng để CHỈ TRÍCH MẠNH một người/tổ chức ở ĐỊA VỊ/TƯ CÁCH CAO QUÝ, ĐÁNG KÍNH (N) mà lại có hành vi KHÔNG XỨNG ĐÁNG với địa vị đó — thể hiện rõ sự NGẠC NHIÊN kết hợp THẤT VỌNG sâu sắc của người nói.",
+        "teacherTips": "ともあろう者が chỉ dùng cho N chỉ ĐỊA VỊ/NGHỀ NGHIỆP được xã hội TÔN TRỌNG (giáo viên, cảnh sát, bác sĩ, nghị sĩ) — không dùng cho người bình thường không có địa vị đặc biệt.",
+        "culturalNotes": "Câu nói kinh điển trên báo Nhật khi đưa tin bê bối của người có chức vị: '〜ともあろう者が、こんな初歩的なミスをするとは' (một người ở địa vị như thế mà lại mắc lỗi sơ đẳng như vậy).",
         "examples": [
           {
-            "id": "ex-n1-l13-1",
+            "id": "ex-n1-l13-s1-1",
             "tokens": [
               {
-                "id": "tok-n1-l13-1",
-                "text": "大学教授とも",
+                "id": "t-l13s1-1",
+                "text": "けいじ",
+                "isKeyGrammar": true,
+                "kanji": "刑事",
+                "furigana": "けいじ"
+              },
+              {
+                "id": "t-l13s1-2",
+                "text": "ともあろうものが",
+                "isKeyGrammar": true,
+                "kanji": "ともあろう者が",
+                "furigana": "ともあろうものが"
+              },
+              {
+                "id": "t-l13s1-3",
+                "text": "、",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n1-l13-2",
-                "text": "あろう者が、剽窃をするとは。",
-                "isKeyGrammar": true
+                "id": "t-l13s1-4",
+                "text": "はんざい",
+                "isKeyGrammar": true,
+                "kanji": "犯罪",
+                "furigana": "はんざい"
+              },
+              {
+                "id": "t-l13s1-5",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s1-6",
+                "text": "おかす",
+                "isKeyGrammar": false,
+                "kanji": "犯す",
+                "furigana": "おかす"
+              },
+              {
+                "id": "t-l13s1-7",
+                "text": "とは",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s1-8",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s1-9",
+                "text": "ゆるせない",
+                "isKeyGrammar": false,
+                "kanji": "許せない",
+                "furigana": "ゆるせない"
               }
             ],
-            "meaningVi": "Đường đường là một giáo sư đại học mà lại đi đạo văn như vậy ư!"
+            "meaningVi": "Một người là thanh tra hình sự mà lại phạm tội — thật không thể tha thứ."
+          },
+          {
+            "id": "ex-n1-l13-s1-2",
+            "tokens": [
+              {
+                "id": "t-l13s1-10",
+                "text": "きょうし",
+                "isKeyGrammar": false,
+                "kanji": "教師",
+                "furigana": "きょうし"
+              },
+              {
+                "id": "t-l13s1-11",
+                "text": "ともあろうものが",
+                "isKeyGrammar": true,
+                "kanji": "ともあろう者が",
+                "furigana": "ともあろうものが"
+              },
+              {
+                "id": "t-l13s1-12",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s1-13",
+                "text": "そんな",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s1-14",
+                "text": "こと",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s1-15",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s1-16",
+                "text": "する",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s1-17",
+                "text": "とは",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s1-18",
+                "text": "しんじられない",
+                "isKeyGrammar": false,
+                "kanji": "信じられない",
+                "furigana": "しんじられない"
+              }
+            ],
+            "meaningVi": "Một người là giáo viên mà lại làm chuyện như vậy — thật không thể tin được."
           }
-        ],
-        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+        ]
+      },
+      {
+        "slideId": "n1-l13-s2",
+        "slideType": "grammar",
+        "title": "2. Nếu là... thì còn hiểu được, nhưng...: N1ならいざ知らず、N2は",
+        "grammarFormula": "N1(trường hợp chấp nhận được) + ならいざ知らず、N2(trường hợp hiện tại) + は〜",
+        "explanation": "N1ならいざ知らず、N2は〜 dùng để SO SÁNH hai trường hợp: nếu là N1 thì CÒN CÓ THỂ hiểu/chấp nhận được, nhưng N2 (trường hợp đang bàn tới) thì KHÔNG THỂ chấp nhận — ngụ ý N2 nghiêm trọng/đáng trách hơn N1 rất nhiều.",
+        "teacherTips": "ならいざ知らず luôn cần HAI vế: N1 (trường hợp NHẸ hơn/còn hiểu được) và N2 (trường hợp THỰC TẾ đang bị phê phán) — thiếu vế N1 thì câu mất đi tính so sánh.",
+        "culturalNotes": "ならいざ知らず là văn phong VIẾT/PHÁT BIỂU trang trọng, gần như không dùng trong hội thoại xuề xòa hằng ngày — thường thấy trong xã luận báo chí hoặc lời phê bình chính thức.",
+        "examples": [
+          {
+            "id": "ex-n1-l13-s2-1",
+            "tokens": [
+              {
+                "id": "t-l13s2-1",
+                "text": "しんじん",
+                "isKeyGrammar": true,
+                "kanji": "新人",
+                "furigana": "しんじん"
+              },
+              {
+                "id": "t-l13s2-2",
+                "text": "ならいざしらず",
+                "isKeyGrammar": true,
+                "kanji": "ならいざ知らず",
+                "furigana": "ならいざしらず"
+              },
+              {
+                "id": "t-l13s2-3",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s2-4",
+                "text": "けいじ",
+                "isKeyGrammar": true,
+                "kanji": "刑事",
+                "furigana": "けいじ"
+              },
+              {
+                "id": "t-l13s2-5",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s2-6",
+                "text": "しみん",
+                "isKeyGrammar": false,
+                "kanji": "市民",
+                "furigana": "しみん"
+              },
+              {
+                "id": "t-l13s2-7",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s2-8",
+                "text": "きたい",
+                "isKeyGrammar": true,
+                "kanji": "期待",
+                "furigana": "きたい"
+              },
+              {
+                "id": "t-l13s2-9",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s2-10",
+                "text": "うらぎる",
+                "isKeyGrammar": true,
+                "kanji": "裏切る",
+                "furigana": "うらぎる"
+              },
+              {
+                "id": "t-l13s2-11",
+                "text": "とは",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Nếu là lính mới thì còn hiểu được, nhưng một thanh tra hình sự lại phản bội kỳ vọng của người dân..."
+          },
+          {
+            "id": "ex-n1-l13-s2-2",
+            "tokens": [
+              {
+                "id": "t-l13s2-12",
+                "text": "こども",
+                "isKeyGrammar": false,
+                "kanji": "子供",
+                "furigana": "こども"
+              },
+              {
+                "id": "t-l13s2-13",
+                "text": "ならいざしらず",
+                "isKeyGrammar": true,
+                "kanji": "ならいざ知らず",
+                "furigana": "ならいざしらず"
+              },
+              {
+                "id": "t-l13s2-14",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s2-15",
+                "text": "おとな",
+                "isKeyGrammar": false,
+                "kanji": "大人",
+                "furigana": "おとな"
+              },
+              {
+                "id": "t-l13s2-16",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s2-17",
+                "text": "やくそく",
+                "isKeyGrammar": false,
+                "kanji": "約束",
+                "furigana": "やくそく"
+              },
+              {
+                "id": "t-l13s2-18",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s2-19",
+                "text": "まもらない",
+                "isKeyGrammar": false,
+                "kanji": "守らない",
+                "furigana": "まもらない"
+              },
+              {
+                "id": "t-l13s2-20",
+                "text": "とは",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s2-21",
+                "text": "はずかしい",
+                "isKeyGrammar": true,
+                "kanji": "恥ずかしい",
+                "furigana": "はずかしい"
+              }
+            ],
+            "meaningVi": "Nếu là trẻ con thì còn hiểu được, nhưng người lớn mà không giữ lời hứa thì thật đáng xấu hổ."
+          }
+        ]
+      },
+      {
+        "slideId": "n1-l13-s3",
+        "slideType": "grammar",
+        "title": "3. So sánh ともあろう者が và ならいざ知らず",
+        "grammarFormula": "ともあろう者が: chỉ trích TRỰC TIẾP một chủ thể duy nhất　vs　ならいざ知らず: SO SÁNH hai trường hợp (A và B)",
+        "explanation": "ともあろう者が chỉ nhắm vào MỘT chủ thể duy nhất, khẳng định địa vị của họ rồi chỉ trích hành vi không xứng — không cần vế so sánh. ならいざ知らず luôn cần HAI vế: nêu một trường hợp CHẤP NHẬN ĐƯỢC (A) trước, rồi mới chỉ ra trường hợp KHÔNG THỂ CHẤP NHẬN (B) — mang tính so sánh rõ rệt. Hai cấu trúc có thể kết hợp trong cùng một câu để tăng sức nặng phê phán.",
+        "teacherTips": "Mẹo: câu chỉ có MỘT chủ thể + chỉ trích trực tiếp → ともあろう者が; câu có HAI trường hợp đối chiếu → ならいざ知らず.",
+        "culturalNotes": "Trong xã luận phê phán một vụ bê bối, tác giả thường dùng ならいざ知らず để hạ thấp mức độ có thể tha thứ của trường hợp khác, rồi dùng ともあろう者が để dồn toàn bộ trách nhiệm lên đúng đối tượng.",
+        "examples": [
+          {
+            "id": "ex-n1-l13-s3-1",
+            "tokens": [
+              {
+                "id": "t-l13s3-1",
+                "text": "けいじ",
+                "isKeyGrammar": true,
+                "kanji": "刑事",
+                "furigana": "けいじ"
+              },
+              {
+                "id": "t-l13s3-2",
+                "text": "ともあろうものが",
+                "isKeyGrammar": true,
+                "kanji": "ともあろう者が",
+                "furigana": "ともあろうものが"
+              },
+              {
+                "id": "t-l13s3-3",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s3-4",
+                "text": "はんざい",
+                "isKeyGrammar": true,
+                "kanji": "犯罪",
+                "furigana": "はんざい"
+              },
+              {
+                "id": "t-l13s3-5",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s3-6",
+                "text": "かかわる",
+                "isKeyGrammar": false,
+                "kanji": "関わる",
+                "furigana": "かかわる"
+              },
+              {
+                "id": "t-l13s3-7",
+                "text": "とは",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Một người là thanh tra hình sự mà lại dính líu đến tội phạm..."
+          },
+          {
+            "id": "ex-n1-l13-s3-2",
+            "tokens": [
+              {
+                "id": "t-l13s3-8",
+                "text": "しんじん",
+                "isKeyGrammar": true,
+                "kanji": "新人",
+                "furigana": "しんじん"
+              },
+              {
+                "id": "t-l13s3-9",
+                "text": "ならいざしらず",
+                "isKeyGrammar": true,
+                "kanji": "ならいざ知らず",
+                "furigana": "ならいざしらず"
+              },
+              {
+                "id": "t-l13s3-10",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s3-11",
+                "text": "けいじ",
+                "isKeyGrammar": true,
+                "kanji": "刑事",
+                "furigana": "けいじ"
+              },
+              {
+                "id": "t-l13s3-12",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s3-13",
+                "text": "はんざい",
+                "isKeyGrammar": true,
+                "kanji": "犯罪",
+                "furigana": "はんざい"
+              },
+              {
+                "id": "t-l13s3-14",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s3-15",
+                "text": "みのがす",
+                "isKeyGrammar": false,
+                "kanji": "見逃す",
+                "furigana": "みのがす"
+              },
+              {
+                "id": "t-l13s3-16",
+                "text": "とは",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s3-17",
+                "text": "ゆるされない",
+                "isKeyGrammar": false,
+                "kanji": "許されない",
+                "furigana": "ゆるされない"
+              }
+            ],
+            "meaningVi": "Nếu là lính mới thì còn hiểu được, nhưng một thanh tra hình sự mà lại bỏ qua tội phạm thì không thể tha thứ."
+          }
+        ]
+      },
+      {
+        "slideId": "n1-l13-s4",
+        "slideType": "grammar",
+        "title": "4. Kết hợp trong một bài bình luận vụ án hoàn chỉnh",
+        "grammarFormula": "新人ならいざ知らず、刑事ともあろう者が、〜とは (kết hợp SO SÁNH + PHÊ PHÁN ĐỊA VỊ trong cùng một câu)",
+        "explanation": "Khi bình luận một vụ bê bối, người nói thường kết hợp CẢ HAI cấu trúc trong CÙNG một câu: dùng ならいざ知らず để nêu trường hợp có thể CHẤP NHẬN ĐƯỢC (làm phép so sánh), rồi dùng ともあろう者が để nhấn mạnh ĐỊA VỊ ĐÁNG LẼ PHẢI GƯƠNG MẪU của chủ thể thực sự — tạo hiệu ứng phê phán TẦNG TẦNG LỚP LỚP, rất mạnh mẽ. ならいざ知らず cũng có thể dùng để so sánh MỨC ĐỘ/SỐ LẦN.",
+        "teacherTips": "ならいざ知らず không chỉ so sánh GIỮA HAI CHỦ THỂ mà còn có thể so sánh MỨC ĐỘ/SỐ LẦN của cùng một chủ thể (一度ならいざ知らず、二度も〜 = một lần thì còn hiểu được, nhưng hai lần thì...).",
+        "culturalNotes": "Cấu trúc phê phán tầng lớp này (so sánh nhẹ hơn → chỉ đích danh địa vị → kết luận đáng trách) là khung xã luận kinh điển của báo chí Nhật khi bình luận bê bối của người có chức vị.",
+        "examples": [
+          {
+            "id": "ex-n1-l13-s4-1",
+            "tokens": [
+              {
+                "id": "t-l13s4-1",
+                "text": "しんじん",
+                "isKeyGrammar": true,
+                "kanji": "新人",
+                "furigana": "しんじん"
+              },
+              {
+                "id": "t-l13s4-2",
+                "text": "ならいざしらず",
+                "isKeyGrammar": true,
+                "kanji": "ならいざ知らず",
+                "furigana": "ならいざしらず"
+              },
+              {
+                "id": "t-l13s4-3",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s4-4",
+                "text": "けいじ",
+                "isKeyGrammar": true,
+                "kanji": "刑事",
+                "furigana": "けいじ"
+              },
+              {
+                "id": "t-l13s4-5",
+                "text": "ともあろうものが",
+                "isKeyGrammar": true,
+                "kanji": "ともあろう者が",
+                "furigana": "ともあろうものが"
+              },
+              {
+                "id": "t-l13s4-6",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s4-7",
+                "text": "しみん",
+                "isKeyGrammar": false,
+                "kanji": "市民",
+                "furigana": "しみん"
+              },
+              {
+                "id": "t-l13s4-8",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s4-9",
+                "text": "しんらい",
+                "isKeyGrammar": true,
+                "kanji": "信頼",
+                "furigana": "しんらい"
+              },
+              {
+                "id": "t-l13s4-10",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s4-11",
+                "text": "うらぎる",
+                "isKeyGrammar": true,
+                "kanji": "裏切る",
+                "furigana": "うらぎる"
+              },
+              {
+                "id": "t-l13s4-12",
+                "text": "とは",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s4-13",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s4-14",
+                "text": "はずべき",
+                "isKeyGrammar": true,
+                "kanji": "恥ずべき",
+                "furigana": "はずべき"
+              },
+              {
+                "id": "t-l13s4-15",
+                "text": "こと",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s4-16",
+                "text": "だ",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Nếu là lính mới thì còn hiểu được, nhưng một người đã là thanh tra hình sự mà lại phản bội niềm tin của người dân — đó là điều đáng xấu hổ."
+          },
+          {
+            "id": "ex-n1-l13-s4-2",
+            "tokens": [
+              {
+                "id": "t-l13s4-17",
+                "text": "いちど",
+                "isKeyGrammar": false,
+                "kanji": "一度",
+                "furigana": "いちど"
+              },
+              {
+                "id": "t-l13s4-18",
+                "text": "ならいざしらず",
+                "isKeyGrammar": true,
+                "kanji": "ならいざ知らず",
+                "furigana": "ならいざしらず"
+              },
+              {
+                "id": "t-l13s4-19",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s4-20",
+                "text": "にど",
+                "isKeyGrammar": false,
+                "kanji": "二度",
+                "furigana": "にど"
+              },
+              {
+                "id": "t-l13s4-21",
+                "text": "も",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s4-22",
+                "text": "おなじ",
+                "isKeyGrammar": false,
+                "kanji": "同じ",
+                "furigana": "おなじ"
+              },
+              {
+                "id": "t-l13s4-23",
+                "text": "あやまち",
+                "isKeyGrammar": false,
+                "kanji": "過ち",
+                "furigana": "あやまち"
+              },
+              {
+                "id": "t-l13s4-24",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s4-25",
+                "text": "おかす",
+                "isKeyGrammar": false,
+                "kanji": "犯す",
+                "furigana": "おかす"
+              },
+              {
+                "id": "t-l13s4-26",
+                "text": "とは",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s4-27",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l13s4-28",
+                "text": "けいじ",
+                "isKeyGrammar": true,
+                "kanji": "刑事",
+                "furigana": "けいじ"
+              },
+              {
+                "id": "t-l13s4-29",
+                "text": "ともあろうものが",
+                "isKeyGrammar": true,
+                "kanji": "ともあろう者が",
+                "furigana": "ともあろうものが"
+              },
+              {
+                "id": "t-l13s4-30",
+                "text": "なさけない",
+                "isKeyGrammar": false,
+                "kanji": "情けない",
+                "furigana": "なさけない"
+              }
+            ],
+            "meaningVi": "Nếu một lần thì còn hiểu được, nhưng phạm cùng một sai lầm đến hai lần — một người là thanh tra hình sự như vậy thật đáng thất vọng."
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n1-13-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "田中",
+        "speakerRole": "Phóng viên",
         "tokens": [
           {
-            "id": "tok-n1-13-d1",
-            "text": "この文法のポイントを"
+            "id": "d13-1",
+            "text": "こんかい",
+            "isKeyGrammar": false,
+            "kanji": "今回",
+            "furigana": "こんかい"
           },
           {
-            "id": "tok-n1-13-d2",
-            "text": "復習しましょう。"
+            "id": "d13-2",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-3",
+            "text": "けいじ",
+            "isKeyGrammar": true,
+            "kanji": "刑事",
+            "furigana": "けいじ"
+          },
+          {
+            "id": "d13-4",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-5",
+            "text": "たいほ",
+            "isKeyGrammar": true,
+            "kanji": "逮捕",
+            "furigana": "たいほ"
+          },
+          {
+            "id": "d13-6",
+            "text": "について",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-7",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-8",
+            "text": "どう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-9",
+            "text": "おもわれますか",
+            "isKeyGrammar": false,
+            "kanji": "思われますか",
+            "furigana": "おもわれますか"
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Về việc thanh tra hình sự lần này bị bắt giữ, ông nghĩ sao?"
+      },
+      {
+        "id": "dia-n1-13-2",
+        "speaker": "評論家",
+        "speakerRole": "Nhà bình luận",
+        "tokens": [
+          {
+            "id": "d13-10",
+            "text": "けいじ",
+            "isKeyGrammar": true,
+            "kanji": "刑事",
+            "furigana": "けいじ"
+          },
+          {
+            "id": "d13-11",
+            "text": "ともあろうものが",
+            "isKeyGrammar": true,
+            "kanji": "ともあろう者が",
+            "furigana": "ともあろうものが"
+          },
+          {
+            "id": "d13-12",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-13",
+            "text": "はんざい",
+            "isKeyGrammar": true,
+            "kanji": "犯罪",
+            "furigana": "はんざい"
+          },
+          {
+            "id": "d13-14",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-15",
+            "text": "かかわる",
+            "isKeyGrammar": false,
+            "kanji": "関わる",
+            "furigana": "かかわる"
+          },
+          {
+            "id": "d13-16",
+            "text": "とは",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-17",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-18",
+            "text": "ゆるせない",
+            "isKeyGrammar": false,
+            "kanji": "許せない",
+            "furigana": "ゆるせない"
+          },
+          {
+            "id": "d13-19",
+            "text": "ことです",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Một người là thanh tra hình sự mà lại dính líu đến tội phạm — đó là điều không thể tha thứ."
+      },
+      {
+        "id": "dia-n1-13-3",
+        "speaker": "田中",
+        "speakerRole": "Phóng viên",
+        "tokens": [
+          {
+            "id": "d13-20",
+            "text": "ぎわく",
+            "isKeyGrammar": true,
+            "kanji": "疑惑",
+            "furigana": "ぎわく"
+          },
+          {
+            "id": "d13-21",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-22",
+            "text": "ないよう",
+            "isKeyGrammar": false,
+            "kanji": "内容",
+            "furigana": "ないよう"
+          },
+          {
+            "id": "d13-23",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-24",
+            "text": "なん",
+            "isKeyGrammar": false,
+            "kanji": "何",
+            "furigana": "なん"
+          },
+          {
+            "id": "d13-25",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-26",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Nội dung nghi vấn là gì?"
+      },
+      {
+        "id": "dia-n1-13-4",
+        "speaker": "評論家",
+        "speakerRole": "Nhà bình luận",
+        "tokens": [
+          {
+            "id": "d13-27",
+            "text": "はんざい",
+            "isKeyGrammar": true,
+            "kanji": "犯罪",
+            "furigana": "はんざい"
+          },
+          {
+            "id": "d13-28",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-29",
+            "text": "じょうほう",
+            "isKeyGrammar": false,
+            "kanji": "情報",
+            "furigana": "じょうほう"
+          },
+          {
+            "id": "d13-30",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-31",
+            "text": "もらしていた",
+            "isKeyGrammar": false,
+            "kanji": "漏らしていた",
+            "furigana": "もらしていた"
+          },
+          {
+            "id": "d13-32",
+            "text": "という",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-33",
+            "text": "ぎわく",
+            "isKeyGrammar": true,
+            "kanji": "疑惑",
+            "furigana": "ぎわく"
+          },
+          {
+            "id": "d13-34",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Đó là nghi vấn đã làm rò rỉ thông tin tội phạm."
+      },
+      {
+        "id": "dia-n1-13-5",
+        "speaker": "田中",
+        "speakerRole": "Phóng viên",
+        "tokens": [
+          {
+            "id": "d13-35",
+            "text": "なぜ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-36",
+            "text": "そんなに",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-37",
+            "text": "きびしく",
+            "isKeyGrammar": false,
+            "kanji": "厳しく",
+            "furigana": "きびしく"
+          },
+          {
+            "id": "d13-38",
+            "text": "ひはんされている",
+            "isKeyGrammar": false,
+            "kanji": "批判されている",
+            "furigana": "ひはんされている"
+          },
+          {
+            "id": "d13-39",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-40",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-41",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Tại sao lại bị chỉ trích gay gắt như vậy?"
+      },
+      {
+        "id": "dia-n1-13-6",
+        "speaker": "評論家",
+        "speakerRole": "Nhà bình luận",
+        "tokens": [
+          {
+            "id": "d13-42",
+            "text": "しんじん",
+            "isKeyGrammar": true,
+            "kanji": "新人",
+            "furigana": "しんじん"
+          },
+          {
+            "id": "d13-43",
+            "text": "ならいざしらず",
+            "isKeyGrammar": true,
+            "kanji": "ならいざ知らず",
+            "furigana": "ならいざしらず"
+          },
+          {
+            "id": "d13-44",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-45",
+            "text": "けいじ",
+            "isKeyGrammar": true,
+            "kanji": "刑事",
+            "furigana": "けいじ"
+          },
+          {
+            "id": "d13-46",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-47",
+            "text": "しみん",
+            "isKeyGrammar": false,
+            "kanji": "市民",
+            "furigana": "しみん"
+          },
+          {
+            "id": "d13-48",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-49",
+            "text": "きたい",
+            "isKeyGrammar": true,
+            "kanji": "期待",
+            "furigana": "きたい"
+          },
+          {
+            "id": "d13-50",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-51",
+            "text": "うらぎった",
+            "isKeyGrammar": true,
+            "kanji": "裏切った",
+            "furigana": "うらぎった"
+          },
+          {
+            "id": "d13-52",
+            "text": "からです",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vì nếu là lính mới thì còn hiểu được, nhưng đây là một thanh tra hình sự đã phản bội kỳ vọng của người dân."
+      },
+      {
+        "id": "dia-n1-13-7",
+        "speaker": "田中",
+        "speakerRole": "Phóng viên",
+        "tokens": [
+          {
+            "id": "d13-53",
+            "text": "しんよう",
+            "isKeyGrammar": true,
+            "kanji": "信用",
+            "furigana": "しんよう"
+          },
+          {
+            "id": "d13-54",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-55",
+            "text": "どう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-56",
+            "text": "なりますか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vậy uy tín sẽ ra sao?"
+      },
+      {
+        "id": "dia-n1-13-8",
+        "speaker": "評論家",
+        "speakerRole": "Nhà bình luận",
+        "tokens": [
+          {
+            "id": "d13-57",
+            "text": "しみん",
+            "isKeyGrammar": false,
+            "kanji": "市民",
+            "furigana": "しみん"
+          },
+          {
+            "id": "d13-58",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-59",
+            "text": "しんよう",
+            "isKeyGrammar": true,
+            "kanji": "信用",
+            "furigana": "しんよう"
+          },
+          {
+            "id": "d13-60",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-61",
+            "text": "とりもどす",
+            "isKeyGrammar": false,
+            "kanji": "取り戻す",
+            "furigana": "とりもどす"
+          },
+          {
+            "id": "d13-62",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-63",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-64",
+            "text": "かんたん",
+            "isKeyGrammar": false,
+            "kanji": "簡単",
+            "furigana": "かんたん"
+          },
+          {
+            "id": "d13-65",
+            "text": "ではない",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-66",
+            "text": "でしょう",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Việc lấy lại sự tín nhiệm của người dân sẽ không dễ dàng."
+      },
+      {
+        "id": "dia-n1-13-9",
+        "speaker": "田中",
+        "speakerRole": "Phóng viên",
+        "tokens": [
+          {
+            "id": "d13-67",
+            "text": "けいさつ",
+            "isKeyGrammar": false,
+            "kanji": "警察",
+            "furigana": "けいさつ"
+          },
+          {
+            "id": "d13-68",
+            "text": "ぜんたい",
+            "isKeyGrammar": false,
+            "kanji": "全体",
+            "furigana": "ぜんたい"
+          },
+          {
+            "id": "d13-69",
+            "text": "へ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-70",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-71",
+            "text": "えいきょう",
+            "isKeyGrammar": false,
+            "kanji": "影響",
+            "furigana": "えいきょう"
+          },
+          {
+            "id": "d13-72",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-73",
+            "text": "ある",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-74",
+            "text": "でしょう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-75",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Cũng sẽ có ảnh hưởng đến toàn ngành cảnh sát chứ?"
+      },
+      {
+        "id": "dia-n1-13-10",
+        "speaker": "評論家",
+        "speakerRole": "Nhà bình luận",
+        "tokens": [
+          {
+            "id": "d13-76",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-77",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-78",
+            "text": "しかも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-79",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-80",
+            "text": "これ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-81",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-82",
+            "text": "はじめて",
+            "isKeyGrammar": false,
+            "kanji": "初めて",
+            "furigana": "はじめて"
+          },
+          {
+            "id": "d13-83",
+            "text": "ではない",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-84",
+            "text": "ようです",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-85",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-86",
+            "text": "いちど",
+            "isKeyGrammar": false,
+            "kanji": "一度",
+            "furigana": "いちど"
+          },
+          {
+            "id": "d13-87",
+            "text": "ならいざしらず",
+            "isKeyGrammar": true,
+            "kanji": "ならいざ知らず",
+            "furigana": "ならいざしらず"
+          },
+          {
+            "id": "d13-88",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-89",
+            "text": "にど",
+            "isKeyGrammar": false,
+            "kanji": "二度",
+            "furigana": "にど"
+          },
+          {
+            "id": "d13-90",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-91",
+            "text": "おなじ",
+            "isKeyGrammar": false,
+            "kanji": "同じ",
+            "furigana": "おなじ"
+          },
+          {
+            "id": "d13-92",
+            "text": "あやまち",
+            "isKeyGrammar": false,
+            "kanji": "過ち",
+            "furigana": "あやまち"
+          },
+          {
+            "id": "d13-93",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-94",
+            "text": "おかす",
+            "isKeyGrammar": false,
+            "kanji": "犯す",
+            "furigana": "おかす"
+          },
+          {
+            "id": "d13-95",
+            "text": "とは",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-96",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d13-97",
+            "text": "けいじ",
+            "isKeyGrammar": true,
+            "kanji": "刑事",
+            "furigana": "けいじ"
+          },
+          {
+            "id": "d13-98",
+            "text": "ともあろうものが",
+            "isKeyGrammar": true,
+            "kanji": "ともあろう者が",
+            "furigana": "ともあろうものが"
+          },
+          {
+            "id": "d13-99",
+            "text": "なさけない",
+            "isKeyGrammar": false,
+            "kanji": "情けない",
+            "furigana": "なさけない"
+          },
+          {
+            "id": "d13-100",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vâng. Hơn nữa, có vẻ đây không phải là lần đầu tiên. Nếu một lần thì còn hiểu được, nhưng phạm cùng sai lầm đến hai lần — một người là thanh tra hình sự như vậy thật đáng thất vọng."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n1-13-1",
-        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Cương vị đáng kính (ともあろう者が & ならいざ知らず)'",
+        "question": "「刑事ともあろう者が、犯罪を犯すとは、許せない」 — ともあろう者が diễn tả điều gì?",
         "options": [
-          "N + ともあろう者が",
-          "V-た + ところで",
-          "N + にかこつけて",
-          "V-る + べく"
+          "Chỉ trích MẠNH một người ở ĐỊA VỊ/TƯ CÁCH CAO QUÝ mà lại có hành vi không xứng đáng — thể hiện ngạc nhiên + thất vọng",
+          "Khen ngợi một người vì đã hoàn thành xuất sắc nhiệm vụ",
+          "So sánh hai trường hợp khác nhau",
+          "Đưa ra lời khuyên nhẹ nhàng"
         ],
         "correctIndex": 0,
-        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: N + ともあろう者が",
-        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+        "explanation": "ともあろう者が chỉ trích mạnh một người ở địa vị cao quý mà lại có hành vi không xứng đáng với địa vị đó.",
+        "hint": "Xem cấu trúc ともあろう者が ở slide 1."
+      },
+      {
+        "id": "ex-q-n1-13-2",
+        "question": "「新人ならいざ知らず、刑事が市民の期待を裏切るとは」 — ならいざ知らず dùng để làm gì?",
+        "options": [
+          "Khẳng định một sự thật hiển nhiên",
+          "SO SÁNH hai trường hợp: nếu là A thì còn chấp nhận được, nhưng B thì không thể chấp nhận",
+          "Xin phép làm việc gì đó",
+          "Diễn tả một hành động đang tiếp diễn"
+        ],
+        "correctIndex": 1,
+        "explanation": "ならいざ知らず dùng để so sánh: trường hợp A (nhẹ hơn) thì còn hiểu được, nhưng trường hợp B (đang bàn) thì không thể chấp nhận.",
+        "hint": "Xem cấu trúc ならいざ知らず ở slide 2."
+      },
+      {
+        "id": "ex-q-n1-13-3",
+        "question": "Sự khác biệt cấu trúc cốt lõi giữa ともあろう者が và ならいざ知らず là gì?",
+        "options": [
+          "ともあろう者が chỉ nhắm vào MỘT chủ thể duy nhất; ならいざ知らず luôn cần HAI vế để SO SÁNH",
+          "Hoàn toàn giống nhau về cấu trúc",
+          "ともあろう者が cần hai vế so sánh; ならいざ知らず chỉ có một chủ thể",
+          "Cả hai đều không thể dùng trong văn viết"
+        ],
+        "correctIndex": 0,
+        "explanation": "ともあろう者が chỉ có một chủ thể bị chỉ trích; ならいざ知らず luôn cần hai vế (A và B) để tạo phép so sánh.",
+        "hint": "Xem bảng so sánh ở slide 3."
+      },
+      {
+        "id": "ex-q-n1-13-4",
+        "question": "「教師ともあろう者が、そんなことをするとは信じられない」 nghĩa là:",
+        "options": [
+          "Một người là giáo viên mà lại làm chuyện như vậy — thật không thể tin được",
+          "Giáo viên đó đã làm rất tốt công việc",
+          "Không ai tin rằng đó là một giáo viên",
+          "Giáo viên hoàn toàn không liên quan"
+        ],
+        "correctIndex": 0,
+        "explanation": "ともあろう者が ở đây khẳng định địa vị giáo viên đáng kính rồi bày tỏ sự không thể tin nổi trước hành vi của người đó.",
+        "hint": "Áp dụng cấu trúc ともあろう者が cho ngữ cảnh giáo dục."
+      },
+      {
+        "id": "ex-q-n1-13-5",
+        "question": "「子供ならいざ知らず、大人が約束を守らないとは恥ずかしい」 nghĩa là:",
+        "options": [
+          "Nếu là trẻ con thì còn hiểu được, nhưng người lớn mà không giữ lời hứa thì thật đáng xấu hổ",
+          "Trẻ con cũng phải giữ lời hứa như người lớn",
+          "Không ai cần giữ lời hứa cả",
+          "Người lớn không bao giờ thất hứa"
+        ],
+        "correctIndex": 0,
+        "explanation": "ならいざ知らず ở đây so sánh: trẻ con (chấp nhận được) với người lớn (không thể chấp nhận) khi không giữ lời hứa.",
+        "hint": "Áp dụng cấu trúc ならいざ知らず cho ngữ cảnh giữ lời hứa."
+      },
+      {
+        "id": "ex-q-n1-13-6",
+        "question": "Tại sao khi bình luận một vụ bê bối, người nói thường kết hợp CẢ ならいざ知らず LẪN ともあろう者が trong cùng một câu?",
+        "options": [
+          "Để vừa SO SÁNH với trường hợp nhẹ hơn, vừa NHẤN MẠNH địa vị đáng lẽ phải gương mẫu — tạo hiệu ứng phê phán tầng tầng lớp lớp",
+          "Vì quy tắc ngữ pháp bắt buộc phải dùng chung cả hai",
+          "Vì hai cấu trúc có nghĩa trái ngược nhau nên cần bổ sung",
+          "Không có lý do đặc biệt nào"
+        ],
+        "correctIndex": 0,
+        "explanation": "Kết hợp cả hai giúp vừa so sánh mức độ nghiêm trọng, vừa nhấn mạnh địa vị đáng kính bị phản bội — tăng sức nặng phê phán.",
+        "hint": "Xem cấu trúc bài bình luận hoàn chỉnh ở slide 4."
+      },
+      {
+        "id": "ex-q-n1-13-7",
+        "question": "「一度ならいざ知らず、二度も同じ過ちを犯すとは」 — ならいざ知らず ở đây so sánh điều gì?",
+        "options": [
+          "So sánh MỨC ĐỘ/SỐ LẦN: một lần thì còn chấp nhận được, nhưng hai lần thì không thể",
+          "So sánh hai người khác nhau",
+          "So sánh quá khứ và tương lai",
+          "Không so sánh gì cả"
+        ],
+        "correctIndex": 0,
+        "explanation": "ならいざ知らず không chỉ so sánh giữa hai chủ thể mà còn có thể so sánh mức độ/số lần lặp lại của cùng một hành vi.",
+        "hint": "Xem ví dụ nâng cao ở slide 4."
+      },
+      {
+        "id": "ex-q-n1-13-8",
+        "question": "Theo hội thoại, thanh tra hình sự bị nghi ngờ về điều gì?",
+        "options": [
+          "Đã làm rò rỉ thông tin tội phạm (犯罪の情報を漏らしていたという疑惑です)",
+          "Đã nhận hối lộ từ nước ngoài",
+          "Không có nghi vấn nào cả",
+          "Đã nghỉ việc đột ngột"
+        ],
+        "correctIndex": 0,
+        "explanation": "Nhà bình luận nói 「犯罪の情報を漏らしていたという疑惑です」.",
+        "hint": "Xem câu thoại thứ 4."
+      },
+      {
+        "id": "ex-q-n1-13-9",
+        "question": "Theo hội thoại, tại sao thanh tra hình sự bị chỉ trích gay gắt?",
+        "options": [
+          "Vì đã phản bội kỳ vọng của người dân, điều mà một lính mới thì còn có thể hiểu được (新人ならいざ知らず、刑事が市民の期待を裏切った)",
+          "Vì tuổi tác còn quá trẻ",
+          "Vì không được đào tạo bài bản",
+          "Không có lý do rõ ràng"
+        ],
+        "correctIndex": 0,
+        "explanation": "Nhà bình luận nói 「新人ならいざ知らず、刑事が市民の期待を裏切ったからです」.",
+        "hint": "Xem câu thoại thứ 6."
+      },
+      {
+        "id": "ex-q-n1-13-10",
+        "question": "Theo hội thoại, điều gì khiến vụ việc càng đáng thất vọng hơn?",
+        "options": [
+          "Đây không phải là lần đầu tiên xảy ra sai phạm tương tự (一度ならいざ知らず、二度も同じ過ちを犯す)",
+          "Đây là lần đầu tiên nên có thể thông cảm",
+          "Vụ việc đã được giải quyết ổn thỏa",
+          "Không có gì đáng thất vọng thêm"
+        ],
+        "correctIndex": 0,
+        "explanation": "Nhà bình luận nói vụ việc không phải lần đầu: 「一度ならいざ知らず、二度も同じ過ちを犯すとは」.",
+        "hint": "Xem câu thoại thứ 10."
       }
     ]
   },
