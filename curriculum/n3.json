@@ -26969,100 +26969,1822 @@
   {
     "level": "N3",
     "lessonNumber": 20,
-    "title": "Bài 20: Tổng kết ngữ pháp đàm thoại thực chiến N3",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "title": "Bài 20: Tổng kết ngữ pháp đàm thoại thực chiến",
+    "description": "Bài tổng kết N3 kết hợp các cấu trúc trọng điểm đã học qua một cuộc họp rút kinh nghiệm dự án thực tế: おかげで/せいで + 一方だ/ばかりだ (nguyên nhân → xu hướng), に違いない/はずだ + べきだ (suy đoán → khuyến nghị), にもかかわらず + だけでなく/ばかりか (nhượng bộ → mở rộng thành tích), và に関して/について + ということ (chủ đề → truyền đạt kết luận) — nắm vững cách KẾT HỢP các cấu trúc này quan trọng hơn học thuộc riêng lẻ, đúng như cách chúng xuất hiện trong đề thi JLPT N3 thực tế. Hoàn thành trọn vẹn 20/20 bài N3!",
     "vocabList": [
       {
         "id": "voc-n3-20-1",
-        "word": "重要語彙 (N3)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "かいぜんします",
+        "kanji": "改善します",
+        "furigana": "かいぜんします",
+        "romaji": "kaizen shimasu",
+        "wordType": "verb",
+        "meaningVi": "Cải thiện",
+        "accentNote": "じょうきょうを 改善します = cải thiện tình huống."
+      },
+      {
+        "id": "voc-n3-20-2",
+        "word": "はんせいします",
+        "kanji": "反省します",
+        "furigana": "はんせいします",
+        "romaji": "hansei shimasu",
+        "wordType": "verb",
+        "meaningVi": "Rút kinh nghiệm, phản tỉnh",
+        "accentNote": "しっぱいを 反省します = rút kinh nghiệm từ thất bại."
+      },
+      {
+        "id": "voc-n3-20-3",
+        "word": "ひょうかします",
+        "kanji": "評価します",
+        "furigana": "ひょうかします",
+        "romaji": "hyouka shimasu",
+        "wordType": "verb",
+        "meaningVi": "Đánh giá",
+        "accentNote": "けっかを 評価します = đánh giá kết quả."
+      },
+      {
+        "id": "voc-n3-20-4",
+        "word": "もくひょう",
+        "kanji": "目標",
+        "furigana": "もくひょう",
+        "romaji": "mokuhyou",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 20",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Mục tiêu",
+        "accentNote": "目標を たてます = lập mục tiêu."
+      },
+      {
+        "id": "voc-n3-20-5",
+        "word": "チーム",
+        "kanji": "チーム",
+        "furigana": "チーム",
+        "romaji": "chiimu",
+        "wordType": "noun",
+        "meaningVi": "Đội nhóm",
+        "accentNote": "チームの 努力 = nỗ lực của đội nhóm."
+      },
+      {
+        "id": "voc-n3-20-6",
+        "word": "どりょく",
+        "kanji": "努力",
+        "furigana": "どりょく",
+        "romaji": "doryoku",
+        "wordType": "noun",
+        "meaningVi": "Nỗ lực",
+        "accentNote": "Đã gặp N3 bài 8."
+      },
+      {
+        "id": "voc-n3-20-7",
+        "word": "じゅんび",
+        "kanji": "準備",
+        "furigana": "じゅんび",
+        "romaji": "junbi",
+        "wordType": "noun",
+        "meaningVi": "Sự chuẩn bị",
+        "accentNote": "Đã gặp N4 bài 26."
+      },
+      {
+        "id": "voc-n3-20-8",
+        "word": "けっか",
+        "kanji": "結果",
+        "furigana": "けっか",
+        "romaji": "kekka",
+        "wordType": "noun",
+        "meaningVi": "Kết quả",
+        "accentNote": "Đã gặp N4 bài 39."
+      },
+      {
+        "id": "voc-n3-20-9",
+        "word": "かいぎ",
+        "kanji": "会議",
+        "furigana": "かいぎ",
+        "romaji": "kaigi",
+        "wordType": "noun",
+        "meaningVi": "Cuộc họp",
+        "accentNote": "Đã gặp N4 bài 30."
+      },
+      {
+        "id": "voc-n3-20-10",
+        "word": "せきにん",
+        "kanji": "責任",
+        "furigana": "せきにん",
+        "romaji": "sekinin",
+        "wordType": "noun",
+        "meaningVi": "Trách nhiệm",
+        "accentNote": "Đã gặp N3 bài 19."
+      },
+      {
+        "id": "voc-n3-20-11",
+        "word": "きそく",
+        "kanji": "規則",
+        "furigana": "きそく",
+        "romaji": "kisoku",
+        "wordType": "noun",
+        "meaningVi": "Quy tắc",
+        "accentNote": "Đã gặp N4 bài 33."
+      },
+      {
+        "id": "voc-n3-20-12",
+        "word": "じょうきょう",
+        "kanji": "状況",
+        "furigana": "じょうきょう",
+        "romaji": "joukyou",
+        "wordType": "noun",
+        "meaningVi": "Tình huống",
+        "accentNote": "Đã gặp N3 bài 13."
+      },
+      {
+        "id": "voc-n3-20-13",
+        "word": "もんだい",
+        "kanji": "問題",
+        "furigana": "もんだい",
+        "romaji": "mondai",
+        "wordType": "noun",
+        "meaningVi": "Vấn đề",
+        "accentNote": "Đã gặp N5 bài 22."
+      },
+      {
+        "id": "voc-n3-20-14",
+        "word": "せいこうします",
+        "kanji": "成功します",
+        "furigana": "せいこうします",
+        "romaji": "seikou shimasu",
+        "wordType": "verb",
+        "meaningVi": "Thành công",
+        "accentNote": "Đã gặp N3 bài 8."
+      },
+      {
+        "id": "voc-n3-20-15",
+        "word": "しっぱいします",
+        "kanji": "失敗します",
+        "furigana": "しっぱいします",
+        "romaji": "shippai shimasu",
+        "wordType": "verb",
+        "meaningVi": "Thất bại",
+        "accentNote": "Đã gặp N4 bài 43."
+      },
+      {
+        "id": "voc-n3-20-16",
+        "word": "けいかく",
+        "kanji": "計画",
+        "furigana": "けいかく",
+        "romaji": "keikaku",
+        "wordType": "noun",
+        "meaningVi": "Kế hoạch",
+        "accentNote": "Đã gặp N4 bài 26."
+      },
+      {
+        "id": "voc-n3-20-17",
+        "word": "らいねん",
+        "kanji": "来年",
+        "furigana": "らいねん",
+        "romaji": "rainen",
+        "wordType": "noun",
+        "meaningVi": "Năm sau",
+        "accentNote": "Đã gặp N4 bài 26."
+      },
+      {
+        "id": "voc-n3-20-18",
+        "word": "かいしゃ",
+        "kanji": "会社",
+        "furigana": "かいしゃ",
+        "romaji": "kaisha",
+        "wordType": "noun",
+        "meaningVi": "Công ty",
+        "accentNote": "Đã gặp N4 bài 26."
+      },
+      {
+        "id": "voc-n3-20-19",
+        "word": "みんな",
+        "kanji": "みんな",
+        "furigana": "みんな",
+        "romaji": "minna",
+        "wordType": "pronoun",
+        "meaningVi": "Mọi người",
+        "accentNote": "Đã gặp N4 bài 26."
+      },
+      {
+        "id": "voc-n3-20-20",
+        "word": "はなします",
+        "kanji": "話します",
+        "furigana": "はなします",
+        "romaji": "hanashimasu",
+        "wordType": "verb",
+        "meaningVi": "Nói chuyện",
+        "accentNote": "Đã gặp N4 bài 26."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n3-20-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "改",
+        "hanViet": "CẢI",
+        "strokeCount": 7,
         "onyomi": [
-          "ゴ"
+          "カイ (kai)"
         ],
         "kunyomi": [
-          "かたる"
+          "あらた(める)"
         ],
-        "meaningVi": "Ngôn ngữ",
+        "meaningVi": "Sửa đổi, cải thiện.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "改善",
+            "furigana": "かいぜん",
+            "meaningVi": "Cải thiện"
+          },
+          {
+            "word": "改める",
+            "furigana": "あらためる",
+            "meaningVi": "Sửa đổi"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-20-2",
+        "character": "善",
+        "hanViet": "THIỆN",
+        "strokeCount": 12,
+        "onyomi": [
+          "ゼン (zen)"
+        ],
+        "kunyomi": [
+          "よ(い)"
+        ],
+        "meaningVi": "Tốt đẹp, thiện lương.",
+        "commonWords": [
+          {
+            "word": "改善",
+            "furigana": "かいぜん",
+            "meaningVi": "Cải thiện"
+          },
+          {
+            "word": "善悪",
+            "furigana": "ぜんあく",
+            "meaningVi": "Thiện ác"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-20-3",
+        "character": "反",
+        "hanViet": "PHẢN",
+        "strokeCount": 4,
+        "onyomi": [
+          "ハン (han)"
+        ],
+        "kunyomi": [
+          "そ(る)"
+        ],
+        "meaningVi": "Trái ngược, phản đối.",
+        "commonWords": [
+          {
+            "word": "反省",
+            "furigana": "はんせい",
+            "meaningVi": "Rút kinh nghiệm"
+          },
+          {
+            "word": "反対",
+            "furigana": "はんたい",
+            "meaningVi": "Phản đối"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-20-4",
+        "character": "省",
+        "hanViet": "TỈNH",
+        "strokeCount": 9,
+        "onyomi": [
+          "セイ (sei)",
+          "ショウ (shou)"
+        ],
+        "kunyomi": [
+          "はぶ(く)"
+        ],
+        "meaningVi": "Suy xét, tiết kiệm.",
+        "commonWords": [
+          {
+            "word": "反省",
+            "furigana": "はんせい",
+            "meaningVi": "Rút kinh nghiệm"
+          },
+          {
+            "word": "省略",
+            "furigana": "しょうりゃく",
+            "meaningVi": "Lược bỏ"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-20-5",
+        "character": "標",
+        "hanViet": "TIÊU",
+        "strokeCount": 15,
+        "onyomi": [
+          "ヒョウ (hyou)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Mục tiêu, dấu hiệu.",
+        "commonWords": [
+          {
+            "word": "目標",
+            "furigana": "もくひょう",
+            "meaningVi": "Mục tiêu"
+          },
+          {
+            "word": "標準",
+            "furigana": "ひょうじゅん",
+            "meaningVi": "Tiêu chuẩn"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n3-l20-s0",
-        "title": "Trọng tâm: Tổng kết ngữ pháp đàm thoại thực chiến N3",
-        "grammarFormula": "Tổng hợp các mẫu câu JLPT N3 trọng tâm",
-        "explanation": "Ôn luyện phối hợp cấu trúc trong đọc hiểu và nghe hiểu.",
+        "slideId": "n3-l20-s1",
+        "slideType": "grammar",
+        "title": "1. Ôn tập: Nguyên nhân + Xu hướng (おかげで/せいで + 一方だ/ばかりだ)",
+        "grammarFormula": "N/[thể thường]+おかげで/せいで、[kết quả]+一方だ/ばかりだ",
+        "explanation": "Khi tổng kết một dự án, ta thường nêu NGUYÊN NHÂN (おかげで cho kết quả tích cực, せいで cho kết quả tiêu cực — đã học ở bài 4) dẫn đến một XU HƯỚNG LIÊN TỤC (一方だ/ばかりだ — bài 14).",
+        "teacherTips": "Ôn nhanh: おかげで=nguyên nhân TÍCH CỰC, せいで=nguyên nhân TIÊU CỰC (bài 4) — kết hợp 一方だ (trang trọng) hoặc ばかりだ (thân mật, thất vọng) từ bài 14.",
+        "culturalNotes": "Báo cáo tổng kết công ty Nhật luôn mở đầu bằng nguyên nhân rồi mới nêu xu hướng kết quả — đây là cấu trúc lập luận chuẩn mực.",
         "examples": [
           {
-            "id": "ex-n3-l20-1",
+            "id": "ex-n3-l20-s1-1",
             "tokens": [
               {
-                "id": "tok-n3-l20-1",
-                "text": "合格でき",
+                "id": "t-l20s1-1",
+                "text": "チーム",
+                "isKeyGrammar": true,
+                "kanji": "チーム",
+                "furigana": "チーム"
+              },
+              {
+                "id": "t-l20s1-2",
+                "text": "の",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n3-l20-2",
-                "text": "るように、最後まで 頑張るべきだ。",
+                "id": "t-l20s1-3",
+                "text": "どりょく",
+                "isKeyGrammar": true,
+                "kanji": "努力",
+                "furigana": "どりょく"
+              },
+              {
+                "id": "t-l20s1-4",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s1-5",
+                "text": "おかげで",
                 "isKeyGrammar": true
+              },
+              {
+                "id": "t-l20s1-6",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s1-7",
+                "text": "けっか",
+                "isKeyGrammar": true,
+                "kanji": "結果",
+                "furigana": "けっか"
+              },
+              {
+                "id": "t-l20s1-8",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s1-9",
+                "text": "よく",
+                "isKeyGrammar": false,
+                "kanji": "良く",
+                "furigana": "よく"
+              },
+              {
+                "id": "t-l20s1-10",
+                "text": "なる",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s1-11",
+                "text": "いっぽう",
+                "isKeyGrammar": true,
+                "kanji": "一方",
+                "furigana": "いっぽう"
+              },
+              {
+                "id": "t-l20s1-12",
+                "text": "です",
+                "isKeyGrammar": false
               }
             ],
-            "meaningVi": "Để có thể đỗ kỳ thi, bạn nên nỗ lực đến cùng."
+            "meaningVi": "Nhờ nỗ lực của đội, kết quả chỉ ngày càng tốt lên."
+          },
+          {
+            "id": "ex-n3-l20-s1-2",
+            "tokens": [
+              {
+                "id": "t-l20s1-13",
+                "text": "じゅんび",
+                "isKeyGrammar": true,
+                "kanji": "準備",
+                "furigana": "じゅんび"
+              },
+              {
+                "id": "t-l20s1-14",
+                "text": "ぶそく",
+                "isKeyGrammar": false,
+                "kanji": "不足",
+                "furigana": "ぶそく"
+              },
+              {
+                "id": "t-l20s1-15",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s1-16",
+                "text": "せいで",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l20s1-17",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s1-18",
+                "text": "もんだい",
+                "isKeyGrammar": true,
+                "kanji": "問題",
+                "furigana": "もんだい"
+              },
+              {
+                "id": "t-l20s1-19",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s1-20",
+                "text": "ふえる",
+                "isKeyGrammar": false,
+                "kanji": "増える",
+                "furigana": "ふえる"
+              },
+              {
+                "id": "t-l20s1-21",
+                "text": "ばかり",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l20s1-22",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Vì thiếu chuẩn bị, vấn đề chỉ ngày càng tăng thôi."
           }
-        ],
-        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+        ]
+      },
+      {
+        "slideId": "n3-l20-s2",
+        "slideType": "grammar",
+        "title": "2. Ôn tập: Suy đoán + Nghĩa vụ (に違いない/はずだ + べきだ)",
+        "grammarFormula": "[suy đoán]に違いない/はずだ。だから、[khuyến nghị]べきだ",
+        "explanation": "Sau khi SUY LUẬN về nguyên nhân/tình huống dựa trên bằng chứng (に違いない) hoặc logic (はずだ — bài 12), ta thường đưa ra NGHĨA VỤ/KHUYẾN NGHỊ (べきだ — bài 19) để giải quyết vấn đề.",
+        "teacherTips": "Ôn nhanh: に違いない=chắc chắn từ BẰNG CHỨNG, はずだ=lẽ ra từ LOGIC (bài 12) — cả hai làm tiền đề hợp lý trước khi đưa ra べきだ (bài 19).",
+        "culturalNotes": "Cấu trúc 'suy luận nguyên nhân → đề xuất hành động' là khung sườn chuẩn của mọi buổi họp rút kinh nghiệm (反省会) ở công ty Nhật.",
+        "examples": [
+          {
+            "id": "ex-n3-l20-s2-1",
+            "tokens": [
+              {
+                "id": "t-l20s2-1",
+                "text": "げんいん",
+                "isKeyGrammar": false,
+                "kanji": "原因",
+                "furigana": "げんいん"
+              },
+              {
+                "id": "t-l20s2-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s2-3",
+                "text": "じゅんび",
+                "isKeyGrammar": true,
+                "kanji": "準備",
+                "furigana": "じゅんび"
+              },
+              {
+                "id": "t-l20s2-4",
+                "text": "ぶそく",
+                "isKeyGrammar": false,
+                "kanji": "不足",
+                "furigana": "ぶそく"
+              },
+              {
+                "id": "t-l20s2-5",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s2-6",
+                "text": "ちがいない",
+                "isKeyGrammar": true,
+                "kanji": "違いない",
+                "furigana": "ちがいない"
+              },
+              {
+                "id": "t-l20s2-7",
+                "text": "。",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s2-8",
+                "text": "だから",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s2-9",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s2-10",
+                "text": "もっと",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s2-11",
+                "text": "けいかく",
+                "isKeyGrammar": true,
+                "kanji": "計画",
+                "furigana": "けいかく"
+              },
+              {
+                "id": "t-l20s2-12",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s2-13",
+                "text": "たてる",
+                "isKeyGrammar": false,
+                "kanji": "立てる",
+                "furigana": "たてる"
+              },
+              {
+                "id": "t-l20s2-14",
+                "text": "べき",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l20s2-15",
+                "text": "だ",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Nguyên nhân chắc chắn là thiếu chuẩn bị. Vì vậy, nên lập kế hoạch kỹ hơn."
+          },
+          {
+            "id": "ex-n3-l20-s2-2",
+            "tokens": [
+              {
+                "id": "t-l20s2-16",
+                "text": "らいねん",
+                "isKeyGrammar": true,
+                "kanji": "来年",
+                "furigana": "らいねん"
+              },
+              {
+                "id": "t-l20s2-17",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s2-18",
+                "text": "せいこう",
+                "isKeyGrammar": true,
+                "kanji": "成功",
+                "furigana": "せいこう"
+              },
+              {
+                "id": "t-l20s2-19",
+                "text": "する",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s2-20",
+                "text": "はず",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l20s2-21",
+                "text": "です",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s2-22",
+                "text": "。",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s2-23",
+                "text": "でも",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s2-24",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s2-25",
+                "text": "みんな",
+                "isKeyGrammar": false,
+                "kanji": "みんな",
+                "furigana": "みんな"
+              },
+              {
+                "id": "t-l20s2-26",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s2-27",
+                "text": "せきにん",
+                "isKeyGrammar": true,
+                "kanji": "責任",
+                "furigana": "せきにん"
+              },
+              {
+                "id": "t-l20s2-28",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s2-29",
+                "text": "もつ",
+                "isKeyGrammar": false,
+                "kanji": "持つ",
+                "furigana": "もつ"
+              },
+              {
+                "id": "t-l20s2-30",
+                "text": "べき",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l20s2-31",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Năm sau lẽ ra sẽ thành công. Nhưng mọi người nên có trách nhiệm."
+          }
+        ]
+      },
+      {
+        "slideId": "n3-l20-s3",
+        "slideType": "grammar",
+        "title": "3. Ôn tập: Nhượng bộ + Mở rộng (にもかかわらず/くせに + だけでなく/ばかりか)",
+        "grammarFormula": "[khó khăn]にもかかわらず、[thành quả]だけでなく/ばかりか、[thêm nữa]",
+        "explanation": "Khi khen ngợi một thành tích VƯỢT QUA KHÓ KHĂN, thường kết hợp にもかかわらず (mặc dù khó khăn khách quan — bài 10) với だけでなく/ばかりか (không chỉ đạt X mà còn đạt Y — bài 15) để nhấn mạnh sự nỗ lực vượt trội.",
+        "teacherTips": "Ôn nhanh: にもかかわらず=khách quan, KHÔNG chê trách (bài 10, khác くせに mang tính chê trách) — kết hợp だけでなく (trung tính) hoặc ばかりか (nhấn mạnh, ngạc nhiên) từ bài 15.",
+        "culturalNotes": "Bài phát biểu khen thưởng cuối năm ở công ty Nhật hay dùng cấu trúc này để vinh danh nỗ lực vượt khó của nhân viên.",
+        "examples": [
+          {
+            "id": "ex-n3-l20-s3-1",
+            "tokens": [
+              {
+                "id": "t-l20s3-1",
+                "text": "じかん",
+                "isKeyGrammar": false,
+                "kanji": "時間",
+                "furigana": "じかん"
+              },
+              {
+                "id": "t-l20s3-2",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s3-3",
+                "text": "たりない",
+                "isKeyGrammar": false,
+                "kanji": "足りない",
+                "furigana": "たりない"
+              },
+              {
+                "id": "t-l20s3-4",
+                "text": "にも",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l20s3-5",
+                "text": "かかわらず",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l20s3-6",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s3-7",
+                "text": "けっか",
+                "isKeyGrammar": true,
+                "kanji": "結果",
+                "furigana": "けっか"
+              },
+              {
+                "id": "t-l20s3-8",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s3-9",
+                "text": "よかった",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s3-10",
+                "text": "ばかりか",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l20s3-11",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s3-12",
+                "text": "ひょうか",
+                "isKeyGrammar": true,
+                "kanji": "評価",
+                "furigana": "ひょうか"
+              },
+              {
+                "id": "t-l20s3-13",
+                "text": "も",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s3-14",
+                "text": "たかかった",
+                "isKeyGrammar": false,
+                "kanji": "高かった",
+                "furigana": "たかかった"
+              },
+              {
+                "id": "t-l20s3-15",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Mặc dù thiếu thời gian, kết quả không những tốt mà đánh giá còn cao."
+          },
+          {
+            "id": "ex-n3-l20-s3-2",
+            "tokens": [
+              {
+                "id": "t-l20s3-16",
+                "text": "もんだい",
+                "isKeyGrammar": true,
+                "kanji": "問題",
+                "furigana": "もんだい"
+              },
+              {
+                "id": "t-l20s3-17",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s3-18",
+                "text": "おおい",
+                "isKeyGrammar": false,
+                "kanji": "多い",
+                "furigana": "おおい"
+              },
+              {
+                "id": "t-l20s3-19",
+                "text": "にも",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l20s3-20",
+                "text": "かかわらず",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l20s3-21",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s3-22",
+                "text": "じょうきょう",
+                "isKeyGrammar": true,
+                "kanji": "状況",
+                "furigana": "じょうきょう"
+              },
+              {
+                "id": "t-l20s3-23",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s3-24",
+                "text": "かいぜん",
+                "isKeyGrammar": true,
+                "kanji": "改善",
+                "furigana": "かいぜん"
+              },
+              {
+                "id": "t-l20s3-25",
+                "text": "しました",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Mặc dù có nhiều vấn đề, đã cải thiện được tình huống."
+          }
+        ]
+      },
+      {
+        "slideId": "n3-l20-s4",
+        "slideType": "grammar",
+        "title": "4. Ôn tập: Chủ đề + Truyền đạt (に関して/について + ということ)",
+        "grammarFormula": "[chủ đề]について/に関して、[nội dung]ということだ/ということになる",
+        "explanation": "Khi TRÌNH BÀY/BÁO CÁO về một CHỦ ĐỀ cụ thể (について thân mật/に関して trang trọng — bài 17), thường kết thúc bằng cách TRUYỀN ĐẠT kết luận đã thống nhất (ということ — bài 18) — cấu trúc chuẩn của báo cáo N3.",
+        "teacherTips": "Ôn nhanh: について/に関して nêu CHỦ ĐỀ (bài 17) → ということだ TRUYỀN TIN, ということになる KẾT LUẬN khách quan (bài 18) — khung câu chuẩn của mọi bản báo cáo.",
+        "culturalNotes": "Đây là 4 nhóm ngữ pháp N3 cốt lõi thường xuất hiện lồng ghép trong đề đọc hiểu JLPT N3 — nắm vững cách KẾT HỢP chúng quan trọng hơn học thuộc riêng lẻ.",
+        "examples": [
+          {
+            "id": "ex-n3-l20-s4-1",
+            "tokens": [
+              {
+                "id": "t-l20s4-1",
+                "text": "この",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s4-2",
+                "text": "プロジェクト",
+                "isKeyGrammar": false,
+                "kanji": "プロジェクト",
+                "furigana": "プロジェクト"
+              },
+              {
+                "id": "t-l20s4-3",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s4-4",
+                "text": "かんして",
+                "isKeyGrammar": true,
+                "kanji": "関して",
+                "furigana": "かんして"
+              },
+              {
+                "id": "t-l20s4-5",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s4-6",
+                "text": "らいねん",
+                "isKeyGrammar": true,
+                "kanji": "来年",
+                "furigana": "らいねん"
+              },
+              {
+                "id": "t-l20s4-7",
+                "text": "も",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s4-8",
+                "text": "つづける",
+                "isKeyGrammar": false,
+                "kanji": "続ける",
+                "furigana": "つづける"
+              },
+              {
+                "id": "t-l20s4-9",
+                "text": "という",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l20s4-10",
+                "text": "こと",
+                "isKeyGrammar": true,
+                "kanji": "事",
+                "furigana": "こと"
+              },
+              {
+                "id": "t-l20s4-11",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s4-12",
+                "text": "なりました",
+                "isKeyGrammar": false,
+                "kanji": "成りました",
+                "furigana": "なりました"
+              }
+            ],
+            "meaningVi": "Về dự án này, đã được quyết định là sẽ tiếp tục vào năm sau."
+          },
+          {
+            "id": "ex-n3-l20-s4-2",
+            "tokens": [
+              {
+                "id": "t-l20s4-13",
+                "text": "かいぜん",
+                "isKeyGrammar": true,
+                "kanji": "改善",
+                "furigana": "かいぜん"
+              },
+              {
+                "id": "t-l20s4-14",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s4-15",
+                "text": "ついて",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l20s4-16",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s4-17",
+                "text": "かいぎ",
+                "isKeyGrammar": true,
+                "kanji": "会議",
+                "furigana": "かいぎ"
+              },
+              {
+                "id": "t-l20s4-18",
+                "text": "で",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l20s4-19",
+                "text": "はなしあう",
+                "isKeyGrammar": false,
+                "kanji": "話し合う",
+                "furigana": "はなしあう"
+              },
+              {
+                "id": "t-l20s4-20",
+                "text": "という",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l20s4-21",
+                "text": "こと",
+                "isKeyGrammar": true,
+                "kanji": "事",
+                "furigana": "こと"
+              },
+              {
+                "id": "t-l20s4-22",
+                "text": "だ",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Nghe nói sẽ thảo luận về việc cải thiện tại cuộc họp."
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n3-20-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "田中",
+        "speakerRole": "Trưởng nhóm dự án",
         "tokens": [
           {
-            "id": "tok-n3-20-d1",
-            "text": "この文法のポイントを"
+            "id": "d20-1",
+            "text": "きょう",
+            "isKeyGrammar": false,
+            "kanji": "今日",
+            "furigana": "きょう"
           },
           {
-            "id": "tok-n3-20-d2",
-            "text": "復習しましょう。"
+            "id": "d20-2",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-3",
+            "text": "かいぎ",
+            "isKeyGrammar": true,
+            "kanji": "会議",
+            "furigana": "かいぎ"
+          },
+          {
+            "id": "d20-4",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-5",
+            "text": "プロジェクト",
+            "isKeyGrammar": false,
+            "kanji": "プロジェクト",
+            "furigana": "プロジェクト"
+          },
+          {
+            "id": "d20-6",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-7",
+            "text": "はんせい",
+            "isKeyGrammar": true,
+            "kanji": "反省",
+            "furigana": "はんせい"
+          },
+          {
+            "id": "d20-8",
+            "text": "です",
+            "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Cuộc họp hôm nay là để rút kinh nghiệm dự án."
+      },
+      {
+        "id": "dia-n3-20-2",
+        "speaker": "サントス",
+        "speakerRole": "Thành viên nhóm",
+        "tokens": [
+          {
+            "id": "d20-9",
+            "text": "チーム",
+            "isKeyGrammar": true,
+            "kanji": "チーム",
+            "furigana": "チーム"
+          },
+          {
+            "id": "d20-10",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-11",
+            "text": "どりょく",
+            "isKeyGrammar": true,
+            "kanji": "努力",
+            "furigana": "どりょく"
+          },
+          {
+            "id": "d20-12",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-13",
+            "text": "おかげで",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d20-14",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-15",
+            "text": "けっか",
+            "isKeyGrammar": true,
+            "kanji": "結果",
+            "furigana": "けっか"
+          },
+          {
+            "id": "d20-16",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-17",
+            "text": "よく",
+            "isKeyGrammar": false,
+            "kanji": "良く",
+            "furigana": "よく"
+          },
+          {
+            "id": "d20-18",
+            "text": "なる",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-19",
+            "text": "いっぽう",
+            "isKeyGrammar": true,
+            "kanji": "一方",
+            "furigana": "いっぽう"
+          },
+          {
+            "id": "d20-20",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Nhờ nỗ lực của đội, kết quả chỉ ngày càng tốt lên."
+      },
+      {
+        "id": "dia-n3-20-3",
+        "speaker": "田中",
+        "speakerRole": "Trưởng nhóm dự án",
+        "tokens": [
+          {
+            "id": "d20-21",
+            "text": "でも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-22",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-23",
+            "text": "じゅんび",
+            "isKeyGrammar": true,
+            "kanji": "準備",
+            "furigana": "じゅんび"
+          },
+          {
+            "id": "d20-24",
+            "text": "ぶそく",
+            "isKeyGrammar": false,
+            "kanji": "不足",
+            "furigana": "ぶそく"
+          },
+          {
+            "id": "d20-25",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-26",
+            "text": "せいで",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d20-27",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-28",
+            "text": "もんだい",
+            "isKeyGrammar": true,
+            "kanji": "問題",
+            "furigana": "もんだい"
+          },
+          {
+            "id": "d20-29",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-30",
+            "text": "ふえる",
+            "isKeyGrammar": false,
+            "kanji": "増える",
+            "furigana": "ふえる"
+          },
+          {
+            "id": "d20-31",
+            "text": "ばかり",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d20-32",
+            "text": "でした",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Nhưng vì thiếu chuẩn bị, vấn đề cũng chỉ ngày càng tăng thôi."
+      },
+      {
+        "id": "dia-n3-20-4",
+        "speaker": "サントス",
+        "speakerRole": "Thành viên nhóm",
+        "tokens": [
+          {
+            "id": "d20-33",
+            "text": "げんいん",
+            "isKeyGrammar": false,
+            "kanji": "原因",
+            "furigana": "げんいん"
+          },
+          {
+            "id": "d20-34",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-35",
+            "text": "けいかく",
+            "isKeyGrammar": true,
+            "kanji": "計画",
+            "furigana": "けいかく"
+          },
+          {
+            "id": "d20-36",
+            "text": "ぶそく",
+            "isKeyGrammar": false,
+            "kanji": "不足",
+            "furigana": "ぶそく"
+          },
+          {
+            "id": "d20-37",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-38",
+            "text": "ちがいありません",
+            "isKeyGrammar": true,
+            "kanji": "違いありません",
+            "furigana": "ちがいありません"
+          }
+        ],
+        "meaningVi": "Nguyên nhân chắc chắn là do thiếu kế hoạch."
+      },
+      {
+        "id": "dia-n3-20-5",
+        "speaker": "田中",
+        "speakerRole": "Trưởng nhóm dự án",
+        "tokens": [
+          {
+            "id": "d20-39",
+            "text": "だから",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-40",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-41",
+            "text": "みんな",
+            "isKeyGrammar": true,
+            "kanji": "みんな",
+            "furigana": "みんな"
+          },
+          {
+            "id": "d20-42",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-43",
+            "text": "せきにん",
+            "isKeyGrammar": true,
+            "kanji": "責任",
+            "furigana": "せきにん"
+          },
+          {
+            "id": "d20-44",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-45",
+            "text": "もつ",
+            "isKeyGrammar": false,
+            "kanji": "持つ",
+            "furigana": "もつ"
+          },
+          {
+            "id": "d20-46",
+            "text": "べき",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d20-47",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vì vậy, mọi người nên có trách nhiệm."
+      },
+      {
+        "id": "dia-n3-20-6",
+        "speaker": "サントス",
+        "speakerRole": "Thành viên nhóm",
+        "tokens": [
+          {
+            "id": "d20-48",
+            "text": "じかん",
+            "isKeyGrammar": false,
+            "kanji": "時間",
+            "furigana": "じかん"
+          },
+          {
+            "id": "d20-49",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-50",
+            "text": "たりない",
+            "isKeyGrammar": false,
+            "kanji": "足りない",
+            "furigana": "たりない"
+          },
+          {
+            "id": "d20-51",
+            "text": "にも",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d20-52",
+            "text": "かかわらず",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d20-53",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-54",
+            "text": "ひょうか",
+            "isKeyGrammar": true,
+            "kanji": "評価",
+            "furigana": "ひょうか"
+          },
+          {
+            "id": "d20-55",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-56",
+            "text": "たかかった",
+            "isKeyGrammar": false,
+            "kanji": "高かった",
+            "furigana": "たかかった"
+          },
+          {
+            "id": "d20-57",
+            "text": "ばかりか",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d20-58",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-59",
+            "text": "みんな",
+            "isKeyGrammar": false,
+            "kanji": "みんな",
+            "furigana": "みんな"
+          },
+          {
+            "id": "d20-60",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-61",
+            "text": "よろこびました",
+            "isKeyGrammar": false,
+            "kanji": "喜びました",
+            "furigana": "よろこびました"
+          }
+        ],
+        "meaningVi": "Mặc dù thiếu thời gian, đánh giá không những cao mà mọi người còn vui mừng."
+      },
+      {
+        "id": "dia-n3-20-7",
+        "speaker": "田中",
+        "speakerRole": "Trưởng nhóm dự án",
+        "tokens": [
+          {
+            "id": "d20-62",
+            "text": "きそく",
+            "isKeyGrammar": true,
+            "kanji": "規則",
+            "furigana": "きそく"
+          },
+          {
+            "id": "d20-63",
+            "text": "に",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d20-64",
+            "text": "ついて",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d20-65",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-66",
+            "text": "かいぜん",
+            "isKeyGrammar": true,
+            "kanji": "改善",
+            "furigana": "かいぜん"
+          },
+          {
+            "id": "d20-67",
+            "text": "する",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-68",
+            "text": "べき",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d20-69",
+            "text": "です",
+            "isKeyGrammar": false,
+            "kanji": "です",
+            "furigana": "です"
+          },
+          {
+            "id": "d20-70",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Về quy tắc, cũng nên cải thiện nhỉ."
+      },
+      {
+        "id": "dia-n3-20-8",
+        "speaker": "サントス",
+        "speakerRole": "Thành viên nhóm",
+        "tokens": [
+          {
+            "id": "d20-73",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-74",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-75",
+            "text": "らいねん",
+            "isKeyGrammar": true,
+            "kanji": "来年",
+            "furigana": "らいねん"
+          },
+          {
+            "id": "d20-76",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-77",
+            "text": "この",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-78",
+            "text": "プロジェクト",
+            "isKeyGrammar": false,
+            "kanji": "プロジェクト",
+            "furigana": "プロジェクト"
+          },
+          {
+            "id": "d20-79",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-80",
+            "text": "つづける",
+            "isKeyGrammar": false,
+            "kanji": "続ける",
+            "furigana": "つづける"
+          },
+          {
+            "id": "d20-81",
+            "text": "という",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d20-82",
+            "text": "こと",
+            "isKeyGrammar": true,
+            "kanji": "事",
+            "furigana": "こと"
+          },
+          {
+            "id": "d20-83",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-84",
+            "text": "なりました",
+            "isKeyGrammar": false,
+            "kanji": "成りました",
+            "furigana": "なりました"
+          }
+        ],
+        "meaningVi": "Vâng. Năm sau đã được quyết định là sẽ tiếp tục dự án này."
+      },
+      {
+        "id": "dia-n3-20-9",
+        "speaker": "田中",
+        "speakerRole": "Trưởng nhóm dự án",
+        "tokens": [
+          {
+            "id": "d20-85",
+            "text": "じゃあ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-86",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-87",
+            "text": "かいぜん",
+            "isKeyGrammar": true,
+            "kanji": "改善",
+            "furigana": "かいぜん"
+          },
+          {
+            "id": "d20-88",
+            "text": "に",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d20-89",
+            "text": "ついて",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d20-90",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-91",
+            "text": "つぎ",
+            "isKeyGrammar": false,
+            "kanji": "次",
+            "furigana": "つぎ"
+          },
+          {
+            "id": "d20-92",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-93",
+            "text": "かいぎ",
+            "isKeyGrammar": true,
+            "kanji": "会議",
+            "furigana": "かいぎ"
+          },
+          {
+            "id": "d20-94",
+            "text": "で",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-95",
+            "text": "はなしあいましょう",
+            "isKeyGrammar": false,
+            "kanji": "話し合いましょう",
+            "furigana": "はなしあいましょう"
+          }
+        ],
+        "meaningVi": "Vậy thì, về việc cải thiện, hãy cùng thảo luận ở cuộc họp tiếp theo."
+      },
+      {
+        "id": "dia-n3-20-10",
+        "speaker": "サントス",
+        "speakerRole": "Thành viên nhóm",
+        "tokens": [
+          {
+            "id": "d20-96",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-97",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-98",
+            "text": "わかりました",
+            "isKeyGrammar": false,
+            "kanji": "分かりました",
+            "furigana": "わかりました"
+          },
+          {
+            "id": "d20-99",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-100",
+            "text": "らいねん",
+            "isKeyGrammar": true,
+            "kanji": "来年",
+            "furigana": "らいねん"
+          },
+          {
+            "id": "d20-101",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-102",
+            "text": "もっと",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-103",
+            "text": "せいこう",
+            "isKeyGrammar": true,
+            "kanji": "成功",
+            "furigana": "せいこう"
+          },
+          {
+            "id": "d20-104",
+            "text": "する",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d20-105",
+            "text": "はず",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d20-106",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vâng, đã hiểu rồi. Năm sau lẽ ra sẽ thành công hơn nữa."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n3-20-1",
-        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Tổng kết ngữ pháp đàm thoại thực chiến N3'?",
+        "question": "「チームの努力のおかげで、結果は良くなる一方です」 — kết hợp hai cấu trúc nào?",
         "options": [
-          "Tổng hợp các mẫu câu JLPT N3 trọng tâm",
-          "V-た + まま",
-          "N + に沿って",
-          "V-る + 途端に"
+          "おかげで (nguyên nhân tích cực, bài 4) + 一方だ (xu hướng liên tục, bài 14)",
+          "せいで (nguyên nhân tiêu cực) + ばかりだ",
+          "べきだ + はずだ",
+          "について + ということ"
         ],
         "correctIndex": 0,
-        "explanation": "Đáp án chính xác: Tổng hợp các mẫu câu JLPT N3 trọng tâm",
-        "hint": "Xem lại công thức chia ở slide lý thuyết."
+        "explanation": "Câu này kết hợp おかげで (nguyên nhân TÍCH CỰC) với 一方だ (xu hướng liên tục, khách quan).",
+        "hint": "Xem slide 1 về ôn tập おかげで/せいで + 一方だ/ばかりだ."
+      },
+      {
+        "id": "ex-q-n3-20-2",
+        "question": "「原因は計画不足に違いありません。だから、責任を持つべきです」 — trình tự lập luận ở đây là gì?",
+        "options": [
+          "Suy đoán nguyên nhân bằng bằng chứng (に違いない) → đưa ra khuyến nghị (べきだ)",
+          "Truyền đạt tin nghe được → giải thích ý nghĩa",
+          "So sánh hai sự việc → kết luận",
+          "Phủ định hoàn toàn → xin lỗi"
+        ],
+        "correctIndex": 0,
+        "explanation": "Câu này theo trình tự: suy đoán nguyên nhân chắc chắn (に違いない) rồi đưa ra nghĩa vụ/khuyến nghị (べきだ).",
+        "hint": "Xem slide 2 về ôn tập に違いない/はずだ + べきだ."
+      },
+      {
+        "id": "ex-q-n3-20-3",
+        "question": "「時間が足りないにもかかわらず、評価は高かったばかりか、みんなも喜びました」 — にもかかわらず và ばかりか kết hợp để làm gì?",
+        "options": [
+          "Nhấn mạnh thành tích VƯỢT QUA khó khăn khách quan một cách ấn tượng",
+          "Phủ định hoàn toàn thành tích đạt được",
+          "Chê trách người khác về khó khăn",
+          "So sánh hai dự án khác nhau"
+        ],
+        "correctIndex": 0,
+        "explanation": "にもかかわらず nêu khó khăn khách quan, ばかりか nhấn mạnh thành tích vượt xa kỳ vọng — kết hợp để khen ngợi nỗ lực vượt khó.",
+        "hint": "Xem slide 3 về ôn tập にもかかわらず/くせに + だけでなく/ばかりか."
+      },
+      {
+        "id": "ex-q-n3-20-4",
+        "question": "「このプロジェクトに関して、来年も続けるということになりました」 — kết hợp hai cấu trúc nào?",
+        "options": [
+          "に関して (nêu chủ đề, bài 17) + ということになる (kết luận khách quan, bài 18)",
+          "について + べきだ",
+          "おかげで + はずだ",
+          "にもかかわらず + について"
+        ],
+        "correctIndex": 0,
+        "explanation": "Câu này nêu chủ đề (このプロジェクトに関して) rồi truyền đạt kết luận đã được quyết định (ということになりました).",
+        "hint": "Xem slide 4 về ôn tập に関して/について + ということ."
+      },
+      {
+        "id": "ex-q-n3-20-5",
+        "question": "Tại sao dùng にもかかわらず mà không dùng くせに trong câu khen ngợi thành tích đội nhóm?",
+        "options": [
+          "Vì にもかかわらず khách quan, không chê trách; くせに luôn mang sắc thái chê trách (bài 10)",
+          "Vì cả hai hoàn toàn giống nhau",
+          "Vì くせに chỉ dùng cho câu hỏi",
+          "Vì にもかかわらず chỉ dùng cho phủ định"
+        ],
+        "correctIndex": 0,
+        "explanation": "くせに luôn ẩn chứa sắc thái CHÊ TRÁCH — không phù hợp để khen ngợi; にもかかわらず khách quan, phù hợp hơn.",
+        "hint": "Ôn lại bài 10 về にもかかわらず vs くせに."
+      },
+      {
+        "id": "ex-q-n3-20-6",
+        "question": "「準備不足のせいで、問題も増えるばかりでした」 — せいで khác おかげで ở điểm nào?",
+        "options": [
+          "せいで dùng cho nguyên nhân dẫn đến kết quả TIÊU CỰC; おかげで dùng cho kết quả TÍCH CỰC",
+          "Hoàn toàn giống nhau, dùng thay thế được",
+          "せいで chỉ dùng cho câu hỏi",
+          "おかげで chỉ dùng cho phủ định"
+        ],
+        "correctIndex": 0,
+        "explanation": "せいで luôn đi với kết quả TIÊU CỰC (vấn đề tăng); おかげで đi với kết quả TÍCH CỰC — đây là ôn lại bài 4.",
+        "hint": "Ôn lại bài 4 về おかげで/せいで."
+      },
+      {
+        "id": "ex-q-n3-20-7",
+        "question": "「来年はもっと成功するはずです」 — はずだ ở đây dựa trên căn cứ gì?",
+        "options": [
+          "Suy luận LOGIC dựa trên tình hình đã cải thiện (khách quan hơn linh cảm)",
+          "Bằng chứng cụ thể không thể chối cãi",
+          "Cảm xúc mãnh liệt của người nói",
+          "Sự chê trách đối với đội nhóm"
+        ],
+        "correctIndex": 0,
+        "explanation": "はずだ (khác に違いない) dựa trên suy luận LOGIC từ thông tin đã biết (đã cải thiện quy tắc, kế hoạch) — ôn lại bài 12.",
+        "hint": "Ôn lại bài 12 về に違いない vs はずだ."
+      },
+      {
+        "id": "ex-q-n3-20-8",
+        "question": "Theo hội thoại, nguyên nhân của vấn đề trong dự án là gì?",
+        "options": [
+          "Thiếu kế hoạch (計画不足に違いありません)",
+          "Thiếu tiền",
+          "Thiếu nhân sự",
+          "Không được đề cập trong hội thoại"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos nói 「原因は計画不足に違いありません」.",
+        "hint": "Xem câu thoại thứ 4."
+      },
+      {
+        "id": "ex-q-n3-20-9",
+        "question": "Dự án có được tiếp tục vào năm sau không?",
+        "options": [
+          "Có, đã quyết định tiếp tục (来年も続けるということになりました)",
+          "Không, dự án đã bị hủy",
+          "Chưa quyết định được",
+          "Không được đề cập trong hội thoại"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos nói 「来年もこのプロジェクトを続けるということになりました」.",
+        "hint": "Xem câu thoại thứ 8."
+      },
+      {
+        "id": "ex-q-n3-20-10",
+        "question": "Điều gì sẽ được thảo luận ở cuộc họp tiếp theo?",
+        "options": [
+          "Việc cải thiện (改善について、次の会議で話し合いましょう)",
+          "Việc tuyển nhân viên mới",
+          "Việc đóng cửa công ty",
+          "Không có gì để thảo luận thêm"
+        ],
+        "correctIndex": 0,
+        "explanation": "田中 nói 「改善について、次の会議で話し合いましょう」.",
+        "hint": "Xem câu thoại thứ 9."
       }
     ]
   }
