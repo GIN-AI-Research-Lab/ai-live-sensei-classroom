@@ -12395,99 +12395,1378 @@
     "level": "N1",
     "lessonNumber": 10,
     "title": "Bài 10: Khởi đầu & Cột mốc lịch sử (を皮切りにして & を限りに)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "description": "を皮切りにして đánh dấu một sự kiện là ĐIỂM KHỞI ĐẦU cho một chuỗi sự kiện tương tự LAN RỘNG sau đó (mở rộng kinh doanh, chuỗi sự kiện lan tỏa); を限りに dùng để TUYÊN BỐ CHẤM DỨT dứt khoát một việc gì đó kể từ một mốc thời gian cụ thể — hai cấu trúc mang ý nghĩa trái ngược, thường kết hợp trong một bài tường thuật lịch sử công ty: kể về sự khởi đầu/mở rộng rồi khép lại bằng một tuyên bố rút lui trang trọng.",
     "vocabList": [
       {
         "id": "voc-n1-10-1",
-        "word": "重要語彙 (N1)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "かわきり",
+        "kanji": "皮切り",
+        "furigana": "かわきり",
+        "romaji": "kawakiri",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 10",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Điểm khởi đầu, mốc mở đầu",
+        "accentNote": "東京を 皮切りにして = bắt đầu từ Tokyo."
+      },
+      {
+        "id": "voc-n1-10-2",
+        "word": "かぎり",
+        "kanji": "限り",
+        "furigana": "かぎり",
+        "romaji": "kagiri",
+        "wordType": "noun",
+        "meaningVi": "Giới hạn, mốc (dùng làm điểm chấm dứt)",
+        "accentNote": "今日を 限りに = kể từ hôm nay trở đi."
+      },
+      {
+        "id": "voc-n1-10-3",
+        "word": "ひろがります",
+        "kanji": "広がります",
+        "furigana": "ひろがります",
+        "romaji": "hirogarimasu",
+        "wordType": "verb",
+        "meaningVi": "Lan rộng, mở rộng",
+        "accentNote": "支店が 広がりました = chi nhánh đã lan rộng."
+      },
+      {
+        "id": "voc-n1-10-4",
+        "word": "やめます",
+        "kanji": "辞めます",
+        "furigana": "やめます",
+        "romaji": "yamemasu",
+        "wordType": "verb",
+        "meaningVi": "Từ chức, thôi việc",
+        "accentNote": "社長を 辞めます = từ chức giám đốc."
+      },
+      {
+        "id": "voc-n1-10-5",
+        "word": "してん",
+        "kanji": "支店",
+        "furigana": "してん",
+        "romaji": "shiten",
+        "wordType": "noun",
+        "meaningVi": "Chi nhánh",
+        "accentNote": "Đã gặp N2 bài 6."
+      },
+      {
+        "id": "voc-n1-10-6",
+        "word": "ぜんこく",
+        "kanji": "全国",
+        "furigana": "ぜんこく",
+        "romaji": "zenkoku",
+        "wordType": "noun",
+        "meaningVi": "Toàn quốc, cả nước",
+        "accentNote": "Đã gặp N3 bài 7."
+      },
+      {
+        "id": "voc-n1-10-7",
+        "word": "かくだいします",
+        "kanji": "拡大します",
+        "furigana": "かくだいします",
+        "romaji": "kakudai shimasu",
+        "wordType": "verb",
+        "meaningVi": "Mở rộng, phóng to",
+        "accentNote": "Đã gặp N2 bài 7."
+      },
+      {
+        "id": "voc-n1-10-8",
+        "word": "みせ",
+        "kanji": "店",
+        "furigana": "みせ",
+        "romaji": "mise",
+        "wordType": "noun",
+        "meaningVi": "Cửa hàng",
+        "accentNote": "Đã gặp N5 bài 22."
+      },
+      {
+        "id": "voc-n1-10-9",
+        "word": "たいしょく",
+        "kanji": "退職",
+        "furigana": "たいしょく",
+        "romaji": "taishoku",
+        "wordType": "noun",
+        "meaningVi": "Nghỉ hưu, thôi việc",
+        "accentNote": "Đã gặp N3 bài 3."
+      },
+      {
+        "id": "voc-n1-10-10",
+        "word": "しゃちょう",
+        "kanji": "社長",
+        "furigana": "しゃちょう",
+        "romaji": "shachou",
+        "wordType": "noun",
+        "meaningVi": "Giám đốc",
+        "accentNote": "Đã gặp N4 bài 41."
+      },
+      {
+        "id": "voc-n1-10-11",
+        "word": "かいしゃ",
+        "kanji": "会社",
+        "furigana": "かいしゃ",
+        "romaji": "kaisha",
+        "wordType": "noun",
+        "meaningVi": "Công ty",
+        "accentNote": "Đã gặp N5 bài 3."
+      },
+      {
+        "id": "voc-n1-10-12",
+        "word": "せいこう",
+        "kanji": "成功",
+        "furigana": "せいこう",
+        "romaji": "seikou",
+        "wordType": "noun",
+        "meaningVi": "Thành công",
+        "accentNote": "Đã gặp N3 bài 4."
+      },
+      {
+        "id": "voc-n1-10-13",
+        "word": "きしゃ",
+        "kanji": "記者",
+        "furigana": "きしゃ",
+        "romaji": "kisha",
+        "wordType": "noun",
+        "meaningVi": "Phóng viên",
+        "accentNote": "Đã gặp N1 bài 9."
+      },
+      {
+        "id": "voc-n1-10-14",
+        "word": "かいけん",
+        "kanji": "会見",
+        "furigana": "かいけん",
+        "romaji": "kaiken",
+        "wordType": "noun",
+        "meaningVi": "Cuộc họp báo, phỏng vấn chính thức",
+        "accentNote": "Đã gặp N1 bài 9."
+      },
+      {
+        "id": "voc-n1-10-15",
+        "word": "せきにん",
+        "kanji": "責任",
+        "furigana": "せきにん",
+        "romaji": "sekinin",
+        "wordType": "noun",
+        "meaningVi": "Trách nhiệm",
+        "accentNote": "Đã gặp N3 bài 19."
+      },
+      {
+        "id": "voc-n1-10-16",
+        "word": "とります",
+        "kanji": "取ります",
+        "furigana": "とります",
+        "romaji": "torimasu",
+        "wordType": "verb",
+        "meaningVi": "Lấy, chịu (trách nhiệm)",
+        "accentNote": "Đã gặp N1 bài 9."
+      },
+      {
+        "id": "voc-n1-10-17",
+        "word": "あやまります",
+        "kanji": "謝ります",
+        "furigana": "あやまります",
+        "romaji": "ayamarimasu",
+        "wordType": "verb",
+        "meaningVi": "Xin lỗi",
+        "accentNote": "Đã gặp N1 bài 9."
+      },
+      {
+        "id": "voc-n1-10-18",
+        "word": "もんだい",
+        "kanji": "問題",
+        "furigana": "もんだい",
+        "romaji": "mondai",
+        "wordType": "noun",
+        "meaningVi": "Vấn đề",
+        "accentNote": "Đã gặp N3 bài 13."
+      },
+      {
+        "id": "voc-n1-10-19",
+        "word": "じたい",
+        "kanji": "事態",
+        "furigana": "じたい",
+        "romaji": "jitai",
+        "wordType": "noun",
+        "meaningVi": "Tình thế, tình huống",
+        "accentNote": "Đã gặp N1 bài 5."
+      },
+      {
+        "id": "voc-n1-10-20",
+        "word": "しんらい",
+        "kanji": "信頼",
+        "furigana": "しんらい",
+        "romaji": "shinrai",
+        "wordType": "noun",
+        "meaningVi": "Sự tin cậy",
+        "accentNote": "Đã gặp N1 bài 6."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n1-10-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "皮",
+        "hanViet": "BÌ",
+        "strokeCount": 5,
         "onyomi": [
-          "ゴ"
+          "ヒ (hi)"
         ],
         "kunyomi": [
-          "かたる"
+          "かわ"
         ],
-        "meaningVi": "Ngôn ngữ",
+        "meaningVi": "Da, vỏ.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "皮切り",
+            "furigana": "かわきり",
+            "meaningVi": "Điểm khởi đầu"
+          },
+          {
+            "word": "皮膚",
+            "furigana": "ひふ",
+            "meaningVi": "Da"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-10-2",
+        "character": "切",
+        "hanViet": "THIẾT",
+        "strokeCount": 4,
+        "onyomi": [
+          "セツ (setsu)"
+        ],
+        "kunyomi": [
+          "き(る)"
+        ],
+        "meaningVi": "Cắt.",
+        "commonWords": [
+          {
+            "word": "皮切り",
+            "furigana": "かわきり",
+            "meaningVi": "Điểm khởi đầu"
+          },
+          {
+            "word": "切ります",
+            "furigana": "きります",
+            "meaningVi": "Cắt"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-10-3",
+        "character": "限",
+        "hanViet": "HẠN",
+        "strokeCount": 9,
+        "onyomi": [
+          "ゲン (gen)"
+        ],
+        "kunyomi": [
+          "かぎ(る)"
+        ],
+        "meaningVi": "Giới hạn.",
+        "commonWords": [
+          {
+            "word": "限り",
+            "furigana": "かぎり",
+            "meaningVi": "Giới hạn"
+          },
+          {
+            "word": "制限",
+            "furigana": "せいげん",
+            "meaningVi": "Sự hạn chế"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-10-4",
+        "character": "拡",
+        "hanViet": "KHUẾCH",
+        "strokeCount": 8,
+        "onyomi": [
+          "カク (kaku)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Mở rộng.",
+        "commonWords": [
+          {
+            "word": "拡大",
+            "furigana": "かくだい",
+            "meaningVi": "Mở rộng"
+          },
+          {
+            "word": "拡張",
+            "furigana": "かくちょう",
+            "meaningVi": "Mở rộng, khuếch trương"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-10-5",
+        "character": "退",
+        "hanViet": "THOÁI",
+        "strokeCount": 9,
+        "onyomi": [
+          "タイ (tai)"
+        ],
+        "kunyomi": [
+          "しりぞ(く)"
+        ],
+        "meaningVi": "Lui, rút lui.",
+        "commonWords": [
+          {
+            "word": "退職",
+            "furigana": "たいしょく",
+            "meaningVi": "Nghỉ hưu"
+          },
+          {
+            "word": "退院",
+            "furigana": "たいいん",
+            "meaningVi": "Xuất viện"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n1-l10-s0",
-        "title": "Trọng tâm: Khởi đầu & Cột mốc lịch sử (を皮切りにして & を限りに)",
-        "grammarFormula": "N + を皮切りに / を限りに (lần cuối cùng)",
-        "explanation": "Bắt đầu bằng một sự kiện tiêu biểu rồi lan tỏa rầm rộ sau đó.",
+        "slideId": "n1-l10-s1",
+        "slideType": "grammar",
+        "title": "1. Bắt đầu từ... (lấy làm điểm khởi đầu cho một chuỗi lan rộng): N + を皮切りにして",
+        "grammarFormula": "N(sự kiện khởi đầu) + を皮切りにして、[chuỗi sự kiện tiếp theo lan rộng]",
+        "explanation": "を皮切りにして dùng khi một sự kiện/địa điểm là ĐIỂM KHỞI ĐẦU cho một LOẠT sự kiện TƯƠNG TỰ diễn ra SAU ĐÓ theo trình tự mở rộng — thường dùng cho việc mở rộng kinh doanh, chuỗi sự kiện lan tỏa.",
+        "teacherTips": "を皮切りにして luôn kéo theo một chuỗi sự kiện LAN RỘNG/MỞ RỘNG ở vế sau — không dùng cho một sự kiện đơn lẻ, không có tiếp diễn.",
+        "culturalNotes": "Lịch sử công ty Nhật hay được kể theo mẫu: '〜を皮切りにして、全国に展開した' (bắt đầu từ..., đã mở rộng ra toàn quốc) — một mô-típ tường thuật thành công kinh điển.",
         "examples": [
           {
-            "id": "ex-n1-l10-1",
+            "id": "ex-n1-l10-s1-1",
             "tokens": [
               {
-                "id": "tok-n1-l10-1",
-                "text": "東京公演を皮",
+                "id": "t-l10s1-1",
+                "text": "とうきょう",
+                "isKeyGrammar": true,
+                "kanji": "東京",
+                "furigana": "とうきょう"
+              },
+              {
+                "id": "t-l10s1-2",
+                "text": "を",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n1-l10-2",
-                "text": "切りに、全国ツアーが 始まる。",
-                "isKeyGrammar": true
+                "id": "t-l10s1-3",
+                "text": "かわきりにして",
+                "isKeyGrammar": true,
+                "kanji": "皮切りにして",
+                "furigana": "かわきりにして"
+              },
+              {
+                "id": "t-l10s1-4",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s1-5",
+                "text": "ぜんこく",
+                "isKeyGrammar": true,
+                "kanji": "全国",
+                "furigana": "ぜんこく"
+              },
+              {
+                "id": "t-l10s1-6",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s1-7",
+                "text": "してん",
+                "isKeyGrammar": true,
+                "kanji": "支店",
+                "furigana": "してん"
+              },
+              {
+                "id": "t-l10s1-8",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s1-9",
+                "text": "ひろがりました",
+                "isKeyGrammar": false,
+                "kanji": "広がりました",
+                "furigana": "ひろがりました"
               }
             ],
-            "meaningVi": "Bắt đầu với buổi diễn tại Tokyo, chuyến lưu diễn toàn quốc sẽ chính thức khởi động."
+            "meaningVi": "Bắt đầu từ Tokyo, các chi nhánh đã lan rộng ra toàn quốc."
+          },
+          {
+            "id": "ex-n1-l10-s1-2",
+            "tokens": [
+              {
+                "id": "t-l10s1-10",
+                "text": "この",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s1-11",
+                "text": "せいこう",
+                "isKeyGrammar": true,
+                "kanji": "成功",
+                "furigana": "せいこう"
+              },
+              {
+                "id": "t-l10s1-12",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s1-13",
+                "text": "かわきりにして",
+                "isKeyGrammar": true,
+                "kanji": "皮切りにして",
+                "furigana": "かわきりにして"
+              },
+              {
+                "id": "t-l10s1-14",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s1-15",
+                "text": "かいしゃ",
+                "isKeyGrammar": true,
+                "kanji": "会社",
+                "furigana": "かいしゃ"
+              },
+              {
+                "id": "t-l10s1-16",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s1-17",
+                "text": "かくだいしました",
+                "isKeyGrammar": false,
+                "kanji": "拡大しました",
+                "furigana": "かくだいしました"
+              }
+            ],
+            "meaningVi": "Bắt đầu từ thành công này, công ty đã mở rộng."
           }
-        ],
-        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+        ]
+      },
+      {
+        "slideId": "n1-l10-s2",
+        "slideType": "grammar",
+        "title": "2. Kể từ [mốc] này sẽ chấm dứt/không còn... (tuyên bố quyết tâm mạnh mẽ): N(thời điểm) + を限りに",
+        "grammarFormula": "N(thời điểm/mốc) + を限りに、[chấm dứt việc gì]",
+        "explanation": "を限りに dùng để TUYÊN BỐ CHẤM DỨT một việc gì đó KỂ TỪ một mốc thời gian cụ thể — mang tính QUYẾT TÂM, DỨT KHOÁT, thường dùng trong lời tuyên bố chính thức (từ chức, giải nghệ, từ bỏ thói quen).",
+        "teacherTips": "を限りに hay đi kèm 今日/本日 (hôm nay) trong các lễ chia tay, tuyên bố từ chức — tạo cảm giác một MỐC THỜI GIAN rõ ràng, dứt khoát.",
+        "culturalNotes": "Lời phát biểu từ chức của lãnh đạo doanh nghiệp/chính trị gia Nhật gần như luôn mở đầu bằng '本日を限りに' (kể từ ngày hôm nay) để đánh dấu một cột mốc lịch sử rõ ràng.",
+        "examples": [
+          {
+            "id": "ex-n1-l10-s2-1",
+            "tokens": [
+              {
+                "id": "t-l10s2-1",
+                "text": "きょう",
+                "isKeyGrammar": true,
+                "kanji": "今日",
+                "furigana": "きょう"
+              },
+              {
+                "id": "t-l10s2-2",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s2-3",
+                "text": "かぎりに",
+                "isKeyGrammar": true,
+                "kanji": "限りに",
+                "furigana": "かぎりに"
+              },
+              {
+                "id": "t-l10s2-4",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s2-5",
+                "text": "たいしょく",
+                "isKeyGrammar": true,
+                "kanji": "退職",
+                "furigana": "たいしょく"
+              },
+              {
+                "id": "t-l10s2-6",
+                "text": "します",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Kể từ hôm nay, tôi sẽ nghỉ hưu."
+          },
+          {
+            "id": "ex-n1-l10-s2-2",
+            "tokens": [
+              {
+                "id": "t-l10s2-7",
+                "text": "きょう",
+                "isKeyGrammar": true,
+                "kanji": "今日",
+                "furigana": "きょう"
+              },
+              {
+                "id": "t-l10s2-8",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s2-9",
+                "text": "かぎりに",
+                "isKeyGrammar": true,
+                "kanji": "限りに",
+                "furigana": "かぎりに"
+              },
+              {
+                "id": "t-l10s2-10",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s2-11",
+                "text": "しゃちょう",
+                "isKeyGrammar": true,
+                "kanji": "社長",
+                "furigana": "しゃちょう"
+              },
+              {
+                "id": "t-l10s2-12",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s2-13",
+                "text": "やめます",
+                "isKeyGrammar": true,
+                "kanji": "辞めます",
+                "furigana": "やめます"
+              }
+            ],
+            "meaningVi": "Kể từ hôm nay, tôi sẽ từ chức giám đốc."
+          }
+        ]
+      },
+      {
+        "slideId": "n1-l10-s3",
+        "slideType": "grammar",
+        "title": "3. So sánh を皮切りにして và を限りに",
+        "grammarFormula": "を皮切りにして: KHỞI ĐẦU một chuỗi MỞ RỘNG　vs　を限りに: CHẤM DỨT dứt khoát kể từ một mốc",
+        "explanation": "を皮切りにして đánh dấu ĐIỂM BẮT ĐẦU của một quá trình PHÁT TRIỂN/LAN RỘNG (hướng về tương lai, mở ra); を限りに đánh dấu MỐC KẾT THÚC dứt khoát của một việc gì đó (hướng về việc chấm dứt, khép lại) — hai cấu trúc mang ý nghĩa TRÁI NGƯỢC nhau về mặt thời gian.",
+        "teacherTips": "Mẹo ghi nhớ: 皮切り (lát cắt đầu tiên) → BẮT ĐẦU; 限り (giới hạn) → KẾT THÚC.",
+        "culturalNotes": "Trong một bài viết lịch sử công ty, hai cấu trúc thường xuất hiện ở hai ĐẦU của bài: を皮切りにして ở phần mở đầu (kể về khởi nghiệp), を限りに ở phần kết (kể về việc người sáng lập nghỉ hưu).",
+        "examples": [
+          {
+            "id": "ex-n1-l10-s3-1",
+            "tokens": [
+              {
+                "id": "t-l10s3-1",
+                "text": "かいしゃ",
+                "isKeyGrammar": true,
+                "kanji": "会社",
+                "furigana": "かいしゃ"
+              },
+              {
+                "id": "t-l10s3-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s3-3",
+                "text": "この",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s3-4",
+                "text": "みせ",
+                "isKeyGrammar": true,
+                "kanji": "店",
+                "furigana": "みせ"
+              },
+              {
+                "id": "t-l10s3-5",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s3-6",
+                "text": "かわきりにして",
+                "isKeyGrammar": true,
+                "kanji": "皮切りにして",
+                "furigana": "かわきりにして"
+              },
+              {
+                "id": "t-l10s3-7",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s3-8",
+                "text": "せいこう",
+                "isKeyGrammar": true,
+                "kanji": "成功",
+                "furigana": "せいこう"
+              },
+              {
+                "id": "t-l10s3-9",
+                "text": "しました",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Công ty bắt đầu từ cửa hàng này, đã thành công. (mở đầu, hướng tới tương lai)"
+          },
+          {
+            "id": "ex-n1-l10-s3-2",
+            "tokens": [
+              {
+                "id": "t-l10s3-10",
+                "text": "しゃちょう",
+                "isKeyGrammar": true,
+                "kanji": "社長",
+                "furigana": "しゃちょう"
+              },
+              {
+                "id": "t-l10s3-11",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s3-12",
+                "text": "きょう",
+                "isKeyGrammar": true,
+                "kanji": "今日",
+                "furigana": "きょう"
+              },
+              {
+                "id": "t-l10s3-13",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s3-14",
+                "text": "かぎりに",
+                "isKeyGrammar": true,
+                "kanji": "限りに",
+                "furigana": "かぎりに"
+              },
+              {
+                "id": "t-l10s3-15",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s3-16",
+                "text": "せきにん",
+                "isKeyGrammar": true,
+                "kanji": "責任",
+                "furigana": "せきにん"
+              },
+              {
+                "id": "t-l10s3-17",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s3-18",
+                "text": "とりました",
+                "isKeyGrammar": false,
+                "kanji": "取りました",
+                "furigana": "とりました"
+              }
+            ],
+            "meaningVi": "Giám đốc, kể từ hôm nay trở đi, đã chịu trách nhiệm [và từ chức]. (kết thúc, khép lại)"
+          }
+        ]
+      },
+      {
+        "slideId": "n1-l10-s4",
+        "slideType": "grammar",
+        "title": "4. Kết hợp trong một bài tường thuật lịch sử công ty hoàn chỉnh",
+        "grammarFormula": "東京を皮切りにして、全国に拡大した (mở đầu lịch sử) + 今日を限りに、社長を辞める (kết thúc một kỷ nguyên)",
+        "explanation": "Một bài viết về LỊCH SỬ CÔNG TY hoàn chỉnh thường mở đầu bằng を皮切りにして để kể về sự KHỞI ĐẦU và MỞ RỘNG, rồi kết thúc bằng を限りに khi người sáng lập/giám đốc TUYÊN BỐ RÚT LUI, khép lại một kỷ nguyên để mở ra một chương mới.",
+        "teacherTips": "を皮切りにして luôn cần một VẾ SAU thể hiện sự lan rộng; を限りに luôn cần một VẾ SAU thể hiện sự chấm dứt — không đảo ngược được ý nghĩa hai cấu trúc.",
+        "culturalNotes": "Bài phát biểu chia tay của người sáng lập công ty Nhật thường theo khung: nhắc lại điểm khởi đầu (を皮切りにして) → thành tựu đạt được → tuyên bố rút lui trang trọng (を限りに).",
+        "examples": [
+          {
+            "id": "ex-n1-l10-s4-1",
+            "tokens": [
+              {
+                "id": "t-l10s4-1",
+                "text": "とうきょう",
+                "isKeyGrammar": true,
+                "kanji": "東京",
+                "furigana": "とうきょう"
+              },
+              {
+                "id": "t-l10s4-2",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s4-3",
+                "text": "かわきりにして",
+                "isKeyGrammar": true,
+                "kanji": "皮切りにして",
+                "furigana": "かわきりにして"
+              },
+              {
+                "id": "t-l10s4-4",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s4-5",
+                "text": "ぜんこく",
+                "isKeyGrammar": true,
+                "kanji": "全国",
+                "furigana": "ぜんこく"
+              },
+              {
+                "id": "t-l10s4-6",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s4-7",
+                "text": "してん",
+                "isKeyGrammar": true,
+                "kanji": "支店",
+                "furigana": "してん"
+              },
+              {
+                "id": "t-l10s4-8",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s4-9",
+                "text": "ひろがりました",
+                "isKeyGrammar": false,
+                "kanji": "広がりました",
+                "furigana": "ひろがりました"
+              }
+            ],
+            "meaningVi": "Bắt đầu từ Tokyo, các chi nhánh đã lan rộng ra toàn quốc."
+          },
+          {
+            "id": "ex-n1-l10-s4-2",
+            "tokens": [
+              {
+                "id": "t-l10s4-10",
+                "text": "きょう",
+                "isKeyGrammar": true,
+                "kanji": "今日",
+                "furigana": "きょう"
+              },
+              {
+                "id": "t-l10s4-11",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s4-12",
+                "text": "かぎりに",
+                "isKeyGrammar": true,
+                "kanji": "限りに",
+                "furigana": "かぎりに"
+              },
+              {
+                "id": "t-l10s4-13",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s4-14",
+                "text": "しゃちょう",
+                "isKeyGrammar": true,
+                "kanji": "社長",
+                "furigana": "しゃちょう"
+              },
+              {
+                "id": "t-l10s4-15",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s4-16",
+                "text": "やめます",
+                "isKeyGrammar": true,
+                "kanji": "辞めます",
+                "furigana": "やめます"
+              }
+            ],
+            "meaningVi": "Kể từ hôm nay, tôi sẽ từ chức giám đốc."
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n1-10-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "田中",
+        "speakerRole": "Phóng viên",
         "tokens": [
           {
-            "id": "tok-n1-10-d1",
-            "text": "この文法のポイントを"
+            "id": "d10-1",
+            "text": "さいしょ",
+            "isKeyGrammar": false,
+            "kanji": "最初",
+            "furigana": "さいしょ"
           },
           {
-            "id": "tok-n1-10-d2",
-            "text": "復習しましょう。"
+            "id": "d10-2",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-3",
+            "text": "みせ",
+            "isKeyGrammar": true,
+            "kanji": "店",
+            "furigana": "みせ"
+          },
+          {
+            "id": "d10-4",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-5",
+            "text": "どこ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-6",
+            "text": "でしたか",
+            "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Cửa hàng đầu tiên ở đâu?"
+      },
+      {
+        "id": "dia-n1-10-2",
+        "speaker": "社長",
+        "speakerRole": "Giám đốc sáng lập",
+        "tokens": [
+          {
+            "id": "d10-7",
+            "text": "とうきょう",
+            "isKeyGrammar": true,
+            "kanji": "東京",
+            "furigana": "とうきょう"
+          },
+          {
+            "id": "d10-8",
+            "text": "でした",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Là ở Tokyo."
+      },
+      {
+        "id": "dia-n1-10-3",
+        "speaker": "田中",
+        "speakerRole": "Phóng viên",
+        "tokens": [
+          {
+            "id": "d10-9",
+            "text": "それから",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-10",
+            "text": "どう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-11",
+            "text": "なりましたか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Sau đó thì sao?"
+      },
+      {
+        "id": "dia-n1-10-4",
+        "speaker": "社長",
+        "speakerRole": "Giám đốc sáng lập",
+        "tokens": [
+          {
+            "id": "d10-12",
+            "text": "とうきょう",
+            "isKeyGrammar": true,
+            "kanji": "東京",
+            "furigana": "とうきょう"
+          },
+          {
+            "id": "d10-13",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-14",
+            "text": "かわきりにして",
+            "isKeyGrammar": true,
+            "kanji": "皮切りにして",
+            "furigana": "かわきりにして"
+          },
+          {
+            "id": "d10-15",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-16",
+            "text": "ぜんこく",
+            "isKeyGrammar": true,
+            "kanji": "全国",
+            "furigana": "ぜんこく"
+          },
+          {
+            "id": "d10-17",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-18",
+            "text": "してん",
+            "isKeyGrammar": true,
+            "kanji": "支店",
+            "furigana": "してん"
+          },
+          {
+            "id": "d10-19",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-20",
+            "text": "ひろがりました",
+            "isKeyGrammar": false,
+            "kanji": "広がりました",
+            "furigana": "ひろがりました"
+          }
+        ],
+        "meaningVi": "Bắt đầu từ Tokyo, các chi nhánh đã lan rộng ra toàn quốc."
+      },
+      {
+        "id": "dia-n1-10-5",
+        "speaker": "田中",
+        "speakerRole": "Phóng viên",
+        "tokens": [
+          {
+            "id": "d10-21",
+            "text": "かいしゃ",
+            "isKeyGrammar": true,
+            "kanji": "会社",
+            "furigana": "かいしゃ"
+          },
+          {
+            "id": "d10-22",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-23",
+            "text": "かくだいしました",
+            "isKeyGrammar": false,
+            "kanji": "拡大しました",
+            "furigana": "かくだいしました"
+          },
+          {
+            "id": "d10-24",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Công ty đã mở rộng chưa?"
+      },
+      {
+        "id": "dia-n1-10-6",
+        "speaker": "社長",
+        "speakerRole": "Giám đốc sáng lập",
+        "tokens": [
+          {
+            "id": "d10-25",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-26",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-27",
+            "text": "この",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-28",
+            "text": "せいこう",
+            "isKeyGrammar": true,
+            "kanji": "成功",
+            "furigana": "せいこう"
+          },
+          {
+            "id": "d10-29",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-30",
+            "text": "かわきりにして",
+            "isKeyGrammar": true,
+            "kanji": "皮切りにして",
+            "furigana": "かわきりにして"
+          },
+          {
+            "id": "d10-31",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-32",
+            "text": "かいしゃ",
+            "isKeyGrammar": true,
+            "kanji": "会社",
+            "furigana": "かいしゃ"
+          },
+          {
+            "id": "d10-33",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-34",
+            "text": "かくだいしました",
+            "isKeyGrammar": false,
+            "kanji": "拡大しました",
+            "furigana": "かくだいしました"
+          }
+        ],
+        "meaningVi": "Vâng. Bắt đầu từ thành công này, công ty đã mở rộng."
+      },
+      {
+        "id": "dia-n1-10-7",
+        "speaker": "田中",
+        "speakerRole": "Phóng viên",
+        "tokens": [
+          {
+            "id": "d10-35",
+            "text": "しゃちょう",
+            "isKeyGrammar": true,
+            "kanji": "社長",
+            "furigana": "しゃちょう"
+          },
+          {
+            "id": "d10-36",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-37",
+            "text": "いつ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-38",
+            "text": "たいしょく",
+            "isKeyGrammar": true,
+            "kanji": "退職",
+            "furigana": "たいしょく"
+          },
+          {
+            "id": "d10-39",
+            "text": "しますか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Khi nào giám đốc sẽ nghỉ hưu?"
+      },
+      {
+        "id": "dia-n1-10-8",
+        "speaker": "社長",
+        "speakerRole": "Giám đốc sáng lập",
+        "tokens": [
+          {
+            "id": "d10-40",
+            "text": "きょう",
+            "isKeyGrammar": true,
+            "kanji": "今日",
+            "furigana": "きょう"
+          },
+          {
+            "id": "d10-41",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-42",
+            "text": "かぎりに",
+            "isKeyGrammar": true,
+            "kanji": "限りに",
+            "furigana": "かぎりに"
+          },
+          {
+            "id": "d10-43",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-44",
+            "text": "たいしょく",
+            "isKeyGrammar": true,
+            "kanji": "退職",
+            "furigana": "たいしょく"
+          },
+          {
+            "id": "d10-45",
+            "text": "します",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Kể từ hôm nay, tôi sẽ nghỉ hưu."
+      },
+      {
+        "id": "dia-n1-10-9",
+        "speaker": "田中",
+        "speakerRole": "Phóng viên",
+        "tokens": [
+          {
+            "id": "d10-46",
+            "text": "しゃちょう",
+            "isKeyGrammar": true,
+            "kanji": "社長",
+            "furigana": "しゃちょう"
+          },
+          {
+            "id": "d10-47",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-48",
+            "text": "やめる",
+            "isKeyGrammar": true,
+            "kanji": "辞める",
+            "furigana": "やめる"
+          },
+          {
+            "id": "d10-49",
+            "text": "ん",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-50",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-51",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Ông sẽ từ chức giám đốc à?"
+      },
+      {
+        "id": "dia-n1-10-10",
+        "speaker": "社長",
+        "speakerRole": "Giám đốc sáng lập",
+        "tokens": [
+          {
+            "id": "d10-52",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-53",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-54",
+            "text": "きょう",
+            "isKeyGrammar": true,
+            "kanji": "今日",
+            "furigana": "きょう"
+          },
+          {
+            "id": "d10-55",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-56",
+            "text": "かぎりに",
+            "isKeyGrammar": true,
+            "kanji": "限りに",
+            "furigana": "かぎりに"
+          },
+          {
+            "id": "d10-57",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-58",
+            "text": "しゃちょう",
+            "isKeyGrammar": true,
+            "kanji": "社長",
+            "furigana": "しゃちょう"
+          },
+          {
+            "id": "d10-59",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-60",
+            "text": "やめます",
+            "isKeyGrammar": true,
+            "kanji": "辞めます",
+            "furigana": "やめます"
+          }
+        ],
+        "meaningVi": "Vâng. Kể từ hôm nay, tôi sẽ từ chức giám đốc."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n1-10-1",
-        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Khởi đầu & Cột mốc lịch sử (を皮切りにして & を限りに)'",
+        "question": "「東京を皮切りにして、全国に支店が広がりました」 — を皮切りにして diễn tả điều gì?",
         "options": [
-          "N + を皮切りに",
-          "V-た + ところで",
-          "N + にかこつけて",
-          "V-る + べく"
+          "Một sự kiện là ĐIỂM KHỞI ĐẦU cho một chuỗi sự kiện tương tự LAN RỘNG sau đó",
+          "Một mốc thời gian chấm dứt hoàn toàn một việc gì đó",
+          "Sự cho phép làm việc gì đó",
+          "Một quyết định đơn lẻ, không có tiếp diễn"
         ],
         "correctIndex": 0,
-        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: N + を皮切りに / を限りに (lần cuối cùng)",
-        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+        "explanation": "を皮切りにして đánh dấu điểm khởi đầu cho một chuỗi sự kiện mở rộng, lan tỏa sau đó.",
+        "hint": "Xem cấu trúc を皮切りにして ở slide 1."
+      },
+      {
+        "id": "ex-q-n1-10-2",
+        "question": "「今日を限りに、退職します」 — を限りに dùng để làm gì?",
+        "options": [
+          "Tuyên bố CHẤM DỨT một việc gì đó một cách dứt khoát kể từ một mốc thời gian",
+          "Đánh dấu điểm khởi đầu cho một chuỗi sự kiện mở rộng",
+          "Xin phép làm việc gì đó",
+          "Đưa ra lời khuyên nhẹ nhàng"
+        ],
+        "correctIndex": 0,
+        "explanation": "を限りに dùng để tuyên bố chấm dứt dứt khoát một việc gì đó kể từ một mốc thời gian cụ thể.",
+        "hint": "Xem cấu trúc を限りに ở slide 2."
+      },
+      {
+        "id": "ex-q-n1-10-3",
+        "question": "Sự khác biệt cốt lõi giữa を皮切りにして và を限りに là gì?",
+        "options": [
+          "を皮切りにして là KHỞI ĐẦU một chuỗi mở rộng; を限りに là CHẤM DỨT dứt khoát kể từ một mốc",
+          "Hoàn toàn giống nhau, dùng thay thế được cho nhau",
+          "を皮切りにして chỉ dùng cho câu hỏi",
+          "を限りに chỉ dùng cho câu mở đầu"
+        ],
+        "correctIndex": 0,
+        "explanation": "Hai cấu trúc mang ý nghĩa trái ngược: một cái mở ra một chuỗi tương lai, một cái khép lại dứt khoát.",
+        "hint": "Xem bảng so sánh ở slide 3."
+      },
+      {
+        "id": "ex-q-n1-10-4",
+        "question": "「この成功を皮切りにして、会社は拡大しました」 nghĩa là:",
+        "options": [
+          "Bắt đầu từ thành công này, công ty đã mở rộng",
+          "Sau thành công này, công ty đã phá sản",
+          "Thành công này là sự kiện cuối cùng của công ty",
+          "Công ty chưa từng thành công"
+        ],
+        "correctIndex": 0,
+        "explanation": "を皮切りにして ở đây đánh dấu thành công này là điểm khởi đầu cho việc mở rộng tiếp theo.",
+        "hint": "Áp dụng cấu trúc を皮切りにして cho ngữ cảnh mở rộng kinh doanh."
+      },
+      {
+        "id": "ex-q-n1-10-5",
+        "question": "Từ nào thường đi kèm を限りに trong các lễ chia tay/tuyên bố từ chức?",
+        "options": [
+          "今日 (hôm nay) / 本日 (ngày hôm nay)",
+          "来年 (năm sau)",
+          "いつか (một lúc nào đó)",
+          "たまに (thỉnh thoảng)"
+        ],
+        "correctIndex": 0,
+        "explanation": "を限りに hay đi kèm mốc thời gian rõ ràng như 今日/本日 để tạo cảm giác dứt khoát, trang trọng.",
+        "hint": "Xem lưu ý ngữ pháp ở slide 2."
+      },
+      {
+        "id": "ex-q-n1-10-6",
+        "question": "Tại sao を皮切りにして và を限りに thường xuất hiện CÙNG NHAU trong một bài tường thuật lịch sử công ty?",
+        "options": [
+          "Để kể về sự khởi đầu/mở rộng (を皮切りにして) rồi kết thúc bằng tuyên bố rút lui trang trọng (を限りに)",
+          "Vì chúng có nghĩa giống hệt nhau nên dùng thay phiên",
+          "Không có lý do đặc biệt",
+          "Vì quy tắc ngữ pháp bắt buộc phải dùng chung"
+        ],
+        "correctIndex": 0,
+        "explanation": "を皮切りにして mở đầu câu chuyện về sự phát triển; を限りに khép lại bằng một tuyên bố rút lui dứt khoát.",
+        "hint": "Xem cấu trúc bài tường thuật hoàn chỉnh ở slide 4."
+      },
+      {
+        "id": "ex-q-n1-10-7",
+        "question": "「社長は今日を限りに、社長を辞めます」 nghĩa là:",
+        "options": [
+          "Kể từ hôm nay, giám đốc sẽ từ chức",
+          "Giám đốc sẽ tiếp tục làm việc mãi mãi",
+          "Giám đốc mới bắt đầu công việc từ hôm nay",
+          "Không có gì thay đổi"
+        ],
+        "correctIndex": 0,
+        "explanation": "を限りに ở đây đánh dấu hôm nay là mốc chấm dứt vai trò giám đốc.",
+        "hint": "Áp dụng cấu trúc を限りに cho ngữ cảnh từ chức."
+      },
+      {
+        "id": "ex-q-n1-10-8",
+        "question": "Theo hội thoại, công ty bắt đầu mở chi nhánh từ đâu?",
+        "options": [
+          "Tokyo (東京を皮切りにして)",
+          "Osaka",
+          "Không được đề cập trong hội thoại",
+          "Nước ngoài"
+        ],
+        "correctIndex": 0,
+        "explanation": "Giám đốc nói 「東京を皮切りにして、全国に支店が広がりました」.",
+        "hint": "Xem câu thoại thứ 4."
+      },
+      {
+        "id": "ex-q-n1-10-9",
+        "question": "Theo hội thoại, khi nào giám đốc sẽ nghỉ hưu?",
+        "options": [
+          "Kể từ hôm nay (今日を限りに、退職します)",
+          "Năm sau",
+          "Không bao giờ nghỉ hưu",
+          "Không được đề cập trong hội thoại"
+        ],
+        "correctIndex": 0,
+        "explanation": "Giám đốc nói 「今日を限りに、退職します」.",
+        "hint": "Xem câu thoại thứ 8."
+      },
+      {
+        "id": "ex-q-n1-10-10",
+        "question": "Theo hội thoại, giám đốc xác nhận điều gì ở cuối cuộc phỏng vấn?",
+        "options": [
+          "Sẽ từ chức giám đốc kể từ hôm nay (今日を限りに、社長を辞めます)",
+          "Sẽ tiếp tục làm giám đốc thêm nhiều năm",
+          "Sẽ mở thêm chi nhánh mới",
+          "Không xác nhận điều gì cả"
+        ],
+        "correctIndex": 0,
+        "explanation": "Giám đốc xác nhận 「はい。今日を限りに、社長を辞めます」.",
+        "hint": "Xem câu thoại thứ 10."
       }
     ]
   },
