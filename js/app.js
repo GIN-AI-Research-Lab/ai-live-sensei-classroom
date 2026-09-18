@@ -167,8 +167,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   populateLessons("N5", 1);
   slideEngine.renderSlide("N5", 1, 0);
 
-  // Chưa kết nối thì không cho giơ tay hỏi bài
-  if (raiseHandBtn) raiseHandBtn.disabled = true;
+  // Giơ tay hỏi TỰ kết nối khi bấm (xem handleRaiseHandClick/ensureConnected)
+  // — không khoá nút chờ kết nối có sẵn, và "Bắt đầu giảng bài" chỉ để điều
+  // khiển việc GIẢNG, không phải điều kiện để được hỏi bài.
 
   // Key doc tu .env — khong con o nhap, cung khong con bang cau hinh de bao tin.
   const savedApiKey = senseiKey();
@@ -655,12 +656,13 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     }
 
-    // 2. Nút giơ tay (ẩn khi đang thu âm — lúc đó hiện Gửi/Hủy)
+    // 2. Nút giơ tay (ẩn khi đang thu âm — lúc đó hiện Gửi/Hủy). KHÔNG khoá
+    // theo geminiClient.isConnected — bấm nút la tu ensureConnected(), không
+    // cần đã kết nối sẵn hay đã bấm "Bắt đầu giảng bài".
     if (raiseHandBtn) {
       raiseHandBtn.className = "ctl ctl-warn";
       if (raiseHandIcon) raiseHandIcon.className = "fa-solid fa-hand";
       if (raiseHandText) raiseHandText.innerText = "Giơ tay hỏi";
-      raiseHandBtn.disabled = !geminiClient.isConnected;
       raiseHandBtn.classList.toggle('hidden', isRaisingHand);
     }
     if (askSendBtn) askSendBtn.classList.toggle('hidden', !isRaisingHand);
@@ -1361,7 +1363,7 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
     if (audioEngine) audioEngine.setSuppressed(false);
     isRaisingHand = false;
     if (audioEngine.isMicActive) audioEngine.stopMic();
-    geminiClient.sendTurnComplete();
+    geminiClient.sendAudioStreamEnd();
     updateAskUI();
     updateLectureControlsUI();
     showToast('Đã gửi câu hỏi — Sensei đang giải đáp cho bạn…');
@@ -1924,7 +1926,7 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
     if (audioEngine.isMicActive) {
       audioEngine.stopMic();
       updateMicUI(true, false);
-      geminiClient.sendTurnComplete();
+      geminiClient.sendAudioStreamEnd();
       addLog("System", "Đã tắt Microphone và gửi câu hỏi. Sensei đang xử lý câu trả lời...");
     } else {
       try {
@@ -1954,7 +1956,6 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
     if (connectBtn) connectBtn.classList.toggle('is-live', connected);
     if (connectIcon) connectIcon.className = connected ? "fa-solid fa-power-off" : "fa-solid fa-plug";
     if (connectText) connectText.innerText = connected ? "Ngắt phiên" : "Bắt đầu phiên";
-    if (raiseHandBtn) raiseHandBtn.disabled = !connected;
   }
 
   // Không còn nút mic riêng: mic chỉ mở trong lúc học viên giơ tay hỏi bài.
@@ -1968,7 +1969,6 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
       if (micVolumePercent) micVolumePercent.innerText = '0%';
       if (micStatusText) micStatusText.innerText = 'Đang thu âm câu hỏi…';
     }
-    if (raiseHandBtn) raiseHandBtn.disabled = !canUse;
   }
 
   function setWaveformActive(active) {
@@ -2601,10 +2601,18 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
     const cau = timCauPhatAm(id);
     if (!cau) return;
 
-    if (!geminiClient.isConnected || !geminiClient.isSetupComplete) {
-      veTinPhatAm(id, '<i class="fa-solid fa-plug"></i><span>Chưa vào lớp được nên chưa chấm phát âm được. Thử tải lại trang.</span>', 'amber');
+    // Tu ket noi neu chua vao lop — khong bat buoc phai bam "Bắt đầu giảng
+    // bài" truoc, nut do chi de dieu khien viec GIANG, khong phai dieu kien
+    // de duoc dung mic cham phat am.
+    veTinPhatAm(id, '<i class="fa-solid fa-spinner fa-spin"></i><span>Đang vào lớp…</span>', 'amber');
+    try {
+      await ensureConnected();
+    } catch (err) {
+      veTinPhatAm(id, '<i class="fa-solid fa-plug"></i><span>Không vào lớp được — kiểm tra API Key hoặc mạng.</span>', 'amber');
       return;
     }
+    // Trong luc cho vao lop, hoc vien co the da bam sang cau khac roi
+    if (dangThuAm) return;
 
     // Dang giang bai thi dung lai da, khong de hai giong chong len nhau
     if (lectureState === 'PLAYING') pauseLecture(false);
@@ -2650,7 +2658,7 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     clearTimeout(chenNgangTimer);
     chenNgangTimer = setTimeout(ketThucChenNgang, 45000);
 
-    geminiClient.sendTurnComplete();
+    geminiClient.sendAudioStreamEnd();
   }
 
   function huyThuAm() {

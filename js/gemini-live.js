@@ -598,16 +598,28 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
   }
 
   /**
-   * Báo hiệu học viên đã nói xong (hoặc bấm tắt mic / gửi xong câu hỏi) để Gemini xử lý ngay lập tức
+   * Bao hieu hoc vien da noi xong qua MIC (bam tat mic / gui xong cau hoi
+   * dang thu bang realtimeInput) de Gemini xu ly ngay lap tuc.
+   *
+   * QUAN TRONG: realtimeInput (dong am thanh) va clientContent (luot noi co
+   * cau truc) la HAI KENH DOC LAP theo dung tai lieu BidiGenerateContent —
+   * "the ordering across these streams is not guaranteed", va turnComplete
+   * cua clientContent KHONG dieu khien duoc dong realtimeInput. Truoc day o
+   * day gui {clientContent:{turnComplete:true}} — sai kenh, nen cau hoi thu
+   * qua mic (gio tay hoi / cham phat am) bi "im" sau khi bam Gui: server
+   * khong co tin hieu dung de biet dong am thanh vua ket thuc.
+   * Tin hieu dung cho truong hop nay (tu dong nhan dien hoat dong dang BAT —
+   * mac dinh cua app nay) la realtimeInput.audioStreamEnd, dung "khi microphone
+   * bi tat" — dung y voi luc bam nut Gui/tat mic o day.
    */
-  sendTurnComplete() {
+  sendAudioStreamEnd() {
     if (!this.ws || this.ws.readyState !== WebSocket.OPEN) return;
 
     this.isModelTurnActive = true;
     this.lastClientSendTime = Date.now();
     this.safeSend({
-      clientContent: {
-        turnComplete: true
+      realtimeInput: {
+        audioStreamEnd: true
       }
     });
   }
