@@ -3,99 +3,1525 @@
     "level": "N3",
     "lessonNumber": 1,
     "title": "Bài 1: Phán đoán chắc chắn (わけがない & わけではない)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "description": "Bài mở đầu N3: わけがない diễn tả phủ định MẠNH MẼ, chủ quan ('không đời nào', dựa trên niềm tin/kinh nghiệm cá nhân — khác はずがない khách quan hơn ở N2), và わけではない diễn tả phủ định MỘT PHẦN, nhẹ nhàng ('không hẳn là', thường dùng đính chính hiểu lầm, đi kèm でも/しかし).",
     "vocabList": [
       {
         "id": "voc-n3-1-1",
-        "word": "重要語彙 (N3)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "しんじます",
+        "kanji": "信じます",
+        "furigana": "しんじます",
+        "romaji": "shinjimasu",
+        "wordType": "verb",
+        "meaningVi": "Tin tưởng",
+        "accentNote": "そんな こと 信じられません = tôi không thể tin chuyện đó."
+      },
+      {
+        "id": "voc-n3-1-2",
+        "word": "ごかいします",
+        "kanji": "誤解します",
+        "furigana": "ごかいします",
+        "romaji": "gokai shimasu",
+        "wordType": "verb",
+        "meaningVi": "Hiểu lầm",
+        "accentNote": "誤解しないで ください = xin đừng hiểu lầm."
+      },
+      {
+        "id": "voc-n3-1-3",
+        "word": "かんちがいします",
+        "kanji": "勘違いします",
+        "furigana": "かんちがいします",
+        "romaji": "kanchigai shimasu",
+        "wordType": "verb",
+        "meaningVi": "Nhầm lẫn, hiểu sai",
+        "accentNote": "何か 勘違いして いるようです = có vẻ (bạn) đang nhầm lẫn điều gì đó."
+      },
+      {
+        "id": "voc-n3-1-4",
+        "word": "じょうたつします",
+        "kanji": "上達します",
+        "furigana": "じょうたつします",
+        "romaji": "joutatsu shimasu",
+        "wordType": "verb",
+        "meaningVi": "Tiến bộ, tiến triển",
+        "accentNote": "日本語が 上達しました = tiếng Nhật đã tiến bộ."
+      },
+      {
+        "id": "voc-n3-1-5",
+        "word": "せんもんです",
+        "kanji": "専門です",
+        "furigana": "せんもんです",
+        "romaji": "senmon desu",
+        "wordType": "phrase",
+        "meaningVi": "Là chuyên môn (thể thông thường: 専門だ)",
+        "accentNote": "彼の 専門だ から = vì đó là chuyên môn của anh ấy."
+      },
+      {
+        "id": "voc-n3-1-6",
+        "word": "せんもん",
+        "kanji": "専門",
+        "furigana": "せんもん",
+        "romaji": "senmon",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 1",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Chuyên môn, ngành học",
+        "accentNote": "医学が 専門です = chuyên môn là y học."
+      },
+      {
+        "id": "voc-n3-1-7",
+        "word": "くわしい",
+        "kanji": "詳しい",
+        "furigana": "くわしい",
+        "romaji": "kuwashii",
+        "wordType": "adjective",
+        "meaningVi": "Rành, tường tận, chi tiết",
+        "accentNote": "この分野に 詳しい 人 = người rành lĩnh vực này."
+      },
+      {
+        "id": "voc-n3-1-8",
+        "word": "にがて",
+        "kanji": "苦手",
+        "furigana": "にがて",
+        "romaji": "nigate",
+        "wordType": "adjective",
+        "meaningVi": "Kém, không giỏi (tính từ な)",
+        "accentNote": "Đã gặp N4 bài 38."
+      },
+      {
+        "id": "voc-n3-1-9",
+        "word": "じしん",
+        "kanji": "自信",
+        "furigana": "じしん",
+        "romaji": "jishin",
+        "wordType": "noun",
+        "meaningVi": "Sự tự tin",
+        "accentNote": "自信が ある わけではありません = không phải là (tôi) có tự tin."
+      },
+      {
+        "id": "voc-n3-1-10",
+        "word": "けいけん",
+        "kanji": "経験",
+        "furigana": "けいけん",
+        "romaji": "keiken",
+        "wordType": "noun",
+        "meaningVi": "Kinh nghiệm, trải nghiệm",
+        "accentNote": "Đã gặp N5 bài 19."
+      },
+      {
+        "id": "voc-n3-1-11",
+        "word": "せいかく",
+        "kanji": "性格",
+        "furigana": "せいかく",
+        "romaji": "seikaku",
+        "wordType": "noun",
+        "meaningVi": "Tính cách",
+        "accentNote": "彼は そういう 性格じゃない = anh ấy không phải kiểu tính cách đó."
+      },
+      {
+        "id": "voc-n3-1-12",
+        "word": "りゆう",
+        "kanji": "理由",
+        "furigana": "りゆう",
+        "romaji": "riyuu",
+        "wordType": "noun",
+        "meaningVi": "Lý do",
+        "accentNote": "Đã gặp bài 26 (N4)."
+      },
+      {
+        "id": "voc-n3-1-13",
+        "word": "けっか",
+        "kanji": "結果",
+        "furigana": "けっか",
+        "romaji": "kekka",
+        "wordType": "noun",
+        "meaningVi": "Kết quả",
+        "accentNote": "この 結果は 偶然の わけがない = kết quả này không thể nào là ngẫu nhiên được."
+      },
+      {
+        "id": "voc-n3-1-14",
+        "word": "ぐうぜん",
+        "kanji": "偶然",
+        "furigana": "ぐうぜん",
+        "romaji": "guuzen",
+        "wordType": "adjective",
+        "meaningVi": "Ngẫu nhiên, tình cờ (danh từ/tính từ な)",
+        "accentNote": "偶然じゃない = không phải ngẫu nhiên."
+      },
+      {
+        "id": "voc-n3-1-15",
+        "word": "とくい",
+        "kanji": "得意",
+        "furigana": "とくい",
+        "romaji": "tokui",
+        "wordType": "adjective",
+        "meaningVi": "Giỏi, sở trường",
+        "accentNote": "彼は 数学が 得意な わけではありません = không phải anh ấy giỏi toán."
+      },
+      {
+        "id": "voc-n3-1-16",
+        "word": "さんか",
+        "kanji": "参加",
+        "furigana": "さんか",
+        "romaji": "sanka",
+        "wordType": "noun",
+        "meaningVi": "Sự tham gia",
+        "accentNote": "パーティーに 参加する わけには いきません = không thể nào tham gia bữa tiệc được (chưa học đủ, chỉ minh họa từ vựng)."
+      },
+      {
+        "id": "voc-n3-1-17",
+        "word": "さんせい",
+        "kanji": "賛成",
+        "furigana": "さんせい",
+        "romaji": "sansei",
+        "wordType": "noun",
+        "meaningVi": "Sự tán thành, đồng ý",
+        "accentNote": "みんなが 賛成した わけではありません = không phải mọi người đều tán thành."
+      },
+      {
+        "id": "voc-n3-1-18",
+        "word": "きろく",
+        "kanji": "記録",
+        "furigana": "きろく",
+        "romaji": "kiroku",
+        "wordType": "noun",
+        "meaningVi": "Kỷ lục, ghi chép",
+        "accentNote": "彼が この 記録を 破った わけがない = không thể nào anh ấy phá được kỷ lục này."
+      },
+      {
+        "id": "voc-n3-1-19",
+        "word": "ざんねん",
+        "kanji": "残念",
+        "furigana": "ざんねん",
+        "romaji": "zannen",
+        "wordType": "adjective",
+        "meaningVi": "Đáng tiếc, tiếc nuối",
+        "accentNote": "Đã gặp N4 bài 27."
+      },
+      {
+        "id": "voc-n3-1-20",
+        "word": "せつめい",
+        "kanji": "説明",
+        "furigana": "せつめい",
+        "romaji": "setsumei",
+        "wordType": "noun",
+        "meaningVi": "Lời giải thích",
+        "accentNote": "Đã gặp N4 bài 34."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n3-1-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "信",
+        "hanViet": "TÍN",
+        "strokeCount": 9,
         "onyomi": [
-          "ゴ"
+          "シン (shin)"
         ],
         "kunyomi": [
-          "かたる"
+          "しん(じる)"
         ],
-        "meaningVi": "Ngôn ngữ",
+        "meaningVi": "Tin tưởng, đáng tin.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "信じます",
+            "furigana": "しんじます",
+            "meaningVi": "Tin tưởng"
+          },
+          {
+            "word": "自信",
+            "furigana": "じしん",
+            "meaningVi": "Tự tin"
+          },
+          {
+            "word": "信号",
+            "furigana": "しんごう",
+            "meaningVi": "Đèn tín hiệu"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-1-2",
+        "character": "誤",
+        "hanViet": "NGỘ",
+        "strokeCount": 14,
+        "onyomi": [
+          "ゴ (go)"
+        ],
+        "kunyomi": [
+          "あやま(る)"
+        ],
+        "meaningVi": "Sai lầm, nhầm lẫn.",
+        "commonWords": [
+          {
+            "word": "誤解",
+            "furigana": "ごかい",
+            "meaningVi": "Hiểu lầm"
+          },
+          {
+            "word": "誤り",
+            "furigana": "あやまり",
+            "meaningVi": "Sai sót"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-1-3",
+        "character": "専",
+        "hanViet": "CHUYÊN",
+        "strokeCount": 9,
+        "onyomi": [
+          "セン (sen)"
+        ],
+        "kunyomi": [
+          "もっぱ(ら)"
+        ],
+        "meaningVi": "Chuyên môn, chuyên nhất.",
+        "commonWords": [
+          {
+            "word": "専門",
+            "furigana": "せんもん",
+            "meaningVi": "Chuyên môn"
+          },
+          {
+            "word": "専門家",
+            "furigana": "せんもんか",
+            "meaningVi": "Chuyên gia"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-1-4",
+        "character": "偶",
+        "hanViet": "NGẪU",
+        "strokeCount": 11,
+        "onyomi": [
+          "グウ (guu)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Ngẫu nhiên, tình cờ.",
+        "commonWords": [
+          {
+            "word": "偶然",
+            "furigana": "ぐうぜん",
+            "meaningVi": "Ngẫu nhiên"
+          },
+          {
+            "word": "偶数",
+            "furigana": "ぐうすう",
+            "meaningVi": "Số chẵn"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-1-5",
+        "character": "録",
+        "hanViet": "LỤC",
+        "strokeCount": 16,
+        "onyomi": [
+          "ロク (roku)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Ghi chép, ghi lại.",
+        "commonWords": [
+          {
+            "word": "記録",
+            "furigana": "きろく",
+            "meaningVi": "Kỷ lục, ghi chép"
+          },
+          {
+            "word": "録音",
+            "furigana": "ろくおん",
+            "meaningVi": "Ghi âm"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n3-l1-s0",
-        "title": "Trọng tâm: Phán đoán chắc chắn (わけがない & わけではない)",
-        "grammarFormula": "Thể thông thường (Naな/Nの) + わけがない / わけではない",
-        "explanation": "わけがない: Tuyệt đối không có lý nào. わけではない: Không hẳn là, không hoàn toàn là.",
+        "slideId": "n3-l1-s1",
+        "slideType": "grammar",
+        "title": "1. Khẳng định chắc chắn KHÔNG THỂ: [Thể thông thường] わけがない",
+        "grammarFormula": "V/A(thể thông thường) + わけがない　　N/な-adj + な + わけがない",
+        "explanation": "わけがない (nghĩa đen: 'không có lý do/cách nào') diễn tả sự PHỦ ĐỊNH MẠNH MẼ dựa trên SUY LUẬN LOGIC của người nói — 'không đời nào, không thể nào' — mạnh hơn hẳn ないでしょう.",
+        "teacherTips": "わけがない mang tính CHỦ QUAN mạnh, dựa trên niềm tin/kinh nghiệm cá nhân của người nói — khác はずがない (khách quan hơn, dựa trên logic/quy tắc, học ở N2).",
+        "culturalNotes": "そんなわけがない là câu phản bác đầy cảm xúc rất phổ biến khi ai đó nhận được tin gây sốc, khó tin.",
         "examples": [
           {
-            "id": "ex-n3-l1-1",
+            "id": "ex-n3-l1-s1-1",
             "tokens": [
               {
-                "id": "tok-n3-l1-1",
-                "text": "そんな難",
+                "id": "t-l1s1-1",
+                "text": "かれ",
+                "isKeyGrammar": false,
+                "kanji": "彼",
+                "furigana": "かれ"
+              },
+              {
+                "id": "t-l1s1-2",
+                "text": "が",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n3-l1-2",
-                "text": "しいこと、私にできるわけがない。",
+                "id": "t-l1s1-3",
+                "text": "この",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s1-4",
+                "text": "きろく",
+                "isKeyGrammar": true,
+                "kanji": "記録",
+                "furigana": "きろく"
+              },
+              {
+                "id": "t-l1s1-5",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s1-6",
+                "text": "やぶった",
+                "isKeyGrammar": false,
+                "kanji": "破った",
+                "furigana": "やぶった"
+              },
+              {
+                "id": "t-l1s1-7",
+                "text": "わけが",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l1s1-8",
+                "text": "ない",
                 "isKeyGrammar": true
               }
             ],
-            "meaningVi": "Chuyện khó như thế thì làm sao tôi có thể làm được chứ!"
+            "meaningVi": "Không thể nào anh ấy phá được kỷ lục này."
+          },
+          {
+            "id": "ex-n3-l1-s1-2",
+            "tokens": [
+              {
+                "id": "t-l1s1-9",
+                "text": "そんな",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s1-10",
+                "text": "こと",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s1-11",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s1-12",
+                "text": "しんじられる",
+                "isKeyGrammar": false,
+                "kanji": "信じられる",
+                "furigana": "しんじられる"
+              },
+              {
+                "id": "t-l1s1-13",
+                "text": "わけが",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l1s1-14",
+                "text": "ありません",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Không thể nào tin được chuyện như vậy."
           }
-        ],
-        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+        ]
+      },
+      {
+        "slideId": "n3-l1-s2",
+        "slideType": "grammar",
+        "title": "2. Phủ định gián tiếp: [Thể thông thường] わけではない",
+        "grammarFormula": "V/A(thể thông thường) + わけではない　　N/な-adj + な + わけではない",
+        "explanation": "わけではない KHÔNG phủ định TOÀN BỘ sự việc, mà chỉ phủ định một PHẦN/MỘT CÁCH HIỂU cụ thể — 'không phải là...' nhẹ nhàng hơn いいえ/ちがいます, thường dùng để ĐÍNH CHÍNH hiểu lầm.",
+        "teacherTips": "わけではない thường dùng để ĐÍNH CHÍNH một hiểu lầm đã hình thành trước đó — thường xuất hiện sau でも/しかし để phản bác nhẹ nhàng.",
+        "culturalNotes": "日本語が上手なわけではありません là câu khiêm tốn phổ biến khi được khen giỏi tiếng Nhật — phủ nhận nhẹ nhàng, không phủ nhận thẳng thừng.",
+        "examples": [
+          {
+            "id": "ex-n3-l1-s2-1",
+            "tokens": [
+              {
+                "id": "t-l1s2-1",
+                "text": "かれ",
+                "isKeyGrammar": false,
+                "kanji": "彼",
+                "furigana": "かれ"
+              },
+              {
+                "id": "t-l1s2-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s2-3",
+                "text": "すうがく",
+                "isKeyGrammar": false,
+                "kanji": "数学",
+                "furigana": "すうがく"
+              },
+              {
+                "id": "t-l1s2-4",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s2-5",
+                "text": "とくいな",
+                "isKeyGrammar": true,
+                "kanji": "得意な",
+                "furigana": "とくいな"
+              },
+              {
+                "id": "t-l1s2-6",
+                "text": "わけでは",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l1s2-7",
+                "text": "ありません",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Không phải là anh ấy giỏi toán (chỉ là điểm tạm ổn thôi)."
+          },
+          {
+            "id": "ex-n3-l1-s2-2",
+            "tokens": [
+              {
+                "id": "t-l1s2-8",
+                "text": "みんな",
+                "isKeyGrammar": false,
+                "kanji": "皆",
+                "furigana": "みんな"
+              },
+              {
+                "id": "t-l1s2-9",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s2-10",
+                "text": "さんせい",
+                "isKeyGrammar": true,
+                "kanji": "賛成",
+                "furigana": "さんせい"
+              },
+              {
+                "id": "t-l1s2-11",
+                "text": "した",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s2-12",
+                "text": "わけでは",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l1s2-13",
+                "text": "ありません",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Không phải là mọi người đều tán thành (một số người phản đối)."
+          }
+        ]
+      },
+      {
+        "slideId": "n3-l1-s3",
+        "slideType": "grammar",
+        "title": "3. So sánh わけがない và わけではない",
+        "grammarFormula": "わけがない: PHỦ ĐỊNH TOÀN BỘ, mạnh mẽ ('không đời nào')　vs　わけではない: PHỦ ĐỊNH MỘT PHẦN, nhẹ nhàng ('không hẳn là')",
+        "explanation": "Hai cấu trúc trông giống nhau (cùng có わけ) nhưng mức độ và phạm vi phủ định HOÀN TOÀN KHÁC — わけがない bác bỏ dứt khoát, わけではない chỉ điều chỉnh một phần nhận định.",
+        "teacherTips": "Mẹo phân biệt nhanh: わけがない thường dịch được là 'không đời nào'; わけではない dịch được là 'không hẳn/không phải hoàn toàn'.",
+        "culturalNotes": "Cả hai cấu trúc đều rất phổ biến trong tranh luận, phản biện lịch sự — thể hiện quan điểm mà không nói thẳng いいえ gây mất lòng.",
+        "examples": [
+          {
+            "id": "ex-n3-l1-s3-1",
+            "tokens": [
+              {
+                "id": "t-l1s3-1",
+                "text": "せんもん",
+                "isKeyGrammar": true,
+                "kanji": "専門",
+                "furigana": "せんもん"
+              },
+              {
+                "id": "t-l1s3-2",
+                "text": "じゃない",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l1s3-3",
+                "text": "かれ",
+                "isKeyGrammar": false,
+                "kanji": "彼",
+                "furigana": "かれ"
+              },
+              {
+                "id": "t-l1s3-4",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s3-5",
+                "text": "この",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s3-6",
+                "text": "もんだい",
+                "isKeyGrammar": false,
+                "kanji": "問題",
+                "furigana": "もんだい"
+              },
+              {
+                "id": "t-l1s3-7",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s3-8",
+                "text": "とけた",
+                "isKeyGrammar": false,
+                "kanji": "解けた",
+                "furigana": "とけた"
+              },
+              {
+                "id": "t-l1s3-9",
+                "text": "わけが",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l1s3-10",
+                "text": "ない",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Không phải chuyên môn của anh ấy nên không thể nào anh ấy giải được bài toán này. (わけがない)"
+          },
+          {
+            "id": "ex-n3-l1-s3-2",
+            "tokens": [
+              {
+                "id": "t-l1s3-11",
+                "text": "かれ",
+                "isKeyGrammar": false,
+                "kanji": "彼",
+                "furigana": "かれ"
+              },
+              {
+                "id": "t-l1s3-12",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s3-13",
+                "text": "にがて",
+                "isKeyGrammar": false,
+                "kanji": "苦手",
+                "furigana": "にがて"
+              },
+              {
+                "id": "t-l1s3-14",
+                "text": "です",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s3-15",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s3-16",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s3-17",
+                "text": "まったく",
+                "isKeyGrammar": false,
+                "kanji": "全く",
+                "furigana": "まったく"
+              },
+              {
+                "id": "t-l1s3-18",
+                "text": "できない",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l1s3-19",
+                "text": "わけでは",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l1s3-20",
+                "text": "ありません",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Anh ấy kém môn đó, nhưng không phải là hoàn toàn không làm được. (わけではない)"
+          }
+        ]
+      },
+      {
+        "slideId": "n3-l1-s4",
+        "slideType": "grammar",
+        "title": "4. わけではない thường đi cùng でも/しかし để đính chính",
+        "grammarFormula": "[Nhận định trước đó] でも／しかし、[thực ra] わけではありません",
+        "explanation": "Cấu trúc điển hình: MỞ ĐẦU bằng một nhận định có vẻ đúng, rồi dùng でも/しかし + わけではありません để LÀM RÕ nó không hoàn toàn chính xác.",
+        "teacherTips": "Đây là mẫu câu rất tự nhiên khi khiêm tốn về thành tích của mình — công nhận một phần rồi ngay lập tức làm rõ giới hạn của nó.",
+        "culturalNotes": "Khiêm tốn kiểu Nhật thường theo mẫu: khen bản thân MỘT CHÚT rồi lập tức わけではありません để giảm nhẹ, tránh tự cao.",
+        "examples": [
+          {
+            "id": "ex-n3-l1-s4-1",
+            "tokens": [
+              {
+                "id": "t-l1s4-1",
+                "text": "にほんご",
+                "isKeyGrammar": false,
+                "kanji": "日本語",
+                "furigana": "にほんご"
+              },
+              {
+                "id": "t-l1s4-2",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s4-3",
+                "text": "じょうたつ",
+                "isKeyGrammar": true,
+                "kanji": "上達",
+                "furigana": "じょうたつ"
+              },
+              {
+                "id": "t-l1s4-4",
+                "text": "しました",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s4-5",
+                "text": "。",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s4-6",
+                "text": "でも",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s4-7",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s4-8",
+                "text": "じしん",
+                "isKeyGrammar": true,
+                "kanji": "自信",
+                "furigana": "じしん"
+              },
+              {
+                "id": "t-l1s4-9",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l1s4-10",
+                "text": "ある",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l1s4-11",
+                "text": "わけでは",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l1s4-12",
+                "text": "ありません",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tiếng Nhật của tôi đã tiến bộ. Nhưng không phải là tôi (đã) có sự tự tin."
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n3-1-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
         "tokens": [
           {
-            "id": "tok-n3-1-d1",
-            "text": "この文法のポイントを"
+            "id": "d1-1",
+            "text": "山田さん",
+            "isKeyGrammar": false,
+            "kanji": "山田さん",
+            "furigana": "山田さん"
           },
           {
-            "id": "tok-n3-1-d2",
-            "text": "復習しましょう。"
+            "id": "d1-2",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-3",
+            "text": "この",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-4",
+            "text": "きろく",
+            "isKeyGrammar": true,
+            "kanji": "記録",
+            "furigana": "きろく"
+          },
+          {
+            "id": "d1-5",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-6",
+            "text": "やぶった",
+            "isKeyGrammar": false,
+            "kanji": "破った",
+            "furigana": "やぶった"
+          },
+          {
+            "id": "d1-7",
+            "text": "そうです",
+            "isKeyGrammar": false,
+            "kanji": "そうです",
+            "furigana": "そうです"
+          },
+          {
+            "id": "d1-8",
+            "text": "よ",
+            "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Nghe nói anh Yamada đã phá kỷ lục này đấy."
+      },
+      {
+        "id": "dia-n3-1-2",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d1-9",
+            "text": "え",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-10",
+            "text": "！",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-11",
+            "text": "そんな",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-12",
+            "text": "わけが",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d1-13",
+            "text": "ありません",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d1-14",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-15",
+            "text": "やまださん",
+            "isKeyGrammar": false,
+            "kanji": "山田さん",
+            "furigana": "やまださん"
+          },
+          {
+            "id": "d1-16",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-17",
+            "text": "スポーツ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-18",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-19",
+            "text": "にがて",
+            "isKeyGrammar": true,
+            "kanji": "苦手",
+            "furigana": "にがて"
+          },
+          {
+            "id": "d1-20",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Ơ! Không thể nào. Anh Yamada kém thể thao mà."
+      },
+      {
+        "id": "dia-n3-1-3",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d1-21",
+            "text": "でも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-22",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-23",
+            "text": "さいきん",
+            "isKeyGrammar": false,
+            "kanji": "最近",
+            "furigana": "さいきん"
+          },
+          {
+            "id": "d1-24",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-25",
+            "text": "とても",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-26",
+            "text": "れんしゅう",
+            "isKeyGrammar": false,
+            "kanji": "練習",
+            "furigana": "れんしゅう"
+          },
+          {
+            "id": "d1-27",
+            "text": "して",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d1-28",
+            "text": "いました",
+            "isKeyGrammar": false,
+            "kanji": "居ました",
+            "furigana": "いました"
+          }
+        ],
+        "meaningVi": "Nhưng gần đây, anh ấy đã luyện tập rất chăm chỉ đấy."
+      },
+      {
+        "id": "dia-n3-1-4",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d1-29",
+            "text": "そうですか",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-30",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-31",
+            "text": "でも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-32",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-33",
+            "text": "せんもん",
+            "isKeyGrammar": true,
+            "kanji": "専門",
+            "furigana": "せんもん"
+          },
+          {
+            "id": "d1-34",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-35",
+            "text": "せんしゅ",
+            "isKeyGrammar": false,
+            "kanji": "選手",
+            "furigana": "せんしゅ"
+          },
+          {
+            "id": "d1-36",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-37",
+            "text": "かった",
+            "isKeyGrammar": false,
+            "kanji": "勝った",
+            "furigana": "かった"
+          },
+          {
+            "id": "d1-38",
+            "text": "わけが",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d1-39",
+            "text": "ない",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d1-40",
+            "text": "と",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-41",
+            "text": "おもいます",
+            "isKeyGrammar": false,
+            "kanji": "思います",
+            "furigana": "おもいます"
+          }
+        ],
+        "meaningVi": "Vậy à. Nhưng tôi vẫn nghĩ không thể nào anh ấy thắng được vận động viên chuyên nghiệp."
+      },
+      {
+        "id": "dia-n3-1-5",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d1-42",
+            "text": "たしかに",
+            "isKeyGrammar": false,
+            "kanji": "確かに",
+            "furigana": "たしかに"
+          },
+          {
+            "id": "d1-43",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-44",
+            "text": "せんもん",
+            "isKeyGrammar": true,
+            "kanji": "専門",
+            "furigana": "せんもん"
+          },
+          {
+            "id": "d1-45",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-46",
+            "text": "せんしゅ",
+            "isKeyGrammar": false,
+            "kanji": "選手",
+            "furigana": "せんしゅ"
+          },
+          {
+            "id": "d1-47",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-48",
+            "text": "かった",
+            "isKeyGrammar": false,
+            "kanji": "勝った",
+            "furigana": "かった"
+          },
+          {
+            "id": "d1-49",
+            "text": "わけでは",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d1-50",
+            "text": "ありません",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d1-51",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-52",
+            "text": "きろく",
+            "isKeyGrammar": false,
+            "kanji": "記録",
+            "furigana": "きろく"
+          },
+          {
+            "id": "d1-53",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-54",
+            "text": "こうしんした",
+            "isKeyGrammar": false,
+            "kanji": "更新した",
+            "furigana": "こうしんした"
+          },
+          {
+            "id": "d1-55",
+            "text": "だけ",
+            "isKeyGrammar": false,
+            "kanji": "だけ",
+            "furigana": "だけ"
+          },
+          {
+            "id": "d1-56",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Đúng là, không phải là anh ấy thắng vận động viên chuyên nghiệp. Chỉ là anh ấy đã phá kỷ lục thôi."
+      },
+      {
+        "id": "dia-n3-1-6",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d1-57",
+            "text": "なるほど",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-58",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-59",
+            "text": "わたし",
+            "isKeyGrammar": false,
+            "kanji": "私",
+            "furigana": "わたし"
+          },
+          {
+            "id": "d1-60",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-61",
+            "text": "かんちがい",
+            "isKeyGrammar": true,
+            "kanji": "勘違い",
+            "furigana": "かんちがい"
+          },
+          {
+            "id": "d1-62",
+            "text": "して",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d1-63",
+            "text": "いました",
+            "isKeyGrammar": false,
+            "kanji": "居ました",
+            "furigana": "いました"
+          }
+        ],
+        "meaningVi": "Ra vậy. Tôi đã hiểu nhầm rồi."
+      },
+      {
+        "id": "dia-n3-1-7",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d1-64",
+            "text": "だいじょうぶ",
+            "isKeyGrammar": false,
+            "kanji": "大丈夫",
+            "furigana": "だいじょうぶ"
+          },
+          {
+            "id": "d1-65",
+            "text": "です",
+            "isKeyGrammar": false,
+            "kanji": "です",
+            "furigana": "です"
+          },
+          {
+            "id": "d1-66",
+            "text": "よ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-67",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-68",
+            "text": "ごかい",
+            "isKeyGrammar": true,
+            "kanji": "誤解",
+            "furigana": "ごかい"
+          },
+          {
+            "id": "d1-69",
+            "text": "しやすい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-70",
+            "text": "はなし",
+            "isKeyGrammar": false,
+            "kanji": "話",
+            "furigana": "はなし"
+          },
+          {
+            "id": "d1-71",
+            "text": "でした",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Không sao đâu. Đây là câu chuyện dễ gây hiểu lầm mà."
+      },
+      {
+        "id": "dia-n3-1-8",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d1-72",
+            "text": "やまださん",
+            "isKeyGrammar": false,
+            "kanji": "山田さん",
+            "furigana": "やまださん"
+          },
+          {
+            "id": "d1-73",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-74",
+            "text": "ほんとう",
+            "isKeyGrammar": false,
+            "kanji": "本当",
+            "furigana": "ほんとう"
+          },
+          {
+            "id": "d1-75",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-76",
+            "text": "じょうたつ",
+            "isKeyGrammar": true,
+            "kanji": "上達",
+            "furigana": "じょうたつ"
+          },
+          {
+            "id": "d1-77",
+            "text": "した",
+            "isKeyGrammar": false,
+            "kanji": "した",
+            "furigana": "した"
+          },
+          {
+            "id": "d1-78",
+            "text": "んです",
+            "isKeyGrammar": false,
+            "kanji": "んです",
+            "furigana": "んです"
+          },
+          {
+            "id": "d1-79",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Anh Yamada thật sự đã tiến bộ nhỉ."
+      },
+      {
+        "id": "dia-n3-1-9",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d1-80",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-81",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-82",
+            "text": "でも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-83",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-84",
+            "text": "じしん",
+            "isKeyGrammar": true,
+            "kanji": "自信",
+            "furigana": "じしん"
+          },
+          {
+            "id": "d1-85",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-86",
+            "text": "ある",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d1-87",
+            "text": "わけでは",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d1-88",
+            "text": "ない",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d1-89",
+            "text": "と",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-90",
+            "text": "いっていました",
+            "isKeyGrammar": false,
+            "kanji": "言っていました",
+            "furigana": "いっていました"
+          }
+        ],
+        "meaningVi": "Vâng. Nhưng anh ấy nói không phải là đã có sự tự tin."
+      },
+      {
+        "id": "dia-n3-1-10",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d1-91",
+            "text": "けんきょ",
+            "isKeyGrammar": false,
+            "kanji": "謙虚",
+            "furigana": "けんきょ"
+          },
+          {
+            "id": "d1-92",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-93",
+            "text": "ね",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-94",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-95",
+            "text": "すごい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-96",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d1-97",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Khiêm tốn thật nhỉ. Giỏi thật đấy."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n3-1-1",
-        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Phán đoán chắc chắn (わけがない & わけではない)'?",
+        "question": "「そんなわけがありません」 nghĩa là:",
         "options": [
-          "Thể thông thường (Naな/Nの) + わけがない",
-          "V-た + まま",
-          "N + に沿って",
-          "V-る + 途端に"
+          "Không thể nào có chuyện đó (phủ định mạnh mẽ)",
+          "Có thể có chuyện đó",
+          "Chuyện đó đã xảy ra rồi",
+          "Không rõ chuyện đó có xảy ra không"
         ],
         "correctIndex": 0,
-        "explanation": "Đáp án chính xác: Thể thông thường (Naな/Nの) + わけがない / わけではない",
-        "hint": "Xem lại công thức chia ở slide lý thuyết."
+        "explanation": "わけがない diễn tả sự phủ định MẠNH MẼ, dựa trên suy luận/niềm tin chắc chắn của người nói.",
+        "hint": "Xem nghĩa わけがない ở slide 1."
+      },
+      {
+        "id": "ex-q-n3-1-2",
+        "question": "「数学が得意なわけではありません」 nghĩa là:",
+        "options": [
+          "Không phải là (anh ấy) giỏi toán hoàn toàn (có thể chỉ tạm ổn)",
+          "Anh ấy hoàn toàn không biết gì về toán",
+          "Anh ấy rất giỏi toán",
+          "Câu này không có nghĩa rõ ràng"
+        ],
+        "correctIndex": 0,
+        "explanation": "わけではない chỉ phủ định MỘT PHẦN nhận định, không phủ định hoàn toàn — 'không hẳn là'.",
+        "hint": "So sánh với わけがない (phủ định toàn bộ)."
+      },
+      {
+        "id": "ex-q-n3-1-3",
+        "question": "わけがない và わけではない khác nhau chủ yếu ở:",
+        "options": [
+          "わけがない phủ định TOÀN BỘ, mạnh mẽ; わけではない phủ định MỘT PHẦN, nhẹ nhàng",
+          "Hoàn toàn giống nhau",
+          "わけがない chỉ dùng cho câu hỏi",
+          "わけではない chỉ dùng cho phủ định kép"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đây là điểm khác biệt cốt lõi của bài học — mức độ và phạm vi phủ định khác nhau.",
+        "hint": "Xem so sánh trực tiếp ở slide 3."
+      },
+      {
+        "id": "ex-q-n3-1-4",
+        "question": "「日本語が上達しました。でも、自信があるわけではありません」 — cấu trúc này dùng để:",
+        "options": [
+          "Công nhận một điều tốt rồi ngay lập tức khiêm tốn, giới hạn lại nhận định đó",
+          "Phủ định hoàn toàn việc đã tiến bộ",
+          "Khẳng định chắc chắn có tự tin",
+          "Không có mục đích gì đặc biệt"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đây là mẫu khiêm tốn kiểu Nhật: khen bản thân một chút rồi dùng わけではありません để giảm nhẹ.",
+        "hint": "Xem ví dụ và ghi chú văn hóa ở slide 4."
+      },
+      {
+        "id": "ex-q-n3-1-5",
+        "question": "「彼がこの記録を破ったわけがない」 — わけがない ở đây dựa trên điều gì?",
+        "options": [
+          "Niềm tin/kinh nghiệm CHỦ QUAN của người nói (biết anh ấy kém thể thao)",
+          "Một quy tắc khách quan, khoa học đã được chứng minh",
+          "Không dựa trên điều gì cả",
+          "Lời của người khác kể lại"
+        ],
+        "correctIndex": 0,
+        "explanation": "わけがない mang tính CHỦ QUAN, dựa trên hiểu biết/niềm tin cá nhân — khác はずがない khách quan hơn (học ở N2).",
+        "hint": "Xem ghi chú so sánh ở slide 1."
+      },
+      {
+        "id": "ex-q-n3-1-6",
+        "question": "「みんなが賛成したわけではありません」 nghĩa là:",
+        "options": [
+          "Không phải TẤT CẢ mọi người đều tán thành (một số phản đối)",
+          "Không ai tán thành cả",
+          "Tất cả mọi người đều tán thành",
+          "Không rõ ai tán thành"
+        ],
+        "correctIndex": 0,
+        "explanation": "わけではない phủ định TOÀN THỂ tính (all), ngụ ý có ngoại lệ — không phải 100% đồng ý.",
+        "hint": "Áp dụng đúng nghĩa わけではない cho câu có 'みんな' (tất cả)."
+      },
+      {
+        "id": "ex-q-n3-1-7",
+        "question": "Câu nào SAI khi ghép わけがない với tính từ な/danh từ?",
+        "options": [
+          "専門わけがない (thiếu な)",
+          "専門なわけがない (đúng)",
+          "偶然なわけがない (đúng)",
+          "得意なわけがない (đúng)"
+        ],
+        "correctIndex": 0,
+        "explanation": "Tính từ な/danh từ cần thêm な trước わけがない: 専門 → 専門な わけがない.",
+        "hint": "Xem công thức chia ở slide 1."
+      },
+      {
+        "id": "ex-q-n3-1-8",
+        "question": "「確かに、専門の選手に勝ったわけではありません」 — 確かに có vai trò gì?",
+        "options": [
+          "Công nhận một phần đúng trước khi đưa ra điều chỉnh bằng わけではありません",
+          "Phủ định hoàn toàn câu trước đó",
+          "Biến câu thành câu hỏi",
+          "Không có vai trò gì đặc biệt"
+        ],
+        "correctIndex": 0,
+        "explanation": "確かに (đúng là) thường mở đầu câu có わけではありません để công nhận một phần rồi làm rõ giới hạn.",
+        "hint": "Xem cách dùng trong hội thoại."
+      },
+      {
+        "id": "ex-q-n3-1-9",
+        "question": "Trong hội thoại, vì sao Santos ban đầu không tin Yamada phá kỷ lục?",
+        "options": [
+          "Vì biết Yamada kém thể thao",
+          "Vì không thích Yamada",
+          "Vì kỷ lục đó rất khó phá",
+          "Không có lý do cụ thể"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos nói 「山田さんはスポーツが苦手です」.",
+        "hint": "Xem câu thoại thứ 2."
+      },
+      {
+        "id": "ex-q-n3-1-10",
+        "question": "Cuối cùng, Yamada nói gì về sự tiến bộ của mình?",
+        "options": [
+          "Không phải là đã có sự tự tin",
+          "Đã rất tự tin",
+          "Không hề tiến bộ",
+          "Không nói gì cả"
+        ],
+        "correctIndex": 0,
+        "explanation": "Tanaka thuật lại lời Yamada: 「自信があるわけではないと言っていました」.",
+        "hint": "Xem câu thoại thứ 9."
       }
     ]
   },
