@@ -13774,99 +13774,1639 @@
     "level": "N1",
     "lessonNumber": 11,
     "title": "Bài 11: Căn cứ pháp lý & Chuẩn mực (に即して & に則って)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "description": "に即して dùng khi đưa ra một hành động/nhận định BÁM SÁT theo một THỰC TẾ CỤ THỂ đang diễn ra (thực trạng vụ việc, tình hình thị trường, bằng chứng) — N là một thực tế cụ thể, không phải quy tắc trừu tượng. に則って dùng để diễn tả việc tuân theo một cách CHÍNH THỨC, TRANG TRỌNG một QUY TẮC/PHÁP LUẬT/TIỀN LỆ/TRUYỀN THỐNG đã được thiết lập từ trước. Hai cấu trúc thường kết hợp trong bối cảnh phiên tòa/xét xử: vừa xem xét thực tế cụ thể của vụ việc, vừa tuân thủ nghiêm ngặt pháp luật và tiền lệ khi đưa ra phán quyết.",
     "vocabList": [
       {
         "id": "voc-n1-11-1",
-        "word": "重要語彙 (N1)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "じったい",
+        "kanji": "実態",
+        "furigana": "じったい",
+        "romaji": "jittai",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 11",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Thực trạng, tình hình thực tế",
+        "accentNote": "市場の 実態を 調べます = điều tra thực trạng thị trường."
+      },
+      {
+        "id": "voc-n1-11-2",
+        "word": "かんしゅう",
+        "kanji": "慣習",
+        "furigana": "かんしゅう",
+        "romaji": "kanshuu",
+        "wordType": "noun",
+        "meaningVi": "Tập quán, thông lệ",
+        "accentNote": "地域の 慣習に 従います = tuân theo tập quán địa phương."
+      },
+      {
+        "id": "voc-n1-11-3",
+        "word": "ぜんれい",
+        "kanji": "前例",
+        "furigana": "ぜんれい",
+        "romaji": "zenrei",
+        "wordType": "noun",
+        "meaningVi": "Tiền lệ",
+        "accentNote": "前例が ない = không có tiền lệ."
+      },
+      {
+        "id": "voc-n1-11-4",
+        "word": "はんけつ",
+        "kanji": "判決",
+        "furigana": "はんけつ",
+        "romaji": "hanketsu",
+        "wordType": "noun",
+        "meaningVi": "Phán quyết, bản án",
+        "accentNote": "判決を 下します = đưa ra phán quyết."
+      },
+      {
+        "id": "voc-n1-11-5",
+        "word": "そしょう",
+        "kanji": "訴訟",
+        "furigana": "そしょう",
+        "romaji": "soshou",
+        "wordType": "noun",
+        "meaningVi": "Vụ kiện, việc kiện tụng",
+        "accentNote": "訴訟を 起こします = khởi kiện."
+      },
+      {
+        "id": "voc-n1-11-6",
+        "word": "そくします",
+        "kanji": "即します",
+        "furigana": "そくします",
+        "romaji": "sokushimasu",
+        "wordType": "verb",
+        "meaningVi": "Bám sát, phù hợp theo (thực tế)",
+        "accentNote": "実態に 即した 対応 = cách ứng phó bám sát thực tế."
+      },
+      {
+        "id": "voc-n1-11-7",
+        "word": "さいばん",
+        "kanji": "裁判",
+        "furigana": "さいばん",
+        "romaji": "saiban",
+        "wordType": "noun",
+        "meaningVi": "Phiên tòa, việc xét xử",
+        "accentNote": "裁判で 争います = tranh chấp tại tòa án."
+      },
+      {
+        "id": "voc-n1-11-8",
+        "word": "べんごし",
+        "kanji": "弁護士",
+        "furigana": "べんごし",
+        "romaji": "bengoshi",
+        "wordType": "noun",
+        "meaningVi": "Luật sư",
+        "accentNote": "弁護士に 相談します = tham khảo ý kiến luật sư."
+      },
+      {
+        "id": "voc-n1-11-9",
+        "word": "じじつ",
+        "kanji": "事実",
+        "furigana": "じじつ",
+        "romaji": "jijitsu",
+        "wordType": "noun",
+        "meaningVi": "Sự thật",
+        "accentNote": "Đã gặp N2 bài 10."
+      },
+      {
+        "id": "voc-n1-11-10",
+        "word": "きそく",
+        "kanji": "規則",
+        "furigana": "きそく",
+        "romaji": "kisoku",
+        "wordType": "noun",
+        "meaningVi": "Quy tắc, nội quy",
+        "accentNote": "Đã gặp N4 bài 28."
+      },
+      {
+        "id": "voc-n1-11-11",
+        "word": "ほうりつ",
+        "kanji": "法律",
+        "furigana": "ほうりつ",
+        "romaji": "houritsu",
+        "wordType": "noun",
+        "meaningVi": "Pháp luật",
+        "accentNote": "Đã gặp N2 bài 10."
+      },
+      {
+        "id": "voc-n1-11-12",
+        "word": "でんとう",
+        "kanji": "伝統",
+        "furigana": "でんとう",
+        "romaji": "dentou",
+        "wordType": "noun",
+        "meaningVi": "Truyền thống",
+        "accentNote": "Đã gặp N2 bài 11."
+      },
+      {
+        "id": "voc-n1-11-13",
+        "word": "ぎしき",
+        "kanji": "儀式",
+        "furigana": "ぎしき",
+        "romaji": "gishiki",
+        "wordType": "noun",
+        "meaningVi": "Nghi lễ, nghi thức",
+        "accentNote": "Đã gặp N2 bài 1."
+      },
+      {
+        "id": "voc-n1-11-14",
+        "word": "きじゅん",
+        "kanji": "基準",
+        "furigana": "きじゅん",
+        "romaji": "kijun",
+        "wordType": "noun",
+        "meaningVi": "Tiêu chuẩn, căn cứ",
+        "accentNote": "Đã gặp N2 bài 10."
+      },
+      {
+        "id": "voc-n1-11-15",
+        "word": "しょうこ",
+        "kanji": "証拠",
+        "furigana": "しょうこ",
+        "romaji": "shouko",
+        "wordType": "noun",
+        "meaningVi": "Chứng cứ, bằng chứng",
+        "accentNote": "Đã gặp N1 bài 7."
+      },
+      {
+        "id": "voc-n1-11-16",
+        "word": "しゅうかん",
+        "kanji": "習慣",
+        "furigana": "しゅうかん",
+        "romaji": "shuukan",
+        "wordType": "noun",
+        "meaningVi": "Thói quen, tập quán",
+        "accentNote": "Đã gặp N4 bài 28."
+      },
+      {
+        "id": "voc-n1-11-17",
+        "word": "とうけい",
+        "kanji": "統計",
+        "furigana": "とうけい",
+        "romaji": "toukei",
+        "wordType": "noun",
+        "meaningVi": "Thống kê",
+        "accentNote": "Đã gặp N2 bài 10."
+      },
+      {
+        "id": "voc-n1-11-18",
+        "word": "きてい",
+        "kanji": "規定",
+        "furigana": "きてい",
+        "romaji": "kitei",
+        "wordType": "noun",
+        "meaningVi": "Quy định (chính thức, văn bản)",
+        "accentNote": "Đã gặp N3 bài 3."
+      },
+      {
+        "id": "voc-n1-11-19",
+        "word": "じけん",
+        "kanji": "事件",
+        "furigana": "じけん",
+        "romaji": "jiken",
+        "wordType": "noun",
+        "meaningVi": "Vụ việc, sự kiện",
+        "accentNote": "Đã gặp N1 bài 2."
+      },
+      {
+        "id": "voc-n1-11-20",
+        "word": "したがいます",
+        "kanji": "従います",
+        "furigana": "したがいます",
+        "romaji": "shitagaimasu",
+        "wordType": "verb",
+        "meaningVi": "Tuân theo, phục tùng",
+        "accentNote": "Đã gặp N3 bài 19."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n1-11-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "即",
+        "hanViet": "TỨC",
+        "strokeCount": 7,
         "onyomi": [
-          "ゴ"
+          "ソク (soku)"
         ],
         "kunyomi": [
-          "かたる"
+          "すなわ(ち)"
         ],
-        "meaningVi": "Ngôn ngữ",
+        "meaningVi": "Ngay lập tức, tức là.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "即します",
+            "furigana": "そくします",
+            "meaningVi": "Bám sát theo, phù hợp với"
+          },
+          {
+            "word": "即座に",
+            "furigana": "そくざに",
+            "meaningVi": "Ngay lập tức"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-11-2",
+        "character": "則",
+        "hanViet": "TẮC",
+        "strokeCount": 9,
+        "onyomi": [
+          "ソク (soku)"
+        ],
+        "kunyomi": [
+          "のっと(る)"
+        ],
+        "meaningVi": "Quy tắc, phép tắc.",
+        "commonWords": [
+          {
+            "word": "規則",
+            "furigana": "きそく",
+            "meaningVi": "Quy tắc"
+          },
+          {
+            "word": "原則",
+            "furigana": "げんそく",
+            "meaningVi": "Nguyên tắc"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-11-3",
+        "character": "態",
+        "hanViet": "THÁI",
+        "strokeCount": 14,
+        "onyomi": [
+          "タイ (tai)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Trạng thái, dáng vẻ.",
+        "commonWords": [
+          {
+            "word": "実態",
+            "furigana": "じったい",
+            "meaningVi": "Thực trạng"
+          },
+          {
+            "word": "状態",
+            "furigana": "じょうたい",
+            "meaningVi": "Trạng thái"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-11-4",
+        "character": "慣",
+        "hanViet": "QUÁN",
+        "strokeCount": 14,
+        "onyomi": [
+          "カン (kan)"
+        ],
+        "kunyomi": [
+          "な(れる)"
+        ],
+        "meaningVi": "Quen thuộc, tập quán.",
+        "commonWords": [
+          {
+            "word": "慣習",
+            "furigana": "かんしゅう",
+            "meaningVi": "Tập quán"
+          },
+          {
+            "word": "習慣",
+            "furigana": "しゅうかん",
+            "meaningVi": "Thói quen"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-11-5",
+        "character": "判",
+        "hanViet": "PHÁN",
+        "strokeCount": 7,
+        "onyomi": [
+          "ハン (han)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Phán đoán, phán quyết.",
+        "commonWords": [
+          {
+            "word": "判決",
+            "furigana": "はんけつ",
+            "meaningVi": "Phán quyết"
+          },
+          {
+            "word": "裁判",
+            "furigana": "さいばん",
+            "meaningVi": "Phiên tòa"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n1-l11-s0",
-        "title": "Trọng tâm: Căn cứ pháp lý & Chuẩn mực (に即して & に則って)",
-        "grammarFormula": "N + に即して (theo sát thực tế) / に則って (theo luật lệ)",
-        "explanation": "Hành động tuân thủ nghiêm ngặt theo quy tắc, truyền thống, pháp luật.",
+        "slideId": "n1-l11-s1",
+        "slideType": "grammar",
+        "title": "1. Bám sát theo thực tế cụ thể: N(thực tế) + に即して",
+        "grammarFormula": "N(thực tế/tình hình cụ thể) + に即して、[hành động/nhận định phù hợp]",
+        "explanation": "に即して dùng khi đưa ra một HÀNH ĐỘNG/NHẬN ĐỊNH bám sát/dựa sát theo một THỰC TẾ CỤ THỂ đang diễn ra (tình hình, kinh nghiệm, dữ liệu, thực trạng vụ việc) — N ở đây luôn là một THỰC TẾ CỤ THỂ, khác với に則って (slide 2) vốn dùng cho quy tắc/pháp luật trừu tượng.",
+        "teacherTips": "に即して luôn đi sau một DANH TỪ chỉ THỰC TẾ/TÌNH HÌNH cụ thể (実態, 実情, 現状) — không dùng trực tiếp sau quy tắc/pháp luật trừu tượng như 法律, 規則 (những từ đó dùng với に則って).",
+        "culturalNotes": "Trong văn bản phán quyết tòa án Nhật, cụm '事実に即して判断する' (phán đoán bám sát theo sự thật) là công thức mở đầu phần lập luận rất phổ biến.",
         "examples": [
           {
-            "id": "ex-n1-l11-1",
+            "id": "ex-n1-l11-s1-1",
             "tokens": [
               {
-                "id": "tok-n1-l11-1",
-                "text": "法律に則って",
+                "id": "t-l11s1-1",
+                "text": "はんけつ",
+                "isKeyGrammar": true,
+                "kanji": "判決",
+                "furigana": "はんけつ"
+              },
+              {
+                "id": "t-l11s1-2",
+                "text": "は",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n1-l11-2",
-                "text": "、厳正に 処罰される。",
+                "id": "t-l11s1-3",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s1-4",
+                "text": "じけん",
+                "isKeyGrammar": true,
+                "kanji": "事件",
+                "furigana": "じけん"
+              },
+              {
+                "id": "t-l11s1-5",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s1-6",
+                "text": "じったい",
+                "isKeyGrammar": true,
+                "kanji": "実態",
+                "furigana": "じったい"
+              },
+              {
+                "id": "t-l11s1-7",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s1-8",
+                "text": "そくして",
+                "isKeyGrammar": true,
+                "kanji": "即して",
+                "furigana": "そくして"
+              },
+              {
+                "id": "t-l11s1-9",
+                "text": "くだされた",
+                "isKeyGrammar": false,
+                "kanji": "下された",
+                "furigana": "くだされた"
+              }
+            ],
+            "meaningVi": "Phán quyết đã được đưa ra bám sát theo thực trạng của vụ việc."
+          },
+          {
+            "id": "ex-n1-l11-s1-2",
+            "tokens": [
+              {
+                "id": "t-l11s1-10",
+                "text": "べんごし",
+                "isKeyGrammar": true,
+                "kanji": "弁護士",
+                "furigana": "べんごし"
+              },
+              {
+                "id": "t-l11s1-11",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s1-12",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s1-13",
+                "text": "しょうこ",
+                "isKeyGrammar": true,
+                "kanji": "証拠",
+                "furigana": "しょうこ"
+              },
+              {
+                "id": "t-l11s1-14",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s1-15",
+                "text": "じったい",
+                "isKeyGrammar": true,
+                "kanji": "実態",
+                "furigana": "じったい"
+              },
+              {
+                "id": "t-l11s1-16",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s1-17",
+                "text": "そくして",
+                "isKeyGrammar": true,
+                "kanji": "即して",
+                "furigana": "そくして"
+              },
+              {
+                "id": "t-l11s1-18",
+                "text": "しゅちょうした",
+                "isKeyGrammar": false,
+                "kanji": "主張した",
+                "furigana": "しゅちょうした"
+              }
+            ],
+            "meaningVi": "Luật sư đã lập luận bám sát theo thực trạng của bằng chứng."
+          }
+        ]
+      },
+      {
+        "slideId": "n1-l11-s2",
+        "slideType": "grammar",
+        "title": "2. Tuân theo quy tắc/truyền thống chính thức: N(quy tắc) + に則って",
+        "grammarFormula": "N(luật lệ/quy định/tiền lệ/truyền thống) + に則って、[hành động tuân theo]",
+        "explanation": "に則って dùng để diễn tả việc thực hiện một hành động TUÂN THEO một cách CHÍNH THỨC, TRANG TRỌNG một QUY TẮC/PHÁP LUẬT/TIỀN LỆ/TRUYỀN THỐNG đã được THIẾT LẬP TỪ TRƯỚC — N phải là điều gì đó mang tính QUY PHẠM có sẵn, không phải một tình huống thực tế đơn thuần.",
+        "teacherTips": "に則って hay đi sau 法律/規則/伝統/慣習/前例 (những danh từ chỉ QUY TẮC đã được thiết lập) — không dùng cho một tình huống thực tế nhất thời.",
+        "culturalNotes": "Các nghi lễ truyền thống Nhật Bản (đám cưới, lễ hội, tang lễ) luôn được giới thiệu bằng cụm '伝統に則って/しきたりに則って' (tuân theo truyền thống/tục lệ) để nhấn mạnh tính trang trọng, đúng khuôn phép.",
+        "examples": [
+          {
+            "id": "ex-n1-l11-s2-1",
+            "tokens": [
+              {
+                "id": "t-l11s2-1",
+                "text": "はんけつ",
+                "isKeyGrammar": true,
+                "kanji": "判決",
+                "furigana": "はんけつ"
+              },
+              {
+                "id": "t-l11s2-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s2-3",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s2-4",
+                "text": "ほうりつ",
+                "isKeyGrammar": true,
+                "kanji": "法律",
+                "furigana": "ほうりつ"
+              },
+              {
+                "id": "t-l11s2-5",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s2-6",
+                "text": "のっとって",
+                "isKeyGrammar": true,
+                "kanji": "則って",
+                "furigana": "のっとって"
+              },
+              {
+                "id": "t-l11s2-7",
+                "text": "くだされた",
+                "isKeyGrammar": false,
+                "kanji": "下された",
+                "furigana": "くだされた"
+              }
+            ],
+            "meaningVi": "Phán quyết đã được đưa ra tuân theo pháp luật."
+          },
+          {
+            "id": "ex-n1-l11-s2-2",
+            "tokens": [
+              {
+                "id": "t-l11s2-8",
+                "text": "けっこんしき",
+                "isKeyGrammar": false,
+                "kanji": "結婚式",
+                "furigana": "けっこんしき"
+              },
+              {
+                "id": "t-l11s2-9",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s2-10",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s2-11",
+                "text": "むかし",
+                "isKeyGrammar": false,
+                "kanji": "昔",
+                "furigana": "むかし"
+              },
+              {
+                "id": "t-l11s2-12",
+                "text": "から",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s2-13",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s2-14",
+                "text": "かんしゅう",
+                "isKeyGrammar": true,
+                "kanji": "慣習",
+                "furigana": "かんしゅう"
+              },
+              {
+                "id": "t-l11s2-15",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s2-16",
+                "text": "のっとって",
+                "isKeyGrammar": true,
+                "kanji": "則って",
+                "furigana": "のっとって"
+              },
+              {
+                "id": "t-l11s2-17",
+                "text": "おこなわれた",
+                "isKeyGrammar": false,
+                "kanji": "行われた",
+                "furigana": "おこなわれた"
+              }
+            ],
+            "meaningVi": "Lễ cưới đã được tổ chức tuân theo tập quán từ xưa."
+          }
+        ]
+      },
+      {
+        "slideId": "n1-l11-s3",
+        "slideType": "grammar",
+        "title": "3. So sánh に即して và に則って",
+        "grammarFormula": "に即して: THỰC TẾ CỤ THỂ (tình hình, dữ liệu, kinh nghiệm)　vs　に則って: QUY TẮC/PHÁP LUẬT/TRUYỀN THỐNG (đã thiết lập, chính thức)",
+        "explanation": "に即して dùng khi căn cứ là một THỰC TẾ CỤ THỂ đang tồn tại (tình hình thị trường, thực trạng vụ việc) — nhấn mạnh sự PHÙ HỢP với hoàn cảnh thực; に則って dùng khi căn cứ là một QUY TẮC/PHÁP LUẬT/TRUYỀN THỐNG đã được thiết lập CHÍNH THỨC từ trước — nhấn mạnh sự TUÂN THỦ đúng khuôn khổ. Cùng một vụ việc thường cần cả hai để nhấn hai khía cạnh khác nhau.",
+        "teacherTips": "Mẹo ghi nhớ: 実態・実情・現状 (thực tế) → dùng に即して; 法律・規則・伝統・前例 (quy tắc có sẵn) → dùng に則って.",
+        "culturalNotes": "Trong tranh luận pháp lý, luật sư thường phải chứng minh cả hai điều: vụ việc PHÙ HỢP với thực tế nào (に即して) và QUY TẮC pháp luật nào đang được áp dụng (に則って).",
+        "examples": [
+          {
+            "id": "ex-n1-l11-s3-1",
+            "tokens": [
+              {
+                "id": "t-l11s3-1",
+                "text": "はんけつ",
+                "isKeyGrammar": true,
+                "kanji": "判決",
+                "furigana": "はんけつ"
+              },
+              {
+                "id": "t-l11s3-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s3-3",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s3-4",
+                "text": "じけん",
+                "isKeyGrammar": true,
+                "kanji": "事件",
+                "furigana": "じけん"
+              },
+              {
+                "id": "t-l11s3-5",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s3-6",
+                "text": "じったい",
+                "isKeyGrammar": true,
+                "kanji": "実態",
+                "furigana": "じったい"
+              },
+              {
+                "id": "t-l11s3-7",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s3-8",
+                "text": "そくして",
+                "isKeyGrammar": true,
+                "kanji": "即して",
+                "furigana": "そくして"
+              },
+              {
+                "id": "t-l11s3-9",
+                "text": "おこなわれる",
+                "isKeyGrammar": false,
+                "kanji": "行われる",
+                "furigana": "おこなわれる"
+              },
+              {
+                "id": "t-l11s3-10",
+                "text": "べきだ",
                 "isKeyGrammar": true
               }
             ],
-            "meaningVi": "Sẽ bị xử phạt nghiêm minh theo đúng quy định của pháp luật."
+            "meaningVi": "Phán quyết nên được đưa ra bám sát theo thực trạng vụ việc."
+          },
+          {
+            "id": "ex-n1-l11-s3-2",
+            "tokens": [
+              {
+                "id": "t-l11s3-11",
+                "text": "しかし",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s3-12",
+                "text": "どうじに",
+                "isKeyGrammar": false,
+                "kanji": "同時に",
+                "furigana": "どうじに"
+              },
+              {
+                "id": "t-l11s3-13",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s3-14",
+                "text": "はんけつ",
+                "isKeyGrammar": true,
+                "kanji": "判決",
+                "furigana": "はんけつ"
+              },
+              {
+                "id": "t-l11s3-15",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s3-16",
+                "text": "ほうりつ",
+                "isKeyGrammar": true,
+                "kanji": "法律",
+                "furigana": "ほうりつ"
+              },
+              {
+                "id": "t-l11s3-17",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s3-18",
+                "text": "のっとって",
+                "isKeyGrammar": true,
+                "kanji": "則って",
+                "furigana": "のっとって"
+              },
+              {
+                "id": "t-l11s3-19",
+                "text": "いなければならない",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Nhưng đồng thời, phán quyết cũng phải tuân theo đúng pháp luật."
           }
-        ],
-        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+        ]
+      },
+      {
+        "slideId": "n1-l11-s4",
+        "slideType": "grammar",
+        "title": "4. Kết hợp trong một phiên tòa hoàn chỉnh",
+        "grammarFormula": "事実に即して調べ、規則に則って処理する (điều tra bám sát sự thật, xử lý tuân theo quy định)",
+        "explanation": "Trong một PHIÊN TÒA, việc xét xử công bằng đòi hỏi vừa phải xem xét THỰC TẾ CỤ THỂ của vụ việc (に即して) để hiểu đúng bản chất sự việc, vừa phải TUÂN THỦ nghiêm ngặt PHÁP LUẬT/TIỀN LỆ (に則って) khi đưa ra phán quyết cuối cùng — thiếu một trong hai, phán quyết sẽ không được coi là công bằng.",
+        "teacherTips": "Khi hai cấu trúc DƯỜNG NHƯ xung đột (tiền lệ cũ không còn phù hợp thực tế mới), đây chính là điểm tranh luận pháp lý kinh điển: nên ưu tiên に即して (thực tế) hay に則って (tiền lệ)?",
+        "culturalNotes": "Đây là chủ đề tranh luận muôn thuở trong ngành luật Nhật Bản: liệu phán quyết nên linh hoạt theo thực tế xã hội thay đổi (に即して), hay phải tuân thủ nghiêm ngặt pháp luật/tiền lệ đã có (に則って)?",
+        "examples": [
+          {
+            "id": "ex-n1-l11-s4-1",
+            "tokens": [
+              {
+                "id": "t-l11s4-1",
+                "text": "こんかい",
+                "isKeyGrammar": false,
+                "kanji": "今回",
+                "furigana": "こんかい"
+              },
+              {
+                "id": "t-l11s4-2",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s4-3",
+                "text": "そしょう",
+                "isKeyGrammar": true,
+                "kanji": "訴訟",
+                "furigana": "そしょう"
+              },
+              {
+                "id": "t-l11s4-4",
+                "text": "も",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s4-5",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s4-6",
+                "text": "じったい",
+                "isKeyGrammar": true,
+                "kanji": "実態",
+                "furigana": "じったい"
+              },
+              {
+                "id": "t-l11s4-7",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s4-8",
+                "text": "そくして",
+                "isKeyGrammar": true,
+                "kanji": "即して",
+                "furigana": "そくして"
+              },
+              {
+                "id": "t-l11s4-9",
+                "text": "しらべた",
+                "isKeyGrammar": false,
+                "kanji": "調べた",
+                "furigana": "しらべた"
+              },
+              {
+                "id": "t-l11s4-10",
+                "text": "うえで",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s4-11",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s4-12",
+                "text": "きそく",
+                "isKeyGrammar": true,
+                "kanji": "規則",
+                "furigana": "きそく"
+              },
+              {
+                "id": "t-l11s4-13",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s4-14",
+                "text": "のっとって",
+                "isKeyGrammar": true,
+                "kanji": "則って",
+                "furigana": "のっとって"
+              },
+              {
+                "id": "t-l11s4-15",
+                "text": "しょりされた",
+                "isKeyGrammar": false,
+                "kanji": "処理された",
+                "furigana": "しょりされた"
+              }
+            ],
+            "meaningVi": "Vụ kiện lần này cũng đã được xử lý tuân theo quy định, sau khi điều tra bám sát theo thực trạng."
+          },
+          {
+            "id": "ex-n1-l11-s4-2",
+            "tokens": [
+              {
+                "id": "t-l11s4-16",
+                "text": "この",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s4-17",
+                "text": "はんけつ",
+                "isKeyGrammar": true,
+                "kanji": "判決",
+                "furigana": "はんけつ"
+              },
+              {
+                "id": "t-l11s4-18",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s4-19",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s4-20",
+                "text": "ぜんれい",
+                "isKeyGrammar": true,
+                "kanji": "前例",
+                "furigana": "ぜんれい"
+              },
+              {
+                "id": "t-l11s4-21",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s4-22",
+                "text": "のっとって",
+                "isKeyGrammar": true,
+                "kanji": "則って",
+                "furigana": "のっとって"
+              },
+              {
+                "id": "t-l11s4-23",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s4-24",
+                "text": "いるが",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s4-25",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s4-26",
+                "text": "じけん",
+                "isKeyGrammar": true,
+                "kanji": "事件",
+                "furigana": "じけん"
+              },
+              {
+                "id": "t-l11s4-27",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s4-28",
+                "text": "じったい",
+                "isKeyGrammar": true,
+                "kanji": "実態",
+                "furigana": "じったい"
+              },
+              {
+                "id": "t-l11s4-29",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s4-30",
+                "text": "そくしている",
+                "isKeyGrammar": true,
+                "kanji": "即している",
+                "furigana": "そくしている"
+              },
+              {
+                "id": "t-l11s4-31",
+                "text": "とは",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l11s4-32",
+                "text": "いえない",
+                "isKeyGrammar": false,
+                "kanji": "言えない",
+                "furigana": "いえない"
+              }
+            ],
+            "meaningVi": "Phán quyết này tuy tuân theo tiền lệ, nhưng không thể nói là đã bám sát theo thực trạng vụ việc."
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n1-11-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "田中",
+        "speakerRole": "Phóng viên",
         "tokens": [
           {
-            "id": "tok-n1-11-d1",
-            "text": "この文法のポイントを"
+            "id": "d11-1",
+            "text": "きょう",
+            "isKeyGrammar": false,
+            "kanji": "今日",
+            "furigana": "きょう"
           },
           {
-            "id": "tok-n1-11-d2",
-            "text": "復習しましょう。"
+            "id": "d11-2",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-3",
+            "text": "はんけつ",
+            "isKeyGrammar": true,
+            "kanji": "判決",
+            "furigana": "はんけつ"
+          },
+          {
+            "id": "d11-4",
+            "text": "について",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-5",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-6",
+            "text": "おはなし",
+            "isKeyGrammar": false,
+            "kanji": "お話",
+            "furigana": "おはなし"
+          },
+          {
+            "id": "d11-7",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-8",
+            "text": "きかせてください",
+            "isKeyGrammar": false,
+            "kanji": "聞かせてください",
+            "furigana": "きかせてください"
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Xin hãy chia sẻ về phán quyết hôm nay."
+      },
+      {
+        "id": "dia-n1-11-2",
+        "speaker": "弁護士",
+        "speakerRole": "Luật sư",
+        "tokens": [
+          {
+            "id": "d11-9",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-10",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-11",
+            "text": "こんかい",
+            "isKeyGrammar": false,
+            "kanji": "今回",
+            "furigana": "こんかい"
+          },
+          {
+            "id": "d11-12",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-13",
+            "text": "はんけつ",
+            "isKeyGrammar": true,
+            "kanji": "判決",
+            "furigana": "はんけつ"
+          },
+          {
+            "id": "d11-14",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-15",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-16",
+            "text": "じけん",
+            "isKeyGrammar": true,
+            "kanji": "事件",
+            "furigana": "じけん"
+          },
+          {
+            "id": "d11-17",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-18",
+            "text": "じったい",
+            "isKeyGrammar": true,
+            "kanji": "実態",
+            "furigana": "じったい"
+          },
+          {
+            "id": "d11-19",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-20",
+            "text": "そくして",
+            "isKeyGrammar": true,
+            "kanji": "即して",
+            "furigana": "そくして"
+          },
+          {
+            "id": "d11-21",
+            "text": "くだされました",
+            "isKeyGrammar": false,
+            "kanji": "下されました",
+            "furigana": "くだされました"
+          }
+        ],
+        "meaningVi": "Vâng. Phán quyết lần này đã được đưa ra bám sát theo thực trạng của vụ việc."
+      },
+      {
+        "id": "dia-n1-11-3",
+        "speaker": "田中",
+        "speakerRole": "Phóng viên",
+        "tokens": [
+          {
+            "id": "d11-22",
+            "text": "ほうりつ",
+            "isKeyGrammar": true,
+            "kanji": "法律",
+            "furigana": "ほうりつ"
+          },
+          {
+            "id": "d11-23",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-24",
+            "text": "めん",
+            "isKeyGrammar": false,
+            "kanji": "面",
+            "furigana": "めん"
+          },
+          {
+            "id": "d11-25",
+            "text": "では",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-26",
+            "text": "どう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-27",
+            "text": "でした",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-28",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Về mặt pháp luật thì sao?"
+      },
+      {
+        "id": "dia-n1-11-4",
+        "speaker": "弁護士",
+        "speakerRole": "Luật sư",
+        "tokens": [
+          {
+            "id": "d11-29",
+            "text": "もちろん",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-30",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-31",
+            "text": "ほうりつ",
+            "isKeyGrammar": true,
+            "kanji": "法律",
+            "furigana": "ほうりつ"
+          },
+          {
+            "id": "d11-32",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-33",
+            "text": "のっとって",
+            "isKeyGrammar": true,
+            "kanji": "則って",
+            "furigana": "のっとって"
+          },
+          {
+            "id": "d11-34",
+            "text": "おこなわれました",
+            "isKeyGrammar": false,
+            "kanji": "行われました",
+            "furigana": "おこなわれました"
+          }
+        ],
+        "meaningVi": "Dĩ nhiên, đã được tiến hành tuân theo pháp luật."
+      },
+      {
+        "id": "dia-n1-11-5",
+        "speaker": "田中",
+        "speakerRole": "Phóng viên",
+        "tokens": [
+          {
+            "id": "d11-35",
+            "text": "ぜんれい",
+            "isKeyGrammar": true,
+            "kanji": "前例",
+            "furigana": "ぜんれい"
+          },
+          {
+            "id": "d11-36",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-37",
+            "text": "ありました",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-38",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Có tiền lệ nào không?"
+      },
+      {
+        "id": "dia-n1-11-6",
+        "speaker": "弁護士",
+        "speakerRole": "Luật sư",
+        "tokens": [
+          {
+            "id": "d11-39",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-40",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-41",
+            "text": "むかし",
+            "isKeyGrammar": false,
+            "kanji": "昔",
+            "furigana": "むかし"
+          },
+          {
+            "id": "d11-42",
+            "text": "から",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-43",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-44",
+            "text": "かんしゅう",
+            "isKeyGrammar": true,
+            "kanji": "慣習",
+            "furigana": "かんしゅう"
+          },
+          {
+            "id": "d11-45",
+            "text": "にも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-46",
+            "text": "のっとって",
+            "isKeyGrammar": true,
+            "kanji": "則って",
+            "furigana": "のっとって"
+          },
+          {
+            "id": "d11-47",
+            "text": "います",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Có, cũng tuân theo cả tập quán từ xưa."
+      },
+      {
+        "id": "dia-n1-11-7",
+        "speaker": "田中",
+        "speakerRole": "Phóng viên",
+        "tokens": [
+          {
+            "id": "d11-48",
+            "text": "しょうこ",
+            "isKeyGrammar": true,
+            "kanji": "証拠",
+            "furigana": "しょうこ"
+          },
+          {
+            "id": "d11-49",
+            "text": "については",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-50",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-51",
+            "text": "どう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-52",
+            "text": "はんだんされました",
+            "isKeyGrammar": false,
+            "kanji": "判断されました",
+            "furigana": "はんだんされました"
+          },
+          {
+            "id": "d11-53",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Còn về bằng chứng, đã được phán đoán thế nào?"
+      },
+      {
+        "id": "dia-n1-11-8",
+        "speaker": "弁護士",
+        "speakerRole": "Luật sư",
+        "tokens": [
+          {
+            "id": "d11-54",
+            "text": "しょうこ",
+            "isKeyGrammar": true,
+            "kanji": "証拠",
+            "furigana": "しょうこ"
+          },
+          {
+            "id": "d11-55",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-56",
+            "text": "じったい",
+            "isKeyGrammar": true,
+            "kanji": "実態",
+            "furigana": "じったい"
+          },
+          {
+            "id": "d11-57",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-58",
+            "text": "そくして",
+            "isKeyGrammar": true,
+            "kanji": "即して",
+            "furigana": "そくして"
+          },
+          {
+            "id": "d11-59",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-60",
+            "text": "しんちょうに",
+            "isKeyGrammar": false,
+            "kanji": "慎重に",
+            "furigana": "しんちょうに"
+          },
+          {
+            "id": "d11-61",
+            "text": "はんだんされました",
+            "isKeyGrammar": false,
+            "kanji": "判断されました",
+            "furigana": "はんだんされました"
+          }
+        ],
+        "meaningVi": "Đã được phán đoán một cách thận trọng, bám sát theo thực trạng của bằng chứng."
+      },
+      {
+        "id": "dia-n1-11-9",
+        "speaker": "田中",
+        "speakerRole": "Phóng viên",
+        "tokens": [
+          {
+            "id": "d11-62",
+            "text": "この",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-63",
+            "text": "はんけつ",
+            "isKeyGrammar": true,
+            "kanji": "判決",
+            "furigana": "はんけつ"
+          },
+          {
+            "id": "d11-64",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-65",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-66",
+            "text": "こんご",
+            "isKeyGrammar": false,
+            "kanji": "今後",
+            "furigana": "こんご"
+          },
+          {
+            "id": "d11-67",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-68",
+            "text": "そしょう",
+            "isKeyGrammar": true,
+            "kanji": "訴訟",
+            "furigana": "そしょう"
+          },
+          {
+            "id": "d11-69",
+            "text": "にも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-70",
+            "text": "えいきょうしますか",
+            "isKeyGrammar": false,
+            "kanji": "影響しますか",
+            "furigana": "えいきょうしますか"
+          }
+        ],
+        "meaningVi": "Phán quyết này có ảnh hưởng đến các vụ kiện sau này không?"
+      },
+      {
+        "id": "dia-n1-11-10",
+        "speaker": "弁護士",
+        "speakerRole": "Luật sư",
+        "tokens": [
+          {
+            "id": "d11-71",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-72",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-73",
+            "text": "この",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-74",
+            "text": "はんけつ",
+            "isKeyGrammar": true,
+            "kanji": "判決",
+            "furigana": "はんけつ"
+          },
+          {
+            "id": "d11-75",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-76",
+            "text": "ぜんれい",
+            "isKeyGrammar": true,
+            "kanji": "前例",
+            "furigana": "ぜんれい"
+          },
+          {
+            "id": "d11-77",
+            "text": "になり",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-78",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-79",
+            "text": "きそく",
+            "isKeyGrammar": true,
+            "kanji": "規則",
+            "furigana": "きそく"
+          },
+          {
+            "id": "d11-80",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d11-81",
+            "text": "のっとって",
+            "isKeyGrammar": true,
+            "kanji": "則って",
+            "furigana": "のっとって"
+          },
+          {
+            "id": "d11-82",
+            "text": "かつようされる",
+            "isKeyGrammar": false,
+            "kanji": "活用される",
+            "furigana": "かつようされる"
+          },
+          {
+            "id": "d11-83",
+            "text": "でしょう",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vâng. Phán quyết này sẽ trở thành tiền lệ, và sẽ được vận dụng tuân theo quy định."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n1-11-1",
-        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Căn cứ pháp lý & Chuẩn mực (に即して & に則って)'",
+        "question": "「判決は、事件の実態に即して下された」 — に即して diễn tả điều gì?",
         "options": [
-          "N + に即して (theo sát thực tế)",
-          "V-た + ところで",
-          "N + にかこつけて",
-          "V-る + べく"
+          "Đưa ra hành động/nhận định BÁM SÁT theo một THỰC TẾ CỤ THỂ đang diễn ra",
+          "Tuân theo một cách chính thức một quy tắc/pháp luật đã thiết lập từ trước",
+          "Sự cho phép làm việc gì đó",
+          "Một quyết định hoàn toàn ngẫu nhiên"
         ],
         "correctIndex": 0,
-        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: N + に即して (theo sát thực tế) / に則って (theo luật lệ)",
-        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+        "explanation": "に即して nhấn mạnh việc bám sát/dựa sát theo thực tế cụ thể (tình hình, dữ liệu, thực trạng), không phải theo quy tắc trừu tượng.",
+        "hint": "Xem cấu trúc に即して ở slide 1."
+      },
+      {
+        "id": "ex-q-n1-11-2",
+        "question": "「判決は、法律に則って下された」 — に則って dùng để làm gì?",
+        "options": [
+          "Diễn tả một thực tế cụ thể đang diễn ra",
+          "Tuân theo một cách CHÍNH THỨC, TRANG TRỌNG một quy tắc/pháp luật/truyền thống đã thiết lập từ trước",
+          "Xin phép làm việc gì đó",
+          "Đưa ra lời khuyên nhẹ nhàng"
+        ],
+        "correctIndex": 1,
+        "explanation": "に則って dùng để diễn tả việc tuân theo chính thức, trang trọng một quy tắc/pháp luật/truyền thống đã có sẵn.",
+        "hint": "Xem cấu trúc に則って ở slide 2."
+      },
+      {
+        "id": "ex-q-n1-11-3",
+        "question": "Sự khác biệt cốt lõi giữa に即して và に則って là gì?",
+        "options": [
+          "に即して dùng cho THỰC TẾ CỤ THỂ; に則って dùng cho QUY TẮC/PHÁP LUẬT/TRUYỀN THỐNG đã thiết lập",
+          "Hoàn toàn giống nhau, dùng thay thế được cho nhau",
+          "に即して chỉ dùng cho câu hỏi",
+          "に則って chỉ dùng cho câu phủ định"
+        ],
+        "correctIndex": 0,
+        "explanation": "に即して căn cứ vào thực tế cụ thể đang diễn ra; に則って căn cứ vào quy tắc/pháp luật/truyền thống đã được thiết lập chính thức.",
+        "hint": "Xem bảng so sánh ở slide 3."
+      },
+      {
+        "id": "ex-q-n1-11-4",
+        "question": "「弁護士は、証拠の実態に即して主張した」 nghĩa là:",
+        "options": [
+          "Luật sư đã lập luận bám sát theo thực trạng của bằng chứng",
+          "Luật sư đã phớt lờ hoàn toàn bằng chứng",
+          "Luật sư đã tuân theo pháp luật một cách máy móc",
+          "Không có bằng chứng nào được đưa ra"
+        ],
+        "correctIndex": 0,
+        "explanation": "に即して ở đây khẳng định lập luận của luật sư bám sát theo thực trạng cụ thể của bằng chứng.",
+        "hint": "Áp dụng cấu trúc に即して cho ngữ cảnh pháp lý."
+      },
+      {
+        "id": "ex-q-n1-11-5",
+        "question": "「結婚式は、昔からの慣習に則って行われた」 nghĩa là:",
+        "options": [
+          "Lễ cưới đã được tổ chức tuân theo tập quán từ xưa",
+          "Lễ cưới đã bị hủy bỏ",
+          "Lễ cưới hoàn toàn không theo truyền thống nào",
+          "Lễ cưới đã bám sát theo thực tế thị trường hiện tại"
+        ],
+        "correctIndex": 0,
+        "explanation": "に則って ở đây khẳng định lễ cưới được tổ chức tuân theo tập quán truyền thống từ xưa.",
+        "hint": "Áp dụng cấu trúc に則って cho ngữ cảnh nghi lễ truyền thống."
+      },
+      {
+        "id": "ex-q-n1-11-6",
+        "question": "Tại sao trong một phiên tòa, cần dùng CẢ に即して LẪN に則って?",
+        "options": [
+          "Vì cần vừa xem xét thực tế cụ thể của vụ việc, vừa tuân thủ pháp luật/tiền lệ khi phán quyết",
+          "Vì hai cấu trúc có nghĩa giống hệt nhau nên dùng thay phiên cho đa dạng",
+          "Vì quy tắc ngữ pháp bắt buộc phải dùng chung",
+          "Không có lý do đặc biệt nào"
+        ],
+        "correctIndex": 0,
+        "explanation": "Xét xử công bằng đòi hỏi vừa bám sát thực tế cụ thể (に即して) vừa tuân thủ pháp luật/tiền lệ (に則って).",
+        "hint": "Xem cấu trúc phiên tòa hoàn chỉnh ở slide 4."
+      },
+      {
+        "id": "ex-q-n1-11-7",
+        "question": "「この判決は、前例に則ってはいるが、事件の実態に即しているとは言えない」 hàm ý điều gì?",
+        "options": [
+          "Phán quyết tuy đúng tiền lệ nhưng có thể chưa phù hợp với thực tế của vụ việc",
+          "Phán quyết hoàn toàn sai cả về tiền lệ lẫn thực tế",
+          "Phán quyết không liên quan gì đến tiền lệ hay thực tế",
+          "Phán quyết chắc chắn đúng cả hai mặt"
+        ],
+        "correctIndex": 0,
+        "explanation": "Câu này nêu một mâu thuẫn có thể xảy ra: đúng tiền lệ (に則って) nhưng chưa chắc bám sát thực tế mới (に即して).",
+        "hint": "Xem ví dụ nâng cao ở slide 4."
+      },
+      {
+        "id": "ex-q-n1-11-8",
+        "question": "Theo hội thoại, phán quyết hôm nay được đưa ra dựa trên điều gì?",
+        "options": [
+          "Thực trạng của vụ việc (事件の実態に即して下されました)",
+          "Ý kiến cá nhân của thẩm phán",
+          "Không có căn cứ rõ ràng",
+          "Áp lực từ dư luận"
+        ],
+        "correctIndex": 0,
+        "explanation": "Luật sư nói 「今回の判決は、事件の実態に即して下されました」.",
+        "hint": "Xem câu thoại thứ 2."
+      },
+      {
+        "id": "ex-q-n1-11-9",
+        "question": "Theo hội thoại, phán quyết có tuân theo tập quán nào không?",
+        "options": [
+          "Có, tuân theo cả tập quán từ xưa (昔からの慣習にも則っています)",
+          "Không, hoàn toàn bỏ qua tập quán",
+          "Không được đề cập trong hội thoại",
+          "Chỉ tuân theo luật nước ngoài"
+        ],
+        "correctIndex": 0,
+        "explanation": "Luật sư nói 「はい、昔からの慣習にも則っています」.",
+        "hint": "Xem câu thoại thứ 6."
+      },
+      {
+        "id": "ex-q-n1-11-10",
+        "question": "Theo hội thoại, phán quyết này sẽ có ảnh hưởng gì trong tương lai?",
+        "options": [
+          "Sẽ trở thành tiền lệ, được vận dụng tuân theo quy định (前例になり、規則に則って活用される)",
+          "Sẽ bị lãng quên ngay lập tức",
+          "Không có ảnh hưởng nào",
+          "Sẽ bị hủy bỏ trong tương lai gần"
+        ],
+        "correctIndex": 0,
+        "explanation": "Luật sư nói 「この判決は前例になり、規則に則って活用されるでしょう」.",
+        "hint": "Xem câu thoại thứ 10."
       }
     ]
   },
