@@ -131,6 +131,21 @@ class GeminiLiveClient {
         },
         outputAudioTranscription: {},
         inputAudioTranscription: {},
+        // TU DANH DAU LUC NOI — KHONG de server tu do (VAD).
+        //
+        // gemini-3.8-live KHONG tu nhan dien duoc moc bat dau/ket thuc loi noi:
+        // gui audio dung dinh dang vao no thi no im lang tuyet doi, khong mot
+        // frame phan hoi, khong ca bao loi — da do bang thuc nghiem A/B tren
+        // cung mot key, cung mot doan tieng:
+        //   3.8-live + VAD tu dong      -> khong phan hoi gi
+        //   3.8-live + danh dau thu cong -> nghe dung nguyen cau, tra loi binh thuong
+        //   3.1-flash-live + VAD tu dong -> nghe duoc (nen truoc day tuong la loi model)
+        // Tat VAD di roi tu gui activityStart/activityEnd quanh doan thu am.
+        // Hop voi kieu bam-de-noi cua lop nay (mic chi mo khi gio tay hoi /
+        // luyen phat am), nen khong mat gi ca.
+        realtimeInputConfig: {
+          automaticActivityDetection: { disabled: true }
+        },
         systemInstruction: {
           parts: [
             {
@@ -633,7 +648,24 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
     this.lastClientSendTime = Date.now();
     this.safeSend({
       realtimeInput: {
-        audioStreamEnd: true
+        activityEnd: {}
+      }
+    });
+  }
+
+  /**
+   * Bao "hoc vien BAT DAU noi" — phai goi ngay khi mo mic.
+   *
+   * Vi da tat tu dong do hoat dong trong setup (xem sendSetup), server chi
+   * coi la co nguoi noi trong khoang giua activityStart va activityEnd.
+   * Thieu activityStart thi toan bo goi tieng gui len bi bo qua im lang.
+   */
+  sendActivityStart() {
+    if (!this.ws || this.ws.readyState !== WebSocket.OPEN) return;
+    this.lastClientSendTime = Date.now();
+    this.safeSend({
+      realtimeInput: {
+        activityStart: {}
       }
     });
   }

@@ -1442,6 +1442,7 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
     if (audioEngine) audioEngine.setSuppressed(false);
     isRaisingHand = false;
     if (audioEngine.isMicActive) audioEngine.stopMic();
+    geminiClient.sendAudioStreamEnd();   // dong moc "dang noi" du la huy
     updateAskUI();
     stopAllAudio();
 
@@ -1547,6 +1548,7 @@ CHỈ DẪN QUAN TRỌNG DÀNH CHO SENSEI:
     mucAmThanhCaoNhat = 0;
     try {
       await audioEngine.startMic();
+      geminiClient.sendActivityStart();   // thieu cai nay thi server bo qua het tieng gui len
       updateMicUI(true, true);
       addLog("System", "✋ Bạn đã giơ tay hỏi bài! Bài giảng đã tạm dừng. Mic đã bật — nói câu hỏi xong hãy bấm lại nút để gửi cho Sensei!");
     } catch (err) {
@@ -2766,6 +2768,7 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     mucAmThanhCaoNhat = 0;
     try {
       await audioEngine.startMic();
+      geminiClient.sendActivityStart();   // thieu cai nay thi server bo qua het tieng gui len
       dangThuAm = id;
       veNutThuAm(id, true);
       veTinPhatAm(id, '<i class="fa-solid fa-circle text-rose-400 animate-pulse"></i><span>Đang nghe… đọc to cả câu, xong bấm nút vuông để gửi.</span>', 'rose');
@@ -2784,8 +2787,9 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     veNutThuAm(id, false);
 
     if (mucAmThanhCaoNhat <= NGUONG_AM_THANH_RO) {
-      // Khong co tieng nao vuot nguong ro suot luot thu — server se khong
-      // nhan dien duoc gio noi (VAD), im MAI MAI chu khong phai dang cham.
+      // Khong co tieng nao vuot nguong ro suot luot thu. Van phai dong moc
+      // "dang noi" lai, khong thi server cu treo cho tiep den het phien.
+      geminiClient.sendAudioStreamEnd();
       veTinPhatAm(id, '<i class="fa-solid fa-triangle-exclamation"></i><span>Không nghe rõ giọng nói — kiểm tra quyền micro hoặc nói to, gần micro hơn rồi thử lại.</span>', 'amber');
       return;
     }
@@ -2818,6 +2822,7 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     dangThuAm = null;
     if (!id) return;
     if (audioEngine.isMicActive) audioEngine.stopMic();
+    geminiClient.sendAudioStreamEnd();   // dong moc "dang noi" du la huy
     veNutThuAm(id, false);
     const box = document.getElementById('kq-' + id);
     if (box) box.className = 'hidden';
