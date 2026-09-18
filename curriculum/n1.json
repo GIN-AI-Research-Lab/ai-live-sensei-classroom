@@ -9936,99 +9936,1138 @@
     "level": "N1",
     "lessonNumber": 8,
     "title": "Bài 8: Nguyện cầu tha thiết (てやまない & 願ってやまない)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "description": "Vてやまない diễn tả một CẢM XÚC MÃNH LIỆT, KHÔNG BAO GIỜ NGUÔI — chỉ dùng với động từ chỉ CẢM XÚC (愛する、尊敬する、感謝する…); 願ってやまない là trường hợp đặc biệt đã trở thành CỤM CỐ ĐỊNH, thường xuất hiện ở CUỐI các bài diễn văn/lời chúc trang trọng để bày tỏ mong muốn tha thiết, chân thành.",
     "vocabList": [
       {
         "id": "voc-n1-8-1",
-        "word": "重要語彙 (N1)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "かんしゃします",
+        "kanji": "感謝します",
+        "furigana": "かんしゃします",
+        "romaji": "kansha shimasu",
+        "wordType": "verb",
+        "meaningVi": "Cảm ơn, biết ơn",
+        "accentNote": "感謝してやまない = biết ơn mãi không thôi."
+      },
+      {
+        "id": "voc-n1-8-2",
+        "word": "そんけいします",
+        "kanji": "尊敬します",
+        "furigana": "そんけいします",
+        "romaji": "sonkei shimasu",
+        "wordType": "verb",
+        "meaningVi": "Kính trọng",
+        "accentNote": "尊敬してやまない = kính trọng mãi không thôi."
+      },
+      {
+        "id": "voc-n1-8-3",
+        "word": "あいします",
+        "kanji": "愛します",
+        "furigana": "あいします",
+        "romaji": "ai shimasu",
+        "wordType": "verb",
+        "meaningVi": "Yêu, yêu quý",
+        "accentNote": "愛してやまない = yêu mãi không thôi."
+      },
+      {
+        "id": "voc-n1-8-4",
+        "word": "ねがいます",
+        "kanji": "願います",
+        "furigana": "ねがいます",
+        "romaji": "negaimasu",
+        "wordType": "verb",
+        "meaningVi": "Cầu mong, nguyện cầu",
+        "accentNote": "願ってやまない = tha thiết cầu mong."
+      },
+      {
+        "id": "voc-n1-8-5",
+        "word": "そつぎょう",
+        "kanji": "卒業",
+        "furigana": "そつぎょう",
+        "romaji": "sotsugyou",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 8",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Tốt nghiệp",
+        "accentNote": "卒業しても = dù đã tốt nghiệp."
+      },
+      {
+        "id": "voc-n1-8-6",
+        "word": "せんせい",
+        "kanji": "先生",
+        "furigana": "せんせい",
+        "romaji": "sensei",
+        "wordType": "noun",
+        "meaningVi": "Thầy/cô giáo",
+        "accentNote": "Đã gặp N5 bài 1."
+      },
+      {
+        "id": "voc-n1-8-7",
+        "word": "おしえます",
+        "kanji": "教えます",
+        "furigana": "おしえます",
+        "romaji": "oshiemasu",
+        "wordType": "verb",
+        "meaningVi": "Dạy",
+        "accentNote": "Đã gặp N5 bài 7."
+      },
+      {
+        "id": "voc-n1-8-8",
+        "word": "けんこう",
+        "kanji": "健康",
+        "furigana": "けんこう",
+        "romaji": "kenkou",
+        "wordType": "noun",
+        "meaningVi": "Sức khỏe",
+        "accentNote": "Đã gặp N4 bài 32."
+      },
+      {
+        "id": "voc-n1-8-9",
+        "word": "しあわせ",
+        "kanji": "幸せ",
+        "furigana": "しあわせ",
+        "romaji": "shiawase",
+        "wordType": "noun",
+        "meaningVi": "Hạnh phúc",
+        "accentNote": "Đã gặp N4 bài 47."
+      },
+      {
+        "id": "voc-n1-8-10",
+        "word": "たいしょく",
+        "kanji": "退職",
+        "furigana": "たいしょく",
+        "romaji": "taishoku",
+        "wordType": "noun",
+        "meaningVi": "Nghỉ hưu, thôi việc",
+        "accentNote": "Đã gặp N3 bài 3."
+      },
+      {
+        "id": "voc-n1-8-11",
+        "word": "わすれます",
+        "kanji": "忘れます",
+        "furigana": "わすれます",
+        "romaji": "wasuremasu",
+        "wordType": "verb",
+        "meaningVi": "Quên",
+        "accentNote": "Đã gặp N5 bài 17."
+      },
+      {
+        "id": "voc-n1-8-12",
+        "word": "がんばります",
+        "kanji": "頑張ります",
+        "furigana": "がんばります",
+        "romaji": "ganbarimasu",
+        "wordType": "verb",
+        "meaningVi": "Cố gắng",
+        "accentNote": "Đã gặp N5 bài 25."
+      },
+      {
+        "id": "voc-n1-8-13",
+        "word": "みなさん",
+        "kanji": "皆さん",
+        "furigana": "みなさん",
+        "romaji": "minasan",
+        "wordType": "noun",
+        "meaningVi": "Mọi người, các bạn",
+        "accentNote": "Đã gặp N5 bài 1."
+      },
+      {
+        "id": "voc-n1-8-14",
+        "word": "だいがく",
+        "kanji": "大学",
+        "furigana": "だいがく",
+        "romaji": "daigaku",
+        "wordType": "noun",
+        "meaningVi": "Đại học",
+        "accentNote": "Đã gặp N5 bài 1."
+      },
+      {
+        "id": "voc-n1-8-15",
+        "word": "がくせい",
+        "kanji": "学生",
+        "furigana": "がくせい",
+        "romaji": "gakusei",
+        "wordType": "noun",
+        "meaningVi": "Học sinh, sinh viên",
+        "accentNote": "Đã gặp N5 bài 1."
+      },
+      {
+        "id": "voc-n1-8-16",
+        "word": "しょうらい",
+        "kanji": "将来",
+        "furigana": "しょうらい",
+        "romaji": "shourai",
+        "wordType": "noun",
+        "meaningVi": "Tương lai",
+        "accentNote": "Đã gặp N4 bài 31."
+      },
+      {
+        "id": "voc-n1-8-17",
+        "word": "じかん",
+        "kanji": "時間",
+        "furigana": "じかん",
+        "romaji": "jikan",
+        "wordType": "noun",
+        "meaningVi": "Thời gian",
+        "accentNote": "Đã gặp N4 bài 35."
+      },
+      {
+        "id": "voc-n1-8-18",
+        "word": "いそがしい",
+        "kanji": "忙しい",
+        "furigana": "いそがしい",
+        "romaji": "isogashii",
+        "wordType": "adjective",
+        "meaningVi": "Bận rộn",
+        "accentNote": "Đã gặp N5 bài 8."
+      },
+      {
+        "id": "voc-n1-8-19",
+        "word": "ゆめ",
+        "kanji": "夢",
+        "furigana": "ゆめ",
+        "romaji": "yume",
+        "wordType": "noun",
+        "meaningVi": "Ước mơ, giấc mơ",
+        "accentNote": "Đã gặp N4 bài 31."
+      },
+      {
+        "id": "voc-n1-8-20",
+        "word": "ともだち",
+        "kanji": "友達",
+        "furigana": "ともだち",
+        "romaji": "tomodachi",
+        "wordType": "noun",
+        "meaningVi": "Bạn bè",
+        "accentNote": "Đã gặp N5 bài 5."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n1-8-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "感",
+        "hanViet": "CẢM",
+        "strokeCount": 13,
         "onyomi": [
-          "ゴ"
+          "カン (kan)"
         ],
-        "kunyomi": [
-          "かたる"
-        ],
-        "meaningVi": "Ngôn ngữ",
+        "kunyomi": [],
+        "meaningVi": "Cảm nhận, cảm động.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "感謝",
+            "furigana": "かんしゃ",
+            "meaningVi": "Biết ơn"
+          },
+          {
+            "word": "感動",
+            "furigana": "かんどう",
+            "meaningVi": "Cảm động"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-8-2",
+        "character": "謝",
+        "hanViet": "TẠ",
+        "strokeCount": 17,
+        "onyomi": [
+          "シャ (sha)"
+        ],
+        "kunyomi": [
+          "あやま(る)"
+        ],
+        "meaningVi": "Cảm tạ, xin lỗi.",
+        "commonWords": [
+          {
+            "word": "感謝",
+            "furigana": "かんしゃ",
+            "meaningVi": "Biết ơn"
+          },
+          {
+            "word": "謝ります",
+            "furigana": "あやまります",
+            "meaningVi": "Xin lỗi"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-8-3",
+        "character": "尊",
+        "hanViet": "TÔN",
+        "strokeCount": 12,
+        "onyomi": [
+          "ソン (son)"
+        ],
+        "kunyomi": [
+          "とうと(い)"
+        ],
+        "meaningVi": "Tôn trọng, cao quý.",
+        "commonWords": [
+          {
+            "word": "尊敬",
+            "furigana": "そんけい",
+            "meaningVi": "Kính trọng"
+          },
+          {
+            "word": "尊重",
+            "furigana": "そんちょう",
+            "meaningVi": "Tôn trọng"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-8-4",
+        "character": "敬",
+        "hanViet": "KÍNH",
+        "strokeCount": 12,
+        "onyomi": [
+          "ケイ (kei)"
+        ],
+        "kunyomi": [
+          "うやま(う)"
+        ],
+        "meaningVi": "Kính trọng.",
+        "commonWords": [
+          {
+            "word": "尊敬",
+            "furigana": "そんけい",
+            "meaningVi": "Kính trọng"
+          },
+          {
+            "word": "敬語",
+            "furigana": "けいご",
+            "meaningVi": "Kính ngữ"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-8-5",
+        "character": "願",
+        "hanViet": "NGUYỆN",
+        "strokeCount": 19,
+        "onyomi": [
+          "ガン (gan)"
+        ],
+        "kunyomi": [
+          "ねが(う)"
+        ],
+        "meaningVi": "Cầu mong, nguyện vọng.",
+        "commonWords": [
+          {
+            "word": "願います",
+            "furigana": "ねがいます",
+            "meaningVi": "Cầu mong"
+          },
+          {
+            "word": "願い",
+            "furigana": "ねがい",
+            "meaningVi": "Nguyện vọng, mong ước"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n1-l8-s0",
-        "title": "Trọng tâm: Nguyện cầu tha thiết (てやまない & 願ってやまない)",
-        "grammarFormula": "V-て + やまない",
-        "explanation": "Tình cảm chân thành từ tận đáy lòng luôn luôn hướng về (cầu chúc, kỳ vọng).",
+        "slideId": "n1-l8-s1",
+        "slideType": "grammar",
+        "title": "1. Mãi không nguôi... (cảm xúc mãnh liệt kéo dài không ngừng): Vて + やまない",
+        "grammarFormula": "V(て form, CHỈ dùng với động từ CẢM XÚC) + やまない",
+        "explanation": "Vてやまない diễn tả một CẢM XÚC MÃNH LIỆT, KHÔNG BAO GIỜ NGUÔI, tiếp diễn liên tục theo thời gian — CHỈ dùng với động từ chỉ CẢM XÚC (愛する、尊敬する、感謝する、望む…), KHÔNG dùng với hành động thông thường. Văn phong CỰC KỲ TRANG TRỌNG, hay ở văn viết/diễn văn.",
+        "teacherTips": "Vてやまない chỉ tự nhiên với động từ diễn tả CẢM XÚC — không nói '食べてやまない' (ăn mãi không thôi) vì 食べる không phải cảm xúc.",
+        "culturalNotes": "Lời tựa sách hoặc bài diễn văn tri ân ở Nhật hay mở đầu bằng '〜氏を尊敬してやまない' (kính trọng ngài... mãi không thôi) để bày tỏ sự ngưỡng mộ sâu sắc, lâu dài.",
         "examples": [
           {
-            "id": "ex-n1-l8-1",
+            "id": "ex-n1-l8-s1-1",
             "tokens": [
               {
-                "id": "tok-n1-l8-1",
-                "text": "世界の平和を",
+                "id": "t-l8s1-1",
+                "text": "せんせい",
+                "isKeyGrammar": true,
+                "kanji": "先生",
+                "furigana": "せんせい"
+              },
+              {
+                "id": "t-l8s1-2",
+                "text": "を",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n1-l8-2",
-                "text": " 願ってやまない。",
+                "id": "t-l8s1-3",
+                "text": "そんけいして",
+                "isKeyGrammar": true,
+                "kanji": "尊敬して",
+                "furigana": "そんけいして"
+              },
+              {
+                "id": "t-l8s1-4",
+                "text": "やまない",
                 "isKeyGrammar": true
               }
             ],
-            "meaningVi": "Tôi không ngừng nguyện cầu cho nền hòa bình của thế giới."
+            "meaningVi": "Kính trọng thầy/cô mãi không thôi."
+          },
+          {
+            "id": "ex-n1-l8-s1-2",
+            "tokens": [
+              {
+                "id": "t-l8s1-5",
+                "text": "みなさん",
+                "isKeyGrammar": true,
+                "kanji": "皆さん",
+                "furigana": "みなさん"
+              },
+              {
+                "id": "t-l8s1-6",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s1-7",
+                "text": "かんしゃして",
+                "isKeyGrammar": true,
+                "kanji": "感謝して",
+                "furigana": "かんしゃして"
+              },
+              {
+                "id": "t-l8s1-8",
+                "text": "やまない",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Biết ơn tất cả mọi người mãi không thôi."
           }
-        ],
-        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+        ]
+      },
+      {
+        "slideId": "n1-l8-s2",
+        "slideType": "grammar",
+        "title": "2. Tha thiết cầu mong rằng... (cụm cố định kết thúc diễn văn): 〜ことを + 願ってやまない",
+        "grammarFormula": "[điều mong muốn]ことを + 願ってやまない",
+        "explanation": "願ってやまない là trường hợp ĐẶC BIỆT của Vてやまない áp dụng cho 願う (mong cầu) — đã trở thành CỤM CỐ ĐỊNH, RẤT PHỔ BIẾN ở CUỐI các bài diễn văn/lời chúc trang trọng (tốt nghiệp, kỷ niệm, tri ân) để bày tỏ MONG MUỐN THA THIẾT, chân thành.",
+        "teacherTips": "願ってやまない gần như LUÔN xuất hiện ở câu CUỐI CÙNG của một bài phát biểu — ghi nhớ như một 'câu kết mẫu' cho văn phong trang trọng.",
+        "culturalNotes": "Diễn văn tốt nghiệp, diễn văn nghỉ hưu ở Nhật hầu như luôn kết bằng '〜ことを願ってやまない' — coi đây là dấu hiệu bài phát biểu sắp kết thúc.",
+        "examples": [
+          {
+            "id": "ex-n1-l8-s2-1",
+            "tokens": [
+              {
+                "id": "t-l8s2-1",
+                "text": "みなさん",
+                "isKeyGrammar": true,
+                "kanji": "皆さん",
+                "furigana": "みなさん"
+              },
+              {
+                "id": "t-l8s2-2",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s2-3",
+                "text": "けんこう",
+                "isKeyGrammar": true,
+                "kanji": "健康",
+                "furigana": "けんこう"
+              },
+              {
+                "id": "t-l8s2-4",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s2-5",
+                "text": "ねがって",
+                "isKeyGrammar": true,
+                "kanji": "願って",
+                "furigana": "ねがって"
+              },
+              {
+                "id": "t-l8s2-6",
+                "text": "やまない",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tha thiết cầu mong sức khỏe của mọi người."
+          },
+          {
+            "id": "ex-n1-l8-s2-2",
+            "tokens": [
+              {
+                "id": "t-l8s2-7",
+                "text": "みなさん",
+                "isKeyGrammar": true,
+                "kanji": "皆さん",
+                "furigana": "みなさん"
+              },
+              {
+                "id": "t-l8s2-8",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s2-9",
+                "text": "しあわせ",
+                "isKeyGrammar": true,
+                "kanji": "幸せ",
+                "furigana": "しあわせ"
+              },
+              {
+                "id": "t-l8s2-10",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s2-11",
+                "text": "ねがって",
+                "isKeyGrammar": true,
+                "kanji": "願って",
+                "furigana": "ねがって"
+              },
+              {
+                "id": "t-l8s2-12",
+                "text": "やまない",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tha thiết cầu mong hạnh phúc của mọi người."
+          }
+        ]
+      },
+      {
+        "slideId": "n1-l8-s3",
+        "slideType": "grammar",
+        "title": "3. Lưu ý: Vてやまない chỉ dùng với động từ CẢM XÚC, không dùng với hành động thường",
+        "grammarFormula": "Đúng: 愛する/尊敬する/感謝する/願う + てやまない　|　Sai: 食べる/行く/勉強する + てやまない",
+        "explanation": "Vì Vてやまない diễn tả một TRẠNG THÁI CẢM XÚC kéo dài bên trong (không phải một hành động lặp đi lặp lại), nó CHỈ tự nhiên với nhóm ĐỘNG TỪ CẢM XÚC/MONG MUỐN nhỏ, cố định — học thuộc nhóm này thay vì áp dụng tùy tiện cho mọi động từ.",
+        "teacherTips": "Nhóm động từ hay đi với てやまない: 愛する、尊敬する、感謝する、望む、願う、期待する — ghi nhớ như một danh sách cố định.",
+        "culturalNotes": "Học sinh Nhật viết thư cảm ơn giáo viên chủ nhiệm khi tốt nghiệp thường dùng đúng mẫu câu '先生に感謝してやみません' (dạng lịch sự của やまない).",
+        "examples": [
+          {
+            "id": "ex-n1-l8-s3-1",
+            "tokens": [
+              {
+                "id": "t-l8s3-1",
+                "text": "せんせい",
+                "isKeyGrammar": true,
+                "kanji": "先生",
+                "furigana": "せんせい"
+              },
+              {
+                "id": "t-l8s3-2",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s3-3",
+                "text": "あいして",
+                "isKeyGrammar": true,
+                "kanji": "愛して",
+                "furigana": "あいして"
+              },
+              {
+                "id": "t-l8s3-4",
+                "text": "やまない",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Yêu quý thầy/cô mãi không thôi."
+          },
+          {
+            "id": "ex-n1-l8-s3-2",
+            "tokens": [
+              {
+                "id": "t-l8s3-5",
+                "text": "そつぎょう",
+                "isKeyGrammar": true,
+                "kanji": "卒業",
+                "furigana": "そつぎょう"
+              },
+              {
+                "id": "t-l8s3-6",
+                "text": "しても",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s3-7",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s3-8",
+                "text": "せんせい",
+                "isKeyGrammar": true,
+                "kanji": "先生",
+                "furigana": "せんせい"
+              },
+              {
+                "id": "t-l8s3-9",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s3-10",
+                "text": "かんしゃして",
+                "isKeyGrammar": true,
+                "kanji": "感謝して",
+                "furigana": "かんしゃして"
+              },
+              {
+                "id": "t-l8s3-11",
+                "text": "やまない",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Dù đã tốt nghiệp, vẫn biết ơn thầy/cô mãi không thôi."
+          }
+        ]
+      },
+      {
+        "slideId": "n1-l8-s4",
+        "slideType": "grammar",
+        "title": "4. Kết hợp trong một bài phát biểu tri ân hoàn chỉnh",
+        "grammarFormula": "先生を尊敬してやまない (bày tỏ cảm xúc) + 皆様の健康と幸せを願ってやまない (câu kết diễn văn)",
+        "explanation": "Trong một bài phát biểu chia tay/tri ân hoàn chỉnh, thường dùng Vてやまない để bày tỏ CẢM XÚC sâu sắc (kính trọng, biết ơn) trước, rồi KẾT THÚC bài phát biểu bằng 願ってやまない để gửi lời chúc tha thiết đến người nghe.",
+        "teacherTips": "Trong hội thoại/thư trang trọng, dùng dạng lịch sự やみません thay vì やまない.",
+        "culturalNotes": "Cấu trúc diễn văn kinh điển ở Nhật: mở đầu bằng lời cảm ơn thông thường → bày tỏ cảm xúc sâu sắc (Vてやまない) → kết bằng lời chúc tha thiết (願ってやまない).",
+        "examples": [
+          {
+            "id": "ex-n1-l8-s4-1",
+            "tokens": [
+              {
+                "id": "t-l8s4-1",
+                "text": "せんせい",
+                "isKeyGrammar": true,
+                "kanji": "先生",
+                "furigana": "せんせい"
+              },
+              {
+                "id": "t-l8s4-2",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s4-3",
+                "text": "そんけいして",
+                "isKeyGrammar": true,
+                "kanji": "尊敬して",
+                "furigana": "そんけいして"
+              },
+              {
+                "id": "t-l8s4-4",
+                "text": "やまない",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Kính trọng thầy/cô mãi không thôi."
+          },
+          {
+            "id": "ex-n1-l8-s4-2",
+            "tokens": [
+              {
+                "id": "t-l8s4-5",
+                "text": "みなさま",
+                "isKeyGrammar": false,
+                "kanji": "皆様",
+                "furigana": "みなさま"
+              },
+              {
+                "id": "t-l8s4-6",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s4-7",
+                "text": "けんこう",
+                "isKeyGrammar": true,
+                "kanji": "健康",
+                "furigana": "けんこう"
+              },
+              {
+                "id": "t-l8s4-8",
+                "text": "と",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s4-9",
+                "text": "しあわせ",
+                "isKeyGrammar": true,
+                "kanji": "幸せ",
+                "furigana": "しあわせ"
+              },
+              {
+                "id": "t-l8s4-10",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s4-11",
+                "text": "ねがって",
+                "isKeyGrammar": true,
+                "kanji": "願って",
+                "furigana": "ねがって"
+              },
+              {
+                "id": "t-l8s4-12",
+                "text": "やまない",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tha thiết cầu mong sức khỏe và hạnh phúc của mọi người."
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n1-8-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "田中",
+        "speakerRole": "Học sinh đại diện",
         "tokens": [
           {
-            "id": "tok-n1-8-d1",
-            "text": "この文法のポイントを"
+            "id": "d8-1",
+            "text": "きょう",
+            "isKeyGrammar": false,
+            "kanji": "今日",
+            "furigana": "きょう"
           },
           {
-            "id": "tok-n1-8-d2",
-            "text": "復習しましょう。"
+            "id": "d8-2",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-3",
+            "text": "そつぎょう",
+            "isKeyGrammar": true,
+            "kanji": "卒業",
+            "furigana": "そつぎょう"
+          },
+          {
+            "id": "d8-4",
+            "text": "しき",
+            "isKeyGrammar": false,
+            "kanji": "式",
+            "furigana": "しき"
+          },
+          {
+            "id": "d8-5",
+            "text": "です",
+            "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Hôm nay là lễ tốt nghiệp."
+      },
+      {
+        "id": "dia-n1-8-2",
+        "speaker": "鈴木",
+        "speakerRole": "Giáo viên sắp nghỉ hưu",
+        "tokens": [
+          {
+            "id": "d8-6",
+            "text": "おめでとう",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Chúc mừng em."
+      },
+      {
+        "id": "dia-n1-8-3",
+        "speaker": "田中",
+        "speakerRole": "Học sinh đại diện",
+        "tokens": [
+          {
+            "id": "d8-7",
+            "text": "せんせい",
+            "isKeyGrammar": true,
+            "kanji": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "id": "d8-8",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-9",
+            "text": "そんけいして",
+            "isKeyGrammar": true,
+            "kanji": "尊敬して",
+            "furigana": "そんけいして"
+          },
+          {
+            "id": "d8-10",
+            "text": "やみません",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Em kính trọng thầy mãi không thôi."
+      },
+      {
+        "id": "dia-n1-8-4",
+        "speaker": "鈴木",
+        "speakerRole": "Giáo viên sắp nghỉ hưu",
+        "tokens": [
+          {
+            "id": "d8-11",
+            "text": "ありがとう",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Cảm ơn em."
+      },
+      {
+        "id": "dia-n1-8-5",
+        "speaker": "田中",
+        "speakerRole": "Học sinh đại diện",
+        "tokens": [
+          {
+            "id": "d8-12",
+            "text": "せんせい",
+            "isKeyGrammar": true,
+            "kanji": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "id": "d8-13",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-14",
+            "text": "かんしゃして",
+            "isKeyGrammar": true,
+            "kanji": "感謝して",
+            "furigana": "かんしゃして"
+          },
+          {
+            "id": "d8-15",
+            "text": "やみません",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Em biết ơn thầy mãi không thôi."
+      },
+      {
+        "id": "dia-n1-8-6",
+        "speaker": "鈴木",
+        "speakerRole": "Giáo viên sắp nghỉ hưu",
+        "tokens": [
+          {
+            "id": "d8-16",
+            "text": "そつぎょう",
+            "isKeyGrammar": true,
+            "kanji": "卒業",
+            "furigana": "そつぎょう"
+          },
+          {
+            "id": "d8-17",
+            "text": "しても",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-18",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-19",
+            "text": "がんばって",
+            "isKeyGrammar": false,
+            "kanji": "頑張って",
+            "furigana": "がんばって"
+          },
+          {
+            "id": "d8-20",
+            "text": "ください",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Dù đã tốt nghiệp, hãy cố gắng nhé."
+      },
+      {
+        "id": "dia-n1-8-7",
+        "speaker": "田中",
+        "speakerRole": "Học sinh đại diện",
+        "tokens": [
+          {
+            "id": "d8-21",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-22",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-23",
+            "text": "せんせい",
+            "isKeyGrammar": true,
+            "kanji": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "id": "d8-24",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-25",
+            "text": "あいして",
+            "isKeyGrammar": true,
+            "kanji": "愛して",
+            "furigana": "あいして"
+          },
+          {
+            "id": "d8-26",
+            "text": "やみません",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Vâng. Em yêu quý thầy mãi không thôi."
+      },
+      {
+        "id": "dia-n1-8-8",
+        "speaker": "鈴木",
+        "speakerRole": "Giáo viên sắp nghỉ hưu",
+        "tokens": [
+          {
+            "id": "d8-27",
+            "text": "みなさん",
+            "isKeyGrammar": true,
+            "kanji": "皆さん",
+            "furigana": "みなさん"
+          },
+          {
+            "id": "d8-28",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-29",
+            "text": "しあわせ",
+            "isKeyGrammar": true,
+            "kanji": "幸せ",
+            "furigana": "しあわせ"
+          },
+          {
+            "id": "d8-30",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-31",
+            "text": "ねがって",
+            "isKeyGrammar": true,
+            "kanji": "願って",
+            "furigana": "ねがって"
+          },
+          {
+            "id": "d8-32",
+            "text": "やみません",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Thầy tha thiết cầu mong hạnh phúc của các em."
+      },
+      {
+        "id": "dia-n1-8-9",
+        "speaker": "田中",
+        "speakerRole": "Học sinh đại diện",
+        "tokens": [
+          {
+            "id": "d8-33",
+            "text": "せんせい",
+            "isKeyGrammar": true,
+            "kanji": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "id": "d8-34",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-35",
+            "text": "けんこう",
+            "isKeyGrammar": true,
+            "kanji": "健康",
+            "furigana": "けんこう"
+          },
+          {
+            "id": "d8-36",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-37",
+            "text": "ねがって",
+            "isKeyGrammar": true,
+            "kanji": "願って",
+            "furigana": "ねがって"
+          },
+          {
+            "id": "d8-38",
+            "text": "やみません",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Em cũng tha thiết cầu mong sức khỏe của thầy."
+      },
+      {
+        "id": "dia-n1-8-10",
+        "speaker": "鈴木",
+        "speakerRole": "Giáo viên sắp nghỉ hưu",
+        "tokens": [
+          {
+            "id": "d8-39",
+            "text": "ありがとう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-40",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-41",
+            "text": "わすれません",
+            "isKeyGrammar": true,
+            "kanji": "忘れません",
+            "furigana": "わすれません"
+          }
+        ],
+        "meaningVi": "Cảm ơn em. Thầy sẽ không quên."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n1-8-1",
-        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Nguyện cầu tha thiết (てやまない & 願ってやまない)'",
+        "question": "「先生を尊敬してやまない」 — Vてやまない diễn tả điều gì?",
         "options": [
-          "V-て + やまない",
-          "V-た + ところで",
-          "N + にかこつけて",
-          "V-る + べく"
+          "Một cảm xúc MÃNH LIỆT, KHÔNG BAO GIỜ NGUÔI, tiếp diễn liên tục",
+          "Một hành động lặp đi lặp lại nhiều lần",
+          "Sự cho phép làm việc gì đó",
+          "Một quá trình dẫn đến kết quả"
         ],
         "correctIndex": 0,
-        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: V-て + やまない",
-        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+        "explanation": "Vてやまない diễn tả cảm xúc mãnh liệt, không bao giờ nguôi — chỉ dùng với động từ chỉ cảm xúc.",
+        "hint": "Xem cấu trúc Vてやまない ở slide 1."
+      },
+      {
+        "id": "ex-q-n1-8-2",
+        "question": "「皆様の健康と幸せを願ってやまない」 — 願ってやまない thường xuất hiện ở đâu?",
+        "options": [
+          "Ở CUỐI các bài diễn văn/lời chúc trang trọng, để bày tỏ mong muốn tha thiết",
+          "Ở đầu bài diễn văn, để chào hỏi",
+          "Chỉ dùng trong hội thoại đời thường",
+          "Chỉ dùng để đặt câu hỏi"
+        ],
+        "correctIndex": 0,
+        "explanation": "願ってやまない là cụm cố định hay xuất hiện ở câu kết của diễn văn trang trọng.",
+        "hint": "Xem cấu trúc 願ってやまない ở slide 2."
+      },
+      {
+        "id": "ex-q-n1-8-3",
+        "question": "Động từ nào KHÔNG THỂ dùng tự nhiên với てやまない?",
+        "options": [
+          "食べます (ăn) — không phải động từ chỉ cảm xúc",
+          "尊敬します (kính trọng) — động từ chỉ cảm xúc",
+          "感謝します (biết ơn) — động từ chỉ cảm xúc",
+          "願います (cầu mong) — động từ chỉ cảm xúc"
+        ],
+        "correctIndex": 0,
+        "explanation": "Vてやまない chỉ dùng tự nhiên với động từ CẢM XÚC/MONG MUỐN — 食べます là hành động thường, không phù hợp.",
+        "hint": "Xem lưu ý ở slide 3."
+      },
+      {
+        "id": "ex-q-n1-8-4",
+        "question": "Dạng lịch sự của Vてやまない trong hội thoại trang trọng là gì?",
+        "options": [
+          "Vてやみません",
+          "Vてやまなかった",
+          "Vてやまますです",
+          "Không có dạng lịch sự"
+        ],
+        "correctIndex": 0,
+        "explanation": "やまない chuyển thành やみません để trở thành dạng lịch sự, hay dùng trong hội thoại/thư trang trọng.",
+        "hint": "Xem hội thoại minh họa — học sinh dùng やみません khi nói chuyện với giáo viên."
+      },
+      {
+        "id": "ex-q-n1-8-5",
+        "question": "「卒業しても、先生に感謝してやまない」 nghĩa là:",
+        "options": [
+          "Dù đã tốt nghiệp, vẫn biết ơn thầy/cô mãi không thôi",
+          "Sau khi tốt nghiệp thì hết biết ơn thầy/cô",
+          "Chưa tốt nghiệp nên chưa biết ơn",
+          "Biết ơn chỉ trong thời gian đi học"
+        ],
+        "correctIndex": 0,
+        "explanation": "てやまない nhấn mạnh cảm xúc TIẾP DIỄN theo thời gian, kể cả sau khi hoàn cảnh đã thay đổi (đã tốt nghiệp).",
+        "hint": "Áp dụng cấu trúc てやまない cho ngữ cảnh sau khi tốt nghiệp."
+      },
+      {
+        "id": "ex-q-n1-8-6",
+        "question": "Tại sao Vてやまない và 願ってやまない thường xuất hiện CÙNG NHAU trong một bài phát biểu tri ân?",
+        "options": [
+          "Để bày tỏ cảm xúc sâu sắc trước (Vてやまない) rồi kết thúc bằng lời chúc tha thiết (願ってやまない)",
+          "Vì chúng có nghĩa giống hệt nhau nên dùng thay phiên",
+          "Không có lý do đặc biệt",
+          "Vì quy tắc ngữ pháp bắt buộc phải dùng chung"
+        ],
+        "correctIndex": 0,
+        "explanation": "Vてやまない bày tỏ cảm xúc (kính trọng, biết ơn); 願ってやまない kết thúc bài phát biểu bằng lời chúc tha thiết.",
+        "hint": "Xem cấu trúc diễn văn hoàn chỉnh ở slide 4."
+      },
+      {
+        "id": "ex-q-n1-8-7",
+        "question": "「先生を愛してやまない」 nghĩa là:",
+        "options": [
+          "Yêu quý thầy/cô mãi không thôi",
+          "Không còn yêu quý thầy/cô nữa",
+          "Chỉ yêu quý thầy/cô trong một thời gian ngắn",
+          "Nghi ngờ tình cảm dành cho thầy/cô"
+        ],
+        "correctIndex": 0,
+        "explanation": "てやまない diễn tả tình cảm mãnh liệt, kéo dài không ngừng.",
+        "hint": "Áp dụng cấu trúc てやまない cho ngữ cảnh tình cảm."
+      },
+      {
+        "id": "ex-q-n1-8-8",
+        "question": "Theo hội thoại, học sinh đã bày tỏ cảm xúc gì với giáo viên?",
+        "options": [
+          "Kính trọng, biết ơn và yêu quý (尊敬して/感謝して/愛してやみません)",
+          "Chỉ có sự tức giận",
+          "Không bày tỏ cảm xúc gì",
+          "Chỉ có sự nghi ngờ"
+        ],
+        "correctIndex": 0,
+        "explanation": "Học sinh lần lượt nói 「尊敬してやみません」「感謝してやみません」「愛してやみません」.",
+        "hint": "Xem câu thoại thứ 3, 5, 7."
+      },
+      {
+        "id": "ex-q-n1-8-9",
+        "question": "Theo hội thoại, giáo viên đã tha thiết cầu mong điều gì cho học sinh?",
+        "options": [
+          "Hạnh phúc của các em (皆さんの幸せを願ってやみません)",
+          "Sự giàu có",
+          "Không cầu mong điều gì",
+          "Sự nổi tiếng"
+        ],
+        "correctIndex": 0,
+        "explanation": "Giáo viên nói 「皆さんの幸せを願ってやみません」.",
+        "hint": "Xem câu thoại thứ 8."
+      },
+      {
+        "id": "ex-q-n1-8-10",
+        "question": "Theo hội thoại, học sinh đã tha thiết cầu mong điều gì cho giáo viên?",
+        "options": [
+          "Sức khỏe của thầy (先生の健康も願ってやみません)",
+          "Sự giàu có",
+          "Không cầu mong điều gì",
+          "Kỳ nghỉ dài"
+        ],
+        "correctIndex": 0,
+        "explanation": "Học sinh nói 「先生の健康も願ってやみません」.",
+        "hint": "Xem câu thoại thứ 9."
       }
     ]
   },
