@@ -19927,99 +19927,1316 @@
     "level": "N4",
     "lessonNumber": 41,
     "title": "Bài 41: Kính ngữ cho nhận (やる / あげる / さしあげる, いただく, くださる)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "description": "Mở rộng bộ ba cho-nhận (N5 bài 7, 24) sang kính ngữ: ba bậc của あげる (やる<あげる<差し上げる tùy địa vị người nhận), いただきます (khiêm nhường ngữ của もらいます, hạ mình khi nhận), và くださいます (tôn kính ngữ của くれます, nâng người trên khi họ cho mình) — nền tảng cho 尊敬語/謙譲語 sẽ học đầy đủ ở bài 49-50.",
     "vocabList": [
       {
         "id": "voc-n4-41-1",
-        "word": "重要語彙 (N4)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "やります",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "yarimasu",
+        "wordType": "verb",
+        "meaningVi": "Cho, tặng (cho vật/động thực vật, dưới mình)",
+        "accentNote": "Bậc THẤP NHẤT của あげる — cho hoa/thú cưng ăn, hoặc nói với em nhỏ thân mật."
+      },
+      {
+        "id": "voc-n4-41-2",
+        "word": "あげます",
+        "kanji": "上げます",
+        "furigana": "あげます",
+        "romaji": "agemasu",
+        "wordType": "verb",
+        "meaningVi": "Cho, tặng (ngang hàng)",
+        "accentNote": "Đã gặp N5 bài 7, 24. Bậc TRUNG TÍNH."
+      },
+      {
+        "id": "voc-n4-41-3",
+        "word": "さしあげます",
+        "kanji": "差し上げます",
+        "furigana": "さしあげます",
+        "romaji": "sashiagemasu",
+        "wordType": "verb",
+        "meaningVi": "Kính biếu, kính tặng (cho người trên)",
+        "accentNote": "Bậc CAO NHẤT của あげる — dùng khi tặng thầy cô, cấp trên, khách hàng."
+      },
+      {
+        "id": "voc-n4-41-4",
+        "word": "いただきます",
+        "kanji": "頂きます",
+        "furigana": "いただきます",
+        "romaji": "itadakimasu",
+        "wordType": "verb",
+        "meaningVi": "Được nhận (khiêm nhường, từ người trên)",
+        "accentNote": "Khiêm nhường ngữ của もらいます — hạ mình khi nhận từ người trên."
+      },
+      {
+        "id": "voc-n4-41-5",
+        "word": "くださいます",
+        "kanji": "下さいます",
+        "furigana": "くださいます",
+        "romaji": "kudasaimasu",
+        "wordType": "verb",
+        "meaningVi": "Được ban cho (tôn kính, từ người trên)",
+        "accentNote": "Tôn kính ngữ của くれます — NÂNG người trên khi họ cho mình."
+      },
+      {
+        "id": "voc-n4-41-6",
+        "word": "もらいます",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "moraimasu",
+        "wordType": "verb",
+        "meaningVi": "Nhận, được (trung tính)",
+        "accentNote": "Đã gặp N5 bài 7, 24."
+      },
+      {
+        "id": "voc-n4-41-7",
+        "word": "くれます",
+        "kanji": "呉れます",
+        "furigana": "くれます",
+        "romaji": "kuremasu",
+        "wordType": "verb",
+        "meaningVi": "Cho (người khác làm cho mình, trung tính)",
+        "accentNote": "Đã gặp N5 bài 24."
+      },
+      {
+        "id": "voc-n4-41-8",
+        "word": "プレゼント",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "purezento",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 41",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Món quà",
+        "accentNote": "プレゼントを 頂きました = tôi đã được nhận quà (khiêm nhường)."
+      },
+      {
+        "id": "voc-n4-41-9",
+        "word": "はなみ",
+        "kanji": "花見",
+        "furigana": "はなみ",
+        "romaji": "hanami",
+        "wordType": "noun",
+        "meaningVi": "Ngắm hoa anh đào",
+        "accentNote": "花見の チケットを 差し上げます = kính biếu vé xem hoa anh đào."
+      },
+      {
+        "id": "voc-n4-41-10",
+        "word": "せんせい",
+        "kanji": "先生",
+        "furigana": "せんせい",
+        "romaji": "sensei",
+        "wordType": "noun",
+        "meaningVi": "Thầy/cô giáo",
+        "accentNote": "先生に 花を 差し上げました = tôi đã kính biếu hoa cho thầy giáo."
+      },
+      {
+        "id": "voc-n4-41-11",
+        "word": "しゃちょう",
+        "kanji": "社長",
+        "furigana": "しゃちょう",
+        "romaji": "shachou",
+        "wordType": "noun",
+        "meaningVi": "Giám đốc công ty",
+        "accentNote": "社長が 本を くださいました = giám đốc đã ban tặng cho tôi quyển sách."
+      },
+      {
+        "id": "voc-n4-41-12",
+        "word": "りょうしん",
+        "kanji": "両親",
+        "furigana": "りょうしん",
+        "romaji": "ryoushin",
+        "wordType": "noun",
+        "meaningVi": "Cha mẹ",
+        "accentNote": "Đã gặp N5 bài 20."
+      },
+      {
+        "id": "voc-n4-41-13",
+        "word": "たんじょうび",
+        "kanji": "誕生日",
+        "furigana": "たんじょうび",
+        "romaji": "tanjoubi",
+        "wordType": "noun",
+        "meaningVi": "Sinh nhật",
+        "accentNote": "Đã gặp N5 bài 5."
+      },
+      {
+        "id": "voc-n4-41-14",
+        "word": "はな",
+        "kanji": "花",
+        "furigana": "はな",
+        "romaji": "hana",
+        "wordType": "noun",
+        "meaningVi": "Hoa",
+        "accentNote": "Đã gặp N5 bài 16."
+      },
+      {
+        "id": "voc-n4-41-15",
+        "word": "ほん",
+        "kanji": "本",
+        "furigana": "ほん",
+        "romaji": "hon",
+        "wordType": "noun",
+        "meaningVi": "Quyển sách",
+        "accentNote": "Đã gặp N5 bài 2."
+      },
+      {
+        "id": "voc-n4-41-16",
+        "word": "いぬ",
+        "kanji": "犬",
+        "furigana": "いぬ",
+        "romaji": "inu",
+        "wordType": "noun",
+        "meaningVi": "Con chó",
+        "accentNote": "Đã gặp N5 bài 10 — nay dùng làm ví dụ やります."
+      },
+      {
+        "id": "voc-n4-41-17",
+        "word": "みず",
+        "kanji": "水",
+        "furigana": "みず",
+        "romaji": "mizu",
+        "wordType": "noun",
+        "meaningVi": "Nước",
+        "accentNote": "犬に 水を やります = cho chó uống nước."
+      },
+      {
+        "id": "voc-n4-41-18",
+        "word": "しゃいん",
+        "kanji": "社員",
+        "furigana": "しゃいん",
+        "romaji": "shain",
+        "wordType": "noun",
+        "meaningVi": "Nhân viên công ty",
+        "accentNote": "Đã gặp N5 bài 1."
+      },
+      {
+        "id": "voc-n4-41-19",
+        "word": "おきゃくさん",
+        "kanji": "お客さん",
+        "furigana": "おきゃくさん",
+        "romaji": "okyakusan",
+        "wordType": "noun",
+        "meaningVi": "Vị khách",
+        "accentNote": "お客さんに お茶を 差し上げます = kính mời khách dùng trà."
+      },
+      {
+        "id": "voc-n4-41-20",
+        "word": "ありがたい",
+        "kanji": "有難い",
+        "furigana": "ありがたい",
+        "romaji": "arigatai",
+        "wordType": "adjective",
+        "meaningVi": "Đáng quý, biết ơn",
+        "accentNote": "先生に 教えて いただき、ありがたいです = được thầy dạy cho, thật đáng quý."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n4-41-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "差",
+        "hanViet": "SAI",
+        "strokeCount": 10,
         "onyomi": [
-          "ゴ"
+          "サ (sa)"
         ],
         "kunyomi": [
-          "かたる"
+          "さ(す)"
         ],
-        "meaningVi": "Ngôn ngữ",
+        "meaningVi": "Sự khác biệt; dâng lên (trong 差し上げる).",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "差し上げます",
+            "furigana": "さしあげます",
+            "meaningVi": "Kính biếu"
+          },
+          {
+            "word": "差",
+            "furigana": "さ",
+            "meaningVi": "Sự khác biệt"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-41-2",
+        "character": "頂",
+        "hanViet": "ĐẢNH",
+        "strokeCount": 11,
+        "onyomi": [
+          "チョウ (chou)"
+        ],
+        "kunyomi": [
+          "いただ(く)"
+        ],
+        "meaningVi": "Đỉnh đầu; nhận lấy một cách khiêm nhường.",
+        "commonWords": [
+          {
+            "word": "頂きます",
+            "furigana": "いただきます",
+            "meaningVi": "Được nhận (khiêm nhường)"
+          },
+          {
+            "word": "頂上",
+            "furigana": "ちょうじょう",
+            "meaningVi": "Đỉnh núi"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-41-3",
+        "character": "客",
+        "hanViet": "KHÁCH",
+        "strokeCount": 9,
+        "onyomi": [
+          "キャク (kyaku)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Khách.",
+        "commonWords": [
+          {
+            "word": "お客さん",
+            "furigana": "おきゃくさん",
+            "meaningVi": "Vị khách"
+          },
+          {
+            "word": "観光客",
+            "furigana": "かんこうきゃく",
+            "meaningVi": "Khách du lịch"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-41-4",
+        "character": "社",
+        "hanViet": "XÃ",
+        "strokeCount": 7,
+        "onyomi": [
+          "シャ (sha)"
+        ],
+        "kunyomi": [
+          "やしろ"
+        ],
+        "meaningVi": "Công ty, đoàn thể. Đã gặp N5 bài 3.",
+        "commonWords": [
+          {
+            "word": "社長",
+            "furigana": "しゃちょう",
+            "meaningVi": "Giám đốc"
+          },
+          {
+            "word": "社員",
+            "furigana": "しゃいん",
+            "meaningVi": "Nhân viên"
+          },
+          {
+            "word": "会社",
+            "furigana": "かいしゃ",
+            "meaningVi": "Công ty"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-41-5",
+        "character": "長",
+        "hanViet": "TRƯỞNG",
+        "strokeCount": 8,
+        "onyomi": [
+          "チョウ (chou)"
+        ],
+        "kunyomi": [
+          "なが(い)"
+        ],
+        "meaningVi": "Trưởng, đứng đầu; dài.",
+        "commonWords": [
+          {
+            "word": "社長",
+            "furigana": "しゃちょう",
+            "meaningVi": "Giám đốc"
+          },
+          {
+            "word": "長い",
+            "furigana": "ながい",
+            "meaningVi": "Dài"
+          },
+          {
+            "word": "校長",
+            "furigana": "こうちょう",
+            "meaningVi": "Hiệu trưởng"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n4-l41-s0",
-        "title": "Trọng tâm: Kính ngữ cho nhận (やる / あげる / さしあげる, いただく, くださる)",
-        "grammarFormula": "Nに 差し上げます / いただきます / くださいます",
-        "explanation": "Dùng khi đối phương là người có địa vị cao hơn, người trên.",
+        "slideId": "n4-l41-s1",
+        "slideType": "grammar",
+        "title": "1. Ba bậc của あげる: やる／あげる／差し上げる",
+        "grammarFormula": "やる (dưới mình: cây, thú cưng, em nhỏ) < あげる (ngang hàng) < 差し上げる (kính biếu người trên)",
+        "explanation": "Đây là MỘT động từ 'cho' được chia thành BA BẬC LỊCH SỰ tùy đối tượng nhận — càng nhận từ người CÀNG CAO thì càng dùng từ trang trọng hơn.",
+        "teacherTips": "Tuyệt đối không dùng やる cho người — kể cả nói về em nhỏ trong gia đình cũng nên dùng あげる để lịch sự hơn trong đa số ngữ cảnh hiện đại.",
+        "culturalNotes": "差し上げます nghe khá trang trọng, dùng phổ biến trong môi trường kinh doanh khi biếu quà đối tác, khách hàng.",
         "examples": [
           {
-            "id": "ex-n4-l41-1",
+            "id": "ex-n4-l41-s1-1",
             "tokens": [
               {
-                "id": "tok-n4-l41-1",
-                "text": "社長に",
+                "id": "t-l41s1-1",
+                "text": "いぬ",
+                "isKeyGrammar": true,
+                "kanji": "犬",
+                "furigana": "いぬ"
+              },
+              {
+                "id": "t-l41s1-2",
+                "text": "に",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n4-l41-2",
-                "text": "社長に お土産を いただきました。",
+                "id": "t-l41s1-3",
+                "text": "みず",
+                "isKeyGrammar": false,
+                "kanji": "水",
+                "furigana": "みず"
+              },
+              {
+                "id": "t-l41s1-4",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l41s1-5",
+                "text": "やります",
                 "isKeyGrammar": true
               }
             ],
-            "meaningVi": "Tôi đã được giám đốc cho quà."
+            "meaningVi": "Tôi cho chó uống nước."
+          },
+          {
+            "id": "ex-n4-l41-s1-2",
+            "tokens": [
+              {
+                "id": "t-l41s1-6",
+                "text": "せんせい",
+                "isKeyGrammar": true,
+                "kanji": "先生",
+                "furigana": "せんせい"
+              },
+              {
+                "id": "t-l41s1-7",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l41s1-8",
+                "text": "はな",
+                "isKeyGrammar": false,
+                "kanji": "花",
+                "furigana": "はな"
+              },
+              {
+                "id": "t-l41s1-9",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l41s1-10",
+                "text": "さしあげました",
+                "isKeyGrammar": true,
+                "kanji": "差し上げました",
+                "furigana": "さしあげました"
+              }
+            ],
+            "meaningVi": "Tôi đã kính biếu hoa cho thầy giáo."
           }
-        ],
-        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+        ]
+      },
+      {
+        "slideId": "n4-l41-s2",
+        "slideType": "grammar",
+        "title": "2. Khiêm nhường khi NHẬN: いただきます (khiêm nhường ngữ của もらいます)",
+        "grammarFormula": "[Người nói] は [người trên] に + いただきます",
+        "explanation": "いただきます HẠ THẤP bản thân người nói khi nhận ơn/vật từ người trên — cùng bản chất với もらいます (N5 bài 7, 24) nhưng thêm sắc thái khiêm tốn rõ rệt.",
+        "teacherTips": "いただきます cũng chính là câu nói trước bữa ăn ('xin phép được nhận') — cùng gốc ý nghĩa khiêm nhường khi tiếp nhận điều gì đó.",
+        "culturalNotes": "教えていただき、ありがとうございます là câu cảm ơn trang trọng chuẩn mực khi viết thư/email cho giáo viên, cấp trên.",
+        "examples": [
+          {
+            "id": "ex-n4-l41-s2-1",
+            "tokens": [
+              {
+                "id": "t-l41s2-1",
+                "text": "せんせい",
+                "isKeyGrammar": true,
+                "kanji": "先生",
+                "furigana": "せんせい"
+              },
+              {
+                "id": "t-l41s2-2",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l41s2-3",
+                "text": "ほん",
+                "isKeyGrammar": false,
+                "kanji": "本",
+                "furigana": "ほん"
+              },
+              {
+                "id": "t-l41s2-4",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l41s2-5",
+                "text": "いただきました",
+                "isKeyGrammar": true,
+                "kanji": "頂きました",
+                "furigana": "いただきました"
+              }
+            ],
+            "meaningVi": "Tôi đã được thầy giáo ban tặng cho quyển sách."
+          },
+          {
+            "id": "ex-n4-l41-s2-2",
+            "tokens": [
+              {
+                "id": "t-l41s2-6",
+                "text": "せんせい",
+                "isKeyGrammar": false,
+                "kanji": "先生",
+                "furigana": "せんせい"
+              },
+              {
+                "id": "t-l41s2-7",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l41s2-8",
+                "text": "にほんご",
+                "isKeyGrammar": false,
+                "kanji": "日本語",
+                "furigana": "にほんご"
+              },
+              {
+                "id": "t-l41s2-9",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l41s2-10",
+                "text": "おしえて",
+                "isKeyGrammar": false,
+                "kanji": "教えて",
+                "furigana": "おしえて"
+              },
+              {
+                "id": "t-l41s2-11",
+                "text": "いただきました",
+                "isKeyGrammar": true,
+                "kanji": "頂きました",
+                "furigana": "いただきました"
+              }
+            ],
+            "meaningVi": "Tôi đã được thầy giáo dạy cho tiếng Nhật. (Vて+いただきます, mở rộng từ もらいます)"
+          }
+        ]
+      },
+      {
+        "slideId": "n4-l41-s3",
+        "slideType": "grammar",
+        "title": "3. Tôn kính khi được CHO: くださいます (tôn kính ngữ của くれます)",
+        "grammarFormula": "[Người trên] は [tôi] に + くださいます",
+        "explanation": "くださいます NÂNG CAO người trên khi họ chủ động cho/làm gì đó cho mình — đối lập vai trò với いただきます (khiêm nhường HẠ MÌNH). Cùng một sự việc, chọn theo ai làm CHỦ NGỮ.",
+        "teacherTips": "くださいました (thầy LÀM cho tôi) và いただきました (tôi ĐƯỢC NHẬN từ thầy) tả CÙNG một sự việc — như くれる/もらう ở N5 bài 24, chỉ khác đây là bản kính ngữ.",
+        "culturalNotes": "Thư cảm ơn trang trọng ở Nhật thường viết cả hai dạng tùy vào việc muốn nhấn mạnh HÀNH ĐỘNG của người trên hay TRẢI NGHIỆM của bản thân.",
+        "examples": [
+          {
+            "id": "ex-n4-l41-s3-1",
+            "tokens": [
+              {
+                "id": "t-l41s3-1",
+                "text": "しゃちょう",
+                "isKeyGrammar": true,
+                "kanji": "社長",
+                "furigana": "しゃちょう"
+              },
+              {
+                "id": "t-l41s3-2",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l41s3-3",
+                "text": "ほん",
+                "isKeyGrammar": false,
+                "kanji": "本",
+                "furigana": "ほん"
+              },
+              {
+                "id": "t-l41s3-4",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l41s3-5",
+                "text": "くださいました",
+                "isKeyGrammar": true,
+                "kanji": "下さいました",
+                "furigana": "くださいました"
+              }
+            ],
+            "meaningVi": "Giám đốc đã ban tặng cho tôi quyển sách."
+          },
+          {
+            "id": "ex-n4-l41-s3-2",
+            "tokens": [
+              {
+                "id": "t-l41s3-6",
+                "text": "せんせい",
+                "isKeyGrammar": false,
+                "kanji": "先生",
+                "furigana": "せんせい"
+              },
+              {
+                "id": "t-l41s3-7",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l41s3-8",
+                "text": "にほんご",
+                "isKeyGrammar": false,
+                "kanji": "日本語",
+                "furigana": "にほんご"
+              },
+              {
+                "id": "t-l41s3-9",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l41s3-10",
+                "text": "おしえて",
+                "isKeyGrammar": false,
+                "kanji": "教えて",
+                "furigana": "おしえて"
+              },
+              {
+                "id": "t-l41s3-11",
+                "text": "くださいました",
+                "isKeyGrammar": true,
+                "kanji": "下さいました",
+                "furigana": "くださいました"
+              }
+            ],
+            "meaningVi": "Thầy giáo đã dạy cho tôi tiếng Nhật. (kính ngữ, chủ ngữ là thầy giáo)"
+          }
+        ]
+      },
+      {
+        "slideId": "n4-l41-s4",
+        "slideType": "grammar",
+        "title": "4. Bảng tổng hợp ba cặp kính ngữ cho-nhận",
+        "grammarFormula": "あげる系: やる<あげる<差し上げる 　もらう系: もらう→いただく (khiêm nhường) 　くれる系: くれる→くださる (tôn kính)",
+        "explanation": "Ba nhóm động từ cho-nhận (N5 bài 7, 24) đều có PHIÊN BẢN KÍNH NGỮ riêng — đây là nền tảng quan trọng trước khi học kính ngữ tổng quát (尊敬語/謙譲語) ở bài 49-50.",
+        "teacherTips": "Ghi nhớ theo cặp: あげる/もらう/くれる (N5) → 差し上げる/いただく/くださる (kính ngữ, N4) — cùng cấu trúc câu, chỉ thay động từ.",
+        "culturalNotes": "ご両親に教えていただき、ありがたいです là mẫu câu cảm ơn kính trọng phổ biến khi nói về việc học hỏi từ cha mẹ người khác.",
+        "examples": [
+          {
+            "id": "ex-n4-l41-s4-1",
+            "tokens": [
+              {
+                "id": "t-l41s4-1",
+                "text": "りょうしん",
+                "isKeyGrammar": true,
+                "kanji": "両親",
+                "furigana": "りょうしん"
+              },
+              {
+                "id": "t-l41s4-2",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l41s4-3",
+                "text": "プレゼント",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l41s4-4",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l41s4-5",
+                "text": "あげました",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi đã tặng quà cho cha mẹ. (あげる, trung tính vì cha mẹ không cần kính ngữ tuyệt đối)"
+          },
+          {
+            "id": "ex-n4-l41-s4-2",
+            "tokens": [
+              {
+                "id": "t-l41s4-6",
+                "text": "おきゃくさん",
+                "isKeyGrammar": true,
+                "kanji": "お客さん",
+                "furigana": "おきゃくさん"
+              },
+              {
+                "id": "t-l41s4-7",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l41s4-8",
+                "text": "おちゃ",
+                "isKeyGrammar": false,
+                "kanji": "お茶",
+                "furigana": "おちゃ"
+              },
+              {
+                "id": "t-l41s4-9",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l41s4-10",
+                "text": "さしあげました",
+                "isKeyGrammar": true,
+                "kanji": "差し上げました",
+                "furigana": "さしあげました"
+              }
+            ],
+            "meaningVi": "Tôi đã kính mời khách dùng trà."
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n4-41-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
         "tokens": [
           {
-            "id": "tok-n4-41-d1",
-            "text": "この文法のポイントを"
+            "id": "d-l41-1",
+            "text": "サントスさん",
+            "isKeyGrammar": false
           },
           {
-            "id": "tok-n4-41-d2",
-            "text": "復習しましょう。"
+            "id": "d-l41-2",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-3",
+            "text": "たんじょうび",
+            "isKeyGrammar": true,
+            "kanji": "誕生日",
+            "furigana": "たんじょうび"
+          },
+          {
+            "id": "d-l41-4",
+            "text": "おめでとう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-5",
+            "text": "ございます",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-6",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-7",
+            "text": "これ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-8",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-9",
+            "text": "プレゼント",
+            "isKeyGrammar": true,
+            "kanji": "プレゼント",
+            "furigana": "プレゼント"
+          },
+          {
+            "id": "d-l41-10",
+            "text": "です",
+            "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Anh Santos, chúc mừng sinh nhật. Đây, quà tặng anh."
+      },
+      {
+        "id": "dia-n4-41-2",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l41-11",
+            "text": "ありがとう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-12",
+            "text": "ございます",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-13",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-14",
+            "text": "うれしい",
+            "isKeyGrammar": false,
+            "kanji": "嬉しい",
+            "furigana": "うれしい"
+          },
+          {
+            "id": "d-l41-15",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-16",
+            "text": "！",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Cảm ơn nhiều. Vui quá!"
+      },
+      {
+        "id": "dia-n4-41-3",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l41-17",
+            "text": "せんせい",
+            "isKeyGrammar": true,
+            "kanji": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "id": "d-l41-18",
+            "text": "から",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-19",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-20",
+            "text": "プレゼント",
+            "isKeyGrammar": false,
+            "kanji": "プレゼント",
+            "furigana": "プレゼント"
+          },
+          {
+            "id": "d-l41-21",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-22",
+            "text": "いただきました",
+            "isKeyGrammar": true,
+            "kanji": "頂きました",
+            "furigana": "いただきました"
+          },
+          {
+            "id": "d-l41-23",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Anh cũng được thầy giáo tặng quà à?"
+      },
+      {
+        "id": "dia-n4-41-4",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l41-24",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-25",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-26",
+            "text": "せんせい",
+            "isKeyGrammar": false,
+            "kanji": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "id": "d-l41-27",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-28",
+            "text": "ほん",
+            "isKeyGrammar": true,
+            "kanji": "本",
+            "furigana": "ほん"
+          },
+          {
+            "id": "d-l41-29",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-30",
+            "text": "くださいました",
+            "isKeyGrammar": true,
+            "kanji": "下さいました",
+            "furigana": "くださいました"
+          }
+        ],
+        "meaningVi": "Vâng. Thầy giáo đã ban tặng cho tôi một quyển sách."
+      },
+      {
+        "id": "dia-n4-41-5",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l41-31",
+            "text": "いいですね",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-32",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-33",
+            "text": "わたし",
+            "isKeyGrammar": false,
+            "kanji": "私",
+            "furigana": "わたし"
+          },
+          {
+            "id": "d-l41-34",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-35",
+            "text": "りょうしん",
+            "isKeyGrammar": true,
+            "kanji": "両親",
+            "furigana": "りょうしん"
+          },
+          {
+            "id": "d-l41-36",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-37",
+            "text": "でんわ",
+            "isKeyGrammar": false,
+            "kanji": "電話",
+            "furigana": "でんわ"
+          },
+          {
+            "id": "d-l41-38",
+            "text": "して",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l41-39",
+            "text": "もらいました",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Hay đó. Tôi thì được cha mẹ gọi điện chúc mừng."
+      },
+      {
+        "id": "dia-n4-41-6",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l41-40",
+            "text": "それ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-41",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-42",
+            "text": "うれしい",
+            "isKeyGrammar": false,
+            "kanji": "嬉しい",
+            "furigana": "うれしい"
+          },
+          {
+            "id": "d-l41-43",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-44",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vậy cũng vui đấy nhỉ."
+      },
+      {
+        "id": "dia-n4-41-7",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l41-45",
+            "text": "らいしゅう",
+            "isKeyGrammar": false,
+            "kanji": "来週",
+            "furigana": "らいしゅう"
+          },
+          {
+            "id": "d-l41-46",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-47",
+            "text": "はなみ",
+            "isKeyGrammar": true,
+            "kanji": "花見",
+            "furigana": "はなみ"
+          },
+          {
+            "id": "d-l41-48",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-49",
+            "text": "いきませんか",
+            "isKeyGrammar": false,
+            "kanji": "行きませんか",
+            "furigana": "いきませんか"
+          }
+        ],
+        "meaningVi": "Tuần sau, mình đi ngắm hoa anh đào không?"
+      },
+      {
+        "id": "dia-n4-41-8",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l41-50",
+            "text": "いいですね",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-51",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-52",
+            "text": "せんせい",
+            "isKeyGrammar": true,
+            "kanji": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "id": "d-l41-53",
+            "text": "にも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-54",
+            "text": "チケット",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-55",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-56",
+            "text": "さしあげましょう",
+            "isKeyGrammar": true,
+            "kanji": "差し上げましょう",
+            "furigana": "さしあげましょう"
+          }
+        ],
+        "meaningVi": "Hay đó. Cũng kính biếu vé cho thầy giáo luôn nhé."
+      },
+      {
+        "id": "dia-n4-41-9",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l41-57",
+            "text": "いい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-58",
+            "text": "かんがえ",
+            "isKeyGrammar": false,
+            "kanji": "考え",
+            "furigana": "かんがえ"
+          },
+          {
+            "id": "d-l41-59",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-60",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-61",
+            "text": "せんせい",
+            "isKeyGrammar": false,
+            "kanji": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "id": "d-l41-62",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-63",
+            "text": "きっと",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-64",
+            "text": "よろこびます",
+            "isKeyGrammar": false,
+            "kanji": "喜びます",
+            "furigana": "よろこびます"
+          }
+        ],
+        "meaningVi": "Ý hay đấy. Thầy giáo chắc chắn sẽ vui đấy."
+      },
+      {
+        "id": "dia-n4-41-10",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l41-65",
+            "text": "いつも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-66",
+            "text": "せんせい",
+            "isKeyGrammar": false,
+            "kanji": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "id": "d-l41-67",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-68",
+            "text": "おしえて",
+            "isKeyGrammar": false,
+            "kanji": "教えて",
+            "furigana": "おしえて"
+          },
+          {
+            "id": "d-l41-69",
+            "text": "いただいて",
+            "isKeyGrammar": true,
+            "kanji": "頂いて",
+            "furigana": "いただいて"
+          },
+          {
+            "id": "d-l41-70",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l41-71",
+            "text": "ありがたい",
+            "isKeyGrammar": true,
+            "kanji": "有難い",
+            "furigana": "ありがたい"
+          },
+          {
+            "id": "d-l41-72",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Được thầy dạy cho mãi, thật đáng quý."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n4-41-1",
-        "question": "Chọn cách kết hợp đúng cho cấu trúc: Kính ngữ cho nhận (やる / あげる / さしあげる, いただく, くださる)",
+        "question": "Ba bậc của あげる theo thứ tự TĂNG DẦN mức độ lịch sự là:",
         "options": [
-          "Nに 差し上げます",
-          "Thể ý chí + だ",
-          "Thể cấm chỉ",
-          "V-ない + です"
+          "やる → あげる → 差し上げる",
+          "差し上げる → あげる → やる",
+          "あげる → やる → 差し上げる",
+          "Cả ba đều ngang nhau"
         ],
         "correctIndex": 0,
-        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Nに 差し上げます / いただきます / くださいます",
-        "hint": "Chú ý dạng thể liên kết của động từ."
+        "explanation": "やる (dưới mình) < あげる (ngang hàng) < 差し上げる (kính biếu người trên) — thang tăng dần theo địa vị người nhận.",
+        "hint": "Xem thang bậc ở slide 1."
+      },
+      {
+        "id": "ex-q-n4-41-2",
+        "question": "いただきます là khiêm nhường ngữ của động từ nào?",
+        "options": [
+          "もらいます",
+          "あげます",
+          "くれます",
+          "やります"
+        ],
+        "correctIndex": 0,
+        "explanation": "いただきます hạ thấp bản thân người nói khi NHẬN — cùng bản chất với もらいます nhưng thêm sắc thái khiêm tốn.",
+        "hint": "Xem cặp tương ứng ở slide 2."
+      },
+      {
+        "id": "ex-q-n4-41-3",
+        "question": "くださいます là tôn kính ngữ của động từ nào?",
+        "options": [
+          "くれます",
+          "もらいます",
+          "あげます",
+          "さしあげます"
+        ],
+        "correctIndex": 0,
+        "explanation": "くださいます nâng cao người trên khi HỌ cho mình — tương ứng với くれます (N5 bài 24) ở dạng kính ngữ.",
+        "hint": "Xem cặp tương ứng ở slide 3."
+      },
+      {
+        "id": "ex-q-n4-41-4",
+        "question": "「先生が本をくださいました」 và 「私は先生に本をいただきました」 có quan hệ:",
+        "options": [
+          "Mô tả CÙNG một sự việc từ hai góc nhìn (giống くれる/もらう ở N5 bài 24)",
+          "Hai sự việc hoàn toàn khác nhau",
+          "Câu thứ hai sai ngữ pháp",
+          "Chỉ câu đầu đúng"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đây là cặp tương đương kính ngữ của くれる/もらう đã học ở N5 bài 24 — chọn chủ ngữ khác nhau tùy góc nhìn.",
+        "hint": "So sánh với cấu trúc くれる/もらう ở N5."
+      },
+      {
+        "id": "ex-q-n4-41-5",
+        "question": "「犬に水をやります」 — vì sao dùng やります chứ không phải あげます?",
+        "options": [
+          "やる dùng cho đối tượng THẤP HƠN mình: động vật, cây cối, không phải người",
+          "やる và あげる hoàn toàn giống nhau",
+          "あげる chỉ dùng cho câu hỏi",
+          "やる là lỗi, phải sửa thành あげる"
+        ],
+        "correctIndex": 0,
+        "explanation": "やる là bậc THẤP NHẤT của あげる, dùng cho vật/con vật/cây cối — không dùng cho người trong giao tiếp lịch sự hiện đại.",
+        "hint": "Xem giới hạn sử dụng やる ở slide 1."
+      },
+      {
+        "id": "ex-q-n4-41-6",
+        "question": "「先生に日本語を教えていただきました」 — cấu trúc Vていただきます mở rộng từ đâu?",
+        "options": [
+          "Vてもらいます (N5 bài 24, mở rộng cho-nhận HÀNH ĐỘNG)",
+          "Vてあげます",
+          "Vてくれます",
+          "Không liên quan tới cấu trúc nào đã học"
+        ],
+        "correctIndex": 0,
+        "explanation": "Giống Vてもらいます (N5 bài 24), Vていただきます áp dụng cho HÀNH ĐỘNG được nhận (không chỉ vật), thêm sắc thái khiêm nhường.",
+        "hint": "Kết nối với kiến thức N5 bài 24."
+      },
+      {
+        "id": "ex-q-n4-41-7",
+        "question": "Câu nào phù hợp khi biếu quà cho GIÁM ĐỐC (người có địa vị cao)?",
+        "options": [
+          "社長に お土産を 差し上げました",
+          "社長に お土産を やりました",
+          "社長に お土産を あげました (không sai nhưng chưa đủ trang trọng)",
+          "社長に お土産を くれました"
+        ],
+        "correctIndex": 0,
+        "explanation": "差し上げます là bậc kính ngữ CAO NHẤT, phù hợp nhất khi biếu tặng người có địa vị cao như giám đốc.",
+        "hint": "Áp dụng đúng thang bậc đã học ở slide 1."
+      },
+      {
+        "id": "ex-q-n4-41-8",
+        "question": "ありがたい trong 「教えていただき、ありがたいです」 có nghĩa:",
+        "options": [
+          "Đáng quý, đáng biết ơn",
+          "Khó khăn, vất vả",
+          "Bình thường, không đặc biệt",
+          "Đáng tiếc"
+        ],
+        "correctIndex": 0,
+        "explanation": "ありがたい diễn tả cảm giác biết ơn sâu sắc, thường đi kèm cấu trúc いただく để nhấn mạnh lòng biết ơn.",
+        "hint": "Xem nghĩa của từ này ở phần từ vựng."
+      },
+      {
+        "id": "ex-q-n4-41-9",
+        "question": "Trong hội thoại, Santos được thầy giáo tặng gì nhân sinh nhật?",
+        "options": [
+          "Một quyển sách",
+          "Một bó hoa",
+          "Tiền mặt",
+          "Không được tặng gì"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos nói 「先生が本をくださいました」.",
+        "hint": "Xem câu thoại thứ 4."
+      },
+      {
+        "id": "ex-q-n4-41-10",
+        "question": "Cuối hội thoại, hai người định làm gì cho thầy giáo?",
+        "options": [
+          "Kính biếu vé xem hoa anh đào",
+          "Mời thầy đi ăn",
+          "Tặng sách",
+          "Không làm gì cả"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos đề nghị 「先生にもチケットを差し上げましょう」.",
+        "hint": "Xem câu thoại thứ 8."
       }
     ]
   },
