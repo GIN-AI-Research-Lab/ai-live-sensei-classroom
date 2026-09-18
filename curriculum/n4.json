@@ -30709,99 +30709,1160 @@
     "level": "N4",
     "lessonNumber": 49,
     "title": "Bài 49: Kính ngữ tôn kính (尊敬語 - Sonkeigo)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "description": "尊敬語 nâng cao hành động của NGƯỜI TRÊN/người nghe (không bao giờ dùng cho chính mình): năm động từ đặc biệt いらっしゃる/おっしゃる/なさる/召し上がる/ご覧になる (cùng nhóm với くださる đã học bài 41), và công thức tổng quát お+gốc ます+になります áp dụng cho các động từ còn lại — chuẩn bị nền tảng đối lập với 謙譲語 (khiêm nhường ngữ) sẽ học ở bài 50.",
     "vocabList": [
       {
         "id": "voc-n4-49-1",
-        "word": "重要語彙 (N4)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "いらっしゃいます",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "irasshaimasu",
+        "wordType": "verb",
+        "meaningVi": "Là/có/đến/đi (tôn kính của です/います/来ます/行きます)",
+        "accentNote": "Một từ DUY NHẤT thay cho BỐN động từ khác nhau khi nói về người trên."
+      },
+      {
+        "id": "voc-n4-49-2",
+        "word": "おっしゃいます",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "osshaimasu",
+        "wordType": "verb",
+        "meaningVi": "Nói (tôn kính của 言います)",
+        "accentNote": "先生が おっしゃいました = thầy giáo đã nói."
+      },
+      {
+        "id": "voc-n4-49-3",
+        "word": "なさいます",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "nasaimasu",
+        "wordType": "verb",
+        "meaningVi": "Làm (tôn kính của します)",
+        "accentNote": "社長は 何を なさいますか = giám đốc định làm gì ạ?"
+      },
+      {
+        "id": "voc-n4-49-4",
+        "word": "めしあがります",
+        "kanji": "召し上がります",
+        "furigana": "めしあがります",
+        "romaji": "meshiagarimasu",
+        "wordType": "verb",
+        "meaningVi": "Ăn/uống (tôn kính của 食べます/飲みます)",
+        "accentNote": "どうぞ 召し上がって ください = xin mời quý vị dùng."
+      },
+      {
+        "id": "voc-n4-49-5",
+        "word": "ごらんになります",
+        "kanji": "ご覧になります",
+        "furigana": "ごらんになります",
+        "romaji": "goran ni narimasu",
+        "wordType": "verb",
+        "meaningVi": "Xem (tôn kính của 見ます)",
+        "accentNote": "この 写真を ご覧に なりましたか = ngài đã xem bức ảnh này chưa ạ?"
+      },
+      {
+        "id": "voc-n4-49-6",
+        "word": "くださいます",
+        "kanji": "下さいます",
+        "furigana": "くださいます",
+        "romaji": "kudasaimasu",
+        "wordType": "verb",
+        "meaningVi": "Ban cho (tôn kính của くれます)",
+        "accentNote": "Đã gặp bài 41."
+      },
+      {
+        "id": "voc-n4-49-7",
+        "word": "およみになります",
+        "kanji": "お読みになります",
+        "furigana": "およみになります",
+        "romaji": "oyomi ni narimasu",
+        "wordType": "verb",
+        "meaningVi": "Đọc (tôn kính, mẫu お+gốc+になります)",
+        "accentNote": "お+gốc ます+になります: mẫu tôn kính TỔNG QUÁT cho mọi động từ."
+      },
+      {
+        "id": "voc-n4-49-8",
+        "word": "おかきになります",
+        "kanji": "お書きになります",
+        "furigana": "おかきになります",
+        "romaji": "okaki ni narimasu",
+        "wordType": "verb",
+        "meaningVi": "Viết (tôn kính, mẫu お+gốc+になります)",
+        "accentNote": "お書きに なりました = ngài đã viết."
+      },
+      {
+        "id": "voc-n4-49-9",
+        "word": "しゃちょう",
+        "kanji": "社長",
+        "furigana": "しゃちょう",
+        "romaji": "shachou",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 49",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Giám đốc công ty",
+        "accentNote": "Đã gặp bài 41."
+      },
+      {
+        "id": "voc-n4-49-10",
+        "word": "ぶちょう",
+        "kanji": "部長",
+        "furigana": "ぶちょう",
+        "romaji": "buchou",
+        "wordType": "noun",
+        "meaningVi": "Trưởng phòng",
+        "accentNote": "部長は もう いらっしゃいました = trưởng phòng đã đến rồi ạ."
+      },
+      {
+        "id": "voc-n4-49-11",
+        "word": "かちょう",
+        "kanji": "課長",
+        "furigana": "かちょう",
+        "romaji": "kachou",
+        "wordType": "noun",
+        "meaningVi": "Trưởng ban, tổ trưởng",
+        "accentNote": "課長が おっしゃいました = tổ trưởng đã nói."
+      },
+      {
+        "id": "voc-n4-49-12",
+        "word": "こうちょう",
+        "kanji": "校長",
+        "furigana": "こうちょう",
+        "romaji": "kouchou",
+        "wordType": "noun",
+        "meaningVi": "Hiệu trưởng",
+        "accentNote": "校長先生は お元気です = thầy hiệu trưởng khỏe mạnh."
+      },
+      {
+        "id": "voc-n4-49-13",
+        "word": "おきゃくさん",
+        "kanji": "お客さん",
+        "furigana": "おきゃくさん",
+        "romaji": "okyakusan",
+        "wordType": "noun",
+        "meaningVi": "Vị khách",
+        "accentNote": "Đã gặp bài 41."
+      },
+      {
+        "id": "voc-n4-49-14",
+        "word": "おたく",
+        "kanji": "お宅",
+        "furigana": "おたく",
+        "romaji": "otaku",
+        "wordType": "noun",
+        "meaningVi": "Nhà (của người khác, tôn kính)",
+        "accentNote": "お宅は どちらですか = nhà ngài ở đâu ạ?"
+      },
+      {
+        "id": "voc-n4-49-15",
+        "word": "せんせい",
+        "kanji": "先生",
+        "furigana": "せんせい",
+        "romaji": "sensei",
+        "wordType": "noun",
+        "meaningVi": "Thầy/cô giáo",
+        "accentNote": "Đã gặp N5 bài 1."
+      },
+      {
+        "id": "voc-n4-49-16",
+        "word": "しんぶん",
+        "kanji": "新聞",
+        "furigana": "しんぶん",
+        "romaji": "shinbun",
+        "wordType": "noun",
+        "meaningVi": "Báo, tờ báo",
+        "accentNote": "新聞を お読みに なりますか = ngài có đọc báo không ạ?"
+      },
+      {
+        "id": "voc-n4-49-17",
+        "word": "しゃしん",
+        "kanji": "写真",
+        "furigana": "しゃしん",
+        "romaji": "shashin",
+        "wordType": "noun",
+        "meaningVi": "Bức ảnh",
+        "accentNote": "Đã gặp N5 bài 6."
+      },
+      {
+        "id": "voc-n4-49-18",
+        "word": "こうえん",
+        "kanji": "講演",
+        "furigana": "こうえん",
+        "romaji": "kouen",
+        "wordType": "noun",
+        "meaningVi": "Bài diễn thuyết",
+        "accentNote": "校長先生が 講演を なさいます = thầy hiệu trưởng sẽ diễn thuyết."
+      },
+      {
+        "id": "voc-n4-49-19",
+        "word": "しょくじ",
+        "kanji": "食事",
+        "furigana": "しょくじ",
+        "romaji": "shokuji",
+        "wordType": "noun",
+        "meaningVi": "Bữa ăn",
+        "accentNote": "Đã gặp bài 39."
+      },
+      {
+        "id": "voc-n4-49-20",
+        "word": "おちゃ",
+        "kanji": "お茶",
+        "furigana": "おちゃ",
+        "romaji": "ocha",
+        "wordType": "noun",
+        "meaningVi": "Trà (xanh)",
+        "accentNote": "お茶を 召し上がって ください = xin mời quý vị dùng trà."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n4-49-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "尊",
+        "hanViet": "TÔN",
+        "strokeCount": 12,
         "onyomi": [
-          "ゴ"
+          "ソン (son)"
         ],
         "kunyomi": [
-          "かたる"
+          "とうと(い)"
         ],
-        "meaningVi": "Ngôn ngữ",
+        "meaningVi": "Tôn kính, cao quý.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "尊敬語",
+            "furigana": "そんけいご",
+            "meaningVi": "Kính ngữ tôn kính"
+          },
+          {
+            "word": "尊敬します",
+            "furigana": "そんけいします",
+            "meaningVi": "Tôn kính, ngưỡng mộ"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-49-2",
+        "character": "敬",
+        "hanViet": "KÍNH",
+        "strokeCount": 12,
+        "onyomi": [
+          "ケイ (kei)"
+        ],
+        "kunyomi": [
+          "うやま(う)"
+        ],
+        "meaningVi": "Kính trọng.",
+        "commonWords": [
+          {
+            "word": "尊敬",
+            "furigana": "そんけい",
+            "meaningVi": "Tôn kính"
+          },
+          {
+            "word": "敬語",
+            "furigana": "けいご",
+            "meaningVi": "Kính ngữ"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-49-3",
+        "character": "部",
+        "hanViet": "BỘ",
+        "strokeCount": 11,
+        "onyomi": [
+          "ブ (bu)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Bộ phận, phòng ban.",
+        "commonWords": [
+          {
+            "word": "部長",
+            "furigana": "ぶちょう",
+            "meaningVi": "Trưởng phòng"
+          },
+          {
+            "word": "部屋",
+            "furigana": "へや",
+            "meaningVi": "Căn phòng"
+          },
+          {
+            "word": "全部",
+            "furigana": "ぜんぶ",
+            "meaningVi": "Tất cả"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-49-4",
+        "character": "課",
+        "hanViet": "KHÓA",
+        "strokeCount": 15,
+        "onyomi": [
+          "カ (ka)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Ban, tổ, bài học.",
+        "commonWords": [
+          {
+            "word": "課長",
+            "furigana": "かちょう",
+            "meaningVi": "Trưởng ban"
+          },
+          {
+            "word": "課題",
+            "furigana": "かだい",
+            "meaningVi": "Bài tập, đề tài"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-49-5",
+        "character": "校",
+        "hanViet": "HIỆU",
+        "strokeCount": 10,
+        "onyomi": [
+          "コウ (kou)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Trường học.",
+        "commonWords": [
+          {
+            "word": "校長",
+            "furigana": "こうちょう",
+            "meaningVi": "Hiệu trưởng"
+          },
+          {
+            "word": "学校",
+            "furigana": "がっこう",
+            "meaningVi": "Trường học"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n4-l49-s0",
-        "title": "Trọng tâm: Kính ngữ tôn kính (尊敬語 - Sonkeigo)",
-        "grammarFormula": "お + V-ます(bỏ) + になります / Thể bị động / Động từ đặc biệt",
-        "explanation": "Nâng cao vị thế và sự tôn trọng đối với hành động của đối phương.",
+        "slideId": "n4-l49-s1",
+        "slideType": "grammar",
+        "title": "1. Vì sao cần Sonkeigo (尊敬語)?",
+        "grammarFormula": "Dùng cho HÀNH ĐỘNG của NGƯỜI TRÊN/NGƯỜI NGHE — KHÔNG BAO GIỜ dùng cho hành động của CHÍNH MÌNH",
+        "explanation": "尊敬語 (kính ngữ tôn kính) NÂNG CAO hành động của người khác (khách hàng, cấp trên, thầy cô) để thể hiện sự tôn trọng — khác hẳn 謙譲語 (khiêm nhường ngữ, bài 50) HẠ THẤP hành động của CHÍNH MÌNH.",
+        "teacherTips": "Quy tắc SỐNG CÒN: 尊敬語 chỉ dùng để nói về HÀNH ĐỘNG CỦA NGƯỜI KHÁC — dùng nhầm cho hành động của mình là lỗi kính ngữ nghiêm trọng.",
+        "culturalNotes": "Nhân viên lễ tân, bán hàng Nhật bắt buộc phải thành thạo 尊敬語 để nói về khách hàng — đây là kỹ năng giao tiếp công sở cơ bản.",
         "examples": [
           {
-            "id": "ex-n4-l49-1",
+            "id": "ex-n4-l49-s1-1",
             "tokens": [
               {
-                "id": "tok-n4-l49-1",
-                "text": "先生は",
+                "id": "t-l49s1-1",
+                "text": "しゃちょう",
+                "isKeyGrammar": true,
+                "kanji": "社長",
+                "furigana": "しゃちょう"
+              },
+              {
+                "id": "t-l49s1-2",
+                "text": "は",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n4-l49-2",
-                "text": "先生は もう お帰りに なりました。",
+                "id": "t-l49s1-3",
+                "text": "もう",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l49s1-4",
+                "text": "いらっしゃいました",
                 "isKeyGrammar": true
               }
             ],
-            "meaningVi": "Thầy giáo đã về rồi ạ."
+            "meaningVi": "Giám đốc đã đến rồi ạ."
+          },
+          {
+            "id": "ex-n4-l49-s1-2",
+            "tokens": [
+              {
+                "id": "t-l49s1-5",
+                "text": "せんせい",
+                "isKeyGrammar": true,
+                "kanji": "先生",
+                "furigana": "せんせい"
+              },
+              {
+                "id": "t-l49s1-6",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l49s1-7",
+                "text": "なにか",
+                "isKeyGrammar": false,
+                "kanji": "何か",
+                "furigana": "なにか"
+              },
+              {
+                "id": "t-l49s1-8",
+                "text": "おっしゃいました",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l49s1-9",
+                "text": "か",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Thầy giáo đã nói gì đó ạ?"
           }
-        ],
-        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+        ]
+      },
+      {
+        "slideId": "n4-l49-s2",
+        "slideType": "grammar",
+        "title": "2. Năm động từ tôn kính ĐẶC BIỆT (bất quy tắc hoàn toàn)",
+        "grammarFormula": "いらっしゃいます (です/います/来ます/行きます) 　おっしゃいます (言います) 　なさいます (します) 　召し上がります (食べます/飲みます) 　ご覧になります (見ます)",
+        "explanation": "Đây là các động từ được THAY THẾ HOÀN TOÀN bằng một từ khác (không phải chia đuôi) — phải học thuộc riêng như từ vựng mới, không suy luận được từ quy tắc chung.",
+        "teacherTips": "いらっしゃいます đặc biệt vì thay được TỚI BỐN động từ khác nhau (です/います/来ます/行きます) — phải xem ngữ cảnh để biết đang thay từ nào.",
+        "culturalNotes": "どうぞ召し上がってください là câu mời ăn/uống trang trọng nhất, thường dùng khi tiếp đãi khách quý tại nhà hoặc dịp lễ.",
+        "examples": [
+          {
+            "id": "ex-n4-l49-s2-1",
+            "tokens": [
+              {
+                "id": "t-l49s2-1",
+                "text": "おきゃくさん",
+                "isKeyGrammar": true,
+                "kanji": "お客さん",
+                "furigana": "おきゃくさん"
+              },
+              {
+                "id": "t-l49s2-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l49s2-3",
+                "text": "なに",
+                "isKeyGrammar": false,
+                "kanji": "何",
+                "furigana": "なに"
+              },
+              {
+                "id": "t-l49s2-4",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l49s2-5",
+                "text": "めしあがります",
+                "isKeyGrammar": true,
+                "kanji": "召し上がります",
+                "furigana": "めしあがります"
+              },
+              {
+                "id": "t-l49s2-6",
+                "text": "か",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Quý khách sẽ dùng gì ạ?"
+          },
+          {
+            "id": "ex-n4-l49-s2-2",
+            "tokens": [
+              {
+                "id": "t-l49s2-7",
+                "text": "こうちょう",
+                "isKeyGrammar": true,
+                "kanji": "校長",
+                "furigana": "こうちょう"
+              },
+              {
+                "id": "t-l49s2-8",
+                "text": "せんせい",
+                "isKeyGrammar": false,
+                "kanji": "先生",
+                "furigana": "せんせい"
+              },
+              {
+                "id": "t-l49s2-9",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l49s2-10",
+                "text": "こうえん",
+                "isKeyGrammar": true,
+                "kanji": "講演",
+                "furigana": "こうえん"
+              },
+              {
+                "id": "t-l49s2-11",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l49s2-12",
+                "text": "なさいます",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Thầy hiệu trưởng sẽ diễn thuyết."
+          }
+        ]
+      },
+      {
+        "slideId": "n4-l49-s3",
+        "slideType": "grammar",
+        "title": "3. Mẫu tôn kính TỔNG QUÁT: お + [gốc ます] + になります",
+        "grammarFormula": "お + V(gốc ます) + になります   (áp dụng được cho HẦU HẾT động từ không có dạng đặc biệt)",
+        "explanation": "Với động từ KHÔNG nằm trong 5 từ đặc biệt (slide 2), dùng công thức chung này để tạo kính ngữ — an toàn, áp dụng được rộng rãi hơn học thuộc từng từ riêng lẻ.",
+        "teacherTips": "Công thức お〜になります KHÔNG áp dụng cho động từ đã có dạng đặc biệt (không nói お食べになります — phải dùng 召し上がります).",
+        "culturalNotes": "お読みになりますか／お使いになりますか là mẫu câu hỏi lịch sự chuẩn mực của nhân viên phục vụ khi hỏi khách hàng.",
+        "examples": [
+          {
+            "id": "ex-n4-l49-s3-1",
+            "tokens": [
+              {
+                "id": "t-l49s3-1",
+                "text": "しゃちょう",
+                "isKeyGrammar": true,
+                "kanji": "社長",
+                "furigana": "しゃちょう"
+              },
+              {
+                "id": "t-l49s3-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l49s3-3",
+                "text": "しんぶん",
+                "isKeyGrammar": false,
+                "kanji": "新聞",
+                "furigana": "しんぶん"
+              },
+              {
+                "id": "t-l49s3-4",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l49s3-5",
+                "text": "およみに",
+                "isKeyGrammar": true,
+                "kanji": "お読みに",
+                "furigana": "およみに"
+              },
+              {
+                "id": "t-l49s3-6",
+                "text": "なりました",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Giám đốc đã đọc báo."
+          },
+          {
+            "id": "ex-n4-l49-s3-2",
+            "tokens": [
+              {
+                "id": "t-l49s3-7",
+                "text": "せんせい",
+                "isKeyGrammar": true,
+                "kanji": "先生",
+                "furigana": "せんせい"
+              },
+              {
+                "id": "t-l49s3-8",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l49s3-9",
+                "text": "もう",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l49s3-10",
+                "text": "おかきに",
+                "isKeyGrammar": true,
+                "kanji": "お書きに",
+                "furigana": "おかきに"
+              },
+              {
+                "id": "t-l49s3-11",
+                "text": "なりました",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l49s3-12",
+                "text": "か",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Thầy giáo đã viết xong chưa ạ?"
+          }
+        ]
+      },
+      {
+        "slideId": "n4-l49-s4",
+        "slideType": "grammar",
+        "title": "4. Ôn lại kudasaru (bài 41) trong hệ thống Sonkeigo",
+        "grammarFormula": "くださいます (tôn kính của くれます, đã học bài 41) CŨNG LÀ một phần của 尊敬語",
+        "explanation": "Bài 41 đã học くださいます như một trường hợp riêng — giờ đặt nó vào ĐÚNG HỆ THỐNG: đây chính là MỘT trong các động từ 尊敬語 đặc biệt, cùng nhóm với いらっしゃる/おっしゃる.",
+        "teacherTips": "Tổng cộng có 6 động từ tôn kính đặc biệt cần nhớ: いらっしゃる、おっしゃる、なさる、召し上がる、ご覧になる、くださる — còn lại dùng công thức お〜になる.",
+        "culturalNotes": "Thư trang trọng, email công việc Nhật thường kết hợp cả 尊敬語 (nói về đối phương) và 謙譲語 (nói về mình, bài 50) trong cùng một đoạn văn.",
+        "examples": [
+          {
+            "id": "ex-n4-l49-s4-1",
+            "tokens": [
+              {
+                "id": "t-l49s4-1",
+                "text": "しゃちょう",
+                "isKeyGrammar": true,
+                "kanji": "社長",
+                "furigana": "しゃちょう"
+              },
+              {
+                "id": "t-l49s4-2",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l49s4-3",
+                "text": "ほん",
+                "isKeyGrammar": false,
+                "kanji": "本",
+                "furigana": "ほん"
+              },
+              {
+                "id": "t-l49s4-4",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l49s4-5",
+                "text": "くださいました",
+                "isKeyGrammar": true,
+                "kanji": "下さいました",
+                "furigana": "くださいました"
+              }
+            ],
+            "meaningVi": "Giám đốc đã ban tặng cho tôi quyển sách. (ôn lại bài 41, cùng hệ thống 尊敬語)"
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n4-49-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "受付",
+        "speakerRole": "Lễ tân",
         "tokens": [
           {
-            "id": "tok-n4-49-d1",
-            "text": "この文法のポイントを"
+            "id": "d-l49-1",
+            "text": "しゃちょう",
+            "isKeyGrammar": true,
+            "kanji": "社長",
+            "furigana": "しゃちょう"
           },
           {
-            "id": "tok-n4-49-d2",
-            "text": "復習しましょう。"
+            "id": "d-l49-2",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-3",
+            "text": "もう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-4",
+            "text": "いらっしゃいました",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l49-5",
+            "text": "か",
+            "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Giám đốc đã đến chưa ạ?"
+      },
+      {
+        "id": "dia-n4-49-2",
+        "speaker": "秘書",
+        "speakerRole": "Thư ký",
+        "tokens": [
+          {
+            "id": "d-l49-6",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-7",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-8",
+            "text": "もう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-9",
+            "text": "いらっしゃいます",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Vâng, ngài đã đến rồi ạ."
+      },
+      {
+        "id": "dia-n4-49-3",
+        "speaker": "受付",
+        "speakerRole": "Lễ tân",
+        "tokens": [
+          {
+            "id": "d-l49-10",
+            "text": "こうちょう",
+            "isKeyGrammar": true,
+            "kanji": "校長",
+            "furigana": "こうちょう"
+          },
+          {
+            "id": "d-l49-11",
+            "text": "せんせい",
+            "isKeyGrammar": false,
+            "kanji": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "id": "d-l49-12",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-13",
+            "text": "いらっしゃいます",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l49-14",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Thầy hiệu trưởng cũng đến ạ?"
+      },
+      {
+        "id": "dia-n4-49-4",
+        "speaker": "秘書",
+        "speakerRole": "Thư ký",
+        "tokens": [
+          {
+            "id": "d-l49-15",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-16",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-17",
+            "text": "こうえん",
+            "isKeyGrammar": true,
+            "kanji": "講演",
+            "furigana": "こうえん"
+          },
+          {
+            "id": "d-l49-18",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-19",
+            "text": "なさいます",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Vâng, thầy sẽ diễn thuyết ạ."
+      },
+      {
+        "id": "dia-n4-49-5",
+        "speaker": "受付",
+        "speakerRole": "Lễ tân",
+        "tokens": [
+          {
+            "id": "d-l49-20",
+            "text": "おきゃくさん",
+            "isKeyGrammar": true,
+            "kanji": "お客さん",
+            "furigana": "おきゃくさん"
+          },
+          {
+            "id": "d-l49-21",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-22",
+            "text": "なに",
+            "isKeyGrammar": false,
+            "kanji": "何",
+            "furigana": "なに"
+          },
+          {
+            "id": "d-l49-23",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-24",
+            "text": "めしあがります",
+            "isKeyGrammar": true,
+            "kanji": "召し上がります",
+            "furigana": "めしあがります"
+          },
+          {
+            "id": "d-l49-25",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Quý khách sẽ dùng gì ạ?"
+      },
+      {
+        "id": "dia-n4-49-6",
+        "speaker": "秘書",
+        "speakerRole": "Thư ký",
+        "tokens": [
+          {
+            "id": "d-l49-26",
+            "text": "おちゃ",
+            "isKeyGrammar": true,
+            "kanji": "お茶",
+            "furigana": "おちゃ"
+          },
+          {
+            "id": "d-l49-27",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-28",
+            "text": "おねがいします",
+            "isKeyGrammar": false,
+            "kanji": "お願いします",
+            "furigana": "おねがいします"
+          }
+        ],
+        "meaningVi": "Xin trà cho tôi."
+      },
+      {
+        "id": "dia-n4-49-7",
+        "speaker": "受付",
+        "speakerRole": "Lễ tân",
+        "tokens": [
+          {
+            "id": "d-l49-29",
+            "text": "かしこまりました",
+            "isKeyGrammar": false,
+            "kanji": "畏まりました",
+            "furigana": "かしこまりました"
+          },
+          {
+            "id": "d-l49-30",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-31",
+            "text": "しゃちょう",
+            "isKeyGrammar": true,
+            "kanji": "社長",
+            "furigana": "しゃちょう"
+          },
+          {
+            "id": "d-l49-32",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-33",
+            "text": "この",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-34",
+            "text": "しんぶん",
+            "isKeyGrammar": true,
+            "kanji": "新聞",
+            "furigana": "しんぶん"
+          },
+          {
+            "id": "d-l49-35",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-36",
+            "text": "およみに",
+            "isKeyGrammar": true,
+            "kanji": "お読みに",
+            "furigana": "およみに"
+          },
+          {
+            "id": "d-l49-37",
+            "text": "なりました",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l49-38",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vâng, tôi hiểu rồi ạ. Giám đốc đã đọc tờ báo này chưa ạ?"
+      },
+      {
+        "id": "dia-n4-49-8",
+        "speaker": "秘書",
+        "speakerRole": "Thư ký",
+        "tokens": [
+          {
+            "id": "d-l49-39",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-40",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-41",
+            "text": "もう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-42",
+            "text": "およみに",
+            "isKeyGrammar": true,
+            "kanji": "お読みに",
+            "furigana": "およみに"
+          },
+          {
+            "id": "d-l49-43",
+            "text": "なりました",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Vâng, ngài đã đọc rồi ạ."
+      },
+      {
+        "id": "dia-n4-49-9",
+        "speaker": "受付",
+        "speakerRole": "Lễ tân",
+        "tokens": [
+          {
+            "id": "d-l49-44",
+            "text": "こうちょう",
+            "isKeyGrammar": true,
+            "kanji": "校長",
+            "furigana": "こうちょう"
+          },
+          {
+            "id": "d-l49-45",
+            "text": "せんせい",
+            "isKeyGrammar": false,
+            "kanji": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "id": "d-l49-46",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-47",
+            "text": "おたく",
+            "isKeyGrammar": true,
+            "kanji": "お宅",
+            "furigana": "おたく"
+          },
+          {
+            "id": "d-l49-48",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-49",
+            "text": "どちら",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-50",
+            "text": "ですか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Nhà của thầy hiệu trưởng ở đâu ạ?"
+      },
+      {
+        "id": "dia-n4-49-10",
+        "speaker": "秘書",
+        "speakerRole": "Thư ký",
+        "tokens": [
+          {
+            "id": "d-l49-51",
+            "text": "とうきょう",
+            "isKeyGrammar": false,
+            "kanji": "東京",
+            "furigana": "とうきょう"
+          },
+          {
+            "id": "d-l49-52",
+            "text": "だ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l49-53",
+            "text": "そうです",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Nghe nói ở Tokyo ạ."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n4-49-1",
-        "question": "Chọn cách kết hợp đúng cho cấu trúc: Kính ngữ tôn kính (尊敬語 - Sonkeigo)",
+        "question": "尊敬語 dùng để nâng cao hành động của ai?",
         "options": [
-          "お + V-ます(bỏ) + になります",
-          "Thể ý chí + だ",
-          "Thể cấm chỉ",
-          "V-ない + です"
+          "Người TRÊN/người nghe (KHÔNG BAO GIỜ dùng cho hành động của chính mình)",
+          "Chính người nói",
+          "Bất kỳ ai, không phân biệt",
+          "Chỉ dùng cho động vật"
         ],
         "correctIndex": 0,
-        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: お + V-ます(bỏ) + になります / Thể bị động / Động từ đặc biệt",
-        "hint": "Chú ý dạng thể liên kết của động từ."
+        "explanation": "尊敬語 luôn dùng để tôn trọng NGƯỜI KHÁC (cấp trên, khách hàng) — tuyệt đối không dùng cho hành động của bản thân.",
+        "hint": "Đây là quy tắc nền tảng nhất của kính ngữ tôn kính."
+      },
+      {
+        "id": "ex-q-n4-49-2",
+        "question": "いらっしゃいます có thể thay thế cho những động từ nào?",
+        "options": [
+          "です／います／来ます／行きます (4 động từ)",
+          "Chỉ thay được 行きます",
+          "Chỉ thay được です",
+          "Chỉ thay được います"
+        ],
+        "correctIndex": 0,
+        "explanation": "いらっしゃいます là động từ tôn kính đặc biệt, có thể thay thế TỚI BỐN động từ khác nhau tùy ngữ cảnh.",
+        "hint": "Xem giải thích ở slide 2."
+      },
+      {
+        "id": "ex-q-n4-49-3",
+        "question": "召し上がります là tôn kính ngữ của động từ nào?",
+        "options": [
+          "食べます／飲みます (ăn/uống)",
+          "見ます (xem)",
+          "言います (nói)",
+          "します (làm)"
+        ],
+        "correctIndex": 0,
+        "explanation": "召し上がります thay thế cho cả 食べます và 飲みます khi nói về hành động ăn/uống của người trên.",
+        "hint": "Xem danh sách 5 động từ đặc biệt ở slide 2."
+      },
+      {
+        "id": "ex-q-n4-49-4",
+        "question": "「新聞をお読みになりました」 dùng công thức nào?",
+        "options": [
+          "お + gốc ます + になります (mẫu tôn kính tổng quát)",
+          "Động từ đặc biệt riêng",
+          "Thể bị động (bài 37)",
+          "Thể sai khiến (bài 48)"
+        ],
+        "correctIndex": 0,
+        "explanation": "読みます không nằm trong 5 động từ đặc biệt, nên dùng công thức chung お+gốc+になります.",
+        "hint": "Áp dụng công thức tổng quát ở slide 3."
+      },
+      {
+        "id": "ex-q-n4-49-5",
+        "question": "Câu nào SAI vì dùng nhầm động từ đặc biệt cho việc KHÔNG có dạng riêng?",
+        "options": [
+          "お食べになります (SAI, phải dùng 召し上がります)",
+          "お読みになります (đúng)",
+          "お書きになります (đúng)",
+          "お使いになります (đúng)"
+        ],
+        "correctIndex": 0,
+        "explanation": "食べます đã có động từ đặc biệt riêng (召し上がります) nên KHÔNG dùng công thức chung お〜になります cho nó.",
+        "hint": "Xem giới hạn của công thức tổng quát ở slide 3."
+      },
+      {
+        "id": "ex-q-n4-49-6",
+        "question": "くださいます (đã học bài 41) thuộc nhóm nào trong hệ thống kính ngữ?",
+        "options": [
+          "尊敬語 (tôn kính ngữ) — một trong các động từ đặc biệt",
+          "謙譲語 (khiêm nhường ngữ)",
+          "Không thuộc nhóm kính ngữ nào",
+          "Chỉ là từ vựng thông thường"
+        ],
+        "correctIndex": 0,
+        "explanation": "くださいます là tôn kính ngữ của くれます, thuộc nhóm 尊敬語 cùng với いらっしゃる/おっしゃる/なさる/召し上がる/ご覧になる.",
+        "hint": "Xem tổng kết ở slide 4."
+      },
+      {
+        "id": "ex-q-n4-49-7",
+        "question": "「校長先生が講演をなさいます」 — なさいます là tôn kính ngữ của động từ nào?",
+        "options": [
+          "します",
+          "言います",
+          "見ます",
+          "食べます"
+        ],
+        "correctIndex": 0,
+        "explanation": "なさいます thay thế します khi nói về hành động của người trên.",
+        "hint": "Xem danh sách động từ đặc biệt ở slide 2."
+      },
+      {
+        "id": "ex-q-n4-49-8",
+        "question": "お宅 nghĩa là gì và dùng khi nào?",
+        "options": [
+          "Nhà (của người khác, cách nói tôn kính) — không dùng cho nhà của chính mình",
+          "Nhà (của chính mình)",
+          "Công ty",
+          "Trường học"
+        ],
+        "correctIndex": 0,
+        "explanation": "お宅 là cách nói lịch sự chỉ NHÀ CỦA NGƯỜI KHÁC, không dùng để nói về nhà của chính người nói.",
+        "hint": "Xem ví dụ ở phần từ vựng."
+      },
+      {
+        "id": "ex-q-n4-49-9",
+        "question": "Trong hội thoại, giám đốc đã đọc tờ báo chưa?",
+        "options": [
+          "Đã đọc rồi",
+          "Chưa đọc",
+          "Không được nhắc tới",
+          "Đang đọc dở"
+        ],
+        "correctIndex": 0,
+        "explanation": "Thư ký trả lời 「はい、もうお読みになりました」.",
+        "hint": "Xem câu thoại thứ 8."
+      },
+      {
+        "id": "ex-q-n4-49-10",
+        "question": "Nhà của thầy hiệu trưởng ở đâu theo hội thoại?",
+        "options": [
+          "Tokyo (nghe nói)",
+          "Osaka",
+          "Kyoto",
+          "Không được nhắc tới"
+        ],
+        "correctIndex": 0,
+        "explanation": "Thư ký trả lời 「東京だそうです」.",
+        "hint": "Xem câu thoại cuối cùng, kết hợp kiến thức そうです đã học ở bài 47."
       }
     ]
   },
