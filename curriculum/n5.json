@@ -33196,204 +33196,1348 @@
     "level": "N5",
     "lessonNumber": 24,
     "title": "Bài 24: Cho và nhận hành động (Vてくれます / Vてもらいます / Vてあげます)",
-    "description": "Học hệ thống cho nhận hành động giúp đỡ: người khác làm cho mình (くれます), mình được nhận sự giúp đỡ (もらいます), mình làm cho người khác (あげます).",
+    "description": "Mở rộng cấu trúc cho-nhận đồ vật (bài 7) sang cho-nhận HÀNH ĐỘNG giúp đỡ: người khác chủ động giúp mình bằng Vてくれます, mình nhờ/được giúp bằng Vてもらいます (cùng sự việc, khác chủ ngữ so với くれます), và mình chủ động giúp người khác bằng Vてあげます (cẩn trọng khi dùng với người trên).",
     "vocabList": [
       {
         "id": "voc-n5-24-1",
         "word": "くれます",
-        "kanji": "",
-        "furigana": "",
+        "kanji": "呉れます",
+        "furigana": "くれます",
         "romaji": "kuremasu",
         "wordType": "verb",
-        "meaningVi": "Cho, tặng (tôi hoặc người phe tôi)",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "meaningVi": "Cho (người khác làm gì đó CHO MÌNH)",
+        "accentNote": "Chủ ngữ luôn là NGƯỜI KHÁC, người nhận ơn luôn là người nói/phe người nói."
       },
       {
         "id": "voc-n5-24-2",
-        "word": "つれていきます",
-        "kanji": "連れて行きます",
-        "furigana": "つれていきます",
-        "romaji": "tsureteikimasu",
+        "word": "もらいます",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "moraimasu",
         "wordType": "verb",
-        "meaningVi": "Dẫn đi",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "meaningVi": "Nhận, được (nhờ ai làm gì đó)",
+        "accentNote": "Đã gặp bài 7 (nhận đồ vật) — nay mở rộng sang nhận HÀNH ĐỘNG giúp đỡ."
       },
       {
         "id": "voc-n5-24-3",
-        "word": "つれてきます",
-        "kanji": "連れて来ます",
-        "furigana": "つれてきます",
-        "romaji": "tsuretekimasu",
+        "word": "あげます",
+        "kanji": "上げます",
+        "furigana": "あげます",
+        "romaji": "agemasu",
         "wordType": "verb",
-        "meaningVi": "Dẫn đến",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "meaningVi": "Cho, làm gì đó CHO người khác",
+        "accentNote": "Đã gặp bài 7 — nay mở rộng sang làm HÀNH ĐỘNG giúp đỡ cho người khác."
       },
       {
         "id": "voc-n5-24-4",
-        "word": "おくります",
-        "kanji": "送ります",
-        "furigana": "おくります",
-        "romaji": "okurimasu",
+        "word": "おしえます",
+        "kanji": "教えます",
+        "furigana": "おしえます",
+        "romaji": "oshiemasu",
         "wordType": "verb",
-        "meaningVi": "Tiễn, đưa về",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "meaningVi": "Dạy, chỉ bảo",
+        "accentNote": "Đã gặp bài 7. 道を 教えて くれました = đã chỉ đường giúp tôi."
       },
       {
         "id": "voc-n5-24-5",
-        "word": "しょうかいします",
-        "kanji": "紹介します",
-        "furigana": "しょうかいします",
-        "romaji": "shoukaishimasu",
+        "word": "かします",
+        "kanji": "貸します",
+        "furigana": "かします",
+        "romaji": "kashimasu",
         "wordType": "verb",
-        "meaningVi": "Giới thiệu",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "meaningVi": "Cho mượn",
+        "accentNote": "Đã gặp bài 7."
       },
       {
         "id": "voc-n5-24-6",
-        "word": "あんないします",
-        "kanji": "案内します",
-        "furigana": "あんないします",
-        "romaji": "annaishimasu",
+        "word": "もちます",
+        "kanji": "持ちます",
+        "furigana": "もちます",
+        "romaji": "mochimasu",
         "wordType": "verb",
-        "meaningVi": "Hướng dẫn, dẫn đường",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "meaningVi": "Cầm, mang, xách",
+        "accentNote": "Đã gặp bài 14. 荷物を 持って くれました = đã cầm hành lý giúp tôi."
       },
       {
         "id": "voc-n5-24-7",
-        "word": "せつめいします",
-        "kanji": "説明します",
-        "furigana": "せつめいします",
-        "romaji": "setsumeishimasu",
+        "word": "あらいます",
+        "kanji": "洗います",
+        "furigana": "あらいます",
+        "romaji": "araimasu",
         "wordType": "verb",
-        "meaningVi": "Giải thích",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "meaningVi": "Rửa, giặt",
+        "accentNote": "Thể từ điển: 洗う. Nhóm I."
+      },
+      {
+        "id": "voc-n5-24-8",
+        "word": "つくります",
+        "kanji": "作ります",
+        "furigana": "つくります",
+        "romaji": "tsukurimasu",
+        "wordType": "verb",
+        "meaningVi": "Làm, nấu",
+        "accentNote": "Đã gặp bài 6. 料理を 作って あげました = đã nấu ăn giúp."
+      },
+      {
+        "id": "voc-n5-24-9",
+        "word": "かいます",
+        "kanji": "買います",
+        "furigana": "かいます",
+        "romaji": "kaimasu",
+        "wordType": "verb",
+        "meaningVi": "Mua",
+        "accentNote": "Đã gặp bài 6. 買って きて くれました = đã mua giúp mang tới."
+      },
+      {
+        "id": "voc-n5-24-10",
+        "word": "にもつ",
+        "kanji": "荷物",
+        "furigana": "にもつ",
+        "romaji": "nimotsu",
+        "wordType": "noun",
+        "meaningVi": "Hành lý, đồ đạc",
+        "accentNote": "重い 荷物 = hành lý nặng."
+      },
+      {
+        "id": "voc-n5-24-11",
+        "word": "おもい",
+        "kanji": "重い",
+        "furigana": "おもい",
+        "romaji": "omoi",
+        "wordType": "adjective",
+        "meaningVi": "Nặng",
+        "accentNote": "Tính từ い. Trái nghĩa: 軽い (nhẹ, chưa học)."
+      },
+      {
+        "id": "voc-n5-24-12",
+        "word": "ちず",
+        "kanji": "地図",
+        "furigana": "ちず",
+        "romaji": "chizu",
+        "wordType": "noun",
+        "meaningVi": "Bản đồ",
+        "accentNote": "Đã gặp bài 7."
+      },
+      {
+        "id": "voc-n5-24-13",
+        "word": "えき",
+        "kanji": "駅",
+        "furigana": "えき",
+        "romaji": "eki",
+        "wordType": "noun",
+        "meaningVi": "Nhà ga",
+        "accentNote": "Đã gặp bài 5."
+      },
+      {
+        "id": "voc-n5-24-14",
+        "word": "みち",
+        "kanji": "道",
+        "furigana": "みち",
+        "romaji": "michi",
+        "wordType": "noun",
+        "meaningVi": "Đường, con đường",
+        "accentNote": "道を 教えます = chỉ đường."
+      },
+      {
+        "id": "voc-n5-24-15",
+        "word": "じしょ",
+        "kanji": "辞書",
+        "furigana": "じしょ",
+        "romaji": "jisho",
+        "wordType": "noun",
+        "meaningVi": "Từ điển",
+        "accentNote": "Đã gặp bài 2."
+      },
+      {
+        "id": "voc-n5-24-16",
+        "word": "しゃしん",
+        "kanji": "写真",
+        "furigana": "しゃしん",
+        "romaji": "shashin",
+        "wordType": "noun",
+        "meaningVi": "Bức ảnh",
+        "accentNote": "Đã gặp bài 6."
+      },
+      {
+        "id": "voc-n5-24-17",
+        "word": "たんじょうび",
+        "kanji": "誕生日",
+        "furigana": "たんじょうび",
+        "romaji": "tanjoubi",
+        "wordType": "noun",
+        "meaningVi": "Sinh nhật",
+        "accentNote": "Đã gặp bài 5."
+      },
+      {
+        "id": "voc-n5-24-18",
+        "word": "しんせつ",
+        "kanji": "親切",
+        "furigana": "しんせつ",
+        "romaji": "shinsetsu",
+        "wordType": "adjective",
+        "meaningVi": "Tốt bụng, ân cần",
+        "accentNote": "Đã gặp bài 16 — nay dùng để khen người giúp đỡ."
+      },
+      {
+        "id": "voc-n5-24-19",
+        "word": "たすかります",
+        "kanji": "助かります",
+        "furigana": "たすかります",
+        "romaji": "tasukarimasu",
+        "wordType": "verb",
+        "meaningVi": "Được giúp đỡ, đỡ vất vả hơn",
+        "accentNote": "助かりました = anh giúp tôi nhiều quá (câu cảm ơn sau khi nhận giúp đỡ)."
+      },
+      {
+        "id": "voc-n5-24-20",
+        "word": "ほんとうに",
+        "kanji": "本当に",
+        "furigana": "ほんとうに",
+        "romaji": "hontou ni",
+        "wordType": "adverb",
+        "meaningVi": "Thật sự, thực lòng",
+        "accentNote": "本当に ありがとう = thật lòng cảm ơn."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n5-24-1",
-        "character": "説",
-        "hanViet": "THUYẾT",
-        "strokeCount": 14,
+        "character": "呉",
+        "hanViet": "NGÔ",
+        "strokeCount": 7,
         "onyomi": [
-          "セツ"
+          "ゴ (go)"
         ],
         "kunyomi": [
-          "と・く"
+          "くれる"
         ],
-        "meaningVi": "Giải thích, thuyết pháp",
+        "meaningVi": "Cho (chỉ dùng trong 呉れる — thường viết hiragana くれる).",
         "commonWords": [
           {
-            "word": "説",
-            "furigana": "と・く",
-            "meaningVi": "Giải thích, thuyết pháp"
+            "word": "くれます",
+            "furigana": "くれます",
+            "meaningVi": "Cho (mình)"
+          },
+          {
+            "word": "呉服",
+            "furigana": "ごふく",
+            "meaningVi": "Vải vóc (từ cổ)"
           }
         ]
       },
       {
         "id": "kan-n5-24-2",
-        "character": "明",
-        "hanViet": "MINH",
-        "strokeCount": 8,
+        "character": "重",
+        "hanViet": "TRỌNG",
+        "strokeCount": 9,
         "onyomi": [
-          "メイ"
+          "ジュウ (juu)"
         ],
         "kunyomi": [
-          "あか・るい"
+          "おも(い)",
+          "かさ(なる)"
         ],
-        "meaningVi": "Sáng tỏ, rõ ràng",
+        "meaningVi": "Nặng; quan trọng; chồng lên.",
         "commonWords": [
           {
-            "word": "明",
-            "furigana": "あか・るい",
-            "meaningVi": "Sáng tỏ, rõ ràng"
+            "word": "重い",
+            "furigana": "おもい",
+            "meaningVi": "Nặng"
+          },
+          {
+            "word": "重要",
+            "furigana": "じゅうよう",
+            "meaningVi": "Quan trọng"
+          },
+          {
+            "word": "体重",
+            "furigana": "たいじゅう",
+            "meaningVi": "Cân nặng cơ thể"
           }
         ]
       },
       {
         "id": "kan-n5-24-3",
-        "character": "紹",
-        "hanViet": "THIỆU",
-        "strokeCount": 11,
+        "character": "道",
+        "hanViet": "ĐẠO",
+        "strokeCount": 12,
         "onyomi": [
-          "ショウ"
+          "ドウ (dou)"
         ],
-        "kunyomi": [],
-        "meaningVi": "Giới thiệu",
+        "kunyomi": [
+          "みち"
+        ],
+        "meaningVi": "Con đường; đạo lý.",
         "commonWords": [
           {
-            "word": "紹",
-            "furigana": "ショウ",
-            "meaningVi": "Giới thiệu"
+            "word": "道",
+            "furigana": "みち",
+            "meaningVi": "Con đường"
+          },
+          {
+            "word": "道具",
+            "furigana": "どうぐ",
+            "meaningVi": "Dụng cụ"
+          },
+          {
+            "word": "柔道",
+            "furigana": "じゅうどう",
+            "meaningVi": "Judo"
+          }
+        ]
+      },
+      {
+        "id": "kan-n5-24-4",
+        "character": "洗",
+        "hanViet": "TẨY",
+        "strokeCount": 9,
+        "onyomi": [
+          "セン (sen)"
+        ],
+        "kunyomi": [
+          "あら(う)"
+        ],
+        "meaningVi": "Rửa, giặt.",
+        "commonWords": [
+          {
+            "word": "洗います",
+            "furigana": "あらいます",
+            "meaningVi": "Rửa"
+          },
+          {
+            "word": "洗濯",
+            "furigana": "せんたく",
+            "meaningVi": "Giặt giũ"
+          },
+          {
+            "word": "洗面所",
+            "furigana": "せんめんじょ",
+            "meaningVi": "Nhà vệ sinh/rửa mặt"
+          }
+        ]
+      },
+      {
+        "id": "kan-n5-24-5",
+        "character": "助",
+        "hanViet": "TRỢ",
+        "strokeCount": 7,
+        "onyomi": [
+          "ジョ (jo)"
+        ],
+        "kunyomi": [
+          "たす(かる)",
+          "たす(ける)"
+        ],
+        "meaningVi": "Giúp đỡ, trợ giúp.",
+        "commonWords": [
+          {
+            "word": "助かります",
+            "furigana": "たすかります",
+            "meaningVi": "Được giúp đỡ"
+          },
+          {
+            "word": "助けます",
+            "furigana": "たすけます",
+            "meaningVi": "Giúp đỡ"
+          },
+          {
+            "word": "助手",
+            "furigana": "じょしゅ",
+            "meaningVi": "Trợ lý"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n5-l24-s0",
+        "slideId": "n5-l24-s1",
         "slideType": "grammar",
-        "title": "Mẫu câu trọng tâm: Cho và nhận hành động",
-        "grammarFormula": "[Ai đó] が わたしに Vて くれます / わたしは [Ai đó] に Vて もらいます",
-        "explanation": "くれます dùng khi ai đó làm ơn làm giúp cho mình hoặc người trong gia đình mình. もらいます dùng khi mình nhận được hành động tốt từ ai đó.",
-        "teacherTips": "Hãy chú ý cách chia trợ từ và thể của động từ trong mẫu câu này nhé.",
+        "title": "1. Người khác làm cho mình: [Người khác] は [mình] に Vて くれます",
+        "grammarFormula": "[Người khác] は (私に) + Vて + くれます",
+        "explanation": "くれます dùng khi NGƯỜI KHÁC chủ động làm gì đó CHO MÌNH (hoặc phe mình) — chủ ngữ luôn là người khác, người nhận ơn (thường lược bỏ vì hiểu ngầm là 'tôi') đánh dấu bằng に nếu nói rõ.",
+        "teacherTips": "くれます LUÔN hàm ý người nói BIẾT ƠN — không dùng khi nói về việc người khác làm cho một người thứ ba không liên quan tới mình.",
+        "culturalNotes": "道を教えてくれました là câu cảm ơn tự nhiên khi kể lại chuyện được người lạ giúp chỉ đường ở Nhật.",
         "examples": [
           {
-            "id": "ex-n5-l24-1",
+            "id": "ex-n5-l24-s1-1",
             "tokens": [
               {
-                "id": "tok-n5-24-1",
-                "text": "佐藤さんが 駅まで 送って くれました。",
+                "id": "t-l24s1-1",
+                "text": "やまださん",
+                "isKeyGrammar": false,
+                "kanji": "山田さん",
+                "furigana": "やまださん"
+              },
+              {
+                "id": "t-l24s1-2",
+                "text": "は",
                 "isKeyGrammar": false
+              },
+              {
+                "id": "t-l24s1-3",
+                "text": "みち",
+                "isKeyGrammar": false,
+                "kanji": "道",
+                "furigana": "みち"
+              },
+              {
+                "id": "t-l24s1-4",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l24s1-5",
+                "text": "おしえて",
+                "isKeyGrammar": true,
+                "kanji": "教えて",
+                "furigana": "おしえて"
+              },
+              {
+                "id": "t-l24s1-6",
+                "text": "くれました",
+                "isKeyGrammar": true
               }
             ],
-            "meaningVi": "Chị Sato đã tiễn tôi ra tận ga."
+            "meaningVi": "Anh Yamada đã chỉ đường giúp tôi."
+          },
+          {
+            "id": "ex-n5-l24-s1-2",
+            "tokens": [
+              {
+                "id": "t-l24s1-7",
+                "text": "ともだち",
+                "isKeyGrammar": false,
+                "kanji": "友達",
+                "furigana": "ともだち"
+              },
+              {
+                "id": "t-l24s1-8",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l24s1-9",
+                "text": "にもつ",
+                "isKeyGrammar": false,
+                "kanji": "荷物",
+                "furigana": "にもつ"
+              },
+              {
+                "id": "t-l24s1-10",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l24s1-11",
+                "text": "もって",
+                "isKeyGrammar": true,
+                "kanji": "持って",
+                "furigana": "もって"
+              },
+              {
+                "id": "t-l24s1-12",
+                "text": "くれました",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Bạn tôi đã cầm hành lý giúp tôi."
           }
-        ],
-        "culturalNotes": "Trong tiếng Nhật giao tiếp, ngữ điệu và sắc thái kính ngữ là yếu tố thể hiện sự tôn trọng đối phương."
+        ]
+      },
+      {
+        "slideId": "n5-l24-s2",
+        "slideType": "grammar",
+        "title": "2. Mình nhờ/được giúp: [Mình] は [người khác] に Vて もらいます",
+        "grammarFormula": "[Mình] は [người giúp] に + Vて + もらいます",
+        "explanation": "もらいます (đã gặp bài 7 với đồ vật) nay mở rộng sang HÀNH ĐỘNG — chủ ngữ là NGƯỜI NHẬN ơn (mình), người giúp đánh dấu bằng に. Cùng một sự việc, khác góc nhìn so với くれます.",
+        "teacherTips": "くれます và もらいます thường tả CÙNG một sự việc — khác nhau ở việc AI làm chủ ngữ (người giúp hay người được giúp).",
+        "culturalNotes": "もらいました nhấn mạnh sự CHỦ ĐỘNG nhờ vả nhẹ nhàng hơn — dùng khi muốn khiêm tốn về việc mình đã xin giúp đỡ.",
+        "examples": [
+          {
+            "id": "ex-n5-l24-s2-1",
+            "tokens": [
+              {
+                "id": "t-l24s2-1",
+                "text": "わたし",
+                "isKeyGrammar": false,
+                "kanji": "私",
+                "furigana": "わたし"
+              },
+              {
+                "id": "t-l24s2-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l24s2-3",
+                "text": "やまださん",
+                "isKeyGrammar": false,
+                "kanji": "山田さん",
+                "furigana": "やまださん"
+              },
+              {
+                "id": "t-l24s2-4",
+                "text": "に",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l24s2-5",
+                "text": "みち",
+                "isKeyGrammar": false,
+                "kanji": "道",
+                "furigana": "みち"
+              },
+              {
+                "id": "t-l24s2-6",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l24s2-7",
+                "text": "おしえて",
+                "isKeyGrammar": true,
+                "kanji": "教えて",
+                "furigana": "おしえて"
+              },
+              {
+                "id": "t-l24s2-8",
+                "text": "もらいました",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi đã nhờ anh Yamada chỉ đường giúp. (cùng sự việc với slide 1, đổi góc nhìn)"
+          },
+          {
+            "id": "ex-n5-l24-s2-2",
+            "tokens": [
+              {
+                "id": "t-l24s2-9",
+                "text": "せんせい",
+                "isKeyGrammar": false,
+                "kanji": "先生",
+                "furigana": "せんせい"
+              },
+              {
+                "id": "t-l24s2-10",
+                "text": "に",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l24s2-11",
+                "text": "にほんご",
+                "isKeyGrammar": false,
+                "kanji": "日本語",
+                "furigana": "にほんご"
+              },
+              {
+                "id": "t-l24s2-12",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l24s2-13",
+                "text": "おしえて",
+                "isKeyGrammar": true,
+                "kanji": "教えて",
+                "furigana": "おしえて"
+              },
+              {
+                "id": "t-l24s2-14",
+                "text": "もらいました",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi đã được thầy giáo dạy tiếng Nhật giúp."
+          }
+        ]
+      },
+      {
+        "slideId": "n5-l24-s3",
+        "slideType": "grammar",
+        "title": "3. Mình làm cho người khác: [Mình] は [người khác] に Vて あげます",
+        "grammarFormula": "[Mình] は [người nhận] に + Vて + あげます",
+        "explanation": "あげます (đã gặp bài 7) mở rộng sang HÀNH ĐỘNG — mình chủ động làm gì đó CHO người khác. Cẩn trọng: nói あげます trực tiếp với người trên dễ nghe như ban ơn, kẻ cả.",
+        "teacherTips": "Khi làm gì cho người TRÊN (thầy cô, cấp trên), nên tránh nói thẳng あげます — dễ nghe kẻ cả; có cách nói khiêm tốn hơn ở trình độ cao hơn.",
+        "culturalNotes": "あげます thường tự nhiên nhất khi nói về việc làm cho BẠN BÈ, EM, hoặc THÚ CƯNG — ít dùng trực tiếp với người lớn tuổi hơn.",
+        "examples": [
+          {
+            "id": "ex-n5-l24-s3-1",
+            "tokens": [
+              {
+                "id": "t-l24s3-1",
+                "text": "わたし",
+                "isKeyGrammar": false,
+                "kanji": "私",
+                "furigana": "わたし"
+              },
+              {
+                "id": "t-l24s3-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l24s3-3",
+                "text": "ともだち",
+                "isKeyGrammar": false,
+                "kanji": "友達",
+                "furigana": "ともだち"
+              },
+              {
+                "id": "t-l24s3-4",
+                "text": "に",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l24s3-5",
+                "text": "じしょ",
+                "isKeyGrammar": false,
+                "kanji": "辞書",
+                "furigana": "じしょ"
+              },
+              {
+                "id": "t-l24s3-6",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l24s3-7",
+                "text": "かして",
+                "isKeyGrammar": true,
+                "kanji": "貸して",
+                "furigana": "かして"
+              },
+              {
+                "id": "t-l24s3-8",
+                "text": "あげました",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi đã cho bạn mượn từ điển."
+          },
+          {
+            "id": "ex-n5-l24-s3-2",
+            "tokens": [
+              {
+                "id": "t-l24s3-9",
+                "text": "たんじょうび",
+                "isKeyGrammar": false,
+                "kanji": "誕生日",
+                "furigana": "たんじょうび"
+              },
+              {
+                "id": "t-l24s3-10",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l24s3-11",
+                "text": "りょうり",
+                "isKeyGrammar": false,
+                "kanji": "料理",
+                "furigana": "りょうり"
+              },
+              {
+                "id": "t-l24s3-12",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l24s3-13",
+                "text": "つくって",
+                "isKeyGrammar": true,
+                "kanji": "作って",
+                "furigana": "つくって"
+              },
+              {
+                "id": "t-l24s3-14",
+                "text": "あげました",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Nhân sinh nhật, tôi đã nấu ăn cho (bạn)."
+          }
+        ]
+      },
+      {
+        "slideId": "n5-l24-s4",
+        "slideType": "grammar",
+        "title": "4. Ba góc nhìn của cùng một sự việc",
+        "grammarFormula": "山田さんが 教えてくれました = 私が 山田さんに 教えてもらいました",
+        "explanation": "So sánh trực tiếp くれます/もらいます tả CÙNG một hành động từ hai phía; あげます tả chiều NGƯỢC LẠI (mình → người khác). Chọn từ nào phụ thuộc ai là NGƯỜI NÓI muốn làm chủ ngữ.",
+        "teacherTips": "Ba động từ này thường bị nhầm hướng — luôn tự hỏi 'AI là người thực hiện hành động, AI là người hưởng lợi' trước khi chọn từ.",
+        "culturalNotes": "助かりました (anh giúp tôi nhiều quá) là câu cảm ơn kèm theo rất tự nhiên sau khi dùng くれました/もらいました.",
+        "examples": [
+          {
+            "id": "ex-n5-l24-s4-1",
+            "tokens": [
+              {
+                "id": "t-l24s4-1",
+                "text": "ともだち",
+                "isKeyGrammar": false,
+                "kanji": "友達",
+                "furigana": "ともだち"
+              },
+              {
+                "id": "t-l24s4-2",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l24s4-3",
+                "text": "しゃしん",
+                "isKeyGrammar": false,
+                "kanji": "写真",
+                "furigana": "しゃしん"
+              },
+              {
+                "id": "t-l24s4-4",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l24s4-5",
+                "text": "とって",
+                "isKeyGrammar": true,
+                "kanji": "撮って",
+                "furigana": "とって"
+              },
+              {
+                "id": "t-l24s4-6",
+                "text": "くれました",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Bạn tôi đã chụp ảnh giúp tôi. (くれます: bạn là chủ ngữ)"
+          },
+          {
+            "id": "ex-n5-l24-s4-2",
+            "tokens": [
+              {
+                "id": "t-l24s4-7",
+                "text": "わたし",
+                "isKeyGrammar": false,
+                "kanji": "私",
+                "furigana": "わたし"
+              },
+              {
+                "id": "t-l24s4-8",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l24s4-9",
+                "text": "ともだち",
+                "isKeyGrammar": false,
+                "kanji": "友達",
+                "furigana": "ともだち"
+              },
+              {
+                "id": "t-l24s4-10",
+                "text": "に",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l24s4-11",
+                "text": "しゃしん",
+                "isKeyGrammar": false,
+                "kanji": "写真",
+                "furigana": "しゃしん"
+              },
+              {
+                "id": "t-l24s4-12",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l24s4-13",
+                "text": "とって",
+                "isKeyGrammar": true,
+                "kanji": "撮って",
+                "furigana": "とって"
+              },
+              {
+                "id": "t-l24s4-14",
+                "text": "もらいました",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi đã nhờ bạn chụp ảnh giúp. (もらいます: tôi là chủ ngữ, cùng sự việc trên)"
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n5-24-1",
-        "speaker": "A (Người hỏi)",
-        "speakerRole": "personA",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
         "tokens": [
           {
-            "id": "tok-d24-1",
-            "text": "佐藤さんが 駅まで 送って くれました。",
+            "id": "d-l24-1",
+            "text": "にもつ",
+            "isKeyGrammar": true,
+            "kanji": "荷物",
+            "furigana": "にもつ"
+          },
+          {
+            "id": "d-l24-2",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-3",
+            "text": "おもい",
+            "isKeyGrammar": true,
+            "kanji": "重い",
+            "furigana": "おもい"
+          },
+          {
+            "id": "d-l24-4",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-5",
+            "text": "ね",
             "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Chị Sato đã tiễn tôi ra tận ga."
+        "meaningVi": "Hành lý nặng thật nhỉ."
       },
       {
         "id": "dia-n5-24-2",
-        "speaker": "B (Người đáp)",
-        "speakerRole": "personB",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
         "tokens": [
           {
-            "id": "tok-d24-2",
-            "text": "わたしは 鈴木さんに 案内して もらいました。",
+            "id": "d-l24-6",
+            "text": "てつだいましょうか",
+            "isKeyGrammar": false,
+            "kanji": "手伝いましょうか",
+            "furigana": "てつだいましょうか"
+          }
+        ],
+        "meaningVi": "Để tớ giúp cậu nhé?"
+      },
+      {
+        "id": "dia-n5-24-3",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l24-7",
+            "text": "ありがとう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-8",
+            "text": "ございます",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-9",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-10",
+            "text": "サントスさん",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-11",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-12",
+            "text": "もって",
+            "isKeyGrammar": true,
+            "kanji": "持って",
+            "furigana": "もって"
+          },
+          {
+            "id": "d-l24-13",
+            "text": "くれる",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l24-14",
+            "text": "と",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-15",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-16",
+            "text": "たすかります",
+            "isKeyGrammar": true,
+            "kanji": "助かります",
+            "furigana": "たすかります"
+          }
+        ],
+        "meaningVi": "Cảm ơn cậu. Nếu cậu cầm giúp thì đỡ vất vả hơn nhiều đấy."
+      },
+      {
+        "id": "dia-n5-24-4",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l24-17",
+            "text": "どういたしまして",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-18",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-19",
+            "text": "えき",
+            "isKeyGrammar": true,
+            "kanji": "駅",
+            "furigana": "えき"
+          },
+          {
+            "id": "d-l24-20",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-21",
+            "text": "どこ",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l24-22",
+            "text": "ですか",
             "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Tôi đã được anh Suzuki dẫn đường giúp."
+        "meaningVi": "Không có gì. Nhà ga ở đâu vậy?"
+      },
+      {
+        "id": "dia-n5-24-5",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l24-23",
+            "text": "わたし",
+            "isKeyGrammar": false,
+            "kanji": "私",
+            "furigana": "わたし"
+          },
+          {
+            "id": "d-l24-24",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-25",
+            "text": "しりません",
+            "isKeyGrammar": false,
+            "kanji": "知りません",
+            "furigana": "しりません"
+          },
+          {
+            "id": "d-l24-26",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-27",
+            "text": "あの",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-28",
+            "text": "ひと",
+            "isKeyGrammar": false,
+            "kanji": "人",
+            "furigana": "ひと"
+          },
+          {
+            "id": "d-l24-29",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-30",
+            "text": "みち",
+            "isKeyGrammar": true,
+            "kanji": "道",
+            "furigana": "みち"
+          },
+          {
+            "id": "d-l24-31",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-32",
+            "text": "きいて",
+            "isKeyGrammar": false,
+            "kanji": "聞いて",
+            "furigana": "きいて"
+          },
+          {
+            "id": "d-l24-33",
+            "text": "みましょう",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Tớ cũng không biết. Thử hỏi đường người kia xem sao."
+      },
+      {
+        "id": "dia-n5-24-6",
+        "speaker": "通行人",
+        "speakerRole": "Người qua đường",
+        "tokens": [
+          {
+            "id": "d-l24-34",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-35",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-36",
+            "text": "この",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-37",
+            "text": "ちず",
+            "isKeyGrammar": true,
+            "kanji": "地図",
+            "furigana": "ちず"
+          },
+          {
+            "id": "d-l24-38",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-39",
+            "text": "みて",
+            "isKeyGrammar": false,
+            "kanji": "見て",
+            "furigana": "みて"
+          },
+          {
+            "id": "d-l24-40",
+            "text": "ください",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vâng, mời xem bản đồ này."
+      },
+      {
+        "id": "dia-n5-24-7",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l24-41",
+            "text": "しんせつ",
+            "isKeyGrammar": true,
+            "kanji": "親切",
+            "furigana": "しんせつ"
+          },
+          {
+            "id": "d-l24-42",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-43",
+            "text": "おしえて",
+            "isKeyGrammar": true,
+            "kanji": "教えて",
+            "furigana": "おしえて"
+          },
+          {
+            "id": "d-l24-44",
+            "text": "くれて",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l24-45",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-46",
+            "text": "ありがとう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-47",
+            "text": "ございます",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Cảm ơn ông/bà đã tốt bụng chỉ giúp."
+      },
+      {
+        "id": "dia-n5-24-8",
+        "speaker": "通行人",
+        "speakerRole": "Người qua đường",
+        "tokens": [
+          {
+            "id": "d-l24-48",
+            "text": "いいえ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-49",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-50",
+            "text": "どういたしまして",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Không có gì đâu."
+      },
+      {
+        "id": "dia-n5-24-9",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l24-51",
+            "text": "ワンさん",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-52",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-53",
+            "text": "あの",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-54",
+            "text": "ひと",
+            "isKeyGrammar": false,
+            "kanji": "人",
+            "furigana": "ひと"
+          },
+          {
+            "id": "d-l24-55",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-56",
+            "text": "みち",
+            "isKeyGrammar": true,
+            "kanji": "道",
+            "furigana": "みち"
+          },
+          {
+            "id": "d-l24-57",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-58",
+            "text": "おしえて",
+            "isKeyGrammar": true,
+            "kanji": "教えて",
+            "furigana": "おしえて"
+          },
+          {
+            "id": "d-l24-59",
+            "text": "もらいました",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l24-60",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Wang này, chúng ta đã được người đó chỉ đường giúp nhỉ."
+      },
+      {
+        "id": "dia-n5-24-10",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l24-61",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-62",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l24-63",
+            "text": "ほんとうに",
+            "isKeyGrammar": true,
+            "kanji": "本当に",
+            "furigana": "ほんとうに"
+          },
+          {
+            "id": "d-l24-64",
+            "text": "たすかりました",
+            "isKeyGrammar": true,
+            "kanji": "助かりました",
+            "furigana": "たすかりました"
+          }
+        ],
+        "meaningVi": "Vâng, thật sự được giúp đỡ nhiều quá."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n5-24-1",
-        "question": "山田さんが わたしに 日本語を 教えて ___。(Ai đó làm cho tôi)",
+        "question": "「山田さんが 道を 教えて くれました」 — chủ ngữ của くれました là:",
         "options": [
-          "くれました",
-          "あげました",
-          "もらいました",
-          "やりました"
+          "山田さん (người thực hiện hành động giúp đỡ)",
+          "Người nói (tôi)",
+          "Không có chủ ngữ",
+          "Cả hai đều là chủ ngữ"
         ],
         "correctIndex": 0,
-        "explanation": "Khi người khác làm việc gì giúp cho bản thân người nói (わたしに), bắt buộc dùng くれます (くれました).",
-        "hint": "Gợi ý: Hãy quan sát kỹ trợ từ hoặc thể của động từ đứng trước."
+        "explanation": "くれます LUÔN lấy NGƯỜI THỰC HIỆN hành động giúp đỡ làm chủ ngữ.",
+        "hint": "Xem cấu trúc của くれます ở slide 1."
+      },
+      {
+        "id": "ex-q-n5-24-2",
+        "question": "「私は 山田さんに 教えて もらいました」 — chủ ngữ ở đây là:",
+        "options": [
+          "私 (người NHẬN được giúp đỡ)",
+          "山田さん",
+          "Không xác định",
+          "Cả câu không có chủ ngữ"
+        ],
+        "correctIndex": 0,
+        "explanation": "もらいます LUÔN lấy NGƯỜI ĐƯỢC GIÚP làm chủ ngữ — ngược với くれます.",
+        "hint": "So sánh trực tiếp với câu 1: cùng sự việc, khác chủ ngữ."
+      },
+      {
+        "id": "ex-q-n5-24-3",
+        "question": "Hai câu 「山田さんが教えてくれました」 và 「私は山田さんに教えてもらいました」 có quan hệ:",
+        "options": [
+          "Mô tả CÙNG một sự việc từ hai góc nhìn khác nhau",
+          "Hai sự việc hoàn toàn khác nhau",
+          "Câu thứ hai sai ngữ pháp",
+          "Không có liên quan gì tới nhau"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đây là hai cách nói tương đương của cùng một sự thật: chọn ai làm chủ ngữ tùy người nói muốn nhấn mạnh góc nhìn nào.",
+        "hint": "Xem slide 4 để thấy sự tương đương."
+      },
+      {
+        "id": "ex-q-n5-24-4",
+        "question": "「私は 友達に 辞書を 貸して あげました」 nghĩa là:",
+        "options": [
+          "Tôi đã cho bạn mượn từ điển",
+          "Tôi đã mượn từ điển của bạn",
+          "Bạn tôi đã cho tôi mượn từ điển",
+          "Tôi không cho bạn mượn từ điển"
+        ],
+        "correctIndex": 0,
+        "explanation": "あげます: CHỦ NGỮ (tôi) làm điều gì đó CHO người khác (bạn) — ở đây là cho mượn từ điển.",
+        "hint": "Xem cấu trúc あげます ở slide 3."
+      },
+      {
+        "id": "ex-q-n5-24-5",
+        "question": "Vì sao nên tránh nói あげます trực tiếp khi làm gì đó cho người TRÊN mình?",
+        "options": [
+          "Nghe như ban ơn, kẻ cả với người trên",
+          "Vì あげます sai ngữ pháp với người trên",
+          "あげます chỉ dùng được với động vật",
+          "Không có lý do gì đặc biệt"
+        ],
+        "correctIndex": 0,
+        "explanation": "あげます mang sắc thái 'tôi ban cho' — dùng trực tiếp với người trên (thầy cô, cấp trên) nghe thiếu tôn trọng.",
+        "hint": "Đây là điểm tế nhị về văn hóa đã nêu ở slide 3."
+      },
+      {
+        "id": "ex-q-n5-24-6",
+        "question": "「荷物を 持って くれると、助かります」 nghĩa là:",
+        "options": [
+          "Nếu (ai đó) cầm giúp hành lý thì đỡ vất vả hơn",
+          "Hành lý đã được cầm giúp rồi",
+          "Không ai cầm giúp hành lý",
+          "Hành lý quá nặng không cầm được"
+        ],
+        "correctIndex": 0,
+        "explanation": "Vてくれる kết hợp と (điều kiện, bài 23) diễn tả: NẾU có người giúp thì kết quả sẽ nhẹ nhõm hơn.",
+        "hint": "Áp dụng kiến thức về と đã học ở bài 23."
+      },
+      {
+        "id": "ex-q-n5-24-7",
+        "question": "助かりました dùng để làm gì?",
+        "options": [
+          "Cảm ơn sau khi được ai đó giúp đỡ",
+          "Xin lỗi vì đã làm phiền",
+          "Từ chối lời đề nghị giúp đỡ",
+          "Yêu cầu được giúp đỡ"
+        ],
+        "correctIndex": 0,
+        "explanation": "助かりました là câu cảm ơn ĐI KÈM sau khi nhận được sự giúp đỡ, nhấn mạnh cảm giác 'đỡ vất vả hơn nhờ có sự giúp đỡ đó'.",
+        "hint": "Xem ngữ cảnh sử dụng ở phần từ vựng và hội thoại."
+      },
+      {
+        "id": "ex-q-n5-24-8",
+        "question": "Câu nào ĐÚNG khi nói 'tôi đã nấu ăn cho bạn nhân sinh nhật'?",
+        "options": [
+          "誕生日に 料理を 作って あげました",
+          "誕生日に 料理を 作って くれました",
+          "誕生日に 料理を 作って もらいました",
+          "誕生日に 料理が 作って あげました"
+        ],
+        "correctIndex": 0,
+        "explanation": "Chủ ngữ là 'tôi' làm việc CHO người khác (bạn) → dùng あげます, và を đánh dấu tân ngữ料理 đúng ngữ pháp.",
+        "hint": "Xác định ai làm hành động, ai nhận lợi ích."
+      },
+      {
+        "id": "ex-q-n5-24-9",
+        "question": "Trong hội thoại, ai đã chỉ đường cho Wang và Santos?",
+        "options": [
+          "Một người qua đường lạ",
+          "Anh Yamada",
+          "Thầy giáo",
+          "Nhân viên nhà ga"
+        ],
+        "correctIndex": 0,
+        "explanation": "Hai bạn hỏi 「あの人に道を聞いてみましょう」 rồi một 通行人 (người qua đường) đã giúp chỉ đường.",
+        "hint": "Xem nhân vật xuất hiện trong hội thoại."
+      },
+      {
+        "id": "ex-q-n5-24-10",
+        "question": "Cuối hội thoại, Wang cảm thấy thế nào về sự giúp đỡ nhận được?",
+        "options": [
+          "Thật sự được giúp đỡ nhiều (助かりました)",
+          "Không cần thiết",
+          "Hơi phiền phức",
+          "Không hài lòng"
+        ],
+        "correctIndex": 0,
+        "explanation": "Wang nói 「本当に 助かりました」 để cảm ơn.",
+        "hint": "Xem câu thoại cuối cùng."
       }
     ]
   },
