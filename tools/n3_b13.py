@@ -1,0 +1,241 @@
+# -*- coding: utf-8 -*-
+"""N3 — Bai 13: Kha nang tiem tang 得る (うる, ly thuyet/khach quan), 得ない (えない, phu dinh).
+
+Tu vung minh hoa TU CHON tu pool mo data/jlpt-vocab/n3.csv (xem NOTICE.md).
+"""
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from n3_lib import v, k, t, ex, slide, line, q, lesson, merge
+from jlpt_pool import Pool
+
+L = 13
+pool = Pool("n3")
+
+VOCAB = [
+    v(1,  "じょうきょう", "状況", "じょうきょう", "joukyou", "noun", "Tình huống, tình hình", "この 状況では = trong tình huống này.", L),
+    v(2,  "そうぞうします", "想像します", "そうぞうします", "souzou shimasu", "verb", "Tưởng tượng", "未来を 想像します = tưởng tượng về tương lai.", L),
+    v(3,  "よそうします", "予想します", "よそうします", "yosou shimasu", "verb", "Dự đoán", "結果を 予想します = dự đoán kết quả.", L),
+    v(4,  "みらい", "未来", "みらい", "mirai", "noun", "Tương lai (nói chung, vĩ mô)", "未来の 変化 = sự thay đổi của tương lai.", L),
+    v(5,  "かのう", "可能", "かのう", "kanou", "adjective", "Khả thi, có thể", "それは 可能です = điều đó khả thi.", L),
+    v(6,  "おこります", "起こります", "おこります", "okorimasu", "verb", "Xảy ra", "地震が 起こります = động đất xảy ra.", L),
+    v(7,  "へんか", "変化", "へんか", "henka", "noun", "Sự thay đổi, biến đổi", "Đã gặp N3 bài 5.", L),
+    v(8,  "じこ", "事故", "じこ", "jiko", "noun", "Tai nạn", "Đã gặp N4 bài 34.", L),
+    v(9,  "じしん", "地震", "じしん", "jishin", "noun", "Động đất", "Đã gặp N4 bài 34.", L),
+    v(10, "きけん", "危険", "きけん", "kiken", "adjective", "Nguy hiểm", "Đã gặp N4 bài 34.", L),
+    v(11, "あんぜん", "安全", "あんぜん", "anzen", "adjective", "An toàn", "Đã gặp N5 bài 24.", L),
+    v(12, "できます", "出来ます", "できます", "dekimasu", "verb", "Có thể làm được (khả năng thực tế)", "Đã gặp N5 bài 18.", L),
+    v(13, "はなします", "話します", "はなします", "hanashimasu", "verb", "Nói chuyện", "Đã gặp N4 bài 26.", L),
+    v(14, "きかい", "機械", "きかい", "kikai", "noun", "Máy móc", "Đã gặp N4 bài 30.", L),
+    v(15, "もんだい", "問題", "もんだい", "mondai", "noun", "Vấn đề", "Đã gặp N5 bài 22.", L),
+    v(16, "いいます", "言います", "いいます", "iimasu", "verb", "Nói", "Đã gặp N5 bài 6.", L),
+    v(17, "しょうらい", "将来", "しょうらい", "shourai", "noun", "Tương lai (cá nhân, gần)", "Đã gặp N3 bài 8.", L),
+    v(18, "にほんご", "日本語", "にほんご", "nihongo", "noun", "Tiếng Nhật", "Đã gặp N4 bài 26.", L),
+    v(19, "かれ", "彼", "かれ", "kare", "noun", "Anh ấy", "Đã gặp N5 bài 6.", L),
+    v(20, "どんな", "どんな", "どんな", "donna", "determiner", "Loại nào, như thế nào", "Đã gặp N5 bài 11.", L),
+]
+
+KANJI = [
+    k(1, "状", "TRẠNG", 7, ["ジョウ (jou)"], [], "Trạng thái, hình dạng.",
+      [("状況", "じょうきょう", "Tình huống"), ("状態", "じょうたい", "Trạng thái")], L),
+    k(2, "況", "HUỐNG", 8, ["キョウ (kyou)"], [], "Tình huống, hoàn cảnh.",
+      [("状況", "じょうきょう", "Tình huống"), ("近況", "きんきょう", "Tình hình gần đây")], L),
+    k(3, "想", "TƯỞNG", 13, ["ソウ (sou)"], [], "Suy nghĩ, tưởng tượng.",
+      [("想像", "そうぞう", "Tưởng tượng"), ("予想", "よそう", "Dự đoán")], L),
+    k(4, "予", "DỰ", 4, ["ヨ (yo)"], [], "Trước, dự tính.",
+      [("予想", "よそう", "Dự đoán"), ("予定", "よてい", "Dự định")], L),
+    k(5, "未", "VỊ", 5, ["ミ (mi)"], [], "Chưa, vị lai.",
+      [("未来", "みらい", "Tương lai"), ("未満", "みまん", "Chưa đầy, dưới")], L),
+]
+
+SLIDES = [
+    slide(L, 1,
+        "1. Khả năng lý thuyết: V-stem + 得る (うる)",
+        "V-ます-stem + 得る（うる）",
+        "得る gắn sau V-stem diễn tả khả năng XẢY RA VỀ MẶT LÝ THUYẾT/KHÁCH QUAN — khác できる là "
+        "khả năng THỰC TẾ do năng lực/luyện tập — thường dùng trong văn viết trang trọng, báo cáo, dự đoán.",
+        [
+            ex(L, 1, 1, [t("t-l13s1-1", "この"), t("t-l13s1-2", "じょうきょう", "状況", "じょうきょう", key=True),
+                         t("t-l13s1-3", "では"), t("t-l13s1-4", "、"), t("t-l13s1-5", "じしん", "地震", "じしん", key=True),
+                         t("t-l13s1-6", "が"), t("t-l13s1-7", "おこり", "起こり", "おこり", key=True), t("t-l13s1-8", "得る", key=True)],
+               "Trong tình huống này, động đất có thể xảy ra."),
+            ex(L, 1, 2, [t("t-l13s1-9", "みらい", "未来", "みらい", key=True), t("t-l13s1-10", "の"),
+                         t("t-l13s1-11", "へんか", "変化", "へんか"), t("t-l13s1-12", "は"),
+                         t("t-l13s1-13", "よそうし", "予想し", "よそうし", key=True), t("t-l13s1-14", "得る", key=True)],
+               "Sự thay đổi của tương lai có thể dự đoán được."),
+        ],
+        tips="得る đọc là うる ở thể từ điển (起こり得る) nhưng đọc là える khi chia thể ます/ない (起こりえます/起こりえない).",
+        culture="Báo cáo khoa học, dự báo thời tiết Nhật hay dùng 得る để nói về khả năng lý thuyết: '大地震が起こり得る' (động đất lớn có thể xảy ra)."),
+
+    slide(L, 2,
+        "2. Phủ định — không có khả năng: V-stem + 得ない (えない)",
+        "V-ます-stem + 得ない（えない）",
+        "得ない là PHỦ ĐỊNH của 得る, diễn tả điều gì đó KHÔNG THỂ xảy ra về mặt lý thuyết/logic — "
+        "mức độ phủ định RẤT MẠNH, khẳng định tính bất khả thi.",
+        [
+            ex(L, 2, 1, [t("t-l13s2-1", "そんな"), t("t-l13s2-2", "こと", "事", "こと"), t("t-l13s2-3", "は"),
+                         t("t-l13s2-4", "ありえない", "有り得ない", "ありえない", key=True)],
+               "Chuyện đó không thể xảy ra."),
+            ex(L, 2, 2, [t("t-l13s2-5", "あんぜんな", "安全な", "あんぜんな", key=True), t("t-l13s2-6", "じょうきょう", "状況", "じょうきょう", key=True),
+                         t("t-l13s2-7", "では"), t("t-l13s2-8", "、"), t("t-l13s2-9", "じこ", "事故", "じこ", key=True),
+                         t("t-l13s2-10", "は"), t("t-l13s2-11", "おこり", "起こり", "おこり"), t("t-l13s2-12", "得ない", key=True)],
+               "Trong tình huống an toàn, tai nạn không thể xảy ra."),
+        ],
+        tips="ありえない thường dùng như câu CẢM THÁN trong hội thoại nghĩa 'không thể tin được!' — rất thông dụng, không chỉ trong văn viết.",
+        culture="Giới trẻ Nhật hay thốt lên 'ありえない！' khi gặp chuyện quá bất ngờ, tương đương 'không thể tin nổi!' trong tiếng Việt."),
+
+    slide(L, 3,
+        "3. Cụm cố định thông dụng: あり得る / あり得ない",
+        "ある（tồn tại/có）+ 得る/得ない → あり得る（có thể có）/ あり得ない（không thể có）",
+        "ある (có/tồn tại) kết hợp với 得る/得ない tạo thành cụm CỐ ĐỊNH cực kỳ thông dụng, dùng cả "
+        "trong hội thoại lẫn văn viết để đánh giá TÍNH KHẢ THI của một sự việc, ý tưởng, giả thuyết.",
+        [
+            ex(L, 3, 1, [t("t-l13s3-1", "そんな"), t("t-l13s3-2", "みらい", "未来", "みらい", key=True), t("t-l13s3-3", "は"),
+                         t("t-l13s3-4", "ありえます", "有り得ます", "ありえます", key=True)],
+               "Tương lai như vậy là có thể có."),
+            ex(L, 3, 2, [t("t-l13s3-5", "どんな"), t("t-l13s3-6", "じょうきょう", "状況", "じょうきょう"), t("t-l13s3-7", "でも"),
+                         t("t-l13s3-8", "、"), t("t-l13s3-9", "じこ", "事故", "じこ", key=True), t("t-l13s3-10", "は"),
+                         t("t-l13s3-11", "おこり", "起こり", "おこり", key=True), t("t-l13s3-12", "得る", key=True)],
+               "Trong bất kỳ tình huống nào, tai nạn cũng có thể xảy ra."),
+        ],
+        tips="かのうせい (khả năng, xác suất) thường đi cùng あり得る để nhấn thêm: 可能性はあり得ます (khả năng đó là có thể có).",
+        culture="Trong tranh luận, hội nghị ở Nhật, người ta hay dùng 'それはあり得る話です' (đó là chuyện có thể xảy ra) để công nhận một giả thuyết đáng cân nhắc."),
+
+    slide(L, 4,
+        "4. Phân biệt 得る (khả năng lý thuyết) và できる (khả năng thực tế)",
+        "できる: khả năng THỰC TẾ (do năng lực, đã luyện tập)　vs　得る: khả năng LÝ THUYẾT/KHÁCH QUAN (có thể xảy ra về mặt logic)",
+        "できる nói về NĂNG LỰC CỤ THỂ của một người/vật (có thể làm gì đó nhờ kỹ năng); 得る nói về "
+        "khả năng XẢY RA của một SỰ VIỆC về mặt lý thuyết, không liên quan đến năng lực cá nhân.",
+        [
+            ex(L, 4, 1, [t("t-l13s4-1", "かれ", "彼", "かれ", key=True), t("t-l13s4-2", "は"),
+                         t("t-l13s4-3", "にほんご", "日本語", "にほんご", key=True), t("t-l13s4-4", "を"),
+                         t("t-l13s4-5", "はなす", "話す", "はなす"), t("t-l13s4-6", "こと", "事", "こと"),
+                         t("t-l13s4-7", "が"), t("t-l13s4-8", "できます", "出来ます", "できます", key=True)],
+               "Anh ấy có thể nói tiếng Nhật. (khả năng thực tế, kỹ năng)"),
+            ex(L, 4, 2, [t("t-l13s4-9", "この"), t("t-l13s4-10", "きかい", "機械", "きかい", key=True), t("t-l13s4-11", "は"),
+                         t("t-l13s4-12", "もんだい", "問題", "もんだい", key=True), t("t-l13s4-13", "が"),
+                         t("t-l13s4-14", "おこり", "起こり", "おこり", key=True), t("t-l13s4-15", "得る", key=True)],
+               "Cái máy này có thể xảy ra vấn đề. (khả năng lý thuyết, khách quan)"),
+        ],
+        tips="Không nói '私は日本語を話し得る' theo nghĩa kỹ năng — phải dùng できる cho năng lực cá nhân, 得る chỉ dùng cho khả năng khách quan của SỰ VIỆC.",
+        culture="Đây là điểm ngữ pháp N3 dễ nhầm nhất — nhiều người học hay lạm dụng 得る thay cho できる, cần phân biệt kỹ trong bài thi."),
+]
+
+DIALOGUE = [
+    line(L, 1, "田中", "Đồng nghiệp (thảo luận rủi ro)",
+         [t("d13-1", "この"), t("d13-2", "じょうきょう", "状況", "じょうきょう", key=True), t("d13-3", "では"),
+          t("d13-4", "、"), t("d13-5", "じこ", "事故", "じこ", key=True), t("d13-6", "が"),
+          t("d13-7", "おこり", "起こり", "おこり", key=True), t("d13-8", "得ます", key=True), t("d13-9", "か")],
+         "Trong tình huống này, tai nạn có thể xảy ra không?"),
+    line(L, 2, "サントス", "Đồng nghiệp (thảo luận rủi ro)",
+         [t("d13-10", "はい"), t("d13-11", "、"), t("d13-12", "きけん", "危険", "きけん", key=True), t("d13-13", "な"),
+          t("d13-14", "じょうきょう", "状況", "じょうきょう"), t("d13-15", "では"), t("d13-16", "じこ", "事故", "じこ"),
+          t("d13-17", "が"), t("d13-18", "おこり", "起こり", "おこり"), t("d13-19", "得ます", key=True)],
+         "Vâng, trong tình huống nguy hiểm thì tai nạn có thể xảy ra."),
+    line(L, 3, "田中", "Đồng nghiệp (thảo luận rủi ro)",
+         [t("d13-20", "でも"), t("d13-21", "、"), t("d13-22", "あんぜんな", "安全な", "あんぜんな", key=True),
+          t("d13-23", "じょうきょう", "状況", "じょうきょう"), t("d13-24", "では"), t("d13-25", "どうですか")],
+         "Nhưng, trong tình huống an toàn thì sao?"),
+    line(L, 4, "サントス", "Đồng nghiệp (thảo luận rủi ro)",
+         [t("d13-26", "あんぜんな", "安全な", "あんぜんな", key=True), t("d13-27", "じょうきょう", "状況", "じょうきょう", key=True),
+          t("d13-28", "では"), t("d13-29", "、"), t("d13-30", "じこ", "事故", "じこ", key=True), t("d13-31", "は"),
+          t("d13-32", "おこり", "起こり", "おこり"), t("d13-33", "得ません", key=True)],
+         "Trong tình huống an toàn thì tai nạn không thể xảy ra."),
+    line(L, 5, "田中", "Đồng nghiệp (thảo luận rủi ro)",
+         [t("d13-34", "みらい", "未来", "みらい", key=True), t("d13-35", "を"), t("d13-36", "そうぞう", "想像", "そうぞう", key=True),
+          t("d13-37", "して"), t("d13-38", "みましょう")],
+         "Hãy thử tưởng tượng về tương lai xem."),
+    line(L, 6, "サントス", "Đồng nghiệp (thảo luận rủi ro)",
+         [t("d13-39", "きかい", "機械", "きかい", key=True), t("d13-40", "が"), t("d13-41", "もんだい", "問題", "もんだい", key=True),
+          t("d13-42", "を"), t("d13-43", "おこす", "起こす", "おこす"), t("d13-44", "かのうせい", "可能性", "かのうせい"),
+          t("d13-45", "が"), t("d13-46", "あります", "有ります", "あります")],
+         "Có khả năng là máy móc sẽ gây ra vấn đề."),
+    line(L, 7, "田中", "Đồng nghiệp (thảo luận rủi ro)",
+         [t("d13-47", "そんな"), t("d13-48", "こと", "事", "こと"), t("d13-49", "は"),
+          t("d13-50", "ありえない", "有り得ない", "ありえない", key=True), t("d13-51", "と"), t("d13-52", "おもいます", "思います", "おもいます")],
+         "Tôi nghĩ chuyện đó không thể xảy ra."),
+    line(L, 8, "サントス", "Đồng nghiệp (thảo luận rủi ro)",
+         [t("d13-53", "どんな"), t("d13-54", "じょうきょう", "状況", "じょうきょう"), t("d13-55", "でも"),
+          t("d13-56", "、"), t("d13-57", "もんだい", "問題", "もんだい", key=True), t("d13-58", "は"),
+          t("d13-59", "おこり", "起こり", "おこり", key=True), t("d13-60", "得ます", key=True)],
+         "Trong bất kỳ tình huống nào, vấn đề cũng có thể xảy ra."),
+    line(L, 9, "田中", "Đồng nghiệp (thảo luận rủi ro)",
+         [t("d13-61", "よそう", "予想", "よそう", key=True), t("d13-62", "が"), t("d13-63", "むずかしい", "難しい", "むずかしい"),
+          t("d13-64", "です", "です", "です"), t("d13-65", "ね")],
+         "Việc dự đoán khó thật nhỉ."),
+    line(L, 10, "サントス", "Đồng nghiệp (thảo luận rủi ro)",
+         [t("d13-66", "はい"), t("d13-67", "。"), t("d13-68", "でも"), t("d13-69", "じゅんび", "準備", "じゅんび"),
+          t("d13-70", "は"), t("d13-71", "かのう", "可能", "かのう", key=True), t("d13-72", "です", "です", "です")],
+         "Vâng. Nhưng việc chuẩn bị thì khả thi."),
+]
+
+EXERCISES = [
+    q(L, 1, "「地震が起こり得る」 — 得る diễn tả điều gì?",
+      ["Khả năng xảy ra về mặt lý thuyết/khách quan, không liên quan năng lực cá nhân",
+       "Khả năng thực tế do năng lực, kỹ năng đã luyện tập", "Sự phủ định hoàn toàn",
+       "Cảm xúc mãnh liệt"], 0,
+      "得る diễn tả khả năng XẢY RA VỀ MẶT LÝ THUYẾT của một sự việc — khác できる là khả năng thực tế do năng lực.",
+      "Xem cấu trúc V-stem+得る ở slide 1."),
+    q(L, 2, "「そんなことはありえない」 nghĩa là:",
+      ["Chuyện đó không thể xảy ra (phủ định mạnh, dùng cả trong cảm thán)",
+       "Chuyện đó chắc chắn sẽ xảy ra", "Chuyện đó đã xảy ra rồi",
+       "Chuyện đó có thể xảy ra"], 0,
+      "ありえない là phủ định của ありえる, diễn tả điều gì đó KHÔNG THỂ xảy ra, mức độ phủ định rất mạnh.",
+      "Xem cấu trúc 得ない ở slide 2."),
+    q(L, 3, "あり得る/あり得ない được tạo thành từ đâu?",
+      ["ある (có, tồn tại) + 得る/得ない", "ある + ます", "ない + 得る", "Không có quy tắc tạo thành"], 0,
+      "あり得る/あり得ない là cụm cố định từ ある (có/tồn tại) kết hợp với 得る/得ない.",
+      "Xem giải thích ở slide 3."),
+    q(L, 4, "Sự khác biệt cốt lõi giữa 得る và できる là gì?",
+      ["得る là khả năng LÝ THUYẾT của SỰ VIỆC; できる là khả năng THỰC TẾ do NĂNG LỰC cá nhân",
+       "Hoàn toàn giống nhau, dùng thay thế được cho nhau", "得る chỉ dùng cho phủ định",
+       "できる chỉ dùng cho câu hỏi"], 0,
+      "得る nói về khả năng xảy ra của một sự việc (khách quan); できる nói về năng lực làm được gì đó (chủ thể có kỹ năng).",
+      "Xem bảng so sánh ở slide 4."),
+    q(L, 5, "Có thể nói '彼は日本語を話し得る' để nghĩa 'anh ấy có thể nói tiếng Nhật' (kỹ năng) không?",
+      ["Không, phải dùng できる cho khả năng do kỹ năng: 彼は日本語を話すことができる",
+       "Có, hoàn toàn đúng ngữ pháp và tự nhiên", "Chỉ đúng trong văn nói thân mật",
+       "Chỉ đúng khi nói về trẻ em"], 0,
+      "得る KHÔNG dùng cho năng lực cá nhân/kỹ năng — phải dùng できる trong trường hợp này.",
+      "Xem lưu ý quan trọng ở slide 4."),
+    q(L, 6, "「安全な状況では、事故は起こり得ません」 nghĩa là:",
+      ["Trong tình huống an toàn, tai nạn không thể xảy ra", "Trong tình huống an toàn, tai nạn chắc chắn xảy ra",
+       "Tình huống này không an toàn", "Tai nạn đã xảy ra rồi"], 0,
+      "得ません (dạng lịch sự của 得ない) phủ định khả năng xảy ra của tai nạn trong tình huống an toàn.",
+      "Áp dụng cấu trúc 得ない cho ngữ cảnh câu."),
+    q(L, 7, "「どんな状況でも、事故は起こり得る」 nhấn mạnh điều gì?",
+      ["Trong MỌI tình huống, khả năng xảy ra tai nạn luôn tồn tại (không loại trừ trường hợp nào)",
+       "Tai nạn chỉ xảy ra trong một tình huống cụ thể", "Tai nạn không bao giờ xảy ra",
+       "So sánh các loại tai nạn khác nhau"], 0,
+      "どんな状況でも (dù trong tình huống nào) kết hợp với 得る nhấn mạnh khả năng luôn tồn tại, không loại trừ trường hợp nào.",
+      "Xem ví dụ tương tự ở slide 3."),
+    q(L, 8, "Theo hội thoại,田中 nghĩ gì về khả năng máy móc gây vấn đề?",
+      ["Nghĩ rằng điều đó không thể xảy ra (ありえないと思います)",
+       "Nghĩ rằng điều đó chắc chắn sẽ xảy ra", "Không có ý kiến gì",
+       "Đồng ý ngay lập tức với Santos"], 0,
+      "田中 nói 「そんなことはありえないと思います」.",
+      "Xem câu thoại thứ 7."),
+    q(L, 9, "Santos phản bác lại田中 bằng lý lẽ gì?",
+      ["Trong bất kỳ tình huống nào, vấn đề cũng có thể xảy ra (どんな状況でも、問題は起こり得ます)",
+       "Đồng ý hoàn toàn với田中", "Không đưa ra lý lẽ nào",
+       "Nói rằng vấn đề đã được giải quyết"], 0,
+      "Santos nói 「どんな状況でも、問題は起こり得ます」.",
+      "Xem câu thoại thứ 8."),
+    q(L, 10, "Santos kết luận điều gì có thể làm được (khả thi) ở cuối hội thoại?",
+      ["Việc chuẩn bị là khả thi (準備は可能です)", "Việc dự đoán chính xác 100%",
+       "Việc ngăn chặn hoàn toàn mọi rủi ro", "Không có gì khả thi cả"], 0,
+      "Santos nói 「準備は可能です」.",
+      "Xem câu thoại cuối cùng."),
+]
+
+LESSON = lesson(
+    L,
+    "Bài 13: Khả năng tiềm tàng (得る / 得ない - うる / えない)",
+    "得る (うる) gắn sau V-stem diễn tả khả năng XẢY RA VỀ MẶT LÝ THUYẾT/KHÁCH QUAN của một sự "
+    "việc (khác できる là khả năng THỰC TẾ do năng lực cá nhân); 得ない (えない) là phủ định mạnh, "
+    "khẳng định điều gì đó KHÔNG THỂ xảy ra; cụm cố định あり得る/あり得ない cực kỳ thông dụng.",
+    VOCAB, KANJI, SLIDES, DIALOGUE, EXERCISES,
+)
+
+if __name__ == "__main__":
+    pool.mark_used([w["word"] for w in VOCAB if w["word"]], lesson=L)
+    merge([LESSON])
