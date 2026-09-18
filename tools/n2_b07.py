@@ -1,0 +1,253 @@
+# -*- coding: utf-8 -*-
+"""N2 — Bai 7: Nhan manh mo rong のみならず (cuc ky trang trong, van viet) va on lai ばかりか (N3 b15).
+
+Tu vung minh hoa TU CHON tu pool mo data/jlpt-vocab/n2.csv (xem NOTICE.md).
+"""
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from n2_lib import v, k, t, ex, slide, line, q, lesson, merge
+from jlpt_pool import Pool
+
+L = 7
+pool = Pool("n2")
+
+VOCAB = [
+    v(1,  "ふきゅうします", "普及します", "ふきゅうします", "fukyuu shimasu", "verb", "Phổ biến, lan rộng", "ぎじゅつが 普及します = kỹ thuật lan rộng.", L),
+    v(2,  "かくち", "各地", "かくち", "kakuchi", "noun", "Khắp nơi", "各地で 発生します = phát sinh ở khắp nơi.", L),
+    v(3,  "かくじ", "各自", "かくじ", "kakuji", "noun", "Mỗi cá nhân, từng người", "各自の 意見 = ý kiến của từng người.", L),
+    v(4,  "ひびきます", "響きます", "ひびきます", "hibikimasu", "verb", "Vang lên, ảnh hưởng đến", "けいざいに 響きます = ảnh hưởng đến kinh tế.", L),
+    v(5,  "えいきょう", "影響", "えいきょう", "eikyou", "noun", "Ảnh hưởng", "えいきょうを あたえます = gây ảnh hưởng.", L),
+    v(6,  "はっせいします", "発生します", "はっせいします", "hassei shimasu", "verb", "Phát sinh, xảy ra", "もんだいが 発生します = vấn đề phát sinh.", L),
+    v(7,  "ぶんや", "分野", "ぶんや", "bun-ya", "noun", "Lĩnh vực", "Đã gặp N3 bài 6.", L),
+    v(8,  "せかい", "世界", "せかい", "sekai", "noun", "Thế giới", "Đã gặp N4 bài 26.", L),
+    v(9,  "ぎじゅつ", "技術", "ぎじゅつ", "gijutsu", "noun", "Kỹ thuật", "Đã gặp N3 bài 14.", L),
+    v(10, "かいしゃ", "会社", "かいしゃ", "kaisha", "noun", "Công ty", "Đã gặp N4 bài 26.", L),
+    v(11, "けいざい", "経済", "けいざい", "keizai", "noun", "Kinh tế", "Đã gặp N3 bài 14.", L),
+    v(12, "かんきょう", "環境", "かんきょう", "kankyou", "noun", "Môi trường", "Đã gặp N3 bài 5.", L),
+    v(13, "もんだい", "問題", "もんだい", "mondai", "noun", "Vấn đề", "Đã gặp N5 bài 22.", L),
+    v(14, "ぞうか", "増加", "ぞうか", "zouka", "noun", "Sự gia tăng", "Đã gặp N3 bài 14.", L),
+    v(15, "かくだい", "拡大", "かくだい", "kakudai", "noun", "Sự mở rộng", "Đã gặp N3 bài 14.", L),
+    v(16, "はってん", "発展", "はってん", "hatten", "noun", "Sự phát triển", "Đã gặp N3 bài 14.", L),
+    v(17, "にほん", "日本", "にほん", "nihon", "noun", "Nhật Bản", "Đã gặp N4 bài 26.", L),
+    v(18, "せかいじゅう", "世界中", "せかいじゅう", "sekaijuu", "noun", "Khắp thế giới", "Đã gặp N4 bài 26.", L),
+    v(19, "とうきょう", "東京", "とうきょう", "toukyou", "noun", "Tokyo", "Đã gặp N2 bài 6.", L),
+    v(20, "くに", "国", "くに", "kuni", "noun", "Quốc gia", "Đã gặp N4 bài 26.", L),
+]
+
+KANJI = [
+    k(1, "普", "PHỔ", 12, ["フ (fu)"], [], "Phổ biến, rộng khắp.",
+      [("普及", "ふきゅう", "Phổ biến, lan rộng"), ("普通", "ふつう", "Thông thường")], L),
+    k(2, "及", "CẬP", 3, ["キュウ (kyuu)"], ["およ(ぶ)"], "Đạt tới, lan đến.",
+      [("普及", "ふきゅう", "Phổ biến"), ("及ぼす", "およぼす", "Gây ảnh hưởng")], L),
+    k(3, "各", "CÁC", 6, ["カク (kaku)"], ["おのおの"], "Mỗi, các.",
+      [("各地", "かくち", "Khắp nơi"), ("各自", "かくじ", "Mỗi cá nhân")], L),
+    k(4, "響", "HƯỞNG", 20, ["キョウ (kyou)"], ["ひび(く)"], "Vang dội, ảnh hưởng.",
+      [("響きます", "ひびきます", "Vang lên, ảnh hưởng"), ("影響", "えいきょう", "Ảnh hưởng")], L),
+    k(5, "影", "ẢNH", 15, ["エイ (ei)"], ["かげ"], "Bóng, hình ảnh.",
+      [("影響", "えいきょう", "Ảnh hưởng"), ("人影", "ひとかげ", "Bóng người")], L),
+]
+
+SLIDES = [
+    slide(L, 1,
+        "1. Không những... mà còn (cực kỳ trang trọng): N + のみならず",
+        "N(+である)/[thể thường] + のみならず、〜も/さえ",
+        "のみならず nghĩa 'không những... mà còn...' nhưng CỰC KỲ TRANG TRỌNG, CHỈ dùng trong "
+        "văn viết học thuật, báo chí, phát biểu chính thức — KHÔNG dùng trong hội thoại đời thường.",
+        [
+            ex(L, 1, 1, [t("t-l7s1-1", "この"), t("t-l7s1-2", "ぎじゅつ", "技術", "ぎじゅつ", key=True), t("t-l7s1-3", "は"),
+                         t("t-l7s1-4", "にほん", "日本", "にほん", key=True), t("t-l7s1-5", "のみならず", key=True),
+                         t("t-l7s1-6", "、"), t("t-l7s1-7", "せかいじゅう", "世界中", "せかいじゅう", key=True), t("t-l7s1-8", "に"),
+                         t("t-l7s1-9", "ふきゅう", "普及", "ふきゅう", key=True), t("t-l7s1-10", "して"), t("t-l7s1-11", "います", "居ます", "います")],
+               "Công nghệ này không những phổ biến ở Nhật Bản mà còn ở khắp thế giới."),
+            ex(L, 1, 2, [t("t-l7s1-12", "えいきょう", "影響", "えいきょう", key=True), t("t-l7s1-13", "は"),
+                         t("t-l7s1-14", "けいざい", "経済", "けいざい", key=True), t("t-l7s1-15", "のみならず", key=True),
+                         t("t-l7s1-16", "、"), t("t-l7s1-17", "かんきょう", "環境", "かんきょう", key=True), t("t-l7s1-18", "にも"),
+                         t("t-l7s1-19", "あります", "有ります", "あります")],
+               "Ảnh hưởng không những ở kinh tế mà còn ở cả môi trường."),
+        ],
+        tips="のみならず là từ Hán-Nhật CỔ, gần như CHỈ xuất hiện trong văn viết — nói のみならず trong hội thoại nghe rất khác thường, cứng nhắc.",
+        culture="Báo cáo nghiên cứu, bài luận học thuật Nhật hay mở đầu bằng: '本研究は理論のみならず、実践にも貢献する' (nghiên cứu này không những đóng góp về lý thuyết mà còn về thực tiễn)."),
+
+    slide(L, 2,
+        "2. Ôn lại: ばかりか (đã học N3 bài 15) — dùng được cả nói và viết",
+        "[Thể thường] + ばかりか、〜も",
+        "ばかりか (đã học ở N3 bài 15) cũng nghĩa 'không những... mà còn...', MẠNH hơn だけでなく, "
+        "nhưng KHÔNG trang trọng bằng のみならず — dùng được cả trong HỘI THOẠI lẫn văn viết thông thường.",
+        [
+            ex(L, 2, 1, [t("t-l7s2-1", "もんだい", "問題", "もんだい", key=True), t("t-l7s2-2", "は"),
+                         t("t-l7s2-3", "とうきょう", "東京", "とうきょう", key=True), t("t-l7s2-4", "ばかりか", key=True),
+                         t("t-l7s2-5", "、"), t("t-l7s2-6", "かくち", "各地", "かくち", key=True), t("t-l7s2-7", "で"),
+                         t("t-l7s2-8", "はっせい", "発生", "はっせい", key=True), t("t-l7s2-9", "して"), t("t-l7s2-10", "います", "居ます", "います")],
+               "Vấn đề không những ở Tokyo mà còn phát sinh ở khắp nơi."),
+            ex(L, 2, 2, [t("t-l7s2-11", "ぎじゅつ", "技術", "ぎじゅつ", key=True), t("t-l7s2-12", "が"),
+                         t("t-l7s2-13", "はってん", "発展", "はってん", key=True), t("t-l7s2-14", "した"),
+                         t("t-l7s2-15", "ばかりか", key=True), t("t-l7s2-16", "、"), t("t-l7s2-17", "ぶんや", "分野", "ぶんや", key=True),
+                         t("t-l7s2-18", "も"), t("t-l7s2-19", "かくだい", "拡大", "かくだい", key=True), t("t-l7s2-20", "しました")],
+               "Kỹ thuật không những phát triển mà lĩnh vực cũng mở rộng."),
+        ],
+        tips="ばかりか linh hoạt hơn のみならず — dùng được trong bài thuyết trình, cuộc họp, LẪN văn viết báo cáo thông thường.",
+        culture="ばかりか vẫn giữ được sắc thái NGẠC NHIÊN/nhấn mạnh như đã học ở N3, khác のみならず chỉ đơn thuần liệt kê trang trọng."),
+
+    slide(L, 3,
+        "3. So sánh 3 mức độ trang trọng: だけでなく, ばかりか, のみならず",
+        "だけでなく (N3): TRUNG TÍNH　<　ばかりか (N3): NHẤN MẠNH　<　のみならず (N2): CỰC KỲ TRANG TRỌNG (chỉ văn viết)",
+        "Cả ba đều nghĩa 'không chỉ... mà còn...', xếp theo THANG ĐỘ TRANG TRỌNG tăng dần: だけで"
+        "なく dùng mọi nơi; ばかりか thêm sắc thái ngạc nhiên, dùng cả nói/viết; のみならず CHỈ dùng "
+        "trong văn bản học thuật, báo chí, diễn văn chính thức.",
+        [
+            ex(L, 3, 1, [t("t-l7s3-1", "にほん", "日本", "にほん", key=True), t("t-l7s3-2", "だけでなく", key=True),
+                         t("t-l7s3-3", "、"), t("t-l7s3-4", "せかいじゅう", "世界中", "せかいじゅう", key=True), t("t-l7s3-5", "にも")],
+               "Không chỉ Nhật Bản mà còn khắp thế giới nữa. (hội thoại thân mật)"),
+            ex(L, 3, 2, [t("t-l7s3-6", "にほん", "日本", "にほん", key=True), t("t-l7s3-7", "のみならず", key=True),
+                         t("t-l7s3-8", "、"), t("t-l7s3-9", "せかいじゅう", "世界中", "せかいじゅう", key=True), t("t-l7s3-10", "に"),
+                         t("t-l7s3-11", "ふきゅう", "普及", "ふきゅう", key=True), t("t-l7s3-12", "して"), t("t-l7s3-13", "います", "居ます", "います")],
+               "Không những Nhật Bản mà còn khắp thế giới đang phổ biến. (văn viết trang trọng)"),
+        ],
+        tips="Mẹo: nói chuyện hàng ngày → だけでなく/ばかりか; viết báo cáo, luận văn, phát biểu chính thức → のみならず.",
+        culture="Đề thi đọc hiểu JLPT N2 hay dùng のみならず trong đoạn văn học thuật — nhận diện được cấu trúc này giúp hiểu nhanh ý chính của đoạn văn."),
+
+    slide(L, 4,
+        "4. Kết hợp のみならず với さえ để nhấn cực độ",
+        "Nのみならず、Nさえ + [động từ/tính từ]",
+        "Khi kết hợp のみならず với さえ (thậm chí, đã học ở さえ〜ば N3 bài 8), câu văn học thuật "
+        "nhấn mạnh mức độ ẢNH HƯỞNG/PHẠM VI cực kỳ rộng lớn, vượt xa những gì người đọc mong đợi.",
+        [
+            ex(L, 4, 1, [t("t-l7s4-1", "この"), t("t-l7s4-2", "もんだい", "問題", "もんだい", key=True), t("t-l7s4-3", "は"),
+                         t("t-l7s4-4", "かいしゃ", "会社", "かいしゃ", key=True), t("t-l7s4-5", "のみならず", key=True),
+                         t("t-l7s4-6", "、"), t("t-l7s4-7", "くに", "国", "くに", key=True), t("t-l7s4-8", "ぜんたい", "全体", "ぜんたい"),
+                         t("t-l7s4-9", "に", key=True), t("t-l7s4-10", "さえ", key=True), t("t-l7s4-11", "ひびきます", "響きます", "ひびきます", key=True)],
+               "Vấn đề này không những ảnh hưởng đến công ty mà thậm chí đến toàn quốc gia."),
+            ex(L, 4, 2, [t("t-l7s4-12", "ぎじゅつ", "技術", "ぎじゅつ", key=True), t("t-l7s4-13", "の"),
+                         t("t-l7s4-14", "ぞうか", "増加", "ぞうか", key=True), t("t-l7s4-15", "は"),
+                         t("t-l7s4-16", "けいざい", "経済", "けいざい", key=True), t("t-l7s4-17", "のみならず", key=True),
+                         t("t-l7s4-18", "、"), t("t-l7s4-19", "かんきょう", "環境", "かんきょう", key=True), t("t-l7s4-20", "に", key=True),
+                         t("t-l7s4-21", "さえ", key=True), t("t-l7s4-22", "えいきょう", "影響", "えいきょう", key=True), t("t-l7s4-23", "して"),
+                         t("t-l7s4-24", "います", "居ます", "います")],
+               "Sự gia tăng của kỹ thuật không những ảnh hưởng đến kinh tế mà thậm chí đến cả môi trường."),
+        ],
+        tips="のみならず〜さえ là cấu trúc nhấn mạnh CAO NHẤT trong hệ thống 'không chỉ... mà còn' của tiếng Nhật, gần như chỉ thấy trong văn bản học thuật.",
+        culture="Bài báo khoa học Nhật thường dùng cấu trúc này để mở đầu phần nêu tầm quan trọng/phạm vi ảnh hưởng của vấn đề nghiên cứu."),
+]
+
+DIALOGUE = [
+    line(L, 1, "田中", "Nhà nghiên cứu",
+         [t("d7-1", "この"), t("d7-2", "ぎじゅつ", "技術", "ぎじゅつ", key=True), t("d7-3", "は"),
+          t("d7-4", "どこで"), t("d7-5", "ふきゅう", "普及", "ふきゅう", key=True), t("d7-6", "して", key=True),
+          t("d7-7", "います", "居ます", "います"), t("d7-8", "か")],
+         "Công nghệ này phổ biến ở đâu?"),
+    line(L, 2, "サントス", "Nhà nghiên cứu",
+         [t("d7-9", "にほん", "日本", "にほん", key=True), t("d7-10", "のみならず", key=True), t("d7-11", "、"),
+          t("d7-12", "せかいじゅう", "世界中", "せかいじゅう", key=True), t("d7-13", "に"), t("d7-14", "ふきゅう", "普及", "ふきゅう", key=True),
+          t("d7-15", "して"), t("d7-16", "います", "居ます", "います")],
+         "Không những Nhật Bản mà còn phổ biến khắp thế giới."),
+    line(L, 3, "田中", "Nhà nghiên cứu",
+         [t("d7-17", "えいきょう", "影響", "えいきょう", key=True), t("d7-18", "は"), t("d7-19", "どこに"),
+          t("d7-20", "あります", "有ります", "あります"), t("d7-21", "か")],
+         "Ảnh hưởng có ở đâu?"),
+    line(L, 4, "サントス", "Nhà nghiên cứu",
+         [t("d7-22", "けいざい", "経済", "けいざい", key=True), t("d7-23", "のみならず", key=True), t("d7-24", "、"),
+          t("d7-25", "かんきょう", "環境", "かんきょう", key=True), t("d7-26", "にも"), t("d7-27", "あります", "有ります", "あります")],
+         "Không những ở kinh tế mà còn có ở cả môi trường."),
+    line(L, 5, "田中", "Nhà nghiên cứu",
+         [t("d7-28", "もんだい", "問題", "もんだい", key=True), t("d7-29", "は"), t("d7-30", "とうきょう", "東京", "とうきょう", key=True),
+          t("d7-31", "だけ"), t("d7-32", "です", "です", "です"), t("d7-33", "か")],
+         "Vấn đề chỉ ở Tokyo thôi à?"),
+    line(L, 6, "サントス", "Nhà nghiên cứu",
+         [t("d7-34", "いいえ"), t("d7-35", "、"), t("d7-36", "とうきょう", "東京", "とうきょう", key=True), t("d7-37", "ばかりか", key=True),
+          t("d7-38", "、"), t("d7-39", "かくち", "各地", "かくち", key=True), t("d7-40", "で"), t("d7-41", "はっせい", "発生", "はっせい", key=True),
+          t("d7-42", "して"), t("d7-43", "います", "居ます", "います")],
+         "Không, không những Tokyo mà còn phát sinh ở khắp nơi."),
+    line(L, 7, "田中", "Nhà nghiên cứu",
+         [t("d7-44", "ぶんや", "分野", "ぶんや", key=True), t("d7-45", "も"), t("d7-46", "かくだい", "拡大", "かくだい", key=True),
+          t("d7-47", "しました", "為ました", "しました"), t("d7-48", "か")],
+         "Lĩnh vực cũng đã mở rộng chứ?"),
+    line(L, 8, "サントス", "Nhà nghiên cứu",
+         [t("d7-49", "はい"), t("d7-50", "。"), t("d7-51", "かいしゃ", "会社", "かいしゃ", key=True), t("d7-52", "のみならず", key=True),
+          t("d7-53", "、"), t("d7-54", "くに", "国", "くに", key=True), t("d7-55", "ぜんたい", "全体", "ぜんたい"), t("d7-56", "に", key=True),
+          t("d7-57", "さえ", key=True), t("d7-58", "ひびきます", "響きます", "ひびきます", key=True)],
+         "Vâng. Không những công ty mà thậm chí đến toàn quốc gia cũng bị ảnh hưởng."),
+    line(L, 9, "田中", "Nhà nghiên cứu",
+         [t("d7-59", "かくじ", "各自", "かくじ", key=True), t("d7-60", "の"), t("d7-61", "いけん", "意見", "いけん"),
+          t("d7-62", "は"), t("d7-63", "どうですか")],
+         "Ý kiến của mỗi người thì sao?"),
+    line(L, 10, "サントス", "Nhà nghiên cứu",
+         [t("d7-64", "かくじ", "各自", "かくじ", key=True), t("d7-65", "が"), t("d7-66", "ちがう"),
+          t("d7-67", "いけん", "意見", "いけん"), t("d7-68", "を"), t("d7-69", "もって", "持って", "もって"),
+          t("d7-70", "います", "居ます", "います")],
+         "Mỗi người đều có ý kiến khác nhau."),
+]
+
+EXERCISES = [
+    q(L, 1, "「この技術は日本のみならず、世界中に普及しています」 — のみならず diễn tả điều gì?",
+      ["Không những... mà còn..., mang tính CỰC KỲ TRANG TRỌNG, chỉ dùng trong văn viết",
+       "So sánh hai đối tượng", "Phủ định việc phổ biến",
+       "Cảm xúc mãnh liệt"], 0,
+      "のみならず nghĩa 'không những... mà còn...' nhưng CỰC TRANG TRỌNG, chỉ dùng trong văn viết học thuật/báo chí.",
+      "Xem cấu trúc のみならず ở slide 1."),
+    q(L, 2, "のみならず có thể dùng trong hội thoại đời thường không?",
+      ["Không, のみならず gần như CHỈ dùng trong văn viết, nói ra nghe rất cứng nhắc",
+       "Có, dùng thoải mái trong mọi ngữ cảnh", "Chỉ dùng được trong câu hỏi",
+       "Chỉ dùng được với người lớn tuổi"], 0,
+      "のみならず là từ Hán-Nhật cổ, gần như chỉ xuất hiện trong văn viết trang trọng, không tự nhiên trong hội thoại.",
+      "Xem lưu ý văn phong ở slide 1."),
+    q(L, 3, "Xếp theo thứ tự MỨC ĐỘ TRANG TRỌNG tăng dần: だけでなく, ばかりか, のみならず?",
+      ["だけでなく < ばかりか < のみならず", "のみならず < ばかりか < だけでなく",
+       "ばかりか < だけでなく < のみならず", "Cả ba đều trang trọng như nhau"], 0,
+      "だけでなく trung tính nhất, ばかりか nhấn mạnh hơn, のみならず cực kỳ trang trọng (chỉ văn viết).",
+      "Xem bảng so sánh ở slide 3."),
+    q(L, 4, "「問題は東京ばかりか、各地で発生しています」 — ばかりか ở đây có thể dùng trong hội thoại không?",
+      ["Có, ばかりか dùng được cả trong hội thoại lẫn văn viết (không quá trang trọng như のみならず)",
+       "Không, chỉ dùng được trong văn viết", "Chỉ dùng được trong câu hỏi",
+       "Chỉ dùng được với người lạ"], 0,
+      "ばかりか (đã học N3) linh hoạt hơn のみならず, dùng được trong cả hội thoại và văn viết thông thường.",
+      "Ôn lại ばかりか ở slide 2."),
+    q(L, 5, "「この問題は会社のみならず、国全体にさえ響きます」 — kết hợp のみならず và さえ để làm gì?",
+      ["Nhấn mạnh phạm vi ảnh hưởng cực kỳ rộng lớn, vượt xa mong đợi",
+       "Giảm nhẹ mức độ nghiêm trọng của vấn đề", "Phủ định hoàn toàn vấn đề",
+       "Chỉ dùng cho câu hỏi"], 0,
+      "のみならず kết hợp さえ (thậm chí) tạo hiệu ứng nhấn mạnh CAO NHẤT về phạm vi ảnh hưởng.",
+      "Xem cấu trúc kết hợp ở slide 4."),
+    q(L, 6, "「影響は経済のみならず、環境にもあります」 nghĩa là:",
+      ["Ảnh hưởng không những ở kinh tế mà còn ở cả môi trường",
+       "Ảnh hưởng chỉ có ở kinh tế", "Không có ảnh hưởng gì cả",
+       "Ảnh hưởng chỉ có ở môi trường, không liên quan kinh tế"], 0,
+      "のみならず ở đây mở rộng phạm vi ảnh hưởng từ kinh tế sang cả môi trường.",
+      "Áp dụng cấu trúc Nのみならず."),
+    q(L, 7, "Đề thi đọc hiểu N2 thường dùng のみならず ở đâu?",
+      ["Trong đoạn văn học thuật, báo cáo nghiên cứu để nêu phạm vi/tầm quan trọng của vấn đề",
+       "Chỉ trong hội thoại giữa bạn bè", "Chỉ trong quảng cáo sản phẩm",
+       "Không bao giờ xuất hiện trong đề thi"], 0,
+      "のみならず thường xuất hiện trong đoạn văn học thuật của đề đọc hiểu N2, nhận diện được giúp hiểu nhanh ý chính.",
+      "Xem văn hóa sử dụng ở slide 3."),
+    q(L, 8, "Theo hội thoại, công nghệ được nói đến phổ biến ở đâu?",
+      ["Không những Nhật Bản mà còn khắp thế giới (日本のみならず、世界中に普及しています)",
+       "Chỉ ở Nhật Bản", "Chỉ ở nước ngoài", "Không phổ biến ở đâu cả"], 0,
+      "Santos nói 「日本のみならず、世界中に普及しています」.",
+      "Xem câu thoại thứ 2."),
+    q(L, 9, "Vấn đề trong hội thoại có chỉ xảy ra ở Tokyo không?",
+      ["Không, không những Tokyo mà còn phát sinh ở khắp nơi (東京ばかりか、各地で発生しています)",
+       "Có, chỉ xảy ra ở Tokyo", "Không xảy ra ở đâu cả",
+       "Chỉ xảy ra ở nước ngoài"], 0,
+      "Santos trả lời 「東京ばかりか、各地で発生しています」.",
+      "Xem câu thoại thứ 6."),
+    q(L, 10, "Mức độ ảnh hưởng của vấn đề được mô tả như thế nào ở cuối hội thoại?",
+      ["Không những công ty mà thậm chí đến toàn quốc gia (会社のみならず、国全体にさえ響きます)",
+       "Chỉ ảnh hưởng đến một công ty nhỏ", "Không có ảnh hưởng gì",
+       "Chỉ ảnh hưởng trong phạm vi gia đình"], 0,
+      "Santos nói 「会社のみならず、国全体にさえ響きます」.",
+      "Xem câu thoại thứ 8."),
+]
+
+LESSON = lesson(
+    L,
+    "Bài 7: Nhấn mạnh mở rộng (のみならず & ばかりか)",
+    "のみならず nghĩa 'không những... mà còn...' nhưng CỰC KỲ TRANG TRỌNG, CHỈ dùng trong văn "
+    "viết học thuật/báo chí (không dùng trong hội thoại); ôn lại ばかりか (N3 bài 15) dùng được cả "
+    "nói và viết; xếp theo mức độ trang trọng tăng dần: だけでなく < ばかりか < のみならず; kết hợp "
+    "のみならず〜さえ để nhấn mạnh phạm vi ảnh hưởng cực kỳ rộng lớn.",
+    VOCAB, KANJI, SLIDES, DIALOGUE, EXERCISES,
+)
+
+if __name__ == "__main__":
+    pool.mark_used([w["word"] for w in VOCAB if w["word"]], lesson=L)
+    merge([LESSON])
