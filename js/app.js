@@ -180,9 +180,17 @@ document.addEventListener('DOMContentLoaded', async () => {
   let chenNgangTimer = null;
   let dangThuAm = null;        // id cau luyen phat am dang thu, null = khong thu
 
+  // Dan dien vien dang doc thoai qua loa (playDialogueLine). Khong tat hang
+  // mic that su (cham, phai xin quyen lai) — chi tam ngung GUI tieng loa lai
+  // cho Sensei nghe. Thieu buoc nay: may khong deo tai nghe se de mic bat lai
+  // chinh giong nhan vat, Gemini tuong hoc vien dang noi va tu dung xen vao
+  // giang giua luc nhan vat con dang thoai.
+  let dangPhatGiongNhanVat = false;
+
   // 3. Audio Engine
   const audioEngine = new AudioEngine({
     onAudioChunk: (base64Pcm) => {
+      if (dangPhatGiongNhanVat) return;
       geminiClient.sendRealtimeAudio(base64Pcm);
     },
     onPlayStateChange: (isPlaying, meta) => {
@@ -2313,12 +2321,12 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
     // thi dung mot khoi tuan tu don, chinh la duong cu da kiem chung ky.
     const dungSongSong = voices.length > 1 && keys.length > 1;
 
-    if (opts.verbose) {
-      showToast(dungSongSong
-        ? `Đang lồng tiếng ${todo} lượt thoại bằng ${voices.length} giọng `
-          + `(song song trên ${Math.min(keys.length, voices.length)} tài khoản)…`
-        : `Đang lồng tiếng ${todo} lượt thoại bằng ${voices.length} giọng…`);
-    }
+    // Long tieng la viec nen tu dong, hoc vien khong can thay tien trinh noi
+    // bo nay tren man hinh — chi ghi console de chan doan khi can.
+    console.log(dungSongSong
+      ? `[long tieng] bắt đầu ${todo} lượt thoại, ${voices.length} giọng `
+        + `(song song trên ${Math.min(keys.length, voices.length)} tài khoản)`
+      : `[long tieng] bắt đầu ${todo} lượt thoại, ${voices.length} giọng`);
 
     let made = 0;
     const ketQua = { permanentFail: false, sessionLimitHit: false };
@@ -2437,13 +2445,13 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
         + (ketQua.permanentFail ? '' : ' Sẽ thử lại khi bạn mở lại bài.'), 'error', 9000);
     }
 
+    // Xong viec nen thi chi ghi console — khong noi cho hoc vien, day la chi
+    // tiet van hanh noi bo, khong phai thu ho can biet de hoc.
     if (made) {
       const cast = window.SenseiVoices.castOf(dialogue)
         .map(c => `${c.speaker} → ${c.voice} (${c.genderVi})`).join(', ');
       console.log(`[long tieng] xong ${made}/${todo} luot thoai — ${cast}`
         + (dungSongSong ? ' (chạy song song)' : ''));
-      showToast(`Đã lồng tiếng ${made} lượt thoại bằng ${voices.length} giọng`
-        + (dungSongSong ? ' (song song).' : '.'));
     }
   }
 
@@ -2633,11 +2641,18 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
    * còn hơn để Sensei đọc hết bằng một giọng.
    */
   async function playDialogueLine(line) {
-    const clip = dialogueAudio[line.id];
-    if (clip && audioEngine.playPcmClip) {
-      try { await audioEngine.playPcmClip(clip); return true; } catch (e) {}
+    dangPhatGiongNhanVat = true;
+    try {
+      const clip = dialogueAudio[line.id];
+      if (clip && audioEngine.playPcmClip) {
+        try { await audioEngine.playPcmClip(clip); return true; } catch (e) {}
+      }
+      return await playLineWithBrowserVoice(line);
+    } finally {
+      // Cho tieng vang qua loa tat han truoc khi mo lai mic, khong ngat qua som
+      await new Promise(r => setTimeout(r, 200));
+      dangPhatGiongNhanVat = false;
     }
-    return playLineWithBrowserVoice(line);
   }
 
   function playLineWithBrowserVoice(line) {
