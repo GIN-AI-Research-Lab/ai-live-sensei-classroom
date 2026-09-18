@@ -1415,6 +1415,7 @@ input:focus, select:focus { outline: none; }
   margin-bottom: 10px;
 }
 .bang-kanji-o {
+  position: relative;
   background: rgba(255, 255, 255, .05);
   border-radius: 10px;
   aspect-ratio: 1;
@@ -1422,6 +1423,19 @@ input:focus, select:focus { outline: none; }
   margin: 0 auto;
 }
 .bang-kanji-svg { width: 100%; height: 100%; display: block; }
+
+/* Lop de to lai bang chuot / but / ngon tay, nam de len SVG demo */
+.bang-kanji-tap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;   /* chan trinh duyet cuon/zoom trang khi dang keo net tren dt */
+  cursor: crosshair;
+}
+/* Sau khi demo viet xong: net lui ve mo lam nen thay vi bien mat hoac dung dam */
+.bang-kanji-o-mo .bang-kanji-duong { opacity: .28; transition: opacity .4s ease; }
+.bang-kanji-o-mo .bang-kanji-chiso { opacity: .45 !important; transition: opacity .4s ease; }
 
 /* Ô kẻ như vở tập viết — để thấy nét nằm ở phần nào của ô */
 .bang-kanji-ke line {

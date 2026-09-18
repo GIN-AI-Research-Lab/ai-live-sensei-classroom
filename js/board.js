@@ -285,19 +285,29 @@
             <g class="bang-kanji-net"></g>
             <g class="bang-kanji-so"></g>
           </svg>
+          <canvas class="bang-kanji-tap" title="Vẽ tay theo nét mờ"></canvas>
         </div>
         <div class="bang-kanji-chan">
           <span class="bang-kanji-ten">${ch} — ${net.length} nét</span>
-          <button type="button" class="bang-kanji-lai" title="Viết lại từ đầu">
+          <button type="button" class="bang-kanji-lai" title="Xem lại thứ tự nét, xoá bản vừa tập viết">
             <i class="fa-solid fa-rotate-left"></i><span>Viết lại</span>
           </button>
         </div>`;
       noi.appendChild(hop);
 
+      const o = hop.querySelector('.bang-kanji-o');
       const gNet = hop.querySelector('.bang-kanji-net');
       const gSo = hop.querySelector('.bang-kanji-so');
+      const canvas = hop.querySelector('.bang-kanji-tap');
+      const ctx = canvas.getContext('2d');
 
+      // Sau khi demo viet xong, cac net LUI VE MO LAM NEN cho hoc vien to lai —
+      // khong bien mat, khong dung nguyen do dam nhu luc dang trinh dien.
+      let henMo = null;
       const chay = () => {
+        clearTimeout(henMo);
+        o.classList.remove('bang-kanji-o-mo');
+        xoaNetVe();   // moi lan xem lai demo la mot luot tap moi, xoa net cu di
         gNet.innerHTML = '';
         gSo.innerHTML = '';
         net.forEach((d, i) => {
@@ -325,7 +335,54 @@
             } catch (e) { /* trinh duyet cu khong do duoc diem dau net */ }
           }
         });
+        // Doi het luot chay xong (net cuoi + mot chut) roi mo dan xuong lam nen
+        henMo = setTimeout(() => o.classList.add('bang-kanji-o-mo'), (net.length) * tocDo * 1000 + 150);
       };
+
+      // ---- 2b. To lai net bang chuot / but / ngon tay (Pointer Events gop ca 3) ----
+      let dpr = 1, dangVe = false;
+      function coKichThuoc() {
+        const r = o.getBoundingClientRect();
+        dpr = window.devicePixelRatio || 1;
+        canvas.width = Math.max(1, Math.round(r.width * dpr));
+        canvas.height = Math.max(1, Math.round(r.height * dpr));
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.lineWidth = 3.2;
+        ctx.strokeStyle = '#c96442';
+      }
+      function xoaNetVe() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+      function toaDo(e) {
+        const r = canvas.getBoundingClientRect();
+        return [e.clientX - r.left, e.clientY - r.top];
+      }
+      canvas.addEventListener('pointerdown', (e) => {
+        dangVe = true;
+        canvas.setPointerCapture(e.pointerId);
+        const [x, y] = toaDo(e);
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        e.preventDefault();
+      });
+      canvas.addEventListener('pointermove', (e) => {
+        if (!dangVe) return;
+        const [x, y] = toaDo(e);
+        ctx.lineTo(x, y);
+        ctx.stroke();
+        e.preventDefault();
+      });
+      const ketThucNet = () => { dangVe = false; };
+      canvas.addEventListener('pointerup', ketThucNet);
+      canvas.addEventListener('pointercancel', ketThucNet);
+      canvas.addEventListener('pointerleave', ketThucNet);
+
+      // Doi co man hinh (xoay dien thoai) thi ve lai kich thuoc canvas — mat
+      // net dang to do la chap nhan duoc, xoay may von da hiem khi dang to.
+      if (window.ResizeObserver) new ResizeObserver(coKichThuoc).observe(o);
+      coKichThuoc();
 
       chay();
       hop.querySelector('.bang-kanji-lai').addEventListener('click', chay);
