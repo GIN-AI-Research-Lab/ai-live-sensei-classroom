@@ -1,0 +1,236 @@
+# -*- coding: utf-8 -*-
+"""N5 — Bài 9: Sở thích, năng lực với が, và liên từ から.
+
+Tu vung minh hoa TU CHON tu pool mo data/jlpt-vocab/n5.csv (xem NOTICE.md).
+"""
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from n5_lib import v, k, t, ex, slide, line, q, lesson, merge
+from jlpt_pool import Pool
+
+L = 9
+pool = Pool("n5")
+
+VOCAB = [
+    v(1,  "すき", "好き", "すき", "suki", "adjective", "Thích", "Tính từ な. Đối tượng thích đánh dấu bằng が, KHÔNG dùng を.", L),
+    v(2,  "だいすき", "大好き", "だいすき", "daisuki", "adjective", "Rất thích, thích lắm", "Tính từ な. Mạnh hơn 好き.", L),
+    v(3,  "きらい", "嫌い", "きらい", "kirai", "adjective", "Ghét, không thích", "Tính từ な. Trái nghĩa với 好き.", L),
+    v(4,  "じょうず", "上手", "じょうず", "jouzu", "adjective", "Giỏi, khéo", "Tính từ な. KHÔNG dùng để tự khen bản thân mình.", L),
+    v(5,  "へた", "下手", "へた", "heta", "adjective", "Kém, vụng", "Tính từ な. Trái nghĩa với 上手.", L),
+    v(6,  "スポーツ", "", "", "supootsu", "noun", "Thể thao", "スポーツが 好きです = thích thể thao.", L),
+    v(7,  "おんがく", "音楽", "おんがく", "ongaku", "noun", "Âm nhạc", "Đã gặp bài 6 — nay dùng làm đối tượng của 好き/上手.", L),
+    v(8,  "うた", "歌", "うた", "uta", "noun", "Bài hát", "歌います = hát.", L),
+    v(9,  "え", "絵", "え", "e", "noun", "Tranh, hình vẽ", "絵を 描きます = vẽ tranh.", L),
+    v(10, "りょうり", "料理", "りょうり", "ryouri", "noun", "Món ăn, nấu ăn", "料理が 上手です = giỏi nấu ăn.", L),
+    v(11, "ギター", "", "", "gitaa", "noun", "Đàn guitar", "", L),
+    v(12, "おさけ", "お酒", "おさけ", "osake", "noun", "Rượu, rượu sake", "お酒が 好きです = thích uống rượu.", L),
+    v(13, "おちゃ", "お茶", "おちゃ", "ocha", "noun", "Trà (xanh)", "お茶を 飲みます = uống trà.", L),
+    v(14, "から", "", "", "kara", "particle", "Vì, bởi vì (nêu lý do, đứng cuối vế lý do)", "Vế lý do + から + vế kết quả.", L),
+    v(15, "どうして", "", "", "doushite", "phrase", "Tại sao, vì sao", "Câu trả lời thường kết bằng から.", L),
+    v(16, "にほんご", "日本語", "にほんご", "nihongo", "noun", "Tiếng Nhật", "Đã gặp bài 2 — nay dùng làm đối tượng năng lực.", L),
+    v(17, "べんきょう", "勉強", "べんきょう", "benkyou", "noun", "Việc học", "勉強します = học tập.", L),
+    v(18, "しごと", "仕事", "しごと", "shigoto", "noun", "Công việc", "仕事が 忙しいです = công việc bận rộn.", L),
+    v(19, "げんき", "元気", "げんき", "genki", "adjective", "Khỏe mạnh", "Đã gặp bài 8 — nay dùng làm lý do trong câu から.", L),
+    v(20, "たのしい", "楽しい", "たのしい", "tanoshii", "adjective", "Vui vẻ", "Đã gặp bài 8 — nay làm lý do thích một hoạt động.", L),
+]
+
+KANJI = [
+    k(1, "好", "HIẾU", 6, ["コウ (kou)"], ["す(き)", "この(む)"], "Yêu thích. Bộ 女 (nữ) + 子 (con) — mẹ yêu con.",
+      [("好き", "すき", "Thích"), ("大好き", "だいすき", "Rất thích"), ("好物", "こうぶつ", "Món khoái khẩu")], L),
+    k(2, "上", "THƯỢNG", 3, ["ジョウ (jou)"], ["うえ", "あ(げる)"], "Trên, giỏi. Đã gặp ở bài 3 (地図の上).",
+      [("上手", "じょうず", "Giỏi"), ("上", "うえ", "Phía trên"), ("屋上", "おくじょう", "Sân thượng")], L),
+    k(3, "下", "HẠ", 3, ["カ (ka)", "ゲ (ge)"], ["した", "へた", "さ(がる)"], "Dưới, kém. Đã gặp ở bài 3.",
+      [("下手", "へた", "Kém"), ("下", "した", "Phía dưới"), ("地下", "ちか", "Tầng hầm")], L),
+    k(4, "手", "THỦ", 4, ["シュ (shu)"], ["て"], "Bàn tay; kỹ năng.",
+      [("上手", "じょうず", "Giỏi"), ("下手", "へた", "Kém"), ("手紙", "てがみ", "Lá thư")], L),
+    k(5, "料", "LIỆU", 10, ["リョウ (ryou)"], [], "Nguyên liệu, chi phí.",
+      [("料理", "りょうり", "Món ăn"), ("料金", "りょうきん", "Cước phí"), ("材料", "ざいりょう", "Nguyên liệu")], L),
+]
+
+SLIDES = [
+    slide(L, 1,
+        "1. Sở thích: N が 好き／嫌い です",
+        "[Đối tượng] + が + 好き／嫌い + です",
+        "好き/嫌い là tính từ な, nhưng đối tượng của cảm xúc đánh dấu bằng が, KHÔNG dùng を "
+        "như tha động từ thông thường. Đây là nhóm ĐỘNG TỪ/TÍNH TỪ CẢM XÚC-NĂNG LỰC dùng が.",
+        [
+            ex(L, 1, 1, [t("t-l9s1-1", "わたし", "私", "わたし"), t("t-l9s1-2", "は"),
+                         t("t-l9s1-3", "おんがく", "音楽", "おんがく"), t("t-l9s1-4", "が", key=True),
+                         t("t-l9s1-5", "すき", "好き", "すき", key=True), t("t-l9s1-6", "です")],
+               "Tôi thích âm nhạc."),
+            ex(L, 1, 2, [t("t-l9s1-7", "サントスさん"), t("t-l9s1-8", "は"),
+                         t("t-l9s1-9", "スポーツ"), t("t-l9s1-10", "が", key=True),
+                         t("t-l9s1-11", "きらい", "嫌い", "きらい", key=True), t("t-l9s1-12", "です")],
+               "Anh Santos ghét thể thao."),
+            ex(L, 1, 3, [t("t-l9s1-13", "なに", "何", "なに", key=True), t("t-l9s1-14", "が", key=True),
+                         t("t-l9s1-15", "すき", "好き", "すき"), t("t-l9s1-16", "ですか")],
+               "Anh thích cái gì vậy?"),
+        ],
+        tips="Lỗi phổ biến của người mới: nói 音楽を 好きです — SAI. 好き/嫌い bắt buộc đi với が.",
+        culture="大好き mạnh hơn 好き nhiều — nói với người mới quen dễ bị hiểu nhầm tình cảm, nên cẩn trọng ngữ cảnh."),
+
+    slide(L, 2,
+        "2. Năng lực: N が 上手／下手 です",
+        "[Kỹ năng] + が + 上手／下手 + です",
+        "Cùng nhóm が với 好き/嫌い. 上手/下手 đánh giá mức độ GIỎI/KÉM một kỹ năng — quan trọng: "
+        "không tự khen mình 上手, chỉ dùng khi nói về NGƯỜI KHÁC.",
+        [
+            ex(L, 2, 1, [t("t-l9s2-1", "やまださん"), t("t-l9s2-2", "は"),
+                         t("t-l9s2-3", "りょうり", "料理", "りょうり"), t("t-l9s2-4", "が", key=True),
+                         t("t-l9s2-5", "じょうず", "上手", "じょうず", key=True), t("t-l9s2-6", "です")],
+               "Anh Yamada nấu ăn giỏi."),
+            ex(L, 2, 2, [t("t-l9s2-7", "わたし", "私", "わたし"), t("t-l9s2-8", "は"),
+                         t("t-l9s2-9", "うた", "歌", "うた"), t("t-l9s2-10", "が", key=True),
+                         t("t-l9s2-11", "へた", "下手", "へた", key=True), t("t-l9s2-12", "です")],
+               "Tôi hát dở."),
+        ],
+        tips="Khiêm tốn kiểu Nhật: tự nói về mình dùng 下手 hoặc あまり上手じゃないです, không tự nhận 上手.",
+        culture="Khen ai đó 上手ですね là câu xã giao rất thường dùng ở Nhật, kể cả khi chỉ giỏi vừa phải."),
+
+    slide(L, 3,
+        "3. Nêu lý do: [lý do] から、[kết quả]",
+        "[Câu lý do] + から、[Câu kết quả]。",
+        "から gắn vào CUỐI câu lý do, không phải đứng giữa như 'vì' tiếng Việt. Thứ tự trong câu "
+        "tiếng Nhật luôn là LÝ DO trước, KẾT QUẢ sau.",
+        [
+            ex(L, 3, 1, [t("t-l9s3-1", "にほんご", "日本語", "にほんご"), t("t-l9s3-2", "が"),
+                         t("t-l9s3-3", "すき", "好き", "すき"), t("t-l9s3-4", "です"), t("t-l9s3-5", "から", key=True),
+                         t("t-l9s3-6", "、"), t("t-l9s3-7", "まいにち", "毎日", "まいにち"),
+                         t("t-l9s3-8", "べんきょう", "勉強", "べんきょう"), t("t-l9s3-9", "します")],
+               "Vì thích tiếng Nhật nên tôi học mỗi ngày."),
+            ex(L, 3, 2, [t("t-l9s3-10", "しごと", "仕事", "しごと"), t("t-l9s3-11", "が"),
+                         t("t-l9s3-12", "いそがしい", "忙しい", "いそがしい"), t("t-l9s3-13", "です"),
+                         t("t-l9s3-14", "から", key=True), t("t-l9s3-15", "、"), t("t-l9s3-16", "たいへん", "大変", "たいへん"),
+                         t("t-l9s3-17", "です")],
+               "Vì công việc bận rộn nên vất vả lắm."),
+        ],
+        tips="から có thể đứng SAU cả tính từ, động từ, hay です — luôn ở cuối vế lý do, trước dấu phẩy.",
+        culture="Trong xin lỗi/từ chối, người Nhật hay bỏ lửng vế sau から để giữ lịch sự: 「ちょっと 忙しいですから…」"),
+
+    slide(L, 4,
+        "4. Hỏi lý do: どうして…か",
+        "どうして + [câu hỏi] + か。  →  [lý do]から です。",
+        "どうして mở đầu câu hỏi lý do. Câu trả lời thường kết bằng からです (rút gọn của から, "
+        "です) — không cần lặp lại toàn bộ câu.",
+        [
+            ex(L, 4, 1, [t("t-l9s4-1", "どうして", key=True), t("t-l9s4-2", "にほんご", "日本語", "にほんご"),
+                         t("t-l9s4-3", "を"), t("t-l9s4-4", "べんきょう", "勉強", "べんきょう"), t("t-l9s4-5", "しますか")],
+               "Vì sao anh học tiếng Nhật?"),
+            ex(L, 4, 2, [t("t-l9s4-6", "にほん", "日本", "にほん"), t("t-l9s4-7", "が"),
+                         t("t-l9s4-8", "すき", "好き", "すき"), t("t-l9s4-9", "です"),
+                         t("t-l9s4-10", "から", key=True), t("t-l9s4-11", "です")],
+               "Vì tôi thích Nhật Bản."),
+        ],
+        tips="からです đứng độc lập là cách trả lời tự nhiên, ngắn gọn nhất — không cần lặp lại chủ đề đã hỏi.",
+        culture="Trẻ em Nhật hay hỏi どうして liên tục — người lớn Nhật coi đây là dấu hiệu tò mò tích cực."),
+]
+
+DIALOGUE = [
+    line(L, 1, "ミラー", "Nhân viên công ty",
+         [t("d-l9-1", "グプタさん"), t("d-l9-2", "は"), t("d-l9-3", "なに", "何", "なに", key=True),
+          t("d-l9-4", "が", key=True), t("d-l9-5", "すき", "好き", "すき", key=True), t("d-l9-6", "ですか")],
+         "Anh Gupta thích gì vậy?"),
+    line(L, 2, "グプタ", "Đồng nghiệp",
+         [t("d-l9-7", "おんがく", "音楽", "おんがく"), t("d-l9-8", "が"), t("d-l9-9", "すき", "好き", "すき"),
+          t("d-l9-10", "です"), t("d-l9-11", "。"), t("d-l9-12", "ギター"), t("d-l9-13", "も"),
+          t("d-l9-14", "すき", "好き", "すき"), t("d-l9-15", "です")],
+         "Tôi thích âm nhạc. Cũng thích guitar nữa."),
+    line(L, 3, "ミラー", "Nhân viên công ty",
+         [t("d-l9-16", "ギター"), t("d-l9-17", "が"), t("d-l9-18", "じょうず", "上手", "じょうず", key=True),
+          t("d-l9-19", "ですか")],
+         "Anh chơi guitar giỏi không?"),
+    line(L, 4, "グプタ", "Đồng nghiệp",
+         [t("d-l9-20", "いいえ"), t("d-l9-21", "、"), t("d-l9-22", "あまり"), t("d-l9-23", "じょうず", "上手", "じょうず"),
+          t("d-l9-24", "じゃ ありません"), t("d-l9-25", "。"), t("d-l9-26", "でも"), t("d-l9-27", "すき", "好き", "すき"),
+          t("d-l9-28", "です"), t("d-l9-29", "から", key=True), t("d-l9-30", "、"), t("d-l9-31", "まいにち", "毎日", "まいにち"),
+          t("d-l9-32", "れんしゅう", "練習", "れんしゅう"), t("d-l9-33", "します")],
+         "Không, không giỏi lắm. Nhưng vì thích nên tôi luyện mỗi ngày."),
+    line(L, 5, "ミラー", "Nhân viên công ty",
+         [t("d-l9-34", "いいですね"), t("d-l9-35", "。"), t("d-l9-36", "りょうり", "料理", "りょうり", key=True),
+          t("d-l9-37", "は"), t("d-l9-38", "どうですか")],
+         "Hay đó. Còn nấu ăn thì sao?"),
+    line(L, 6, "グプタ", "Đồng nghiệp",
+         [t("d-l9-39", "りょうり", "料理", "りょうり"), t("d-l9-40", "は"), t("d-l9-41", "へた", "下手", "へた", key=True),
+          t("d-l9-42", "です"), t("d-l9-43", "。"), t("d-l9-44", "どうして"), t("d-l9-45", "か")],
+         "Nấu ăn thì tôi dở. Không biết tại sao nữa."),
+    line(L, 7, "ミラー", "Nhân viên công ty",
+         [t("d-l9-46", "どうして", key=True), t("d-l9-47", "りょうり", "料理", "りょうり"), t("d-l9-48", "が"),
+          t("d-l9-49", "きらい", "嫌い", "きらい", key=True), t("d-l9-50", "ですか")],
+         "Vì sao anh ghét nấu ăn vậy?"),
+    line(L, 8, "グプタ", "Đồng nghiệp",
+         [t("d-l9-51", "しごと", "仕事", "しごと", key=True), t("d-l9-52", "が"),
+          t("d-l9-53", "いそがしい", "忙しい", "いそがしい"), t("d-l9-54", "です"), t("d-l9-55", "から", key=True),
+          t("d-l9-56", "です")],
+         "Vì công việc bận rộn."),
+    line(L, 9, "ミラー", "Nhân viên công ty",
+         [t("d-l9-57", "そうですか"), t("d-l9-58", "。"), t("d-l9-59", "おさけ", "お酒", "おさけ", key=True),
+          t("d-l9-60", "は"), t("d-l9-61", "すき", "好き", "すき", key=True), t("d-l9-62", "ですか")],
+         "Ra vậy. Anh có thích rượu không?"),
+    line(L, 10, "グプタ", "Đồng nghiệp",
+         [t("d-l9-63", "はい"), t("d-l9-64", "、"), t("d-l9-65", "だいすき", "大好き", "だいすき", key=True),
+          t("d-l9-66", "です"), t("d-l9-67", "！")],
+         "Có chứ, thích lắm luôn!"),
+]
+
+EXERCISES = [
+    q(L, 1, "「音楽が 好きです」 — trợ từ が ở đây đóng vai trò gì?",
+      ["Đánh dấu đối tượng của cảm xúc thích", "Đánh dấu tân ngữ trực tiếp",
+       "Đánh dấu chủ đề của câu", "Đánh dấu nơi chốn"], 0,
+      "好き/嫌い/上手/下手 là nhóm từ ĐẶC BIỆT dùng が để đánh dấu đối tượng, không dùng を như tha động từ thường.",
+      "Đây không phải は hay を."),
+    q(L, 2, "Câu nào SAI ngữ pháp?",
+      ["音楽を 好きです", "音楽が 好きです",
+       "私は 音楽が 好きです", "音楽が とても 好きです"], 0,
+      "好き bắt buộc dùng が cho đối tượng — không dùng を dù 好き về hình thức có vẻ giống tha động từ.",
+      "Xem lại quy tắc trợ từ が."),
+    q(L, 3, "Muốn tự nhận xét khiêm tốn về khả năng nấu ăn của mình, nên nói:",
+      ["料理は 下手です", "料理は 上手です",
+       "料理が とても 上手です", "料理は 一番 上手です"], 0,
+      "Người Nhật hiếm khi tự khen mình 上手 — thường dùng 下手 hoặc câu giảm nhẹ để khiêm tốn.",
+      "Đây là chuẩn mực văn hóa, không chỉ là ngữ pháp."),
+    q(L, 4, "「日本が 好きですから、日本語を 勉強します」 — から đứng ở đâu trong câu?",
+      ["Cuối vế LÝ DO, trước dấu phẩy", "Đầu câu",
+       "Cuối vế KẾT QUẢ", "Ngay sau chủ ngữ"], 0,
+      "から luôn đứng cuối vế lý do, ngay trước dấu phẩy ngăn cách với vế kết quả.",
+      "So sánh với vị trí của 'vì' trong tiếng Việt."),
+    q(L, 5, "「どうして 日本語を 勉強しますか」 「日本が 好きです___」",
+      ["から", "が", "を", "ので、でも"], 0,
+      "からです là cách trả lời ngắn gọn, tự nhiên cho câu hỏi どうして.",
+      "Cần từ nối lý do-kết quả."),
+    q(L, 6, "大好き khác 好き ở chỗ:",
+      ["大好き mạnh hơn, nghĩa là 'rất thích'", "大好き là ghét",
+       "Không khác gì cả", "大好き chỉ dùng cho người"], 0,
+      "大好き thêm 大 (to lớn) để nhấn mạnh mức độ thích — 'thích lắm', 'rất thích'.",
+      "So sánh mức độ cảm xúc."),
+    q(L, 7, "Từ nào KHÔNG cùng nhóm dùng trợ từ が như 好き/嫌い?",
+      ["食べます", "上手", "下手", "好き"], 0,
+      "食べます là tha động từ thường, dùng を cho tân ngữ. 好き/嫌い/上手/下手 là nhóm đặc biệt dùng が.",
+      "Ba đáp án còn lại đều là tính từ cảm xúc/năng lực."),
+    q(L, 8, "「仕事が 忙しいですから、大変です」 nghĩa là:",
+      ["Vì công việc bận rộn nên vất vả", "Công việc không bận nên nhàn",
+       "Dù công việc bận nhưng vẫn nhàn", "Công việc bận nhưng không sao"], 0,
+      "から nối vế lý do (忙しいです) với vế kết quả (大変です) theo đúng trật tự lý do trước - kết quả sau.",
+      "Đọc theo đúng thứ tự câu."),
+    q(L, 9, "「料理が 下手です」 và câu 「料理を 作りません」 khác nhau ở chỗ:",
+      ["Một nói về KHẢ NĂNG kém, một nói về HÀNH ĐỘNG không làm",
+       "Hoàn toàn giống nhau", "料理が下手です sai ngữ pháp",
+       "Chỉ khác về thì"], 0,
+      "下手 đánh giá NĂNG LỰC (giỏi/kém), còn 作りません là phủ định HÀNH ĐỘNG (không làm) — hai khái niệm khác nhau.",
+      "Xem ý nghĩa của từng cấu trúc."),
+    q(L, 10, "Ở hội thoại, anh Gupta thích uống gì?",
+      ["Rượu (rất thích)", "Trà xanh", "Cà phê", "Không thích uống gì cả"], 0,
+      "Cuối hội thoại, Gupta trả lời 大好き khi được hỏi về お酒.",
+      "Xem câu cuối cùng của hội thoại."),
+]
+
+LESSON = lesson(
+    L,
+    "Bài 9: Sở thích, Năng lực & Lý do (好き / 嫌い / 上手 / 下手 / から)",
+    "Nhóm tính từ đặc biệt dùng trợ từ が (好き, 嫌い, 上手, 下手) để nói sở thích và năng lực, "
+    "cách nêu lý do bằng から (lý do trước, kết quả sau), và cách hỏi-đáp lý do bằng どうして…からです。",
+    VOCAB, KANJI, SLIDES, DIALOGUE, EXERCISES,
+)
+
+if __name__ == "__main__":
+    pool.mark_used([w["word"] for w in VOCAB], lesson=L)
+    merge([LESSON])
