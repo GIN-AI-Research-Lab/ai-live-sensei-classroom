@@ -57,9 +57,13 @@ class CORSAndMimeHandler(http.server.SimpleHTTPRequestHandler):
                 'window.SENSEI_ENV = {\n'
                 '  key1: %s,\n'
                 '  key2: %s,\n'
+                '  key3: %s,\n'
+                '  key4: %s,\n'
                 '};\n'
             ) % (json.dumps(env.get('GEMINI_KEY1', '')),
-                 json.dumps(env.get('GEMINI_KEY2', '')))
+                 json.dumps(env.get('GEMINI_KEY2', '')),
+                 json.dumps(env.get('GEMINI_KEY3', '')),
+                 json.dumps(env.get('GEMINI_KEY4', '')))
             data = body.encode('utf-8')
             self.send_response(200)
             self.send_header('Content-Type', 'application/javascript; charset=utf-8')

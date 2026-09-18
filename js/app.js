@@ -56,12 +56,21 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // 2. DOM Elements
   // Key doc tu .env qua env.js — khong con nhap tay tren UI.
-  //   key1 -> phien Sensei
-  //   key2 -> dan dien vien long tieng + soan de
-  // Tach hai TAI KHOAN de khong tranh suat phien Live cua nhau (loi ma 1000).
+  //   key1 -> phien Sensei (uu tien)
+  //   key2 -> dan dien vien long tieng + soan de (uu tien)
+  //   key3, key4 -> du phong, dung khi cac key tren rong hoac het quota
+  // Tach TAI KHOAN de khong tranh suat phien Live cua nhau (loi ma 1000);
+  // co them key3/key4 thi vong lap thu lai (soanDeBangAI, dan dien vien)
+  // co nhieu suat quota hon de xoay vong khi mot vai key bi 429.
   const ENV = window.SENSEI_ENV || {};
-  const senseiKey = () => String(ENV.key1 || ENV.key2 || '').trim();
-  const helperKey = () => String(ENV.key2 || ENV.key1 || '').trim();
+  /** Tat ca key da dien trong .env, giu dung thu tu uu tien, bo trung/rong. */
+  function allKeys() {
+    return [ENV.key1, ENV.key2, ENV.key3, ENV.key4]
+      .map(k => String(k || '').trim())
+      .filter((k, i, a) => k && a.indexOf(k) === i);
+  }
+  const senseiKey = () => String(ENV.key1 || ENV.key2 || ENV.key3 || ENV.key4 || '').trim();
+  const helperKey = () => String(ENV.key2 || ENV.key1 || ENV.key3 || ENV.key4 || '').trim();
   // Giong Sensei chot cung: Charon — nam tram, ro chu, hop tieng Nhat nhat.
   // Khong con o chon tren UI nua.
   const SENSEI_VOICE = 'Charon';
@@ -1039,7 +1048,7 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
       actorModelIdx = 0;
       soloRetryDone = false;
       lastActorError = null;
-      if (actorPool) { actorPool.closeAll(); actorPool = null; }
+      closeAllActorPools();
       await prefetchDialogueAudio(lvl, no, { verbose: true });
       return window.__voice.status();
     },
@@ -2200,14 +2209,26 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
      Không dùng model TTS vì TTS không nằm trong nhóm quota Unlimited.
      ====================================================================== */
 
-  // Nguon giong hoi thoai: dan dien vien Live chay song song.
+  // Nguon giong hoi thoai: dan dien vien Live.
   // KHONG dung model TTS — TTS khong nam trong nhom quota Unlimited.
   // Thu model chinh truoc; hong thi tut xuong du phong va nho lai.
+  //
+  // Co tu 2 key .env tro len VA hoi thoai co tu 2 giong tro len: moi giong
+  // duoc giao mot key rieng (vong tron), cac giong o KEY KHAC NHAU chay
+  // SONG SONG — gioi han "so phien Live dong thoi" la tinh THEO TUNG KEY nen
+  // khong cham tran. Chi con 1 key hoac 1 giong thi dung duong tuan tu don,
+  // da kiem chung ky qua nhieu loi thuc te (xem chayLongTieng ben duoi).
   const ACTOR_MODELS = [SENSEI_MODELS.actor, SENSEI_MODELS.actorFallback];
-  let actorModelIdx = 0;
+  let actorModelIdx = 0;            // chi de hien thi chan doan (__voice.status)
   function actorModel() { return ACTOR_MODELS[actorModelIdx]; }
 
-  let actorPool = null;
+  let actorPool = null;             // duong du phong: chi 1 key hoac chi 1 giong
+  const actorPools = new Map();     // duong song song: key -> VoiceActorPool rieng
+  function closeAllActorPools() {
+    if (actorPool) { actorPool.closeAll(); actorPool = null; }
+    actorPools.forEach(p => p.closeAll());
+    actorPools.clear();
+  }
   let lastActorError = null;      // loi gan nhat khi dung giong
   let soloRetryDone = false;      // da thu "dong Sensei roi dung giong" chua
   const dialogueAudio = {};        // 'dia-n5-1-3' -> base64 PCM 24kHz
@@ -2264,20 +2285,14 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
 
   async function chayLongTieng(lvl, lessonNum, opts = {}) {
     if (ttsDisabled) return;
-    const apiKey = helperKey();
-    if (!apiKey || !window.SenseiVoices || !window.VoiceActorPool) return;
+    if (!window.SenseiVoices || !window.VoiceActorPool) return;
+    const keys = allKeys();
+    if (!keys.length) return;
 
     const dialogue = curriculumLoader.getDialogue(lvl, lessonNum) || [];
     if (!dialogue.length) return;
 
-    if (!actorPool || actorPool.apiKey !== apiKey || actorPool.model !== actorModel()) {
-      if (actorPool) actorPool.closeAll();
-      actorPool = new VoiceActorPool({ apiKey, model: actorModel() });
-    }
-
-    // Gom cac luot thoai theo giong, roi lam LAN LUOT tung giong mot.
-    // Mo Sensei + nhieu dien vien cung luc se cham tran so phien Live dong thoi
-    // (server dong phien moi voi ma 1000, khong bao ly do).
+    // Gom cac luot thoai theo giong.
     const byVoice = new Map();
     for (const line of dialogue) {
       if (dialogueAudio[line.id]) continue;
@@ -2287,94 +2302,148 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
       if (!byVoice.has(voice)) byVoice.set(voice, []);
       byVoice.get(voice).push({ line, jp });
     }
-
+    const voices = [...byVoice.keys()];
     const todo = [...byVoice.values()].reduce((n, a) => n + a.length, 0);
-    if (todo && opts.verbose) {
-      showToast(`Đang lồng tiếng ${todo} lượt thoại bằng ${byVoice.size} giọng…`);
+    if (!todo) return;
+
+    // Co tu 2 giong VA tu 2 key tro len: giao moi giong mot key (vong tron),
+    // cac KHOI o KHAC KEY chay SONG SONG — gioi han "so phien Live dong thoi"
+    // la tinh THEO TUNG KEY (tai khoan), khong phai toan cuc, nen nhieu key
+    // thi chay cung luc ma khong cham tran mã 1000. Chi 1 giong hoac 1 key
+    // thi dung mot khoi tuan tu don, chinh la duong cu da kiem chung ky.
+    const dungSongSong = voices.length > 1 && keys.length > 1;
+
+    if (opts.verbose) {
+      showToast(dungSongSong
+        ? `Đang lồng tiếng ${todo} lượt thoại bằng ${voices.length} giọng `
+          + `(song song trên ${Math.min(keys.length, voices.length)} tài khoản)…`
+        : `Đang lồng tiếng ${todo} lượt thoại bằng ${voices.length} giọng…`);
     }
 
     let made = 0;
-    for (const [voice, items] of byVoice) {
-      if (slideEngine.currentLevel !== lvl || slideEngine.currentLesson !== Number(lessonNum)) break;
+    const ketQua = { permanentFail: false, sessionLimitHit: false };
 
-      for (const { line, jp } of items) {
-        datCho('kaiwa', `Đang lồng tiếng ${made + 1}/${todo} lượt thoại…`,
-          `${line.speaker || 'Nhân vật'} — giọng ${voice}. Mỗi nhân vật một giọng riêng `
-          + 'nên phải dựng lần lượt, không chạy song song được.');
+    /**
+     * Doc het loi cua MOT nhom giong, tuan tu trong nhom (dung nhu duong cu).
+     * candidateKeys: cac key duoc phep thu cho nhom nay, theo dung thu tu —
+     * nhom song song chi nhan DUNG MOT key (khong tranh voi nhom khac); nhom
+     * don (khong song song) nhan CA DANH SACH de con xoay key khi het quota.
+     */
+    async function chayNhom(candidateKeys, danhSachGiong) {
+      let keyIdx = 0, modelIdx = 0;
+      const moPool = () => new VoiceActorPool({ apiKey: candidateKeys[keyIdx], model: ACTOR_MODELS[modelIdx] });
+      let pool = moPool();
+      if (dungSongSong) actorPools.set(candidateKeys[0], pool); else actorPool = pool;
 
-        // Thu lai vai lan: loi WebSocket nhat thoi rat hay gap khi phien Sensei
-        // vua bat tay xong. Bo cuoc ngay lan dau la ca buoi mat giong nhan vat.
-        let res = null;
-        for (let attempt = 1; attempt <= 3; attempt++) {
-          res = await actorPool.speak(voice, jp);
-          if (res.ok) break;
-          if (attempt < 3) {
-            console.warn(`[long tieng] thu lai lan ${attempt + 1}:`, res.reason);
-            actorPool.close(voice);                       // dung phien hong
-            await new Promise(r => setTimeout(r, 1200 * attempt));
+      for (const voice of danhSachGiong) {
+        if (slideEngine.currentLevel !== lvl || slideEngine.currentLesson !== Number(lessonNum)) break;
+
+        for (const { line, jp } of byVoice.get(voice)) {
+          if (dialogueAudio[line.id]) { made++; continue; }
+          datCho('kaiwa', `Đang lồng tiếng ${made + 1}/${todo} lượt thoại…`,
+            `${line.speaker || 'Nhân vật'} — giọng ${voice}.`
+            + (dungSongSong ? ' Đang chạy song song nhiều giọng trên nhiều tài khoản.'
+                            : ' Mỗi nhân vật một giọng riêng nên phải dựng lần lượt.'));
+
+          // Thu lai vai lan: loi WebSocket nhat thoi rat hay gap khi phien vua
+          // bat tay xong. Bo cuoc ngay lan dau la ca buoi mat giong nhan vat.
+          let res = null;
+          for (let attempt = 1; attempt <= 3; attempt++) {
+            res = await pool.speak(voice, jp);
+            if (res.ok) break;
+            if (attempt < 3) {
+              console.warn(`[long tieng] thu lai lan ${attempt + 1} (${voice}):`, res.reason);
+              pool.close(voice);
+              await new Promise(r => setTimeout(r, 1200 * attempt));
+            }
           }
-        }
 
-        if (!res.ok) {
-          lastActorError = `${actorModel().replace('models/', '')}/${voice}: ${res.reason}`;
-
-          // (a) Model chinh khong dung duoc -> tut xuong du phong, thu lai tu dau
-          if (actorModelIdx < ACTOR_MODELS.length - 1) {
-            actorModelIdx++;
-            actorPool.closeAll();
-            actorPool = null;
-            console.warn('[long tieng] doi sang', actorModel(), '-', res.reason);
-            return prefetchDialogueAudio(lvl, lessonNum, opts);
+          // Het 3 lan van hong -> tut model du phong CHO RIENG NHOM NAY, thu 1 lan.
+          if (!res.ok && modelIdx < ACTOR_MODELS.length - 1) {
+            modelIdx++;
+            actorModelIdx = modelIdx;   // chi de __voice.status() hien dung
+            console.warn('[long tieng] doi sang', ACTOR_MODELS[modelIdx], '-', res.reason);
+            pool.closeAll();
+            pool = moPool();
+            if (dungSongSong) actorPools.set(candidateKeys[0], pool); else actorPool = pool;
+            res = await pool.speak(voice, jp);
           }
 
-          // (b) Ma 1000 = server dong "binh thuong", dau hieu cham tran so phien
-          //     Live dong thoi. Phien Sensei dang chiem mot suat -> tam dong no,
-          //     dung giong xong roi noi lai.
-          const looksLikeSessionLimit = /mã 1000/.test(res.reason || '');
-          if (looksLikeSessionLimit && !soloRetryDone
-              && geminiClient.isConnected && lectureState !== 'PLAYING') {
-            soloRetryDone = true;
-            actorPool.closeAll();
-            actorPool = null;
+          // Van hong sau khi het model -> con key du phong trong danh sach
+          // duoc giao (chi co o nhom don) thi xoay sang key do, tu model dau.
+          if (!res.ok && keyIdx < candidateKeys.length - 1) {
+            keyIdx++;
+            modelIdx = 0;
             actorModelIdx = 0;
-            ttsDisabled = false;
-            showToast('Tạm rời lớp một lát để lồng tiếng hội thoại…');
-            geminiClient.disconnect();
-            await new Promise(r => setTimeout(r, 600));
-            await prefetchDialogueAudio(lvl, lessonNum, { soloMode: true });
-            showToast('Lồng tiếng xong — đang vào lớp lại…');
-            ensureConnected().catch(() => {});
-            return;
+            console.warn('[long tieng] doi sang key khac (idx', keyIdx, ') -', res.reason);
+            pool.closeAll();
+            pool = moPool();
+            actorPool = pool;
+            res = await pool.speak(voice, jp);
           }
 
-          // Chi TAT HAN khi loi chac chan khong sua duoc (key/model/quyen).
-          // Loi mang hay WebSocket la nhat thoi -> de nguyen de lan mo bai sau
-          // con thu lai, dung khoa vinh vien ca buoi hoc.
-          const permanent = /không được phép|permission|API key|not found|không tìm thấy|403|404/i
-            .test(res.reason || '');
-          if (permanent) ttsDisabled = true;
+          if (res && res.ok) {
+            dialogueAudio[line.id] = res.pcm;
+            made++;
+            continue;
+          }
 
-          actorPool.closeAll();
-          actorPool = null;
-          console.warn('[long tieng] dung lai:', lastActorError);
-          showToast(`Chưa lồng tiếng được — ${lastActorError}. Sensei sẽ tự đọc đoạn này.`
-            + (permanent ? '' : ' Sẽ thử lại khi bạn mở lại bài.'), 'error', 9000);
-          return;
+          // Cau nay chiu — GHI NHAN loi va BO QUA, khong nuke ca bai hoc vi
+          // mot cau; Sensei se tu doc doan nay khi den luot (xem sendToSensei).
+          lastActorError = `${ACTOR_MODELS[modelIdx].replace('models/', '')}/${voice}: ${(res && res.reason) || 'không rõ'}`;
+          console.warn('[long tieng] bỏ qua 1 câu:', lastActorError);
+          if (/mã 1000/.test((res && res.reason) || '')) ketQua.sessionLimitHit = true;
+          if (/không được phép|permission|API key|not found|không tìm thấy|403|404/i.test((res && res.reason) || '')) {
+            ketQua.permanentFail = true;
+          }
         }
 
-        dialogueAudio[line.id] = res.pcm;
-        made++;
+        pool.close(voice);   // xong giong nay thi dong phien lai roi moi sang giong ke
       }
+    }
 
-      // Xong giong nay thi DONG phien lai roi moi mo giong ke tiep
-      actorPool.close(voice);
+    if (dungSongSong) {
+      const nhom = new Map();     // key -> [giong,...], chia vong tron
+      voices.forEach((voice, i) => {
+        const key = keys[i % keys.length];
+        if (!nhom.has(key)) nhom.set(key, []);
+        nhom.get(key).push(voice);
+      });
+      await Promise.all([...nhom.entries()].map(([key, ds]) => chayNhom([key], ds)));
+    } else {
+      await chayNhom(keys, voices);
+    }
+
+    // Xu ly hau ky CHUNG cho ca hai duong chay.
+    if (ketQua.sessionLimitHit && !soloRetryDone
+        && geminiClient.isConnected && lectureState !== 'PLAYING') {
+      soloRetryDone = true;
+      closeAllActorPools();
+      ttsDisabled = false;
+      showToast('Tạm rời lớp một lát để lồng tiếng hội thoại…');
+      geminiClient.disconnect();
+      await new Promise(r => setTimeout(r, 600));
+      await prefetchDialogueAudio(lvl, lessonNum, { soloMode: true });
+      showToast('Lồng tiếng xong — đang vào lớp lại…');
+      ensureConnected().catch(() => {});
+      return;
+    }
+
+    if (ketQua.permanentFail) ttsDisabled = true;
+    if (lastActorError && made < todo) {
+      // Loi kind='error' khong hien man hinh (showToast da chan) — chi ghi
+      // console/nhat ky de chan doan, hoc vien khong bi lam phien.
+      showToast(`Chưa lồng tiếng được hết — ${lastActorError}. Sensei sẽ tự đọc phần còn thiếu.`
+        + (ketQua.permanentFail ? '' : ' Sẽ thử lại khi bạn mở lại bài.'), 'error', 9000);
     }
 
     if (made) {
       const cast = window.SenseiVoices.castOf(dialogue)
         .map(c => `${c.speaker} → ${c.voice} (${c.genderVi})`).join(', ');
-      console.log(`[long tieng] xong ${made} luot thoai — ${cast}`);
-      showToast(`Đã lồng tiếng ${made} lượt thoại bằng ${actorPool.size} giọng.`);
+      console.log(`[long tieng] xong ${made}/${todo} luot thoai — ${cast}`
+        + (dungSongSong ? ' (chạy song song)' : ''));
+      showToast(`Đã lồng tiếng ${made} lượt thoại bằng ${voices.length} giọng`
+        + (dungSongSong ? ' (song song).' : '.'));
     }
   }
 
@@ -2836,12 +2905,14 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
   /**
    * Goi model soan de, thu lan luot tung cap (model x key).
    *
-   *   429 het quota -> sang KEY kia. Hai key la hai tai khoan, han muc tach roi.
+   *   429 het quota -> sang KEY khac. Moi key la mot tai khoan, han muc tach
+   *                    rieng — dien cang nhieu key trong .env (toi da 4) thi
+   *                    cang nhieu suat de xoay khi mot vai key bi 429.
    *   503 qua tai   -> doi key vo ich (qua tai nam o phia model). Cho roi thu lai.
    *   loi khac      -> xuong model du phong.
    */
   async function soanDeBangAI(prompt, baoTien) {
-    const keys = [helperKey(), senseiKey()].filter((k, i, a) => k && a.indexOf(k) === i);
+    const keys = allKeys();
     if (!keys.length) return { ok: false, status: 'chưa đọc được key từ .env' };
 
     const daThu = [];
