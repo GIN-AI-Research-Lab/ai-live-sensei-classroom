@@ -191,6 +191,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   let dangThuAm = null;        // id cau luyen phat am dang thu, null = khong thu
   let dangChoChamPhatAm = null; // id hop ket qua dang cho Sensei cham xong (sau khi bam gui luyen phat am)
 
+  // Muc am thanh CAO NHAT tung thay duoc trong lan thu am hien tai — dat lai
+  // ve 0 moi khi mo mic. Neu bam Gui ma so nay van thap le te, gan chac hoc
+  // vien da noi nhung mic khong bat duoc gi ra hon — server tu dong nhan
+  // dien hoat dong (VAD) se khong bao gio thay "co nguoi noi" nen im lang
+  // MAI MAI, chu khong phai chi cham nhu binh thuong. Day la trieu chung
+  // NGOAI PHAN CUNG/QUYEN MIC that su, khac voi do tre xu ly binh thuong.
+  let mucAmThanhCaoNhat = 0;
+  const NGUONG_AM_THANH_RO = 6; // trung voi nguong da dung o updateLiveMicVolume
+
   // Dan dien vien dang doc thoai qua loa (playDialogueLine). Khong tat hang
   // mic that su (cham, phai xin quyen lai) — chi tam ngung GUI tieng loa lai
   // cho Sensei nghe. Thieu buoc nay: may khong deo tai nghe se de mic bat lai
@@ -1408,11 +1417,20 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
     if (audioEngine) audioEngine.setSuppressed(false);
     isRaisingHand = false;
     if (audioEngine.isMicActive) audioEngine.stopMic();
+    const khongNgheRo = mucAmThanhCaoNhat <= NGUONG_AM_THANH_RO;
     geminiClient.sendAudioStreamEnd();
     updateAskUI();
     updateLectureControlsUI();
-    showToast('Đã gửi câu hỏi — Sensei đang giải đáp cho bạn…');
-    hienThiChoTraLoi();
+    if (khongNgheRo) {
+      // Ca luot thu am khong co tieng nao vuot nguong ro — gan chac server
+      // se khong nhan dien duoc gio noi (VAD), Sensei se im MAI MAI chu
+      // khong phai cham nhu binh thuong. Bao ngay, dung de hoc vien tuong
+      // dang xu ly roi cho vo ich.
+      showToast('Không nghe rõ giọng nói trong lúc thu âm — kiểm tra quyền micro hoặc thử nói to, gần micro hơn. Có thể gõ câu hỏi bằng chữ thay thế.', 'info', 9000);
+    } else {
+      showToast('Đã gửi câu hỏi — Sensei đang giải đáp cho bạn…');
+      hienThiChoTraLoi();
+    }
   }
 
   // Bấm "Hủy": bỏ câu hỏi, Sensei giảng tiếp từ chỗ đang dở
@@ -1523,6 +1541,7 @@ CHỈ DẪN QUAN TRỌNG DÀNH CHO SENSEI:
     geminiClient.sendContextNote(contextPrompt);
 
     // 5. Mở Micro
+    mucAmThanhCaoNhat = 0;
     try {
       await audioEngine.startMic();
       updateMicUI(true, true);
@@ -1952,11 +1971,12 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
   const micVolumePercent = document.getElementById('micVolumePercent');
 
   function updateLiveMicVolume(volume) {
+    if (volume > mucAmThanhCaoNhat) mucAmThanhCaoNhat = volume;
     if (micVolumeBar) micVolumeBar.style.width = `${volume}%`;
     if (micVolumePercent) micVolumePercent.innerText = `${volume}%`;
 
     if (audioEngine && audioEngine.isMicActive && micStatusText) {
-      micStatusText.innerText = volume > 6 ? 'Đang nghe bạn nói…' : 'Đang thu âm câu hỏi…';
+      micStatusText.innerText = volume > NGUONG_AM_THANH_RO ? 'Đang nghe bạn nói…' : 'Đang thu âm câu hỏi…';
     }
   }
 
@@ -2026,6 +2046,7 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
   // dau tien cua Sensei phat ra (anChoTraLoi goi tu onAudioData/onTurnComplete).
   let dangChoTraLoi = false;
   let choTraLoiTimer = null;
+  let choTraLoiTimer2 = null;
   function hienThiChoTraLoi() {
     dangChoTraLoi = true;
     if (micVolumeWrapper) {
@@ -2036,16 +2057,27 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
     if (micVolumePercent) micVolumePercent.innerText = '';
     if (micStatusText) micStatusText.innerText = 'Sensei đang xử lý câu trả lời…';
     clearTimeout(choTraLoiTimer);
+    clearTimeout(choTraLoiTimer2);
     choTraLoiTimer = setTimeout(() => {
       if (dangChoTraLoi && micStatusText) {
         micStatusText.innerText = 'Câu hỏi bằng giọng nói cần thêm chút thời gian, Sensei vẫn đang xử lý…';
       }
     }, 12000);
+    // Doi qua lau (60s+) ma van chua co gi — cau tra loi qua mic thuong toi
+    // trong khoang 20-90s, nhung neu qua moc nay van im thi kha nang cao la
+    // ket noi/mic co van de that su, khong phai chi cham. Goi y ngay loi
+    // thoat: go chu (kenh nay luon phan hoi gan nhu tuc thi).
+    choTraLoiTimer2 = setTimeout(() => {
+      if (dangChoTraLoi && micStatusText) {
+        micStatusText.innerText = 'Đợi hơi lâu rồi — nếu vẫn không thấy gì, thử gõ câu hỏi bằng chữ thay vì nói.';
+      }
+    }, 60000);
   }
   function anChoTraLoi() {
     if (!dangChoTraLoi) return;
     dangChoTraLoi = false;
     clearTimeout(choTraLoiTimer);
+    clearTimeout(choTraLoiTimer2);
     if (micVolumeWrapper) {
       micVolumeWrapper.classList.add('hidden');
       micVolumeWrapper.classList.remove('is-waiting');
@@ -2713,6 +2745,7 @@ Nghe xong tiếng nó đọc thì CHẤM ngay, theo đúng thứ tự:
 Nếu nó đọc sai hẳn thì gọi tool mark_error(wrong_phrase, corrected_phrase, explanation).
 Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng Việt.`);
 
+    mucAmThanhCaoNhat = 0;
     try {
       await audioEngine.startMic();
       dangThuAm = id;
@@ -2731,6 +2764,14 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
 
     if (audioEngine.isMicActive) audioEngine.stopMic();
     veNutThuAm(id, false);
+
+    if (mucAmThanhCaoNhat <= NGUONG_AM_THANH_RO) {
+      // Khong co tieng nao vuot nguong ro suot luot thu — server se khong
+      // nhan dien duoc gio noi (VAD), im MAI MAI chu khong phai dang cham.
+      veTinPhatAm(id, '<i class="fa-solid fa-triangle-exclamation"></i><span>Không nghe rõ giọng nói — kiểm tra quyền micro hoặc nói to, gần micro hơn rồi thử lại.</span>', 'amber');
+      return;
+    }
+
     veTinPhatAm(id, '<i class="fa-solid fa-spinner fa-spin"></i><span>Sensei đang nghe lại và chuẩn bị phán…</span>');
     dangChoChamPhatAm = id; // onTurnComplete se dien loi cham that vao day khi xong
 
