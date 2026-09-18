@@ -9936,99 +9936,1569 @@
     "level": "N2",
     "lessonNumber": 8,
     "title": "Bài 8: Tranh cãi & Vấn đề xoay quanh (をめぐって & を巡る)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N2.",
+    "description": "をめぐって diễn tả 'xoay quanh' một VẤN ĐỀ TRANH CÃI có nhiều bên quan điểm khác nhau, thường theo sau bởi động từ tranh luận/đối lập, dùng khi câu kết thúc bằng động từ; を巡る là dạng bổ nghĩa danh từ tương ứng, đứng trực tiếp trước danh từ nó bổ nghĩa; thường kết hợp với 賛成/反対 để mô tả hai phe ý kiến trái ngược.",
     "vocabList": [
       {
         "id": "voc-n2-8-1",
-        "word": "重要語彙 (N2)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "たいりつします",
+        "kanji": "対立します",
+        "furigana": "たいりつします",
+        "romaji": "tairitsu shimasu",
+        "wordType": "verb",
+        "meaningVi": "Đối lập, đối đầu",
+        "accentNote": "いけんが 対立します = ý kiến đối lập nhau."
+      },
+      {
+        "id": "voc-n2-8-2",
+        "word": "とち",
+        "kanji": "土地",
+        "furigana": "とち",
+        "romaji": "tochi",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 8",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Đất đai",
+        "accentNote": "土地の 問題 = vấn đề đất đai."
+      },
+      {
+        "id": "voc-n2-8-3",
+        "word": "かいけつします",
+        "kanji": "解決します",
+        "furigana": "かいけつします",
+        "romaji": "kaiketsu shimasu",
+        "wordType": "verb",
+        "meaningVi": "Giải quyết",
+        "accentNote": "Đã gặp N3 bài 13."
+      },
+      {
+        "id": "voc-n2-8-4",
+        "word": "ぎろんします",
+        "kanji": "議論します",
+        "furigana": "ぎろんします",
+        "romaji": "giron shimasu",
+        "wordType": "verb",
+        "meaningVi": "Tranh luận",
+        "accentNote": "Đã gặp N3 bài 17."
+      },
+      {
+        "id": "voc-n2-8-5",
+        "word": "さんせい",
+        "kanji": "賛成",
+        "furigana": "さんせい",
+        "romaji": "sansei",
+        "wordType": "noun",
+        "meaningVi": "Tán thành",
+        "accentNote": "Đã gặp N3 bài 20."
+      },
+      {
+        "id": "voc-n2-8-6",
+        "word": "はんたい",
+        "kanji": "反対",
+        "furigana": "はんたい",
+        "romaji": "hantai",
+        "wordType": "noun",
+        "meaningVi": "Phản đối",
+        "accentNote": "Đã gặp N3 bài 20."
+      },
+      {
+        "id": "voc-n2-8-7",
+        "word": "もんだい",
+        "kanji": "問題",
+        "furigana": "もんだい",
+        "romaji": "mondai",
+        "wordType": "noun",
+        "meaningVi": "Vấn đề",
+        "accentNote": "Đã gặp N5 bài 22."
+      },
+      {
+        "id": "voc-n2-8-8",
+        "word": "けいかく",
+        "kanji": "計画",
+        "furigana": "けいかく",
+        "romaji": "keikaku",
+        "wordType": "noun",
+        "meaningVi": "Kế hoạch",
+        "accentNote": "Đã gặp N4 bài 26."
+      },
+      {
+        "id": "voc-n2-8-9",
+        "word": "かいしゃ",
+        "kanji": "会社",
+        "furigana": "かいしゃ",
+        "romaji": "kaisha",
+        "wordType": "noun",
+        "meaningVi": "Công ty",
+        "accentNote": "Đã gặp N4 bài 26."
+      },
+      {
+        "id": "voc-n2-8-10",
+        "word": "いけん",
+        "kanji": "意見",
+        "furigana": "いけん",
+        "romaji": "iken",
+        "wordType": "noun",
+        "meaningVi": "Ý kiến",
+        "accentNote": "Đã gặp N4 bài 26."
+      },
+      {
+        "id": "voc-n2-8-11",
+        "word": "つづきます",
+        "kanji": "続きます",
+        "furigana": "つづきます",
+        "romaji": "tsuzukimasu",
+        "wordType": "verb",
+        "meaningVi": "Tiếp diễn",
+        "accentNote": "Đã gặp N3 bài 9."
+      },
+      {
+        "id": "voc-n2-8-12",
+        "word": "なります",
+        "kanji": "成ります",
+        "furigana": "なります",
+        "romaji": "narimasu",
+        "wordType": "verb",
+        "meaningVi": "Trở thành",
+        "accentNote": "Đã gặp N5 bài 8."
+      },
+      {
+        "id": "voc-n2-8-13",
+        "word": "まだ",
+        "kanji": "まだ",
+        "furigana": "まだ",
+        "romaji": "mada",
+        "wordType": "adverb",
+        "meaningVi": "Vẫn chưa",
+        "accentNote": "Đã gặp N4 bài 26."
+      },
+      {
+        "id": "voc-n2-8-14",
+        "word": "ひと",
+        "kanji": "人",
+        "furigana": "ひと",
+        "romaji": "hito",
+        "wordType": "noun",
+        "meaningVi": "Người",
+        "accentNote": "Đã gặp N5 bài 1."
+      },
+      {
+        "id": "voc-n2-8-15",
+        "word": "せいじ",
+        "kanji": "政治",
+        "furigana": "せいじ",
+        "romaji": "seiji",
+        "wordType": "noun",
+        "meaningVi": "Chính trị",
+        "accentNote": "Đã gặp N4 bài 40."
+      },
+      {
+        "id": "voc-n2-8-16",
+        "word": "しゃかい",
+        "kanji": "社会",
+        "furigana": "しゃかい",
+        "romaji": "shakai",
+        "wordType": "noun",
+        "meaningVi": "Xã hội",
+        "accentNote": "Đã gặp N3 bài 5."
+      },
+      {
+        "id": "voc-n2-8-17",
+        "word": "かんきょう",
+        "kanji": "環境",
+        "furigana": "かんきょう",
+        "romaji": "kankyou",
+        "wordType": "noun",
+        "meaningVi": "Môi trường",
+        "accentNote": "Đã gặp N3 bài 5."
+      },
+      {
+        "id": "voc-n2-8-18",
+        "word": "かいぎ",
+        "kanji": "会議",
+        "furigana": "かいぎ",
+        "romaji": "kaigi",
+        "wordType": "noun",
+        "meaningVi": "Cuộc họp",
+        "accentNote": "Đã gặp N4 bài 30."
+      },
+      {
+        "id": "voc-n2-8-19",
+        "word": "くに",
+        "kanji": "国",
+        "furigana": "くに",
+        "romaji": "kuni",
+        "wordType": "noun",
+        "meaningVi": "Quốc gia",
+        "accentNote": "Đã gặp N4 bài 26."
+      },
+      {
+        "id": "voc-n2-8-20",
+        "word": "とうきょう",
+        "kanji": "東京",
+        "furigana": "とうきょう",
+        "romaji": "toukyou",
+        "wordType": "noun",
+        "meaningVi": "Tokyo",
+        "accentNote": "Đã gặp N2 bài 6."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n2-8-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "対",
+        "hanViet": "ĐỐI",
+        "strokeCount": 7,
         "onyomi": [
-          "ゴ"
+          "タイ (tai)"
         ],
-        "kunyomi": [
-          "かたる"
-        ],
-        "meaningVi": "Ngôn ngữ",
+        "kunyomi": [],
+        "meaningVi": "Đối lập, đối diện.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "対立",
+            "furigana": "たいりつ",
+            "meaningVi": "Đối lập"
+          },
+          {
+            "word": "反対",
+            "furigana": "はんたい",
+            "meaningVi": "Phản đối"
+          }
+        ]
+      },
+      {
+        "id": "kan-n2-8-2",
+        "character": "立",
+        "hanViet": "LẬP",
+        "strokeCount": 5,
+        "onyomi": [
+          "リツ (ritsu)"
+        ],
+        "kunyomi": [
+          "た(つ)"
+        ],
+        "meaningVi": "Đứng, thành lập.",
+        "commonWords": [
+          {
+            "word": "対立",
+            "furigana": "たいりつ",
+            "meaningVi": "Đối lập"
+          },
+          {
+            "word": "立場",
+            "furigana": "たちば",
+            "meaningVi": "Lập trường"
+          }
+        ]
+      },
+      {
+        "id": "kan-n2-8-3",
+        "character": "巡",
+        "hanViet": "TUẦN",
+        "strokeCount": 6,
+        "onyomi": [
+          "ジュン (jun)"
+        ],
+        "kunyomi": [
+          "めぐ(る)"
+        ],
+        "meaningVi": "Đi vòng quanh, tuần hoàn.",
+        "commonWords": [
+          {
+            "word": "巡る",
+            "furigana": "めぐる",
+            "meaningVi": "Xoay quanh"
+          },
+          {
+            "word": "巡回",
+            "furigana": "じゅんかい",
+            "meaningVi": "Tuần tra"
+          }
+        ]
+      },
+      {
+        "id": "kan-n2-8-4",
+        "character": "土",
+        "hanViet": "THỔ",
+        "strokeCount": 3,
+        "onyomi": [
+          "ド (do)"
+        ],
+        "kunyomi": [
+          "つち"
+        ],
+        "meaningVi": "Đất, thổ nhưỡng.",
+        "commonWords": [
+          {
+            "word": "土地",
+            "furigana": "とち",
+            "meaningVi": "Đất đai"
+          },
+          {
+            "word": "土曜日",
+            "furigana": "どようび",
+            "meaningVi": "Thứ bảy"
+          }
+        ]
+      },
+      {
+        "id": "kan-n2-8-5",
+        "character": "地",
+        "hanViet": "ĐỊA",
+        "strokeCount": 6,
+        "onyomi": [
+          "チ (chi)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Đất, địa điểm.",
+        "commonWords": [
+          {
+            "word": "土地",
+            "furigana": "とち",
+            "meaningVi": "Đất đai"
+          },
+          {
+            "word": "地震",
+            "furigana": "じしん",
+            "meaningVi": "Động đất"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n2-l8-s0",
-        "title": "Trọng tâm: Tranh cãi & Vấn đề xoay quanh (をめぐって & を巡る)",
-        "grammarFormula": "N + をめぐって / をめぐる + N",
-        "explanation": "Xoay quanh một mâu thuẫn, tranh chấp giữa nhiều bên.",
+        "slideId": "n2-l8-s1",
+        "slideType": "grammar",
+        "title": "1. Xoay quanh (trước động từ tranh luận): N + をめぐって",
+        "grammarFormula": "N(vấn đề tranh cãi) + をめぐって、[tranh luận/đối lập/xảy ra]",
+        "explanation": "をめぐって diễn tả 'XOAY QUANH' một VẤN ĐỀ TRANH CÃI — thường theo sau bởi động từ chỉ sự TRANH LUẬN/ĐỐI LẬP (議論する, 対立する, 争う), dùng khi mô tả một cuộc tranh cãi có NHIỀU BÊN liên quan.",
+        "teacherTips": "をめぐって luôn ngụ ý có NHIỀU BÊN với QUAN ĐIỂM KHÁC NHAU về cùng một vấn đề — không dùng cho vấn đề đã có sự đồng thuận.",
+        "culturalNotes": "Bản tin thời sự Nhật hay dùng: '新しい法律をめぐって、国会で議論が続いている' (xoay quanh luật mới, tranh luận vẫn tiếp diễn ở quốc hội).",
         "examples": [
           {
-            "id": "ex-n2-l8-1",
+            "id": "ex-n2-l8-s1-1",
             "tokens": [
               {
-                "id": "tok-n2-l8-1",
-                "text": "遺産相続をめ",
+                "id": "t-l8s1-1",
+                "text": "とち",
+                "isKeyGrammar": true,
+                "kanji": "土地",
+                "furigana": "とち"
+              },
+              {
+                "id": "t-l8s1-2",
+                "text": "の",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n2-l8-2",
-                "text": "ぐって、兄弟が 争っている。",
+                "id": "t-l8s1-3",
+                "text": "もんだい",
+                "isKeyGrammar": true,
+                "kanji": "問題",
+                "furigana": "もんだい"
+              },
+              {
+                "id": "t-l8s1-4",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s1-5",
+                "text": "めぐって",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s1-6",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s1-7",
+                "text": "たいりつ",
+                "isKeyGrammar": true,
+                "kanji": "対立",
+                "furigana": "たいりつ"
+              },
+              {
+                "id": "t-l8s1-8",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s1-9",
+                "text": "つづいて",
+                "isKeyGrammar": false,
+                "kanji": "続いて",
+                "furigana": "つづいて"
+              },
+              {
+                "id": "t-l8s1-10",
+                "text": "います",
+                "isKeyGrammar": false,
+                "kanji": "居ます",
+                "furigana": "います"
+              }
+            ],
+            "meaningVi": "Xoay quanh vấn đề đất đai, sự đối lập vẫn tiếp diễn."
+          },
+          {
+            "id": "ex-n2-l8-s1-2",
+            "tokens": [
+              {
+                "id": "t-l8s1-11",
+                "text": "けいかく",
+                "isKeyGrammar": true,
+                "kanji": "計画",
+                "furigana": "けいかく"
+              },
+              {
+                "id": "t-l8s1-12",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s1-13",
+                "text": "めぐって",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s1-14",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s1-15",
+                "text": "ぎろん",
+                "isKeyGrammar": true,
+                "kanji": "議論",
+                "furigana": "ぎろん"
+              },
+              {
+                "id": "t-l8s1-16",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s1-17",
+                "text": "おこなわれました",
+                "isKeyGrammar": false,
+                "kanji": "行われました",
+                "furigana": "おこなわれました"
+              }
+            ],
+            "meaningVi": "Xoay quanh kế hoạch, đã diễn ra tranh luận."
+          }
+        ]
+      },
+      {
+        "slideId": "n2-l8-s2",
+        "slideType": "grammar",
+        "title": "2. Dạng bổ nghĩa danh từ: N1 + を巡る + N2",
+        "grammarFormula": "N1(vấn đề tranh cãi) + を巡る + N2(vấn đề/tranh luận/đối lập)",
+        "explanation": "を巡る là DẠNG BỔ NGHĨA DANH TỪ của をめぐって — dùng khi 'vấn đề xoay quanh N1' cần bổ nghĩa trực tiếp cho một DANH TỪ khác (N2) như 問題, 議論, 対立, đứng NGAY TRƯỚC danh từ đó.",
+        "teacherTips": "Nを巡るN2 ≈ N2をめぐって (cùng ý nghĩa, khác vị trí cú pháp) — chọn dạng nào tùy vào N2 đứng trước hay sau trong câu.",
+        "culturalNotes": "Tiêu đề báo Nhật thường dùng を巡る để súc tích hóa câu: '環境問題を巡る国際会議' (hội nghị quốc tế xoay quanh vấn đề môi trường).",
+        "examples": [
+          {
+            "id": "ex-n2-l8-s2-1",
+            "tokens": [
+              {
+                "id": "t-l8s2-1",
+                "text": "とち",
+                "isKeyGrammar": true,
+                "kanji": "土地",
+                "furigana": "とち"
+              },
+              {
+                "id": "t-l8s2-2",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s2-3",
+                "text": "めぐる",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s2-4",
+                "text": "もんだい",
+                "isKeyGrammar": true,
+                "kanji": "問題",
+                "furigana": "もんだい"
+              },
+              {
+                "id": "t-l8s2-5",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s2-6",
+                "text": "まだ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s2-7",
+                "text": "かいけつ",
+                "isKeyGrammar": true,
+                "kanji": "解決",
+                "furigana": "かいけつ"
+              },
+              {
+                "id": "t-l8s2-8",
+                "text": "して",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s2-9",
+                "text": "いません",
                 "isKeyGrammar": true
               }
             ],
-            "meaningVi": "Xoay quanh việc thừa kế tài sản, anh em đang tranh chấp nhau."
+            "meaningVi": "Vấn đề xoay quanh đất đai vẫn chưa được giải quyết."
+          },
+          {
+            "id": "ex-n2-l8-s2-2",
+            "tokens": [
+              {
+                "id": "t-l8s2-10",
+                "text": "けいかく",
+                "isKeyGrammar": true,
+                "kanji": "計画",
+                "furigana": "けいかく"
+              },
+              {
+                "id": "t-l8s2-11",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s2-12",
+                "text": "めぐる",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s2-13",
+                "text": "ぎろん",
+                "isKeyGrammar": true,
+                "kanji": "議論",
+                "furigana": "ぎろん"
+              },
+              {
+                "id": "t-l8s2-14",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s2-15",
+                "text": "つづいて",
+                "isKeyGrammar": false,
+                "kanji": "続いて",
+                "furigana": "つづいて"
+              },
+              {
+                "id": "t-l8s2-16",
+                "text": "います",
+                "isKeyGrammar": false,
+                "kanji": "居ます",
+                "furigana": "います"
+              }
+            ],
+            "meaningVi": "Cuộc tranh luận xoay quanh kế hoạch vẫn đang tiếp diễn."
           }
-        ],
-        "culturalNotes": "Ngữ pháp trình độ N2 dùng nhiều trong báo chí, kinh doanh và văn bản học thuật."
+        ]
+      },
+      {
+        "slideId": "n2-l8-s3",
+        "slideType": "grammar",
+        "title": "3. So sánh vị trí cú pháp của をめぐって và を巡る",
+        "grammarFormula": "Nをめぐって、[động từ ở CUỐI câu]　vs　Nを巡るN2 (N2 là danh từ theo SAU ngay lập tức)",
+        "explanation": "Hai dạng CÙNG Ý NGHĨA nhưng khác VỊ TRÍ CÚ PHÁP: をめぐって đặt TRƯỚC MỆNH ĐỀ (có động từ ở cuối câu); を巡る đặt TRỰC TIẾP TRƯỚC DANH TỪ mà nó bổ nghĩa — cần chọn đúng dạng theo cấu trúc câu.",
+        "teacherTips": "Mẹo: nếu câu KẾT THÚC bằng động từ → dùng をめぐって; nếu cần một CỤM DANH TỪ (làm chủ ngữ/tân ngữ) → dùng を巡る.",
+        "culturalNotes": "Cả hai đều là ngữ pháp N2 trọng điểm, hay xuất hiện trong đề đọc hiểu về tin tức chính trị, xã hội, tranh chấp kinh doanh.",
+        "examples": [
+          {
+            "id": "ex-n2-l8-s3-1",
+            "tokens": [
+              {
+                "id": "t-l8s3-1",
+                "text": "せいじ",
+                "isKeyGrammar": true,
+                "kanji": "政治",
+                "furigana": "せいじ"
+              },
+              {
+                "id": "t-l8s3-2",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s3-3",
+                "text": "めぐって",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s3-4",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s3-5",
+                "text": "ひと",
+                "isKeyGrammar": true,
+                "kanji": "人",
+                "furigana": "ひと"
+              },
+              {
+                "id": "t-l8s3-6",
+                "text": "びと",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s3-7",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s3-8",
+                "text": "いけん",
+                "isKeyGrammar": true,
+                "kanji": "意見",
+                "furigana": "いけん"
+              },
+              {
+                "id": "t-l8s3-9",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s3-10",
+                "text": "わかれます",
+                "isKeyGrammar": false,
+                "kanji": "分かれます",
+                "furigana": "わかれます"
+              }
+            ],
+            "meaningVi": "Xoay quanh chính trị, ý kiến của mọi người bị chia rẽ. (をめぐって + động từ cuối câu)"
+          },
+          {
+            "id": "ex-n2-l8-s3-2",
+            "tokens": [
+              {
+                "id": "t-l8s3-11",
+                "text": "せいじ",
+                "isKeyGrammar": true,
+                "kanji": "政治",
+                "furigana": "せいじ"
+              },
+              {
+                "id": "t-l8s3-12",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s3-13",
+                "text": "めぐる",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s3-14",
+                "text": "いけん",
+                "isKeyGrammar": true,
+                "kanji": "意見",
+                "furigana": "いけん"
+              },
+              {
+                "id": "t-l8s3-15",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s3-16",
+                "text": "ちがい",
+                "isKeyGrammar": false,
+                "kanji": "違い",
+                "furigana": "ちがい"
+              },
+              {
+                "id": "t-l8s3-17",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s3-18",
+                "text": "おおきい",
+                "isKeyGrammar": false,
+                "kanji": "大きい",
+                "furigana": "おおきい"
+              }
+            ],
+            "meaningVi": "Sự khác biệt ý kiến xoay quanh chính trị là rất lớn. (を巡る + danh từ theo sau)"
+          }
+        ]
+      },
+      {
+        "slideId": "n2-l8-s4",
+        "slideType": "grammar",
+        "title": "4. Kết hợp với 賛成/反対 để mô tả hai phe tranh luận",
+        "grammarFormula": "Nをめぐって、賛成する人と反対する人が対立します",
+        "explanation": "をめぐって/を巡る thường kết hợp với 賛成 (tán thành) và 反対 (phản đối) để mô tả một vấn đề có HAI PHE Ý KIẾN TRÁI NGƯỢC — cấu trúc điển hình khi tường thuật một cuộc tranh luận xã hội.",
+        "teacherTips": "賛成派/反対派 (phe tán thành/phe phản đối) là cách gọi phổ biến trong tin tức khi tường thuật các cuộc tranh luận をめぐって.",
+        "culturalNotes": "Bài báo về chính sách công ở Nhật thường có cấu trúc: '[vấn đề]をめぐって、賛成派と反対派が対立している'.",
+        "examples": [
+          {
+            "id": "ex-n2-l8-s4-1",
+            "tokens": [
+              {
+                "id": "t-l8s4-1",
+                "text": "この",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s4-2",
+                "text": "けいかく",
+                "isKeyGrammar": true,
+                "kanji": "計画",
+                "furigana": "けいかく"
+              },
+              {
+                "id": "t-l8s4-3",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s4-4",
+                "text": "めぐって",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s4-5",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s4-6",
+                "text": "さんせい",
+                "isKeyGrammar": true,
+                "kanji": "賛成",
+                "furigana": "さんせい"
+              },
+              {
+                "id": "t-l8s4-7",
+                "text": "する",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s4-8",
+                "text": "ひと",
+                "isKeyGrammar": false,
+                "kanji": "人",
+                "furigana": "ひと"
+              },
+              {
+                "id": "t-l8s4-9",
+                "text": "と",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s4-10",
+                "text": "はんたい",
+                "isKeyGrammar": true,
+                "kanji": "反対",
+                "furigana": "はんたい"
+              },
+              {
+                "id": "t-l8s4-11",
+                "text": "する",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s4-12",
+                "text": "ひと",
+                "isKeyGrammar": false,
+                "kanji": "人",
+                "furigana": "ひと"
+              },
+              {
+                "id": "t-l8s4-13",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s4-14",
+                "text": "たいりつ",
+                "isKeyGrammar": true,
+                "kanji": "対立",
+                "furigana": "たいりつ"
+              },
+              {
+                "id": "t-l8s4-15",
+                "text": "して",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s4-16",
+                "text": "います",
+                "isKeyGrammar": false,
+                "kanji": "居ます",
+                "furigana": "います"
+              }
+            ],
+            "meaningVi": "Xoay quanh kế hoạch này, người tán thành và người phản đối đang đối lập nhau."
+          },
+          {
+            "id": "ex-n2-l8-s4-2",
+            "tokens": [
+              {
+                "id": "t-l8s4-17",
+                "text": "とち",
+                "isKeyGrammar": true,
+                "kanji": "土地",
+                "furigana": "とち"
+              },
+              {
+                "id": "t-l8s4-18",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s4-19",
+                "text": "めぐる",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s4-20",
+                "text": "かいぎ",
+                "isKeyGrammar": true,
+                "kanji": "会議",
+                "furigana": "かいぎ"
+              },
+              {
+                "id": "t-l8s4-21",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s4-22",
+                "text": "まだ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s4-23",
+                "text": "つづいて",
+                "isKeyGrammar": false,
+                "kanji": "続いて",
+                "furigana": "つづいて"
+              },
+              {
+                "id": "t-l8s4-24",
+                "text": "います",
+                "isKeyGrammar": false,
+                "kanji": "居ます",
+                "furigana": "います"
+              }
+            ],
+            "meaningVi": "Cuộc họp xoay quanh đất đai vẫn đang tiếp diễn."
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n2-8-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
         "tokens": [
           {
-            "id": "tok-n2-8-d1",
-            "text": "この文法のポイントを"
+            "id": "d8-1",
+            "text": "とち",
+            "isKeyGrammar": true,
+            "kanji": "土地",
+            "furigana": "とち"
           },
           {
-            "id": "tok-n2-8-d2",
-            "text": "復習しましょう。"
+            "id": "d8-2",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-3",
+            "text": "もんだい",
+            "isKeyGrammar": true,
+            "kanji": "問題",
+            "furigana": "もんだい"
+          },
+          {
+            "id": "d8-4",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-5",
+            "text": "めぐって",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d8-6",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-7",
+            "text": "たいりつ",
+            "isKeyGrammar": true,
+            "kanji": "対立",
+            "furigana": "たいりつ"
+          },
+          {
+            "id": "d8-8",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-9",
+            "text": "つづいて",
+            "isKeyGrammar": false,
+            "kanji": "続いて",
+            "furigana": "つづいて"
+          },
+          {
+            "id": "d8-10",
+            "text": "います",
+            "isKeyGrammar": false,
+            "kanji": "居ます",
+            "furigana": "います"
+          },
+          {
+            "id": "d8-11",
+            "text": "ね",
+            "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Xoay quanh vấn đề đất đai, sự đối lập vẫn tiếp diễn nhỉ."
+      },
+      {
+        "id": "dia-n2-8-2",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d8-12",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-13",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-14",
+            "text": "とち",
+            "isKeyGrammar": true,
+            "kanji": "土地",
+            "furigana": "とち"
+          },
+          {
+            "id": "d8-15",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-16",
+            "text": "めぐる",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d8-17",
+            "text": "もんだい",
+            "isKeyGrammar": true,
+            "kanji": "問題",
+            "furigana": "もんだい"
+          },
+          {
+            "id": "d8-18",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-19",
+            "text": "まだ",
+            "isKeyGrammar": true,
+            "kanji": "まだ",
+            "furigana": "まだ"
+          },
+          {
+            "id": "d8-20",
+            "text": "かいけつ",
+            "isKeyGrammar": true,
+            "kanji": "解決",
+            "furigana": "かいけつ"
+          },
+          {
+            "id": "d8-21",
+            "text": "して",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d8-22",
+            "text": "いません",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Vâng. Vấn đề xoay quanh đất đai vẫn chưa được giải quyết."
+      },
+      {
+        "id": "dia-n2-8-3",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d8-23",
+            "text": "けいかく",
+            "isKeyGrammar": true,
+            "kanji": "計画",
+            "furigana": "けいかく"
+          },
+          {
+            "id": "d8-24",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-25",
+            "text": "めぐって",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d8-26",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-27",
+            "text": "かいしゃ",
+            "isKeyGrammar": true,
+            "kanji": "会社",
+            "furigana": "かいしゃ"
+          },
+          {
+            "id": "d8-28",
+            "text": "で",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-29",
+            "text": "ぎろん",
+            "isKeyGrammar": true,
+            "kanji": "議論",
+            "furigana": "ぎろん"
+          },
+          {
+            "id": "d8-30",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-31",
+            "text": "おこなわれました",
+            "isKeyGrammar": false,
+            "kanji": "行われました",
+            "furigana": "おこなわれました"
+          }
+        ],
+        "meaningVi": "Xoay quanh kế hoạch, đã có tranh luận diễn ra ở công ty."
+      },
+      {
+        "id": "dia-n2-8-4",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d8-32",
+            "text": "さんせい",
+            "isKeyGrammar": true,
+            "kanji": "賛成",
+            "furigana": "さんせい"
+          },
+          {
+            "id": "d8-33",
+            "text": "する",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-34",
+            "text": "ひと",
+            "isKeyGrammar": true,
+            "kanji": "人",
+            "furigana": "ひと"
+          },
+          {
+            "id": "d8-35",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-36",
+            "text": "おおいです",
+            "isKeyGrammar": false,
+            "kanji": "多いです",
+            "furigana": "おおいです"
+          },
+          {
+            "id": "d8-37",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Có nhiều người tán thành không?"
+      },
+      {
+        "id": "dia-n2-8-5",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d8-38",
+            "text": "はんたい",
+            "isKeyGrammar": true,
+            "kanji": "反対",
+            "furigana": "はんたい"
+          },
+          {
+            "id": "d8-39",
+            "text": "する",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-40",
+            "text": "ひと",
+            "isKeyGrammar": true,
+            "kanji": "人",
+            "furigana": "ひと"
+          },
+          {
+            "id": "d8-41",
+            "text": "と",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-42",
+            "text": "たいりつ",
+            "isKeyGrammar": true,
+            "kanji": "対立",
+            "furigana": "たいりつ"
+          },
+          {
+            "id": "d8-43",
+            "text": "して",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d8-44",
+            "text": "います",
+            "isKeyGrammar": false,
+            "kanji": "居ます",
+            "furigana": "います"
+          }
+        ],
+        "meaningVi": "Đang đối lập với những người phản đối."
+      },
+      {
+        "id": "dia-n2-8-6",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d8-45",
+            "text": "せいじ",
+            "isKeyGrammar": true,
+            "kanji": "政治",
+            "furigana": "せいじ"
+          },
+          {
+            "id": "d8-46",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-47",
+            "text": "めぐる",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d8-48",
+            "text": "いけん",
+            "isKeyGrammar": true,
+            "kanji": "意見",
+            "furigana": "いけん"
+          },
+          {
+            "id": "d8-49",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-50",
+            "text": "ちがい",
+            "isKeyGrammar": false,
+            "kanji": "違い",
+            "furigana": "ちがい"
+          },
+          {
+            "id": "d8-51",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-52",
+            "text": "おおきい",
+            "isKeyGrammar": false,
+            "kanji": "大きい",
+            "furigana": "おおきい"
+          },
+          {
+            "id": "d8-53",
+            "text": "です",
+            "isKeyGrammar": false,
+            "kanji": "です",
+            "furigana": "です"
+          },
+          {
+            "id": "d8-54",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Sự khác biệt ý kiến xoay quanh chính trị cũng lớn nhỉ."
+      },
+      {
+        "id": "dia-n2-8-7",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d8-55",
+            "text": "かんきょう",
+            "isKeyGrammar": true,
+            "kanji": "環境",
+            "furigana": "かんきょう"
+          },
+          {
+            "id": "d8-56",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-57",
+            "text": "めぐって",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d8-58",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-59",
+            "text": "しゃかい",
+            "isKeyGrammar": true,
+            "kanji": "社会",
+            "furigana": "しゃかい"
+          },
+          {
+            "id": "d8-60",
+            "text": "で",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-61",
+            "text": "ぎろん",
+            "isKeyGrammar": true,
+            "kanji": "議論",
+            "furigana": "ぎろん"
+          },
+          {
+            "id": "d8-62",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-63",
+            "text": "あります",
+            "isKeyGrammar": false,
+            "kanji": "有ります",
+            "furigana": "あります"
+          }
+        ],
+        "meaningVi": "Xoay quanh môi trường cũng có tranh luận trong xã hội."
+      },
+      {
+        "id": "dia-n2-8-8",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d8-64",
+            "text": "くに",
+            "isKeyGrammar": true,
+            "kanji": "国",
+            "furigana": "くに"
+          },
+          {
+            "id": "d8-65",
+            "text": "ぜんたい",
+            "isKeyGrammar": false,
+            "kanji": "全体",
+            "furigana": "ぜんたい"
+          },
+          {
+            "id": "d8-66",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-67",
+            "text": "かんけい",
+            "isKeyGrammar": false,
+            "kanji": "関係",
+            "furigana": "かんけい"
+          },
+          {
+            "id": "d8-68",
+            "text": "しますか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Toàn quốc gia có liên quan không?"
+      },
+      {
+        "id": "dia-n2-8-9",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d8-69",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-70",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-71",
+            "text": "とうきょう",
+            "isKeyGrammar": true,
+            "kanji": "東京",
+            "furigana": "とうきょう"
+          },
+          {
+            "id": "d8-72",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-73",
+            "text": "かいぎ",
+            "isKeyGrammar": true,
+            "kanji": "会議",
+            "furigana": "かいぎ"
+          },
+          {
+            "id": "d8-74",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-75",
+            "text": "つづいて",
+            "isKeyGrammar": false,
+            "kanji": "続いて",
+            "furigana": "つづいて"
+          },
+          {
+            "id": "d8-76",
+            "text": "います",
+            "isKeyGrammar": false,
+            "kanji": "居ます",
+            "furigana": "います"
+          }
+        ],
+        "meaningVi": "Vâng. Cuộc họp ở Tokyo cũng đang tiếp diễn."
+      },
+      {
+        "id": "dia-n2-8-10",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d8-77",
+            "text": "はやく",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-78",
+            "text": "かいけつ",
+            "isKeyGrammar": true,
+            "kanji": "解決",
+            "furigana": "かいけつ"
+          },
+          {
+            "id": "d8-79",
+            "text": "して",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d8-80",
+            "text": "ほしい",
+            "isKeyGrammar": false,
+            "kanji": "欲しい",
+            "furigana": "ほしい"
+          },
+          {
+            "id": "d8-81",
+            "text": "です",
+            "isKeyGrammar": false,
+            "kanji": "です",
+            "furigana": "です"
+          },
+          {
+            "id": "d8-82",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Mong sẽ sớm được giải quyết nhỉ."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n2-8-1",
-        "question": "Chọn mẫu ngữ pháp phù hợp biểu thị: 'Tranh cãi & Vấn đề xoay quanh (をめぐって & を巡る)'",
+        "question": "「土地の問題をめぐって、対立が続いています」 — をめぐって diễn tả điều gì?",
         "options": [
-          "N + をめぐって",
-          "V-る + べきではない",
-          "N + からして",
-          "V-ます + 次第"
+          "Xoay quanh một vấn đề tranh cãi, thường có nhiều bên với quan điểm khác nhau",
+          "Sự khẳng định chắc chắn một điều gì đó",
+          "Sự từ chối lịch sự",
+          "Phủ định hoàn toàn vấn đề"
         ],
         "correctIndex": 0,
-        "explanation": "Cấu trúc chính xác: N + をめぐって / をめぐる + N",
-        "hint": "Xem công thức liên kết đặc trưng của N2."
+        "explanation": "をめぐって diễn tả việc xoay quanh một vấn đề TRANH CÃI có nhiều bên quan điểm khác nhau.",
+        "hint": "Xem cấu trúc をめぐって ở slide 1."
+      },
+      {
+        "id": "ex-q-n2-8-2",
+        "question": "「土地を巡る問題」 — を巡る khác をめぐって ở điểm nào?",
+        "options": [
+          "を巡る là dạng bổ nghĩa danh từ, đứng TRỰC TIẾP trước danh từ nó bổ nghĩa",
+          "Hoàn toàn khác nghĩa nhau",
+          "を巡る chỉ dùng cho câu hỏi",
+          "をめぐって chỉ dùng cho phủ định"
+        ],
+        "correctIndex": 0,
+        "explanation": "を巡る là dạng bổ nghĩa danh từ của をめぐって, đứng ngay trước danh từ (như 問題, 議論).",
+        "hint": "Xem giải thích を巡る ở slide 2."
+      },
+      {
+        "id": "ex-q-n2-8-3",
+        "question": "Khi nào nên dùng をめぐって thay vì を巡る?",
+        "options": [
+          "Khi câu kết thúc bằng một động từ (mệnh đề hoàn chỉnh)",
+          "Khi cần một cụm danh từ làm chủ ngữ/tân ngữ",
+          "Không có sự khác biệt nào",
+          "Chỉ dùng được trong câu hỏi"
+        ],
+        "correctIndex": 0,
+        "explanation": "をめぐって dùng khi câu có động từ ở CUỐI câu; を巡る dùng khi cần tạo CỤM DANH TỪ.",
+        "hint": "Xem mẹo phân biệt ở slide 3."
+      },
+      {
+        "id": "ex-q-n2-8-4",
+        "question": "「政治を巡る意見の違いは大きい」 nghĩa là:",
+        "options": [
+          "Sự khác biệt ý kiến xoay quanh chính trị là rất lớn",
+          "Không có sự khác biệt ý kiến nào về chính trị",
+          "Chính trị đã được giải quyết hoàn toàn",
+          "Mọi người đều đồng ý về chính trị"
+        ],
+        "correctIndex": 0,
+        "explanation": "を巡る ở đây bổ nghĩa cho 意見の違い (sự khác biệt ý kiến), nghĩa là sự khác biệt XOAY QUANH chính trị.",
+        "hint": "Áp dụng cấu trúc Nを巡るN2."
+      },
+      {
+        "id": "ex-q-n2-8-5",
+        "question": "をめぐって/を巡る thường kết hợp với cặp từ nào để mô tả hai phe tranh luận?",
+        "options": [
+          "賛成 (tán thành) và 反対 (phản đối)",
+          "上手 (giỏi) và 下手 (kém)",
+          "忙しい (bận) và 暇 (rảnh)",
+          "高い (cao) và 安い (rẻ)"
+        ],
+        "correctIndex": 0,
+        "explanation": "賛成/反対 là cặp từ điển hình mô tả hai phe ý kiến trái ngược khi dùng をめぐって/を巡る.",
+        "hint": "Xem cấu trúc kết hợp ở slide 4."
+      },
+      {
+        "id": "ex-q-n2-8-6",
+        "question": "「この計画をめぐって、賛成する人と反対する人が対立しています」 nghĩa là:",
+        "options": [
+          "Xoay quanh kế hoạch này, người tán thành và người phản đối đang đối lập nhau",
+          "Mọi người đều tán thành kế hoạch này",
+          "Mọi người đều phản đối kế hoạch này",
+          "Kế hoạch này đã bị hủy bỏ"
+        ],
+        "correctIndex": 0,
+        "explanation": "Câu này mô tả HAI PHE (tán thành và phản đối) đang đối lập nhau xoay quanh kế hoạch.",
+        "hint": "Áp dụng cấu trúc kết hợp をめぐって + 賛成/反対."
+      },
+      {
+        "id": "ex-q-n2-8-7",
+        "question": "「環境をめぐって、社会で議論があります」 nghĩa là:",
+        "options": [
+          "Xoay quanh môi trường, có tranh luận trong xã hội",
+          "Môi trường đã được cải thiện hoàn toàn",
+          "Không ai quan tâm đến môi trường",
+          "Xã hội đã đồng thuận về môi trường"
+        ],
+        "correctIndex": 0,
+        "explanation": "をめぐって ở đây chỉ ra rằng vấn đề môi trường đang là chủ đề TRANH LUẬN trong xã hội.",
+        "hint": "Áp dụng cấu trúc Nをめぐって cho ngữ cảnh câu."
+      },
+      {
+        "id": "ex-q-n2-8-8",
+        "question": "Theo hội thoại, vấn đề đất đai đã được giải quyết chưa?",
+        "options": [
+          "Chưa, vẫn chưa được giải quyết (まだ解決していません)",
+          "Đã được giải quyết hoàn toàn",
+          "Không cần giải quyết",
+          "Không được đề cập trong hội thoại"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos nói 「土地を巡る問題はまだ解決していません」.",
+        "hint": "Xem câu thoại thứ 2."
+      },
+      {
+        "id": "ex-q-n2-8-9",
+        "question": "Ai đang đối lập với nhau trong hội thoại về kế hoạch của công ty?",
+        "options": [
+          "Người phản đối và người tán thành (反対する人と対立しています)",
+          "Chỉ có một phe duy nhất",
+          "Không ai đối lập cả",
+          "Giám đốc và trưởng phòng"
+        ],
+        "correctIndex": 0,
+        "explanation": "田中 nói 「反対する人と対立しています」.",
+        "hint": "Xem câu thoại thứ 5."
+      },
+      {
+        "id": "ex-q-n2-8-10",
+        "question": "Santos mong muốn điều gì ở cuối hội thoại?",
+        "options": [
+          "Vấn đề sẽ sớm được giải quyết (早く解決してほしいです)",
+          "Vấn đề sẽ kéo dài mãi mãi",
+          "Cuộc họp sẽ bị hủy",
+          "Không mong muốn gì cả"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos nói 「早く解決してほしいですね」.",
+        "hint": "Xem câu thoại cuối cùng."
       }
     ]
   },
