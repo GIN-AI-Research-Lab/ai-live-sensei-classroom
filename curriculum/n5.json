@@ -26173,68 +26173,208 @@
   {
     "level": "N5",
     "lessonNumber": 19,
-    "title": "Bài 19: Thể た & Kinh nghiệm (Vた ことが あります / Vたり Vたり します / なります)",
-    "description": "Học thể quá khứ ngắn (thể た), nói về trải nghiệm kinh nghiệm trong quá khứ, liệt kê hành động tượng trưng và sự biến đổi trạng thái.",
+    "title": "Bài 19: Thể た & Kinh nghiệm (Vたことがあります / Vたりたりします / なります)",
+    "description": "Chia thể た (giống quy tắc thể て, chỉ đổi て→た), diễn tả trải nghiệm quá khứ bằng Vたことがあります, liệt kê một vài hành động tiêu biểu bằng V1たりV2たりします, và sự biến đổi trạng thái theo thời gian bằng A/Nに／くなります.",
     "vocabList": [
       {
         "id": "voc-n5-19-1",
-        "word": "のぼります",
-        "kanji": "登ります",
-        "furigana": "noborimasu",
-        "romaji": "noborimasu",
+        "word": "のります",
+        "kanji": "乗ります",
+        "furigana": "のります",
+        "romaji": "norimasu",
         "wordType": "verb",
-        "meaningVi": "Leo (núi)",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "meaningVi": "Lên, đi (phương tiện)",
+        "accentNote": "Thể た: 乗った. Đã gặp bài 5."
       },
       {
         "id": "voc-n5-19-2",
-        "word": "とまります",
-        "kanji": "泊まります",
-        "furigana": "とまります",
-        "romaji": "tomarimasu",
+        "word": "のぼります",
+        "kanji": "登ります",
+        "furigana": "のぼります",
+        "romaji": "noborimasu",
         "wordType": "verb",
-        "meaningVi": "Trọ lại, ở lại (khách sạn)",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "meaningVi": "Leo, trèo (núi)",
+        "accentNote": "Thể た: 登った. 富士山に 登ります = leo núi Phú Sĩ."
       },
       {
         "id": "voc-n5-19-3",
-        "word": "そうじします",
-        "kanji": "掃除します",
-        "furigana": "そうじします",
-        "romaji": "soujishimasu",
-        "wordType": "verb",
-        "meaningVi": "Dọn dẹp, vệ sinh",
-        "accentNote": "Phát âm chuẩn Tokyo."
-      },
-      {
-        "id": "voc-n5-19-4",
-        "word": "せんたくします",
-        "kanji": "洗濯します",
-        "furigana": "せんたくします",
-        "romaji": "sentakushimasu",
-        "wordType": "verb",
-        "meaningVi": "Giặt giũ quần áo",
-        "accentNote": "Phát âm chuẩn Tokyo."
-      },
-      {
-        "id": "voc-n5-19-5",
-        "word": "れんしゅうします",
-        "kanji": "練習します",
-        "furigana": "れんしゅうします",
-        "romaji": "renshuushimasu",
-        "wordType": "verb",
-        "meaningVi": "Luyện tập",
-        "accentNote": "Phát âm chuẩn Tokyo."
-      },
-      {
-        "id": "voc-n5-19-6",
         "word": "なります",
-        "kanji": "",
-        "furigana": "",
+        "kanji": "成ります",
+        "furigana": "なります",
         "romaji": "narimasu",
         "wordType": "verb",
         "meaningVi": "Trở nên, trở thành",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "accentNote": "N/な-adj + に なります; い-adj bỏ い + く なります."
+      },
+      {
+        "id": "voc-n5-19-4",
+        "word": "はなします",
+        "kanji": "話します",
+        "furigana": "はなします",
+        "romaji": "hanashimasu",
+        "wordType": "verb",
+        "meaningVi": "Nói, trò chuyện",
+        "accentNote": "Đã gặp bài 7 — nay dùng ví dụ liệt kê たり."
+      },
+      {
+        "id": "voc-n5-19-5",
+        "word": "およぎます",
+        "kanji": "泳ぎます",
+        "furigana": "およぎます",
+        "romaji": "oyogimasu",
+        "wordType": "verb",
+        "meaningVi": "Bơi",
+        "accentNote": "Đã gặp bài 13."
+      },
+      {
+        "id": "voc-n5-19-6",
+        "word": "かいものします",
+        "kanji": "買い物します",
+        "furigana": "かいものします",
+        "romaji": "kaimonoshimasu",
+        "wordType": "verb",
+        "meaningVi": "Mua sắm",
+        "accentNote": "Đã gặp bài 13 (danh từ 買い物) — nay chia động từ đầy đủ."
+      },
+      {
+        "id": "voc-n5-19-7",
+        "word": "がいこく",
+        "kanji": "外国",
+        "furigana": "がいこく",
+        "romaji": "gaikoku",
+        "wordType": "noun",
+        "meaningVi": "Nước ngoài",
+        "accentNote": "外国へ 行った ことが あります = đã từng đi nước ngoài."
+      },
+      {
+        "id": "voc-n5-19-8",
+        "word": "がいこくじん",
+        "kanji": "外国人",
+        "furigana": "がいこくじん",
+        "romaji": "gaikokujin",
+        "wordType": "noun",
+        "meaningVi": "Người nước ngoài",
+        "accentNote": "Đã gặp bài 1."
+      },
+      {
+        "id": "voc-n5-19-9",
+        "word": "りゅうがくせい",
+        "kanji": "留学生",
+        "furigana": "りゅうがくせい",
+        "romaji": "ryuugakusei",
+        "wordType": "noun",
+        "meaningVi": "Du học sinh",
+        "accentNote": ""
+      },
+      {
+        "id": "voc-n5-19-10",
+        "word": "ふじさん",
+        "kanji": "富士山",
+        "furigana": "ふじさん",
+        "romaji": "fujisan",
+        "wordType": "noun",
+        "meaningVi": "Núi Phú Sĩ",
+        "accentNote": "Ngọn núi cao nhất Nhật Bản, biểu tượng quốc gia."
+      },
+      {
+        "id": "voc-n5-19-11",
+        "word": "きょうと",
+        "kanji": "京都",
+        "furigana": "きょうと",
+        "romaji": "kyouto",
+        "wordType": "noun",
+        "meaningVi": "Kyoto (cố đô Nhật Bản)",
+        "accentNote": "Nổi tiếng với nhiều đền chùa cổ."
+      },
+      {
+        "id": "voc-n5-19-12",
+        "word": "おてら",
+        "kanji": "お寺",
+        "furigana": "おてら",
+        "romaji": "otera",
+        "wordType": "noun",
+        "meaningVi": "Ngôi chùa",
+        "accentNote": "京都には お寺が たくさん あります."
+      },
+      {
+        "id": "voc-n5-19-13",
+        "word": "いちど",
+        "kanji": "一度",
+        "furigana": "いちど",
+        "romaji": "ichido",
+        "wordType": "noun",
+        "meaningVi": "Một lần",
+        "accentNote": "〜た ことが 一度 あります = đã từng làm ~ một lần."
+      },
+      {
+        "id": "voc-n5-19-14",
+        "word": "ゆうめい",
+        "kanji": "有名",
+        "furigana": "ゆうめい",
+        "romaji": "yuumei",
+        "wordType": "adjective",
+        "meaningVi": "Nổi tiếng",
+        "accentNote": "Đã gặp bài 8 — nay dùng làm ví dụ なります."
+      },
+      {
+        "id": "voc-n5-19-15",
+        "word": "げんき",
+        "kanji": "元気",
+        "furigana": "げんき",
+        "romaji": "genki",
+        "wordType": "adjective",
+        "meaningVi": "Khỏe mạnh",
+        "accentNote": "Đã gặp bài 8."
+      },
+      {
+        "id": "voc-n5-19-16",
+        "word": "あつい",
+        "kanji": "暑い",
+        "furigana": "あつい",
+        "romaji": "atsui",
+        "wordType": "adjective",
+        "meaningVi": "Nóng",
+        "accentNote": "暑く なります = trở nên nóng. Đã gặp bài 8."
+      },
+      {
+        "id": "voc-n5-19-17",
+        "word": "さむい",
+        "kanji": "寒い",
+        "furigana": "さむい",
+        "romaji": "samui",
+        "wordType": "adjective",
+        "meaningVi": "Lạnh",
+        "accentNote": "寒く なります = trở nên lạnh. Đã gặp bài 8."
+      },
+      {
+        "id": "voc-n5-19-18",
+        "word": "じょうず",
+        "kanji": "上手",
+        "furigana": "じょうず",
+        "romaji": "jouzu",
+        "wordType": "adjective",
+        "meaningVi": "Giỏi",
+        "accentNote": "上手に なります = trở nên giỏi. Đã gặp bài 9."
+      },
+      {
+        "id": "voc-n5-19-19",
+        "word": "いそがしい",
+        "kanji": "忙しい",
+        "furigana": "いそがしい",
+        "romaji": "isogashii",
+        "wordType": "adjective",
+        "meaningVi": "Bận rộn",
+        "accentNote": "Đã gặp bài 9."
+      },
+      {
+        "id": "voc-n5-19-20",
+        "word": "けいけん",
+        "kanji": "経験",
+        "furigana": "けいけん",
+        "romaji": "keiken",
+        "wordType": "noun",
+        "meaningVi": "Kinh nghiệm, trải nghiệm",
+        "accentNote": "いい 経験に なりました = đã trở thành một trải nghiệm tốt."
       }
     ],
     "kanjiList": [
@@ -26244,126 +26384,1115 @@
         "hanViet": "ĐĂNG",
         "strokeCount": 12,
         "onyomi": [
-          "トウ"
+          "トウ (tou)"
         ],
         "kunyomi": [
-          "のぼ・る"
+          "のぼ(る)"
         ],
-        "meaningVi": "Leo trèo, đăng ký",
+        "meaningVi": "Leo, trèo lên.",
         "commonWords": [
           {
-            "word": "登",
-            "furigana": "のぼ・る",
-            "meaningVi": "Leo trèo, đăng ký"
+            "word": "登ります",
+            "furigana": "のぼります",
+            "meaningVi": "Leo lên"
+          },
+          {
+            "word": "登山",
+            "furigana": "とざん",
+            "meaningVi": "Leo núi"
+          },
+          {
+            "word": "登録",
+            "furigana": "とうろく",
+            "meaningVi": "Đăng ký"
           }
         ]
       },
       {
         "id": "kan-n5-19-2",
-        "character": "泊",
-        "hanViet": "BẠC",
-        "strokeCount": 8,
+        "character": "経",
+        "hanViet": "KINH",
+        "strokeCount": 11,
         "onyomi": [
-          "ハク"
+          "ケイ (kei)"
         ],
         "kunyomi": [
-          "と・まる"
+          "へ(る)"
         ],
-        "meaningVi": "Trọ lại",
+        "meaningVi": "Trải qua, kinh qua.",
         "commonWords": [
           {
-            "word": "泊",
-            "furigana": "と・まる",
-            "meaningVi": "Trọ lại"
+            "word": "経験",
+            "furigana": "けいけん",
+            "meaningVi": "Kinh nghiệm"
+          },
+          {
+            "word": "経済",
+            "furigana": "けいざい",
+            "meaningVi": "Kinh tế"
+          },
+          {
+            "word": "経由",
+            "furigana": "けいゆ",
+            "meaningVi": "Quá cảnh, qua ngả"
           }
         ]
       },
       {
         "id": "kan-n5-19-3",
-        "character": "強",
-        "hanViet": "CƯỜNG",
-        "strokeCount": 11,
+        "character": "験",
+        "hanViet": "NGHIỆM",
+        "strokeCount": 18,
         "onyomi": [
-          "キョウ"
+          "ケン (ken)"
         ],
-        "kunyomi": [
-          "つよ・い"
-        ],
-        "meaningVi": "Mạnh mẽ",
+        "kunyomi": [],
+        "meaningVi": "Kiểm nghiệm, thử nghiệm.",
         "commonWords": [
           {
-            "word": "強",
-            "furigana": "つよ・い",
-            "meaningVi": "Mạnh mẽ"
+            "word": "経験",
+            "furigana": "けいけん",
+            "meaningVi": "Kinh nghiệm"
+          },
+          {
+            "word": "試験",
+            "furigana": "しけん",
+            "meaningVi": "Kỳ thi"
+          },
+          {
+            "word": "実験",
+            "furigana": "じっけん",
+            "meaningVi": "Thí nghiệm"
+          }
+        ]
+      },
+      {
+        "id": "kan-n5-19-4",
+        "character": "寺",
+        "hanViet": "TỰ",
+        "strokeCount": 6,
+        "onyomi": [
+          "ジ (ji)"
+        ],
+        "kunyomi": [
+          "てら"
+        ],
+        "meaningVi": "Chùa.",
+        "commonWords": [
+          {
+            "word": "お寺",
+            "furigana": "おてら",
+            "meaningVi": "Ngôi chùa"
+          },
+          {
+            "word": "寺院",
+            "furigana": "じいん",
+            "meaningVi": "Tự viện"
+          },
+          {
+            "word": "金閣寺",
+            "furigana": "きんかくじ",
+            "meaningVi": "Chùa Vàng"
+          }
+        ]
+      },
+      {
+        "id": "kan-n5-19-5",
+        "character": "都",
+        "hanViet": "ĐÔ",
+        "strokeCount": 11,
+        "onyomi": [
+          "ト (to)"
+        ],
+        "kunyomi": [
+          "みやこ"
+        ],
+        "meaningVi": "Kinh đô, đô thị.",
+        "commonWords": [
+          {
+            "word": "京都",
+            "furigana": "きょうと",
+            "meaningVi": "Kyoto"
+          },
+          {
+            "word": "都市",
+            "furigana": "とし",
+            "meaningVi": "Đô thị"
+          },
+          {
+            "word": "東京都",
+            "furigana": "とうきょうと",
+            "meaningVi": "Đô Tokyo"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n5-l19-s0",
+        "slideId": "n5-l19-s1",
         "slideType": "grammar",
-        "title": "Mẫu câu trọng tâm: Thể た & Kinh nghiệm",
-        "grammarFormula": "Quy tắc chia thể た: Giống hệt thể て, thay て -> た, で -> だ",
-        "explanation": "Vた ことが あります (Đã từng làm V). V1たり V2たり します (Lúc thì làm 1, lúc thì làm 2). Tính từ い bỏ い + く / Tính từ な + に + なります (Biến đổi).",
-        "teacherTips": "Hãy chú ý cách chia trợ từ và thể của động từ trong mẫu câu này nhé.",
+        "title": "1. Chia thể た (giống hệt quy tắc thể て, đổi て→た)",
+        "grammarFormula": "Nhóm I: 5 kiểu biến âm giống thể て / Nhóm II: bỏ ます + た / Nhóm III bất quy tắc",
+        "explanation": "Thể た chia HỆT thể て đã học ở bài 14 — chỉ cần đổi て→た, で→だ ở mọi vị trí. Nếu đã thuộc thể て thì thể た gần như không cần học lại từ đầu.",
+        "teacherTips": "Học thể た gần như MIỄN PHÍ nếu đã nắm chắc thể て ở bài 14 — chỉ đổi て/で thành た/だ.",
+        "culturalNotes": "Thể た còn gọi là 'thể ngắn quá khứ' (普通形), dùng trong văn viết thân mật, nhật ký, và làm gốc cho rất nhiều ngữ pháp N4 trở lên.",
         "examples": [
           {
-            "id": "ex-n5-l19-1",
+            "id": "ex-n5-l19-s1-1",
             "tokens": [
               {
-                "id": "tok-n5-19-1",
-                "text": "富士山に 登ったことが あります。",
+                "id": "t-l19s1-1",
+                "text": "のった",
+                "isKeyGrammar": true,
+                "kanji": "乗った",
+                "furigana": "のった"
+              },
+              {
+                "id": "t-l19s1-2",
+                "text": "。",
                 "isKeyGrammar": false
               }
             ],
-            "meaningVi": "Tôi đã từng leo núi Phú Sĩ."
+            "meaningVi": "Đã lên (xe/tàu). (乗って → 乗った, giống hệt quy tắc thể て)"
+          },
+          {
+            "id": "ex-n5-l19-s1-2",
+            "tokens": [
+              {
+                "id": "t-l19s1-3",
+                "text": "のぼった",
+                "isKeyGrammar": true,
+                "kanji": "登った",
+                "furigana": "のぼった"
+              },
+              {
+                "id": "t-l19s1-4",
+                "text": "。",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Đã leo lên. (登って → 登った)"
           }
-        ],
-        "culturalNotes": "Trong tiếng Nhật giao tiếp, ngữ điệu và sắc thái kính ngữ là yếu tố thể hiện sự tôn trọng đối phương."
+        ]
+      },
+      {
+        "slideId": "n5-l19-s2",
+        "slideType": "grammar",
+        "title": "2. Kinh nghiệm: Vた ことが あります",
+        "grammarFormula": "[Thể た] + ことが + あります",
+        "explanation": "Cùng khung こと danh từ hóa đã học ở bài 18 (ことができます — khả năng), nhưng ở đây ghép với あります để diễn tả ĐÃ TỪNG có trải nghiệm làm việc gì đó trong quá khứ.",
+        "teacherTips": "Vたことがあります nói về TRẢI NGHIỆM đáng chú ý trong đời — khác もう〜ました (đã làm xong, bài 7) chỉ báo việc vừa hoàn tất gần đây.",
+        "culturalNotes": "外国人が 富士山に 登ったことが あります là câu tự hào phổ biến của người nước ngoài từng leo núi Phú Sĩ — một trải nghiệm biểu tượng khi ở Nhật.",
+        "examples": [
+          {
+            "id": "ex-n5-l19-s2-1",
+            "tokens": [
+              {
+                "id": "t-l19s2-1",
+                "text": "ふじさん",
+                "isKeyGrammar": false,
+                "kanji": "富士山",
+                "furigana": "ふじさん"
+              },
+              {
+                "id": "t-l19s2-2",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l19s2-3",
+                "text": "のぼった",
+                "isKeyGrammar": true,
+                "kanji": "登った",
+                "furigana": "のぼった"
+              },
+              {
+                "id": "t-l19s2-4",
+                "text": "こと",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l19s2-5",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l19s2-6",
+                "text": "あります",
+                "isKeyGrammar": true,
+                "kanji": "有ります",
+                "furigana": "あります"
+              }
+            ],
+            "meaningVi": "Tôi đã từng leo núi Phú Sĩ."
+          },
+          {
+            "id": "ex-n5-l19-s2-2",
+            "tokens": [
+              {
+                "id": "t-l19s2-7",
+                "text": "きょうと",
+                "isKeyGrammar": false,
+                "kanji": "京都",
+                "furigana": "きょうと"
+              },
+              {
+                "id": "t-l19s2-8",
+                "text": "へ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l19s2-9",
+                "text": "いった",
+                "isKeyGrammar": false,
+                "kanji": "行った",
+                "furigana": "いった"
+              },
+              {
+                "id": "t-l19s2-10",
+                "text": "こと",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l19s2-11",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l19s2-12",
+                "text": "ありますか",
+                "isKeyGrammar": false,
+                "kanji": "有りますか",
+                "furigana": "ありますか"
+              }
+            ],
+            "meaningVi": "Anh đã từng đi Kyoto chưa?"
+          }
+        ]
+      },
+      {
+        "slideId": "n5-l19-s3",
+        "slideType": "grammar",
+        "title": "3. Liệt kê hành động tượng trưng: Vたり、Vたり します",
+        "grammarFormula": "V1た + り、V2た + り + します",
+        "explanation": "たり liệt kê MỘT VÀI hành động TIÊU BIỂU trong số nhiều việc đã/sẽ làm — khác V1て、V2て (bài 16) vốn liệt kê ĐẦY ĐỦ theo đúng thứ tự thời gian.",
+        "teacherTips": "たり luôn có ít nhất HAI động từ, kết bằng します/しました — không dùng một mình một động từ たり.",
+        "culturalNotes": "たり rất hữu ích khi tả một buổi cuối tuần bận rộn nhiều hoạt động mà không cần liệt kê hết theo thứ tự chính xác.",
+        "examples": [
+          {
+            "id": "ex-n5-l19-s3-1",
+            "tokens": [
+              {
+                "id": "t-l19s3-1",
+                "text": "しゅうまつ",
+                "isKeyGrammar": false,
+                "kanji": "週末",
+                "furigana": "しゅうまつ"
+              },
+              {
+                "id": "t-l19s3-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l19s3-3",
+                "text": "およいだり",
+                "isKeyGrammar": true,
+                "kanji": "泳いだり",
+                "furigana": "およいだり"
+              },
+              {
+                "id": "t-l19s3-4",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l19s3-5",
+                "text": "ほん",
+                "isKeyGrammar": false,
+                "kanji": "本",
+                "furigana": "ほん"
+              },
+              {
+                "id": "t-l19s3-6",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l19s3-7",
+                "text": "よんだり",
+                "isKeyGrammar": true,
+                "kanji": "読んだり",
+                "furigana": "よんだり"
+              },
+              {
+                "id": "t-l19s3-8",
+                "text": "します",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Cuối tuần tôi thường bơi, đọc sách, đủ thứ như vậy."
+          },
+          {
+            "id": "ex-n5-l19-s3-2",
+            "tokens": [
+              {
+                "id": "t-l19s3-9",
+                "text": "きのう",
+                "isKeyGrammar": false,
+                "kanji": "昨日",
+                "furigana": "きのう"
+              },
+              {
+                "id": "t-l19s3-10",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l19s3-11",
+                "text": "かいものしたり",
+                "isKeyGrammar": true,
+                "kanji": "買い物したり",
+                "furigana": "かいものしたり"
+              },
+              {
+                "id": "t-l19s3-12",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l19s3-13",
+                "text": "ともだち",
+                "isKeyGrammar": false,
+                "kanji": "友達",
+                "furigana": "ともだち"
+              },
+              {
+                "id": "t-l19s3-14",
+                "text": "と",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l19s3-15",
+                "text": "はなしたり",
+                "isKeyGrammar": true,
+                "kanji": "話したり",
+                "furigana": "はなしたり"
+              },
+              {
+                "id": "t-l19s3-16",
+                "text": "しました",
+                "isKeyGrammar": false,
+                "kanji": "しました",
+                "furigana": "しました"
+              }
+            ],
+            "meaningVi": "Hôm qua tôi đã mua sắm, nói chuyện với bạn bè, đủ thứ như vậy."
+          }
+        ]
+      },
+      {
+        "slideId": "n5-l19-s4",
+        "slideType": "grammar",
+        "title": "4. Biến đổi trạng thái: A/N に／く なります",
+        "grammarFormula": "い-adj (bỏ い) + く + なります　　　　な-adj/N + に + なります",
+        "explanation": "なります diễn tả sự THAY ĐỔI theo thời gian — khác です (trạng thái tĩnh, không đổi). Tính từ い đổi đuôi thành く, tính từ な/danh từ thêm に trước なります.",
+        "teacherTips": "Phân biệt です (trạng thái tĩnh: 暑いです = trời đang nóng) và なります (biến đổi: 暑くなりました = trời ĐÃ TRỞ NÊN nóng, trước đó không nóng).",
+        "culturalNotes": "この経験は いい勉強に なりました là câu kết bài luận/chia sẻ trải nghiệm rất thường gặp trong văn viết tiếng Nhật.",
+        "examples": [
+          {
+            "id": "ex-n5-l19-s4-1",
+            "tokens": [
+              {
+                "id": "t-l19s4-1",
+                "text": "あつく",
+                "isKeyGrammar": true,
+                "kanji": "暑く",
+                "furigana": "あつく"
+              },
+              {
+                "id": "t-l19s4-2",
+                "text": "なりました",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Trời đã trở nên nóng. (暑い bỏ い, thêm く)"
+          },
+          {
+            "id": "ex-n5-l19-s4-2",
+            "tokens": [
+              {
+                "id": "t-l19s4-3",
+                "text": "にほんご",
+                "isKeyGrammar": false,
+                "kanji": "日本語",
+                "furigana": "にほんご"
+              },
+              {
+                "id": "t-l19s4-4",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l19s4-5",
+                "text": "じょうずに",
+                "isKeyGrammar": true,
+                "kanji": "上手に",
+                "furigana": "じょうずに"
+              },
+              {
+                "id": "t-l19s4-6",
+                "text": "なりました",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tiếng Nhật của tôi đã trở nên giỏi hơn. (上手 là tính từ な, thêm に)"
+          },
+          {
+            "id": "ex-n5-l19-s4-3",
+            "tokens": [
+              {
+                "id": "t-l19s4-7",
+                "text": "らいねん",
+                "isKeyGrammar": false,
+                "kanji": "来年",
+                "furigana": "らいねん"
+              },
+              {
+                "id": "t-l19s4-8",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l19s4-9",
+                "text": "せんせい",
+                "isKeyGrammar": false,
+                "kanji": "先生",
+                "furigana": "せんせい"
+              },
+              {
+                "id": "t-l19s4-10",
+                "text": "に",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l19s4-11",
+                "text": "なります",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Sang năm, tôi sẽ trở thành giáo viên. (danh từ + に)"
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n5-19-1",
-        "speaker": "A (Người hỏi)",
-        "speakerRole": "personA",
+        "speaker": "先生",
+        "speakerRole": "Giáo viên",
         "tokens": [
           {
-            "id": "tok-d19-1",
-            "text": "富士山に 登ったことが あります。",
+            "id": "d-l19-1",
+            "text": "みなさん",
+            "isKeyGrammar": false,
+            "kanji": "皆さん",
+            "furigana": "みなさん"
+          },
+          {
+            "id": "d-l19-2",
+            "text": "は",
             "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-3",
+            "text": "ふじさん",
+            "isKeyGrammar": true,
+            "kanji": "富士山",
+            "furigana": "ふじさん"
+          },
+          {
+            "id": "d-l19-4",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-5",
+            "text": "のぼった",
+            "isKeyGrammar": true,
+            "kanji": "登った",
+            "furigana": "のぼった"
+          },
+          {
+            "id": "d-l19-6",
+            "text": "こと",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l19-7",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-8",
+            "text": "ありますか",
+            "isKeyGrammar": false,
+            "kanji": "有りますか",
+            "furigana": "ありますか"
           }
         ],
-        "meaningVi": "Tôi đã từng leo núi Phú Sĩ."
+        "meaningVi": "Các em đã từng leo núi Phú Sĩ chưa?"
       },
       {
         "id": "dia-n5-19-2",
-        "speaker": "B (Người đáp)",
-        "speakerRole": "personB",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
         "tokens": [
           {
-            "id": "tok-d19-2",
-            "text": "日曜日は 買い物を したり、映画を 見たり します。",
+            "id": "d-l19-9",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-10",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-11",
+            "text": "いちど",
+            "isKeyGrammar": true,
+            "kanji": "一度",
+            "furigana": "いちど"
+          },
+          {
+            "id": "d-l19-12",
+            "text": "あります",
+            "isKeyGrammar": false,
+            "kanji": "有ります",
+            "furigana": "あります"
+          }
+        ],
+        "meaningVi": "Có ạ, em đã từng leo một lần."
+      },
+      {
+        "id": "dia-n5-19-3",
+        "speaker": "先生",
+        "speakerRole": "Giáo viên",
+        "tokens": [
+          {
+            "id": "d-l19-13",
+            "text": "どうでしたか",
             "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Ngày Chủ nhật lúc thì tôi đi mua sắm, lúc thì xem phim."
+        "meaningVi": "Thế nào rồi?"
+      },
+      {
+        "id": "dia-n5-19-4",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l19-14",
+            "text": "とても",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-15",
+            "text": "つかれました",
+            "isKeyGrammar": false,
+            "kanji": "疲れました",
+            "furigana": "つかれました"
+          },
+          {
+            "id": "d-l19-16",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-17",
+            "text": "でも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-18",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-19",
+            "text": "いい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-20",
+            "text": "けいけん",
+            "isKeyGrammar": true,
+            "kanji": "経験",
+            "furigana": "けいけん"
+          },
+          {
+            "id": "d-l19-21",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-22",
+            "text": "なりました",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Rất mệt. Nhưng đã trở thành một trải nghiệm tốt."
+      },
+      {
+        "id": "dia-n5-19-5",
+        "speaker": "先生",
+        "speakerRole": "Giáo viên",
+        "tokens": [
+          {
+            "id": "d-l19-23",
+            "text": "サントスさん",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-24",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-25",
+            "text": "どうですか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Còn Santos thì sao?"
+      },
+      {
+        "id": "dia-n5-19-6",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l19-26",
+            "text": "わたし",
+            "isKeyGrammar": false,
+            "kanji": "私",
+            "furigana": "わたし"
+          },
+          {
+            "id": "d-l19-27",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-28",
+            "text": "まだ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-29",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-30",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-31",
+            "text": "でも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-32",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-33",
+            "text": "きょうと",
+            "isKeyGrammar": true,
+            "kanji": "京都",
+            "furigana": "きょうと"
+          },
+          {
+            "id": "d-l19-34",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-35",
+            "text": "おてら",
+            "isKeyGrammar": true,
+            "kanji": "お寺",
+            "furigana": "おてら"
+          },
+          {
+            "id": "d-l19-36",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-37",
+            "text": "たくさん",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-38",
+            "text": "みた",
+            "isKeyGrammar": false,
+            "kanji": "見た",
+            "furigana": "みた"
+          },
+          {
+            "id": "d-l19-39",
+            "text": "こと",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l19-40",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-41",
+            "text": "あります",
+            "isKeyGrammar": false,
+            "kanji": "有ります",
+            "furigana": "あります"
+          }
+        ],
+        "meaningVi": "Em thì chưa ạ. Nhưng em đã từng thăm nhiều ngôi chùa ở Kyoto rồi."
+      },
+      {
+        "id": "dia-n5-19-7",
+        "speaker": "先生",
+        "speakerRole": "Giáo viên",
+        "tokens": [
+          {
+            "id": "d-l19-42",
+            "text": "きょうと",
+            "isKeyGrammar": false,
+            "kanji": "京都",
+            "furigana": "きょうと"
+          },
+          {
+            "id": "d-l19-43",
+            "text": "で",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-44",
+            "text": "なに",
+            "isKeyGrammar": false,
+            "kanji": "何",
+            "furigana": "なに"
+          },
+          {
+            "id": "d-l19-45",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-46",
+            "text": "しましたか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Ở Kyoto em đã làm gì?"
+      },
+      {
+        "id": "dia-n5-19-8",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l19-47",
+            "text": "おてら",
+            "isKeyGrammar": true,
+            "kanji": "お寺",
+            "furigana": "おてら"
+          },
+          {
+            "id": "d-l19-48",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-49",
+            "text": "みたり",
+            "isKeyGrammar": true,
+            "kanji": "見たり",
+            "furigana": "みたり"
+          },
+          {
+            "id": "d-l19-50",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-51",
+            "text": "しゃしん",
+            "isKeyGrammar": false,
+            "kanji": "写真",
+            "furigana": "しゃしん"
+          },
+          {
+            "id": "d-l19-52",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-53",
+            "text": "とったり",
+            "isKeyGrammar": true,
+            "kanji": "撮ったり",
+            "furigana": "とったり"
+          },
+          {
+            "id": "d-l19-54",
+            "text": "しました",
+            "isKeyGrammar": false,
+            "kanji": "しました",
+            "furigana": "しました"
+          }
+        ],
+        "meaningVi": "Em đã đi xem chùa, chụp ảnh, đủ thứ như vậy."
+      },
+      {
+        "id": "dia-n5-19-9",
+        "speaker": "先生",
+        "speakerRole": "Giáo viên",
+        "tokens": [
+          {
+            "id": "d-l19-55",
+            "text": "たのしそう",
+            "isKeyGrammar": false,
+            "kanji": "楽しそう",
+            "furigana": "たのしそう"
+          },
+          {
+            "id": "d-l19-56",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-57",
+            "text": "ね",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-58",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-59",
+            "text": "にほんご",
+            "isKeyGrammar": true,
+            "kanji": "日本語",
+            "furigana": "にほんご"
+          },
+          {
+            "id": "d-l19-60",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-61",
+            "text": "じょうずに",
+            "isKeyGrammar": true,
+            "kanji": "上手に",
+            "furigana": "じょうずに"
+          },
+          {
+            "id": "d-l19-62",
+            "text": "なりました",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l19-63",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Nghe vui đấy nhỉ. Tiếng Nhật của em cũng đã giỏi hơn rồi đấy."
+      },
+      {
+        "id": "dia-n5-19-10",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l19-64",
+            "text": "ありがとう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-65",
+            "text": "ございます",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-66",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l19-67",
+            "text": "まいにち",
+            "isKeyGrammar": false,
+            "kanji": "毎日",
+            "furigana": "まいにち"
+          },
+          {
+            "id": "d-l19-68",
+            "text": "れんしゅう",
+            "isKeyGrammar": false,
+            "kanji": "練習",
+            "furigana": "れんしゅう"
+          },
+          {
+            "id": "d-l19-69",
+            "text": "しました",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Cảm ơn thầy ạ. Em đã luyện tập mỗi ngày."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n5-19-1",
-        "question": "日本へ 行___ ことが ありますか。(Đã từng đi Nhật chưa?)",
+        "question": "Thể た của 乗って (thể て) là:",
         "options": [
-          "った",
-          "く",
-          "き",
-          "って"
+          "乗った",
+          "乗た",
+          "乗って đổi thành 乗いた",
+          "乗んだ"
         ],
         "correctIndex": 0,
-        "explanation": "Hỏi về trải nghiệm trong quá khứ: V [thể た] + ことが ありますか: 行ったことが ありますか.",
-        "hint": "Gợi ý: Hãy quan sát kỹ trợ từ hoặc thể của động từ đứng trước."
+        "explanation": "Thể た chia hệt thể て, chỉ đổi て→た: 乗って → 乗った.",
+        "hint": "Áp dụng đúng phép đổi て→た, で→だ."
+      },
+      {
+        "id": "ex-q-n5-19-2",
+        "question": "「富士山に 登った ことが あります」 nghĩa là:",
+        "options": [
+          "Tôi đã từng leo núi Phú Sĩ (trải nghiệm)",
+          "Tôi đang leo núi Phú Sĩ",
+          "Tôi sẽ leo núi Phú Sĩ",
+          "Tôi chưa từng leo núi Phú Sĩ"
+        ],
+        "correctIndex": 0,
+        "explanation": "Vたことがあります diễn tả TRẢI NGHIỆM đã từng có trong quá khứ, không giới hạn thời gian gần đây.",
+        "hint": "So sánh với もう〜ました (đã làm xong gần đây, bài 7)."
+      },
+      {
+        "id": "ex-q-n5-19-3",
+        "question": "「京都へ 行った ことが ありますか」 「いいえ、___」",
+        "options": [
+          "ありません",
+          "ないです",
+          "しません",
+          "できません"
+        ],
+        "correctIndex": 0,
+        "explanation": "Phủ định của あります (trong cấu trúc kinh nghiệm) là ありません, không phải ないです hay しません.",
+        "hint": "Xem lại cách chia phủ định của あります."
+      },
+      {
+        "id": "ex-q-n5-19-4",
+        "question": "「泳いだり、本を 読んだり します」 diễn tả điều gì?",
+        "options": [
+          "Liệt kê một vài hành động tiêu biểu trong nhiều việc làm",
+          "Liệt kê ĐẦY ĐỦ theo đúng thứ tự thời gian",
+          "Chỉ một hành động duy nhất",
+          "Việc chưa từng làm"
+        ],
+        "correctIndex": 0,
+        "explanation": "たり liệt kê MỘT SỐ hành động TIÊU BIỂU, không cần đầy đủ và không nhấn mạnh thứ tự — khác V1てV2て (bài 16).",
+        "hint": "So sánh với V1てV2て đã học ở bài 16."
+      },
+      {
+        "id": "ex-q-n5-19-5",
+        "question": "Biến đổi của 暑い (tính từ い) khi ghép với なります là:",
+        "options": [
+          "暑く なります",
+          "暑いに なります",
+          "暑な なります",
+          "暑さに なります"
+        ],
+        "correctIndex": 0,
+        "explanation": "Tính từ い bỏ い, thêm く trước なります: 暑い → 暑く なります.",
+        "hint": "Áp dụng quy tắc chia của tính từ い."
+      },
+      {
+        "id": "ex-q-n5-19-6",
+        "question": "Biến đổi của 上手 (tính từ な) khi ghép với なります là:",
+        "options": [
+          "上手に なります",
+          "上手く なります",
+          "上手な なります",
+          "上手だ なります"
+        ],
+        "correctIndex": 0,
+        "explanation": "Tính từ な và danh từ thêm に trước なります: 上手 → 上手に なります.",
+        "hint": "So sánh với câu 5 để thấy khác biệt giữa hai loại tính từ."
+      },
+      {
+        "id": "ex-q-n5-19-7",
+        "question": "です và なります khác nhau ở chỗ:",
+        "options": [
+          "です là trạng thái tĩnh, なります là sự BIẾN ĐỔI theo thời gian",
+          "Hoàn toàn giống nhau",
+          "です chỉ dùng cho câu hỏi",
+          "なります chỉ dùng cho quá khứ"
+        ],
+        "correctIndex": 0,
+        "explanation": "です miêu tả trạng thái hiện tại không đổi; なります nhấn mạnh sự CHUYỂN ĐỔI từ trạng thái này sang trạng thái khác.",
+        "hint": "So sánh 暑いです (đang nóng) với 暑くなりました (đã trở nên nóng)."
+      },
+      {
+        "id": "ex-q-n5-19-8",
+        "question": "「先生に なります」 nghĩa là:",
+        "options": [
+          "Sẽ trở thành giáo viên",
+          "Là giáo viên (đã lâu)",
+          "Đã từng là giáo viên",
+          "Không phải giáo viên"
+        ],
+        "correctIndex": 0,
+        "explanation": "Danh từ + に + なります diễn tả sự thay đổi TRỞ THÀNH một vai trò/trạng thái mới.",
+        "hint": "Đây là câu nói về tương lai/thay đổi, không phải trạng thái đã ổn định."
+      },
+      {
+        "id": "ex-q-n5-19-9",
+        "question": "Trong hội thoại, Wang đã từng leo núi Phú Sĩ mấy lần?",
+        "options": [
+          "Một lần",
+          "Hai lần",
+          "Chưa từng leo",
+          "Ba lần"
+        ],
+        "correctIndex": 0,
+        "explanation": "Wang trả lời 「はい、一度あります」.",
+        "hint": "Xem câu thoại thứ 2."
+      },
+      {
+        "id": "ex-q-n5-19-10",
+        "question": "Ở Kyoto, Santos đã làm những gì?",
+        "options": [
+          "Xem chùa và chụp ảnh",
+          "Chỉ leo núi",
+          "Chỉ mua sắm",
+          "Không làm gì cả"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos nói 「お寺を見たり、写真を撮ったり しました」.",
+        "hint": "Xem câu thoại thứ 8."
       }
     ]
   },
