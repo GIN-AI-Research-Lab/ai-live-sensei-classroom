@@ -1,0 +1,257 @@
+# -*- coding: utf-8 -*-
+"""N5 — Bài 8: Tính từ đuôi い và đuôi な.
+
+Tu vung minh hoa TU CHON tu pool mo data/jlpt-vocab/n5.csv (xem NOTICE.md).
+"""
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from n5_lib import v, k, t, ex, slide, line, q, lesson, merge
+from jlpt_pool import Pool
+
+L = 8
+pool = Pool("n5")
+
+VOCAB = [
+    v(1,  "おおきい", "大きい", "おおきい", "ookii", "adjective", "To, lớn", "Tính từ đuôi い. Trái nghĩa: 小さい.", L),
+    v(2,  "ちいさい", "小さい", "ちいさい", "chiisai", "adjective", "Nhỏ, bé", "Tính từ đuôi い.", L),
+    v(3,  "あたらしい", "新しい", "あたらしい", "atarashii", "adjective", "Mới", "Tính từ đuôi い. Chỉ dùng cho ĐỒ VẬT, không dùng cho người mới quen.", L),
+    v(4,  "ふるい", "古い", "ふるい", "furui", "adjective", "Cũ, cổ", "Tính từ đuôi い. Không dùng để chê tuổi người.", L),
+    v(5,  "いい／よい", "", "", "ii/yoi", "adjective", "Tốt, hay, được", "Tính từ đuôi い BẤT QUY TẮC: phủ định phải chia từ よい (よくない), không chia từ いい.", L),
+    v(6,  "わるい", "悪い", "わるい", "warui", "adjective", "Xấu, tệ, có lỗi", "Tính từ đuôi い. すみません có gốc liên quan đến 悪い.", L),
+    v(7,  "あつい", "暑い", "あつい", "atsui", "adjective", "Nóng (thời tiết)", "Tính từ đuôi い. Nóng của VẬT dùng chữ 熱い khác.", L),
+    v(8,  "さむい", "寒い", "さむい", "samui", "adjective", "Lạnh (thời tiết)", "Tính từ đuôi い. Lạnh của VẬT dùng chữ 冷たい khác.", L),
+    v(9,  "むずかしい", "難しい", "むずかしい", "muzukashii", "adjective", "Khó", "Tính từ đuôi い.", L),
+    v(10, "やさしい", "易しい", "やさしい", "yasashii", "adjective", "Dễ, đơn giản", "Tính từ đuôi い. Đồng âm với 優しい (dịu dàng) nhưng nghĩa khác.", L),
+    v(11, "たかい", "高い", "たかい", "takai", "adjective", "Cao; đắt", "Tính từ đuôi い. Vừa nghĩa chiều cao vừa nghĩa giá tiền.", L),
+    v(12, "やすい", "安い", "やすい", "yasui", "adjective", "Rẻ", "Tính từ đuôi い. Trái nghĩa với 高い (nghĩa giá tiền).", L),
+    v(13, "おもしろい", "面白い", "おもしろい", "omoshiroi", "adjective", "Thú vị, hay", "Tính từ đuôi い.", L),
+    v(14, "たのしい", "楽しい", "たのしい", "tanoshii", "adjective", "Vui vẻ", "Tính từ đuôi い.", L),
+    v(15, "いそがしい", "忙しい", "いそがしい", "isogashii", "adjective", "Bận rộn", "Tính từ đuôi い.", L),
+    v(16, "おいしい", "美味しい", "おいしい", "oishii", "adjective", "Ngon", "Tính từ đuôi い.", L),
+    v(17, "きれい", "綺麗", "きれい", "kirei", "adjective", "Đẹp, sạch sẽ", "Tính từ đuôi な dù kết thúc bằng い — NGOẠI LỆ phải nhớ riêng.", L),
+    v(18, "げんき", "元気", "げんき", "genki", "adjective", "Khỏe mạnh, năng động", "Tính từ đuôi な. お元気ですか = anh/chị khỏe không.", L),
+    v(19, "しずか", "静か", "しずか", "shizuka", "adjective", "Yên tĩnh", "Tính từ đuôi な.", L),
+    v(20, "ゆうめい", "有名", "ゆうめい", "yuumei", "adjective", "Nổi tiếng", "Tính từ đuôi な.", L),
+    v(21, "べんり", "便利", "べんり", "benri", "adjective", "Tiện lợi", "Tính từ đuôi な. Trái nghĩa: 不便 (ふべん).", L),
+    v(22, "とても", "", "", "totemo", "adverb", "Rất", "Đứng trước tính từ, không dùng với thể phủ định.", L),
+    v(23, "あまり", "", "", "amari", "adverb", "Không mấy, không lắm", "CHỈ dùng với thể PHỦ ĐỊNH: あまり 大きくないです.", L),
+]
+
+KANJI = [
+    k(1, "大", "ĐẠI", 3, ["ダイ (dai)", "タイ (tai)"], ["おお(きい)"], "To lớn. Hình người dang rộng tay chân.",
+      [("大きい", "おおきい", "To"), ("大学", "だいがく", "Đại học"), ("大丈夫", "だいじょうぶ", "Ổn, không sao")], L),
+    k(2, "小", "TIỂU", 3, ["ショウ (shou)"], ["ちい(さい)", "こ"], "Nhỏ bé.",
+      [("小さい", "ちいさい", "Nhỏ"), ("小学校", "しょうがっこう", "Trường tiểu học"), ("小説", "しょうせつ", "Tiểu thuyết")], L),
+    k(3, "新", "TÂN", 13, ["シン (shin)"], ["あたら(しい)", "あら(た)"], "Mới.",
+      [("新しい", "あたらしい", "Mới"), ("新聞", "しんぶん", "Báo"), ("新幹線", "しんかんせん", "Tàu Shinkansen")], L),
+    k(4, "古", "CỔ", 5, ["コ (ko)"], ["ふる(い)"], "Cũ, xưa.",
+      [("古い", "ふるい", "Cũ"), ("古本", "ふるほん", "Sách cũ"), ("中古", "ちゅうこ", "Đồ đã qua sử dụng")], L),
+    k(5, "高", "CAO", 10, ["コウ (kou)"], ["たか(い)"], "Cao; đắt. Hình vẽ tòa tháp cao.",
+      [("高い", "たかい", "Cao/đắt"), ("高校", "こうこう", "Trường cấp 3"), ("高校生", "こうこうせい", "Học sinh cấp 3")], L),
+    k(6, "安", "AN", 6, ["アン (an)"], ["やす(い)"], "Yên ổn; rẻ.",
+      [("安い", "やすい", "Rẻ"), ("安全", "あんぜん", "An toàn"), ("不安", "ふあん", "Bất an")], L),
+]
+
+SLIDES = [
+    slide(L, 1,
+        "1. Tính từ đuôi い: N は A-い です",
+        "N + は + [Tính từ い] + です",
+        "Tính từ đuôi い tự nó đã mang nghĩa 'là', không cần です đóng vai trò liên từ như với danh "
+        "từ — です ở đây chỉ thêm SẮC THÁI LỊCH SỰ, không phải bắt buộc về ngữ pháp như với danh từ.",
+        [
+            ex(L, 1, 1, [t("t-l8s1-1", "この"), t("t-l8s1-2", "かばん", "鞄", "かばん"), t("t-l8s1-3", "は"),
+                         t("t-l8s1-4", "おおきい", "大きい", "おおきい", key=True), t("t-l8s1-5", "です")],
+               "Cái cặp này to."),
+            ex(L, 1, 2, [t("t-l8s1-6", "きょう", "今日", "きょう"), t("t-l8s1-7", "は"),
+                         t("t-l8s1-8", "あつい", "暑い", "あつい", key=True), t("t-l8s1-9", "です")],
+               "Hôm nay trời nóng."),
+            ex(L, 1, 3, [t("t-l8s1-10", "この"), t("t-l8s1-11", "ほん", "本", "ほん"), t("t-l8s1-12", "は"),
+                         t("t-l8s1-13", "おもしろい", "面白い", "おもしろい", key=True), t("t-l8s1-14", "です")],
+               "Quyển sách này thú vị."),
+        ],
+        tips="Tính từ đuôi い LUÔN kết thúc bằng い ở dạng từ điển — nếu bỏ です câu vẫn đúng ngữ pháp.",
+        culture="いい (tốt) là tính từ đuôi い DUY NHẤT bất quy tắc — chia phủ định phải quay về gốc よい: よくないです."),
+
+    slide(L, 2,
+        "2. Phủ định tính từ đuôi い: A-くない です",
+        "[Tính từ い] bỏ い, thêm くない + です",
+        "Quy tắc CỐ ĐỊNH: bỏ い cuối, thêm くない. Không cần です đứng riêng phía trước như danh từ "
+        "— くない đã tự mang nghĩa phủ định, です chỉ thêm lịch sự.",
+        [
+            ex(L, 2, 1, [t("t-l8s2-1", "この"), t("t-l8s2-2", "かばん", "鞄", "かばん"), t("t-l8s2-3", "は"),
+                         t("t-l8s2-4", "おおきくない", "大きくない", "おおきくない", key=True), t("t-l8s2-5", "です")],
+               "Cái cặp này không to."),
+            ex(L, 2, 2, [t("t-l8s2-6", "この"), t("t-l8s2-7", "テスト"), t("t-l8s2-8", "は"),
+                         t("t-l8s2-9", "むずかしくない", "難しくない", "むずかしくない", key=True), t("t-l8s2-10", "です")],
+               "Bài kiểm tra này không khó."),
+            ex(L, 2, 3, [t("t-l8s2-11", "この"), t("t-l8s2-12", "みせ", "店", "みせ"), t("t-l8s2-13", "は"),
+                         t("t-l8s2-14", "よくない", "良くない", "よくない", key=True), t("t-l8s2-15", "です")],
+               "Cửa hàng này không tốt. (いい → よくない, KHÔNG NÓI いくない)"),
+        ],
+        tips="Nhớ đặc biệt: いい → phủ định phải là よくない, không bao giờ nói いくない.",
+        culture="Người Nhật thường tránh nói thẳng 'không tốt' về sản phẩm/dịch vụ — hay dùng câu giảm nhẹ như ちょっと…"),
+
+    slide(L, 3,
+        "3. Tính từ đuôi な: N は A-な です",
+        "N + は + [Tính từ な] + です   (khi bổ nghĩa danh từ: A + な + N)",
+        "Tính từ đuôi な giống danh từ hơn — khi ĐỨNG TRƯỚC です thì bỏ な, nhưng khi BỔ NGHĨA cho "
+        "danh từ đứng ngay sau thì PHẢI GIỮ な. Đây là khác biệt lớn nhất với tính từ đuôi い.",
+        [
+            ex(L, 3, 1, [t("t-l8s3-1", "この"), t("t-l8s3-2", "こうえん", "公園", "こうえん"), t("t-l8s3-3", "は"),
+                         t("t-l8s3-4", "しずか", "静か", "しずか", key=True), t("t-l8s3-5", "です")],
+               "Công viên này yên tĩnh."),
+            ex(L, 3, 2, [t("t-l8s3-6", "しずか", "静か", "しずか", key=True), t("t-l8s3-7", "な", key=True),
+                         t("t-l8s3-8", "こうえん", "公園", "こうえん"), t("t-l8s3-9", "です")],
+               "Là một công viên yên tĩnh. (bổ nghĩa cho danh từ — PHẢI có な)"),
+            ex(L, 3, 3, [t("t-l8s3-10", "やまださん", "山田さん", "やまださん"), t("t-l8s3-11", "は"),
+                         t("t-l8s3-12", "げんき", "元気", "げんき", key=True), t("t-l8s3-13", "です")],
+               "Anh Yamada khỏe."),
+        ],
+        tips="Mẹo phân biệt nhanh: đứng trước です thì KHÔNG な, đứng trước danh từ thì PHẢI CÓ な.",
+        culture="きれい và 元気 tuy kết thúc bằng い nhưng LÀ tính từ な — bẫy kinh điển của người mới học."),
+
+    slide(L, 4,
+        "4. Phủ định tính từ đuôi な: A-じゃ ありません",
+        "[Tính từ な] + じゃ ありません   (giống hệt cách phủ định danh từ ở bài 1)",
+        "Tính từ な chia y hệt danh từ: khẳng định です, phủ định じゃ ありません — hoàn toàn khác "
+        "quy tắc くない của tính từ い. Đây là lý do phải phân biệt rõ hai loại ngay từ đầu.",
+        [
+            ex(L, 4, 1, [t("t-l8s4-1", "この"), t("t-l8s4-2", "まち", "町", "まち"), t("t-l8s4-3", "は"),
+                         t("t-l8s4-4", "しずか", "静か", "しずか"), t("t-l8s4-5", "じゃ ありません", key=True)],
+               "Thị trấn này không yên tĩnh."),
+            ex(L, 4, 2, [t("t-l8s4-6", "この"), t("t-l8s4-7", "でんき", "電気", "でんき"), t("t-l8s4-8", "は"),
+                         t("t-l8s4-9", "べんり", "便利", "べんり"), t("t-l8s4-10", "じゃ ありません", key=True)],
+               "Cái đồ điện này không tiện lợi."),
+        ],
+        tips="Nhầm lẫn phổ biến nhất của người mới học: chia tính từ な theo くない của tính từ い — SAI hoàn toàn.",
+        culture="便利 rất hay xuất hiện khi người Nhật khen hạ tầng công cộng: 「日本の電車は 便利ですね」."),
+
+    slide(L, 5,
+        "5. Mức độ: とても / あまり",
+        "とても + [Tính từ] + です  (rất)   /   あまり + [Tính từ phủ định]  (không mấy)",
+        "とても dùng được cả câu khẳng định và phủ định. あまり CHỈ dùng được với câu PHỦ ĐỊNH — "
+        "nói あまり với câu khẳng định là sai ngữ pháp.",
+        [
+            ex(L, 5, 1, [t("t-l8s5-1", "この"), t("t-l8s5-2", "まち", "町", "まち"), t("t-l8s5-3", "は"),
+                         t("t-l8s5-4", "とても", key=True), t("t-l8s5-5", "きれい", "綺麗", "きれい"), t("t-l8s5-6", "です")],
+               "Thị trấn này rất đẹp."),
+            ex(L, 5, 2, [t("t-l8s5-7", "この"), t("t-l8s5-8", "テスト"), t("t-l8s5-9", "は"),
+                         t("t-l8s5-10", "あまり", key=True), t("t-l8s5-11", "むずかしくない", "難しくない", "むずかしくない"), t("t-l8s5-12", "です")],
+               "Bài kiểm tra này không khó lắm."),
+            ex(L, 5, 3, [t("t-l8s5-13", "この"), t("t-l8s5-14", "まち", "町", "まち"), t("t-l8s5-15", "は"),
+                         t("t-l8s5-16", "あまり", key=True), t("t-l8s5-17", "しずか", "静か", "しずか"),
+                         t("t-l8s5-18", "じゃ ありません", key=True)],
+               "Thị trấn này không yên tĩnh lắm."),
+        ],
+        tips="Lỗi rất hay gặp: 「あまり 静かです」 — SAI vì あまり thiếu vế phủ định phía sau.",
+        culture="あまり…ない là cách nói giảm nhẹ rất Nhật — tránh chê thẳng bằng câu khẳng định tiêu cực."),
+]
+
+DIALOGUE = [
+    line(L, 1, "ワン", "Sinh viên",
+         [t("d-l8-1", "この"), t("d-l8-2", "まち", "町", "まち"), t("d-l8-3", "は"),
+          t("d-l8-4", "どうですか")],
+         "Thị trấn này thế nào?"),
+    line(L, 2, "サントス", "Sinh viên",
+         [t("d-l8-5", "とても", key=True), t("d-l8-6", "しずか", "静か", "しずか", key=True),
+          t("d-l8-7", "です"), t("d-l8-8", "。"), t("d-l8-9", "そして"), t("d-l8-10", "きれい", "綺麗", "きれい", key=True),
+          t("d-l8-11", "です")],
+         "Rất yên tĩnh. Và đẹp nữa."),
+    line(L, 3, "ワン", "Sinh viên",
+         [t("d-l8-12", "べんり", "便利", "べんり", key=True), t("d-l8-13", "ですか")],
+         "Có tiện lợi không?"),
+    line(L, 4, "サントス", "Sinh viên",
+         [t("d-l8-14", "うーん"), t("d-l8-15", "、"), t("d-l8-16", "あまり", key=True),
+          t("d-l8-17", "べんり", "便利", "べんり"), t("d-l8-18", "じゃ ありません", key=True), t("d-l8-19", "。"),
+          t("d-l8-20", "スーパー"), t("d-l8-21", "が"), t("d-l8-22", "ちいさい", "小さい", "ちいさい", key=True), t("d-l8-23", "です")],
+         "Ừm, không tiện lợi lắm. Siêu thị nhỏ."),
+    line(L, 5, "ワン", "Sinh viên",
+         [t("d-l8-24", "そうですか"), t("d-l8-25", "。"), t("d-l8-26", "この"), t("d-l8-27", "レストラン"),
+          t("d-l8-28", "は"), t("d-l8-29", "どうですか")],
+         "Vậy à. Nhà hàng này thế nào?"),
+    line(L, 6, "サントス", "Sinh viên",
+         [t("d-l8-30", "とても", key=True), t("d-l8-31", "おいしい", "美味しい", "おいしい", key=True),
+          t("d-l8-32", "です"), t("d-l8-33", "。"), t("d-l8-34", "でも"), t("d-l8-35", "ちょっと"),
+          t("d-l8-36", "たかい", "高い", "たかい", key=True), t("d-l8-37", "です")],
+         "Rất ngon. Nhưng hơi đắt."),
+    line(L, 7, "ワン", "Sinh viên",
+         [t("d-l8-38", "やすい", "安い", "やすい", key=True), t("d-l8-39", "みせ", "店", "みせ"),
+          t("d-l8-40", "は"), t("d-l8-41", "ありませんか")],
+         "Không có quán nào rẻ hơn à?"),
+    line(L, 8, "サントス", "Sinh viên",
+         [t("d-l8-42", "あります", "有ります", "あります"), t("d-l8-43", "よ"), t("d-l8-44", "。"),
+          t("d-l8-45", "あの"), t("d-l8-46", "しょくどう", "食堂", "しょくどう"), t("d-l8-47", "は"),
+          t("d-l8-48", "やすくて", "安くて", "やすくて"), t("d-l8-49", "おいしい", "美味しい", "おいしい", key=True), t("d-l8-50", "です")],
+         "Có chứ. Cái quán ăn kia vừa rẻ vừa ngon."),
+    line(L, 9, "ワン", "Sinh viên",
+         [t("d-l8-51", "ゆうめい", "有名", "ゆうめい", key=True), t("d-l8-52", "な", key=True),
+          t("d-l8-53", "みせ", "店", "みせ"), t("d-l8-54", "ですか")],
+         "Có phải là quán nổi tiếng không?"),
+    line(L, 10, "サントス", "Sinh viên",
+         [t("d-l8-55", "はい"), t("d-l8-56", "、"), t("d-l8-57", "この"), t("d-l8-58", "まち", "町", "まち"),
+          t("d-l8-59", "で"), t("d-l8-60", "いちばん", "一番", "いちばん"), t("d-l8-61", "ゆうめい", "有名", "ゆうめい"), t("d-l8-62", "です")],
+         "Vâng, đây là quán nổi tiếng nhất thị trấn này."),
+]
+
+EXERCISES = [
+    q(L, 1, "Phủ định của 大きい là:",
+      ["大きくない", "大きじゃない", "大きいない", "大きでない"], 0,
+      "Tính từ đuôi い: bỏ い cuối, thêm くない. 大きい → 大きくない.",
+      "Đây là quy tắc cố định của tính từ い."),
+    q(L, 2, "Phủ định của いい (tốt) là:",
+      ["よくない", "いくない", "いいくない", "いくありません"], 0,
+      "いい là tính từ đuôi い DUY NHẤT bất quy tắc — phủ định phải quay về gốc よい rồi mới chia くない.",
+      "いい có gốc từ khác khi chia."),
+    q(L, 3, "「静かな 公園」 và 「公園は 静かです」 khác nhau ở việc dùng な vì:",
+      ["な xuất hiện khi bổ nghĩa trực tiếp cho danh từ đứng sau",
+       "な là lỗi chính tả", "Cả hai đều sai, phải bỏ な",
+       "な chỉ dùng trong câu hỏi"], 0,
+      "Tính từ な GIỮ な khi đứng ngay trước danh từ nó bổ nghĩa, nhưng bỏ な khi đứng trước です.",
+      "Xem vị trí của tính từ trong câu."),
+    q(L, 4, "Phủ định của 便利 (tiện lợi, tính từ な) là:",
+      ["便利じゃ ありません", "便利くない", "便利じゃ くない", "便利ないです"], 0,
+      "Tính từ な chia phủ định GIỐNG DANH TỪ: N/な-adj + じゃ ありません, khác hẳn quy tắc くない của tính từ い.",
+      "So sánh với cách chia danh từ ở bài 1."),
+    q(L, 5, "きれい (đẹp) là loại tính từ nào dù kết thúc bằng い?",
+      ["Tính từ な (ngoại lệ)", "Tính từ い bình thường",
+       "Vừa な vừa い", "Không phải tính từ"], 0,
+      "きれい và 有名, 嫌い cũng vậy — nhìn giống tính từ い nhưng thực chất là tính từ な, phải học thuộc riêng.",
+      "Đây là bẫy ngữ pháp kinh điển."),
+    q(L, 6, "Câu nào SAI ngữ pháp?",
+      ["この本は あまり 面白いです", "この本は あまり 面白くないです",
+       "この本は とても 面白いです", "この本は とても 面白くないです"], 0,
+      "あまり CHỈ dùng được với câu PHỦ ĐỊNH. Câu khẳng định với あまり là sai ngữ pháp.",
+      "Xem lại quy tắc của あまり."),
+    q(L, 7, "高い vừa có nghĩa 'cao' vừa có nghĩa gì khác?",
+      ["Đắt (giá tiền)", "Xa", "Nặng", "Sâu"], 0,
+      "高い là tính từ đa nghĩa: vừa chỉ CHIỀU CAO vừa chỉ GIÁ TIỀN cao (đắt).",
+      "Xem ngữ cảnh câu để biết nghĩa nào."),
+    q(L, 8, "Muốn nói 'quán này vừa rẻ vừa ngon', nối hai tính từ い bằng cách:",
+      ["安くて 美味しいです", "安いと 美味しいです",
+       "安いも 美味しいです", "安いし 美味しいですが"], 0,
+      "Nối hai tính từ い liên tiếp: bỏ い cuối tính từ thứ nhất, thêm くて, rồi tính từ thứ hai giữ nguyên.",
+      "Giống cách chia くない nhưng đổi đuôi thành くて."),
+    q(L, 9, "新しい chỉ dùng để miêu tả:",
+      ["Đồ vật (không dùng để chê tuổi người)", "Chỉ con người",
+       "Chỉ thức ăn", "Chỉ thời gian"], 0,
+      "新しい/古い dùng cho đồ vật, nơi chốn. Miêu tả người mới quen không dùng 新しい người.",
+      "Xem ghi chú của mục từ vựng."),
+    q(L, 10, "Ở phần hội thoại, quán ăn được khen là:",
+      ["Vừa rẻ vừa ngon và nổi tiếng nhất thị trấn", "Chỉ rẻ nhưng không ngon",
+       "Đắt nhưng rất ngon", "Không nổi tiếng nhưng rẻ"], 0,
+      "サントス khen quán 安くて 美味しい và là quán 一番 有名 trong thị trấn.",
+      "Xem lại các câu cuối hội thoại."),
+]
+
+LESSON = lesson(
+    L,
+    "Bài 8: Tính từ đuôi な và Tính từ đuôi い",
+    "Phân biệt hai loại tính từ theo cách chia (い → くない, な → じゃ ありません), quy tắc "
+    "な bắt buộc khi bổ nghĩa trực tiếp cho danh từ, các ngoại lệ いい/きれい, và cách dùng "
+    "phó từ mức độ とても/あまり.",
+    VOCAB, KANJI, SLIDES, DIALOGUE, EXERCISES,
+)
+
+if __name__ == "__main__":
+    pool.mark_used([w["word"] for w in VOCAB], lesson=L)
+    merge([LESSON])
