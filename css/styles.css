@@ -474,6 +474,17 @@ ruby rt {
 }
 @keyframes recBlink { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.82); } }
 
+/* Dai "dang cho Sensei tra loi" — tai su dung khung .deck-recording nhung doi
+   mau + nhip cham dot de khong bi tuong nham la "van dang thu am". */
+.deck-recording.is-waiting { border-color: rgba(107, 138, 94, .45); }
+.deck-recording.is-waiting .rec-dot {
+  background: var(--sage);
+  animation: waitPulse 1.4s ease-in-out infinite;
+}
+.deck-recording.is-waiting .deck-micbar,
+.deck-recording.is-waiting .deck-micpct { display: none; }
+@keyframes waitPulse { 0%, 100% { opacity: .5; transform: scale(.85); } 50% { opacity: 1; transform: scale(1.05); } }
+
 .deck-micbar { width: 92px; height: 5px; border-radius: 99px; background: var(--paper-deep); overflow: hidden; }
 .deck-micbar > div {
   height: 100%; width: 0; border-radius: 99px;
