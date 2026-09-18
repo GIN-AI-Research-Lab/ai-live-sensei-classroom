@@ -1,0 +1,248 @@
+# -*- coding: utf-8 -*-
+"""N5 — Bài 23: Vるとき / Vたとき (moc thoi diem), Vると (dieu kien tat yeu).
+
+Tu vung minh hoa TU CHON tu pool mo data/jlpt-vocab/n5.csv (xem NOTICE.md).
+"""
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from n5_lib import v, k, t, ex, slide, line, q, lesson, merge
+from jlpt_pool import Pool
+
+L = 23
+pool = Pool("n5")
+
+VOCAB = [
+    v(1,  "おします", "押します", "おします", "oshimasu", "verb", "Ấn, nhấn", "Thể từ điển: 押す. Nhóm I. ボタンを 押すと = hễ ấn nút thì.", L),
+    v(2,  "わたります", "渡ります", "わたります", "watarimasu", "verb", "Băng qua, đi qua", "Thể từ điển: 渡る. Nhóm I.", L),
+    v(3,  "まがります", "曲がります", "まがります", "magarimasu", "verb", "Rẽ, quẹo", "Thể từ điển: 曲がる. Nhóm I.", L),
+    v(4,  "あきます", "開きます", "あきます", "akimasu", "verb", "Mở ra (tự động)", "Thể từ điển: 開く. Nhóm I. Khác 開けます (tha động từ, bài 14).", L),
+    v(5,  "でかけます", "出かけます", "でかけます", "dekakemasu", "verb", "Ra ngoài", "Đã gặp bài 16 — nay dùng làm mốc thời điểm.", L),
+    v(6,  "かえります", "帰ります", "かえります", "kaerimasu", "verb", "Về nhà", "Đã gặp bài 5.", L),
+    v(7,  "ボタン", "", "", "botan", "noun", "Cái nút (bấm)", "ボタンを 押します = ấn nút.", L),
+    v(8,  "みぎ", "右", "みぎ", "migi", "noun", "Bên phải", "右に 曲がります = rẽ phải.", L),
+    v(9,  "ひだり", "左", "ひだり", "hidari", "noun", "Bên trái", "左に 曲がります = rẽ trái.", L),
+    v(10, "しんごう", "信号", "しんごう", "shingou", "noun", "Đèn tín hiệu giao thông", "信号を 渡ります = qua đường ở chỗ đèn tín hiệu.", L),
+    v(11, "まど", "窓", "まど", "mado", "noun", "Cửa sổ", "Đã gặp bài 14.", L),
+    v(12, "でんき", "電気", "でんき", "denki", "noun", "Điện, đèn điện", "Đã gặp bài 15.", L),
+    v(13, "はる", "春", "はる", "haru", "noun", "Mùa xuân", "Đã gặp bài 12 — nay dùng làm mốc thời điểm theo mùa.", L),
+    v(14, "あき", "秋", "あき", "aki", "noun", "Mùa thu", "Đã gặp bài 12.", L),
+    v(15, "あつい", "暑い", "あつい", "atsui", "adjective", "Nóng", "Đã gặp bài 8 — nay dùng trong câu とき.", L),
+    v(16, "さむい", "寒い", "さむい", "samui", "adjective", "Lạnh", "Đã gặp bài 8.", L),
+    v(17, "こども", "子供", "こども", "kodomo", "noun", "Trẻ con, con cái", "子供の とき = hồi còn nhỏ.", L),
+    v(18, "がくせい", "学生", "がくせい", "gakusei", "noun", "Học sinh, sinh viên", "学生の とき = hồi còn là học sinh.", L),
+    v(19, "ひま", "暇", "ひま", "hima", "adjective", "Rảnh rỗi", "暇な とき = lúc rảnh (tính từ な giữ な trước とき, giống trước danh từ).", L),
+    v(20, "げんき", "元気", "げんき", "genki", "adjective", "Khỏe mạnh", "Đã gặp bài 8.", L),
+]
+
+KANJI = [
+    k(1, "右", "HỮU", 5, ["ウ (u)", "ユウ (yuu)"], ["みぎ"], "Bên phải.",
+      [("右", "みぎ", "Bên phải"), ("右手", "みぎて", "Tay phải"), ("左右", "さゆう", "Trái phải")], L),
+    k(2, "左", "TẢ", 5, ["サ (sa)"], ["ひだり"], "Bên trái.",
+      [("左", "ひだり", "Bên trái"), ("左手", "ひだりて", "Tay trái"), ("左折", "させつ", "Rẽ trái")], L),
+    k(3, "信", "TÍN", 9, ["シン (shin)"], [], "Tin tưởng, tín hiệu.",
+      [("信号", "しんごう", "Đèn tín hiệu"), ("自信", "じしん", "Tự tin"), ("信じます", "しんじます", "Tin tưởng")], L),
+    k(4, "号", "HIỆU", 5, ["ゴウ (gou)"], [], "Số hiệu, ký hiệu.",
+      [("信号", "しんごう", "Đèn tín hiệu"), ("番号", "ばんごう", "Số hiệu"), ("記号", "きごう", "Ký hiệu")], L),
+    k(5, "供", "CUNG", 8, ["キョウ (kyou)"], ["とも"], "Cùng, phối hợp; trẻ con (trong 子供).",
+      [("子供", "こども", "Trẻ con"), ("供給", "きょうきゅう", "Cung cấp"), ("提供", "ていきょう", "Cung cấp, đề xuất")], L),
+]
+
+SLIDES = [
+    slide(L, 1,
+        "1. Mốc thời điểm: [Thể thông thường] とき、V",
+        "V(từ điển)/V(た)/A/N-の + とき、[hành động]",
+        "とき (khi, lúc) đứng sau MỆNH ĐỀ THỜI ĐIỂM ở thể thông thường — động từ, tính từ, hay danh "
+        "từ (thêm の) đều ghép được. Chọn từ điển hay た tùy hành động đó XẢY RA TRƯỚC hay SAU mốc.",
+        [
+            ex(L, 1, 1, [t("t-l23s1-1", "でかける", "出かける", "でかける", key=True), t("t-l23s1-2", "とき", key=True),
+                         t("t-l23s1-3", "、"), t("t-l23s1-4", "でんき", "電気", "でんき"), t("t-l23s1-5", "を"),
+                         t("t-l23s1-6", "けします", "消します", "けします")],
+               "Khi ra ngoài (SẮP đi), tôi tắt đèn."),
+            ex(L, 1, 2, [t("t-l23s1-7", "でかけた", "出かけた", "でかけた", key=True), t("t-l23s1-8", "とき", key=True),
+                         t("t-l23s1-9", "、"), t("t-l23s1-10", "あめ", "雨", "あめ"), t("t-l23s1-11", "が"),
+                         t("t-l23s1-12", "ふって", "降って", "ふって"), t("t-l23s1-13", "いました", "居ました", "いました")],
+               "Khi tôi ra ngoài (ĐÃ ra khỏi nhà), trời đang mưa."),
+        ],
+        tips="Mẹo phân biệt: V(từ điển)+とき = hành động CHƯA xảy ra tại mốc; V(た)+とき = hành động ĐÃ xảy ra tại mốc.",
+        culture="子供のとき (hồi còn nhỏ) và 学生のとき (hồi còn đi học) là cách mở đầu câu chuyện quá khứ rất phổ biến trong hội thoại Nhật."),
+
+    slide(L, 2,
+        "2. とき với tính từ và danh từ",
+        "A-い+とき / A-な+とき / N+の+とき",
+        "Tính từ い giữ nguyên, tính từ な GIỮ な (như trước danh từ thường, bài 8), danh từ cần "
+        "thêm の trước とき — vì とき về bản chất cũng là một DANH TỪ (thời điểm).",
+        [
+            ex(L, 2, 1, [t("t-l23s2-1", "さむい", "寒い", "さむい", key=True), t("t-l23s2-2", "とき", key=True),
+                         t("t-l23s2-3", "、"), t("t-l23s2-4", "あつい", "熱い", "あつい"), t("t-l23s2-5", "おちゃ", "お茶", "おちゃ"),
+                         t("t-l23s2-6", "を"), t("t-l23s2-7", "のみます", "飲みます", "のみます")],
+               "Khi trời lạnh, tôi uống trà nóng."),
+            ex(L, 2, 2, [t("t-l23s2-8", "ひま", "暇", "ひま", key=True), t("t-l23s2-9", "な", key=True),
+                         t("t-l23s2-10", "とき", key=True), t("t-l23s2-11", "、"), t("t-l23s2-12", "ほん", "本", "ほん"),
+                         t("t-l23s2-13", "を"), t("t-l23s2-14", "よみます", "読みます", "よみます")],
+               "Lúc rảnh, tôi đọc sách."),
+            ex(L, 2, 3, [t("t-l23s2-15", "がくせい", "学生", "がくせい", key=True), t("t-l23s2-16", "の", key=True),
+                         t("t-l23s2-17", "とき", key=True), t("t-l23s2-18", "、"), t("t-l23s2-19", "まいにち", "毎日", "まいにち"),
+                         t("t-l23s2-20", "べんきょう", "勉強", "べんきょう"), t("t-l23s2-21", "しました")],
+               "Hồi còn là học sinh, tôi học mỗi ngày."),
+        ],
+        tips="Ba cách ghép とき tương ứng đúng ba loại từ đã học: い giữ nguyên (bài 2), な thêm な (bài 8), danh từ thêm の (bài 2).",
+        culture="暇なとき (lúc rảnh) là câu mở đầu phổ biến khi rủ ai đó làm gì mà không ép buộc thời gian cụ thể."),
+
+    slide(L, 3,
+        "3. Điều kiện tất yếu: Vる/Aい/Aな/N だ + と、V",
+        "[Thể từ điển/tính từ/danh từ+だ] + と、[kết quả TẤT YẾU xảy ra]",
+        "と (khác と trích dẫn ở bài 21) diễn tả quan hệ NHÂN QUẢ TỰ NHIÊN, LUÔN ĐÚNG — không phải "
+        "ý muốn hay lời mời. Vế sau KHÔNG được là mệnh lệnh, lời mời hay ý chí cá nhân.",
+        [
+            ex(L, 3, 1, [t("t-l23s3-1", "みぎ", "右", "みぎ", key=True), t("t-l23s3-2", "に"),
+                         t("t-l23s3-3", "まがる", "曲がる", "まがる", key=True), t("t-l23s3-4", "と", key=True),
+                         t("t-l23s3-5", "、"), t("t-l23s3-6", "ぎんこう", "銀行", "ぎんこう"), t("t-l23s3-7", "が"),
+                         t("t-l23s3-8", "あります", "有ります", "あります")],
+               "Hễ rẽ phải là sẽ thấy ngân hàng ngay."),
+            ex(L, 3, 2, [t("t-l23s3-9", "ボタン"), t("t-l23s3-10", "を"), t("t-l23s3-11", "おす", "押す", "おす", key=True),
+                         t("t-l23s3-12", "と", key=True), t("t-l23s3-13", "、"), t("t-l23s3-14", "ドア"),
+                         t("t-l23s3-15", "が"), t("t-l23s3-16", "あきます", "開きます", "あきます")],
+               "Hễ ấn nút là cửa mở ra."),
+        ],
+        tips="Kiểm tra nhanh: nếu vế sau có thể thay bằng 'luôn luôn xảy ra như vậy' thì dùng được と — nếu là lời mời/mệnh lệnh thì phải dùng たら/ば (học ở trình độ cao hơn).",
+        culture="Bảng hướng dẫn sử dụng máy móc, chỉ đường ở Nhật dùng と rất nhiều vì diễn tả đúng bản chất 'thao tác này → kết quả này, luôn luôn vậy'."),
+
+    slide(L, 4,
+        "4. So sánh とき và と",
+        "とき = MỘT THỜI ĐIỂM cụ thể　　と = QUAN HỆ NHÂN QUẢ tất yếu, lặp lại được",
+        "Cả hai đều dịch gần giống 'khi' trong tiếng Việt nhưng bản chất khác hẳn: とき chỉ đơn "
+        "thuần định vị THỜI GIAN, còn と khẳng định B LUÔN XẢY RA mỗi khi A xảy ra.",
+        [
+            ex(L, 4, 1, [t("t-l23s4-1", "はる", "春", "はる", key=True), t("t-l23s4-2", "に"),
+                         t("t-l23s4-3", "なる", "成る", "なる"), t("t-l23s4-4", "と", key=True),
+                         t("t-l23s4-5", "、"), t("t-l23s4-6", "はな", "花", "はな"), t("t-l23s4-7", "が"),
+                         t("t-l23s4-8", "さきます", "咲きます", "さきます")],
+               "Hễ vào xuân là hoa nở. (quy luật tự nhiên, luôn đúng → dùng と)"),
+            ex(L, 4, 2, [t("t-l23s4-9", "はる", "春", "はる", key=True), t("t-l23s4-10", "の", key=True),
+                         t("t-l23s4-11", "とき", key=True), t("t-l23s4-12", "、"), t("t-l23s4-13", "にほん", "日本", "にほん"),
+                         t("t-l23s4-14", "へ"), t("t-l23s4-15", "いきました", "行きました", "いきました")],
+               "Vào mùa xuân (năm đó), tôi đã đi Nhật Bản. (một lần cụ thể → dùng とき)"),
+        ],
+        tips="Nếu câu chỉ nói về MỘT LẦN cụ thể trong quá khứ, phải dùng とき — と chỉ hợp với quy luật lặp lại/luôn đúng.",
+        culture="と thường xuất hiện trong ca dao, thành ngữ về quy luật tự nhiên Nhật Bản như bốn mùa thay đổi đều đặn."),
+]
+
+DIALOGUE = [
+    line(L, 1, "ワン", "Sinh viên",
+         [t("d-l23-1", "すみません"), t("d-l23-2", "、"), t("d-l23-3", "ぎんこう", "銀行", "ぎんこう"),
+          t("d-l23-4", "は"), t("d-l23-5", "どこ", key=True), t("d-l23-6", "ですか")],
+         "Xin lỗi, ngân hàng ở đâu vậy ạ?"),
+    line(L, 2, "サントス", "Sinh viên",
+         [t("d-l23-7", "この"), t("d-l23-8", "しんごう", "信号", "しんごう", key=True), t("d-l23-9", "を"),
+          t("d-l23-10", "わたる", "渡る", "わたる", key=True), t("d-l23-11", "と", key=True), t("d-l23-12", "、"),
+          t("d-l23-13", "みぎ", "右", "みぎ", key=True), t("d-l23-14", "に"), t("d-l23-15", "あります", "有ります", "あります")],
+         "Hễ qua đèn tín hiệu này là sẽ thấy ở bên phải."),
+    line(L, 3, "ワン", "Sinh viên",
+         [t("d-l23-16", "わかりました", "分かりました", "わかりました"), t("d-l23-17", "。"), t("d-l23-18", "ありがとう"),
+          t("d-l23-19", "ございます")],
+         "Tôi hiểu rồi. Cảm ơn anh."),
+    line(L, 4, "サントス", "Sinh viên",
+         [t("d-l23-20", "どういたしまして"), t("d-l23-21", "。"), t("d-l23-22", "ぎんこう", "銀行", "ぎんこう"),
+          t("d-l23-23", "に"), t("d-l23-24", "いく", "行く", "いく"), t("d-l23-25", "とき", key=True),
+          t("d-l23-26", "、"), t("d-l23-27", "パスポート"), t("d-l23-28", "を"), t("d-l23-29", "もって", "持って", "もって"),
+          t("d-l23-30", "いって", "行って", "いって"), t("d-l23-31", "ください")],
+         "Không có gì. Khi đi ngân hàng, nhớ mang theo hộ chiếu nhé."),
+    line(L, 5, "ワン", "Sinh viên",
+         [t("d-l23-32", "はい"), t("d-l23-33", "、"), t("d-l23-34", "わかりました", "分かりました", "わかりました")],
+         "Vâng, tôi hiểu rồi."),
+    line(L, 6, "サントス", "Sinh viên",
+         [t("d-l23-35", "ところで"), t("d-l23-36", "、"), t("d-l23-37", "ひま", "暇", "ひま", key=True),
+          t("d-l23-38", "な", key=True), t("d-l23-39", "とき", key=True), t("d-l23-40", "、"),
+          t("d-l23-41", "なに", "何", "なに"), t("d-l23-42", "を"), t("d-l23-43", "しますか")],
+         "À mà, lúc rảnh cậu hay làm gì?"),
+    line(L, 7, "ワン", "Sinh viên",
+         [t("d-l23-44", "こども", "子供", "こども", key=True), t("d-l23-45", "の", key=True),
+          t("d-l23-46", "とき", key=True), t("d-l23-47", "から"), t("d-l23-48", "、"),
+          t("d-l23-49", "ほん", "本", "ほん"), t("d-l23-50", "を"), t("d-l23-51", "よむ", "読む", "よむ"),
+          t("d-l23-52", "こと"), t("d-l23-53", "が"), t("d-l23-54", "すき", "好き", "すき"), t("d-l23-55", "です")],
+         "Từ hồi còn nhỏ, tôi đã thích đọc sách."),
+    line(L, 8, "サントス", "Sinh viên",
+         [t("d-l23-56", "いいですね"), t("d-l23-57", "。"), t("d-l23-58", "わたし", "私", "わたし"),
+          t("d-l23-59", "は"), t("d-l23-60", "さむい", "寒い", "さむい", key=True), t("d-l23-61", "とき", key=True),
+          t("d-l23-62", "、"), t("d-l23-63", "うち", "家", "うち"), t("d-l23-64", "に"), t("d-l23-65", "いたい", "居たい", "いたい")],
+         "Hay đó. Tớ thì khi trời lạnh, chỉ muốn ở nhà thôi."),
+    line(L, 9, "ワン", "Sinh viên",
+         [t("d-l23-66", "わかります", "分かります", "わかります"), t("d-l23-67", "。"), t("d-l23-68", "あき", "秋", "あき", key=True),
+          t("d-l23-69", "に"), t("d-l23-70", "なる", "成る", "なる"), t("d-l23-71", "と", key=True),
+          t("d-l23-72", "、"), t("d-l23-73", "すずしく"), t("d-l23-74", "なりますね")],
+         "Tớ hiểu mà. Hễ vào thu là trời mát hẳn ra nhỉ."),
+    line(L, 10, "サントス", "Sinh viên",
+         [t("d-l23-75", "そうですね"), t("d-l23-76", "。"), t("d-l23-77", "あき", "秋", "あき"),
+          t("d-l23-78", "が"), t("d-l23-79", "いちばん", "一番", "いちばん"), t("d-l23-80", "いいです", key=True)],
+         "Đúng vậy nhỉ. Mùa thu là dễ chịu nhất."),
+]
+
+EXERCISES = [
+    q(L, 1, "「出かけるとき、電気を消します」 — 出かける ở thể từ điển vì:",
+      ["Hành động ra ngoài CHƯA xảy ra tại mốc tắt đèn (tắt đèn trước khi đi)",
+       "出かける luôn ở thể từ điển, không thay đổi được", "Đây là lỗi ngữ pháp",
+       "出かける phải chia thành 出かけた"], 0,
+      "V(từ điển)+とき nghĩa là hành động đó CHƯA xảy ra ở thời điểm được nói tới trong vế sau.",
+      "So sánh với 出かけたとき (đã ra khỏi nhà) ở slide 1."),
+    q(L, 2, "「暇なとき」 — vì sao có な giữa 暇 và とき?",
+      ["暇 là tính từ な, cần thêm な khi bổ nghĩa cho danh từ とき",
+       "な là lỗi thừa", "とき luôn cần な phía trước bất kể từ loại nào",
+       "暇 là danh từ nên cần の chứ không phải な"], 0,
+      "とき về bản chất là một danh từ, nên nó chịu chung quy tắc bổ nghĩa: tính từ な phải giữ な.",
+      "Áp dụng quy tắc tính từ な trước danh từ đã học ở bài 8."),
+    q(L, 3, "「学生のとき」 — vì sao có の giữa 学生 và とき?",
+      ["学生 là danh từ, cần の để nối với danh từ とき theo sau",
+       "の là lỗi thừa", "がくせい luôn cần の đứng sau",
+       "Đây là ngoại lệ không theo quy tắc nào"], 0,
+      "Danh từ + の + N khác (đã học ở bài 2) áp dụng ở đây vì とき cũng là một danh từ.",
+      "Nhớ lại cấu trúc N1のN2 đã học ở bài 2."),
+    q(L, 4, "「右に曲がると、銀行があります」 — と ở đây diễn tả:",
+      ["Quan hệ nhân quả tất yếu, luôn đúng (rẽ phải thì LUÔN thấy ngân hàng)",
+       "Trích dẫn lời nói (giống bài 21)", "Một lần cụ thể trong quá khứ",
+       "Lời mời rủ ai đó"], 0,
+      "と ở đây khác と trích dẫn (bài 21) — nó diễn tả quy luật/kết quả LUÔN xảy ra khi điều kiện đúng.",
+      "Phân biệt với と trích dẫn đã học ở bài 21."),
+    q(L, 5, "Câu nào SAI khi dùng と?",
+      ["ボタンを押すと、一緒に 食べましょう", "ボタンを押すと、ドアが開きます",
+       "右に曲がると、銀行があります", "春になると、花が咲きます"], 0,
+      "Vế sau と KHÔNG được là lời mời/ý chí cá nhân (食べましょう) — chỉ dùng được cho kết quả TẤT YẾU, khách quan.",
+      "Xem quy tắc giới hạn vế sau của と ở slide 3."),
+    q(L, 6, "「春に なると、花が咲きます」 và 「春のとき、日本へ行きました」 khác nhau ở:",
+      ["Một là quy luật lặp lại luôn đúng (と), một là MỘT LẦN cụ thể trong quá khứ (とき)",
+       "Hoàn toàn giống nhau về nghĩa", "とき chỉ dùng cho tương lai",
+       "と chỉ dùng cho câu phủ định"], 0,
+      "と diễn tả điều LUÔN xảy ra (quy luật tự nhiên); とき chỉ định vị một THỜI ĐIỂM cụ thể, có thể chỉ xảy ra một lần.",
+      "Đọc kỹ nghĩa của cả hai câu ví dụ ở slide 4."),
+    q(L, 7, "「子供のとき」 nghĩa là:",
+      ["Hồi còn nhỏ", "Con của tôi", "Khi có con", "Đứa trẻ đó"], 0,
+      "子供の (danh từ+の) + とき (thời điểm) = 'thời điểm còn là trẻ con', tức hồi nhỏ.",
+      "Áp dụng cấu trúc N+の+とき."),
+    q(L, 8, "開きます (tự động mở ra) khác 開けます (mở, tha động từ) ở chỗ:",
+      ["開きます là tự động từ (cửa TỰ mở), 開けます là tha động từ (AI ĐÓ mở cửa)",
+       "Hoàn toàn giống nhau", "開きます chỉ dùng cho cửa sổ",
+       "開けます là thì quá khứ của 開きます"], 0,
+      "Đây là cặp tự động từ/tha động từ: 開きます không cần chủ thể tác động, 開けます cần người/vật tác động vào.",
+      "So sánh với 開けます đã học ở bài 14, 15."),
+    q(L, 9, "Trong hội thoại, đi ngân hàng cần mang theo gì?",
+      ["Hộ chiếu", "Tiền mặt", "Thẻ ngân hàng", "Không cần mang gì"], 0,
+      "サントス dặn 「銀行に行くとき、パスポートを持って行ってください」.",
+      "Xem câu thoại thứ 4."),
+    q(L, 10, "Sở thích của Wang từ hồi nhỏ là gì?",
+      ["Đọc sách", "Chơi thể thao", "Xem phim", "Nấu ăn"], 0,
+      "Wang nói 「子供のときから、本を読むことが好きです」.",
+      "Xem câu thoại thứ 7."),
+]
+
+LESSON = lesson(
+    L,
+    "Bài 23: Mẫu câu 'Khi... thì...' (Vるとき / Vたとき / Vると)",
+    "Diễn tả mốc thời điểm bằng とき (chọn thể từ điển hay た tùy hành động chưa/đã xảy ra tại mốc, "
+    "tính từ い giữ nguyên, な giữ な, danh từ thêm の), và quan hệ nhân quả tất yếu luôn đúng bằng "
+    "と (vế sau không được là lời mời/mệnh lệnh) — phân biệt rõ とき (một thời điểm cụ thể) với と "
+    "(quy luật lặp lại).",
+    VOCAB, KANJI, SLIDES, DIALOGUE, EXERCISES,
+)
+
+if __name__ == "__main__":
+    pool.mark_used([w["word"] for w in VOCAB], lesson=L)
+    merge([LESSON])
