@@ -18549,99 +18549,1377 @@
     "level": "N4",
     "lessonNumber": 40,
     "title": "Bài 40: Nghi vấn lồng (〜か, 〜かどうか) & Thử làm (〜てみます)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "description": "Lồng câu hỏi vào câu lớn hơn: dùng か khi có từ để hỏi (何/いつ/どこ), かどうか khi là câu hỏi đúng-sai; diễn tả hành động thử nghiệm bằng V(て)みます; và kết hợp cả hai để mô tả hành động XÁC MINH một điều chưa chắc chắn (かどうか + てみます).",
     "vocabList": [
       {
         "id": "voc-n4-40-1",
-        "word": "重要語彙 (N4)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "しらべます",
+        "kanji": "調べます",
+        "furigana": "しらべます",
+        "romaji": "shirabemasu",
+        "wordType": "verb",
+        "meaningVi": "Tra cứu, kiểm tra",
+        "accentNote": "Đã gặp N4 bài 30 — nay dùng làm động từ chính chứa câu hỏi lồng."
+      },
+      {
+        "id": "voc-n4-40-2",
+        "word": "たべてみます",
+        "kanji": "食べてみます",
+        "furigana": "たべてみます",
+        "romaji": "tabete mimasu",
+        "wordType": "verb",
+        "meaningVi": "Thử ăn xem sao",
+        "accentNote": "食べる + てみます: bỏ bớt phần cuối, thêm てみます."
+      },
+      {
+        "id": "voc-n4-40-3",
+        "word": "きてみます",
+        "kanji": "着てみます",
+        "furigana": "きてみます",
+        "romaji": "kite mimasu",
+        "wordType": "verb",
+        "meaningVi": "Thử mặc xem sao",
+        "accentNote": "着る + てみます."
+      },
+      {
+        "id": "voc-n4-40-4",
+        "word": "やってみます",
+        "kanji": "やってみます",
+        "furigana": "やってみます",
+        "romaji": "yatte mimasu",
+        "wordType": "verb",
+        "meaningVi": "Thử làm xem sao",
+        "accentNote": "やる + てみます. Đã gặp bài 34."
+      },
+      {
+        "id": "voc-n4-40-5",
+        "word": "ききます",
+        "kanji": "聞きます",
+        "furigana": "ききます",
+        "romaji": "kikimasu",
+        "wordType": "verb",
+        "meaningVi": "Hỏi, nghe",
+        "accentNote": "Đã gặp N5 bài 6 — nay dùng làm động từ chính chứa câu hỏi lồng."
+      },
+      {
+        "id": "voc-n4-40-6",
+        "word": "わかりません",
+        "kanji": "分かりません",
+        "furigana": "わかりません",
+        "romaji": "wakarimasen",
+        "wordType": "phrase",
+        "meaningVi": "Không biết, không hiểu",
+        "accentNote": "いつ 来るか わかりません = không biết khi nào sẽ đến."
+      },
+      {
+        "id": "voc-n4-40-7",
+        "word": "あじ",
+        "kanji": "味",
+        "furigana": "あじ",
+        "romaji": "aji",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 40",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Hương vị, mùi vị",
+        "accentNote": "味が どうか、食べてみます = thử ăn xem vị thế nào."
+      },
+      {
+        "id": "voc-n4-40-8",
+        "word": "きょうみ",
+        "kanji": "興味",
+        "furigana": "きょうみ",
+        "romaji": "kyoumi",
+        "wordType": "noun",
+        "meaningVi": "Sự hứng thú, quan tâm",
+        "accentNote": "興味が あるかどうか、聞いてみます = thử hỏi xem có hứng thú không."
+      },
+      {
+        "id": "voc-n4-40-9",
+        "word": "しゅみ",
+        "kanji": "趣味",
+        "furigana": "しゅみ",
+        "romaji": "shumi",
+        "wordType": "noun",
+        "meaningVi": "Sở thích",
+        "accentNote": "Đã gặp N5 bài 18."
+      },
+      {
+        "id": "voc-n4-40-10",
+        "word": "てんき",
+        "kanji": "天気",
+        "furigana": "てんき",
+        "romaji": "tenki",
+        "wordType": "noun",
+        "meaningVi": "Thời tiết",
+        "accentNote": "Đã gặp N5 bài 21."
+      },
+      {
+        "id": "voc-n4-40-11",
+        "word": "しけん",
+        "kanji": "試験",
+        "furigana": "しけん",
+        "romaji": "shiken",
+        "wordType": "noun",
+        "meaningVi": "Kỳ thi",
+        "accentNote": "試験に 合格するかどうか、心配です = lo không biết có đậu kỳ thi không."
+      },
+      {
+        "id": "voc-n4-40-12",
+        "word": "ごうかくします",
+        "kanji": "合格します",
+        "furigana": "ごうかくします",
+        "romaji": "goukaku shimasu",
+        "wordType": "verb",
+        "meaningVi": "Đậu, đỗ (kỳ thi)",
+        "accentNote": ""
+      },
+      {
+        "id": "voc-n4-40-13",
+        "word": "りょうり",
+        "kanji": "料理",
+        "furigana": "りょうり",
+        "romaji": "ryouri",
+        "wordType": "noun",
+        "meaningVi": "Món ăn, nấu ăn",
+        "accentNote": "Đã gặp N5 bài 9."
+      },
+      {
+        "id": "voc-n4-40-14",
+        "word": "ふく",
+        "kanji": "服",
+        "furigana": "ふく",
+        "romaji": "fuku",
+        "wordType": "noun",
+        "meaningVi": "Quần áo",
+        "accentNote": "Đã gặp N5 bài 22."
+      },
+      {
+        "id": "voc-n4-40-15",
+        "word": "サイズ",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "saizu",
+        "wordType": "noun",
+        "meaningVi": "Kích cỡ",
+        "accentNote": "サイズが 合うか どうか、着てみます = thử mặc xem có vừa cỡ không."
+      },
+      {
+        "id": "voc-n4-40-16",
+        "word": "あいます",
+        "kanji": "合います",
+        "furigana": "あいます",
+        "romaji": "aimasu",
+        "wordType": "verb",
+        "meaningVi": "Vừa vặn, phù hợp",
+        "accentNote": "サイズが 合いません = không vừa cỡ."
+      },
+      {
+        "id": "voc-n4-40-17",
+        "word": "でんわします",
+        "kanji": "電話します",
+        "furigana": "でんわします",
+        "romaji": "denwa shimasu",
+        "wordType": "verb",
+        "meaningVi": "Gọi điện thoại",
+        "accentNote": "本当かどうか、電話して 聞いてみます = gọi điện hỏi xem có đúng không."
+      },
+      {
+        "id": "voc-n4-40-18",
+        "word": "ほんとう",
+        "kanji": "本当",
+        "furigana": "ほんとう",
+        "romaji": "hontou",
+        "wordType": "noun",
+        "meaningVi": "Sự thật, thật",
+        "accentNote": "Đã gặp N5 bài 22 (本当ですか)."
+      },
+      {
+        "id": "voc-n4-40-19",
+        "word": "せんせい",
+        "kanji": "先生",
+        "furigana": "せんせい",
+        "romaji": "sensei",
+        "wordType": "noun",
+        "meaningVi": "Thầy/cô giáo",
+        "accentNote": "Đã gặp N5 bài 1."
+      },
+      {
+        "id": "voc-n4-40-20",
+        "word": "だいじょうぶ",
+        "kanji": "大丈夫",
+        "furigana": "だいじょうぶ",
+        "romaji": "daijoubu",
+        "wordType": "adjective",
+        "meaningVi": "Ổn, không sao",
+        "accentNote": "Đã gặp N5 bài 15."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n4-40-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "味",
+        "hanViet": "VỊ",
+        "strokeCount": 8,
         "onyomi": [
-          "ゴ"
+          "ミ (mi)"
         ],
         "kunyomi": [
-          "かたる"
+          "あじ"
         ],
-        "meaningVi": "Ngôn ngữ",
+        "meaningVi": "Hương vị, mùi vị.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "味",
+            "furigana": "あじ",
+            "meaningVi": "Hương vị"
+          },
+          {
+            "word": "興味",
+            "furigana": "きょうみ",
+            "meaningVi": "Hứng thú"
+          },
+          {
+            "word": "味噌",
+            "furigana": "みそ",
+            "meaningVi": "Tương miso"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-40-2",
+        "character": "興",
+        "hanViet": "HƯNG",
+        "strokeCount": 16,
+        "onyomi": [
+          "キョウ (kyou)"
+        ],
+        "kunyomi": [
+          "おこ(る)"
+        ],
+        "meaningVi": "Hưng thịnh, hứng thú.",
+        "commonWords": [
+          {
+            "word": "興味",
+            "furigana": "きょうみ",
+            "meaningVi": "Hứng thú"
+          },
+          {
+            "word": "興奮",
+            "furigana": "こうふん",
+            "meaningVi": "Hưng phấn"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-40-3",
+        "character": "試",
+        "hanViet": "THÍ",
+        "strokeCount": 13,
+        "onyomi": [
+          "シ (shi)"
+        ],
+        "kunyomi": [
+          "こころ(みる)",
+          "ため(す)"
+        ],
+        "meaningVi": "Thử nghiệm, thi cử.",
+        "commonWords": [
+          {
+            "word": "試験",
+            "furigana": "しけん",
+            "meaningVi": "Kỳ thi"
+          },
+          {
+            "word": "試着",
+            "furigana": "しちゃく",
+            "meaningVi": "Thử đồ"
+          },
+          {
+            "word": "試合",
+            "furigana": "しあい",
+            "meaningVi": "Trận đấu"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-40-4",
+        "character": "験",
+        "hanViet": "NGHIỆM",
+        "strokeCount": 18,
+        "onyomi": [
+          "ケン (ken)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Kiểm nghiệm. Đã gặp N5 bài 19.",
+        "commonWords": [
+          {
+            "word": "試験",
+            "furigana": "しけん",
+            "meaningVi": "Kỳ thi"
+          },
+          {
+            "word": "経験",
+            "furigana": "けいけん",
+            "meaningVi": "Kinh nghiệm"
+          },
+          {
+            "word": "実験",
+            "furigana": "じっけん",
+            "meaningVi": "Thí nghiệm"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-40-5",
+        "character": "格",
+        "hanViet": "CÁCH",
+        "strokeCount": 10,
+        "onyomi": [
+          "カク (kaku)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Tư cách, tiêu chuẩn.",
+        "commonWords": [
+          {
+            "word": "合格",
+            "furigana": "ごうかく",
+            "meaningVi": "Đậu (thi)"
+          },
+          {
+            "word": "性格",
+            "furigana": "せいかく",
+            "meaningVi": "Tính cách"
+          },
+          {
+            "word": "価格",
+            "furigana": "かかく",
+            "meaningVi": "Giá cả"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n4-l40-s0",
-        "title": "Trọng tâm: Nghi vấn lồng (〜か, 〜かどうか) & Thử làm (〜てみます)",
-        "grammarFormula": "Thể thông thường + か / かどうか + V",
-        "explanation": "Lồng câu hỏi vào trong một câu phức.",
+        "slideId": "n4-l40-s1",
+        "slideType": "grammar",
+        "title": "1. Nghi vấn lồng với từ để hỏi: [Từ hỏi + thể thông thường] + か",
+        "grammarFormula": "[何/いつ/どこ/だれ + V(thể thông thường)] + か + [động từ chính: 分かりません/知りません/調べます]",
+        "explanation": "Khi CÂU HỎI trở thành một PHẦN của câu lớn hơn (không hỏi trực tiếp mà là nội dung của động từ khác như biết/không biết), thêm か vào cuối phần câu hỏi rồi mới đến động từ chính.",
+        "teacherTips": "Khác câu hỏi trực tiếp (いつ来ますか。), câu hỏi LỒNG không có dấu chấm hỏi riêng — か chỉ đánh dấu ranh giới, cả câu vẫn kết ở động từ chính.",
+        "culturalNotes": "いつ来るか分かりません là câu trả lời phổ biến khi ai đó hỏi lịch trình chưa chắc chắn, tránh cam kết thời gian cụ thể.",
         "examples": [
           {
-            "id": "ex-n4-l40-1",
+            "id": "ex-n4-l40-s1-1",
             "tokens": [
               {
-                "id": "tok-n4-l40-1",
-                "text": "彼が",
+                "id": "t-l40s1-1",
+                "text": "せんせい",
+                "isKeyGrammar": false,
+                "kanji": "先生",
+                "furigana": "せんせい"
+              },
+              {
+                "id": "t-l40s1-2",
+                "text": "が",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n4-l40-2",
-                "text": "彼が 来るかどうか 分かりません。",
+                "id": "t-l40s1-3",
+                "text": "いつ",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l40s1-4",
+                "text": "くる",
+                "isKeyGrammar": false,
+                "kanji": "来る",
+                "furigana": "くる"
+              },
+              {
+                "id": "t-l40s1-5",
+                "text": "か",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l40s1-6",
+                "text": "わかりません",
+                "isKeyGrammar": false,
+                "kanji": "分かりません",
+                "furigana": "わかりません"
+              }
+            ],
+            "meaningVi": "Tôi không biết khi nào thầy giáo sẽ đến."
+          },
+          {
+            "id": "ex-n4-l40-s1-2",
+            "tokens": [
+              {
+                "id": "t-l40s1-7",
+                "text": "これ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l40s1-8",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l40s1-9",
+                "text": "なん",
+                "isKeyGrammar": true,
+                "kanji": "何",
+                "furigana": "なん"
+              },
+              {
+                "id": "t-l40s1-10",
+                "text": "か",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l40s1-11",
+                "text": "しらべて",
+                "isKeyGrammar": false,
+                "kanji": "調べて",
+                "furigana": "しらべて"
+              },
+              {
+                "id": "t-l40s1-12",
+                "text": "みます",
                 "isKeyGrammar": true
               }
             ],
-            "meaningVi": "Tôi không biết anh ấy có đến hay không."
+            "meaningVi": "Tôi sẽ tra xem cái này là cái gì."
           }
-        ],
-        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+        ]
+      },
+      {
+        "slideId": "n4-l40-s2",
+        "slideType": "grammar",
+        "title": "2. Nghi vấn lồng cho câu ĐÚNG-SAI: [Thể thông thường] かどうか",
+        "grammarFormula": "[Thể thông thường] + か + どうか + [động từ chính]",
+        "explanation": "Với câu hỏi ĐÚNG-SAI (có/không, đúng/sai — không có từ để hỏi), dùng かどうか (nghĩa đen: 'có... hay không') thay vì chỉ か đơn thuần.",
+        "teacherTips": "Mẹo phân biệt: có từ để hỏi (何/いつ/どこ) → chỉ cần か; câu đúng-sai/có-không → cần か+どうか đầy đủ.",
+        "culturalNotes": "合格するかどうか、心配です là tâm trạng phổ biến của học sinh Nhật trước kỳ thi tuyển sinh quan trọng.",
+        "examples": [
+          {
+            "id": "ex-n4-l40-s2-1",
+            "tokens": [
+              {
+                "id": "t-l40s2-1",
+                "text": "しけん",
+                "isKeyGrammar": true,
+                "kanji": "試験",
+                "furigana": "しけん"
+              },
+              {
+                "id": "t-l40s2-2",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l40s2-3",
+                "text": "ごうかく",
+                "isKeyGrammar": false,
+                "kanji": "合格",
+                "furigana": "ごうかく"
+              },
+              {
+                "id": "t-l40s2-4",
+                "text": "する",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l40s2-5",
+                "text": "か",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l40s2-6",
+                "text": "どうか",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l40s2-7",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l40s2-8",
+                "text": "しんぱい",
+                "isKeyGrammar": false,
+                "kanji": "心配",
+                "furigana": "しんぱい"
+              },
+              {
+                "id": "t-l40s2-9",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Tôi lo không biết có đậu kỳ thi hay không."
+          },
+          {
+            "id": "ex-n4-l40-s2-2",
+            "tokens": [
+              {
+                "id": "t-l40s2-10",
+                "text": "サイズ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l40s2-11",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l40s2-12",
+                "text": "あう",
+                "isKeyGrammar": false,
+                "kanji": "合う",
+                "furigana": "あう"
+              },
+              {
+                "id": "t-l40s2-13",
+                "text": "か",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l40s2-14",
+                "text": "どうか",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l40s2-15",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l40s2-16",
+                "text": "きて",
+                "isKeyGrammar": false,
+                "kanji": "着て",
+                "furigana": "きて"
+              },
+              {
+                "id": "t-l40s2-17",
+                "text": "みます",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi sẽ thử mặc xem có vừa cỡ không."
+          }
+        ]
+      },
+      {
+        "slideId": "n4-l40-s3",
+        "slideType": "grammar",
+        "title": "3. Thử làm: V(て) + みます",
+        "grammarFormula": "[Thể て] + みます   (thử làm gì đó để XEM KẾT QUẢ ra sao, chưa chắc sẽ tiếp tục)",
+        "explanation": "みます (nguyên nghĩa 'xem') ghép sau thể て tạo nghĩa 'thử làm xem sao' — nhấn mạnh tính THỬ NGHIỆM, khác hẳn nghĩa 見ます (xem, nhìn) độc lập.",
+        "teacherTips": "てみます KHÔNG chia phủ định trực tiếp thành 'không thử' — nếu thất bại thì nói てみましたが、〜ませんでした (đã thử nhưng...).",
+        "culturalNotes": "やってみます là câu trả lời tích cực, cầu tiến rất được đánh giá cao trong văn hóa làm việc Nhật khi được giao việc mới, khó.",
+        "examples": [
+          {
+            "id": "ex-n4-l40-s3-1",
+            "tokens": [
+              {
+                "id": "t-l40s3-1",
+                "text": "この",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l40s3-2",
+                "text": "りょうり",
+                "isKeyGrammar": true,
+                "kanji": "料理",
+                "furigana": "りょうり"
+              },
+              {
+                "id": "t-l40s3-3",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l40s3-4",
+                "text": "たべて",
+                "isKeyGrammar": true,
+                "kanji": "食べて",
+                "furigana": "たべて"
+              },
+              {
+                "id": "t-l40s3-5",
+                "text": "みます",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi sẽ thử ăn món này xem sao."
+          },
+          {
+            "id": "ex-n4-l40-s3-2",
+            "tokens": [
+              {
+                "id": "t-l40s3-6",
+                "text": "せんせい",
+                "isKeyGrammar": false,
+                "kanji": "先生",
+                "furigana": "せんせい"
+              },
+              {
+                "id": "t-l40s3-7",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l40s3-8",
+                "text": "でんわ",
+                "isKeyGrammar": false,
+                "kanji": "電話",
+                "furigana": "でんわ"
+              },
+              {
+                "id": "t-l40s3-9",
+                "text": "して",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l40s3-10",
+                "text": "みます",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi sẽ thử gọi điện cho thầy giáo xem sao."
+          }
+        ]
+      },
+      {
+        "slideId": "n4-l40-s4",
+        "slideType": "grammar",
+        "title": "4. Kết hợp かどうか và てみます",
+        "grammarFormula": "[かどうか] + [てみます]   (thử làm gì đó ĐỂ TÌM RA câu trả lời cho một nghi vấn)",
+        "explanation": "Hai cấu trúc trong bài này thường XUẤT HIỆN CÙNG NHAU: đặt ra nghi vấn bằng かどうか, rồi giải quyết nghi vấn đó bằng hành động てみます.",
+        "teacherTips": "Cấu trúc kép này rất tự nhiên khi mô tả HÀNH ĐỘNG XÁC MINH một điều chưa chắc chắn — phổ biến trong công việc, nghiên cứu.",
+        "culturalNotes": "本当かどうか、電話して聞いてみます phản ánh thói quen xác minh thông tin cẩn thận trước khi tin/hành động của người Nhật.",
+        "examples": [
+          {
+            "id": "ex-n4-l40-s4-1",
+            "tokens": [
+              {
+                "id": "t-l40s4-1",
+                "text": "ほんとう",
+                "isKeyGrammar": true,
+                "kanji": "本当",
+                "furigana": "ほんとう"
+              },
+              {
+                "id": "t-l40s4-2",
+                "text": "か",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l40s4-3",
+                "text": "どうか",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l40s4-4",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l40s4-5",
+                "text": "でんわ",
+                "isKeyGrammar": false,
+                "kanji": "電話",
+                "furigana": "でんわ"
+              },
+              {
+                "id": "t-l40s4-6",
+                "text": "して",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l40s4-7",
+                "text": "きいて",
+                "isKeyGrammar": false,
+                "kanji": "聞いて",
+                "furigana": "きいて"
+              },
+              {
+                "id": "t-l40s4-8",
+                "text": "みます",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi sẽ gọi điện hỏi thử xem có đúng sự thật hay không."
+          },
+          {
+            "id": "ex-n4-l40-s4-2",
+            "tokens": [
+              {
+                "id": "t-l40s4-9",
+                "text": "きょうみ",
+                "isKeyGrammar": true,
+                "kanji": "興味",
+                "furigana": "きょうみ"
+              },
+              {
+                "id": "t-l40s4-10",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l40s4-11",
+                "text": "ある",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l40s4-12",
+                "text": "か",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l40s4-13",
+                "text": "どうか",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l40s4-14",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l40s4-15",
+                "text": "きいて",
+                "isKeyGrammar": false,
+                "kanji": "聞いて",
+                "furigana": "きいて"
+              },
+              {
+                "id": "t-l40s4-16",
+                "text": "みましょう",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Chúng ta thử hỏi xem (người đó) có hứng thú hay không nhé."
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n4-40-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
         "tokens": [
           {
-            "id": "tok-n4-40-d1",
-            "text": "この文法のポイントを"
+            "id": "d-l40-1",
+            "text": "あした",
+            "isKeyGrammar": false
           },
           {
-            "id": "tok-n4-40-d2",
-            "text": "復習しましょう。"
+            "id": "d-l40-2",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-3",
+            "text": "しけん",
+            "isKeyGrammar": true,
+            "kanji": "試験",
+            "furigana": "しけん"
+          },
+          {
+            "id": "d-l40-4",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-5",
+            "text": "ごうかく",
+            "isKeyGrammar": false,
+            "kanji": "合格",
+            "furigana": "ごうかく"
+          },
+          {
+            "id": "d-l40-6",
+            "text": "する",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l40-7",
+            "text": "か",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l40-8",
+            "text": "どうか",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l40-9",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-10",
+            "text": "しんぱい",
+            "isKeyGrammar": false,
+            "kanji": "心配",
+            "furigana": "しんぱい"
+          },
+          {
+            "id": "d-l40-11",
+            "text": "です",
+            "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Tôi lo không biết ngày mai có đậu kỳ thi hay không."
+      },
+      {
+        "id": "dia-n4-40-2",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l40-12",
+            "text": "だいじょうぶ",
+            "isKeyGrammar": false,
+            "kanji": "大丈夫",
+            "furigana": "だいじょうぶ"
+          },
+          {
+            "id": "d-l40-13",
+            "text": "ですよ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-14",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-15",
+            "text": "まいにち",
+            "isKeyGrammar": false,
+            "kanji": "毎日",
+            "furigana": "まいにち"
+          },
+          {
+            "id": "d-l40-16",
+            "text": "べんきょう",
+            "isKeyGrammar": false,
+            "kanji": "勉強",
+            "furigana": "べんきょう"
+          },
+          {
+            "id": "d-l40-17",
+            "text": "して",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l40-18",
+            "text": "いました",
+            "isKeyGrammar": false,
+            "kanji": "居ました",
+            "furigana": "いました"
+          }
+        ],
+        "meaningVi": "Ổn thôi mà. Cậu đã học mỗi ngày rồi mà."
+      },
+      {
+        "id": "dia-n4-40-3",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l40-19",
+            "text": "しけん",
+            "isKeyGrammar": true,
+            "kanji": "試験",
+            "furigana": "しけん"
+          },
+          {
+            "id": "d-l40-20",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-21",
+            "text": "むずかしい",
+            "isKeyGrammar": false,
+            "kanji": "難しい",
+            "furigana": "むずかしい"
+          },
+          {
+            "id": "d-l40-22",
+            "text": "か",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l40-23",
+            "text": "どうか",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l40-24",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-25",
+            "text": "せんせい",
+            "isKeyGrammar": true,
+            "kanji": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "id": "d-l40-26",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-27",
+            "text": "きいて",
+            "isKeyGrammar": true,
+            "kanji": "聞いて",
+            "furigana": "きいて"
+          },
+          {
+            "id": "d-l40-28",
+            "text": "みます",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Tôi sẽ thử hỏi thầy giáo xem đề thi có khó không."
+      },
+      {
+        "id": "dia-n4-40-4",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l40-29",
+            "text": "いい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-30",
+            "text": "かんがえ",
+            "isKeyGrammar": false,
+            "kanji": "考え",
+            "furigana": "かんがえ"
+          },
+          {
+            "id": "d-l40-31",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-32",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Ý hay đấy."
+      },
+      {
+        "id": "dia-n4-40-5",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l40-33",
+            "text": "ところで",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-34",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-35",
+            "text": "この",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-36",
+            "text": "りょうり",
+            "isKeyGrammar": true,
+            "kanji": "料理",
+            "furigana": "りょうり"
+          },
+          {
+            "id": "d-l40-37",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-38",
+            "text": "たべた",
+            "isKeyGrammar": false,
+            "kanji": "食べた",
+            "furigana": "たべた"
+          },
+          {
+            "id": "d-l40-39",
+            "text": "こと",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-40",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-41",
+            "text": "ありますか",
+            "isKeyGrammar": false,
+            "kanji": "有りますか",
+            "furigana": "ありますか"
+          }
+        ],
+        "meaningVi": "À mà, món ăn này cậu đã từng ăn chưa?"
+      },
+      {
+        "id": "dia-n4-40-6",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l40-42",
+            "text": "いいえ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-43",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-44",
+            "text": "はじめて",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-45",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-46",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-47",
+            "text": "あじ",
+            "isKeyGrammar": true,
+            "kanji": "味",
+            "furigana": "あじ"
+          },
+          {
+            "id": "d-l40-48",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-49",
+            "text": "どう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-50",
+            "text": "か",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-51",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-52",
+            "text": "たべて",
+            "isKeyGrammar": true,
+            "kanji": "食べて",
+            "furigana": "たべて"
+          },
+          {
+            "id": "d-l40-53",
+            "text": "みます",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Không, lần đầu tiên. Tôi sẽ thử ăn xem vị thế nào."
+      },
+      {
+        "id": "dia-n4-40-7",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l40-54",
+            "text": "どうでしたか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Thế nào rồi?"
+      },
+      {
+        "id": "dia-n4-40-8",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l40-55",
+            "text": "おいしい",
+            "isKeyGrammar": false,
+            "kanji": "美味しい",
+            "furigana": "おいしい"
+          },
+          {
+            "id": "d-l40-56",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-57",
+            "text": "！",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-58",
+            "text": "ワンさん",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-59",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-60",
+            "text": "たべて",
+            "isKeyGrammar": true,
+            "kanji": "食べて",
+            "furigana": "たべて"
+          },
+          {
+            "id": "d-l40-61",
+            "text": "みて",
+            "isKeyGrammar": false,
+            "kanji": "みて",
+            "furigana": "みて"
+          },
+          {
+            "id": "d-l40-62",
+            "text": "ください",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Ngon lắm! Wang cũng thử ăn xem đi."
+      },
+      {
+        "id": "dia-n4-40-9",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l40-63",
+            "text": "きょうみ",
+            "isKeyGrammar": true,
+            "kanji": "興味",
+            "furigana": "きょうみ"
+          },
+          {
+            "id": "d-l40-64",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-65",
+            "text": "あります",
+            "isKeyGrammar": false,
+            "kanji": "有ります",
+            "furigana": "あります"
+          },
+          {
+            "id": "d-l40-66",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-67",
+            "text": "やって",
+            "isKeyGrammar": false,
+            "kanji": "やって",
+            "furigana": "やって"
+          },
+          {
+            "id": "d-l40-68",
+            "text": "みます",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Tôi có hứng thú đấy. Tôi sẽ thử."
+      },
+      {
+        "id": "dia-n4-40-10",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l40-69",
+            "text": "きっと",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l40-70",
+            "text": "きに",
+            "isKeyGrammar": false,
+            "kanji": "気に",
+            "furigana": "きに"
+          },
+          {
+            "id": "d-l40-71",
+            "text": "いります",
+            "isKeyGrammar": false,
+            "kanji": "入ります",
+            "furigana": "いります"
+          }
+        ],
+        "meaningVi": "Chắc chắn cậu sẽ thích đấy."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n4-40-1",
-        "question": "Chọn cách kết hợp đúng cho cấu trúc: Nghi vấn lồng (〜か, 〜かどうか) & Thử làm (〜てみます)",
+        "question": "「先生がいつ来るか分かりません」 — か ở đây có vai trò gì?",
         "options": [
-          "Thể thông thường + か",
-          "Thể ý chí + だ",
-          "Thể cấm chỉ",
-          "V-ない + です"
+          "Đánh dấu ranh giới của câu hỏi LỒNG bên trong câu lớn hơn",
+          "Biến câu thành câu hỏi trực tiếp",
+          "Phủ định câu trước đó",
+          "Không có vai trò gì đặc biệt"
         ],
         "correctIndex": 0,
-        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Thể thông thường + か / かどうか + V",
-        "hint": "Chú ý dạng thể liên kết của động từ."
+        "explanation": "か đánh dấu điểm kết thúc của phần câu hỏi (いつ来る), sau đó nối với động từ chính (分かりません).",
+        "hint": "Xem cấu trúc nghi vấn lồng ở slide 1."
+      },
+      {
+        "id": "ex-q-n4-40-2",
+        "question": "Câu hỏi ĐÚNG-SAI (không có từ để hỏi) khi lồng vào câu khác cần thêm:",
+        "options": [
+          "かどうか",
+          "chỉ か là đủ",
+          "かどうですか",
+          "かなのか"
+        ],
+        "correctIndex": 0,
+        "explanation": "Câu hỏi có/không dùng かどうか (nghĩa đen 'có...hay không') khi lồng vào câu lớn hơn.",
+        "hint": "So sánh với câu có từ để hỏi ở câu 1."
+      },
+      {
+        "id": "ex-q-n4-40-3",
+        "question": "「試験に合格するかどうか、心配です」 nghĩa là:",
+        "options": [
+          "Tôi lo không biết có đậu kỳ thi hay không",
+          "Tôi chắc chắn sẽ đậu kỳ thi",
+          "Tôi đã đậu kỳ thi rồi",
+          "Tôi không quan tâm tới kỳ thi"
+        ],
+        "correctIndex": 0,
+        "explanation": "かどうか lồng câu hỏi đúng-sai (đậu hay không đậu) vào trong câu tâm trạng 心配です.",
+        "hint": "Áp dụng đúng cấu trúc かどうか đã học."
+      },
+      {
+        "id": "ex-q-n4-40-4",
+        "question": "「食べてみます」 khác 「食べます」 ở chỗ:",
+        "options": [
+          "てみます nhấn mạnh tính THỬ NGHIỆM, chưa chắc sẽ tiếp tục làm",
+          "Hoàn toàn giống nhau",
+          "てみます là thì quá khứ",
+          "食べます mới có nghĩa thử"
+        ],
+        "correctIndex": 0,
+        "explanation": "てみます thêm sắc thái 'thử xem sao', khác 食べます chỉ đơn thuần là hành động ăn.",
+        "hint": "Xem nghĩa của てみます ở slide 3."
+      },
+      {
+        "id": "ex-q-n4-40-5",
+        "question": "「本当かどうか、電話して聞いてみます」 kết hợp hai cấu trúc nào?",
+        "options": [
+          "かどうか (nghi vấn lồng) + てみます (thử làm để xác minh)",
+          "から + ので",
+          "ば + なら",
+          "ように + ようになる"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đây là sự kết hợp điển hình: đặt nghi vấn bằng かどうか, rồi giải quyết bằng hành động てみます.",
+        "hint": "Xem cấu trúc kép ở slide 4."
+      },
+      {
+        "id": "ex-q-n4-40-6",
+        "question": "「サイズが合うかどうか、着てみます」 nghĩa là:",
+        "options": [
+          "Tôi sẽ thử mặc xem có vừa cỡ không",
+          "Cỡ áo chắc chắn vừa",
+          "Tôi không muốn thử áo",
+          "Áo này quá nhỏ"
+        ],
+        "correctIndex": 0,
+        "explanation": "着てみます (thử mặc) + かどうか (có vừa hay không) diễn tả hành động thử để kiểm tra.",
+        "hint": "Áp dụng đúng nghĩa của cấu trúc kép."
+      },
+      {
+        "id": "ex-q-n4-40-7",
+        "question": "「これが何か調べてみます」 — vì sao không cần どうか ở đây?",
+        "options": [
+          "何 là từ để hỏi, chỉ cần か là đủ, không cần どうか",
+          "Câu này thiếu どうか nên sai ngữ pháp",
+          "何か luôn cần どうか đi kèm",
+          "調べます không ghép được với か"
+        ],
+        "correctIndex": 0,
+        "explanation": "Có từ để hỏi (何) thì chỉ cần か, không cần thêm どうか — どうか chỉ dùng cho câu hỏi đúng-sai.",
+        "hint": "So sánh lại quy tắc phân biệt ở slide 2."
+      },
+      {
+        "id": "ex-q-n4-40-8",
+        "question": "やってみます trong môi trường công việc thể hiện thái độ:",
+        "options": [
+          "Tích cực, cầu tiến, sẵn sàng thử thách mới",
+          "Từ chối công việc",
+          "Nghi ngờ khả năng bản thân",
+          "Không quan tâm tới kết quả"
+        ],
+        "correctIndex": 0,
+        "explanation": "やってみます là câu trả lời tích cực được đánh giá cao trong văn hóa làm việc Nhật khi nhận nhiệm vụ mới.",
+        "hint": "Xem ghi chú văn hóa ở slide 3."
+      },
+      {
+        "id": "ex-q-n4-40-9",
+        "question": "Trong hội thoại, Wang định làm gì để biết đề thi có khó không?",
+        "options": [
+          "Hỏi thầy giáo thử xem",
+          "Tự đoán mà không hỏi ai",
+          "Bỏ thi luôn",
+          "Hỏi Santos"
+        ],
+        "correctIndex": 0,
+        "explanation": "Wang nói 「試験が難しいかどうか、先生に聞いてみます」.",
+        "hint": "Xem câu thoại thứ 3."
+      },
+      {
+        "id": "ex-q-n4-40-10",
+        "question": "Santos nhận xét thế nào về món ăn sau khi thử?",
+        "options": [
+          "Rất ngon",
+          "Không ngon",
+          "Quá cay",
+          "Không có ý kiến"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos nói 「おいしいです！」 sau khi thử ăn.",
+        "hint": "Xem câu thoại thứ 8."
       }
     ]
   },

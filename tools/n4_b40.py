@@ -1,0 +1,240 @@
+# -*- coding: utf-8 -*-
+"""N4 — Bai 40: Nghi van long か/かどうか, thu lam てみます.
+
+Tu vung minh hoa TU CHON tu pool mo data/jlpt-vocab/n4.csv (xem NOTICE.md).
+"""
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from n4_lib import v, k, t, ex, slide, line, q, lesson, merge
+from jlpt_pool import Pool
+
+L = 40
+pool = Pool("n4")
+
+VOCAB = [
+    v(1,  "しらべます", "調べます", "しらべます", "shirabemasu", "verb", "Tra cứu, kiểm tra", "Đã gặp N4 bài 30 — nay dùng làm động từ chính chứa câu hỏi lồng.", L),
+    v(2,  "たべてみます", "食べてみます", "たべてみます", "tabete mimasu", "verb", "Thử ăn xem sao", "食べる + てみます: bỏ bớt phần cuối, thêm てみます.", L),
+    v(3,  "きてみます", "着てみます", "きてみます", "kite mimasu", "verb", "Thử mặc xem sao", "着る + てみます.", L),
+    v(4,  "やってみます", "やってみます", "やってみます", "yatte mimasu", "verb", "Thử làm xem sao", "やる + てみます. Đã gặp bài 34.", L),
+    v(5,  "ききます", "聞きます", "ききます", "kikimasu", "verb", "Hỏi, nghe", "Đã gặp N5 bài 6 — nay dùng làm động từ chính chứa câu hỏi lồng.", L),
+    v(6,  "わかりません", "分かりません", "わかりません", "wakarimasen", "phrase", "Không biết, không hiểu", "いつ 来るか わかりません = không biết khi nào sẽ đến.", L),
+    v(7,  "あじ", "味", "あじ", "aji", "noun", "Hương vị, mùi vị", "味が どうか、食べてみます = thử ăn xem vị thế nào.", L),
+    v(8,  "きょうみ", "興味", "きょうみ", "kyoumi", "noun", "Sự hứng thú, quan tâm", "興味が あるかどうか、聞いてみます = thử hỏi xem có hứng thú không.", L),
+    v(9,  "しゅみ", "趣味", "しゅみ", "shumi", "noun", "Sở thích", "Đã gặp N5 bài 18.", L),
+    v(10, "てんき", "天気", "てんき", "tenki", "noun", "Thời tiết", "Đã gặp N5 bài 21.", L),
+    v(11, "しけん", "試験", "しけん", "shiken", "noun", "Kỳ thi", "試験に 合格するかどうか、心配です = lo không biết có đậu kỳ thi không.", L),
+    v(12, "ごうかくします", "合格します", "ごうかくします", "goukaku shimasu", "verb", "Đậu, đỗ (kỳ thi)", "", L),
+    v(13, "りょうり", "料理", "りょうり", "ryouri", "noun", "Món ăn, nấu ăn", "Đã gặp N5 bài 9.", L),
+    v(14, "ふく", "服", "ふく", "fuku", "noun", "Quần áo", "Đã gặp N5 bài 22.", L),
+    v(15, "サイズ", "", "", "saizu", "noun", "Kích cỡ", "サイズが 合うか どうか、着てみます = thử mặc xem có vừa cỡ không.", L),
+    v(16, "あいます", "合います", "あいます", "aimasu", "verb", "Vừa vặn, phù hợp", "サイズが 合いません = không vừa cỡ.", L),
+    v(17, "でんわします", "電話します", "でんわします", "denwa shimasu", "verb", "Gọi điện thoại", "本当かどうか、電話して 聞いてみます = gọi điện hỏi xem có đúng không.", L),
+    v(18, "ほんとう", "本当", "ほんとう", "hontou", "noun", "Sự thật, thật", "Đã gặp N5 bài 22 (本当ですか).", L),
+    v(19, "せんせい", "先生", "せんせい", "sensei", "noun", "Thầy/cô giáo", "Đã gặp N5 bài 1.", L),
+    v(20, "だいじょうぶ", "大丈夫", "だいじょうぶ", "daijoubu", "adjective", "Ổn, không sao", "Đã gặp N5 bài 15.", L),
+]
+
+KANJI = [
+    k(1, "味", "VỊ", 8, ["ミ (mi)"], ["あじ"], "Hương vị, mùi vị.",
+      [("味", "あじ", "Hương vị"), ("興味", "きょうみ", "Hứng thú"), ("味噌", "みそ", "Tương miso")], L),
+    k(2, "興", "HƯNG", 16, ["キョウ (kyou)"], ["おこ(る)"], "Hưng thịnh, hứng thú.",
+      [("興味", "きょうみ", "Hứng thú"), ("興奮", "こうふん", "Hưng phấn")], L),
+    k(3, "試", "THÍ", 13, ["シ (shi)"], ["こころ(みる)", "ため(す)"], "Thử nghiệm, thi cử.",
+      [("試験", "しけん", "Kỳ thi"), ("試着", "しちゃく", "Thử đồ"), ("試合", "しあい", "Trận đấu")], L),
+    k(4, "験", "NGHIỆM", 18, ["ケン (ken)"], [], "Kiểm nghiệm. Đã gặp N5 bài 19.",
+      [("試験", "しけん", "Kỳ thi"), ("経験", "けいけん", "Kinh nghiệm"), ("実験", "じっけん", "Thí nghiệm")], L),
+    k(5, "格", "CÁCH", 10, ["カク (kaku)"], [], "Tư cách, tiêu chuẩn.",
+      [("合格", "ごうかく", "Đậu (thi)"), ("性格", "せいかく", "Tính cách"), ("価格", "かかく", "Giá cả")], L),
+]
+
+SLIDES = [
+    slide(L, 1,
+        "1. Nghi vấn lồng với từ để hỏi: [Từ hỏi + thể thông thường] + か",
+        "[何/いつ/どこ/だれ + V(thể thông thường)] + か + [động từ chính: 分かりません/知りません/調べます]",
+        "Khi CÂU HỎI trở thành một PHẦN của câu lớn hơn (không hỏi trực tiếp mà là nội dung của "
+        "động từ khác như biết/không biết), thêm か vào cuối phần câu hỏi rồi mới đến động từ chính.",
+        [
+            ex(L, 1, 1, [t("t-l40s1-1", "せんせい", "先生", "せんせい"), t("t-l40s1-2", "が"),
+                         t("t-l40s1-3", "いつ", key=True), t("t-l40s1-4", "くる", "来る", "くる"),
+                         t("t-l40s1-5", "か", key=True), t("t-l40s1-6", "わかりません", "分かりません", "わかりません")],
+               "Tôi không biết khi nào thầy giáo sẽ đến."),
+            ex(L, 1, 2, [t("t-l40s1-7", "これ"), t("t-l40s1-8", "が"), t("t-l40s1-9", "なん", "何", "なん", key=True),
+                         t("t-l40s1-10", "か", key=True), t("t-l40s1-11", "しらべて", "調べて", "しらべて"),
+                         t("t-l40s1-12", "みます", key=True)],
+               "Tôi sẽ tra xem cái này là cái gì."),
+        ],
+        tips="Khác câu hỏi trực tiếp (いつ来ますか。), câu hỏi LỒNG không có dấu chấm hỏi riêng — か chỉ đánh dấu ranh giới, cả câu vẫn kết ở động từ chính.",
+        culture="いつ来るか分かりません là câu trả lời phổ biến khi ai đó hỏi lịch trình chưa chắc chắn, tránh cam kết thời gian cụ thể."),
+
+    slide(L, 2,
+        "2. Nghi vấn lồng cho câu ĐÚNG-SAI: [Thể thông thường] かどうか",
+        "[Thể thông thường] + か + どうか + [động từ chính]",
+        "Với câu hỏi ĐÚNG-SAI (có/không, đúng/sai — không có từ để hỏi), dùng かどうか (nghĩa đen: "
+        "'có... hay không') thay vì chỉ か đơn thuần.",
+        [
+            ex(L, 2, 1, [t("t-l40s2-1", "しけん", "試験", "しけん", key=True), t("t-l40s2-2", "に"),
+                         t("t-l40s2-3", "ごうかく", "合格", "ごうかく"), t("t-l40s2-4", "する", key=True),
+                         t("t-l40s2-5", "か", key=True), t("t-l40s2-6", "どうか", key=True),
+                         t("t-l40s2-7", "、"), t("t-l40s2-8", "しんぱい", "心配", "しんぱい"), t("t-l40s2-9", "です")],
+               "Tôi lo không biết có đậu kỳ thi hay không."),
+            ex(L, 2, 2, [t("t-l40s2-10", "サイズ"), t("t-l40s2-11", "が"), t("t-l40s2-12", "あう", "合う", "あう"),
+                         t("t-l40s2-13", "か", key=True), t("t-l40s2-14", "どうか", key=True), t("t-l40s2-15", "、"),
+                         t("t-l40s2-16", "きて", "着て", "きて"), t("t-l40s2-17", "みます", key=True)],
+               "Tôi sẽ thử mặc xem có vừa cỡ không."),
+        ],
+        tips="Mẹo phân biệt: có từ để hỏi (何/いつ/どこ) → chỉ cần か; câu đúng-sai/có-không → cần か+どうか đầy đủ.",
+        culture="合格するかどうか、心配です là tâm trạng phổ biến của học sinh Nhật trước kỳ thi tuyển sinh quan trọng."),
+
+    slide(L, 3,
+        "3. Thử làm: V(て) + みます",
+        "[Thể て] + みます   (thử làm gì đó để XEM KẾT QUẢ ra sao, chưa chắc sẽ tiếp tục)",
+        "みます (nguyên nghĩa 'xem') ghép sau thể て tạo nghĩa 'thử làm xem sao' — nhấn mạnh tính "
+        "THỬ NGHIỆM, khác hẳn nghĩa 見ます (xem, nhìn) độc lập.",
+        [
+            ex(L, 3, 1, [t("t-l40s3-1", "この"), t("t-l40s3-2", "りょうり", "料理", "りょうり", key=True),
+                         t("t-l40s3-3", "を"), t("t-l40s3-4", "たべて", "食べて", "たべて", key=True),
+                         t("t-l40s3-5", "みます", key=True)],
+               "Tôi sẽ thử ăn món này xem sao."),
+            ex(L, 3, 2, [t("t-l40s3-6", "せんせい", "先生", "せんせい"), t("t-l40s3-7", "に"),
+                         t("t-l40s3-8", "でんわ", "電話", "でんわ"), t("t-l40s3-9", "して", key=True),
+                         t("t-l40s3-10", "みます", key=True)],
+               "Tôi sẽ thử gọi điện cho thầy giáo xem sao."),
+        ],
+        tips="てみます KHÔNG chia phủ định trực tiếp thành 'không thử' — nếu thất bại thì nói てみましたが、〜ませんでした (đã thử nhưng...).",
+        culture="やってみます là câu trả lời tích cực, cầu tiến rất được đánh giá cao trong văn hóa làm việc Nhật khi được giao việc mới, khó."),
+
+    slide(L, 4,
+        "4. Kết hợp かどうか và てみます",
+        "[かどうか] + [てみます]   (thử làm gì đó ĐỂ TÌM RA câu trả lời cho một nghi vấn)",
+        "Hai cấu trúc trong bài này thường XUẤT HIỆN CÙNG NHAU: đặt ra nghi vấn bằng かどうか, rồi "
+        "giải quyết nghi vấn đó bằng hành động てみます.",
+        [
+            ex(L, 4, 1, [t("t-l40s4-1", "ほんとう", "本当", "ほんとう", key=True), t("t-l40s4-2", "か"),
+                         t("t-l40s4-3", "どうか", key=True), t("t-l40s4-4", "、"), t("t-l40s4-5", "でんわ", "電話", "でんわ"),
+                         t("t-l40s4-6", "して", key=True), t("t-l40s4-7", "きいて", "聞いて", "きいて"),
+                         t("t-l40s4-8", "みます", key=True)],
+               "Tôi sẽ gọi điện hỏi thử xem có đúng sự thật hay không."),
+            ex(L, 4, 2, [t("t-l40s4-9", "きょうみ", "興味", "きょうみ", key=True), t("t-l40s4-10", "が"),
+                         t("t-l40s4-11", "ある", key=True), t("t-l40s4-12", "か", key=True), t("t-l40s4-13", "どうか", key=True),
+                         t("t-l40s4-14", "、"), t("t-l40s4-15", "きいて", "聞いて", "きいて"), t("t-l40s4-16", "みましょう", key=True)],
+               "Chúng ta thử hỏi xem (người đó) có hứng thú hay không nhé."),
+        ],
+        tips="Cấu trúc kép này rất tự nhiên khi mô tả HÀNH ĐỘNG XÁC MINH một điều chưa chắc chắn — phổ biến trong công việc, nghiên cứu.",
+        culture="本当かどうか、電話して聞いてみます phản ánh thói quen xác minh thông tin cẩn thận trước khi tin/hành động của người Nhật."),
+]
+
+DIALOGUE = [
+    line(L, 1, "ワン", "Sinh viên",
+         [t("d-l40-1", "あした"), t("d-l40-2", "の"), t("d-l40-3", "しけん", "試験", "しけん", key=True),
+          t("d-l40-4", "に"), t("d-l40-5", "ごうかく", "合格", "ごうかく"), t("d-l40-6", "する", key=True),
+          t("d-l40-7", "か", key=True), t("d-l40-8", "どうか", key=True), t("d-l40-9", "、"),
+          t("d-l40-10", "しんぱい", "心配", "しんぱい"), t("d-l40-11", "です")],
+         "Tôi lo không biết ngày mai có đậu kỳ thi hay không."),
+    line(L, 2, "サントス", "Sinh viên",
+         [t("d-l40-12", "だいじょうぶ", "大丈夫", "だいじょうぶ"), t("d-l40-13", "ですよ"), t("d-l40-14", "。"),
+          t("d-l40-15", "まいにち", "毎日", "まいにち"), t("d-l40-16", "べんきょう", "勉強", "べんきょう"),
+          t("d-l40-17", "して", key=True), t("d-l40-18", "いました", "居ました", "いました")],
+         "Ổn thôi mà. Cậu đã học mỗi ngày rồi mà."),
+    line(L, 3, "ワン", "Sinh viên",
+         [t("d-l40-19", "しけん", "試験", "しけん", key=True), t("d-l40-20", "が"), t("d-l40-21", "むずかしい", "難しい", "むずかしい"),
+          t("d-l40-22", "か", key=True), t("d-l40-23", "どうか", key=True), t("d-l40-24", "、"),
+          t("d-l40-25", "せんせい", "先生", "せんせい", key=True), t("d-l40-26", "に"), t("d-l40-27", "きいて", "聞いて", "きいて", key=True),
+          t("d-l40-28", "みます", key=True)],
+         "Tôi sẽ thử hỏi thầy giáo xem đề thi có khó không."),
+    line(L, 4, "サントス", "Sinh viên",
+         [t("d-l40-29", "いい"), t("d-l40-30", "かんがえ", "考え", "かんがえ"), t("d-l40-31", "です"), t("d-l40-32", "ね")],
+         "Ý hay đấy."),
+    line(L, 5, "ワン", "Sinh viên",
+         [t("d-l40-33", "ところで"), t("d-l40-34", "、"), t("d-l40-35", "この"), t("d-l40-36", "りょうり", "料理", "りょうり", key=True),
+          t("d-l40-37", "、"), t("d-l40-38", "たべた", "食べた", "たべた"), t("d-l40-39", "こと"), t("d-l40-40", "が"),
+          t("d-l40-41", "ありますか", "有りますか", "ありますか")],
+         "À mà, món ăn này cậu đã từng ăn chưa?"),
+    line(L, 6, "サントス", "Sinh viên",
+         [t("d-l40-42", "いいえ"), t("d-l40-43", "、"), t("d-l40-44", "はじめて"), t("d-l40-45", "です"),
+          t("d-l40-46", "。"), t("d-l40-47", "あじ", "味", "あじ", key=True), t("d-l40-48", "が"),
+          t("d-l40-49", "どう"), t("d-l40-50", "か"), t("d-l40-51", "、"), t("d-l40-52", "たべて", "食べて", "たべて", key=True),
+          t("d-l40-53", "みます", key=True)],
+         "Không, lần đầu tiên. Tôi sẽ thử ăn xem vị thế nào."),
+    line(L, 7, "ワン", "Sinh viên",
+         [t("d-l40-54", "どうでしたか")],
+         "Thế nào rồi?"),
+    line(L, 8, "サントス", "Sinh viên",
+         [t("d-l40-55", "おいしい", "美味しい", "おいしい"), t("d-l40-56", "です"), t("d-l40-57", "！"),
+          t("d-l40-58", "ワンさん"), t("d-l40-59", "も"), t("d-l40-60", "たべて", "食べて", "たべて", key=True),
+          t("d-l40-61", "みて", "みて", "みて"), t("d-l40-62", "ください")],
+         "Ngon lắm! Wang cũng thử ăn xem đi."),
+    line(L, 9, "ワン", "Sinh viên",
+         [t("d-l40-63", "きょうみ", "興味", "きょうみ", key=True), t("d-l40-64", "が"), t("d-l40-65", "あります", "有ります", "あります"),
+          t("d-l40-66", "。"), t("d-l40-67", "やって", "やって", "やって"), t("d-l40-68", "みます", key=True)],
+         "Tôi có hứng thú đấy. Tôi sẽ thử."),
+    line(L, 10, "サントス", "Sinh viên",
+         [t("d-l40-69", "きっと"), t("d-l40-70", "きに", "気に", "きに"), t("d-l40-71", "いります", "入ります", "いります")],
+         "Chắc chắn cậu sẽ thích đấy."),
+]
+
+EXERCISES = [
+    q(L, 1, "「先生がいつ来るか分かりません」 — か ở đây có vai trò gì?",
+      ["Đánh dấu ranh giới của câu hỏi LỒNG bên trong câu lớn hơn",
+       "Biến câu thành câu hỏi trực tiếp", "Phủ định câu trước đó",
+       "Không có vai trò gì đặc biệt"], 0,
+      "か đánh dấu điểm kết thúc của phần câu hỏi (いつ来る), sau đó nối với động từ chính (分かりません).",
+      "Xem cấu trúc nghi vấn lồng ở slide 1."),
+    q(L, 2, "Câu hỏi ĐÚNG-SAI (không có từ để hỏi) khi lồng vào câu khác cần thêm:",
+      ["かどうか", "chỉ か là đủ", "かどうですか", "かなのか"], 0,
+      "Câu hỏi có/không dùng かどうか (nghĩa đen 'có...hay không') khi lồng vào câu lớn hơn.",
+      "So sánh với câu có từ để hỏi ở câu 1."),
+    q(L, 3, "「試験に合格するかどうか、心配です」 nghĩa là:",
+      ["Tôi lo không biết có đậu kỳ thi hay không", "Tôi chắc chắn sẽ đậu kỳ thi",
+       "Tôi đã đậu kỳ thi rồi", "Tôi không quan tâm tới kỳ thi"], 0,
+      "かどうか lồng câu hỏi đúng-sai (đậu hay không đậu) vào trong câu tâm trạng 心配です.",
+      "Áp dụng đúng cấu trúc かどうか đã học."),
+    q(L, 4, "「食べてみます」 khác 「食べます」 ở chỗ:",
+      ["てみます nhấn mạnh tính THỬ NGHIỆM, chưa chắc sẽ tiếp tục làm",
+       "Hoàn toàn giống nhau", "てみます là thì quá khứ",
+       "食べます mới có nghĩa thử"], 0,
+      "てみます thêm sắc thái 'thử xem sao', khác 食べます chỉ đơn thuần là hành động ăn.",
+      "Xem nghĩa của てみます ở slide 3."),
+    q(L, 5, "「本当かどうか、電話して聞いてみます」 kết hợp hai cấu trúc nào?",
+      ["かどうか (nghi vấn lồng) + てみます (thử làm để xác minh)",
+       "から + ので", "ば + なら", "ように + ようになる"], 0,
+      "Đây là sự kết hợp điển hình: đặt nghi vấn bằng かどうか, rồi giải quyết bằng hành động てみます.",
+      "Xem cấu trúc kép ở slide 4."),
+    q(L, 6, "「サイズが合うかどうか、着てみます」 nghĩa là:",
+      ["Tôi sẽ thử mặc xem có vừa cỡ không", "Cỡ áo chắc chắn vừa",
+       "Tôi không muốn thử áo", "Áo này quá nhỏ"], 0,
+      "着てみます (thử mặc) + かどうか (có vừa hay không) diễn tả hành động thử để kiểm tra.",
+      "Áp dụng đúng nghĩa của cấu trúc kép."),
+    q(L, 7, "「これが何か調べてみます」 — vì sao không cần どうか ở đây?",
+      ["何 là từ để hỏi, chỉ cần か là đủ, không cần どうか",
+       "Câu này thiếu どうか nên sai ngữ pháp", "何か luôn cần どうか đi kèm",
+       "調べます không ghép được với か"], 0,
+      "Có từ để hỏi (何) thì chỉ cần か, không cần thêm どうか — どうか chỉ dùng cho câu hỏi đúng-sai.",
+      "So sánh lại quy tắc phân biệt ở slide 2."),
+    q(L, 8, "やってみます trong môi trường công việc thể hiện thái độ:",
+      ["Tích cực, cầu tiến, sẵn sàng thử thách mới", "Từ chối công việc",
+       "Nghi ngờ khả năng bản thân", "Không quan tâm tới kết quả"], 0,
+      "やってみます là câu trả lời tích cực được đánh giá cao trong văn hóa làm việc Nhật khi nhận nhiệm vụ mới.",
+      "Xem ghi chú văn hóa ở slide 3."),
+    q(L, 9, "Trong hội thoại, Wang định làm gì để biết đề thi có khó không?",
+      ["Hỏi thầy giáo thử xem", "Tự đoán mà không hỏi ai", "Bỏ thi luôn",
+       "Hỏi Santos"], 0,
+      "Wang nói 「試験が難しいかどうか、先生に聞いてみます」.",
+      "Xem câu thoại thứ 3."),
+    q(L, 10, "Santos nhận xét thế nào về món ăn sau khi thử?",
+      ["Rất ngon", "Không ngon", "Quá cay", "Không có ý kiến"], 0,
+      "Santos nói 「おいしいです！」 sau khi thử ăn.",
+      "Xem câu thoại thứ 8."),
+]
+
+LESSON = lesson(
+    L,
+    "Bài 40: Nghi vấn lồng (〜か, 〜かどうか) & Thử làm (〜てみます)",
+    "Lồng câu hỏi vào câu lớn hơn: dùng か khi có từ để hỏi (何/いつ/どこ), かどうか khi là câu "
+    "hỏi đúng-sai; diễn tả hành động thử nghiệm bằng V(て)みます; và kết hợp cả hai để mô tả hành "
+    "động XÁC MINH một điều chưa chắc chắn (かどうか + てみます).",
+    VOCAB, KANJI, SLIDES, DIALOGUE, EXERCISES,
+)
+
+if __name__ == "__main__":
+    pool.mark_used([w["word"] for w in VOCAB], lesson=L)
+    merge([LESSON])
