@@ -25387,99 +25387,1345 @@
     "level": "N4",
     "lessonNumber": 45,
     "title": "Bài 45: Trường hợp (〜場合は) & Mặc dù (〜のに)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "description": "Giới thiệu tình huống giả định rồi đưa hướng dẫn/kết quả bằng 場合は (trang trọng, phổ biến trong thông báo an toàn), và diễn tả kết quả TRÁI VỚI KỲ VỌNG bằng のに (mặc dù — LƯU Ý: hoàn toàn khác のに mục đích ở bài 42, dù viết giống hệt) — so sánh のに với ても (N5 bài 25) để thấy rõ のに luôn kể một sự việc thực tế đã xảy ra, mang cảm xúc thất vọng/bất ngờ.",
     "vocabList": [
       {
         "id": "voc-n4-45-1",
-        "word": "重要語彙 (N4)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "がんばります",
+        "kanji": "頑張ります",
+        "furigana": "がんばります",
+        "romaji": "ganbarimasu",
+        "wordType": "verb",
+        "meaningVi": "Cố gắng, nỗ lực",
+        "accentNote": "頑張ったのに、失敗しました = dù đã cố gắng nhưng vẫn thất bại."
+      },
+      {
+        "id": "voc-n4-45-2",
+        "word": "しっぱいします",
+        "kanji": "失敗します",
+        "furigana": "しっぱいします",
+        "romaji": "shippai shimasu",
+        "wordType": "verb",
+        "meaningVi": "Thất bại, mắc lỗi",
+        "accentNote": ""
+      },
+      {
+        "id": "voc-n4-45-3",
+        "word": "ごうかくします",
+        "kanji": "合格します",
+        "furigana": "ごうかくします",
+        "romaji": "goukaku shimasu",
+        "wordType": "verb",
+        "meaningVi": "Đậu, đỗ (kỳ thi)",
+        "accentNote": "Đã gặp bài 40."
+      },
+      {
+        "id": "voc-n4-45-4",
+        "word": "でかけます",
+        "kanji": "出かけます",
+        "furigana": "でかけます",
+        "romaji": "dekakemasu",
+        "wordType": "verb",
+        "meaningVi": "Ra ngoài, đi ra",
+        "accentNote": "地震の 場合は、外に 出かけないで ください = trong trường hợp động đất, xin đừng ra ngoài."
+      },
+      {
+        "id": "voc-n4-45-5",
+        "word": "れんらくします",
+        "kanji": "連絡します",
+        "furigana": "れんらくします",
+        "romaji": "renraku shimasu",
+        "wordType": "verb",
+        "meaningVi": "Liên lạc",
+        "accentNote": "Đã gặp bài 38."
+      },
+      {
+        "id": "voc-n4-45-6",
+        "word": "ばあい",
+        "kanji": "場合",
+        "furigana": "ばあい",
+        "romaji": "baai",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 45",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Trường hợp",
+        "accentNote": "〜場合は、〜: trong trường hợp ~ thì ~."
+      },
+      {
+        "id": "voc-n4-45-7",
+        "word": "じしん",
+        "kanji": "地震",
+        "furigana": "じしん",
+        "romaji": "jishin",
+        "wordType": "noun",
+        "meaningVi": "Động đất",
+        "accentNote": "地震の 場合は = trong trường hợp có động đất."
+      },
+      {
+        "id": "voc-n4-45-8",
+        "word": "かじ",
+        "kanji": "火事",
+        "furigana": "かじ",
+        "romaji": "kaji",
+        "wordType": "noun",
+        "meaningVi": "Vụ hỏa hoạn, cháy nhà",
+        "accentNote": "火事の 場合は、エレベーターを 使わないで ください = trong trường hợp cháy, xin đừng dùng thang máy."
+      },
+      {
+        "id": "voc-n4-45-9",
+        "word": "たいふう",
+        "kanji": "台風",
+        "furigana": "たいふう",
+        "romaji": "taifuu",
+        "wordType": "noun",
+        "meaningVi": "Bão (bão nhiệt đới)",
+        "accentNote": "Đã gặp N5 bài 21."
+      },
+      {
+        "id": "voc-n4-45-10",
+        "word": "いっしょうけんめい",
+        "kanji": "一生懸命",
+        "furigana": "いっしょうけんめい",
+        "romaji": "isshoukenmei",
+        "wordType": "adverb",
+        "meaningVi": "Hết mình, hết sức",
+        "accentNote": "一生懸命 勉強したのに、合格しませんでした = học hành chăm chỉ hết mình nhưng vẫn không đậu."
+      },
+      {
+        "id": "voc-n4-45-11",
+        "word": "ざんねん",
+        "kanji": "残念",
+        "furigana": "ざんねん",
+        "romaji": "zannen",
+        "wordType": "adjective",
+        "meaningVi": "Đáng tiếc, tiếc nuối",
+        "accentNote": "Đã gặp bài 27."
+      },
+      {
+        "id": "voc-n4-45-12",
+        "word": "しけん",
+        "kanji": "試験",
+        "furigana": "しけん",
+        "romaji": "shiken",
+        "wordType": "noun",
+        "meaningVi": "Kỳ thi",
+        "accentNote": "Đã gặp bài 40."
+      },
+      {
+        "id": "voc-n4-45-13",
+        "word": "てんき",
+        "kanji": "天気",
+        "furigana": "てんき",
+        "romaji": "tenki",
+        "wordType": "noun",
+        "meaningVi": "Thời tiết",
+        "accentNote": "Đã gặp N5 bài 21."
+      },
+      {
+        "id": "voc-n4-45-14",
+        "word": "あめ",
+        "kanji": "雨",
+        "furigana": "あめ",
+        "romaji": "ame",
+        "wordType": "noun",
+        "meaningVi": "Mưa",
+        "accentNote": "晴れの 予報だったのに、雨が 降りました = dự báo nắng nhưng lại mưa."
+      },
+      {
+        "id": "voc-n4-45-15",
+        "word": "びょういん",
+        "kanji": "病院",
+        "furigana": "びょういん",
+        "romaji": "byouin",
+        "wordType": "noun",
+        "meaningVi": "Bệnh viện",
+        "accentNote": "Đã gặp N5 bài 3."
+      },
+      {
+        "id": "voc-n4-45-16",
+        "word": "エレベーター",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "erebeetaa",
+        "wordType": "noun",
+        "meaningVi": "Thang máy",
+        "accentNote": "Đã gặp N5 bài 3."
+      },
+      {
+        "id": "voc-n4-45-17",
+        "word": "かいだん",
+        "kanji": "階段",
+        "furigana": "かいだん",
+        "romaji": "kaidan",
+        "wordType": "noun",
+        "meaningVi": "Cầu thang bộ",
+        "accentNote": "Đã gặp N5 bài 3."
+      },
+      {
+        "id": "voc-n4-45-18",
+        "word": "でんわ",
+        "kanji": "電話",
+        "furigana": "でんわ",
+        "romaji": "denwa",
+        "wordType": "noun",
+        "meaningVi": "Điện thoại, cuộc gọi",
+        "accentNote": "Đã gặp N5 bài 2."
+      },
+      {
+        "id": "voc-n4-45-19",
+        "word": "やくそく",
+        "kanji": "約束",
+        "furigana": "やくそく",
+        "romaji": "yakusoku",
+        "wordType": "noun",
+        "meaningVi": "Lời hứa, cuộc hẹn",
+        "accentNote": "Đã gặp bài 38."
+      },
+      {
+        "id": "voc-n4-45-20",
+        "word": "しゅくだい",
+        "kanji": "宿題",
+        "furigana": "しゅくだい",
+        "romaji": "shukudai",
+        "wordType": "noun",
+        "meaningVi": "Bài tập về nhà",
+        "accentNote": "Đã gặp N5 bài 7."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n4-45-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "場",
+        "hanViet": "TRƯỜNG",
+        "strokeCount": 12,
         "onyomi": [
-          "ゴ"
+          "ジョウ (jou)"
         ],
         "kunyomi": [
-          "かたる"
+          "ば"
         ],
-        "meaningVi": "Ngôn ngữ",
+        "meaningVi": "Nơi chốn, trường hợp.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "場合",
+            "furigana": "ばあい",
+            "meaningVi": "Trường hợp"
+          },
+          {
+            "word": "会場",
+            "furigana": "かいじょう",
+            "meaningVi": "Địa điểm sự kiện"
+          },
+          {
+            "word": "駐車場",
+            "furigana": "ちゅうしゃじょう",
+            "meaningVi": "Bãi đỗ xe"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-45-2",
+        "character": "合",
+        "hanViet": "HỢP",
+        "strokeCount": 6,
+        "onyomi": [
+          "ゴウ (gou)"
+        ],
+        "kunyomi": [
+          "あ(う)"
+        ],
+        "meaningVi": "Phù hợp, gộp lại. Đã gặp N5 bài 22 (合います).",
+        "commonWords": [
+          {
+            "word": "場合",
+            "furigana": "ばあい",
+            "meaningVi": "Trường hợp"
+          },
+          {
+            "word": "合格",
+            "furigana": "ごうかく",
+            "meaningVi": "Đậu (thi)"
+          },
+          {
+            "word": "合います",
+            "furigana": "あいます",
+            "meaningVi": "Vừa vặn"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-45-3",
+        "character": "震",
+        "hanViet": "CHẤN",
+        "strokeCount": 15,
+        "onyomi": [
+          "シン (shin)"
+        ],
+        "kunyomi": [
+          "ふる(える)"
+        ],
+        "meaningVi": "Rung chuyển, chấn động.",
+        "commonWords": [
+          {
+            "word": "地震",
+            "furigana": "じしん",
+            "meaningVi": "Động đất"
+          },
+          {
+            "word": "震えます",
+            "furigana": "ふるえます",
+            "meaningVi": "Run rẩy"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-45-4",
+        "character": "失",
+        "hanViet": "THẤT",
+        "strokeCount": 5,
+        "onyomi": [
+          "シツ (shitsu)"
+        ],
+        "kunyomi": [
+          "うしな(う)"
+        ],
+        "meaningVi": "Mất đi, thất bại.",
+        "commonWords": [
+          {
+            "word": "失敗",
+            "furigana": "しっぱい",
+            "meaningVi": "Thất bại"
+          },
+          {
+            "word": "失礼",
+            "furigana": "しつれい",
+            "meaningVi": "Thất lễ"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-45-5",
+        "character": "敗",
+        "hanViet": "BẠI",
+        "strokeCount": 11,
+        "onyomi": [
+          "ハイ (hai)"
+        ],
+        "kunyomi": [
+          "やぶ(れる)"
+        ],
+        "meaningVi": "Thua, thất bại.",
+        "commonWords": [
+          {
+            "word": "失敗",
+            "furigana": "しっぱい",
+            "meaningVi": "Thất bại"
+          },
+          {
+            "word": "敗北",
+            "furigana": "はいぼく",
+            "meaningVi": "Thất bại (trận đấu)"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n4-l45-s0",
-        "title": "Trọng tâm: Trường hợp (〜場合は) & Mặc dù (〜のに)",
-        "grammarFormula": "Thể thông thường (Na/Nな) + 場合は / のに",
-        "explanation": "のに biểu thị sự bất mãn, kết quả trái ngược với kỳ vọng.",
+        "slideId": "n4-l45-s1",
+        "slideType": "grammar",
+        "title": "1. Trường hợp: [Thể thông thường] 場合は、V",
+        "grammarFormula": "V(từ điển/た)／A-い／A-な+な／N+の + 場合は、[hướng dẫn/kết quả]",
+        "explanation": "場合 (trường hợp) đứng sau một MỆNH ĐỀ GIẢ ĐỊNH để giới thiệu tình huống, rồi đưa ra hướng dẫn/kết quả tương ứng — trang trọng, khách quan hơn たら (N5 bài 25), thường dùng trong THÔNG BÁO, HƯỚNG DẪN AN TOÀN.",
+        "teacherTips": "場合は phổ biến trong biển báo tòa nhà, hướng dẫn sử dụng thiết bị — trang trọng, khách quan hơn hẳn たら thông thường.",
+        "culturalNotes": "Hướng dẫn an toàn tại các tòa nhà Nhật (đặc biệt về động đất/hỏa hoạn) luôn dùng cấu trúc 〜場合は vì tính khách quan, rõ ràng, dễ hiểu khi khẩn cấp.",
         "examples": [
           {
-            "id": "ex-n4-l45-1",
+            "id": "ex-n4-l45-s1-1",
             "tokens": [
               {
-                "id": "tok-n4-l45-1",
-                "text": "約束したのに、彼は",
+                "id": "t-l45s1-1",
+                "text": "じしん",
+                "isKeyGrammar": true,
+                "kanji": "地震",
+                "furigana": "じしん"
+              },
+              {
+                "id": "t-l45s1-2",
+                "text": "の",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l45s1-3",
+                "text": "ばあい",
+                "isKeyGrammar": true,
+                "kanji": "場合",
+                "furigana": "ばあい"
+              },
+              {
+                "id": "t-l45s1-4",
+                "text": "は",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l45s1-5",
+                "text": "、",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n4-l45-2",
-                "text": "約束したのに、彼は 来ませんでした。",
-                "isKeyGrammar": true
+                "id": "t-l45s1-6",
+                "text": "でかけないで",
+                "isKeyGrammar": false,
+                "kanji": "出かけないで",
+                "furigana": "でかけないで"
+              },
+              {
+                "id": "t-l45s1-7",
+                "text": "ください",
+                "isKeyGrammar": false
               }
             ],
-            "meaningVi": "Đã hẹn rồi thế mà anh ấy lại không đến."
+            "meaningVi": "Trong trường hợp có động đất, xin đừng ra ngoài."
+          },
+          {
+            "id": "ex-n4-l45-s1-2",
+            "tokens": [
+              {
+                "id": "t-l45s1-8",
+                "text": "かじ",
+                "isKeyGrammar": true,
+                "kanji": "火事",
+                "furigana": "かじ"
+              },
+              {
+                "id": "t-l45s1-9",
+                "text": "の",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l45s1-10",
+                "text": "ばあい",
+                "isKeyGrammar": true,
+                "kanji": "場合",
+                "furigana": "ばあい"
+              },
+              {
+                "id": "t-l45s1-11",
+                "text": "は",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l45s1-12",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l45s1-13",
+                "text": "エレベーター",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l45s1-14",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l45s1-15",
+                "text": "つかわないで",
+                "isKeyGrammar": false,
+                "kanji": "使わないで",
+                "furigana": "つかわないで"
+              },
+              {
+                "id": "t-l45s1-16",
+                "text": "ください",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Trong trường hợp cháy, xin đừng dùng thang máy."
           }
-        ],
-        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+        ]
+      },
+      {
+        "slideId": "n4-l45-s2",
+        "slideType": "grammar",
+        "title": "2. Tương phản/nghịch ý: [Thể thông thường] のに、[kết quả TRÁI VỚI KỲ VỌNG]",
+        "grammarFormula": "[Thể thông thường] + のに、[kết quả bất ngờ/thất vọng]",
+        "explanation": "のに ở đây mang nghĩa 'MẶC DÙ...NHƯNG...' — khác HOÀN TOÀN のに mục đích ở bài 42 (の+に). Luôn ẩn ý CẢM XÚC bất ngờ, thất vọng, hoặc không hài lòng về kết quả.",
+        "teacherTips": "のに (mặc dù) luôn hàm chứa THẤT VỌNG/BẤT NGỜ — khác hẳn ても (N5 bài 25, nhượng bộ trung tính, không nhất thiết mang cảm xúc tiêu cực).",
+        "culturalNotes": "一生懸命勉強したのに、合格しませんでした là câu than thở rất chân thực, phổ biến của học sinh Nhật sau kỳ thi không như ý.",
+        "examples": [
+          {
+            "id": "ex-n4-l45-s2-1",
+            "tokens": [
+              {
+                "id": "t-l45s2-1",
+                "text": "いっしょうけんめい",
+                "isKeyGrammar": true,
+                "kanji": "一生懸命",
+                "furigana": "いっしょうけんめい"
+              },
+              {
+                "id": "t-l45s2-2",
+                "text": "べんきょう",
+                "isKeyGrammar": false,
+                "kanji": "勉強",
+                "furigana": "べんきょう"
+              },
+              {
+                "id": "t-l45s2-3",
+                "text": "した",
+                "isKeyGrammar": false,
+                "kanji": "した",
+                "furigana": "した"
+              },
+              {
+                "id": "t-l45s2-4",
+                "text": "のに",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l45s2-5",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l45s2-6",
+                "text": "しけん",
+                "isKeyGrammar": false,
+                "kanji": "試験",
+                "furigana": "しけん"
+              },
+              {
+                "id": "t-l45s2-7",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l45s2-8",
+                "text": "ごうかく",
+                "isKeyGrammar": false,
+                "kanji": "合格",
+                "furigana": "ごうかく"
+              },
+              {
+                "id": "t-l45s2-9",
+                "text": "しませんでした",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Dù đã học hành chăm chỉ hết mình nhưng vẫn không đậu kỳ thi."
+          },
+          {
+            "id": "ex-n4-l45-s2-2",
+            "tokens": [
+              {
+                "id": "t-l45s2-10",
+                "text": "はれ",
+                "isKeyGrammar": false,
+                "kanji": "晴れ",
+                "furigana": "はれ"
+              },
+              {
+                "id": "t-l45s2-11",
+                "text": "の",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l45s2-12",
+                "text": "よほう",
+                "isKeyGrammar": false,
+                "kanji": "予報",
+                "furigana": "よほう"
+              },
+              {
+                "id": "t-l45s2-13",
+                "text": "だった",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l45s2-14",
+                "text": "のに",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l45s2-15",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l45s2-16",
+                "text": "あめ",
+                "isKeyGrammar": false,
+                "kanji": "雨",
+                "furigana": "あめ"
+              },
+              {
+                "id": "t-l45s2-17",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l45s2-18",
+                "text": "ふりました",
+                "isKeyGrammar": false,
+                "kanji": "降りました",
+                "furigana": "ふりました"
+              }
+            ],
+            "meaningVi": "Dự báo nắng nhưng lại đổ mưa."
+          }
+        ]
+      },
+      {
+        "slideId": "n4-l45-s3",
+        "slideType": "grammar",
+        "title": "3. Phân biệt hai のに (mục đích, bài 42) và (mặc dù, bài 45)",
+        "grammarFormula": "のに (bài 42) = の (danh từ hóa) + に (mục đích): [Vật] は [Vる]のに 使います",
+        "explanation": "のに (bài 45) = trợ từ nghịch ý cố định: [Thể thông thường]のに、[kết quả bất ngờ]",
+        "teacherTips": "Cách phân biệt nhanh: のに MỤC ĐÍCH đứng sau danh từ chủ ngữ là VẬT (kéo, dụng cụ); のに MẶC DÙ đứng cuối một câu ĐẦY ĐỦ rồi mới tới kết quả trái ngược.",
+        "culturalNotes": "Đây là một trong những cặp đồng âm dị nghĩa dễ gây nhầm lẫn nhất ở trình độ N4 — người học cần chú ý ngữ cảnh cả câu, không chỉ nhìn mặt chữ のに.",
+        "examples": [
+          {
+            "id": "ex-n4-l45-s3-1",
+            "tokens": [
+              {
+                "id": "t-l45s3-1",
+                "text": "はさみ",
+                "isKeyGrammar": false,
+                "kanji": "鋏",
+                "furigana": "はさみ"
+              },
+              {
+                "id": "t-l45s3-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l45s3-3",
+                "text": "かみ",
+                "isKeyGrammar": false,
+                "kanji": "紙",
+                "furigana": "かみ"
+              },
+              {
+                "id": "t-l45s3-4",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l45s3-5",
+                "text": "きる",
+                "isKeyGrammar": false,
+                "kanji": "切る",
+                "furigana": "きる"
+              },
+              {
+                "id": "t-l45s3-6",
+                "text": "のに",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l45s3-7",
+                "text": "つかいます",
+                "isKeyGrammar": false,
+                "kanji": "使います",
+                "furigana": "つかいます"
+              }
+            ],
+            "meaningVi": "Kéo dùng để cắt giấy. (のに MỤC ĐÍCH — bài 42, không mang cảm xúc)"
+          },
+          {
+            "id": "ex-n4-l45-s3-2",
+            "tokens": [
+              {
+                "id": "t-l45s3-8",
+                "text": "がんばった",
+                "isKeyGrammar": false,
+                "kanji": "頑張った",
+                "furigana": "がんばった"
+              },
+              {
+                "id": "t-l45s3-9",
+                "text": "のに",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l45s3-10",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l45s3-11",
+                "text": "しっぱいしました",
+                "isKeyGrammar": true,
+                "kanji": "失敗しました",
+                "furigana": "しっぱいしました"
+              }
+            ],
+            "meaningVi": "Dù đã cố gắng nhưng vẫn thất bại. (のに MẶC DÙ — bài 45, mang cảm xúc thất vọng)"
+          }
+        ]
+      },
+      {
+        "slideId": "n4-l45-s4",
+        "slideType": "grammar",
+        "title": "4. So sánh のに (mặc dù) và ても (N5 bài 25)",
+        "grammarFormula": "のに: kết quả THỰC TẾ đã xảy ra, mang cảm xúc bất ngờ/thất vọng　vs　ても: giả định chung, trung tính hơn",
+        "explanation": "ても diễn tả một quy luật/giả định CHUNG ('dù...vẫn...', không nhất thiết đã xảy ra); のに luôn nói về một SỰ VIỆC ĐÃ THỰC SỰ XẢY RA, khiến người nói ngạc nhiên/thất vọng.",
+        "teacherTips": "のに thường dùng để KỂ LẠI một trải nghiệm đáng nhớ/đáng tiếc; ても hợp hơn khi nói về NGUYÊN TẮC/THÓI QUEN chung.",
+        "culturalNotes": "Nhật ký, bài chia sẻ cảm xúc trên mạng xã hội Nhật dùng のに rất nhiều để diễn tả những khoảnh khắc 'đời không như mơ'.",
+        "examples": [
+          {
+            "id": "ex-n4-l45-s4-1",
+            "tokens": [
+              {
+                "id": "t-l45s4-1",
+                "text": "たかくても",
+                "isKeyGrammar": true,
+                "kanji": "高くても",
+                "furigana": "たかくても"
+              },
+              {
+                "id": "t-l45s4-2",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l45s4-3",
+                "text": "かいます",
+                "isKeyGrammar": false,
+                "kanji": "買います",
+                "furigana": "かいます"
+              }
+            ],
+            "meaningVi": "Dù đắt tôi vẫn mua. (ても: giả định chung, chưa chắc đã mua)"
+          },
+          {
+            "id": "ex-n4-l45-s4-2",
+            "tokens": [
+              {
+                "id": "t-l45s4-4",
+                "text": "たかかった",
+                "isKeyGrammar": true,
+                "kanji": "高かった",
+                "furigana": "たかかった"
+              },
+              {
+                "id": "t-l45s4-5",
+                "text": "のに",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l45s4-6",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l45s4-7",
+                "text": "かいました",
+                "isKeyGrammar": false,
+                "kanji": "買いました",
+                "furigana": "かいました"
+              }
+            ],
+            "meaningVi": "Dù đắt nhưng tôi (vẫn) đã mua. (のに: sự việc ĐÃ xảy ra, có sắc thái)"
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n4-45-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "先生",
+        "speakerRole": "Giáo viên",
         "tokens": [
           {
-            "id": "tok-n4-45-d1",
-            "text": "この文法のポイントを"
+            "id": "d-l45-1",
+            "text": "みなさん",
+            "isKeyGrammar": false,
+            "kanji": "皆さん",
+            "furigana": "みなさん"
           },
           {
-            "id": "tok-n4-45-d2",
-            "text": "復習しましょう。"
+            "id": "d-l45-2",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-3",
+            "text": "じしん",
+            "isKeyGrammar": true,
+            "kanji": "地震",
+            "furigana": "じしん"
+          },
+          {
+            "id": "d-l45-4",
+            "text": "の",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l45-5",
+            "text": "ばあい",
+            "isKeyGrammar": true,
+            "kanji": "場合",
+            "furigana": "ばあい"
+          },
+          {
+            "id": "d-l45-6",
+            "text": "は",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l45-7",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-8",
+            "text": "かいだん",
+            "isKeyGrammar": true,
+            "kanji": "階段",
+            "furigana": "かいだん"
+          },
+          {
+            "id": "d-l45-9",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-10",
+            "text": "つかって",
+            "isKeyGrammar": false,
+            "kanji": "使って",
+            "furigana": "つかって"
+          },
+          {
+            "id": "d-l45-11",
+            "text": "ください",
+            "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Các em, trong trường hợp có động đất, hãy dùng cầu thang bộ."
+      },
+      {
+        "id": "dia-n4-45-2",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l45-12",
+            "text": "エレベーター",
+            "isKeyGrammar": false,
+            "kanji": "エレベーター",
+            "furigana": "エレベーター"
+          },
+          {
+            "id": "d-l45-13",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-14",
+            "text": "つかっては",
+            "isKeyGrammar": false,
+            "kanji": "使っては",
+            "furigana": "つかっては"
+          },
+          {
+            "id": "d-l45-15",
+            "text": "いけません",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l45-16",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Không được dùng thang máy ạ?"
+      },
+      {
+        "id": "dia-n4-45-3",
+        "speaker": "先生",
+        "speakerRole": "Giáo viên",
+        "tokens": [
+          {
+            "id": "d-l45-17",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-18",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-19",
+            "text": "かじ",
+            "isKeyGrammar": true,
+            "kanji": "火事",
+            "furigana": "かじ"
+          },
+          {
+            "id": "d-l45-20",
+            "text": "の",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l45-21",
+            "text": "ばあい",
+            "isKeyGrammar": true,
+            "kanji": "場合",
+            "furigana": "ばあい"
+          },
+          {
+            "id": "d-l45-22",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-23",
+            "text": "おなじ",
+            "isKeyGrammar": false,
+            "kanji": "同じ",
+            "furigana": "おなじ"
+          },
+          {
+            "id": "d-l45-24",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Đúng, trường hợp cháy cũng vậy."
+      },
+      {
+        "id": "dia-n4-45-4",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l45-25",
+            "text": "せんせい",
+            "isKeyGrammar": false,
+            "kanji": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "id": "d-l45-26",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-27",
+            "text": "しけん",
+            "isKeyGrammar": true,
+            "kanji": "試験",
+            "furigana": "しけん"
+          },
+          {
+            "id": "d-l45-28",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-29",
+            "text": "どうでしたか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Thầy ơi, kỳ thi thế nào ạ?"
+      },
+      {
+        "id": "dia-n4-45-5",
+        "speaker": "先生",
+        "speakerRole": "Giáo viên",
+        "tokens": [
+          {
+            "id": "d-l45-30",
+            "text": "ワンさん",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-31",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-32",
+            "text": "いっしょうけんめい",
+            "isKeyGrammar": true,
+            "kanji": "一生懸命",
+            "furigana": "いっしょうけんめい"
+          },
+          {
+            "id": "d-l45-33",
+            "text": "べんきょう",
+            "isKeyGrammar": false,
+            "kanji": "勉強",
+            "furigana": "べんきょう"
+          },
+          {
+            "id": "d-l45-34",
+            "text": "した",
+            "isKeyGrammar": false,
+            "kanji": "した",
+            "furigana": "した"
+          },
+          {
+            "id": "d-l45-35",
+            "text": "のに",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l45-36",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-37",
+            "text": "ごうかく",
+            "isKeyGrammar": false,
+            "kanji": "合格",
+            "furigana": "ごうかく"
+          },
+          {
+            "id": "d-l45-38",
+            "text": "しませんでした",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Wang đã học hành hết sức chăm chỉ nhưng vẫn không đậu."
+      },
+      {
+        "id": "dia-n4-45-6",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l45-39",
+            "text": "ざんねん",
+            "isKeyGrammar": true,
+            "kanji": "残念",
+            "furigana": "ざんねん"
+          },
+          {
+            "id": "d-l45-40",
+            "text": "です",
+            "isKeyGrammar": false,
+            "kanji": "です",
+            "furigana": "です"
+          }
+        ],
+        "meaningVi": "Đáng tiếc thật."
+      },
+      {
+        "id": "dia-n4-45-7",
+        "speaker": "先生",
+        "speakerRole": "Giáo viên",
+        "tokens": [
+          {
+            "id": "d-l45-41",
+            "text": "だいじょうぶ",
+            "isKeyGrammar": false,
+            "kanji": "大丈夫",
+            "furigana": "だいじょうぶ"
+          },
+          {
+            "id": "d-l45-42",
+            "text": "です",
+            "isKeyGrammar": false,
+            "kanji": "です",
+            "furigana": "です"
+          },
+          {
+            "id": "d-l45-43",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-44",
+            "text": "らいげつ",
+            "isKeyGrammar": false,
+            "kanji": "来月",
+            "furigana": "らいげつ"
+          },
+          {
+            "id": "d-l45-45",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-46",
+            "text": "また",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-47",
+            "text": "うけられます",
+            "isKeyGrammar": false,
+            "kanji": "受けられます",
+            "furigana": "うけられます"
+          }
+        ],
+        "meaningVi": "Không sao. Tháng sau, em thi lại được mà."
+      },
+      {
+        "id": "dia-n4-45-8",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l45-48",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-49",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-50",
+            "text": "こんど",
+            "isKeyGrammar": false,
+            "kanji": "今度",
+            "furigana": "こんど"
+          },
+          {
+            "id": "d-l45-51",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-52",
+            "text": "ごうかく",
+            "isKeyGrammar": false,
+            "kanji": "合格",
+            "furigana": "ごうかく"
+          },
+          {
+            "id": "d-l45-53",
+            "text": "したい",
+            "isKeyGrammar": false,
+            "kanji": "したい",
+            "furigana": "したい"
+          },
+          {
+            "id": "d-l45-54",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vâng, lần này em muốn đậu."
+      },
+      {
+        "id": "dia-n4-45-9",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l45-55",
+            "text": "がんばれ",
+            "isKeyGrammar": false,
+            "kanji": "頑張れ",
+            "furigana": "がんばれ"
+          }
+        ],
+        "meaningVi": "Cố lên!"
+      },
+      {
+        "id": "dia-n4-45-10",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l45-56",
+            "text": "ありがとう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-57",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-58",
+            "text": "あめ",
+            "isKeyGrammar": true,
+            "kanji": "雨",
+            "furigana": "あめ"
+          },
+          {
+            "id": "d-l45-59",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-60",
+            "text": "よほう",
+            "isKeyGrammar": false,
+            "kanji": "予報",
+            "furigana": "よほう"
+          },
+          {
+            "id": "d-l45-61",
+            "text": "だった",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-62",
+            "text": "のに",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l45-63",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l45-64",
+            "text": "はれました",
+            "isKeyGrammar": false,
+            "kanji": "晴れました",
+            "furigana": "はれました"
+          },
+          {
+            "id": "d-l45-65",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Cảm ơn. Dự báo mưa nhưng lại nắng nhỉ."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n4-45-1",
-        "question": "Chọn cách kết hợp đúng cho cấu trúc: Trường hợp (〜場合は) & Mặc dù (〜のに)",
+        "question": "「地震の場合は、階段を使ってください」 — 場合は dùng để làm gì?",
         "options": [
-          "Thể thông thường (Na/Nな) + 場合は",
-          "Thể ý chí + だ",
-          "Thể cấm chỉ",
-          "V-ない + です"
+          "Giới thiệu một TÌNH HUỐNG rồi đưa ra hướng dẫn tương ứng",
+          "Ra lệnh phải có động đất",
+          "Hỏi có động đất không",
+          "Phủ định việc dùng cầu thang"
         ],
         "correctIndex": 0,
-        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Thể thông thường (Na/Nな) + 場合は / のに",
-        "hint": "Chú ý dạng thể liên kết của động từ."
+        "explanation": "場合は giới thiệu tình huống giả định (có động đất) rồi đưa hướng dẫn tương ứng — trang trọng, thường dùng trong biển báo/thông báo an toàn.",
+        "hint": "Xem cấu trúc ở slide 1."
+      },
+      {
+        "id": "ex-q-n4-45-2",
+        "question": "「一生懸命勉強したのに、合格しませんでした」 — のに ở đây mang nghĩa:",
+        "options": [
+          "Mặc dù...nhưng... (kết quả trái với kỳ vọng, mang cảm xúc thất vọng)",
+          "Mục đích (giống のに ở bài 42)",
+          "Vì, bởi vì (giống ので/から)",
+          "Nếu, giả sử (giống たら)"
+        ],
+        "correctIndex": 0,
+        "explanation": "のに ở bài này là trợ từ NGHỊCH Ý riêng biệt, nghĩa 'mặc dù' — khác hoàn toàn のに mục đích đã học ở bài 42.",
+        "hint": "Đây là điểm dễ nhầm nhất của bài học."
+      },
+      {
+        "id": "ex-q-n4-45-3",
+        "question": "「はさみは紙を切るのに使います」 và 「頑張ったのに、失敗しました」 — hai のに này:",
+        "options": [
+          "Là hai cấu trúc HOÀN TOÀN KHÁC NHAU dù viết giống nhau (mục đích vs mặc dù)",
+          "Là cùng một cấu trúc, nghĩa giống hệt nhau",
+          "Câu đầu sai ngữ pháp",
+          "Câu sau sai ngữ pháp"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đây là cặp đồng âm dị nghĩa dễ gây nhầm lẫn nhất N4 — phân biệt bằng cấu trúc câu và ngữ cảnh, không chỉ nhìn mặt chữ.",
+        "hint": "Xem so sánh trực tiếp ở slide 3."
+      },
+      {
+        "id": "ex-q-n4-45-4",
+        "question": "のに (mặc dù) khác ても (N5 bài 25) ở chỗ:",
+        "options": [
+          "のに nói về sự việc ĐÃ XẢY RA, mang cảm xúc; ても là giả định CHUNG, trung tính hơn",
+          "Hoàn toàn giống nhau",
+          "のに chỉ dùng cho câu hỏi",
+          "ても chỉ dùng cho quá khứ"
+        ],
+        "correctIndex": 0,
+        "explanation": "のに luôn kể lại một sự việc THỰC TẾ đã xảy ra khiến người nói ngạc nhiên/thất vọng; ても là giả định/quy luật chung.",
+        "hint": "Xem so sánh ở slide 4."
+      },
+      {
+        "id": "ex-q-n4-45-5",
+        "question": "「晴れの予報だったのに、雨が降りました」 nghĩa là:",
+        "options": [
+          "Dự báo nắng nhưng lại đổ mưa (trái với dự báo, gây bất ngờ)",
+          "Dự báo mưa và đã mưa đúng như vậy",
+          "Trời sẽ nắng vào ngày mai",
+          "Không có dự báo thời tiết nào cả"
+        ],
+        "correctIndex": 0,
+        "explanation": "のに nhấn mạnh sự TRÁI NGƯỢC giữa dự báo (nắng) và thực tế (mưa) — một bất ngờ không như mong đợi.",
+        "hint": "Áp dụng đúng nghĩa のに (mặc dù)."
+      },
+      {
+        "id": "ex-q-n4-45-6",
+        "question": "Câu nào ĐÚNG khi nói 'trong trường hợp cháy, đừng dùng thang máy'?",
+        "options": [
+          "火事の場合は、エレベーターを使わないでください",
+          "火事のに、エレベーターを使わないでください",
+          "火事ても、エレベーターを使わないでください",
+          "火事から、エレベーターを使わないでください"
+        ],
+        "correctIndex": 0,
+        "explanation": "場合は là cấu trúc chuẩn cho hướng dẫn tình huống khẩn cấp — không dùng のに (mặc dù) hay から (lý do) ở đây.",
+        "hint": "Chọn đúng cấu trúc phù hợp với ngữ cảnh thông báo an toàn."
+      },
+      {
+        "id": "ex-q-n4-45-7",
+        "question": "残念 trong 「残念です」 có nghĩa:",
+        "options": [
+          "Đáng tiếc, tiếc nuối",
+          "Vui mừng",
+          "Tức giận",
+          "Ngạc nhiên"
+        ],
+        "correctIndex": 0,
+        "explanation": "残念 diễn tả cảm giác tiếc nuối, thường đi kèm với câu có のに để nhấn mạnh kết quả không như ý.",
+        "hint": "Xem nghĩa từ vựng và ngữ cảnh sử dụng."
+      },
+      {
+        "id": "ex-q-n4-45-8",
+        "question": "「高かったのに、買いました」 khác 「高くても、買います」 ở:",
+        "options": [
+          "Câu đầu kể việc ĐÃ mua dù đắt (thực tế, quá khứ); câu sau là quyết tâm CHUNG (dù đắt sẽ vẫn mua)",
+          "Hoàn toàn giống nhau về ý nghĩa và thì",
+          "Câu đầu sai ngữ pháp",
+          "Câu sau mới đúng"
+        ],
+        "correctIndex": 0,
+        "explanation": "のに thuật lại một hành động THỰC TẾ đã xảy ra trong quá khứ; ても diễn tả quyết tâm/nguyên tắc chung, có thể ở thì hiện tại/tương lai.",
+        "hint": "So sánh trực tiếp hai câu ở slide 4."
+      },
+      {
+        "id": "ex-q-n4-45-9",
+        "question": "Trong hội thoại, kết quả kỳ thi của Wang thế nào?",
+        "options": [
+          "Không đậu dù đã học rất chăm chỉ",
+          "Đậu với điểm cao",
+          "Chưa thi",
+          "Bỏ thi giữa chừng"
+        ],
+        "correctIndex": 0,
+        "explanation": "Giáo viên nói 「一生懸命勉強したのに、合格しませんでした」.",
+        "hint": "Xem câu thoại thứ 5."
+      },
+      {
+        "id": "ex-q-n4-45-10",
+        "question": "Cuối hội thoại, thời tiết hôm đó thế nào so với dự báo?",
+        "options": [
+          "Dự báo mưa nhưng lại nắng",
+          "Dự báo nắng và đúng như vậy",
+          "Dự báo mưa và đúng như vậy",
+          "Không có dự báo nào"
+        ],
+        "correctIndex": 0,
+        "explanation": "Wang nói 「雨の予報だったのに、晴れましたね」.",
+        "hint": "Xem câu thoại cuối cùng."
       }
     ]
   },
