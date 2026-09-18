@@ -27953,99 +27953,1352 @@
     "level": "N4",
     "lessonNumber": 47,
     "title": "Bài 47: Nghe nói (〜そうです) & Dường như (〜ようです)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "description": "Thuật lại thông tin NGHE ĐƯỢC từ nguồn khác bằng そうです (ghép sau thể thông thường ĐẦY ĐỦ, giữ だ với danh từ/tính từ な — khác hẳn V-そう bài 43 phải bỏ đuôi), thường kèm [nguồn]によると; và diễn tả NHẬN ĐỊNH của chính người nói qua quan sát trực tiếp bằng ようです (tính từ な bỏ だ thêm な) — phân biệt rạch ròi hai nguồn thông tin: nghe kể vs tự quan sát.",
     "vocabList": [
       {
         "id": "voc-n4-47-1",
-        "word": "重要語彙 (N4)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "ひっこします",
+        "kanji": "引っ越します",
+        "furigana": "ひっこします",
+        "romaji": "hikkoshimasu",
+        "wordType": "verb",
+        "meaningVi": "Chuyển nhà, dọn nhà",
+        "accentNote": "来月 引っ越すそうです = nghe nói tháng sau (người đó) sẽ chuyển nhà."
+      },
+      {
+        "id": "voc-n4-47-2",
+        "word": "けっこんします",
+        "kanji": "結婚します",
+        "furigana": "けっこんします",
+        "romaji": "kekkon shimasu",
+        "wordType": "verb",
+        "meaningVi": "Kết hôn",
+        "accentNote": "Đã gặp N5 bài 14. 結婚するそうです = nghe nói sẽ kết hôn."
+      },
+      {
+        "id": "voc-n4-47-3",
+        "word": "やめます",
+        "kanji": "止めます",
+        "furigana": "やめます",
+        "romaji": "yamemasu",
+        "wordType": "verb",
+        "meaningVi": "Nghỉ (việc), từ bỏ",
+        "accentNote": "Đã gặp bài 29."
+      },
+      {
+        "id": "voc-n4-47-4",
+        "word": "びょうきです",
+        "kanji": "病気です",
+        "furigana": "びょうきです",
+        "romaji": "byouki desu",
+        "wordType": "phrase",
+        "meaningVi": "Bị bệnh (thể thông thường: 病気だ)",
+        "accentNote": "病気だ そうです = nghe nói bị bệnh."
+      },
+      {
+        "id": "voc-n4-47-5",
+        "word": "ふります",
+        "kanji": "降ります",
+        "furigana": "ふります",
+        "romaji": "furimasu",
+        "wordType": "verb",
+        "meaningVi": "Rơi, đổ xuống (mưa, tuyết)",
+        "accentNote": "Đã gặp bài 43. 雨が 降るそうです = nghe nói (dự báo) trời sẽ mưa."
+      },
+      {
+        "id": "voc-n4-47-6",
+        "word": "つかれます",
+        "kanji": "疲れます",
+        "furigana": "つかれます",
+        "romaji": "tsukaremasu",
+        "wordType": "verb",
+        "meaningVi": "Mệt, mệt mỏi",
+        "accentNote": "Đã gặp bài 32. 疲れているようです = có vẻ đang mệt (quan sát được)."
+      },
+      {
+        "id": "voc-n4-47-7",
+        "word": "げんきです",
+        "kanji": "元気です",
+        "furigana": "げんきです",
+        "romaji": "genki desu",
+        "wordType": "phrase",
+        "meaningVi": "Khỏe mạnh (thể thông thường: 元気だ)",
+        "accentNote": "元気な ようです = có vẻ khỏe mạnh."
+      },
+      {
+        "id": "voc-n4-47-8",
+        "word": "てんきよほう",
+        "kanji": "天気予報",
+        "furigana": "てんきよほう",
+        "romaji": "tenki yohou",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 47",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Dự báo thời tiết",
+        "accentNote": "天気予報に よると、雨だ そうです = theo dự báo, nghe nói sẽ mưa."
+      },
+      {
+        "id": "voc-n4-47-9",
+        "word": "うわさ",
+        "kanji": "噂",
+        "furigana": "うわさ",
+        "romaji": "uwasa",
+        "wordType": "noun",
+        "meaningVi": "Tin đồn",
+        "accentNote": "噂に よると = theo tin đồn thì."
+      },
+      {
+        "id": "voc-n4-47-10",
+        "word": "にほんご",
+        "kanji": "日本語",
+        "furigana": "にほんご",
+        "romaji": "nihongo",
+        "wordType": "noun",
+        "meaningVi": "Tiếng Nhật",
+        "accentNote": "日本語が 上手な ようです = có vẻ giỏi tiếng Nhật."
+      },
+      {
+        "id": "voc-n4-47-11",
+        "word": "せんせい",
+        "kanji": "先生",
+        "furigana": "せんせい",
+        "romaji": "sensei",
+        "wordType": "noun",
+        "meaningVi": "Thầy/cô giáo",
+        "accentNote": "先生の 話に よると = theo lời thầy giáo thì."
+      },
+      {
+        "id": "voc-n4-47-12",
+        "word": "しんぶん",
+        "kanji": "新聞",
+        "furigana": "しんぶん",
+        "romaji": "shinbun",
+        "wordType": "noun",
+        "meaningVi": "Báo, tờ báo",
+        "accentNote": "新聞に よると = theo báo thì."
+      },
+      {
+        "id": "voc-n4-47-13",
+        "word": "ニュース",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "nyuusu",
+        "wordType": "noun",
+        "meaningVi": "Tin tức",
+        "accentNote": "ニュースで 聞きました = tôi đã nghe được từ tin tức."
+      },
+      {
+        "id": "voc-n4-47-14",
+        "word": "かいしゃ",
+        "kanji": "会社",
+        "furigana": "かいしゃ",
+        "romaji": "kaisha",
+        "wordType": "noun",
+        "meaningVi": "Công ty",
+        "accentNote": "Đã gặp N5 bài 3."
+      },
+      {
+        "id": "voc-n4-47-15",
+        "word": "びょういん",
+        "kanji": "病院",
+        "furigana": "びょういん",
+        "romaji": "byouin",
+        "wordType": "noun",
+        "meaningVi": "Bệnh viện",
+        "accentNote": "Đã gặp N5 bài 3."
+      },
+      {
+        "id": "voc-n4-47-16",
+        "word": "たいふう",
+        "kanji": "台風",
+        "furigana": "たいふう",
+        "romaji": "taifuu",
+        "wordType": "noun",
+        "meaningVi": "Bão (bão nhiệt đới)",
+        "accentNote": "Đã gặp N5 bài 21."
+      },
+      {
+        "id": "voc-n4-47-17",
+        "word": "らいしゅう",
+        "kanji": "来週",
+        "furigana": "らいしゅう",
+        "romaji": "raishuu",
+        "wordType": "noun",
+        "meaningVi": "Tuần sau",
+        "accentNote": "Đã gặp N5 bài 4."
+      },
+      {
+        "id": "voc-n4-47-18",
+        "word": "らいげつ",
+        "kanji": "来月",
+        "furigana": "らいげつ",
+        "romaji": "raigetsu",
+        "wordType": "noun",
+        "meaningVi": "Tháng sau",
+        "accentNote": "Đã gặp N5 bài 5."
+      },
+      {
+        "id": "voc-n4-47-19",
+        "word": "しあわせ",
+        "kanji": "幸せ",
+        "furigana": "しあわせ",
+        "romaji": "shiawase",
+        "wordType": "adjective",
+        "meaningVi": "Hạnh phúc",
+        "accentNote": "幸せそう(な様子) = trông có vẻ hạnh phúc."
+      },
+      {
+        "id": "voc-n4-47-20",
+        "word": "ほんとう",
+        "kanji": "本当",
+        "furigana": "ほんとう",
+        "romaji": "hontou",
+        "wordType": "noun",
+        "meaningVi": "Sự thật, thật",
+        "accentNote": "Đã gặp N5 bài 22."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n4-47-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "越",
+        "hanViet": "VIỆT",
+        "strokeCount": 12,
         "onyomi": [
-          "ゴ"
+          "エツ (etsu)"
         ],
         "kunyomi": [
-          "かたる"
+          "こ(す)"
         ],
-        "meaningVi": "Ngôn ngữ",
+        "meaningVi": "Vượt qua (chỉ ghép trong 引っ越す).",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "引っ越します",
+            "furigana": "ひっこします",
+            "meaningVi": "Chuyển nhà"
+          },
+          {
+            "word": "引っ越し",
+            "furigana": "ひっこし",
+            "meaningVi": "Việc chuyển nhà"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-47-2",
+        "character": "予",
+        "hanViet": "DỰ",
+        "strokeCount": 4,
+        "onyomi": [
+          "ヨ (yo)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Dự đoán, trước.",
+        "commonWords": [
+          {
+            "word": "予報",
+            "furigana": "よほう",
+            "meaningVi": "Dự báo"
+          },
+          {
+            "word": "予約",
+            "furigana": "よやく",
+            "meaningVi": "Đặt trước"
+          },
+          {
+            "word": "予定",
+            "furigana": "よてい",
+            "meaningVi": "Dự định"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-47-3",
+        "character": "報",
+        "hanViet": "BÁO",
+        "strokeCount": 12,
+        "onyomi": [
+          "ホウ (hou)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Báo cáo, thông báo.",
+        "commonWords": [
+          {
+            "word": "予報",
+            "furigana": "よほう",
+            "meaningVi": "Dự báo"
+          },
+          {
+            "word": "報告",
+            "furigana": "ほうこく",
+            "meaningVi": "Báo cáo"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-47-4",
+        "character": "噂",
+        "hanViet": "TÔN",
+        "strokeCount": 15,
+        "onyomi": [
+          "ソン (son)"
+        ],
+        "kunyomi": [
+          "うわさ"
+        ],
+        "meaningVi": "Tin đồn.",
+        "commonWords": [
+          {
+            "word": "噂",
+            "furigana": "うわさ",
+            "meaningVi": "Tin đồn"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-47-5",
+        "character": "幸",
+        "hanViet": "HẠNH",
+        "strokeCount": 8,
+        "onyomi": [
+          "コウ (kou)"
+        ],
+        "kunyomi": [
+          "しあわ(せ)",
+          "さいわ(い)"
+        ],
+        "meaningVi": "May mắn, hạnh phúc.",
+        "commonWords": [
+          {
+            "word": "幸せ",
+            "furigana": "しあわせ",
+            "meaningVi": "Hạnh phúc"
+          },
+          {
+            "word": "幸運",
+            "furigana": "こううん",
+            "meaningVi": "May mắn"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n4-l47-s0",
-        "title": "Trọng tâm: Nghe nói (〜そうです) & Dường như (〜ようです)",
-        "grammarFormula": "Thể thông thường + そうです (truyền văn)",
-        "explanation": "Dẫn lại thông tin nghe được từ nguồn khác mà không thêm bớt ý kiến.",
+        "slideId": "n4-l47-s1",
+        "slideType": "grammar",
+        "title": "1. Nghe nói (truyền văn): [Thể thông thường ĐẦY ĐỦ] + そうです",
+        "grammarFormula": "V/A-い (giữ nguyên) 　A-な/N + だ + そうです   (ghép sau THỂ THÔNG THƯỜNG, KHÁC HẲN V-そう bài 43)",
+        "explanation": "そうです ở đây (聞いたことを伝える — truyền đạt điều đã nghe) ghép sau THỂ THÔNG THƯỜNG ĐẦY ĐỦ (giữ nguyên だ với danh từ/tính từ な) — khác V-そう bài 43 phải bỏ đuôi trước khi ghép.",
+        "teacherTips": "So sánh trực tiếp: 病気そうです (bài 43: TRÔNG có vẻ bệnh, nhìn thấy) khác 病気だそうです (bài 47: NGHE NÓI bị bệnh, qua lời kể) — chỉ khác một chữ だ nhưng nghĩa khác hẳn.",
+        "culturalNotes": "天気予報によると、明日は雨だそうです là cấu trúc chuẩn khi thuật lại thông tin từ báo đài, không phải tự mình quan sát.",
         "examples": [
           {
-            "id": "ex-n4-l47-1",
+            "id": "ex-n4-l47-s1-1",
             "tokens": [
               {
-                "id": "tok-n4-l47-1",
-                "text": "天気予報に",
+                "id": "t-l47s1-1",
+                "text": "やまださん",
+                "isKeyGrammar": false,
+                "kanji": "山田さん",
+                "furigana": "やまださん"
+              },
+              {
+                "id": "t-l47s1-2",
+                "text": "は",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n4-l47-2",
-                "text": "天気予報に よると、明日は 寒くなるそうです。",
+                "id": "t-l47s1-3",
+                "text": "らいげつ",
+                "isKeyGrammar": false,
+                "kanji": "来月",
+                "furigana": "らいげつ"
+              },
+              {
+                "id": "t-l47s1-4",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l47s1-5",
+                "text": "けっこんする",
+                "isKeyGrammar": false,
+                "kanji": "結婚する",
+                "furigana": "けっこんする"
+              },
+              {
+                "id": "t-l47s1-6",
+                "text": "そうです",
                 "isKeyGrammar": true
               }
             ],
-            "meaningVi": "Theo dự báo thời tiết thì ngày mai nghe nói sẽ trở lạnh."
+            "meaningVi": "Nghe nói anh Yamada tháng sau sẽ kết hôn."
+          },
+          {
+            "id": "ex-n4-l47-s1-2",
+            "tokens": [
+              {
+                "id": "t-l47s1-7",
+                "text": "やまださん",
+                "isKeyGrammar": false,
+                "kanji": "山田さん",
+                "furigana": "やまださん"
+              },
+              {
+                "id": "t-l47s1-8",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l47s1-9",
+                "text": "びょうき",
+                "isKeyGrammar": false,
+                "kanji": "病気",
+                "furigana": "びょうき"
+              },
+              {
+                "id": "t-l47s1-10",
+                "text": "だ",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l47s1-11",
+                "text": "そうです",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Nghe nói anh Yamada bị bệnh. (danh từ GIỮ NGUYÊN だ, khác V-そう bài 43 phải bỏ)"
           }
-        ],
-        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+        ]
+      },
+      {
+        "slideId": "n4-l47-s2",
+        "slideType": "grammar",
+        "title": "2. Nguồn tin: [Nguồn]によると、〜そうです",
+        "grammarFormula": "[Nguồn tin] + に + よると、[nội dung] + そうです",
+        "explanation": "によると (theo như...) thường đứng ĐẦU câu để chỉ rõ NGUỒN GỐC thông tin trước khi thuật lại bằng そうです — làm câu nghe khách quan, có căn cứ rõ ràng hơn.",
+        "teacherTips": "によると luôn kết hợp với そうです (nghe nói) chứ không phải でしょう (bài 32) — vì nguồn tin đã XÁC ĐỊNH, không phải suy đoán của người nói.",
+        "culturalNotes": "ニュースによると／新聞によると là cách mở đầu tin tức chuẩn mực, thể hiện thông tin có nguồn xác thực, không phải lời đồn cá nhân.",
+        "examples": [
+          {
+            "id": "ex-n4-l47-s2-1",
+            "tokens": [
+              {
+                "id": "t-l47s2-1",
+                "text": "てんきよほう",
+                "isKeyGrammar": true,
+                "kanji": "天気予報",
+                "furigana": "てんきよほう"
+              },
+              {
+                "id": "t-l47s2-2",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l47s2-3",
+                "text": "よると",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l47s2-4",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l47s2-5",
+                "text": "らいしゅう",
+                "isKeyGrammar": false,
+                "kanji": "来週",
+                "furigana": "らいしゅう"
+              },
+              {
+                "id": "t-l47s2-6",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l47s2-7",
+                "text": "たいふう",
+                "isKeyGrammar": false,
+                "kanji": "台風",
+                "furigana": "たいふう"
+              },
+              {
+                "id": "t-l47s2-8",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l47s2-9",
+                "text": "くる",
+                "isKeyGrammar": false,
+                "kanji": "来る",
+                "furigana": "くる"
+              },
+              {
+                "id": "t-l47s2-10",
+                "text": "そうです",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Theo dự báo thời tiết, nghe nói tuần sau sẽ có bão."
+          },
+          {
+            "id": "ex-n4-l47-s2-2",
+            "tokens": [
+              {
+                "id": "t-l47s2-11",
+                "text": "うわさ",
+                "isKeyGrammar": true,
+                "kanji": "噂",
+                "furigana": "うわさ"
+              },
+              {
+                "id": "t-l47s2-12",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l47s2-13",
+                "text": "よると",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l47s2-14",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l47s2-15",
+                "text": "かいしゃ",
+                "isKeyGrammar": false,
+                "kanji": "会社",
+                "furigana": "かいしゃ"
+              },
+              {
+                "id": "t-l47s2-16",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l47s2-17",
+                "text": "やめる",
+                "isKeyGrammar": false,
+                "kanji": "止める",
+                "furigana": "やめる"
+              },
+              {
+                "id": "t-l47s2-18",
+                "text": "そうです",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Theo tin đồn, nghe nói (người đó) sẽ nghỉ việc."
+          }
+        ]
+      },
+      {
+        "slideId": "n4-l47-s3",
+        "slideType": "grammar",
+        "title": "3. Dường như (dựa trên quan sát/suy luận): [Thể thông thường] + ようです",
+        "grammarFormula": "V/A-い (giữ nguyên) 　A-な (bỏ だ) + な 　N + の + ようです",
+        "explanation": "ようです diễn tả NHẬN ĐỊNH của chính người nói, dựa trên những gì họ TỰ QUAN SÁT/CẢM NHẬN — khác そうです (nghe nói, thông tin từ NGƯỜI KHÁC).",
+        "teacherTips": "ようです cần bằng chứng QUAN SÁT ĐƯỢC (nét mặt, hành vi) để đưa ra nhận định — không phải nghe ai kể lại như そうです.",
+        "culturalNotes": "疲れているようですね là câu quan tâm tế nhị phổ biến ở Nhật — nhận xét dựa trên quan sát chứ không khẳng định chắc chắn, giữ ý tứ.",
+        "examples": [
+          {
+            "id": "ex-n4-l47-s3-1",
+            "tokens": [
+              {
+                "id": "t-l47s3-1",
+                "text": "やまださん",
+                "isKeyGrammar": false,
+                "kanji": "山田さん",
+                "furigana": "やまださん"
+              },
+              {
+                "id": "t-l47s3-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l47s3-3",
+                "text": "つかれて",
+                "isKeyGrammar": false,
+                "kanji": "疲れて",
+                "furigana": "つかれて"
+              },
+              {
+                "id": "t-l47s3-4",
+                "text": "いる",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l47s3-5",
+                "text": "ようです",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Anh Yamada có vẻ đang mệt. (tôi tự quan sát: mặt anh ấy mệt mỏi)"
+          },
+          {
+            "id": "ex-n4-l47-s3-2",
+            "tokens": [
+              {
+                "id": "t-l47s3-6",
+                "text": "あの",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l47s3-7",
+                "text": "ひと",
+                "isKeyGrammar": false,
+                "kanji": "人",
+                "furigana": "ひと"
+              },
+              {
+                "id": "t-l47s3-8",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l47s3-9",
+                "text": "にほんご",
+                "isKeyGrammar": false,
+                "kanji": "日本語",
+                "furigana": "にほんご"
+              },
+              {
+                "id": "t-l47s3-10",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l47s3-11",
+                "text": "じょうずな",
+                "isKeyGrammar": true,
+                "kanji": "上手な",
+                "furigana": "じょうずな"
+              },
+              {
+                "id": "t-l47s3-12",
+                "text": "ようです",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Người kia có vẻ giỏi tiếng Nhật. (tính từ な bỏ だ, thêm な trước ようです)"
+          }
+        ]
+      },
+      {
+        "slideId": "n4-l47-s4",
+        "slideType": "grammar",
+        "title": "4. So sánh そうです (nghe nói) và ようです (dường như)",
+        "grammarFormula": "そうです: THÔNG TIN từ người khác/nguồn tin　vs　ようです: NHẬN ĐỊNH của chính mình qua quan sát",
+        "explanation": "Đây là hai NGUỒN THÔNG TIN khác nhau hoàn toàn — chọn sai sẽ khiến câu nói SAI SỰ THẬT về việc thông tin đến từ đâu, rất quan trọng khi tường thuật chính xác.",
+        "teacherTips": "Kiểm tra nhanh: nếu thông tin đến từ LỜI KỂ/BÁO ĐÀI → そうです; nếu là NHẬN XÉT CỦA CHÍNH BẠN qua quan sát trực tiếp → ようです.",
+        "culturalNotes": "Phóng viên, người viết báo cáo khách quan luôn phân biệt rõ ràng hai nguồn này — nhầm lẫn giữa 'nghe nói' và 'tôi thấy' bị coi là thiếu chuyên nghiệp.",
+        "examples": [
+          {
+            "id": "ex-n4-l47-s4-1",
+            "tokens": [
+              {
+                "id": "t-l47s4-1",
+                "text": "やまださん",
+                "isKeyGrammar": false,
+                "kanji": "山田さん",
+                "furigana": "やまださん"
+              },
+              {
+                "id": "t-l47s4-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l47s4-3",
+                "text": "しあわせ",
+                "isKeyGrammar": true,
+                "kanji": "幸せ",
+                "furigana": "しあわせ"
+              },
+              {
+                "id": "t-l47s4-4",
+                "text": "だ",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l47s4-5",
+                "text": "そうです",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Nghe nói anh Yamada hạnh phúc. (ai đó KỂ cho tôi nghe)"
+          },
+          {
+            "id": "ex-n4-l47-s4-2",
+            "tokens": [
+              {
+                "id": "t-l47s4-6",
+                "text": "やまださん",
+                "isKeyGrammar": false,
+                "kanji": "山田さん",
+                "furigana": "やまださん"
+              },
+              {
+                "id": "t-l47s4-7",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l47s4-8",
+                "text": "しあわせな",
+                "isKeyGrammar": true,
+                "kanji": "幸せな",
+                "furigana": "しあわせな"
+              },
+              {
+                "id": "t-l47s4-9",
+                "text": "ようです",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Anh Yamada có vẻ hạnh phúc. (tôi TỰ NHÌN THẤY nụ cười, thái độ của anh ấy)"
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n4-47-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
         "tokens": [
           {
-            "id": "tok-n4-47-d1",
-            "text": "この文法のポイントを"
+            "id": "d-l47-1",
+            "text": "やまださん",
+            "isKeyGrammar": false
           },
           {
-            "id": "tok-n4-47-d2",
-            "text": "復習しましょう。"
+            "id": "d-l47-2",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-3",
+            "text": "らいげつ",
+            "isKeyGrammar": true,
+            "kanji": "来月",
+            "furigana": "らいげつ"
+          },
+          {
+            "id": "d-l47-4",
+            "text": "けっこんする",
+            "isKeyGrammar": false,
+            "kanji": "結婚する",
+            "furigana": "けっこんする"
+          },
+          {
+            "id": "d-l47-5",
+            "text": "そうです",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l47-6",
+            "text": "ね",
+            "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Nghe nói anh Yamada tháng sau kết hôn nhỉ."
+      },
+      {
+        "id": "dia-n4-47-2",
+        "speaker": "山田",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d-l47-7",
+            "text": "え",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-8",
+            "text": "！",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-9",
+            "text": "だれ",
+            "isKeyGrammar": false,
+            "kanji": "誰",
+            "furigana": "だれ"
+          },
+          {
+            "id": "d-l47-10",
+            "text": "から",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-11",
+            "text": "きいた",
+            "isKeyGrammar": false,
+            "kanji": "聞いた",
+            "furigana": "きいた"
+          },
+          {
+            "id": "d-l47-12",
+            "text": "んです",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l47-13",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Ơ! Chị nghe từ ai vậy?"
+      },
+      {
+        "id": "dia-n4-47-3",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d-l47-14",
+            "text": "うわさ",
+            "isKeyGrammar": true,
+            "kanji": "噂",
+            "furigana": "うわさ"
+          },
+          {
+            "id": "d-l47-15",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-16",
+            "text": "よると",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l47-17",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-18",
+            "text": "そう",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l47-19",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-20",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-21",
+            "text": "ちがいます",
+            "isKeyGrammar": false,
+            "kanji": "違います",
+            "furigana": "ちがいます"
+          },
+          {
+            "id": "d-l47-22",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Theo tin đồn thì vậy đấy. Không đúng à?"
+      },
+      {
+        "id": "dia-n4-47-4",
+        "speaker": "山田",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d-l47-23",
+            "text": "ちがいます",
+            "isKeyGrammar": false,
+            "kanji": "違います",
+            "furigana": "ちがいます"
+          },
+          {
+            "id": "d-l47-24",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-25",
+            "text": "まだ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-26",
+            "text": "けっこん",
+            "isKeyGrammar": false,
+            "kanji": "結婚",
+            "furigana": "けっこん"
+          },
+          {
+            "id": "d-l47-27",
+            "text": "しません",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-28",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-29",
+            "text": "でも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-30",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-31",
+            "text": "らいねん",
+            "isKeyGrammar": false,
+            "kanji": "来年",
+            "furigana": "らいねん"
+          },
+          {
+            "id": "d-l47-32",
+            "text": "けっこん",
+            "isKeyGrammar": false,
+            "kanji": "結婚",
+            "furigana": "けっこん"
+          },
+          {
+            "id": "d-l47-33",
+            "text": "する",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l47-34",
+            "text": "つもり",
+            "isKeyGrammar": false,
+            "kanji": "つもり",
+            "furigana": "つもり"
+          },
+          {
+            "id": "d-l47-35",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Không đúng đâu. Tôi vẫn chưa kết hôn. Nhưng sang năm tôi định kết hôn."
+      },
+      {
+        "id": "dia-n4-47-5",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d-l47-36",
+            "text": "そうですか",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-37",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-38",
+            "text": "しあわせ",
+            "isKeyGrammar": true,
+            "kanji": "幸せ",
+            "furigana": "しあわせ"
+          },
+          {
+            "id": "d-l47-39",
+            "text": "そう",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l47-40",
+            "text": "です",
+            "isKeyGrammar": false,
+            "kanji": "です",
+            "furigana": "です"
+          },
+          {
+            "id": "d-l47-41",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vậy à. Trông anh có vẻ hạnh phúc lắm nhỉ."
+      },
+      {
+        "id": "dia-n4-47-6",
+        "speaker": "山田",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d-l47-42",
+            "text": "ありがとう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-43",
+            "text": "ございます",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-44",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-45",
+            "text": "ところで",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-46",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-47",
+            "text": "てんきよほう",
+            "isKeyGrammar": true,
+            "kanji": "天気予報",
+            "furigana": "てんきよほう"
+          },
+          {
+            "id": "d-l47-48",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-49",
+            "text": "よると",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l47-50",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-51",
+            "text": "らいしゅう",
+            "isKeyGrammar": false,
+            "kanji": "来週",
+            "furigana": "らいしゅう"
+          },
+          {
+            "id": "d-l47-52",
+            "text": "たいふう",
+            "isKeyGrammar": true,
+            "kanji": "台風",
+            "furigana": "たいふう"
+          },
+          {
+            "id": "d-l47-53",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-54",
+            "text": "くる",
+            "isKeyGrammar": false,
+            "kanji": "来る",
+            "furigana": "くる"
+          },
+          {
+            "id": "d-l47-55",
+            "text": "そうです",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l47-56",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Cảm ơn chị. À mà, theo dự báo thời tiết, nghe nói tuần sau có bão nhỉ."
+      },
+      {
+        "id": "dia-n4-47-7",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d-l47-57",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-58",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-59",
+            "text": "きをつけましょう",
+            "isKeyGrammar": false,
+            "kanji": "気を付けましょう",
+            "furigana": "きをつけましょう"
+          }
+        ],
+        "meaningVi": "Vâng, chúng ta cẩn thận nhé."
+      },
+      {
+        "id": "dia-n4-47-8",
+        "speaker": "山田",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d-l47-60",
+            "text": "あ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-61",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-62",
+            "text": "サントスさん",
+            "isKeyGrammar": false,
+            "kanji": "サントスさん",
+            "furigana": "サントスさん"
+          },
+          {
+            "id": "d-l47-63",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-64",
+            "text": "つかれて",
+            "isKeyGrammar": false,
+            "kanji": "疲れて",
+            "furigana": "つかれて"
+          },
+          {
+            "id": "d-l47-65",
+            "text": "いる",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l47-66",
+            "text": "ようです",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l47-67",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "À, anh Santos trông có vẻ đang mệt nhỉ."
+      },
+      {
+        "id": "dia-n4-47-9",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d-l47-68",
+            "text": "ほんとう",
+            "isKeyGrammar": true,
+            "kanji": "本当",
+            "furigana": "ほんとう"
+          },
+          {
+            "id": "d-l47-69",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-70",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Đúng thật nhỉ."
+      },
+      {
+        "id": "dia-n4-47-10",
+        "speaker": "山田",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d-l47-71",
+            "text": "だいじょうぶ",
+            "isKeyGrammar": false,
+            "kanji": "大丈夫",
+            "furigana": "だいじょうぶ"
+          },
+          {
+            "id": "d-l47-72",
+            "text": "か",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-73",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l47-74",
+            "text": "きいて",
+            "isKeyGrammar": false,
+            "kanji": "聞いて",
+            "furigana": "きいて"
+          },
+          {
+            "id": "d-l47-75",
+            "text": "みましょう",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Thử hỏi xem anh ấy có ổn không nhé."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n4-47-1",
-        "question": "Chọn cách kết hợp đúng cho cấu trúc: Nghe nói (〜そうです) & Dường như (〜ようです)",
+        "question": "「山田さんは結婚するそうです」 — そうです ở đây có nghĩa:",
         "options": [
-          "Thể thông thường + そうです (truyền văn)",
-          "Thể ý chí + だ",
-          "Thể cấm chỉ",
-          "V-ない + です"
+          "Nghe nói/truyền đạt lại thông tin từ nguồn khác",
+          "Trông có vẻ (dựa trên quan sát)",
+          "Chắc chắn 100%",
+          "Phủ định việc kết hôn"
         ],
         "correctIndex": 0,
-        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Thể thông thường + そうです (truyền văn)",
-        "hint": "Chú ý dạng thể liên kết của động từ."
+        "explanation": "そうです ở bài này (nghe nói) khác V-そう bài 43 (trông có vẻ, dựa trên dấu hiệu quan sát).",
+        "hint": "Đây là cách dùng そうです thứ hai, phân biệt với bài 43."
+      },
+      {
+        "id": "ex-q-n4-47-2",
+        "question": "「病気だそうです」 khác 「病気そうです」 (bài 43) ở chỗ:",
+        "options": [
+          "病気だそうです = nghe nói bị bệnh (qua lời kể); 病気そうです = trông có vẻ bệnh (quan sát trực tiếp)",
+          "Hoàn toàn giống nhau",
+          "病気だそうです sai ngữ pháp",
+          "病気そうです chỉ dùng cho câu hỏi"
+        ],
+        "correctIndex": 0,
+        "explanation": "Chỉ khác một chữ だ nhưng ý nghĩa hoàn toàn khác: nguồn thông tin từ ĐÂU (nghe kể hay tự quan sát).",
+        "hint": "Đây là điểm nhầm lẫn quan trọng nhất của bài — so sánh kỹ ở slide 1."
+      },
+      {
+        "id": "ex-q-n4-47-3",
+        "question": "「天気予報によると、雨だそうです」 — によると có vai trò gì?",
+        "options": [
+          "Chỉ rõ NGUỒN GỐC thông tin trước khi thuật lại bằng そうです",
+          "Phủ định thông tin theo sau",
+          "Biến câu thành câu hỏi",
+          "Không có vai trò gì đặc biệt"
+        ],
+        "correctIndex": 0,
+        "explanation": "によると (theo như...) đứng đầu câu, chỉ rõ nguồn tin, thường kết hợp với そうです để tăng tính khách quan.",
+        "hint": "Xem cấu trúc ở slide 2."
+      },
+      {
+        "id": "ex-q-n4-47-4",
+        "question": "「疲れているようです」 — ようです dựa trên điều gì?",
+        "options": [
+          "Sự QUAN SÁT/CẢM NHẬN trực tiếp của người nói",
+          "Lời kể từ người khác",
+          "Tin tức trên báo đài",
+          "Dự báo thời tiết"
+        ],
+        "correctIndex": 0,
+        "explanation": "ようです diễn tả nhận định của CHÍNH NGƯỜI NÓI dựa trên những gì họ tự thấy/cảm nhận — khác そうです (nghe từ người khác).",
+        "hint": "Xem định nghĩa ようです ở slide 3."
+      },
+      {
+        "id": "ex-q-n4-47-5",
+        "question": "「日本語が上手なようです」 — vì sao có な trước ようです?",
+        "options": [
+          "上手 là tính từ な, cần bỏ だ và thêm な trước ようです",
+          "な là lỗi thừa",
+          "ようです luôn cần な bất kể từ loại nào",
+          "上手 phải chia thành 上手だ trước"
+        ],
+        "correctIndex": 0,
+        "explanation": "Tính từ な khi ghép với ようです cần bỏ だ, thêm な: 上手だ → 上手な + ようです.",
+        "hint": "Áp dụng quy tắc chia tính từ な trước ようです."
+      },
+      {
+        "id": "ex-q-n4-47-6",
+        "question": "そうです (nghe nói) và ようです (dường như) khác nhau CHỦ YẾU ở:",
+        "options": [
+          "Nguồn thông tin: そうです từ NGƯỜI KHÁC kể lại; ようです từ QUAN SÁT của chính mình",
+          "Hoàn toàn giống nhau",
+          "そうです chỉ dùng cho câu hỏi",
+          "ようです chỉ dùng cho phủ định"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đây là điểm khác biệt cốt lõi của cả bài: nguồn gốc thông tin đến từ đâu.",
+        "hint": "Xem so sánh trực tiếp ở slide 4."
+      },
+      {
+        "id": "ex-q-n4-47-7",
+        "question": "「山田さんは幸せだそうです」 và 「山田さんは幸せなようです」 khác nhau ở:",
+        "options": [
+          "Câu đầu là NGHE NÓI (ai đó kể); câu sau là NHẬN ĐỊNH của người nói (tự quan sát nụ cười, thái độ)",
+          "Hoàn toàn giống nhau về nguồn thông tin",
+          "Câu đầu sai ngữ pháp",
+          "Câu sau chỉ dùng cho phủ định"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đây là ví dụ so sánh trực tiếp ở slide 4 — cùng nội dung nhưng nguồn thông tin khác nhau.",
+        "hint": "Xem ví dụ song song ở slide 4."
+      },
+      {
+        "id": "ex-q-n4-47-8",
+        "question": "噂によると thường đi kèm với cấu trúc nào?",
+        "options": [
+          "そうです (nghe nói)",
+          "ようです (dường như)",
+          "でしょう (bài 32)",
+          "かもしれません (bài 32)"
+        ],
+        "correctIndex": 0,
+        "explanation": "噂によると (theo tin đồn) chỉ rõ nguồn tin, nên kết hợp tự nhiên với そうです để thuật lại thông tin đã nghe.",
+        "hint": "Xem ví dụ ở slide 2."
+      },
+      {
+        "id": "ex-q-n4-47-9",
+        "question": "Trong hội thoại, Tanaka nghe tin Yamada kết hôn từ đâu?",
+        "options": [
+          "Tin đồn (噂)",
+          "Chính Yamada nói",
+          "Báo chí",
+          "Không có nguồn cụ thể"
+        ],
+        "correctIndex": 0,
+        "explanation": "Tanaka nói 「噂によると、そうです」.",
+        "hint": "Xem câu thoại thứ 3."
+      },
+      {
+        "id": "ex-q-n4-47-10",
+        "question": "Cuối hội thoại, Yamada nhận xét gì về Santos?",
+        "options": [
+          "Trông có vẻ đang mệt",
+          "Trông có vẻ vui vẻ",
+          "Sắp nghỉ việc",
+          "Không nhận xét gì"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yamada nói 「サントスさんは疲れているようですね」.",
+        "hint": "Xem câu thoại thứ 8."
       }
     ]
   },
