@@ -1176,11 +1176,17 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
     return i === -1 ? 0 : i;
   }
 
-  function startLecture(forceStepIndex = null) {
+  async function startLecture(forceStepIndex = null) {
     if (audioEngine) audioEngine.ensureOutContext();
 
     const lvl = slideEngine.currentLevel;
     const lessonNum = slideEngine.currentLesson;
+
+    // Bai co the vua duoc chon qua dropdown/lenh thoai va chua kip tai xong
+    // chi tiet (chi la muc luc nhe) — cho tai xong roi moi dung buildLecturePlan.
+    await curriculumLoader.ensureLessonLoaded(lvl, lessonNum);
+    if (slideEngine.currentLevel !== lvl || slideEngine.currentLesson !== lessonNum) return;
+
     currentLectureSteps = buildLecturePlan(lvl, lessonNum);
 
     if (!currentLectureSteps.length) {
@@ -3129,12 +3135,15 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
   const pickerCloseBtn = document.getElementById('pickerCloseBtn');
   const pickerSearch = document.getElementById('pickerSearch');
 
+  // l chi la muc luc nhe (chua bam mo bao gio) thi dung dem so co san trong
+  // index (vocabCount...); bai nao da tung mo roi thi mang that (vocabList...)
+  // co san va chinh xac hon (vi du sau khi soan them de AI vao exercises).
   function lessonStats(l) {
     return {
-      vocab: (l.vocabList || []).length,
-      kanji: (l.kanjiList || []).length,
-      slides: (l.slides || []).length,
-      quiz: (l.exercises || []).length,
+      vocab: l.vocabList ? l.vocabList.length : (l.vocabCount || 0),
+      kanji: l.kanjiList ? l.kanjiList.length : (l.kanjiCount || 0),
+      slides: l.slides ? l.slides.length : (l.slideCount || 0),
+      quiz: l.exercises ? l.exercises.length : (l.exerciseCount || 0),
     };
   }
 
@@ -3230,7 +3239,7 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
    * Mở một bài học. LUÔN bắt đầu ở chương Từ vựng — đó là điểm vào tự nhiên
    * của mọi bài. Muốn giảng từ chương khác thì bấm chương đó rồi mới bấm giảng.
    */
-  function openLesson(lvl, lessonNum) {
+  async function openLesson(lvl, lessonNum) {
     if (lectureState !== 'IDLE') {
       pauseLecture(false);
       lectureState = 'IDLE';
@@ -3245,14 +3254,22 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
     slideEngine.currentLevel = lvl;
     slideEngine.currentLesson = Number(lessonNum);
     slideEngine.currentSlideIndex = 0;
+    // setTab tu lo viec hien "dang tai bai hoc..." neu chi tiet chua co san
     slideEngine.setTab('vocab');
+
+    closePicker();
+
+    // Ke hoach giang bai (buildLecturePlan) can DU vocabList/kanjiList/slides/
+    // dialogue/exercises — phai cho tai xong chi tiet moi duoc dung tiep,
+    // khong thi ra ke hoach rong (bai vua mo tren picker chi la muc luc nhe).
+    await curriculumLoader.ensureLessonLoaded(lvl, lessonNum);
+    // Trong luc cho, hoc vien da bam sang bai khac thi thoi, de bai do tu lo.
+    if (slideEngine.currentLevel !== lvl || slideEngine.currentLesson !== Number(lessonNum)) return;
 
     currentLectureSteps = buildLecturePlan(lvl, lessonNum);
     currentLectureStepIndex = -1;
     lectureCheckpoint = { stepIndex: 0, sectionName: 'vocab', subIndex: null, level: lvl, lessonNum: Number(lessonNum) };
     updateLectureControlsUI();
-
-    closePicker();
 
     const lesson = curriculumLoader.getLesson(lvl, lessonNum);
     if (lesson) showToast(`${lvl} · Bài ${lessonNum} — ${lesson.title.split(':').slice(1).join(':').trim() || lesson.title}`);

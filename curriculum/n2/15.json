@@ -1,0 +1,1688 @@
+{
+  "level": "N2",
+  "lessonNumber": 15,
+  "title": "Bài 15: Tổng kết chiến lược đọc hiểu & ngữ pháp N2",
+  "description": "Bài tổng kết N2 kết hợp các cấu trúc trọng điểm đã học qua một bài phát biểu kỷ niệm thành lập công ty thực tế: に際して + を契機に (mở đầu diễn văn → bước ngoặt khởi đầu), ざるを得ない + をものともせずに (thừa nhận khó khăn → ca ngợi kiên cường), 末に + につれて + にとどまらず (kết quả → xu hướng theo thời gian → phạm vi mở rộng), và に基づいて + ならではの + にふさわしい (căn cứ khách quan → đặc trưng độc đáo → sự xứng đáng) — nắm vững cách KẾT HỢP các cấu trúc này quan trọng hơn học thuộc riêng lẻ, đúng như cách chúng xuất hiện trong đề thi JLPT N2 thực tế. Hoàn thành trọn vẹn 15/15 bài N2, khép lại toàn bộ hành trình N5→N2!",
+  "vocabList": [
+    {
+      "id": "voc-n2-15-1",
+      "word": "きねん",
+      "kanji": "記念",
+      "furigana": "きねん",
+      "romaji": "kinen",
+      "wordType": "noun",
+      "meaningVi": "Kỷ niệm",
+      "accentNote": "10周年 記念 = kỷ niệm 10 năm."
+    },
+    {
+      "id": "voc-n2-15-2",
+      "word": "しゅうねん",
+      "kanji": "周年",
+      "furigana": "しゅうねん",
+      "romaji": "shuunen",
+      "wordType": "noun",
+      "meaningVi": "...năm kỷ niệm",
+      "accentNote": "創立10周年 = kỷ niệm 10 năm thành lập."
+    },
+    {
+      "id": "voc-n2-15-3",
+      "word": "いわいます",
+      "kanji": "祝います",
+      "furigana": "いわいます",
+      "romaji": "iwaimasu",
+      "wordType": "verb",
+      "meaningVi": "Chúc mừng",
+      "accentNote": "記念日を 祝います = chúc mừng ngày kỷ niệm."
+    },
+    {
+      "id": "voc-n2-15-4",
+      "word": "そうりつ",
+      "kanji": "創立",
+      "furigana": "そうりつ",
+      "romaji": "souritsu",
+      "wordType": "noun",
+      "meaningVi": "Sáng lập, thành lập",
+      "accentNote": "会社の 創立 = sự thành lập công ty."
+    },
+    {
+      "id": "voc-n2-15-5",
+      "word": "けいえい",
+      "kanji": "経営",
+      "furigana": "けいえい",
+      "romaji": "keiei",
+      "wordType": "noun",
+      "meaningVi": "Kinh doanh, quản lý",
+      "accentNote": "会社を 経営します = kinh doanh công ty."
+    },
+    {
+      "id": "voc-n2-15-6",
+      "word": "しゅうにん",
+      "kanji": "就任",
+      "furigana": "しゅうにん",
+      "romaji": "shuunin",
+      "wordType": "noun",
+      "meaningVi": "Nhậm chức",
+      "accentNote": "Đã gặp N2 bài 1."
+    },
+    {
+      "id": "voc-n2-15-7",
+      "word": "けいき",
+      "kanji": "契機",
+      "furigana": "けいき",
+      "romaji": "keiki",
+      "wordType": "noun",
+      "meaningVi": "Cơ hội, động lực",
+      "accentNote": "Đã gặp N2 bài 6."
+    },
+    {
+      "id": "voc-n2-15-8",
+      "word": "しゅくしょう",
+      "kanji": "縮小",
+      "furigana": "しゅくしょう",
+      "romaji": "shukushou",
+      "wordType": "noun",
+      "meaningVi": "Sự thu hẹp",
+      "accentNote": "Đã gặp N2 bài 2."
+    },
+    {
+      "id": "voc-n2-15-9",
+      "word": "やむをえない",
+      "kanji": "やむを得ない",
+      "furigana": "やむをえない",
+      "romaji": "yamu wo enai",
+      "wordType": "adjective",
+      "meaningVi": "Bất đắc dĩ",
+      "accentNote": "Đã gặp N2 bài 2."
+    },
+    {
+      "id": "voc-n2-15-10",
+      "word": "どりょく",
+      "kanji": "努力",
+      "furigana": "どりょく",
+      "romaji": "doryoku",
+      "wordType": "noun",
+      "meaningVi": "Nỗ lực",
+      "accentNote": "Đã gặp N3 bài 8."
+    },
+    {
+      "id": "voc-n2-15-11",
+      "word": "のうりょく",
+      "kanji": "能力",
+      "furigana": "のうりょく",
+      "romaji": "nouryoku",
+      "wordType": "noun",
+      "meaningVi": "Năng lực",
+      "accentNote": "Đã gặp N2 bài 11."
+    },
+    {
+      "id": "voc-n2-15-12",
+      "word": "ぶんや",
+      "kanji": "分野",
+      "furigana": "ぶんや",
+      "romaji": "bun-ya",
+      "wordType": "noun",
+      "meaningVi": "Lĩnh vực",
+      "accentNote": "Đã gặp N3 bài 6."
+    },
+    {
+      "id": "voc-n2-15-13",
+      "word": "えいきょう",
+      "kanji": "影響",
+      "furigana": "えいきょう",
+      "romaji": "eikyou",
+      "wordType": "noun",
+      "meaningVi": "Ảnh hưởng",
+      "accentNote": "Đã gặp N2 bài 7."
+    },
+    {
+      "id": "voc-n2-15-14",
+      "word": "とくしょく",
+      "kanji": "特色",
+      "furigana": "とくしょく",
+      "romaji": "tokushoku",
+      "wordType": "noun",
+      "meaningVi": "Đặc điểm, đặc sắc",
+      "accentNote": "Đã gặp N2 bài 11."
+    },
+    {
+      "id": "voc-n2-15-15",
+      "word": "かいしゃ",
+      "kanji": "会社",
+      "furigana": "かいしゃ",
+      "romaji": "kaisha",
+      "wordType": "noun",
+      "meaningVi": "Công ty",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-15-16",
+      "word": "しゃちょう",
+      "kanji": "社長",
+      "furigana": "しゃちょう",
+      "romaji": "shachou",
+      "wordType": "noun",
+      "meaningVi": "Giám đốc",
+      "accentNote": "Đã gặp N4 bài 41."
+    },
+    {
+      "id": "voc-n2-15-17",
+      "word": "せかいじゅう",
+      "kanji": "世界中",
+      "furigana": "せかいじゅう",
+      "romaji": "sekaijuu",
+      "wordType": "noun",
+      "meaningVi": "Khắp thế giới",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-15-18",
+      "word": "はってん",
+      "kanji": "発展",
+      "furigana": "はってん",
+      "romaji": "hatten",
+      "wordType": "noun",
+      "meaningVi": "Sự phát triển",
+      "accentNote": "Đã gặp N3 bài 14."
+    },
+    {
+      "id": "voc-n2-15-19",
+      "word": "けっか",
+      "kanji": "結果",
+      "furigana": "けっか",
+      "romaji": "kekka",
+      "wordType": "noun",
+      "meaningVi": "Kết quả",
+      "accentNote": "Đã gặp N4 bài 39."
+    },
+    {
+      "id": "voc-n2-15-20",
+      "word": "みなさま",
+      "kanji": "皆様",
+      "furigana": "みなさま",
+      "romaji": "minasama",
+      "wordType": "pronoun",
+      "meaningVi": "Quý vị",
+      "accentNote": "Đã gặp N2 bài 1."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n2-15-1",
+      "character": "記",
+      "hanViet": "KÝ",
+      "strokeCount": 10,
+      "onyomi": [
+        "キ (ki)"
+      ],
+      "kunyomi": [
+        "しる(す)"
+      ],
+      "meaningVi": "Ghi chép, kỷ niệm.",
+      "commonWords": [
+        {
+          "word": "記念",
+          "furigana": "きねん",
+          "meaningVi": "Kỷ niệm"
+        },
+        {
+          "word": "日記",
+          "furigana": "にっき",
+          "meaningVi": "Nhật ký"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-15-2",
+      "character": "念",
+      "hanViet": "NIỆM",
+      "strokeCount": 8,
+      "onyomi": [
+        "ネン (nen)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Ý niệm, tưởng nhớ.",
+      "commonWords": [
+        {
+          "word": "記念",
+          "furigana": "きねん",
+          "meaningVi": "Kỷ niệm"
+        },
+        {
+          "word": "念のため",
+          "furigana": "ねんのため",
+          "meaningVi": "Để chắc chắn"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-15-3",
+      "character": "祝",
+      "hanViet": "CHÚC",
+      "strokeCount": 9,
+      "onyomi": [
+        "シュク (shuku)"
+      ],
+      "kunyomi": [
+        "いわ(う)"
+      ],
+      "meaningVi": "Chúc mừng.",
+      "commonWords": [
+        {
+          "word": "祝います",
+          "furigana": "いわいます",
+          "meaningVi": "Chúc mừng"
+        },
+        {
+          "word": "祝日",
+          "furigana": "しゅくじつ",
+          "meaningVi": "Ngày lễ"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-15-4",
+      "character": "創",
+      "hanViet": "SÁNG",
+      "strokeCount": 12,
+      "onyomi": [
+        "ソウ (sou)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Sáng lập, khởi đầu.",
+      "commonWords": [
+        {
+          "word": "創立",
+          "furigana": "そうりつ",
+          "meaningVi": "Sáng lập, thành lập"
+        },
+        {
+          "word": "創業",
+          "furigana": "そうぎょう",
+          "meaningVi": "Khởi nghiệp"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-15-5",
+      "character": "営",
+      "hanViet": "DOANH",
+      "strokeCount": 12,
+      "onyomi": [
+        "エイ (ei)"
+      ],
+      "kunyomi": [
+        "いとな(む)"
+      ],
+      "meaningVi": "Kinh doanh, vận hành.",
+      "commonWords": [
+        {
+          "word": "経営",
+          "furigana": "けいえい",
+          "meaningVi": "Kinh doanh, quản lý"
+        },
+        {
+          "word": "営業",
+          "furigana": "えいぎょう",
+          "meaningVi": "Kinh doanh, bán hàng"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n2-l15-s1",
+      "slideType": "grammar",
+      "title": "1. Ôn tập: Mở đầu diễn văn kỷ niệm (に際して + を契機に)",
+      "grammarFormula": "N周年に際して、[phát biểu]。　　Nを契機に、[bước ngoặt khởi đầu]。",
+      "explanation": "Khi mở đầu bài phát biểu kỷ niệm, thường dùng に際して (bài 1 — nhân dịp) để chào hỏi trang trọng, rồi dùng を契機に (bài 6 — lấy làm cơ hội) để kể lại BƯỚC NGOẶT khởi đầu doanh nghiệp.",
+      "teacherTips": "Ôn nhanh: に際して=nhân dịp sự kiện đang diễn ra (bài 1); を契機に=lấy một sự kiện làm động lực chuyển hướng (bài 6).",
+      "culturalNotes": "Diễn văn kỷ niệm thành lập công ty Nhật luôn theo khung: chào hỏi trang trọng (に際して) → kể lại bước ngoặt khởi nghiệp (を契機に).",
+      "examples": [
+        {
+          "id": "ex-n2-l15-s1-1",
+          "tokens": [
+            {
+              "id": "t-l15s1-1",
+              "text": "そうりつ",
+              "isKeyGrammar": true,
+              "kanji": "創立",
+              "furigana": "そうりつ"
+            },
+            {
+              "id": "t-l15s1-2",
+              "text": "10",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-3",
+              "text": "しゅうねん",
+              "isKeyGrammar": true,
+              "kanji": "周年",
+              "furigana": "しゅうねん"
+            },
+            {
+              "id": "t-l15s1-4",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l15s1-5",
+              "text": "さいして",
+              "isKeyGrammar": true,
+              "kanji": "際して",
+              "furigana": "さいして"
+            },
+            {
+              "id": "t-l15s1-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-7",
+              "text": "ひとこと",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-8",
+              "text": "ご",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-9",
+              "text": "あいさつ",
+              "isKeyGrammar": false,
+              "kanji": "挨拶",
+              "furigana": "あいさつ"
+            },
+            {
+              "id": "t-l15s1-10",
+              "text": "もうしあげます",
+              "isKeyGrammar": false,
+              "kanji": "申し上げます",
+              "furigana": "もうしあげます"
+            }
+          ],
+          "meaningVi": "Nhân dịp kỷ niệm 10 năm thành lập, tôi xin có đôi lời phát biểu."
+        },
+        {
+          "id": "ex-n2-l15-s1-2",
+          "tokens": [
+            {
+              "id": "t-l15s1-11",
+              "text": "かいがい",
+              "isKeyGrammar": false,
+              "kanji": "海外",
+              "furigana": "かいがい"
+            },
+            {
+              "id": "t-l15s1-12",
+              "text": "りゅうがく",
+              "isKeyGrammar": false,
+              "kanji": "留学",
+              "furigana": "りゅうがく"
+            },
+            {
+              "id": "t-l15s1-13",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-14",
+              "text": "けいき",
+              "isKeyGrammar": true,
+              "kanji": "契機",
+              "furigana": "けいき"
+            },
+            {
+              "id": "t-l15s1-15",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-16",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-17",
+              "text": "かいしゃ",
+              "isKeyGrammar": true,
+              "kanji": "会社",
+              "furigana": "かいしゃ"
+            },
+            {
+              "id": "t-l15s1-18",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-19",
+              "text": "そうりつ",
+              "isKeyGrammar": true,
+              "kanji": "創立",
+              "furigana": "そうりつ"
+            },
+            {
+              "id": "t-l15s1-20",
+              "text": "しました",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Lấy việc du học nước ngoài làm động lực, tôi đã thành lập công ty."
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l15-s2",
+      "slideType": "grammar",
+      "title": "2. Ôn tập: Vượt qua khó khăn (をものともせずに + ざるを得ない)",
+      "grammarFormula": "[khó khăn]をものともせずに、[hành động kiên cường]。[Bất đắc dĩ]ざるを得なかったが、[đã vượt qua]。",
+      "explanation": "Khi kể về giai đoạn khó khăn, thường dùng をものともせずに (bài 9 — ca ngợi kiên cường) để khen ngợi tinh thần vượt khó, đồng thời thừa nhận đã CÓ LÚC ざるを得ない (bài 2 — bất đắc dĩ) phải thu hẹp quy mô.",
+      "teacherTips": "Ôn nhanh: をものともせずに=CA NGỢI sự kiên cường (bài 9); ざるを得ない=thừa nhận sự MIỄN CƯỠNG chủ quan (bài 2) — kết hợp tạo câu chuyện thuyết phục về nghị lực vượt khó.",
+      "culturalNotes": "Tiểu sử doanh nhân Nhật luôn có đoạn 'khó khăn' kể theo khung này để tăng tính thuyết phục và cảm động cho câu chuyện thành công.",
+      "examples": [
+        {
+          "id": "ex-n2-l15-s2-1",
+          "tokens": [
+            {
+              "id": "t-l15s2-1",
+              "text": "けいざい",
+              "isKeyGrammar": false,
+              "kanji": "経済",
+              "furigana": "けいざい"
+            },
+            {
+              "id": "t-l15s2-2",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-3",
+              "text": "もんだい",
+              "isKeyGrammar": false,
+              "kanji": "問題",
+              "furigana": "もんだい"
+            },
+            {
+              "id": "t-l15s2-4",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-5",
+              "text": "ものともせずに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l15s2-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-7",
+              "text": "けいえい",
+              "isKeyGrammar": true,
+              "kanji": "経営",
+              "furigana": "けいえい"
+            },
+            {
+              "id": "t-l15s2-8",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-9",
+              "text": "つづけました",
+              "isKeyGrammar": false,
+              "kanji": "続けました",
+              "furigana": "つづけました"
+            }
+          ],
+          "meaningVi": "Bất chấp vấn đề kinh tế, đã tiếp tục việc kinh doanh."
+        },
+        {
+          "id": "ex-n2-l15-s2-2",
+          "tokens": [
+            {
+              "id": "t-l15s2-10",
+              "text": "いちじ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-11",
+              "text": "じぎょう",
+              "isKeyGrammar": false,
+              "kanji": "事業",
+              "furigana": "じぎょう"
+            },
+            {
+              "id": "t-l15s2-12",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-13",
+              "text": "しゅくしょう",
+              "isKeyGrammar": true,
+              "kanji": "縮小",
+              "furigana": "しゅくしょう"
+            },
+            {
+              "id": "t-l15s2-14",
+              "text": "せざるを",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-15",
+              "text": "えません",
+              "isKeyGrammar": false,
+              "kanji": "得ません",
+              "furigana": "えません"
+            },
+            {
+              "id": "t-l15s2-16",
+              "text": "でした",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-17",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-18",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-19",
+              "text": "どりょく",
+              "isKeyGrammar": true,
+              "kanji": "努力",
+              "furigana": "どりょく"
+            },
+            {
+              "id": "t-l15s2-20",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-21",
+              "text": "つづけました",
+              "isKeyGrammar": false,
+              "kanji": "続けました",
+              "furigana": "つづけました"
+            }
+          ],
+          "meaningVi": "Có lúc bất đắc dĩ phải thu hẹp sự nghiệp, nhưng đã tiếp tục nỗ lực."
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l15-s3",
+      "slideType": "grammar",
+      "title": "3. Ôn tập: Kết quả & xu hướng phát triển (末に + につれて + にとどまらず)",
+      "grammarFormula": "長い努力の末に、[kết quả]。時間が経つにつれて、[xu hướng]は日本にとどまらず、[mở rộng]。",
+      "explanation": "Khi tường thuật KẾT QUẢ sau một hành trình dài, dùng 末に (bài 12 — cuối cùng, sau quá trình dài) rồi につれて/にしたがって (bài 5) để mô tả XU HƯỚNG PHÁT TRIỂN theo thời gian, kết thúc bằng にとどまらず (bài 13) để nhấn PHẠM VI mở rộng vượt xa ban đầu.",
+      "teacherTips": "Ôn nhanh: 末に=kết quả cuối cùng (bài 12); につれて/にしたがって=xu hướng song song theo thời gian (bài 5); にとどまらず=nhấn phạm vi vượt xa ban đầu (bài 13).",
+      "culturalNotes": "Đây là khung TƯỜNG THUẬT THÀNH CÔNG kinh điển: kết quả → xu hướng theo thời gian → phạm vi mở rộng, thường thấy trong báo cáo thường niên công ty Nhật.",
+      "examples": [
+        {
+          "id": "ex-n2-l15-s3-1",
+          "tokens": [
+            {
+              "id": "t-l15s3-1",
+              "text": "ながい",
+              "isKeyGrammar": false,
+              "kanji": "長い",
+              "furigana": "ながい"
+            },
+            {
+              "id": "t-l15s3-2",
+              "text": "どりょく",
+              "isKeyGrammar": true,
+              "kanji": "努力",
+              "furigana": "どりょく"
+            },
+            {
+              "id": "t-l15s3-3",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-4",
+              "text": "すえに",
+              "isKeyGrammar": true,
+              "kanji": "末に",
+              "furigana": "すえに"
+            },
+            {
+              "id": "t-l15s3-5",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-6",
+              "text": "かいしゃ",
+              "isKeyGrammar": true,
+              "kanji": "会社",
+              "furigana": "かいしゃ"
+            },
+            {
+              "id": "t-l15s3-7",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-8",
+              "text": "はってん",
+              "isKeyGrammar": true,
+              "kanji": "発展",
+              "furigana": "はってん"
+            },
+            {
+              "id": "t-l15s3-9",
+              "text": "しました",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Sau nỗ lực dài lâu, công ty đã phát triển."
+        },
+        {
+          "id": "ex-n2-l15-s3-2",
+          "tokens": [
+            {
+              "id": "t-l15s3-10",
+              "text": "じかん",
+              "isKeyGrammar": false,
+              "kanji": "時間",
+              "furigana": "じかん"
+            },
+            {
+              "id": "t-l15s3-11",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-12",
+              "text": "たつ",
+              "isKeyGrammar": false,
+              "kanji": "経つ",
+              "furigana": "たつ"
+            },
+            {
+              "id": "t-l15s3-13",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-14",
+              "text": "したがって",
+              "isKeyGrammar": false,
+              "kanji": "従って",
+              "furigana": "したがって"
+            },
+            {
+              "id": "t-l15s3-15",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-16",
+              "text": "じぎょう",
+              "isKeyGrammar": false,
+              "kanji": "事業",
+              "furigana": "じぎょう"
+            },
+            {
+              "id": "t-l15s3-17",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-18",
+              "text": "にほん",
+              "isKeyGrammar": false,
+              "kanji": "日本",
+              "furigana": "にほん"
+            },
+            {
+              "id": "t-l15s3-19",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-20",
+              "text": "とどまらず",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l15s3-21",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-22",
+              "text": "せかいじゅう",
+              "isKeyGrammar": true,
+              "kanji": "世界中",
+              "furigana": "せかいじゅう"
+            },
+            {
+              "id": "t-l15s3-23",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-24",
+              "text": "はってん",
+              "isKeyGrammar": true,
+              "kanji": "発展",
+              "furigana": "はってん"
+            },
+            {
+              "id": "t-l15s3-25",
+              "text": "しました",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Theo thời gian trôi qua, sự nghiệp kinh doanh không chỉ dừng lại ở Nhật Bản mà còn phát triển khắp thế giới."
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l15-s4",
+      "slideType": "grammar",
+      "title": "4. Ôn tập: Đặc trưng & căn cứ đánh giá (ならではの/にふさわしい + に基づいて)",
+      "grammarFormula": "統計に基づいて、[đánh giá]。この会社ならではの特色は〜。社長にふさわしい能力です。",
+      "explanation": "Khi kết luận bài phát biểu, thường dùng に基づいて (bài 10 — dựa trên căn cứ khách quan) để đưa ra đánh giá đáng tin cậy, rồi khen ngợi ĐẶC TRƯNG riêng của công ty bằng ならではの (bài 11) và năng lực xứng đáng bằng にふさわしい (bài 11).",
+      "teacherTips": "Ôn nhanh: に基づいて=căn cứ khách quan chính xác (bài 10); ならではの=đặc trưng độc đáo (bài 11); にふさわしい=xứng đáng theo tiêu chuẩn (bài 11) — bộ ba khép lại một bài phát biểu thuyết phục.",
+      "culturalNotes": "Đây là 4 nhóm ngữ pháp N2 cốt lõi thường xuất hiện lồng ghép trong đề đọc hiểu JLPT N2 — nắm vững cách KẾT HỢP chúng trong một bài diễn văn/bài viết hoàn chỉnh quan trọng hơn học thuộc riêng lẻ.",
+      "examples": [
+        {
+          "id": "ex-n2-l15-s4-1",
+          "tokens": [
+            {
+              "id": "t-l15s4-1",
+              "text": "とうけい",
+              "isKeyGrammar": false,
+              "kanji": "統計",
+              "furigana": "とうけい"
+            },
+            {
+              "id": "t-l15s4-2",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-3",
+              "text": "もとづいて",
+              "isKeyGrammar": false,
+              "kanji": "基づいて",
+              "furigana": "もとづいて"
+            },
+            {
+              "id": "t-l15s4-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-5",
+              "text": "けいえい",
+              "isKeyGrammar": true,
+              "kanji": "経営",
+              "furigana": "けいえい"
+            },
+            {
+              "id": "t-l15s4-6",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-7",
+              "text": "はんだん",
+              "isKeyGrammar": false,
+              "kanji": "判断",
+              "furigana": "はんだん"
+            },
+            {
+              "id": "t-l15s4-8",
+              "text": "します",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Phán đoán việc kinh doanh dựa trên số liệu thống kê."
+        },
+        {
+          "id": "ex-n2-l15-s4-2",
+          "tokens": [
+            {
+              "id": "t-l15s4-9",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-10",
+              "text": "かいしゃ",
+              "isKeyGrammar": true,
+              "kanji": "会社",
+              "furigana": "かいしゃ"
+            },
+            {
+              "id": "t-l15s4-11",
+              "text": "ならではの",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l15s4-12",
+              "text": "とくしょく",
+              "isKeyGrammar": true,
+              "kanji": "特色",
+              "furigana": "とくしょく"
+            },
+            {
+              "id": "t-l15s4-13",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-14",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-15",
+              "text": "しゃいん",
+              "isKeyGrammar": false,
+              "kanji": "社員",
+              "furigana": "しゃいん"
+            },
+            {
+              "id": "t-l15s4-16",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-17",
+              "text": "どりょく",
+              "isKeyGrammar": true,
+              "kanji": "努力",
+              "furigana": "どりょく"
+            },
+            {
+              "id": "t-l15s4-18",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Đặc trưng riêng của công ty này là sự nỗ lực của nhân viên."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n2-15-1",
+      "speaker": "田中",
+      "speakerRole": "MC buổi lễ",
+      "tokens": [
+        {
+          "id": "d15-1",
+          "text": "そうりつ",
+          "isKeyGrammar": true,
+          "kanji": "創立",
+          "furigana": "そうりつ"
+        },
+        {
+          "id": "d15-2",
+          "text": "10",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-3",
+          "text": "しゅうねん",
+          "isKeyGrammar": true,
+          "kanji": "周年",
+          "furigana": "しゅうねん"
+        },
+        {
+          "id": "d15-4",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d15-5",
+          "text": "さいしまして",
+          "isKeyGrammar": false,
+          "kanji": "際しまして",
+          "furigana": "さいしまして"
+        },
+        {
+          "id": "d15-6",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-7",
+          "text": "しゃちょう",
+          "isKeyGrammar": true,
+          "kanji": "社長",
+          "furigana": "しゃちょう"
+        },
+        {
+          "id": "d15-8",
+          "text": "から",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-9",
+          "text": "ひとこと",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Nhân dịp kỷ niệm 10 năm thành lập, xin mời giám đốc phát biểu đôi lời."
+    },
+    {
+      "id": "dia-n2-15-2",
+      "speaker": "サントス",
+      "speakerRole": "Giám đốc",
+      "tokens": [
+        {
+          "id": "d15-10",
+          "text": "かいがい",
+          "isKeyGrammar": false,
+          "kanji": "海外",
+          "furigana": "かいがい"
+        },
+        {
+          "id": "d15-11",
+          "text": "けいけん",
+          "isKeyGrammar": false,
+          "kanji": "経験",
+          "furigana": "けいけん"
+        },
+        {
+          "id": "d15-12",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-13",
+          "text": "けいき",
+          "isKeyGrammar": true,
+          "kanji": "契機",
+          "furigana": "けいき"
+        },
+        {
+          "id": "d15-14",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-15",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-16",
+          "text": "かいしゃ",
+          "isKeyGrammar": true,
+          "kanji": "会社",
+          "furigana": "かいしゃ"
+        },
+        {
+          "id": "d15-17",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-18",
+          "text": "そうりつ",
+          "isKeyGrammar": true,
+          "kanji": "創立",
+          "furigana": "そうりつ"
+        },
+        {
+          "id": "d15-19",
+          "text": "しました",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Lấy kinh nghiệm ở nước ngoài làm động lực, tôi đã thành lập công ty."
+    },
+    {
+      "id": "dia-n2-15-3",
+      "speaker": "田中",
+      "speakerRole": "MC buổi lễ",
+      "tokens": [
+        {
+          "id": "d15-20",
+          "text": "けいざい",
+          "isKeyGrammar": false,
+          "kanji": "経済",
+          "furigana": "けいざい"
+        },
+        {
+          "id": "d15-21",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-22",
+          "text": "もんだい",
+          "isKeyGrammar": false,
+          "kanji": "問題",
+          "furigana": "もんだい"
+        },
+        {
+          "id": "d15-23",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-24",
+          "text": "ものともせずに",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d15-25",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-26",
+          "text": "けいえい",
+          "isKeyGrammar": true,
+          "kanji": "経営",
+          "furigana": "けいえい"
+        },
+        {
+          "id": "d15-27",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-28",
+          "text": "つづけました",
+          "isKeyGrammar": false,
+          "kanji": "続けました",
+          "furigana": "つづけました"
+        },
+        {
+          "id": "d15-29",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ông đã bất chấp vấn đề kinh tế để tiếp tục kinh doanh phải không?"
+    },
+    {
+      "id": "dia-n2-15-4",
+      "speaker": "サントス",
+      "speakerRole": "Giám đốc",
+      "tokens": [
+        {
+          "id": "d15-30",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-31",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-32",
+          "text": "いちじ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-33",
+          "text": "じぎょう",
+          "isKeyGrammar": false,
+          "kanji": "事業",
+          "furigana": "じぎょう"
+        },
+        {
+          "id": "d15-34",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-35",
+          "text": "しゅくしょう",
+          "isKeyGrammar": true,
+          "kanji": "縮小",
+          "furigana": "しゅくしょう"
+        },
+        {
+          "id": "d15-36",
+          "text": "せざるを",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-37",
+          "text": "えません",
+          "isKeyGrammar": false,
+          "kanji": "得ません",
+          "furigana": "えません"
+        },
+        {
+          "id": "d15-38",
+          "text": "でした",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng. Có lúc bất đắc dĩ phải thu hẹp sự nghiệp."
+    },
+    {
+      "id": "dia-n2-15-5",
+      "speaker": "田中",
+      "speakerRole": "MC buổi lễ",
+      "tokens": [
+        {
+          "id": "d15-39",
+          "text": "ながい",
+          "isKeyGrammar": false,
+          "kanji": "長い",
+          "furigana": "ながい"
+        },
+        {
+          "id": "d15-40",
+          "text": "どりょく",
+          "isKeyGrammar": true,
+          "kanji": "努力",
+          "furigana": "どりょく"
+        },
+        {
+          "id": "d15-41",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-42",
+          "text": "すえに",
+          "isKeyGrammar": false,
+          "kanji": "末に",
+          "furigana": "すえに"
+        },
+        {
+          "id": "d15-43",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-44",
+          "text": "はってん",
+          "isKeyGrammar": true,
+          "kanji": "発展",
+          "furigana": "はってん"
+        },
+        {
+          "id": "d15-45",
+          "text": "しました",
+          "isKeyGrammar": false,
+          "kanji": "為ました",
+          "furigana": "しました"
+        },
+        {
+          "id": "d15-46",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Sau nỗ lực dài lâu, đã phát triển nhỉ."
+    },
+    {
+      "id": "dia-n2-15-6",
+      "speaker": "サントス",
+      "speakerRole": "Giám đốc",
+      "tokens": [
+        {
+          "id": "d15-47",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-48",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-49",
+          "text": "じぎょう",
+          "isKeyGrammar": false,
+          "kanji": "事業",
+          "furigana": "じぎょう"
+        },
+        {
+          "id": "d15-50",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-51",
+          "text": "にほん",
+          "isKeyGrammar": false,
+          "kanji": "日本",
+          "furigana": "にほん"
+        },
+        {
+          "id": "d15-52",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-53",
+          "text": "とどまらず",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d15-54",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-55",
+          "text": "せかいじゅう",
+          "isKeyGrammar": true,
+          "kanji": "世界中",
+          "furigana": "せかいじゅう"
+        },
+        {
+          "id": "d15-56",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-57",
+          "text": "はってん",
+          "isKeyGrammar": true,
+          "kanji": "発展",
+          "furigana": "はってん"
+        },
+        {
+          "id": "d15-58",
+          "text": "しました",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng. Sự nghiệp không chỉ dừng lại ở Nhật Bản mà còn phát triển khắp thế giới."
+    },
+    {
+      "id": "dia-n2-15-7",
+      "speaker": "田中",
+      "speakerRole": "MC buổi lễ",
+      "tokens": [
+        {
+          "id": "d15-59",
+          "text": "とうけい",
+          "isKeyGrammar": false,
+          "kanji": "統計",
+          "furigana": "とうけい"
+        },
+        {
+          "id": "d15-60",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-61",
+          "text": "もとづいて",
+          "isKeyGrammar": false,
+          "kanji": "基づいて",
+          "furigana": "もとづいて"
+        },
+        {
+          "id": "d15-62",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-63",
+          "text": "らいねん",
+          "isKeyGrammar": false,
+          "kanji": "来年",
+          "furigana": "らいねん"
+        },
+        {
+          "id": "d15-64",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-65",
+          "text": "けいかく",
+          "isKeyGrammar": false,
+          "kanji": "計画",
+          "furigana": "けいかく"
+        },
+        {
+          "id": "d15-66",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-67",
+          "text": "どうですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Dựa trên số liệu thống kê, kế hoạch năm sau thế nào?"
+    },
+    {
+      "id": "dia-n2-15-8",
+      "speaker": "サントス",
+      "speakerRole": "Giám đốc",
+      "tokens": [
+        {
+          "id": "d15-68",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-69",
+          "text": "かいしゃ",
+          "isKeyGrammar": true,
+          "kanji": "会社",
+          "furigana": "かいしゃ"
+        },
+        {
+          "id": "d15-70",
+          "text": "ならではの",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d15-71",
+          "text": "とくしょく",
+          "isKeyGrammar": true,
+          "kanji": "特色",
+          "furigana": "とくしょく"
+        },
+        {
+          "id": "d15-72",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-73",
+          "text": "いかして",
+          "isKeyGrammar": false,
+          "kanji": "生かして",
+          "furigana": "いかして"
+        },
+        {
+          "id": "d15-74",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-75",
+          "text": "あたらしい",
+          "isKeyGrammar": false,
+          "kanji": "新しい",
+          "furigana": "あたらしい"
+        },
+        {
+          "id": "d15-76",
+          "text": "ぶんや",
+          "isKeyGrammar": true,
+          "kanji": "分野",
+          "furigana": "ぶんや"
+        },
+        {
+          "id": "d15-77",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-78",
+          "text": "すすみます",
+          "isKeyGrammar": false,
+          "kanji": "進みます",
+          "furigana": "すすみます"
+        }
+      ],
+      "meaningVi": "Sẽ tận dụng đặc trưng riêng của công ty này để tiến vào lĩnh vực mới."
+    },
+    {
+      "id": "dia-n2-15-9",
+      "speaker": "田中",
+      "speakerRole": "MC buổi lễ",
+      "tokens": [
+        {
+          "id": "d15-79",
+          "text": "しゃちょう",
+          "isKeyGrammar": true,
+          "kanji": "社長",
+          "furigana": "しゃちょう"
+        },
+        {
+          "id": "d15-80",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-81",
+          "text": "ふさわしい",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d15-82",
+          "text": "のうりょく",
+          "isKeyGrammar": true,
+          "kanji": "能力",
+          "furigana": "のうりょく"
+        },
+        {
+          "id": "d15-83",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d15-84",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Đó là năng lực xứng đáng với một giám đốc nhỉ."
+    },
+    {
+      "id": "dia-n2-15-10",
+      "speaker": "サントス",
+      "speakerRole": "Giám đốc",
+      "tokens": [
+        {
+          "id": "d15-85",
+          "text": "みなさま",
+          "isKeyGrammar": true,
+          "kanji": "皆様",
+          "furigana": "みなさま"
+        },
+        {
+          "id": "d15-86",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-87",
+          "text": "きょう",
+          "isKeyGrammar": false,
+          "kanji": "今日",
+          "furigana": "きょう"
+        },
+        {
+          "id": "d15-88",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-89",
+          "text": "きねん",
+          "isKeyGrammar": true,
+          "kanji": "記念",
+          "furigana": "きねん"
+        },
+        {
+          "id": "d15-90",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-91",
+          "text": "いわって",
+          "isKeyGrammar": false,
+          "kanji": "祝って",
+          "furigana": "いわって"
+        },
+        {
+          "id": "d15-92",
+          "text": "くださって",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-93",
+          "text": "ありがとうございます",
+          "isKeyGrammar": false,
+          "kanji": "ありがとうございます",
+          "furigana": "ありがとうございます"
+        }
+      ],
+      "meaningVi": "Kính thưa quý vị, hôm nay xin cảm ơn đã đến chúc mừng kỷ niệm."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n2-15-1",
+      "question": "「創立10周年に際しまして、社長からひとこと」 — kết hợp cấu trúc nào để mở đầu diễn văn?",
+      "options": [
+        "に際して (bài 1, nhân dịp sự kiện) để chào hỏi trang trọng",
+        "ざるを得ない (bài 2)",
+        "をものともせずに (bài 9)",
+        "にとどまらず (bài 13)"
+      ],
+      "correctIndex": 0,
+      "explanation": "に際して (bài 1) dùng để mở đầu bài phát biểu nhân dịp một sự kiện quan trọng đang diễn ra.",
+      "hint": "Xem slide 1 về に際して + を契機に."
+    },
+    {
+      "id": "ex-q-n2-15-2",
+      "question": "「海外経験を契機に、会社を創立しました」 — を契機に diễn tả điều gì?",
+      "options": [
+        "Lấy một sự kiện làm cơ hội/động lực để bắt đầu một bước ngoặt (bài 6)",
+        "Bị buộc phải làm điều gì đó (bài 2)",
+        "Không chỉ dừng lại ở một phạm vi (bài 13)",
+        "Xứng đáng với một tiêu chuẩn (bài 11)"
+      ],
+      "correctIndex": 0,
+      "explanation": "を契機に (bài 6) diễn tả việc lấy kinh nghiệm nước ngoài làm động lực để thành lập công ty — một bước ngoặt cá nhân.",
+      "hint": "Xem slide 1 về を契機に."
+    },
+    {
+      "id": "ex-q-n2-15-3",
+      "question": "「経済の問題をものともせずに、経営を続けました」 kết hợp với「一時、縮小せざるを得ませんでした」 để làm gì?",
+      "options": [
+        "Vừa CA NGỢI sự kiên cường (をものともせずに, bài 9), vừa thừa nhận khó khăn thực tế (ざるを得ない, bài 2)",
+        "Chỉ để phủ định hoàn toàn câu chuyện",
+        "Chỉ để so sánh hai công ty khác nhau",
+        "Không có mục đích rõ ràng"
+      ],
+      "correctIndex": 0,
+      "explanation": "Kết hợp hai cấu trúc tạo câu chuyện THUYẾT PHỤC: vừa kiên cường vượt khó, vừa trung thực về khó khăn đã gặp phải.",
+      "hint": "Xem slide 2 về をものともせずに + ざるを得ない."
+    },
+    {
+      "id": "ex-q-n2-15-4",
+      "question": "「事業は日本にとどまらず、世界中に発展しました」 — にとどまらず (bài 13) nhấn mạnh điều gì trong ngữ cảnh này?",
+      "options": [
+        "Phạm vi phát triển thực tế (thế giới) vượt xa phạm vi ban đầu (chỉ Nhật Bản)",
+        "Sự nghiệp đã thất bại hoàn toàn",
+        "Công ty chỉ hoạt động ở Nhật Bản",
+        "Không có sự phát triển nào"
+      ],
+      "correctIndex": 0,
+      "explanation": "にとどまらず nhấn mạnh việc phạm vi phát triển đã VƯỢT XA giới hạn ban đầu (chỉ Nhật Bản) để lan ra toàn thế giới.",
+      "hint": "Xem slide 3 về 末に + につれて + にとどまらず."
+    },
+    {
+      "id": "ex-q-n2-15-5",
+      "question": "「統計に基づいて、経営を判断します」 — に基づいて (bài 10) yêu cầu điều gì về căn cứ?",
+      "options": [
+        "Phải TUÂN THỦ CHÍNH XÁC nội dung của căn cứ (số liệu thống kê), không được tự ý thay đổi",
+        "Có thể thay đổi tự do theo ý muốn",
+        "Không cần căn cứ nào cả",
+        "Chỉ cần cảm tính cá nhân"
+      ],
+      "correctIndex": 0,
+      "explanation": "に基づいて (bài 10) yêu cầu phán đoán phải PHÙ HỢP CHÍNH XÁC với căn cứ khách quan (số liệu thống kê).",
+      "hint": "Xem slide 4 về に基づいて + ならではの + にふさわしい."
+    },
+    {
+      "id": "ex-q-n2-15-6",
+      "question": "「この会社ならではの特色」 và 「社長にふさわしい能力」 khác nhau ở điểm nào?",
+      "options": [
+        "ならではの (bài 11) nhấn tính ĐỘC ĐÁO chỉ công ty này có; にふさわしい (bài 11) nhấn sự PHÙ HỢP theo tiêu chuẩn",
+        "Hoàn toàn giống nhau",
+        "ならではの chỉ dùng cho phủ định",
+        "にふさわしい chỉ dùng cho câu hỏi"
+      ],
+      "correctIndex": 0,
+      "explanation": "ならではの nhấn ĐẶC TRƯNG DUY NHẤT; にふさわしい nhấn SỰ TƯƠNG XỨNG với một tiêu chuẩn/vai trò — cả hai đã học ở bài 11.",
+      "hint": "Ôn lại bài 11 về ならではの vs にふさわしい."
+    },
+    {
+      "id": "ex-q-n2-15-7",
+      "question": "Theo hội thoại, Santos đã thành lập công ty nhờ động lực gì?",
+      "options": [
+        "Kinh nghiệm ở nước ngoài (海外経験を契機に)",
+        "Lời khuyên của bạn bè",
+        "Yêu cầu của gia đình",
+        "Không có động lực cụ thể"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「海外経験を契機に、会社を創立しました」.",
+      "hint": "Xem câu thoại thứ 2."
+    },
+    {
+      "id": "ex-q-n2-15-8",
+      "question": "Công ty của Santos đã từng gặp khó khăn gì?",
+      "options": [
+        "Có lúc bất đắc dĩ phải thu hẹp sự nghiệp (一時、事業を縮小せざるを得ませんでした)",
+        "Chưa từng gặp khó khăn nào",
+        "Đã phá sản hoàn toàn",
+        "Không được đề cập trong hội thoại"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「一時、事業を縮小せざるを得ませんでした」.",
+      "hint": "Xem câu thoại thứ 4."
+    },
+    {
+      "id": "ex-q-n2-15-9",
+      "question": "Phạm vi hoạt động hiện tại của công ty là gì?",
+      "options": [
+        "Không chỉ Nhật Bản mà còn khắp thế giới (日本にとどまらず、世界中に発展しました)",
+        "Chỉ trong nội địa Nhật Bản",
+        "Chỉ ở một thành phố",
+        "Đã ngừng hoạt động"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「事業は日本にとどまらず、世界中に発展しました」.",
+      "hint": "Xem câu thoại thứ 6."
+    },
+    {
+      "id": "ex-q-n2-15-10",
+      "question": "Kế hoạch tương lai của công ty dựa trên điều gì?",
+      "options": [
+        "Đặc trưng riêng của công ty (この会社ならではの特色を生かして)",
+        "Chỉ dựa trên may mắn",
+        "Không có kế hoạch nào",
+        "Sao chép công ty khác"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「この会社ならではの特色を生かして、新しい分野に進みます」.",
+      "hint": "Xem câu thoại thứ 8."
+    }
+  ]
+}

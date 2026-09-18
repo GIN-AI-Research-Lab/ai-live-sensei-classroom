@@ -1,0 +1,1372 @@
+{
+  "level": "N3",
+  "lessonNumber": 13,
+  "title": "Bài 13: Khả năng tiềm tàng (得る / 得ない - うる / えない)",
+  "description": "得る (うる) gắn sau V-stem diễn tả khả năng XẢY RA VỀ MẶT LÝ THUYẾT/KHÁCH QUAN của một sự việc (khác できる là khả năng THỰC TẾ do năng lực cá nhân); 得ない (えない) là phủ định mạnh, khẳng định điều gì đó KHÔNG THỂ xảy ra; cụm cố định あり得る/あり得ない cực kỳ thông dụng.",
+  "vocabList": [
+    {
+      "id": "voc-n3-13-1",
+      "word": "じょうきょう",
+      "kanji": "状況",
+      "furigana": "じょうきょう",
+      "romaji": "joukyou",
+      "wordType": "noun",
+      "meaningVi": "Tình huống, tình hình",
+      "accentNote": "この 状況では = trong tình huống này."
+    },
+    {
+      "id": "voc-n3-13-2",
+      "word": "そうぞうします",
+      "kanji": "想像します",
+      "furigana": "そうぞうします",
+      "romaji": "souzou shimasu",
+      "wordType": "verb",
+      "meaningVi": "Tưởng tượng",
+      "accentNote": "未来を 想像します = tưởng tượng về tương lai."
+    },
+    {
+      "id": "voc-n3-13-3",
+      "word": "よそうします",
+      "kanji": "予想します",
+      "furigana": "よそうします",
+      "romaji": "yosou shimasu",
+      "wordType": "verb",
+      "meaningVi": "Dự đoán",
+      "accentNote": "結果を 予想します = dự đoán kết quả."
+    },
+    {
+      "id": "voc-n3-13-4",
+      "word": "みらい",
+      "kanji": "未来",
+      "furigana": "みらい",
+      "romaji": "mirai",
+      "wordType": "noun",
+      "meaningVi": "Tương lai (nói chung, vĩ mô)",
+      "accentNote": "未来の 変化 = sự thay đổi của tương lai."
+    },
+    {
+      "id": "voc-n3-13-5",
+      "word": "かのう",
+      "kanji": "可能",
+      "furigana": "かのう",
+      "romaji": "kanou",
+      "wordType": "adjective",
+      "meaningVi": "Khả thi, có thể",
+      "accentNote": "それは 可能です = điều đó khả thi."
+    },
+    {
+      "id": "voc-n3-13-6",
+      "word": "おこります",
+      "kanji": "起こります",
+      "furigana": "おこります",
+      "romaji": "okorimasu",
+      "wordType": "verb",
+      "meaningVi": "Xảy ra",
+      "accentNote": "地震が 起こります = động đất xảy ra."
+    },
+    {
+      "id": "voc-n3-13-7",
+      "word": "へんか",
+      "kanji": "変化",
+      "furigana": "へんか",
+      "romaji": "henka",
+      "wordType": "noun",
+      "meaningVi": "Sự thay đổi, biến đổi",
+      "accentNote": "Đã gặp N3 bài 5."
+    },
+    {
+      "id": "voc-n3-13-8",
+      "word": "じこ",
+      "kanji": "事故",
+      "furigana": "じこ",
+      "romaji": "jiko",
+      "wordType": "noun",
+      "meaningVi": "Tai nạn",
+      "accentNote": "Đã gặp N4 bài 34."
+    },
+    {
+      "id": "voc-n3-13-9",
+      "word": "じしん",
+      "kanji": "地震",
+      "furigana": "じしん",
+      "romaji": "jishin",
+      "wordType": "noun",
+      "meaningVi": "Động đất",
+      "accentNote": "Đã gặp N4 bài 34."
+    },
+    {
+      "id": "voc-n3-13-10",
+      "word": "きけん",
+      "kanji": "危険",
+      "furigana": "きけん",
+      "romaji": "kiken",
+      "wordType": "adjective",
+      "meaningVi": "Nguy hiểm",
+      "accentNote": "Đã gặp N4 bài 34."
+    },
+    {
+      "id": "voc-n3-13-11",
+      "word": "あんぜん",
+      "kanji": "安全",
+      "furigana": "あんぜん",
+      "romaji": "anzen",
+      "wordType": "adjective",
+      "meaningVi": "An toàn",
+      "accentNote": "Đã gặp N5 bài 24."
+    },
+    {
+      "id": "voc-n3-13-12",
+      "word": "できます",
+      "kanji": "出来ます",
+      "furigana": "できます",
+      "romaji": "dekimasu",
+      "wordType": "verb",
+      "meaningVi": "Có thể làm được (khả năng thực tế)",
+      "accentNote": "Đã gặp N5 bài 18."
+    },
+    {
+      "id": "voc-n3-13-13",
+      "word": "はなします",
+      "kanji": "話します",
+      "furigana": "はなします",
+      "romaji": "hanashimasu",
+      "wordType": "verb",
+      "meaningVi": "Nói chuyện",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n3-13-14",
+      "word": "きかい",
+      "kanji": "機械",
+      "furigana": "きかい",
+      "romaji": "kikai",
+      "wordType": "noun",
+      "meaningVi": "Máy móc",
+      "accentNote": "Đã gặp N4 bài 30."
+    },
+    {
+      "id": "voc-n3-13-15",
+      "word": "もんだい",
+      "kanji": "問題",
+      "furigana": "もんだい",
+      "romaji": "mondai",
+      "wordType": "noun",
+      "meaningVi": "Vấn đề",
+      "accentNote": "Đã gặp N5 bài 22."
+    },
+    {
+      "id": "voc-n3-13-16",
+      "word": "いいます",
+      "kanji": "言います",
+      "furigana": "いいます",
+      "romaji": "iimasu",
+      "wordType": "verb",
+      "meaningVi": "Nói",
+      "accentNote": "Đã gặp N5 bài 6."
+    },
+    {
+      "id": "voc-n3-13-17",
+      "word": "しょうらい",
+      "kanji": "将来",
+      "furigana": "しょうらい",
+      "romaji": "shourai",
+      "wordType": "noun",
+      "meaningVi": "Tương lai (cá nhân, gần)",
+      "accentNote": "Đã gặp N3 bài 8."
+    },
+    {
+      "id": "voc-n3-13-18",
+      "word": "にほんご",
+      "kanji": "日本語",
+      "furigana": "にほんご",
+      "romaji": "nihongo",
+      "wordType": "noun",
+      "meaningVi": "Tiếng Nhật",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n3-13-19",
+      "word": "かれ",
+      "kanji": "彼",
+      "furigana": "かれ",
+      "romaji": "kare",
+      "wordType": "noun",
+      "meaningVi": "Anh ấy",
+      "accentNote": "Đã gặp N5 bài 6."
+    },
+    {
+      "id": "voc-n3-13-20",
+      "word": "どんな",
+      "kanji": "どんな",
+      "furigana": "どんな",
+      "romaji": "donna",
+      "wordType": "determiner",
+      "meaningVi": "Loại nào, như thế nào",
+      "accentNote": "Đã gặp N5 bài 11."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n3-13-1",
+      "character": "状",
+      "hanViet": "TRẠNG",
+      "strokeCount": 7,
+      "onyomi": [
+        "ジョウ (jou)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Trạng thái, hình dạng.",
+      "commonWords": [
+        {
+          "word": "状況",
+          "furigana": "じょうきょう",
+          "meaningVi": "Tình huống"
+        },
+        {
+          "word": "状態",
+          "furigana": "じょうたい",
+          "meaningVi": "Trạng thái"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-13-2",
+      "character": "況",
+      "hanViet": "HUỐNG",
+      "strokeCount": 8,
+      "onyomi": [
+        "キョウ (kyou)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Tình huống, hoàn cảnh.",
+      "commonWords": [
+        {
+          "word": "状況",
+          "furigana": "じょうきょう",
+          "meaningVi": "Tình huống"
+        },
+        {
+          "word": "近況",
+          "furigana": "きんきょう",
+          "meaningVi": "Tình hình gần đây"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-13-3",
+      "character": "想",
+      "hanViet": "TƯỞNG",
+      "strokeCount": 13,
+      "onyomi": [
+        "ソウ (sou)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Suy nghĩ, tưởng tượng.",
+      "commonWords": [
+        {
+          "word": "想像",
+          "furigana": "そうぞう",
+          "meaningVi": "Tưởng tượng"
+        },
+        {
+          "word": "予想",
+          "furigana": "よそう",
+          "meaningVi": "Dự đoán"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-13-4",
+      "character": "予",
+      "hanViet": "DỰ",
+      "strokeCount": 4,
+      "onyomi": [
+        "ヨ (yo)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Trước, dự tính.",
+      "commonWords": [
+        {
+          "word": "予想",
+          "furigana": "よそう",
+          "meaningVi": "Dự đoán"
+        },
+        {
+          "word": "予定",
+          "furigana": "よてい",
+          "meaningVi": "Dự định"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-13-5",
+      "character": "未",
+      "hanViet": "VỊ",
+      "strokeCount": 5,
+      "onyomi": [
+        "ミ (mi)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Chưa, vị lai.",
+      "commonWords": [
+        {
+          "word": "未来",
+          "furigana": "みらい",
+          "meaningVi": "Tương lai"
+        },
+        {
+          "word": "未満",
+          "furigana": "みまん",
+          "meaningVi": "Chưa đầy, dưới"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n3-l13-s1",
+      "slideType": "grammar",
+      "title": "1. Khả năng lý thuyết: V-stem + 得る (うる)",
+      "grammarFormula": "V-ます-stem + 得る（うる）",
+      "explanation": "得る gắn sau V-stem diễn tả khả năng XẢY RA VỀ MẶT LÝ THUYẾT/KHÁCH QUAN — khác できる là khả năng THỰC TẾ do năng lực/luyện tập — thường dùng trong văn viết trang trọng, báo cáo, dự đoán.",
+      "teacherTips": "得る đọc là うる ở thể từ điển (起こり得る) nhưng đọc là える khi chia thể ます/ない (起こりえます/起こりえない).",
+      "culturalNotes": "Báo cáo khoa học, dự báo thời tiết Nhật hay dùng 得る để nói về khả năng lý thuyết: '大地震が起こり得る' (động đất lớn có thể xảy ra).",
+      "examples": [
+        {
+          "id": "ex-n3-l13-s1-1",
+          "tokens": [
+            {
+              "id": "t-l13s1-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s1-2",
+              "text": "じょうきょう",
+              "isKeyGrammar": true,
+              "kanji": "状況",
+              "furigana": "じょうきょう"
+            },
+            {
+              "id": "t-l13s1-3",
+              "text": "では",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s1-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s1-5",
+              "text": "じしん",
+              "isKeyGrammar": true,
+              "kanji": "地震",
+              "furigana": "じしん"
+            },
+            {
+              "id": "t-l13s1-6",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s1-7",
+              "text": "おこり",
+              "isKeyGrammar": true,
+              "kanji": "起こり",
+              "furigana": "おこり"
+            },
+            {
+              "id": "t-l13s1-8",
+              "text": "得る",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Trong tình huống này, động đất có thể xảy ra."
+        },
+        {
+          "id": "ex-n3-l13-s1-2",
+          "tokens": [
+            {
+              "id": "t-l13s1-9",
+              "text": "みらい",
+              "isKeyGrammar": true,
+              "kanji": "未来",
+              "furigana": "みらい"
+            },
+            {
+              "id": "t-l13s1-10",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s1-11",
+              "text": "へんか",
+              "isKeyGrammar": false,
+              "kanji": "変化",
+              "furigana": "へんか"
+            },
+            {
+              "id": "t-l13s1-12",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s1-13",
+              "text": "よそうし",
+              "isKeyGrammar": true,
+              "kanji": "予想し",
+              "furigana": "よそうし"
+            },
+            {
+              "id": "t-l13s1-14",
+              "text": "得る",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Sự thay đổi của tương lai có thể dự đoán được."
+        }
+      ]
+    },
+    {
+      "slideId": "n3-l13-s2",
+      "slideType": "grammar",
+      "title": "2. Phủ định — không có khả năng: V-stem + 得ない (えない)",
+      "grammarFormula": "V-ます-stem + 得ない（えない）",
+      "explanation": "得ない là PHỦ ĐỊNH của 得る, diễn tả điều gì đó KHÔNG THỂ xảy ra về mặt lý thuyết/logic — mức độ phủ định RẤT MẠNH, khẳng định tính bất khả thi.",
+      "teacherTips": "ありえない thường dùng như câu CẢM THÁN trong hội thoại nghĩa 'không thể tin được!' — rất thông dụng, không chỉ trong văn viết.",
+      "culturalNotes": "Giới trẻ Nhật hay thốt lên 'ありえない！' khi gặp chuyện quá bất ngờ, tương đương 'không thể tin nổi!' trong tiếng Việt.",
+      "examples": [
+        {
+          "id": "ex-n3-l13-s2-1",
+          "tokens": [
+            {
+              "id": "t-l13s2-1",
+              "text": "そんな",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s2-2",
+              "text": "こと",
+              "isKeyGrammar": false,
+              "kanji": "事",
+              "furigana": "こと"
+            },
+            {
+              "id": "t-l13s2-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s2-4",
+              "text": "ありえない",
+              "isKeyGrammar": true,
+              "kanji": "有り得ない",
+              "furigana": "ありえない"
+            }
+          ],
+          "meaningVi": "Chuyện đó không thể xảy ra."
+        },
+        {
+          "id": "ex-n3-l13-s2-2",
+          "tokens": [
+            {
+              "id": "t-l13s2-5",
+              "text": "あんぜんな",
+              "isKeyGrammar": true,
+              "kanji": "安全な",
+              "furigana": "あんぜんな"
+            },
+            {
+              "id": "t-l13s2-6",
+              "text": "じょうきょう",
+              "isKeyGrammar": true,
+              "kanji": "状況",
+              "furigana": "じょうきょう"
+            },
+            {
+              "id": "t-l13s2-7",
+              "text": "では",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s2-8",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s2-9",
+              "text": "じこ",
+              "isKeyGrammar": true,
+              "kanji": "事故",
+              "furigana": "じこ"
+            },
+            {
+              "id": "t-l13s2-10",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s2-11",
+              "text": "おこり",
+              "isKeyGrammar": false,
+              "kanji": "起こり",
+              "furigana": "おこり"
+            },
+            {
+              "id": "t-l13s2-12",
+              "text": "得ない",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Trong tình huống an toàn, tai nạn không thể xảy ra."
+        }
+      ]
+    },
+    {
+      "slideId": "n3-l13-s3",
+      "slideType": "grammar",
+      "title": "3. Cụm cố định thông dụng: あり得る / あり得ない",
+      "grammarFormula": "ある（tồn tại/có）+ 得る/得ない → あり得る（có thể có）/ あり得ない（không thể có）",
+      "explanation": "ある (có/tồn tại) kết hợp với 得る/得ない tạo thành cụm CỐ ĐỊNH cực kỳ thông dụng, dùng cả trong hội thoại lẫn văn viết để đánh giá TÍNH KHẢ THI của một sự việc, ý tưởng, giả thuyết.",
+      "teacherTips": "かのうせい (khả năng, xác suất) thường đi cùng あり得る để nhấn thêm: 可能性はあり得ます (khả năng đó là có thể có).",
+      "culturalNotes": "Trong tranh luận, hội nghị ở Nhật, người ta hay dùng 'それはあり得る話です' (đó là chuyện có thể xảy ra) để công nhận một giả thuyết đáng cân nhắc.",
+      "examples": [
+        {
+          "id": "ex-n3-l13-s3-1",
+          "tokens": [
+            {
+              "id": "t-l13s3-1",
+              "text": "そんな",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s3-2",
+              "text": "みらい",
+              "isKeyGrammar": true,
+              "kanji": "未来",
+              "furigana": "みらい"
+            },
+            {
+              "id": "t-l13s3-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s3-4",
+              "text": "ありえます",
+              "isKeyGrammar": true,
+              "kanji": "有り得ます",
+              "furigana": "ありえます"
+            }
+          ],
+          "meaningVi": "Tương lai như vậy là có thể có."
+        },
+        {
+          "id": "ex-n3-l13-s3-2",
+          "tokens": [
+            {
+              "id": "t-l13s3-5",
+              "text": "どんな",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s3-6",
+              "text": "じょうきょう",
+              "isKeyGrammar": false,
+              "kanji": "状況",
+              "furigana": "じょうきょう"
+            },
+            {
+              "id": "t-l13s3-7",
+              "text": "でも",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s3-8",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s3-9",
+              "text": "じこ",
+              "isKeyGrammar": true,
+              "kanji": "事故",
+              "furigana": "じこ"
+            },
+            {
+              "id": "t-l13s3-10",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s3-11",
+              "text": "おこり",
+              "isKeyGrammar": true,
+              "kanji": "起こり",
+              "furigana": "おこり"
+            },
+            {
+              "id": "t-l13s3-12",
+              "text": "得る",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Trong bất kỳ tình huống nào, tai nạn cũng có thể xảy ra."
+        }
+      ]
+    },
+    {
+      "slideId": "n3-l13-s4",
+      "slideType": "grammar",
+      "title": "4. Phân biệt 得る (khả năng lý thuyết) và できる (khả năng thực tế)",
+      "grammarFormula": "できる: khả năng THỰC TẾ (do năng lực, đã luyện tập)　vs　得る: khả năng LÝ THUYẾT/KHÁCH QUAN (có thể xảy ra về mặt logic)",
+      "explanation": "できる nói về NĂNG LỰC CỤ THỂ của một người/vật (có thể làm gì đó nhờ kỹ năng); 得る nói về khả năng XẢY RA của một SỰ VIỆC về mặt lý thuyết, không liên quan đến năng lực cá nhân.",
+      "teacherTips": "Không nói '私は日本語を話し得る' theo nghĩa kỹ năng — phải dùng できる cho năng lực cá nhân, 得る chỉ dùng cho khả năng khách quan của SỰ VIỆC.",
+      "culturalNotes": "Đây là điểm ngữ pháp N3 dễ nhầm nhất — nhiều người học hay lạm dụng 得る thay cho できる, cần phân biệt kỹ trong bài thi.",
+      "examples": [
+        {
+          "id": "ex-n3-l13-s4-1",
+          "tokens": [
+            {
+              "id": "t-l13s4-1",
+              "text": "かれ",
+              "isKeyGrammar": true,
+              "kanji": "彼",
+              "furigana": "かれ"
+            },
+            {
+              "id": "t-l13s4-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s4-3",
+              "text": "にほんご",
+              "isKeyGrammar": true,
+              "kanji": "日本語",
+              "furigana": "にほんご"
+            },
+            {
+              "id": "t-l13s4-4",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s4-5",
+              "text": "はなす",
+              "isKeyGrammar": false,
+              "kanji": "話す",
+              "furigana": "はなす"
+            },
+            {
+              "id": "t-l13s4-6",
+              "text": "こと",
+              "isKeyGrammar": false,
+              "kanji": "事",
+              "furigana": "こと"
+            },
+            {
+              "id": "t-l13s4-7",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s4-8",
+              "text": "できます",
+              "isKeyGrammar": true,
+              "kanji": "出来ます",
+              "furigana": "できます"
+            }
+          ],
+          "meaningVi": "Anh ấy có thể nói tiếng Nhật. (khả năng thực tế, kỹ năng)"
+        },
+        {
+          "id": "ex-n3-l13-s4-2",
+          "tokens": [
+            {
+              "id": "t-l13s4-9",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s4-10",
+              "text": "きかい",
+              "isKeyGrammar": true,
+              "kanji": "機械",
+              "furigana": "きかい"
+            },
+            {
+              "id": "t-l13s4-11",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s4-12",
+              "text": "もんだい",
+              "isKeyGrammar": true,
+              "kanji": "問題",
+              "furigana": "もんだい"
+            },
+            {
+              "id": "t-l13s4-13",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s4-14",
+              "text": "おこり",
+              "isKeyGrammar": true,
+              "kanji": "起こり",
+              "furigana": "おこり"
+            },
+            {
+              "id": "t-l13s4-15",
+              "text": "得る",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Cái máy này có thể xảy ra vấn đề. (khả năng lý thuyết, khách quan)"
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n3-13-1",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp (thảo luận rủi ro)",
+      "tokens": [
+        {
+          "id": "d13-1",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-2",
+          "text": "じょうきょう",
+          "isKeyGrammar": true,
+          "kanji": "状況",
+          "furigana": "じょうきょう"
+        },
+        {
+          "id": "d13-3",
+          "text": "では",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-4",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-5",
+          "text": "じこ",
+          "isKeyGrammar": true,
+          "kanji": "事故",
+          "furigana": "じこ"
+        },
+        {
+          "id": "d13-6",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-7",
+          "text": "おこり",
+          "isKeyGrammar": true,
+          "kanji": "起こり",
+          "furigana": "おこり"
+        },
+        {
+          "id": "d13-8",
+          "text": "得ます",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d13-9",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Trong tình huống này, tai nạn có thể xảy ra không?"
+    },
+    {
+      "id": "dia-n3-13-2",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp (thảo luận rủi ro)",
+      "tokens": [
+        {
+          "id": "d13-10",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-11",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-12",
+          "text": "きけん",
+          "isKeyGrammar": true,
+          "kanji": "危険",
+          "furigana": "きけん"
+        },
+        {
+          "id": "d13-13",
+          "text": "な",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-14",
+          "text": "じょうきょう",
+          "isKeyGrammar": false,
+          "kanji": "状況",
+          "furigana": "じょうきょう"
+        },
+        {
+          "id": "d13-15",
+          "text": "では",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-16",
+          "text": "じこ",
+          "isKeyGrammar": false,
+          "kanji": "事故",
+          "furigana": "じこ"
+        },
+        {
+          "id": "d13-17",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-18",
+          "text": "おこり",
+          "isKeyGrammar": false,
+          "kanji": "起こり",
+          "furigana": "おこり"
+        },
+        {
+          "id": "d13-19",
+          "text": "得ます",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Vâng, trong tình huống nguy hiểm thì tai nạn có thể xảy ra."
+    },
+    {
+      "id": "dia-n3-13-3",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp (thảo luận rủi ro)",
+      "tokens": [
+        {
+          "id": "d13-20",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-21",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-22",
+          "text": "あんぜんな",
+          "isKeyGrammar": true,
+          "kanji": "安全な",
+          "furigana": "あんぜんな"
+        },
+        {
+          "id": "d13-23",
+          "text": "じょうきょう",
+          "isKeyGrammar": false,
+          "kanji": "状況",
+          "furigana": "じょうきょう"
+        },
+        {
+          "id": "d13-24",
+          "text": "では",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-25",
+          "text": "どうですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Nhưng, trong tình huống an toàn thì sao?"
+    },
+    {
+      "id": "dia-n3-13-4",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp (thảo luận rủi ro)",
+      "tokens": [
+        {
+          "id": "d13-26",
+          "text": "あんぜんな",
+          "isKeyGrammar": true,
+          "kanji": "安全な",
+          "furigana": "あんぜんな"
+        },
+        {
+          "id": "d13-27",
+          "text": "じょうきょう",
+          "isKeyGrammar": true,
+          "kanji": "状況",
+          "furigana": "じょうきょう"
+        },
+        {
+          "id": "d13-28",
+          "text": "では",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-29",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-30",
+          "text": "じこ",
+          "isKeyGrammar": true,
+          "kanji": "事故",
+          "furigana": "じこ"
+        },
+        {
+          "id": "d13-31",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-32",
+          "text": "おこり",
+          "isKeyGrammar": false,
+          "kanji": "起こり",
+          "furigana": "おこり"
+        },
+        {
+          "id": "d13-33",
+          "text": "得ません",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Trong tình huống an toàn thì tai nạn không thể xảy ra."
+    },
+    {
+      "id": "dia-n3-13-5",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp (thảo luận rủi ro)",
+      "tokens": [
+        {
+          "id": "d13-34",
+          "text": "みらい",
+          "isKeyGrammar": true,
+          "kanji": "未来",
+          "furigana": "みらい"
+        },
+        {
+          "id": "d13-35",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-36",
+          "text": "そうぞう",
+          "isKeyGrammar": true,
+          "kanji": "想像",
+          "furigana": "そうぞう"
+        },
+        {
+          "id": "d13-37",
+          "text": "して",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-38",
+          "text": "みましょう",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Hãy thử tưởng tượng về tương lai xem."
+    },
+    {
+      "id": "dia-n3-13-6",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp (thảo luận rủi ro)",
+      "tokens": [
+        {
+          "id": "d13-39",
+          "text": "きかい",
+          "isKeyGrammar": true,
+          "kanji": "機械",
+          "furigana": "きかい"
+        },
+        {
+          "id": "d13-40",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-41",
+          "text": "もんだい",
+          "isKeyGrammar": true,
+          "kanji": "問題",
+          "furigana": "もんだい"
+        },
+        {
+          "id": "d13-42",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-43",
+          "text": "おこす",
+          "isKeyGrammar": false,
+          "kanji": "起こす",
+          "furigana": "おこす"
+        },
+        {
+          "id": "d13-44",
+          "text": "かのうせい",
+          "isKeyGrammar": false,
+          "kanji": "可能性",
+          "furigana": "かのうせい"
+        },
+        {
+          "id": "d13-45",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-46",
+          "text": "あります",
+          "isKeyGrammar": false,
+          "kanji": "有ります",
+          "furigana": "あります"
+        }
+      ],
+      "meaningVi": "Có khả năng là máy móc sẽ gây ra vấn đề."
+    },
+    {
+      "id": "dia-n3-13-7",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp (thảo luận rủi ro)",
+      "tokens": [
+        {
+          "id": "d13-47",
+          "text": "そんな",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-48",
+          "text": "こと",
+          "isKeyGrammar": false,
+          "kanji": "事",
+          "furigana": "こと"
+        },
+        {
+          "id": "d13-49",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-50",
+          "text": "ありえない",
+          "isKeyGrammar": true,
+          "kanji": "有り得ない",
+          "furigana": "ありえない"
+        },
+        {
+          "id": "d13-51",
+          "text": "と",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-52",
+          "text": "おもいます",
+          "isKeyGrammar": false,
+          "kanji": "思います",
+          "furigana": "おもいます"
+        }
+      ],
+      "meaningVi": "Tôi nghĩ chuyện đó không thể xảy ra."
+    },
+    {
+      "id": "dia-n3-13-8",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp (thảo luận rủi ro)",
+      "tokens": [
+        {
+          "id": "d13-53",
+          "text": "どんな",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-54",
+          "text": "じょうきょう",
+          "isKeyGrammar": false,
+          "kanji": "状況",
+          "furigana": "じょうきょう"
+        },
+        {
+          "id": "d13-55",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-56",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-57",
+          "text": "もんだい",
+          "isKeyGrammar": true,
+          "kanji": "問題",
+          "furigana": "もんだい"
+        },
+        {
+          "id": "d13-58",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-59",
+          "text": "おこり",
+          "isKeyGrammar": true,
+          "kanji": "起こり",
+          "furigana": "おこり"
+        },
+        {
+          "id": "d13-60",
+          "text": "得ます",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Trong bất kỳ tình huống nào, vấn đề cũng có thể xảy ra."
+    },
+    {
+      "id": "dia-n3-13-9",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp (thảo luận rủi ro)",
+      "tokens": [
+        {
+          "id": "d13-61",
+          "text": "よそう",
+          "isKeyGrammar": true,
+          "kanji": "予想",
+          "furigana": "よそう"
+        },
+        {
+          "id": "d13-62",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-63",
+          "text": "むずかしい",
+          "isKeyGrammar": false,
+          "kanji": "難しい",
+          "furigana": "むずかしい"
+        },
+        {
+          "id": "d13-64",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d13-65",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Việc dự đoán khó thật nhỉ."
+    },
+    {
+      "id": "dia-n3-13-10",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp (thảo luận rủi ro)",
+      "tokens": [
+        {
+          "id": "d13-66",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-67",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-68",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-69",
+          "text": "じゅんび",
+          "isKeyGrammar": false,
+          "kanji": "準備",
+          "furigana": "じゅんび"
+        },
+        {
+          "id": "d13-70",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-71",
+          "text": "かのう",
+          "isKeyGrammar": true,
+          "kanji": "可能",
+          "furigana": "かのう"
+        },
+        {
+          "id": "d13-72",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        }
+      ],
+      "meaningVi": "Vâng. Nhưng việc chuẩn bị thì khả thi."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n3-13-1",
+      "question": "「地震が起こり得る」 — 得る diễn tả điều gì?",
+      "options": [
+        "Khả năng xảy ra về mặt lý thuyết/khách quan, không liên quan năng lực cá nhân",
+        "Khả năng thực tế do năng lực, kỹ năng đã luyện tập",
+        "Sự phủ định hoàn toàn",
+        "Cảm xúc mãnh liệt"
+      ],
+      "correctIndex": 0,
+      "explanation": "得る diễn tả khả năng XẢY RA VỀ MẶT LÝ THUYẾT của một sự việc — khác できる là khả năng thực tế do năng lực.",
+      "hint": "Xem cấu trúc V-stem+得る ở slide 1."
+    },
+    {
+      "id": "ex-q-n3-13-2",
+      "question": "「そんなことはありえない」 nghĩa là:",
+      "options": [
+        "Chuyện đó không thể xảy ra (phủ định mạnh, dùng cả trong cảm thán)",
+        "Chuyện đó chắc chắn sẽ xảy ra",
+        "Chuyện đó đã xảy ra rồi",
+        "Chuyện đó có thể xảy ra"
+      ],
+      "correctIndex": 0,
+      "explanation": "ありえない là phủ định của ありえる, diễn tả điều gì đó KHÔNG THỂ xảy ra, mức độ phủ định rất mạnh.",
+      "hint": "Xem cấu trúc 得ない ở slide 2."
+    },
+    {
+      "id": "ex-q-n3-13-3",
+      "question": "あり得る/あり得ない được tạo thành từ đâu?",
+      "options": [
+        "ある (có, tồn tại) + 得る/得ない",
+        "ある + ます",
+        "ない + 得る",
+        "Không có quy tắc tạo thành"
+      ],
+      "correctIndex": 0,
+      "explanation": "あり得る/あり得ない là cụm cố định từ ある (có/tồn tại) kết hợp với 得る/得ない.",
+      "hint": "Xem giải thích ở slide 3."
+    },
+    {
+      "id": "ex-q-n3-13-4",
+      "question": "Sự khác biệt cốt lõi giữa 得る và できる là gì?",
+      "options": [
+        "得る là khả năng LÝ THUYẾT của SỰ VIỆC; できる là khả năng THỰC TẾ do NĂNG LỰC cá nhân",
+        "Hoàn toàn giống nhau, dùng thay thế được cho nhau",
+        "得る chỉ dùng cho phủ định",
+        "できる chỉ dùng cho câu hỏi"
+      ],
+      "correctIndex": 0,
+      "explanation": "得る nói về khả năng xảy ra của một sự việc (khách quan); できる nói về năng lực làm được gì đó (chủ thể có kỹ năng).",
+      "hint": "Xem bảng so sánh ở slide 4."
+    },
+    {
+      "id": "ex-q-n3-13-5",
+      "question": "Có thể nói '彼は日本語を話し得る' để nghĩa 'anh ấy có thể nói tiếng Nhật' (kỹ năng) không?",
+      "options": [
+        "Không, phải dùng できる cho khả năng do kỹ năng: 彼は日本語を話すことができる",
+        "Có, hoàn toàn đúng ngữ pháp và tự nhiên",
+        "Chỉ đúng trong văn nói thân mật",
+        "Chỉ đúng khi nói về trẻ em"
+      ],
+      "correctIndex": 0,
+      "explanation": "得る KHÔNG dùng cho năng lực cá nhân/kỹ năng — phải dùng できる trong trường hợp này.",
+      "hint": "Xem lưu ý quan trọng ở slide 4."
+    },
+    {
+      "id": "ex-q-n3-13-6",
+      "question": "「安全な状況では、事故は起こり得ません」 nghĩa là:",
+      "options": [
+        "Trong tình huống an toàn, tai nạn không thể xảy ra",
+        "Trong tình huống an toàn, tai nạn chắc chắn xảy ra",
+        "Tình huống này không an toàn",
+        "Tai nạn đã xảy ra rồi"
+      ],
+      "correctIndex": 0,
+      "explanation": "得ません (dạng lịch sự của 得ない) phủ định khả năng xảy ra của tai nạn trong tình huống an toàn.",
+      "hint": "Áp dụng cấu trúc 得ない cho ngữ cảnh câu."
+    },
+    {
+      "id": "ex-q-n3-13-7",
+      "question": "「どんな状況でも、事故は起こり得る」 nhấn mạnh điều gì?",
+      "options": [
+        "Trong MỌI tình huống, khả năng xảy ra tai nạn luôn tồn tại (không loại trừ trường hợp nào)",
+        "Tai nạn chỉ xảy ra trong một tình huống cụ thể",
+        "Tai nạn không bao giờ xảy ra",
+        "So sánh các loại tai nạn khác nhau"
+      ],
+      "correctIndex": 0,
+      "explanation": "どんな状況でも (dù trong tình huống nào) kết hợp với 得る nhấn mạnh khả năng luôn tồn tại, không loại trừ trường hợp nào.",
+      "hint": "Xem ví dụ tương tự ở slide 3."
+    },
+    {
+      "id": "ex-q-n3-13-8",
+      "question": "Theo hội thoại,田中 nghĩ gì về khả năng máy móc gây vấn đề?",
+      "options": [
+        "Nghĩ rằng điều đó không thể xảy ra (ありえないと思います)",
+        "Nghĩ rằng điều đó chắc chắn sẽ xảy ra",
+        "Không có ý kiến gì",
+        "Đồng ý ngay lập tức với Santos"
+      ],
+      "correctIndex": 0,
+      "explanation": "田中 nói 「そんなことはありえないと思います」.",
+      "hint": "Xem câu thoại thứ 7."
+    },
+    {
+      "id": "ex-q-n3-13-9",
+      "question": "Santos phản bác lại田中 bằng lý lẽ gì?",
+      "options": [
+        "Trong bất kỳ tình huống nào, vấn đề cũng có thể xảy ra (どんな状況でも、問題は起こり得ます)",
+        "Đồng ý hoàn toàn với田中",
+        "Không đưa ra lý lẽ nào",
+        "Nói rằng vấn đề đã được giải quyết"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「どんな状況でも、問題は起こり得ます」.",
+      "hint": "Xem câu thoại thứ 8."
+    },
+    {
+      "id": "ex-q-n3-13-10",
+      "question": "Santos kết luận điều gì có thể làm được (khả thi) ở cuối hội thoại?",
+      "options": [
+        "Việc chuẩn bị là khả thi (準備は可能です)",
+        "Việc dự đoán chính xác 100%",
+        "Việc ngăn chặn hoàn toàn mọi rủi ro",
+        "Không có gì khả thi cả"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「準備は可能です」.",
+      "hint": "Xem câu thoại cuối cùng."
+    }
+  ]
+}

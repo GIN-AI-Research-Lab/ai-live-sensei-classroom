@@ -1,0 +1,1688 @@
+{
+  "level": "N1",
+  "lessonNumber": 3,
+  "title": "Bài 3: Bất kể & Dù là (であれ〜であれ & といい〜といい)",
+  "description": "であれ〜であれ liệt kê HAI LỰA CHỌN ĐỐI LẬP (giàu hay nghèo, chính trị gia hay nhân viên) để nhấn mạnh KHÔNG PHÂN BIỆT trường hợp nào, kết quả/nguyên tắc vẫn không đổi — có thể dùng ĐỘC LẬP (một vế); といい〜といい liệt kê HAI KHÍA CẠNH của CÙNG MỘT chủ thể để đưa ra NHẬN XÉT TOÀN DIỆN, thường mang tính khen ngợi.",
+  "vocabList": [
+    {
+      "id": "voc-n1-3-1",
+      "word": "あじわい",
+      "kanji": "味わい",
+      "furigana": "あじわい",
+      "romaji": "ajiwai",
+      "wordType": "noun",
+      "meaningVi": "Hương vị",
+      "accentNote": "味わいと 品質 = hương vị và chất lượng."
+    },
+    {
+      "id": "voc-n1-3-2",
+      "word": "ひんしつ",
+      "kanji": "品質",
+      "furigana": "ひんしつ",
+      "romaji": "hinshitsu",
+      "wordType": "noun",
+      "meaningVi": "Chất lượng",
+      "accentNote": "品質が いい = chất lượng tốt."
+    },
+    {
+      "id": "voc-n1-3-3",
+      "word": "みかく",
+      "kanji": "味覚",
+      "furigana": "みかく",
+      "romaji": "mikaku",
+      "wordType": "noun",
+      "meaningVi": "Vị giác",
+      "accentNote": "味覚が するどい = vị giác nhạy bén."
+    },
+    {
+      "id": "voc-n1-3-4",
+      "word": "とみ",
+      "kanji": "富",
+      "furigana": "とみ",
+      "romaji": "tomi",
+      "wordType": "noun",
+      "meaningVi": "Của cải, tài sản",
+      "accentNote": "富を きずきます = xây dựng tài sản."
+    },
+    {
+      "id": "voc-n1-3-5",
+      "word": "ふごう",
+      "kanji": "富豪",
+      "furigana": "ふごう",
+      "romaji": "fugou",
+      "wordType": "noun",
+      "meaningVi": "Người giàu có, triệu phú",
+      "accentNote": "富豪であれ = dù là người giàu có."
+    },
+    {
+      "id": "voc-n1-3-6",
+      "word": "きのう",
+      "kanji": "機能",
+      "furigana": "きのう",
+      "romaji": "kinou",
+      "wordType": "noun",
+      "meaningVi": "Chức năng",
+      "accentNote": "機能が すぐれて います = chức năng vượt trội."
+    },
+    {
+      "id": "voc-n1-3-7",
+      "word": "かんぺき",
+      "kanji": "完璧",
+      "furigana": "かんぺき",
+      "romaji": "kanpeki",
+      "wordType": "adjective",
+      "meaningVi": "Hoàn hảo",
+      "accentNote": "完璧な せいひん = sản phẩm hoàn hảo."
+    },
+    {
+      "id": "voc-n1-3-8",
+      "word": "せいじか",
+      "kanji": "政治家",
+      "furigana": "せいじか",
+      "romaji": "seijika",
+      "wordType": "noun",
+      "meaningVi": "Chính trị gia",
+      "accentNote": "政治家であれ = dù là chính trị gia."
+    },
+    {
+      "id": "voc-n1-3-9",
+      "word": "かいしゃいん",
+      "kanji": "会社員",
+      "furigana": "かいしゃいん",
+      "romaji": "kaishain",
+      "wordType": "noun",
+      "meaningVi": "Nhân viên công ty",
+      "accentNote": "会社員であれ = dù là nhân viên công ty."
+    },
+    {
+      "id": "voc-n1-3-10",
+      "word": "すばらしい",
+      "kanji": "素晴らしい",
+      "furigana": "すばらしい",
+      "romaji": "subarashii",
+      "wordType": "adjective",
+      "meaningVi": "Tuyệt vời",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n1-3-11",
+      "word": "まずしい",
+      "kanji": "貧しい",
+      "furigana": "まずしい",
+      "romaji": "mazushii",
+      "wordType": "adjective",
+      "meaningVi": "Nghèo",
+      "accentNote": "Đã gặp N3 bài 4."
+    },
+    {
+      "id": "voc-n1-3-12",
+      "word": "たちば",
+      "kanji": "立場",
+      "furigana": "たちば",
+      "romaji": "tachiba",
+      "wordType": "noun",
+      "meaningVi": "Lập trường",
+      "accentNote": "Đã gặp N2 bài 8."
+    },
+    {
+      "id": "voc-n1-3-13",
+      "word": "みぶん",
+      "kanji": "身分",
+      "furigana": "みぶん",
+      "romaji": "mibun",
+      "wordType": "noun",
+      "meaningVi": "Thân phận, địa vị",
+      "accentNote": "Đã gặp N4 bài 33."
+    },
+    {
+      "id": "voc-n1-3-14",
+      "word": "かのうせい",
+      "kanji": "可能性",
+      "furigana": "かのうせい",
+      "romaji": "kanousei",
+      "wordType": "noun",
+      "meaningVi": "Khả năng",
+      "accentNote": "Đã gặp N3 bài 13."
+    },
+    {
+      "id": "voc-n1-3-15",
+      "word": "しょうひん",
+      "kanji": "商品",
+      "furigana": "しょうひん",
+      "romaji": "shouhin",
+      "wordType": "noun",
+      "meaningVi": "Hàng hóa",
+      "accentNote": "Đã gặp N3 bài 6."
+    },
+    {
+      "id": "voc-n1-3-16",
+      "word": "びょうき",
+      "kanji": "病気",
+      "furigana": "びょうき",
+      "romaji": "byouki",
+      "wordType": "noun",
+      "meaningVi": "Bệnh",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n1-3-17",
+      "word": "ほうりつ",
+      "kanji": "法律",
+      "furigana": "ほうりつ",
+      "romaji": "houritsu",
+      "wordType": "noun",
+      "meaningVi": "Pháp luật",
+      "accentNote": "Đã gặp N2 bài 2."
+    },
+    {
+      "id": "voc-n1-3-18",
+      "word": "まもります",
+      "kanji": "守ります",
+      "furigana": "まもります",
+      "romaji": "mamorimasu",
+      "wordType": "verb",
+      "meaningVi": "Tuân thủ, bảo vệ",
+      "accentNote": "Đã gặp N3 bài 19."
+    },
+    {
+      "id": "voc-n1-3-19",
+      "word": "おなじ",
+      "kanji": "同じ",
+      "furigana": "おなじ",
+      "romaji": "onaji",
+      "wordType": "adjective",
+      "meaningVi": "Giống nhau",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n1-3-20",
+      "word": "せいひん",
+      "kanji": "製品",
+      "furigana": "せいひん",
+      "romaji": "seihin",
+      "wordType": "noun",
+      "meaningVi": "Sản phẩm",
+      "accentNote": "Đã gặp N3 bài 6."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n1-3-1",
+      "character": "富",
+      "hanViet": "PHÚ",
+      "strokeCount": 12,
+      "onyomi": [
+        "フ (fu)"
+      ],
+      "kunyomi": [
+        "と(み)",
+        "と(む)"
+      ],
+      "meaningVi": "Giàu có, phong phú.",
+      "commonWords": [
+        {
+          "word": "富",
+          "furigana": "とみ",
+          "meaningVi": "Của cải"
+        },
+        {
+          "word": "富豪",
+          "furigana": "ふごう",
+          "meaningVi": "Người giàu có"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-3-2",
+      "character": "豪",
+      "hanViet": "HÀO",
+      "strokeCount": 14,
+      "onyomi": [
+        "ゴウ (gou)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Hào kiệt, mạnh mẽ.",
+      "commonWords": [
+        {
+          "word": "富豪",
+          "furigana": "ふごう",
+          "meaningVi": "Triệu phú"
+        },
+        {
+          "word": "豪華",
+          "furigana": "ごうか",
+          "meaningVi": "Sang trọng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-3-3",
+      "character": "完",
+      "hanViet": "HOÀN",
+      "strokeCount": 7,
+      "onyomi": [
+        "カン (kan)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Hoàn thành, đầy đủ.",
+      "commonWords": [
+        {
+          "word": "完璧",
+          "furigana": "かんぺき",
+          "meaningVi": "Hoàn hảo"
+        },
+        {
+          "word": "完成",
+          "furigana": "かんせい",
+          "meaningVi": "Hoàn thành"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-3-4",
+      "character": "璧",
+      "hanViet": "BÍCH",
+      "strokeCount": 18,
+      "onyomi": [
+        "ヘキ (heki)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Ngọc bích, hoàn mỹ.",
+      "commonWords": [
+        {
+          "word": "完璧",
+          "furigana": "かんぺき",
+          "meaningVi": "Hoàn hảo"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-3-5",
+      "character": "覚",
+      "hanViet": "GIÁC",
+      "strokeCount": 12,
+      "onyomi": [
+        "カク (kaku)"
+      ],
+      "kunyomi": [
+        "おぼ(える)"
+      ],
+      "meaningVi": "Cảm giác, ghi nhớ.",
+      "commonWords": [
+        {
+          "word": "味覚",
+          "furigana": "みかく",
+          "meaningVi": "Vị giác"
+        },
+        {
+          "word": "覚えます",
+          "furigana": "おぼえます",
+          "meaningVi": "Ghi nhớ"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n1-l3-s1",
+      "slideType": "grammar",
+      "title": "1. Bất kể, dù là... hay là... (đối lập): N1であれ、N2であれ",
+      "grammarFormula": "N1であれ、N2であれ、[kết quả/nguyên tắc không đổi]",
+      "explanation": "であれ〜であれ liệt kê HAI (hoặc nhiều) khả năng ĐỐI LẬP để nhấn mạnh KHÔNG PHÂN BIỆT trường hợp nào xảy ra, kết quả/nguyên tắc vẫn GIỮ NGUYÊN — trang trọng, dùng trong quy tắc phổ quát.",
+      "teacherTips": "であれ dùng được cho cả DANH TỪ (như ví dụ trên) — không cần V/A, thích hợp để liệt kê các NHÓM NGƯỜI/vai trò khác nhau.",
+      "culturalNotes": "Hiến pháp, quy định pháp lý Nhật hay viết: '国籍であれ、性別であれ、平等に扱われる' (dù quốc tịch hay giới tính nào, đều được đối xử bình đẳng).",
+      "examples": [
+        {
+          "id": "ex-n1-l3-s1-1",
+          "tokens": [
+            {
+              "id": "t-l3s1-1",
+              "text": "ふごう",
+              "isKeyGrammar": true,
+              "kanji": "富豪",
+              "furigana": "ふごう"
+            },
+            {
+              "id": "t-l3s1-2",
+              "text": "であれ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s1-3",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s1-4",
+              "text": "まずしい",
+              "isKeyGrammar": true,
+              "kanji": "貧しい",
+              "furigana": "まずしい"
+            },
+            {
+              "id": "t-l3s1-5",
+              "text": "ひと",
+              "isKeyGrammar": false,
+              "kanji": "人",
+              "furigana": "ひと"
+            },
+            {
+              "id": "t-l3s1-6",
+              "text": "であれ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s1-7",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s1-8",
+              "text": "びょうき",
+              "isKeyGrammar": true,
+              "kanji": "病気",
+              "furigana": "びょうき"
+            },
+            {
+              "id": "t-l3s1-9",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s1-10",
+              "text": "なる",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s1-11",
+              "text": "かのうせい",
+              "isKeyGrammar": true,
+              "kanji": "可能性",
+              "furigana": "かのうせい"
+            },
+            {
+              "id": "t-l3s1-12",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s1-13",
+              "text": "おなじ",
+              "isKeyGrammar": true,
+              "kanji": "同じ",
+              "furigana": "おなじ"
+            },
+            {
+              "id": "t-l3s1-14",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Dù là người giàu có hay người nghèo, khả năng bị bệnh đều như nhau."
+        },
+        {
+          "id": "ex-n1-l3-s1-2",
+          "tokens": [
+            {
+              "id": "t-l3s1-15",
+              "text": "せいじか",
+              "isKeyGrammar": true,
+              "kanji": "政治家",
+              "furigana": "せいじか"
+            },
+            {
+              "id": "t-l3s1-16",
+              "text": "であれ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s1-17",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s1-18",
+              "text": "かいしゃいん",
+              "isKeyGrammar": true,
+              "kanji": "会社員",
+              "furigana": "かいしゃいん"
+            },
+            {
+              "id": "t-l3s1-19",
+              "text": "であれ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s1-20",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s1-21",
+              "text": "ほうりつ",
+              "isKeyGrammar": true,
+              "kanji": "法律",
+              "furigana": "ほうりつ"
+            },
+            {
+              "id": "t-l3s1-22",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s1-23",
+              "text": "まもらなければ",
+              "isKeyGrammar": true,
+              "kanji": "守らなければ",
+              "furigana": "まもらなければ"
+            },
+            {
+              "id": "t-l3s1-24",
+              "text": "なりません",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Dù là chính trị gia hay nhân viên công ty, đều phải tuân theo pháp luật."
+        }
+      ]
+    },
+    {
+      "slideId": "n1-l3-s2",
+      "slideType": "grammar",
+      "title": "2. Cả... lẫn... (cùng một chủ thể, khen toàn diện): N1といい、N2といい",
+      "grammarFormula": "N1といい、N2といい、[nhận xét chung, thường khen ngợi]",
+      "explanation": "といい〜といい liệt kê HAI KHÍA CẠNH của CÙNG MỘT CHỦ THỂ (không phải hai lựa chọn đối lập như であれ) để đưa ra một NHẬN XÉT TOÀN DIỆN — thường mang tính KHEN NGỢI (đôi khi chê).",
+      "teacherTips": "といい〜といい KHÁC であれ〜であれ ở chỗ: hai vế trong といい luôn là hai KHÍA CẠNH của CÙNG một sự vật/người, không phải hai LỰA CHỌN riêng biệt.",
+      "culturalNotes": "Quảng cáo sản phẩm Nhật hay dùng: '味といい、価格といい、お客様に満足していただけます' (cả về hương vị lẫn giá cả, đều làm hài lòng quý khách).",
+      "examples": [
+        {
+          "id": "ex-n1-l3-s2-1",
+          "tokens": [
+            {
+              "id": "t-l3s2-1",
+              "text": "あじわい",
+              "isKeyGrammar": true,
+              "kanji": "味わい",
+              "furigana": "あじわい"
+            },
+            {
+              "id": "t-l3s2-2",
+              "text": "と",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s2-3",
+              "text": "いい",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s2-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s2-5",
+              "text": "ひんしつ",
+              "isKeyGrammar": true,
+              "kanji": "品質",
+              "furigana": "ひんしつ"
+            },
+            {
+              "id": "t-l3s2-6",
+              "text": "と",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s2-7",
+              "text": "いい",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s2-8",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s2-9",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s2-10",
+              "text": "しょうひん",
+              "isKeyGrammar": true,
+              "kanji": "商品",
+              "furigana": "しょうひん"
+            },
+            {
+              "id": "t-l3s2-11",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s2-12",
+              "text": "かんぺき",
+              "isKeyGrammar": true,
+              "kanji": "完璧",
+              "furigana": "かんぺき"
+            },
+            {
+              "id": "t-l3s2-13",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Cả về hương vị lẫn chất lượng, sản phẩm này đều hoàn hảo."
+        },
+        {
+          "id": "ex-n1-l3-s2-2",
+          "tokens": [
+            {
+              "id": "t-l3s2-14",
+              "text": "たちば",
+              "isKeyGrammar": true,
+              "kanji": "立場",
+              "furigana": "たちば"
+            },
+            {
+              "id": "t-l3s2-15",
+              "text": "と",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s2-16",
+              "text": "いい",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s2-17",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s2-18",
+              "text": "みぶん",
+              "isKeyGrammar": true,
+              "kanji": "身分",
+              "furigana": "みぶん"
+            },
+            {
+              "id": "t-l3s2-19",
+              "text": "と",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s2-20",
+              "text": "いい",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s2-21",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s2-22",
+              "text": "かれ",
+              "isKeyGrammar": false,
+              "kanji": "彼",
+              "furigana": "かれ"
+            },
+            {
+              "id": "t-l3s2-23",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s2-24",
+              "text": "すばらしい",
+              "isKeyGrammar": true,
+              "kanji": "素晴らしい",
+              "furigana": "すばらしい"
+            },
+            {
+              "id": "t-l3s2-25",
+              "text": "ひと",
+              "isKeyGrammar": false,
+              "kanji": "人",
+              "furigana": "ひと"
+            },
+            {
+              "id": "t-l3s2-26",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Cả về lập trường lẫn địa vị, anh ấy đều là người tuyệt vời."
+        }
+      ]
+    },
+    {
+      "slideId": "n1-l3-s3",
+      "slideType": "grammar",
+      "title": "3. So sánh であれ〜であれ và といい〜といい",
+      "grammarFormula": "であれ〜であれ: hai LỰA CHỌN đối lập, không phân biệt trường hợp nào　vs　といい〜といい: hai KHÍA CẠNH của CÙNG một chủ thể, nhận xét toàn diện",
+      "explanation": "であれ〜であれ liệt kê hai khả năng KHÁC NHAU/ĐỐI LẬP (ví dụ: giàu HAY nghèo) để nói kết quả không đổi; といい〜といい liệt kê hai MẶT của MỘT chủ thể duy nhất (ví dụ: hương vị VÀ chất lượng của CÙNG một sản phẩm) để đưa ra nhận xét tổng thể.",
+      "teacherTips": "Mẹo: nếu hai vế là hai LỰA CHỌN KHÁC NHAU (A hay B) → であれ; nếu hai vế là hai MẶT của CÙNG MỘT thứ (A và B của C) → といい.",
+      "culturalNotes": "Cả hai đều là ngữ pháp N1 trọng điểm — nhầm lẫn giữa 'lựa chọn đối lập' và 'khía cạnh của cùng một vật' là lỗi phổ biến của người học.",
+      "examples": [
+        {
+          "id": "ex-n1-l3-s3-1",
+          "tokens": [
+            {
+              "id": "t-l3s3-1",
+              "text": "ふごう",
+              "isKeyGrammar": true,
+              "kanji": "富豪",
+              "furigana": "ふごう"
+            },
+            {
+              "id": "t-l3s3-2",
+              "text": "であれ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s3-3",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s3-4",
+              "text": "せいじか",
+              "isKeyGrammar": true,
+              "kanji": "政治家",
+              "furigana": "せいじか"
+            },
+            {
+              "id": "t-l3s3-5",
+              "text": "であれ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s3-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s3-7",
+              "text": "きそく",
+              "isKeyGrammar": false,
+              "kanji": "規則",
+              "furigana": "きそく"
+            },
+            {
+              "id": "t-l3s3-8",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s3-9",
+              "text": "おなじ",
+              "isKeyGrammar": true,
+              "kanji": "同じ",
+              "furigana": "おなじ"
+            },
+            {
+              "id": "t-l3s3-10",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Dù là triệu phú hay chính trị gia, quy tắc đều như nhau. (2 lựa chọn đối lập)"
+        },
+        {
+          "id": "ex-n1-l3-s3-2",
+          "tokens": [
+            {
+              "id": "t-l3s3-11",
+              "text": "きのう",
+              "isKeyGrammar": true,
+              "kanji": "機能",
+              "furigana": "きのう"
+            },
+            {
+              "id": "t-l3s3-12",
+              "text": "と",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s3-13",
+              "text": "いい",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s3-14",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s3-15",
+              "text": "みかく",
+              "isKeyGrammar": true,
+              "kanji": "味覚",
+              "furigana": "みかく"
+            },
+            {
+              "id": "t-l3s3-16",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s3-17",
+              "text": "たのしみ",
+              "isKeyGrammar": false,
+              "kanji": "楽しみ",
+              "furigana": "たのしみ"
+            },
+            {
+              "id": "t-l3s3-18",
+              "text": "と",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s3-19",
+              "text": "いい",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s3-20",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s3-21",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s3-22",
+              "text": "せいひん",
+              "isKeyGrammar": true,
+              "kanji": "製品",
+              "furigana": "せいひん"
+            },
+            {
+              "id": "t-l3s3-23",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s3-24",
+              "text": "かんぺき",
+              "isKeyGrammar": true,
+              "kanji": "完璧",
+              "furigana": "かんぺき"
+            },
+            {
+              "id": "t-l3s3-25",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Cả về chức năng lẫn niềm vui vị giác, sản phẩm này đều hoàn hảo. (2 khía cạnh của 1 chủ thể)"
+        }
+      ]
+    },
+    {
+      "slideId": "n1-l3-s4",
+      "slideType": "grammar",
+      "title": "4. であれ dùng độc lập (chỉ một vế): N + であれ",
+      "grammarFormula": "N + であれ、[kết quả/nguyên tắc không đổi]",
+      "explanation": "であれ có thể dùng ĐỘC LẬP (không cần lặp lại であれ lần hai) khi chỉ có MỘT trường hợp cần nhấn mạnh 'DÙ LÀ...' vẫn không làm thay đổi kết quả/nguyên tắc.",
+      "teacherTips": "Dạng độc lập であれ gần giống でも thông thường nhưng TRANG TRỌNG hơn nhiều, thường thấy trong quy định, phát biểu chính thức.",
+      "culturalNotes": "Thông báo nội quy công ty Nhật hay viết: '新入社員であれ、規則を守る義務がある' (dù là nhân viên mới, cũng có nghĩa vụ tuân thủ quy tắc).",
+      "examples": [
+        {
+          "id": "ex-n1-l3-s4-1",
+          "tokens": [
+            {
+              "id": "t-l3s4-1",
+              "text": "しゃちょう",
+              "isKeyGrammar": false,
+              "kanji": "社長",
+              "furigana": "しゃちょう"
+            },
+            {
+              "id": "t-l3s4-2",
+              "text": "であれ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s4-3",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s4-4",
+              "text": "きそく",
+              "isKeyGrammar": false,
+              "kanji": "規則",
+              "furigana": "きそく"
+            },
+            {
+              "id": "t-l3s4-5",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s4-6",
+              "text": "まもらなければ",
+              "isKeyGrammar": true,
+              "kanji": "守らなければ",
+              "furigana": "まもらなければ"
+            },
+            {
+              "id": "t-l3s4-7",
+              "text": "なりません",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Dù là giám đốc, cũng phải tuân theo quy tắc."
+        },
+        {
+          "id": "ex-n1-l3-s4-2",
+          "tokens": [
+            {
+              "id": "t-l3s4-8",
+              "text": "ふごう",
+              "isKeyGrammar": true,
+              "kanji": "富豪",
+              "furigana": "ふごう"
+            },
+            {
+              "id": "t-l3s4-9",
+              "text": "であれ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s4-10",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s4-11",
+              "text": "びょうき",
+              "isKeyGrammar": true,
+              "kanji": "病気",
+              "furigana": "びょうき"
+            },
+            {
+              "id": "t-l3s4-12",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s4-13",
+              "text": "なる",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s4-14",
+              "text": "かのうせい",
+              "isKeyGrammar": false,
+              "kanji": "可能性",
+              "furigana": "かのうせい"
+            },
+            {
+              "id": "t-l3s4-15",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s4-16",
+              "text": "あります",
+              "isKeyGrammar": false,
+              "kanji": "有ります",
+              "furigana": "あります"
+            }
+          ],
+          "meaningVi": "Dù là người giàu có, vẫn có khả năng bị bệnh."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n1-3-1",
+      "speaker": "田中",
+      "speakerRole": "Nhà báo",
+      "tokens": [
+        {
+          "id": "d3-1",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-2",
+          "text": "しょうひん",
+          "isKeyGrammar": true,
+          "kanji": "商品",
+          "furigana": "しょうひん"
+        },
+        {
+          "id": "d3-3",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-4",
+          "text": "どうですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Sản phẩm này thế nào?"
+    },
+    {
+      "id": "dia-n1-3-2",
+      "speaker": "サントス",
+      "speakerRole": "Nhà sản xuất",
+      "tokens": [
+        {
+          "id": "d3-5",
+          "text": "あじわい",
+          "isKeyGrammar": true,
+          "kanji": "味わい",
+          "furigana": "あじわい"
+        },
+        {
+          "id": "d3-6",
+          "text": "と",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-7",
+          "text": "いい",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d3-8",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-9",
+          "text": "ひんしつ",
+          "isKeyGrammar": true,
+          "kanji": "品質",
+          "furigana": "ひんしつ"
+        },
+        {
+          "id": "d3-10",
+          "text": "と",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-11",
+          "text": "いい",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d3-12",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-13",
+          "text": "かんぺき",
+          "isKeyGrammar": true,
+          "kanji": "完璧",
+          "furigana": "かんぺき"
+        },
+        {
+          "id": "d3-14",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Cả về hương vị lẫn chất lượng đều hoàn hảo."
+    },
+    {
+      "id": "dia-n1-3-3",
+      "speaker": "田中",
+      "speakerRole": "Nhà báo",
+      "tokens": [
+        {
+          "id": "d3-15",
+          "text": "きのう",
+          "isKeyGrammar": true,
+          "kanji": "機能",
+          "furigana": "きのう"
+        },
+        {
+          "id": "d3-16",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-17",
+          "text": "どうですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Chức năng thì sao?"
+    },
+    {
+      "id": "dia-n1-3-4",
+      "speaker": "サントス",
+      "speakerRole": "Nhà sản xuất",
+      "tokens": [
+        {
+          "id": "d3-18",
+          "text": "みかく",
+          "isKeyGrammar": true,
+          "kanji": "味覚",
+          "furigana": "みかく"
+        },
+        {
+          "id": "d3-19",
+          "text": "と",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-20",
+          "text": "いい",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d3-21",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-22",
+          "text": "きのう",
+          "isKeyGrammar": true,
+          "kanji": "機能",
+          "furigana": "きのう"
+        },
+        {
+          "id": "d3-23",
+          "text": "と",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-24",
+          "text": "いい",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d3-25",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-26",
+          "text": "すばらしい",
+          "isKeyGrammar": true,
+          "kanji": "素晴らしい",
+          "furigana": "すばらしい"
+        },
+        {
+          "id": "d3-27",
+          "text": "せいひん",
+          "isKeyGrammar": true,
+          "kanji": "製品",
+          "furigana": "せいひん"
+        },
+        {
+          "id": "d3-28",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Cả về vị giác lẫn chức năng, đều là sản phẩm tuyệt vời."
+    },
+    {
+      "id": "dia-n1-3-5",
+      "speaker": "田中",
+      "speakerRole": "Nhà báo",
+      "tokens": [
+        {
+          "id": "d3-29",
+          "text": "ふごう",
+          "isKeyGrammar": true,
+          "kanji": "富豪",
+          "furigana": "ふごう"
+        },
+        {
+          "id": "d3-30",
+          "text": "であれ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d3-31",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-32",
+          "text": "まずしい",
+          "isKeyGrammar": true,
+          "kanji": "貧しい",
+          "furigana": "まずしい"
+        },
+        {
+          "id": "d3-33",
+          "text": "ひと",
+          "isKeyGrammar": false,
+          "kanji": "人",
+          "furigana": "ひと"
+        },
+        {
+          "id": "d3-34",
+          "text": "であれ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d3-35",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-36",
+          "text": "だれ",
+          "isKeyGrammar": false,
+          "kanji": "誰",
+          "furigana": "だれ"
+        },
+        {
+          "id": "d3-37",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-38",
+          "text": "つかえます",
+          "isKeyGrammar": false,
+          "kanji": "使えます",
+          "furigana": "つかえます"
+        },
+        {
+          "id": "d3-39",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Dù là người giàu hay người nghèo, ai cũng dùng được chứ?"
+    },
+    {
+      "id": "dia-n1-3-6",
+      "speaker": "サントス",
+      "speakerRole": "Nhà sản xuất",
+      "tokens": [
+        {
+          "id": "d3-40",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-41",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-42",
+          "text": "みぶん",
+          "isKeyGrammar": true,
+          "kanji": "身分",
+          "furigana": "みぶん"
+        },
+        {
+          "id": "d3-43",
+          "text": "であれ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d3-44",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-45",
+          "text": "たちば",
+          "isKeyGrammar": true,
+          "kanji": "立場",
+          "furigana": "たちば"
+        },
+        {
+          "id": "d3-46",
+          "text": "であれ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d3-47",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-48",
+          "text": "だれ",
+          "isKeyGrammar": false,
+          "kanji": "誰",
+          "furigana": "だれ"
+        },
+        {
+          "id": "d3-49",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-50",
+          "text": "つかえます",
+          "isKeyGrammar": false,
+          "kanji": "使えます",
+          "furigana": "つかえます"
+        }
+      ],
+      "meaningVi": "Vâng. Dù là địa vị hay lập trường nào, ai cũng dùng được."
+    },
+    {
+      "id": "dia-n1-3-7",
+      "speaker": "田中",
+      "speakerRole": "Nhà báo",
+      "tokens": [
+        {
+          "id": "d3-51",
+          "text": "せいじか",
+          "isKeyGrammar": true,
+          "kanji": "政治家",
+          "furigana": "せいじか"
+        },
+        {
+          "id": "d3-52",
+          "text": "であれ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d3-53",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-54",
+          "text": "かいしゃいん",
+          "isKeyGrammar": true,
+          "kanji": "会社員",
+          "furigana": "かいしゃいん"
+        },
+        {
+          "id": "d3-55",
+          "text": "であれ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d3-56",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-57",
+          "text": "みんな",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-58",
+          "text": "こうにゅう",
+          "isKeyGrammar": false,
+          "kanji": "購入",
+          "furigana": "こうにゅう"
+        },
+        {
+          "id": "d3-59",
+          "text": "できます",
+          "isKeyGrammar": false,
+          "kanji": "出来ます",
+          "furigana": "できます"
+        },
+        {
+          "id": "d3-60",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Dù là chính trị gia hay nhân viên công ty, mọi người đều mua được chứ?"
+    },
+    {
+      "id": "dia-n1-3-8",
+      "speaker": "サントス",
+      "speakerRole": "Nhà sản xuất",
+      "tokens": [
+        {
+          "id": "d3-61",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-62",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-63",
+          "text": "しゃちょう",
+          "isKeyGrammar": false,
+          "kanji": "社長",
+          "furigana": "しゃちょう"
+        },
+        {
+          "id": "d3-64",
+          "text": "であれ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d3-65",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-66",
+          "text": "きそく",
+          "isKeyGrammar": false,
+          "kanji": "規則",
+          "furigana": "きそく"
+        },
+        {
+          "id": "d3-67",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-68",
+          "text": "おなじ",
+          "isKeyGrammar": true,
+          "kanji": "同じ",
+          "furigana": "おなじ"
+        },
+        {
+          "id": "d3-69",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng. Dù là giám đốc, quy tắc vẫn giống nhau."
+    },
+    {
+      "id": "dia-n1-3-9",
+      "speaker": "田中",
+      "speakerRole": "Nhà báo",
+      "tokens": [
+        {
+          "id": "d3-70",
+          "text": "とみ",
+          "isKeyGrammar": true,
+          "kanji": "富",
+          "furigana": "とみ"
+        },
+        {
+          "id": "d3-71",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-72",
+          "text": "あって",
+          "isKeyGrammar": false,
+          "kanji": "有って",
+          "furigana": "あって"
+        },
+        {
+          "id": "d3-73",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-74",
+          "text": "びょうき",
+          "isKeyGrammar": true,
+          "kanji": "病気",
+          "furigana": "びょうき"
+        },
+        {
+          "id": "d3-75",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-76",
+          "text": "なる",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-77",
+          "text": "かのうせい",
+          "isKeyGrammar": true,
+          "kanji": "可能性",
+          "furigana": "かのうせい"
+        },
+        {
+          "id": "d3-78",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-79",
+          "text": "おなじ",
+          "isKeyGrammar": false,
+          "kanji": "同じ",
+          "furigana": "おなじ"
+        },
+        {
+          "id": "d3-80",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d3-81",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Dù có tài sản, khả năng bị bệnh vẫn giống nhau chứ?"
+    },
+    {
+      "id": "dia-n1-3-10",
+      "speaker": "サントス",
+      "speakerRole": "Nhà sản xuất",
+      "tokens": [
+        {
+          "id": "d3-82",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-83",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-84",
+          "text": "ふごう",
+          "isKeyGrammar": true,
+          "kanji": "富豪",
+          "furigana": "ふごう"
+        },
+        {
+          "id": "d3-85",
+          "text": "であれ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d3-86",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-87",
+          "text": "びょうき",
+          "isKeyGrammar": true,
+          "kanji": "病気",
+          "furigana": "びょうき"
+        },
+        {
+          "id": "d3-88",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-89",
+          "text": "なる",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-90",
+          "text": "かのうせい",
+          "isKeyGrammar": true,
+          "kanji": "可能性",
+          "furigana": "かのうせい"
+        },
+        {
+          "id": "d3-91",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-92",
+          "text": "あります",
+          "isKeyGrammar": false,
+          "kanji": "有ります",
+          "furigana": "あります"
+        }
+      ],
+      "meaningVi": "Vâng. Dù là người giàu, vẫn có khả năng bị bệnh."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n1-3-1",
+      "question": "「富豪であれ、貧しい人であれ、病気になる可能性は同じです」 — であれ〜であれ diễn tả điều gì?",
+      "options": [
+        "Liệt kê hai lựa chọn đối lập để nhấn mạnh không phân biệt trường hợp nào, kết quả vẫn giữ nguyên",
+        "Liệt kê hai khía cạnh của cùng một chủ thể để khen ngợi",
+        "Sự khẳng định chắc chắn",
+        "Sự từ chối lịch sự"
+      ],
+      "correctIndex": 0,
+      "explanation": "であれ〜であれ liệt kê hai khả năng ĐỐI LẬP (giàu/nghèo) để nhấn mạnh kết quả không đổi.",
+      "hint": "Xem cấu trúc であれ〜であれ ở slide 1."
+    },
+    {
+      "id": "ex-q-n1-3-2",
+      "question": "「味わいといい、品質といい、この商品は完璧です」 — といい〜といい khác であれ〜であれ ở điểm nào?",
+      "options": [
+        "といい〜といい liệt kê hai KHÍA CẠNH của CÙNG một chủ thể, không phải hai lựa chọn đối lập",
+        "Hoàn toàn giống nhau, dùng thay thế được cho nhau",
+        "といい chỉ dùng cho câu hỏi",
+        "であれ chỉ dùng cho phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "といい〜といい liệt kê hai mặt (hương vị, chất lượng) của CÙNG một sản phẩm, khác であれ là hai lựa chọn khác nhau.",
+      "hint": "Xem giải thích といい〜といい ở slide 2."
+    },
+    {
+      "id": "ex-q-n1-3-3",
+      "question": "Có thể dùng であれ〜であれ để nói về 'hương vị và chất lượng của cùng một sản phẩm' không?",
+      "options": [
+        "Không tự nhiên — であれ dành cho hai LỰA CHỌN đối lập, nên dùng といい〜といい mới đúng",
+        "Có, hoàn toàn tự nhiên",
+        "Chỉ đúng trong văn viết trang trọng",
+        "Chỉ đúng khi nói về sản phẩm đắt tiền"
+      ],
+      "correctIndex": 0,
+      "explanation": "であれ〜であれ dành cho hai lựa chọn KHÁC NHAU/đối lập, không phù hợp khi nói về hai khía cạnh của MỘT chủ thể.",
+      "hint": "Xem mẹo phân biệt ở slide 3."
+    },
+    {
+      "id": "ex-q-n1-3-4",
+      "question": "「社長であれ、規則を守らなければなりません」 — であれ ở đây dùng như thế nào?",
+      "options": [
+        "Dùng ĐỘC LẬP (chỉ một vế) để nhấn mạnh 'dù là...' vẫn không đổi nguyên tắc",
+        "Phải luôn dùng lặp lại hai lần であれ〜であれ",
+        "Đây là lỗi ngữ pháp",
+        "Chỉ dùng được cho câu hỏi"
+      ],
+      "correctIndex": 0,
+      "explanation": "であれ có thể dùng ĐỘC LẬP (một vế) khi chỉ cần nhấn mạnh một trường hợp cụ thể.",
+      "hint": "Xem cấu trúc độc lập ở slide 4."
+    },
+    {
+      "id": "ex-q-n1-3-5",
+      "question": "「政治家であれ、会社員であれ、法律を守らなければなりません」 nghĩa là:",
+      "options": [
+        "Dù là chính trị gia hay nhân viên công ty, đều phải tuân theo pháp luật",
+        "Chỉ chính trị gia mới cần tuân theo pháp luật",
+        "Không ai cần tuân theo pháp luật",
+        "Chỉ nhân viên công ty mới cần tuân theo pháp luật"
+      ],
+      "correctIndex": 0,
+      "explanation": "であれ〜であれ ở đây liệt kê hai vai trò khác nhau (chính trị gia/nhân viên) để nói nghĩa vụ không đổi với ai.",
+      "hint": "Áp dụng cấu trúc N1であれ、N2であれ."
+    },
+    {
+      "id": "ex-q-n1-3-6",
+      "question": "「機能といい、味覚の楽しみといい、この製品は完璧です」 nghĩa là:",
+      "options": [
+        "Cả về chức năng lẫn niềm vui vị giác, sản phẩm này đều hoàn hảo",
+        "Chỉ chức năng là tốt, vị giác thì không",
+        "Sản phẩm này không có chức năng gì",
+        "Chỉ vị giác là tốt, chức năng thì không"
+      ],
+      "correctIndex": 0,
+      "explanation": "といい〜といい ở đây khen ngợi TOÀN DIỆN cả hai khía cạnh (chức năng và vị giác) của cùng sản phẩm.",
+      "hint": "Áp dụng cấu trúc N1といい、N2といい."
+    },
+    {
+      "id": "ex-q-n1-3-7",
+      "question": "Xếp であれ〜であれ và といい〜といい theo tiêu chí phân biệt chính:",
+      "options": [
+        "であれ = hai lựa chọn KHÁC NHAU; といい = hai khía cạnh của CÙNG một chủ thể",
+        "であれ = trang trọng; といい = thân mật (không có khác biệt về nghĩa)",
+        "Cả hai hoàn toàn giống nhau",
+        "であれ chỉ dùng cho người; といい chỉ dùng cho vật"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tiêu chí phân biệt chính là: であれ cho lựa chọn đối lập; といい cho khía cạnh của cùng một thứ.",
+      "hint": "Xem bảng so sánh ở slide 3."
+    },
+    {
+      "id": "ex-q-n1-3-8",
+      "question": "Theo hội thoại, sản phẩm được đánh giá thế nào về hương vị và chất lượng?",
+      "options": [
+        "Hoàn hảo cả hai (味わいといい、品質といい、完璧です)",
+        "Chỉ hương vị tốt",
+        "Chỉ chất lượng tốt",
+        "Cả hai đều không tốt"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「味わいといい、品質といい、完璧です」.",
+      "hint": "Xem câu thoại thứ 2."
+    },
+    {
+      "id": "ex-q-n1-3-9",
+      "question": "Theo hội thoại, ai có thể sử dụng sản phẩm này?",
+      "options": [
+        "Bất kể địa vị hay lập trường nào, ai cũng dùng được (身分であれ、立場であれ、誰でも使えます)",
+        "Chỉ người giàu mới dùng được",
+        "Chỉ chính trị gia mới dùng được",
+        "Không ai dùng được"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「身分であれ、立場であれ、誰でも使えます」.",
+      "hint": "Xem câu thoại thứ 6."
+    },
+    {
+      "id": "ex-q-n1-3-10",
+      "question": "Khả năng bị bệnh có giống nhau giữa người giàu và người nghèo không theo hội thoại?",
+      "options": [
+        "Có, dù giàu vẫn có khả năng bị bệnh (富豪であれ、病気になる可能性があります)",
+        "Không, người giàu không bao giờ bị bệnh",
+        "Chỉ người nghèo mới bị bệnh",
+        "Không được đề cập trong hội thoại"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos xác nhận 「富豪であれ、病気になる可能性があります」.",
+      "hint": "Xem câu thoại cuối cùng."
+    }
+  ]
+}

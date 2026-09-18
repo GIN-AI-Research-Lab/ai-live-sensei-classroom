@@ -343,6 +343,34 @@ class SlideEngine {
       }
     }
 
+    this._renderTabContentWhenReady(tabName, subIndex);
+  }
+
+  /**
+   * Bai co the moi chi la muc luc nhe (chua co vocabList that su — xem
+   * CurriculumLoader.ensureLessonLoaded). Cho nay tai not chi tiet day du
+   * TRUOC khi ve, thay vi ve ngay tren du lieu rong.
+   */
+  async _renderTabContentWhenReady(tabName, subIndex) {
+    const lvl = this.currentLevel, baiSo = this.currentLesson;
+    const bai = this.loader.getLesson(lvl, baiSo);
+    if (bai && !Array.isArray(bai.vocabList)) {
+      if (this.slideContent) {
+        this.slideContent.innerHTML = `
+          <div class="text-center py-16 text-slate-400">
+            <i class="fa-solid fa-spinner fa-spin text-2xl mb-2 text-indigo-400"></i>
+            <p class="font-medium">Đang tải bài học…</p>
+          </div>`;
+      }
+      await this.loader.ensureLessonLoaded(lvl, baiSo);
+      // Trong luc cho, hoc vien da chuyen sang bai/tab khac roi thi thoi,
+      // khong ve de nay chong len muc hien tai nua.
+      if (this.currentLevel !== lvl || this.currentLesson !== baiSo || this.activeTab !== tabName) return;
+    }
+    this._renderTabContentNow(tabName, subIndex);
+  }
+
+  _renderTabContentNow(tabName, subIndex) {
     if (tabName === 'vocab') {
       this.renderVocab();
     } else if (tabName === 'kanji') {

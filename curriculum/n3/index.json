@@ -1,0 +1,222 @@
+[
+  {
+    "lessonNumber": 1,
+    "level": "N3",
+    "title": "Bài 1: Phán đoán chắc chắn (わけがない & わけではない)",
+    "description": "Bài mở đầu N3: わけがない diễn tả phủ định MẠNH MẼ, chủ quan ('không đời nào', dựa trên niềm tin/kinh nghiệm cá nhân — khác はずがない khách quan hơn ở N2), và わけではない diễn tả phủ định MỘT PHẦN, nhẹ nhàng ('không hẳn là', thường dùng đính chính hiểu lầm, đi kèm でも/しかし).",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 2,
+    "level": "N3",
+    "title": "Bài 2: Thói quen & Biến đổi (ようにする & ようになる)",
+    "description": "ようにする diễn tả NỖ LỰC CHỦ ĐỘNG để đạt một mục tiêu/thói quen (chưa chắc đã thành công), đối lập với ようになる (N4 bài 36, KẾT QUẢ đã đạt được) — hai cấu trúc thường xuất hiện nối tiếp trong mạch kể chuyện thành công (nỗ lực → kết quả), cả hai đều ghép được với thể ない để diễn tả chiều ngược lại (tránh làm/mất khả năng).",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 3,
+    "level": "N3",
+    "title": "Bài 3: Quy định & Dự định (ことになっている & ことにする)",
+    "description": "ことになっている diễn tả QUY ĐỊNH/THÔNG LỆ khách quan đã có sẵn từ tổ chức/xã hội (khác hẳn ことにする đã học N4 bài 31 — quyết định CÁ NHÂN của người nói), kiểm tra bằng câu hỏi 'ai là người quyết định', kết hợp với thể bị động 決まっています (N4 bài 37), và mở rộng cảm xúc quyết tâm bằng 決心する.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 4,
+    "level": "N3",
+    "title": "Bài 4: Nguyên nhân lý do (おかげで & せいで & ばかりに)",
+    "description": "Ba cấu trúc nguyên nhân-kết quả mang SẮC THÁI CẢM XÚC (khác から/ので trung tính, N4 bài 39): おかげで cho kết quả TỐT (biết ơn), せいで cho kết quả XẤU (đổ lỗi), và ばかりに cho kết quả XẤU NẶNG NỀ so với một nguyên nhân nhỏ nhặt (tiếc nuối sâu sắc) — cùng câu おかげさまで dùng trong chào hỏi xã giao.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 5,
+    "level": "N3",
+    "title": "Bài 5: So sánh & Tương quan (に比べて & に対して)",
+    "description": "に比べて đặt một MỐC để SO SÁNH (thời gian/đối tượng khác, khách quan hơn より của N5 bài 12), và に対して đánh dấu ĐỐI TƯỢNG mà một thái độ/cảm xúc/hành động HƯỚNG TỚI (dạng bổ nghĩa danh từ: に対する) — hai cấu trúc thường gặp trong văn phong báo cáo, thống kê cùng cặp động từ 上昇する/減少する mô tả xu hướng biến đổi.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 6,
+    "level": "N3",
+    "title": "Bài 6: Mục đích & Đối tượng (向けに & ために)",
+    "description": "向けに/向けの nêu ĐỐI TƯỢNG cụ thể mà sản phẩm/dịch vụ/hành động nhắm tới (thường dùng trong marketing, sản xuất), có thể kết hợp với ため(に) (đã ôn từ N4 bài 42) để vừa nêu đối tượng vừa nêu mục đích; を対象に(して) là cách nói trang trọng hơn của 向け, dùng trong khảo sát/báo cáo.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 7,
+    "level": "N3",
+    "title": "Bài 7: Phạm vi & Giới hạn (を通して & にわたって & に限って)",
+    "description": "を通して diễn tả SUỐT một khoảng thời gian hoặc THÔNG QUA một phương tiện/kênh trung gian; にわたって nhấn PHẠM VI RỘNG LỚN mà sự việc trải dài qua (thường kèm số từ cụ thể); に限って diễn tả CHỈ RIÊNG một trường hợp, thường mang sắc thái trớ trêu khi điều không may xảy ra đúng lúc.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 8,
+    "level": "N3",
+    "title": "Bài 8: Điều kiện & Giả định (さえ〜ば & としたら)",
+    "description": "さえ〜ば diễn tả CHỈ CẦN có N (hoặc thực hiện hành động, dạng V-stem+さえすれば) là ĐỦ để đạt kết quả mong muốn — điều kiện THỰC TẾ có thể xảy ra; としたら dùng để GIẢ ĐỊNH một tình huống (có thể viển vông/chưa xảy ra) rồi suy luận kết quả nếu tình huống đó là thật.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 9,
+    "level": "N3",
+    "title": "Bài 9: Xu hướng & Khởi đầu (〜かける & 〜がち & 〜気味)",
+    "description": "がち diễn tả XU HƯỚNG thường xuyên xảy ra, mang sắc thái tiêu cực (hay đi trễ, hay quên); 気味 diễn tả CẢM GIÁC nhẹ, chủ quan về một trạng thái hiện tại (hơi mệt, hơi thiếu ngủ); かける gắn sau V-stem diễn tả một hành động ĐÃ BẮT ĐẦU nhưng CHƯA HOÀN THÀNH, bị gián đoạn giữa chừng.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 10,
+    "level": "N3",
+    "title": "Bài 10: Nhượng bộ bất ngờ (にもかかわらず & くせに)",
+    "description": "にもかかわらず diễn tả 'mặc dù/bất chấp' một cách KHÁCH QUAN, TRANG TRỌNG — kết quả trái với kỳ vọng, không mang phán xét; くせに cũng nghĩa 'mặc dù' nhưng luôn ẩn chứa sắc thái CHÊ TRÁCH/khó chịu của người nói với chủ thể (không dùng cho bản thân), chỉ dùng trong hội thoại thân mật.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 11,
+    "level": "N3",
+    "title": "Bài 11: Cảm xúc mãnh liệt (たまらない & しょうがない & てならない)",
+    "description": "たまらない diễn tả cảm giác MÃNH LIỆT không chịu nổi (thân mật, phổ biến); しょうがない mang 2 nghĩa - đành chịu/bất lực, hoặc cực kỳ (giống たまらない, thân mật); てならない trang trọng hơn, chỉ dùng cho cảm xúc/suy nghĩ TỰ NHIÊN trào lên mà người nói không thể kiềm chế được.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 12,
+    "level": "N3",
+    "title": "Bài 12: Đánh giá chắc chắn (に違いない & はずだ & はずがない)",
+    "description": "に違いない diễn tả suy luận CHẮC CHẮN dựa trên BẰNG CHỨNG cụ thể (chủ quan, mức tin tưởng rất cao); はずだ diễn tả suy luận dựa trên LOGIC/thông tin đã biết (khách quan hơn); はずがない là PHỦ ĐỊNH MẠNH của はずだ, khẳng định điều gì đó KHÔNG THỂ xảy ra dựa trên logic vững chắc.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 13,
+    "level": "N3",
+    "title": "Bài 13: Khả năng tiềm tàng (得る / 得ない - うる / えない)",
+    "description": "得る (うる) gắn sau V-stem diễn tả khả năng XẢY RA VỀ MẶT LÝ THUYẾT/KHÁCH QUAN của một sự việc (khác できる là khả năng THỰC TẾ do năng lực cá nhân); 得ない (えない) là phủ định mạnh, khẳng định điều gì đó KHÔNG THỂ xảy ra; cụm cố định あり得る/あり得ない cực kỳ thông dụng.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 14,
+    "level": "N3",
+    "title": "Bài 14: Biến đổi liên tục (一方だ & ばかりだ)",
+    "description": "一方だ diễn tả xu hướng thay đổi theo MỘT CHIỀU liên tục, không dừng lại — trang trọng, khách quan, dùng được cho cả xu hướng tích cực lẫn tiêu cực; ばかりだ cũng diễn tả xu hướng một chiều nhưng thân mật hơn, hầu như CHỈ dùng cho xu hướng XẤU ĐI và mang cảm xúc thất vọng/lo lắng của người nói.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 15,
+    "level": "N3",
+    "title": "Bài 15: Mở rộng phạm vi (だけでなく & ばかりか)",
+    "description": "だけでなく mở rộng phạm vi, thêm một điều ngoài điều đã nêu một cách TRUNG TÍNH, phổ biến; ばかりか cũng nghĩa 'không những... mà còn...' nhưng MẠNH HƠN, nhấn mạnh điều thứ hai VƯỢT XA KỲ VỌNG (tích cực hoặc tiêu cực); kết hợp ばかりか〜さえ để nhấn mức độ cực đoan gấp đôi.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 16,
+    "level": "N3",
+    "title": "Bài 16: Thay thế (代わりに & に代わって)",
+    "description": "代わりに diễn tả 'thay vì' một cách PHỔ BIẾN, dùng được cho cả người và việc; に代わって trang trọng hơn, CHỈ dùng khi một người/tổ chức CHÍNH THỨC đảm nhận vai trò của người/tổ chức khác (công việc, nghi lễ, văn bản); kết hợp với 代理/代表 để nhấn tính hợp pháp của việc thay thế.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 17,
+    "level": "N3",
+    "title": "Bài 17: Về vấn đề (に関して & について)",
+    "description": "について diễn tả 'về, liên quan đến' một chủ đề — dùng PHỔ BIẾN, trung tính, tự nhiên trong cả hội thoại đời thường lẫn văn viết; に関して cũng nghĩa tương tự nhưng TRANG TRỌNG HƠN, phù hợp văn phong học thuật/báo cáo; dạng bổ nghĩa danh từ: についての vs に関する (không phải に関しての).",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 18,
+    "level": "N3",
+    "title": "Bài 18: Truyền đạt thông tin chính thức (ということ)",
+    "description": "ということだ dùng để TRUYỀN ĐẠT một thông tin đã nghe/đọc được một cách TRANG TRỌNG (mạnh mẽ hơn そうだ); ということは〜ということだ dùng để GIẢI THÍCH Ý NGHĨA ('A tức là B'); ということになる diễn tả KẾT LUẬN LOGIC từ hoàn cảnh khách quan (khác ことにする là quyết định chủ quan).",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 19,
+    "level": "N3",
+    "title": "Bài 19: Bổn phận đạo đức (べきだ & べきではない)",
+    "description": "べきだ diễn tả điều NÊN LÀM theo lẽ đúng đắn, đạo đức, hoặc quan điểm cá nhân/xã hội (chủ quan, khác なければならない là nghĩa vụ khách quan); べきではない là phủ định, diễn tả điều KHÔNG NÊN làm; べきだった mang sắc thái HỐI TIẾC về một việc lẽ ra nên làm trong quá khứ.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 20,
+    "level": "N3",
+    "title": "Bài 20: Tổng kết ngữ pháp đàm thoại thực chiến",
+    "description": "Bài tổng kết N3 kết hợp các cấu trúc trọng điểm đã học qua một cuộc họp rút kinh nghiệm dự án thực tế: おかげで/せいで + 一方だ/ばかりだ (nguyên nhân → xu hướng), に違いない/はずだ + べきだ (suy đoán → khuyến nghị), にもかかわらず + だけでなく/ばかりか (nhượng bộ → mở rộng thành tích), và に関して/について + ということ (chủ đề → truyền đạt kết luận) — nắm vững cách KẾT HỢP các cấu trúc này quan trọng hơn học thuộc riêng lẻ, đúng như cách chúng xuất hiện trong đề thi JLPT N3 thực tế. Hoàn thành trọn vẹn 20/20 bài N3!",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  }
+]

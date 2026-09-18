@@ -1,0 +1,1527 @@
+{
+  "level": "N4",
+  "lessonNumber": 42,
+  "title": "Bài 42: Mục đích vì ai/cái gì (〜ために) & Dùng vào việc gì (〜のに)",
+  "description": "Diễn tả mục đích với động từ Ý CHÍ (đối lập ように bài 36) bằng N/Vの/từ điển+ために (mục đích → hành động, chủ ngữ là người), và công dụng của một vật bằng V(từ điển)のに+使います/役に立ちます (の danh từ hóa + に mục đích, khác hẳn のに nhượng bộ ở bài 45) — tổng kết ba cấu trúc mục đích ように/ために/のに theo loại động từ và chủ ngữ.",
+  "vocabList": [
+    {
+      "id": "voc-n4-42-1",
+      "word": "つかいます",
+      "kanji": "使います",
+      "furigana": "つかいます",
+      "romaji": "tsukaimasu",
+      "wordType": "verb",
+      "meaningVi": "Sử dụng, dùng",
+      "accentNote": "Đã gặp N5 bài 15 — nay dùng làm động từ chính cho のに."
+    },
+    {
+      "id": "voc-n4-42-2",
+      "word": "ためます",
+      "kanji": "貯めます",
+      "furigana": "ためます",
+      "romaji": "tamemasu",
+      "wordType": "verb",
+      "meaningVi": "Tích lũy, để dành (tiền)",
+      "accentNote": "留学の ために、お金を 貯めています = để đi du học, tôi đang để dành tiền."
+    },
+    {
+      "id": "voc-n4-42-3",
+      "word": "はたらきます",
+      "kanji": "働きます",
+      "furigana": "はたらきます",
+      "romaji": "hatarakimasu",
+      "wordType": "verb",
+      "meaningVi": "Làm việc, đi làm",
+      "accentNote": "Đã gặp N5 bài 4."
+    },
+    {
+      "id": "voc-n4-42-4",
+      "word": "べんきょうします",
+      "kanji": "勉強します",
+      "furigana": "べんきょうします",
+      "romaji": "benkyou shimasu",
+      "wordType": "verb",
+      "meaningVi": "Học, học tập",
+      "accentNote": "Đã gặp N5 bài 4."
+    },
+    {
+      "id": "voc-n4-42-5",
+      "word": "やくにたちます",
+      "kanji": "役に立ちます",
+      "furigana": "やくにたちます",
+      "romaji": "yaku ni tachimasu",
+      "wordType": "verb",
+      "meaningVi": "Có ích, hữu dụng",
+      "accentNote": "この道具は 料理を 作るのに 役に立ちます = dụng cụ này hữu ích để nấu ăn."
+    },
+    {
+      "id": "voc-n4-42-6",
+      "word": "りゅうがくします",
+      "kanji": "留学します",
+      "furigana": "りゅうがくします",
+      "romaji": "ryuugaku shimasu",
+      "wordType": "verb",
+      "meaningVi": "Đi du học",
+      "accentNote": "Đã gặp N5 bài 21."
+    },
+    {
+      "id": "voc-n4-42-7",
+      "word": "しょうらい",
+      "kanji": "将来",
+      "furigana": "しょうらい",
+      "romaji": "shourai",
+      "wordType": "noun",
+      "meaningVi": "Tương lai",
+      "accentNote": "Đã gặp bài 31."
+    },
+    {
+      "id": "voc-n4-42-8",
+      "word": "どうぐ",
+      "kanji": "道具",
+      "furigana": "どうぐ",
+      "romaji": "dougu",
+      "wordType": "noun",
+      "meaningVi": "Dụng cụ, công cụ",
+      "accentNote": "この道具は 何に 使いますか = dụng cụ này dùng để làm gì vậy?"
+    },
+    {
+      "id": "voc-n4-42-9",
+      "word": "おかね",
+      "kanji": "お金",
+      "furigana": "おかね",
+      "romaji": "okane",
+      "wordType": "noun",
+      "meaningVi": "Tiền",
+      "accentNote": "Đã gặp N5 bài 25."
+    },
+    {
+      "id": "voc-n4-42-10",
+      "word": "おかねもち",
+      "kanji": "お金持ち",
+      "furigana": "おかねもち",
+      "romaji": "okanemochi",
+      "wordType": "noun",
+      "meaningVi": "Người giàu có",
+      "accentNote": "お金持ちに なるために = để trở thành người giàu có."
+    },
+    {
+      "id": "voc-n4-42-11",
+      "word": "りょうり",
+      "kanji": "料理",
+      "furigana": "りょうり",
+      "romaji": "ryouri",
+      "wordType": "noun",
+      "meaningVi": "Món ăn, nấu ăn",
+      "accentNote": "Đã gặp N5 bài 9."
+    },
+    {
+      "id": "voc-n4-42-12",
+      "word": "じかん",
+      "kanji": "時間",
+      "furigana": "じかん",
+      "romaji": "jikan",
+      "wordType": "noun",
+      "meaningVi": "Thời gian",
+      "accentNote": "Đã gặp N5 bài 4."
+    },
+    {
+      "id": "voc-n4-42-13",
+      "word": "けんこう",
+      "kanji": "健康",
+      "furigana": "けんこう",
+      "romaji": "kenkou",
+      "wordType": "adjective",
+      "meaningVi": "Sức khỏe, khỏe mạnh",
+      "accentNote": "健康の ために、運動します = để (giữ) sức khỏe, tôi tập thể dục."
+    },
+    {
+      "id": "voc-n4-42-14",
+      "word": "しけん",
+      "kanji": "試験",
+      "furigana": "しけん",
+      "romaji": "shiken",
+      "wordType": "noun",
+      "meaningVi": "Kỳ thi",
+      "accentNote": "Đã gặp bài 40."
+    },
+    {
+      "id": "voc-n4-42-15",
+      "word": "ごうかくします",
+      "kanji": "合格します",
+      "furigana": "ごうかくします",
+      "romaji": "goukaku shimasu",
+      "wordType": "verb",
+      "meaningVi": "Đậu, đỗ (kỳ thi)",
+      "accentNote": "Đã gặp bài 40."
+    },
+    {
+      "id": "voc-n4-42-16",
+      "word": "だいがく",
+      "kanji": "大学",
+      "furigana": "だいがく",
+      "romaji": "daigaku",
+      "wordType": "noun",
+      "meaningVi": "Trường đại học",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n4-42-17",
+      "word": "はさみ",
+      "kanji": "鋏",
+      "furigana": "はさみ",
+      "romaji": "hasami",
+      "wordType": "noun",
+      "meaningVi": "Cái kéo",
+      "accentNote": "はさみは 紙を 切るのに 使います = kéo dùng để cắt giấy."
+    },
+    {
+      "id": "voc-n4-42-18",
+      "word": "かみ",
+      "kanji": "紙",
+      "furigana": "かみ",
+      "romaji": "kami",
+      "wordType": "noun",
+      "meaningVi": "Giấy",
+      "accentNote": "Đã gặp N5 bài 11."
+    },
+    {
+      "id": "voc-n4-42-19",
+      "word": "きります",
+      "kanji": "切ります",
+      "furigana": "きります",
+      "romaji": "kirimasu",
+      "wordType": "verb",
+      "meaningVi": "Cắt",
+      "accentNote": "紙を 切ります = cắt giấy."
+    },
+    {
+      "id": "voc-n4-42-20",
+      "word": "べんり",
+      "kanji": "便利",
+      "furigana": "べんり",
+      "romaji": "benri",
+      "wordType": "adjective",
+      "meaningVi": "Tiện lợi",
+      "accentNote": "Đã gặp N5 bài 8."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n4-42-1",
+      "character": "将",
+      "hanViet": "TƯỚNG",
+      "strokeCount": 10,
+      "onyomi": [
+        "ショウ (shou)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Sắp tới, tương lai. Đã gặp bài 31.",
+      "commonWords": [
+        {
+          "word": "将来",
+          "furigana": "しょうらい",
+          "meaningVi": "Tương lai"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-42-2",
+      "character": "道",
+      "hanViet": "ĐẠO",
+      "strokeCount": 12,
+      "onyomi": [
+        "ドウ (dou)"
+      ],
+      "kunyomi": [
+        "みち"
+      ],
+      "meaningVi": "Con đường; đạo lý. Đã gặp N5 bài 24.",
+      "commonWords": [
+        {
+          "word": "道具",
+          "furigana": "どうぐ",
+          "meaningVi": "Dụng cụ"
+        },
+        {
+          "word": "道",
+          "furigana": "みち",
+          "meaningVi": "Con đường"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-42-3",
+      "character": "具",
+      "hanViet": "CỤ",
+      "strokeCount": 8,
+      "onyomi": [
+        "グ (gu)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Dụng cụ. Đã gặp bài 26 (具合).",
+      "commonWords": [
+        {
+          "word": "道具",
+          "furigana": "どうぐ",
+          "meaningVi": "Dụng cụ"
+        },
+        {
+          "word": "具合",
+          "furigana": "ぐあい",
+          "meaningVi": "Tình trạng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-42-4",
+      "character": "役",
+      "hanViet": "DỊCH",
+      "strokeCount": 7,
+      "onyomi": [
+        "ヤク (yaku)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Vai trò, chức vụ.",
+      "commonWords": [
+        {
+          "word": "役に立ちます",
+          "furigana": "やくにたちます",
+          "meaningVi": "Có ích"
+        },
+        {
+          "word": "役者",
+          "furigana": "やくしゃ",
+          "meaningVi": "Diễn viên"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-42-5",
+      "character": "切",
+      "hanViet": "THIẾT",
+      "strokeCount": 4,
+      "onyomi": [
+        "セツ (setsu)"
+      ],
+      "kunyomi": [
+        "き(る)"
+      ],
+      "meaningVi": "Cắt.",
+      "commonWords": [
+        {
+          "word": "切ります",
+          "furigana": "きります",
+          "meaningVi": "Cắt"
+        },
+        {
+          "word": "大切",
+          "furigana": "たいせつ",
+          "meaningVi": "Quan trọng"
+        },
+        {
+          "word": "切手",
+          "furigana": "きって",
+          "meaningVi": "Tem thư"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n4-l42-s1",
+      "slideType": "grammar",
+      "title": "1. Mục đích với động từ Ý CHÍ: N/V(từ điển) の ために",
+      "grammarFormula": "N + の + ために 　　V(từ điển) + ために   (dùng với động từ TỰ CHỦ điều khiển được: 貯める, 働く, 勉強する)",
+      "explanation": "ために đối lập với ように (bài 36, dùng cho động từ VÔ Ý CHÍ như 聞こえる/分かる) — ために CHỈ dùng khi người nói TỰ CHỌN thực hiện hành động để đạt mục đích.",
+      "teacherTips": "Mẹo phân biệt nhanh với ように (bài 36): thử tự hỏi ai đó có thể TỰ QUYẾT ĐỊNH làm/không làm hành động này không — nếu có, dùng ために.",
+      "culturalNotes": "お金持ちになるために、毎日働きます phản ánh tinh thần cần cù, có mục tiêu rõ ràng thường thấy trong văn hóa làm việc Nhật.",
+      "examples": [
+        {
+          "id": "ex-n4-l42-s1-1",
+          "tokens": [
+            {
+              "id": "t-l42s1-1",
+              "text": "りゅうがく",
+              "isKeyGrammar": true,
+              "kanji": "留学",
+              "furigana": "りゅうがく"
+            },
+            {
+              "id": "t-l42s1-2",
+              "text": "の",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l42s1-3",
+              "text": "ために",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l42s1-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l42s1-5",
+              "text": "おかね",
+              "isKeyGrammar": false,
+              "kanji": "お金",
+              "furigana": "おかね"
+            },
+            {
+              "id": "t-l42s1-6",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l42s1-7",
+              "text": "ためて",
+              "isKeyGrammar": false,
+              "kanji": "貯めて",
+              "furigana": "ためて"
+            },
+            {
+              "id": "t-l42s1-8",
+              "text": "います",
+              "isKeyGrammar": false,
+              "kanji": "居ます",
+              "furigana": "います"
+            }
+          ],
+          "meaningVi": "Để đi du học, tôi đang để dành tiền."
+        },
+        {
+          "id": "ex-n4-l42-s1-2",
+          "tokens": [
+            {
+              "id": "t-l42s1-9",
+              "text": "けんこう",
+              "isKeyGrammar": true,
+              "kanji": "健康",
+              "furigana": "けんこう"
+            },
+            {
+              "id": "t-l42s1-10",
+              "text": "の",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l42s1-11",
+              "text": "ために",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l42s1-12",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l42s1-13",
+              "text": "うんどう",
+              "isKeyGrammar": false,
+              "kanji": "運動",
+              "furigana": "うんどう"
+            },
+            {
+              "id": "t-l42s1-14",
+              "text": "します",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Để (giữ) sức khỏe, tôi tập thể dục."
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l42-s2",
+      "slideType": "grammar",
+      "title": "2. Dùng vào việc gì: N は [Vる] のに 使います／役に立ちます",
+      "grammarFormula": "N + は + V(từ điển) + の + に + 使います／役に立ちます",
+      "explanation": "のに ở đây KHÁC HẲN のに mang nghĩa 'mặc dù' (sẽ học ở bài 45) — đây là の (danh từ hóa, N4 bài 38) + に (mục đích) ghép lại, hỏi/trả lời một VẬT dùng để LÀM GÌ.",
+      "teacherTips": "Câu hỏi tương ứng: 「これは 何に 使いますか」 (cái này dùng để làm gì) — 何 thay cho cả cụm V+の.",
+      "culturalNotes": "この道具は何に使いますか là câu hỏi rất tự nhiên khi thấy một vật dụng lạ, đặc biệt phổ biến khi mua đồ ở Nhật.",
+      "examples": [
+        {
+          "id": "ex-n4-l42-s2-1",
+          "tokens": [
+            {
+              "id": "t-l42s2-1",
+              "text": "はさみ",
+              "isKeyGrammar": true,
+              "kanji": "鋏",
+              "furigana": "はさみ"
+            },
+            {
+              "id": "t-l42s2-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l42s2-3",
+              "text": "かみ",
+              "isKeyGrammar": false,
+              "kanji": "紙",
+              "furigana": "かみ"
+            },
+            {
+              "id": "t-l42s2-4",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l42s2-5",
+              "text": "きる",
+              "isKeyGrammar": false,
+              "kanji": "切る",
+              "furigana": "きる"
+            },
+            {
+              "id": "t-l42s2-6",
+              "text": "の",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l42s2-7",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l42s2-8",
+              "text": "つかいます",
+              "isKeyGrammar": true,
+              "kanji": "使います",
+              "furigana": "つかいます"
+            }
+          ],
+          "meaningVi": "Kéo dùng để cắt giấy."
+        },
+        {
+          "id": "ex-n4-l42-s2-2",
+          "tokens": [
+            {
+              "id": "t-l42s2-9",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l42s2-10",
+              "text": "どうぐ",
+              "isKeyGrammar": true,
+              "kanji": "道具",
+              "furigana": "どうぐ"
+            },
+            {
+              "id": "t-l42s2-11",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l42s2-12",
+              "text": "りょうり",
+              "isKeyGrammar": false,
+              "kanji": "料理",
+              "furigana": "りょうり"
+            },
+            {
+              "id": "t-l42s2-13",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l42s2-14",
+              "text": "つくる",
+              "isKeyGrammar": false,
+              "kanji": "作る",
+              "furigana": "つくる"
+            },
+            {
+              "id": "t-l42s2-15",
+              "text": "の",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l42s2-16",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l42s2-17",
+              "text": "やくに",
+              "isKeyGrammar": false,
+              "kanji": "役に",
+              "furigana": "やくに"
+            },
+            {
+              "id": "t-l42s2-18",
+              "text": "たちます",
+              "isKeyGrammar": true,
+              "kanji": "立ちます",
+              "furigana": "たちます"
+            }
+          ],
+          "meaningVi": "Dụng cụ này hữu ích để nấu ăn."
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l42-s3",
+      "slideType": "grammar",
+      "title": "3. So sánh ために và のに (mục đích)",
+      "grammarFormula": "ために: [MỤC ĐÍCH]、[hành động để ĐẠT mục đích đó]　vs　のに: [VẬT]は [MỤC ĐÍCH]の に [công dụng của vật]",
+      "explanation": "ために đặt MỤC ĐÍCH lên trước, hành động theo sau; のに (mục đích) mô tả CÔNG DỤNG của một VẬT/PHƯƠNG TIỆN cụ thể — hai chiều nhìn khác nhau của cùng khái niệm 'mục đích'.",
+      "teacherTips": "ために trả lời câu hỏi 'LÀM ĐỂ LÀM GÌ'; のに trả lời câu hỏi 'VẬT NÀY DÙNG ĐỂ LÀM GÌ' — chủ ngữ của hai cấu trúc khác hẳn nhau.",
+      "culturalNotes": "Cả hai cấu trúc đều rất phổ biến trong hướng dẫn sử dụng sản phẩm và bài luận về mục tiêu cá nhân ở Nhật.",
+      "examples": [
+        {
+          "id": "ex-n4-l42-s3-1",
+          "tokens": [
+            {
+              "id": "t-l42s3-1",
+              "text": "しけん",
+              "isKeyGrammar": true,
+              "kanji": "試験",
+              "furigana": "しけん"
+            },
+            {
+              "id": "t-l42s3-2",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l42s3-3",
+              "text": "ごうかく",
+              "isKeyGrammar": false,
+              "kanji": "合格",
+              "furigana": "ごうかく"
+            },
+            {
+              "id": "t-l42s3-4",
+              "text": "する",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l42s3-5",
+              "text": "ために",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l42s3-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l42s3-7",
+              "text": "べんきょう",
+              "isKeyGrammar": false,
+              "kanji": "勉強",
+              "furigana": "べんきょう"
+            },
+            {
+              "id": "t-l42s3-8",
+              "text": "して",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l42s3-9",
+              "text": "います",
+              "isKeyGrammar": false,
+              "kanji": "居ます",
+              "furigana": "います"
+            }
+          ],
+          "meaningVi": "Để đậu kỳ thi, tôi đang học bài. (ために: mục đích → hành động)"
+        },
+        {
+          "id": "ex-n4-l42-s3-2",
+          "tokens": [
+            {
+              "id": "t-l42s3-10",
+              "text": "じしょ",
+              "isKeyGrammar": true,
+              "kanji": "辞書",
+              "furigana": "じしょ"
+            },
+            {
+              "id": "t-l42s3-11",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l42s3-12",
+              "text": "ことば",
+              "isKeyGrammar": false,
+              "kanji": "言葉",
+              "furigana": "ことば"
+            },
+            {
+              "id": "t-l42s3-13",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l42s3-14",
+              "text": "しらべる",
+              "isKeyGrammar": false,
+              "kanji": "調べる",
+              "furigana": "しらべる"
+            },
+            {
+              "id": "t-l42s3-15",
+              "text": "の",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l42s3-16",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l42s3-17",
+              "text": "つかいます",
+              "isKeyGrammar": true,
+              "kanji": "使います",
+              "furigana": "つかいます"
+            }
+          ],
+          "meaningVi": "Từ điển dùng để tra từ. (のに: vật → công dụng)"
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l42-s4",
+      "slideType": "grammar",
+      "title": "4. Ba cấu trúc mục đích: ように (b36) / ために / のに — chọn đúng theo ngữ cảnh",
+      "grammarFormula": "ように: động từ VÔ Ý CHÍ 　ために: mục đích CÓ Ý CHÍ, hành động hướng tới 　のに: CÔNG DỤNG của vật/phương tiện",
+      "explanation": "Ba cấu trúc đều dịch gần giống 'để' trong tiếng Việt nhưng áp dụng cho BA TÌNH HUỐNG khác nhau rõ rệt — chọn sai sẽ khiến câu nghe ngược nghĩa hoặc kỳ lạ với người bản xứ.",
+      "teacherTips": "Kiểm tra nhanh: chủ ngữ là NGƯỜI muốn đạt mục tiêu → ために; chủ ngữ là VẬT/CÔNG CỤ có công dụng → のに; động từ không tự chủ (nghe/thấy/hiểu/quên) → ように.",
+      "culturalNotes": "Ba cấu trúc này thường xuất hiện cùng nhau trong một đoạn văn khi người viết vừa nói mục tiêu cá nhân vừa mô tả công cụ hỗ trợ.",
+      "examples": [
+        {
+          "id": "ex-n4-l42-s4-1",
+          "tokens": [
+            {
+              "id": "t-l42s4-1",
+              "text": "だいがく",
+              "isKeyGrammar": true,
+              "kanji": "大学",
+              "furigana": "だいがく"
+            },
+            {
+              "id": "t-l42s4-2",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l42s4-3",
+              "text": "はいる",
+              "isKeyGrammar": false,
+              "kanji": "入る",
+              "furigana": "はいる"
+            },
+            {
+              "id": "t-l42s4-4",
+              "text": "ために",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l42s4-5",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l42s4-6",
+              "text": "がんばって",
+              "isKeyGrammar": false,
+              "kanji": "頑張って",
+              "furigana": "がんばって"
+            },
+            {
+              "id": "t-l42s4-7",
+              "text": "います",
+              "isKeyGrammar": false,
+              "kanji": "居ます",
+              "furigana": "います"
+            }
+          ],
+          "meaningVi": "Để vào được đại học, tôi đang cố gắng. (ため: mục đích có ý chí)"
+        },
+        {
+          "id": "ex-n4-l42-s4-2",
+          "tokens": [
+            {
+              "id": "t-l42s4-8",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l42s4-9",
+              "text": "アプリ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l42s4-10",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l42s4-11",
+              "text": "じかん",
+              "isKeyGrammar": true,
+              "kanji": "時間",
+              "furigana": "じかん"
+            },
+            {
+              "id": "t-l42s4-12",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l42s4-13",
+              "text": "かんりする",
+              "isKeyGrammar": false,
+              "kanji": "管理する",
+              "furigana": "かんりする"
+            },
+            {
+              "id": "t-l42s4-14",
+              "text": "の",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l42s4-15",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l42s4-16",
+              "text": "べんり",
+              "isKeyGrammar": true,
+              "kanji": "便利",
+              "furigana": "べんり"
+            },
+            {
+              "id": "t-l42s4-17",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Ứng dụng này tiện lợi để quản lý thời gian. (のに: công dụng)"
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n4-42-1",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l42-1",
+          "text": "山田さん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-2",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-3",
+          "text": "どうして",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-4",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-5",
+          "text": "まいにち",
+          "isKeyGrammar": false,
+          "kanji": "毎日",
+          "furigana": "まいにち"
+        },
+        {
+          "id": "d-l42-6",
+          "text": "べんきょう",
+          "isKeyGrammar": true,
+          "kanji": "勉強",
+          "furigana": "べんきょう"
+        },
+        {
+          "id": "d-l42-7",
+          "text": "して",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l42-8",
+          "text": "いる",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l42-9",
+          "text": "んです",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l42-10",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Anh Yamada sao lại học mỗi ngày vậy?"
+    },
+    {
+      "id": "dia-n4-42-2",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l42-11",
+          "text": "りゅうがく",
+          "isKeyGrammar": true,
+          "kanji": "留学",
+          "furigana": "りゅうがく"
+        },
+        {
+          "id": "d-l42-12",
+          "text": "の",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l42-13",
+          "text": "ために",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l42-14",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-15",
+          "text": "しけん",
+          "isKeyGrammar": true,
+          "kanji": "試験",
+          "furigana": "しけん"
+        },
+        {
+          "id": "d-l42-16",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-17",
+          "text": "ごうかく",
+          "isKeyGrammar": true,
+          "kanji": "合格",
+          "furigana": "ごうかく"
+        },
+        {
+          "id": "d-l42-18",
+          "text": "したい",
+          "isKeyGrammar": false,
+          "kanji": "したい",
+          "furigana": "したい"
+        },
+        {
+          "id": "d-l42-19",
+          "text": "んです",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Để đi du học, tôi muốn đậu kỳ thi."
+    },
+    {
+      "id": "dia-n4-42-3",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l42-20",
+          "text": "すごい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-21",
+          "text": "ですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-22",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-23",
+          "text": "その",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-24",
+          "text": "どうぐ",
+          "isKeyGrammar": true,
+          "kanji": "道具",
+          "furigana": "どうぐ"
+        },
+        {
+          "id": "d-l42-25",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-26",
+          "text": "なに",
+          "isKeyGrammar": false,
+          "kanji": "何",
+          "furigana": "なに"
+        },
+        {
+          "id": "d-l42-27",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-28",
+          "text": "つかいます",
+          "isKeyGrammar": true,
+          "kanji": "使います",
+          "furigana": "つかいます"
+        },
+        {
+          "id": "d-l42-29",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Giỏi thật đấy. Cái dụng cụ đó dùng để làm gì vậy?"
+    },
+    {
+      "id": "dia-n4-42-4",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l42-30",
+          "text": "これ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-31",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-32",
+          "text": "たんご",
+          "isKeyGrammar": false,
+          "kanji": "単語",
+          "furigana": "たんご"
+        },
+        {
+          "id": "d-l42-33",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-34",
+          "text": "おぼえる",
+          "isKeyGrammar": false,
+          "kanji": "覚える",
+          "furigana": "おぼえる"
+        },
+        {
+          "id": "d-l42-35",
+          "text": "の",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l42-36",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-37",
+          "text": "つかいます",
+          "isKeyGrammar": true,
+          "kanji": "使います",
+          "furigana": "つかいます"
+        }
+      ],
+      "meaningVi": "Cái này dùng để ghi nhớ từ vựng."
+    },
+    {
+      "id": "dia-n4-42-5",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l42-38",
+          "text": "やくに",
+          "isKeyGrammar": false,
+          "kanji": "役に",
+          "furigana": "やくに"
+        },
+        {
+          "id": "d-l42-39",
+          "text": "たちますか",
+          "isKeyGrammar": true,
+          "kanji": "立ちますか",
+          "furigana": "たちますか"
+        }
+      ],
+      "meaningVi": "Có hữu ích không?"
+    },
+    {
+      "id": "dia-n4-42-6",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l42-40",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-41",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-42",
+          "text": "とても",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-43",
+          "text": "べんり",
+          "isKeyGrammar": true,
+          "kanji": "便利",
+          "furigana": "べんり"
+        },
+        {
+          "id": "d-l42-44",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-45",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-46",
+          "text": "しょうらい",
+          "isKeyGrammar": true,
+          "kanji": "将来",
+          "furigana": "しょうらい"
+        },
+        {
+          "id": "d-l42-47",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-48",
+          "text": "ために",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l42-49",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-50",
+          "text": "まいにち",
+          "isKeyGrammar": false,
+          "kanji": "毎日",
+          "furigana": "まいにち"
+        },
+        {
+          "id": "d-l42-51",
+          "text": "つかって",
+          "isKeyGrammar": false,
+          "kanji": "使って",
+          "furigana": "つかって"
+        },
+        {
+          "id": "d-l42-52",
+          "text": "います",
+          "isKeyGrammar": false,
+          "kanji": "居ます",
+          "furigana": "います"
+        }
+      ],
+      "meaningVi": "Vâng, rất tiện lợi. Vì tương lai, tôi dùng nó mỗi ngày."
+    },
+    {
+      "id": "dia-n4-42-7",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l42-53",
+          "text": "わたし",
+          "isKeyGrammar": false,
+          "kanji": "私",
+          "furigana": "わたし"
+        },
+        {
+          "id": "d-l42-54",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-55",
+          "text": "おかねもち",
+          "isKeyGrammar": true,
+          "kanji": "お金持ち",
+          "furigana": "おかねもち"
+        },
+        {
+          "id": "d-l42-56",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-57",
+          "text": "なる",
+          "isKeyGrammar": false,
+          "kanji": "成る",
+          "furigana": "なる"
+        },
+        {
+          "id": "d-l42-58",
+          "text": "ために",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l42-59",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-60",
+          "text": "がんばって",
+          "isKeyGrammar": false,
+          "kanji": "頑張って",
+          "furigana": "がんばって"
+        },
+        {
+          "id": "d-l42-61",
+          "text": "はたらいて",
+          "isKeyGrammar": false,
+          "kanji": "働いて",
+          "furigana": "はたらいて"
+        },
+        {
+          "id": "d-l42-62",
+          "text": "います",
+          "isKeyGrammar": false,
+          "kanji": "居ます",
+          "furigana": "います"
+        }
+      ],
+      "meaningVi": "Tôi cũng đang làm việc chăm chỉ để trở thành người giàu có."
+    },
+    {
+      "id": "dia-n4-42-8",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l42-63",
+          "text": "いいですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-64",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-65",
+          "text": "おかね",
+          "isKeyGrammar": true,
+          "kanji": "お金",
+          "furigana": "おかね"
+        },
+        {
+          "id": "d-l42-66",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-67",
+          "text": "ためて",
+          "isKeyGrammar": false,
+          "kanji": "貯めて",
+          "furigana": "ためて"
+        },
+        {
+          "id": "d-l42-68",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-69",
+          "text": "なに",
+          "isKeyGrammar": false,
+          "kanji": "何",
+          "furigana": "なに"
+        },
+        {
+          "id": "d-l42-70",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-71",
+          "text": "したい",
+          "isKeyGrammar": false,
+          "kanji": "したい",
+          "furigana": "したい"
+        },
+        {
+          "id": "d-l42-72",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Hay đó. Để dành tiền rồi, anh muốn làm gì?"
+    },
+    {
+      "id": "dia-n4-42-9",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l42-73",
+          "text": "だいがく",
+          "isKeyGrammar": false,
+          "kanji": "大学",
+          "furigana": "だいがく"
+        },
+        {
+          "id": "d-l42-74",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-75",
+          "text": "はいる",
+          "isKeyGrammar": false,
+          "kanji": "入る",
+          "furigana": "はいる"
+        },
+        {
+          "id": "d-l42-76",
+          "text": "こども",
+          "isKeyGrammar": false,
+          "kanji": "子供",
+          "furigana": "こども"
+        },
+        {
+          "id": "d-l42-77",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-78",
+          "text": "ために",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l42-79",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-80",
+          "text": "つかいたい",
+          "isKeyGrammar": false,
+          "kanji": "使いたい",
+          "furigana": "つかいたい"
+        },
+        {
+          "id": "d-l42-81",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Tôi muốn dùng cho con vào đại học."
+    },
+    {
+      "id": "dia-n4-42-10",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l42-82",
+          "text": "すばらしい",
+          "isKeyGrammar": false,
+          "kanji": "素晴らしい",
+          "furigana": "すばらしい"
+        },
+        {
+          "id": "d-l42-83",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-84",
+          "text": "ね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-85",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l42-86",
+          "text": "がんばりましょう",
+          "isKeyGrammar": false,
+          "kanji": "頑張りましょう",
+          "furigana": "がんばりましょう"
+        }
+      ],
+      "meaningVi": "Tuyệt vời quá. Cùng cố gắng nhé."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n4-42-1",
+      "question": "「留学のために、お金を貯めています」 — ために dùng vì động từ 貯める thuộc loại nào?",
+      "options": [
+        "Động từ Ý CHÍ (tự mình quyết định thực hiện được)",
+        "Động từ VÔ Ý CHÍ (không tự chủ)",
+        "Không phải động từ",
+        "Cả hai loại đều được"
+      ],
+      "correctIndex": 0,
+      "explanation": "ために CHỈ dùng với động từ Ý CHÍ — người nói TỰ QUYẾT ĐỊNH thực hiện hành động (貯める: để dành, tự chủ được).",
+      "hint": "So sánh với ように (bài 36) dùng cho động từ vô ý chí."
+    },
+    {
+      "id": "ex-q-n4-42-2",
+      "question": "「はさみは紙を切るのに使います」 — のに ở đây khác のに (mặc dù) sẽ học ở bài 45 vì:",
+      "options": [
+        "Đây là の (danh từ hóa) + に (mục đích), không mang nghĩa nhượng bộ 'mặc dù'",
+        "Hoàn toàn giống nhau, cùng một のに",
+        "のに ở đây là lỗi chính tả",
+        "のに chỉ có một nghĩa duy nhất"
+      ],
+      "correctIndex": 0,
+      "explanation": "のに ở bài này là ghép の (N4 bài 38, danh từ hóa) + に (mục đích) — khác hẳn のに nhượng bộ ('mặc dù') sẽ học riêng ở bài 45.",
+      "hint": "Đây là hai のに khác nhau hoàn toàn về cấu tạo và nghĩa."
+    },
+    {
+      "id": "ex-q-n4-42-3",
+      "question": "「この道具は何に使いますか」 dùng để hỏi:",
+      "options": [
+        "Công dụng của một vật/dụng cụ",
+        "Ai đã mua dụng cụ đó",
+        "Giá của dụng cụ đó",
+        "Dụng cụ đó ở đâu"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đây là câu hỏi chuẩn về CÔNG DỤNG, dùng 何 thay cho cụm [V+の] trong cấu trúc のに.",
+      "hint": "Xem mẫu câu hỏi ở slide 2."
+    },
+    {
+      "id": "ex-q-n4-42-4",
+      "question": "ために và のに (mục đích) khác nhau ở CHỦ NGỮ chính của câu:",
+      "options": [
+        "ために: chủ ngữ là NGƯỜI có mục tiêu; のに: chủ ngữ là VẬT/CÔNG CỤ có công dụng",
+        "Hoàn toàn giống nhau về chủ ngữ",
+        "ために chỉ dùng cho vật",
+        "のに chỉ dùng cho người"
+      ],
+      "correctIndex": 0,
+      "explanation": "ために đặt mục đích của một NGƯỜI trước hành động của họ; のに mô tả một VẬT dùng để làm gì.",
+      "hint": "Xem so sánh trực tiếp ở slide 3."
+    },
+    {
+      "id": "ex-q-n4-42-5",
+      "question": "「健康のために、運動します」 nghĩa là:",
+      "options": [
+        "Để (giữ) sức khỏe, tôi tập thể dục",
+        "Vì sức khỏe kém nên tôi không tập thể dục",
+        "Sức khỏe của tôi rất tốt",
+        "Tập thể dục có hại cho sức khỏe"
+      ],
+      "correctIndex": 0,
+      "explanation": "健康のために diễn tả MỤC ĐÍCH (để có sức khỏe tốt) của hành động tập thể dục.",
+      "hint": "Áp dụng đúng cấu trúc N+の+ために."
+    },
+    {
+      "id": "ex-q-n4-42-6",
+      "question": "Ba cấu trúc mục đích ように/ために/のに khác nhau chủ yếu ở:",
+      "options": [
+        "Loại động từ (vô ý chí/có ý chí) và chủ ngữ (người có mục tiêu/vật có công dụng)",
+        "Hoàn toàn giống nhau, dùng thay thế tự do",
+        "ように chỉ dùng cho câu hỏi",
+        "のに chỉ dùng cho câu phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ba cấu trúc áp dụng cho ba tình huống khác nhau: ように (động từ vô ý chí, bài 36), ために (mục đích có ý chí), のに (công dụng của vật).",
+      "hint": "Xem bảng tổng kết ở slide 4."
+    },
+    {
+      "id": "ex-q-n4-42-7",
+      "question": "Câu nào ĐÚNG khi nói 'từ điển dùng để tra từ'?",
+      "options": [
+        "辞書は言葉を調べるのに使います",
+        "辞書は言葉を調べるために使います",
+        "辞書は言葉を調べるように使います",
+        "辞書は言葉を調べることに使います"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đây là câu mô tả CÔNG DỤNG của một vật (từ điển), nên dùng のに, không dùng ために (dành cho mục đích của người).",
+      "hint": "Xác định chủ ngữ là VẬT hay NGƯỜI."
+    },
+    {
+      "id": "ex-q-n4-42-8",
+      "question": "「大学に入るために、頑張っています」 — vì sao KHÔNG dùng のに ở đây?",
+      "options": [
+        "Chủ ngữ là NGƯỜI đang cố gắng đạt mục tiêu (vào đại học), không phải vật có công dụng",
+        "のに mới đúng, ために sai",
+        "Cả hai đều sai, phải dùng ように",
+        "Không có lý do gì đặc biệt"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đây là mục đích của một NGƯỜI (tôi muốn vào đại học) → dùng ために, không dùng のに (dành cho công dụng vật).",
+      "hint": "Phân biệt theo chủ ngữ như đã học ở slide 3."
+    },
+    {
+      "id": "ex-q-n4-42-9",
+      "question": "Trong hội thoại, Yamada học chăm chỉ để làm gì?",
+      "options": [
+        "Để đậu kỳ thi đi du học",
+        "Để được thăng chức",
+        "Để thi lấy bằng lái xe",
+        "Không có lý do cụ thể"
+      ],
+      "correctIndex": 0,
+      "explanation": "Yamada nói 「留学のために、試験に合格したいんです」.",
+      "hint": "Xem câu thoại thứ 2."
+    },
+    {
+      "id": "ex-q-n4-42-10",
+      "question": "Tanaka để dành tiền để làm gì?",
+      "options": [
+        "Để dùng cho con vào đại học",
+        "Để đi du lịch",
+        "Để mua nhà",
+        "Để nghỉ hưu sớm"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tanaka nói 「大学に入る子供のために、使いたいです」.",
+      "hint": "Xem câu thoại thứ 9."
+    }
+  ]
+}

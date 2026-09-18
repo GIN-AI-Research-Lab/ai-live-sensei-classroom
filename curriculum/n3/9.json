@@ -1,0 +1,1362 @@
+{
+  "level": "N3",
+  "lessonNumber": 9,
+  "title": "Bài 9: Xu hướng & Khởi đầu (〜かける & 〜がち & 〜気味)",
+  "description": "がち diễn tả XU HƯỚNG thường xuyên xảy ra, mang sắc thái tiêu cực (hay đi trễ, hay quên); 気味 diễn tả CẢM GIÁC nhẹ, chủ quan về một trạng thái hiện tại (hơi mệt, hơi thiếu ngủ); かける gắn sau V-stem diễn tả một hành động ĐÃ BẮT ĐẦU nhưng CHƯA HOÀN THÀNH, bị gián đoạn giữa chừng.",
+  "vocabList": [
+    {
+      "id": "voc-n3-9-1",
+      "word": "がち",
+      "kanji": "〜がち",
+      "furigana": "がち",
+      "romaji": "gachi",
+      "wordType": "expression",
+      "meaningVi": "Hay có xu hướng, thường xuyên (thường mang sắc thái tiêu cực)",
+      "accentNote": "遅刻がちです = hay đi trễ."
+    },
+    {
+      "id": "voc-n3-9-2",
+      "word": "ぎみ",
+      "kanji": "気味",
+      "furigana": "ぎみ",
+      "romaji": "gimi",
+      "wordType": "expression",
+      "meaningVi": "Có vẻ hơi, dấu hiệu nhẹ của (chủ quan)",
+      "accentNote": "疲れ気味です = có vẻ hơi mệt."
+    },
+    {
+      "id": "voc-n3-9-3",
+      "word": "かけます",
+      "kanji": "掛けます",
+      "furigana": "かけます",
+      "romaji": "kakemasu",
+      "wordType": "verb",
+      "meaningVi": "Bắt đầu làm dở, chưa hoàn thành (gắn sau V-stem)",
+      "accentNote": "食べかけの パン = bánh mì ăn dở."
+    },
+    {
+      "id": "voc-n3-9-4",
+      "word": "けっせきします",
+      "kanji": "欠席します",
+      "furigana": "けっせきします",
+      "romaji": "kesseki shimasu",
+      "wordType": "verb",
+      "meaningVi": "Vắng mặt, nghỉ (học/họp)",
+      "accentNote": "学校を 欠席します = nghỉ học."
+    },
+    {
+      "id": "voc-n3-9-5",
+      "word": "けんこう",
+      "kanji": "健康",
+      "furigana": "けんこう",
+      "romaji": "kenkou",
+      "wordType": "noun",
+      "meaningVi": "Sức khỏe",
+      "accentNote": "健康の ために = vì mục đích sức khỏe."
+    },
+    {
+      "id": "voc-n3-9-6",
+      "word": "ちこくします",
+      "kanji": "遅刻します",
+      "furigana": "ちこくします",
+      "romaji": "chikoku shimasu",
+      "wordType": "verb",
+      "meaningVi": "Đi trễ, đến muộn",
+      "accentNote": "会社に 遅刻します = đi trễ đến công ty."
+    },
+    {
+      "id": "voc-n3-9-7",
+      "word": "つかれ",
+      "kanji": "疲れ",
+      "furigana": "つかれ",
+      "romaji": "tsukare",
+      "wordType": "noun",
+      "meaningVi": "Sự mệt mỏi",
+      "accentNote": "疲れが たまります = tích tụ mệt mỏi."
+    },
+    {
+      "id": "voc-n3-9-8",
+      "word": "けいこう",
+      "kanji": "傾向",
+      "furigana": "けいこう",
+      "romaji": "keikou",
+      "wordType": "noun",
+      "meaningVi": "Xu hướng, khuynh hướng",
+      "accentNote": "太る 傾向が あります = có xu hướng béo lên."
+    },
+    {
+      "id": "voc-n3-9-9",
+      "word": "ふそく",
+      "kanji": "不足",
+      "furigana": "ふそく",
+      "romaji": "fusoku",
+      "wordType": "noun",
+      "meaningVi": "Sự thiếu hụt, thiếu",
+      "accentNote": "睡眠 不足 = thiếu ngủ."
+    },
+    {
+      "id": "voc-n3-9-10",
+      "word": "すいみん",
+      "kanji": "睡眠",
+      "furigana": "すいみん",
+      "romaji": "suimin",
+      "wordType": "noun",
+      "meaningVi": "Giấc ngủ",
+      "accentNote": "睡眠 時間 = thời gian ngủ."
+    },
+    {
+      "id": "voc-n3-9-11",
+      "word": "あきます",
+      "kanji": "飽きます",
+      "furigana": "あきます",
+      "romaji": "akimasu",
+      "wordType": "verb",
+      "meaningVi": "Chán, mất hứng thú",
+      "accentNote": "仕事に 飽きます = chán công việc."
+    },
+    {
+      "id": "voc-n3-9-12",
+      "word": "えいよう",
+      "kanji": "栄養",
+      "furigana": "えいよう",
+      "romaji": "eiyou",
+      "wordType": "noun",
+      "meaningVi": "Dinh dưỡng",
+      "accentNote": "栄養が 足りません = thiếu dinh dưỡng."
+    },
+    {
+      "id": "voc-n3-9-13",
+      "word": "やすみます",
+      "kanji": "休みます",
+      "furigana": "やすみます",
+      "romaji": "yasumimasu",
+      "wordType": "verb",
+      "meaningVi": "Nghỉ",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n3-9-14",
+      "word": "わすれます",
+      "kanji": "忘れます",
+      "furigana": "わすれます",
+      "romaji": "wasuremasu",
+      "wordType": "verb",
+      "meaningVi": "Quên",
+      "accentNote": "Đã gặp N4 bài 38."
+    },
+    {
+      "id": "voc-n3-9-15",
+      "word": "いそがしい",
+      "kanji": "忙しい",
+      "furigana": "いそがしい",
+      "romaji": "isogashii",
+      "wordType": "adjective",
+      "meaningVi": "Bận rộn",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n3-9-16",
+      "word": "たべます",
+      "kanji": "食べます",
+      "furigana": "たべます",
+      "romaji": "tabemasu",
+      "wordType": "verb",
+      "meaningVi": "Ăn",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n3-9-17",
+      "word": "いいます",
+      "kanji": "言います",
+      "furigana": "いいます",
+      "romaji": "iimasu",
+      "wordType": "verb",
+      "meaningVi": "Nói",
+      "accentNote": "Đã gặp N5 bài 6."
+    },
+    {
+      "id": "voc-n3-9-18",
+      "word": "やめます",
+      "kanji": "止めます",
+      "furigana": "やめます",
+      "romaji": "yamemasu",
+      "wordType": "verb",
+      "meaningVi": "Dừng lại, từ bỏ",
+      "accentNote": "Đã gặp N4 bài 33."
+    },
+    {
+      "id": "voc-n3-9-19",
+      "word": "さいきん",
+      "kanji": "最近",
+      "furigana": "さいきん",
+      "romaji": "saikin",
+      "wordType": "noun",
+      "meaningVi": "Gần đây",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n3-9-20",
+      "word": "びょうき",
+      "kanji": "病気",
+      "furigana": "びょうき",
+      "romaji": "byouki",
+      "wordType": "noun",
+      "meaningVi": "Bệnh, ốm",
+      "accentNote": "Đã gặp N4 bài 26."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n3-9-1",
+      "character": "傾",
+      "hanViet": "KHUYNH",
+      "strokeCount": 13,
+      "onyomi": [
+        "ケイ (kei)"
+      ],
+      "kunyomi": [
+        "かたむ(く)"
+      ],
+      "meaningVi": "Nghiêng, có xu hướng.",
+      "commonWords": [
+        {
+          "word": "傾向",
+          "furigana": "けいこう",
+          "meaningVi": "Xu hướng"
+        },
+        {
+          "word": "傾く",
+          "furigana": "かたむく",
+          "meaningVi": "Nghiêng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-9-2",
+      "character": "疲",
+      "hanViet": "BÌ",
+      "strokeCount": 10,
+      "onyomi": [
+        "ヒ (hi)"
+      ],
+      "kunyomi": [
+        "つか(れる)"
+      ],
+      "meaningVi": "Mệt mỏi.",
+      "commonWords": [
+        {
+          "word": "疲れ",
+          "furigana": "つかれ",
+          "meaningVi": "Sự mệt mỏi"
+        },
+        {
+          "word": "疲れます",
+          "furigana": "つかれます",
+          "meaningVi": "Mệt mỏi"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-9-3",
+      "character": "欠",
+      "hanViet": "KHIẾM",
+      "strokeCount": 4,
+      "onyomi": [
+        "ケツ (ketsu)"
+      ],
+      "kunyomi": [
+        "か(ける)",
+        "か(く)"
+      ],
+      "meaningVi": "Thiếu, vắng mặt.",
+      "commonWords": [
+        {
+          "word": "欠席",
+          "furigana": "けっせき",
+          "meaningVi": "Vắng mặt"
+        },
+        {
+          "word": "欠点",
+          "furigana": "けってん",
+          "meaningVi": "Khuyết điểm"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-9-4",
+      "character": "康",
+      "hanViet": "KHANG",
+      "strokeCount": 11,
+      "onyomi": [
+        "コウ (kou)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Khỏe mạnh, an khang.",
+      "commonWords": [
+        {
+          "word": "健康",
+          "furigana": "けんこう",
+          "meaningVi": "Sức khỏe"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-9-5",
+      "character": "睡",
+      "hanViet": "THỤY",
+      "strokeCount": 13,
+      "onyomi": [
+        "スイ (sui)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Ngủ.",
+      "commonWords": [
+        {
+          "word": "睡眠",
+          "furigana": "すいみん",
+          "meaningVi": "Giấc ngủ"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n3-l9-s1",
+      "slideType": "grammar",
+      "title": "1. Xu hướng thường xuyên (tiêu cực): V-stem/N + がち",
+      "grammarFormula": "V-stem/N + がち、[trạng thái]",
+      "explanation": "がち diễn tả một XU HƯỚNG THƯỜNG XUYÊN xảy ra, thường mang sắc thái TIÊU CỰC hoặc không mong muốn — nhấn mạnh tần suất cao của một việc không tốt (đi trễ, nghỉ học, quên...).",
+      "teacherTips": "がち thường đi với các từ tiêu cực: 病気がち (hay ốm), 休みがち (hay nghỉ), 忘れがち (hay quên).",
+      "culturalNotes": "Bác sĩ Nhật hay hỏi bệnh nhân: '最近、疲れがちですか' (gần đây bạn có hay mệt mỏi không).",
+      "examples": [
+        {
+          "id": "ex-n3-l9-s1-1",
+          "tokens": [
+            {
+              "id": "t-l9s1-1",
+              "text": "さいきん",
+              "isKeyGrammar": true,
+              "kanji": "最近",
+              "furigana": "さいきん"
+            },
+            {
+              "id": "t-l9s1-2",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s1-3",
+              "text": "ちこく",
+              "isKeyGrammar": true,
+              "kanji": "遅刻",
+              "furigana": "ちこく"
+            },
+            {
+              "id": "t-l9s1-4",
+              "text": "がち",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l9s1-5",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Gần đây, tôi hay đi trễ."
+        },
+        {
+          "id": "ex-n3-l9-s1-2",
+          "tokens": [
+            {
+              "id": "t-l9s1-6",
+              "text": "いそがしい",
+              "isKeyGrammar": false,
+              "kanji": "忙しい",
+              "furigana": "いそがしい"
+            },
+            {
+              "id": "t-l9s1-7",
+              "text": "とき",
+              "isKeyGrammar": false,
+              "kanji": "時",
+              "furigana": "とき"
+            },
+            {
+              "id": "t-l9s1-8",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s1-9",
+              "text": "しょくじ",
+              "isKeyGrammar": false,
+              "kanji": "食事",
+              "furigana": "しょくじ"
+            },
+            {
+              "id": "t-l9s1-10",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s1-11",
+              "text": "わすれ",
+              "isKeyGrammar": true,
+              "kanji": "忘れ",
+              "furigana": "わすれ"
+            },
+            {
+              "id": "t-l9s1-12",
+              "text": "がち",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l9s1-13",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Lúc bận rộn, tôi hay quên ăn."
+        }
+      ]
+    },
+    {
+      "slideId": "n3-l9-s2",
+      "slideType": "grammar",
+      "title": "2. Dấu hiệu nhẹ, cảm nhận chủ quan: N/V-stem + 気味",
+      "grammarFormula": "N/V-stem + 気味、[trạng thái]",
+      "explanation": "気味 diễn tả CÓ CHÚT dấu hiệu/cảm giác của một trạng thái nào đó — nhẹ hơn hẳn がち, thiên về CẢM NHẬN CHỦ QUAN của người nói về cơ thể/tâm trạng của chính mình.",
+      "teacherTips": "気味 nhấn CẢM GIÁC HIỆN TẠI của bản thân (nhẹ, chủ quan); がち nhấn TẦN SUẤT LẶP LẠI theo thời gian (khách quan hơn).",
+      "culturalNotes": "Ở phòng khám Nhật, phiếu khai bệnh hay có mục 'かぜ気味' (có vẻ hơi bị cảm) để mô tả triệu chứng nhẹ.",
+      "examples": [
+        {
+          "id": "ex-n3-l9-s2-1",
+          "tokens": [
+            {
+              "id": "t-l9s2-1",
+              "text": "さいきん",
+              "isKeyGrammar": true,
+              "kanji": "最近",
+              "furigana": "さいきん"
+            },
+            {
+              "id": "t-l9s2-2",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s2-3",
+              "text": "つかれ",
+              "isKeyGrammar": true,
+              "kanji": "疲れ",
+              "furigana": "つかれ"
+            },
+            {
+              "id": "t-l9s2-4",
+              "text": "ぎみ",
+              "isKeyGrammar": true,
+              "kanji": "気味",
+              "furigana": "ぎみ"
+            },
+            {
+              "id": "t-l9s2-5",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Gần đây, tôi có cảm giác hơi mệt."
+        },
+        {
+          "id": "ex-n3-l9-s2-2",
+          "tokens": [
+            {
+              "id": "t-l9s2-6",
+              "text": "すいみん",
+              "isKeyGrammar": true,
+              "kanji": "睡眠",
+              "furigana": "すいみん"
+            },
+            {
+              "id": "t-l9s2-7",
+              "text": "ふそく",
+              "isKeyGrammar": true,
+              "kanji": "不足",
+              "furigana": "ふそく"
+            },
+            {
+              "id": "t-l9s2-8",
+              "text": "ぎみ",
+              "isKeyGrammar": true,
+              "kanji": "気味",
+              "furigana": "ぎみ"
+            },
+            {
+              "id": "t-l9s2-9",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Có vẻ tôi hơi thiếu ngủ."
+        }
+      ]
+    },
+    {
+      "slideId": "n3-l9-s3",
+      "slideType": "grammar",
+      "title": "3. Hành động dang dở: V-stem + かける",
+      "grammarFormula": "V-stem + かける/かけの/かけだ   (hành động BẮT ĐẦU nhưng CHƯA HOÀN THÀNH)",
+      "explanation": "かける gắn sau V-stem diễn tả một HÀNH ĐỘNG ĐÃ BẮT ĐẦU nhưng bị GIÁN ĐOẠN GIỮA CHỪNG, chưa hoàn thành — khác hẳn がち/気味 (nói về xu hướng/cảm giác lặp lại theo thời gian).",
+      "teacherTips": "V-stem+かけの+N (dạng bổ nghĩa danh từ): 食べかけのパン (bánh mì ăn dở), 読みかけの本 (sách đọc dở).",
+      "culturalNotes": "Câu 'ゲームをやりかけたまま寝てしまった' (chơi game dở rồi ngủ quên mất) rất phổ biến trong hội thoại đời thường Nhật.",
+      "examples": [
+        {
+          "id": "ex-n3-l9-s3-1",
+          "tokens": [
+            {
+              "id": "t-l9s3-1",
+              "text": "たべ",
+              "isKeyGrammar": true,
+              "kanji": "食べ",
+              "furigana": "たべ"
+            },
+            {
+              "id": "t-l9s3-2",
+              "text": "かけ",
+              "isKeyGrammar": true,
+              "kanji": "掛け",
+              "furigana": "かけ"
+            },
+            {
+              "id": "t-l9s3-3",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-4",
+              "text": "パン",
+              "isKeyGrammar": false,
+              "kanji": "パン",
+              "furigana": "パン"
+            },
+            {
+              "id": "t-l9s3-5",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-6",
+              "text": "あります",
+              "isKeyGrammar": false,
+              "kanji": "有ります",
+              "furigana": "あります"
+            }
+          ],
+          "meaningVi": "Có bánh mì ăn dở."
+        },
+        {
+          "id": "ex-n3-l9-s3-2",
+          "tokens": [
+            {
+              "id": "t-l9s3-7",
+              "text": "いい",
+              "isKeyGrammar": true,
+              "kanji": "言い",
+              "furigana": "いい"
+            },
+            {
+              "id": "t-l9s3-8",
+              "text": "かけて",
+              "isKeyGrammar": true,
+              "kanji": "掛けて",
+              "furigana": "かけて"
+            },
+            {
+              "id": "t-l9s3-9",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-10",
+              "text": "やめました",
+              "isKeyGrammar": false,
+              "kanji": "止めました",
+              "furigana": "やめました"
+            }
+          ],
+          "meaningVi": "Tôi định nói (nhưng nói dở) rồi đã dừng lại."
+        }
+      ]
+    },
+    {
+      "slideId": "n3-l9-s4",
+      "slideType": "grammar",
+      "title": "4. So sánh がち, 気味, かける",
+      "grammarFormula": "がち: xu hướng LẶP LẠI (khách quan, tiêu cực)　vs　気味: CẢM GIÁC nhẹ (chủ quan)　vs　かける: hành động DANG DỞ (một lần cụ thể)",
+      "explanation": "Ba cấu trúc dễ nhầm vì đều mô tả trạng thái 'chưa trọn vẹn', nhưng khác nhau về BẢN CHẤT: がち là XU HƯỚNG lặp đi lặp lại theo thời gian; 気味 là CẢM GIÁC hiện tại về cơ thể/tâm trạng; かける là HÀNH ĐỘNG cụ thể bị bỏ dở giữa chừng, không lặp lại.",
+      "teacherTips": "Mẹo phân biệt: 気味 trả lời 'CẢM THẤY thế nào'; がち trả lời 'THƯỜNG hay làm gì'; かける trả lời 'LÀM DỞ việc gì'.",
+      "culturalNotes": "Cả ba đều là điểm ngữ pháp N3 phổ biến trong đề đọc hiểu về sức khỏe, thói quen sinh hoạt.",
+      "examples": [
+        {
+          "id": "ex-n3-l9-s4-1",
+          "tokens": [
+            {
+              "id": "t-l9s4-1",
+              "text": "さいきん",
+              "isKeyGrammar": false,
+              "kanji": "最近",
+              "furigana": "さいきん"
+            },
+            {
+              "id": "t-l9s4-2",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-3",
+              "text": "つかれ",
+              "isKeyGrammar": true,
+              "kanji": "疲れ",
+              "furigana": "つかれ"
+            },
+            {
+              "id": "t-l9s4-4",
+              "text": "ぎみ",
+              "isKeyGrammar": true,
+              "kanji": "気味",
+              "furigana": "ぎみ"
+            },
+            {
+              "id": "t-l9s4-5",
+              "text": "で",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-7",
+              "text": "しごと",
+              "isKeyGrammar": false,
+              "kanji": "仕事",
+              "furigana": "しごと"
+            },
+            {
+              "id": "t-l9s4-8",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-9",
+              "text": "やすみ",
+              "isKeyGrammar": true,
+              "kanji": "休み",
+              "furigana": "やすみ"
+            },
+            {
+              "id": "t-l9s4-10",
+              "text": "がち",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l9s4-11",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Gần đây tôi hơi mệt (気味), nên hay nghỉ làm (がち)."
+        },
+        {
+          "id": "ex-n3-l9-s4-2",
+          "tokens": [
+            {
+              "id": "t-l9s4-12",
+              "text": "えいよう",
+              "isKeyGrammar": true,
+              "kanji": "栄養",
+              "furigana": "えいよう"
+            },
+            {
+              "id": "t-l9s4-13",
+              "text": "ふそく",
+              "isKeyGrammar": true,
+              "kanji": "不足",
+              "furigana": "ふそく"
+            },
+            {
+              "id": "t-l9s4-14",
+              "text": "で",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-15",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-16",
+              "text": "けんこう",
+              "isKeyGrammar": true,
+              "kanji": "健康",
+              "furigana": "けんこう"
+            },
+            {
+              "id": "t-l9s4-17",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-18",
+              "text": "くずし",
+              "isKeyGrammar": false,
+              "kanji": "崩し",
+              "furigana": "くずし"
+            },
+            {
+              "id": "t-l9s4-19",
+              "text": "がち",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l9s4-20",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Vì thiếu dinh dưỡng nên tôi hay bị suy yếu sức khỏe."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n3-9-1",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d9-1",
+          "text": "さいきん",
+          "isKeyGrammar": true,
+          "kanji": "最近",
+          "furigana": "さいきん"
+        },
+        {
+          "id": "d9-2",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-3",
+          "text": "つかれ",
+          "isKeyGrammar": true,
+          "kanji": "疲れ",
+          "furigana": "つかれ"
+        },
+        {
+          "id": "d9-4",
+          "text": "ぎみ",
+          "isKeyGrammar": true,
+          "kanji": "気味",
+          "furigana": "ぎみ"
+        },
+        {
+          "id": "d9-5",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d9-6",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Gần đây, có vẻ bạn hơi mệt nhỉ."
+    },
+    {
+      "id": "dia-n3-9-2",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d9-7",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-8",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-9",
+          "text": "すいみん",
+          "isKeyGrammar": true,
+          "kanji": "睡眠",
+          "furigana": "すいみん"
+        },
+        {
+          "id": "d9-10",
+          "text": "ふそく",
+          "isKeyGrammar": true,
+          "kanji": "不足",
+          "furigana": "ふそく"
+        },
+        {
+          "id": "d9-11",
+          "text": "ぎみ",
+          "isKeyGrammar": true,
+          "kanji": "気味",
+          "furigana": "ぎみ"
+        },
+        {
+          "id": "d9-12",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng, có vẻ tôi hơi thiếu ngủ."
+    },
+    {
+      "id": "dia-n3-9-3",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d9-13",
+          "text": "さいきん",
+          "isKeyGrammar": false,
+          "kanji": "最近",
+          "furigana": "さいきん"
+        },
+        {
+          "id": "d9-14",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-15",
+          "text": "ちこく",
+          "isKeyGrammar": true,
+          "kanji": "遅刻",
+          "furigana": "ちこく"
+        },
+        {
+          "id": "d9-16",
+          "text": "がち",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d9-17",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d9-18",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Gần đây, bạn hay đi trễ nhỉ."
+    },
+    {
+      "id": "dia-n3-9-4",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d9-19",
+          "text": "すみません",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-20",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-21",
+          "text": "しょくじ",
+          "isKeyGrammar": false,
+          "kanji": "食事",
+          "furigana": "しょくじ"
+        },
+        {
+          "id": "d9-22",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-23",
+          "text": "わすれ",
+          "isKeyGrammar": true,
+          "kanji": "忘れ",
+          "furigana": "わすれ"
+        },
+        {
+          "id": "d9-24",
+          "text": "がち",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d9-25",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Xin lỗi. Tôi cũng hay quên ăn nữa."
+    },
+    {
+      "id": "dia-n3-9-5",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d9-26",
+          "text": "けんこう",
+          "isKeyGrammar": true,
+          "kanji": "健康",
+          "furigana": "けんこう"
+        },
+        {
+          "id": "d9-27",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-28",
+          "text": "ために",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-29",
+          "text": "えいよう",
+          "isKeyGrammar": true,
+          "kanji": "栄養",
+          "furigana": "えいよう"
+        },
+        {
+          "id": "d9-30",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-31",
+          "text": "とった",
+          "isKeyGrammar": false,
+          "kanji": "取った",
+          "furigana": "とった"
+        },
+        {
+          "id": "d9-32",
+          "text": "ほうが",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-33",
+          "text": "いいです",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vì sức khỏe, bạn nên bổ sung dinh dưỡng đầy đủ."
+    },
+    {
+      "id": "dia-n3-9-6",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d9-34",
+          "text": "たべ",
+          "isKeyGrammar": true,
+          "kanji": "食べ",
+          "furigana": "たべ"
+        },
+        {
+          "id": "d9-35",
+          "text": "かけ",
+          "isKeyGrammar": true,
+          "kanji": "掛け",
+          "furigana": "かけ"
+        },
+        {
+          "id": "d9-36",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-37",
+          "text": "パン",
+          "isKeyGrammar": false,
+          "kanji": "パン",
+          "furigana": "パン"
+        },
+        {
+          "id": "d9-38",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-39",
+          "text": "つくえ",
+          "isKeyGrammar": false,
+          "kanji": "机",
+          "furigana": "つくえ"
+        },
+        {
+          "id": "d9-40",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-41",
+          "text": "あります",
+          "isKeyGrammar": false,
+          "kanji": "有ります",
+          "furigana": "あります"
+        }
+      ],
+      "meaningVi": "Có bánh mì tôi ăn dở trên bàn."
+    },
+    {
+      "id": "dia-n3-9-7",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d9-42",
+          "text": "しごと",
+          "isKeyGrammar": false,
+          "kanji": "仕事",
+          "furigana": "しごと"
+        },
+        {
+          "id": "d9-43",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-44",
+          "text": "あき",
+          "isKeyGrammar": true,
+          "kanji": "飽き",
+          "furigana": "あき"
+        },
+        {
+          "id": "d9-45",
+          "text": "ました",
+          "isKeyGrammar": false,
+          "kanji": "ました",
+          "furigana": "ました"
+        },
+        {
+          "id": "d9-46",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Bạn có chán công việc không?"
+    },
+    {
+      "id": "dia-n3-9-8",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d9-47",
+          "text": "いいえ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-48",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-49",
+          "text": "けいこう",
+          "isKeyGrammar": true,
+          "kanji": "傾向",
+          "furigana": "けいこう"
+        },
+        {
+          "id": "d9-50",
+          "text": "として",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-51",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-52",
+          "text": "しごと",
+          "isKeyGrammar": false,
+          "kanji": "仕事",
+          "furigana": "しごと"
+        },
+        {
+          "id": "d9-53",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-54",
+          "text": "けっせき",
+          "isKeyGrammar": true,
+          "kanji": "欠席",
+          "furigana": "けっせき"
+        },
+        {
+          "id": "d9-55",
+          "text": "する",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-56",
+          "text": "こと",
+          "isKeyGrammar": false,
+          "kanji": "事",
+          "furigana": "こと"
+        },
+        {
+          "id": "d9-57",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-58",
+          "text": "おおい",
+          "isKeyGrammar": false,
+          "kanji": "多い",
+          "furigana": "おおい"
+        },
+        {
+          "id": "d9-59",
+          "text": "だけです",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Không, chỉ là có xu hướng hay nghỉ làm thôi."
+    },
+    {
+      "id": "dia-n3-9-9",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d9-60",
+          "text": "びょうき",
+          "isKeyGrammar": true,
+          "kanji": "病気",
+          "furigana": "びょうき"
+        },
+        {
+          "id": "d9-61",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-62",
+          "text": "なる",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-63",
+          "text": "まえ",
+          "isKeyGrammar": false,
+          "kanji": "前",
+          "furigana": "まえ"
+        },
+        {
+          "id": "d9-64",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-65",
+          "text": "やすみます",
+          "isKeyGrammar": false,
+          "kanji": "休みます",
+          "furigana": "やすみます"
+        }
+      ],
+      "meaningVi": "Hãy nghỉ ngơi trước khi bị ốm nhé."
+    },
+    {
+      "id": "dia-n3-9-10",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d9-66",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-67",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-68",
+          "text": "ありがとうございます",
+          "isKeyGrammar": false,
+          "kanji": "ありがとうございます",
+          "furigana": "ありがとうございます"
+        },
+        {
+          "id": "d9-69",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-70",
+          "text": "きをつけます",
+          "isKeyGrammar": false,
+          "kanji": "気を付けます",
+          "furigana": "きをつけます"
+        }
+      ],
+      "meaningVi": "Vâng, cảm ơn bạn. Tôi sẽ cẩn thận hơn."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n3-9-1",
+      "question": "「最近、遅刻がちです」 — がち diễn tả điều gì?",
+      "options": [
+        "Xu hướng thường xuyên xảy ra, mang sắc thái tiêu cực (hay đi trễ)",
+        "Chỉ xảy ra một lần duy nhất",
+        "Sự việc đã hoàn thành",
+        "Cảm giác nhẹ chủ quan"
+      ],
+      "correctIndex": 0,
+      "explanation": "がち nhấn TẦN SUẤT CAO của một việc không mong muốn lặp đi lặp lại — ở đây là hay đi trễ.",
+      "hint": "Xem cấu trúc V-stem/Nがち ở slide 1."
+    },
+    {
+      "id": "ex-q-n3-9-2",
+      "question": "「最近、疲れ気味です」 — 気味 khác がち ở điểm nào?",
+      "options": [
+        "気味 diễn tả CẢM GIÁC nhẹ, chủ quan hiện tại; がち diễn tả XU HƯỚNG lặp lại theo thời gian",
+        "Hoàn toàn giống nhau",
+        "気味 chỉ dùng cho câu hỏi",
+        "がち chỉ dùng cho phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "気味 nhấn CẢM NHẬN CHỦ QUAN hiện tại (hơi mệt); がち nhấn TẦN SUẤT lặp lại theo thời gian (hay bị/hay làm).",
+      "hint": "Xem so sánh がち và 気味 ở slide 2."
+    },
+    {
+      "id": "ex-q-n3-9-3",
+      "question": "「食べかけのパンがあります」 — かけ diễn tả điều gì?",
+      "options": [
+        "Hành động ăn đã bắt đầu nhưng chưa hoàn thành (ăn dở)",
+        "Đã ăn xong hoàn toàn",
+        "Chưa từng ăn",
+        "Sẽ ăn trong tương lai"
+      ],
+      "correctIndex": 0,
+      "explanation": "V-stem+かけ (食べかけ) diễn tả hành động đã bắt đầu nhưng bị gián đoạn, chưa hoàn thành.",
+      "hint": "Xem cấu trúc V-stemかける ở slide 3."
+    },
+    {
+      "id": "ex-q-n3-9-4",
+      "question": "「言いかけて、止めました」 nghĩa là:",
+      "options": [
+        "Định nói (nói dở) nhưng đã dừng lại giữa chừng",
+        "Đã nói xong hoàn toàn",
+        "Chưa từng định nói gì cả",
+        "Sẽ nói vào lúc khác"
+      ],
+      "correctIndex": 0,
+      "explanation": "言いかけて diễn tả hành động nói đã bắt đầu (dở dang) rồi bị dừng lại (止めました).",
+      "hint": "Áp dụng cấu trúc V-stemかける cho động từ 言う."
+    },
+    {
+      "id": "ex-q-n3-9-5",
+      "question": "Cả ba cấu trúc がち, 気味, かける đều mô tả trạng thái gì chung?",
+      "options": [
+        "Trạng thái 'chưa trọn vẹn' nhưng khác nhau về bản chất (xu hướng/cảm giác/hành động dang dở)",
+        "Đều diễn tả sự hoàn thành trọn vẹn",
+        "Đều chỉ dùng cho phủ định",
+        "Đều chỉ dùng cho câu hỏi"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cả ba đều liên quan đến trạng thái chưa trọn vẹn, nhưng がち=xu hướng lặp lại, 気味=cảm giác chủ quan, かける=hành động dang dở một lần.",
+      "hint": "Xem bảng so sánh tổng hợp ở slide 4."
+    },
+    {
+      "id": "ex-q-n3-9-6",
+      "question": "「栄養不足で、健康を崩しがちです」 nghĩa là:",
+      "options": [
+        "Vì thiếu dinh dưỡng nên hay bị suy yếu sức khỏe",
+        "Vì đủ dinh dưỡng nên rất khỏe mạnh",
+        "Không liên quan gì đến sức khỏe",
+        "Đã khỏi bệnh hoàn toàn"
+      ],
+      "correctIndex": 0,
+      "explanation": "栄養不足で (vì thiếu dinh dưỡng) + 健康を崩しがちです (hay bị suy yếu sức khỏe) diễn tả nguyên nhân-kết quả tiêu cực lặp lại.",
+      "hint": "Xem ví dụ kết hợp ở slide 4."
+    },
+    {
+      "id": "ex-q-n3-9-7",
+      "question": "「睡眠不足気味です」 mang sắc thái gì so với 「いつも寝不足です」?",
+      "options": [
+        "気味 nhẹ nhàng hơn, mang tính cảm nhận chủ quan hiện tại, không khẳng định tuyệt đối",
+        "気味 mạnh mẽ, khẳng định chắc chắn hơn",
+        "Hoàn toàn giống nhau về sắc thái",
+        "気味 chỉ dùng trong văn viết trang trọng"
+      ],
+      "correctIndex": 0,
+      "explanation": "気味 luôn mang sắc thái NHẸ, CHỦ QUAN — 'có vẻ hơi...' chứ không khẳng định chắc chắn như いつも (luôn luôn).",
+      "hint": "So sánh sắc thái của 気味 với các cách diễn đạt khác."
+    },
+    {
+      "id": "ex-q-n3-9-8",
+      "question": "Theo hội thoại, Santos gần đây cảm thấy thế nào?",
+      "options": [
+        "Có vẻ hơi mệt và thiếu ngủ (疲れ気味、睡眠不足気味)",
+        "Rất khỏe mạnh, tràn đầy năng lượng",
+        "Không có vấn đề gì về sức khỏe",
+        "Đã khỏi hoàn toàn mệt mỏi"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「睡眠不足気味です」 sau khi Tanaka nhận xét 「疲れ気味ですね」.",
+      "hint": "Xem câu thoại thứ 1-2."
+    },
+    {
+      "id": "ex-q-n3-9-9",
+      "question": "Santos giải thích lý do hay nghỉ làm là gì?",
+      "options": [
+        "Có xu hướng hay nghỉ làm (欠席することが多いだけ), không phải chán việc",
+        "Vì chán ghét công việc hoàn toàn",
+        "Vì đã nghỉ việc",
+        "Không đưa ra lý do nào"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos trả lời 「傾向として、仕事を欠席することが多いだけです」ngay sau khi được hỏi có chán việc không.",
+      "hint": "Xem câu thoại thứ 7-8."
+    },
+    {
+      "id": "ex-q-n3-9-10",
+      "question": "田中 khuyên Santos điều gì ở cuối hội thoại?",
+      "options": [
+        "Nên nghỉ ngơi trước khi bị ốm (病気になる前に休みます)",
+        "Nên làm việc nhiều hơn",
+        "Nên bỏ việc ngay",
+        "Không đưa ra lời khuyên nào"
+      ],
+      "correctIndex": 0,
+      "explanation": "田中 nói 「病気になる前に休みます」.",
+      "hint": "Xem câu thoại thứ 9."
+    }
+  ]
+}

@@ -1,0 +1,1231 @@
+{
+  "level": "N5",
+  "lessonNumber": 11,
+  "title": "Bài 11: Lượng từ & Số đếm (〜つ, 〜枚, 〜台, 〜人 & Tần suất)",
+  "description": "Số đếm thuần Nhật ひとつ〜とお dùng cho vật chung chung, lượng từ riêng theo loại vật (個/枚/台/冊/人) kết hợp số Hán, vị trí cụm số lượng đứng sau trợ từ が/を, và cách nói tần suất bằng [khoảng thời gian]に[số]回.",
+  "vocabList": [
+    {
+      "id": "voc-n5-11-1",
+      "word": "ひとつ",
+      "kanji": "一つ",
+      "furigana": "ひとつ",
+      "romaji": "hitotsu",
+      "wordType": "noun",
+      "meaningVi": "Một cái (số đếm thuần Nhật)",
+      "accentNote": "Dùng đếm vật chung chung, không cần lượng từ riêng."
+    },
+    {
+      "id": "voc-n5-11-2",
+      "word": "ふたつ",
+      "kanji": "二つ",
+      "furigana": "ふたつ",
+      "romaji": "futatsu",
+      "wordType": "noun",
+      "meaningVi": "Hai cái",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-11-3",
+      "word": "いつつ",
+      "kanji": "五つ",
+      "furigana": "いつつ",
+      "romaji": "itsutsu",
+      "wordType": "noun",
+      "meaningVi": "Năm cái",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-11-4",
+      "word": "ここのつ",
+      "kanji": "九つ",
+      "furigana": "ここのつ",
+      "romaji": "kokonotsu",
+      "wordType": "noun",
+      "meaningVi": "Chín cái",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-11-5",
+      "word": "とお",
+      "kanji": "十",
+      "furigana": "とお",
+      "romaji": "too",
+      "wordType": "noun",
+      "meaningVi": "Mười cái",
+      "accentNote": "Từ 11 trở đi dùng số đếm thường + つ không còn áp dụng, chuyển sang lượng từ riêng."
+    },
+    {
+      "id": "voc-n5-11-6",
+      "word": "いくつ",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "ikutsu",
+      "wordType": "noun",
+      "meaningVi": "Mấy cái, bao nhiêu (hỏi số lượng)",
+      "accentNote": "Khác いくら (hỏi giá tiền, đã học bài 3)."
+    },
+    {
+      "id": "voc-n5-11-7",
+      "word": "〜こ",
+      "kanji": "〜個",
+      "furigana": "〜こ",
+      "romaji": "-ko",
+      "wordType": "noun",
+      "meaningVi": "~ cái (lượng từ vật nhỏ, tròn)",
+      "accentNote": "りんごが 三個 = ba quả táo."
+    },
+    {
+      "id": "voc-n5-11-8",
+      "word": "〜まい",
+      "kanji": "〜枚",
+      "furigana": "〜まい",
+      "romaji": "-mai",
+      "wordType": "noun",
+      "meaningVi": "~ tờ, ~ tấm (lượng từ vật mỏng, phẳng)",
+      "accentNote": "紙が 二枚 = hai tờ giấy."
+    },
+    {
+      "id": "voc-n5-11-9",
+      "word": "〜だい",
+      "kanji": "〜台",
+      "furigana": "〜だい",
+      "romaji": "-dai",
+      "wordType": "noun",
+      "meaningVi": "~ chiếc (lượng từ máy móc, xe cộ)",
+      "accentNote": "車が 一台 = một chiếc xe."
+    },
+    {
+      "id": "voc-n5-11-10",
+      "word": "〜さつ",
+      "kanji": "〜冊",
+      "furigana": "〜さつ",
+      "romaji": "-satsu",
+      "wordType": "noun",
+      "meaningVi": "~ quyển (lượng từ sách vở)",
+      "accentNote": "本が 三冊 = ba quyển sách."
+    },
+    {
+      "id": "voc-n5-11-11",
+      "word": "〜じん",
+      "kanji": "〜人",
+      "furigana": "〜じん",
+      "romaji": "-jin",
+      "wordType": "noun",
+      "meaningVi": "~ người (đếm số người)",
+      "accentNote": "1人 ひとり, 2人 ふたり là ngoại lệ, từ 3人 trở đi theo quy tắc さんにん."
+    },
+    {
+      "id": "voc-n5-11-12",
+      "word": "〜かい",
+      "kanji": "〜回",
+      "furigana": "〜かい",
+      "romaji": "-kai",
+      "wordType": "noun",
+      "meaningVi": "~ lần (đếm số lần xảy ra)",
+      "accentNote": "一週間に 三回 = ba lần một tuần."
+    },
+    {
+      "id": "voc-n5-11-13",
+      "word": "かみ",
+      "kanji": "紙",
+      "furigana": "かみ",
+      "romaji": "kami",
+      "wordType": "noun",
+      "meaningVi": "Giấy",
+      "accentNote": "紙を 二枚 ください = cho tôi hai tờ giấy."
+    },
+    {
+      "id": "voc-n5-11-14",
+      "word": "きって",
+      "kanji": "切手",
+      "furigana": "きって",
+      "romaji": "kitte",
+      "wordType": "noun",
+      "meaningVi": "Tem thư",
+      "accentNote": "切手を 三枚 買います = mua ba con tem."
+    },
+    {
+      "id": "voc-n5-11-15",
+      "word": "ふうとう",
+      "kanji": "封筒",
+      "furigana": "ふうとう",
+      "romaji": "fuutou",
+      "wordType": "noun",
+      "meaningVi": "Phong bì",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-11-16",
+      "word": "きっぷ",
+      "kanji": "切符",
+      "furigana": "きっぷ",
+      "romaji": "kippu",
+      "wordType": "noun",
+      "meaningVi": "Vé (tàu, xe)",
+      "accentNote": "切符を 一枚 買います = mua một vé."
+    },
+    {
+      "id": "voc-n5-11-17",
+      "word": "おさら",
+      "kanji": "お皿",
+      "furigana": "おさら",
+      "romaji": "osara",
+      "wordType": "noun",
+      "meaningVi": "Cái đĩa",
+      "accentNote": "お皿が 五枚 あります = có năm cái đĩa."
+    },
+    {
+      "id": "voc-n5-11-18",
+      "word": "たまご",
+      "kanji": "卵",
+      "furigana": "たまご",
+      "romaji": "tamago",
+      "wordType": "noun",
+      "meaningVi": "Quả trứng",
+      "accentNote": "卵を 六個 買います = mua sáu quả trứng."
+    },
+    {
+      "id": "voc-n5-11-19",
+      "word": "えんぴつ",
+      "kanji": "鉛筆",
+      "furigana": "えんぴつ",
+      "romaji": "enpitsu",
+      "wordType": "noun",
+      "meaningVi": "Bút chì",
+      "accentNote": "Đã gặp bài 2 — nay dùng làm ví dụ đếm vật dài (thực ra đếm 本 nhưng ở đây dùng つ để đơn giản hoá)."
+    },
+    {
+      "id": "voc-n5-11-20",
+      "word": "がいこくじん",
+      "kanji": "外国人",
+      "furigana": "がいこくじん",
+      "romaji": "gaikokujin",
+      "wordType": "noun",
+      "meaningVi": "Người nước ngoài",
+      "accentNote": "外国人が 三人 います = có ba người nước ngoài."
+    },
+    {
+      "id": "voc-n5-11-21",
+      "word": "おとな",
+      "kanji": "大人",
+      "furigana": "おとな",
+      "romaji": "otona",
+      "wordType": "noun",
+      "meaningVi": "Người lớn",
+      "accentNote": "大人が 二人 = hai người lớn."
+    },
+    {
+      "id": "voc-n5-11-22",
+      "word": "しつもん",
+      "kanji": "質問",
+      "furigana": "しつもん",
+      "romaji": "shitsumon",
+      "wordType": "noun",
+      "meaningVi": "Câu hỏi",
+      "accentNote": "質問が 一つ あります = có một câu hỏi."
+    },
+    {
+      "id": "voc-n5-11-23",
+      "word": "いっしゅうかん",
+      "kanji": "一週間",
+      "furigana": "いっしゅうかん",
+      "romaji": "isshuukan",
+      "wordType": "noun",
+      "meaningVi": "Một tuần (khoảng thời gian)",
+      "accentNote": "一週間に 三回 = ba lần trong một tuần."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n5-11-1",
+      "character": "回",
+      "hanViet": "HỒI",
+      "strokeCount": 6,
+      "onyomi": [
+        "カイ (kai)"
+      ],
+      "kunyomi": [
+        "まわ(る)"
+      ],
+      "meaningVi": "Vòng, lần. Hình chữ hồi (xoáy ốc).",
+      "commonWords": [
+        {
+          "word": "一回",
+          "furigana": "いっかい",
+          "meaningVi": "Một lần"
+        },
+        {
+          "word": "回ります",
+          "furigana": "まわります",
+          "meaningVi": "Xoay vòng"
+        },
+        {
+          "word": "今回",
+          "furigana": "こんかい",
+          "meaningVi": "Lần này"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-11-2",
+      "character": "枚",
+      "hanViet": "MAI",
+      "strokeCount": 8,
+      "onyomi": [
+        "マイ (mai)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Lượng từ đếm vật mỏng, phẳng.",
+      "commonWords": [
+        {
+          "word": "二枚",
+          "furigana": "にまい",
+          "meaningVi": "Hai tờ"
+        },
+        {
+          "word": "切符",
+          "furigana": "きっぷ",
+          "meaningVi": "Vé (từ ghép)"
+        },
+        {
+          "word": "紙",
+          "furigana": "かみ",
+          "meaningVi": "Giấy (từ ghép)"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-11-3",
+      "character": "台",
+      "hanViet": "ĐÀI",
+      "strokeCount": 5,
+      "onyomi": [
+        "ダイ (dai)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Bệ, đài; lượng từ đếm máy móc, xe cộ.",
+      "commonWords": [
+        {
+          "word": "一台",
+          "furigana": "いちだい",
+          "meaningVi": "Một chiếc (máy/xe)"
+        },
+        {
+          "word": "台所",
+          "furigana": "だいどころ",
+          "meaningVi": "Nhà bếp"
+        },
+        {
+          "word": "台風",
+          "furigana": "たいふう",
+          "meaningVi": "Bão"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-11-4",
+      "character": "個",
+      "hanViet": "CÁ",
+      "strokeCount": 10,
+      "onyomi": [
+        "コ (ko)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Lượng từ đếm vật nhỏ, tròn nói chung.",
+      "commonWords": [
+        {
+          "word": "三個",
+          "furigana": "さんこ",
+          "meaningVi": "Ba cái"
+        },
+        {
+          "word": "個人",
+          "furigana": "こじん",
+          "meaningVi": "Cá nhân"
+        },
+        {
+          "word": "一個",
+          "furigana": "いっこ",
+          "meaningVi": "Một cái"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-11-5",
+      "character": "冊",
+      "hanViet": "SÁCH",
+      "strokeCount": 5,
+      "onyomi": [
+        "サツ (satsu)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Lượng từ đếm sách vở.",
+      "commonWords": [
+        {
+          "word": "三冊",
+          "furigana": "さんさつ",
+          "meaningVi": "Ba quyển"
+        },
+        {
+          "word": "一冊",
+          "furigana": "いっさつ",
+          "meaningVi": "Một quyển"
+        },
+        {
+          "word": "冊子",
+          "furigana": "さっし",
+          "meaningVi": "Tập sách nhỏ"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n5-l11-s1",
+      "slideType": "grammar",
+      "title": "1. Số đếm thuần Nhật: ひとつ〜とお",
+      "grammarFormula": "ひとつ、ふたつ、みっつ…ここのつ、とお",
+      "explanation": "Từ 1 đến 10 có một bộ số đếm THUẦN NHẬT riêng, dùng được cho HẦU HẾT mọi vật mà không cần nhớ lượng từ. Từ 11 trở đi PHẢI chuyển sang số Hán + lượng từ riêng theo loại vật.",
+      "teacherTips": "Dùng số đếm thuần Nhật là cách AN TOÀN nhất khi chưa nhớ lượng từ riêng — áp dụng được với hầu hết đồ vật từ 1-10.",
+      "culturalNotes": "いくつ còn dùng để hỏi TUỔI một cách thân mật: お子さんは おいくつですか (con anh mấy tuổi).",
+      "examples": [
+        {
+          "id": "ex-n5-l11-s1-1",
+          "tokens": [
+            {
+              "id": "t-l11s1-1",
+              "text": "りんご",
+              "isKeyGrammar": false,
+              "kanji": "林檎",
+              "furigana": "りんご"
+            },
+            {
+              "id": "t-l11s1-2",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s1-3",
+              "text": "みっつ",
+              "isKeyGrammar": true,
+              "kanji": "三つ",
+              "furigana": "みっつ"
+            },
+            {
+              "id": "t-l11s1-4",
+              "text": "ください",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Cho tôi ba quả táo."
+        },
+        {
+          "id": "ex-n5-l11-s1-2",
+          "tokens": [
+            {
+              "id": "t-l11s1-5",
+              "text": "しつもん",
+              "isKeyGrammar": false,
+              "kanji": "質問",
+              "furigana": "しつもん"
+            },
+            {
+              "id": "t-l11s1-6",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s1-7",
+              "text": "ひとつ",
+              "isKeyGrammar": true,
+              "kanji": "一つ",
+              "furigana": "ひとつ"
+            },
+            {
+              "id": "t-l11s1-8",
+              "text": "あります",
+              "isKeyGrammar": false,
+              "kanji": "有ります",
+              "furigana": "あります"
+            }
+          ],
+          "meaningVi": "Tôi có một câu hỏi."
+        },
+        {
+          "id": "ex-n5-l11-s1-3",
+          "tokens": [
+            {
+              "id": "t-l11s1-9",
+              "text": "たまご",
+              "isKeyGrammar": false,
+              "kanji": "卵",
+              "furigana": "たまご"
+            },
+            {
+              "id": "t-l11s1-10",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s1-11",
+              "text": "いくつ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l11s1-12",
+              "text": "ありますか",
+              "isKeyGrammar": false,
+              "kanji": "有りますか",
+              "furigana": "ありますか"
+            }
+          ],
+          "meaningVi": "Có mấy quả trứng vậy?"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l11-s2",
+      "slideType": "grammar",
+      "title": "2. Lượng từ theo loại vật: [số Hán] + Lượng từ",
+      "grammarFormula": "〜個 (vật nhỏ tròn) / 〜枚 (vật mỏng) / 〜台 (máy móc) / 〜冊 (sách) / 〜人 (người)",
+      "explanation": "Mỗi loại vật có LƯỢNG TỪ RIÊNG đi kèm số đếm Hán-Nhật (いち、に、さん…). Chọn sai lượng từ vẫn hiểu được nhưng nghe rất kỳ — đây là điểm cần luyện nhiều nhất ở bài này.",
+      "teacherTips": "Nhớ biến âm: 一 + 枚/回 không biến âm nhưng 一 + 個/台 có biến âm nhẹ (いっこ、いちだい cần kiểm tra riêng từng cặp).",
+      "culturalNotes": "外国人 học tiếng Nhật thường sợ nhất phần lượng từ vì tiếng Việt chỉ có MỘT từ 'cái' dùng chung cho mọi vật.",
+      "examples": [
+        {
+          "id": "ex-n5-l11-s2-1",
+          "tokens": [
+            {
+              "id": "t-l11s2-1",
+              "text": "かみ",
+              "isKeyGrammar": false,
+              "kanji": "紙",
+              "furigana": "かみ"
+            },
+            {
+              "id": "t-l11s2-2",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s2-3",
+              "text": "にまい",
+              "isKeyGrammar": true,
+              "kanji": "二枚",
+              "furigana": "にまい"
+            },
+            {
+              "id": "t-l11s2-4",
+              "text": "ください",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Cho tôi hai tờ giấy."
+        },
+        {
+          "id": "ex-n5-l11-s2-2",
+          "tokens": [
+            {
+              "id": "t-l11s2-5",
+              "text": "くるま",
+              "isKeyGrammar": false,
+              "kanji": "車",
+              "furigana": "くるま"
+            },
+            {
+              "id": "t-l11s2-6",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s2-7",
+              "text": "いちだい",
+              "isKeyGrammar": true,
+              "kanji": "一台",
+              "furigana": "いちだい"
+            },
+            {
+              "id": "t-l11s2-8",
+              "text": "あります",
+              "isKeyGrammar": false,
+              "kanji": "有ります",
+              "furigana": "あります"
+            }
+          ],
+          "meaningVi": "Có một chiếc xe."
+        },
+        {
+          "id": "ex-n5-l11-s2-3",
+          "tokens": [
+            {
+              "id": "t-l11s2-9",
+              "text": "ほん",
+              "isKeyGrammar": false,
+              "kanji": "本",
+              "furigana": "ほん"
+            },
+            {
+              "id": "t-l11s2-10",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s2-11",
+              "text": "さんさつ",
+              "isKeyGrammar": true,
+              "kanji": "三冊",
+              "furigana": "さんさつ"
+            },
+            {
+              "id": "t-l11s2-12",
+              "text": "かいました",
+              "isKeyGrammar": false,
+              "kanji": "買いました",
+              "furigana": "かいました"
+            }
+          ],
+          "meaningVi": "Tôi đã mua ba quyển sách."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l11-s3",
+      "slideType": "grammar",
+      "title": "3. Vị trí lượng từ trong câu",
+      "grammarFormula": "N + が/を + [số + lượng từ] + V   (lượng từ đứng SAU trợ từ, KHÔNG đứng ngay sau danh từ)",
+      "explanation": "Khác tiếng Việt (ba quả táo — số đứng trước danh từ), tiếng Nhật đặt CỤM SỐ LƯỢNG sau trợ từ が/を, ngay trước động từ — không chen vào giữa danh từ và trợ từ.",
+      "teacherTips": "Lỗi hay gặp: 「三枚の切手を 買いました」 nghe không tự nhiên — chỉ dùng cấu trúc の khi muốn NHẤN MẠNH đặc biệt.",
+      "culturalNotes": "Khi mua vé tàu, nhân viên ga thường xác nhận lại bằng cách lặp lại số lượng: 切符、二枚ですね.",
+      "examples": [
+        {
+          "id": "ex-n5-l11-s3-1",
+          "tokens": [
+            {
+              "id": "t-l11s3-1",
+              "text": "きって",
+              "isKeyGrammar": false,
+              "kanji": "切手",
+              "furigana": "きって"
+            },
+            {
+              "id": "t-l11s3-2",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s3-3",
+              "text": "さんまい",
+              "isKeyGrammar": true,
+              "kanji": "三枚",
+              "furigana": "さんまい"
+            },
+            {
+              "id": "t-l11s3-4",
+              "text": "かいました",
+              "isKeyGrammar": false,
+              "kanji": "買いました",
+              "furigana": "かいました"
+            }
+          ],
+          "meaningVi": "Tôi đã mua ba con tem. (KHÔNG nói 三枚の切手を)"
+        },
+        {
+          "id": "ex-n5-l11-s3-2",
+          "tokens": [
+            {
+              "id": "t-l11s3-5",
+              "text": "きょうしつ",
+              "isKeyGrammar": false,
+              "kanji": "教室",
+              "furigana": "きょうしつ"
+            },
+            {
+              "id": "t-l11s3-6",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s3-7",
+              "text": "がくせい",
+              "isKeyGrammar": false,
+              "kanji": "学生",
+              "furigana": "がくせい"
+            },
+            {
+              "id": "t-l11s3-8",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s3-9",
+              "text": "じゅうにん",
+              "isKeyGrammar": true,
+              "kanji": "十人",
+              "furigana": "じゅうにん"
+            },
+            {
+              "id": "t-l11s3-10",
+              "text": "います",
+              "isKeyGrammar": false,
+              "kanji": "居ます",
+              "furigana": "います"
+            }
+          ],
+          "meaningVi": "Trong lớp học có mười học sinh."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l11-s4",
+      "slideType": "grammar",
+      "title": "4. Tần suất: 一週間に〜回",
+      "grammarFormula": "[khoảng thời gian] + に + [số] + 回",
+      "explanation": "に ở đây đóng vai trò 'trong mỗi', đánh dấu ĐƠN VỊ THỜI GIAN để tính tần suất — khác に chỉ thời điểm (bài 4) hay nơi tồn tại (bài 10), nhưng cùng một chữ.",
+      "teacherTips": "Thứ tự luôn là [khoảng thời gian]に[số回] — không đảo ngược, không thiếu に.",
+      "culturalNotes": "Người Nhật hay hỏi tần suất tập thể dục/ăn ngoài như một câu xã giao thông thường: 週に何回 ジムに行きますか.",
+      "examples": [
+        {
+          "id": "ex-n5-l11-s4-1",
+          "tokens": [
+            {
+              "id": "t-l11s4-1",
+              "text": "いっしゅうかん",
+              "isKeyGrammar": false,
+              "kanji": "一週間",
+              "furigana": "いっしゅうかん"
+            },
+            {
+              "id": "t-l11s4-2",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l11s4-3",
+              "text": "さんかい",
+              "isKeyGrammar": true,
+              "kanji": "三回",
+              "furigana": "さんかい"
+            },
+            {
+              "id": "t-l11s4-4",
+              "text": "べんきょう",
+              "isKeyGrammar": false,
+              "kanji": "勉強",
+              "furigana": "べんきょう"
+            },
+            {
+              "id": "t-l11s4-5",
+              "text": "します",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Một tuần tôi học ba lần."
+        },
+        {
+          "id": "ex-n5-l11-s4-2",
+          "tokens": [
+            {
+              "id": "t-l11s4-6",
+              "text": "いっかげつ",
+              "isKeyGrammar": false,
+              "kanji": "一か月",
+              "furigana": "いっかげつ"
+            },
+            {
+              "id": "t-l11s4-7",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l11s4-8",
+              "text": "なんかい",
+              "isKeyGrammar": true,
+              "kanji": "何回",
+              "furigana": "なんかい"
+            },
+            {
+              "id": "t-l11s4-9",
+              "text": "えいが",
+              "isKeyGrammar": false,
+              "kanji": "映画",
+              "furigana": "えいが"
+            },
+            {
+              "id": "t-l11s4-10",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s4-11",
+              "text": "みますか",
+              "isKeyGrammar": false,
+              "kanji": "見ますか",
+              "furigana": "みますか"
+            }
+          ],
+          "meaningVi": "Một tháng anh xem phim mấy lần?"
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n5-11-1",
+      "speaker": "店員",
+      "speakerRole": "Nhân viên cửa hàng",
+      "tokens": [
+        {
+          "id": "d-l11-1",
+          "text": "いらっしゃいませ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l11-2",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l11-3",
+          "text": "なに",
+          "isKeyGrammar": true,
+          "kanji": "何",
+          "furigana": "なに"
+        },
+        {
+          "id": "d-l11-4",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l11-5",
+          "text": "ひつよう",
+          "isKeyGrammar": false,
+          "kanji": "必要",
+          "furigana": "ひつよう"
+        },
+        {
+          "id": "d-l11-6",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Kính chào quý khách. Quý khách cần gì ạ?"
+    },
+    {
+      "id": "dia-n5-11-2",
+      "speaker": "ミラー",
+      "speakerRole": "Khách hàng",
+      "tokens": [
+        {
+          "id": "d-l11-7",
+          "text": "きって",
+          "isKeyGrammar": true,
+          "kanji": "切手",
+          "furigana": "きって"
+        },
+        {
+          "id": "d-l11-8",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l11-9",
+          "text": "さんまい",
+          "isKeyGrammar": true,
+          "kanji": "三枚",
+          "furigana": "さんまい"
+        },
+        {
+          "id": "d-l11-10",
+          "text": "ください",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Cho tôi ba con tem."
+    },
+    {
+      "id": "dia-n5-11-3",
+      "speaker": "店員",
+      "speakerRole": "Nhân viên cửa hàng",
+      "tokens": [
+        {
+          "id": "d-l11-11",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l11-12",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l11-13",
+          "text": "どうぞ",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng, đây ạ."
+    },
+    {
+      "id": "dia-n5-11-4",
+      "speaker": "ミラー",
+      "speakerRole": "Khách hàng",
+      "tokens": [
+        {
+          "id": "d-l11-14",
+          "text": "ふうとう",
+          "isKeyGrammar": true,
+          "kanji": "封筒",
+          "furigana": "ふうとう"
+        },
+        {
+          "id": "d-l11-15",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l11-16",
+          "text": "ひとつ",
+          "isKeyGrammar": true,
+          "kanji": "一つ",
+          "furigana": "ひとつ"
+        },
+        {
+          "id": "d-l11-17",
+          "text": "ください",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Cho tôi thêm một cái phong bì nữa."
+    },
+    {
+      "id": "dia-n5-11-5",
+      "speaker": "店員",
+      "speakerRole": "Nhân viên cửa hàng",
+      "tokens": [
+        {
+          "id": "d-l11-18",
+          "text": "かしこまりました",
+          "isKeyGrammar": false,
+          "kanji": "畏まりました",
+          "furigana": "かしこまりました"
+        },
+        {
+          "id": "d-l11-19",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l11-20",
+          "text": "ほか",
+          "isKeyGrammar": false,
+          "kanji": "他",
+          "furigana": "ほか"
+        },
+        {
+          "id": "d-l11-21",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l11-22",
+          "text": "なにか",
+          "isKeyGrammar": false,
+          "kanji": "何か",
+          "furigana": "なにか"
+        }
+      ],
+      "meaningVi": "Vâng, tôi hiểu ạ. Còn cần gì khác không ạ?"
+    },
+    {
+      "id": "dia-n5-11-6",
+      "speaker": "ミラー",
+      "speakerRole": "Khách hàng",
+      "tokens": [
+        {
+          "id": "d-l11-23",
+          "text": "かみ",
+          "isKeyGrammar": true,
+          "kanji": "紙",
+          "furigana": "かみ"
+        },
+        {
+          "id": "d-l11-24",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l11-25",
+          "text": "ありますか",
+          "isKeyGrammar": false,
+          "kanji": "有りますか",
+          "furigana": "ありますか"
+        }
+      ],
+      "meaningVi": "Ở đây có bán giấy không ạ?"
+    },
+    {
+      "id": "dia-n5-11-7",
+      "speaker": "店員",
+      "speakerRole": "Nhân viên cửa hàng",
+      "tokens": [
+        {
+          "id": "d-l11-26",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l11-27",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l11-28",
+          "text": "あります",
+          "isKeyGrammar": false,
+          "kanji": "有ります",
+          "furigana": "あります"
+        },
+        {
+          "id": "d-l11-29",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l11-30",
+          "text": "なんまい",
+          "isKeyGrammar": true,
+          "kanji": "何枚",
+          "furigana": "なんまい"
+        },
+        {
+          "id": "d-l11-31",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Dạ có ạ. Quý khách muốn mấy tờ?"
+    },
+    {
+      "id": "dia-n5-11-8",
+      "speaker": "ミラー",
+      "speakerRole": "Khách hàng",
+      "tokens": [
+        {
+          "id": "d-l11-32",
+          "text": "じゅうまい",
+          "isKeyGrammar": true,
+          "kanji": "十枚",
+          "furigana": "じゅうまい"
+        },
+        {
+          "id": "d-l11-33",
+          "text": "おねがいします",
+          "isKeyGrammar": false,
+          "kanji": "お願いします",
+          "furigana": "おねがいします"
+        }
+      ],
+      "meaningVi": "Cho tôi mười tờ."
+    },
+    {
+      "id": "dia-n5-11-9",
+      "speaker": "店員",
+      "speakerRole": "Nhân viên cửa hàng",
+      "tokens": [
+        {
+          "id": "d-l11-34",
+          "text": "かしこまりました",
+          "isKeyGrammar": false,
+          "kanji": "畏まりました",
+          "furigana": "かしこまりました"
+        },
+        {
+          "id": "d-l11-35",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l11-36",
+          "text": "ぜんぶ",
+          "isKeyGrammar": false,
+          "kanji": "全部",
+          "furigana": "ぜんぶ"
+        },
+        {
+          "id": "d-l11-37",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l11-38",
+          "text": "せんえん",
+          "isKeyGrammar": false,
+          "kanji": "千円",
+          "furigana": "せんえん"
+        },
+        {
+          "id": "d-l11-39",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng ạ. Tất cả là 1.000 yên ạ."
+    },
+    {
+      "id": "dia-n5-11-10",
+      "speaker": "ミラー",
+      "speakerRole": "Khách hàng",
+      "tokens": [
+        {
+          "id": "d-l11-40",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l11-41",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l11-42",
+          "text": "どうぞ",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng, đây ạ."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n5-11-1",
+      "question": "Đếm 'ba quả táo' theo số đếm thuần Nhật:",
+      "options": [
+        "りんごを みっつ",
+        "りんごを さんこ",
+        "りんごを さんつ",
+        "りんごを みっこ"
+      ],
+      "correctIndex": 0,
+      "explanation": "みっつ (ba cái) là số đếm thuần Nhật, dùng được cho vật chung chung như táo mà không cần lượng từ riêng.",
+      "hint": "Đây thuộc bộ ひとつ〜とお."
+    },
+    {
+      "id": "ex-q-n5-11-2",
+      "question": "Đếm sách dùng lượng từ nào?",
+      "options": [
+        "〜冊",
+        "〜枚",
+        "〜個",
+        "〜台"
+      ],
+      "correctIndex": 0,
+      "explanation": "〜冊 là lượng từ riêng cho sách, tạp chí, các ấn phẩm đóng thành tập.",
+      "hint": "Xem bảng lượng từ theo loại vật."
+    },
+    {
+      "id": "ex-q-n5-11-3",
+      "question": "Đếm xe hơi, máy tính dùng lượng từ nào?",
+      "options": [
+        "〜台",
+        "〜個",
+        "〜枚",
+        "〜人"
+      ],
+      "correctIndex": 0,
+      "explanation": "〜台 dùng cho máy móc và phương tiện: xe hơi, tivi, máy tính, xe đạp.",
+      "hint": "Vật có động cơ hoặc là thiết bị."
+    },
+    {
+      "id": "ex-q-n5-11-4",
+      "question": "Câu nào ĐÚNG trật tự từ?",
+      "options": [
+        "切手を 三枚 買いました",
+        "三枚の 切手を 買いました",
+        "切手 三枚を 買いました",
+        "三枚 切手を 買いました"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cụm số lượng đứng SAU trợ từ を, ngay trước động từ — đây là trật tự tự nhiên nhất trong tiếng Nhật.",
+      "hint": "So sánh với trật tự 'ba con tem' trong tiếng Việt."
+    },
+    {
+      "id": "ex-q-n5-11-5",
+      "question": "「一週間に 三回」 nghĩa là:",
+      "options": [
+        "Ba lần một tuần",
+        "Tuần thứ ba",
+        "Ba tuần một lần",
+        "Lúc ba giờ trong tuần"
+      ],
+      "correctIndex": 0,
+      "explanation": "[khoảng thời gian] + に + [số + 回] diễn tả TẦN SUẤT trong một đơn vị thời gian.",
+      "hint": "に ở đây có nghĩa 'trong mỗi'."
+    },
+    {
+      "id": "ex-q-n5-11-6",
+      "question": "いくつ và いくら khác nhau ở chỗ:",
+      "options": [
+        "いくつ hỏi SỐ LƯỢNG, いくら hỏi GIÁ TIỀN",
+        "Cả hai đều hỏi giá",
+        "Cả hai đều hỏi số lượng",
+        "Không khác gì nhau"
+      ],
+      "correctIndex": 0,
+      "explanation": "いくつ (bao nhiêu CÁI) và いくら (bao nhiêu TIỀN, đã học ở bài 3) dễ nhầm vì phát âm gần giống.",
+      "hint": "Xem lại bài 3 về いくら."
+    },
+    {
+      "id": "ex-q-n5-11-7",
+      "question": "Đếm người theo cách đặc biệt (không theo quy tắc) ở số 1 và 2 là:",
+      "options": [
+        "ひとり、ふたり",
+        "いちじん、ににん",
+        "ひとつじん、ふたつじん",
+        "いちにん、ふたつ"
+      ],
+      "correctIndex": 0,
+      "explanation": "1人 và 2人 đọc đặc biệt là ひとり、ふたり — từ 3人 trở đi mới theo quy tắc さんにん、よにん…",
+      "hint": "Đây là hai ngoại lệ phải học thuộc riêng."
+    },
+    {
+      "id": "ex-q-n5-11-8",
+      "question": "Muốn hỏi 'có mấy quả trứng', câu nào ĐÚNG?",
+      "options": [
+        "卵が いくつ ありますか",
+        "卵が いくら ありますか",
+        "卵が なんじ ありますか",
+        "卵が どこ ありますか"
+      ],
+      "correctIndex": 0,
+      "explanation": "いくつ hỏi số lượng vật đếm được bằng bộ ひとつ〜とお hoặc lượng từ riêng.",
+      "hint": "Không phải hỏi giá, giờ, hay nơi chốn."
+    },
+    {
+      "id": "ex-q-n5-11-9",
+      "question": "Từ 11 trở đi, cách đếm vật thay đổi thế nào?",
+      "options": [
+        "Chuyển sang số Hán (じゅういち…) + lượng từ riêng theo loại vật",
+        "Vẫn dùng ひとつ〜とお như cũ",
+        "Không đếm được nữa",
+        "Chỉ dùng được với người"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bộ ひとつ〜とお chỉ có đến 10. Từ 11 trở lên bắt buộc dùng số Hán-Nhật kết hợp lượng từ riêng.",
+      "hint": "Đây là giới hạn của bộ số đếm thuần Nhật."
+    },
+    {
+      "id": "ex-q-n5-11-10",
+      "question": "Trong hội thoại, khách hàng mua tổng cộng những gì?",
+      "options": [
+        "3 con tem, 1 phong bì, 10 tờ giấy",
+        "5 con tem, 2 phong bì",
+        "10 con tem, 1 tờ giấy",
+        "3 phong bì, 10 con tem"
+      ],
+      "correctIndex": 0,
+      "explanation": "Khách lần lượt mua 切手を三枚, 封筒も一つ, và 紙を十枚.",
+      "hint": "Xem lại toàn bộ hội thoại theo thứ tự."
+    }
+  ]
+}

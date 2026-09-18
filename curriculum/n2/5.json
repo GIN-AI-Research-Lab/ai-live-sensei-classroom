@@ -1,0 +1,1543 @@
+{
+  "level": "N2",
+  "lessonNumber": 5,
+  "title": "Bài 5: Tỉ lệ thuận & Càng ngày càng (にしたがって & につれて & 一方だ)",
+  "description": "にしたがって diễn tả sự thay đổi tỉ lệ thuận CÓ TÍNH QUY LUẬT, và còn mang thêm nghĩa 'TUÂN THEO' quy tắc/mệnh lệnh; につれて hẹp nghĩa hơn, CHỈ mô tả sự thay đổi SONG SONG TỰ NHIÊN (không có nghĩa tuân theo); kết hợp với 一方だ (ôn N3 bài 14) để nhấn mạnh xu hướng thay đổi dài hạn, liên tục.",
+  "vocabList": [
+    {
+      "id": "voc-n2-5-1",
+      "word": "きょうかします",
+      "kanji": "強化します",
+      "furigana": "きょうかします",
+      "romaji": "kyouka shimasu",
+      "wordType": "verb",
+      "meaningVi": "Tăng cường",
+      "accentNote": "きそくを 強化します = tăng cường quy tắc."
+    },
+    {
+      "id": "voc-n2-5-2",
+      "word": "みなれます",
+      "kanji": "見慣れます",
+      "furigana": "みなれます",
+      "romaji": "minaremasu",
+      "wordType": "verb",
+      "meaningVi": "Quen mắt (khi nhìn nhiều lần)",
+      "accentNote": "みなれた けしき = phong cảnh đã quen mắt."
+    },
+    {
+      "id": "voc-n2-5-3",
+      "word": "じしん",
+      "kanji": "自信",
+      "furigana": "じしん",
+      "romaji": "jishin",
+      "wordType": "noun",
+      "meaningVi": "Sự tự tin",
+      "accentNote": "自信が つきます = có được sự tự tin."
+    },
+    {
+      "id": "voc-n2-5-4",
+      "word": "ねんれい",
+      "kanji": "年齢",
+      "furigana": "ねんれい",
+      "romaji": "nenrei",
+      "wordType": "noun",
+      "meaningVi": "Độ tuổi",
+      "accentNote": "年齢が あがるに したがって = theo độ tuổi tăng lên."
+    },
+    {
+      "id": "voc-n2-5-5",
+      "word": "かわります",
+      "kanji": "変わります",
+      "furigana": "かわります",
+      "romaji": "kawarimasu",
+      "wordType": "verb",
+      "meaningVi": "Thay đổi",
+      "accentNote": "きせつが かわります = mùa thay đổi."
+    },
+    {
+      "id": "voc-n2-5-6",
+      "word": "たちます",
+      "kanji": "経ちます",
+      "furigana": "たちます",
+      "romaji": "tachimasu",
+      "wordType": "verb",
+      "meaningVi": "Trôi qua (thời gian)",
+      "accentNote": "じかんが たちます = thời gian trôi qua."
+    },
+    {
+      "id": "voc-n2-5-7",
+      "word": "つよい",
+      "kanji": "強い",
+      "furigana": "つよい",
+      "romaji": "tsuyoi",
+      "wordType": "adjective",
+      "meaningVi": "Mạnh",
+      "accentNote": "かぜが つよく なります = gió trở nên mạnh."
+    },
+    {
+      "id": "voc-n2-5-8",
+      "word": "ちかづきます",
+      "kanji": "近づきます",
+      "furigana": "ちかづきます",
+      "romaji": "chikazukimasu",
+      "wordType": "verb",
+      "meaningVi": "Đến gần",
+      "accentNote": "たいふうが ちかづきます = bão đến gần."
+    },
+    {
+      "id": "voc-n2-5-9",
+      "word": "なれます",
+      "kanji": "慣れます",
+      "furigana": "なれます",
+      "romaji": "naremasu",
+      "wordType": "verb",
+      "meaningVi": "Quen thuộc, làm quen",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-5-10",
+      "word": "きせつ",
+      "kanji": "季節",
+      "furigana": "きせつ",
+      "romaji": "kisetsu",
+      "wordType": "noun",
+      "meaningVi": "Mùa",
+      "accentNote": "Đã gặp N5 bài 25."
+    },
+    {
+      "id": "voc-n2-5-11",
+      "word": "きおん",
+      "kanji": "気温",
+      "furigana": "きおん",
+      "romaji": "kion",
+      "wordType": "noun",
+      "meaningVi": "Nhiệt độ",
+      "accentNote": "Đã gặp N3 bài 5."
+    },
+    {
+      "id": "voc-n2-5-12",
+      "word": "とし",
+      "kanji": "年",
+      "furigana": "とし",
+      "romaji": "toshi",
+      "wordType": "noun",
+      "meaningVi": "Năm, tuổi",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-5-13",
+      "word": "にほんご",
+      "kanji": "日本語",
+      "furigana": "にほんご",
+      "romaji": "nihongo",
+      "wordType": "noun",
+      "meaningVi": "Tiếng Nhật",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-5-14",
+      "word": "じょうず",
+      "kanji": "上手",
+      "furigana": "じょうず",
+      "romaji": "jouzu",
+      "wordType": "adjective",
+      "meaningVi": "Giỏi",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-5-15",
+      "word": "じかん",
+      "kanji": "時間",
+      "furigana": "じかん",
+      "romaji": "jikan",
+      "wordType": "noun",
+      "meaningVi": "Thời gian",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-5-16",
+      "word": "かぜ",
+      "kanji": "風",
+      "furigana": "かぜ",
+      "romaji": "kaze",
+      "wordType": "noun",
+      "meaningVi": "Gió",
+      "accentNote": "Đã gặp N4 bài 34."
+    },
+    {
+      "id": "voc-n2-5-17",
+      "word": "たいふう",
+      "kanji": "台風",
+      "furigana": "たいふう",
+      "romaji": "taifuu",
+      "wordType": "noun",
+      "meaningVi": "Bão",
+      "accentNote": "Đã gặp N4 bài 34."
+    },
+    {
+      "id": "voc-n2-5-18",
+      "word": "きそく",
+      "kanji": "規則",
+      "furigana": "きそく",
+      "romaji": "kisoku",
+      "wordType": "noun",
+      "meaningVi": "Quy tắc",
+      "accentNote": "Đã gặp N4 bài 33."
+    },
+    {
+      "id": "voc-n2-5-19",
+      "word": "したがいます",
+      "kanji": "従います",
+      "furigana": "したがいます",
+      "romaji": "shitagaimasu",
+      "wordType": "verb",
+      "meaningVi": "Tuân theo",
+      "accentNote": "Đã gặp N3 bài 19."
+    },
+    {
+      "id": "voc-n2-5-20",
+      "word": "わすれます",
+      "kanji": "忘れます",
+      "furigana": "わすれます",
+      "romaji": "wasuremasu",
+      "wordType": "verb",
+      "meaningVi": "Quên",
+      "accentNote": "Đã gặp N4 bài 38."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n2-5-1",
+      "character": "強",
+      "hanViet": "CƯỜNG",
+      "strokeCount": 11,
+      "onyomi": [
+        "キョウ (kyou)"
+      ],
+      "kunyomi": [
+        "つよ(い)"
+      ],
+      "meaningVi": "Mạnh, cường tráng.",
+      "commonWords": [
+        {
+          "word": "強化",
+          "furigana": "きょうか",
+          "meaningVi": "Tăng cường"
+        },
+        {
+          "word": "強い",
+          "furigana": "つよい",
+          "meaningVi": "Mạnh"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-5-2",
+      "character": "慣",
+      "hanViet": "QUÁN",
+      "strokeCount": 14,
+      "onyomi": [
+        "カン (kan)"
+      ],
+      "kunyomi": [
+        "な(れる)"
+      ],
+      "meaningVi": "Quen thuộc, thói quen.",
+      "commonWords": [
+        {
+          "word": "慣れます",
+          "furigana": "なれます",
+          "meaningVi": "Quen thuộc"
+        },
+        {
+          "word": "見慣れる",
+          "furigana": "みなれる",
+          "meaningVi": "Quen mắt"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-5-3",
+      "character": "齢",
+      "hanViet": "LINH",
+      "strokeCount": 17,
+      "onyomi": [
+        "レイ (rei)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Tuổi tác.",
+      "commonWords": [
+        {
+          "word": "年齢",
+          "furigana": "ねんれい",
+          "meaningVi": "Độ tuổi"
+        },
+        {
+          "word": "高齢",
+          "furigana": "こうれい",
+          "meaningVi": "Cao tuổi"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-5-4",
+      "character": "近",
+      "hanViet": "CẬN",
+      "strokeCount": 7,
+      "onyomi": [
+        "キン (kin)"
+      ],
+      "kunyomi": [
+        "ちか(い)",
+        "ちか(づく)"
+      ],
+      "meaningVi": "Gần, lân cận.",
+      "commonWords": [
+        {
+          "word": "近づきます",
+          "furigana": "ちかづきます",
+          "meaningVi": "Đến gần"
+        },
+        {
+          "word": "近く",
+          "furigana": "ちかく",
+          "meaningVi": "Gần đây"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-5-5",
+      "character": "変",
+      "hanViet": "BIẾN",
+      "strokeCount": 9,
+      "onyomi": [
+        "ヘン (hen)"
+      ],
+      "kunyomi": [
+        "か(わる)"
+      ],
+      "meaningVi": "Thay đổi, biến hóa.",
+      "commonWords": [
+        {
+          "word": "変わります",
+          "furigana": "かわります",
+          "meaningVi": "Thay đổi"
+        },
+        {
+          "word": "変化",
+          "furigana": "へんか",
+          "meaningVi": "Sự thay đổi"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n2-l5-s1",
+      "slideType": "grammar",
+      "title": "1. Theo sự thay đổi tỉ lệ thuận (có tính quy luật): V(từ điển)/N + にしたがって",
+      "grammarFormula": "V(thể từ điển)/N + にしたがって、[thay đổi tương ứng]",
+      "explanation": "にしたがって diễn tả 'THEO' sự thay đổi của A thì B cũng thay đổi TƯƠNG ỨNG — mang tính QUY LUẬT/LOGIC hơn hẳn につれて, và còn có thể mang nghĩa 'TUÂN THEO' khi đi với danh từ chỉ quy tắc.",
+      "teacherTips": "にしたがって có 2 nghĩa: (1) tỉ lệ thuận theo thay đổi, (2) tuân theo quy tắc/mệnh lệnh — につれて KHÔNG có nghĩa (2).",
+      "culturalNotes": "Văn bản hướng dẫn, quy định công ty Nhật hay dùng nghĩa 'tuân theo': '規則にしたがって、行動してください'.",
+      "examples": [
+        {
+          "id": "ex-n2-l5-s1-1",
+          "tokens": [
+            {
+              "id": "t-l5s1-1",
+              "text": "にほんご",
+              "isKeyGrammar": true,
+              "kanji": "日本語",
+              "furigana": "にほんご"
+            },
+            {
+              "id": "t-l5s1-2",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s1-3",
+              "text": "じょうず",
+              "isKeyGrammar": true,
+              "kanji": "上手",
+              "furigana": "じょうず"
+            },
+            {
+              "id": "t-l5s1-4",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s1-5",
+              "text": "なる",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s1-6",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s1-7",
+              "text": "したがって",
+              "isKeyGrammar": true,
+              "kanji": "従って",
+              "furigana": "したがって"
+            },
+            {
+              "id": "t-l5s1-8",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s1-9",
+              "text": "じしん",
+              "isKeyGrammar": true,
+              "kanji": "自信",
+              "furigana": "じしん"
+            },
+            {
+              "id": "t-l5s1-10",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s1-11",
+              "text": "つきます",
+              "isKeyGrammar": false,
+              "kanji": "付きます",
+              "furigana": "つきます"
+            }
+          ],
+          "meaningVi": "Theo việc tiếng Nhật giỏi lên, sự tự tin cũng tăng theo."
+        },
+        {
+          "id": "ex-n2-l5-s1-2",
+          "tokens": [
+            {
+              "id": "t-l5s1-12",
+              "text": "きそく",
+              "isKeyGrammar": true,
+              "kanji": "規則",
+              "furigana": "きそく"
+            },
+            {
+              "id": "t-l5s1-13",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s1-14",
+              "text": "したがって",
+              "isKeyGrammar": true,
+              "kanji": "従って",
+              "furigana": "したがって"
+            },
+            {
+              "id": "t-l5s1-15",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s1-16",
+              "text": "こうどう",
+              "isKeyGrammar": false,
+              "kanji": "行動",
+              "furigana": "こうどう"
+            },
+            {
+              "id": "t-l5s1-17",
+              "text": "して",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s1-18",
+              "text": "ください",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Hãy hành động theo quy tắc. (nghĩa 'tuân theo')"
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l5-s2",
+      "slideType": "grammar",
+      "title": "2. Cùng với, theo đà (song song tự nhiên): V(từ điển)/N + につれて",
+      "grammarFormula": "V(thể từ điển)/N + につれて、[thay đổi tương ứng]",
+      "explanation": "につれて diễn tả 'CÙNG VỚI' việc A thay đổi thì B cũng thay đổi theo — chỉ mô tả sự thay đổi SONG SONG TỰ NHIÊN, KHÔNG mang nghĩa 'tuân theo quy tắc' như にしたがって.",
+      "teacherTips": "につれて thường dùng cho hiện tượng TỰ NHIÊN (thời gian, thời tiết, tuổi tác) — không dùng cho mệnh lệnh/quy tắc.",
+      "culturalNotes": "Câu miêu tả tự nhiên trong văn học Nhật: '季節が変わるにつれて、気温も下がっていく' (theo mùa thay đổi, nhiệt độ cũng giảm dần).",
+      "examples": [
+        {
+          "id": "ex-n2-l5-s2-1",
+          "tokens": [
+            {
+              "id": "t-l5s2-1",
+              "text": "じかん",
+              "isKeyGrammar": true,
+              "kanji": "時間",
+              "furigana": "じかん"
+            },
+            {
+              "id": "t-l5s2-2",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s2-3",
+              "text": "たつ",
+              "isKeyGrammar": true,
+              "kanji": "経つ",
+              "furigana": "たつ"
+            },
+            {
+              "id": "t-l5s2-4",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s2-5",
+              "text": "つれて",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s2-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s2-7",
+              "text": "わすれて",
+              "isKeyGrammar": true,
+              "kanji": "忘れて",
+              "furigana": "わすれて"
+            },
+            {
+              "id": "t-l5s2-8",
+              "text": "いきます",
+              "isKeyGrammar": false,
+              "kanji": "行きます",
+              "furigana": "いきます"
+            }
+          ],
+          "meaningVi": "Theo thời gian trôi qua, dần dần quên đi."
+        },
+        {
+          "id": "ex-n2-l5-s2-2",
+          "tokens": [
+            {
+              "id": "t-l5s2-9",
+              "text": "たいふう",
+              "isKeyGrammar": true,
+              "kanji": "台風",
+              "furigana": "たいふう"
+            },
+            {
+              "id": "t-l5s2-10",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s2-11",
+              "text": "ちかづく",
+              "isKeyGrammar": true,
+              "kanji": "近づく",
+              "furigana": "ちかづく"
+            },
+            {
+              "id": "t-l5s2-12",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s2-13",
+              "text": "つれて",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s2-14",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s2-15",
+              "text": "かぜ",
+              "isKeyGrammar": true,
+              "kanji": "風",
+              "furigana": "かぜ"
+            },
+            {
+              "id": "t-l5s2-16",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s2-17",
+              "text": "つよく",
+              "isKeyGrammar": true,
+              "kanji": "強く",
+              "furigana": "つよく"
+            },
+            {
+              "id": "t-l5s2-18",
+              "text": "なります",
+              "isKeyGrammar": false,
+              "kanji": "成ります",
+              "furigana": "なります"
+            }
+          ],
+          "meaningVi": "Khi bão đến gần, gió trở nên mạnh hơn."
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l5-s3",
+      "slideType": "grammar",
+      "title": "3. So sánh にしたがって và につれて",
+      "grammarFormula": "にしたがって: có thể mang nghĩa TUÂN THEO + tỉ lệ thuận　vs　につれて: CHỈ tỉ lệ thuận song song tự nhiên",
+      "explanation": "にしたがって RỘNG NGHĨA hơn (dùng được cho cả 'tuân theo mệnh lệnh' lẫn 'tỉ lệ thuận'); につれて CHỈ dùng cho sự thay đổi TỰ NHIÊN, không có sắc thái mệnh lệnh — trong nhiều trường hợp tỉ lệ thuận cả hai có thể thay thế nhau.",
+      "teacherTips": "Mẹo: nếu câu có ý MỆNH LỆNH/QUY TẮC → chỉ dùng にしたがって; nếu chỉ là hai HIỆN TƯỢNG thay đổi song song → cả hai đều dùng được.",
+      "culturalNotes": "Đây là điểm ngữ pháp N2 hay gây nhầm lẫn nhất vì cả hai đều dịch là 'theo/cùng với' — cần nhớ につれて hẹp nghĩa hơn.",
+      "examples": [
+        {
+          "id": "ex-n2-l5-s3-1",
+          "tokens": [
+            {
+              "id": "t-l5s3-1",
+              "text": "ねんれい",
+              "isKeyGrammar": true,
+              "kanji": "年齢",
+              "furigana": "ねんれい"
+            },
+            {
+              "id": "t-l5s3-2",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s3-3",
+              "text": "あがる",
+              "isKeyGrammar": false,
+              "kanji": "上がる",
+              "furigana": "あがる"
+            },
+            {
+              "id": "t-l5s3-4",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s3-5",
+              "text": "したがって",
+              "isKeyGrammar": true,
+              "kanji": "従って",
+              "furigana": "したがって"
+            },
+            {
+              "id": "t-l5s3-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s3-7",
+              "text": "みなれた",
+              "isKeyGrammar": true,
+              "kanji": "見慣れた",
+              "furigana": "みなれた"
+            },
+            {
+              "id": "t-l5s3-8",
+              "text": "けしき",
+              "isKeyGrammar": false,
+              "kanji": "景色",
+              "furigana": "けしき"
+            },
+            {
+              "id": "t-l5s3-9",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s3-10",
+              "text": "かわります",
+              "isKeyGrammar": true,
+              "kanji": "変わります",
+              "furigana": "かわります"
+            }
+          ],
+          "meaningVi": "Theo độ tuổi tăng lên, phong cảnh đã quen mắt cũng thay đổi. (có thể thay bằng につれて)"
+        },
+        {
+          "id": "ex-n2-l5-s3-2",
+          "tokens": [
+            {
+              "id": "t-l5s3-11",
+              "text": "きそく",
+              "isKeyGrammar": true,
+              "kanji": "規則",
+              "furigana": "きそく"
+            },
+            {
+              "id": "t-l5s3-12",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s3-13",
+              "text": "したがって",
+              "isKeyGrammar": true,
+              "kanji": "従って",
+              "furigana": "したがって"
+            },
+            {
+              "id": "t-l5s3-14",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s3-15",
+              "text": "したがいます",
+              "isKeyGrammar": false,
+              "kanji": "従います",
+              "furigana": "したがいます"
+            }
+          ],
+          "meaningVi": "Tuân theo quy tắc. (KHÔNG thể thay bằng につれて vì đây là nghĩa 'tuân theo')"
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l5-s4",
+      "slideType": "grammar",
+      "title": "4. Kết hợp với 一方だ (ôn N3 bài 14): mô tả xu hướng liên tục",
+      "grammarFormula": "Nにつれて/にしたがって、[thay đổi A]一方だ",
+      "explanation": "Kết hợp につれて/にしたがって với 一方だ (đã học N3 bài 14 — xu hướng MỘT CHIỀU liên tục) để nhấn mạnh một QUÁ TRÌNH THAY ĐỔI DÀI HẠN, không ngừng lại, thường dùng trong báo cáo, phân tích xu hướng.",
+      "teacherTips": "Cấu trúc につれて/にしたがって + 一方だ thường xuất hiện trong tiêu đề báo cáo xã hội học, kinh tế học phân tích xu hướng dài hạn.",
+      "culturalNotes": "Đây là cách kết hợp ngữ pháp N2+N3 điển hình mà đề thi đọc hiểu JLPT hay lồng ghép để kiểm tra khả năng nắm bắt ngữ pháp tổng hợp.",
+      "examples": [
+        {
+          "id": "ex-n2-l5-s4-1",
+          "tokens": [
+            {
+              "id": "t-l5s4-1",
+              "text": "きおん",
+              "isKeyGrammar": true,
+              "kanji": "気温",
+              "furigana": "きおん"
+            },
+            {
+              "id": "t-l5s4-2",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s4-3",
+              "text": "あがる",
+              "isKeyGrammar": false,
+              "kanji": "上がる",
+              "furigana": "あがる"
+            },
+            {
+              "id": "t-l5s4-4",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s4-5",
+              "text": "つれて",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s4-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s4-7",
+              "text": "きせつ",
+              "isKeyGrammar": true,
+              "kanji": "季節",
+              "furigana": "きせつ"
+            },
+            {
+              "id": "t-l5s4-8",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s4-9",
+              "text": "かわる",
+              "isKeyGrammar": false,
+              "kanji": "変わる",
+              "furigana": "かわる"
+            },
+            {
+              "id": "t-l5s4-10",
+              "text": "いっぽう",
+              "isKeyGrammar": true,
+              "kanji": "一方",
+              "furigana": "いっぽう"
+            },
+            {
+              "id": "t-l5s4-11",
+              "text": "だ",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Theo đà nhiệt độ tăng, mùa cứ thay đổi liên tục."
+        },
+        {
+          "id": "ex-n2-l5-s4-2",
+          "tokens": [
+            {
+              "id": "t-l5s4-12",
+              "text": "とし",
+              "isKeyGrammar": true,
+              "kanji": "年",
+              "furigana": "とし"
+            },
+            {
+              "id": "t-l5s4-13",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s4-14",
+              "text": "とる",
+              "isKeyGrammar": false,
+              "kanji": "取る",
+              "furigana": "とる"
+            },
+            {
+              "id": "t-l5s4-15",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s4-16",
+              "text": "したがって",
+              "isKeyGrammar": true,
+              "kanji": "従って",
+              "furigana": "したがって"
+            },
+            {
+              "id": "t-l5s4-17",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s4-18",
+              "text": "きょうか",
+              "isKeyGrammar": true,
+              "kanji": "強化",
+              "furigana": "きょうか"
+            },
+            {
+              "id": "t-l5s4-19",
+              "text": "する",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s4-20",
+              "text": "いっぽう",
+              "isKeyGrammar": true,
+              "kanji": "一方",
+              "furigana": "いっぽう"
+            },
+            {
+              "id": "t-l5s4-21",
+              "text": "だ",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Theo tuổi tác tăng lên, việc tăng cường (sức khỏe) chỉ ngày càng cần thiết."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n2-5-1",
+      "speaker": "田中",
+      "speakerRole": "Bạn học tiếng Nhật",
+      "tokens": [
+        {
+          "id": "d5-1",
+          "text": "にほんご",
+          "isKeyGrammar": true,
+          "kanji": "日本語",
+          "furigana": "にほんご"
+        },
+        {
+          "id": "d5-2",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-3",
+          "text": "じょうず",
+          "isKeyGrammar": true,
+          "kanji": "上手",
+          "furigana": "じょうず"
+        },
+        {
+          "id": "d5-4",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-5",
+          "text": "なりました",
+          "isKeyGrammar": false,
+          "kanji": "成りました",
+          "furigana": "なりました"
+        },
+        {
+          "id": "d5-6",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Tiếng Nhật của bạn giỏi lên rồi nhỉ."
+    },
+    {
+      "id": "dia-n2-5-2",
+      "speaker": "サントス",
+      "speakerRole": "Bạn học tiếng Nhật",
+      "tokens": [
+        {
+          "id": "d5-7",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-8",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-9",
+          "text": "じょうず",
+          "isKeyGrammar": true,
+          "kanji": "上手",
+          "furigana": "じょうず"
+        },
+        {
+          "id": "d5-10",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-11",
+          "text": "なる",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-12",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d5-13",
+          "text": "したがって",
+          "isKeyGrammar": true,
+          "kanji": "従って",
+          "furigana": "したがって"
+        },
+        {
+          "id": "d5-14",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-15",
+          "text": "じしん",
+          "isKeyGrammar": true,
+          "kanji": "自信",
+          "furigana": "じしん"
+        },
+        {
+          "id": "d5-16",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-17",
+          "text": "つきました",
+          "isKeyGrammar": false,
+          "kanji": "付きました",
+          "furigana": "つきました"
+        }
+      ],
+      "meaningVi": "Vâng. Theo việc giỏi lên, sự tự tin cũng tăng theo."
+    },
+    {
+      "id": "dia-n2-5-3",
+      "speaker": "田中",
+      "speakerRole": "Bạn học tiếng Nhật",
+      "tokens": [
+        {
+          "id": "d5-18",
+          "text": "じかん",
+          "isKeyGrammar": true,
+          "kanji": "時間",
+          "furigana": "じかん"
+        },
+        {
+          "id": "d5-19",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-20",
+          "text": "たつ",
+          "isKeyGrammar": true,
+          "kanji": "経つ",
+          "furigana": "たつ"
+        },
+        {
+          "id": "d5-21",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d5-22",
+          "text": "つれて",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d5-23",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-24",
+          "text": "べんきょう",
+          "isKeyGrammar": false,
+          "kanji": "勉強",
+          "furigana": "べんきょう"
+        },
+        {
+          "id": "d5-25",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-26",
+          "text": "らくに",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-27",
+          "text": "なりました",
+          "isKeyGrammar": false,
+          "kanji": "成りました",
+          "furigana": "なりました"
+        },
+        {
+          "id": "d5-28",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Theo thời gian trôi qua, việc học có trở nên dễ dàng hơn không?"
+    },
+    {
+      "id": "dia-n2-5-4",
+      "speaker": "サントス",
+      "speakerRole": "Bạn học tiếng Nhật",
+      "tokens": [
+        {
+          "id": "d5-29",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-30",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-31",
+          "text": "きそく",
+          "isKeyGrammar": true,
+          "kanji": "規則",
+          "furigana": "きそく"
+        },
+        {
+          "id": "d5-32",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d5-33",
+          "text": "したがって",
+          "isKeyGrammar": true,
+          "kanji": "従って",
+          "furigana": "したがって"
+        },
+        {
+          "id": "d5-34",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-35",
+          "text": "まいにち",
+          "isKeyGrammar": false,
+          "kanji": "毎日",
+          "furigana": "まいにち"
+        },
+        {
+          "id": "d5-36",
+          "text": "べんきょう",
+          "isKeyGrammar": false,
+          "kanji": "勉強",
+          "furigana": "べんきょう"
+        },
+        {
+          "id": "d5-37",
+          "text": "しました",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng. Tôi đã học mỗi ngày theo đúng quy tắc (kỷ luật của bản thân)."
+    },
+    {
+      "id": "dia-n2-5-5",
+      "speaker": "田中",
+      "speakerRole": "Bạn học tiếng Nhật",
+      "tokens": [
+        {
+          "id": "d5-38",
+          "text": "たのもしい",
+          "isKeyGrammar": false,
+          "kanji": "頼もしい",
+          "furigana": "たのもしい"
+        },
+        {
+          "id": "d5-39",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d5-40",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Bạn thật đáng tin cậy nhỉ."
+    },
+    {
+      "id": "dia-n2-5-6",
+      "speaker": "サントス",
+      "speakerRole": "Bạn học tiếng Nhật",
+      "tokens": [
+        {
+          "id": "d5-41",
+          "text": "ねんれい",
+          "isKeyGrammar": true,
+          "kanji": "年齢",
+          "furigana": "ねんれい"
+        },
+        {
+          "id": "d5-42",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-43",
+          "text": "あがる",
+          "isKeyGrammar": false,
+          "kanji": "上がる",
+          "furigana": "あがる"
+        },
+        {
+          "id": "d5-44",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d5-45",
+          "text": "したがって",
+          "isKeyGrammar": true,
+          "kanji": "従って",
+          "furigana": "したがって"
+        },
+        {
+          "id": "d5-46",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-47",
+          "text": "みなれた",
+          "isKeyGrammar": true,
+          "kanji": "見慣れた",
+          "furigana": "みなれた"
+        },
+        {
+          "id": "d5-48",
+          "text": "けしき",
+          "isKeyGrammar": false,
+          "kanji": "景色",
+          "furigana": "けしき"
+        },
+        {
+          "id": "d5-49",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-50",
+          "text": "かわりました",
+          "isKeyGrammar": true,
+          "kanji": "変わりました",
+          "furigana": "かわりました"
+        }
+      ],
+      "meaningVi": "Theo độ tuổi tăng lên, phong cảnh đã quen mắt cũng thay đổi."
+    },
+    {
+      "id": "dia-n2-5-7",
+      "speaker": "田中",
+      "speakerRole": "Bạn học tiếng Nhật",
+      "tokens": [
+        {
+          "id": "d5-51",
+          "text": "たいふう",
+          "isKeyGrammar": true,
+          "kanji": "台風",
+          "furigana": "たいふう"
+        },
+        {
+          "id": "d5-52",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-53",
+          "text": "ちかづく",
+          "isKeyGrammar": true,
+          "kanji": "近づく",
+          "furigana": "ちかづく"
+        },
+        {
+          "id": "d5-54",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d5-55",
+          "text": "つれて",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d5-56",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-57",
+          "text": "かぜ",
+          "isKeyGrammar": true,
+          "kanji": "風",
+          "furigana": "かぜ"
+        },
+        {
+          "id": "d5-58",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-59",
+          "text": "つよく",
+          "isKeyGrammar": true,
+          "kanji": "強く",
+          "furigana": "つよく"
+        },
+        {
+          "id": "d5-60",
+          "text": "なりました",
+          "isKeyGrammar": false,
+          "kanji": "成りました",
+          "furigana": "なりました"
+        }
+      ],
+      "meaningVi": "Khi bão đến gần, gió trở nên mạnh hơn."
+    },
+    {
+      "id": "dia-n2-5-8",
+      "speaker": "サントス",
+      "speakerRole": "Bạn học tiếng Nhật",
+      "tokens": [
+        {
+          "id": "d5-61",
+          "text": "きおん",
+          "isKeyGrammar": true,
+          "kanji": "気温",
+          "furigana": "きおん"
+        },
+        {
+          "id": "d5-62",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-63",
+          "text": "さがる",
+          "isKeyGrammar": false,
+          "kanji": "下がる",
+          "furigana": "さがる"
+        },
+        {
+          "id": "d5-64",
+          "text": "いっぽう",
+          "isKeyGrammar": true,
+          "kanji": "一方",
+          "furigana": "いっぽう"
+        },
+        {
+          "id": "d5-65",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Nhiệt độ cũng chỉ ngày càng giảm."
+    },
+    {
+      "id": "dia-n2-5-9",
+      "speaker": "田中",
+      "speakerRole": "Bạn học tiếng Nhật",
+      "tokens": [
+        {
+          "id": "d5-66",
+          "text": "きせつ",
+          "isKeyGrammar": true,
+          "kanji": "季節",
+          "furigana": "きせつ"
+        },
+        {
+          "id": "d5-67",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-68",
+          "text": "かわる",
+          "isKeyGrammar": false,
+          "kanji": "変わる",
+          "furigana": "かわる"
+        },
+        {
+          "id": "d5-69",
+          "text": "いっぽう",
+          "isKeyGrammar": true,
+          "kanji": "一方",
+          "furigana": "いっぽう"
+        },
+        {
+          "id": "d5-70",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d5-71",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Mùa cứ thay đổi liên tục nhỉ."
+    },
+    {
+      "id": "dia-n2-5-10",
+      "speaker": "サントス",
+      "speakerRole": "Bạn học tiếng Nhật",
+      "tokens": [
+        {
+          "id": "d5-72",
+          "text": "そうですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-73",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-74",
+          "text": "からだ",
+          "isKeyGrammar": false,
+          "kanji": "体",
+          "furigana": "からだ"
+        },
+        {
+          "id": "d5-75",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-76",
+          "text": "きょうか",
+          "isKeyGrammar": true,
+          "kanji": "強化",
+          "furigana": "きょうか"
+        },
+        {
+          "id": "d5-77",
+          "text": "した",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-78",
+          "text": "ほうが",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-79",
+          "text": "いいです",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Đúng vậy nhỉ. Nên tăng cường sức khỏe cơ thể."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n2-5-1",
+      "question": "「日本語が上手になるにしたがって、自信がつきます」 — にしたがって diễn tả điều gì?",
+      "options": [
+        "Theo sự thay đổi của A thì B cũng thay đổi tương ứng (mang tính quy luật)",
+        "Tuân theo mệnh lệnh một cách máy móc",
+        "So sánh hai điều kiện",
+        "Phủ định việc tự tin"
+      ],
+      "correctIndex": 0,
+      "explanation": "にしたがって diễn tả sự thay đổi tỉ lệ thuận có tính quy luật giữa hai vế của câu.",
+      "hint": "Xem cấu trúc にしたがって ở slide 1."
+    },
+    {
+      "id": "ex-q-n2-5-2",
+      "question": "「規則にしたがって、行動してください」 — にしたがって ở đây mang nghĩa gì?",
+      "options": [
+        "Tuân theo (quy tắc) — nghĩa thứ hai của にしたがって",
+        "Tỉ lệ thuận về thời gian",
+        "Phủ định việc hành động",
+        "So sánh hai quy tắc khác nhau"
+      ],
+      "correctIndex": 0,
+      "explanation": "にしたがって có 2 nghĩa: tỉ lệ thuận VÀ tuân theo quy tắc — ở đây là nghĩa tuân theo.",
+      "hint": "Xem nghĩa thứ hai ở slide 1."
+    },
+    {
+      "id": "ex-q-n2-5-3",
+      "question": "につれて có thể dùng để diễn tả nghĩa 'tuân theo mệnh lệnh' không?",
+      "options": [
+        "Không, につれて CHỈ diễn tả sự thay đổi song song tự nhiên",
+        "Có, hoàn toàn giống にしたがって",
+        "Chỉ dùng được trong câu hỏi",
+        "Chỉ dùng được trong câu phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "につれて hẹp nghĩa hơn にしたがって — KHÔNG có nghĩa 'tuân theo', chỉ mô tả thay đổi song song tự nhiên.",
+      "hint": "Xem giải thích につれて ở slide 2."
+    },
+    {
+      "id": "ex-q-n2-5-4",
+      "question": "「時間が経つにつれて、忘れていきます」 nghĩa là:",
+      "options": [
+        "Theo thời gian trôi qua, dần dần quên đi",
+        "Ngay lập tức quên hết mọi thứ",
+        "Không bao giờ quên",
+        "Thời gian đã dừng lại"
+      ],
+      "correctIndex": 0,
+      "explanation": "につれて ở đây mô tả sự thay đổi song song tự nhiên: thời gian trôi qua → dần dần quên đi.",
+      "hint": "Áp dụng cấu trúc につれて cho ngữ cảnh câu."
+    },
+    {
+      "id": "ex-q-n2-5-5",
+      "question": "Trường hợp nào KHÔNG THỂ thay にしたがって bằng につれて?",
+      "options": [
+        "Khi câu mang nghĩa 'tuân theo quy tắc/mệnh lệnh'",
+        "Khi câu mô tả sự thay đổi song song tự nhiên",
+        "Không có trường hợp nào cả",
+        "Chỉ khi câu là câu hỏi"
+      ],
+      "correctIndex": 0,
+      "explanation": "につれて không có nghĩa 'tuân theo', nên câu như 規則にしたがって (tuân theo quy tắc) không thể đổi thành 規則につれて.",
+      "hint": "Xem mẹo phân biệt ở slide 3."
+    },
+    {
+      "id": "ex-q-n2-5-6",
+      "question": "「気温が上がるにつれて、季節は変わる一方だ」 — kết hợp につれて và 一方だ để làm gì?",
+      "options": [
+        "Nhấn mạnh một quá trình thay đổi dài hạn, liên tục không ngừng lại",
+        "Phủ định sự thay đổi",
+        "So sánh hai mùa khác nhau",
+        "Chỉ ra một sự kiện xảy ra một lần duy nhất"
+      ],
+      "correctIndex": 0,
+      "explanation": "Kết hợp につれて (song song) với 一方だ (một chiều liên tục, đã học N3) nhấn mạnh xu hướng thay đổi dài hạn.",
+      "hint": "Xem cấu trúc kết hợp ở slide 4."
+    },
+    {
+      "id": "ex-q-n2-5-7",
+      "question": "「年を取るにしたがって、強化する一方だ」 nghĩa là:",
+      "options": [
+        "Theo tuổi tác tăng lên, việc tăng cường (sức khỏe) chỉ ngày càng cần thiết",
+        "Tuổi tác không ảnh hưởng gì đến sức khỏe",
+        "Không cần tăng cường gì cả",
+        "Tuổi tác giảm dần theo thời gian"
+      ],
+      "correctIndex": 0,
+      "explanation": "にしたがって+一方だ nhấn mạnh mối liên hệ tỉ lệ thuận liên tục giữa tuổi tác và nhu cầu tăng cường sức khỏe.",
+      "hint": "Áp dụng cấu trúc kết hợp ở slide 4."
+    },
+    {
+      "id": "ex-q-n2-5-8",
+      "question": "Theo hội thoại, Santos đã học tiếng Nhật như thế nào?",
+      "options": [
+        "Học mỗi ngày theo quy tắc/kỷ luật của bản thân (規則にしたがって、毎日勉強しました)",
+        "Chỉ học khi có thời gian rảnh",
+        "Không học đều đặn",
+        "Chỉ học vào cuối tuần"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「規則にしたがって、毎日勉強しました」.",
+      "hint": "Xem câu thoại thứ 4."
+    },
+    {
+      "id": "ex-q-n2-5-9",
+      "question": "Điều gì xảy ra khi bão đến gần theo hội thoại?",
+      "options": [
+        "Gió trở nên mạnh hơn (風が強くなりました)",
+        "Gió trở nên yếu đi",
+        "Không có gì thay đổi",
+        "Trời trở nên nắng đẹp"
+      ],
+      "correctIndex": 0,
+      "explanation": "田中 nói 「台風が近づくにつれて、風が強くなりました」.",
+      "hint": "Xem câu thoại thứ 7."
+    },
+    {
+      "id": "ex-q-n2-5-10",
+      "question": "Santos đề xuất điều gì ở cuối hội thoại?",
+      "options": [
+        "Nên tăng cường sức khỏe cơ thể (体を強化したほうがいいです)",
+        "Nên đi du lịch",
+        "Nên nghỉ học tiếng Nhật",
+        "Không đề xuất gì cả"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「体を強化したほうがいいです」.",
+      "hint": "Xem câu thoại cuối cùng."
+    }
+  ]
+}

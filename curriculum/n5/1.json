@@ -1,0 +1,1691 @@
+{
+  "level": "N5",
+  "lessonNumber": 1,
+  "title": "Bài 1: Giới thiệu bản thân — です / じゃありません / ですか / も / の",
+  "description": "Chào hỏi lần đầu, xưng hô, nghề nghiệp, quốc tịch và tuổi tác. Nắm trọn bộ khung câu danh từ: khẳng định です, phủ định じゃ ありません, nghi vấn か, trợ từ も (cũng) và の (nối danh từ).",
+  "vocabList": [
+    {
+      "id": "voc-n5-1-1",
+      "word": "わたし",
+      "kanji": "私",
+      "furigana": "わたし",
+      "romaji": "watashi",
+      "wordType": "noun",
+      "meaningVi": "Tôi (ngôi thứ nhất, trung tính, dùng được mọi lúc)",
+      "accentNote": "Đọc bằng, hạ nhẹ âm cuối."
+    },
+    {
+      "id": "voc-n5-1-2",
+      "word": "わたしたち",
+      "kanji": "私たち",
+      "furigana": "わたしたち",
+      "romaji": "watashitachi",
+      "wordType": "noun",
+      "meaningVi": "Chúng tôi, chúng ta",
+      "accentNote": "たち là hậu tố số nhiều cho người."
+    },
+    {
+      "id": "voc-n5-1-3",
+      "word": "あなた",
+      "kanji": "貴方",
+      "furigana": "あなた",
+      "romaji": "anata",
+      "wordType": "noun",
+      "meaningVi": "Bạn / anh / chị (ngôi thứ 2)",
+      "accentNote": "Biết tên rồi thì gọi tên + さん, đừng dùng あなた."
+    },
+    {
+      "id": "voc-n5-1-4",
+      "word": "あのひと",
+      "kanji": "あの人",
+      "furigana": "あのひと",
+      "romaji": "ano hito",
+      "wordType": "noun",
+      "meaningVi": "Người kia, người đó",
+      "accentNote": "Lịch sự hơn: あの方 (あのかた)."
+    },
+    {
+      "id": "voc-n5-1-5",
+      "word": "みなさん",
+      "kanji": "皆さん",
+      "furigana": "みなさん",
+      "romaji": "minasan",
+      "wordType": "noun",
+      "meaningVi": "Các bạn, mọi người, quý vị",
+      "accentNote": "Câu mở đầu khi nói trước đám đông."
+    },
+    {
+      "id": "voc-n5-1-6",
+      "word": "〜さん",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "-san",
+      "wordType": "particle",
+      "meaningVi": "Anh / chị / ông / bà (gắn sau tên người khác)",
+      "accentNote": "TUYỆT ĐỐI không gắn vào tên mình."
+    },
+    {
+      "id": "voc-n5-1-7",
+      "word": "〜ちゃん",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "-chan",
+      "wordType": "particle",
+      "meaningVi": "Bé, cu, em (gọi thân mật trẻ nhỏ, bạn gái thân)",
+      "accentNote": "Chỉ dùng trong gia đình hoặc bạn rất thân."
+    },
+    {
+      "id": "voc-n5-1-8",
+      "word": "〜くん",
+      "kanji": "〜君",
+      "furigana": "〜くん",
+      "romaji": "-kun",
+      "wordType": "particle",
+      "meaningVi": "Cậu, em (gọi bé trai hoặc đàn em nam)",
+      "accentNote": "Cấp trên gọi cấp dưới nam cũng dùng."
+    },
+    {
+      "id": "voc-n5-1-9",
+      "word": "〜じん",
+      "kanji": "〜人",
+      "furigana": "〜じん",
+      "romaji": "-jin",
+      "wordType": "particle",
+      "meaningVi": "Người nước ~ (ベトナム人 = người Việt Nam)",
+      "accentNote": "Nước + 人. Riêng Nhật: 日本人 (にほんじん)."
+    },
+    {
+      "id": "voc-n5-1-10",
+      "word": "せんせい",
+      "kanji": "先生",
+      "furigana": "せんせい",
+      "romaji": "sensei",
+      "wordType": "noun",
+      "meaningVi": "Thầy / cô giáo, bác sĩ (dùng để GỌI người khác)",
+      "accentNote": "Kéo dài âm せい. Không tự xưng là 先生."
+    },
+    {
+      "id": "voc-n5-1-11",
+      "word": "きょうし",
+      "kanji": "教師",
+      "furigana": "きょうし",
+      "romaji": "kyoushi",
+      "wordType": "noun",
+      "meaningVi": "Giáo viên (tên NGHỀ, dùng khi nói nghề của mình)",
+      "accentNote": "Tôi là giáo viên → 私は教師です."
+    },
+    {
+      "id": "voc-n5-1-12",
+      "word": "がくせい",
+      "kanji": "学生",
+      "furigana": "がくせい",
+      "romaji": "gakusei",
+      "wordType": "noun",
+      "meaningVi": "Học sinh, sinh viên",
+      "accentNote": "Trọng âm phẳng."
+    },
+    {
+      "id": "voc-n5-1-13",
+      "word": "かいしゃいん",
+      "kanji": "会社員",
+      "furigana": "かいしゃいん",
+      "romaji": "kaishain",
+      "wordType": "noun",
+      "meaningVi": "Nhân viên công ty (nói chung)",
+      "accentNote": "Phân biệt với 社員: nhân viên của một công ty cụ thể."
+    },
+    {
+      "id": "voc-n5-1-14",
+      "word": "しゃいん",
+      "kanji": "社員",
+      "furigana": "しゃいん",
+      "romaji": "shain",
+      "wordType": "noun",
+      "meaningVi": "Nhân viên của công ty ~ (IMCの社員)",
+      "accentNote": "Luôn đi kèm tên công ty phía trước."
+    },
+    {
+      "id": "voc-n5-1-15",
+      "word": "ぎんこういん",
+      "kanji": "銀行員",
+      "furigana": "ぎんこういん",
+      "romaji": "ginkouin",
+      "wordType": "noun",
+      "meaningVi": "Nhân viên ngân hàng",
+      "accentNote": "Hậu tố 員 (いん) = thành viên, nhân viên."
+    },
+    {
+      "id": "voc-n5-1-16",
+      "word": "いしゃ",
+      "kanji": "医者",
+      "furigana": "いしゃ",
+      "romaji": "isha",
+      "wordType": "noun",
+      "meaningVi": "Bác sĩ (tên nghề)",
+      "accentNote": "Gọi bác sĩ trước mặt thì dùng 先生."
+    },
+    {
+      "id": "voc-n5-1-17",
+      "word": "けんきゅうしゃ",
+      "kanji": "研究者",
+      "furigana": "けんきゅうしゃ",
+      "romaji": "kenkyuusha",
+      "wordType": "noun",
+      "meaningVi": "Nhà nghiên cứu",
+      "accentNote": "Hậu tố 者 (しゃ) = người làm nghề ~."
+    },
+    {
+      "id": "voc-n5-1-18",
+      "word": "エンジニア",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "enjinia",
+      "wordType": "noun",
+      "meaningVi": "Kỹ sư",
+      "accentNote": "Từ ngoại lai, viết Katakana."
+    },
+    {
+      "id": "voc-n5-1-19",
+      "word": "だいがく",
+      "kanji": "大学",
+      "furigana": "だいがく",
+      "romaji": "daigaku",
+      "wordType": "noun",
+      "meaningVi": "Trường đại học",
+      "accentNote": "Nhấn ở âm い."
+    },
+    {
+      "id": "voc-n5-1-20",
+      "word": "びょういん",
+      "kanji": "病院",
+      "furigana": "びょういん",
+      "romaji": "byouin",
+      "wordType": "noun",
+      "meaningVi": "Bệnh viện",
+      "accentNote": "Đừng lẫn với 美容院 (びよういん) = tiệm làm tóc!"
+    },
+    {
+      "id": "voc-n5-1-21",
+      "word": "でんき",
+      "kanji": "電気",
+      "furigana": "でんき",
+      "romaji": "denki",
+      "wordType": "noun",
+      "meaningVi": "Điện, đèn điện",
+      "accentNote": "電気屋 = cửa hàng đồ điện."
+    },
+    {
+      "id": "voc-n5-1-22",
+      "word": "だれ",
+      "kanji": "誰",
+      "furigana": "だれ",
+      "romaji": "dare",
+      "wordType": "noun",
+      "meaningVi": "Ai (từ để hỏi người)",
+      "accentNote": "Lịch sự hơn: どなた."
+    },
+    {
+      "id": "voc-n5-1-23",
+      "word": "どなた",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "donata",
+      "wordType": "noun",
+      "meaningVi": "Vị nào, ai ạ (lịch sự)",
+      "accentNote": "Dùng với khách, người trên."
+    },
+    {
+      "id": "voc-n5-1-24",
+      "word": "〜さい",
+      "kanji": "〜歳",
+      "furigana": "〜さい",
+      "romaji": "-sai",
+      "wordType": "noun",
+      "meaningVi": "~ tuổi",
+      "accentNote": "1 tuổi いっさい, 8 tuổi はっさい, 20 tuổi はたち."
+    },
+    {
+      "id": "voc-n5-1-25",
+      "word": "なんさい",
+      "kanji": "何歳",
+      "furigana": "なんさい",
+      "romaji": "nansai",
+      "wordType": "noun",
+      "meaningVi": "Mấy tuổi",
+      "accentNote": "Lịch sự hơn: おいくつですか."
+    },
+    {
+      "id": "voc-n5-1-26",
+      "word": "はい",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "hai",
+      "wordType": "phrase",
+      "meaningVi": "Vâng, đúng vậy",
+      "accentNote": "Cũng dùng để báo “tôi đang nghe”."
+    },
+    {
+      "id": "voc-n5-1-27",
+      "word": "いいえ",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "iie",
+      "wordType": "phrase",
+      "meaningVi": "Không, không phải",
+      "accentNote": "Khi được khen thì đáp いいえ cho khiêm tốn."
+    },
+    {
+      "id": "voc-n5-1-28",
+      "word": "はじめまして",
+      "kanji": "初めまして",
+      "furigana": "はじめまして",
+      "romaji": "hajimemashite",
+      "wordType": "phrase",
+      "meaningVi": "Rất hân hạnh được gặp (lần đầu)",
+      "accentNote": "Nói kèm cúi đầu khoảng 15 độ."
+    },
+    {
+      "id": "voc-n5-1-29",
+      "word": "どうぞよろしくおねがいします",
+      "kanji": "どうぞよろしくお願いします",
+      "furigana": "どうぞよろしくおねがいします",
+      "romaji": "douzo yoroshiku onegaishimasu",
+      "wordType": "phrase",
+      "meaningVi": "Rất mong được giúp đỡ",
+      "accentNote": "Câu chốt bắt buộc khi chào lần đầu."
+    },
+    {
+      "id": "voc-n5-1-30",
+      "word": "しつれいですが",
+      "kanji": "失礼ですが",
+      "furigana": "しつれいですが",
+      "romaji": "shitsurei desu ga",
+      "wordType": "phrase",
+      "meaningVi": "Xin lỗi cho hỏi… (mở lời hỏi thông tin)",
+      "accentNote": "Đệm trước khi hỏi tên, tuổi, nghề."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n5-1-1",
+      "character": "私",
+      "hanViet": "TƯ",
+      "strokeCount": 7,
+      "onyomi": [
+        "シ (shi)"
+      ],
+      "kunyomi": [
+        "わたし",
+        "わたくし"
+      ],
+      "meaningVi": "Tôi; riêng tư, cá nhân.",
+      "commonWords": [
+        {
+          "word": "私",
+          "furigana": "わたし",
+          "meaningVi": "Tôi"
+        },
+        {
+          "word": "私立",
+          "furigana": "しりつ",
+          "meaningVi": "Tư lập, dân lập"
+        },
+        {
+          "word": "私生活",
+          "furigana": "しせいかつ",
+          "meaningVi": "Đời sống riêng tư"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-1-2",
+      "character": "人",
+      "hanViet": "NHÂN",
+      "strokeCount": 2,
+      "onyomi": [
+        "ジン (jin)",
+        "ニン (nin)"
+      ],
+      "kunyomi": [
+        "ひと"
+      ],
+      "meaningVi": "Người. Hình vẽ một người đang đứng dang chân.",
+      "commonWords": [
+        {
+          "word": "人",
+          "furigana": "ひと",
+          "meaningVi": "Người"
+        },
+        {
+          "word": "日本人",
+          "furigana": "にほんじん",
+          "meaningVi": "Người Nhật"
+        },
+        {
+          "word": "三人",
+          "furigana": "さんにん",
+          "meaningVi": "Ba người"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-1-3",
+      "character": "先",
+      "hanViet": "TIÊN",
+      "strokeCount": 6,
+      "onyomi": [
+        "セン (sen)"
+      ],
+      "kunyomi": [
+        "さき"
+      ],
+      "meaningVi": "Trước, phía trước, đi trước.",
+      "commonWords": [
+        {
+          "word": "先生",
+          "furigana": "せんせい",
+          "meaningVi": "Thầy/cô giáo"
+        },
+        {
+          "word": "先月",
+          "furigana": "せんげつ",
+          "meaningVi": "Tháng trước"
+        },
+        {
+          "word": "お先に",
+          "furigana": "おさきに",
+          "meaningVi": "Tôi xin phép trước"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-1-4",
+      "character": "生",
+      "hanViet": "SINH",
+      "strokeCount": 5,
+      "onyomi": [
+        "セイ (sei)",
+        "ショウ (shou)"
+      ],
+      "kunyomi": [
+        "い(きる)",
+        "う(まれる)",
+        "なま"
+      ],
+      "meaningVi": "Sinh ra, sống; tươi sống.",
+      "commonWords": [
+        {
+          "word": "学生",
+          "furigana": "がくせい",
+          "meaningVi": "Học sinh, sinh viên"
+        },
+        {
+          "word": "生まれる",
+          "furigana": "うまれる",
+          "meaningVi": "Được sinh ra"
+        },
+        {
+          "word": "生ビール",
+          "furigana": "なまビール",
+          "meaningVi": "Bia tươi"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-1-5",
+      "character": "学",
+      "hanViet": "HỌC",
+      "strokeCount": 8,
+      "onyomi": [
+        "ガク (gaku)"
+      ],
+      "kunyomi": [
+        "まな(ぶ)"
+      ],
+      "meaningVi": "Học tập, học vấn.",
+      "commonWords": [
+        {
+          "word": "学校",
+          "furigana": "がっこう",
+          "meaningVi": "Trường học"
+        },
+        {
+          "word": "大学",
+          "furigana": "だいがく",
+          "meaningVi": "Đại học"
+        },
+        {
+          "word": "学ぶ",
+          "furigana": "まなぶ",
+          "meaningVi": "Học hỏi"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-1-6",
+      "character": "会",
+      "hanViet": "HỘI",
+      "strokeCount": 6,
+      "onyomi": [
+        "カイ (kai)"
+      ],
+      "kunyomi": [
+        "あ(う)"
+      ],
+      "meaningVi": "Gặp gỡ, hội họp.",
+      "commonWords": [
+        {
+          "word": "会社",
+          "furigana": "かいしゃ",
+          "meaningVi": "Công ty"
+        },
+        {
+          "word": "会議",
+          "furigana": "かいぎ",
+          "meaningVi": "Cuộc họp"
+        },
+        {
+          "word": "会う",
+          "furigana": "あう",
+          "meaningVi": "Gặp mặt"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-1-7",
+      "character": "社",
+      "hanViet": "XÃ",
+      "strokeCount": 7,
+      "onyomi": [
+        "シャ (sha)"
+      ],
+      "kunyomi": [
+        "やしろ"
+      ],
+      "meaningVi": "Công ty, xã hội; đền thờ Thần đạo.",
+      "commonWords": [
+        {
+          "word": "会社員",
+          "furigana": "かいしゃいん",
+          "meaningVi": "Nhân viên công ty"
+        },
+        {
+          "word": "社長",
+          "furigana": "しゃちょう",
+          "meaningVi": "Giám đốc"
+        },
+        {
+          "word": "神社",
+          "furigana": "じんじゃ",
+          "meaningVi": "Đền Thần đạo"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-1-8",
+      "character": "名",
+      "hanViet": "DANH",
+      "strokeCount": 6,
+      "onyomi": [
+        "メイ (mei)",
+        "ミョウ (myou)"
+      ],
+      "kunyomi": [
+        "な"
+      ],
+      "meaningVi": "Tên gọi, danh tiếng.",
+      "commonWords": [
+        {
+          "word": "名前",
+          "furigana": "なまえ",
+          "meaningVi": "Tên"
+        },
+        {
+          "word": "有名",
+          "furigana": "ゆうめい",
+          "meaningVi": "Nổi tiếng"
+        },
+        {
+          "word": "名刺",
+          "furigana": "めいし",
+          "meaningVi": "Danh thiếp"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n5-l1-s1",
+      "slideType": "grammar",
+      "title": "1. Khẳng định: N1 は N2 です",
+      "grammarFormula": "N1 [chủ đề] + は + N2 [danh từ vị ngữ] + です",
+      "explanation": "は đánh dấu CHỦ ĐỀ của câu — thứ mà cả câu đang nói về. Viết bằng chữ は nhưng khi là trợ từ thì BẮT BUỘC đọc là 'wa'. です đứng cuối câu, vừa khẳng định vừa thể hiện thái độ lịch sự.",
+      "teacherTips": "Khi VIẾT thì dùng chữ は, khi ĐỌC thì bật ra thành 'wa'. Sai chỗ này là lộ ngay người mới học.",
+      "culturalNotes": "Người Nhật rất hay lược bỏ 私は khi ngữ cảnh đã rõ. Nói 学生です là đủ hiểu 'tôi là sinh viên'.",
+      "examples": [
+        {
+          "id": "ex-n5-l1-s1-1",
+          "tokens": [
+            {
+              "id": "t-l1s1-1",
+              "text": "わたし",
+              "isKeyGrammar": false,
+              "kanji": "私",
+              "furigana": "わたし"
+            },
+            {
+              "id": "t-l1s1-2",
+              "text": "は",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l1s1-3",
+              "text": "マイク・ミラー",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l1s1-4",
+              "text": "です",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Tôi là Mike Miller."
+        },
+        {
+          "id": "ex-n5-l1-s1-2",
+          "tokens": [
+            {
+              "id": "t-l1s1-5",
+              "text": "サントスさん",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l1s1-6",
+              "text": "は",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l1s1-7",
+              "text": "がくせい",
+              "isKeyGrammar": false,
+              "kanji": "学生",
+              "furigana": "がくせい"
+            },
+            {
+              "id": "t-l1s1-8",
+              "text": "です",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Anh Santos là sinh viên."
+        },
+        {
+          "id": "ex-n5-l1-s1-3",
+          "tokens": [
+            {
+              "id": "t-l1s1-9",
+              "text": "わたし",
+              "isKeyGrammar": false,
+              "kanji": "私",
+              "furigana": "わたし"
+            },
+            {
+              "id": "t-l1s1-10",
+              "text": "は",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l1s1-11",
+              "text": "ベトナム",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l1s1-12",
+              "text": "じん",
+              "isKeyGrammar": false,
+              "kanji": "人",
+              "furigana": "じん"
+            },
+            {
+              "id": "t-l1s1-13",
+              "text": "です",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Tôi là người Việt Nam."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l1-s2",
+      "slideType": "grammar",
+      "title": "2. Phủ định: N1 は N2 じゃありません",
+      "grammarFormula": "N1 + は + N2 + じゃ ありません  (trang trọng: では ありません)",
+      "explanation": "Muốn nói 'không phải là ~' thì thay です bằng じゃありません. じゃ là dạng nói, では là dạng viết/trang trọng. Cả hai đều lịch sự, khác nhau ở độ trang trọng chứ không phải đúng/sai.",
+      "teacherTips": "じゃ ありません nói nhanh sẽ thành じゃないです — thân mật hơn một chút, vẫn lịch sự.",
+      "culturalNotes": "Người Nhật ngại phủ định thẳng. Thay vì 'không phải', họ hay nói ちょっと… và bỏ lửng.",
+      "examples": [
+        {
+          "id": "ex-n5-l1-s2-1",
+          "tokens": [
+            {
+              "id": "t-l1s2-1",
+              "text": "サントスさん",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l1s2-2",
+              "text": "は",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l1s2-3",
+              "text": "がくせい",
+              "isKeyGrammar": false,
+              "kanji": "学生",
+              "furigana": "がくせい"
+            },
+            {
+              "id": "t-l1s2-4",
+              "text": "じゃ ありません",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Anh Santos không phải là sinh viên."
+        },
+        {
+          "id": "ex-n5-l1-s2-2",
+          "tokens": [
+            {
+              "id": "t-l1s2-5",
+              "text": "わたし",
+              "isKeyGrammar": false,
+              "kanji": "私",
+              "furigana": "わたし"
+            },
+            {
+              "id": "t-l1s2-6",
+              "text": "は",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l1s2-7",
+              "text": "いしゃ",
+              "isKeyGrammar": false,
+              "kanji": "医者",
+              "furigana": "いしゃ"
+            },
+            {
+              "id": "t-l1s2-8",
+              "text": "では ありません",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Tôi không phải là bác sĩ."
+        },
+        {
+          "id": "ex-n5-l1-s2-3",
+          "tokens": [
+            {
+              "id": "t-l1s2-9",
+              "text": "ミラーさん",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l1s2-10",
+              "text": "は",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l1s2-11",
+              "text": "にほんじん",
+              "isKeyGrammar": false,
+              "kanji": "日本人",
+              "furigana": "にほんじん"
+            },
+            {
+              "id": "t-l1s2-12",
+              "text": "じゃ ありません",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Anh Miller không phải là người Nhật."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l1-s3",
+      "slideType": "grammar",
+      "title": "3. Nghi vấn: N1 は N2 ですか",
+      "grammarFormula": "N1 + は + N2 + です + か ↗",
+      "explanation": "Chỉ cần thêm trợ từ か vào cuối câu là thành câu hỏi — KHÔNG đảo trật tự từ như tiếng Anh. Cuối câu lên giọng nhẹ. Trả lời: はい、～です / いいえ、～じゃ ありません.",
+      "teacherTips": "Với từ để hỏi (だれ, なん, どこ…) thì KHÔNG trả lời はい/いいえ, phải trả lời thẳng nội dung.",
+      "culturalNotes": "Trong văn viết tiếng Nhật, câu hỏi kết thúc bằng か thì dùng dấu 。 chứ không cần dấu ?.",
+      "examples": [
+        {
+          "id": "ex-n5-l1-s3-1",
+          "tokens": [
+            {
+              "id": "t-l1s3-1",
+              "text": "ミラーさん",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l1s3-2",
+              "text": "は",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l1s3-3",
+              "text": "かいしゃいん",
+              "isKeyGrammar": false,
+              "kanji": "会社員",
+              "furigana": "かいしゃいん"
+            },
+            {
+              "id": "t-l1s3-4",
+              "text": "ですか",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Anh Miller là nhân viên công ty phải không?"
+        },
+        {
+          "id": "ex-n5-l1-s3-2",
+          "tokens": [
+            {
+              "id": "t-l1s3-5",
+              "text": "はい",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l1s3-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l1s3-7",
+              "text": "かいしゃいん",
+              "isKeyGrammar": false,
+              "kanji": "会社員",
+              "furigana": "かいしゃいん"
+            },
+            {
+              "id": "t-l1s3-8",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Vâng, đúng là nhân viên công ty."
+        },
+        {
+          "id": "ex-n5-l1-s3-3",
+          "tokens": [
+            {
+              "id": "t-l1s3-9",
+              "text": "あのひと",
+              "isKeyGrammar": false,
+              "kanji": "あの人",
+              "furigana": "あのひと"
+            },
+            {
+              "id": "t-l1s3-10",
+              "text": "は",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l1s3-11",
+              "text": "だれ",
+              "isKeyGrammar": true,
+              "kanji": "誰",
+              "furigana": "だれ"
+            },
+            {
+              "id": "t-l1s3-12",
+              "text": "ですか",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Người kia là ai vậy?"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l1-s4",
+      "slideType": "grammar",
+      "title": "4. Trợ từ も: cũng vậy",
+      "grammarFormula": "N1 + も + N2 + です   (も thay chỗ của は)",
+      "explanation": "Khi vị ngữ TRÙNG với câu trước, thay は bằng も để nói 'cũng'. Lưu ý: も ĐẨY は ra, không bao giờ viết 「は も」 cạnh nhau.",
+      "teacherTips": "Nghe ai giới thiệu xong mà mình giống họ, đáp ngay 「わたしもです」 — cực tự nhiên.",
+      "culturalNotes": "Nói 私もです là cách nhanh nhất để tạo cảm giác đồng cảm trong hội thoại Nhật.",
+      "examples": [
+        {
+          "id": "ex-n5-l1-s4-1",
+          "tokens": [
+            {
+              "id": "t-l1s4-1",
+              "text": "ミラーさん",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l1s4-2",
+              "text": "は",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l1s4-3",
+              "text": "かいしゃいん",
+              "isKeyGrammar": false,
+              "kanji": "会社員",
+              "furigana": "かいしゃいん"
+            },
+            {
+              "id": "t-l1s4-4",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Anh Miller là nhân viên công ty."
+        },
+        {
+          "id": "ex-n5-l1-s4-2",
+          "tokens": [
+            {
+              "id": "t-l1s4-5",
+              "text": "グプタさん",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l1s4-6",
+              "text": "も",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l1s4-7",
+              "text": "かいしゃいん",
+              "isKeyGrammar": false,
+              "kanji": "会社員",
+              "furigana": "かいしゃいん"
+            },
+            {
+              "id": "t-l1s4-8",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Anh Gupta cũng là nhân viên công ty."
+        },
+        {
+          "id": "ex-n5-l1-s4-3",
+          "tokens": [
+            {
+              "id": "t-l1s4-9",
+              "text": "わたし",
+              "isKeyGrammar": false,
+              "kanji": "私",
+              "furigana": "わたし"
+            },
+            {
+              "id": "t-l1s4-10",
+              "text": "も",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l1s4-11",
+              "text": "ベトナムじん",
+              "isKeyGrammar": false,
+              "kanji": "ベトナム人",
+              "furigana": "ベトナムじん"
+            },
+            {
+              "id": "t-l1s4-12",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Tôi cũng là người Việt Nam."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l1-s5",
+      "slideType": "grammar",
+      "title": "5. Trợ từ の: nối hai danh từ",
+      "grammarFormula": "N1 + の + N2   (N1 bổ nghĩa cho N2)",
+      "explanation": "の nối hai danh từ, N1 giải thích cho N2: nơi trực thuộc, người sở hữu, loại. Thứ tự NGƯỢC tiếng Việt — cái lớn/bao trùm đứng TRƯỚC.",
+      "teacherTips": "Đọc ngược từ phải sang trái là ra nghĩa tiếng Việt: IMC の 社員 → nhân viên ← của IMC.",
+      "culturalNotes": "Người Nhật giới thiệu CÔNG TY trước rồi mới tới TÊN: 「IMCのミラーです」 — tập thể đứng trước cá nhân.",
+      "examples": [
+        {
+          "id": "ex-n5-l1-s5-1",
+          "tokens": [
+            {
+              "id": "t-l1s5-1",
+              "text": "IMC",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l1s5-2",
+              "text": "の",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l1s5-3",
+              "text": "しゃいん",
+              "isKeyGrammar": false,
+              "kanji": "社員",
+              "furigana": "しゃいん"
+            },
+            {
+              "id": "t-l1s5-4",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "(Tôi) là nhân viên của công ty IMC."
+        },
+        {
+          "id": "ex-n5-l1-s5-2",
+          "tokens": [
+            {
+              "id": "t-l1s5-5",
+              "text": "さくら",
+              "isKeyGrammar": false,
+              "kanji": "桜",
+              "furigana": "さくら"
+            },
+            {
+              "id": "t-l1s5-6",
+              "text": "だいがく",
+              "isKeyGrammar": false,
+              "kanji": "大学",
+              "furigana": "だいがく"
+            },
+            {
+              "id": "t-l1s5-7",
+              "text": "の",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l1s5-8",
+              "text": "せんせい",
+              "isKeyGrammar": false,
+              "kanji": "先生",
+              "furigana": "せんせい"
+            },
+            {
+              "id": "t-l1s5-9",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "(Cô ấy) là giáo viên của Đại học Sakura."
+        },
+        {
+          "id": "ex-n5-l1-s5-3",
+          "tokens": [
+            {
+              "id": "t-l1s5-10",
+              "text": "わたし",
+              "isKeyGrammar": false,
+              "kanji": "私",
+              "furigana": "わたし"
+            },
+            {
+              "id": "t-l1s5-11",
+              "text": "の",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l1s5-12",
+              "text": "なまえ",
+              "isKeyGrammar": false,
+              "kanji": "名前",
+              "furigana": "なまえ"
+            },
+            {
+              "id": "t-l1s5-13",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l1s5-14",
+              "text": "ナム",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l1s5-15",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Tên tôi là Nam."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l1-s6",
+      "slideType": "grammar",
+      "title": "6. Hỏi tuổi & 〜歳",
+      "grammarFormula": "N は + [số] + 歳(さい) です  /  なんさい ですか, おいくつ ですか",
+      "explanation": "Đếm tuổi bằng hậu tố 〜歳. Có ba trường hợp biến âm phải nhớ: 1 tuổi いっさい, 8 tuổi はっさい, 10 tuổi じゅっさい. Riêng 20 tuổi đọc đặc biệt là はたち (二十歳).",
+      "teacherTips": "なんさい hỏi trẻ con thì được; hỏi người lớn phải dùng おいくつですか cho lịch sự.",
+      "culturalNotes": "Hỏi tuổi phụ nữ ở Nhật khá nhạy cảm — luôn đệm 失礼ですが trước khi hỏi.",
+      "examples": [
+        {
+          "id": "ex-n5-l1-s6-1",
+          "tokens": [
+            {
+              "id": "t-l1s6-1",
+              "text": "テレサちゃん",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l1s6-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l1s6-3",
+              "text": "きゅうさい",
+              "isKeyGrammar": true,
+              "kanji": "九歳",
+              "furigana": "きゅうさい"
+            },
+            {
+              "id": "t-l1s6-4",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Bé Teresa 9 tuổi."
+        },
+        {
+          "id": "ex-n5-l1-s6-2",
+          "tokens": [
+            {
+              "id": "t-l1s6-5",
+              "text": "しつれいですが",
+              "isKeyGrammar": true,
+              "kanji": "失礼ですが",
+              "furigana": "しつれいですが"
+            },
+            {
+              "id": "t-l1s6-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l1s6-7",
+              "text": "おいくつ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l1s6-8",
+              "text": "ですか",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Xin lỗi cho hỏi, anh/chị bao nhiêu tuổi ạ?"
+        },
+        {
+          "id": "ex-n5-l1-s6-3",
+          "tokens": [
+            {
+              "id": "t-l1s6-9",
+              "text": "わたし",
+              "isKeyGrammar": false,
+              "kanji": "私",
+              "furigana": "わたし"
+            },
+            {
+              "id": "t-l1s6-10",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l1s6-11",
+              "text": "はたち",
+              "isKeyGrammar": true,
+              "kanji": "二十歳",
+              "furigana": "はたち"
+            },
+            {
+              "id": "t-l1s6-12",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Tôi 20 tuổi."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n5-1-1",
+      "speaker": "佐藤 (Satou)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-l1-1a",
+          "text": "はじめまして",
+          "isKeyGrammar": false,
+          "kanji": "初めまして",
+          "furigana": "はじめまして"
+        },
+        {
+          "id": "d-l1-1b",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-1c",
+          "text": "さとう",
+          "isKeyGrammar": false,
+          "kanji": "佐藤",
+          "furigana": "さとう"
+        },
+        {
+          "id": "d-l1-1d",
+          "text": "けいこ",
+          "isKeyGrammar": false,
+          "kanji": "けい子",
+          "furigana": "けいこ"
+        },
+        {
+          "id": "d-l1-1e",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Rất hân hạnh được gặp. Tôi là Satou Keiko."
+    },
+    {
+      "id": "dia-n5-1-2",
+      "speaker": "山田 (Yamada)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-l1-2a",
+          "text": "みなさん",
+          "isKeyGrammar": false,
+          "kanji": "皆さん",
+          "furigana": "みなさん"
+        },
+        {
+          "id": "d-l1-2b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-2c",
+          "text": "こちら",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-2d",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-2e",
+          "text": "マイク・ミラーさん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-2f",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Mọi người ơi, đây là anh Mike Miller."
+    },
+    {
+      "id": "dia-n5-1-3",
+      "speaker": "ミラー (Miller)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-l1-3a",
+          "text": "はじめまして",
+          "isKeyGrammar": false,
+          "kanji": "初めまして",
+          "furigana": "はじめまして"
+        },
+        {
+          "id": "d-l1-3b",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-3c",
+          "text": "マイク・ミラー",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-3d",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-3e",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-3f",
+          "text": "アメリカ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-3g",
+          "text": "から",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-3h",
+          "text": "きました",
+          "isKeyGrammar": false,
+          "kanji": "来ました",
+          "furigana": "きました"
+        }
+      ],
+      "meaningVi": "Rất hân hạnh. Tôi là Mike Miller. Tôi đến từ Mỹ."
+    },
+    {
+      "id": "dia-n5-1-4",
+      "speaker": "ミラー (Miller)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-l1-4a",
+          "text": "IMC",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-4b",
+          "text": "の",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l1-4c",
+          "text": "しゃいん",
+          "isKeyGrammar": false,
+          "kanji": "社員",
+          "furigana": "しゃいん"
+        },
+        {
+          "id": "d-l1-4d",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Tôi là nhân viên công ty IMC."
+    },
+    {
+      "id": "dia-n5-1-5",
+      "speaker": "ミラー (Miller)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-l1-5a",
+          "text": "どうぞ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-5b",
+          "text": "よろしく",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-5c",
+          "text": "おねがいします",
+          "isKeyGrammar": false,
+          "kanji": "お願いします",
+          "furigana": "おねがいします"
+        }
+      ],
+      "meaningVi": "Rất mong nhận được sự giúp đỡ của mọi người."
+    },
+    {
+      "id": "dia-n5-1-6",
+      "speaker": "佐藤 (Satou)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-l1-6a",
+          "text": "ミラーさん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-6b",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-6c",
+          "text": "エンジニア",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-6d",
+          "text": "ですか",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Anh Miller là kỹ sư phải không ạ?"
+    },
+    {
+      "id": "dia-n5-1-7",
+      "speaker": "ミラー (Miller)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-l1-7a",
+          "text": "いいえ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-7b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-7c",
+          "text": "エンジニア",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-7d",
+          "text": "じゃ ありません",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l1-7e",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-7f",
+          "text": "かいしゃいん",
+          "isKeyGrammar": false,
+          "kanji": "会社員",
+          "furigana": "かいしゃいん"
+        },
+        {
+          "id": "d-l1-7g",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Không, tôi không phải kỹ sư. Tôi là nhân viên công ty."
+    },
+    {
+      "id": "dia-n5-1-8",
+      "speaker": "佐藤 (Satou)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-l1-8a",
+          "text": "しつれいですが",
+          "isKeyGrammar": false,
+          "kanji": "失礼ですが",
+          "furigana": "しつれいですが"
+        },
+        {
+          "id": "d-l1-8b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-8c",
+          "text": "おいくつ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-8d",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Xin lỗi cho hỏi, anh bao nhiêu tuổi ạ?"
+    },
+    {
+      "id": "dia-n5-1-9",
+      "speaker": "ミラー (Miller)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-l1-9a",
+          "text": "にじゅうきゅうさい",
+          "isKeyGrammar": true,
+          "kanji": "二十九歳",
+          "furigana": "にじゅうきゅうさい"
+        },
+        {
+          "id": "d-l1-9b",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-9c",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-9d",
+          "text": "さとうさん",
+          "isKeyGrammar": false,
+          "kanji": "佐藤さん",
+          "furigana": "さとうさん"
+        },
+        {
+          "id": "d-l1-9e",
+          "text": "も",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l1-9f",
+          "text": "IMC",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-9g",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-9h",
+          "text": "しゃいん",
+          "isKeyGrammar": false,
+          "kanji": "社員",
+          "furigana": "しゃいん"
+        },
+        {
+          "id": "d-l1-9i",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Tôi 29 tuổi. Chị Satou cũng là nhân viên IMC ạ?"
+    },
+    {
+      "id": "dia-n5-1-10",
+      "speaker": "佐藤 (Satou)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-l1-10a",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-10b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-10c",
+          "text": "そう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-10d",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-10e",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-10f",
+          "text": "よろしく",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l1-10g",
+          "text": "おねがいします",
+          "isKeyGrammar": false,
+          "kanji": "お願いします",
+          "furigana": "おねがいします"
+        }
+      ],
+      "meaningVi": "Vâng, đúng vậy. Rất mong được hợp tác."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n5-1-1",
+      "question": "わたし ___ ナムです。(Chọn trợ từ đánh dấu chủ đề)",
+      "options": [
+        "は (wa)",
+        "が (ga)",
+        "を (o)",
+        "に (ni)"
+      ],
+      "correctIndex": 0,
+      "explanation": "は là trợ từ đánh dấu CHỦ ĐỀ. Viết là 'ha' nhưng khi làm trợ từ thì đọc bật ra thành 'wa'.",
+      "hint": "Trợ từ cơ bản nhất của bài 1."
+    },
+    {
+      "id": "ex-q-n5-1-2",
+      "question": "ミラーさんは 医者 ___ ありません。(Phủ định danh từ)",
+      "options": [
+        "じゃ",
+        "で",
+        "を",
+        "が"
+      ],
+      "correctIndex": 0,
+      "explanation": "Phủ định của です là じゃ ありません (dạng nói) hoặc では ありません (trang trọng hơn).",
+      "hint": "Nhớ cặp です ↔ じゃ ありません."
+    },
+    {
+      "id": "ex-q-n5-1-3",
+      "question": "A: あの人は ___ ですか。 B: 山田さんです。",
+      "options": [
+        "だれ",
+        "なん",
+        "どこ",
+        "いくつ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hỏi về NGƯỜI thì dùng だれ (lịch sự hơn: どなた). なん hỏi vật, どこ hỏi nơi chốn.",
+      "hint": "Câu trả lời là tên một người."
+    },
+    {
+      "id": "ex-q-n5-1-4",
+      "question": "サントスさんは 学生です。カリナさん ___ 学生です。",
+      "options": [
+        "も",
+        "は",
+        "の",
+        "と"
+      ],
+      "correctIndex": 0,
+      "explanation": "Khi vị ngữ TRÙNG với câu trước, dùng も thay cho は để diễn đạt ý 'cũng'.",
+      "hint": "Hai người cùng một nghề."
+    },
+    {
+      "id": "ex-q-n5-1-5",
+      "question": "わたしは IMC ___ 社員です。(Nối hai danh từ)",
+      "options": [
+        "の",
+        "は",
+        "も",
+        "で"
+      ],
+      "correctIndex": 0,
+      "explanation": "の nối hai danh từ, danh từ đứng trước bổ nghĩa cho danh từ đứng sau: IMC の 社員 = nhân viên của IMC.",
+      "hint": "Quan hệ trực thuộc."
+    },
+    {
+      "id": "ex-q-n5-1-6",
+      "question": "Câu nào trang trọng NHẤT khi phủ định?",
+      "options": [
+        "学生では ありません",
+        "学生じゃ ありません",
+        "学生じゃ ないです",
+        "学生じゃ ない"
+      ],
+      "correctIndex": 0,
+      "explanation": "Thứ tự trang trọng giảm dần: では ありません > じゃ ありません > じゃ ないです > じゃ ない (suồng sã).",
+      "hint": "Dạng nào dùng trong văn bản?"
+    },
+    {
+      "id": "ex-q-n5-1-7",
+      "question": "20 tuổi trong tiếng Nhật đọc là gì?",
+      "options": [
+        "はたち",
+        "にじゅうさい",
+        "にじっさい",
+        "ふたつさい"
+      ],
+      "correctIndex": 0,
+      "explanation": "20 tuổi có cách đọc ĐẶC BIỆT là はたち (二十歳), không đọc theo quy tắc にじゅっさい.",
+      "hint": "Đây là ngoại lệ phải học thuộc."
+    },
+    {
+      "id": "ex-q-n5-1-8",
+      "question": "Từ nào KHÔNG được dùng để tự giới thiệu nghề của mình?",
+      "options": [
+        "先生",
+        "教師",
+        "会社員",
+        "医者"
+      ],
+      "correctIndex": 0,
+      "explanation": "先生 là từ dùng để GỌI người khác một cách kính trọng. Nói về nghề của mình phải dùng 教師.",
+      "hint": "Có từ mang sắc thái kính ngữ."
+    },
+    {
+      "id": "ex-q-n5-1-9",
+      "question": "Chọn câu chào đúng khi gặp lần đầu:",
+      "options": [
+        "はじめまして。どうぞ よろしく お願いします。",
+        "おはよう ございます。",
+        "お元気ですか。",
+        "また あした。"
+      ],
+      "correctIndex": 0,
+      "explanation": "はじめまして dùng riêng cho lần gặp ĐẦU TIÊN, luôn đi kèm どうぞ よろしく お願いします.",
+      "hint": "Lần đầu tiên gặp mặt."
+    },
+    {
+      "id": "ex-q-n5-1-10",
+      "question": "「失礼ですが」 được dùng để làm gì?",
+      "options": [
+        "Đệm trước khi hỏi thông tin riêng tư",
+        "Xin lỗi vì làm sai",
+        "Chào tạm biệt",
+        "Cảm ơn ai đó"
+      ],
+      "correctIndex": 0,
+      "explanation": "失礼ですが = 'xin lỗi cho hỏi', dùng để mở lời trước khi hỏi tên, tuổi, nghề nghiệp cho lịch sự.",
+      "hint": "Nó đứng TRƯỚC một câu hỏi."
+    }
+  ]
+}

@@ -1,0 +1,1596 @@
+{
+  "level": "N5",
+  "lessonNumber": 4,
+  "title": "Bài 4: Thời gian, giờ giấc & động từ ます",
+  "description": "Nói giờ chính xác (kèm 4 số biến âm đặc biệt), chia động từ thể ます ở cả bốn thì (khẳng định/phủ định × hiện tại/quá khứ), đánh dấu thời điểm bằng に, và khoảng thời gian bằng から〜まで.",
+  "vocabList": [
+    {
+      "id": "voc-n5-4-1",
+      "word": "いま",
+      "kanji": "今",
+      "furigana": "いま",
+      "romaji": "ima",
+      "wordType": "noun",
+      "meaningVi": "Bây giờ",
+      "accentNote": "Dùng để hỏi giờ: 今 何時ですか。"
+    },
+    {
+      "id": "voc-n5-4-2",
+      "word": "〜じ",
+      "kanji": "〜時",
+      "furigana": "〜じ",
+      "romaji": "-ji",
+      "wordType": "noun",
+      "meaningVi": "~ giờ",
+      "accentNote": "4 giờ よじ, 7 giờ しちじ, 9 giờ くじ — không đọc よんじ/ななじ/きゅうじ."
+    },
+    {
+      "id": "voc-n5-4-3",
+      "word": "〜ふん／〜ぷん",
+      "kanji": "〜分",
+      "furigana": "〜ふん／〜ぷん",
+      "romaji": "-fun/-pun",
+      "wordType": "noun",
+      "meaningVi": "~ phút",
+      "accentNote": "1 phút いっぷん, 3 phút さんぷん, 8 phút はっぷん — biến âm bật hơi."
+    },
+    {
+      "id": "voc-n5-4-4",
+      "word": "はん",
+      "kanji": "半",
+      "furigana": "はん",
+      "romaji": "han",
+      "wordType": "noun",
+      "meaningVi": "Rưỡi, một nửa",
+      "accentNote": "2 giờ rưỡi = にじはん."
+    },
+    {
+      "id": "voc-n5-4-5",
+      "word": "〜じかん",
+      "kanji": "〜時間",
+      "furigana": "〜じかん",
+      "romaji": "-jikan",
+      "wordType": "noun",
+      "meaningVi": "~ tiếng đồng hồ (khoảng thời gian)",
+      "accentNote": "Phân biệt với 〜時 (thời điểm): 2時間 (2 tiếng) khác 2時 (2 giờ)."
+    },
+    {
+      "id": "voc-n5-4-6",
+      "word": "なんじ",
+      "kanji": "何時",
+      "furigana": "なんじ",
+      "romaji": "nanji",
+      "wordType": "noun",
+      "meaningVi": "Mấy giờ",
+      "accentNote": "Hỏi thời điểm, không hỏi khoảng thời gian."
+    },
+    {
+      "id": "voc-n5-4-7",
+      "word": "ごぜん",
+      "kanji": "午前",
+      "furigana": "ごぜん",
+      "romaji": "gozen",
+      "wordType": "noun",
+      "meaningVi": "Buổi sáng, giờ AM",
+      "accentNote": "Đứng trước giờ: 午前9時."
+    },
+    {
+      "id": "voc-n5-4-8",
+      "word": "ごご",
+      "kanji": "午後",
+      "furigana": "ごご",
+      "romaji": "gogo",
+      "wordType": "noun",
+      "meaningVi": "Buổi chiều, giờ PM",
+      "accentNote": "午後3時 = 3 giờ chiều."
+    },
+    {
+      "id": "voc-n5-4-9",
+      "word": "あさ",
+      "kanji": "朝",
+      "furigana": "あさ",
+      "romaji": "asa",
+      "wordType": "noun",
+      "meaningVi": "Buổi sáng",
+      "accentNote": "毎朝 = mỗi sáng."
+    },
+    {
+      "id": "voc-n5-4-10",
+      "word": "けさ",
+      "kanji": "今朝",
+      "furigana": "けさ",
+      "romaji": "kesa",
+      "wordType": "noun",
+      "meaningVi": "Sáng nay",
+      "accentNote": "Đọc đặc biệt, không theo quy tắc 今+朝."
+    },
+    {
+      "id": "voc-n5-4-11",
+      "word": "きょう",
+      "kanji": "今日",
+      "furigana": "きょう",
+      "romaji": "kyou",
+      "wordType": "noun",
+      "meaningVi": "Hôm nay",
+      "accentNote": "Đọc đặc biệt, không phải こんにち trong nghĩa này."
+    },
+    {
+      "id": "voc-n5-4-12",
+      "word": "あした",
+      "kanji": "明日",
+      "furigana": "あした",
+      "romaji": "ashita",
+      "wordType": "noun",
+      "meaningVi": "Ngày mai",
+      "accentNote": "Lịch sự hơn: あす."
+    },
+    {
+      "id": "voc-n5-4-13",
+      "word": "きのう",
+      "kanji": "昨日",
+      "furigana": "きのう",
+      "romaji": "kinou",
+      "wordType": "noun",
+      "meaningVi": "Hôm qua",
+      "accentNote": "Đọc đặc biệt."
+    },
+    {
+      "id": "voc-n5-4-14",
+      "word": "こんばん",
+      "kanji": "今晩",
+      "furigana": "こんばん",
+      "romaji": "konban",
+      "wordType": "noun",
+      "meaningVi": "Tối nay",
+      "accentNote": "今晩は = chào buổi tối (câu chào quen)."
+    },
+    {
+      "id": "voc-n5-4-15",
+      "word": "げつようび",
+      "kanji": "月曜日",
+      "furigana": "げつようび",
+      "romaji": "getsuyoubi",
+      "wordType": "noun",
+      "meaningVi": "Thứ Hai",
+      "accentNote": "Có thể nói tắt: 月曜."
+    },
+    {
+      "id": "voc-n5-4-16",
+      "word": "かようび",
+      "kanji": "火曜日",
+      "furigana": "かようび",
+      "romaji": "kayoubi",
+      "wordType": "noun",
+      "meaningVi": "Thứ Ba",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-4-17",
+      "word": "きんようび",
+      "kanji": "金曜日",
+      "furigana": "きんようび",
+      "romaji": "kinyoubi",
+      "wordType": "noun",
+      "meaningVi": "Thứ Sáu",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-4-18",
+      "word": "なんようび",
+      "kanji": "何曜日",
+      "furigana": "なんようび",
+      "romaji": "nan’youbi",
+      "wordType": "noun",
+      "meaningVi": "Thứ mấy",
+      "accentNote": "Hỏi ngày trong tuần."
+    },
+    {
+      "id": "voc-n5-4-19",
+      "word": "まいあさ",
+      "kanji": "毎朝",
+      "furigana": "まいあさ",
+      "romaji": "maiasa",
+      "wordType": "noun",
+      "meaningVi": "Mỗi sáng",
+      "accentNote": "毎 + đơn vị thời gian = mỗi ~."
+    },
+    {
+      "id": "voc-n5-4-20",
+      "word": "まいばん",
+      "kanji": "毎晩",
+      "furigana": "まいばん",
+      "romaji": "maiban",
+      "wordType": "noun",
+      "meaningVi": "Mỗi tối",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-4-21",
+      "word": "まいにち",
+      "kanji": "毎日",
+      "furigana": "まいにち",
+      "romaji": "mainichi",
+      "wordType": "noun",
+      "meaningVi": "Mỗi ngày, hằng ngày",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-4-22",
+      "word": "せんしゅう",
+      "kanji": "先週",
+      "furigana": "せんしゅう",
+      "romaji": "senshuu",
+      "wordType": "noun",
+      "meaningVi": "Tuần trước",
+      "accentNote": "先 = trước, 来 = sau/tới."
+    },
+    {
+      "id": "voc-n5-4-23",
+      "word": "らいしゅう",
+      "kanji": "来週",
+      "furigana": "らいしゅう",
+      "romaji": "raishuu",
+      "wordType": "noun",
+      "meaningVi": "Tuần sau",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-4-24",
+      "word": "ぎんこう",
+      "kanji": "銀行",
+      "furigana": "ぎんこう",
+      "romaji": "ginkou",
+      "wordType": "noun",
+      "meaningVi": "Ngân hàng",
+      "accentNote": "銀行員 = nhân viên ngân hàng (đã học bài 1)."
+    },
+    {
+      "id": "voc-n5-4-25",
+      "word": "としょかん",
+      "kanji": "図書館",
+      "furigana": "としょかん",
+      "romaji": "toshokan",
+      "wordType": "noun",
+      "meaningVi": "Thư viện",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-4-26",
+      "word": "えいが",
+      "kanji": "映画",
+      "furigana": "えいが",
+      "romaji": "eiga",
+      "wordType": "noun",
+      "meaningVi": "Phim, điện ảnh",
+      "accentNote": "映画館 = rạp chiếu phim."
+    },
+    {
+      "id": "voc-n5-4-27",
+      "word": "やすみ",
+      "kanji": "休み",
+      "furigana": "やすみ",
+      "romaji": "yasumi",
+      "wordType": "noun",
+      "meaningVi": "Ngày nghỉ, kỳ nghỉ",
+      "accentNote": "休みます = nghỉ, vắng mặt."
+    },
+    {
+      "id": "voc-n5-4-28",
+      "word": "ばんごう",
+      "kanji": "番号",
+      "furigana": "ばんごう",
+      "romaji": "bangou",
+      "wordType": "noun",
+      "meaningVi": "Số hiệu, số điện thoại",
+      "accentNote": "電話番号 = số điện thoại."
+    },
+    {
+      "id": "voc-n5-4-29",
+      "word": "おきます",
+      "kanji": "起きます",
+      "furigana": "おきます",
+      "romaji": "okimasu",
+      "wordType": "verb",
+      "meaningVi": "Thức dậy",
+      "accentNote": "Nhóm 2 (Vて = 起きて)."
+    },
+    {
+      "id": "voc-n5-4-30",
+      "word": "ねます",
+      "kanji": "寝ます",
+      "furigana": "ねます",
+      "romaji": "nemasu",
+      "wordType": "verb",
+      "meaningVi": "Đi ngủ",
+      "accentNote": "Nhóm 2."
+    },
+    {
+      "id": "voc-n5-4-31",
+      "word": "はたらきます",
+      "kanji": "働きます",
+      "furigana": "はたらきます",
+      "romaji": "hatarakimasu",
+      "wordType": "verb",
+      "meaningVi": "Làm việc",
+      "accentNote": "Nhóm 1."
+    },
+    {
+      "id": "voc-n5-4-32",
+      "word": "やすみます",
+      "kanji": "休みます",
+      "furigana": "やすみます",
+      "romaji": "yasumimasu",
+      "wordType": "verb",
+      "meaningVi": "Nghỉ ngơi, nghỉ (làm/học)",
+      "accentNote": "Nhóm 1."
+    },
+    {
+      "id": "voc-n5-4-33",
+      "word": "べんきょうします",
+      "kanji": "勉強します",
+      "furigana": "べんきょうします",
+      "romaji": "benkyoushimasu",
+      "wordType": "verb",
+      "meaningVi": "Học, học tập",
+      "accentNote": "Nhóm 3 (します)."
+    },
+    {
+      "id": "voc-n5-4-34",
+      "word": "おわります",
+      "kanji": "終わります",
+      "furigana": "おわります",
+      "romaji": "owarimasu",
+      "wordType": "verb",
+      "meaningVi": "Kết thúc, xong",
+      "accentNote": "Nhóm 1. Trái nghĩa với 始まります."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n5-4-1",
+      "character": "時",
+      "hanViet": "THỜI",
+      "strokeCount": 10,
+      "onyomi": [
+        "ジ (ji)"
+      ],
+      "kunyomi": [
+        "とき"
+      ],
+      "meaningVi": "Thời gian, giờ. Đã gặp ở 時計 bài 2 — nay dùng để đếm giờ.",
+      "commonWords": [
+        {
+          "word": "何時",
+          "furigana": "なんじ",
+          "meaningVi": "Mấy giờ"
+        },
+        {
+          "word": "時間",
+          "furigana": "じかん",
+          "meaningVi": "Khoảng thời gian"
+        },
+        {
+          "word": "時々",
+          "furigana": "ときどき",
+          "meaningVi": "Thỉnh thoảng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-4-2",
+      "character": "分",
+      "hanViet": "PHÂN",
+      "strokeCount": 4,
+      "onyomi": [
+        "フン (fun)",
+        "ブン (bun)"
+      ],
+      "kunyomi": [
+        "わ(かる)"
+      ],
+      "meaningVi": "Chia, phần; phút.",
+      "commonWords": [
+        {
+          "word": "三分",
+          "furigana": "さんぷん",
+          "meaningVi": "3 phút"
+        },
+        {
+          "word": "半分",
+          "furigana": "はんぶん",
+          "meaningVi": "Một nửa"
+        },
+        {
+          "word": "分かります",
+          "furigana": "わかります",
+          "meaningVi": "Hiểu"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-4-3",
+      "character": "曜",
+      "hanViet": "DIỆU",
+      "strokeCount": 18,
+      "onyomi": [
+        "ヨウ (you)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Ngày trong tuần — luôn đi kèm 曜日.",
+      "commonWords": [
+        {
+          "word": "何曜日",
+          "furigana": "なんようび",
+          "meaningVi": "Thứ mấy"
+        },
+        {
+          "word": "月曜日",
+          "furigana": "げつようび",
+          "meaningVi": "Thứ Hai"
+        },
+        {
+          "word": "日曜日",
+          "furigana": "にちようび",
+          "meaningVi": "Chủ Nhật"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-4-4",
+      "character": "週",
+      "hanViet": "CHU",
+      "strokeCount": 11,
+      "onyomi": [
+        "シュウ (shuu)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Tuần lễ.",
+      "commonWords": [
+        {
+          "word": "今週",
+          "furigana": "こんしゅう",
+          "meaningVi": "Tuần này"
+        },
+        {
+          "word": "先週",
+          "furigana": "せんしゅう",
+          "meaningVi": "Tuần trước"
+        },
+        {
+          "word": "毎週",
+          "furigana": "まいしゅう",
+          "meaningVi": "Mỗi tuần"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-4-5",
+      "character": "午",
+      "hanViet": "NGỌ",
+      "strokeCount": 4,
+      "onyomi": [
+        "ゴ (go)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Giữa trưa — chỉ dùng ghép trong 午前/午後/正午.",
+      "commonWords": [
+        {
+          "word": "午前",
+          "furigana": "ごぜん",
+          "meaningVi": "Buổi sáng (AM)"
+        },
+        {
+          "word": "午後",
+          "furigana": "ごご",
+          "meaningVi": "Buổi chiều (PM)"
+        },
+        {
+          "word": "正午",
+          "furigana": "しょうご",
+          "meaningVi": "Giữa trưa"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-4-6",
+      "character": "半",
+      "hanViet": "BÁN",
+      "strokeCount": 5,
+      "onyomi": [
+        "ハン (han)"
+      ],
+      "kunyomi": [
+        "なか(ば)"
+      ],
+      "meaningVi": "Một nửa.",
+      "commonWords": [
+        {
+          "word": "半分",
+          "furigana": "はんぶん",
+          "meaningVi": "Một nửa"
+        },
+        {
+          "word": "二時半",
+          "furigana": "にじはん",
+          "meaningVi": "2 giờ rưỡi"
+        },
+        {
+          "word": "半年",
+          "furigana": "はんとし",
+          "meaningVi": "Nửa năm"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n5-l4-s1",
+      "slideType": "grammar",
+      "title": "1. Hỏi giờ: 今 何時ですか",
+      "grammarFormula": "今 + 何時 + ですか  →  [số] + 時 + [số] + 分 + です",
+      "explanation": "何時 hỏi THỜI ĐIỂM. Đọc giờ phải nhớ biến âm: 4時 よじ (không phải よんじ), 7時 しちじ (không phải ななじ), 9時 くじ (không phải きゅうじ).",
+      "teacherTips": "Học vẹt 4 số biến âm よじ/しちじ/くじ/よじはん trước — sai bốn số này là lộ ngay người mới học.",
+      "culturalNotes": "Người Nhật quen giờ 24h trên tàu xe, nhưng nói chuyện đời thường vẫn dùng 午前/午後 + giờ 12h.",
+      "examples": [
+        {
+          "id": "ex-n5-l4-s1-1",
+          "tokens": [
+            {
+              "id": "t-l4s1-1",
+              "text": "いま",
+              "isKeyGrammar": false,
+              "kanji": "今",
+              "furigana": "いま"
+            },
+            {
+              "id": "t-l4s1-2",
+              "text": "なんじ",
+              "isKeyGrammar": true,
+              "kanji": "何時",
+              "furigana": "なんじ"
+            },
+            {
+              "id": "t-l4s1-3",
+              "text": "ですか",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Bây giờ là mấy giờ vậy?"
+        },
+        {
+          "id": "ex-n5-l4-s1-2",
+          "tokens": [
+            {
+              "id": "t-l4s1-4",
+              "text": "よじ",
+              "isKeyGrammar": true,
+              "kanji": "4時",
+              "furigana": "よじ"
+            },
+            {
+              "id": "t-l4s1-5",
+              "text": "はん",
+              "isKeyGrammar": true,
+              "kanji": "半",
+              "furigana": "はん"
+            },
+            {
+              "id": "t-l4s1-6",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "4 giờ rưỡi ạ."
+        },
+        {
+          "id": "ex-n5-l4-s1-3",
+          "tokens": [
+            {
+              "id": "t-l4s1-7",
+              "text": "くじ",
+              "isKeyGrammar": true,
+              "kanji": "9時",
+              "furigana": "くじ"
+            },
+            {
+              "id": "t-l4s1-8",
+              "text": "ごじゅっぷん",
+              "isKeyGrammar": true,
+              "kanji": "50分",
+              "furigana": "ごじゅっぷん"
+            },
+            {
+              "id": "t-l4s1-9",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "9 giờ 50 phút ạ."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l4-s2",
+      "slideType": "grammar",
+      "title": "2. Thời điểm hành động: N[thời gian] + に + V",
+      "grammarFormula": "[Ngày/giờ cụ thể] + に + Vます    (KHÔNG dùng に với hôm nay/mai/hôm qua)",
+      "explanation": "に đánh dấu MỘT THỜI ĐIỂM cụ thể để hành động xảy ra. Ngoại lệ quan trọng: 今日, 明日, 昨日, 今 KHÔNG đi với に — chỉ áp dụng cho ngày trong tuần, giờ, tháng, năm.",
+      "teacherTips": "Học sinh Việt hay thêm nhầm に sau 今日/明日/昨日 — nhớ đây là bốn từ ngoại lệ.",
+      "culturalNotes": "銀行 Nhật thường mở 9:00–15:00, đóng cửa cuối tuần — khác giờ hành chính Việt Nam.",
+      "examples": [
+        {
+          "id": "ex-n5-l4-s2-1",
+          "tokens": [
+            {
+              "id": "t-l4s2-1",
+              "text": "げつようび",
+              "isKeyGrammar": true,
+              "kanji": "月曜日",
+              "furigana": "げつようび"
+            },
+            {
+              "id": "t-l4s2-2",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s2-3",
+              "text": "べんきょうします",
+              "isKeyGrammar": false,
+              "kanji": "勉強します",
+              "furigana": "べんきょうします"
+            }
+          ],
+          "meaningVi": "Thứ Hai tôi học bài."
+        },
+        {
+          "id": "ex-n5-l4-s2-2",
+          "tokens": [
+            {
+              "id": "t-l4s2-4",
+              "text": "しちじ",
+              "isKeyGrammar": false,
+              "kanji": "7時",
+              "furigana": "しちじ"
+            },
+            {
+              "id": "t-l4s2-5",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s2-6",
+              "text": "おきます",
+              "isKeyGrammar": false,
+              "kanji": "起きます",
+              "furigana": "おきます"
+            }
+          ],
+          "meaningVi": "7 giờ tôi thức dậy."
+        },
+        {
+          "id": "ex-n5-l4-s2-3",
+          "tokens": [
+            {
+              "id": "t-l4s2-7",
+              "text": "あした",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s2-8",
+              "text": "はたらきます",
+              "isKeyGrammar": false,
+              "kanji": "働きます",
+              "furigana": "はたらきます"
+            }
+          ],
+          "meaningVi": "Ngày mai tôi đi làm. (KHÔNG に vì 明日 tự thân đã đủ)"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l4-s3",
+      "slideType": "grammar",
+      "title": "3. Khoảng thời gian から〜まで",
+      "grammarFormula": "[bắt đầu] + から + [kết thúc] + まで",
+      "explanation": "から (từ) và まで (đến) đánh dấu điểm ĐẦU và điểm CUỐI của một khoảng. Có thể dùng riêng từng cái, hoặc ghép cả hai trong một câu.",
+      "teacherTips": "から và まで KHÔNG bắt buộc đi cùng nhau — dùng một cái vẫn là câu đúng ngữ pháp.",
+      "culturalNotes": "Nhiều cửa hàng nhỏ ở Nhật ghi 定休日 (ngày nghỉ cố định) ngay ngoài cửa, thường là thứ trong tuần chứ không phải cuối tuần.",
+      "examples": [
+        {
+          "id": "ex-n5-l4-s3-1",
+          "tokens": [
+            {
+              "id": "t-l4s3-1",
+              "text": "ぎんこう",
+              "isKeyGrammar": false,
+              "kanji": "銀行",
+              "furigana": "ぎんこう"
+            },
+            {
+              "id": "t-l4s3-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s3-3",
+              "text": "くじ",
+              "isKeyGrammar": false,
+              "kanji": "9時",
+              "furigana": "くじ"
+            },
+            {
+              "id": "t-l4s3-4",
+              "text": "から",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s3-5",
+              "text": "さんじ",
+              "isKeyGrammar": false,
+              "kanji": "3時",
+              "furigana": "さんじ"
+            },
+            {
+              "id": "t-l4s3-6",
+              "text": "まで",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s3-7",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Ngân hàng làm việc từ 9 giờ đến 3 giờ."
+        },
+        {
+          "id": "ex-n5-l4-s3-2",
+          "tokens": [
+            {
+              "id": "t-l4s3-8",
+              "text": "としょかん",
+              "isKeyGrammar": false,
+              "kanji": "図書館",
+              "furigana": "としょかん"
+            },
+            {
+              "id": "t-l4s3-9",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s3-10",
+              "text": "げつようび",
+              "isKeyGrammar": false,
+              "kanji": "月曜日",
+              "furigana": "げつようび"
+            },
+            {
+              "id": "t-l4s3-11",
+              "text": "から",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s3-12",
+              "text": "きんようび",
+              "isKeyGrammar": false,
+              "kanji": "金曜日",
+              "furigana": "きんようび"
+            },
+            {
+              "id": "t-l4s3-13",
+              "text": "まで",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s3-14",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Thư viện mở từ thứ Hai đến thứ Sáu."
+        },
+        {
+          "id": "ex-n5-l4-s3-3",
+          "tokens": [
+            {
+              "id": "t-l4s3-15",
+              "text": "やすみます",
+              "isKeyGrammar": true,
+              "kanji": "休みます",
+              "furigana": "やすみます"
+            },
+            {
+              "id": "t-l4s3-16",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s3-17",
+              "text": "げつようび",
+              "isKeyGrammar": false,
+              "kanji": "月曜日",
+              "furigana": "げつようび"
+            },
+            {
+              "id": "t-l4s3-18",
+              "text": "から",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s3-19",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Nghỉ từ thứ Hai. (chỉ dùng から, chưa biết ngày kết thúc)"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l4-s4",
+      "slideType": "grammar",
+      "title": "4. Động từ ます (hiện tại/tương lai)",
+      "grammarFormula": "V-masu (khẳng định) / V-masen (phủ định)",
+      "explanation": "Thể ます là dạng LỊCH SỰ, trung tính, dùng được với người lạ và trong công việc. Diễn tả việc THƯỜNG XUYÊN xảy ra hoặc SẼ xảy ra — không phân biệt hiện tại/tương lai bằng động từ.",
+      "teacherTips": "ません chỉ dùng phủ định VIỆC THÓI QUEN/DỰ ĐỊNH — không nói ai đó 'không thể' làm gì bằng dạng này.",
+      "culturalNotes": "働きます nghiêng về 'lao động, đi làm'; nói việc học ở trường dùng 勉強します, không dùng 働きます.",
+      "examples": [
+        {
+          "id": "ex-n5-l4-s4-1",
+          "tokens": [
+            {
+              "id": "t-l4s4-1",
+              "text": "まいあさ",
+              "isKeyGrammar": false,
+              "kanji": "毎朝",
+              "furigana": "まいあさ"
+            },
+            {
+              "id": "t-l4s4-2",
+              "text": "しちじ",
+              "isKeyGrammar": false,
+              "kanji": "7時",
+              "furigana": "しちじ"
+            },
+            {
+              "id": "t-l4s4-3",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s4-4",
+              "text": "おきます",
+              "isKeyGrammar": true,
+              "kanji": "起きます",
+              "furigana": "おきます"
+            }
+          ],
+          "meaningVi": "Mỗi sáng tôi thức dậy lúc 7 giờ."
+        },
+        {
+          "id": "ex-n5-l4-s4-2",
+          "tokens": [
+            {
+              "id": "t-l4s4-5",
+              "text": "にちようび",
+              "isKeyGrammar": false,
+              "kanji": "日曜日",
+              "furigana": "にちようび"
+            },
+            {
+              "id": "t-l4s4-6",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s4-7",
+              "text": "はたらきません",
+              "isKeyGrammar": true,
+              "kanji": "働きません",
+              "furigana": "はたらきません"
+            }
+          ],
+          "meaningVi": "Chủ nhật tôi không đi làm."
+        },
+        {
+          "id": "ex-n5-l4-s4-3",
+          "tokens": [
+            {
+              "id": "t-l4s4-8",
+              "text": "こんばん",
+              "isKeyGrammar": false,
+              "kanji": "今晩",
+              "furigana": "こんばん"
+            },
+            {
+              "id": "t-l4s4-9",
+              "text": "じゅういちじ",
+              "isKeyGrammar": false,
+              "kanji": "11時",
+              "furigana": "じゅういちじ"
+            },
+            {
+              "id": "t-l4s4-10",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s4-11",
+              "text": "ねます",
+              "isKeyGrammar": true,
+              "kanji": "寝ます",
+              "furigana": "ねます"
+            }
+          ],
+          "meaningVi": "Tối nay tôi sẽ đi ngủ lúc 11 giờ."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l4-s5",
+      "slideType": "grammar",
+      "title": "5. Thì quá khứ: Vました / Vませんでした",
+      "grammarFormula": "V-mashita (đã làm) / V-masen deshita (đã không làm)",
+      "explanation": "Thêm でした vào sau ません để chuyển phủ định sang quá khứ. Đây là cách chia thì DUY NHẤT cần nhớ ở thể ます — không có biến thể theo chủ ngữ.",
+      "teacherTips": "ました/ませんでした luôn giữ nguyên bất kể ngôi thứ mấy — dễ hơn tiếng Việt chia theo chủ ngữ.",
+      "culturalNotes": "Người Nhật xem giờ tan làm rất nghiêm — hỏi 何時に終わりますか trước một cuộc hẹn là phép lịch sự thường thấy.",
+      "examples": [
+        {
+          "id": "ex-n5-l4-s5-1",
+          "tokens": [
+            {
+              "id": "t-l4s5-1",
+              "text": "きのう",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s5-2",
+              "text": "べんきょうしました",
+              "isKeyGrammar": true,
+              "kanji": "勉強しました",
+              "furigana": "べんきょうしました"
+            }
+          ],
+          "meaningVi": "Hôm qua tôi đã học bài."
+        },
+        {
+          "id": "ex-n5-l4-s5-2",
+          "tokens": [
+            {
+              "id": "t-l4s5-3",
+              "text": "せんしゅう",
+              "isKeyGrammar": false,
+              "kanji": "先週",
+              "furigana": "せんしゅう"
+            },
+            {
+              "id": "t-l4s5-4",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s5-5",
+              "text": "やすみませんでした",
+              "isKeyGrammar": true,
+              "kanji": "休みませんでした",
+              "furigana": "やすみませんでした"
+            }
+          ],
+          "meaningVi": "Tuần trước tôi đã không nghỉ."
+        },
+        {
+          "id": "ex-n5-l4-s5-3",
+          "tokens": [
+            {
+              "id": "t-l4s5-6",
+              "text": "えいが",
+              "isKeyGrammar": false,
+              "kanji": "映画",
+              "furigana": "えいが"
+            },
+            {
+              "id": "t-l4s5-7",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s5-8",
+              "text": "なんじ",
+              "isKeyGrammar": true,
+              "kanji": "何時",
+              "furigana": "なんじ"
+            },
+            {
+              "id": "t-l4s5-9",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s5-10",
+              "text": "おわりました",
+              "isKeyGrammar": true,
+              "kanji": "終わりました",
+              "furigana": "おわりました"
+            },
+            {
+              "id": "t-l4s5-11",
+              "text": "か",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Phim kết thúc lúc mấy giờ vậy?"
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n5-4-1",
+      "speaker": "ミラー",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l4-1",
+          "text": "すみません",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-2",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-3",
+          "text": "いま",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-4",
+          "text": "なんじ",
+          "isKeyGrammar": true,
+          "kanji": "何時",
+          "furigana": "なんじ"
+        },
+        {
+          "id": "d-l4-5",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Xin lỗi, bây giờ là mấy giờ vậy ạ?"
+    },
+    {
+      "id": "dia-n5-4-2",
+      "speaker": "受付",
+      "speakerRole": "Lễ tân",
+      "tokens": [
+        {
+          "id": "d-l4-6",
+          "text": "くじ",
+          "isKeyGrammar": true,
+          "kanji": "9時",
+          "furigana": "くじ"
+        },
+        {
+          "id": "d-l4-7",
+          "text": "はん",
+          "isKeyGrammar": true,
+          "kanji": "半",
+          "furigana": "はん"
+        },
+        {
+          "id": "d-l4-8",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Dạ 9 giờ rưỡi ạ."
+    },
+    {
+      "id": "dia-n5-4-3",
+      "speaker": "ミラー",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l4-9",
+          "text": "ぎんこう",
+          "isKeyGrammar": false,
+          "kanji": "銀行",
+          "furigana": "ぎんこう"
+        },
+        {
+          "id": "d-l4-10",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-11",
+          "text": "なんじ",
+          "isKeyGrammar": true,
+          "kanji": "何時",
+          "furigana": "なんじ"
+        },
+        {
+          "id": "d-l4-12",
+          "text": "から",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l4-13",
+          "text": "なんじ",
+          "isKeyGrammar": true,
+          "kanji": "何時",
+          "furigana": "なんじ"
+        },
+        {
+          "id": "d-l4-14",
+          "text": "まで",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l4-15",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ngân hàng mở cửa từ mấy giờ đến mấy giờ vậy ạ?"
+    },
+    {
+      "id": "dia-n5-4-4",
+      "speaker": "受付",
+      "speakerRole": "Lễ tân",
+      "tokens": [
+        {
+          "id": "d-l4-16",
+          "text": "くじ",
+          "isKeyGrammar": false,
+          "kanji": "9時",
+          "furigana": "くじ"
+        },
+        {
+          "id": "d-l4-17",
+          "text": "から",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l4-18",
+          "text": "さんじ",
+          "isKeyGrammar": false,
+          "kanji": "3時",
+          "furigana": "さんじ"
+        },
+        {
+          "id": "d-l4-19",
+          "text": "まで",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l4-20",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-21",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-22",
+          "text": "どようび",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-23",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-24",
+          "text": "やすみます",
+          "isKeyGrammar": true,
+          "kanji": "休みます",
+          "furigana": "やすみます"
+        }
+      ],
+      "meaningVi": "Từ 9 giờ đến 3 giờ ạ. Thứ Bảy thì nghỉ."
+    },
+    {
+      "id": "dia-n5-4-5",
+      "speaker": "ミラー",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l4-25",
+          "text": "そうですか",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-26",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-27",
+          "text": "ありがとう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-28",
+          "text": "ございます",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vậy à. Cảm ơn chị nhiều."
+    },
+    {
+      "id": "dia-n5-4-6",
+      "speaker": "グプタ",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l4-29",
+          "text": "ミラーさん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-30",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-31",
+          "text": "まいあさ",
+          "isKeyGrammar": false,
+          "kanji": "毎朝",
+          "furigana": "まいあさ"
+        },
+        {
+          "id": "d-l4-32",
+          "text": "なんじ",
+          "isKeyGrammar": true,
+          "kanji": "何時",
+          "furigana": "なんじ"
+        },
+        {
+          "id": "d-l4-33",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-34",
+          "text": "おきます",
+          "isKeyGrammar": true,
+          "kanji": "起きます",
+          "furigana": "おきます"
+        },
+        {
+          "id": "d-l4-35",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Anh Miller mỗi sáng thức dậy lúc mấy giờ vậy?"
+    },
+    {
+      "id": "dia-n5-4-7",
+      "speaker": "ミラー",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l4-36",
+          "text": "ろくじ",
+          "isKeyGrammar": true,
+          "kanji": "6時",
+          "furigana": "ろくじ"
+        },
+        {
+          "id": "d-l4-37",
+          "text": "はん",
+          "isKeyGrammar": true,
+          "kanji": "半",
+          "furigana": "はん"
+        },
+        {
+          "id": "d-l4-38",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-39",
+          "text": "おきます",
+          "isKeyGrammar": false,
+          "kanji": "起きます",
+          "furigana": "おきます"
+        }
+      ],
+      "meaningVi": "Tôi thức dậy lúc 6 giờ rưỡi."
+    },
+    {
+      "id": "dia-n5-4-8",
+      "speaker": "グプタ",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l4-40",
+          "text": "きのう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-41",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-42",
+          "text": "ろくじはん",
+          "isKeyGrammar": false,
+          "kanji": "6時半",
+          "furigana": "ろくじはん"
+        },
+        {
+          "id": "d-l4-43",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-44",
+          "text": "おきました",
+          "isKeyGrammar": true,
+          "kanji": "起きました",
+          "furigana": "おきました"
+        },
+        {
+          "id": "d-l4-45",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Hôm qua cũng thức dậy lúc 6 giờ rưỡi à?"
+    },
+    {
+      "id": "dia-n5-4-9",
+      "speaker": "ミラー",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l4-46",
+          "text": "いいえ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-47",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-48",
+          "text": "きのう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-49",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-50",
+          "text": "おきませんでした",
+          "isKeyGrammar": true,
+          "kanji": "起きませんでした",
+          "furigana": "おきませんでした"
+        },
+        {
+          "id": "d-l4-51",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-52",
+          "text": "はちじ",
+          "isKeyGrammar": true,
+          "kanji": "8時",
+          "furigana": "はちじ"
+        },
+        {
+          "id": "d-l4-53",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-54",
+          "text": "おきました",
+          "isKeyGrammar": false,
+          "kanji": "起きました",
+          "furigana": "おきました"
+        }
+      ],
+      "meaningVi": "Không, hôm qua tôi không thức dậy sớm được. Tôi thức dậy lúc 8 giờ."
+    },
+    {
+      "id": "dia-n5-4-10",
+      "speaker": "グプタ",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l4-55",
+          "text": "そうですか",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-56",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-57",
+          "text": "こんばん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-58",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-59",
+          "text": "なんじ",
+          "isKeyGrammar": true,
+          "kanji": "何時",
+          "furigana": "なんじ"
+        },
+        {
+          "id": "d-l4-60",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l4-61",
+          "text": "ねます",
+          "isKeyGrammar": true,
+          "kanji": "寝ます",
+          "furigana": "ねます"
+        },
+        {
+          "id": "d-l4-62",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ra vậy. Tối nay anh định ngủ lúc mấy giờ?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n5-4-1",
+      "question": "4時 đọc đúng là:",
+      "options": [
+        "よじ",
+        "よんじ",
+        "しじ",
+        "よっじ"
+      ],
+      "correctIndex": 0,
+      "explanation": "4 giờ đọc よじ, biến âm hoàn toàn khác cách đếm số thường (よん).",
+      "hint": "Đây là một trong bốn số biến âm đặc biệt."
+    },
+    {
+      "id": "ex-q-n5-4-2",
+      "question": "Câu nào ĐÚNG?",
+      "options": [
+        "あした 会社へ 行きます",
+        "あしたに 会社へ 行きます",
+        "げつようび 会社へ 行きます",
+        "げつようびは 会社へ 行きます、に"
+      ],
+      "correctIndex": 0,
+      "explanation": "明日 (ngày mai) là một trong bốn từ ngoại lệ KHÔNG đi với に. Ngày trong tuần thì cần に.",
+      "hint": "Từ chỉ thời gian tương đối không cần trợ từ に."
+    },
+    {
+      "id": "ex-q-n5-4-3",
+      "question": "「銀行は 9時から 3時までです」 nghĩa là:",
+      "options": [
+        "Ngân hàng mở cửa từ 9 giờ đến 3 giờ",
+        "Ngân hàng mở cửa lúc 9 giờ và 3 giờ",
+        "Ngân hàng đóng cửa từ 9 giờ đến 3 giờ",
+        "Ngân hàng mất 9 đến 3 tiếng để mở"
+      ],
+      "correctIndex": 0,
+      "explanation": "から (từ) đánh dấu điểm bắt đầu, まで (đến) đánh dấu điểm kết thúc của một khoảng thời gian.",
+      "hint": "Đây là khoảng THỜI GIAN HOẠT ĐỘNG."
+    },
+    {
+      "id": "ex-q-n5-4-4",
+      "question": "Phủ định quá khứ của 起きます là:",
+      "options": [
+        "起きませんでした",
+        "起きませんです",
+        "起きなかったでした",
+        "起きます でした"
+      ],
+      "correctIndex": 0,
+      "explanation": "Công thức duy nhất: bỏ ます -> thêm ません -> thêm でした. Không có dạng nào khác ở thể lịch sự.",
+      "hint": "Ghép hai hậu tố lại."
+    },
+    {
+      "id": "ex-q-n5-4-5",
+      "question": "Từ nào chỉ MỘT TIẾNG ĐỒNG HỒ (khoảng thời gian), không phải một thời điểm?",
+      "options": [
+        "2時間",
+        "2時",
+        "2時に",
+        "2時半"
+      ],
+      "correctIndex": 0,
+      "explanation": "〜時間 là ĐƠN VỊ ĐO độ dài. 〜時 (không có 間) là một ĐIỂM trên đồng hồ.",
+      "hint": "Có chữ 間 (khoảng) đi kèm."
+    },
+    {
+      "id": "ex-q-n5-4-6",
+      "question": "「今週」 không cần trợ từ に, nhưng câu nào SAU ĐÂY vẫn cần に?",
+      "options": [
+        "月曜日に 勉強します",
+        "今週 勉強します",
+        "今日 勉強します",
+        "毎日 勉強します"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ngày trong tuần cụ thể (月曜日) cần に. 今週/今日/毎日 là các từ chỉ thời gian tương đối, không cần に.",
+      "hint": "Ba đáp án còn lại đều là từ tương đối."
+    },
+    {
+      "id": "ex-q-n5-4-7",
+      "question": "Muốn nói 'nghỉ từ thứ Hai' mà chưa biết ngày kết thúc, dùng:",
+      "options": [
+        "月曜日から 休みます",
+        "月曜日まで 休みます",
+        "月曜日から月曜日まで 休みます",
+        "月曜日に 休みます"
+      ],
+      "correctIndex": 0,
+      "explanation": "から dùng độc lập vẫn đúng ngữ pháp khi chỉ biết điểm bắt đầu.",
+      "hint": "Chỉ cần MỘT trong hai trợ từ."
+    },
+    {
+      "id": "ex-q-n5-4-8",
+      "question": "8時 đọc là gì (chú ý âm bật hơi)?",
+      "options": [
+        "はちじ",
+        "はっじ",
+        "やじ",
+        "はつじ"
+      ],
+      "correctIndex": 0,
+      "explanation": "8時 đọc bình thường theo quy tắc số đếm là はちじ — không biến âm như 4/7/9時.",
+      "hint": "8 không nằm trong nhóm 4 số biến âm đặc biệt."
+    },
+    {
+      "id": "ex-q-n5-4-9",
+      "question": "「今朝」 đọc là gì?",
+      "options": [
+        "けさ",
+        "いまあさ",
+        "こんあさ",
+        "きんちょう"
+      ],
+      "correctIndex": 0,
+      "explanation": "今朝 là một trong các từ đọc ĐẶC BIỆT không theo âm ghép thông thường của 今 + 朝.",
+      "hint": "Không đọc theo kiểu ghép âm on/kun bình thường."
+    },
+    {
+      "id": "ex-q-n5-4-10",
+      "question": "Nhà băng Nhật thường đóng cửa ngày nào trong tuần?",
+      "options": [
+        "Thứ Bảy và Chủ Nhật",
+        "Chỉ Chủ Nhật",
+        "Không bao giờ đóng cửa",
+        "Thứ Tư"
+      ],
+      "correctIndex": 0,
+      "explanation": "銀行 Nhật theo giờ hành chính, nghỉ cuối tuần như văn phòng — khác nhiều cửa hàng bán lẻ mở cả tuần.",
+      "hint": "Giống giờ làm việc công sở."
+    }
+  ]
+}

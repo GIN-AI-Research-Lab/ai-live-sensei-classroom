@@ -1,0 +1,167 @@
+[
+  {
+    "lessonNumber": 1,
+    "level": "N2",
+    "title": "Bài 1: Thời điểm & Nghi thức trang trọng (に際して & に先立って)",
+    "description": "に際して diễn tả 'vào dịp/nhân lúc' một sự kiện quan trọng ĐANG diễn ra (trang trọng, dùng mở đầu phát biểu); に先立って diễn tả một hành động xảy ra TRƯỚC sự kiện đó (trình tự thời gian rõ ràng); dạng trang trọng nhất に際しまして/に先立ちまして kết hợp khiêm nhường ngữ là khung câu chuẩn cho phát biểu khai mạc/bế mạc chính thức.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 2,
+    "level": "N2",
+    "title": "Bài 2: Bất đắc dĩ & Đành lòng (ざるを得ない & を余儀なくされる)",
+    "description": "ざるを得ない diễn tả 'bất đắc dĩ phải làm' dù không muốn — mang cảm xúc CHỦ QUAN, miễn cưỡng của người nói (する→せざるを得ない, ngoại lệ); を余儀なくされる diễn tả 'bị buộc phải' do hoàn cảnh KHÁCH QUAN/ngoại lực ép buộc — trang trọng hơn, luôn ở dạng bị động; cả hai đều bắt nguồn từ やむを得ない (không thể tránh khỏi).",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 3,
+    "level": "N2",
+    "title": "Bài 3: Tuyệt đối không thể (っこない & かねる & ようがない)",
+    "description": "っこない diễn tả sự KHẲNG ĐỊNH CHẮC CHẮN tuyệt đối không thể xảy ra (thân mật, hội thoại đời thường); かねる diễn tả việc TỪ CHỐI LỊCH SỰ một yêu cầu (trang trọng, dùng trong công việc/dịch vụ); ようがない diễn tả việc THIẾU PHƯƠNG TIỆN/PHƯƠNG PHÁP khách quan để thực hiện — ba cách diễn đạt 'không thể' khác nhau về lý do và mức độ trang trọng.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 4,
+    "level": "N2",
+    "title": "Bài 4: Nguy cơ & Khả năng xấu (かねない & おそれがある)",
+    "description": "かねない diễn tả 'có thể xảy ra' một điều KHÔNG TỐT dựa trên XU HƯỚNG/HÀNH VI của một người/vật cụ thể — cảnh báo chủ quan; おそれがある diễn tả 'có nguy cơ' xảy ra điều xấu một cách KHÁCH QUAN, TRANG TRỌNG — thường dùng cho thiên tai, sự kiện lớn có căn cứ; hai cấu trúc thường được kết hợp trong biển báo an toàn thực tế.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 5,
+    "level": "N2",
+    "title": "Bài 5: Tỉ lệ thuận & Càng ngày càng (にしたがって & につれて & 一方だ)",
+    "description": "にしたがって diễn tả sự thay đổi tỉ lệ thuận CÓ TÍNH QUY LUẬT, và còn mang thêm nghĩa 'TUÂN THEO' quy tắc/mệnh lệnh; につれて hẹp nghĩa hơn, CHỈ mô tả sự thay đổi SONG SONG TỰ NHIÊN (không có nghĩa tuân theo); kết hợp với 一方だ (ôn N3 bài 14) để nhấn mạnh xu hướng thay đổi dài hạn, liên tục.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 6,
+    "level": "N2",
+    "title": "Bài 6: Khởi điểm & Cột mốc (を契機に & を皮切りに)",
+    "description": "を契機に diễn tả việc lấy một sự kiện làm CƠ HỘI/ĐỘNG LỰC để bắt đầu một THAY ĐỔI TÍCH CỰC (bước ngoặt cá nhân, một sự kiện duy nhất); を皮切りに diễn tả việc BẮT ĐẦU TỪ một điểm mốc rồi tiếp tục mở rộng thành một CHUỖI sự kiện khác (nhấn trình tự thời gian); きっかけ là dạng thuần Nhật, thân mật hơn của 契機.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 7,
+    "level": "N2",
+    "title": "Bài 7: Nhấn mạnh mở rộng (のみならず & ばかりか)",
+    "description": "のみならず nghĩa 'không những... mà còn...' nhưng CỰC KỲ TRANG TRỌNG, CHỈ dùng trong văn viết học thuật/báo chí (không dùng trong hội thoại); ôn lại ばかりか (N3 bài 15) dùng được cả nói và viết; xếp theo mức độ trang trọng tăng dần: だけでなく < ばかりか < のみならず; kết hợp のみならず〜さえ để nhấn mạnh phạm vi ảnh hưởng cực kỳ rộng lớn.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 8,
+    "level": "N2",
+    "title": "Bài 8: Tranh cãi & Vấn đề xoay quanh (をめぐって & を巡る)",
+    "description": "をめぐって diễn tả 'xoay quanh' một VẤN ĐỀ TRANH CÃI có nhiều bên quan điểm khác nhau, thường theo sau bởi động từ tranh luận/đối lập, dùng khi câu kết thúc bằng động từ; を巡る là dạng bổ nghĩa danh từ tương ứng, đứng trực tiếp trước danh từ nó bổ nghĩa; thường kết hợp với 賛成/反対 để mô tả hai phe ý kiến trái ngược.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 9,
+    "level": "N2",
+    "title": "Bài 9: Bất chấp gian khó (をものともせずに & をよそに)",
+    "description": "をものともせずに diễn tả việc BẤT CHẤP một khó khăn/trở ngại KHÁCH QUAN (bệnh tật, chấn thương, thất bại) để tiếp tục hành động — mang tính CA NGỢI sự kiên cường; をよそに diễn tả việc PHỚT LỜ/MẶC KỆ ý kiến, cảm xúc của NGƯỜI KHÁC (lo lắng, phản đối, phàn nàn) — mang sắc thái PHÊ PHÁN sự vô tâm; hai cấu trúc thường dùng song song để thể hiện lập trường trong tường thuật.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 10,
+    "level": "N2",
+    "title": "Bài 10: Căn cứ & Dựa trên (に基づいて & をもとに)",
+    "description": "に基づいて diễn tả việc dựa trên một CĂN CỨ CHÍNH THỨC/KHÁCH QUAN (luật pháp, số liệu, quy tắc) và phải TUÂN THỦ CHÍNH XÁC nội dung đó (dạng bổ nghĩa: に基づく); をもとに diễn tả việc lấy một THÔNG TIN/KINH NGHIỆM làm CƠ SỞ để TẠO RA điều mới, CÓ THỂ biến đổi/sáng tạo (dạng bổ nghĩa: をもとにした) — thường dùng cho tiểu thuyết, phim dựa trên chuyện có thật.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 11,
+    "level": "N2",
+    "title": "Bài 11: Đặc trưng riêng biệt (ならではの & にふさわしい)",
+    "description": "ならではの diễn tả một điều ĐẶC TRƯNG, ĐỘC ĐÁO CHỈ CÓ Ở một địa phương/người/tổ chức cụ thể, không thể tìm thấy ở nơi khác — luôn mang tính CA NGỢI; にふさわしい diễn tả sự PHÙ HỢP/XỨNG ĐÁNG về mặt PHẨM CHẤT, TIÊU CHUẨN giữa một vai trò/địa vị và điều được đánh giá — mang tính ĐÁNH GIÁ KHÁCH QUAN, thường dùng trong quảng bá du lịch (ならではの) và đánh giá nhân sự (にふさわしい).",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 12,
+    "level": "N2",
+    "title": "Bài 12: Kết cục sau quá trình dài (末に & あげく)",
+    "description": "末に diễn tả 'cuối cùng, sau' một quá trình dài đắn đo/nỗ lực với kết quả THƯỜNG TRUNG TÍNH hoặc TÍCH CỰC, văn phong trang trọng; あげく cũng nghĩa tương tự nhưng kết quả hầu như LUÔN TIÊU CỰC, mang sắc thái CHÊ TRÁCH/thất vọng về công sức bỏ ra vô ích; cả hai đều có dạng danh từ N+の+末に/あげく thường thấy trong tiêu đề báo.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 13,
+    "level": "N2",
+    "title": "Bài 13: Vượt ngoài giới hạn (にとどまらず)",
+    "description": "にとどまらず (từ động từ gốc 留まる - dừng lại) diễn tả việc VƯỢT RA KHỎI một PHẠM VI/GIỚI HẠN ban đầu để mở rộng sang phạm vi RỘNG HƠN — trang trọng, gần với mức độ của のみならず; thường kết hợp với 単に ở vế trước để nhấn mạnh phạm vi ban đầu quá hẹp; dạng bổ nghĩa danh từ: にとどまらない (thể phủ định thông thường của とどまる).",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 14,
+    "level": "N2",
+    "title": "Bài 14: Khó lòng mà làm được (がたい & かねる)",
+    "description": "がたい gắn sau V-stem diễn tả độ khó KHÁCH QUAN của việc TIN/HIỂU/CHẤP NHẬN một điều gì đó (thường đi với động từ cảm xúc/nhận thức: 信じる, 理解する, 許す, 忘れる); ôn lại かねる (đã học bài 3) là sự từ chối CHỦ ĐỘNG, lịch sự một hành động/yêu cầu cụ thể; bốn cụm cố định cần nhớ: 信じがたい/許しがたい/理解しがたい/忘れがたい.",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 15,
+    "level": "N2",
+    "title": "Bài 15: Tổng kết chiến lược đọc hiểu & ngữ pháp N2",
+    "description": "Bài tổng kết N2 kết hợp các cấu trúc trọng điểm đã học qua một bài phát biểu kỷ niệm thành lập công ty thực tế: に際して + を契機に (mở đầu diễn văn → bước ngoặt khởi đầu), ざるを得ない + をものともせずに (thừa nhận khó khăn → ca ngợi kiên cường), 末に + につれて + にとどまらず (kết quả → xu hướng theo thời gian → phạm vi mở rộng), và に基づいて + ならではの + にふさわしい (căn cứ khách quan → đặc trưng độc đáo → sự xứng đáng) — nắm vững cách KẾT HỢP các cấu trúc này quan trọng hơn học thuộc riêng lẻ, đúng như cách chúng xuất hiện trong đề thi JLPT N2 thực tế. Hoàn thành trọn vẹn 15/15 bài N2, khép lại toàn bộ hành trình N5→N2!",
+    "vocabCount": 20,
+    "kanjiCount": 5,
+    "slideCount": 4,
+    "dialogueCount": 10,
+    "exerciseCount": 10
+  }
+]

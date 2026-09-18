@@ -1,0 +1,1573 @@
+{
+  "level": "N5",
+  "lessonNumber": 5,
+  "title": "Bài 5: Di chuyển & Phương tiện (へ 行きます/来ます/帰ります, で, と, いつ)",
+  "description": "Nói điểm đến bằng へ, phương tiện di chuyển bằng で (trừ đi bộ dùng 歩いて), người cùng đi bằng と…一緒に hoặc đi một mình bằng 一人で, hỏi thời điểm chung chung bằng いつ, và cách đọc ngày tháng 〜月〜日.",
+  "vocabList": [
+    {
+      "id": "voc-n5-5-1",
+      "word": "いきます",
+      "kanji": "行きます",
+      "furigana": "いきます",
+      "romaji": "ikimasu",
+      "wordType": "verb",
+      "meaningVi": "Đi (đến một nơi)",
+      "accentNote": "Thể từ điển: 行く. Nhóm 1."
+    },
+    {
+      "id": "voc-n5-5-2",
+      "word": "きます",
+      "kanji": "来ます",
+      "furigana": "きます",
+      "romaji": "kimasu",
+      "wordType": "verb",
+      "meaningVi": "Đến, tới (về phía người nói)",
+      "accentNote": "Thể từ điển: 来る. Nhóm 2 bất quy tắc."
+    },
+    {
+      "id": "voc-n5-5-3",
+      "word": "かえります",
+      "kanji": "帰ります",
+      "furigana": "かえります",
+      "romaji": "kaerimasu",
+      "wordType": "verb",
+      "meaningVi": "Về, trở về (nhà, quê)",
+      "accentNote": "Thể từ điển: 帰る. Nhóm 1 (trông giống nhóm 2 nhưng chia như nhóm 1)."
+    },
+    {
+      "id": "voc-n5-5-4",
+      "word": "のります",
+      "kanji": "乗ります",
+      "furigana": "のります",
+      "romaji": "norimasu",
+      "wordType": "verb",
+      "meaningVi": "Lên, đi (phương tiện)",
+      "accentNote": "Đi kèm trợ từ に: 電車に 乗ります."
+    },
+    {
+      "id": "voc-n5-5-5",
+      "word": "おります",
+      "kanji": "降ります",
+      "furigana": "おります",
+      "romaji": "orimasu",
+      "wordType": "verb",
+      "meaningVi": "Xuống (phương tiện)",
+      "accentNote": "Đi kèm trợ từ を: バスを 降ります."
+    },
+    {
+      "id": "voc-n5-5-6",
+      "word": "えき",
+      "kanji": "駅",
+      "furigana": "えき",
+      "romaji": "eki",
+      "wordType": "noun",
+      "meaningVi": "Nhà ga",
+      "accentNote": "駅員 = nhân viên nhà ga."
+    },
+    {
+      "id": "voc-n5-5-7",
+      "word": "でんしゃ",
+      "kanji": "電車",
+      "furigana": "でんしゃ",
+      "romaji": "densha",
+      "wordType": "noun",
+      "meaningVi": "Tàu điện",
+      "accentNote": "Phương tiện phổ biến nhất ở đô thị Nhật."
+    },
+    {
+      "id": "voc-n5-5-8",
+      "word": "じてんしゃ",
+      "kanji": "自転車",
+      "furigana": "じてんしゃ",
+      "romaji": "jitensha",
+      "wordType": "noun",
+      "meaningVi": "Xe đạp",
+      "accentNote": "自転車に 乗ります = đi xe đạp."
+    },
+    {
+      "id": "voc-n5-5-9",
+      "word": "くるま",
+      "kanji": "車",
+      "furigana": "くるま",
+      "romaji": "kuruma",
+      "wordType": "noun",
+      "meaningVi": "Xe hơi, ô tô",
+      "accentNote": "Đã gặp ở bài 2 (đồ vật); nay dùng làm phương tiện."
+    },
+    {
+      "id": "voc-n5-5-10",
+      "word": "じどうしゃ",
+      "kanji": "自動車",
+      "furigana": "じどうしゃ",
+      "romaji": "jidousha",
+      "wordType": "noun",
+      "meaningVi": "Ô tô (trang trọng hơn 車)",
+      "accentNote": "Dùng nhiều trong văn viết, biển báo."
+    },
+    {
+      "id": "voc-n5-5-11",
+      "word": "バス",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "basu",
+      "wordType": "noun",
+      "meaningVi": "Xe buýt",
+      "accentNote": "バス停 = trạm xe buýt."
+    },
+    {
+      "id": "voc-n5-5-12",
+      "word": "タクシー",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "takushii",
+      "wordType": "noun",
+      "meaningVi": "Taxi",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-5-13",
+      "word": "ひこうき",
+      "kanji": "飛行機",
+      "furigana": "ひこうき",
+      "romaji": "hikouki",
+      "wordType": "noun",
+      "meaningVi": "Máy bay",
+      "accentNote": "空港 = sân bay (chưa học, sẽ gặp ở bài sau)."
+    },
+    {
+      "id": "voc-n5-5-14",
+      "word": "ともだち",
+      "kanji": "友達",
+      "furigana": "ともだち",
+      "romaji": "tomodachi",
+      "wordType": "noun",
+      "meaningVi": "Bạn bè",
+      "accentNote": "友達と = cùng với bạn bè."
+    },
+    {
+      "id": "voc-n5-5-15",
+      "word": "いっしょに",
+      "kanji": "一緒に",
+      "furigana": "いっしょに",
+      "romaji": "issho ni",
+      "wordType": "phrase",
+      "meaningVi": "Cùng nhau, cùng với",
+      "accentNote": "友達と 一緒に 行きます = đi cùng với bạn."
+    },
+    {
+      "id": "voc-n5-5-16",
+      "word": "ひとり",
+      "kanji": "一人",
+      "furigana": "ひとり",
+      "romaji": "hitori",
+      "wordType": "noun",
+      "meaningVi": "Một mình, một người",
+      "accentNote": "一人で 行きます = đi một mình."
+    },
+    {
+      "id": "voc-n5-5-17",
+      "word": "いつ",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "itsu",
+      "wordType": "noun",
+      "meaningVi": "Khi nào (từ để hỏi thời gian không xác định)",
+      "accentNote": "Khác 何時 (hỏi giờ cụ thể) và 何曜日 (hỏi thứ)."
+    },
+    {
+      "id": "voc-n5-5-18",
+      "word": "いつも",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "itsumo",
+      "wordType": "noun",
+      "meaningVi": "Luôn luôn, mọi khi",
+      "accentNote": "いつも 電車で 行きます = tôi luôn đi bằng tàu điện."
+    },
+    {
+      "id": "voc-n5-5-19",
+      "word": "たんじょうび",
+      "kanji": "誕生日",
+      "furigana": "たんじょうび",
+      "romaji": "tanjoubi",
+      "wordType": "noun",
+      "meaningVi": "Sinh nhật",
+      "accentNote": "お誕生日おめでとうございます = chúc mừng sinh nhật."
+    },
+    {
+      "id": "voc-n5-5-20",
+      "word": "りょこう",
+      "kanji": "旅行",
+      "furigana": "りょこう",
+      "romaji": "ryokou",
+      "wordType": "noun",
+      "meaningVi": "Du lịch, chuyến đi",
+      "accentNote": "旅行します = đi du lịch."
+    },
+    {
+      "id": "voc-n5-5-21",
+      "word": "らいしゅう",
+      "kanji": "来週",
+      "furigana": "らいしゅう",
+      "romaji": "raishuu",
+      "wordType": "noun",
+      "meaningVi": "Tuần sau",
+      "accentNote": "Đã gặp bài 4."
+    },
+    {
+      "id": "voc-n5-5-22",
+      "word": "らいげつ",
+      "kanji": "来月",
+      "furigana": "らいげつ",
+      "romaji": "raigetsu",
+      "wordType": "noun",
+      "meaningVi": "Tháng sau",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-5-23",
+      "word": "らいねん",
+      "kanji": "来年",
+      "furigana": "らいねん",
+      "romaji": "rainen",
+      "wordType": "noun",
+      "meaningVi": "Năm sau",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-5-24",
+      "word": "〜がつ",
+      "kanji": "〜月",
+      "furigana": "〜がつ",
+      "romaji": "-gatsu",
+      "wordType": "noun",
+      "meaningVi": "Tháng ~ (trong năm)",
+      "accentNote": "4月 しがつ, 7月 しちがつ, 9月 くがつ — ba số biến âm phải nhớ."
+    },
+    {
+      "id": "voc-n5-5-25",
+      "word": "〜にち／〜か",
+      "kanji": "〜日",
+      "furigana": "〜にち／〜か",
+      "romaji": "-nichi/-ka",
+      "wordType": "noun",
+      "meaningVi": "Ngày ~ (trong tháng)",
+      "accentNote": "1日 ついたち là ngoại lệ hoàn toàn không theo quy tắc."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n5-5-1",
+      "character": "行",
+      "hanViet": "HÀNH",
+      "strokeCount": 6,
+      "onyomi": [
+        "コウ (kou)"
+      ],
+      "kunyomi": [
+        "い(く)",
+        "おこな(う)"
+      ],
+      "meaningVi": "Đi, thực hiện. Hình vẽ ngã tư đường.",
+      "commonWords": [
+        {
+          "word": "行きます",
+          "furigana": "いきます",
+          "meaningVi": "Đi"
+        },
+        {
+          "word": "旅行",
+          "furigana": "りょこう",
+          "meaningVi": "Du lịch"
+        },
+        {
+          "word": "銀行",
+          "furigana": "ぎんこう",
+          "meaningVi": "Ngân hàng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-5-2",
+      "character": "来",
+      "hanViet": "LAI",
+      "strokeCount": 7,
+      "onyomi": [
+        "ライ (rai)"
+      ],
+      "kunyomi": [
+        "く(る)",
+        "き(たる)"
+      ],
+      "meaningVi": "Đến, tới; sắp tới.",
+      "commonWords": [
+        {
+          "word": "来ます",
+          "furigana": "きます",
+          "meaningVi": "Đến"
+        },
+        {
+          "word": "来週",
+          "furigana": "らいしゅう",
+          "meaningVi": "Tuần sau"
+        },
+        {
+          "word": "来年",
+          "furigana": "らいねん",
+          "meaningVi": "Năm sau"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-5-3",
+      "character": "駅",
+      "hanViet": "DỊCH",
+      "strokeCount": 14,
+      "onyomi": [
+        "エキ (eki)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Nhà ga. Bộ 馬 (ngựa) bên trái — gốc từ trạm đổi ngựa thời xưa.",
+      "commonWords": [
+        {
+          "word": "駅",
+          "furigana": "えき",
+          "meaningVi": "Nhà ga"
+        },
+        {
+          "word": "駅前",
+          "furigana": "えきまえ",
+          "meaningVi": "Trước ga"
+        },
+        {
+          "word": "東京駅",
+          "furigana": "とうきょうえき",
+          "meaningVi": "Ga Tokyo"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-5-4",
+      "character": "月",
+      "hanViet": "NGUYỆT",
+      "strokeCount": 4,
+      "onyomi": [
+        "ゲツ (getsu)",
+        "ガツ (gatsu)"
+      ],
+      "kunyomi": [
+        "つき"
+      ],
+      "meaningVi": "Mặt trăng; tháng.",
+      "commonWords": [
+        {
+          "word": "来月",
+          "furigana": "らいげつ",
+          "meaningVi": "Tháng sau"
+        },
+        {
+          "word": "四月",
+          "furigana": "しがつ",
+          "meaningVi": "Tháng 4"
+        },
+        {
+          "word": "月曜日",
+          "furigana": "げつようび",
+          "meaningVi": "Thứ Hai"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-5-5",
+      "character": "友",
+      "hanViet": "HỮU",
+      "strokeCount": 4,
+      "onyomi": [
+        "ユウ (yuu)"
+      ],
+      "kunyomi": [
+        "とも"
+      ],
+      "meaningVi": "Bạn bè. Hai bàn tay nắm nhau.",
+      "commonWords": [
+        {
+          "word": "友達",
+          "furigana": "ともだち",
+          "meaningVi": "Bạn bè"
+        },
+        {
+          "word": "友情",
+          "furigana": "ゆうじょう",
+          "meaningVi": "Tình bạn"
+        },
+        {
+          "word": "親友",
+          "furigana": "しんゆう",
+          "meaningVi": "Bạn thân"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n5-l5-s1",
+      "slideType": "grammar",
+      "title": "1. Điểm đến: N[nơi chốn] + へ + 行きます/来ます/帰ります",
+      "grammarFormula": "[Địa điểm] + へ (đọc \"e\") + 行きます / 来ます / 帰ります",
+      "explanation": "へ đánh dấu HƯỚNG di chuyển, đọc là え chứ không phải へ (he). Ba động từ dùng với へ: 行く (đi xa người nói), 来る (đến gần người nói), 帰る (về nơi thuộc về mình — nhà, quê).",
+      "teacherTips": "へ chỉ là trợ từ, luôn đọc え. Đây là một trong ba chữ đặc biệt (は/へ/を) đọc khác cách viết.",
+      "culturalNotes": "帰ります còn dùng cho 'về nước' dù đang ở nước ngoài — vì quê hương luôn là nơi để 帰る.",
+      "examples": [
+        {
+          "id": "ex-n5-l5-s1-1",
+          "tokens": [
+            {
+              "id": "t-l5s1-1",
+              "text": "らいしゅう",
+              "isKeyGrammar": false,
+              "kanji": "来週",
+              "furigana": "らいしゅう"
+            },
+            {
+              "id": "t-l5s1-2",
+              "text": "にほん",
+              "isKeyGrammar": false,
+              "kanji": "日本",
+              "furigana": "にほん"
+            },
+            {
+              "id": "t-l5s1-3",
+              "text": "へ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s1-4",
+              "text": "いきます",
+              "isKeyGrammar": true,
+              "kanji": "行きます",
+              "furigana": "いきます"
+            }
+          ],
+          "meaningVi": "Tuần sau tôi sẽ đi Nhật Bản."
+        },
+        {
+          "id": "ex-n5-l5-s1-2",
+          "tokens": [
+            {
+              "id": "t-l5s1-5",
+              "text": "せんせい",
+              "isKeyGrammar": false,
+              "kanji": "先生",
+              "furigana": "せんせい"
+            },
+            {
+              "id": "t-l5s1-6",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s1-7",
+              "text": "きょうしつ",
+              "isKeyGrammar": false,
+              "kanji": "教室",
+              "furigana": "きょうしつ"
+            },
+            {
+              "id": "t-l5s1-8",
+              "text": "へ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s1-9",
+              "text": "きます",
+              "isKeyGrammar": true,
+              "kanji": "来ます",
+              "furigana": "きます"
+            }
+          ],
+          "meaningVi": "Thầy giáo đang đến phòng học."
+        },
+        {
+          "id": "ex-n5-l5-s1-3",
+          "tokens": [
+            {
+              "id": "t-l5s1-10",
+              "text": "なんじ",
+              "isKeyGrammar": false,
+              "kanji": "何時",
+              "furigana": "なんじ"
+            },
+            {
+              "id": "t-l5s1-11",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s1-12",
+              "text": "うち",
+              "isKeyGrammar": false,
+              "kanji": "家",
+              "furigana": "うち"
+            },
+            {
+              "id": "t-l5s1-13",
+              "text": "へ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s1-14",
+              "text": "かえります",
+              "isKeyGrammar": true,
+              "kanji": "帰ります",
+              "furigana": "かえります"
+            },
+            {
+              "id": "t-l5s1-15",
+              "text": "か",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Mấy giờ anh về nhà vậy?"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l5-s2",
+      "slideType": "grammar",
+      "title": "2. Phương tiện: N[phương tiện] + で + V",
+      "grammarFormula": "[Phương tiện] + で + 行きます/来ます/帰ります   (đi bộ: 歩いて + V, không dùng で)",
+      "explanation": "で đánh dấu PHƯƠNG TIỆN hoặc CÔNG CỤ thực hiện hành động. Ngoại lệ duy nhất: đi bộ không dùng で mà dùng 歩いて (dạng て của 歩きます).",
+      "teacherTips": "Lỗi rất hay gặp: 「歩いてで 帰ります」 — SAI. 歩いて đã đủ nghĩa 'bằng cách đi bộ', không thêm で nữa.",
+      "culturalNotes": "Ở Tokyo, đi làm bằng 電車 là chuyện bình thường dù mất cả tiếng đồng hồ — khác thói quen đi xe máy ở Việt Nam.",
+      "examples": [
+        {
+          "id": "ex-n5-l5-s2-1",
+          "tokens": [
+            {
+              "id": "t-l5s2-1",
+              "text": "でんしゃ",
+              "isKeyGrammar": false,
+              "kanji": "電車",
+              "furigana": "でんしゃ"
+            },
+            {
+              "id": "t-l5s2-2",
+              "text": "で",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s2-3",
+              "text": "かいしゃ",
+              "isKeyGrammar": false,
+              "kanji": "会社",
+              "furigana": "かいしゃ"
+            },
+            {
+              "id": "t-l5s2-4",
+              "text": "へ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s2-5",
+              "text": "いきます",
+              "isKeyGrammar": false,
+              "kanji": "行きます",
+              "furigana": "いきます"
+            }
+          ],
+          "meaningVi": "Tôi đi làm bằng tàu điện."
+        },
+        {
+          "id": "ex-n5-l5-s2-2",
+          "tokens": [
+            {
+              "id": "t-l5s2-6",
+              "text": "じてんしゃ",
+              "isKeyGrammar": false,
+              "kanji": "自転車",
+              "furigana": "じてんしゃ"
+            },
+            {
+              "id": "t-l5s2-7",
+              "text": "で",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s2-8",
+              "text": "えき",
+              "isKeyGrammar": false,
+              "kanji": "駅",
+              "furigana": "えき"
+            },
+            {
+              "id": "t-l5s2-9",
+              "text": "へ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s2-10",
+              "text": "きます",
+              "isKeyGrammar": false,
+              "kanji": "来ます",
+              "furigana": "きます"
+            }
+          ],
+          "meaningVi": "Tôi đến ga bằng xe đạp."
+        },
+        {
+          "id": "ex-n5-l5-s2-3",
+          "tokens": [
+            {
+              "id": "t-l5s2-11",
+              "text": "あるいて",
+              "isKeyGrammar": true,
+              "kanji": "歩いて",
+              "furigana": "あるいて"
+            },
+            {
+              "id": "t-l5s2-12",
+              "text": "うち",
+              "isKeyGrammar": false,
+              "kanji": "家",
+              "furigana": "うち"
+            },
+            {
+              "id": "t-l5s2-13",
+              "text": "へ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s2-14",
+              "text": "かえります",
+              "isKeyGrammar": false,
+              "kanji": "帰ります",
+              "furigana": "かえります"
+            }
+          ],
+          "meaningVi": "Tôi đi bộ về nhà. (KHÔNG dùng で với đi bộ)"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l5-s3",
+      "slideType": "grammar",
+      "title": "3. Người cùng đi: N[người] + と + V",
+      "grammarFormula": "[Người] + と + 一緒に + V   /   一人で + V (đi một mình)",
+      "explanation": "と đánh dấu người CÙNG THAM GIA hành động — khác hẳn は (chủ đề) hay を (tân ngữ). Đi một mình thì không dùng と mà dùng 一人で.",
+      "teacherTips": "Hỏi 'với ai' luôn dùng 誰と — không được nói 誰は hay để trống trợ từ.",
+      "culturalNotes": "Người Nhật có khái niệm 一人旅 (du lịch một mình) rất phổ biến và được xã hội chấp nhận, không bị coi là cô đơn.",
+      "examples": [
+        {
+          "id": "ex-n5-l5-s3-1",
+          "tokens": [
+            {
+              "id": "t-l5s3-1",
+              "text": "ともだち",
+              "isKeyGrammar": false,
+              "kanji": "友達",
+              "furigana": "ともだち"
+            },
+            {
+              "id": "t-l5s3-2",
+              "text": "と",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s3-3",
+              "text": "いっしょに",
+              "isKeyGrammar": true,
+              "kanji": "一緒に",
+              "furigana": "いっしょに"
+            },
+            {
+              "id": "t-l5s3-4",
+              "text": "りょこう",
+              "isKeyGrammar": false,
+              "kanji": "旅行",
+              "furigana": "りょこう"
+            },
+            {
+              "id": "t-l5s3-5",
+              "text": "します",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Tôi đi du lịch cùng với bạn bè."
+        },
+        {
+          "id": "ex-n5-l5-s3-2",
+          "tokens": [
+            {
+              "id": "t-l5s3-6",
+              "text": "だれ",
+              "isKeyGrammar": false,
+              "kanji": "誰",
+              "furigana": "だれ"
+            },
+            {
+              "id": "t-l5s3-7",
+              "text": "と",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s3-8",
+              "text": "にほん",
+              "isKeyGrammar": false,
+              "kanji": "日本",
+              "furigana": "にほん"
+            },
+            {
+              "id": "t-l5s3-9",
+              "text": "へ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s3-10",
+              "text": "いきますか",
+              "isKeyGrammar": false,
+              "kanji": "行きますか",
+              "furigana": "いきますか"
+            }
+          ],
+          "meaningVi": "Anh đi Nhật với ai vậy?"
+        },
+        {
+          "id": "ex-n5-l5-s3-3",
+          "tokens": [
+            {
+              "id": "t-l5s3-11",
+              "text": "ひとり",
+              "isKeyGrammar": true,
+              "kanji": "一人",
+              "furigana": "ひとり"
+            },
+            {
+              "id": "t-l5s3-12",
+              "text": "で",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s3-13",
+              "text": "いきます",
+              "isKeyGrammar": false,
+              "kanji": "行きます",
+              "furigana": "いきます"
+            }
+          ],
+          "meaningVi": "Tôi đi một mình."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l5-s4",
+      "slideType": "grammar",
+      "title": "4. Hỏi thời điểm không xác định: いつ",
+      "grammarFormula": "いつ + V + か   (khác 何時: hỏi GIỜ; khác 何曜日: hỏi THỨ)",
+      "explanation": "いつ hỏi một thời điểm chung chung — có thể trả lời bằng ngày, tháng, năm, hoặc cả một khoảng như 来週. Đây là điểm khác với 何時 (chỉ hỏi giờ) đã học ở bài 4.",
+      "teacherTips": "いつ không đi kèm trợ từ (không nói いつに, いつは) — đứng trực tiếp trong câu.",
+      "culturalNotes": "Người Nhật hỏi sinh nhật khá tự nhiên trong giao tiếp xã giao, không bị coi là riêng tư như hỏi tuổi/lương.",
+      "examples": [
+        {
+          "id": "ex-n5-l5-s4-1",
+          "tokens": [
+            {
+              "id": "t-l5s4-1",
+              "text": "いつ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s4-2",
+              "text": "にほん",
+              "isKeyGrammar": false,
+              "kanji": "日本",
+              "furigana": "にほん"
+            },
+            {
+              "id": "t-l5s4-3",
+              "text": "へ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s4-4",
+              "text": "いきますか",
+              "isKeyGrammar": false,
+              "kanji": "行きますか",
+              "furigana": "いきますか"
+            }
+          ],
+          "meaningVi": "Khi nào anh đi Nhật vậy?"
+        },
+        {
+          "id": "ex-n5-l5-s4-2",
+          "tokens": [
+            {
+              "id": "t-l5s4-5",
+              "text": "らいげつ",
+              "isKeyGrammar": false,
+              "kanji": "来月",
+              "furigana": "らいげつ"
+            },
+            {
+              "id": "t-l5s4-6",
+              "text": "いきます",
+              "isKeyGrammar": false,
+              "kanji": "行きます",
+              "furigana": "いきます"
+            }
+          ],
+          "meaningVi": "Tháng sau tôi đi."
+        },
+        {
+          "id": "ex-n5-l5-s4-3",
+          "tokens": [
+            {
+              "id": "t-l5s4-7",
+              "text": "たんじょうび",
+              "isKeyGrammar": false,
+              "kanji": "誕生日",
+              "furigana": "たんじょうび"
+            },
+            {
+              "id": "t-l5s4-8",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s4-9",
+              "text": "いつ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s4-10",
+              "text": "ですか",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Sinh nhật anh là khi nào vậy?"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l5-s5",
+      "slideType": "grammar",
+      "title": "5. Đọc tháng, ngày: 〜月〜日",
+      "grammarFormula": "[số] + 月 + [số] + 日",
+      "explanation": "月 (tháng) chỉ biến âm ở 4, 7, 9: しがつ、しちがつ、くがつ. 日 (ngày) biến âm phức tạp hơn nhiều — đặc biệt 1日 đọc ついたち, hoàn toàn không theo quy tắc.",
+      "teacherTips": "Học riêng bảng 1日〜10日 (ついたち、ふつか、みっか…) như một nhóm từ vựng độc lập — không suy luận được.",
+      "culturalNotes": "Năm tài chính và năm học ở Nhật bắt đầu từ tháng 4, không phải tháng 1 như lịch dương thông thường.",
+      "examples": [
+        {
+          "id": "ex-n5-l5-s5-1",
+          "tokens": [
+            {
+              "id": "t-l5s5-1",
+              "text": "たんじょうび",
+              "isKeyGrammar": false,
+              "kanji": "誕生日",
+              "furigana": "たんじょうび"
+            },
+            {
+              "id": "t-l5s5-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s5-3",
+              "text": "しがつ",
+              "isKeyGrammar": true,
+              "kanji": "4月",
+              "furigana": "しがつ"
+            },
+            {
+              "id": "t-l5s5-4",
+              "text": "ついたち",
+              "isKeyGrammar": true,
+              "kanji": "1日",
+              "furigana": "ついたち"
+            },
+            {
+              "id": "t-l5s5-5",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Sinh nhật tôi là ngày mùng 1 tháng 4."
+        },
+        {
+          "id": "ex-n5-l5-s5-2",
+          "tokens": [
+            {
+              "id": "t-l5s5-6",
+              "text": "らいねん",
+              "isKeyGrammar": false,
+              "kanji": "来年",
+              "furigana": "らいねん"
+            },
+            {
+              "id": "t-l5s5-7",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s5-8",
+              "text": "くがつ",
+              "isKeyGrammar": true,
+              "kanji": "9月",
+              "furigana": "くがつ"
+            },
+            {
+              "id": "t-l5s5-9",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s5-10",
+              "text": "りょこう",
+              "isKeyGrammar": false,
+              "kanji": "旅行",
+              "furigana": "りょこう"
+            },
+            {
+              "id": "t-l5s5-11",
+              "text": "します",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Tháng 9 năm sau tôi sẽ đi du lịch."
+        },
+        {
+          "id": "ex-n5-l5-s5-3",
+          "tokens": [
+            {
+              "id": "t-l5s5-12",
+              "text": "なんがつ",
+              "isKeyGrammar": true,
+              "kanji": "何月",
+              "furigana": "なんがつ"
+            },
+            {
+              "id": "t-l5s5-13",
+              "text": "なんにち",
+              "isKeyGrammar": true,
+              "kanji": "何日",
+              "furigana": "なんにち"
+            },
+            {
+              "id": "t-l5s5-14",
+              "text": "ですか",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Ngày mấy tháng mấy vậy?"
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n5-5-1",
+      "speaker": "ワン",
+      "speakerRole": "Du học sinh",
+      "tokens": [
+        {
+          "id": "d-l5-1",
+          "text": "サントスさん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-2",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-3",
+          "text": "まいにち",
+          "isKeyGrammar": false,
+          "kanji": "毎日",
+          "furigana": "まいにち"
+        },
+        {
+          "id": "d-l5-4",
+          "text": "なんで",
+          "isKeyGrammar": true,
+          "kanji": "何で",
+          "furigana": "なんで"
+        },
+        {
+          "id": "d-l5-5",
+          "text": "がっこう",
+          "isKeyGrammar": false,
+          "kanji": "学校",
+          "furigana": "がっこう"
+        },
+        {
+          "id": "d-l5-6",
+          "text": "へ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-7",
+          "text": "きますか",
+          "isKeyGrammar": false,
+          "kanji": "来ますか",
+          "furigana": "きますか"
+        }
+      ],
+      "meaningVi": "Anh Santos ngày nào cũng đến trường bằng gì vậy?"
+    },
+    {
+      "id": "dia-n5-5-2",
+      "speaker": "サントス",
+      "speakerRole": "Du học sinh",
+      "tokens": [
+        {
+          "id": "d-l5-8",
+          "text": "でんしゃ",
+          "isKeyGrammar": true,
+          "kanji": "電車",
+          "furigana": "でんしゃ"
+        },
+        {
+          "id": "d-l5-9",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-10",
+          "text": "きます",
+          "isKeyGrammar": false,
+          "kanji": "来ます",
+          "furigana": "きます"
+        },
+        {
+          "id": "d-l5-11",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-12",
+          "text": "ワンさん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-13",
+          "text": "は",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Tôi đi bằng tàu điện. Còn Wang thì sao?"
+    },
+    {
+      "id": "dia-n5-5-3",
+      "speaker": "ワン",
+      "speakerRole": "Du học sinh",
+      "tokens": [
+        {
+          "id": "d-l5-14",
+          "text": "わたし",
+          "isKeyGrammar": false,
+          "kanji": "私",
+          "furigana": "わたし"
+        },
+        {
+          "id": "d-l5-15",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-16",
+          "text": "あるいて",
+          "isKeyGrammar": true,
+          "kanji": "歩いて",
+          "furigana": "あるいて"
+        },
+        {
+          "id": "d-l5-17",
+          "text": "きます",
+          "isKeyGrammar": false,
+          "kanji": "来ます",
+          "furigana": "きます"
+        },
+        {
+          "id": "d-l5-18",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-19",
+          "text": "うち",
+          "isKeyGrammar": false,
+          "kanji": "家",
+          "furigana": "うち"
+        },
+        {
+          "id": "d-l5-20",
+          "text": "から",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-21",
+          "text": "ちかい",
+          "isKeyGrammar": false,
+          "kanji": "近い",
+          "furigana": "ちかい"
+        },
+        {
+          "id": "d-l5-22",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Tôi đi bộ. Vì nhà tôi gần đây."
+    },
+    {
+      "id": "dia-n5-5-4",
+      "speaker": "サントス",
+      "speakerRole": "Du học sinh",
+      "tokens": [
+        {
+          "id": "d-l5-23",
+          "text": "いいですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-24",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-25",
+          "text": "らいしゅう",
+          "isKeyGrammar": false,
+          "kanji": "来週",
+          "furigana": "らいしゅう"
+        },
+        {
+          "id": "d-l5-26",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-27",
+          "text": "どようび",
+          "isKeyGrammar": false,
+          "kanji": "土曜日",
+          "furigana": "どようび"
+        },
+        {
+          "id": "d-l5-28",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-29",
+          "text": "ひま",
+          "isKeyGrammar": false,
+          "kanji": "暇",
+          "furigana": "ひま"
+        },
+        {
+          "id": "d-l5-30",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Tốt vậy. Thứ Bảy tuần sau anh có rảnh không?"
+    },
+    {
+      "id": "dia-n5-5-5",
+      "speaker": "ワン",
+      "speakerRole": "Du học sinh",
+      "tokens": [
+        {
+          "id": "d-l5-31",
+          "text": "ええ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-32",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-33",
+          "text": "ひま",
+          "isKeyGrammar": false,
+          "kanji": "暇",
+          "furigana": "ひま"
+        },
+        {
+          "id": "d-l5-34",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-35",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-36",
+          "text": "どうしてですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ừ, tôi rảnh. Sao vậy?"
+    },
+    {
+      "id": "dia-n5-5-6",
+      "speaker": "サントス",
+      "speakerRole": "Du học sinh",
+      "tokens": [
+        {
+          "id": "d-l5-37",
+          "text": "ともだち",
+          "isKeyGrammar": true,
+          "kanji": "友達",
+          "furigana": "ともだち"
+        },
+        {
+          "id": "d-l5-38",
+          "text": "と",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l5-39",
+          "text": "いっしょに",
+          "isKeyGrammar": true,
+          "kanji": "一緒に",
+          "furigana": "いっしょに"
+        },
+        {
+          "id": "d-l5-40",
+          "text": "こうえん",
+          "isKeyGrammar": false,
+          "kanji": "公園",
+          "furigana": "こうえん"
+        },
+        {
+          "id": "d-l5-41",
+          "text": "へ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-42",
+          "text": "いきます",
+          "isKeyGrammar": false,
+          "kanji": "行きます",
+          "furigana": "いきます"
+        },
+        {
+          "id": "d-l5-43",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-44",
+          "text": "いっしょに",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-45",
+          "text": "どうですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Tôi định đi công viên cùng bạn bè. Wang đi cùng luôn nhé?"
+    },
+    {
+      "id": "dia-n5-5-7",
+      "speaker": "ワン",
+      "speakerRole": "Du học sinh",
+      "tokens": [
+        {
+          "id": "d-l5-46",
+          "text": "いいですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-47",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-48",
+          "text": "なんで",
+          "isKeyGrammar": true,
+          "kanji": "何で",
+          "furigana": "なんで"
+        },
+        {
+          "id": "d-l5-49",
+          "text": "いきますか",
+          "isKeyGrammar": false,
+          "kanji": "行きますか",
+          "furigana": "いきますか"
+        }
+      ],
+      "meaningVi": "Được đó. Đi bằng gì vậy?"
+    },
+    {
+      "id": "dia-n5-5-8",
+      "speaker": "サントス",
+      "speakerRole": "Du học sinh",
+      "tokens": [
+        {
+          "id": "d-l5-50",
+          "text": "じてんしゃ",
+          "isKeyGrammar": true,
+          "kanji": "自転車",
+          "furigana": "じてんしゃ"
+        },
+        {
+          "id": "d-l5-51",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-52",
+          "text": "いきます",
+          "isKeyGrammar": false,
+          "kanji": "行きます",
+          "furigana": "いきます"
+        }
+      ],
+      "meaningVi": "Đi bằng xe đạp."
+    },
+    {
+      "id": "dia-n5-5-9",
+      "speaker": "ワン",
+      "speakerRole": "Du học sinh",
+      "tokens": [
+        {
+          "id": "d-l5-53",
+          "text": "いいですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-54",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-55",
+          "text": "いつ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-56",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-57",
+          "text": "どこ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-58",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-59",
+          "text": "あいますか",
+          "isKeyGrammar": false,
+          "kanji": "会いますか",
+          "furigana": "あいますか"
+        }
+      ],
+      "meaningVi": "Tốt. Khi nào, ở đâu thì gặp nhau vậy?"
+    },
+    {
+      "id": "dia-n5-5-10",
+      "speaker": "サントス",
+      "speakerRole": "Du học sinh",
+      "tokens": [
+        {
+          "id": "d-l5-60",
+          "text": "どようび",
+          "isKeyGrammar": false,
+          "kanji": "土曜日",
+          "furigana": "どようび"
+        },
+        {
+          "id": "d-l5-61",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-62",
+          "text": "あさ",
+          "isKeyGrammar": false,
+          "kanji": "朝",
+          "furigana": "あさ"
+        },
+        {
+          "id": "d-l5-63",
+          "text": "くじ",
+          "isKeyGrammar": false,
+          "kanji": "9時",
+          "furigana": "くじ"
+        },
+        {
+          "id": "d-l5-64",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-65",
+          "text": "えき",
+          "isKeyGrammar": true,
+          "kanji": "駅",
+          "furigana": "えき"
+        },
+        {
+          "id": "d-l5-66",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l5-67",
+          "text": "あいましょう",
+          "isKeyGrammar": false,
+          "kanji": "会いましょう",
+          "furigana": "あいましょう"
+        }
+      ],
+      "meaningVi": "9 giờ sáng thứ Bảy gặp nhau ở ga nhé."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n5-5-1",
+      "question": "Trợ từ へ trong 「日本へ 行きます」 đọc là:",
+      "options": [
+        "え",
+        "へ",
+        "は",
+        "え、へ đều được"
+      ],
+      "correctIndex": 0,
+      "explanation": "へ là một trong ba trợ từ đọc khác chữ viết (は=わ, へ=え, を=お). Luôn đọc え khi làm trợ từ chỉ hướng.",
+      "hint": "Đây là ngoại lệ về cách đọc."
+    },
+    {
+      "id": "ex-q-n5-5-2",
+      "question": "Câu nào ĐÚNG khi nói 'đi bộ về nhà'?",
+      "options": [
+        "歩いて 家へ 帰ります",
+        "歩いてで 家へ 帰ります",
+        "歩きます で 家へ 帰ります",
+        "歩いて で 家へ 帰ります"
+      ],
+      "correctIndex": 0,
+      "explanation": "歩いて (dạng て của 歩きます) đã tự đủ nghĩa 'bằng cách đi bộ' — không được thêm で phía sau.",
+      "hint": "で chỉ dùng với danh từ phương tiện, không dùng với dạng て."
+    },
+    {
+      "id": "ex-q-n5-5-3",
+      "question": "「友達と 一緒に 行きます」 và 「一人で 行きます」 khác nhau ở đâu?",
+      "options": [
+        "Có bạn đi cùng / đi một mình",
+        "Đi bằng xe / đi bộ",
+        "Đi hôm nay / đi mai",
+        "Không khác gì cả"
+      ],
+      "correctIndex": 0,
+      "explanation": "と…一緒に nói có người cùng đi; 一人で nói đi một mình — hai cấu trúc đối lập nhau.",
+      "hint": "So sánh nghĩa của と và 一人."
+    },
+    {
+      "id": "ex-q-n5-5-4",
+      "question": "Muốn hỏi 'khi nào' một cách chung chung (không nhất thiết hỏi giờ), dùng từ nào?",
+      "options": [
+        "いつ",
+        "何時",
+        "何曜日",
+        "何日"
+      ],
+      "correctIndex": 0,
+      "explanation": "いつ hỏi thời điểm chung chung, có thể trả lời bằng ngày/tháng/năm/tuần. 何時 chỉ hỏi GIỜ cụ thể.",
+      "hint": "Từ này không cần biết đơn vị trả lời trước."
+    },
+    {
+      "id": "ex-q-n5-5-5",
+      "question": "1日 (ngày mùng 1) đọc là:",
+      "options": [
+        "ついたち",
+        "いちにち",
+        "いちじつ",
+        "ひとひ"
+      ],
+      "correctIndex": 0,
+      "explanation": "1日 là trường hợp đọc HOÀN TOÀN đặc biệt, không theo quy tắc số + 日 thông thường.",
+      "hint": "Đây là từ phải học thuộc riêng, không suy luận được."
+    },
+    {
+      "id": "ex-q-n5-5-6",
+      "question": "「電車に 乗ります」 và 「電車を 降ります」 khác nhau ở trợ từ vì:",
+      "options": [
+        "に là hướng ĐẾN (lên xe), を là tân ngữ rời khỏi (xuống xe)",
+        "に và を hoàn toàn có thể thay cho nhau",
+        "を luôn dùng cho phương tiện",
+        "に chỉ dùng cho tàu, を chỉ dùng cho xe buýt"
+      ],
+      "correctIndex": 0,
+      "explanation": "乗ります dùng に (hướng tới, lên phương tiện); 降ります dùng を (rời khỏi, tân ngữ của hành động xuống).",
+      "hint": "Hai động từ ngược nghĩa dùng hai trợ từ khác nhau."
+    },
+    {
+      "id": "ex-q-n5-5-7",
+      "question": "4月 (tháng 4) đọc là:",
+      "options": [
+        "しがつ",
+        "よんがつ",
+        "よがつ",
+        "しつき"
+      ],
+      "correctIndex": 0,
+      "explanation": "月 chỉ biến âm ở ba số: 4月 しがつ, 7月 しちがつ, 9月 くがつ.",
+      "hint": "Không đọc theo số đếm thông thường よん."
+    },
+    {
+      "id": "ex-q-n5-5-8",
+      "question": "誰と 日本へ 行きますか — câu này KHÔNG THỂ trả lời bằng:",
+      "options": [
+        "はい、そうです",
+        "友達と 行きます",
+        "一人で 行きます",
+        "田中さんと 行きます"
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu hỏi có từ để hỏi 誰 (ai) không đáp được bằng はい/いいえ, phải trả lời thẳng nội dung.",
+      "hint": "So sánh với quy tắc đã học ở bài 3."
+    },
+    {
+      "id": "ex-q-n5-5-9",
+      "question": "Từ nào dùng để chỉ PHƯƠNG TIỆN đi lại?",
+      "options": [
+        "で",
+        "へ",
+        "と",
+        "に"
+      ],
+      "correctIndex": 0,
+      "explanation": "で đánh dấu phương tiện/công cụ. へ chỉ hướng đến, と chỉ người cùng đi, に chỉ thời điểm hoặc điểm đến của một số động từ.",
+      "hint": "Bốn trợ từ này dễ nhầm nếu không phân biệt rõ chức năng."
+    },
+    {
+      "id": "ex-q-n5-5-10",
+      "question": "Năm học và năm tài chính ở Nhật thường bắt đầu vào tháng nào?",
+      "options": [
+        "Tháng 4",
+        "Tháng 1",
+        "Tháng 9",
+        "Tháng 3"
+      ],
+      "correctIndex": 0,
+      "explanation": "Khác với lịch dương thông thường bắt đầu tháng 1, Nhật Bản dùng năm tài chính và năm học bắt đầu từ tháng 4.",
+      "hint": "Trùng thời điểm hoa anh đào nở."
+    }
+  ]
+}

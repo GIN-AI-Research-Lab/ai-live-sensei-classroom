@@ -1,0 +1,2283 @@
+{
+  "level": "N1",
+  "lessonNumber": 15,
+  "title": "Bài 15: Tổng kết văn phong hàn lâm & Diễn thuyết N1",
+  "description": "Bài tổng kết N1 kết hợp các cấu trúc trọng điểm đã học qua một bài diễn thuyết kỷ niệm nghỉ hưu của một giáo sư: を皮切りにして + 極まりない (mở đầu hồi tưởng sự nghiệp → cảm xúc tột độ, bài 10+1), に即して + に則って + にほかならない (lập luận học thuật bám sát thực tế + tuân theo truyền thống → khẳng định dứt khoát, bài 11+7), きらいがある + ならいざ知らず + ともあろう者が (cảnh tỉnh nhẹ nhàng → phê phán nghiêm khắc, bài 14+13), và なくしては + を限りに + 願ってやまない (tri ân → tuyên bố khép lại → nguyện cầu tha thiết, bài 12+10+8) — nắm vững cách KẾT HỢP các cấu trúc này quan trọng hơn học thuộc riêng lẻ, đúng như cách chúng xuất hiện trong văn phong diễn thuyết/học thuật N1 thực tế. Hoàn thành trọn vẹn 15/15 bài N1!",
+  "vocabList": [
+    {
+      "id": "voc-n1-15-1",
+      "word": "たいかん",
+      "kanji": "退官",
+      "furigana": "たいかん",
+      "romaji": "taikan",
+      "wordType": "noun",
+      "meaningVi": "Nghỉ hưu, rời khỏi chức vụ (quan chức/học giả)",
+      "accentNote": "大学を 退官します = nghỉ hưu khỏi trường đại học."
+    },
+    {
+      "id": "voc-n1-15-2",
+      "word": "こうせき",
+      "kanji": "功績",
+      "furigana": "こうせき",
+      "romaji": "kouseki",
+      "wordType": "noun",
+      "meaningVi": "Công lao, thành tích",
+      "accentNote": "功績を 称えます = ca ngợi công lao."
+    },
+    {
+      "id": "voc-n1-15-3",
+      "word": "めいよ",
+      "kanji": "名誉",
+      "furigana": "めいよ",
+      "romaji": "meiyo",
+      "wordType": "noun",
+      "meaningVi": "Danh dự, vinh dự",
+      "accentNote": "名誉を 守ります = bảo vệ danh dự."
+    },
+    {
+      "id": "voc-n1-15-4",
+      "word": "はっけん",
+      "kanji": "発見",
+      "furigana": "はっけん",
+      "romaji": "hakken",
+      "wordType": "noun",
+      "meaningVi": "Phát hiện",
+      "accentNote": "新しい 発見を します = có một phát hiện mới."
+    },
+    {
+      "id": "voc-n1-15-5",
+      "word": "おんし",
+      "kanji": "恩師",
+      "furigana": "おんし",
+      "romaji": "onshi",
+      "wordType": "noun",
+      "meaningVi": "Người thầy đáng kính, ân sư",
+      "accentNote": "恩師に 感謝します = biết ơn ân sư."
+    },
+    {
+      "id": "voc-n1-15-6",
+      "word": "きょうだん",
+      "kanji": "教壇",
+      "furigana": "きょうだん",
+      "romaji": "kyoudan",
+      "wordType": "noun",
+      "meaningVi": "Bục giảng",
+      "accentNote": "教壇に 立ちます = đứng trên bục giảng."
+    },
+    {
+      "id": "voc-n1-15-7",
+      "word": "かわきり",
+      "kanji": "皮切り",
+      "furigana": "かわきり",
+      "romaji": "kawakiri",
+      "wordType": "noun",
+      "meaningVi": "Điểm khởi đầu, mốc mở đầu",
+      "accentNote": "Đã gặp N2 bài 6."
+    },
+    {
+      "id": "voc-n1-15-8",
+      "word": "かぎり",
+      "kanji": "限り",
+      "furigana": "かぎり",
+      "romaji": "kagiri",
+      "wordType": "noun",
+      "meaningVi": "Giới hạn, mốc (dùng làm điểm chấm dứt)",
+      "accentNote": "Đã gặp N1 bài 10."
+    },
+    {
+      "id": "voc-n1-15-9",
+      "word": "ぎわく",
+      "kanji": "疑惑",
+      "furigana": "ぎわく",
+      "romaji": "giwaku",
+      "wordType": "noun",
+      "meaningVi": "Sự nghi ngờ, mối nghi hoặc",
+      "accentNote": "Đã gặp N1 bài 13."
+    },
+    {
+      "id": "voc-n1-15-10",
+      "word": "しんじん",
+      "kanji": "新人",
+      "furigana": "しんじん",
+      "romaji": "shinjin",
+      "wordType": "noun",
+      "meaningVi": "Người mới, tân binh",
+      "accentNote": "Đã gặp N1 bài 13."
+    },
+    {
+      "id": "voc-n1-15-11",
+      "word": "けいこう",
+      "kanji": "傾向",
+      "furigana": "けいこう",
+      "romaji": "keikou",
+      "wordType": "noun",
+      "meaningVi": "Xu hướng, khuynh hướng",
+      "accentNote": "Đã gặp N3 bài 9."
+    },
+    {
+      "id": "voc-n1-15-12",
+      "word": "こうえん",
+      "kanji": "講演",
+      "furigana": "こうえん",
+      "romaji": "kouen",
+      "wordType": "noun",
+      "meaningVi": "Bài diễn thuyết, buổi giảng",
+      "accentNote": "Đã gặp N4 bài 49."
+    },
+    {
+      "id": "voc-n1-15-13",
+      "word": "りろん",
+      "kanji": "理論",
+      "furigana": "りろん",
+      "romaji": "riron",
+      "wordType": "noun",
+      "meaningVi": "Lý thuyết",
+      "accentNote": "Đã gặp N1 bài 14."
+    },
+    {
+      "id": "voc-n1-15-14",
+      "word": "じっせん",
+      "kanji": "実践",
+      "furigana": "じっせん",
+      "romaji": "jissen",
+      "wordType": "noun",
+      "meaningVi": "Thực hành, thực tiễn",
+      "accentNote": "Đã gặp N1 bài 14."
+    },
+    {
+      "id": "voc-n1-15-15",
+      "word": "はじ",
+      "kanji": "恥",
+      "furigana": "はじ",
+      "romaji": "haji",
+      "wordType": "noun",
+      "meaningVi": "Sự xấu hổ, nỗi nhục",
+      "accentNote": "Đã gặp N1 bài 13."
+    },
+    {
+      "id": "voc-n1-15-16",
+      "word": "しんらい",
+      "kanji": "信頼",
+      "furigana": "しんらい",
+      "romaji": "shinrai",
+      "wordType": "noun",
+      "meaningVi": "Sự tin cậy",
+      "accentNote": "Đã gặp N1 bài 6."
+    },
+    {
+      "id": "voc-n1-15-17",
+      "word": "どりょく",
+      "kanji": "努力",
+      "furigana": "どりょく",
+      "romaji": "doryoku",
+      "wordType": "noun",
+      "meaningVi": "Nỗ lực",
+      "accentNote": "Đã gặp N3 bài 2."
+    },
+    {
+      "id": "voc-n1-15-18",
+      "word": "きょうじゅ",
+      "kanji": "教授",
+      "furigana": "きょうじゅ",
+      "romaji": "kyouju",
+      "wordType": "noun",
+      "meaningVi": "Giáo sư",
+      "accentNote": "Đã gặp N1 bài 14."
+    },
+    {
+      "id": "voc-n1-15-19",
+      "word": "ろんぶん",
+      "kanji": "論文",
+      "furigana": "ろんぶん",
+      "romaji": "ronbun",
+      "wordType": "noun",
+      "meaningVi": "Luận văn, luận án",
+      "accentNote": "Đã gặp N1 bài 14."
+    },
+    {
+      "id": "voc-n1-15-20",
+      "word": "がんこ",
+      "kanji": "頑固",
+      "furigana": "がんこ",
+      "romaji": "ganko",
+      "wordType": "adjective",
+      "meaningVi": "Cố chấp, ngoan cố",
+      "accentNote": "Đã gặp N1 bài 14."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n1-15-1",
+      "character": "官",
+      "hanViet": "QUAN",
+      "strokeCount": 8,
+      "onyomi": [
+        "カン (kan)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Quan chức, chức vụ nhà nước.",
+      "commonWords": [
+        {
+          "word": "退官",
+          "furigana": "たいかん",
+          "meaningVi": "Nghỉ hưu (quan chức/học giả)"
+        },
+        {
+          "word": "官庁",
+          "furigana": "かんちょう",
+          "meaningVi": "Cơ quan nhà nước"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-15-2",
+      "character": "壇",
+      "hanViet": "ĐÀN",
+      "strokeCount": 16,
+      "onyomi": [
+        "ダン (dan)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Bục, đàn, đài.",
+      "commonWords": [
+        {
+          "word": "教壇",
+          "furigana": "きょうだん",
+          "meaningVi": "Bục giảng"
+        },
+        {
+          "word": "壇上",
+          "furigana": "だんじょう",
+          "meaningVi": "Trên bục, trên lễ đài"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-15-3",
+      "character": "誉",
+      "hanViet": "DỰ",
+      "strokeCount": 13,
+      "onyomi": [
+        "ヨ (yo)"
+      ],
+      "kunyomi": [
+        "ほま(れ)"
+      ],
+      "meaningVi": "Danh dự, khen ngợi.",
+      "commonWords": [
+        {
+          "word": "名誉",
+          "furigana": "めいよ",
+          "meaningVi": "Danh dự"
+        },
+        {
+          "word": "誉れ",
+          "furigana": "ほまれ",
+          "meaningVi": "Niềm vinh dự"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-15-4",
+      "character": "功",
+      "hanViet": "CÔNG",
+      "strokeCount": 5,
+      "onyomi": [
+        "コウ (kou)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Công lao, thành tích.",
+      "commonWords": [
+        {
+          "word": "功績",
+          "furigana": "こうせき",
+          "meaningVi": "Công lao, thành tích"
+        },
+        {
+          "word": "成功",
+          "furigana": "せいこう",
+          "meaningVi": "Thành công"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-15-5",
+      "character": "師",
+      "hanViet": "SƯ",
+      "strokeCount": 10,
+      "onyomi": [
+        "シ (shi)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Thầy, người thầy.",
+      "commonWords": [
+        {
+          "word": "恩師",
+          "furigana": "おんし",
+          "meaningVi": "Ân sư"
+        },
+        {
+          "word": "師匠",
+          "furigana": "ししょう",
+          "meaningVi": "Sư phụ"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n1-l15-s1",
+      "slideType": "grammar",
+      "title": "1. Mở đầu bài phát biểu: Khởi đầu sự nghiệp & Cảm xúc tột độ (を皮切りにして + 極まりない)",
+      "grammarFormula": "N(điểm khởi đầu)を皮切りにして、[sự nghiệp phát triển]。感慨極まりないものがある。",
+      "explanation": "Mở đầu bài phát biểu chia tay, người nói thường dùng を皮切りにして (bài 10) để hồi tưởng lại ĐIỂM KHỞI ĐẦU của cả sự nghiệp, rồi bày tỏ cảm xúc dâng trào bằng 極まりない (bài 1 — cực điểm, vô cùng) để diễn tả cảm giác CỰC ĐỘ, khó kìm nén khi đứng trước cột mốc cuối cùng của hành trình đó.",
+      "teacherTips": "を皮切りにして (bài 10) luôn kéo theo một chuỗi phát triển; 極まりない (bài 1) luôn diễn tả một cảm xúc CHỦ QUAN ở mức cực điểm — kết hợp tạo mở đầu vừa kể chuyện vừa giàu cảm xúc.",
+      "culturalNotes": "Bài giảng kỷ niệm nghỉ hưu (退官記念講演) của giáo sư Nhật luôn mở đầu bằng việc hồi tưởng cột mốc khởi nghiệp nghiên cứu, kèm theo một câu cảm thán trang trọng như '感慨極まりないものがあります'.",
+      "examples": [
+        {
+          "id": "ex-n1-l15-s1-1",
+          "tokens": [
+            {
+              "id": "t-l15s1-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-2",
+              "text": "ちいさな",
+              "isKeyGrammar": false,
+              "kanji": "小さな",
+              "furigana": "ちいさな"
+            },
+            {
+              "id": "t-l15s1-3",
+              "text": "はっけん",
+              "isKeyGrammar": true,
+              "kanji": "発見",
+              "furigana": "はっけん"
+            },
+            {
+              "id": "t-l15s1-4",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-5",
+              "text": "かわきりにして",
+              "isKeyGrammar": true,
+              "kanji": "皮切りにして",
+              "furigana": "かわきりにして"
+            },
+            {
+              "id": "t-l15s1-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-7",
+              "text": "よんじゅうねん",
+              "isKeyGrammar": false,
+              "kanji": "40年",
+              "furigana": "よんじゅうねん"
+            },
+            {
+              "id": "t-l15s1-8",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-9",
+              "text": "および",
+              "isKeyGrammar": false,
+              "kanji": "及ぶ",
+              "furigana": "および"
+            },
+            {
+              "id": "t-l15s1-10",
+              "text": "けんきゅう",
+              "isKeyGrammar": false,
+              "kanji": "研究",
+              "furigana": "けんきゅう"
+            },
+            {
+              "id": "t-l15s1-11",
+              "text": "じんせい",
+              "isKeyGrammar": false,
+              "kanji": "人生",
+              "furigana": "じんせい"
+            },
+            {
+              "id": "t-l15s1-12",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-13",
+              "text": "はじまりました",
+              "isKeyGrammar": false,
+              "kanji": "始まりました",
+              "furigana": "はじまりました"
+            }
+          ],
+          "meaningVi": "Bắt đầu từ phát hiện nhỏ bé này, sự nghiệp nghiên cứu kéo dài 40 năm đã bắt đầu."
+        },
+        {
+          "id": "ex-n1-l15-s1-2",
+          "tokens": [
+            {
+              "id": "t-l15s1-14",
+              "text": "こうして",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-15",
+              "text": "みなさま",
+              "isKeyGrammar": false,
+              "kanji": "皆様",
+              "furigana": "みなさま"
+            },
+            {
+              "id": "t-l15s1-16",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-17",
+              "text": "まえ",
+              "isKeyGrammar": false,
+              "kanji": "前",
+              "furigana": "まえ"
+            },
+            {
+              "id": "t-l15s1-18",
+              "text": "で",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-19",
+              "text": "さいご",
+              "isKeyGrammar": false,
+              "kanji": "最後",
+              "furigana": "さいご"
+            },
+            {
+              "id": "t-l15s1-20",
+              "text": "こうぎ",
+              "isKeyGrammar": false,
+              "kanji": "講義",
+              "furigana": "こうぎ"
+            },
+            {
+              "id": "t-l15s1-21",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-22",
+              "text": "する",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-23",
+              "text": "こと",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-24",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-25",
+              "text": "でき",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-26",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-27",
+              "text": "かんがい",
+              "isKeyGrammar": true,
+              "kanji": "感慨",
+              "furigana": "かんがい"
+            },
+            {
+              "id": "t-l15s1-28",
+              "text": "きわまりない",
+              "isKeyGrammar": true,
+              "kanji": "極まりない",
+              "furigana": "きわまりない"
+            },
+            {
+              "id": "t-l15s1-29",
+              "text": "もの",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-30",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s1-31",
+              "text": "あります",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Có thể đứng trước quý vị để thực hiện bài giảng cuối cùng như thế này, tôi cảm thấy cảm khái vô cùng."
+        }
+      ]
+    },
+    {
+      "slideId": "n1-l15-s2",
+      "slideType": "grammar",
+      "title": "2. Lập luận học thuật: Dựa sát thực tế, tuân theo chuẩn mực & khẳng định (に即して + に則って + にほかならない)",
+      "grammarFormula": "実態に即して分析すれば、〜にほかならない。伝統に則って進めることこそ、〜にほかならない。",
+      "explanation": "Trình bày quan điểm học thuật đòi hỏi vừa PHÂN TÍCH bám sát THỰC TẾ cụ thể (に即して — bài 11), vừa TUÂN THEO chuẩn mực/truyền thống đã được thiết lập (に則って — bài 11), rồi KHẲNG ĐỊNH dứt khoát bản chất vấn đề bằng にほかならない (bài 7 — chính là, không gì khác) để tăng sức thuyết phục cho lập luận.",
+      "teacherTips": "に即して căn cứ vào THỰC TẾ cụ thể (dữ liệu, hiện tượng); に則って căn cứ vào QUY TẮC/TRUYỀN THỐNG có sẵn — cả hai cùng dẫn tới một khẳng định dứt khoát bằng にほかならない.",
+      "culturalNotes": "Diễn văn học thuật Nhật thường theo khung: nêu căn cứ (thực tế hoặc chuẩn mực) → khẳng định kết luận bằng にほかならない để tăng tính thuyết phục, đanh thép.",
+      "examples": [
+        {
+          "id": "ex-n1-l15-s2-1",
+          "tokens": [
+            {
+              "id": "t-l15s2-1",
+              "text": "ながねん",
+              "isKeyGrammar": false,
+              "kanji": "長年",
+              "furigana": "ながねん"
+            },
+            {
+              "id": "t-l15s2-2",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-3",
+              "text": "データ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-4",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-5",
+              "text": "そくして",
+              "isKeyGrammar": true,
+              "kanji": "即して",
+              "furigana": "そくして"
+            },
+            {
+              "id": "t-l15s2-6",
+              "text": "ぶんせきすれば",
+              "isKeyGrammar": false,
+              "kanji": "分析すれば",
+              "furigana": "ぶんせきすれば"
+            },
+            {
+              "id": "t-l15s2-7",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-8",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-9",
+              "text": "げんしょう",
+              "isKeyGrammar": false,
+              "kanji": "現象",
+              "furigana": "げんしょう"
+            },
+            {
+              "id": "t-l15s2-10",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-11",
+              "text": "しぜん",
+              "isKeyGrammar": false,
+              "kanji": "自然",
+              "furigana": "しぜん"
+            },
+            {
+              "id": "t-l15s2-12",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-13",
+              "text": "ほうそく",
+              "isKeyGrammar": false,
+              "kanji": "法則",
+              "furigana": "ほうそく"
+            },
+            {
+              "id": "t-l15s2-14",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-15",
+              "text": "ほかならない",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l15s2-16",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-17",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Nếu phân tích bám sát theo dữ liệu nhiều năm, thì hiện tượng này chính là quy luật tự nhiên, không gì khác."
+        },
+        {
+          "id": "ex-n1-l15-s2-2",
+          "tokens": [
+            {
+              "id": "t-l15s2-18",
+              "text": "がくもん",
+              "isKeyGrammar": false,
+              "kanji": "学問",
+              "furigana": "がくもん"
+            },
+            {
+              "id": "t-l15s2-19",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-20",
+              "text": "でんとう",
+              "isKeyGrammar": false,
+              "kanji": "伝統",
+              "furigana": "でんとう"
+            },
+            {
+              "id": "t-l15s2-21",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-22",
+              "text": "のっとって",
+              "isKeyGrammar": true,
+              "kanji": "則って",
+              "furigana": "のっとって"
+            },
+            {
+              "id": "t-l15s2-23",
+              "text": "けんきゅう",
+              "isKeyGrammar": false,
+              "kanji": "研究",
+              "furigana": "けんきゅう"
+            },
+            {
+              "id": "t-l15s2-24",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-25",
+              "text": "すすめる",
+              "isKeyGrammar": false,
+              "kanji": "進める",
+              "furigana": "すすめる"
+            },
+            {
+              "id": "t-l15s2-26",
+              "text": "こと",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-27",
+              "text": "こそ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-28",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-29",
+              "text": "しん",
+              "isKeyGrammar": false,
+              "kanji": "真",
+              "furigana": "しん"
+            },
+            {
+              "id": "t-l15s2-30",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-31",
+              "text": "がくしゃ",
+              "isKeyGrammar": false,
+              "kanji": "学者",
+              "furigana": "がくしゃ"
+            },
+            {
+              "id": "t-l15s2-32",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-33",
+              "text": "すがた",
+              "isKeyGrammar": false,
+              "kanji": "姿",
+              "furigana": "すがた"
+            },
+            {
+              "id": "t-l15s2-34",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-35",
+              "text": "ほかならない",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l15s2-36",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s2-37",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Chính việc tiến hành nghiên cứu tuân theo truyền thống học thuật mới là dáng vẻ đích thực của một học giả chân chính, không gì khác."
+        }
+      ]
+    },
+    {
+      "slideId": "n1-l15-s3",
+      "slideType": "grammar",
+      "title": "3. Lời cảnh tỉnh dành cho học giả trẻ: Xu hướng cần lưu ý & Phê phán nghiêm khắc (きらいがある + ならいざ知らず + ともあろう者が)",
+      "grammarFormula": "若手はNに走るきらいがある。新人ならいざ知らず、研究者ともあろう者が、〜とは。",
+      "explanation": "Khi cảnh tỉnh thế hệ học giả trẻ, giáo sư trước tiên NHẬN XÉT NHẸ NHÀNG một xu hướng còn thiếu sót bằng きらいがある (bài 14 — khách quan, điềm tĩnh), sau đó CHUYỂN SANG PHÊ PHÁN NGHIÊM KHẮC hơn đối với hành vi sai trái nghiêm trọng bằng cách kết hợp ならいざ知らず (bài 13 — so sánh mức độ) và ともあろう者が (bài 13 — chỉ trích địa vị) — tạo ra hai TẦNG PHÊ PHÁN rõ rệt: nhẹ nhàng nhắc nhở và nghiêm khắc lên án.",
+      "teacherTips": "きらいがある dùng cho xu hướng NHẸ, còn có thể sửa; ならいざ知らず + ともあろう者が dành cho hành vi NGHIÊM TRỌNG, không thể tha thứ — mức độ phê phán tăng dần rõ rệt.",
+      "culturalNotes": "Bài giảng cuối của giáo sư Nhật thường có đoạn 'lời khuyên cho hậu bối' đi từ nhắc nhở nhẹ nhàng đến cảnh báo nghiêm khắc, thể hiện trách nhiệm dẫn dắt thế hệ sau.",
+      "examples": [
+        {
+          "id": "ex-n1-l15-s3-1",
+          "tokens": [
+            {
+              "id": "t-l15s3-1",
+              "text": "わかて",
+              "isKeyGrammar": false,
+              "kanji": "若手",
+              "furigana": "わかて"
+            },
+            {
+              "id": "t-l15s3-2",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-3",
+              "text": "けんきゅうしゃ",
+              "isKeyGrammar": false,
+              "kanji": "研究者",
+              "furigana": "けんきゅうしゃ"
+            },
+            {
+              "id": "t-l15s3-4",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-5",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-6",
+              "text": "りろん",
+              "isKeyGrammar": true,
+              "kanji": "理論",
+              "furigana": "りろん"
+            },
+            {
+              "id": "t-l15s3-7",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-8",
+              "text": "はしる",
+              "isKeyGrammar": false,
+              "kanji": "走る",
+              "furigana": "はしる"
+            },
+            {
+              "id": "t-l15s3-9",
+              "text": "きらいがあります",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l15s3-10",
+              "text": "。",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-11",
+              "text": "じっせん",
+              "isKeyGrammar": true,
+              "kanji": "実践",
+              "furigana": "じっせん"
+            },
+            {
+              "id": "t-l15s3-12",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-13",
+              "text": "わすれないで",
+              "isKeyGrammar": false,
+              "kanji": "忘れないで",
+              "furigana": "わすれないで"
+            },
+            {
+              "id": "t-l15s3-14",
+              "text": "ほしい",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-15",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-16",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Các nhà nghiên cứu trẻ có xu hướng chạy theo lý thuyết suông. Tôi mong các bạn đừng quên tính thực tiễn."
+        },
+        {
+          "id": "ex-n1-l15-s3-2",
+          "tokens": [
+            {
+              "id": "t-l15s3-17",
+              "text": "しんじん",
+              "isKeyGrammar": true,
+              "kanji": "新人",
+              "furigana": "しんじん"
+            },
+            {
+              "id": "t-l15s3-18",
+              "text": "ならいざしらず",
+              "isKeyGrammar": true,
+              "kanji": "ならいざ知らず",
+              "furigana": "ならいざしらず"
+            },
+            {
+              "id": "t-l15s3-19",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-20",
+              "text": "けんきゅうしゃ",
+              "isKeyGrammar": false,
+              "kanji": "研究者",
+              "furigana": "けんきゅうしゃ"
+            },
+            {
+              "id": "t-l15s3-21",
+              "text": "ともあろうものが",
+              "isKeyGrammar": true,
+              "kanji": "ともあろう者が",
+              "furigana": "ともあろうものが"
+            },
+            {
+              "id": "t-l15s3-22",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-23",
+              "text": "データ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-24",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-25",
+              "text": "いつわる",
+              "isKeyGrammar": false,
+              "kanji": "偽る",
+              "furigana": "いつわる"
+            },
+            {
+              "id": "t-l15s3-26",
+              "text": "とは",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-27",
+              "text": "ゆるされない",
+              "isKeyGrammar": false,
+              "kanji": "許されない",
+              "furigana": "ゆるされない"
+            },
+            {
+              "id": "t-l15s3-28",
+              "text": "こと",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s3-29",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Nếu là người mới thì còn hiểu được, nhưng một người đã là nhà nghiên cứu mà lại làm giả dữ liệu thì đó là điều không thể tha thứ."
+        }
+      ]
+    },
+    {
+      "slideId": "n1-l15-s4",
+      "slideType": "grammar",
+      "title": "4. Lời tri ân & Tuyên bố khép lại: Điều kiện không thể thiếu & Nguyện cầu tha thiết (なくしては + を限りに + 願ってやまない)",
+      "grammarFormula": "恩師や家族の支えなくしては、今日の私はない。本日を限りに教壇を去るが、〜を願ってやまない。",
+      "explanation": "Khép lại bài phát biểu, người nói bày tỏ lòng biết ơn bằng cách khẳng định sự hỗ trợ của mọi người là điều kiện KHÔNG THỂ THIẾU (なくしては — bài 12), rồi TUYÊN BỐ dứt khoát mốc kết thúc sự nghiệp bằng を限りに (bài 10 — hô ứng với を皮切りにして ở slide 1: một mở đầu, một khép lại), và cuối cùng gửi gắm NGUYỆN CẦU THA THIẾT cho tương lai bằng 願ってやまない (bài 8).",
+      "teacherTips": "を皮切りにして (mở đầu, slide 1) và を限りに (kết thúc, slide 4) tạo hiệu ứng BOOKEND cho toàn bộ bài phát biểu — chính là cách hai cấu trúc này từng được dùng ngay trong bài 10.",
+      "culturalNotes": "Một bài phát biểu chia tay hoàn chỉnh ở Nhật luôn khép lại bằng ba bước: tri ân (なくしては) → tuyên bố dứt khoát mốc kết thúc (を限りに) → gửi gắm nguyện cầu cho tương lai (願ってやまない).",
+      "examples": [
+        {
+          "id": "ex-n1-l15-s4-1",
+          "tokens": [
+            {
+              "id": "t-l15s4-1",
+              "text": "おんし",
+              "isKeyGrammar": true,
+              "kanji": "恩師",
+              "furigana": "おんし"
+            },
+            {
+              "id": "t-l15s4-2",
+              "text": "や",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-3",
+              "text": "かぞく",
+              "isKeyGrammar": false,
+              "kanji": "家族",
+              "furigana": "かぞく"
+            },
+            {
+              "id": "t-l15s4-4",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-5",
+              "text": "ささえ",
+              "isKeyGrammar": false,
+              "kanji": "支え",
+              "furigana": "ささえ"
+            },
+            {
+              "id": "t-l15s4-6",
+              "text": "なくしては",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l15s4-7",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-8",
+              "text": "きょう",
+              "isKeyGrammar": false,
+              "kanji": "今日",
+              "furigana": "きょう"
+            },
+            {
+              "id": "t-l15s4-9",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-10",
+              "text": "わたし",
+              "isKeyGrammar": false,
+              "kanji": "私",
+              "furigana": "わたし"
+            },
+            {
+              "id": "t-l15s4-11",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-12",
+              "text": "なかった",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-13",
+              "text": "でしょう",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Nếu không có sự nâng đỡ của ân sư và gia đình, thì đã không có tôi của ngày hôm nay."
+        },
+        {
+          "id": "ex-n1-l15-s4-2",
+          "tokens": [
+            {
+              "id": "t-l15s4-14",
+              "text": "ほんじつ",
+              "isKeyGrammar": false,
+              "kanji": "本日",
+              "furigana": "ほんじつ"
+            },
+            {
+              "id": "t-l15s4-15",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-16",
+              "text": "かぎりに",
+              "isKeyGrammar": true,
+              "kanji": "限りに",
+              "furigana": "かぎりに"
+            },
+            {
+              "id": "t-l15s4-17",
+              "text": "きょうだん",
+              "isKeyGrammar": true,
+              "kanji": "教壇",
+              "furigana": "きょうだん"
+            },
+            {
+              "id": "t-l15s4-18",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-19",
+              "text": "さります",
+              "isKeyGrammar": false,
+              "kanji": "去ります",
+              "furigana": "さります"
+            },
+            {
+              "id": "t-l15s4-20",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-21",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-22",
+              "text": "みなさま",
+              "isKeyGrammar": false,
+              "kanji": "皆様",
+              "furigana": "みなさま"
+            },
+            {
+              "id": "t-l15s4-23",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-24",
+              "text": "こんご",
+              "isKeyGrammar": false,
+              "kanji": "今後",
+              "furigana": "こんご"
+            },
+            {
+              "id": "t-l15s4-25",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-26",
+              "text": "ご",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-27",
+              "text": "かつやく",
+              "isKeyGrammar": false,
+              "kanji": "活躍",
+              "furigana": "かつやく"
+            },
+            {
+              "id": "t-l15s4-28",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l15s4-29",
+              "text": "ねがってやみません",
+              "isKeyGrammar": true,
+              "kanji": "願ってやみません",
+              "furigana": "ねがってやみません"
+            }
+          ],
+          "meaningVi": "Kể từ hôm nay tôi sẽ rời khỏi bục giảng này, nhưng tôi tha thiết nguyện cầu quý vị sẽ tiếp tục hoạt động rực rỡ trong tương lai."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n1-15-1",
+      "speaker": "司会",
+      "speakerRole": "Người dẫn chương trình",
+      "tokens": [
+        {
+          "id": "d15-1",
+          "text": "ほんじつ",
+          "isKeyGrammar": false,
+          "kanji": "本日",
+          "furigana": "ほんじつ"
+        },
+        {
+          "id": "d15-2",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-3",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-4",
+          "text": "きょうじゅ",
+          "isKeyGrammar": true,
+          "kanji": "教授",
+          "furigana": "きょうじゅ"
+        },
+        {
+          "id": "d15-5",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-6",
+          "text": "たいかん",
+          "isKeyGrammar": true,
+          "kanji": "退官",
+          "furigana": "たいかん"
+        },
+        {
+          "id": "d15-7",
+          "text": "きねん",
+          "isKeyGrammar": false,
+          "kanji": "記念",
+          "furigana": "きねん"
+        },
+        {
+          "id": "d15-8",
+          "text": "こうえん",
+          "isKeyGrammar": true,
+          "kanji": "講演",
+          "furigana": "こうえん"
+        },
+        {
+          "id": "d15-9",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-10",
+          "text": "おあつまりいただき",
+          "isKeyGrammar": false,
+          "kanji": "お集まりいただき",
+          "furigana": "おあつまりいただき"
+        },
+        {
+          "id": "d15-11",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-12",
+          "text": "ありがとうございます",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Hôm nay, cảm ơn mọi người đã đến dự buổi giảng kỷ niệm nghỉ hưu của giáo sư."
+    },
+    {
+      "id": "dia-n1-15-2",
+      "speaker": "教授",
+      "speakerRole": "Giáo sư",
+      "tokens": [
+        {
+          "id": "d15-13",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-14",
+          "text": "ちいさな",
+          "isKeyGrammar": false,
+          "kanji": "小さな",
+          "furigana": "ちいさな"
+        },
+        {
+          "id": "d15-15",
+          "text": "はっけん",
+          "isKeyGrammar": true,
+          "kanji": "発見",
+          "furigana": "はっけん"
+        },
+        {
+          "id": "d15-16",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-17",
+          "text": "かわきりにして",
+          "isKeyGrammar": true,
+          "kanji": "皮切りにして",
+          "furigana": "かわきりにして"
+        },
+        {
+          "id": "d15-18",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-19",
+          "text": "よんじゅうねん",
+          "isKeyGrammar": false,
+          "kanji": "40年",
+          "furigana": "よんじゅうねん"
+        },
+        {
+          "id": "d15-20",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-21",
+          "text": "および",
+          "isKeyGrammar": false,
+          "kanji": "及ぶ",
+          "furigana": "および"
+        },
+        {
+          "id": "d15-22",
+          "text": "けんきゅう",
+          "isKeyGrammar": false,
+          "kanji": "研究",
+          "furigana": "けんきゅう"
+        },
+        {
+          "id": "d15-23",
+          "text": "じんせい",
+          "isKeyGrammar": false,
+          "kanji": "人生",
+          "furigana": "じんせい"
+        },
+        {
+          "id": "d15-24",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-25",
+          "text": "はじまりました",
+          "isKeyGrammar": false,
+          "kanji": "始まりました",
+          "furigana": "はじまりました"
+        },
+        {
+          "id": "d15-26",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-27",
+          "text": "かんがい",
+          "isKeyGrammar": true,
+          "kanji": "感慨",
+          "furigana": "かんがい"
+        },
+        {
+          "id": "d15-28",
+          "text": "きわまりない",
+          "isKeyGrammar": true,
+          "kanji": "極まりない",
+          "furigana": "きわまりない"
+        },
+        {
+          "id": "d15-29",
+          "text": "もの",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-30",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-31",
+          "text": "あります",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Bắt đầu từ phát hiện nhỏ bé này, sự nghiệp nghiên cứu kéo dài 40 năm đã bắt đầu. Tôi cảm thấy cảm khái vô cùng."
+    },
+    {
+      "id": "dia-n1-15-3",
+      "speaker": "司会",
+      "speakerRole": "Người dẫn chương trình",
+      "tokens": [
+        {
+          "id": "d15-32",
+          "text": "これまで",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-33",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-34",
+          "text": "ご",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-35",
+          "text": "けんきゅう",
+          "isKeyGrammar": false,
+          "kanji": "研究",
+          "furigana": "けんきゅう"
+        },
+        {
+          "id": "d15-36",
+          "text": "について",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-37",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-38",
+          "text": "ひとこと",
+          "isKeyGrammar": false,
+          "kanji": "一言",
+          "furigana": "ひとこと"
+        },
+        {
+          "id": "d15-39",
+          "text": "おねがいできますか",
+          "isKeyGrammar": false,
+          "kanji": "お願いできますか",
+          "furigana": "おねがいできますか"
+        }
+      ],
+      "meaningVi": "Về nghiên cứu từ trước đến nay, xin giáo sư có thể nói đôi lời được không ạ?"
+    },
+    {
+      "id": "dia-n1-15-4",
+      "speaker": "教授",
+      "speakerRole": "Giáo sư",
+      "tokens": [
+        {
+          "id": "d15-40",
+          "text": "ながねん",
+          "isKeyGrammar": false,
+          "kanji": "長年",
+          "furigana": "ながねん"
+        },
+        {
+          "id": "d15-41",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-42",
+          "text": "データ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-43",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-44",
+          "text": "そくして",
+          "isKeyGrammar": true,
+          "kanji": "即して",
+          "furigana": "そくして"
+        },
+        {
+          "id": "d15-45",
+          "text": "ぶんせきすれば",
+          "isKeyGrammar": false,
+          "kanji": "分析すれば",
+          "furigana": "ぶんせきすれば"
+        },
+        {
+          "id": "d15-46",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-47",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-48",
+          "text": "げんしょう",
+          "isKeyGrammar": false,
+          "kanji": "現象",
+          "furigana": "げんしょう"
+        },
+        {
+          "id": "d15-49",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-50",
+          "text": "しぜん",
+          "isKeyGrammar": false,
+          "kanji": "自然",
+          "furigana": "しぜん"
+        },
+        {
+          "id": "d15-51",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-52",
+          "text": "ほうそく",
+          "isKeyGrammar": false,
+          "kanji": "法則",
+          "furigana": "ほうそく"
+        },
+        {
+          "id": "d15-53",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-54",
+          "text": "ほかなりません",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d15-55",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-56",
+          "text": "でんとう",
+          "isKeyGrammar": false,
+          "kanji": "伝統",
+          "furigana": "でんとう"
+        },
+        {
+          "id": "d15-57",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-58",
+          "text": "のっとって",
+          "isKeyGrammar": true,
+          "kanji": "則って",
+          "furigana": "のっとって"
+        },
+        {
+          "id": "d15-59",
+          "text": "けんきゅう",
+          "isKeyGrammar": false,
+          "kanji": "研究",
+          "furigana": "けんきゅう"
+        },
+        {
+          "id": "d15-60",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-61",
+          "text": "すすめる",
+          "isKeyGrammar": false,
+          "kanji": "進める",
+          "furigana": "すすめる"
+        },
+        {
+          "id": "d15-62",
+          "text": "こと",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-63",
+          "text": "こそ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-64",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-65",
+          "text": "しん",
+          "isKeyGrammar": false,
+          "kanji": "真",
+          "furigana": "しん"
+        },
+        {
+          "id": "d15-66",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-67",
+          "text": "がくしゃ",
+          "isKeyGrammar": false,
+          "kanji": "学者",
+          "furigana": "がくしゃ"
+        },
+        {
+          "id": "d15-68",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-69",
+          "text": "すがた",
+          "isKeyGrammar": false,
+          "kanji": "姿",
+          "furigana": "すがた"
+        },
+        {
+          "id": "d15-70",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-71",
+          "text": "ほかならない",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d15-72",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-73",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Nếu phân tích bám sát theo dữ liệu nhiều năm, thì hiện tượng này chính là quy luật tự nhiên. Chính việc tiến hành nghiên cứu tuân theo truyền thống học thuật mới là dáng vẻ đích thực của một học giả chân chính."
+    },
+    {
+      "id": "dia-n1-15-5",
+      "speaker": "司会",
+      "speakerRole": "Người dẫn chương trình",
+      "tokens": [
+        {
+          "id": "d15-74",
+          "text": "わかい",
+          "isKeyGrammar": false,
+          "kanji": "若い",
+          "furigana": "わかい"
+        },
+        {
+          "id": "d15-75",
+          "text": "けんきゅうしゃ",
+          "isKeyGrammar": false,
+          "kanji": "研究者",
+          "furigana": "けんきゅうしゃ"
+        },
+        {
+          "id": "d15-76",
+          "text": "たち",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-77",
+          "text": "へ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-78",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-79",
+          "text": "メッセージ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-80",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-81",
+          "text": "ありますか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Giáo sư có thông điệp nào dành cho các nhà nghiên cứu trẻ không ạ?"
+    },
+    {
+      "id": "dia-n1-15-6",
+      "speaker": "教授",
+      "speakerRole": "Giáo sư",
+      "tokens": [
+        {
+          "id": "d15-82",
+          "text": "わかて",
+          "isKeyGrammar": false,
+          "kanji": "若手",
+          "furigana": "わかて"
+        },
+        {
+          "id": "d15-83",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-84",
+          "text": "けんきゅうしゃ",
+          "isKeyGrammar": false,
+          "kanji": "研究者",
+          "furigana": "けんきゅうしゃ"
+        },
+        {
+          "id": "d15-85",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-86",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-87",
+          "text": "りろん",
+          "isKeyGrammar": true,
+          "kanji": "理論",
+          "furigana": "りろん"
+        },
+        {
+          "id": "d15-88",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-89",
+          "text": "はしる",
+          "isKeyGrammar": false,
+          "kanji": "走る",
+          "furigana": "はしる"
+        },
+        {
+          "id": "d15-90",
+          "text": "きらいがあります",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d15-91",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-92",
+          "text": "じっせん",
+          "isKeyGrammar": true,
+          "kanji": "実践",
+          "furigana": "じっせん"
+        },
+        {
+          "id": "d15-93",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-94",
+          "text": "わすれないで",
+          "isKeyGrammar": false,
+          "kanji": "忘れないで",
+          "furigana": "わすれないで"
+        },
+        {
+          "id": "d15-95",
+          "text": "ほしい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-96",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-97",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Các nhà nghiên cứu trẻ có xu hướng chạy theo lý thuyết suông. Tôi mong các bạn đừng quên tính thực tiễn."
+    },
+    {
+      "id": "dia-n1-15-7",
+      "speaker": "司会",
+      "speakerRole": "Người dẫn chương trình",
+      "tokens": [
+        {
+          "id": "d15-98",
+          "text": "さいきん",
+          "isKeyGrammar": false,
+          "kanji": "最近",
+          "furigana": "さいきん"
+        },
+        {
+          "id": "d15-99",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-100",
+          "text": "データ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-101",
+          "text": "ぎぞう",
+          "isKeyGrammar": false,
+          "kanji": "偽造",
+          "furigana": "ぎぞう"
+        },
+        {
+          "id": "d15-102",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-103",
+          "text": "ぎわく",
+          "isKeyGrammar": true,
+          "kanji": "疑惑",
+          "furigana": "ぎわく"
+        },
+        {
+          "id": "d15-104",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-105",
+          "text": "ありました",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-106",
+          "text": "が",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Gần đây có nghi vấn ngụy tạo dữ liệu..."
+    },
+    {
+      "id": "dia-n1-15-8",
+      "speaker": "教授",
+      "speakerRole": "Giáo sư",
+      "tokens": [
+        {
+          "id": "d15-107",
+          "text": "しんじん",
+          "isKeyGrammar": true,
+          "kanji": "新人",
+          "furigana": "しんじん"
+        },
+        {
+          "id": "d15-108",
+          "text": "ならいざしらず",
+          "isKeyGrammar": true,
+          "kanji": "ならいざ知らず",
+          "furigana": "ならいざしらず"
+        },
+        {
+          "id": "d15-109",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-110",
+          "text": "けんきゅうしゃ",
+          "isKeyGrammar": false,
+          "kanji": "研究者",
+          "furigana": "けんきゅうしゃ"
+        },
+        {
+          "id": "d15-111",
+          "text": "ともあろうものが",
+          "isKeyGrammar": true,
+          "kanji": "ともあろう者が",
+          "furigana": "ともあろうものが"
+        },
+        {
+          "id": "d15-112",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-113",
+          "text": "データ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-114",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-115",
+          "text": "いつわる",
+          "isKeyGrammar": false,
+          "kanji": "偽る",
+          "furigana": "いつわる"
+        },
+        {
+          "id": "d15-116",
+          "text": "とは",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-117",
+          "text": "ゆるされない",
+          "isKeyGrammar": false,
+          "kanji": "許されない",
+          "furigana": "ゆるされない"
+        },
+        {
+          "id": "d15-118",
+          "text": "こと",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-119",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Nếu là người mới thì còn hiểu được, nhưng một người đã là nhà nghiên cứu mà lại làm giả dữ liệu thì đó là điều không thể tha thứ."
+    },
+    {
+      "id": "dia-n1-15-9",
+      "speaker": "司会",
+      "speakerRole": "Người dẫn chương trình",
+      "tokens": [
+        {
+          "id": "d15-120",
+          "text": "さいごに",
+          "isKeyGrammar": false,
+          "kanji": "最後に",
+          "furigana": "さいごに"
+        },
+        {
+          "id": "d15-121",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-122",
+          "text": "かんしゃ",
+          "isKeyGrammar": false,
+          "kanji": "感謝",
+          "furigana": "かんしゃ"
+        },
+        {
+          "id": "d15-123",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-124",
+          "text": "ことば",
+          "isKeyGrammar": false,
+          "kanji": "言葉",
+          "furigana": "ことば"
+        },
+        {
+          "id": "d15-125",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-126",
+          "text": "おねがいします",
+          "isKeyGrammar": false,
+          "kanji": "お願いします",
+          "furigana": "おねがいします"
+        }
+      ],
+      "meaningVi": "Cuối cùng, xin giáo sư nói lời cảm ơn."
+    },
+    {
+      "id": "dia-n1-15-10",
+      "speaker": "教授",
+      "speakerRole": "Giáo sư",
+      "tokens": [
+        {
+          "id": "d15-127",
+          "text": "おんし",
+          "isKeyGrammar": true,
+          "kanji": "恩師",
+          "furigana": "おんし"
+        },
+        {
+          "id": "d15-128",
+          "text": "や",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-129",
+          "text": "かぞく",
+          "isKeyGrammar": false,
+          "kanji": "家族",
+          "furigana": "かぞく"
+        },
+        {
+          "id": "d15-130",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-131",
+          "text": "ささえ",
+          "isKeyGrammar": false,
+          "kanji": "支え",
+          "furigana": "ささえ"
+        },
+        {
+          "id": "d15-132",
+          "text": "なくしては",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d15-133",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-134",
+          "text": "きょう",
+          "isKeyGrammar": false,
+          "kanji": "今日",
+          "furigana": "きょう"
+        },
+        {
+          "id": "d15-135",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-136",
+          "text": "わたし",
+          "isKeyGrammar": false,
+          "kanji": "私",
+          "furigana": "わたし"
+        },
+        {
+          "id": "d15-137",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-138",
+          "text": "ありませんでした",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-139",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-140",
+          "text": "ほんじつ",
+          "isKeyGrammar": false,
+          "kanji": "本日",
+          "furigana": "ほんじつ"
+        },
+        {
+          "id": "d15-141",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-142",
+          "text": "かぎりに",
+          "isKeyGrammar": true,
+          "kanji": "限りに",
+          "furigana": "かぎりに"
+        },
+        {
+          "id": "d15-143",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-144",
+          "text": "きょうだん",
+          "isKeyGrammar": true,
+          "kanji": "教壇",
+          "furigana": "きょうだん"
+        },
+        {
+          "id": "d15-145",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-146",
+          "text": "さります",
+          "isKeyGrammar": false,
+          "kanji": "去ります",
+          "furigana": "さります"
+        },
+        {
+          "id": "d15-147",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-148",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-149",
+          "text": "みなさま",
+          "isKeyGrammar": false,
+          "kanji": "皆様",
+          "furigana": "みなさま"
+        },
+        {
+          "id": "d15-150",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-151",
+          "text": "こんご",
+          "isKeyGrammar": false,
+          "kanji": "今後",
+          "furigana": "こんご"
+        },
+        {
+          "id": "d15-152",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-153",
+          "text": "ご",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-154",
+          "text": "かつやく",
+          "isKeyGrammar": false,
+          "kanji": "活躍",
+          "furigana": "かつやく"
+        },
+        {
+          "id": "d15-155",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d15-156",
+          "text": "ねがってやみません",
+          "isKeyGrammar": true,
+          "kanji": "願ってやみません",
+          "furigana": "ねがってやみません"
+        }
+      ],
+      "meaningVi": "Nếu không có sự nâng đỡ của ân sư và gia đình, thì đã không có tôi của ngày hôm nay. Kể từ hôm nay tôi sẽ rời khỏi bục giảng này, nhưng tôi tha thiết nguyện cầu quý vị sẽ tiếp tục hoạt động rực rỡ trong tương lai."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n1-15-1",
+      "question": "「この小さな発見を皮切りにして、40年に及ぶ研究人生が始まりました。感慨極まりないものがあります」 — kết hợp hai cấu trúc nào?",
+      "options": [
+        "を皮切りにして (khởi đầu một chuỗi, bài 10) + 極まりない (cảm xúc tột độ, bài 1)",
+        "なくしては + 願ってやまない",
+        "に即して + に則って",
+        "きらいがある + ならいざ知らず"
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu này kết hợp を皮切りにして để hồi tưởng điểm khởi đầu sự nghiệp với 極まりない để diễn tả cảm xúc dâng trào cực độ.",
+      "hint": "Xem slide 1 về を皮切りにして + 極まりない."
+    },
+    {
+      "id": "ex-q-n1-15-2",
+      "question": "「長年のデータに即して分析すれば、この現象は自然の法則にほかなりません」 — に即して kết hợp với にほかならない để làm gì?",
+      "options": [
+        "Phân tích bám sát THỰC TẾ cụ thể (bài 11) rồi KHẲNG ĐỊNH dứt khoát bản chất vấn đề (bài 7)",
+        "So sánh hai trường hợp khác nhau",
+        "Chỉ trích một người có địa vị cao",
+        "Bày tỏ lòng biết ơn sâu sắc"
+      ],
+      "correctIndex": 0,
+      "explanation": "に即して nêu căn cứ là thực tế dữ liệu cụ thể; にほかならない khẳng định dứt khoát kết luận rút ra từ đó.",
+      "hint": "Xem slide 2 về に即して + にほかならない."
+    },
+    {
+      "id": "ex-q-n1-15-3",
+      "question": "「伝統に則って研究を進めることこそ、真の学者の姿にほかならない」 — に則って ở đây nhấn mạnh điều gì?",
+      "options": [
+        "Tuân theo TRUYỀN THỐNG/chuẩn mực đã được thiết lập (bài 11), khác với に即して (thực tế cụ thể)",
+        "Một thực tế thị trường đang thay đổi",
+        "Một xu hướng tiêu cực trong tính cách",
+        "Một điều kiện tiên quyết sống còn"
+      ],
+      "correctIndex": 0,
+      "explanation": "に則って ở đây nhấn mạnh việc tuân theo truyền thống học thuật đã được thiết lập, khác với に即して vốn dựa trên thực tế cụ thể.",
+      "hint": "Xem slide 2 về に則って + にほかならない."
+    },
+    {
+      "id": "ex-q-n1-15-4",
+      "question": "「若手の研究者は、理論に走るきらいがあります」 kết hợp với 「新人ならいざ知らず、研究者ともあろう者が、データを偽るとは許されない」 để tạo ra điều gì?",
+      "options": [
+        "Hai TẦNG phê phán: nhận xét NHẸ NHÀNG về xu hướng (bài 14) rồi PHÊ PHÁN NGHIÊM KHẮC hành vi sai trái bằng cách so sánh mức độ và nhấn địa vị (bài 13)",
+        "Hai lời khen ngợi liên tiếp",
+        "Một sự mâu thuẫn logic không có ý nghĩa",
+        "Một câu hỏi tu từ không cần trả lời"
+      ],
+      "correctIndex": 0,
+      "explanation": "きらいがある tạo tầng phê phán nhẹ (xu hướng cần cải thiện); ならいざ知らず + ともあろう者が tạo tầng phê phán nghiêm khắc (hành vi không thể chấp nhận).",
+      "hint": "Xem slide 3 về きらいがある + ならいざ知らず + ともあろう者が."
+    },
+    {
+      "id": "ex-q-n1-15-5",
+      "question": "「恩師や家族の支えなくしては、今日の私はありませんでした」 — なくしては (bài 12) ở đây diễn tả điều gì?",
+      "options": [
+        "Ân sư và gia đình là ĐIỀU KIỆN TIÊN QUYẾT không thể thiếu cho thành công của người nói",
+        "Người nói không cần ai giúp đỡ cả",
+        "Ân sư và gia đình đã phản đối người nói",
+        "Một xu hướng tiêu cực trong tính cách"
+      ],
+      "correctIndex": 0,
+      "explanation": "なくしては khẳng định sự nâng đỡ của ân sư và gia đình là điều kiện tiên quyết không thể thiếu.",
+      "hint": "Xem slide 4 về なくしては + を限りに + 願ってやまない."
+    },
+    {
+      "id": "ex-q-n1-15-6",
+      "question": "「本日を限りにこの教壇を去りますが、皆様の今後のご活躍を願ってやみません」 — kết hợp を限りに và 願ってやまない để làm gì?",
+      "options": [
+        "TUYÊN BỐ dứt khoát mốc kết thúc sự nghiệp (bài 10) rồi gửi gắm NGUYỆN CẦU THA THIẾT cho tương lai người khác (bài 8)",
+        "Chỉ trích mạnh mẽ một hành vi sai trái",
+        "So sánh hai trường hợp để nhấn mạnh sự nghiêm trọng",
+        "Yêu cầu người nghe phải làm gì đó ngay lập tức"
+      ],
+      "correctIndex": 0,
+      "explanation": "を限りに tuyên bố dứt khoát việc rời bục giảng kể từ hôm nay; 願ってやまない gửi gắm nguyện cầu tha thiết cho tương lai của người nghe.",
+      "hint": "Xem slide 4 về を限りに + 願ってやまない."
+    },
+    {
+      "id": "ex-q-n1-15-7",
+      "question": "Tại sao を皮切りにして (mở đầu bài phát biểu) và を限りに (kết thúc bài phát biểu) đều xuất hiện trong cùng một bài diễn thuyết ở bài 15?",
+      "options": [
+        "Để tạo hiệu ứng BOOKEND — một mở đầu sự nghiệp, một khép lại sự nghiệp — giống hệt cách chúng được dùng trong chính bài 10",
+        "Vì hai cấu trúc bắt buộc phải luôn đi cùng nhau trong mọi trường hợp",
+        "Vì đó là lỗi lặp từ không cố ý",
+        "Không có lý do đặc biệt nào"
+      ],
+      "correctIndex": 0,
+      "explanation": "を皮切りにして mở đầu hồi tưởng sự nghiệp, を限りに khép lại dứt khoát — tạo hiệu ứng bookend cho toàn bài phát biểu, giống cách dùng trong chính bài 10.",
+      "hint": "Xem tips ở slide 4."
+    },
+    {
+      "id": "ex-q-n1-15-8",
+      "question": "Theo hội thoại, sự nghiệp nghiên cứu của giáo sư đã bắt đầu như thế nào?",
+      "options": [
+        "Bắt đầu từ một phát hiện nhỏ bé, kéo dài 40 năm (小さな発見を皮切りにして、40年に及ぶ研究人生が始まりました)",
+        "Bắt đầu từ một giải thưởng lớn",
+        "Không được đề cập trong hội thoại",
+        "Bắt đầu từ khi còn là học sinh trung học"
+      ],
+      "correctIndex": 0,
+      "explanation": "Giáo sư nói 「この小さな発見を皮切りにして、40年に及ぶ研究人生が始まりました」.",
+      "hint": "Xem câu thoại thứ 2."
+    },
+    {
+      "id": "ex-q-n1-15-9",
+      "question": "Theo hội thoại, giáo sư phản ứng thế nào trước vụ nghi vấn ngụy tạo dữ liệu?",
+      "options": [
+        "Phê phán nghiêm khắc: nếu là người mới thì còn hiểu được, nhưng một nhà nghiên cứu mà làm vậy thì không thể tha thứ (新人ならいざ知らず、研究者ともあろう者が、データを偽るとは許されない)",
+        "Hoàn toàn thông cảm và bỏ qua",
+        "Từ chối bình luận về vụ việc",
+        "Cho rằng đó là chuyện bình thường"
+      ],
+      "correctIndex": 0,
+      "explanation": "Giáo sư nói 「新人ならいざ知らず、研究者ともあろう者が、データを偽るとは許されないことです」.",
+      "hint": "Xem câu thoại thứ 8."
+    },
+    {
+      "id": "ex-q-n1-15-10",
+      "question": "Theo hội thoại, giáo sư kết thúc bài phát biểu bằng điều gì?",
+      "options": [
+        "Cảm ơn ân sư/gia đình, tuyên bố rời bục giảng, và nguyện cầu tha thiết cho tương lai của mọi người",
+        "Yêu cầu mọi người vinh danh mình nhiều hơn",
+        "Tuyên bố sẽ tiếp tục giảng dạy thêm nhiều năm nữa",
+        "Không nói lời cảm ơn nào"
+      ],
+      "correctIndex": 0,
+      "explanation": "Giáo sư nói 「恩師や家族の支えなくしては、今日の私はありませんでした。本日を限りにこの教壇を去りますが、皆様の今後のご活躍を願ってやみません」.",
+      "hint": "Xem câu thoại thứ 10."
+    }
+  ]
+}

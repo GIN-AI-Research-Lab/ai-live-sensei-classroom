@@ -118,21 +118,48 @@ def lesson(number, title, description, vocab, kanji, slides, dialogue, exercises
 
 
 # ---------------------------------------------------------------- ghi file
-def merge(new_lessons, path="curriculum/n5.json"):
-    """Thay the cac bai co cung lessonNumber, giu nguyen cac bai khac, sap xep lai."""
+def merge(new_lessons, path="curriculum/n5"):
+    """Ghi moi bai ra MOT FILE RIENG (curriculum/n5/<so>.json) + mot file
+    index.json nhe (khong keo theo vocabList/kanjiList/slides/dialogue/
+    exercises). Trang chon bai chi doc index.json (nhanh), con chi tiet
+    tung bai chi duoc tai khi hoc vien thuc su bam mo bai do — xem
+    CurriculumLoader.ensureLessonLoaded() ben js/curriculum-loader.js.
+    """
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    full = os.path.join(root, path)
-    data = json.load(io.open(full, encoding="utf-8")) if os.path.exists(full) else []
+    dir_path = os.path.join(root, path)
+    os.makedirs(dir_path, exist_ok=True)
 
-    by_num = {l["lessonNumber"]: l for l in data}
+    by_num = {}
+    for fname in os.listdir(dir_path):
+        if fname.endswith(".json") and fname != "index.json":
+            with io.open(os.path.join(dir_path, fname), encoding="utf-8") as f:
+                lesson = json.load(f)
+                by_num[lesson["lessonNumber"]] = lesson
     for l in new_lessons:
         by_num[l["lessonNumber"]] = l
 
-    out = [by_num[n] for n in sorted(by_num)]
-    with io.open(full, "w", encoding="utf-8") as f:
-        json.dump(out, f, ensure_ascii=False, indent=2)
+    for n, l in by_num.items():
+        with io.open(os.path.join(dir_path, "%d.json" % n), "w", encoding="utf-8") as f:
+            json.dump(l, f, ensure_ascii=False, indent=2)
 
-    print("[OK] %s: %d bai" % (path, len(out)))
+    index = []
+    for n in sorted(by_num):
+        l = by_num[n]
+        index.append({
+            "lessonNumber": l["lessonNumber"],
+            "level": l["level"],
+            "title": l["title"],
+            "description": l.get("description", ""),
+            "vocabCount": len(l.get("vocabList") or []),
+            "kanjiCount": len(l.get("kanjiList") or []),
+            "slideCount": len(l.get("slides") or []),
+            "dialogueCount": len(l.get("dialogue") or []),
+            "exerciseCount": len(l.get("exercises") or []),
+        })
+    with io.open(os.path.join(dir_path, "index.json"), "w", encoding="utf-8") as f:
+        json.dump(index, f, ensure_ascii=False, indent=2)
+
+    print("[OK] %s: %d bai" % (path, len(by_num)))
     for l in new_lessons:
         print("   B%02d  tu vung=%2d  kanji=%d  slide=%d  thoai=%d  bai tap=%d  | %s"
               % (l["lessonNumber"], len(l["vocabList"]), len(l["kanjiList"]),

@@ -1,0 +1,1332 @@
+{
+  "level": "N4",
+  "lessonNumber": 44,
+  "title": "Bài 44: Quá mức (〜すぎます) & Dễ/Khó làm (〜やすい / 〜にくい)",
+  "description": "Ghép すぎます vào gốc ます của động từ hoặc tính từ (bỏ đuôi い/な) để diễn tả mức độ THÁI QUÁ, thường mang hàm ý tiêu cực; ghép やすい/にくい vào gốc ます để tạo TÍNH TỪ MỚI diễn tả đặc điểm khách quan dễ/khó thực hiện (khác できる — năng lực người, bài 27); và cách chồng tầng すぎます lên chính やすい/にくい.",
+  "vocabList": [
+    {
+      "id": "voc-n4-44-1",
+      "word": "たべます",
+      "kanji": "食べます",
+      "furigana": "たべます",
+      "romaji": "tabemasu",
+      "wordType": "verb",
+      "meaningVi": "Ăn",
+      "accentNote": "Đã gặp N5 bài 6 — nay dùng làm ví dụ すぎます."
+    },
+    {
+      "id": "voc-n4-44-2",
+      "word": "のみます",
+      "kanji": "飲みます",
+      "furigana": "のみます",
+      "romaji": "nomimasu",
+      "wordType": "verb",
+      "meaningVi": "Uống",
+      "accentNote": "Đã gặp N5 bài 6."
+    },
+    {
+      "id": "voc-n4-44-3",
+      "word": "はたらきます",
+      "kanji": "働きます",
+      "furigana": "はたらきます",
+      "romaji": "hatarakimasu",
+      "wordType": "verb",
+      "meaningVi": "Làm việc, đi làm",
+      "accentNote": "Đã gặp N5 bài 4."
+    },
+    {
+      "id": "voc-n4-44-4",
+      "word": "つかいます",
+      "kanji": "使います",
+      "furigana": "つかいます",
+      "romaji": "tsukaimasu",
+      "wordType": "verb",
+      "meaningVi": "Sử dụng, dùng",
+      "accentNote": "Đã gặp N5 bài 15."
+    },
+    {
+      "id": "voc-n4-44-5",
+      "word": "あるきます",
+      "kanji": "歩きます",
+      "furigana": "あるきます",
+      "romaji": "arukimasu",
+      "wordType": "verb",
+      "meaningVi": "Đi bộ",
+      "accentNote": "Đã gặp N5 bài 16."
+    },
+    {
+      "id": "voc-n4-44-6",
+      "word": "よみます",
+      "kanji": "読みます",
+      "furigana": "よみます",
+      "romaji": "yomimasu",
+      "wordType": "verb",
+      "meaningVi": "Đọc",
+      "accentNote": "Đã gặp N5 bài 6 — nay dùng làm ví dụ やすい/にくい."
+    },
+    {
+      "id": "voc-n4-44-7",
+      "word": "かきます",
+      "kanji": "書きます",
+      "furigana": "かきます",
+      "romaji": "kakimasu",
+      "wordType": "verb",
+      "meaningVi": "Viết",
+      "accentNote": "Đã gặp N5 bài 6."
+    },
+    {
+      "id": "voc-n4-44-8",
+      "word": "うんてんします",
+      "kanji": "運転します",
+      "furigana": "うんてんします",
+      "romaji": "unten shimasu",
+      "wordType": "verb",
+      "meaningVi": "Lái xe",
+      "accentNote": "Đã gặp bài 27."
+    },
+    {
+      "id": "voc-n4-44-9",
+      "word": "ふとります",
+      "kanji": "太ります",
+      "furigana": "ふとります",
+      "romaji": "futorimasu",
+      "wordType": "verb",
+      "meaningVi": "Tăng cân, béo lên",
+      "accentNote": "Đã gặp bài 32."
+    },
+    {
+      "id": "voc-n4-44-10",
+      "word": "せつめいします",
+      "kanji": "説明します",
+      "furigana": "せつめいします",
+      "romaji": "setsumei shimasu",
+      "wordType": "verb",
+      "meaningVi": "Giải thích",
+      "accentNote": "Đã gặp bài 34."
+    },
+    {
+      "id": "voc-n4-44-11",
+      "word": "たかい",
+      "kanji": "高い",
+      "furigana": "たかい",
+      "romaji": "takai",
+      "wordType": "adjective",
+      "meaningVi": "Cao, đắt",
+      "accentNote": "Đã gặp N5 bài 8. 高すぎます = đắt quá mức."
+    },
+    {
+      "id": "voc-n4-44-12",
+      "word": "やすい",
+      "kanji": "安い",
+      "furigana": "やすい",
+      "romaji": "yasui",
+      "wordType": "adjective",
+      "meaningVi": "Rẻ",
+      "accentNote": "Đã gặp N5 bài 8. Chú ý: 安い là TÍNH TỪ, khác やすい hậu tố (dễ làm) tuy đọc giống nhau."
+    },
+    {
+      "id": "voc-n4-44-13",
+      "word": "おおきい",
+      "kanji": "大きい",
+      "furigana": "おおきい",
+      "romaji": "ookii",
+      "wordType": "adjective",
+      "meaningVi": "To, lớn",
+      "accentNote": "Đã gặp N5 bài 8."
+    },
+    {
+      "id": "voc-n4-44-14",
+      "word": "むずかしい",
+      "kanji": "難しい",
+      "furigana": "むずかしい",
+      "romaji": "muzukashii",
+      "wordType": "adjective",
+      "meaningVi": "Khó",
+      "accentNote": "Đã gặp N5 bài 8."
+    },
+    {
+      "id": "voc-n4-44-15",
+      "word": "げんき",
+      "kanji": "元気",
+      "furigana": "げんき",
+      "romaji": "genki",
+      "wordType": "adjective",
+      "meaningVi": "Khỏe mạnh",
+      "accentNote": "Đã gặp N5 bài 8."
+    },
+    {
+      "id": "voc-n4-44-16",
+      "word": "しずか",
+      "kanji": "静か",
+      "furigana": "しずか",
+      "romaji": "shizuka",
+      "wordType": "adjective",
+      "meaningVi": "Yên tĩnh",
+      "accentNote": "Đã gặp N5 bài 8. 静かすぎます = yên tĩnh quá mức (đến mức khó chịu)."
+    },
+    {
+      "id": "voc-n4-44-17",
+      "word": "くつ",
+      "kanji": "靴",
+      "furigana": "くつ",
+      "romaji": "kutsu",
+      "wordType": "noun",
+      "meaningVi": "Giày",
+      "accentNote": "この 靴は 歩きやすいです = đôi giày này đi dễ chịu."
+    },
+    {
+      "id": "voc-n4-44-18",
+      "word": "じ",
+      "kanji": "字",
+      "furigana": "じ",
+      "romaji": "ji",
+      "wordType": "noun",
+      "meaningVi": "Chữ viết",
+      "accentNote": "この 字は 読みにくいです = chữ này khó đọc."
+    },
+    {
+      "id": "voc-n4-44-19",
+      "word": "せつめいしょ",
+      "kanji": "説明書",
+      "furigana": "せつめいしょ",
+      "romaji": "setsumeisho",
+      "wordType": "noun",
+      "meaningVi": "Sách hướng dẫn sử dụng",
+      "accentNote": "Đã gặp bài 34. 分かりやすい 説明書 = sách hướng dẫn dễ hiểu."
+    },
+    {
+      "id": "voc-n4-44-20",
+      "word": "びょうき",
+      "kanji": "病気",
+      "furigana": "びょうき",
+      "romaji": "byouki",
+      "wordType": "noun",
+      "meaningVi": "Bệnh, ốm",
+      "accentNote": "食べすぎて、病気に なりました = ăn quá nhiều nên bị ốm."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n4-44-1",
+      "character": "過",
+      "hanViet": "QUÁ",
+      "strokeCount": 12,
+      "onyomi": [
+        "カ (ka)"
+      ],
+      "kunyomi": [
+        "す(ぎる)",
+        "す(ごす)"
+      ],
+      "meaningVi": "Vượt quá, đi qua.",
+      "commonWords": [
+        {
+          "word": "過ぎます",
+          "furigana": "すぎます",
+          "meaningVi": "Vượt quá"
+        },
+        {
+          "word": "過去",
+          "furigana": "かこ",
+          "meaningVi": "Quá khứ"
+        },
+        {
+          "word": "過ごします",
+          "furigana": "すごします",
+          "meaningVi": "Trải qua thời gian"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-44-2",
+      "character": "易",
+      "hanViet": "DỊ",
+      "strokeCount": 8,
+      "onyomi": [
+        "イ (i)",
+        "エキ (eki)"
+      ],
+      "kunyomi": [
+        "やさ(しい)"
+      ],
+      "meaningVi": "Dễ dàng. Đã gặp N5 bài 2 (易しい).",
+      "commonWords": [
+        {
+          "word": "易しい",
+          "furigana": "やさしい",
+          "meaningVi": "Dễ"
+        },
+        {
+          "word": "容易",
+          "furigana": "ようい",
+          "meaningVi": "Dễ dàng (Hán Việt)"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-44-3",
+      "character": "難",
+      "hanViet": "NAN",
+      "strokeCount": 18,
+      "onyomi": [
+        "ナン (nan)"
+      ],
+      "kunyomi": [
+        "むずか(しい)"
+      ],
+      "meaningVi": "Khó khăn. Đã gặp N5 bài 8.",
+      "commonWords": [
+        {
+          "word": "難しい",
+          "furigana": "むずかしい",
+          "meaningVi": "Khó"
+        },
+        {
+          "word": "困難",
+          "furigana": "こんなん",
+          "meaningVi": "Khó khăn"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-44-4",
+      "character": "字",
+      "hanViet": "TỰ",
+      "strokeCount": 6,
+      "onyomi": [
+        "ジ (ji)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Chữ viết. Đã gặp N4 bài 36 (trong 漢字).",
+      "commonWords": [
+        {
+          "word": "字",
+          "furigana": "じ",
+          "meaningVi": "Chữ"
+        },
+        {
+          "word": "漢字",
+          "furigana": "かんじ",
+          "meaningVi": "Chữ Hán"
+        },
+        {
+          "word": "数字",
+          "furigana": "すうじ",
+          "meaningVi": "Chữ số"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-44-5",
+      "character": "運",
+      "hanViet": "VẬN",
+      "strokeCount": 12,
+      "onyomi": [
+        "ウン (un)"
+      ],
+      "kunyomi": [
+        "はこ(ぶ)"
+      ],
+      "meaningVi": "Vận chuyển, vận may. Đã gặp bài 18.",
+      "commonWords": [
+        {
+          "word": "運転",
+          "furigana": "うんてん",
+          "meaningVi": "Lái xe"
+        },
+        {
+          "word": "運動",
+          "furigana": "うんどう",
+          "meaningVi": "Vận động"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n4-l44-s1",
+      "slideType": "grammar",
+      "title": "1. Quá mức: V(ます bỏ ます)／A(い/な bỏ đuôi) + すぎます",
+      "grammarFormula": "V(gốc ます) + すぎます 　A-い (bỏ い) + すぎます 　A-な (bỏ な) + すぎます",
+      "explanation": "すぎます (vốn nghĩa 'vượt quá') ghép sau động từ/tính từ để diễn tả một mức độ THÁI QUÁ, thường mang HÀM Ý TIÊU CỰC — làm/là gì đó NHIỀU/CAO hơn mức bình thường, gây hậu quả không hay.",
+      "teacherTips": "すぎます hầu như luôn mang sắc thái TIÊU CỰC (quá nhiều thành hại) — hiếm khi dùng để khen ai đó 'giỏi quá mức' theo nghĩa tích cực thuần túy.",
+      "culturalNotes": "食べすぎました。お腹が痛いです là câu than thở rất phổ biến sau các bữa tiệc/buffet ở Nhật.",
+      "examples": [
+        {
+          "id": "ex-n4-l44-s1-1",
+          "tokens": [
+            {
+              "id": "t-l44s1-1",
+              "text": "たべすぎました",
+              "isKeyGrammar": true,
+              "kanji": "食べすぎました",
+              "furigana": "たべすぎました"
+            },
+            {
+              "id": "t-l44s1-2",
+              "text": "。",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s1-3",
+              "text": "おなか",
+              "isKeyGrammar": false,
+              "kanji": "お腹",
+              "furigana": "おなか"
+            },
+            {
+              "id": "t-l44s1-4",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s1-5",
+              "text": "いたい",
+              "isKeyGrammar": false,
+              "kanji": "痛い",
+              "furigana": "いたい"
+            },
+            {
+              "id": "t-l44s1-6",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Tôi đã ăn quá nhiều. Đau bụng quá."
+        },
+        {
+          "id": "ex-n4-l44-s1-2",
+          "tokens": [
+            {
+              "id": "t-l44s1-7",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s1-8",
+              "text": "みせ",
+              "isKeyGrammar": false,
+              "kanji": "店",
+              "furigana": "みせ"
+            },
+            {
+              "id": "t-l44s1-9",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s1-10",
+              "text": "たかすぎます",
+              "isKeyGrammar": true,
+              "kanji": "高すぎます",
+              "furigana": "たかすぎます"
+            }
+          ],
+          "meaningVi": "Cửa hàng này đắt quá mức."
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l44-s2",
+      "slideType": "grammar",
+      "title": "2. Dễ làm: V(ます bỏ ます) + やすい",
+      "grammarFormula": "V(gốc ます) + やすい   (chia như TÍNH TỪ い: やすい→やすくない→やすかった)",
+      "explanation": "やすい ghép sau gốc động từ diễn tả hành động đó DỄ THỰC HIỆN — chính bản thân やすい trở thành một TÍNH TỪ MỚI, chia đầy đủ theo quy tắc tính từ い đã học.",
+      "teacherTips": "安い (rẻ, tính từ độc lập) và やすい (hậu tố 'dễ') phát âm GIỐNG NHAU nhưng chữ Hán và ý nghĩa hoàn toàn khác — phân biệt qua ngữ cảnh và có động từ đứng trước hay không.",
+      "culturalNotes": "分かりやすい説明 (giải thích dễ hiểu) là lời khen phổ biến nhất dành cho giáo viên, người thuyết trình giỏi ở Nhật.",
+      "examples": [
+        {
+          "id": "ex-n4-l44-s2-1",
+          "tokens": [
+            {
+              "id": "t-l44s2-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s2-2",
+              "text": "くつ",
+              "isKeyGrammar": true,
+              "kanji": "靴",
+              "furigana": "くつ"
+            },
+            {
+              "id": "t-l44s2-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s2-4",
+              "text": "あるきやすい",
+              "isKeyGrammar": true,
+              "kanji": "歩きやすい",
+              "furigana": "あるきやすい"
+            },
+            {
+              "id": "t-l44s2-5",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Đôi giày này đi (bộ) dễ chịu."
+        },
+        {
+          "id": "ex-n4-l44-s2-2",
+          "tokens": [
+            {
+              "id": "t-l44s2-6",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s2-7",
+              "text": "せつめいしょ",
+              "isKeyGrammar": false,
+              "kanji": "説明書",
+              "furigana": "せつめいしょ"
+            },
+            {
+              "id": "t-l44s2-8",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s2-9",
+              "text": "わかりやすい",
+              "isKeyGrammar": true,
+              "kanji": "分かりやすい",
+              "furigana": "わかりやすい"
+            },
+            {
+              "id": "t-l44s2-10",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Sách hướng dẫn này dễ hiểu."
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l44-s3",
+      "slideType": "grammar",
+      "title": "3. Khó làm: V(ます bỏ ます) + にくい",
+      "grammarFormula": "V(gốc ます) + にくい   (đối lập trực tiếp với やすい, cùng chia như tính từ い)",
+      "explanation": "にくい là cặp ĐỐI LẬP của やすい — diễn tả hành động KHÓ THỰC HIỆN, thường vì đặc điểm vật lý hoặc điều kiện khách quan của đối tượng.",
+      "teacherTips": "やすい/にくい luôn nói về ĐẶC ĐIỂM KHÁCH QUAN của vật/hành động — khác できる (khả năng, bài 27) nói về NĂNG LỰC của người.",
+      "culturalNotes": "使いにくい (khó dùng) là lời phàn nàn phổ biến về thiết kế sản phẩm, thường thấy trong đánh giá (レビュー) mua sắm online.",
+      "examples": [
+        {
+          "id": "ex-n4-l44-s3-1",
+          "tokens": [
+            {
+              "id": "t-l44s3-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s3-2",
+              "text": "じ",
+              "isKeyGrammar": true,
+              "kanji": "字",
+              "furigana": "じ"
+            },
+            {
+              "id": "t-l44s3-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s3-4",
+              "text": "よみにくい",
+              "isKeyGrammar": true,
+              "kanji": "読みにくい",
+              "furigana": "よみにくい"
+            },
+            {
+              "id": "t-l44s3-5",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Chữ này khó đọc."
+        },
+        {
+          "id": "ex-n4-l44-s3-2",
+          "tokens": [
+            {
+              "id": "t-l44s3-6",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s3-7",
+              "text": "くつ",
+              "isKeyGrammar": false,
+              "kanji": "靴",
+              "furigana": "くつ"
+            },
+            {
+              "id": "t-l44s3-8",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s3-9",
+              "text": "あるきにくい",
+              "isKeyGrammar": true,
+              "kanji": "歩きにくい",
+              "furigana": "あるきにくい"
+            },
+            {
+              "id": "t-l44s3-10",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Đôi giày này đi khó chịu. (đối lập trực tiếp với ví dụ slide 2)"
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l44-s4",
+      "slideType": "grammar",
+      "title": "4. Kết hợp すぎます với やすい/にくい",
+      "grammarFormula": "[Vやすい/にくい] + すぎます   (chính TÍNH TỪ MỚI やすい/にくい cũng chia được すぎます)",
+      "explanation": "Vì やすい/にくい đã TRỞ THÀNH tính từ い hoàn chỉnh (slide 2-3), chúng có thể tiếp tục ghép すぎます để nói 'quá dễ' hoặc 'quá khó' — một tầng ngữ pháp chồng lên tầng khác.",
+      "teacherTips": "Khi chồng tầng, やすい bỏ い thành やす trước khi ghép すぎる (やすすぎる) — cùng quy tắc chia tính từ い bình thường.",
+      "culturalNotes": "使いやすすぎて子供でも使えます là câu quảng cáo sản phẩm công nghệ rất thường gặp, nhấn mạnh tính đơn giản, thân thiện người dùng.",
+      "examples": [
+        {
+          "id": "ex-n4-l44-s4-1",
+          "tokens": [
+            {
+              "id": "t-l44s4-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s4-2",
+              "text": "しごと",
+              "isKeyGrammar": false,
+              "kanji": "仕事",
+              "furigana": "しごと"
+            },
+            {
+              "id": "t-l44s4-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s4-4",
+              "text": "むずかしすぎて",
+              "isKeyGrammar": true,
+              "kanji": "難しすぎて",
+              "furigana": "むずかしすぎて"
+            },
+            {
+              "id": "t-l44s4-5",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s4-6",
+              "text": "できません",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Việc này khó quá mức nên tôi không làm được."
+        },
+        {
+          "id": "ex-n4-l44-s4-2",
+          "tokens": [
+            {
+              "id": "t-l44s4-7",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s4-8",
+              "text": "アプリ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s4-9",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s4-10",
+              "text": "つかいやすすぎて",
+              "isKeyGrammar": true,
+              "kanji": "使いやすすぎて",
+              "furigana": "つかいやすすぎて"
+            },
+            {
+              "id": "t-l44s4-11",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l44s4-12",
+              "text": "こどもでも",
+              "isKeyGrammar": false,
+              "kanji": "子供でも",
+              "furigana": "こどもでも"
+            },
+            {
+              "id": "t-l44s4-13",
+              "text": "つかえます",
+              "isKeyGrammar": false,
+              "kanji": "使えます",
+              "furigana": "つかえます"
+            }
+          ],
+          "meaningVi": "Ứng dụng này dễ dùng đến mức trẻ con cũng dùng được. (やすい bỏ い, thêm すぎる: やすすぎる)"
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n4-44-1",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l44-1",
+          "text": "山田さん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-2",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-3",
+          "text": "だいじょうぶ",
+          "isKeyGrammar": false,
+          "kanji": "大丈夫",
+          "furigana": "だいじょうぶ"
+        },
+        {
+          "id": "d-l44-4",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Anh Yamada, anh ổn không?"
+    },
+    {
+      "id": "dia-n4-44-2",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l44-5",
+          "text": "きのう",
+          "isKeyGrammar": false,
+          "kanji": "昨日",
+          "furigana": "きのう"
+        },
+        {
+          "id": "d-l44-6",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-7",
+          "text": "のみすぎました",
+          "isKeyGrammar": true,
+          "kanji": "飲みすぎました",
+          "furigana": "のみすぎました"
+        },
+        {
+          "id": "d-l44-8",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-9",
+          "text": "あたま",
+          "isKeyGrammar": false,
+          "kanji": "頭",
+          "furigana": "あたま"
+        },
+        {
+          "id": "d-l44-10",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-11",
+          "text": "いたい",
+          "isKeyGrammar": false,
+          "kanji": "痛い",
+          "furigana": "いたい"
+        },
+        {
+          "id": "d-l44-12",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Hôm qua tôi đã uống quá nhiều. Đầu tôi đau quá."
+    },
+    {
+      "id": "dia-n4-44-3",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l44-13",
+          "text": "たいへんでした",
+          "isKeyGrammar": false,
+          "kanji": "大変でした",
+          "furigana": "たいへんでした"
+        },
+        {
+          "id": "d-l44-14",
+          "text": "ね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-15",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-16",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-17",
+          "text": "くすり",
+          "isKeyGrammar": false,
+          "kanji": "薬",
+          "furigana": "くすり"
+        },
+        {
+          "id": "d-l44-18",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-19",
+          "text": "のんで",
+          "isKeyGrammar": false,
+          "kanji": "飲んで",
+          "furigana": "のんで"
+        },
+        {
+          "id": "d-l44-20",
+          "text": "みて",
+          "isKeyGrammar": false,
+          "kanji": "みて",
+          "furigana": "みて"
+        },
+        {
+          "id": "d-l44-21",
+          "text": "ください",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vất vả thật đấy nhỉ. Thử uống viên thuốc này xem."
+    },
+    {
+      "id": "dia-n4-44-4",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l44-22",
+          "text": "ありがとう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-23",
+          "text": "ございます",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-24",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-25",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-26",
+          "text": "せつめいしょ",
+          "isKeyGrammar": true,
+          "kanji": "説明書",
+          "furigana": "せつめいしょ"
+        },
+        {
+          "id": "d-l44-27",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-28",
+          "text": "わかりやすい",
+          "isKeyGrammar": true,
+          "kanji": "分かりやすい",
+          "furigana": "わかりやすい"
+        },
+        {
+          "id": "d-l44-29",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-30",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Cảm ơn chị. Sách hướng dẫn này dễ hiểu nhỉ."
+    },
+    {
+      "id": "dia-n4-44-5",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l44-31",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-32",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-33",
+          "text": "ところで",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-34",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-35",
+          "text": "さいきん",
+          "isKeyGrammar": false,
+          "kanji": "最近",
+          "furigana": "さいきん"
+        },
+        {
+          "id": "d-l44-36",
+          "text": "はたらきすぎて",
+          "isKeyGrammar": true,
+          "kanji": "働きすぎて",
+          "furigana": "はたらきすぎて"
+        },
+        {
+          "id": "d-l44-37",
+          "text": "いません",
+          "isKeyGrammar": false,
+          "kanji": "居ません",
+          "furigana": "いません"
+        },
+        {
+          "id": "d-l44-38",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng. À mà, gần đây anh không làm việc quá sức chứ?"
+    },
+    {
+      "id": "dia-n4-44-6",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l44-39",
+          "text": "すこし",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-40",
+          "text": "はたらきすぎて",
+          "isKeyGrammar": true,
+          "kanji": "働きすぎて",
+          "furigana": "はたらきすぎて"
+        },
+        {
+          "id": "d-l44-41",
+          "text": "います",
+          "isKeyGrammar": false,
+          "kanji": "居ます",
+          "furigana": "います"
+        },
+        {
+          "id": "d-l44-42",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-43",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-44",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-45",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-46",
+          "text": "しごと",
+          "isKeyGrammar": false,
+          "kanji": "仕事",
+          "furigana": "しごと"
+        },
+        {
+          "id": "d-l44-47",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-48",
+          "text": "たのしくて",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-49",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-50",
+          "text": "やすい",
+          "isKeyGrammar": false,
+          "kanji": "易い",
+          "furigana": "やすい"
+        },
+        {
+          "id": "d-l44-51",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Tôi có làm việc hơi quá sức thật. Nhưng công việc này vui và dễ làm."
+    },
+    {
+      "id": "dia-n4-44-7",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l44-52",
+          "text": "それ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-53",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-54",
+          "text": "いいです",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l44-55",
+          "text": "ね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-56",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-57",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-58",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-59",
+          "text": "けんこう",
+          "isKeyGrammar": false,
+          "kanji": "健康",
+          "furigana": "けんこう"
+        },
+        {
+          "id": "d-l44-60",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-61",
+          "text": "たいせつ",
+          "isKeyGrammar": false,
+          "kanji": "大切",
+          "furigana": "たいせつ"
+        },
+        {
+          "id": "d-l44-62",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-63",
+          "text": "よ",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Thế thì tốt nhỉ. Nhưng sức khỏe cũng quan trọng lắm."
+    },
+    {
+      "id": "dia-n4-44-8",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l44-64",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-65",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-66",
+          "text": "きをつけます",
+          "isKeyGrammar": false,
+          "kanji": "気を付けます",
+          "furigana": "きをつけます"
+        }
+      ],
+      "meaningVi": "Vâng, tôi sẽ cẩn thận."
+    },
+    {
+      "id": "dia-n4-44-9",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l44-67",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-68",
+          "text": "くつ",
+          "isKeyGrammar": true,
+          "kanji": "靴",
+          "furigana": "くつ"
+        },
+        {
+          "id": "d-l44-69",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-70",
+          "text": "あるきにくくない",
+          "isKeyGrammar": true,
+          "kanji": "歩きにくくない",
+          "furigana": "あるきにくくない"
+        },
+        {
+          "id": "d-l44-71",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Đôi giày này, không khó đi à?"
+    },
+    {
+      "id": "dia-n4-44-10",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l44-72",
+          "text": "いいえ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-73",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-74",
+          "text": "あるきやすい",
+          "isKeyGrammar": true,
+          "kanji": "歩きやすい",
+          "furigana": "あるきやすい"
+        },
+        {
+          "id": "d-l44-75",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l44-76",
+          "text": "よ",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Không, đi dễ chịu lắm đấy."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n4-44-1",
+      "question": "「食べすぎました」 — すぎます ghép vào phần nào của 食べます?",
+      "options": [
+        "Gốc ます (bỏ ます, giữ 食べ)",
+        "Thể từ điển (食べる)",
+        "Thể た (食べた)",
+        "Thể て (食べて)"
+      ],
+      "correctIndex": 0,
+      "explanation": "すぎます ghép vào GỐC MASU của động từ (giống V-そう ở bài 43): 食べます → 食べすぎます.",
+      "hint": "Áp dụng quy tắc chia すぎます."
+    },
+    {
+      "id": "ex-q-n4-44-2",
+      "question": "「高すぎます」 mang sắc thái:",
+      "options": [
+        "Tiêu cực — đắt đến mức gây khó chịu/vấn đề",
+        "Tích cực — đắt là tốt",
+        "Trung tính, không cảm xúc",
+        "Chỉ dùng cho câu hỏi"
+      ],
+      "correctIndex": 0,
+      "explanation": "すぎます hầu như luôn mang hàm ý TIÊU CỰC — một mức độ vượt quá bình thường, gây hậu quả không hay.",
+      "hint": "Xem sắc thái đã nêu ở slide 1."
+    },
+    {
+      "id": "ex-q-n4-44-3",
+      "question": "「歩きやすい」 chia phủ định như thế nào?",
+      "options": [
+        "歩きやすくない (chia như tính từ い)",
+        "歩きやすじゃない",
+        "歩きやすいじゃない",
+        "Không chia được phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "やすい đã TRỞ THÀNH tính từ い hoàn chỉnh, chia phủ định theo đúng quy tắc: bỏ い, thêm くない.",
+      "hint": "Xem ghi chú về やすい là tính từ mới ở slide 2."
+    },
+    {
+      "id": "ex-q-n4-44-4",
+      "question": "安い (rẻ) và やすい (hậu tố, dễ làm) khác nhau ở:",
+      "options": [
+        "安い là tính từ độc lập; やすい luôn ghép sau một động từ khác",
+        "Hoàn toàn giống nhau về nghĩa và cách dùng",
+        "安い chỉ dùng cho câu hỏi",
+        "やすい chỉ dùng cho phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "安い đứng ĐỘC LẬP làm tính từ (rẻ); やすい luôn PHẢI ghép sau gốc động từ khác để tạo nghĩa 'dễ làm gì'.",
+      "hint": "Phân biệt qua việc có động từ đứng trước hay không."
+    },
+    {
+      "id": "ex-q-n4-44-5",
+      "question": "「読みにくい」 nghĩa là:",
+      "options": [
+        "Khó đọc",
+        "Dễ đọc",
+        "Không muốn đọc",
+        "Đã đọc xong"
+      ],
+      "correctIndex": 0,
+      "explanation": "にくい ghép sau gốc động từ diễn tả hành động đó KHÓ THỰC HIỆN — đối lập với やすい.",
+      "hint": "Áp dụng đúng nghĩa của にくい."
+    },
+    {
+      "id": "ex-q-n4-44-6",
+      "question": "やすい/にくい khác できる (thể khả năng, bài 27) ở chỗ:",
+      "options": [
+        "やすい/にくい nói về ĐẶC ĐIỂM KHÁCH QUAN của vật/hành động; できる nói về NĂNG LỰC của người",
+        "Hoàn toàn giống nhau",
+        "やすい/にくい chỉ dùng cho câu hỏi",
+        "できる chỉ dùng cho phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "やすい/にくい miêu tả tính chất của VẬT (giày dễ/khó đi); できる miêu tả NĂNG LỰC làm được của một NGƯỜI cụ thể.",
+      "hint": "So sánh hai khái niệm dễ nhầm này."
+    },
+    {
+      "id": "ex-q-n4-44-7",
+      "question": "「使いやすすぎて、子供でも使えます」 — やすすぎて được chia như thế nào?",
+      "options": [
+        "やすい bỏ い, thêm すぎる (chồng tầng ngữ pháp): やすい→やす→やすすぎる",
+        "Đây là lỗi chính tả, phải sửa lại",
+        "やすすぎて không tồn tại trong tiếng Nhật",
+        "すぎて chỉ ghép được với động từ gốc"
+      ],
+      "correctIndex": 0,
+      "explanation": "Vì やすい đã là tính từ い hoàn chỉnh, nó tiếp tục chia được với すぎる theo đúng quy tắc: bỏ い, thêm すぎる.",
+      "hint": "Xem ví dụ chồng tầng ngữ pháp ở slide 4."
+    },
+    {
+      "id": "ex-q-n4-44-8",
+      "question": "「難しすぎて、できません」 nghĩa là:",
+      "options": [
+        "Khó quá mức nên không làm được",
+        "Dễ quá nên làm được ngay",
+        "Không khó chút nào",
+        "Đã làm xong rồi"
+      ],
+      "correctIndex": 0,
+      "explanation": "難しすぎて (khó quá mức) + できません (không làm được) diễn tả hậu quả của mức độ khó thái quá.",
+      "hint": "Kết hợp すぎます với できる (bài 27)."
+    },
+    {
+      "id": "ex-q-n4-44-9",
+      "question": "Trong hội thoại, vì sao Yamada bị đau đầu?",
+      "options": [
+        "Vì uống quá nhiều rượu hôm qua",
+        "Vì thức khuya làm việc",
+        "Vì bị cảm cúm",
+        "Không có lý do cụ thể"
+      ],
+      "correctIndex": 0,
+      "explanation": "Yamada nói 「昨日、飲みすぎました。頭が痛いです」.",
+      "hint": "Xem câu thoại thứ 2."
+    },
+    {
+      "id": "ex-q-n4-44-10",
+      "question": "Đôi giày của Yamada có dễ đi không?",
+      "options": [
+        "Có, dễ đi (歩きやすい)",
+        "Không, khó đi",
+        "Không được nhắc tới",
+        "Giày bị hỏng"
+      ],
+      "correctIndex": 0,
+      "explanation": "Yamada trả lời 「歩きやすいですよ」 khi Tanaka hỏi.",
+      "hint": "Xem câu thoại cuối cùng."
+    }
+  ]
+}

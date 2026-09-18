@@ -1,0 +1,1336 @@
+{
+  "level": "N4",
+  "lessonNumber": 37,
+  "title": "Bài 37: Thể bị động (受身形)",
+  "description": "Chia thể bị động (nhóm 1: う→あ+れる giống thể ない bài 17, nhóm 2: bỏ る+られる, する→される), và ba loại bị động: PHIỀN TOÁI (迷惑の受身: 雨に降られる, 泣かれる — đặc trưng tiếng Nhật, không có tương đương tiếng Việt), MẤT MÁT (giữ を cho vật cụ thể bị lấy: 財布を盗まれる), và TRUNG TÍNH (miêu tả sự thật khách quan: 車は工場で作られる).",
+  "vocabList": [
+    {
+      "id": "voc-n4-37-1",
+      "word": "しかられます",
+      "kanji": "叱られます",
+      "furigana": "しかられます",
+      "romaji": "shikararemasu",
+      "wordType": "verb",
+      "meaningVi": "Bị mắng (thể bị động của 叱る)",
+      "accentNote": "叱る (nhóm 1) → 叱られる: đổi đuôi う→あ, thêm れる."
+    },
+    {
+      "id": "voc-n4-37-2",
+      "word": "ほめられます",
+      "kanji": "褒められます",
+      "furigana": "ほめられます",
+      "romaji": "homeraremasu",
+      "wordType": "verb",
+      "meaningVi": "Được khen (thể bị động của 褒める)",
+      "accentNote": "褒める (nhóm 2) → 褒められる: bỏ る, thêm られる."
+    },
+    {
+      "id": "voc-n4-37-3",
+      "word": "ぬすまれます",
+      "kanji": "盗まれます",
+      "furigana": "ぬすまれます",
+      "romaji": "nusumaremasu",
+      "wordType": "verb",
+      "meaningVi": "Bị trộm mất (thể bị động của 盗む)",
+      "accentNote": "盗む → 盗まれる."
+    },
+    {
+      "id": "voc-n4-37-4",
+      "word": "ふまれます",
+      "kanji": "踏まれます",
+      "furigana": "ふまれます",
+      "romaji": "fumaremasu",
+      "wordType": "verb",
+      "meaningVi": "Bị giẫm phải (thể bị động của 踏む)",
+      "accentNote": "踏む → 踏まれる."
+    },
+    {
+      "id": "voc-n4-37-5",
+      "word": "なかれます",
+      "kanji": "泣かれます",
+      "furigana": "なかれます",
+      "romaji": "nakaremasu",
+      "wordType": "verb",
+      "meaningVi": "Bị (ai đó) khóc (bị động PHIỀN TOÁI)",
+      "accentNote": "泣く → 泣かれる. Câu 'bị làm phiền' kiểu Nhật đặc trưng, không có tương đương trực tiếp trong tiếng Việt."
+    },
+    {
+      "id": "voc-n4-37-6",
+      "word": "おどろかれます",
+      "kanji": "驚かれます",
+      "furigana": "おどろかれます",
+      "romaji": "odorokaremasu",
+      "wordType": "verb",
+      "meaningVi": "Khiến ai đó ngạc nhiên (bị động)",
+      "accentNote": "驚く → 驚かれる."
+    },
+    {
+      "id": "voc-n4-37-7",
+      "word": "たてられます",
+      "kanji": "建てられます",
+      "furigana": "たてられます",
+      "romaji": "tateraremasu",
+      "wordType": "verb",
+      "meaningVi": "Được xây dựng (thể bị động của 建てる)",
+      "accentNote": "建てる → 建てられる. Bị động TRUNG TÍNH, chỉ nói về sự kiện khách quan."
+    },
+    {
+      "id": "voc-n4-37-8",
+      "word": "しょうたいされます",
+      "kanji": "招待されます",
+      "furigana": "しょうたいされます",
+      "romaji": "shoutai saremasu",
+      "wordType": "verb",
+      "meaningVi": "Được mời",
+      "accentNote": "招待する → 招待される. される: thể bị động của する."
+    },
+    {
+      "id": "voc-n4-37-9",
+      "word": "つくられます",
+      "kanji": "作られます",
+      "furigana": "つくられます",
+      "romaji": "tsukuraremasu",
+      "wordType": "verb",
+      "meaningVi": "Được làm ra, được chế tạo",
+      "accentNote": "作る → 作られる."
+    },
+    {
+      "id": "voc-n4-37-10",
+      "word": "よばれます",
+      "kanji": "呼ばれます",
+      "furigana": "よばれます",
+      "romaji": "yobaremasu",
+      "wordType": "verb",
+      "meaningVi": "Được gọi là",
+      "accentNote": "呼ぶ → 呼ばれる. 富士山と 呼ばれています = được gọi là núi Phú Sĩ."
+    },
+    {
+      "id": "voc-n4-37-11",
+      "word": "せんせい",
+      "kanji": "先生",
+      "furigana": "せんせい",
+      "romaji": "sensei",
+      "wordType": "noun",
+      "meaningVi": "Thầy/cô giáo",
+      "accentNote": "先生に 叱られました = tôi đã bị thầy giáo mắng."
+    },
+    {
+      "id": "voc-n4-37-12",
+      "word": "どろぼう",
+      "kanji": "泥棒",
+      "furigana": "どろぼう",
+      "romaji": "dorobou",
+      "wordType": "noun",
+      "meaningVi": "Kẻ trộm",
+      "accentNote": "泥棒に 財布を 盗まれました = tôi bị kẻ trộm lấy mất ví."
+    },
+    {
+      "id": "voc-n4-37-13",
+      "word": "さいふ",
+      "kanji": "財布",
+      "furigana": "さいふ",
+      "romaji": "saifu",
+      "wordType": "noun",
+      "meaningVi": "Ví tiền",
+      "accentNote": "Đã gặp N5 bài 13."
+    },
+    {
+      "id": "voc-n4-37-14",
+      "word": "あめ",
+      "kanji": "雨",
+      "furigana": "あめ",
+      "romaji": "ame",
+      "wordType": "noun",
+      "meaningVi": "Mưa",
+      "accentNote": "雨に 降られました = tôi bị (dính) mưa (bị động phiền toái)."
+    },
+    {
+      "id": "voc-n4-37-15",
+      "word": "でんしゃ",
+      "kanji": "電車",
+      "furigana": "でんしゃ",
+      "romaji": "densha",
+      "wordType": "noun",
+      "meaningVi": "Tàu điện",
+      "accentNote": "電車の中で 足を 踏まれました = tôi bị giẫm chân trong tàu điện."
+    },
+    {
+      "id": "voc-n4-37-16",
+      "word": "あし",
+      "kanji": "足",
+      "furigana": "あし",
+      "romaji": "ashi",
+      "wordType": "noun",
+      "meaningVi": "Chân, bàn chân",
+      "accentNote": "Đã gặp N5 bài 16."
+    },
+    {
+      "id": "voc-n4-37-17",
+      "word": "パーティー",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "paatii",
+      "wordType": "noun",
+      "meaningVi": "Bữa tiệc",
+      "accentNote": "パーティーに 招待されました = tôi đã được mời dự tiệc."
+    },
+    {
+      "id": "voc-n4-37-18",
+      "word": "せかいじゅう",
+      "kanji": "世界中",
+      "furigana": "せかいじゅう",
+      "romaji": "sekaijuu",
+      "wordType": "noun",
+      "meaningVi": "Khắp thế giới",
+      "accentNote": "世界中で 知られています = được biết đến khắp thế giới."
+    },
+    {
+      "id": "voc-n4-37-19",
+      "word": "ゆうめい",
+      "kanji": "有名",
+      "furigana": "ゆうめい",
+      "romaji": "yuumei",
+      "wordType": "adjective",
+      "meaningVi": "Nổi tiếng",
+      "accentNote": "Đã gặp N5 bài 8."
+    },
+    {
+      "id": "voc-n4-37-20",
+      "word": "こうじょう",
+      "kanji": "工場",
+      "furigana": "こうじょう",
+      "romaji": "koujou",
+      "wordType": "noun",
+      "meaningVi": "Nhà máy",
+      "accentNote": "この 車は 日本の 工場で 作られました = xe này được sản xuất ở nhà máy Nhật Bản."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n4-37-1",
+      "character": "受",
+      "hanViet": "THỤ",
+      "strokeCount": 8,
+      "onyomi": [
+        "ジュ (ju)"
+      ],
+      "kunyomi": [
+        "う(ける)"
+      ],
+      "meaningVi": "Nhận, tiếp nhận.",
+      "commonWords": [
+        {
+          "word": "受身",
+          "furigana": "うけみ",
+          "meaningVi": "Thể bị động"
+        },
+        {
+          "word": "受けます",
+          "furigana": "うけます",
+          "meaningVi": "Nhận, chịu"
+        },
+        {
+          "word": "受付",
+          "furigana": "うけつけ",
+          "meaningVi": "Quầy lễ tân"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-37-2",
+      "character": "身",
+      "hanViet": "THÂN",
+      "strokeCount": 7,
+      "onyomi": [
+        "シン (shin)"
+      ],
+      "kunyomi": [
+        "み"
+      ],
+      "meaningVi": "Thân thể, bản thân.",
+      "commonWords": [
+        {
+          "word": "受身",
+          "furigana": "うけみ",
+          "meaningVi": "Thể bị động"
+        },
+        {
+          "word": "身分",
+          "furigana": "みぶん",
+          "meaningVi": "Thân phận"
+        },
+        {
+          "word": "出身",
+          "furigana": "しゅっしん",
+          "meaningVi": "Xuất thân"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-37-3",
+      "character": "叱",
+      "hanViet": "SỈ",
+      "strokeCount": 5,
+      "onyomi": [
+        "シツ (shitsu)"
+      ],
+      "kunyomi": [
+        "しか(る)"
+      ],
+      "meaningVi": "Mắng, quở trách.",
+      "commonWords": [
+        {
+          "word": "叱ります",
+          "furigana": "しかります",
+          "meaningVi": "Mắng"
+        },
+        {
+          "word": "叱られます",
+          "furigana": "しかられます",
+          "meaningVi": "Bị mắng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-37-4",
+      "character": "招",
+      "hanViet": "CHIÊU",
+      "strokeCount": 8,
+      "onyomi": [
+        "ショウ (shou)"
+      ],
+      "kunyomi": [
+        "まね(く)"
+      ],
+      "meaningVi": "Mời gọi, chiêu đãi.",
+      "commonWords": [
+        {
+          "word": "招待",
+          "furigana": "しょうたい",
+          "meaningVi": "Sự mời"
+        },
+        {
+          "word": "招きます",
+          "furigana": "まねきます",
+          "meaningVi": "Mời, vẫy gọi"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-37-5",
+      "character": "泥",
+      "hanViet": "NÊ",
+      "strokeCount": 8,
+      "onyomi": [
+        "デイ (dei)"
+      ],
+      "kunyomi": [
+        "どろ"
+      ],
+      "meaningVi": "Bùn đất (chỉ ghép trong 泥棒).",
+      "commonWords": [
+        {
+          "word": "泥棒",
+          "furigana": "どろぼう",
+          "meaningVi": "Kẻ trộm"
+        },
+        {
+          "word": "泥",
+          "furigana": "どろ",
+          "meaningVi": "Bùn"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n4-l37-s1",
+      "slideType": "grammar",
+      "title": "1. Chia thể bị động",
+      "grammarFormula": "Nhóm 1: う→あ+れる (叱る→叱られる) 　Nhóm 2: bỏ る+られる (褒める→褒められる) 　する→される 　来る→来られる",
+      "explanation": "Chú ý: nhóm 1 chia thể bị động GIỐNG HỆT thể ない (bài 17) về phần đổi âm, chỉ khác đuôi cuối (ない vs られる) — nếu đã thuộc thể ない thì học thể bị động rất nhanh.",
+      "teacherTips": "に đánh dấu người GÂY RA hành động trong câu bị động (先生に = bởi thầy giáo) — khác は/が đánh dấu chủ ngữ chịu tác động.",
+      "culturalNotes": "叱られました/褒められました là hai câu học sinh Nhật hay dùng để kể chuyện ở trường với cha mẹ, gia đình.",
+      "examples": [
+        {
+          "id": "ex-n4-l37-s1-1",
+          "tokens": [
+            {
+              "id": "t-l37s1-1",
+              "text": "せんせい",
+              "isKeyGrammar": false,
+              "kanji": "先生",
+              "furigana": "せんせい"
+            },
+            {
+              "id": "t-l37s1-2",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l37s1-3",
+              "text": "しかられました",
+              "isKeyGrammar": true,
+              "kanji": "叱られました",
+              "furigana": "しかられました"
+            }
+          ],
+          "meaningVi": "Tôi đã bị thầy giáo mắng."
+        },
+        {
+          "id": "ex-n4-l37-s1-2",
+          "tokens": [
+            {
+              "id": "t-l37s1-4",
+              "text": "せんせい",
+              "isKeyGrammar": false,
+              "kanji": "先生",
+              "furigana": "せんせい"
+            },
+            {
+              "id": "t-l37s1-5",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l37s1-6",
+              "text": "ほめられました",
+              "isKeyGrammar": true,
+              "kanji": "褒められました",
+              "furigana": "ほめられました"
+            }
+          ],
+          "meaningVi": "Tôi đã được thầy giáo khen."
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l37-s2",
+      "slideType": "grammar",
+      "title": "2. Bị động PHIỀN TOÁI (迷惑の受身): việc KHÔNG MONG MUỐN xảy ra",
+      "grammarFormula": "N が [thể bị động]   (diễn tả cảm giác BỊ ẢNH HƯỞNG, dù người/vật gây ra không cố ý)",
+      "explanation": "Đây là điểm ĐẶC TRƯNG của tiếng Nhật, KHÔNG có tương đương trực tiếp trong tiếng Việt: dùng bị động để than phiền một việc xảy ra làm mình khó chịu, dù chủ thể gây ra vô tình.",
+      "teacherTips": "泣かれる là ví dụ kinh điển: 泣く (khóc) không có tân ngữ, nhưng người Nhật vẫn 'bị động hóa' để diễn tả CẢM GIÁC BỊ LÀM PHIỀN bởi việc đó.",
+      "culturalNotes": "Bị động phiền toái phản ánh não trạng ngôn ngữ Nhật: ngay cả hiện tượng tự nhiên (mưa) cũng có thể 'làm phiền' mình một cách chủ động về ngữ pháp.",
+      "examples": [
+        {
+          "id": "ex-n4-l37-s2-1",
+          "tokens": [
+            {
+              "id": "t-l37s2-1",
+              "text": "あめ",
+              "isKeyGrammar": true,
+              "kanji": "雨",
+              "furigana": "あめ"
+            },
+            {
+              "id": "t-l37s2-2",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l37s2-3",
+              "text": "ふられました",
+              "isKeyGrammar": true,
+              "kanji": "降られました",
+              "furigana": "ふられました"
+            }
+          ],
+          "meaningVi": "Tôi bị dính mưa (không mang ô, khó chịu vì trời mưa)."
+        },
+        {
+          "id": "ex-n4-l37-s2-2",
+          "tokens": [
+            {
+              "id": "t-l37s2-4",
+              "text": "でんしゃ",
+              "isKeyGrammar": true,
+              "kanji": "電車",
+              "furigana": "でんしゃ"
+            },
+            {
+              "id": "t-l37s2-5",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l37s2-6",
+              "text": "なか",
+              "isKeyGrammar": false,
+              "kanji": "中",
+              "furigana": "なか"
+            },
+            {
+              "id": "t-l37s2-7",
+              "text": "で",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l37s2-8",
+              "text": "あし",
+              "isKeyGrammar": true,
+              "kanji": "足",
+              "furigana": "あし"
+            },
+            {
+              "id": "t-l37s2-9",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l37s2-10",
+              "text": "ふまれました",
+              "isKeyGrammar": true,
+              "kanji": "踏まれました",
+              "furigana": "ふまれました"
+            }
+          ],
+          "meaningVi": "Trong tàu điện, tôi bị giẫm chân (dù người giẫm không cố ý)."
+        },
+        {
+          "id": "ex-n4-l37-s2-3",
+          "tokens": [
+            {
+              "id": "t-l37s2-11",
+              "text": "こども",
+              "isKeyGrammar": false,
+              "kanji": "子供",
+              "furigana": "こども"
+            },
+            {
+              "id": "t-l37s2-12",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l37s2-13",
+              "text": "なかれました",
+              "isKeyGrammar": true,
+              "kanji": "泣かれました",
+              "furigana": "なかれました"
+            }
+          ],
+          "meaningVi": "Tôi bị (đứa trẻ) khóc (làm phiền tôi) — 泣く vốn là động từ tự thân, nhưng chia bị động vẫn được."
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l37-s3",
+      "slideType": "grammar",
+      "title": "3. Bị động mất mát: N を [thể bị động]",
+      "grammarFormula": "N は N2に N3を [thể bị động]   (mất/tổn thất một VẬT CỤ THỂ, giữ を cho vật bị lấy)",
+      "explanation": "Khi CÓ MỘT VẬT CỤ THỂ bị lấy đi/tác động, câu bị động vẫn giữ を cho vật đó — khác câu bị động phiền toái ở slide 2 (không có vật cụ thể, chỉ có が cho chủ ngữ).",
+      "teacherTips": "Cấu trúc は…に…を…られる là khung CHUẨN cho việc mất mát tài sản — と đặc biệt phổ biến khi khai báo với cảnh sát/bảo hiểm.",
+      "culturalNotes": "Câu 財布を盗まれました là mẫu câu thực tế đầu tiên người nước ngoài học để trình báo mất cắp tại đồn cảnh sát Nhật.",
+      "examples": [
+        {
+          "id": "ex-n4-l37-s3-1",
+          "tokens": [
+            {
+              "id": "t-l37s3-1",
+              "text": "わたし",
+              "isKeyGrammar": false,
+              "kanji": "私",
+              "furigana": "わたし"
+            },
+            {
+              "id": "t-l37s3-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l37s3-3",
+              "text": "どろぼう",
+              "isKeyGrammar": true,
+              "kanji": "泥棒",
+              "furigana": "どろぼう"
+            },
+            {
+              "id": "t-l37s3-4",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l37s3-5",
+              "text": "さいふ",
+              "isKeyGrammar": false,
+              "kanji": "財布",
+              "furigana": "さいふ"
+            },
+            {
+              "id": "t-l37s3-6",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l37s3-7",
+              "text": "ぬすまれました",
+              "isKeyGrammar": true,
+              "kanji": "盗まれました",
+              "furigana": "ぬすまれました"
+            }
+          ],
+          "meaningVi": "Tôi bị kẻ trộm lấy mất ví. (giữ を cho 財布, vật cụ thể bị lấy)"
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l37-s4",
+      "slideType": "grammar",
+      "title": "4. Bị động TRUNG TÍNH: sự kiện/vật thể khách quan",
+      "grammarFormula": "N は [thể bị động]   (không mang cảm xúc phiền toái, chỉ miêu tả sự việc khách quan)",
+      "explanation": "Khác hai loại bị động ở slide 2-3 (mang cảm xúc), bị động TRUNG TÍNH chỉ miêu tả sự thật khách quan — vật do ai làm ra, sự kiện diễn ra như thế nào, thường thấy trong văn viết/tin tức.",
+      "teacherTips": "Loại bị động này không có chủ thể gây ra cụ thể (hoặc không quan trọng ai làm) — nhấn mạnh vào VẬT/SỰ KIỆN chứ không phải người gây ra.",
+      "culturalNotes": "Tin tức, sách giáo khoa Nhật dùng bị động trung tính rất nhiều để giữ giọng văn khách quan, tránh nêu đích danh chủ thể không cần thiết.",
+      "examples": [
+        {
+          "id": "ex-n4-l37-s4-1",
+          "tokens": [
+            {
+              "id": "t-l37s4-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l37s4-2",
+              "text": "くるま",
+              "isKeyGrammar": false,
+              "kanji": "車",
+              "furigana": "くるま"
+            },
+            {
+              "id": "t-l37s4-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l37s4-4",
+              "text": "にほん",
+              "isKeyGrammar": false,
+              "kanji": "日本",
+              "furigana": "にほん"
+            },
+            {
+              "id": "t-l37s4-5",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l37s4-6",
+              "text": "こうじょう",
+              "isKeyGrammar": true,
+              "kanji": "工場",
+              "furigana": "こうじょう"
+            },
+            {
+              "id": "t-l37s4-7",
+              "text": "で",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l37s4-8",
+              "text": "つくられました",
+              "isKeyGrammar": true,
+              "kanji": "作られました",
+              "furigana": "つくられました"
+            }
+          ],
+          "meaningVi": "Chiếc xe này được sản xuất ở nhà máy Nhật Bản."
+        },
+        {
+          "id": "ex-n4-l37-s4-2",
+          "tokens": [
+            {
+              "id": "t-l37s4-9",
+              "text": "ふじさん",
+              "isKeyGrammar": false,
+              "kanji": "富士山",
+              "furigana": "ふじさん"
+            },
+            {
+              "id": "t-l37s4-10",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l37s4-11",
+              "text": "せかいじゅう",
+              "isKeyGrammar": true,
+              "kanji": "世界中",
+              "furigana": "せかいじゅう"
+            },
+            {
+              "id": "t-l37s4-12",
+              "text": "で",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l37s4-13",
+              "text": "しられて",
+              "isKeyGrammar": false,
+              "kanji": "知られて",
+              "furigana": "しられて"
+            },
+            {
+              "id": "t-l37s4-14",
+              "text": "います",
+              "isKeyGrammar": false,
+              "kanji": "居ます",
+              "furigana": "います"
+            }
+          ],
+          "meaningVi": "Núi Phú Sĩ được biết đến khắp thế giới."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n4-37-1",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l37-1",
+          "text": "山田さん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-2",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-3",
+          "text": "げんき",
+          "isKeyGrammar": false,
+          "kanji": "元気",
+          "furigana": "げんき"
+        },
+        {
+          "id": "d-l37-4",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-5",
+          "text": "ないです",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-6",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Anh Yamada, trông không có tinh thần nhỉ."
+    },
+    {
+      "id": "dia-n4-37-2",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l37-7",
+          "text": "じつは",
+          "isKeyGrammar": false,
+          "kanji": "実は",
+          "furigana": "じつは"
+        },
+        {
+          "id": "d-l37-8",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-9",
+          "text": "けさ",
+          "isKeyGrammar": false,
+          "kanji": "今朝",
+          "furigana": "けさ"
+        },
+        {
+          "id": "d-l37-10",
+          "text": "でんしゃ",
+          "isKeyGrammar": true,
+          "kanji": "電車",
+          "furigana": "でんしゃ"
+        },
+        {
+          "id": "d-l37-11",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-12",
+          "text": "なか",
+          "isKeyGrammar": false,
+          "kanji": "中",
+          "furigana": "なか"
+        },
+        {
+          "id": "d-l37-13",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-14",
+          "text": "あし",
+          "isKeyGrammar": true,
+          "kanji": "足",
+          "furigana": "あし"
+        },
+        {
+          "id": "d-l37-15",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-16",
+          "text": "ふまれました",
+          "isKeyGrammar": true,
+          "kanji": "踏まれました",
+          "furigana": "ふまれました"
+        }
+      ],
+      "meaningVi": "Thật ra là, sáng nay trong tàu điện tôi bị giẫm chân."
+    },
+    {
+      "id": "dia-n4-37-3",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l37-17",
+          "text": "それ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-18",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-19",
+          "text": "たいへん",
+          "isKeyGrammar": false,
+          "kanji": "大変",
+          "furigana": "たいへん"
+        },
+        {
+          "id": "d-l37-20",
+          "text": "でした",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-21",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vất vả thật đấy nhỉ."
+    },
+    {
+      "id": "dia-n4-37-4",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l37-22",
+          "text": "そして",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-23",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-24",
+          "text": "かいしゃ",
+          "isKeyGrammar": false,
+          "kanji": "会社",
+          "furigana": "かいしゃ"
+        },
+        {
+          "id": "d-l37-25",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-26",
+          "text": "つく",
+          "isKeyGrammar": false,
+          "kanji": "着く",
+          "furigana": "つく"
+        },
+        {
+          "id": "d-l37-27",
+          "text": "まえに",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l37-28",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-29",
+          "text": "あめ",
+          "isKeyGrammar": true,
+          "kanji": "雨",
+          "furigana": "あめ"
+        },
+        {
+          "id": "d-l37-30",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-31",
+          "text": "ふられました",
+          "isKeyGrammar": true,
+          "kanji": "降られました",
+          "furigana": "ふられました"
+        }
+      ],
+      "meaningVi": "Rồi trước khi đến công ty, tôi còn bị dính mưa nữa."
+    },
+    {
+      "id": "dia-n4-37-5",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l37-32",
+          "text": "ついていません",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-33",
+          "text": "ね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-34",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-35",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-36",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-37",
+          "text": "けいかく",
+          "isKeyGrammar": false,
+          "kanji": "計画",
+          "furigana": "けいかく"
+        },
+        {
+          "id": "d-l37-38",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-39",
+          "text": "せんせい",
+          "isKeyGrammar": true,
+          "kanji": "先生",
+          "furigana": "せんせい"
+        },
+        {
+          "id": "d-l37-40",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-41",
+          "text": "ほめられました",
+          "isKeyGrammar": true,
+          "kanji": "褒められました",
+          "furigana": "ほめられました"
+        },
+        {
+          "id": "d-l37-42",
+          "text": "でしょう",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Không may quá nhỉ. Nhưng chắc kế hoạch được thầy khen phải không?"
+    },
+    {
+      "id": "dia-n4-37-6",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l37-43",
+          "text": "いいえ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-44",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-45",
+          "text": "ぎゃくに",
+          "isKeyGrammar": false,
+          "kanji": "逆に",
+          "furigana": "ぎゃくに"
+        },
+        {
+          "id": "d-l37-46",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-47",
+          "text": "しかられました",
+          "isKeyGrammar": true,
+          "kanji": "叱られました",
+          "furigana": "しかられました"
+        }
+      ],
+      "meaningVi": "Không, ngược lại tôi còn bị mắng nữa."
+    },
+    {
+      "id": "dia-n4-37-7",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l37-48",
+          "text": "そうですか",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-49",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-50",
+          "text": "だいじょうぶ",
+          "isKeyGrammar": false,
+          "kanji": "大丈夫",
+          "furigana": "だいじょうぶ"
+        },
+        {
+          "id": "d-l37-51",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vậy à. Anh ổn không?"
+    },
+    {
+      "id": "dia-n4-37-8",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l37-52",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-53",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-54",
+          "text": "だいじょうぶ",
+          "isKeyGrammar": false,
+          "kanji": "大丈夫",
+          "furigana": "だいじょうぶ"
+        },
+        {
+          "id": "d-l37-55",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-56",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-57",
+          "text": "あ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-58",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-59",
+          "text": "そういえば",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-60",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-61",
+          "text": "きのう",
+          "isKeyGrammar": false,
+          "kanji": "昨日",
+          "furigana": "きのう"
+        },
+        {
+          "id": "d-l37-62",
+          "text": "パーティー",
+          "isKeyGrammar": true,
+          "kanji": "パーティー",
+          "furigana": "パーティー"
+        },
+        {
+          "id": "d-l37-63",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-64",
+          "text": "しょうたいされました",
+          "isKeyGrammar": true,
+          "kanji": "招待されました",
+          "furigana": "しょうたいされました"
+        }
+      ],
+      "meaningVi": "Vâng, tôi ổn. À, nói mới nhớ, hôm qua tôi đã được mời dự tiệc."
+    },
+    {
+      "id": "dia-n4-37-9",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l37-65",
+          "text": "いいですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-66",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-67",
+          "text": "だれ",
+          "isKeyGrammar": false,
+          "kanji": "誰",
+          "furigana": "だれ"
+        },
+        {
+          "id": "d-l37-68",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-69",
+          "text": "パーティー",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-70",
+          "text": "でした",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-71",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Hay đó. Tiệc của ai vậy?"
+    },
+    {
+      "id": "dia-n4-37-10",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l37-72",
+          "text": "ゆうめい",
+          "isKeyGrammar": true,
+          "kanji": "有名",
+          "furigana": "ゆうめい"
+        },
+        {
+          "id": "d-l37-73",
+          "text": "な",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-74",
+          "text": "かいしゃ",
+          "isKeyGrammar": false,
+          "kanji": "会社",
+          "furigana": "かいしゃ"
+        },
+        {
+          "id": "d-l37-75",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-76",
+          "text": "パーティー",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l37-77",
+          "text": "でした",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Là tiệc của một công ty nổi tiếng."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n4-37-1",
+      "question": "Thể bị động của 叱る (nhóm 1) là:",
+      "options": [
+        "叱られる",
+        "叱ける",
+        "叱いれる",
+        "叱るれる"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nhóm 1 đổi âm cuối gốc từ điển sang hàng あ, thêm れる: 叱る → 叱られる.",
+      "hint": "Áp dụng quy tắc chia thể bị động nhóm 1."
+    },
+    {
+      "id": "ex-q-n4-37-2",
+      "question": "「電車の中で足を踏まれました」 — trợ từ を dùng ở đây vì:",
+      "options": [
+        "Có VẬT CỤ THỂ (足) bị tác động, giữ を dù cả câu ở thể bị động",
+        "を là lỗi, phải sửa thành が",
+        "を chỉ dùng cho câu hỏi",
+        "Đây là câu chủ động, không phải bị động"
+      ],
+      "correctIndex": 0,
+      "explanation": "Khi có vật cụ thể bị lấy/tác động, câu bị động vẫn giữ を cho vật đó — khác câu bị động phiền toái không có vật cụ thể.",
+      "hint": "So sánh với 雨に降られました (không có を) ở slide 2."
+    },
+    {
+      "id": "ex-q-n4-37-3",
+      "question": "「雨に降られました」 diễn tả điều gì đặc trưng của tiếng Nhật?",
+      "options": [
+        "Bị động PHIỀN TOÁI: cảm giác bị ảnh hưởng bởi một việc, dù không ai cố ý gây ra",
+        "Bị mưa tấn công trực tiếp",
+        "Trời không mưa",
+        "Mưa đã tạnh"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đây là 迷惑の受身 (bị động phiền toái) — nét đặc trưng của tiếng Nhật không có tương đương trực tiếp trong tiếng Việt.",
+      "hint": "Xem giải thích đặc biệt ở slide 2."
+    },
+    {
+      "id": "ex-q-n4-37-4",
+      "question": "「子供に泣かれました」 — vì sao 泣く (khóc, không có tân ngữ) vẫn chia được bị động?",
+      "options": [
+        "Bị động phiền toái áp dụng được cả với động từ TỰ THÂN để diễn tả cảm giác bị làm phiền",
+        "Đây là câu sai ngữ pháp",
+        "泣く phải luôn có tân ngữ",
+        "Chỉ áp dụng được với động từ có tân ngữ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bị động phiền toái (迷惑の受身) là điểm đặc biệt: ngay cả động từ tự thân cũng chia được để diễn tả 'bị làm phiền bởi việc đó'.",
+      "hint": "Đây là ví dụ điển hình nhất của bị động phiền toái."
+    },
+    {
+      "id": "ex-q-n4-37-5",
+      "question": "「財布を盗まれました」 và 「雨に降られました」 khác nhau ở:",
+      "options": [
+        "Câu đầu có VẬT CỤ THỂ bị mất (giữ を), câu sau không có vật cụ thể (chỉ có が cho chủ ngữ)",
+        "Hoàn toàn giống nhau về cấu trúc",
+        "Câu đầu không phải bị động",
+        "Câu sau mới là bị động thật sự"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đây là hai loại bị động khác nhau: mất mát vật cụ thể (giữ を) và phiền toái chung (không có vật cụ thể).",
+      "hint": "So sánh cấu trúc ở slide 2 và 3."
+    },
+    {
+      "id": "ex-q-n4-37-6",
+      "question": "「この車は日本の工場で作られました」 thuộc loại bị động nào?",
+      "options": [
+        "Bị động TRUNG TÍNH (miêu tả sự thật khách quan, không cảm xúc)",
+        "Bị động phiền toái",
+        "Bị động mất mát",
+        "Không phải câu bị động"
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu này chỉ miêu tả sự thật khách quan (xe được sản xuất ở đâu), không mang cảm xúc phiền toái hay mất mát.",
+      "hint": "Xem loại bị động thứ ba ở slide 4."
+    },
+    {
+      "id": "ex-q-n4-37-7",
+      "question": "「富士山は世界中で知られています」 — trợ từ で ở đây có vai trò gì?",
+      "options": [
+        "Đánh dấu PHẠM VI mà sự việc được biết đến (khắp thế giới)",
+        "Đánh dấu phương tiện di chuyển",
+        "Đánh dấu công cụ",
+        "Đánh dấu nơi hành động xảy ra thông thường"
+      ],
+      "correctIndex": 0,
+      "explanation": "で ở đây đánh dấu phạm vi RỘNG mà sự việc/danh tiếng lan tỏa tới — một cách dùng mở rộng của で.",
+      "hint": "So sánh với các chức năng で đã học trước đó."
+    },
+    {
+      "id": "ex-q-n4-37-8",
+      "question": "する chia thể bị động là:",
+      "options": [
+        "される",
+        "しられる",
+        "すれる",
+        "しれる"
+      ],
+      "correctIndex": 0,
+      "explanation": "する là động từ bất quy tắc, chia thể bị động thành される.",
+      "hint": "Đây là trường hợp bất quy tắc cần học thuộc."
+    },
+    {
+      "id": "ex-q-n4-37-9",
+      "question": "Trong hội thoại, Yamada gặp những chuyện không may nào trong ngày?",
+      "options": [
+        "Bị giẫm chân trên tàu điện, bị dính mưa, và bị thầy mắng",
+        "Chỉ bị dính mưa",
+        "Không gặp chuyện gì không may",
+        "Bị mất ví"
+      ],
+      "correctIndex": 0,
+      "explanation": "Yamada kể lần lượt: 「足を踏まれました」「雨に降られました」「叱られました」.",
+      "hint": "Xem các câu thoại đầu của Yamada."
+    },
+    {
+      "id": "ex-q-n4-37-10",
+      "question": "Cuối hội thoại, Yamada được mời dự tiệc của ai?",
+      "options": [
+        "Một công ty nổi tiếng",
+        "Bạn thân",
+        "Gia đình",
+        "Trường học cũ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Yamada nói 「有名な会社のパーティーでした」.",
+      "hint": "Xem câu thoại cuối cùng."
+    }
+  ]
+}

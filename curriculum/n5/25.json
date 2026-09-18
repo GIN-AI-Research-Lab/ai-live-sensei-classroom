@@ -1,0 +1,1316 @@
+{
+  "level": "N5",
+  "lessonNumber": 25,
+  "title": "Bài 25: Thể điều kiện giả định (〜たら / 〜ても)",
+  "description": "Bài chốt N5: chia thể たら (giống quy tắc thể た, chỉ thêm ら), dùng cho cả giả định 'nếu' (điều kiện chưa chắc, vế sau được là mệnh lệnh/lời mời — linh hoạt hơn と ở bài 23) và trình tự 'sau khi' (điều kiện chắc chắn xảy ra); và thể nhượng bộ ても/でも diễn tả 'dù...vẫn...', kết quả trái ngược kỳ vọng của điều kiện.",
+  "vocabList": [
+    {
+      "id": "voc-n5-25-1",
+      "word": "つかれます",
+      "kanji": "疲れます",
+      "furigana": "つかれます",
+      "romaji": "tsukaremasu",
+      "wordType": "verb",
+      "meaningVi": "Mệt, mệt mỏi",
+      "accentNote": "疲れたら、休みます = nếu mệt thì nghỉ ngơi."
+    },
+    {
+      "id": "voc-n5-25-2",
+      "word": "やすみます",
+      "kanji": "休みます",
+      "furigana": "やすみます",
+      "romaji": "yasumimasu",
+      "wordType": "verb",
+      "meaningVi": "Nghỉ ngơi, nghỉ (làm/học)",
+      "accentNote": "Đã gặp bài 4."
+    },
+    {
+      "id": "voc-n5-25-3",
+      "word": "かいものします",
+      "kanji": "買い物します",
+      "furigana": "かいものします",
+      "romaji": "kaimonoshimasu",
+      "wordType": "verb",
+      "meaningVi": "Mua sắm",
+      "accentNote": "Đã gặp bài 19."
+    },
+    {
+      "id": "voc-n5-25-4",
+      "word": "りょこうします",
+      "kanji": "旅行します",
+      "furigana": "りょこうします",
+      "romaji": "ryokoushimasu",
+      "wordType": "verb",
+      "meaningVi": "Đi du lịch",
+      "accentNote": "お金が あったら、旅行します = nếu có tiền thì đi du lịch."
+    },
+    {
+      "id": "voc-n5-25-5",
+      "word": "がんばります",
+      "kanji": "頑張ります",
+      "furigana": "がんばります",
+      "romaji": "ganbarimasu",
+      "wordType": "verb",
+      "meaningVi": "Cố gắng, nỗ lực",
+      "accentNote": "頑張っても、できません = dù cố gắng thế nào cũng không làm được."
+    },
+    {
+      "id": "voc-n5-25-6",
+      "word": "おかね",
+      "kanji": "お金",
+      "furigana": "おかね",
+      "romaji": "okane",
+      "wordType": "noun",
+      "meaningVi": "Tiền",
+      "accentNote": "お金が あったら = nếu có tiền."
+    },
+    {
+      "id": "voc-n5-25-7",
+      "word": "やすみ",
+      "kanji": "休み",
+      "furigana": "やすみ",
+      "romaji": "yasumi",
+      "wordType": "noun",
+      "meaningVi": "Ngày nghỉ, kỳ nghỉ",
+      "accentNote": "Đã gặp bài 4."
+    },
+    {
+      "id": "voc-n5-25-8",
+      "word": "かいしゃ",
+      "kanji": "会社",
+      "furigana": "かいしゃ",
+      "romaji": "kaisha",
+      "wordType": "noun",
+      "meaningVi": "Công ty",
+      "accentNote": "Đã gặp bài 3."
+    },
+    {
+      "id": "voc-n5-25-9",
+      "word": "しごと",
+      "kanji": "仕事",
+      "furigana": "しごと",
+      "romaji": "shigoto",
+      "wordType": "noun",
+      "meaningVi": "Công việc",
+      "accentNote": "Đã gặp bài 9."
+    },
+    {
+      "id": "voc-n5-25-10",
+      "word": "てんき",
+      "kanji": "天気",
+      "furigana": "てんき",
+      "romaji": "tenki",
+      "wordType": "noun",
+      "meaningVi": "Thời tiết",
+      "accentNote": "Đã gặp bài 21."
+    },
+    {
+      "id": "voc-n5-25-11",
+      "word": "あめ",
+      "kanji": "雨",
+      "furigana": "あめ",
+      "romaji": "ame",
+      "wordType": "noun",
+      "meaningVi": "Mưa",
+      "accentNote": "Đã gặp bài 21."
+    },
+    {
+      "id": "voc-n5-25-12",
+      "word": "いそがしい",
+      "kanji": "忙しい",
+      "furigana": "いそがしい",
+      "romaji": "isogashii",
+      "wordType": "adjective",
+      "meaningVi": "Bận rộn",
+      "accentNote": "Đã gặp bài 9."
+    },
+    {
+      "id": "voc-n5-25-13",
+      "word": "たかい",
+      "kanji": "高い",
+      "furigana": "たかい",
+      "romaji": "takai",
+      "wordType": "adjective",
+      "meaningVi": "Đắt, cao",
+      "accentNote": "Đã gặp bài 8."
+    },
+    {
+      "id": "voc-n5-25-14",
+      "word": "やすい",
+      "kanji": "安い",
+      "furigana": "やすい",
+      "romaji": "yasui",
+      "wordType": "adjective",
+      "meaningVi": "Rẻ",
+      "accentNote": "Đã gặp bài 8."
+    },
+    {
+      "id": "voc-n5-25-15",
+      "word": "げんき",
+      "kanji": "元気",
+      "furigana": "げんき",
+      "romaji": "genki",
+      "wordType": "adjective",
+      "meaningVi": "Khỏe mạnh",
+      "accentNote": "Đã gặp bài 8."
+    },
+    {
+      "id": "voc-n5-25-16",
+      "word": "たいせつ",
+      "kanji": "大切",
+      "furigana": "たいせつ",
+      "romaji": "taisetsu",
+      "wordType": "adjective",
+      "meaningVi": "Quan trọng, quý giá",
+      "accentNote": "Đã gặp bài 21."
+    },
+    {
+      "id": "voc-n5-25-17",
+      "word": "らいしゅう",
+      "kanji": "来週",
+      "furigana": "らいしゅう",
+      "romaji": "raishuu",
+      "wordType": "noun",
+      "meaningVi": "Tuần sau",
+      "accentNote": "Đã gặp bài 4."
+    },
+    {
+      "id": "voc-n5-25-18",
+      "word": "せんせい",
+      "kanji": "先生",
+      "furigana": "せんせい",
+      "romaji": "sensei",
+      "wordType": "noun",
+      "meaningVi": "Thầy/cô giáo",
+      "accentNote": "Đã gặp bài 1."
+    },
+    {
+      "id": "voc-n5-25-19",
+      "word": "しつもん",
+      "kanji": "質問",
+      "furigana": "しつもん",
+      "romaji": "shitsumon",
+      "wordType": "noun",
+      "meaningVi": "Câu hỏi",
+      "accentNote": "Đã gặp bài 11."
+    },
+    {
+      "id": "voc-n5-25-20",
+      "word": "ぜんぶ",
+      "kanji": "全部",
+      "furigana": "ぜんぶ",
+      "romaji": "zenbu",
+      "wordType": "noun",
+      "meaningVi": "Tất cả, toàn bộ",
+      "accentNote": "ぜんぶ 頑張っても = dù cố gắng hết sức."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n5-25-1",
+      "character": "疲",
+      "hanViet": "BÌ",
+      "strokeCount": 10,
+      "onyomi": [
+        "ヒ (hi)"
+      ],
+      "kunyomi": [
+        "つか(れる)"
+      ],
+      "meaningVi": "Mệt mỏi.",
+      "commonWords": [
+        {
+          "word": "疲れます",
+          "furigana": "つかれます",
+          "meaningVi": "Mệt"
+        },
+        {
+          "word": "疲労",
+          "furigana": "ひろう",
+          "meaningVi": "Sự mệt mỏi (Hán Việt)"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-25-2",
+      "character": "金",
+      "hanViet": "KIM",
+      "strokeCount": 8,
+      "onyomi": [
+        "キン (kin)"
+      ],
+      "kunyomi": [
+        "かね"
+      ],
+      "meaningVi": "Tiền, vàng, kim loại.",
+      "commonWords": [
+        {
+          "word": "お金",
+          "furigana": "おかね",
+          "meaningVi": "Tiền"
+        },
+        {
+          "word": "金曜日",
+          "furigana": "きんようび",
+          "meaningVi": "Thứ Sáu"
+        },
+        {
+          "word": "料金",
+          "furigana": "りょうきん",
+          "meaningVi": "Cước phí"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-25-3",
+      "character": "頑",
+      "hanViet": "NGOAN",
+      "strokeCount": 13,
+      "onyomi": [
+        "ガン (gan)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Ngoan cường, cố chấp (chỉ dùng trong 頑張る).",
+      "commonWords": [
+        {
+          "word": "頑張ります",
+          "furigana": "がんばります",
+          "meaningVi": "Cố gắng"
+        },
+        {
+          "word": "頑張って",
+          "furigana": "がんばって",
+          "meaningVi": "Cố lên"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-25-4",
+      "character": "全",
+      "hanViet": "TOÀN",
+      "strokeCount": 6,
+      "onyomi": [
+        "ゼン (zen)"
+      ],
+      "kunyomi": [
+        "まった(く)"
+      ],
+      "meaningVi": "Toàn bộ, hoàn toàn.",
+      "commonWords": [
+        {
+          "word": "全部",
+          "furigana": "ぜんぶ",
+          "meaningVi": "Tất cả"
+        },
+        {
+          "word": "全然",
+          "furigana": "ぜんぜん",
+          "meaningVi": "Hoàn toàn (không)"
+        },
+        {
+          "word": "安全",
+          "furigana": "あんぜん",
+          "meaningVi": "An toàn"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-25-5",
+      "character": "問",
+      "hanViet": "VẤN",
+      "strokeCount": 11,
+      "onyomi": [
+        "モン (mon)"
+      ],
+      "kunyomi": [
+        "と(う)"
+      ],
+      "meaningVi": "Hỏi, vấn đề.",
+      "commonWords": [
+        {
+          "word": "質問",
+          "furigana": "しつもん",
+          "meaningVi": "Câu hỏi"
+        },
+        {
+          "word": "問題",
+          "furigana": "もんだい",
+          "meaningVi": "Vấn đề"
+        },
+        {
+          "word": "訪問",
+          "furigana": "ほうもん",
+          "meaningVi": "Thăm hỏi"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n5-l25-s1",
+      "slideType": "grammar",
+      "title": "1. Chia thể たら (giống hệt quy tắc thể た, thêm ら)",
+      "grammarFormula": "[Thể た] + ら",
+      "explanation": "たら chia hệt thể た đã học ở bài 19 — chỉ thêm ら vào cuối. Nếu đã thuộc thể た thì たら gần như không cần học lại quy tắc chia từ đầu.",
+      "teacherTips": "Quy tắc chia たら = quy tắc chia た (bài 19) + ら — không có kiểu biến âm mới nào phải học thêm.",
+      "culturalNotes": "たら là cấu trúc điều kiện DỄ DÙNG NHẤT trong tiếng Nhật vì áp dụng được cho MỌI từ loại theo cùng một cách.",
+      "examples": [
+        {
+          "id": "ex-n5-l25-s1-1",
+          "tokens": [
+            {
+              "id": "t-l25s1-1",
+              "text": "つかれたら",
+              "isKeyGrammar": true,
+              "kanji": "疲れたら",
+              "furigana": "つかれたら"
+            },
+            {
+              "id": "t-l25s1-2",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l25s1-3",
+              "text": "やすみます",
+              "isKeyGrammar": false,
+              "kanji": "休みます",
+              "furigana": "やすみます"
+            }
+          ],
+          "meaningVi": "Nếu mệt thì nghỉ ngơi. (疲れた → 疲れたら)"
+        },
+        {
+          "id": "ex-n5-l25-s1-2",
+          "tokens": [
+            {
+              "id": "t-l25s1-4",
+              "text": "あめ",
+              "isKeyGrammar": false,
+              "kanji": "雨",
+              "furigana": "あめ"
+            },
+            {
+              "id": "t-l25s1-5",
+              "text": "だったら",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l25s1-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l25s1-7",
+              "text": "いきません",
+              "isKeyGrammar": false,
+              "kanji": "行きません",
+              "furigana": "いきません"
+            }
+          ],
+          "meaningVi": "Nếu trời mưa thì tôi không đi. (danh từ+だ → だったら)"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l25-s2",
+      "slideType": "grammar",
+      "title": "2. Giả định 'nếu': たら cho điều kiện CHƯA CHẮC xảy ra",
+      "grammarFormula": "[Điều kiện]たら、[kết quả]",
+      "explanation": "Khi vế điều kiện là việc CHƯA CHẮC XẢY RA (giả định), たら dịch là 'NẾU'. Khác と (bài 23) vốn chỉ dùng cho quy luật LUÔN đúng — たら linh hoạt hơn, dùng được cho mọi mối quan hệ.",
+      "teacherTips": "Vế sau たら CÓ THỂ là mệnh lệnh, lời mời, ý chí cá nhân — khác hẳn と (bài 23) vốn cấm những dạng câu này.",
+      "culturalNotes": "So sánh với と đã học ở bài 23: と cho quy luật tự nhiên luôn đúng, たら cho mọi tình huống giả định, kể cả một lần duy nhất.",
+      "examples": [
+        {
+          "id": "ex-n5-l25-s2-1",
+          "tokens": [
+            {
+              "id": "t-l25s2-1",
+              "text": "おかね",
+              "isKeyGrammar": false,
+              "kanji": "お金",
+              "furigana": "おかね"
+            },
+            {
+              "id": "t-l25s2-2",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l25s2-3",
+              "text": "あったら",
+              "isKeyGrammar": true,
+              "kanji": "有ったら",
+              "furigana": "あったら"
+            },
+            {
+              "id": "t-l25s2-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l25s2-5",
+              "text": "りょこう",
+              "isKeyGrammar": false,
+              "kanji": "旅行",
+              "furigana": "りょこう"
+            },
+            {
+              "id": "t-l25s2-6",
+              "text": "します",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Nếu có tiền, tôi sẽ đi du lịch."
+        },
+        {
+          "id": "ex-n5-l25-s2-2",
+          "tokens": [
+            {
+              "id": "t-l25s2-7",
+              "text": "わからなかったら",
+              "isKeyGrammar": true,
+              "kanji": "分からなかったら",
+              "furigana": "わからなかったら"
+            },
+            {
+              "id": "t-l25s2-8",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l25s2-9",
+              "text": "せんせい",
+              "isKeyGrammar": false,
+              "kanji": "先生",
+              "furigana": "せんせい"
+            },
+            {
+              "id": "t-l25s2-10",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l25s2-11",
+              "text": "しつもん",
+              "isKeyGrammar": false,
+              "kanji": "質問",
+              "furigana": "しつもん"
+            },
+            {
+              "id": "t-l25s2-12",
+              "text": "して",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l25s2-13",
+              "text": "ください",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Nếu không hiểu, xin hãy hỏi thầy giáo."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l25-s3",
+      "slideType": "grammar",
+      "title": "3. Sau khi: たら cho trình tự thời gian",
+      "grammarFormula": "[Hành động 1]たら、[hành động 2]   (hành động 1 CHẮC CHẮN sẽ/đã xảy ra)",
+      "explanation": "たら còn dùng khi vế đầu là việc CHẮC CHẮN xảy ra theo thời gian (không phải giả định) — khi đó dịch gần với 'SAU KHI' hơn là 'nếu'. Phân biệt bằng ngữ cảnh.",
+      "teacherTips": "会社が終わる (tan làm) gần như CHẮC CHẮN xảy ra mỗi ngày — nên たら ở đây nghiêng nghĩa 'sau khi' hơn là 'nếu'.",
+      "culturalNotes": "家に帰ったら、電話してください là câu dặn dò thường gặp giữa gia đình, bạn bè Nhật để báo an toàn khi về đến nhà.",
+      "examples": [
+        {
+          "id": "ex-n5-l25-s3-1",
+          "tokens": [
+            {
+              "id": "t-l25s3-1",
+              "text": "かいしゃ",
+              "isKeyGrammar": false,
+              "kanji": "会社",
+              "furigana": "かいしゃ"
+            },
+            {
+              "id": "t-l25s3-2",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l25s3-3",
+              "text": "おわったら",
+              "isKeyGrammar": true,
+              "kanji": "終わったら",
+              "furigana": "おわったら"
+            },
+            {
+              "id": "t-l25s3-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l25s3-5",
+              "text": "かいものします",
+              "isKeyGrammar": false,
+              "kanji": "買い物します",
+              "furigana": "かいものします"
+            }
+          ],
+          "meaningVi": "Sau khi (tan) làm xong, tôi sẽ đi mua sắm."
+        },
+        {
+          "id": "ex-n5-l25-s3-2",
+          "tokens": [
+            {
+              "id": "t-l25s3-6",
+              "text": "うち",
+              "isKeyGrammar": false,
+              "kanji": "家",
+              "furigana": "うち"
+            },
+            {
+              "id": "t-l25s3-7",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l25s3-8",
+              "text": "かえったら",
+              "isKeyGrammar": true,
+              "kanji": "帰ったら",
+              "furigana": "かえったら"
+            },
+            {
+              "id": "t-l25s3-9",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l25s3-10",
+              "text": "でんわ",
+              "isKeyGrammar": false,
+              "kanji": "電話",
+              "furigana": "でんわ"
+            },
+            {
+              "id": "t-l25s3-11",
+              "text": "して",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l25s3-12",
+              "text": "ください",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Sau khi về đến nhà, xin hãy gọi điện cho tôi."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l25-s4",
+      "slideType": "grammar",
+      "title": "4. Nhượng bộ: [Thể て]も、[kết quả trái ngược mong đợi]",
+      "grammarFormula": "Vても／Aくても／Aでも／Nでも + 、[kết quả KHÔNG như mong đợi]",
+      "explanation": "ても (dù...) diễn tả: dù điều kiện A xảy ra, kết quả VẪN KHÔNG đổi theo hướng mong đợi — hoàn toàn khác も đơn thuần (cũng, bài 2). Ghép vào thể て đã học từ bài 14.",
+      "teacherTips": "ても LUÔN kèm kết quả TRÁI VỚI KỲ VỌNG thông thường của điều kiện đó — nếu kết quả xuôi theo lẽ tự nhiên thì không dùng ても.",
+      "culturalNotes": "頑張っても できません là câu than thở phổ biến khi diễn tả sự bất lực dù đã nỗ lực hết sức — rất thường gặp trong hội thoại đời sống.",
+      "examples": [
+        {
+          "id": "ex-n5-l25-s4-1",
+          "tokens": [
+            {
+              "id": "t-l25s4-1",
+              "text": "がんばっても",
+              "isKeyGrammar": true,
+              "kanji": "頑張っても",
+              "furigana": "がんばっても"
+            },
+            {
+              "id": "t-l25s4-2",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l25s4-3",
+              "text": "できません",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Dù cố gắng thế nào cũng không làm được."
+        },
+        {
+          "id": "ex-n5-l25-s4-2",
+          "tokens": [
+            {
+              "id": "t-l25s4-11",
+              "text": "たかくても",
+              "isKeyGrammar": true,
+              "kanji": "高くても",
+              "furigana": "たかくても"
+            },
+            {
+              "id": "t-l25s4-12",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l25s4-13",
+              "text": "かいます",
+              "isKeyGrammar": false,
+              "kanji": "買います",
+              "furigana": "かいます"
+            }
+          ],
+          "meaningVi": "Dù đắt tôi vẫn mua."
+        },
+        {
+          "id": "ex-n5-l25-s4-3",
+          "tokens": [
+            {
+              "id": "t-l25s4-14",
+              "text": "あめ",
+              "isKeyGrammar": false,
+              "kanji": "雨",
+              "furigana": "あめ"
+            },
+            {
+              "id": "t-l25s4-15",
+              "text": "でも",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l25s4-16",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l25s4-17",
+              "text": "いきます",
+              "isKeyGrammar": false,
+              "kanji": "行きます",
+              "furigana": "いきます"
+            }
+          ],
+          "meaningVi": "Dù trời mưa tôi vẫn đi. (danh từ + でも)"
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n5-25-1",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l25-1",
+          "text": "サントスさん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-2",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-3",
+          "text": "らいしゅう",
+          "isKeyGrammar": true,
+          "kanji": "来週",
+          "furigana": "らいしゅう"
+        },
+        {
+          "id": "d-l25-4",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-5",
+          "text": "やすみ",
+          "isKeyGrammar": true,
+          "kanji": "休み",
+          "furigana": "やすみ"
+        },
+        {
+          "id": "d-l25-6",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-7",
+          "text": "なに",
+          "isKeyGrammar": false,
+          "kanji": "何",
+          "furigana": "なに"
+        },
+        {
+          "id": "d-l25-8",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-9",
+          "text": "しますか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Anh Santos, kỳ nghỉ tuần sau anh định làm gì?"
+    },
+    {
+      "id": "dia-n5-25-2",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l25-10",
+          "text": "てんき",
+          "isKeyGrammar": true,
+          "kanji": "天気",
+          "furigana": "てんき"
+        },
+        {
+          "id": "d-l25-11",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-12",
+          "text": "よかったら",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l25-13",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-14",
+          "text": "りょこう",
+          "isKeyGrammar": false,
+          "kanji": "旅行",
+          "furigana": "りょこう"
+        },
+        {
+          "id": "d-l25-15",
+          "text": "します",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Nếu thời tiết tốt, tôi sẽ đi du lịch."
+    },
+    {
+      "id": "dia-n5-25-3",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l25-16",
+          "text": "あめ",
+          "isKeyGrammar": true,
+          "kanji": "雨",
+          "furigana": "あめ"
+        },
+        {
+          "id": "d-l25-17",
+          "text": "だったら",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l25-18",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-19",
+          "text": "どうしますか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Nếu trời mưa thì sao?"
+    },
+    {
+      "id": "dia-n5-25-4",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l25-20",
+          "text": "あめ",
+          "isKeyGrammar": false,
+          "kanji": "雨",
+          "furigana": "あめ"
+        },
+        {
+          "id": "d-l25-21",
+          "text": "でも",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l25-22",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-23",
+          "text": "かいものします",
+          "isKeyGrammar": true,
+          "kanji": "買い物します",
+          "furigana": "かいものします"
+        }
+      ],
+      "meaningVi": "Dù trời mưa, tôi vẫn đi mua sắm."
+    },
+    {
+      "id": "dia-n5-25-5",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l25-24",
+          "text": "いいですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-25",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-26",
+          "text": "おかね",
+          "isKeyGrammar": true,
+          "kanji": "お金",
+          "furigana": "おかね"
+        },
+        {
+          "id": "d-l25-27",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-28",
+          "text": "たくさん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-29",
+          "text": "あったら",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l25-30",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-31",
+          "text": "なに",
+          "isKeyGrammar": false,
+          "kanji": "何",
+          "furigana": "なに"
+        },
+        {
+          "id": "d-l25-32",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-33",
+          "text": "かいたい",
+          "isKeyGrammar": false,
+          "kanji": "買いたい",
+          "furigana": "かいたい"
+        },
+        {
+          "id": "d-l25-34",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Hay đó. Nếu có nhiều tiền, anh muốn mua gì?"
+    },
+    {
+      "id": "dia-n5-25-6",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l25-35",
+          "text": "あたらしい",
+          "isKeyGrammar": false,
+          "kanji": "新しい",
+          "furigana": "あたらしい"
+        },
+        {
+          "id": "d-l25-36",
+          "text": "カメラ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-37",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-38",
+          "text": "かいたい",
+          "isKeyGrammar": false,
+          "kanji": "買いたい",
+          "furigana": "かいたい"
+        },
+        {
+          "id": "d-l25-39",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-40",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-41",
+          "text": "たかくても",
+          "isKeyGrammar": true,
+          "kanji": "高くても",
+          "furigana": "たかくても"
+        },
+        {
+          "id": "d-l25-42",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-43",
+          "text": "かいます",
+          "isKeyGrammar": false,
+          "kanji": "買います",
+          "furigana": "かいます"
+        }
+      ],
+      "meaningVi": "Tôi muốn mua máy ảnh mới. Dù đắt tôi vẫn mua."
+    },
+    {
+      "id": "dia-n5-25-7",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l25-44",
+          "text": "わたし",
+          "isKeyGrammar": false,
+          "kanji": "私",
+          "furigana": "わたし"
+        },
+        {
+          "id": "d-l25-45",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-46",
+          "text": "しごと",
+          "isKeyGrammar": true,
+          "kanji": "仕事",
+          "furigana": "しごと"
+        },
+        {
+          "id": "d-l25-47",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-48",
+          "text": "おわったら",
+          "isKeyGrammar": true,
+          "kanji": "終わったら",
+          "furigana": "おわったら"
+        },
+        {
+          "id": "d-l25-49",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-50",
+          "text": "うち",
+          "isKeyGrammar": false,
+          "kanji": "家",
+          "furigana": "うち"
+        },
+        {
+          "id": "d-l25-51",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-52",
+          "text": "やすみたい",
+          "isKeyGrammar": false,
+          "kanji": "休みたい",
+          "furigana": "やすみたい"
+        },
+        {
+          "id": "d-l25-53",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Còn tớ thì sau khi làm xong việc, chỉ muốn nghỉ ở nhà thôi."
+    },
+    {
+      "id": "dia-n5-25-8",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l25-54",
+          "text": "つかれて",
+          "isKeyGrammar": false,
+          "kanji": "疲れて",
+          "furigana": "つかれて"
+        },
+        {
+          "id": "d-l25-55",
+          "text": "いますか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Cậu đang mệt à?"
+    },
+    {
+      "id": "dia-n5-25-9",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l25-56",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-57",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-58",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-59",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-60",
+          "text": "つかれても",
+          "isKeyGrammar": true,
+          "kanji": "疲れても",
+          "furigana": "つかれても"
+        },
+        {
+          "id": "d-l25-61",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-62",
+          "text": "べんきょう",
+          "isKeyGrammar": false,
+          "kanji": "勉強",
+          "furigana": "べんきょう"
+        },
+        {
+          "id": "d-l25-63",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-64",
+          "text": "がんばります",
+          "isKeyGrammar": true,
+          "kanji": "頑張ります",
+          "furigana": "がんばります"
+        }
+      ],
+      "meaningVi": "Ừ, nhưng dù mệt tớ vẫn sẽ cố gắng học."
+    },
+    {
+      "id": "dia-n5-25-10",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l25-65",
+          "text": "がんばって",
+          "isKeyGrammar": false,
+          "kanji": "頑張って",
+          "furigana": "がんばって"
+        },
+        {
+          "id": "d-l25-66",
+          "text": "ください",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-67",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-68",
+          "text": "げんき",
+          "isKeyGrammar": true,
+          "kanji": "元気",
+          "furigana": "げんき"
+        },
+        {
+          "id": "d-l25-69",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l25-70",
+          "text": "！",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Cố lên nhé. Giữ sức khỏe nha!"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n5-25-1",
+      "question": "Thể たら của 疲れた (thể た) là:",
+      "options": [
+        "疲れたら",
+        "疲れったら",
+        "疲れらた",
+        "疲れるたら"
+      ],
+      "correctIndex": 0,
+      "explanation": "たら chia hệt thể た, chỉ thêm ら: 疲れた → 疲れたら.",
+      "hint": "Áp dụng đúng quy tắc た + ら."
+    },
+    {
+      "id": "ex-q-n5-25-2",
+      "question": "「お金が あったら、旅行します」 nghĩa là:",
+      "options": [
+        "Nếu có tiền, tôi sẽ đi du lịch (giả định chưa chắc)",
+        "Tôi đã có tiền và đã đi du lịch",
+        "Tôi không có tiền nên không đi du lịch",
+        "Sau khi có tiền xong thì thôi không đi du lịch nữa"
+      ],
+      "correctIndex": 0,
+      "explanation": "たら cho điều kiện GIẢ ĐỊNH (chưa chắc xảy ra) dịch là 'nếu' — 'có tiền' ở đây chưa chắc chắn.",
+      "hint": "Xem slide 2 về nghĩa 'nếu'."
+    },
+    {
+      "id": "ex-q-n5-25-3",
+      "question": "「家に帰ったら、電話してください」 — たら ở đây nghiêng về nghĩa nào?",
+      "options": [
+        "Sau khi (về nhà là việc chắc chắn sẽ xảy ra)",
+        "Nếu (việc chưa chắc xảy ra)",
+        "Dù (nhượng bộ)",
+        "Trong khi"
+      ],
+      "correctIndex": 0,
+      "explanation": "Về đến nhà là việc CHẮC CHẮN sẽ xảy ra (không phải giả định) — nên たら ở đây gần nghĩa 'sau khi' hơn.",
+      "hint": "So sánh với câu 2, nơi điều kiện chưa chắc xảy ra."
+    },
+    {
+      "id": "ex-q-n5-25-4",
+      "question": "So sánh と (bài 23) và たら, khác biệt chính là:",
+      "options": [
+        "と chỉ dùng cho quy luật LUÔN đúng, たら dùng được cho mọi giả định kể cả một lần",
+        "Hoàn toàn giống nhau",
+        "と chỉ dùng cho câu hỏi",
+        "たら không chia được với tính từ"
+      ],
+      "correctIndex": 0,
+      "explanation": "と giới hạn ở quy luật tất yếu (vế sau không được là mệnh lệnh/lời mời), たら linh hoạt hơn nhiều, cho phép mọi loại vế sau.",
+      "hint": "Đây là điểm khác biệt cốt lõi đã nêu ở slide 2."
+    },
+    {
+      "id": "ex-q-n5-25-5",
+      "question": "「高くても、買います」 nghĩa là:",
+      "options": [
+        "Dù đắt tôi vẫn mua",
+        "Vì đắt nên tôi mua",
+        "Nếu đắt thì tôi mua",
+        "Đắt nên tôi không mua"
+      ],
+      "correctIndex": 0,
+      "explanation": "ても diễn tả nhượng bộ: dù điều kiện (đắt) có xảy ra, kết quả vẫn KHÔNG đổi (vẫn mua) — trái ngược lẽ thường.",
+      "hint": "So sánh với vì/nếu (から, たら) đã học."
+    },
+    {
+      "id": "ex-q-n5-25-6",
+      "question": "「雨でも、行きます」 — vì sao dùng でも thay vì ても?",
+      "options": [
+        "雨 là danh từ, danh từ ghép ても phải thành でも",
+        "でも là lỗi chính tả của ても",
+        "でも chỉ dùng cho câu hỏi",
+        "Không có khác biệt gì, dùng cái nào cũng được"
+      ],
+      "correctIndex": 0,
+      "explanation": "Danh từ/tính từ な ghép với ても sẽ biến thành でも (giống で trong で ございます), còn tính từ い/động từ giữ nguyên ても.",
+      "hint": "Xem lại bảng chia ở slide 4."
+    },
+    {
+      "id": "ex-q-n5-25-7",
+      "question": "「頑張っても、できません」 nghĩa là:",
+      "options": [
+        "Dù cố gắng thế nào cũng không làm được",
+        "Vì cố gắng nên đã làm được",
+        "Nếu cố gắng thì sẽ làm được",
+        "Không cần cố gắng cũng làm được"
+      ],
+      "correctIndex": 0,
+      "explanation": "ても khẳng định: dù có nỗ lực (điều kiện), kết quả vẫn KHÔNG như mong muốn (trái ngược kỳ vọng).",
+      "hint": "Đây là câu than thở điển hình dùng ても."
+    },
+    {
+      "id": "ex-q-n5-25-8",
+      "question": "Câu nào có vế sau KHÔNG được phép nếu dùng と (bài 23) nhưng ĐƯỢC PHÉP nếu dùng たら?",
+      "options": [
+        "疲れたら、休んでください (mệnh lệnh)",
+        "春になると、花が咲きます (quy luật)",
+        "右に曲がると、銀行があります (quy luật)",
+        "ボタンを押すと、開きます (quy luật)"
+      ],
+      "correctIndex": 0,
+      "explanation": "たら cho phép vế sau là mệnh lệnh/lời mời/ý chí cá nhân (休んでください); と thì cấm điều này, chỉ cho kết quả tất yếu khách quan.",
+      "hint": "Nhớ lại giới hạn của と đã học ở bài 23."
+    },
+    {
+      "id": "ex-q-n5-25-9",
+      "question": "Trong hội thoại, nếu trời mưa Santos sẽ làm gì?",
+      "options": [
+        "Đi mua sắm",
+        "Ở nhà cả ngày",
+        "Hủy hết kế hoạch",
+        "Không được nhắc tới"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「雨でも、買い物します」.",
+      "hint": "Xem câu thoại thứ 4."
+    },
+    {
+      "id": "ex-q-n5-25-10",
+      "question": "Cuối hội thoại, Wang quyết tâm làm gì dù đang mệt?",
+      "options": [
+        "Cố gắng học bài",
+        "Đi ngủ sớm",
+        "Đi du lịch cùng Santos",
+        "Nghỉ hẳn việc học"
+      ],
+      "correctIndex": 0,
+      "explanation": "Wang nói 「疲れても、勉強を頑張ります」.",
+      "hint": "Xem câu thoại thứ 9, câu chốt cả khóa N5."
+    }
+  ]
+}

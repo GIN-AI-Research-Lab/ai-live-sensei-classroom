@@ -1,0 +1,1207 @@
+{
+  "level": "N5",
+  "lessonNumber": 20,
+  "title": "Bài 20: Thể thông thường / Thể ngắn (Plain Form)",
+  "description": "Tổng kết thể thông thường (普通形) dùng trong giao tiếp thân mật: bốn dạng chia của động từ (đã học ở bài 17-19), tính từ い giữ nguyên còn tính từ な/danh từ đổi です thành だ, và cặp từ xưng hô gia đình khiêm tốn (父/母/兄/姉, nói về nhà mình) đối lập tôn kính (お父さん/お母さん/お兄さん/お姉さん, nói về nhà người khác).",
+  "vocabList": [
+    {
+      "id": "voc-n5-20-1",
+      "word": "たべる",
+      "kanji": "食べる",
+      "furigana": "たべる",
+      "romaji": "taberu",
+      "wordType": "verb",
+      "meaningVi": "Ăn (thể thông thường của 食べます)",
+      "accentNote": "Chính là thể từ điển đã học ở bài 18."
+    },
+    {
+      "id": "voc-n5-20-2",
+      "word": "たべない",
+      "kanji": "食べない",
+      "furigana": "たべない",
+      "romaji": "tabenai",
+      "wordType": "verb",
+      "meaningVi": "Không ăn (thể thông thường)",
+      "accentNote": "Chính là thể ない đã học ở bài 17."
+    },
+    {
+      "id": "voc-n5-20-3",
+      "word": "たべた",
+      "kanji": "食べた",
+      "furigana": "たべた",
+      "romaji": "tabeta",
+      "wordType": "verb",
+      "meaningVi": "Đã ăn (thể thông thường)",
+      "accentNote": "Chính là thể た đã học ở bài 19."
+    },
+    {
+      "id": "voc-n5-20-4",
+      "word": "たべなかった",
+      "kanji": "食べなかった",
+      "furigana": "たべなかった",
+      "romaji": "tabenakatta",
+      "wordType": "verb",
+      "meaningVi": "Đã không ăn (thể thông thường)",
+      "accentNote": "Thể ない chia quá khứ: bỏ い, thêm かった — giống tính từ い."
+    },
+    {
+      "id": "voc-n5-20-5",
+      "word": "かぞく",
+      "kanji": "家族",
+      "furigana": "かぞく",
+      "romaji": "kazoku",
+      "wordType": "noun",
+      "meaningVi": "Gia đình",
+      "accentNote": "家族は 何人ですか = gia đình anh có mấy người."
+    },
+    {
+      "id": "voc-n5-20-6",
+      "word": "りょうしん",
+      "kanji": "両親",
+      "furigana": "りょうしん",
+      "romaji": "ryoushin",
+      "wordType": "noun",
+      "meaningVi": "Cha mẹ",
+      "accentNote": "Từ khiêm tốn, dùng khi nói về cha mẹ MÌNH."
+    },
+    {
+      "id": "voc-n5-20-7",
+      "word": "ちち",
+      "kanji": "父",
+      "furigana": "ちち",
+      "romaji": "chichi",
+      "wordType": "noun",
+      "meaningVi": "Cha (khiêm tốn)",
+      "accentNote": "Nói với người ngoài về cha MÌNH."
+    },
+    {
+      "id": "voc-n5-20-8",
+      "word": "はは",
+      "kanji": "母",
+      "furigana": "はは",
+      "romaji": "haha",
+      "wordType": "noun",
+      "meaningVi": "Mẹ (khiêm tốn)",
+      "accentNote": "Nói với người ngoài về mẹ MÌNH."
+    },
+    {
+      "id": "voc-n5-20-9",
+      "word": "おとうさん",
+      "kanji": "お父さん",
+      "furigana": "おとうさん",
+      "romaji": "otousan",
+      "wordType": "noun",
+      "meaningVi": "Cha (tôn kính)",
+      "accentNote": "Dùng để GỌI cha mình hoặc nói về cha NGƯỜI KHÁC."
+    },
+    {
+      "id": "voc-n5-20-10",
+      "word": "おかあさん",
+      "kanji": "お母さん",
+      "furigana": "おかあさん",
+      "romaji": "okaasan",
+      "wordType": "noun",
+      "meaningVi": "Mẹ (tôn kính)",
+      "accentNote": "Dùng để GỌI mẹ mình hoặc nói về mẹ NGƯỜI KHÁC."
+    },
+    {
+      "id": "voc-n5-20-11",
+      "word": "きょうだい",
+      "kanji": "兄弟",
+      "furigana": "きょうだい",
+      "romaji": "kyoudai",
+      "wordType": "noun",
+      "meaningVi": "Anh chị em",
+      "accentNote": "Từ chung, không phân biệt trai/gái, khiêm tốn."
+    },
+    {
+      "id": "voc-n5-20-12",
+      "word": "あに",
+      "kanji": "兄",
+      "furigana": "あに",
+      "romaji": "ani",
+      "wordType": "noun",
+      "meaningVi": "Anh trai (khiêm tốn)",
+      "accentNote": "Nói về anh trai MÌNH."
+    },
+    {
+      "id": "voc-n5-20-13",
+      "word": "あね",
+      "kanji": "姉",
+      "furigana": "あね",
+      "romaji": "ane",
+      "wordType": "noun",
+      "meaningVi": "Chị gái (khiêm tốn)",
+      "accentNote": "Nói về chị gái MÌNH."
+    },
+    {
+      "id": "voc-n5-20-14",
+      "word": "おとうと",
+      "kanji": "弟",
+      "furigana": "おとうと",
+      "romaji": "otouto",
+      "wordType": "noun",
+      "meaningVi": "Em trai",
+      "accentNote": "Không có dạng khiêm tốn/tôn kính riêng biệt như anh/chị."
+    },
+    {
+      "id": "voc-n5-20-15",
+      "word": "いもうと",
+      "kanji": "妹",
+      "furigana": "いもうと",
+      "romaji": "imouto",
+      "wordType": "noun",
+      "meaningVi": "Em gái",
+      "accentNote": "Không có dạng khiêm tốn/tôn kính riêng biệt."
+    },
+    {
+      "id": "voc-n5-20-16",
+      "word": "おにいさん",
+      "kanji": "お兄さん",
+      "furigana": "おにいさん",
+      "romaji": "oniisan",
+      "wordType": "noun",
+      "meaningVi": "Anh trai (tôn kính)",
+      "accentNote": "Dùng để GỌI anh mình hoặc nói về anh NGƯỜI KHÁC."
+    },
+    {
+      "id": "voc-n5-20-17",
+      "word": "おねえさん",
+      "kanji": "お姉さん",
+      "furigana": "おねえさん",
+      "romaji": "oneesan",
+      "wordType": "noun",
+      "meaningVi": "Chị gái (tôn kính)",
+      "accentNote": "Dùng để GỌI chị mình hoặc nói về chị NGƯỜI KHÁC."
+    },
+    {
+      "id": "voc-n5-20-18",
+      "word": "ともだち",
+      "kanji": "友達",
+      "furigana": "ともだち",
+      "romaji": "tomodachi",
+      "wordType": "noun",
+      "meaningVi": "Bạn bè",
+      "accentNote": "Đã gặp bài 5 — nay dùng làm đối tượng nói chuyện thân mật."
+    },
+    {
+      "id": "voc-n5-20-19",
+      "word": "げんき",
+      "kanji": "元気",
+      "furigana": "げんき",
+      "romaji": "genki",
+      "wordType": "adjective",
+      "meaningVi": "Khỏe mạnh",
+      "accentNote": "Đã gặp bài 8 — nay dùng minh họa chia thể thông thường của tính từ な."
+    },
+    {
+      "id": "voc-n5-20-20",
+      "word": "いそがしい",
+      "kanji": "忙しい",
+      "furigana": "いそがしい",
+      "romaji": "isogashii",
+      "wordType": "adjective",
+      "meaningVi": "Bận rộn",
+      "accentNote": "Đã gặp bài 9 — nay minh họa chia thể thông thường của tính từ い."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n5-20-1",
+      "character": "父",
+      "hanViet": "PHỤ",
+      "strokeCount": 4,
+      "onyomi": [
+        "フ (fu)"
+      ],
+      "kunyomi": [
+        "ちち",
+        "とう"
+      ],
+      "meaningVi": "Cha.",
+      "commonWords": [
+        {
+          "word": "父",
+          "furigana": "ちち",
+          "meaningVi": "Cha (khiêm tốn)"
+        },
+        {
+          "word": "お父さん",
+          "furigana": "おとうさん",
+          "meaningVi": "Cha (tôn kính)"
+        },
+        {
+          "word": "父親",
+          "furigana": "ちちおや",
+          "meaningVi": "Người cha"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-20-2",
+      "character": "母",
+      "hanViet": "MẪU",
+      "strokeCount": 5,
+      "onyomi": [
+        "ボ (bo)"
+      ],
+      "kunyomi": [
+        "はは",
+        "かあ"
+      ],
+      "meaningVi": "Mẹ.",
+      "commonWords": [
+        {
+          "word": "母",
+          "furigana": "はは",
+          "meaningVi": "Mẹ (khiêm tốn)"
+        },
+        {
+          "word": "お母さん",
+          "furigana": "おかあさん",
+          "meaningVi": "Mẹ (tôn kính)"
+        },
+        {
+          "word": "母国",
+          "furigana": "ぼこく",
+          "meaningVi": "Tổ quốc"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-20-3",
+      "character": "兄",
+      "hanViet": "HUYNH",
+      "strokeCount": 5,
+      "onyomi": [
+        "キョウ (kyou)"
+      ],
+      "kunyomi": [
+        "あに",
+        "にい"
+      ],
+      "meaningVi": "Anh trai.",
+      "commonWords": [
+        {
+          "word": "兄",
+          "furigana": "あに",
+          "meaningVi": "Anh trai (khiêm tốn)"
+        },
+        {
+          "word": "お兄さん",
+          "furigana": "おにいさん",
+          "meaningVi": "Anh trai (tôn kính)"
+        },
+        {
+          "word": "兄弟",
+          "furigana": "きょうだい",
+          "meaningVi": "Anh chị em"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-20-4",
+      "character": "姉",
+      "hanViet": "TỈ",
+      "strokeCount": 8,
+      "onyomi": [
+        "シ (shi)"
+      ],
+      "kunyomi": [
+        "あね",
+        "ねえ"
+      ],
+      "meaningVi": "Chị gái.",
+      "commonWords": [
+        {
+          "word": "姉",
+          "furigana": "あね",
+          "meaningVi": "Chị gái (khiêm tốn)"
+        },
+        {
+          "word": "お姉さん",
+          "furigana": "おねえさん",
+          "meaningVi": "Chị gái (tôn kính)"
+        },
+        {
+          "word": "姉妹",
+          "furigana": "しまい",
+          "meaningVi": "Chị em gái"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-20-5",
+      "character": "族",
+      "hanViet": "TỘC",
+      "strokeCount": 11,
+      "onyomi": [
+        "ゾク (zoku)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Dòng họ, gia tộc.",
+      "commonWords": [
+        {
+          "word": "家族",
+          "furigana": "かぞく",
+          "meaningVi": "Gia đình"
+        },
+        {
+          "word": "民族",
+          "furigana": "みんぞく",
+          "meaningVi": "Dân tộc"
+        },
+        {
+          "word": "親族",
+          "furigana": "しんぞく",
+          "meaningVi": "Thân tộc"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n5-l20-s1",
+      "slideType": "grammar",
+      "title": "1. Thể thông thường của động từ — tổng kết 4 dạng",
+      "grammarFormula": "食べる(hiện tại) / 食べない(phủ định) / 食べた(quá khứ) / 食べなかった(phủ định quá khứ)",
+      "explanation": "Đây chính là BỐN THỂ đã học rải rác: từ điển (bài 18), ない (bài 17), た (bài 19), và ghép ない+かった (phủ định quá khứ). Gộp cả bốn lại thành 'thể thông thường' dùng với bạn bè.",
+      "teacherTips": "Thể thông thường KHÔNG PHẢI ngữ pháp mới — chỉ là gọi tên và hệ thống lại 4 dạng chia đã học từ bài 14-19.",
+      "culturalNotes": "Bạn thân, anh chị em, người cùng tuổi nói chuyện với nhau luôn dùng thể thông thường — dùng です/ます với bạn thân nghe xa cách, kỳ lạ.",
+      "examples": [
+        {
+          "id": "ex-n5-l20-s1-1",
+          "tokens": [
+            {
+              "id": "t-l20s1-1",
+              "text": "きのう",
+              "isKeyGrammar": false,
+              "kanji": "昨日",
+              "furigana": "きのう"
+            },
+            {
+              "id": "t-l20s1-2",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l20s1-3",
+              "text": "なに",
+              "isKeyGrammar": true,
+              "kanji": "何",
+              "furigana": "なに"
+            },
+            {
+              "id": "t-l20s1-4",
+              "text": "たべた",
+              "isKeyGrammar": true,
+              "kanji": "食べた",
+              "furigana": "たべた"
+            },
+            {
+              "id": "t-l20s1-5",
+              "text": "？",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Hôm qua ăn gì vậy? (thân mật, không có ですか)"
+        },
+        {
+          "id": "ex-n5-l20-s1-2",
+          "tokens": [
+            {
+              "id": "t-l20s1-6",
+              "text": "なにも",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l20s1-7",
+              "text": "たべなかった",
+              "isKeyGrammar": true,
+              "kanji": "食べなかった",
+              "furigana": "たべなかった"
+            }
+          ],
+          "meaningVi": "Không ăn gì cả."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l20-s2",
+      "slideType": "grammar",
+      "title": "2. Thể thông thường của tính từ い và な",
+      "grammarFormula": "い-adj: 忙しい／忙しくない／忙しかった／忙しくなかった　　な-adj: 元気だ／元気じゃない／元気だった／元気じゃなかった",
+      "explanation": "Tính từ い giữ nguyên 4 dạng đã học. Tính từ な đổi です → だ ở thể thông thường khẳng định hiện tại — đây là điểm khác duy nhất so với thể lịch sự.",
+      "teacherTips": "Bẫy hay gặp: tính từ い KHÔNG có だ ở cuối (không nói 忙しいだ) — chỉ tính từ な và danh từ mới dùng だ.",
+      "culturalNotes": "だ thường bị LƯỢC BỎ hoàn toàn trong câu hỏi thân mật: 元気？ nghe tự nhiên hơn cả 元気だ？",
+      "examples": [
+        {
+          "id": "ex-n5-l20-s2-1",
+          "tokens": [
+            {
+              "id": "t-l20s2-1",
+              "text": "きょう",
+              "isKeyGrammar": false,
+              "kanji": "今日",
+              "furigana": "きょう"
+            },
+            {
+              "id": "t-l20s2-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l20s2-3",
+              "text": "いそがしい",
+              "isKeyGrammar": true,
+              "kanji": "忙しい",
+              "furigana": "いそがしい"
+            }
+          ],
+          "meaningVi": "Hôm nay bận. (giữ nguyên tính từ い, bỏ です)"
+        },
+        {
+          "id": "ex-n5-l20-s2-2",
+          "tokens": [
+            {
+              "id": "t-l20s2-4",
+              "text": "げんき",
+              "isKeyGrammar": true,
+              "kanji": "元気",
+              "furigana": "げんき"
+            },
+            {
+              "id": "t-l20s2-5",
+              "text": "だ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l20s2-6",
+              "text": "？",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Khỏe không? (元気です → 元気だ, đổi です thành だ)"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l20-s3",
+      "slideType": "grammar",
+      "title": "3. Thể thông thường của danh từ",
+      "grammarFormula": "N-だ／N-じゃない／N-だった／N-じゃなかった",
+      "explanation": "Danh từ chia GIỐNG HỆT tính từ な — です→だ, じゃありません→じゃない, でした→だった. Đây là lý do tính từ な còn được gọi là 'tính từ giống danh từ'.",
+      "teacherTips": "So sánh song song: 元気(な-adj) và 休み(danh từ) chia HỆT nhau ở thể thông thường — cùng một bảng quy tắc.",
+      "culturalNotes": "Ghi chú, tin nhắn ngắn giữa bạn bè ở Nhật gần như luôn dùng thể thông thường, kể cả với thầy cô ngoài giờ học chính thức.",
+      "examples": [
+        {
+          "id": "ex-n5-l20-s3-1",
+          "tokens": [
+            {
+              "id": "t-l20s3-1",
+              "text": "あした",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l20s3-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l20s3-3",
+              "text": "やすみ",
+              "isKeyGrammar": false,
+              "kanji": "休み",
+              "furigana": "やすみ"
+            },
+            {
+              "id": "t-l20s3-4",
+              "text": "だ",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Ngày mai là ngày nghỉ."
+        },
+        {
+          "id": "ex-n5-l20-s3-2",
+          "tokens": [
+            {
+              "id": "t-l20s3-5",
+              "text": "きのう",
+              "isKeyGrammar": false,
+              "kanji": "昨日",
+              "furigana": "きのう"
+            },
+            {
+              "id": "t-l20s3-6",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l20s3-7",
+              "text": "やすみ",
+              "isKeyGrammar": false,
+              "kanji": "休み",
+              "furigana": "やすみ"
+            },
+            {
+              "id": "t-l20s3-8",
+              "text": "じゃなかった",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Hôm qua không phải ngày nghỉ."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l20-s4",
+      "slideType": "grammar",
+      "title": "4. Xưng hô gia đình: khiêm tốn và tôn kính",
+      "grammarFormula": "父／母／兄／姉 (nói về NHÀ MÌNH)　　お父さん／お母さん／お兄さん／お姉さん (GỌI hoặc nói về NHÀ NGƯỜI KHÁC)",
+      "explanation": "Đây là ví dụ rõ nhất của tính khiêm nhường trong tiếng Nhật: HẠ THẤP người nhà mình khi nói với người ngoài, nhưng NÂNG CAO khi nói về/gọi người nhà của người khác.",
+      "teacherTips": "弟/妹 (em trai/em gái) KHÔNG có cặp khiêm tốn/tôn kính riêng — dùng chung một từ cho cả hai trường hợp.",
+      "culturalNotes": "Nhầm お父さん/父 khi nói về đúng người dễ bị coi là thiếu lễ độ — đây là một trong những quy tắc kính ngữ đầu tiên người học tiếng Nhật cần nắm.",
+      "examples": [
+        {
+          "id": "ex-n5-l20-s4-1",
+          "tokens": [
+            {
+              "id": "t-l20s4-1",
+              "text": "わたし",
+              "isKeyGrammar": false,
+              "kanji": "私",
+              "furigana": "わたし"
+            },
+            {
+              "id": "t-l20s4-2",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l20s4-3",
+              "text": "ちち",
+              "isKeyGrammar": true,
+              "kanji": "父",
+              "furigana": "ちち"
+            },
+            {
+              "id": "t-l20s4-4",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l20s4-5",
+              "text": "いしゃ",
+              "isKeyGrammar": false,
+              "kanji": "医者",
+              "furigana": "いしゃ"
+            },
+            {
+              "id": "t-l20s4-6",
+              "text": "だ",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Cha tôi là bác sĩ."
+        },
+        {
+          "id": "ex-n5-l20-s4-2",
+          "tokens": [
+            {
+              "id": "t-l20s4-7",
+              "text": "やまださん",
+              "isKeyGrammar": false,
+              "kanji": "山田さん",
+              "furigana": "やまださん"
+            },
+            {
+              "id": "t-l20s4-8",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l20s4-9",
+              "text": "おとうさん",
+              "isKeyGrammar": true,
+              "kanji": "お父さん",
+              "furigana": "おとうさん"
+            },
+            {
+              "id": "t-l20s4-10",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l20s4-11",
+              "text": "せんせい",
+              "isKeyGrammar": false,
+              "kanji": "先生",
+              "furigana": "せんせい"
+            },
+            {
+              "id": "t-l20s4-12",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Cha của anh Yamada là giáo viên. (nói về nhà NGƯỜI KHÁC → dùng お父さん)"
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n5-20-1",
+      "speaker": "山田",
+      "speakerRole": "Bạn thân",
+      "tokens": [
+        {
+          "id": "d-l20-1",
+          "text": "ねえ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-2",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-3",
+          "text": "きょう",
+          "isKeyGrammar": false,
+          "kanji": "今日",
+          "furigana": "きょう"
+        },
+        {
+          "id": "d-l20-4",
+          "text": "いそがしい",
+          "isKeyGrammar": true,
+          "kanji": "忙しい",
+          "furigana": "いそがしい"
+        },
+        {
+          "id": "d-l20-5",
+          "text": "？",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Này, hôm nay có bận không?"
+    },
+    {
+      "id": "dia-n5-20-2",
+      "speaker": "サントス",
+      "speakerRole": "Bạn thân",
+      "tokens": [
+        {
+          "id": "d-l20-6",
+          "text": "ううん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-7",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-8",
+          "text": "いそがしくない",
+          "isKeyGrammar": true,
+          "kanji": "忙しくない",
+          "furigana": "いそがしくない"
+        },
+        {
+          "id": "d-l20-9",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-10",
+          "text": "どうしたの",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Không, không bận. Có chuyện gì vậy?"
+    },
+    {
+      "id": "dia-n5-20-3",
+      "speaker": "山田",
+      "speakerRole": "Bạn thân",
+      "tokens": [
+        {
+          "id": "d-l20-11",
+          "text": "かぞく",
+          "isKeyGrammar": true,
+          "kanji": "家族",
+          "furigana": "かぞく"
+        },
+        {
+          "id": "d-l20-12",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-13",
+          "text": "しゃしん",
+          "isKeyGrammar": false,
+          "kanji": "写真",
+          "furigana": "しゃしん"
+        },
+        {
+          "id": "d-l20-14",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-15",
+          "text": "みる",
+          "isKeyGrammar": false,
+          "kanji": "見る",
+          "furigana": "みる"
+        },
+        {
+          "id": "d-l20-16",
+          "text": "？",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Xem ảnh gia đình tớ không?"
+    },
+    {
+      "id": "dia-n5-20-4",
+      "speaker": "サントス",
+      "speakerRole": "Bạn thân",
+      "tokens": [
+        {
+          "id": "d-l20-17",
+          "text": "うん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-18",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-19",
+          "text": "みたい",
+          "isKeyGrammar": false,
+          "kanji": "見たい",
+          "furigana": "みたい"
+        },
+        {
+          "id": "d-l20-20",
+          "text": "！",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ừ, muốn xem!"
+    },
+    {
+      "id": "dia-n5-20-5",
+      "speaker": "山田",
+      "speakerRole": "Bạn thân",
+      "tokens": [
+        {
+          "id": "d-l20-21",
+          "text": "これ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-22",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-23",
+          "text": "わたし",
+          "isKeyGrammar": false,
+          "kanji": "私",
+          "furigana": "わたし"
+        },
+        {
+          "id": "d-l20-24",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-25",
+          "text": "ちち",
+          "isKeyGrammar": true,
+          "kanji": "父",
+          "furigana": "ちち"
+        },
+        {
+          "id": "d-l20-26",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-27",
+          "text": "いしゃ",
+          "isKeyGrammar": false,
+          "kanji": "医者",
+          "furigana": "いしゃ"
+        },
+        {
+          "id": "d-l20-28",
+          "text": "だ",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Đây là bố tớ. Bố tớ là bác sĩ."
+    },
+    {
+      "id": "dia-n5-20-6",
+      "speaker": "サントス",
+      "speakerRole": "Bạn thân",
+      "tokens": [
+        {
+          "id": "d-l20-29",
+          "text": "かっこいい",
+          "isKeyGrammar": false,
+          "kanji": "格好いい",
+          "furigana": "かっこいい"
+        },
+        {
+          "id": "d-l20-30",
+          "text": "！",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-31",
+          "text": "おかあさん",
+          "isKeyGrammar": true,
+          "kanji": "お母さん",
+          "furigana": "おかあさん"
+        },
+        {
+          "id": "d-l20-32",
+          "text": "は",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ngầu quá! Còn mẹ cậu thì sao?"
+    },
+    {
+      "id": "dia-n5-20-7",
+      "speaker": "山田",
+      "speakerRole": "Bạn thân",
+      "tokens": [
+        {
+          "id": "d-l20-33",
+          "text": "はは",
+          "isKeyGrammar": true,
+          "kanji": "母",
+          "furigana": "はは"
+        },
+        {
+          "id": "d-l20-34",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-35",
+          "text": "せんせい",
+          "isKeyGrammar": false,
+          "kanji": "先生",
+          "furigana": "せんせい"
+        },
+        {
+          "id": "d-l20-36",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-37",
+          "text": "あに",
+          "isKeyGrammar": true,
+          "kanji": "兄",
+          "furigana": "あに"
+        },
+        {
+          "id": "d-l20-38",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-39",
+          "text": "いる",
+          "isKeyGrammar": false,
+          "kanji": "居る",
+          "furigana": "いる"
+        }
+      ],
+      "meaningVi": "Mẹ tớ là giáo viên. Tớ còn có cả anh trai nữa."
+    },
+    {
+      "id": "dia-n5-20-8",
+      "speaker": "サントス",
+      "speakerRole": "Bạn thân",
+      "tokens": [
+        {
+          "id": "d-l20-40",
+          "text": "いいな",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-41",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-42",
+          "text": "わたし",
+          "isKeyGrammar": false,
+          "kanji": "私",
+          "furigana": "わたし"
+        },
+        {
+          "id": "d-l20-43",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-44",
+          "text": "きょうだい",
+          "isKeyGrammar": true,
+          "kanji": "兄弟",
+          "furigana": "きょうだい"
+        },
+        {
+          "id": "d-l20-45",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-46",
+          "text": "いない",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Hay quá vậy. Tớ thì không có anh chị em."
+    },
+    {
+      "id": "dia-n5-20-9",
+      "speaker": "山田",
+      "speakerRole": "Bạn thân",
+      "tokens": [
+        {
+          "id": "d-l20-47",
+          "text": "そうなんだ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-48",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-49",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-50",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-51",
+          "text": "ともだち",
+          "isKeyGrammar": true,
+          "kanji": "友達",
+          "furigana": "ともだち"
+        },
+        {
+          "id": "d-l20-52",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-53",
+          "text": "いっぱい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-54",
+          "text": "いる",
+          "isKeyGrammar": false,
+          "kanji": "居る",
+          "furigana": "いる"
+        }
+      ],
+      "meaningVi": "Vậy à. Nhưng cậu có nhiều bạn bè mà."
+    },
+    {
+      "id": "dia-n5-20-10",
+      "speaker": "サントス",
+      "speakerRole": "Bạn thân",
+      "tokens": [
+        {
+          "id": "d-l20-55",
+          "text": "うん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-56",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-57",
+          "text": "そうだ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l20-58",
+          "text": "ね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-59",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l20-60",
+          "text": "ありがとう",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ừ, đúng vậy nhỉ. Cảm ơn cậu."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n5-20-1",
+      "question": "Thể thông thường quá khứ phủ định của 食べます là:",
+      "options": [
+        "食べなかった",
+        "食べませんでした",
+        "食べたない",
+        "食べないでした"
+      ],
+      "correctIndex": 0,
+      "explanation": "食べません(でした) là thể lịch sự; thể thông thường tương ứng là 食べなかった (ない chia như tính từ い).",
+      "hint": "So sánh thể lịch sự và thể thông thường."
+    },
+    {
+      "id": "ex-q-n5-20-2",
+      "question": "「元気？」 tương ứng thể lịch sự nào?",
+      "options": [
+        "元気ですか",
+        "元気でした",
+        "元気じゃない",
+        "元気だ"
+      ],
+      "correctIndex": 0,
+      "explanation": "元気？ là câu hỏi thân mật, だ thường bị lược bỏ — tương ứng thể lịch sự đầy đủ là 元気ですか.",
+      "hint": "Xem lại ghi chú văn hóa ở slide 2."
+    },
+    {
+      "id": "ex-q-n5-20-3",
+      "question": "Thể thông thường khẳng định của tính từ な 元気 là:",
+      "options": [
+        "元気だ",
+        "元気だ です",
+        "元気な",
+        "元気い"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tính từ な đổi です thành だ ở thể thông thường: 元気です → 元気だ.",
+      "hint": "Đây là điểm khác duy nhất so với thể lịch sự cho tính từ な."
+    },
+    {
+      "id": "ex-q-n5-20-4",
+      "question": "Danh từ chia thể thông thường GIỐNG loại tính từ nào?",
+      "options": [
+        "Tính từ な",
+        "Tính từ い",
+        "Không giống loại nào",
+        "Động từ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Danh từ và tính từ な dùng chung một bảng chia: だ/じゃない/だった/じゃなかった.",
+      "hint": "Xem lại slide 3."
+    },
+    {
+      "id": "ex-q-n5-20-5",
+      "question": "Nói với người ngoài về CHA CỦA MÌNH, dùng từ nào?",
+      "options": [
+        "父",
+        "お父さん",
+        "パパ",
+        "おやじさん"
+      ],
+      "correctIndex": 0,
+      "explanation": "父 là từ KHIÊM TỐN dùng khi nói về cha mình với người ngoài. お父さん dùng để GỌI cha mình hoặc nói về cha người khác.",
+      "hint": "Đây là quy tắc khiêm tốn/tôn kính."
+    },
+    {
+      "id": "ex-q-n5-20-6",
+      "question": "Nói về CHA CỦA NGƯỜI KHÁC, dùng từ nào?",
+      "options": [
+        "お父さん",
+        "父",
+        "ちちうえ",
+        "おやじ"
+      ],
+      "correctIndex": 0,
+      "explanation": "お父さん (tôn kính) dùng khi nói về cha của người khác, thể hiện sự tôn trọng với gia đình họ.",
+      "hint": "Ngược lại hoàn toàn với câu 5."
+    },
+    {
+      "id": "ex-q-n5-20-7",
+      "question": "弟 và 妹 khác 兄/姉 ở điểm nào về xưng hô?",
+      "options": [
+        "Không có cặp khiêm tốn/tôn kính riêng — dùng chung một từ",
+        "Có tới ba cách gọi khác nhau",
+        "Chỉ dùng cho con trai",
+        "Luôn phải thêm さん phía sau"
+      ],
+      "correctIndex": 0,
+      "explanation": "兄/姉 có cặp khiêm tốn (兄/姉) và tôn kính (お兄さん/お姉さん) riêng biệt; 弟/妹 dùng chung không phân biệt.",
+      "hint": "Đây là điểm bất đối xứng thú vị trong hệ thống xưng hô gia đình."
+    },
+    {
+      "id": "ex-q-n5-20-8",
+      "question": "「今日は 休みだ」 và 「今日は 休みです」 khác nhau ở:",
+      "options": [
+        "Mức độ trang trọng: だ thân mật, です lịch sự — nghĩa giống nhau",
+        "Nghĩa hoàn toàn khác nhau",
+        "だ là thì quá khứ",
+        "です là câu hỏi"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cùng một nghĩa (hôm nay là ngày nghỉ), chỉ khác mức độ trang trọng — だ dùng với bạn bè, です dùng lịch sự.",
+      "hint": "Đây là điểm cốt lõi của bài học: chuyển đổi giữa hai mức trang trọng."
+    },
+    {
+      "id": "ex-q-n5-20-9",
+      "question": "Trong hội thoại, cha của Yamada làm nghề gì?",
+      "options": [
+        "Bác sĩ",
+        "Giáo viên",
+        "Kỹ sư",
+        "Nhân viên ngân hàng"
+      ],
+      "correctIndex": 0,
+      "explanation": "Yamada nói 「これ、私の父。医者だ」.",
+      "hint": "Xem câu thoại thứ 5."
+    },
+    {
+      "id": "ex-q-n5-20-10",
+      "question": "Santos có anh chị em không?",
+      "options": [
+        "Không có",
+        "Có một anh trai",
+        "Có một chị gái",
+        "Có hai em"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「私は 兄弟が いない」.",
+      "hint": "Xem câu thoại thứ 8."
+    }
+  ]
+}

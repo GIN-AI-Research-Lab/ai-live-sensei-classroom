@@ -1,0 +1,1319 @@
+{
+  "level": "N5",
+  "lessonNumber": 16,
+  "title": "Bài 16: Chuỗi hành động liên tiếp (V1て V2て / Vてから / N1はN2がA)",
+  "description": "Nối nhiều hành động theo thứ tự bằng thể て (chỉ động từ cuối chia ます), nhấn mạnh thứ tự bắt buộc bằng Vてから, và cấu trúc hai chủ ngữ N1はN2がA để miêu tả bộ phận cơ thể, ngoại hình và tính cách.",
+  "vocabList": [
+    {
+      "id": "voc-n5-16-1",
+      "word": "おきます",
+      "kanji": "起きます",
+      "furigana": "おきます",
+      "romaji": "okimasu",
+      "wordType": "verb",
+      "meaningVi": "Thức dậy",
+      "accentNote": "Đã gặp bài 4 — nay dùng làm hành động đầu chuỗi."
+    },
+    {
+      "id": "voc-n5-16-2",
+      "word": "はをみがきます",
+      "kanji": "歯を磨きます",
+      "furigana": "はをみがきます",
+      "romaji": "ha o migakimasu",
+      "wordType": "verb",
+      "meaningVi": "Đánh răng",
+      "accentNote": "磨きます: nhóm 1."
+    },
+    {
+      "id": "voc-n5-16-3",
+      "word": "シャワーをあびます",
+      "kanji": "シャワーを浴びます",
+      "furigana": "シャワーをあびます",
+      "romaji": "shawaa o abimasu",
+      "wordType": "verb",
+      "meaningVi": "Tắm vòi sen",
+      "accentNote": "浴びます: nhóm 2."
+    },
+    {
+      "id": "voc-n5-16-4",
+      "word": "でかけます",
+      "kanji": "出かけます",
+      "furigana": "でかけます",
+      "romaji": "dekakemasu",
+      "wordType": "verb",
+      "meaningVi": "Ra ngoài, đi ra",
+      "accentNote": "Nhóm 2. Khác 出ます (ra khỏi một nơi cụ thể)."
+    },
+    {
+      "id": "voc-n5-16-5",
+      "word": "かえります",
+      "kanji": "帰ります",
+      "furigana": "かえります",
+      "romaji": "kaerimasu",
+      "wordType": "verb",
+      "meaningVi": "Về nhà",
+      "accentNote": "Đã gặp bài 5 — nay dùng làm hành động cuối chuỗi."
+    },
+    {
+      "id": "voc-n5-16-6",
+      "word": "かお",
+      "kanji": "顔",
+      "furigana": "かお",
+      "romaji": "kao",
+      "wordType": "noun",
+      "meaningVi": "Khuôn mặt",
+      "accentNote": "顔を 洗います = rửa mặt."
+    },
+    {
+      "id": "voc-n5-16-7",
+      "word": "め",
+      "kanji": "目",
+      "furigana": "め",
+      "romaji": "me",
+      "wordType": "noun",
+      "meaningVi": "Mắt",
+      "accentNote": "目が 大きいです = mắt to."
+    },
+    {
+      "id": "voc-n5-16-8",
+      "word": "みみ",
+      "kanji": "耳",
+      "furigana": "みみ",
+      "romaji": "mimi",
+      "wordType": "noun",
+      "meaningVi": "Tai",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-16-9",
+      "word": "くち",
+      "kanji": "口",
+      "furigana": "くち",
+      "romaji": "kuchi",
+      "wordType": "noun",
+      "meaningVi": "Miệng",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-16-10",
+      "word": "て",
+      "kanji": "手",
+      "furigana": "て",
+      "romaji": "te",
+      "wordType": "noun",
+      "meaningVi": "Bàn tay",
+      "accentNote": "手が 大きいです = bàn tay to."
+    },
+    {
+      "id": "voc-n5-16-11",
+      "word": "あし",
+      "kanji": "足",
+      "furigana": "あし",
+      "romaji": "ashi",
+      "wordType": "noun",
+      "meaningVi": "Chân, bàn chân",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-16-12",
+      "word": "あたま",
+      "kanji": "頭",
+      "furigana": "あたま",
+      "romaji": "atama",
+      "wordType": "noun",
+      "meaningVi": "Đầu",
+      "accentNote": "頭が いいです = đầu óc thông minh (thành ngữ khen trí tuệ)."
+    },
+    {
+      "id": "voc-n5-16-13",
+      "word": "からだ",
+      "kanji": "体",
+      "furigana": "からだ",
+      "romaji": "karada",
+      "wordType": "noun",
+      "meaningVi": "Cơ thể, sức khỏe",
+      "accentNote": "体が 丈夫です = cơ thể khỏe mạnh."
+    },
+    {
+      "id": "voc-n5-16-14",
+      "word": "せい",
+      "kanji": "背",
+      "furigana": "せい",
+      "romaji": "sei",
+      "wordType": "noun",
+      "meaningVi": "Chiều cao (dáng người)",
+      "accentNote": "背が 高いです = dáng người cao."
+    },
+    {
+      "id": "voc-n5-16-15",
+      "word": "かみ",
+      "kanji": "髪",
+      "furigana": "かみ",
+      "romaji": "kami",
+      "wordType": "noun",
+      "meaningVi": "Tóc",
+      "accentNote": "髪が 長いです = tóc dài."
+    },
+    {
+      "id": "voc-n5-16-16",
+      "word": "あかるい",
+      "kanji": "明るい",
+      "furigana": "あかるい",
+      "romaji": "akarui",
+      "wordType": "adjective",
+      "meaningVi": "Vui vẻ, cởi mở, sáng sủa",
+      "accentNote": "Tính từ い. Miêu tả tính cách hoặc ánh sáng."
+    },
+    {
+      "id": "voc-n5-16-17",
+      "word": "しんせつ",
+      "kanji": "親切",
+      "furigana": "しんせつ",
+      "romaji": "shinsetsu",
+      "wordType": "adjective",
+      "meaningVi": "Tốt bụng, ân cần",
+      "accentNote": "Tính từ な."
+    },
+    {
+      "id": "voc-n5-16-18",
+      "word": "やさしい",
+      "kanji": "優しい",
+      "furigana": "やさしい",
+      "romaji": "yasashii",
+      "wordType": "adjective",
+      "meaningVi": "Dịu dàng, hiền hậu",
+      "accentNote": "Tính từ い. Đồng âm với 易しい (dễ, bài 2) nhưng chữ Hán khác."
+    },
+    {
+      "id": "voc-n5-16-19",
+      "word": "せびろ",
+      "kanji": "背広",
+      "furigana": "せびろ",
+      "romaji": "sebiro",
+      "wordType": "noun",
+      "meaningVi": "Bộ vest nam",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-16-20",
+      "word": "いりぐち",
+      "kanji": "入口",
+      "furigana": "いりぐち",
+      "romaji": "いりぐち",
+      "wordType": "noun",
+      "meaningVi": "Lối vào",
+      "accentNote": "Trái nghĩa: 出口 (lối ra)."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n5-16-1",
+      "character": "顔",
+      "hanViet": "NHAN",
+      "strokeCount": 18,
+      "onyomi": [
+        "ガン (gan)"
+      ],
+      "kunyomi": [
+        "かお"
+      ],
+      "meaningVi": "Khuôn mặt.",
+      "commonWords": [
+        {
+          "word": "顔",
+          "furigana": "かお",
+          "meaningVi": "Khuôn mặt"
+        },
+        {
+          "word": "洗顔",
+          "furigana": "せんがん",
+          "meaningVi": "Rửa mặt"
+        },
+        {
+          "word": "笑顔",
+          "furigana": "えがお",
+          "meaningVi": "Nụ cười"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-16-2",
+      "character": "目",
+      "hanViet": "MỤC",
+      "strokeCount": 5,
+      "onyomi": [
+        "モク (moku)"
+      ],
+      "kunyomi": [
+        "め"
+      ],
+      "meaningVi": "Mắt. Hình vẽ con mắt.",
+      "commonWords": [
+        {
+          "word": "目",
+          "furigana": "め",
+          "meaningVi": "Mắt"
+        },
+        {
+          "word": "目的",
+          "furigana": "もくてき",
+          "meaningVi": "Mục đích"
+        },
+        {
+          "word": "科目",
+          "furigana": "かもく",
+          "meaningVi": "Môn học"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-16-3",
+      "character": "手",
+      "hanViet": "THỦ",
+      "strokeCount": 4,
+      "onyomi": [
+        "シュ (shu)"
+      ],
+      "kunyomi": [
+        "て"
+      ],
+      "meaningVi": "Bàn tay. Đã gặp ở bài 9 (上手/下手).",
+      "commonWords": [
+        {
+          "word": "手",
+          "furigana": "て",
+          "meaningVi": "Bàn tay"
+        },
+        {
+          "word": "上手",
+          "furigana": "じょうず",
+          "meaningVi": "Giỏi"
+        },
+        {
+          "word": "手紙",
+          "furigana": "てがみ",
+          "meaningVi": "Lá thư"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-16-4",
+      "character": "足",
+      "hanViet": "TÚC",
+      "strokeCount": 7,
+      "onyomi": [
+        "ソク (soku)"
+      ],
+      "kunyomi": [
+        "あし",
+        "た(りる)"
+      ],
+      "meaningVi": "Chân; đủ.",
+      "commonWords": [
+        {
+          "word": "足",
+          "furigana": "あし",
+          "meaningVi": "Chân"
+        },
+        {
+          "word": "足ります",
+          "furigana": "たります",
+          "meaningVi": "Đủ"
+        },
+        {
+          "word": "満足",
+          "furigana": "まんぞく",
+          "meaningVi": "Mãn nguyện"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-16-5",
+      "character": "頭",
+      "hanViet": "ĐẦU",
+      "strokeCount": 16,
+      "onyomi": [
+        "トウ (tou)"
+      ],
+      "kunyomi": [
+        "あたま"
+      ],
+      "meaningVi": "Đầu.",
+      "commonWords": [
+        {
+          "word": "頭",
+          "furigana": "あたま",
+          "meaningVi": "Đầu"
+        },
+        {
+          "word": "頭痛",
+          "furigana": "ずつう",
+          "meaningVi": "Đau đầu"
+        },
+        {
+          "word": "先頭",
+          "furigana": "せんとう",
+          "meaningVi": "Hàng đầu"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n5-l16-s1",
+      "slideType": "grammar",
+      "title": "1. Nối nhiều hành động: V1て、V2て、V3ます",
+      "grammarFormula": "V1て + V2て + …+ V(cuối)ます   (chỉ chia ます ở ĐỘNG TỪ CUỐI CÙNG)",
+      "explanation": "Muốn kể một chuỗi hành động liên tiếp theo thời gian, chia TẤT CẢ động từ trước đó thành thể て, chỉ động từ CUỐI CÙNG mới chia ます để chốt thì của cả câu.",
+      "teacherTips": "Nếu chia ます cho từng động từ (起きます、磨きます、行きます) thì thành ba câu rời rạc, mất chất tự nhiên của chuỗi hành động.",
+      "culturalNotes": "Trật tự các hành động buổi sáng trong câu ví dụ phản ánh thói quen thường thấy của người Nhật: dậy → vệ sinh cá nhân → ra khỏi nhà.",
+      "examples": [
+        {
+          "id": "ex-n5-l16-s1-1",
+          "tokens": [
+            {
+              "id": "t-l16s1-1",
+              "text": "あさ",
+              "isKeyGrammar": false,
+              "kanji": "朝",
+              "furigana": "あさ"
+            },
+            {
+              "id": "t-l16s1-2",
+              "text": "おきて",
+              "isKeyGrammar": true,
+              "kanji": "起きて",
+              "furigana": "おきて"
+            },
+            {
+              "id": "t-l16s1-3",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s1-4",
+              "text": "はをみがいて",
+              "isKeyGrammar": true,
+              "kanji": "歯を磨いて",
+              "furigana": "はをみがいて"
+            },
+            {
+              "id": "t-l16s1-5",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s1-6",
+              "text": "かいしゃ",
+              "isKeyGrammar": false,
+              "kanji": "会社",
+              "furigana": "かいしゃ"
+            },
+            {
+              "id": "t-l16s1-7",
+              "text": "へ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s1-8",
+              "text": "いきます",
+              "isKeyGrammar": false,
+              "kanji": "行きます",
+              "furigana": "いきます"
+            }
+          ],
+          "meaningVi": "Buổi sáng tôi thức dậy, đánh răng, rồi đi làm."
+        },
+        {
+          "id": "ex-n5-l16-s1-2",
+          "tokens": [
+            {
+              "id": "t-l16s1-9",
+              "text": "シャワーを あびて",
+              "isKeyGrammar": true,
+              "kanji": "シャワーを浴びて",
+              "furigana": "シャワーをあびて"
+            },
+            {
+              "id": "t-l16s1-10",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s1-11",
+              "text": "でかけます",
+              "isKeyGrammar": false,
+              "kanji": "出かけます",
+              "furigana": "でかけます"
+            }
+          ],
+          "meaningVi": "Tôi tắm vòi sen rồi ra ngoài."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l16-s2",
+      "slideType": "grammar",
+      "title": "2. Ôn Vてから: bắt buộc đúng thứ tự",
+      "grammarFormula": "V1てから、V2 (nhấn mạnh V1 PHẢI xong trước khi V2 bắt đầu)",
+      "explanation": "So với V1て、V2 ở slide 1 (chỉ kể tuần tự), Vてから nhấn mạnh tính BẮT BUỘC của thứ tự — nếu chưa xong V1 thì V2 không thể/không nên xảy ra.",
+      "teacherTips": "Cả V1て、V2 và V1てから、V2 đều đúng ngữ pháp — khác biệt chỉ ở mức độ NHẤN MẠNH thứ tự bắt buộc.",
+      "culturalNotes": "Người Nhật rất coi trọng đúng trình tự các bước vệ sinh cá nhân, nấu ăn — đây là lý do てから xuất hiện nhiều trong hướng dẫn.",
+      "examples": [
+        {
+          "id": "ex-n5-l16-s2-1",
+          "tokens": [
+            {
+              "id": "t-l16s2-1",
+              "text": "かお",
+              "isKeyGrammar": false,
+              "kanji": "顔",
+              "furigana": "かお"
+            },
+            {
+              "id": "t-l16s2-2",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s2-3",
+              "text": "あらって",
+              "isKeyGrammar": true,
+              "kanji": "洗って",
+              "furigana": "あらって"
+            },
+            {
+              "id": "t-l16s2-4",
+              "text": "から",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l16s2-5",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s2-6",
+              "text": "はをみがきます",
+              "isKeyGrammar": false,
+              "kanji": "歯を磨きます",
+              "furigana": "はをみがきます"
+            }
+          ],
+          "meaningVi": "Rửa mặt xong rồi mới đánh răng."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l16-s3",
+      "slideType": "grammar",
+      "title": "3. Miêu tả bộ phận/đặc điểm: N1 は N2 が A です",
+      "grammarFormula": "[Toàn thể] + は + [bộ phận/đặc điểm] + が + [tính từ] + です",
+      "explanation": "Cấu trúc HAI CHỦ NGỮ đặc trưng của tiếng Nhật: は đánh dấu chủ đề TOÀN THỂ (người/vật), が đánh dấu BỘ PHẬN CỤ THỂ được miêu tả — は giới thiệu, が miêu tả chi tiết.",
+      "teacherTips": "Câu trúc này cũng dùng được cho TÍNH CÁCH: 「山田さんは 性格が 明るいです」= anh Yamada tính tình vui vẻ.",
+      "culturalNotes": "Khen ngoại hình bằng cấu trúc này rất tự nhiên trong tiếng Nhật, nhưng cần chọn từ cẩn trọng để không mạo phạm.",
+      "examples": [
+        {
+          "id": "ex-n5-l16-s3-1",
+          "tokens": [
+            {
+              "id": "t-l16s3-1",
+              "text": "やまださん",
+              "isKeyGrammar": false,
+              "kanji": "山田さん",
+              "furigana": "やまださん"
+            },
+            {
+              "id": "t-l16s3-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s3-3",
+              "text": "め",
+              "isKeyGrammar": true,
+              "kanji": "目",
+              "furigana": "め"
+            },
+            {
+              "id": "t-l16s3-4",
+              "text": "が",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l16s3-5",
+              "text": "おおきい",
+              "isKeyGrammar": false,
+              "kanji": "大きい",
+              "furigana": "おおきい"
+            },
+            {
+              "id": "t-l16s3-6",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Anh Yamada có đôi mắt to."
+        },
+        {
+          "id": "ex-n5-l16-s3-2",
+          "tokens": [
+            {
+              "id": "t-l16s3-7",
+              "text": "ぞう",
+              "isKeyGrammar": false,
+              "kanji": "象",
+              "furigana": "ぞう"
+            },
+            {
+              "id": "t-l16s3-8",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s3-9",
+              "text": "はな",
+              "isKeyGrammar": true,
+              "kanji": "鼻",
+              "furigana": "はな"
+            },
+            {
+              "id": "t-l16s3-10",
+              "text": "が",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l16s3-11",
+              "text": "ながい",
+              "isKeyGrammar": false,
+              "kanji": "長い",
+              "furigana": "ながい"
+            },
+            {
+              "id": "t-l16s3-12",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Con voi có cái vòi dài."
+        },
+        {
+          "id": "ex-n5-l16-s3-3",
+          "tokens": [
+            {
+              "id": "t-l16s3-13",
+              "text": "サントスさん",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s3-14",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s3-15",
+              "text": "せい",
+              "isKeyGrammar": true,
+              "kanji": "背",
+              "furigana": "せい"
+            },
+            {
+              "id": "t-l16s3-16",
+              "text": "が",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l16s3-17",
+              "text": "たかい",
+              "isKeyGrammar": false,
+              "kanji": "高い",
+              "furigana": "たかい"
+            },
+            {
+              "id": "t-l16s3-18",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Anh Santos có dáng người cao."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l16-s4",
+      "slideType": "grammar",
+      "title": "4. Miêu tả tính cách bằng N1はN2がA",
+      "grammarFormula": "[Người] + は + [đặc điểm tính cách] + が + いい／親切／優しい",
+      "explanation": "Mở rộng cấu trúc slide 3 sang TÍNH CÁCH thay vì ngoại hình — vẫn giữ nguyên khung は…が…です, chỉ đổi loại đặc điểm được miêu tả.",
+      "teacherTips": "やさしい (優しい, dịu dàng) và やさしい (易しい, dễ, bài 2) đọc GIỐNG NHAU nhưng chữ Hán và nghĩa khác hẳn — phân biệt bằng ngữ cảnh.",
+      "culturalNotes": "優しい là lời khen phổ biến nhất về tính cách trong tiếng Nhật, dùng được cho cả nam và nữ.",
+      "examples": [
+        {
+          "id": "ex-n5-l16-s4-1",
+          "tokens": [
+            {
+              "id": "t-l16s4-1",
+              "text": "せんせい",
+              "isKeyGrammar": false,
+              "kanji": "先生",
+              "furigana": "せんせい"
+            },
+            {
+              "id": "t-l16s4-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s4-3",
+              "text": "せいかく",
+              "isKeyGrammar": false,
+              "kanji": "性格",
+              "furigana": "せいかく"
+            },
+            {
+              "id": "t-l16s4-4",
+              "text": "が",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l16s4-5",
+              "text": "あかるい",
+              "isKeyGrammar": true,
+              "kanji": "明るい",
+              "furigana": "あかるい"
+            },
+            {
+              "id": "t-l16s4-6",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Thầy giáo có tính cách vui vẻ."
+        },
+        {
+          "id": "ex-n5-l16-s4-2",
+          "tokens": [
+            {
+              "id": "t-l16s4-7",
+              "text": "やまださん",
+              "isKeyGrammar": false,
+              "kanji": "山田さん",
+              "furigana": "やまださん"
+            },
+            {
+              "id": "t-l16s4-8",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s4-9",
+              "text": "ひと",
+              "isKeyGrammar": false,
+              "kanji": "人",
+              "furigana": "ひと"
+            },
+            {
+              "id": "t-l16s4-10",
+              "text": "が",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l16s4-11",
+              "text": "しんせつ",
+              "isKeyGrammar": true,
+              "kanji": "親切",
+              "furigana": "しんせつ"
+            },
+            {
+              "id": "t-l16s4-12",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Anh Yamada là người tốt bụng."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n5-16-1",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l16-1",
+          "text": "サントスさん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-2",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-3",
+          "text": "まいあさ",
+          "isKeyGrammar": false,
+          "kanji": "毎朝",
+          "furigana": "まいあさ"
+        },
+        {
+          "id": "d-l16-4",
+          "text": "なに",
+          "isKeyGrammar": false,
+          "kanji": "何",
+          "furigana": "なに"
+        },
+        {
+          "id": "d-l16-5",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-6",
+          "text": "しますか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Anh Santos mỗi sáng làm gì vậy?"
+    },
+    {
+      "id": "dia-n5-16-2",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l16-7",
+          "text": "ろくじ",
+          "isKeyGrammar": false,
+          "kanji": "6時",
+          "furigana": "ろくじ"
+        },
+        {
+          "id": "d-l16-8",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-9",
+          "text": "おきて",
+          "isKeyGrammar": true,
+          "kanji": "起きて",
+          "furigana": "おきて"
+        },
+        {
+          "id": "d-l16-10",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-11",
+          "text": "はをみがいて",
+          "isKeyGrammar": true,
+          "kanji": "歯を磨いて",
+          "furigana": "はをみがいて"
+        },
+        {
+          "id": "d-l16-12",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-13",
+          "text": "シャワーを あびます",
+          "isKeyGrammar": true,
+          "kanji": "シャワーを浴びます",
+          "furigana": "シャワーをあびます"
+        }
+      ],
+      "meaningVi": "6 giờ tôi thức dậy, đánh răng, rồi tắm vòi sen."
+    },
+    {
+      "id": "dia-n5-16-3",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l16-14",
+          "text": "そのあと",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-15",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-16",
+          "text": "なに",
+          "isKeyGrammar": false,
+          "kanji": "何",
+          "furigana": "なに"
+        },
+        {
+          "id": "d-l16-17",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-18",
+          "text": "しますか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Sau đó anh làm gì tiếp?"
+    },
+    {
+      "id": "dia-n5-16-4",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l16-19",
+          "text": "あさごはん",
+          "isKeyGrammar": false,
+          "kanji": "朝ご飯",
+          "furigana": "あさごはん"
+        },
+        {
+          "id": "d-l16-20",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-21",
+          "text": "たべて",
+          "isKeyGrammar": false,
+          "kanji": "食べて",
+          "furigana": "たべて"
+        },
+        {
+          "id": "d-l16-22",
+          "text": "から",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l16-23",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-24",
+          "text": "でかけます",
+          "isKeyGrammar": true,
+          "kanji": "出かけます",
+          "furigana": "でかけます"
+        }
+      ],
+      "meaningVi": "Ăn sáng xong tôi mới ra ngoài."
+    },
+    {
+      "id": "dia-n5-16-5",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l16-25",
+          "text": "ところで",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-26",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-27",
+          "text": "あたらしい",
+          "isKeyGrammar": false,
+          "kanji": "新しい",
+          "furigana": "あたらしい"
+        },
+        {
+          "id": "d-l16-28",
+          "text": "せんせい",
+          "isKeyGrammar": false,
+          "kanji": "先生",
+          "furigana": "せんせい"
+        },
+        {
+          "id": "d-l16-29",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-30",
+          "text": "どんな",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-31",
+          "text": "ひと",
+          "isKeyGrammar": false,
+          "kanji": "人",
+          "furigana": "ひと"
+        },
+        {
+          "id": "d-l16-32",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "À mà, thầy giáo mới là người thế nào vậy?"
+    },
+    {
+      "id": "dia-n5-16-6",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l16-33",
+          "text": "せんせい",
+          "isKeyGrammar": false,
+          "kanji": "先生",
+          "furigana": "せんせい"
+        },
+        {
+          "id": "d-l16-34",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-35",
+          "text": "せい",
+          "isKeyGrammar": true,
+          "kanji": "背",
+          "furigana": "せい"
+        },
+        {
+          "id": "d-l16-36",
+          "text": "が",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l16-37",
+          "text": "たかくて",
+          "isKeyGrammar": false,
+          "kanji": "高くて",
+          "furigana": "たかくて"
+        },
+        {
+          "id": "d-l16-38",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-39",
+          "text": "め",
+          "isKeyGrammar": true,
+          "kanji": "目",
+          "furigana": "め"
+        },
+        {
+          "id": "d-l16-40",
+          "text": "が",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l16-41",
+          "text": "おおきい",
+          "isKeyGrammar": false,
+          "kanji": "大きい",
+          "furigana": "おおきい"
+        },
+        {
+          "id": "d-l16-42",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Thầy dáng cao, mắt to."
+    },
+    {
+      "id": "dia-n5-16-7",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l16-43",
+          "text": "せいかく",
+          "isKeyGrammar": false,
+          "kanji": "性格",
+          "furigana": "せいかく"
+        },
+        {
+          "id": "d-l16-44",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-45",
+          "text": "どうですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Tính cách thầy thế nào?"
+    },
+    {
+      "id": "dia-n5-16-8",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l16-46",
+          "text": "とても",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-47",
+          "text": "しんせつ",
+          "isKeyGrammar": true,
+          "kanji": "親切",
+          "furigana": "しんせつ"
+        },
+        {
+          "id": "d-l16-48",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-49",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-50",
+          "text": "ひと",
+          "isKeyGrammar": false,
+          "kanji": "人",
+          "furigana": "ひと"
+        },
+        {
+          "id": "d-l16-51",
+          "text": "が",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l16-52",
+          "text": "やさしい",
+          "isKeyGrammar": true,
+          "kanji": "優しい",
+          "furigana": "やさしい"
+        },
+        {
+          "id": "d-l16-53",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Thầy rất tốt bụng. Là người dịu dàng."
+    },
+    {
+      "id": "dia-n5-16-9",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l16-54",
+          "text": "そうですか",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-55",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-56",
+          "text": "はやく",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-57",
+          "text": "あいたい",
+          "isKeyGrammar": true,
+          "kanji": "会いたい",
+          "furigana": "あいたい"
+        },
+        {
+          "id": "d-l16-58",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vậy à. Tôi muốn gặp thầy sớm quá."
+    },
+    {
+      "id": "dia-n5-16-10",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l16-59",
+          "text": "らいしゅう",
+          "isKeyGrammar": false,
+          "kanji": "来週",
+          "furigana": "らいしゅう"
+        },
+        {
+          "id": "d-l16-60",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-61",
+          "text": "きょうしつ",
+          "isKeyGrammar": false,
+          "kanji": "教室",
+          "furigana": "きょうしつ"
+        },
+        {
+          "id": "d-l16-62",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l16-63",
+          "text": "あいましょう",
+          "isKeyGrammar": false,
+          "kanji": "会いましょう",
+          "furigana": "あいましょう"
+        }
+      ],
+      "meaningVi": "Tuần sau gặp nhau ở phòng học nhé."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n5-16-1",
+      "question": "「起きて、歯を磨いて、会社へ 行きます」 — hai động từ đầu chia thể gì?",
+      "options": [
+        "Thể て (chỉ động từ cuối chia ます)",
+        "Thể ます như bình thường",
+        "Thể từ điển",
+        "Thể quá khứ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Khi nối nhiều hành động liên tiếp, chỉ động từ CUỐI CÙNG chia ます để chốt thì cả câu, các động từ trước chia thể て.",
+      "hint": "Xem quy tắc nối chuỗi hành động."
+    },
+    {
+      "id": "ex-q-n5-16-2",
+      "question": "V1てから、V2 khác V1て、V2 ở chỗ:",
+      "options": [
+        "Nhấn mạnh V1 PHẢI xong trước khi V2 bắt đầu",
+        "Không có gì khác nhau",
+        "V1てから sai ngữ pháp",
+        "V1て chỉ dùng cho câu phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cả hai đều đúng ngữ pháp, nhưng てから nhấn mạnh tính BẮT BUỘC của thứ tự hơn て đơn thuần.",
+      "hint": "So sánh mức độ nhấn mạnh."
+    },
+    {
+      "id": "ex-q-n5-16-3",
+      "question": "「山田さんは 目が 大きいです」 — trợ từ は và が đóng vai trò gì?",
+      "options": [
+        "は giới thiệu chủ đề toàn thể, が đánh dấu bộ phận được miêu tả",
+        "Cả hai đều là chủ ngữ như nhau",
+        "は là tân ngữ",
+        "が là chủ đề"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đây là cấu trúc HAI CHỦ NGỮ đặc trưng: は cho TOÀN THỂ (người), が cho BỘ PHẬN cụ thể (mắt).",
+      "hint": "Đọc lại giải thích cấu trúc N1はN2が."
+    },
+    {
+      "id": "ex-q-n5-16-4",
+      "question": "「象は 鼻が 長いです」 dịch đúng là:",
+      "options": [
+        "Con voi có cái vòi dài",
+        "Cái vòi có con voi dài",
+        "Con voi dài",
+        "Cái vòi ngắn"
+      ],
+      "correctIndex": 0,
+      "explanation": "は giới thiệu chủ đề (voi), が đánh dấu bộ phận cụ thể (vòi) có tính chất dài.",
+      "hint": "Áp dụng đúng cấu trúc N1はN2がA."
+    },
+    {
+      "id": "ex-q-n5-16-5",
+      "question": "優しい và 易しい khác nhau ở chỗ:",
+      "options": [
+        "Đọc giống nhau (やさしい) nhưng nghĩa và chữ Hán khác nhau",
+        "Đọc khác nhau hoàn toàn",
+        "Chỉ là một từ duy nhất",
+        "優しい chỉ dùng cho vật"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đây là cặp từ đồng âm dị nghĩa: 優しい (dịu dàng, tính cách) và 易しい (dễ, đã học ở bài 2).",
+      "hint": "Phân biệt bằng ngữ cảnh câu."
+    },
+    {
+      "id": "ex-q-n5-16-6",
+      "question": "Cấu trúc N1はN2がA còn dùng để miêu tả điều gì ngoài ngoại hình?",
+      "options": [
+        "Tính cách",
+        "Chỉ dùng cho ngoại hình",
+        "Chỉ dùng cho động vật",
+        "Chỉ dùng cho câu hỏi"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cấu trúc này mở rộng sang miêu tả TÍNH CÁCH: 性格が明るい, 人が親切.",
+      "hint": "Xem slide 4 về mở rộng cấu trúc."
+    },
+    {
+      "id": "ex-q-n5-16-7",
+      "question": "Muốn nói 'rửa mặt xong rồi mới đánh răng', câu nào ĐÚNG?",
+      "options": [
+        "顔を 洗ってから、歯を 磨きます",
+        "顔を 洗ってから、歯を 磨いてから",
+        "顔を 洗って、歯を 磨いてから",
+        "顔を 洗いてから、歯を 磨きます"
+      ],
+      "correctIndex": 0,
+      "explanation": "V1てから chỉ cần một lần て+から ở hành động ĐẦU, hành động sau chia ます bình thường để kết thúc câu.",
+      "hint": "Chỉ hành động đầu tiên cần てから."
+    },
+    {
+      "id": "ex-q-n5-16-8",
+      "question": "出かけます khác 出ます ở chỗ:",
+      "options": [
+        "出かけます là ra ngoài nói chung (rời khỏi nhà), 出ます là ra khỏi MỘT nơi cụ thể",
+        "Hoàn toàn giống nhau",
+        "出かけます chỉ dùng cho xe cộ",
+        "出ます là dạng lịch sự hơn"
+      ],
+      "correctIndex": 0,
+      "explanation": "出かけます mang nghĩa 'đi ra ngoài' tổng quát (thường từ nhà), còn 出ます cần chỉ rõ RA KHỎI nơi nào.",
+      "hint": "Xem ghi chú từ vựng của hai từ này."
+    },
+    {
+      "id": "ex-q-n5-16-9",
+      "question": "Trong hội thoại, thầy giáo mới có đặc điểm ngoại hình gì?",
+      "options": [
+        "Dáng cao, mắt to",
+        "Dáng thấp, mắt nhỏ",
+        "Tóc dài",
+        "Không được miêu tả"
+      ],
+      "correctIndex": 0,
+      "explanation": "サントス miêu tả 「先生は 背が高くて、目が大きいです」.",
+      "hint": "Xem câu thoại thứ 6."
+    },
+    {
+      "id": "ex-q-n5-16-10",
+      "question": "Tính cách thầy giáo mới được miêu tả thế nào?",
+      "options": [
+        "Tốt bụng và dịu dàng",
+        "Nghiêm khắc",
+        "Ít nói",
+        "Không được nhắc tới"
+      ],
+      "correctIndex": 0,
+      "explanation": "サントス nói 「とても親切です。人が優しいです」.",
+      "hint": "Xem câu thoại thứ 8."
+    }
+  ]
+}

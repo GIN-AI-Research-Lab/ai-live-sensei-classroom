@@ -1,0 +1,1505 @@
+{
+  "level": "N3",
+  "lessonNumber": 5,
+  "title": "Bài 5: So sánh & Tương quan (に比べて & に対して)",
+  "description": "に比べて đặt một MỐC để SO SÁNH (thời gian/đối tượng khác, khách quan hơn より của N5 bài 12), và に対して đánh dấu ĐỐI TƯỢNG mà một thái độ/cảm xúc/hành động HƯỚNG TỚI (dạng bổ nghĩa danh từ: に対する) — hai cấu trúc thường gặp trong văn phong báo cáo, thống kê cùng cặp động từ 上昇する/減少する mô tả xu hướng biến đổi.",
+  "vocabList": [
+    {
+      "id": "voc-n3-5-1",
+      "word": "くらべます",
+      "kanji": "比べます",
+      "furigana": "くらべます",
+      "romaji": "kurabemasu",
+      "wordType": "verb",
+      "meaningVi": "So sánh",
+      "accentNote": "以前に 比べて = so với trước đây."
+    },
+    {
+      "id": "voc-n3-5-2",
+      "word": "たいします",
+      "kanji": "対します",
+      "furigana": "たいします",
+      "romaji": "taishimasu",
+      "wordType": "verb",
+      "meaningVi": "Đối với, hướng tới (thường dùng dạng に対して)",
+      "accentNote": "その 質問に 対して = đối với câu hỏi đó."
+    },
+    {
+      "id": "voc-n3-5-3",
+      "word": "へんかします",
+      "kanji": "変化します",
+      "furigana": "へんかします",
+      "romaji": "henka shimasu",
+      "wordType": "verb",
+      "meaningVi": "Thay đổi, biến đổi",
+      "accentNote": "環境が 変化しました = môi trường đã thay đổi."
+    },
+    {
+      "id": "voc-n3-5-4",
+      "word": "じょうしょうします",
+      "kanji": "上昇します",
+      "furigana": "じょうしょうします",
+      "romaji": "joushou shimasu",
+      "wordType": "verb",
+      "meaningVi": "Tăng lên, đi lên",
+      "accentNote": "物価が 上昇しました = giá cả đã tăng lên."
+    },
+    {
+      "id": "voc-n3-5-5",
+      "word": "げんしょうします",
+      "kanji": "減少します",
+      "furigana": "げんしょうします",
+      "romaji": "genshou shimasu",
+      "wordType": "verb",
+      "meaningVi": "Giảm xuống",
+      "accentNote": "人口が 減少しました = dân số đã giảm xuống."
+    },
+    {
+      "id": "voc-n3-5-6",
+      "word": "いぜん",
+      "kanji": "以前",
+      "furigana": "いぜん",
+      "romaji": "izen",
+      "wordType": "noun",
+      "meaningVi": "Trước đây, ngày xưa",
+      "accentNote": "以前に 比べて、便利に なりました = so với trước đây, đã trở nên tiện lợi hơn."
+    },
+    {
+      "id": "voc-n3-5-7",
+      "word": "げんざい",
+      "kanji": "現在",
+      "furigana": "げんざい",
+      "romaji": "genzai",
+      "wordType": "noun",
+      "meaningVi": "Hiện tại, bây giờ",
+      "accentNote": "現在に 比べて、昔は 不便でした = so với hiện tại, ngày xưa bất tiện hơn."
+    },
+    {
+      "id": "voc-n3-5-8",
+      "word": "かんきょう",
+      "kanji": "環境",
+      "furigana": "かんきょう",
+      "romaji": "kankyou",
+      "wordType": "noun",
+      "meaningVi": "Môi trường",
+      "accentNote": "環境問題に 対して 関心が あります = tôi quan tâm đối với vấn đề môi trường."
+    },
+    {
+      "id": "voc-n3-5-9",
+      "word": "とかい",
+      "kanji": "都会",
+      "furigana": "とかい",
+      "romaji": "tokai",
+      "wordType": "noun",
+      "meaningVi": "Thành thị, đô thị",
+      "accentNote": "Đã gặp N4 bài 35."
+    },
+    {
+      "id": "voc-n3-5-10",
+      "word": "いなか",
+      "kanji": "田舎",
+      "furigana": "いなか",
+      "romaji": "inaka",
+      "wordType": "noun",
+      "meaningVi": "Vùng quê, nông thôn",
+      "accentNote": "Đã gặp N4 bài 35."
+    },
+    {
+      "id": "voc-n3-5-11",
+      "word": "ぶっか",
+      "kanji": "物価",
+      "furigana": "ぶっか",
+      "romaji": "bukka",
+      "wordType": "noun",
+      "meaningVi": "Vật giá, giá cả sinh hoạt",
+      "accentNote": "都会は 田舎に 比べて 物価が 高いです = thành thị so với nông thôn thì giá cả cao hơn."
+    },
+    {
+      "id": "voc-n3-5-12",
+      "word": "じんこう",
+      "kanji": "人口",
+      "furigana": "じんこう",
+      "romaji": "jinkou",
+      "wordType": "noun",
+      "meaningVi": "Dân số",
+      "accentNote": "Đã gặp bài 27 (N4)."
+    },
+    {
+      "id": "voc-n3-5-13",
+      "word": "かんしん",
+      "kanji": "関心",
+      "furigana": "かんしん",
+      "romaji": "kanshin",
+      "wordType": "noun",
+      "meaningVi": "Sự quan tâm, hứng thú",
+      "accentNote": "政治に 対する 関心が 低いです = sự quan tâm đối với chính trị thấp."
+    },
+    {
+      "id": "voc-n3-5-14",
+      "word": "たいど",
+      "kanji": "態度",
+      "furigana": "たいど",
+      "romaji": "taido",
+      "wordType": "noun",
+      "meaningVi": "Thái độ",
+      "accentNote": "彼の 態度に 対して 怒りました = tôi đã tức giận với thái độ của anh ấy."
+    },
+    {
+      "id": "voc-n3-5-15",
+      "word": "いけん",
+      "kanji": "意見",
+      "furigana": "いけん",
+      "romaji": "iken",
+      "wordType": "noun",
+      "meaningVi": "Ý kiến, quan điểm",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n3-5-16",
+      "word": "べんり",
+      "kanji": "便利",
+      "furigana": "べんり",
+      "romaji": "benri",
+      "wordType": "adjective",
+      "meaningVi": "Tiện lợi",
+      "accentNote": "Đã gặp N5 bài 8."
+    },
+    {
+      "id": "voc-n3-5-17",
+      "word": "ふべん",
+      "kanji": "不便",
+      "furigana": "ふべん",
+      "romaji": "fuben",
+      "wordType": "adjective",
+      "meaningVi": "Bất tiện",
+      "accentNote": "Đã gặp N4 bài 35."
+    },
+    {
+      "id": "voc-n3-5-18",
+      "word": "むかし",
+      "kanji": "昔",
+      "furigana": "むかし",
+      "romaji": "mukashi",
+      "wordType": "noun",
+      "meaningVi": "Ngày xưa, thuở xưa",
+      "accentNote": "昔に 比べて = so với ngày xưa."
+    },
+    {
+      "id": "voc-n3-5-19",
+      "word": "せいかつ",
+      "kanji": "生活",
+      "furigana": "せいかつ",
+      "romaji": "seikatsu",
+      "wordType": "noun",
+      "meaningVi": "Cuộc sống, sinh hoạt",
+      "accentNote": "Đã gặp N4 bài 28."
+    },
+    {
+      "id": "voc-n3-5-20",
+      "word": "しゃかい",
+      "kanji": "社会",
+      "furigana": "しゃかい",
+      "romaji": "shakai",
+      "wordType": "noun",
+      "meaningVi": "Xã hội",
+      "accentNote": "現代 社会に 対する 意見 = ý kiến đối với xã hội hiện đại."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n3-5-1",
+      "character": "比",
+      "hanViet": "TỈ",
+      "strokeCount": 4,
+      "onyomi": [
+        "ヒ (hi)"
+      ],
+      "kunyomi": [
+        "くら(べる)"
+      ],
+      "meaningVi": "So sánh.",
+      "commonWords": [
+        {
+          "word": "比べます",
+          "furigana": "くらべます",
+          "meaningVi": "So sánh"
+        },
+        {
+          "word": "比較",
+          "furigana": "ひかく",
+          "meaningVi": "So sánh (Hán Việt)"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-5-2",
+      "character": "対",
+      "hanViet": "ĐỐI",
+      "strokeCount": 7,
+      "onyomi": [
+        "タイ (tai)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Đối diện, đối với.",
+      "commonWords": [
+        {
+          "word": "対して",
+          "furigana": "たいして",
+          "meaningVi": "Đối với"
+        },
+        {
+          "word": "反対",
+          "furigana": "はんたい",
+          "meaningVi": "Phản đối"
+        },
+        {
+          "word": "絶対",
+          "furigana": "ぜったい",
+          "meaningVi": "Tuyệt đối"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-5-3",
+      "character": "境",
+      "hanViet": "CẢNH",
+      "strokeCount": 14,
+      "onyomi": [
+        "キョウ (kyou)"
+      ],
+      "kunyomi": [
+        "さかい"
+      ],
+      "meaningVi": "Ranh giới, hoàn cảnh.",
+      "commonWords": [
+        {
+          "word": "環境",
+          "furigana": "かんきょう",
+          "meaningVi": "Môi trường"
+        },
+        {
+          "word": "国境",
+          "furigana": "こっきょう",
+          "meaningVi": "Biên giới"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-5-4",
+      "character": "価",
+      "hanViet": "GIÁ",
+      "strokeCount": 8,
+      "onyomi": [
+        "カ (ka)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Giá cả, giá trị.",
+      "commonWords": [
+        {
+          "word": "物価",
+          "furigana": "ぶっか",
+          "meaningVi": "Vật giá"
+        },
+        {
+          "word": "価格",
+          "furigana": "かかく",
+          "meaningVi": "Giá cả"
+        },
+        {
+          "word": "評価",
+          "furigana": "ひょうか",
+          "meaningVi": "Đánh giá"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-5-5",
+      "character": "態",
+      "hanViet": "THÁI",
+      "strokeCount": 14,
+      "onyomi": [
+        "タイ (tai)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Hình thái, trạng thái.",
+      "commonWords": [
+        {
+          "word": "態度",
+          "furigana": "たいど",
+          "meaningVi": "Thái độ"
+        },
+        {
+          "word": "状態",
+          "furigana": "じょうたい",
+          "meaningVi": "Trạng thái"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n3-l5-s1",
+      "slideType": "grammar",
+      "title": "1. So sánh với mốc trước đó: N に比べて、[sự thay đổi]",
+      "grammarFormula": "N + に比べて、[so sánh/thay đổi]   (đặt một MỐC để so sánh, thường là thời gian hoặc đối tượng khác)",
+      "explanation": "に比べて (so với) đặt ra một MỐC SO SÁNH rõ ràng — khác より (N5 bài 12, so sánh đơn giản hai vật), に比べて thường dùng cho so sánh có DỮ LIỆU/SỰ THAY ĐỔI theo thời gian.",
+      "teacherTips": "に比べて thường xuất hiện trong báo cáo, thống kê, bài luận vì tính KHÁCH QUAN — hơn hẳn より vốn thân mật, dùng nhiều trong hội thoại.",
+      "culturalNotes": "都会は田舎に比べて物価が高いです là nhận định thường được nêu khi bàn về việc chọn nơi sinh sống ở Nhật — chủ đề dân sinh phổ biến.",
+      "examples": [
+        {
+          "id": "ex-n3-l5-s1-1",
+          "tokens": [
+            {
+              "id": "t-l5s1-1",
+              "text": "いぜん",
+              "isKeyGrammar": true,
+              "kanji": "以前",
+              "furigana": "いぜん"
+            },
+            {
+              "id": "t-l5s1-2",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s1-3",
+              "text": "くらべて",
+              "isKeyGrammar": true,
+              "kanji": "比べて",
+              "furigana": "くらべて"
+            },
+            {
+              "id": "t-l5s1-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s1-5",
+              "text": "せいかつ",
+              "isKeyGrammar": false,
+              "kanji": "生活",
+              "furigana": "せいかつ"
+            },
+            {
+              "id": "t-l5s1-6",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s1-7",
+              "text": "べんり",
+              "isKeyGrammar": false,
+              "kanji": "便利",
+              "furigana": "べんり"
+            },
+            {
+              "id": "t-l5s1-8",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s1-9",
+              "text": "なりました",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "So với trước đây, cuộc sống đã trở nên tiện lợi hơn."
+        },
+        {
+          "id": "ex-n3-l5-s1-2",
+          "tokens": [
+            {
+              "id": "t-l5s1-10",
+              "text": "とかい",
+              "isKeyGrammar": true,
+              "kanji": "都会",
+              "furigana": "とかい"
+            },
+            {
+              "id": "t-l5s1-11",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s1-12",
+              "text": "いなか",
+              "isKeyGrammar": true,
+              "kanji": "田舎",
+              "furigana": "いなか"
+            },
+            {
+              "id": "t-l5s1-13",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s1-14",
+              "text": "くらべて",
+              "isKeyGrammar": true,
+              "kanji": "比べて",
+              "furigana": "くらべて"
+            },
+            {
+              "id": "t-l5s1-15",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s1-16",
+              "text": "ぶっか",
+              "isKeyGrammar": true,
+              "kanji": "物価",
+              "furigana": "ぶっか"
+            },
+            {
+              "id": "t-l5s1-17",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s1-18",
+              "text": "たかい",
+              "isKeyGrammar": false,
+              "kanji": "高い",
+              "furigana": "たかい"
+            },
+            {
+              "id": "t-l5s1-19",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Thành thị so với nông thôn thì giá cả cao hơn."
+        }
+      ]
+    },
+    {
+      "slideId": "n3-l5-s2",
+      "slideType": "grammar",
+      "title": "2. Đối tượng của thái độ/hành động: N に対して、[thái độ/hành động]",
+      "grammarFormula": "N + に対して、[thái độ/hành động]   (hướng THẲNG một hành động/cảm xúc VÀO một đối tượng cụ thể)",
+      "explanation": "に対して đánh dấu ĐỐI TƯỢNG mà một thái độ, cảm xúc, hoặc hành động HƯỚNG TỚI — khác に比べて (so sánh), に対して nhấn MỐI QUAN HỆ TRỰC TIẾP giữa chủ thể và đối tượng.",
+      "teacherTips": "に対する (dạng bổ nghĩa danh từ): 環境に対する関心 (sự quan tâm ĐỐI VỚI môi trường) — cần đổi して thành する khi đứng trước danh từ.",
+      "culturalNotes": "社会に対する意見 (ý kiến đối với xã hội) là cụm từ phổ biến trong bài luận, phỏng vấn về quan điểm xã hội tại Nhật.",
+      "examples": [
+        {
+          "id": "ex-n3-l5-s2-1",
+          "tokens": [
+            {
+              "id": "t-l5s2-1",
+              "text": "かんきょう",
+              "isKeyGrammar": true,
+              "kanji": "環境",
+              "furigana": "かんきょう"
+            },
+            {
+              "id": "t-l5s2-2",
+              "text": "もんだい",
+              "isKeyGrammar": false,
+              "kanji": "問題",
+              "furigana": "もんだい"
+            },
+            {
+              "id": "t-l5s2-3",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s2-4",
+              "text": "たいして",
+              "isKeyGrammar": true,
+              "kanji": "対して",
+              "furigana": "たいして"
+            },
+            {
+              "id": "t-l5s2-5",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s2-6",
+              "text": "かんしん",
+              "isKeyGrammar": true,
+              "kanji": "関心",
+              "furigana": "かんしん"
+            },
+            {
+              "id": "t-l5s2-7",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s2-8",
+              "text": "あります",
+              "isKeyGrammar": false,
+              "kanji": "有ります",
+              "furigana": "あります"
+            }
+          ],
+          "meaningVi": "Tôi có sự quan tâm đối với vấn đề môi trường."
+        },
+        {
+          "id": "ex-n3-l5-s2-2",
+          "tokens": [
+            {
+              "id": "t-l5s2-9",
+              "text": "かれ",
+              "isKeyGrammar": false,
+              "kanji": "彼",
+              "furigana": "かれ"
+            },
+            {
+              "id": "t-l5s2-10",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s2-11",
+              "text": "たいど",
+              "isKeyGrammar": true,
+              "kanji": "態度",
+              "furigana": "たいど"
+            },
+            {
+              "id": "t-l5s2-12",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s2-13",
+              "text": "たいして",
+              "isKeyGrammar": true,
+              "kanji": "対して",
+              "furigana": "たいして"
+            },
+            {
+              "id": "t-l5s2-14",
+              "text": "おこりました",
+              "isKeyGrammar": false,
+              "kanji": "怒りました",
+              "furigana": "おこりました"
+            }
+          ],
+          "meaningVi": "Tôi đã tức giận với thái độ của anh ấy."
+        }
+      ]
+    },
+    {
+      "slideId": "n3-l5-s3",
+      "slideType": "grammar",
+      "title": "3. Phân biệt に比べて và に対して",
+      "grammarFormula": "に比べて: SO SÁNH giữa hai đối tượng/thời điểm　vs　に対して: HƯỚNG một thái độ/hành động VÀO một đối tượng",
+      "explanation": "Hai cấu trúc dễ nhầm vì đều có に + động từ — nhưng に比べて luôn cần HAI THỨ để so sánh, còn に対して chỉ cần MỘT đối tượng để hướng thái độ/hành động vào.",
+      "teacherTips": "Mẹo phân biệt: nếu câu có 'A so với B' → に比べて; nếu câu có 'đối với X, [ai đó] làm/cảm thấy gì' → に対して.",
+      "culturalNotes": "Cả hai cấu trúc đều xuất hiện dày đặc trong tin tức, báo cáo thống kê tiếng Nhật — kỹ năng đọc hiểu N3 cần nắm vững cả hai.",
+      "examples": [
+        {
+          "id": "ex-n3-l5-s3-1",
+          "tokens": [
+            {
+              "id": "t-l5s3-1",
+              "text": "むかし",
+              "isKeyGrammar": true,
+              "kanji": "昔",
+              "furigana": "むかし"
+            },
+            {
+              "id": "t-l5s3-2",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s3-3",
+              "text": "くらべて",
+              "isKeyGrammar": true,
+              "kanji": "比べて",
+              "furigana": "くらべて"
+            },
+            {
+              "id": "t-l5s3-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s3-5",
+              "text": "じんこう",
+              "isKeyGrammar": true,
+              "kanji": "人口",
+              "furigana": "じんこう"
+            },
+            {
+              "id": "t-l5s3-6",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s3-7",
+              "text": "げんしょう",
+              "isKeyGrammar": false,
+              "kanji": "減少",
+              "furigana": "げんしょう"
+            },
+            {
+              "id": "t-l5s3-8",
+              "text": "しました",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "So với ngày xưa, dân số đã giảm xuống. (に比べて: so sánh 2 mốc thời gian)"
+        },
+        {
+          "id": "ex-n3-l5-s3-2",
+          "tokens": [
+            {
+              "id": "t-l5s3-9",
+              "text": "せいふ",
+              "isKeyGrammar": false,
+              "kanji": "政府",
+              "furigana": "せいふ"
+            },
+            {
+              "id": "t-l5s3-10",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s3-11",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s3-12",
+              "text": "もんだい",
+              "isKeyGrammar": false,
+              "kanji": "問題",
+              "furigana": "もんだい"
+            },
+            {
+              "id": "t-l5s3-13",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s3-14",
+              "text": "たいして",
+              "isKeyGrammar": true,
+              "kanji": "対して",
+              "furigana": "たいして"
+            },
+            {
+              "id": "t-l5s3-15",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s3-16",
+              "text": "なにも",
+              "isKeyGrammar": false,
+              "kanji": "何も",
+              "furigana": "なにも"
+            },
+            {
+              "id": "t-l5s3-17",
+              "text": "しませんでした",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Chính phủ đã không làm gì đối với vấn đề này. (に対して: hướng hành động vào MỘT đối tượng)"
+        }
+      ]
+    },
+    {
+      "slideId": "n3-l5-s4",
+      "slideType": "grammar",
+      "title": "4. Kết hợp với thay đổi theo thời gian: 上昇します／減少します",
+      "grammarFormula": "N が [thời gian] に比べて、上昇/減少 しました",
+      "explanation": "Hai động từ 上昇する (tăng) và 減少する (giảm) rất hay xuất hiện cùng に比べて trong VĂN PHONG THỐNG KÊ, BÁO CÁO — mô tả xu hướng biến đổi theo thời gian một cách khách quan.",
+      "teacherTips": "上昇/減少 trang trọng, khách quan hơn nhiều so với 増える/減る thông thường — hợp với văn phong báo cáo, tin tức hơn hội thoại đời thường.",
+      "culturalNotes": "都会の人口が減少しています là một chủ đề xã hội thực tế đang được bàn luận nhiều ở Nhật do tình trạng già hóa dân số và di cư.",
+      "examples": [
+        {
+          "id": "ex-n3-l5-s4-1",
+          "tokens": [
+            {
+              "id": "t-l5s4-1",
+              "text": "ぶっか",
+              "isKeyGrammar": true,
+              "kanji": "物価",
+              "furigana": "ぶっか"
+            },
+            {
+              "id": "t-l5s4-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s4-3",
+              "text": "きょねん",
+              "isKeyGrammar": false,
+              "kanji": "去年",
+              "furigana": "きょねん"
+            },
+            {
+              "id": "t-l5s4-4",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s4-5",
+              "text": "くらべて",
+              "isKeyGrammar": true,
+              "kanji": "比べて",
+              "furigana": "くらべて"
+            },
+            {
+              "id": "t-l5s4-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s4-7",
+              "text": "じょうしょう",
+              "isKeyGrammar": true,
+              "kanji": "上昇",
+              "furigana": "じょうしょう"
+            },
+            {
+              "id": "t-l5s4-8",
+              "text": "しました",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "So với năm ngoái, vật giá đã tăng lên."
+        },
+        {
+          "id": "ex-n3-l5-s4-2",
+          "tokens": [
+            {
+              "id": "t-l5s4-9",
+              "text": "とかい",
+              "isKeyGrammar": false,
+              "kanji": "都会",
+              "furigana": "とかい"
+            },
+            {
+              "id": "t-l5s4-10",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s4-11",
+              "text": "じんこう",
+              "isKeyGrammar": true,
+              "kanji": "人口",
+              "furigana": "じんこう"
+            },
+            {
+              "id": "t-l5s4-12",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l5s4-13",
+              "text": "げんしょう",
+              "isKeyGrammar": true,
+              "kanji": "減少",
+              "furigana": "げんしょう"
+            },
+            {
+              "id": "t-l5s4-14",
+              "text": "して",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l5s4-15",
+              "text": "います",
+              "isKeyGrammar": false,
+              "kanji": "居ます",
+              "furigana": "います"
+            }
+          ],
+          "meaningVi": "Dân số thành thị đang giảm xuống."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n3-5-1",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d5-1",
+          "text": "さいきん",
+          "isKeyGrammar": false,
+          "kanji": "最近",
+          "furigana": "さいきん"
+        },
+        {
+          "id": "d5-2",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-3",
+          "text": "ぶっか",
+          "isKeyGrammar": true,
+          "kanji": "物価",
+          "furigana": "ぶっか"
+        },
+        {
+          "id": "d5-4",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-5",
+          "text": "たかく",
+          "isKeyGrammar": false,
+          "kanji": "高く",
+          "furigana": "たかく"
+        },
+        {
+          "id": "d5-6",
+          "text": "なりました",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d5-7",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Gần đây, vật giá đã tăng lên nhỉ."
+    },
+    {
+      "id": "dia-n3-5-2",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d5-8",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-9",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-10",
+          "text": "いぜん",
+          "isKeyGrammar": true,
+          "kanji": "以前",
+          "furigana": "いぜん"
+        },
+        {
+          "id": "d5-11",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d5-12",
+          "text": "くらべて",
+          "isKeyGrammar": true,
+          "kanji": "比べて",
+          "furigana": "くらべて"
+        },
+        {
+          "id": "d5-13",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-14",
+          "text": "じょうしょう",
+          "isKeyGrammar": true,
+          "kanji": "上昇",
+          "furigana": "じょうしょう"
+        },
+        {
+          "id": "d5-15",
+          "text": "しました",
+          "isKeyGrammar": false,
+          "kanji": "しました",
+          "furigana": "しました"
+        }
+      ],
+      "meaningVi": "Vâng. So với trước đây, đã tăng lên rồi."
+    },
+    {
+      "id": "dia-n3-5-3",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d5-16",
+          "text": "とかい",
+          "isKeyGrammar": true,
+          "kanji": "都会",
+          "furigana": "とかい"
+        },
+        {
+          "id": "d5-17",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-18",
+          "text": "とくに",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-19",
+          "text": "たかい",
+          "isKeyGrammar": false,
+          "kanji": "高い",
+          "furigana": "たかい"
+        },
+        {
+          "id": "d5-20",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d5-21",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Thành thị đặc biệt đắt nhỉ."
+    },
+    {
+      "id": "dia-n3-5-4",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d5-22",
+          "text": "そうですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-23",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-24",
+          "text": "いなか",
+          "isKeyGrammar": true,
+          "kanji": "田舎",
+          "furigana": "いなか"
+        },
+        {
+          "id": "d5-25",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d5-26",
+          "text": "くらべて",
+          "isKeyGrammar": true,
+          "kanji": "比べて",
+          "furigana": "くらべて"
+        },
+        {
+          "id": "d5-27",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-28",
+          "text": "とかい",
+          "isKeyGrammar": false,
+          "kanji": "都会",
+          "furigana": "とかい"
+        },
+        {
+          "id": "d5-29",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-30",
+          "text": "ぶっか",
+          "isKeyGrammar": false,
+          "kanji": "物価",
+          "furigana": "ぶっか"
+        },
+        {
+          "id": "d5-31",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-32",
+          "text": "たかい",
+          "isKeyGrammar": false,
+          "kanji": "高い",
+          "furigana": "たかい"
+        },
+        {
+          "id": "d5-33",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Đúng vậy nhỉ. So với nông thôn, vật giá thành thị cao hơn."
+    },
+    {
+      "id": "dia-n3-5-5",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d5-34",
+          "text": "かんきょう",
+          "isKeyGrammar": true,
+          "kanji": "環境",
+          "furigana": "かんきょう"
+        },
+        {
+          "id": "d5-35",
+          "text": "もんだい",
+          "isKeyGrammar": false,
+          "kanji": "問題",
+          "furigana": "もんだい"
+        },
+        {
+          "id": "d5-36",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d5-37",
+          "text": "たいして",
+          "isKeyGrammar": true,
+          "kanji": "対して",
+          "furigana": "たいして"
+        },
+        {
+          "id": "d5-38",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-39",
+          "text": "かんしん",
+          "isKeyGrammar": true,
+          "kanji": "関心",
+          "furigana": "かんしん"
+        },
+        {
+          "id": "d5-40",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-41",
+          "text": "ありますか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Anh có quan tâm đối với vấn đề môi trường không?"
+    },
+    {
+      "id": "dia-n3-5-6",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d5-42",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-43",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-44",
+          "text": "とても",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-45",
+          "text": "かんしん",
+          "isKeyGrammar": false,
+          "kanji": "関心",
+          "furigana": "かんしん"
+        },
+        {
+          "id": "d5-46",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-47",
+          "text": "あります",
+          "isKeyGrammar": false,
+          "kanji": "有ります",
+          "furigana": "あります"
+        }
+      ],
+      "meaningVi": "Vâng, tôi rất quan tâm."
+    },
+    {
+      "id": "dia-n3-5-7",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d5-48",
+          "text": "じんこう",
+          "isKeyGrammar": true,
+          "kanji": "人口",
+          "furigana": "じんこう"
+        },
+        {
+          "id": "d5-49",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-50",
+          "text": "げんしょう",
+          "isKeyGrammar": true,
+          "kanji": "減少",
+          "furigana": "げんしょう"
+        },
+        {
+          "id": "d5-51",
+          "text": "して",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d5-52",
+          "text": "いますね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Dân số cũng đang giảm nữa nhỉ."
+    },
+    {
+      "id": "dia-n3-5-8",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d5-53",
+          "text": "そうですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-54",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-55",
+          "text": "むかし",
+          "isKeyGrammar": true,
+          "kanji": "昔",
+          "furigana": "むかし"
+        },
+        {
+          "id": "d5-56",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d5-57",
+          "text": "くらべて",
+          "isKeyGrammar": true,
+          "kanji": "比べて",
+          "furigana": "くらべて"
+        },
+        {
+          "id": "d5-58",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-59",
+          "text": "しゃかい",
+          "isKeyGrammar": true,
+          "kanji": "社会",
+          "furigana": "しゃかい"
+        },
+        {
+          "id": "d5-60",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-61",
+          "text": "おおきく",
+          "isKeyGrammar": false,
+          "kanji": "大きく",
+          "furigana": "おおきく"
+        },
+        {
+          "id": "d5-62",
+          "text": "かわりました",
+          "isKeyGrammar": false,
+          "kanji": "変わりました",
+          "furigana": "かわりました"
+        }
+      ],
+      "meaningVi": "Đúng vậy. So với ngày xưa, xã hội đã thay đổi rất nhiều."
+    },
+    {
+      "id": "dia-n3-5-9",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d5-63",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-64",
+          "text": "しゃかい",
+          "isKeyGrammar": false,
+          "kanji": "社会",
+          "furigana": "しゃかい"
+        },
+        {
+          "id": "d5-65",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-66",
+          "text": "へんか",
+          "isKeyGrammar": false,
+          "kanji": "変化",
+          "furigana": "へんか"
+        },
+        {
+          "id": "d5-67",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d5-68",
+          "text": "たいして",
+          "isKeyGrammar": true,
+          "kanji": "対して",
+          "furigana": "たいして"
+        },
+        {
+          "id": "d5-69",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-70",
+          "text": "どう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-71",
+          "text": "おもいます",
+          "isKeyGrammar": false,
+          "kanji": "思います",
+          "furigana": "おもいます"
+        },
+        {
+          "id": "d5-72",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Đối với sự thay đổi này của xã hội, anh nghĩ sao?"
+    },
+    {
+      "id": "dia-n3-5-10",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d5-73",
+          "text": "わたし",
+          "isKeyGrammar": false,
+          "kanji": "私",
+          "furigana": "わたし"
+        },
+        {
+          "id": "d5-74",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-75",
+          "text": "いい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-76",
+          "text": "へんか",
+          "isKeyGrammar": false,
+          "kanji": "変化",
+          "furigana": "へんか"
+        },
+        {
+          "id": "d5-77",
+          "text": "だ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-78",
+          "text": "と",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d5-79",
+          "text": "おもいます",
+          "isKeyGrammar": false,
+          "kanji": "思います",
+          "furigana": "おもいます"
+        }
+      ],
+      "meaningVi": "Tôi nghĩ đó là sự thay đổi tốt."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n3-5-1",
+      "question": "「以前に比べて、生活が便利になりました」 — に比べて dùng để:",
+      "options": [
+        "Đặt mốc so sánh (trước đây) để đối chiếu với hiện tại",
+        "Hướng thái độ vào một đối tượng",
+        "Ra lệnh so sánh",
+        "Phủ định việc so sánh"
+      ],
+      "correctIndex": 0,
+      "explanation": "に比べて đặt một MỐC (以前) làm cơ sở so sánh, khác より chỉ so sánh đơn giản.",
+      "hint": "Xem cấu trúc に比べて ở slide 1."
+    },
+    {
+      "id": "ex-q-n3-5-2",
+      "question": "「環境問題に対して、関心があります」 — に対して dùng để:",
+      "options": [
+        "Đánh dấu ĐỐI TƯỢNG mà một cảm xúc/thái độ hướng tới",
+        "So sánh hai đối tượng",
+        "Chỉ nơi chốn",
+        "Chỉ thời gian"
+      ],
+      "correctIndex": 0,
+      "explanation": "に対して đánh dấu đối tượng cụ thể mà thái độ/cảm xúc (関心, quan tâm) hướng vào.",
+      "hint": "Xem cấu trúc に対して ở slide 2."
+    },
+    {
+      "id": "ex-q-n3-5-3",
+      "question": "に比べて và に対して khác nhau chủ yếu ở:",
+      "options": [
+        "に比べて cần HAI đối tượng để SO SÁNH; に対して chỉ cần MỘT đối tượng để HƯỚNG thái độ vào",
+        "Hoàn toàn giống nhau",
+        "に比べて chỉ dùng cho câu hỏi",
+        "に対して chỉ dùng cho phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đây là điểm khác biệt cốt lõi: số lượng đối tượng và mối quan hệ (so sánh vs hướng tới).",
+      "hint": "Xem so sánh trực tiếp ở slide 3."
+    },
+    {
+      "id": "ex-q-n3-5-4",
+      "question": "「彼の態度に対して怒りました」 nghĩa là:",
+      "options": [
+        "Tôi đã tức giận VỚI thái độ của anh ấy (thái độ là đối tượng của cảm xúc)",
+        "Tôi đã so sánh thái độ của anh ấy với người khác",
+        "Tôi không tức giận",
+        "Anh ấy đã tức giận với tôi"
+      ],
+      "correctIndex": 0,
+      "explanation": "に対して hướng cảm xúc tức giận (怒りました) vào đối tượng cụ thể (態度 - thái độ của anh ấy).",
+      "hint": "Áp dụng đúng nghĩa に対して."
+    },
+    {
+      "id": "ex-q-n3-5-5",
+      "question": "Dạng bổ nghĩa danh từ của に対して là gì?",
+      "options": [
+        "に対する (đổi して thành する)",
+        "に対しての",
+        "に対してな",
+        "Không có dạng bổ nghĩa danh từ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Khi đứng trước danh từ, に対して đổi thành に対する: 環境に対する関心 (sự quan tâm đối với môi trường).",
+      "hint": "Xem ghi chú ngữ pháp ở slide 2."
+    },
+    {
+      "id": "ex-q-n3-5-6",
+      "question": "「物価は去年に比べて、上昇しました」 — 上昇します mang văn phong nào?",
+      "options": [
+        "Trang trọng, khách quan, hợp với báo cáo/thống kê",
+        "Thân mật, dùng trong hội thoại đời thường",
+        "Chỉ dùng trong thơ ca",
+        "Chỉ dùng cho câu hỏi"
+      ],
+      "correctIndex": 0,
+      "explanation": "上昇する/減少する trang trọng hơn 増える/減る thông thường, thường thấy trong văn phong báo cáo, tin tức.",
+      "hint": "Xem ghi chú văn phong ở slide 4."
+    },
+    {
+      "id": "ex-q-n3-5-7",
+      "question": "「都会は田舎に比べて物価が高いです」 — có bao nhiêu đối tượng được so sánh?",
+      "options": [
+        "Hai: đô thị và nông thôn",
+        "Một: chỉ có đô thị",
+        "Ba: đô thị, nông thôn và giá cả",
+        "Không có đối tượng so sánh nào"
+      ],
+      "correctIndex": 0,
+      "explanation": "に比べて luôn cần HAI đối tượng để so sánh — ở đây là 都会 (đô thị) và 田舎 (nông thôn).",
+      "hint": "Đếm số đối tượng xuất hiện trong câu."
+    },
+    {
+      "id": "ex-q-n3-5-8",
+      "question": "「政府はこの問題に対して、何もしませんでした」 — に対して ở đây đánh dấu:",
+      "options": [
+        "Đối tượng (vấn đề) mà hành động (không làm gì) của chính phủ hướng tới",
+        "So sánh chính phủ với vấn đề",
+        "Nơi chốn xảy ra vấn đề",
+        "Thời gian vấn đề xảy ra"
+      ],
+      "correctIndex": 0,
+      "explanation": "に対して đánh dấu đối tượng (この問題) mà hành động của chủ thể (政府) hướng tới/liên quan tới.",
+      "hint": "Áp dụng đúng nghĩa に対して cho ngữ cảnh hành động."
+    },
+    {
+      "id": "ex-q-n3-5-9",
+      "question": "Trong hội thoại, Santos có quan tâm đến vấn đề môi trường không?",
+      "options": [
+        "Có, rất quan tâm",
+        "Không quan tâm chút nào",
+        "Không được hỏi",
+        "Chỉ quan tâm một chút"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos trả lời 「はい、とても関心があります」.",
+      "hint": "Xem câu thoại thứ 6."
+    },
+    {
+      "id": "ex-q-n3-5-10",
+      "question": "Santos nghĩ gì về sự thay đổi của xã hội?",
+      "options": [
+        "Đó là sự thay đổi tốt",
+        "Đó là sự thay đổi xấu",
+        "Không có ý kiến gì",
+        "Xã hội không thay đổi"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「私はいい変化だと思います」.",
+      "hint": "Xem câu thoại cuối cùng."
+    }
+  ]
+}

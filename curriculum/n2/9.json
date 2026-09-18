@@ -1,0 +1,1480 @@
+{
+  "level": "N2",
+  "lessonNumber": 9,
+  "title": "Bài 9: Bất chấp gian khó (をものともせずに & をよそに)",
+  "description": "をものともせずに diễn tả việc BẤT CHẤP một khó khăn/trở ngại KHÁCH QUAN (bệnh tật, chấn thương, thất bại) để tiếp tục hành động — mang tính CA NGỢI sự kiên cường; をよそに diễn tả việc PHỚT LỜ/MẶC KỆ ý kiến, cảm xúc của NGƯỜI KHÁC (lo lắng, phản đối, phàn nàn) — mang sắc thái PHÊ PHÁN sự vô tâm; hai cấu trúc thường dùng song song để thể hiện lập trường trong tường thuật.",
+  "vocabList": [
+    {
+      "id": "voc-n2-9-1",
+      "word": "くしん",
+      "kanji": "苦心",
+      "furigana": "くしん",
+      "romaji": "kushin",
+      "wordType": "noun",
+      "meaningVi": "Khổ tâm, nỗ lực vất vả",
+      "accentNote": "苦心して 完成します = khổ công hoàn thành."
+    },
+    {
+      "id": "voc-n2-9-2",
+      "word": "くじょう",
+      "kanji": "苦情",
+      "furigana": "くじょう",
+      "romaji": "kujou",
+      "wordType": "noun",
+      "meaningVi": "Lời phàn nàn, khiếu nại",
+      "accentNote": "苦情を 言います = phàn nàn."
+    },
+    {
+      "id": "voc-n2-9-3",
+      "word": "すすめます",
+      "kanji": "進めます",
+      "furigana": "すすめます",
+      "romaji": "susumemasu",
+      "wordType": "verb",
+      "meaningVi": "Tiến hành, xúc tiến",
+      "accentNote": "計画を 進めます = tiến hành kế hoạch."
+    },
+    {
+      "id": "voc-n2-9-4",
+      "word": "まわり",
+      "kanji": "周り",
+      "furigana": "まわり",
+      "romaji": "mawari",
+      "wordType": "noun",
+      "meaningVi": "Xung quanh, mọi người xung quanh",
+      "accentNote": "周りの 意見 = ý kiến của mọi người xung quanh."
+    },
+    {
+      "id": "voc-n2-9-5",
+      "word": "ひはん",
+      "kanji": "批判",
+      "furigana": "ひはん",
+      "romaji": "hihan",
+      "wordType": "noun",
+      "meaningVi": "Phê bình, chỉ trích",
+      "accentNote": "批判を 受けます = bị phê bình."
+    },
+    {
+      "id": "voc-n2-9-6",
+      "word": "がんばります",
+      "kanji": "頑張ります",
+      "furigana": "がんばります",
+      "romaji": "ganbarimasu",
+      "wordType": "verb",
+      "meaningVi": "Cố gắng, nỗ lực",
+      "accentNote": "Đã gặp N4 bài 32."
+    },
+    {
+      "id": "voc-n2-9-7",
+      "word": "つづけます",
+      "kanji": "続けます",
+      "furigana": "つづけます",
+      "romaji": "tsuzukemasu",
+      "wordType": "verb",
+      "meaningVi": "Tiếp tục",
+      "accentNote": "Đã gặp N4 bài 28."
+    },
+    {
+      "id": "voc-n2-9-8",
+      "word": "びょうき",
+      "kanji": "病気",
+      "furigana": "びょうき",
+      "romaji": "byouki",
+      "wordType": "noun",
+      "meaningVi": "Bệnh, ốm",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-9-9",
+      "word": "はんたい",
+      "kanji": "反対",
+      "furigana": "はんたい",
+      "romaji": "hantai",
+      "wordType": "noun",
+      "meaningVi": "Phản đối",
+      "accentNote": "Đã gặp N3 bài 20."
+    },
+    {
+      "id": "voc-n2-9-10",
+      "word": "しっぱいします",
+      "kanji": "失敗します",
+      "furigana": "しっぱいします",
+      "romaji": "shippai shimasu",
+      "wordType": "verb",
+      "meaningVi": "Thất bại",
+      "accentNote": "Đã gặp N4 bài 43."
+    },
+    {
+      "id": "voc-n2-9-11",
+      "word": "れんしゅうします",
+      "kanji": "練習します",
+      "furigana": "れんしゅうします",
+      "romaji": "renshuu shimasu",
+      "wordType": "verb",
+      "meaningVi": "Luyện tập",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-9-12",
+      "word": "けいかく",
+      "kanji": "計画",
+      "furigana": "けいかく",
+      "romaji": "keikaku",
+      "wordType": "noun",
+      "meaningVi": "Kế hoạch",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-9-13",
+      "word": "せいこうします",
+      "kanji": "成功します",
+      "furigana": "せいこうします",
+      "romaji": "seikou shimasu",
+      "wordType": "verb",
+      "meaningVi": "Thành công",
+      "accentNote": "Đã gặp N3 bài 8."
+    },
+    {
+      "id": "voc-n2-9-14",
+      "word": "しんぱい",
+      "kanji": "心配",
+      "furigana": "しんぱい",
+      "romaji": "shinpai",
+      "wordType": "noun",
+      "meaningVi": "Sự lo lắng",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-9-15",
+      "word": "じこ",
+      "kanji": "事故",
+      "furigana": "じこ",
+      "romaji": "jiko",
+      "wordType": "noun",
+      "meaningVi": "Tai nạn",
+      "accentNote": "Đã gặp N4 bài 34."
+    },
+    {
+      "id": "voc-n2-9-16",
+      "word": "かぞく",
+      "kanji": "家族",
+      "furigana": "かぞく",
+      "romaji": "kazoku",
+      "wordType": "noun",
+      "meaningVi": "Gia đình",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n2-9-17",
+      "word": "せんしゅ",
+      "kanji": "選手",
+      "furigana": "せんしゅ",
+      "romaji": "senshu",
+      "wordType": "noun",
+      "meaningVi": "Vận động viên",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-9-18",
+      "word": "たいかい",
+      "kanji": "大会",
+      "furigana": "たいかい",
+      "romaji": "taikai",
+      "wordType": "noun",
+      "meaningVi": "Đại hội",
+      "accentNote": "Đã gặp N3 bài 7."
+    },
+    {
+      "id": "voc-n2-9-19",
+      "word": "ゆうしょうします",
+      "kanji": "優勝します",
+      "furigana": "ゆうしょうします",
+      "romaji": "yuushou shimasu",
+      "wordType": "verb",
+      "meaningVi": "Vô địch",
+      "accentNote": "Đã gặp N3 bài 8."
+    },
+    {
+      "id": "voc-n2-9-20",
+      "word": "どりょく",
+      "kanji": "努力",
+      "furigana": "どりょく",
+      "romaji": "doryoku",
+      "wordType": "noun",
+      "meaningVi": "Nỗ lực",
+      "accentNote": "Đã gặp N3 bài 8."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n2-9-1",
+      "character": "苦",
+      "hanViet": "KHỔ",
+      "strokeCount": 8,
+      "onyomi": [
+        "ク (ku)"
+      ],
+      "kunyomi": [
+        "くる(しい)",
+        "にが(い)"
+      ],
+      "meaningVi": "Khổ sở, đắng.",
+      "commonWords": [
+        {
+          "word": "苦心",
+          "furigana": "くしん",
+          "meaningVi": "Khổ tâm, nỗ lực vất vả"
+        },
+        {
+          "word": "苦情",
+          "furigana": "くじょう",
+          "meaningVi": "Lời phàn nàn"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-9-2",
+      "character": "情",
+      "hanViet": "TÌNH",
+      "strokeCount": 11,
+      "onyomi": [
+        "ジョウ (jou)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Tình cảm, tình huống.",
+      "commonWords": [
+        {
+          "word": "苦情",
+          "furigana": "くじょう",
+          "meaningVi": "Lời phàn nàn"
+        },
+        {
+          "word": "事情",
+          "furigana": "じじょう",
+          "meaningVi": "Hoàn cảnh"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-9-3",
+      "character": "批",
+      "hanViet": "PHÊ",
+      "strokeCount": 7,
+      "onyomi": [
+        "ヒ (hi)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Phê bình, phê phán.",
+      "commonWords": [
+        {
+          "word": "批判",
+          "furigana": "ひはん",
+          "meaningVi": "Phê bình, chỉ trích"
+        },
+        {
+          "word": "批評",
+          "furigana": "ひひょう",
+          "meaningVi": "Bình luận"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-9-4",
+      "character": "判",
+      "hanViet": "PHÁN",
+      "strokeCount": 7,
+      "onyomi": [
+        "ハン (han)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Phán đoán, phán xét.",
+      "commonWords": [
+        {
+          "word": "批判",
+          "furigana": "ひはん",
+          "meaningVi": "Phê bình"
+        },
+        {
+          "word": "判断",
+          "furigana": "はんだん",
+          "meaningVi": "Phán đoán"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-9-5",
+      "character": "周",
+      "hanViet": "CHU",
+      "strokeCount": 8,
+      "onyomi": [
+        "シュウ (shuu)"
+      ],
+      "kunyomi": [
+        "まわ(り)"
+      ],
+      "meaningVi": "Xung quanh, chu vi.",
+      "commonWords": [
+        {
+          "word": "周り",
+          "furigana": "まわり",
+          "meaningVi": "Xung quanh"
+        },
+        {
+          "word": "周辺",
+          "furigana": "しゅうへん",
+          "meaningVi": "Khu vực lân cận"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n2-l9-s1",
+      "slideType": "grammar",
+      "title": "1. Bất chấp khó khăn (ca ngợi kiên cường): N + をものともせずに",
+      "grammarFormula": "N(khó khăn/trở ngại) + をものともせずに、[hành động vượt qua]",
+      "explanation": "をものともせずに diễn tả 'BẤT CHẤP' một khó khăn/trở ngại, KHÔNG coi đó là vấn đề gì để tiếp tục hành động — mang tính CA NGỢI sự DŨNG CẢM/KIÊN CƯỜNG của chủ thể khi vượt qua nghịch cảnh.",
+      "teacherTips": "をものともせずに luôn mang sắc thái TÍCH CỰC — dùng để KHEN NGỢI ai đó đã vượt qua khó khăn khách quan (bệnh tật, thất bại, chấn thương).",
+      "culturalNotes": "Bản tin thể thao Nhật hay dùng: '選手はけがをものともせずに、大会で優勝しました' (vận động viên bất chấp chấn thương, đã vô địch tại đại hội).",
+      "examples": [
+        {
+          "id": "ex-n2-l9-s1-1",
+          "tokens": [
+            {
+              "id": "t-l9s1-1",
+              "text": "びょうき",
+              "isKeyGrammar": true,
+              "kanji": "病気",
+              "furigana": "びょうき"
+            },
+            {
+              "id": "t-l9s1-2",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s1-3",
+              "text": "ものともせずに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l9s1-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s1-5",
+              "text": "れんしゅう",
+              "isKeyGrammar": true,
+              "kanji": "練習",
+              "furigana": "れんしゅう"
+            },
+            {
+              "id": "t-l9s1-6",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s1-7",
+              "text": "つづけました",
+              "isKeyGrammar": false,
+              "kanji": "続けました",
+              "furigana": "つづけました"
+            }
+          ],
+          "meaningVi": "Bất chấp bệnh tật, đã tiếp tục luyện tập."
+        },
+        {
+          "id": "ex-n2-l9-s1-2",
+          "tokens": [
+            {
+              "id": "t-l9s1-8",
+              "text": "しっぱい",
+              "isKeyGrammar": true,
+              "kanji": "失敗",
+              "furigana": "しっぱい"
+            },
+            {
+              "id": "t-l9s1-9",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s1-10",
+              "text": "ものともせずに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l9s1-11",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s1-12",
+              "text": "どりょく",
+              "isKeyGrammar": true,
+              "kanji": "努力",
+              "furigana": "どりょく"
+            },
+            {
+              "id": "t-l9s1-13",
+              "text": "しました",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Bất chấp thất bại, đã nỗ lực."
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l9-s2",
+      "slideType": "grammar",
+      "title": "2. Bất chấp, mặc kệ (phê phán phớt lờ): N + をよそに",
+      "grammarFormula": "N(sự lo lắng/cảnh báo/phản đối của người khác) + をよそに、[hành động phớt lờ]",
+      "explanation": "をよそに diễn tả việc PHỚT LỜ/MẶC KỆ một điều đáng lẽ phải quan tâm (thường là sự lo lắng, cảnh báo, phản đối của NGƯỜI KHÁC) — mang sắc thái PHÊ PHÁN nhẹ về hành động thiếu quan tâm đó.",
+      "teacherTips": "をよそに luôn mang sắc thái TIÊU CỰC nhẹ — ngụ ý chủ thể đã KHÔNG QUAN TÂM đến ý kiến/cảm xúc của người khác một cách đáng ra nên quan tâm.",
+      "culturalNotes": "Bản tin xã hội Nhật hay phê bình: '住民の苦情をよそに、工事が続けられている' (mặc kệ những lời phàn nàn của cư dân, công trình vẫn được tiếp tục).",
+      "examples": [
+        {
+          "id": "ex-n2-l9-s2-1",
+          "tokens": [
+            {
+              "id": "t-l9s2-1",
+              "text": "かぞく",
+              "isKeyGrammar": true,
+              "kanji": "家族",
+              "furigana": "かぞく"
+            },
+            {
+              "id": "t-l9s2-2",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s2-3",
+              "text": "しんぱい",
+              "isKeyGrammar": true,
+              "kanji": "心配",
+              "furigana": "しんぱい"
+            },
+            {
+              "id": "t-l9s2-4",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s2-5",
+              "text": "よそに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l9s2-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s2-7",
+              "text": "きけんな",
+              "isKeyGrammar": false,
+              "kanji": "危険な",
+              "furigana": "きけんな"
+            },
+            {
+              "id": "t-l9s2-8",
+              "text": "しごと",
+              "isKeyGrammar": false,
+              "kanji": "仕事",
+              "furigana": "しごと"
+            },
+            {
+              "id": "t-l9s2-9",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s2-10",
+              "text": "つづけました",
+              "isKeyGrammar": false,
+              "kanji": "続けました",
+              "furigana": "つづけました"
+            }
+          ],
+          "meaningVi": "Mặc kệ sự lo lắng của gia đình, đã tiếp tục công việc nguy hiểm."
+        },
+        {
+          "id": "ex-n2-l9-s2-2",
+          "tokens": [
+            {
+              "id": "t-l9s2-11",
+              "text": "まわり",
+              "isKeyGrammar": true,
+              "kanji": "周り",
+              "furigana": "まわり"
+            },
+            {
+              "id": "t-l9s2-12",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s2-13",
+              "text": "はんたい",
+              "isKeyGrammar": true,
+              "kanji": "反対",
+              "furigana": "はんたい"
+            },
+            {
+              "id": "t-l9s2-14",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s2-15",
+              "text": "よそに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l9s2-16",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s2-17",
+              "text": "けいかく",
+              "isKeyGrammar": true,
+              "kanji": "計画",
+              "furigana": "けいかく"
+            },
+            {
+              "id": "t-l9s2-18",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s2-19",
+              "text": "すすめました",
+              "isKeyGrammar": true,
+              "kanji": "進めました",
+              "furigana": "すすめました"
+            }
+          ],
+          "meaningVi": "Mặc kệ sự phản đối xung quanh, đã tiến hành kế hoạch."
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l9-s3",
+      "slideType": "grammar",
+      "title": "3. So sánh をものともせずに (ca ngợi) và をよそに (phê phán)",
+      "grammarFormula": "をものともせずに: TÍCH CỰC, ca ngợi vượt khó KHÁCH QUAN　vs　をよそに: TIÊU CỰC, phê phán phớt lờ Ý KIẾN người khác",
+      "explanation": "をものともせずに luôn CA NGỢI việc vượt qua một trở ngại KHÁCH QUAN (bệnh tật, chấn thương, thất bại) để đạt thành tựu; をよそに luôn PHÊ PHÁN việc phớt lờ Ý KIẾN/CẢM XÚC của người khác (lo lắng, phản đối, phàn nàn) một cách vô trách nhiệm.",
+      "teacherTips": "Mẹo: nếu câu CA NGỢI sự kiên cường → をものともせずに; nếu câu ngụ ý CHỈ TRÍCH sự vô tâm → をよそに.",
+      "culturalNotes": "Đây là điểm ngữ pháp N2 dễ nhầm nhất vì cả hai đều dịch là 'bất chấp' — cần dựa vào SẮC THÁI CẢM XÚC (khen/chê) để chọn đúng.",
+      "examples": [
+        {
+          "id": "ex-n2-l9-s3-1",
+          "tokens": [
+            {
+              "id": "t-l9s3-1",
+              "text": "せんしゅ",
+              "isKeyGrammar": true,
+              "kanji": "選手",
+              "furigana": "せんしゅ"
+            },
+            {
+              "id": "t-l9s3-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-3",
+              "text": "けが",
+              "isKeyGrammar": false,
+              "kanji": "怪我",
+              "furigana": "けが"
+            },
+            {
+              "id": "t-l9s3-4",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-5",
+              "text": "ものともせずに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l9s3-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-7",
+              "text": "たいかい",
+              "isKeyGrammar": true,
+              "kanji": "大会",
+              "furigana": "たいかい"
+            },
+            {
+              "id": "t-l9s3-8",
+              "text": "で",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-9",
+              "text": "ゆうしょう",
+              "isKeyGrammar": true,
+              "kanji": "優勝",
+              "furigana": "ゆうしょう"
+            },
+            {
+              "id": "t-l9s3-10",
+              "text": "しました",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Vận động viên bất chấp chấn thương, đã vô địch tại đại hội. (ca ngợi)"
+        },
+        {
+          "id": "ex-n2-l9-s3-2",
+          "tokens": [
+            {
+              "id": "t-l9s3-11",
+              "text": "くじょう",
+              "isKeyGrammar": true,
+              "kanji": "苦情",
+              "furigana": "くじょう"
+            },
+            {
+              "id": "t-l9s3-12",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-13",
+              "text": "よそに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l9s3-14",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-15",
+              "text": "かいしゃ",
+              "isKeyGrammar": false,
+              "kanji": "会社",
+              "furigana": "かいしゃ"
+            },
+            {
+              "id": "t-l9s3-16",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-17",
+              "text": "けいかく",
+              "isKeyGrammar": true,
+              "kanji": "計画",
+              "furigana": "けいかく"
+            },
+            {
+              "id": "t-l9s3-18",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-19",
+              "text": "すすめました",
+              "isKeyGrammar": true,
+              "kanji": "進めました",
+              "furigana": "すすめました"
+            }
+          ],
+          "meaningVi": "Mặc kệ những lời phàn nàn, công ty đã tiến hành kế hoạch. (phê phán)"
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l9-s4",
+      "slideType": "grammar",
+      "title": "4. Kết hợp trong tường thuật thể thao và tin tức",
+      "grammarFormula": "[Khó khăn khách quan]をものともせずに、[thành tựu]。　　[Ý kiến người khác]をよそに、[hành động đơn phương]。",
+      "explanation": "Hai cấu trúc thường xuất hiện SONG SONG trong bài báo: をものともせずに để CA NGỢI nhân vật chính, をよそに để PHÊ PHÁN một bên khác (tổ chức, đối thủ) đã phớt lờ dư luận.",
+      "teacherTips": "Trong một bài báo, việc dùng をものともせずに cho phe A và をよそに cho phe B thể hiện rõ LẬP TRƯỜNG của người viết (ủng hộ A, phê bình B).",
+      "culturalNotes": "Đây là kỹ thuật viết báo tinh tế của phóng viên Nhật để thể hiện quan điểm mà không cần nói thẳng.",
+      "examples": [
+        {
+          "id": "ex-n2-l9-s4-1",
+          "tokens": [
+            {
+              "id": "t-l9s4-1",
+              "text": "くしん",
+              "isKeyGrammar": true,
+              "kanji": "苦心",
+              "furigana": "くしん"
+            },
+            {
+              "id": "t-l9s4-2",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-3",
+              "text": "ものともせずに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l9s4-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-5",
+              "text": "せんしゅ",
+              "isKeyGrammar": true,
+              "kanji": "選手",
+              "furigana": "せんしゅ"
+            },
+            {
+              "id": "t-l9s4-6",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-7",
+              "text": "がんばりました",
+              "isKeyGrammar": false,
+              "kanji": "頑張りました",
+              "furigana": "がんばりました"
+            }
+          ],
+          "meaningVi": "Bất chấp khổ tâm nỗ lực, vận động viên đã cố gắng."
+        },
+        {
+          "id": "ex-n2-l9-s4-2",
+          "tokens": [
+            {
+              "id": "t-l9s4-8",
+              "text": "ひはん",
+              "isKeyGrammar": true,
+              "kanji": "批判",
+              "furigana": "ひはん"
+            },
+            {
+              "id": "t-l9s4-9",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-10",
+              "text": "よそに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l9s4-11",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-12",
+              "text": "けいかく",
+              "isKeyGrammar": true,
+              "kanji": "計画",
+              "furigana": "けいかく"
+            },
+            {
+              "id": "t-l9s4-13",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-14",
+              "text": "すすめられました",
+              "isKeyGrammar": false,
+              "kanji": "進められました",
+              "furigana": "すすめられました"
+            }
+          ],
+          "meaningVi": "Mặc kệ những lời chỉ trích, kế hoạch đã được tiến hành."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n2-9-1",
+      "speaker": "田中",
+      "speakerRole": "Bình luận viên thể thao",
+      "tokens": [
+        {
+          "id": "d9-1",
+          "text": "あの",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-2",
+          "text": "せんしゅ",
+          "isKeyGrammar": true,
+          "kanji": "選手",
+          "furigana": "せんしゅ"
+        },
+        {
+          "id": "d9-3",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-4",
+          "text": "びょうき",
+          "isKeyGrammar": true,
+          "kanji": "病気",
+          "furigana": "びょうき"
+        },
+        {
+          "id": "d9-5",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-6",
+          "text": "ものともせずに",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d9-7",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-8",
+          "text": "れんしゅう",
+          "isKeyGrammar": true,
+          "kanji": "練習",
+          "furigana": "れんしゅう"
+        },
+        {
+          "id": "d9-9",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-10",
+          "text": "つづけました",
+          "isKeyGrammar": false,
+          "kanji": "続けました",
+          "furigana": "つづけました"
+        }
+      ],
+      "meaningVi": "Vận động viên đó bất chấp bệnh tật, đã tiếp tục luyện tập."
+    },
+    {
+      "id": "dia-n2-9-2",
+      "speaker": "サントス",
+      "speakerRole": "Bình luận viên thể thao",
+      "tokens": [
+        {
+          "id": "d9-11",
+          "text": "すごい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-12",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d9-13",
+          "text": "ね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-14",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-15",
+          "text": "たいかい",
+          "isKeyGrammar": true,
+          "kanji": "大会",
+          "furigana": "たいかい"
+        },
+        {
+          "id": "d9-16",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-17",
+          "text": "ゆうしょう",
+          "isKeyGrammar": true,
+          "kanji": "優勝",
+          "furigana": "ゆうしょう"
+        },
+        {
+          "id": "d9-18",
+          "text": "しました",
+          "isKeyGrammar": false,
+          "kanji": "為ました",
+          "furigana": "しました"
+        },
+        {
+          "id": "d9-19",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Tuyệt vời quá nhỉ. Có vô địch tại đại hội không?"
+    },
+    {
+      "id": "dia-n2-9-3",
+      "speaker": "田中",
+      "speakerRole": "Bình luận viên thể thao",
+      "tokens": [
+        {
+          "id": "d9-20",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-21",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-22",
+          "text": "どりょく",
+          "isKeyGrammar": true,
+          "kanji": "努力",
+          "furigana": "どりょく"
+        },
+        {
+          "id": "d9-23",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-24",
+          "text": "せいこう",
+          "isKeyGrammar": true,
+          "kanji": "成功",
+          "furigana": "せいこう"
+        },
+        {
+          "id": "d9-25",
+          "text": "しました",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng. Sự nỗ lực đã thành công."
+    },
+    {
+      "id": "dia-n2-9-4",
+      "speaker": "サントス",
+      "speakerRole": "Bình luận viên thể thao",
+      "tokens": [
+        {
+          "id": "d9-26",
+          "text": "かぞく",
+          "isKeyGrammar": true,
+          "kanji": "家族",
+          "furigana": "かぞく"
+        },
+        {
+          "id": "d9-27",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-28",
+          "text": "しんぱい",
+          "isKeyGrammar": true,
+          "kanji": "心配",
+          "furigana": "しんぱい"
+        },
+        {
+          "id": "d9-29",
+          "text": "しました",
+          "isKeyGrammar": false,
+          "kanji": "為ました",
+          "furigana": "しました"
+        },
+        {
+          "id": "d9-30",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Gia đình có lo lắng không?"
+    },
+    {
+      "id": "dia-n2-9-5",
+      "speaker": "田中",
+      "speakerRole": "Bình luận viên thể thao",
+      "tokens": [
+        {
+          "id": "d9-31",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-32",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-33",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-34",
+          "text": "かぞく",
+          "isKeyGrammar": true,
+          "kanji": "家族",
+          "furigana": "かぞく"
+        },
+        {
+          "id": "d9-35",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-36",
+          "text": "しんぱい",
+          "isKeyGrammar": true,
+          "kanji": "心配",
+          "furigana": "しんぱい"
+        },
+        {
+          "id": "d9-37",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-38",
+          "text": "よそに",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d9-39",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-40",
+          "text": "がんばりました",
+          "isKeyGrammar": false,
+          "kanji": "頑張りました",
+          "furigana": "がんばりました"
+        }
+      ],
+      "meaningVi": "Vâng. Nhưng mặc kệ sự lo lắng của gia đình, anh ấy đã cố gắng."
+    },
+    {
+      "id": "dia-n2-9-6",
+      "speaker": "サントス",
+      "speakerRole": "Bình luận viên thể thao",
+      "tokens": [
+        {
+          "id": "d9-41",
+          "text": "べつの",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-42",
+          "text": "はなし",
+          "isKeyGrammar": false,
+          "kanji": "話",
+          "furigana": "はなし"
+        },
+        {
+          "id": "d9-43",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d9-44",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-45",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-46",
+          "text": "かいしゃ",
+          "isKeyGrammar": false,
+          "kanji": "会社",
+          "furigana": "かいしゃ"
+        },
+        {
+          "id": "d9-47",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-48",
+          "text": "けいかく",
+          "isKeyGrammar": true,
+          "kanji": "計画",
+          "furigana": "けいかく"
+        },
+        {
+          "id": "d9-49",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-50",
+          "text": "どうですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Chuyện khác, kế hoạch của công ty thì sao?"
+    },
+    {
+      "id": "dia-n2-9-7",
+      "speaker": "田中",
+      "speakerRole": "Bình luận viên thể thao",
+      "tokens": [
+        {
+          "id": "d9-51",
+          "text": "まわり",
+          "isKeyGrammar": true,
+          "kanji": "周り",
+          "furigana": "まわり"
+        },
+        {
+          "id": "d9-52",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-53",
+          "text": "はんたい",
+          "isKeyGrammar": true,
+          "kanji": "反対",
+          "furigana": "はんたい"
+        },
+        {
+          "id": "d9-54",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-55",
+          "text": "よそに",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d9-56",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-57",
+          "text": "けいかく",
+          "isKeyGrammar": true,
+          "kanji": "計画",
+          "furigana": "けいかく"
+        },
+        {
+          "id": "d9-58",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-59",
+          "text": "すすめました",
+          "isKeyGrammar": true,
+          "kanji": "進めました",
+          "furigana": "すすめました"
+        }
+      ],
+      "meaningVi": "Mặc kệ sự phản đối xung quanh, đã tiến hành kế hoạch."
+    },
+    {
+      "id": "dia-n2-9-8",
+      "speaker": "サントス",
+      "speakerRole": "Bình luận viên thể thao",
+      "tokens": [
+        {
+          "id": "d9-60",
+          "text": "くじょう",
+          "isKeyGrammar": true,
+          "kanji": "苦情",
+          "furigana": "くじょう"
+        },
+        {
+          "id": "d9-61",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-62",
+          "text": "ありました",
+          "isKeyGrammar": false,
+          "kanji": "有りました",
+          "furigana": "ありました"
+        },
+        {
+          "id": "d9-63",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Có lời phàn nàn nào không?"
+    },
+    {
+      "id": "dia-n2-9-9",
+      "speaker": "田中",
+      "speakerRole": "Bình luận viên thể thao",
+      "tokens": [
+        {
+          "id": "d9-64",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-65",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-66",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-67",
+          "text": "ひはん",
+          "isKeyGrammar": true,
+          "kanji": "批判",
+          "furigana": "ひはん"
+        },
+        {
+          "id": "d9-68",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-69",
+          "text": "よそに",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d9-70",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-71",
+          "text": "けいかく",
+          "isKeyGrammar": true,
+          "kanji": "計画",
+          "furigana": "けいかく"
+        },
+        {
+          "id": "d9-72",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-73",
+          "text": "つづいて",
+          "isKeyGrammar": false,
+          "kanji": "続いて",
+          "furigana": "つづいて"
+        },
+        {
+          "id": "d9-74",
+          "text": "います",
+          "isKeyGrammar": false,
+          "kanji": "居ます",
+          "furigana": "います"
+        }
+      ],
+      "meaningVi": "Vâng. Nhưng mặc kệ những lời chỉ trích, kế hoạch vẫn đang tiếp diễn."
+    },
+    {
+      "id": "dia-n2-9-10",
+      "speaker": "サントス",
+      "speakerRole": "Bình luận viên thể thao",
+      "tokens": [
+        {
+          "id": "d9-75",
+          "text": "くしん",
+          "isKeyGrammar": true,
+          "kanji": "苦心",
+          "furigana": "くしん"
+        },
+        {
+          "id": "d9-76",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-77",
+          "text": "おおかった",
+          "isKeyGrammar": false,
+          "kanji": "多かった",
+          "furigana": "おおかった"
+        },
+        {
+          "id": "d9-78",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d9-79",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Đã có nhiều khổ tâm nỗ lực nhỉ."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n2-9-1",
+      "question": "「病気をものともせずに、練習を続けました」 — をものともせずに diễn tả điều gì?",
+      "options": [
+        "Bất chấp một khó khăn/trở ngại khách quan để tiếp tục hành động, mang tính CA NGỢI",
+        "Phớt lờ ý kiến của người khác một cách vô trách nhiệm",
+        "Sự từ chối lịch sự",
+        "Sự khẳng định chắc chắn"
+      ],
+      "correctIndex": 0,
+      "explanation": "をものともせずに mang tính CA NGỢI sự kiên cường khi vượt qua khó khăn khách quan (bệnh tật).",
+      "hint": "Xem cấu trúc をものともせずに ở slide 1."
+    },
+    {
+      "id": "ex-q-n2-9-2",
+      "question": "「家族の心配をよそに、危険な仕事を続けました」 — をよそに khác をものともせずに ở điểm nào?",
+      "options": [
+        "をよそに mang sắc thái PHÊ PHÁN việc phớt lờ ý kiến/cảm xúc của người khác",
+        "Hoàn toàn giống nhau, dùng thay thế được cho nhau",
+        "をよそに chỉ dùng cho câu hỏi",
+        "をものともせずに chỉ dùng cho phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "をよそに luôn mang sắc thái TIÊU CỰC, phê phán việc phớt lờ sự lo lắng/ý kiến của người khác.",
+      "hint": "Xem giải thích をよそに ở slide 2."
+    },
+    {
+      "id": "ex-q-n2-9-3",
+      "question": "をものともせずに thường dùng cho loại trở ngại nào?",
+      "options": [
+        "Trở ngại KHÁCH QUAN như bệnh tật, chấn thương, thất bại",
+        "Ý kiến/cảm xúc của người khác",
+        "Chỉ dùng cho trở ngại về tiền bạc",
+        "Chỉ dùng cho trở ngại về thời gian"
+      ],
+      "correctIndex": 0,
+      "explanation": "をものともせずに dùng cho trở ngại KHÁCH QUAN (bệnh tật, chấn thương) mà chủ thể tự mình vượt qua.",
+      "hint": "Xem ví dụ ở slide 1."
+    },
+    {
+      "id": "ex-q-n2-9-4",
+      "question": "をよそに thường dùng cho loại đối tượng nào bị phớt lờ?",
+      "options": [
+        "Ý kiến/cảm xúc của NGƯỜI KHÁC (lo lắng, phản đối, phàn nàn)",
+        "Trở ngại vật lý như bệnh tật",
+        "Thời tiết xấu",
+        "Vấn đề tài chính cá nhân"
+      ],
+      "correctIndex": 0,
+      "explanation": "をよそに dùng khi chủ thể phớt lờ Ý KIẾN/CẢM XÚC của người khác một cách đáng chê trách.",
+      "hint": "Xem ví dụ ở slide 2."
+    },
+    {
+      "id": "ex-q-n2-9-5",
+      "question": "「選手はけがをものともせずに、大会で優勝しました」 mang sắc thái gì?",
+      "options": [
+        "Ca ngợi sự kiên cường của vận động viên",
+        "Phê phán vận động viên",
+        "Trung tính, không có cảm xúc",
+        "Nghi ngờ về khả năng của vận động viên"
+      ],
+      "correctIndex": 0,
+      "explanation": "をものともせずに luôn mang sắc thái CA NGỢI khi ai đó vượt qua khó khăn khách quan để đạt thành tựu.",
+      "hint": "Xem văn hóa sử dụng ở slide 1."
+    },
+    {
+      "id": "ex-q-n2-9-6",
+      "question": "「苦情をよそに、工事が続けられている」 mang sắc thái gì?",
+      "options": [
+        "Phê phán việc phớt lờ những lời phàn nàn của người dân",
+        "Ca ngợi công trình xây dựng",
+        "Trung tính, không có cảm xúc",
+        "Đồng tình với việc tiếp tục công trình"
+      ],
+      "correctIndex": 0,
+      "explanation": "をよそに ở đây mang sắc thái PHÊ PHÁN việc công trình phớt lờ những lời phàn nàn của cư dân.",
+      "hint": "Xem ví dụ văn hóa ở slide 2."
+    },
+    {
+      "id": "ex-q-n2-9-7",
+      "question": "Trong một bài báo, khi nào phóng viên dùng をものともせずに và khi nào dùng をよそに?",
+      "options": [
+        "をものともせずに để ca ngợi nhân vật chính; をよそに để phê bình bên bị chỉ trích",
+        "Cả hai đều dùng để ca ngợi như nhau",
+        "Cả hai đều dùng để phê bình như nhau",
+        "Không có quy tắc nào để lựa chọn"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cách dùng khác nhau giữa hai cấu trúc thể hiện LẬP TRƯỜNG của người viết mà không cần nói thẳng.",
+      "hint": "Xem kỹ thuật viết báo ở slide 4."
+    },
+    {
+      "id": "ex-q-n2-9-8",
+      "question": "Theo hội thoại, vận động viên đã bất chấp điều gì để tiếp tục luyện tập?",
+      "options": [
+        "Bệnh tật (病気をものともせずに)",
+        "Thời tiết xấu",
+        "Sự phản đối của huấn luyện viên",
+        "Không được đề cập trong hội thoại"
+      ],
+      "correctIndex": 0,
+      "explanation": "田中 nói 「あの選手は病気をものともせずに、練習を続けました」.",
+      "hint": "Xem câu thoại thứ 1."
+    },
+    {
+      "id": "ex-q-n2-9-9",
+      "question": "Công ty đã mặc kệ điều gì để tiến hành kế hoạch?",
+      "options": [
+        "Sự phản đối xung quanh (周りの反対をよそに)",
+        "Sự ủng hộ của mọi người",
+        "Không có ai phản đối cả",
+        "Chỉ thị của giám đốc"
+      ],
+      "correctIndex": 0,
+      "explanation": "田中 nói 「周りの反対をよそに、計画を進めました」.",
+      "hint": "Xem câu thoại thứ 7."
+    },
+    {
+      "id": "ex-q-n2-9-10",
+      "question": "Kế hoạch của công ty có tiếp tục diễn ra dù bị chỉ trích không?",
+      "options": [
+        "Có, vẫn đang tiếp diễn (批判をよそに、計画は続いています)",
+        "Không, đã bị hủy bỏ hoàn toàn",
+        "Đã tạm dừng",
+        "Không được đề cập trong hội thoại"
+      ],
+      "correctIndex": 0,
+      "explanation": "田中 nói 「批判をよそに、計画は続いています」.",
+      "hint": "Xem câu thoại thứ 9."
+    }
+  ]
+}

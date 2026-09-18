@@ -1,0 +1,1356 @@
+{
+  "level": "N1",
+  "lessonNumber": 4,
+  "title": "Bài 4: Coi nhẹ & Huống chi (はおろか & をものともせず)",
+  "description": "はおろか diễn tả 'CHƯA NÓI ĐẾN N1 (khó/nhiều hơn), NGAY CẢ N2 (cơ bản hơn) CŨNG KHÔNG...' — luôn kèm phủ định, dùng để MIÊU TẢ mức độ nghiêm trọng qua so sánh; ôn lại をものともせず (N2 bài 9) dùng để CA NGỢI sự vượt qua khó khăn — hai cấu trúc thường kết hợp trong câu chuyện vượt khó để tạo sự tương phản giữa xuất phát điểm tệ hại và thành quả đạt được.",
+  "vocabList": [
+    {
+      "id": "voc-n1-4-1",
+      "word": "ひんこん",
+      "kanji": "貧困",
+      "furigana": "ひんこん",
+      "romaji": "hinkon",
+      "wordType": "noun",
+      "meaningVi": "Nghèo đói, khốn cùng",
+      "accentNote": "貧困を ものともせず = bất chấp nghèo đói."
+    },
+    {
+      "id": "voc-n1-4-2",
+      "word": "こどく",
+      "kanji": "孤独",
+      "furigana": "こどく",
+      "romaji": "kodoku",
+      "wordType": "noun",
+      "meaningVi": "Cô độc, cô đơn",
+      "accentNote": "孤独な じんせい = cuộc đời cô độc."
+    },
+    {
+      "id": "voc-n1-4-3",
+      "word": "ひらがな",
+      "kanji": "ひらがな",
+      "furigana": "ひらがな",
+      "romaji": "hiragana",
+      "wordType": "noun",
+      "meaningVi": "Chữ hiragana",
+      "accentNote": "ひらがなさえ かけません = ngay cả hiragana cũng không viết được."
+    },
+    {
+      "id": "voc-n1-4-4",
+      "word": "じんせい",
+      "kanji": "人生",
+      "furigana": "じんせい",
+      "romaji": "jinsei",
+      "wordType": "noun",
+      "meaningVi": "Đời người, cuộc đời",
+      "accentNote": "きびしい じんせい = cuộc đời khắc nghiệt."
+    },
+    {
+      "id": "voc-n1-4-5",
+      "word": "かんじ",
+      "kanji": "漢字",
+      "furigana": "かんじ",
+      "romaji": "kanji",
+      "wordType": "noun",
+      "meaningVi": "Chữ Hán",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n1-4-6",
+      "word": "かきます",
+      "kanji": "書きます",
+      "furigana": "かきます",
+      "romaji": "kakimasu",
+      "wordType": "verb",
+      "meaningVi": "Viết",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n1-4-7",
+      "word": "かけます",
+      "kanji": "書けます",
+      "furigana": "かけます",
+      "romaji": "kakemasu",
+      "wordType": "verb",
+      "meaningVi": "Có thể viết",
+      "accentNote": "Đã gặp N4 bài 27."
+    },
+    {
+      "id": "voc-n1-4-8",
+      "word": "まずしい",
+      "kanji": "貧しい",
+      "furigana": "まずしい",
+      "romaji": "mazushii",
+      "wordType": "adjective",
+      "meaningVi": "Nghèo",
+      "accentNote": "Đã gặp N3 bài 4."
+    },
+    {
+      "id": "voc-n1-4-9",
+      "word": "けいけん",
+      "kanji": "経験",
+      "furigana": "けいけん",
+      "romaji": "keiken",
+      "wordType": "noun",
+      "meaningVi": "Kinh nghiệm",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n1-4-10",
+      "word": "どりょく",
+      "kanji": "努力",
+      "furigana": "どりょく",
+      "romaji": "doryoku",
+      "wordType": "noun",
+      "meaningVi": "Nỗ lực",
+      "accentNote": "Đã gặp N3 bài 8."
+    },
+    {
+      "id": "voc-n1-4-11",
+      "word": "せいかつ",
+      "kanji": "生活",
+      "furigana": "せいかつ",
+      "romaji": "seikatsu",
+      "wordType": "noun",
+      "meaningVi": "Cuộc sống",
+      "accentNote": "Đã gặp N4 bài 28."
+    },
+    {
+      "id": "voc-n1-4-12",
+      "word": "しょくじ",
+      "kanji": "食事",
+      "furigana": "しょくじ",
+      "romaji": "shokuji",
+      "wordType": "noun",
+      "meaningVi": "Bữa ăn",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n1-4-13",
+      "word": "おかね",
+      "kanji": "お金",
+      "furigana": "おかね",
+      "romaji": "okane",
+      "wordType": "noun",
+      "meaningVi": "Tiền",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n1-4-14",
+      "word": "ほん",
+      "kanji": "本",
+      "furigana": "ほん",
+      "romaji": "hon",
+      "wordType": "noun",
+      "meaningVi": "Sách",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n1-4-15",
+      "word": "なまえ",
+      "kanji": "名前",
+      "furigana": "なまえ",
+      "romaji": "namae",
+      "wordType": "noun",
+      "meaningVi": "Tên",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n1-4-16",
+      "word": "ものともせず",
+      "kanji": "ものともせず",
+      "furigana": "ものともせず",
+      "romaji": "mono to mo sezu",
+      "wordType": "expression",
+      "meaningVi": "Bất chấp (khó khăn)",
+      "accentNote": "Đã gặp N2 bài 9."
+    },
+    {
+      "id": "voc-n1-4-17",
+      "word": "きけん",
+      "kanji": "危険",
+      "furigana": "きけん",
+      "romaji": "kiken",
+      "wordType": "adjective",
+      "meaningVi": "Nguy hiểm",
+      "accentNote": "Đã gặp N4 bài 34."
+    },
+    {
+      "id": "voc-n1-4-18",
+      "word": "しっぱいします",
+      "kanji": "失敗します",
+      "furigana": "しっぱいします",
+      "romaji": "shippai shimasu",
+      "wordType": "verb",
+      "meaningVi": "Thất bại",
+      "accentNote": "Đã gặp N4 bài 43."
+    },
+    {
+      "id": "voc-n1-4-19",
+      "word": "せいこうします",
+      "kanji": "成功します",
+      "furigana": "せいこうします",
+      "romaji": "seikou shimasu",
+      "wordType": "verb",
+      "meaningVi": "Thành công",
+      "accentNote": "Đã gặp N3 bài 8."
+    },
+    {
+      "id": "voc-n1-4-20",
+      "word": "がんばります",
+      "kanji": "頑張ります",
+      "furigana": "がんばります",
+      "romaji": "ganbarimasu",
+      "wordType": "verb",
+      "meaningVi": "Cố gắng",
+      "accentNote": "Đã gặp N4 bài 32."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n1-4-1",
+      "character": "困",
+      "hanViet": "KHỐN",
+      "strokeCount": 7,
+      "onyomi": [
+        "コン (kon)"
+      ],
+      "kunyomi": [
+        "こま(る)"
+      ],
+      "meaningVi": "Khốn khó, khó khăn.",
+      "commonWords": [
+        {
+          "word": "貧困",
+          "furigana": "ひんこん",
+          "meaningVi": "Nghèo đói"
+        },
+        {
+          "word": "困ります",
+          "furigana": "こまります",
+          "meaningVi": "Khó xử, gặp khó khăn"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-4-2",
+      "character": "孤",
+      "hanViet": "CÔ",
+      "strokeCount": 9,
+      "onyomi": [
+        "コ (ko)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Cô đơn, lẻ loi.",
+      "commonWords": [
+        {
+          "word": "孤独",
+          "furigana": "こどく",
+          "meaningVi": "Cô độc"
+        },
+        {
+          "word": "孤児",
+          "furigana": "こじ",
+          "meaningVi": "Trẻ mồ côi"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-4-3",
+      "character": "独",
+      "hanViet": "ĐỘC",
+      "strokeCount": 9,
+      "onyomi": [
+        "ドク (doku)"
+      ],
+      "kunyomi": [
+        "ひと(り)"
+      ],
+      "meaningVi": "Một mình, độc lập.",
+      "commonWords": [
+        {
+          "word": "孤独",
+          "furigana": "こどく",
+          "meaningVi": "Cô độc"
+        },
+        {
+          "word": "独身",
+          "furigana": "どくしん",
+          "meaningVi": "Độc thân"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-4-4",
+      "character": "貧",
+      "hanViet": "BẦN",
+      "strokeCount": 11,
+      "onyomi": [
+        "ヒン (hin)"
+      ],
+      "kunyomi": [
+        "まず(しい)"
+      ],
+      "meaningVi": "Nghèo, bần cùng.",
+      "commonWords": [
+        {
+          "word": "貧困",
+          "furigana": "ひんこん",
+          "meaningVi": "Nghèo đói"
+        },
+        {
+          "word": "貧しい",
+          "furigana": "まずしい",
+          "meaningVi": "Nghèo"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-4-5",
+      "character": "書",
+      "hanViet": "THƯ",
+      "strokeCount": 10,
+      "onyomi": [
+        "ショ (sho)"
+      ],
+      "kunyomi": [
+        "か(く)"
+      ],
+      "meaningVi": "Viết, sách vở.",
+      "commonWords": [
+        {
+          "word": "書きます",
+          "furigana": "かきます",
+          "meaningVi": "Viết"
+        },
+        {
+          "word": "辞書",
+          "furigana": "じしょ",
+          "meaningVi": "Từ điển"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n1-l4-s1",
+      "slideType": "grammar",
+      "title": "1. Chưa nói đến... huống chi... (nhấn mạnh mức độ nghiêm trọng): N1はおろか、N2さえ",
+      "grammarFormula": "N1(khó/nhiều hơn) + はおろか、N2(dễ/ít hơn) + さえ/も + [phủ định]",
+      "explanation": "はおろか diễn tả 'CHƯA NÓI ĐẾN N1 (đương nhiên không làm được), NGAY CẢ N2 (điều CƠ BẢN hơn) CŨNG KHÔNG...' — luôn đi kèm PHỦ ĐỊNH, nhấn mạnh mức độ NGHIÊM TRỌNG bằng cách so sánh với một tiêu chuẩn thấp hơn hẳn.",
+      "teacherTips": "はおろか BẮT BUỘC đi kèm phủ định ở cuối câu — không dùng cho câu khẳng định thông thường.",
+      "culturalNotes": "Câu chuyện vượt khó trên báo Nhật hay mở đầu bằng: '彼は貧困の中、漢字はおろか、ひらがなさえ書けなかった' (giữa cảnh nghèo đói, anh ấy từng không biết viết cả hiragana, chưa nói đến chữ Hán).",
+      "examples": [
+        {
+          "id": "ex-n1-l4-s1-1",
+          "tokens": [
+            {
+              "id": "t-l4s1-1",
+              "text": "かんじ",
+              "isKeyGrammar": true,
+              "kanji": "漢字",
+              "furigana": "かんじ"
+            },
+            {
+              "id": "t-l4s1-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s1-3",
+              "text": "おろか",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s1-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s1-5",
+              "text": "ひらがな",
+              "isKeyGrammar": true,
+              "kanji": "ひらがな",
+              "furigana": "ひらがな"
+            },
+            {
+              "id": "t-l4s1-6",
+              "text": "さえ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s1-7",
+              "text": "かけません",
+              "isKeyGrammar": false,
+              "kanji": "書けません",
+              "furigana": "かけません"
+            }
+          ],
+          "meaningVi": "Chưa nói đến chữ Hán, ngay cả hiragana cũng không viết được."
+        },
+        {
+          "id": "ex-n1-l4-s1-2",
+          "tokens": [
+            {
+              "id": "t-l4s1-8",
+              "text": "せいかつ",
+              "isKeyGrammar": false,
+              "kanji": "生活",
+              "furigana": "せいかつ"
+            },
+            {
+              "id": "t-l4s1-9",
+              "text": "ひ",
+              "isKeyGrammar": false,
+              "kanji": "費",
+              "furigana": "ひ"
+            },
+            {
+              "id": "t-l4s1-10",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s1-11",
+              "text": "おろか",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s1-12",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s1-13",
+              "text": "しょくじ",
+              "isKeyGrammar": true,
+              "kanji": "食事",
+              "furigana": "しょくじ"
+            },
+            {
+              "id": "t-l4s1-14",
+              "text": "だい",
+              "isKeyGrammar": false,
+              "kanji": "代",
+              "furigana": "だい"
+            },
+            {
+              "id": "t-l4s1-15",
+              "text": "さえ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s1-16",
+              "text": "ありません",
+              "isKeyGrammar": false,
+              "kanji": "有りません",
+              "furigana": "ありません"
+            }
+          ],
+          "meaningVi": "Chưa nói đến chi phí sinh hoạt, ngay cả tiền ăn cũng không có."
+        }
+      ]
+    },
+    {
+      "slideId": "n1-l4-s2",
+      "slideType": "grammar",
+      "title": "2. Ôn lại: をものともせず (đã học N2 bài 9) — bất chấp khó khăn khách quan",
+      "grammarFormula": "N(khó khăn/trở ngại) + をものともせず、[hành động vượt qua]",
+      "explanation": "をものともせず (đã học ở N2 bài 9) diễn tả 'BẤT CHẤP' một khó khăn/trở ngại KHÁCH QUAN (nghèo đói, cô độc, bệnh tật) để tiếp tục hành động — mang tính CA NGỢI sự KIÊN CƯỜNG.",
+      "teacherTips": "Ôn nhanh: をものともせず luôn mang sắc thái TÍCH CỰC, CA NGỢI — khác をよそに (cũng học N2 bài 9) mang sắc thái PHÊ PHÁN.",
+      "culturalNotes": "Tiểu sử nhân vật thành công ở Nhật thường dùng をものともせず để mô tả nghị lực vượt qua hoàn cảnh xuất phát điểm khó khăn.",
+      "examples": [
+        {
+          "id": "ex-n1-l4-s2-1",
+          "tokens": [
+            {
+              "id": "t-l4s2-1",
+              "text": "ひんこん",
+              "isKeyGrammar": true,
+              "kanji": "貧困",
+              "furigana": "ひんこん"
+            },
+            {
+              "id": "t-l4s2-2",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s2-3",
+              "text": "ものともせず",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s2-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s2-5",
+              "text": "どりょく",
+              "isKeyGrammar": true,
+              "kanji": "努力",
+              "furigana": "どりょく"
+            },
+            {
+              "id": "t-l4s2-6",
+              "text": "しました",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Bất chấp nghèo đói, đã nỗ lực."
+        },
+        {
+          "id": "ex-n1-l4-s2-2",
+          "tokens": [
+            {
+              "id": "t-l4s2-7",
+              "text": "こどく",
+              "isKeyGrammar": true,
+              "kanji": "孤独",
+              "furigana": "こどく"
+            },
+            {
+              "id": "t-l4s2-8",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s2-9",
+              "text": "ものともせず",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s2-10",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s2-11",
+              "text": "がんばりました",
+              "isKeyGrammar": false,
+              "kanji": "頑張りました",
+              "furigana": "がんばりました"
+            }
+          ],
+          "meaningVi": "Bất chấp cô độc, đã cố gắng."
+        }
+      ]
+    },
+    {
+      "slideId": "n1-l4-s3",
+      "slideType": "grammar",
+      "title": "3. So sánh はおろか và をものともせず",
+      "grammarFormula": "はおろか: NHẤN MẠNH mức độ tệ hại (so sánh 2 tiêu chuẩn, luôn phủ định)　vs　をものともせず: CA NGỢI sự vượt qua (khẳng định, kiên cường)",
+      "explanation": "はおろか dùng để MIÊU TẢ một tình trạng TỆ HẠI đến mức nào (bằng cách so sánh với tiêu chuẩn thấp hơn); をものともせず dùng để CA NGỢI việc VƯỢT QUA khó khăn đó để đạt thành tựu — hai cấu trúc thường xuất hiện CÙNG NHAU trong một câu chuyện vượt khó hoàn chỉnh.",
+      "teacherTips": "Mẹo: câu MIÊU TẢ độ tệ (kèm phủ định) → はおろか; câu CA NGỢI hành động vượt qua (kèm khẳng định) → をものともせず.",
+      "culturalNotes": "Cả hai đều là ngữ pháp N1 mang văn phong TRANG TRỌNG, thường xuất hiện trong tiểu sử, bài phát biểu truyền cảm hứng.",
+      "examples": [
+        {
+          "id": "ex-n1-l4-s3-1",
+          "tokens": [
+            {
+              "id": "t-l4s3-1",
+              "text": "なまえ",
+              "isKeyGrammar": true,
+              "kanji": "名前",
+              "furigana": "なまえ"
+            },
+            {
+              "id": "t-l4s3-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s3-3",
+              "text": "おろか",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s3-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s3-5",
+              "text": "じぶんの",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s3-6",
+              "text": "ねんれい",
+              "isKeyGrammar": false,
+              "kanji": "年齢",
+              "furigana": "ねんれい"
+            },
+            {
+              "id": "t-l4s3-7",
+              "text": "さえ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s3-8",
+              "text": "しりません",
+              "isKeyGrammar": false,
+              "kanji": "知りません",
+              "furigana": "しりません"
+            }
+          ],
+          "meaningVi": "Chưa nói đến tên, ngay cả tuổi của bản thân cũng không biết. (miêu tả mức độ tệ hại)"
+        },
+        {
+          "id": "ex-n1-l4-s3-2",
+          "tokens": [
+            {
+              "id": "t-l4s3-9",
+              "text": "そんな",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s3-10",
+              "text": "じょうきょう",
+              "isKeyGrammar": false,
+              "kanji": "状況",
+              "furigana": "じょうきょう"
+            },
+            {
+              "id": "t-l4s3-11",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s3-12",
+              "text": "ものともせず",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s3-13",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s3-14",
+              "text": "せいこう",
+              "isKeyGrammar": true,
+              "kanji": "成功",
+              "furigana": "せいこう"
+            },
+            {
+              "id": "t-l4s3-15",
+              "text": "しました",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Bất chấp tình huống như vậy, đã thành công. (ca ngợi sự vượt qua)"
+        }
+      ]
+    },
+    {
+      "slideId": "n1-l4-s4",
+      "slideType": "grammar",
+      "title": "4. Kết hợp trong câu chuyện vượt khó hoàn chỉnh",
+      "grammarFormula": "[Khó khăn]をものともせず、努力しました。[Trước đây]はおろか、[cơ bản hơn]さえ〜なかったが、今は〜。",
+      "explanation": "Trong một câu chuyện VƯỢT KHÓ hoàn chỉnh, thường dùng をものともせず để mở đầu (bất chấp hoàn cảnh), rồi はおろか để nhấn XUẤT PHÁT ĐIỂM tệ hại đến mức nào, tạo nên sự tương phản mạnh mẽ với KẾT QUẢ đạt được sau này.",
+      "teacherTips": "Sự TƯƠNG PHẢN giữa はおろか (quá khứ tệ hại) và kết quả hiện tại (thành công) là kỹ thuật kể chuyện kinh điển trong diễn văn truyền cảm hứng.",
+      "culturalNotes": "Diễn văn tự truyện ở Nhật thường theo khung: nêu khó khăn (ものともせず) → nêu xuất phát điểm tệ (はおろか) → nêu thành quả hiện tại, tạo hiệu ứng cảm động mạnh cho người nghe.",
+      "examples": [
+        {
+          "id": "ex-n1-l4-s4-1",
+          "tokens": [
+            {
+              "id": "t-l4s4-1",
+              "text": "ひんこん",
+              "isKeyGrammar": true,
+              "kanji": "貧困",
+              "furigana": "ひんこん"
+            },
+            {
+              "id": "t-l4s4-2",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s4-3",
+              "text": "ものともせず",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s4-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s4-5",
+              "text": "どりょく",
+              "isKeyGrammar": true,
+              "kanji": "努力",
+              "furigana": "どりょく"
+            },
+            {
+              "id": "t-l4s4-6",
+              "text": "しました",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Bất chấp nghèo đói, đã nỗ lực."
+        },
+        {
+          "id": "ex-n1-l4-s4-2",
+          "tokens": [
+            {
+              "id": "t-l4s4-7",
+              "text": "かんじ",
+              "isKeyGrammar": true,
+              "kanji": "漢字",
+              "furigana": "かんじ"
+            },
+            {
+              "id": "t-l4s4-8",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s4-9",
+              "text": "おろか",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s4-10",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s4-11",
+              "text": "ひらがな",
+              "isKeyGrammar": true,
+              "kanji": "ひらがな",
+              "furigana": "ひらがな"
+            },
+            {
+              "id": "t-l4s4-12",
+              "text": "さえ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l4s4-13",
+              "text": "かけません",
+              "isKeyGrammar": false,
+              "kanji": "書けません",
+              "furigana": "かけません"
+            },
+            {
+              "id": "t-l4s4-14",
+              "text": "でした",
+              "isKeyGrammar": false,
+              "kanji": "でした",
+              "furigana": "でした"
+            },
+            {
+              "id": "t-l4s4-15",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s4-16",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s4-17",
+              "text": "いま",
+              "isKeyGrammar": false,
+              "kanji": "今",
+              "furigana": "いま"
+            },
+            {
+              "id": "t-l4s4-18",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s4-19",
+              "text": "ほん",
+              "isKeyGrammar": true,
+              "kanji": "本",
+              "furigana": "ほん"
+            },
+            {
+              "id": "t-l4s4-20",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l4s4-21",
+              "text": "かけます",
+              "isKeyGrammar": true,
+              "kanji": "書けます",
+              "furigana": "かけます"
+            }
+          ],
+          "meaningVi": "Chưa nói đến chữ Hán, ngay cả hiragana cũng từng không viết được, nhưng giờ đã có thể viết sách."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n1-4-1",
+      "speaker": "田中",
+      "speakerRole": "Người dẫn chương trình",
+      "tokens": [
+        {
+          "id": "d4-1",
+          "text": "あなた",
+          "isKeyGrammar": false,
+          "kanji": "貴方",
+          "furigana": "あなた"
+        },
+        {
+          "id": "d4-2",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-3",
+          "text": "じんせい",
+          "isKeyGrammar": true,
+          "kanji": "人生",
+          "furigana": "じんせい"
+        },
+        {
+          "id": "d4-4",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-5",
+          "text": "おしえて",
+          "isKeyGrammar": false,
+          "kanji": "教えて",
+          "furigana": "おしえて"
+        },
+        {
+          "id": "d4-6",
+          "text": "ください",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Xin hãy kể về cuộc đời của bạn."
+    },
+    {
+      "id": "dia-n1-4-2",
+      "speaker": "サントス",
+      "speakerRole": "Diễn giả",
+      "tokens": [
+        {
+          "id": "d4-7",
+          "text": "こどく",
+          "isKeyGrammar": true,
+          "kanji": "孤独",
+          "furigana": "こどく"
+        },
+        {
+          "id": "d4-8",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-9",
+          "text": "ものともせず",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d4-10",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-11",
+          "text": "どりょく",
+          "isKeyGrammar": true,
+          "kanji": "努力",
+          "furigana": "どりょく"
+        },
+        {
+          "id": "d4-12",
+          "text": "しました",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Bất chấp cô độc, tôi đã nỗ lực."
+    },
+    {
+      "id": "dia-n1-4-3",
+      "speaker": "田中",
+      "speakerRole": "Người dẫn chương trình",
+      "tokens": [
+        {
+          "id": "d4-13",
+          "text": "むかし",
+          "isKeyGrammar": false,
+          "kanji": "昔",
+          "furigana": "むかし"
+        },
+        {
+          "id": "d4-14",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-15",
+          "text": "どんな",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-16",
+          "text": "せいかつ",
+          "isKeyGrammar": true,
+          "kanji": "生活",
+          "furigana": "せいかつ"
+        },
+        {
+          "id": "d4-17",
+          "text": "でしたか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ngày xưa cuộc sống thế nào?"
+    },
+    {
+      "id": "dia-n1-4-4",
+      "speaker": "サントス",
+      "speakerRole": "Diễn giả",
+      "tokens": [
+        {
+          "id": "d4-18",
+          "text": "ひんこん",
+          "isKeyGrammar": true,
+          "kanji": "貧困",
+          "furigana": "ひんこん"
+        },
+        {
+          "id": "d4-19",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-20",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-21",
+          "text": "しょくじ",
+          "isKeyGrammar": true,
+          "kanji": "食事",
+          "furigana": "しょくじ"
+        },
+        {
+          "id": "d4-22",
+          "text": "だい",
+          "isKeyGrammar": false,
+          "kanji": "代",
+          "furigana": "だい"
+        },
+        {
+          "id": "d4-23",
+          "text": "さえ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d4-24",
+          "text": "ありません",
+          "isKeyGrammar": false,
+          "kanji": "有りません",
+          "furigana": "ありません"
+        },
+        {
+          "id": "d4-25",
+          "text": "でした",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vì nghèo đói, ngay cả tiền ăn cũng không có."
+    },
+    {
+      "id": "dia-n1-4-5",
+      "speaker": "田中",
+      "speakerRole": "Người dẫn chương trình",
+      "tokens": [
+        {
+          "id": "d4-26",
+          "text": "べんきょう",
+          "isKeyGrammar": false,
+          "kanji": "勉強",
+          "furigana": "べんきょう"
+        },
+        {
+          "id": "d4-27",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-28",
+          "text": "どうでしたか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Chuyện học hành thì sao?"
+    },
+    {
+      "id": "dia-n1-4-6",
+      "speaker": "サントス",
+      "speakerRole": "Diễn giả",
+      "tokens": [
+        {
+          "id": "d4-29",
+          "text": "かんじ",
+          "isKeyGrammar": true,
+          "kanji": "漢字",
+          "furigana": "かんじ"
+        },
+        {
+          "id": "d4-30",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-31",
+          "text": "おろか",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d4-32",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-33",
+          "text": "ひらがな",
+          "isKeyGrammar": true,
+          "kanji": "ひらがな",
+          "furigana": "ひらがな"
+        },
+        {
+          "id": "d4-34",
+          "text": "さえ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d4-35",
+          "text": "かけません",
+          "isKeyGrammar": false,
+          "kanji": "書けません",
+          "furigana": "かけません"
+        },
+        {
+          "id": "d4-36",
+          "text": "でした",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Chưa nói đến chữ Hán, ngay cả hiragana cũng không viết được."
+    },
+    {
+      "id": "dia-n1-4-7",
+      "speaker": "田中",
+      "speakerRole": "Người dẫn chương trình",
+      "tokens": [
+        {
+          "id": "d4-37",
+          "text": "いま",
+          "isKeyGrammar": false,
+          "kanji": "今",
+          "furigana": "いま"
+        },
+        {
+          "id": "d4-38",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-39",
+          "text": "どうですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Bây giờ thì thế nào?"
+    },
+    {
+      "id": "dia-n1-4-8",
+      "speaker": "サントス",
+      "speakerRole": "Diễn giả",
+      "tokens": [
+        {
+          "id": "d4-40",
+          "text": "きけん",
+          "isKeyGrammar": true,
+          "kanji": "危険",
+          "furigana": "きけん"
+        },
+        {
+          "id": "d4-41",
+          "text": "な",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-42",
+          "text": "けいけん",
+          "isKeyGrammar": true,
+          "kanji": "経験",
+          "furigana": "けいけん"
+        },
+        {
+          "id": "d4-43",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-44",
+          "text": "ものともせず",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d4-45",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-46",
+          "text": "せいこう",
+          "isKeyGrammar": true,
+          "kanji": "成功",
+          "furigana": "せいこう"
+        },
+        {
+          "id": "d4-47",
+          "text": "しました",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Bất chấp những kinh nghiệm nguy hiểm, tôi đã thành công."
+    },
+    {
+      "id": "dia-n1-4-9",
+      "speaker": "田中",
+      "speakerRole": "Người dẫn chương trình",
+      "tokens": [
+        {
+          "id": "d4-48",
+          "text": "いま",
+          "isKeyGrammar": false,
+          "kanji": "今",
+          "furigana": "いま"
+        },
+        {
+          "id": "d4-49",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-50",
+          "text": "ほん",
+          "isKeyGrammar": true,
+          "kanji": "本",
+          "furigana": "ほん"
+        },
+        {
+          "id": "d4-51",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-52",
+          "text": "かけます",
+          "isKeyGrammar": true,
+          "kanji": "書けます",
+          "furigana": "かけます"
+        },
+        {
+          "id": "d4-53",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Bây giờ bạn có thể viết sách chứ?"
+    },
+    {
+      "id": "dia-n1-4-10",
+      "speaker": "サントス",
+      "speakerRole": "Diễn giả",
+      "tokens": [
+        {
+          "id": "d4-54",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-55",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-56",
+          "text": "しっぱい",
+          "isKeyGrammar": true,
+          "kanji": "失敗",
+          "furigana": "しっぱい"
+        },
+        {
+          "id": "d4-57",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-58",
+          "text": "ものともせず",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d4-59",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d4-60",
+          "text": "がんばりました",
+          "isKeyGrammar": false,
+          "kanji": "頑張りました",
+          "furigana": "がんばりました"
+        }
+      ],
+      "meaningVi": "Vâng. Bất chấp thất bại, tôi đã cố gắng."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n1-4-1",
+      "question": "「漢字はおろか、ひらがなさえ書けません」 — はおろか diễn tả điều gì?",
+      "options": [
+        "Chưa nói đến điều khó hơn, ngay cả điều cơ bản hơn cũng không làm được (luôn kèm phủ định)",
+        "Ca ngợi sự vượt qua khó khăn",
+        "Sự khẳng định chắc chắn",
+        "Sự cho phép làm việc gì đó"
+      ],
+      "correctIndex": 0,
+      "explanation": "はおろか nhấn mạnh mức độ nghiêm trọng bằng cách so sánh với một tiêu chuẩn THẤP HƠN, luôn kèm phủ định.",
+      "hint": "Xem cấu trúc はおろか ở slide 1."
+    },
+    {
+      "id": "ex-q-n1-4-2",
+      "question": "「貧困をものともせず、努力しました」 — をものともせず (đã học N2) mang sắc thái gì?",
+      "options": [
+        "Ca ngợi sự kiên cường khi vượt qua khó khăn khách quan",
+        "Phê phán việc phớt lờ khó khăn",
+        "Sự từ chối lịch sự",
+        "Sự nghi ngờ về khả năng"
+      ],
+      "correctIndex": 0,
+      "explanation": "をものともせず luôn mang sắc thái TÍCH CỰC, ca ngợi việc vượt qua khó khăn khách quan.",
+      "hint": "Xem ôn tập をものともせず ở slide 2."
+    },
+    {
+      "id": "ex-q-n1-4-3",
+      "question": "はおろか luôn đi kèm với loại câu nào?",
+      "options": [
+        "Câu PHỦ ĐỊNH (không làm được/không có)",
+        "Câu khẳng định thông thường",
+        "Chỉ câu hỏi",
+        "Chỉ câu mệnh lệnh"
+      ],
+      "correctIndex": 0,
+      "explanation": "はおろか BẮT BUỘC đi kèm phủ định ở cuối câu để nhấn mạnh mức độ không thể/không có.",
+      "hint": "Xem lưu ý ngữ pháp ở slide 1."
+    },
+    {
+      "id": "ex-q-n1-4-4",
+      "question": "Sự khác biệt cốt lõi giữa はおろか và をものともせず là gì?",
+      "options": [
+        "はおろか MIÊU TẢ mức độ tệ hại (phủ định); をものともせず CA NGỢI sự vượt qua (khẳng định)",
+        "Hoàn toàn giống nhau, dùng thay thế được cho nhau",
+        "はおろか chỉ dùng cho câu hỏi",
+        "をものともせず chỉ dùng cho phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "はおろか miêu tả mức độ tệ (phủ định); をものともせず ca ngợi hành động vượt qua (khẳng định) — hai chức năng khác hẳn nhau.",
+      "hint": "Xem bảng so sánh ở slide 3."
+    },
+    {
+      "id": "ex-q-n1-4-5",
+      "question": "「名前はおろか、自分の年齢さえ知りません」 nghĩa là:",
+      "options": [
+        "Chưa nói đến tên, ngay cả tuổi của bản thân cũng không biết",
+        "Biết rất rõ tên và tuổi của mình",
+        "Chỉ biết tên, không biết tuổi",
+        "Chỉ biết tuổi, không biết tên"
+      ],
+      "correctIndex": 0,
+      "explanation": "はおろか ở đây nhấn mạnh việc KHÔNG BIẾT cả hai thứ, với tuổi (cơ bản hơn) làm chuẩn so sánh.",
+      "hint": "Áp dụng cấu trúc N1はおろか、N2さえ."
+    },
+    {
+      "id": "ex-q-n1-4-6",
+      "question": "Tại sao hai cấu trúc はおろか và をものともせず thường xuất hiện CÙNG NHAU trong một câu chuyện?",
+      "options": [
+        "Để tạo sự TƯƠNG PHẢN mạnh giữa xuất phát điểm tệ hại và thành quả đạt được sau khi vượt khó",
+        "Vì chúng có nghĩa giống hệt nhau nên dùng thay phiên",
+        "Không có lý do đặc biệt",
+        "Vì quy tắc ngữ pháp bắt buộc phải dùng chung"
+      ],
+      "correctIndex": 0,
+      "explanation": "Kết hợp cả hai tạo hiệu ứng KỂ CHUYỆN: nêu khó khăn đã vượt qua (ものともせず) và mức độ tệ hại ban đầu (はおろか) để làm nổi bật thành quả.",
+      "hint": "Xem kỹ thuật kể chuyện ở slide 4."
+    },
+    {
+      "id": "ex-q-n1-4-7",
+      "question": "「生活費はおろか、食事代さえありません」 nghĩa là:",
+      "options": [
+        "Chưa nói đến chi phí sinh hoạt, ngay cả tiền ăn cũng không có",
+        "Có đủ tiền cho cả sinh hoạt và ăn uống",
+        "Chỉ có tiền ăn, không có tiền sinh hoạt",
+        "Chỉ có tiền sinh hoạt, không có tiền ăn"
+      ],
+      "correctIndex": 0,
+      "explanation": "はおろか ở đây nhấn mạnh việc thiếu thốn nghiêm trọng: không có cả sinh hoạt phí lẫn tiền ăn (cơ bản hơn).",
+      "hint": "Áp dụng cấu trúc はおろか cho ngữ cảnh tài chính."
+    },
+    {
+      "id": "ex-q-n1-4-8",
+      "question": "Theo hội thoại, Santos đã vượt qua điều gì để nỗ lực?",
+      "options": [
+        "Sự cô độc (孤独をものともせず)",
+        "Sự giàu có",
+        "Sự thành công có sẵn",
+        "Không có khó khăn nào"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「孤独をものともせず、努力しました」.",
+      "hint": "Xem câu thoại thứ 2."
+    },
+    {
+      "id": "ex-q-n1-4-9",
+      "question": "Trước đây Santos có viết được hiragana không?",
+      "options": [
+        "Không, ngay cả hiragana cũng không viết được (ひらがなさえ書けませんでした)",
+        "Có, viết rất giỏi",
+        "Chỉ viết được một phần",
+        "Không được đề cập trong hội thoại"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「漢字はおろか、ひらがなさえ書けませんでした」.",
+      "hint": "Xem câu thoại thứ 6."
+    },
+    {
+      "id": "ex-q-n1-4-10",
+      "question": "Santos hiện tại có thể làm gì?",
+      "options": [
+        "Viết sách (本を書けます)",
+        "Không làm được gì cả",
+        "Chỉ đọc được, không viết được",
+        "Vẫn không biết chữ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos xác nhận có thể viết sách khi được hỏi 「今は本を書けますか」.",
+      "hint": "Xem câu thoại thứ 9-10."
+    }
+  ]
+}

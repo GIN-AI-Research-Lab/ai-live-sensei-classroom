@@ -16,7 +16,11 @@ class CurriculumLoader {
   }
 
   /**
-   * Nap giao trinh 5 cap do.
+   * Nap MUC LUC 5 cap do — moi bai chi co lessonNumber/title/description va
+   * cac dem so (vocabCount, kanjiCount...), KHONG co vocabList/slides/dialogue/
+   * exercises. Nhe (vai chuc KB moi cap) nen trang chon bai hien ra ngay.
+   * Chi tiet tung bai duoc tai RIENG, khi hoc vien thuc su bam vao — xem
+   * ensureLessonLoaded().
    *
    * MOI CAP DO NAP DOC LAP. Truoc day dung Promise.all: chi mot tep hong la do
    * ca cum, roi tut xuong bo du phong (von chi co DUNG MOT bai) — nen danh sach
@@ -34,7 +38,7 @@ class CurriculumLoader {
       let loiCuoi = null;
       for (let lan = 1; lan <= 3; lan++) {
         try {
-          const res = await fetch(`curriculum/${lvl}.json`, { cache: 'no-store' });
+          const res = await fetch(`curriculum/${lvl}/index.json`, { cache: 'no-store' });
           if (!res.ok) throw new Error(`HTTP ${res.status}`);
           const data = await res.json();
           if (!Array.isArray(data) || !data.length) throw new Error('tep rong hoac sai dinh dang');
@@ -72,8 +76,46 @@ class CurriculumLoader {
     this.capDoThieu = hong.map(k => k.lvl.toUpperCase());
 
     const tong = Object.values(this.database).reduce((n, a) => n + a.length, 0);
-    console.log(`[giao trinh] xong: ${tong} bai`,
+    console.log(`[giao trinh] xong: ${tong} bai (chi muc luc)`,
       hong.length ? `(thieu ${this.capDoThieu.join(', ')})` : '');
+  }
+
+  /**
+   * Tai CHI TIET day du cua MOT bai (vocabList, kanjiList, slides, dialogue,
+   * exercises) neu chua co, roi gop vao DUNG object dang nam trong
+   * this.database — giu nguyen tham chieu de moi cho khac da luu lesson nay
+   * (vi du currentLectureSteps) tu dong thay duoc du lieu moi.
+   *
+   * An toan goi nhieu lan / goi chong: neu dang co 1 lan tai dang chay cho
+   * dung bai nay thi tra ve DUNG promise do, khong bay them yeu cau thu hai.
+   */
+  async ensureLessonLoaded(level, lessonNumber) {
+    const lvl = (level || "N5").toUpperCase();
+    const no = Number(lessonNumber);
+    const list = this.database[lvl] || [];
+    const entry = list.find(l => l.lessonNumber === no);
+    if (!entry) return null;
+    if (Array.isArray(entry.vocabList)) return entry;   // da co chi tiet day du roi
+
+    this._dangTai = this._dangTai || new Map();
+    const key = `${lvl}-${no}`;
+    if (this._dangTai.has(key)) return this._dangTai.get(key);
+
+    const p = (async () => {
+      try {
+        const res = await fetch(`curriculum/${lvl.toLowerCase()}/${no}.json`, { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const full = await res.json();
+        Object.assign(entry, full);   // giu nguyen object entry, chi bom them khoa
+      } catch (err) {
+        console.warn(`[giao trinh] khong tai duoc chi tiet ${lvl} bai ${no}:`, err.message || err);
+      } finally {
+        this._dangTai.delete(key);
+      }
+      return entry;
+    })();
+    this._dangTai.set(key, p);
+    return p;
   }
 
   getLesson(level, lessonNumber) {
@@ -185,24 +227,34 @@ class CurriculumLoader {
   }
 
   getAllCurriculumSummary() {
+    // l.slideCount/exerciseCount la dem so tu index.json (luon co san). Neu
+    // bai da duoc tai chi tiet day du thi l.slides/l.exercises cung co that,
+    // uu tien do vi luc do moi la con so chinh xac nhat.
     return Object.keys(this.database).map(lvl => ({
       level: lvl,
       lessons: (this.database[lvl] || []).map(l => ({
         lessonNumber: l.lessonNumber,
         title: l.title,
-        slideCount: (l.slides || []).length,
-        exerciseCount: (l.exercises || []).length
+        slideCount: l.slides ? l.slides.length : (l.slideCount || 0),
+        exerciseCount: l.exercises ? l.exercises.length : (l.exerciseCount || 0)
       }))
     }));
   }
 
   loadFallbackBundle() {
-    // Fallback nếu chạy trực tiếp tệp file:/// mà không qua web server
+    // Fallback nếu chạy trực tiếp tệp file:/// mà không qua web server. Cho
+    // du day chi la 1 bai mau, van phai co du 4 mang rong (vocabList...) de
+    // ensureLessonLoaded() biet bai nay COI NHU da tai xong, khong di fetch
+    // chi tiet nua — fetch() cung se hong y het trong moi truong file:///.
     this.database["N5"] = [
       {
         level: "N5",
         lessonNumber: 1,
         title: "Bài 1: Khẳng định, Phủ định & Nghi vấn với です",
+        vocabList: [],
+        kanjiList: [],
+        dialogue: [],
+        exercises: [],
         slides: [
           {
             slideId: "n5-l1-s0",

@@ -1,0 +1,1320 @@
+{
+  "level": "N1",
+  "lessonNumber": 9,
+  "title": "Bài 9: Bắt buộc từ lương tâm (ずにはおかない & ないではすまない)",
+  "description": "Vずにはおかない (せずにはおかない cho する) diễn tả một sự việc/tác phẩm CHẮC CHẮN sẽ khiến người khác phản ứng theo cách tự nhiên, không thể kiềm chế; Vないではすまない nhấn mạnh NGHĨA VỤ đạo đức/xã hội — nếu không làm thì sẽ không ổn. Cả hai đều là văn phong trang trọng, thường kết hợp trong bối cảnh họp báo hoặc lời tự kiểm điểm để mô tả cả nghĩa vụ phải hành động lẫn tác động tất yếu của hành động đó.",
+  "vocabList": [
+    {
+      "id": "voc-n1-9-1",
+      "word": "あやまります",
+      "kanji": "謝ります",
+      "furigana": "あやまります",
+      "romaji": "ayamarimasu",
+      "wordType": "verb",
+      "meaningVi": "Xin lỗi",
+      "accentNote": "謝らないでは すまない = bắt buộc phải xin lỗi."
+    },
+    {
+      "id": "voc-n1-9-2",
+      "word": "なっとくします",
+      "kanji": "納得します",
+      "furigana": "なっとくします",
+      "romaji": "nattoku shimasu",
+      "wordType": "verb",
+      "meaningVi": "Đồng tình, chấp nhận, hiểu ra",
+      "accentNote": "納得させずには おかない = chắc chắn sẽ khiến đồng tình."
+    },
+    {
+      "id": "voc-n1-9-3",
+      "word": "きしゃ",
+      "kanji": "記者",
+      "furigana": "きしゃ",
+      "romaji": "kisha",
+      "wordType": "noun",
+      "meaningVi": "Phóng viên, nhà báo",
+      "accentNote": "記者が 質問します = phóng viên đặt câu hỏi."
+    },
+    {
+      "id": "voc-n1-9-4",
+      "word": "とります",
+      "kanji": "取ります",
+      "furigana": "とります",
+      "romaji": "torimasu",
+      "wordType": "verb",
+      "meaningVi": "Lấy, chịu (trách nhiệm)",
+      "accentNote": "責任を 取ります = chịu trách nhiệm."
+    },
+    {
+      "id": "voc-n1-9-5",
+      "word": "かいけん",
+      "kanji": "会見",
+      "furigana": "かいけん",
+      "romaji": "kaiken",
+      "wordType": "noun",
+      "meaningVi": "Cuộc họp báo, buổi phỏng vấn chính thức",
+      "accentNote": "記者会見 = buổi họp báo."
+    },
+    {
+      "id": "voc-n1-9-6",
+      "word": "こたえます",
+      "kanji": "答えます",
+      "furigana": "こたえます",
+      "romaji": "kotaemasu",
+      "wordType": "verb",
+      "meaningVi": "Trả lời",
+      "accentNote": "質問に 答えます = trả lời câu hỏi."
+    },
+    {
+      "id": "voc-n1-9-7",
+      "word": "かんどうします",
+      "kanji": "感動します",
+      "furigana": "かんどうします",
+      "romaji": "kandou shimasu",
+      "wordType": "verb",
+      "meaningVi": "Cảm động",
+      "accentNote": "Đã gặp N3 bài 11."
+    },
+    {
+      "id": "voc-n1-9-8",
+      "word": "せつめいします",
+      "kanji": "説明します",
+      "furigana": "せつめいします",
+      "romaji": "setsumei shimasu",
+      "wordType": "verb",
+      "meaningVi": "Giải thích",
+      "accentNote": "Đã gặp N4 bài 34."
+    },
+    {
+      "id": "voc-n1-9-9",
+      "word": "せきにん",
+      "kanji": "責任",
+      "furigana": "せきにん",
+      "romaji": "sekinin",
+      "wordType": "noun",
+      "meaningVi": "Trách nhiệm",
+      "accentNote": "Đã gặp N3 bài 19."
+    },
+    {
+      "id": "voc-n1-9-10",
+      "word": "えいが",
+      "kanji": "映画",
+      "furigana": "えいが",
+      "romaji": "eiga",
+      "wordType": "noun",
+      "meaningVi": "Phim, điện ảnh",
+      "accentNote": "Đã gặp N5 bài 4."
+    },
+    {
+      "id": "voc-n1-9-11",
+      "word": "しつもん",
+      "kanji": "質問",
+      "furigana": "しつもん",
+      "romaji": "shitsumon",
+      "wordType": "noun",
+      "meaningVi": "Câu hỏi",
+      "accentNote": "Đã gặp N5 bài 11."
+    },
+    {
+      "id": "voc-n1-9-12",
+      "word": "しゃちょう",
+      "kanji": "社長",
+      "furigana": "しゃちょう",
+      "romaji": "shachou",
+      "wordType": "noun",
+      "meaningVi": "Giám đốc",
+      "accentNote": "Đã gặp N4 bài 41."
+    },
+    {
+      "id": "voc-n1-9-13",
+      "word": "かいしゃ",
+      "kanji": "会社",
+      "furigana": "かいしゃ",
+      "romaji": "kaisha",
+      "wordType": "noun",
+      "meaningVi": "Công ty",
+      "accentNote": "Đã gặp N5 bài 3."
+    },
+    {
+      "id": "voc-n1-9-14",
+      "word": "もんだい",
+      "kanji": "問題",
+      "furigana": "もんだい",
+      "romaji": "mondai",
+      "wordType": "noun",
+      "meaningVi": "Vấn đề",
+      "accentNote": "Đã gặp N3 bài 13."
+    },
+    {
+      "id": "voc-n1-9-15",
+      "word": "じたい",
+      "kanji": "事態",
+      "furigana": "じたい",
+      "romaji": "jitai",
+      "wordType": "noun",
+      "meaningVi": "Tình thế, tình huống",
+      "accentNote": "Đã gặp N1 bài 5."
+    },
+    {
+      "id": "voc-n1-9-16",
+      "word": "とうさん",
+      "kanji": "倒産",
+      "furigana": "とうさん",
+      "romaji": "tousan",
+      "wordType": "noun",
+      "meaningVi": "Phá sản",
+      "accentNote": "Đã gặp N1 bài 5."
+    },
+    {
+      "id": "voc-n1-9-17",
+      "word": "ふせい",
+      "kanji": "不正",
+      "furigana": "ふせい",
+      "romaji": "fusei",
+      "wordType": "noun",
+      "meaningVi": "Sự bất chính, gian lận",
+      "accentNote": "Đã gặp N1 bài 6."
+    },
+    {
+      "id": "voc-n1-9-18",
+      "word": "ぎいん",
+      "kanji": "議員",
+      "furigana": "ぎいん",
+      "romaji": "giin",
+      "wordType": "noun",
+      "meaningVi": "Nghị sĩ",
+      "accentNote": "Đã gặp N1 bài 6."
+    },
+    {
+      "id": "voc-n1-9-19",
+      "word": "しんじます",
+      "kanji": "信じます",
+      "furigana": "しんじます",
+      "romaji": "shinjimasu",
+      "wordType": "verb",
+      "meaningVi": "Tin tưởng",
+      "accentNote": "Đã gặp N3 bài 1."
+    },
+    {
+      "id": "voc-n1-9-20",
+      "word": "しんらい",
+      "kanji": "信頼",
+      "furigana": "しんらい",
+      "romaji": "shinrai",
+      "wordType": "noun",
+      "meaningVi": "Sự tin cậy",
+      "accentNote": "Đã gặp N1 bài 6."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n1-9-1",
+      "character": "記",
+      "hanViet": "KÝ",
+      "strokeCount": 10,
+      "onyomi": [
+        "キ (ki)"
+      ],
+      "kunyomi": [
+        "しる(す)"
+      ],
+      "meaningVi": "Ghi chép.",
+      "commonWords": [
+        {
+          "word": "記者",
+          "furigana": "きしゃ",
+          "meaningVi": "Phóng viên"
+        },
+        {
+          "word": "日記",
+          "furigana": "にっき",
+          "meaningVi": "Nhật ký"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-9-2",
+      "character": "者",
+      "hanViet": "GIẢ",
+      "strokeCount": 8,
+      "onyomi": [
+        "シャ (sha)"
+      ],
+      "kunyomi": [
+        "もの"
+      ],
+      "meaningVi": "Người (hậu tố chỉ người).",
+      "commonWords": [
+        {
+          "word": "記者",
+          "furigana": "きしゃ",
+          "meaningVi": "Phóng viên"
+        },
+        {
+          "word": "学者",
+          "furigana": "がくしゃ",
+          "meaningVi": "Học giả"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-9-3",
+      "character": "納",
+      "hanViet": "NẠP",
+      "strokeCount": 10,
+      "onyomi": [
+        "ノウ (nou)",
+        "ナッ (na)"
+      ],
+      "kunyomi": [
+        "おさ(める)"
+      ],
+      "meaningVi": "Nộp, chấp nhận.",
+      "commonWords": [
+        {
+          "word": "納得",
+          "furigana": "なっとく",
+          "meaningVi": "Đồng tình, hiểu ra"
+        },
+        {
+          "word": "納品",
+          "furigana": "のうひん",
+          "meaningVi": "Giao hàng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-9-4",
+      "character": "得",
+      "hanViet": "ĐẮC",
+      "strokeCount": 11,
+      "onyomi": [
+        "トク (toku)"
+      ],
+      "kunyomi": [
+        "え(る)"
+      ],
+      "meaningVi": "Đạt được.",
+      "commonWords": [
+        {
+          "word": "納得",
+          "furigana": "なっとく",
+          "meaningVi": "Đồng tình"
+        },
+        {
+          "word": "得意",
+          "furigana": "とくい",
+          "meaningVi": "Sở trường"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-9-5",
+      "character": "任",
+      "hanViet": "NHIỆM",
+      "strokeCount": 6,
+      "onyomi": [
+        "ニン (nin)"
+      ],
+      "kunyomi": [
+        "まか(せる)"
+      ],
+      "meaningVi": "Nhiệm vụ, trách nhiệm.",
+      "commonWords": [
+        {
+          "word": "責任",
+          "furigana": "せきにん",
+          "meaningVi": "Trách nhiệm"
+        },
+        {
+          "word": "任せます",
+          "furigana": "まかせます",
+          "meaningVi": "Giao phó, ủy thác"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n1-l9-s1",
+      "slideType": "grammar",
+      "title": "1. Chắc chắn sẽ khiến... không thể không... (tác động khách quan tất yếu): V(させる)ずにはおかない",
+      "grammarFormula": "V(thể sai khiến/未然形) + ずにはおかない (する→せずにはおかない)",
+      "explanation": "ずにはおかない diễn tả một SỰ VIỆC/TÁC ĐỘNG KHÁCH QUAN (phim, lời nói, sự kiện) CHẮC CHẮN sẽ khiến người khác PHẢI phản ứng theo một cách nào đó một cách TỰ NHIÊN, không thể kiềm chế được — chủ thể ngữ pháp thường là SỰ VIỆC, không phải người quyết định làm.",
+      "teacherTips": "する chuyển thành せずにはおかない (không phải しずには) — đây là điểm bất quy tắc cần nhớ kỹ.",
+      "culturalNotes": "Lời quảng cáo phim/sách ở Nhật hay dùng '読む者を感動させずにはおかない' (chắc chắn sẽ khiến người đọc cảm động) để nhấn mạnh sức ảnh hưởng mãnh liệt của tác phẩm.",
+      "examples": [
+        {
+          "id": "ex-n1-l9-s1-1",
+          "tokens": [
+            {
+              "id": "t-l9s1-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s1-2",
+              "text": "えいが",
+              "isKeyGrammar": true,
+              "kanji": "映画",
+              "furigana": "えいが"
+            },
+            {
+              "id": "t-l9s1-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s1-4",
+              "text": "ひと",
+              "isKeyGrammar": false,
+              "kanji": "人",
+              "furigana": "ひと"
+            },
+            {
+              "id": "t-l9s1-5",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s1-6",
+              "text": "かんどうさせず",
+              "isKeyGrammar": true,
+              "kanji": "感動させず",
+              "furigana": "かんどうさせず"
+            },
+            {
+              "id": "t-l9s1-7",
+              "text": "には",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s1-8",
+              "text": "おかない",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Bộ phim này chắc chắn sẽ khiến người xem cảm động."
+        },
+        {
+          "id": "ex-n1-l9-s1-2",
+          "tokens": [
+            {
+              "id": "t-l9s1-9",
+              "text": "かれ",
+              "isKeyGrammar": false,
+              "kanji": "彼",
+              "furigana": "かれ"
+            },
+            {
+              "id": "t-l9s1-10",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s1-11",
+              "text": "せつめい",
+              "isKeyGrammar": true,
+              "kanji": "説明",
+              "furigana": "せつめい"
+            },
+            {
+              "id": "t-l9s1-12",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s1-13",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s1-14",
+              "text": "きしゃ",
+              "isKeyGrammar": true,
+              "kanji": "記者",
+              "furigana": "きしゃ"
+            },
+            {
+              "id": "t-l9s1-15",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s1-16",
+              "text": "なっとくさせず",
+              "isKeyGrammar": true,
+              "kanji": "納得させず",
+              "furigana": "なっとくさせず"
+            },
+            {
+              "id": "t-l9s1-17",
+              "text": "には",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s1-18",
+              "text": "おかない",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Lời giải thích của anh ấy chắc chắn sẽ khiến các phóng viên đồng tình."
+        }
+      ]
+    },
+    {
+      "slideId": "n1-l9-s2",
+      "slideType": "grammar",
+      "title": "2. Không [V] thì không xong / bắt buộc phải [V] (nghĩa vụ đạo đức, xã hội): Vない + ではすまない",
+      "grammarFormula": "V(ない形) + ではすまない",
+      "explanation": "ないではすまない diễn tả rằng nếu KHÔNG làm một việc gì đó thì sẽ KHÔNG ỔN/KHÔNG ĐƯỢC XÃ HỘI CHẤP NHẬN — nhấn mạnh NGHĨA VỤ ĐẠO ĐỨC/TRÁCH NHIỆM bắt buộc phải thực hiện, khác với ずにはおかない (chủ thể là SỰ VIỆC gây tác động khách quan).",
+      "teacherTips": "Dạng lịch sự là 〜ではすみません — hay dùng khi tự nhắc nhở bản thân về nghĩa vụ đạo đức trong hoàn cảnh trang trọng.",
+      "culturalNotes": "ないではすまない hay xuất hiện trong lời tự kiểm điểm của quan chức/lãnh đạo Nhật: '謝らないでは済まない事態だ' (đây là tình huống mà không xin lỗi thì không xong).",
+      "examples": [
+        {
+          "id": "ex-n1-l9-s2-1",
+          "tokens": [
+            {
+              "id": "t-l9s2-1",
+              "text": "あやまらない",
+              "isKeyGrammar": true,
+              "kanji": "謝らない",
+              "furigana": "あやまらない"
+            },
+            {
+              "id": "t-l9s2-2",
+              "text": "では",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s2-3",
+              "text": "すまない",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Không xin lỗi thì không xong. (bắt buộc phải xin lỗi)"
+        },
+        {
+          "id": "ex-n1-l9-s2-2",
+          "tokens": [
+            {
+              "id": "t-l9s2-4",
+              "text": "せきにん",
+              "isKeyGrammar": true,
+              "kanji": "責任",
+              "furigana": "せきにん"
+            },
+            {
+              "id": "t-l9s2-5",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s2-6",
+              "text": "とらない",
+              "isKeyGrammar": true,
+              "kanji": "取らない",
+              "furigana": "とらない"
+            },
+            {
+              "id": "t-l9s2-7",
+              "text": "では",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s2-8",
+              "text": "すまない",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Không chịu trách nhiệm thì không xong. (bắt buộc phải chịu trách nhiệm)"
+        }
+      ]
+    },
+    {
+      "slideId": "n1-l9-s3",
+      "slideType": "grammar",
+      "title": "3. So sánh ずにはおかない và ないではすまない",
+      "grammarFormula": "ずにはおかない: TÁC ĐỘNG KHÁCH QUAN (sự việc khiến người KHÁC phản ứng)　vs　ないではすまない: NGHĨA VỤ ĐẠO ĐỨC (chủ thể tự phải làm)",
+      "explanation": "ずにはおかない dùng khi CHỦ NGỮ là một SỰ VIỆC/TÁC PHẨM có sức ảnh hưởng khiến NGƯỜI KHÁC phản ứng; ないではすまない dùng khi CHỦ THỂ (thường là chính người nói/nhân vật) cảm thấy có NGHĨA VỤ phải tự mình thực hiện một hành động, nếu không sẽ không ổn về mặt đạo đức/xã hội.",
+      "teacherTips": "Mẹo: chủ ngữ là 'vật/sự việc gây tác động' → ずにはおかない; chủ ngữ là 'người có nghĩa vụ tự làm' → ないではすまない.",
+      "culturalNotes": "Cả hai cấu trúc đều rất trang trọng, thường thấy trong bài xã luận hoặc lời tự bạch mang tính đạo đức/trách nhiệm cao.",
+      "examples": [
+        {
+          "id": "ex-n1-l9-s3-1",
+          "tokens": [
+            {
+              "id": "t-l9s3-1",
+              "text": "きしゃ",
+              "isKeyGrammar": true,
+              "kanji": "記者",
+              "furigana": "きしゃ"
+            },
+            {
+              "id": "t-l9s3-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-3",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-4",
+              "text": "しゃちょう",
+              "isKeyGrammar": true,
+              "kanji": "社長",
+              "furigana": "しゃちょう"
+            },
+            {
+              "id": "t-l9s3-5",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-6",
+              "text": "しつもん",
+              "isKeyGrammar": true,
+              "kanji": "質問",
+              "furigana": "しつもん"
+            },
+            {
+              "id": "t-l9s3-7",
+              "text": "しない",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-8",
+              "text": "では",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-9",
+              "text": "すまない",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Phóng viên không thể không đặt câu hỏi cho giám đốc. (nghĩa vụ nghề nghiệp)"
+        },
+        {
+          "id": "ex-n1-l9-s3-2",
+          "tokens": [
+            {
+              "id": "t-l9s3-10",
+              "text": "しゃちょう",
+              "isKeyGrammar": true,
+              "kanji": "社長",
+              "furigana": "しゃちょう"
+            },
+            {
+              "id": "t-l9s3-11",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-12",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-13",
+              "text": "しつもん",
+              "isKeyGrammar": true,
+              "kanji": "質問",
+              "furigana": "しつもん"
+            },
+            {
+              "id": "t-l9s3-14",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-15",
+              "text": "こたえない",
+              "isKeyGrammar": true,
+              "kanji": "答えない",
+              "furigana": "こたえない"
+            },
+            {
+              "id": "t-l9s3-16",
+              "text": "では",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s3-17",
+              "text": "すまなかった",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Giám đốc không thể không trả lời câu hỏi. (nghĩa vụ, thì quá khứ)"
+        }
+      ]
+    },
+    {
+      "slideId": "n1-l9-s4",
+      "slideType": "grammar",
+      "title": "4. Kết hợp trong một buổi họp báo hoàn chỉnh",
+      "grammarFormula": "記者は質問しないではすまない (nghĩa vụ hỏi) + 説明は記者を納得させずにはおかない (tác động khách quan của câu trả lời)",
+      "explanation": "Trong một buổi họp báo (記者会見), phóng viên CẢM THẤY CÓ NGHĨA VỤ phải đặt câu hỏi (ないではすまない), còn một lời giải thích THUYẾT PHỤC thì CHẮC CHẮN sẽ khiến mọi người đồng tình (ずにはおかない) — hai cấu trúc bổ sung cho nhau để mô tả đầy đủ động lực của cả hai phía.",
+      "teacherTips": "Dạng lịch sự trong hội thoại trang trọng: ずにはおきません / ではすみません.",
+      "culturalNotes": "Buổi họp báo xin lỗi (謝罪会見) ở Nhật thường được đánh giá thành công hay không dựa trên việc lời giải thích có '記者を納得させずにはおかない' hay không.",
+      "examples": [
+        {
+          "id": "ex-n1-l9-s4-1",
+          "tokens": [
+            {
+              "id": "t-l9s4-1",
+              "text": "きしゃ",
+              "isKeyGrammar": true,
+              "kanji": "記者",
+              "furigana": "きしゃ"
+            },
+            {
+              "id": "t-l9s4-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-3",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-4",
+              "text": "しゃちょう",
+              "isKeyGrammar": true,
+              "kanji": "社長",
+              "furigana": "しゃちょう"
+            },
+            {
+              "id": "t-l9s4-5",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-6",
+              "text": "しつもん",
+              "isKeyGrammar": true,
+              "kanji": "質問",
+              "furigana": "しつもん"
+            },
+            {
+              "id": "t-l9s4-7",
+              "text": "しない",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-8",
+              "text": "では",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-9",
+              "text": "すまない",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Phóng viên không thể không đặt câu hỏi cho giám đốc."
+        },
+        {
+          "id": "ex-n1-l9-s4-2",
+          "tokens": [
+            {
+              "id": "t-l9s4-10",
+              "text": "しゃちょう",
+              "isKeyGrammar": true,
+              "kanji": "社長",
+              "furigana": "しゃちょう"
+            },
+            {
+              "id": "t-l9s4-11",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-12",
+              "text": "せつめい",
+              "isKeyGrammar": true,
+              "kanji": "説明",
+              "furigana": "せつめい"
+            },
+            {
+              "id": "t-l9s4-13",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-14",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-15",
+              "text": "きしゃ",
+              "isKeyGrammar": true,
+              "kanji": "記者",
+              "furigana": "きしゃ"
+            },
+            {
+              "id": "t-l9s4-16",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-17",
+              "text": "なっとくさせず",
+              "isKeyGrammar": true,
+              "kanji": "納得させず",
+              "furigana": "なっとくさせず"
+            },
+            {
+              "id": "t-l9s4-18",
+              "text": "には",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l9s4-19",
+              "text": "おかない",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Lời giải thích của giám đốc chắc chắn sẽ khiến các phóng viên đồng tình."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n1-9-1",
+      "speaker": "記者",
+      "speakerRole": "Phóng viên",
+      "tokens": [
+        {
+          "id": "d9-1",
+          "text": "きょう",
+          "isKeyGrammar": false,
+          "kanji": "今日",
+          "furigana": "きょう"
+        },
+        {
+          "id": "d9-2",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-3",
+          "text": "きしゃ",
+          "isKeyGrammar": true,
+          "kanji": "記者",
+          "furigana": "きしゃ"
+        },
+        {
+          "id": "d9-4",
+          "text": "かいけん",
+          "isKeyGrammar": true,
+          "kanji": "会見",
+          "furigana": "かいけん"
+        },
+        {
+          "id": "d9-5",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Hôm nay là buổi họp báo."
+    },
+    {
+      "id": "dia-n1-9-2",
+      "speaker": "社長",
+      "speakerRole": "Giám đốc",
+      "tokens": [
+        {
+          "id": "d9-6",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-7",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-8",
+          "text": "しつもん",
+          "isKeyGrammar": true,
+          "kanji": "質問",
+          "furigana": "しつもん"
+        },
+        {
+          "id": "d9-9",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-10",
+          "text": "どうぞ",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng. Xin mời đặt câu hỏi."
+    },
+    {
+      "id": "dia-n1-9-3",
+      "speaker": "記者",
+      "speakerRole": "Phóng viên",
+      "tokens": [
+        {
+          "id": "d9-11",
+          "text": "しゃちょう",
+          "isKeyGrammar": true,
+          "kanji": "社長",
+          "furigana": "しゃちょう"
+        },
+        {
+          "id": "d9-12",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-13",
+          "text": "あやまらない",
+          "isKeyGrammar": true,
+          "kanji": "謝らない",
+          "furigana": "あやまらない"
+        },
+        {
+          "id": "d9-14",
+          "text": "では",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-15",
+          "text": "すみません",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Giám đốc bắt buộc phải xin lỗi."
+    },
+    {
+      "id": "dia-n1-9-4",
+      "speaker": "社長",
+      "speakerRole": "Giám đốc",
+      "tokens": [
+        {
+          "id": "d9-16",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-17",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-18",
+          "text": "すみません",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng. Xin lỗi."
+    },
+    {
+      "id": "dia-n1-9-5",
+      "speaker": "記者",
+      "speakerRole": "Phóng viên",
+      "tokens": [
+        {
+          "id": "d9-19",
+          "text": "せきにん",
+          "isKeyGrammar": true,
+          "kanji": "責任",
+          "furigana": "せきにん"
+        },
+        {
+          "id": "d9-20",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-21",
+          "text": "とらない",
+          "isKeyGrammar": true,
+          "kanji": "取らない",
+          "furigana": "とらない"
+        },
+        {
+          "id": "d9-22",
+          "text": "では",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-23",
+          "text": "すみません",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Ông bắt buộc phải chịu trách nhiệm."
+    },
+    {
+      "id": "dia-n1-9-6",
+      "speaker": "社長",
+      "speakerRole": "Giám đốc",
+      "tokens": [
+        {
+          "id": "d9-24",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-25",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-26",
+          "text": "せきにん",
+          "isKeyGrammar": true,
+          "kanji": "責任",
+          "furigana": "せきにん"
+        },
+        {
+          "id": "d9-27",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-28",
+          "text": "とります",
+          "isKeyGrammar": true,
+          "kanji": "取ります",
+          "furigana": "とります"
+        }
+      ],
+      "meaningVi": "Vâng, tôi sẽ chịu trách nhiệm."
+    },
+    {
+      "id": "dia-n1-9-7",
+      "speaker": "記者",
+      "speakerRole": "Phóng viên",
+      "tokens": [
+        {
+          "id": "d9-29",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-30",
+          "text": "せつめい",
+          "isKeyGrammar": true,
+          "kanji": "説明",
+          "furigana": "せつめい"
+        },
+        {
+          "id": "d9-31",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-32",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-33",
+          "text": "みんな",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-34",
+          "text": "なっとくします",
+          "isKeyGrammar": true,
+          "kanji": "納得します",
+          "furigana": "なっとくします"
+        },
+        {
+          "id": "d9-35",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Với lời giải thích này, mọi người sẽ đồng tình chứ?"
+    },
+    {
+      "id": "dia-n1-9-8",
+      "speaker": "社長",
+      "speakerRole": "Giám đốc",
+      "tokens": [
+        {
+          "id": "d9-36",
+          "text": "わたし",
+          "isKeyGrammar": false,
+          "kanji": "私",
+          "furigana": "わたし"
+        },
+        {
+          "id": "d9-37",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-38",
+          "text": "せつめい",
+          "isKeyGrammar": true,
+          "kanji": "説明",
+          "furigana": "せつめい"
+        },
+        {
+          "id": "d9-39",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-40",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-41",
+          "text": "きしゃ",
+          "isKeyGrammar": true,
+          "kanji": "記者",
+          "furigana": "きしゃ"
+        },
+        {
+          "id": "d9-42",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-43",
+          "text": "なっとくさせず",
+          "isKeyGrammar": true,
+          "kanji": "納得させず",
+          "furigana": "なっとくさせず"
+        },
+        {
+          "id": "d9-44",
+          "text": "には",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-45",
+          "text": "おきません",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Lời giải thích của tôi chắc chắn sẽ khiến các phóng viên đồng tình."
+    },
+    {
+      "id": "dia-n1-9-9",
+      "speaker": "記者",
+      "speakerRole": "Phóng viên",
+      "tokens": [
+        {
+          "id": "d9-46",
+          "text": "しゃいん",
+          "isKeyGrammar": false,
+          "kanji": "社員",
+          "furigana": "しゃいん"
+        },
+        {
+          "id": "d9-47",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-48",
+          "text": "どう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-49",
+          "text": "おもいますか",
+          "isKeyGrammar": false,
+          "kanji": "思いますか",
+          "furigana": "おもいますか"
+        }
+      ],
+      "meaningVi": "Nhân viên nghĩ sao?"
+    },
+    {
+      "id": "dia-n1-9-10",
+      "speaker": "社長",
+      "speakerRole": "Giám đốc",
+      "tokens": [
+        {
+          "id": "d9-50",
+          "text": "これから",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-51",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-52",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-53",
+          "text": "まじめに",
+          "isKeyGrammar": false,
+          "kanji": "真面目に",
+          "furigana": "まじめに"
+        },
+        {
+          "id": "d9-54",
+          "text": "はなさない",
+          "isKeyGrammar": true,
+          "kanji": "話さない",
+          "furigana": "はなさない"
+        },
+        {
+          "id": "d9-55",
+          "text": "では",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d9-56",
+          "text": "すみません",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Từ giờ, tôi bắt buộc phải nói thật nghiêm túc."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n1-9-1",
+      "question": "「この映画は人を感動させずにはおかない」 — ずにはおかない diễn tả điều gì?",
+      "options": [
+        "Một sự việc/tác phẩm CHẮC CHẮN sẽ khiến người khác phản ứng theo một cách tự nhiên",
+        "Nghĩa vụ đạo đức mà chính người nói phải thực hiện",
+        "Sự cho phép làm việc gì đó",
+        "Một quá trình dẫn đến kết quả"
+      ],
+      "correctIndex": 0,
+      "explanation": "ずにはおかない diễn tả tác động khách quan: sự việc/tác phẩm chắc chắn sẽ khiến người khác phản ứng.",
+      "hint": "Xem cấu trúc ずにはおかない ở slide 1."
+    },
+    {
+      "id": "ex-q-n1-9-2",
+      "question": "「責任を取らないではすまない」 — ないではすまない dùng để làm gì?",
+      "options": [
+        "Nhấn mạnh NGHĨA VỤ đạo đức/xã hội — nếu không làm thì không ổn",
+        "Diễn tả tác động khách quan của một sự việc",
+        "Xin phép làm việc gì đó",
+        "Đưa ra lời khuyên nhẹ nhàng"
+      ],
+      "correctIndex": 0,
+      "explanation": "ないではすまない nhấn mạnh nghĩa vụ bắt buộc phải làm, nếu không sẽ không được chấp nhận về mặt đạo đức/xã hội.",
+      "hint": "Xem cấu trúc ないではすまない ở slide 2."
+    },
+    {
+      "id": "ex-q-n1-9-3",
+      "question": "Sự khác biệt cốt lõi giữa ずにはおかない và ないではすまない là gì?",
+      "options": [
+        "ずにはおかない: chủ ngữ là SỰ VIỆC tác động lên người khác; ないではすまない: chủ thể tự thấy có NGHĨA VỤ",
+        "Hoàn toàn giống nhau, dùng thay thế được cho nhau",
+        "ずにはおかない chỉ dùng cho câu hỏi",
+        "ないではすまない chỉ dùng cho câu khẳng định"
+      ],
+      "correctIndex": 0,
+      "explanation": "ずにはおかない có chủ ngữ là sự việc/tác phẩm; ないではすまない có chủ thể là người cảm thấy nghĩa vụ đạo đức.",
+      "hint": "Xem bảng so sánh ở slide 3."
+    },
+    {
+      "id": "ex-q-n1-9-4",
+      "question": "する chuyển thành dạng nào khi dùng với ずにはおかない?",
+      "options": [
+        "せずにはおかない (bất quy tắc, không phải しずには)",
+        "しずにはおかない",
+        "するずにはおかない",
+        "しますずにはおかない"
+      ],
+      "correctIndex": 0,
+      "explanation": "する là động từ bất quy tắc, chuyển thành せずにはおかない khi dùng với cấu trúc này.",
+      "hint": "Xem lưu ý ngữ pháp ở slide 1."
+    },
+    {
+      "id": "ex-q-n1-9-5",
+      "question": "「彼の説明は、記者を納得させずにはおかない」 nghĩa là:",
+      "options": [
+        "Lời giải thích của anh ấy chắc chắn sẽ khiến các phóng viên đồng tình",
+        "Lời giải thích của anh ấy chắc chắn sẽ khiến các phóng viên nghi ngờ",
+        "Không ai quan tâm đến lời giải thích",
+        "Lời giải thích chưa được đưa ra"
+      ],
+      "correctIndex": 0,
+      "explanation": "させずにはおかない ở đây khẳng định tác động tất yếu: chắc chắn sẽ khiến đồng tình.",
+      "hint": "Áp dụng cấu trúc ずにはおかない cho ngữ cảnh giải thích."
+    },
+    {
+      "id": "ex-q-n1-9-6",
+      "question": "Tại sao ずにはおかない và ないではすまない thường xuất hiện CÙNG NHAU trong một buổi họp báo?",
+      "options": [
+        "Để mô tả nghĩa vụ của phóng viên (đặt câu hỏi) và tác động tất yếu của lời giải thích thuyết phục",
+        "Vì chúng có nghĩa giống hệt nhau nên dùng thay phiên",
+        "Không có lý do đặc biệt",
+        "Vì quy tắc ngữ pháp bắt buộc phải dùng chung"
+      ],
+      "correctIndex": 0,
+      "explanation": "ないではすまない mô tả nghĩa vụ của phóng viên; ずにはおかない mô tả tác động tất yếu của một lời giải thích tốt.",
+      "hint": "Xem cấu trúc buổi họp báo hoàn chỉnh ở slide 4."
+    },
+    {
+      "id": "ex-q-n1-9-7",
+      "question": "「記者は、社長に質問しないではすまない」 nghĩa là:",
+      "options": [
+        "Phóng viên không thể không đặt câu hỏi cho giám đốc (nghĩa vụ nghề nghiệp)",
+        "Phóng viên được phép không đặt câu hỏi nếu muốn",
+        "Phóng viên không quan tâm đến câu hỏi",
+        "Giám đốc cấm phóng viên đặt câu hỏi"
+      ],
+      "correctIndex": 0,
+      "explanation": "ないではすまない ở đây nhấn mạnh nghĩa vụ nghề nghiệp: phóng viên bắt buộc phải hỏi.",
+      "hint": "Áp dụng cấu trúc ないではすまない cho ngữ cảnh nghề nghiệp."
+    },
+    {
+      "id": "ex-q-n1-9-8",
+      "question": "Theo hội thoại, giám đốc đã hứa sẽ làm gì với trách nhiệm?",
+      "options": [
+        "Chịu trách nhiệm (責任を取ります)",
+        "Từ chối chịu trách nhiệm",
+        "Không nhắc đến trách nhiệm",
+        "Đổ lỗi cho người khác"
+      ],
+      "correctIndex": 0,
+      "explanation": "Giám đốc nói 「はい、責任を取ります」.",
+      "hint": "Xem câu thoại thứ 6."
+    },
+    {
+      "id": "ex-q-n1-9-9",
+      "question": "Theo hội thoại, giám đốc tin rằng lời giải thích của mình sẽ có tác dụng gì?",
+      "options": [
+        "Chắc chắn sẽ khiến các phóng viên đồng tình (記者を納得させずにはおきません)",
+        "Sẽ khiến các phóng viên tức giận hơn",
+        "Sẽ không ai tin",
+        "Không có tác dụng gì"
+      ],
+      "correctIndex": 0,
+      "explanation": "Giám đốc nói 「私の説明は、記者を納得させずにはおきません」.",
+      "hint": "Xem câu thoại thứ 8."
+    },
+    {
+      "id": "ex-q-n1-9-10",
+      "question": "Theo hội thoại, giám đốc cam kết điều gì cho tương lai?",
+      "options": [
+        "Nói chuyện nghiêm túc, trung thực (真面目に話さないではすみません)",
+        "Sẽ tiếp tục che giấu sự thật",
+        "Sẽ từ chức ngay lập tức",
+        "Không cam kết gì cả"
+      ],
+      "correctIndex": 0,
+      "explanation": "Giám đốc nói 「これからは、真面目に話さないではすみません」.",
+      "hint": "Xem câu thoại thứ 10."
+    }
+  ]
+}

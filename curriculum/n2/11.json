@@ -1,0 +1,1313 @@
+{
+  "level": "N2",
+  "lessonNumber": 11,
+  "title": "Bài 11: Đặc trưng riêng biệt (ならではの & にふさわしい)",
+  "description": "ならではの diễn tả một điều ĐẶC TRƯNG, ĐỘC ĐÁO CHỈ CÓ Ở một địa phương/người/tổ chức cụ thể, không thể tìm thấy ở nơi khác — luôn mang tính CA NGỢI; にふさわしい diễn tả sự PHÙ HỢP/XỨNG ĐÁNG về mặt PHẨM CHẤT, TIÊU CHUẨN giữa một vai trò/địa vị và điều được đánh giá — mang tính ĐÁNH GIÁ KHÁCH QUAN, thường dùng trong quảng bá du lịch (ならではの) và đánh giá nhân sự (にふさわしい).",
+  "vocabList": [
+    {
+      "id": "voc-n2-11-1",
+      "word": "めいぶつ",
+      "kanji": "名物",
+      "furigana": "めいぶつ",
+      "romaji": "meibutsu",
+      "wordType": "noun",
+      "meaningVi": "Đặc sản nổi tiếng",
+      "accentNote": "この町の 名物 = đặc sản của thị trấn này."
+    },
+    {
+      "id": "voc-n2-11-2",
+      "word": "とくしょく",
+      "kanji": "特色",
+      "furigana": "とくしょく",
+      "romaji": "tokushoku",
+      "wordType": "noun",
+      "meaningVi": "Đặc điểm, đặc sắc",
+      "accentNote": "地元の 特色 = đặc điểm của địa phương."
+    },
+    {
+      "id": "voc-n2-11-3",
+      "word": "でんとう",
+      "kanji": "伝統",
+      "furigana": "でんとう",
+      "romaji": "dentou",
+      "wordType": "noun",
+      "meaningVi": "Truyền thống",
+      "accentNote": "伝統的な 料理 = món ăn truyền thống."
+    },
+    {
+      "id": "voc-n2-11-4",
+      "word": "じもと",
+      "kanji": "地元",
+      "furigana": "じもと",
+      "romaji": "jimoto",
+      "wordType": "noun",
+      "meaningVi": "Địa phương, quê nhà",
+      "accentNote": "地元の 人 = người địa phương."
+    },
+    {
+      "id": "voc-n2-11-5",
+      "word": "かんこう",
+      "kanji": "観光",
+      "furigana": "かんこう",
+      "romaji": "kankou",
+      "wordType": "noun",
+      "meaningVi": "Du lịch, tham quan",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-11-6",
+      "word": "しかく",
+      "kanji": "資格",
+      "furigana": "しかく",
+      "romaji": "shikaku",
+      "wordType": "noun",
+      "meaningVi": "Chứng chỉ, tư cách",
+      "accentNote": "Đã gặp N3 bài 8."
+    },
+    {
+      "id": "voc-n2-11-7",
+      "word": "のうりょく",
+      "kanji": "能力",
+      "furigana": "のうりょく",
+      "romaji": "nouryoku",
+      "wordType": "noun",
+      "meaningVi": "Năng lực",
+      "accentNote": "Đã gặp N3 bài 15."
+    },
+    {
+      "id": "voc-n2-11-8",
+      "word": "ぶんか",
+      "kanji": "文化",
+      "furigana": "ぶんか",
+      "romaji": "bunka",
+      "wordType": "noun",
+      "meaningVi": "Văn hóa",
+      "accentNote": "Đã gặp N3 bài 17."
+    },
+    {
+      "id": "voc-n2-11-9",
+      "word": "まち",
+      "kanji": "町",
+      "furigana": "まち",
+      "romaji": "machi",
+      "wordType": "noun",
+      "meaningVi": "Thị trấn",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n2-11-10",
+      "word": "しごと",
+      "kanji": "仕事",
+      "furigana": "しごと",
+      "romaji": "shigoto",
+      "wordType": "noun",
+      "meaningVi": "Công việc",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-11-11",
+      "word": "たいど",
+      "kanji": "態度",
+      "furigana": "たいど",
+      "romaji": "taido",
+      "wordType": "noun",
+      "meaningVi": "Thái độ",
+      "accentNote": "Đã gặp N3 bài 5."
+    },
+    {
+      "id": "voc-n2-11-12",
+      "word": "せんせい",
+      "kanji": "先生",
+      "furigana": "せんせい",
+      "romaji": "sensei",
+      "wordType": "noun",
+      "meaningVi": "Giáo viên",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n2-11-13",
+      "word": "にほん",
+      "kanji": "日本",
+      "furigana": "にほん",
+      "romaji": "nihon",
+      "wordType": "noun",
+      "meaningVi": "Nhật Bản",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-11-14",
+      "word": "りょうり",
+      "kanji": "料理",
+      "furigana": "りょうり",
+      "romaji": "ryouri",
+      "wordType": "noun",
+      "meaningVi": "Món ăn",
+      "accentNote": "Đã gặp N3 bài 15."
+    },
+    {
+      "id": "voc-n2-11-15",
+      "word": "かいしゃ",
+      "kanji": "会社",
+      "furigana": "かいしゃ",
+      "romaji": "kaisha",
+      "wordType": "noun",
+      "meaningVi": "Công ty",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-11-16",
+      "word": "しゃちょう",
+      "kanji": "社長",
+      "furigana": "しゃちょう",
+      "romaji": "shachou",
+      "wordType": "noun",
+      "meaningVi": "Giám đốc",
+      "accentNote": "Đã gặp N4 bài 41."
+    },
+    {
+      "id": "voc-n2-11-17",
+      "word": "けいけん",
+      "kanji": "経験",
+      "furigana": "けいけん",
+      "romaji": "keiken",
+      "wordType": "noun",
+      "meaningVi": "Kinh nghiệm",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-11-18",
+      "word": "じょうず",
+      "kanji": "上手",
+      "furigana": "じょうず",
+      "romaji": "jouzu",
+      "wordType": "adjective",
+      "meaningVi": "Giỏi",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-11-19",
+      "word": "せいかく",
+      "kanji": "性格",
+      "furigana": "せいかく",
+      "romaji": "seikaku",
+      "wordType": "noun",
+      "meaningVi": "Tính cách",
+      "accentNote": "Đã gặp N3 bài 15."
+    },
+    {
+      "id": "voc-n2-11-20",
+      "word": "たかい",
+      "kanji": "高い",
+      "furigana": "たかい",
+      "romaji": "takai",
+      "wordType": "adjective",
+      "meaningVi": "Cao",
+      "accentNote": "Đã gặp N4 bài 34."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n2-11-1",
+      "character": "名",
+      "hanViet": "DANH",
+      "strokeCount": 6,
+      "onyomi": [
+        "メイ (mei)"
+      ],
+      "kunyomi": [
+        "な"
+      ],
+      "meaningVi": "Tên, nổi tiếng.",
+      "commonWords": [
+        {
+          "word": "名物",
+          "furigana": "めいぶつ",
+          "meaningVi": "Đặc sản nổi tiếng"
+        },
+        {
+          "word": "有名",
+          "furigana": "ゆうめい",
+          "meaningVi": "Nổi tiếng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-11-2",
+      "character": "伝",
+      "hanViet": "TRUYỀN",
+      "strokeCount": 6,
+      "onyomi": [
+        "デン (den)"
+      ],
+      "kunyomi": [
+        "つた(える)"
+      ],
+      "meaningVi": "Truyền đạt, lưu truyền.",
+      "commonWords": [
+        {
+          "word": "伝統",
+          "furigana": "でんとう",
+          "meaningVi": "Truyền thống"
+        },
+        {
+          "word": "伝えます",
+          "furigana": "つたえます",
+          "meaningVi": "Truyền đạt"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-11-3",
+      "character": "特",
+      "hanViet": "ĐẶC",
+      "strokeCount": 10,
+      "onyomi": [
+        "トク (toku)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Đặc biệt, đặc trưng.",
+      "commonWords": [
+        {
+          "word": "特色",
+          "furigana": "とくしょく",
+          "meaningVi": "Đặc điểm"
+        },
+        {
+          "word": "特別",
+          "furigana": "とくべつ",
+          "meaningVi": "Đặc biệt"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-11-4",
+      "character": "色",
+      "hanViet": "SẮC",
+      "strokeCount": 6,
+      "onyomi": [
+        "ショク (shoku)"
+      ],
+      "kunyomi": [
+        "いろ"
+      ],
+      "meaningVi": "Màu sắc, đặc sắc.",
+      "commonWords": [
+        {
+          "word": "特色",
+          "furigana": "とくしょく",
+          "meaningVi": "Đặc điểm"
+        },
+        {
+          "word": "景色",
+          "furigana": "けしき",
+          "meaningVi": "Phong cảnh"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-11-5",
+      "character": "元",
+      "hanViet": "NGUYÊN",
+      "strokeCount": 4,
+      "onyomi": [
+        "ゲン (gen)"
+      ],
+      "kunyomi": [
+        "もと"
+      ],
+      "meaningVi": "Nguồn gốc, ban đầu.",
+      "commonWords": [
+        {
+          "word": "地元",
+          "furigana": "じもと",
+          "meaningVi": "Địa phương"
+        },
+        {
+          "word": "元気",
+          "furigana": "げんき",
+          "meaningVi": "Khỏe mạnh"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n2-l11-s1",
+      "slideType": "grammar",
+      "title": "1. Đặc trưng độc đáo (chỉ có ở...): N + ならではの + N2",
+      "grammarFormula": "N(địa phương/người/tổ chức) + ならではの + N2",
+      "explanation": "ならではの diễn tả một điều ĐẶC TRƯNG, ĐỘC ĐÁO CHỈ CÓ Ở N mà KHÔNG THỂ TÌM THẤY ở nơi/người khác — luôn mang tính CA NGỢI sự độc đáo, đặc sắc, không thể thay thế.",
+      "teacherTips": "ならではの luôn mang nghĩa TÍCH CỰC, KHEN NGỢI — không dùng cho đặc điểm tiêu cực hay tầm thường.",
+      "culturalNotes": "Biển quảng cáo du lịch Nhật hay dùng: '地元ならではの味を楽しんでください' (xin hãy thưởng thức hương vị chỉ có ở địa phương này).",
+      "examples": [
+        {
+          "id": "ex-n2-l11-s1-1",
+          "tokens": [
+            {
+              "id": "t-l11s1-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s1-2",
+              "text": "まち",
+              "isKeyGrammar": true,
+              "kanji": "町",
+              "furigana": "まち"
+            },
+            {
+              "id": "t-l11s1-3",
+              "text": "ならではの",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l11s1-4",
+              "text": "めいぶつ",
+              "isKeyGrammar": true,
+              "kanji": "名物",
+              "furigana": "めいぶつ"
+            },
+            {
+              "id": "t-l11s1-5",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Đây là đặc sản chỉ có ở thị trấn này mới có."
+        },
+        {
+          "id": "ex-n2-l11-s1-2",
+          "tokens": [
+            {
+              "id": "t-l11s1-6",
+              "text": "にほん",
+              "isKeyGrammar": true,
+              "kanji": "日本",
+              "furigana": "にほん"
+            },
+            {
+              "id": "t-l11s1-7",
+              "text": "ならではの",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l11s1-8",
+              "text": "ぶんか",
+              "isKeyGrammar": true,
+              "kanji": "文化",
+              "furigana": "ぶんか"
+            },
+            {
+              "id": "t-l11s1-9",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Đây là văn hóa chỉ có ở Nhật Bản mới có."
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l11-s2",
+      "slideType": "grammar",
+      "title": "2. Xứng đáng, phù hợp (đánh giá tiêu chuẩn): N + にふさわしい + N2",
+      "grammarFormula": "N(vai trò/địa vị/hoàn cảnh) + にふさわしい + N2",
+      "explanation": "にふさわしい diễn tả sự PHÙ HỢP/XỨNG ĐÁNG về mặt PHẨM CHẤT, TIÊU CHUẨN giữa một vai trò/địa vị/hoàn cảnh (N) và điều được đánh giá (N2) — mang tính ĐÁNH GIÁ KHÁCH QUAN, không nhất thiết là độc đáo.",
+      "teacherTips": "にふさわしい dùng để ĐÁNH GIÁ mức độ TƯƠNG XỨNG — thường thấy trong nhận xét, phỏng vấn tuyển dụng, tiêu chí lựa chọn.",
+      "culturalNotes": "Trong đánh giá nhân sự Nhật: '彼は社長にふさわしい人物だ' (anh ấy là người xứng đáng với vị trí giám đốc).",
+      "examples": [
+        {
+          "id": "ex-n2-l11-s2-1",
+          "tokens": [
+            {
+              "id": "t-l11s2-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s2-2",
+              "text": "しごと",
+              "isKeyGrammar": true,
+              "kanji": "仕事",
+              "furigana": "しごと"
+            },
+            {
+              "id": "t-l11s2-3",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s2-4",
+              "text": "ふさわしい",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l11s2-5",
+              "text": "のうりょく",
+              "isKeyGrammar": true,
+              "kanji": "能力",
+              "furigana": "のうりょく"
+            },
+            {
+              "id": "t-l11s2-6",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s2-7",
+              "text": "あります",
+              "isKeyGrammar": false,
+              "kanji": "有ります",
+              "furigana": "あります"
+            }
+          ],
+          "meaningVi": "Có năng lực xứng đáng với công việc này."
+        },
+        {
+          "id": "ex-n2-l11-s2-2",
+          "tokens": [
+            {
+              "id": "t-l11s2-8",
+              "text": "せんせい",
+              "isKeyGrammar": true,
+              "kanji": "先生",
+              "furigana": "せんせい"
+            },
+            {
+              "id": "t-l11s2-9",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s2-10",
+              "text": "ふさわしい",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l11s2-11",
+              "text": "たいど",
+              "isKeyGrammar": true,
+              "kanji": "態度",
+              "furigana": "たいど"
+            },
+            {
+              "id": "t-l11s2-12",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Đây là thái độ xứng đáng với một giáo viên."
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l11-s3",
+      "slideType": "grammar",
+      "title": "3. So sánh ならではの và にふさわしい",
+      "grammarFormula": "ならではの: ĐỘC ĐÁO, không thể thay thế (đặc trưng riêng)　vs　にふさわしい: PHÙ HỢP, xứng đáng (đánh giá theo tiêu chuẩn)",
+      "explanation": "ならではの nhấn TÍNH DUY NHẤT — điều đó CHỈ TỒN TẠI ở N và không nơi nào khác có; にふさわしい nhấn SỰ TƯƠNG XỨNG — điều đó có thể tồn tại ở nhiều nơi, nhưng ĐÁP ỨNG ĐÚNG TIÊU CHUẨN của N.",
+      "teacherTips": "Mẹo: nếu nhấn 'CHỈ Ở ĐÂY MỚI CÓ' → ならではの; nếu nhấn 'ĐÁP ỨNG ĐÚNG TIÊU CHUẨN' → にふさわしい.",
+      "culturalNotes": "Cả hai đều là ngữ pháp N2 trọng điểm, thường xuất hiện trong bài đọc hiểu về du lịch, văn hóa địa phương, đánh giá nhân sự.",
+      "examples": [
+        {
+          "id": "ex-n2-l11-s3-1",
+          "tokens": [
+            {
+              "id": "t-l11s3-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s3-2",
+              "text": "まち",
+              "isKeyGrammar": true,
+              "kanji": "町",
+              "furigana": "まち"
+            },
+            {
+              "id": "t-l11s3-3",
+              "text": "ならではの",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l11s3-4",
+              "text": "でんとう",
+              "isKeyGrammar": true,
+              "kanji": "伝統",
+              "furigana": "でんとう"
+            },
+            {
+              "id": "t-l11s3-5",
+              "text": "てきな",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s3-6",
+              "text": "りょうり",
+              "isKeyGrammar": true,
+              "kanji": "料理",
+              "furigana": "りょうり"
+            },
+            {
+              "id": "t-l11s3-7",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Đây là món ăn truyền thống chỉ có ở thị trấn này. (độc đáo)"
+        },
+        {
+          "id": "ex-n2-l11-s3-2",
+          "tokens": [
+            {
+              "id": "t-l11s3-8",
+              "text": "しゃちょう",
+              "isKeyGrammar": true,
+              "kanji": "社長",
+              "furigana": "しゃちょう"
+            },
+            {
+              "id": "t-l11s3-9",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s3-10",
+              "text": "ふさわしい",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l11s3-11",
+              "text": "せいかく",
+              "isKeyGrammar": true,
+              "kanji": "性格",
+              "furigana": "せいかく"
+            },
+            {
+              "id": "t-l11s3-12",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Đây là tính cách xứng đáng với một giám đốc. (phù hợp tiêu chuẩn, không nhất thiết độc đáo)"
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l11-s4",
+      "slideType": "grammar",
+      "title": "4. Kết hợp trong văn phong du lịch và tuyển dụng",
+      "grammarFormula": "この特色は地元ならではのものです。　　N は N2にふさわしいサービス/人物です。",
+      "explanation": "Trong thực tế, tài liệu QUẢNG BÁ DU LỊCH hay dùng ならではの để khen ngợi đặc sản địa phương; tài liệu TUYỂN DỤNG/đánh giá hay dùng にふさわしい để mô tả người/dịch vụ đáp ứng đúng tiêu chuẩn.",
+      "teacherTips": "Ghi nhớ ngữ cảnh: quảng bá đặc sản/văn hóa → ならではの; đánh giá con người/dịch vụ theo tiêu chuẩn → にふさわしい.",
+      "culturalNotes": "Tờ rơi du lịch Nhật thường kết hợp cả hai: '地元ならではの名物と、観光客にふさわしいおもてなし' (đặc sản chỉ có ở địa phương, và sự tiếp đãi xứng đáng với du khách).",
+      "examples": [
+        {
+          "id": "ex-n2-l11-s4-1",
+          "tokens": [
+            {
+              "id": "t-l11s4-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s4-2",
+              "text": "とくしょく",
+              "isKeyGrammar": true,
+              "kanji": "特色",
+              "furigana": "とくしょく"
+            },
+            {
+              "id": "t-l11s4-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s4-4",
+              "text": "じもと",
+              "isKeyGrammar": true,
+              "kanji": "地元",
+              "furigana": "じもと"
+            },
+            {
+              "id": "t-l11s4-5",
+              "text": "ならではの",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l11s4-6",
+              "text": "もの",
+              "isKeyGrammar": false,
+              "kanji": "物",
+              "furigana": "もの"
+            },
+            {
+              "id": "t-l11s4-7",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Đặc điểm này là thứ chỉ có ở địa phương mới có."
+        },
+        {
+          "id": "ex-n2-l11-s4-2",
+          "tokens": [
+            {
+              "id": "t-l11s4-8",
+              "text": "かんこうきゃく",
+              "isKeyGrammar": true,
+              "kanji": "観光客",
+              "furigana": "かんこうきゃく"
+            },
+            {
+              "id": "t-l11s4-9",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s4-10",
+              "text": "ふさわしい",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l11s4-11",
+              "text": "サービス",
+              "isKeyGrammar": false,
+              "kanji": "サービス",
+              "furigana": "サービス"
+            },
+            {
+              "id": "t-l11s4-12",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l11s4-13",
+              "text": "あります",
+              "isKeyGrammar": false,
+              "kanji": "有ります",
+              "furigana": "あります"
+            }
+          ],
+          "meaningVi": "Có dịch vụ xứng đáng/phù hợp với khách du lịch."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n2-11-1",
+      "speaker": "田中",
+      "speakerRole": "Hướng dẫn viên du lịch",
+      "tokens": [
+        {
+          "id": "d11-1",
+          "text": "これ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-2",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-3",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-4",
+          "text": "まち",
+          "isKeyGrammar": true,
+          "kanji": "町",
+          "furigana": "まち"
+        },
+        {
+          "id": "d11-5",
+          "text": "ならではの",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d11-6",
+          "text": "めいぶつ",
+          "isKeyGrammar": true,
+          "kanji": "名物",
+          "furigana": "めいぶつ"
+        },
+        {
+          "id": "d11-7",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Đây là đặc sản chỉ có ở thị trấn này mới có."
+    },
+    {
+      "id": "dia-n2-11-2",
+      "speaker": "サントス",
+      "speakerRole": "Du khách",
+      "tokens": [
+        {
+          "id": "d11-8",
+          "text": "おいしい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-9",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d11-10",
+          "text": "ね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-11",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-12",
+          "text": "でんとう",
+          "isKeyGrammar": true,
+          "kanji": "伝統",
+          "furigana": "でんとう"
+        },
+        {
+          "id": "d11-13",
+          "text": "てきな",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-14",
+          "text": "りょうり",
+          "isKeyGrammar": true,
+          "kanji": "料理",
+          "furigana": "りょうり"
+        },
+        {
+          "id": "d11-15",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d11-16",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ngon nhỉ. Đây có phải món ăn truyền thống không?"
+    },
+    {
+      "id": "dia-n2-11-3",
+      "speaker": "田中",
+      "speakerRole": "Hướng dẫn viên du lịch",
+      "tokens": [
+        {
+          "id": "d11-17",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-18",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-19",
+          "text": "じもと",
+          "isKeyGrammar": true,
+          "kanji": "地元",
+          "furigana": "じもと"
+        },
+        {
+          "id": "d11-20",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-21",
+          "text": "とくしょく",
+          "isKeyGrammar": true,
+          "kanji": "特色",
+          "furigana": "とくしょく"
+        },
+        {
+          "id": "d11-22",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng. Là đặc điểm của địa phương."
+    },
+    {
+      "id": "dia-n2-11-4",
+      "speaker": "サントス",
+      "speakerRole": "Du khách",
+      "tokens": [
+        {
+          "id": "d11-23",
+          "text": "ぶんか",
+          "isKeyGrammar": true,
+          "kanji": "文化",
+          "furigana": "ぶんか"
+        },
+        {
+          "id": "d11-24",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-25",
+          "text": "たいせつ",
+          "isKeyGrammar": false,
+          "kanji": "大切",
+          "furigana": "たいせつ"
+        },
+        {
+          "id": "d11-26",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d11-27",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Văn hóa cũng quan trọng nhỉ."
+    },
+    {
+      "id": "dia-n2-11-5",
+      "speaker": "田中",
+      "speakerRole": "Hướng dẫn viên du lịch",
+      "tokens": [
+        {
+          "id": "d11-28",
+          "text": "かんこうきゃく",
+          "isKeyGrammar": true,
+          "kanji": "観光客",
+          "furigana": "かんこうきゃく"
+        },
+        {
+          "id": "d11-29",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-30",
+          "text": "ふさわしい",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d11-31",
+          "text": "サービス",
+          "isKeyGrammar": false,
+          "kanji": "サービス",
+          "furigana": "サービス"
+        },
+        {
+          "id": "d11-32",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-33",
+          "text": "つくって",
+          "isKeyGrammar": false,
+          "kanji": "作って",
+          "furigana": "つくって"
+        },
+        {
+          "id": "d11-34",
+          "text": "います",
+          "isKeyGrammar": false,
+          "kanji": "居ます",
+          "furigana": "います"
+        }
+      ],
+      "meaningVi": "Chúng tôi đang tạo ra dịch vụ xứng đáng với khách du lịch."
+    },
+    {
+      "id": "dia-n2-11-6",
+      "speaker": "サントス",
+      "speakerRole": "Du khách",
+      "tokens": [
+        {
+          "id": "d11-35",
+          "text": "しごと",
+          "isKeyGrammar": true,
+          "kanji": "仕事",
+          "furigana": "しごと"
+        },
+        {
+          "id": "d11-36",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-37",
+          "text": "ふさわしい",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d11-38",
+          "text": "のうりょく",
+          "isKeyGrammar": true,
+          "kanji": "能力",
+          "furigana": "のうりょく"
+        },
+        {
+          "id": "d11-39",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-40",
+          "text": "ひつよう",
+          "isKeyGrammar": false,
+          "kanji": "必要",
+          "furigana": "ひつよう"
+        },
+        {
+          "id": "d11-41",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d11-42",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Cần có năng lực xứng đáng với công việc nhỉ."
+    },
+    {
+      "id": "dia-n2-11-7",
+      "speaker": "田中",
+      "speakerRole": "Hướng dẫn viên du lịch",
+      "tokens": [
+        {
+          "id": "d11-43",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-44",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-45",
+          "text": "しかく",
+          "isKeyGrammar": true,
+          "kanji": "資格",
+          "furigana": "しかく"
+        },
+        {
+          "id": "d11-46",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-47",
+          "text": "ひつよう",
+          "isKeyGrammar": false,
+          "kanji": "必要",
+          "furigana": "ひつよう"
+        },
+        {
+          "id": "d11-48",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng. Chứng chỉ cũng cần thiết."
+    },
+    {
+      "id": "dia-n2-11-8",
+      "speaker": "サントス",
+      "speakerRole": "Du khách",
+      "tokens": [
+        {
+          "id": "d11-49",
+          "text": "せんせい",
+          "isKeyGrammar": true,
+          "kanji": "先生",
+          "furigana": "せんせい"
+        },
+        {
+          "id": "d11-50",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-51",
+          "text": "ふさわしい",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d11-52",
+          "text": "たいど",
+          "isKeyGrammar": true,
+          "kanji": "態度",
+          "furigana": "たいど"
+        },
+        {
+          "id": "d11-53",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-54",
+          "text": "だいじ",
+          "isKeyGrammar": false,
+          "kanji": "大事",
+          "furigana": "だいじ"
+        },
+        {
+          "id": "d11-55",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d11-56",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Thái độ xứng đáng với một giáo viên cũng quan trọng nhỉ."
+    },
+    {
+      "id": "dia-n2-11-9",
+      "speaker": "田中",
+      "speakerRole": "Hướng dẫn viên du lịch",
+      "tokens": [
+        {
+          "id": "d11-57",
+          "text": "しゃちょう",
+          "isKeyGrammar": true,
+          "kanji": "社長",
+          "furigana": "しゃちょう"
+        },
+        {
+          "id": "d11-58",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-59",
+          "text": "ふさわしい",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d11-60",
+          "text": "せいかく",
+          "isKeyGrammar": true,
+          "kanji": "性格",
+          "furigana": "せいかく"
+        },
+        {
+          "id": "d11-61",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d11-62",
+          "text": "ひつよう",
+          "isKeyGrammar": false,
+          "kanji": "必要",
+          "furigana": "ひつよう"
+        },
+        {
+          "id": "d11-63",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Tính cách xứng đáng với một giám đốc cũng cần thiết."
+    },
+    {
+      "id": "dia-n2-11-10",
+      "speaker": "サントス",
+      "speakerRole": "Du khách",
+      "tokens": [
+        {
+          "id": "d11-64",
+          "text": "にほん",
+          "isKeyGrammar": true,
+          "kanji": "日本",
+          "furigana": "にほん"
+        },
+        {
+          "id": "d11-65",
+          "text": "ならではの",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d11-66",
+          "text": "けいけん",
+          "isKeyGrammar": true,
+          "kanji": "経験",
+          "furigana": "けいけん"
+        },
+        {
+          "id": "d11-67",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d11-68",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Đây là kinh nghiệm chỉ có ở Nhật Bản mới có nhỉ."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n2-11-1",
+      "question": "「この町ならではの名物です」 — ならではの diễn tả điều gì?",
+      "options": [
+        "Đặc trưng độc đáo, chỉ có ở nơi/người/tổ chức đó mới có, mang tính ca ngợi",
+        "Sự phù hợp về tiêu chuẩn",
+        "Sự phủ định hoàn toàn",
+        "Sự khẳng định chắc chắn"
+      ],
+      "correctIndex": 0,
+      "explanation": "ならではの diễn tả một điều ĐỘC ĐÁO, CHỈ CÓ Ở nơi/người/tổ chức đó, không thể tìm thấy ở nơi khác.",
+      "hint": "Xem cấu trúc ならではの ở slide 1."
+    },
+    {
+      "id": "ex-q-n2-11-2",
+      "question": "「この仕事にふさわしい能力があります」 — にふさわしい khác ならではの ở điểm nào?",
+      "options": [
+        "にふさわしい nhấn sự PHÙ HỢP/xứng đáng theo tiêu chuẩn, không nhất thiết độc đáo",
+        "Hoàn toàn giống nhau, dùng thay thế được cho nhau",
+        "にふさわしい chỉ dùng cho câu hỏi",
+        "ならではの chỉ dùng cho phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "にふさわしい đánh giá sự TƯƠNG XỨNG về tiêu chuẩn, khác ならではの nhấn tính DUY NHẤT/độc đáo.",
+      "hint": "Xem giải thích にふさわしい ở slide 2."
+    },
+    {
+      "id": "ex-q-n2-11-3",
+      "question": "ならではの có thể dùng cho một đặc điểm TIÊU CỰC/tầm thường không?",
+      "options": [
+        "Không, ならではの luôn mang nghĩa TÍCH CỰC, ca ngợi sự độc đáo",
+        "Có, dùng được cho cả tích cực lẫn tiêu cực",
+        "Chỉ dùng được cho tiêu cực",
+        "Không có quy tắc nào về việc này"
+      ],
+      "correctIndex": 0,
+      "explanation": "ならではの luôn mang tính KHEN NGỢI — không dùng cho đặc điểm tiêu cực hay tầm thường.",
+      "hint": "Xem lưu ý ngữ pháp ở slide 1."
+    },
+    {
+      "id": "ex-q-n2-11-4",
+      "question": "「社長にふさわしい性格です」 nghĩa là:",
+      "options": [
+        "Đây là tính cách xứng đáng/phù hợp với vị trí giám đốc",
+        "Đây là tính cách chỉ có ở giám đốc mới có (độc nhất)",
+        "Giám đốc không có tính cách nào cả",
+        "Tính cách này không phù hợp với ai"
+      ],
+      "correctIndex": 0,
+      "explanation": "にふさわしい ở đây đánh giá sự TƯƠNG XỨNG giữa tính cách và vị trí giám đốc theo tiêu chuẩn.",
+      "hint": "Áp dụng cấu trúc Nにふさわしい cho ngữ cảnh câu."
+    },
+    {
+      "id": "ex-q-n2-11-5",
+      "question": "Trong tài liệu quảng bá du lịch, cấu trúc nào thường được dùng để khen ngợi đặc sản địa phương?",
+      "options": [
+        "ならではの",
+        "にふさわしい",
+        "べきだ",
+        "としたら"
+      ],
+      "correctIndex": 0,
+      "explanation": "ならではの phù hợp để khen ngợi đặc sản/văn hóa ĐỘC ĐÁO của một địa phương cụ thể.",
+      "hint": "Xem văn hóa sử dụng ở slide 1."
+    },
+    {
+      "id": "ex-q-n2-11-6",
+      "question": "Trong đánh giá nhân sự/tuyển dụng, cấu trúc nào thường được dùng?",
+      "options": [
+        "にふさわしい",
+        "ならではの",
+        "ばかりだ",
+        "one方だ"
+      ],
+      "correctIndex": 0,
+      "explanation": "にふさわしい phù hợp để đánh giá mức độ TƯƠNG XỨNG của một người với vị trí/vai trò công việc.",
+      "hint": "Xem văn hóa sử dụng ở slide 2."
+    },
+    {
+      "id": "ex-q-n2-11-7",
+      "question": "「日本ならではの文化です」 và 「観光客にふさわしいサービス」 khác nhau ở đâu?",
+      "options": [
+        "Câu đầu nhấn TÍNH ĐỘC ĐÁO (chỉ Nhật Bản có); câu sau nhấn SỰ PHÙ HỢP (đáp ứng tiêu chuẩn khách du lịch)",
+        "Không có gì khác nhau cả",
+        "Câu đầu là quá khứ, câu sau là hiện tại",
+        "Câu sau là phủ định của câu đầu"
+      ],
+      "correctIndex": 0,
+      "explanation": "ならではの nhấn tính DUY NHẤT của văn hóa Nhật; にふさわしい nhấn sự PHÙ HỢP của dịch vụ với khách du lịch.",
+      "hint": "So sánh hai câu ở slide 3."
+    },
+    {
+      "id": "ex-q-n2-11-8",
+      "question": "Theo hội thoại, món ăn được giới thiệu có phải đặc sản của thị trấn không?",
+      "options": [
+        "Có, là đặc sản chỉ có ở thị trấn này (この町ならではの名物です)",
+        "Không, là món ăn phổ biến khắp nơi",
+        "Không được đề cập trong hội thoại",
+        "Là món ăn nhập khẩu từ nước ngoài"
+      ],
+      "correctIndex": 0,
+      "explanation": "田中 nói 「これはこの町ならではの名物です」.",
+      "hint": "Xem câu thoại thứ 1."
+    },
+    {
+      "id": "ex-q-n2-11-9",
+      "question": "田中 đang tạo ra điều gì cho khách du lịch?",
+      "options": [
+        "Dịch vụ xứng đáng với khách du lịch (観光客にふさわしいサービス)",
+        "Không tạo ra gì cả",
+        "Chỉ tạo ra đặc sản, không có dịch vụ",
+        "Dịch vụ dành cho người địa phương"
+      ],
+      "correctIndex": 0,
+      "explanation": "田中 nói 「観光客にふさわしいサービスを作っています」.",
+      "hint": "Xem câu thoại thứ 5."
+    },
+    {
+      "id": "ex-q-n2-11-10",
+      "question": "Santos nhận xét gì về kinh nghiệm của mình ở cuối hội thoại?",
+      "options": [
+        "Đây là kinh nghiệm chỉ có ở Nhật Bản mới có (日本ならではの経験ですね)",
+        "Đây là kinh nghiệm bình thường, không đặc biệt",
+        "Không có kinh nghiệm gì đáng nhớ",
+        "Kinh nghiệm này có thể có ở bất cứ đâu"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「日本ならではの経験ですね」.",
+      "hint": "Xem câu thoại cuối cùng."
+    }
+  ]
+}

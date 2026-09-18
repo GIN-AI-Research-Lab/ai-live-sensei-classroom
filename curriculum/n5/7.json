@@ -1,0 +1,1239 @@
+{
+  "level": "N5",
+  "lessonNumber": 7,
+  "title": "Bài 7: Công cụ, Phương tiện で & Cho nhận (あげます / もらいます / もう Vました)",
+  "description": "Dùng で để chỉ công cụ hoặc ngôn ngữ thực hiện hành động, cấu trúc tặng あげます và nhận もらいます (luôn lấy người nói làm gốc), cặp 貸します/借ります, và cách nói việc đã xong bằng もう Vました / まだ Vていません.",
+  "vocabList": [
+    {
+      "id": "voc-n5-7-1",
+      "word": "あげます",
+      "kanji": "上げます",
+      "furigana": "あげます",
+      "romaji": "agemasu",
+      "wordType": "verb",
+      "meaningVi": "Tặng, cho (người khác)",
+      "accentNote": "Người nói/phe người nói TẶNG cho người khác."
+    },
+    {
+      "id": "voc-n5-7-2",
+      "word": "もらいます",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "moraimasu",
+      "wordType": "verb",
+      "meaningVi": "Nhận, được (từ ai đó)",
+      "accentNote": "Người nói NHẬN từ người khác — người cho đánh dấu bằng に hoặc から."
+    },
+    {
+      "id": "voc-n5-7-3",
+      "word": "かします",
+      "kanji": "貸します",
+      "furigana": "かします",
+      "romaji": "kashimasu",
+      "wordType": "verb",
+      "meaningVi": "Cho mượn",
+      "accentNote": "Thể từ điển: 貸す. Khác 借ります (mượn) — hai chiều ngược nhau."
+    },
+    {
+      "id": "voc-n5-7-4",
+      "word": "かります",
+      "kanji": "借ります",
+      "furigana": "かります",
+      "romaji": "karimasu",
+      "wordType": "verb",
+      "meaningVi": "Mượn, vay",
+      "accentNote": "Thể từ điển: 借りる. Người MƯỢN dùng động từ này."
+    },
+    {
+      "id": "voc-n5-7-5",
+      "word": "おしえます",
+      "kanji": "教えます",
+      "furigana": "おしえます",
+      "romaji": "oshiemasu",
+      "wordType": "verb",
+      "meaningVi": "Dạy, chỉ bảo, cho biết",
+      "accentNote": "教えて ください = xin hãy chỉ giúp tôi."
+    },
+    {
+      "id": "voc-n5-7-6",
+      "word": "ならいます",
+      "kanji": "習います",
+      "furigana": "ならいます",
+      "romaji": "naraimasu",
+      "wordType": "verb",
+      "meaningVi": "Học (một kỹ năng, từ ai đó)",
+      "accentNote": "Khác 勉強します (học nói chung) — 習います nhấn mạnh HỌC TỪ AI."
+    },
+    {
+      "id": "voc-n5-7-7",
+      "word": "はなします",
+      "kanji": "話します",
+      "furigana": "はなします",
+      "romaji": "hanashimasu",
+      "wordType": "verb",
+      "meaningVi": "Nói, trò chuyện",
+      "accentNote": "日本語で 話します = nói bằng tiếng Nhật."
+    },
+    {
+      "id": "voc-n5-7-8",
+      "word": "みせます",
+      "kanji": "見せます",
+      "furigana": "みせます",
+      "romaji": "misemasu",
+      "wordType": "verb",
+      "meaningVi": "Cho xem, trình bày",
+      "accentNote": "Đã gặp dạng lịch sự 見せて ください ở bài 3."
+    },
+    {
+      "id": "voc-n5-7-9",
+      "word": "ペン",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "pen",
+      "wordType": "noun",
+      "meaningVi": "Cây bút (nói chung)",
+      "accentNote": "ボールペン (bút bi) đã học ở bài 2 là một loại ペン."
+    },
+    {
+      "id": "voc-n5-7-10",
+      "word": "かんじ",
+      "kanji": "漢字",
+      "furigana": "かんじ",
+      "romaji": "kanji",
+      "wordType": "noun",
+      "meaningVi": "Chữ Hán",
+      "accentNote": "漢字を 習います = học chữ Hán."
+    },
+    {
+      "id": "voc-n5-7-11",
+      "word": "でんわ",
+      "kanji": "電話",
+      "furigana": "でんわ",
+      "romaji": "denwa",
+      "wordType": "noun",
+      "meaningVi": "Điện thoại, cuộc gọi",
+      "accentNote": "電話を 貸します = cho mượn điện thoại."
+    },
+    {
+      "id": "voc-n5-7-12",
+      "word": "たんじょうび",
+      "kanji": "誕生日",
+      "furigana": "たんじょうび",
+      "romaji": "tanjoubi",
+      "wordType": "noun",
+      "meaningVi": "Sinh nhật",
+      "accentNote": "Đã gặp bài 5 — nay dùng làm dịp tặng quà."
+    },
+    {
+      "id": "voc-n5-7-13",
+      "word": "もう",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "mou",
+      "wordType": "adverb",
+      "meaningVi": "Đã, rồi (việc đã hoàn tất)",
+      "accentNote": "もう Vました = đã làm ~ rồi."
+    },
+    {
+      "id": "voc-n5-7-14",
+      "word": "まだ",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "mada",
+      "wordType": "adverb",
+      "meaningVi": "Vẫn chưa, còn",
+      "accentNote": "まだ Vていません = vẫn chưa làm ~."
+    },
+    {
+      "id": "voc-n5-7-15",
+      "word": "にほんご",
+      "kanji": "日本語",
+      "furigana": "にほんご",
+      "romaji": "nihongo",
+      "wordType": "noun",
+      "meaningVi": "Tiếng Nhật",
+      "accentNote": "Đã gặp bài 2 — nay dùng làm ngôn ngữ để 話します/教えます."
+    },
+    {
+      "id": "voc-n5-7-16",
+      "word": "えいご",
+      "kanji": "英語",
+      "furigana": "えいご",
+      "romaji": "eigo",
+      "wordType": "noun",
+      "meaningVi": "Tiếng Anh",
+      "accentNote": "Đã gặp bài 2."
+    },
+    {
+      "id": "voc-n5-7-17",
+      "word": "じしょ",
+      "kanji": "辞書",
+      "furigana": "じしょ",
+      "romaji": "jisho",
+      "wordType": "noun",
+      "meaningVi": "Từ điển",
+      "accentNote": "Đã gặp bài 2 — nay dùng làm vật cho mượn."
+    },
+    {
+      "id": "voc-n5-7-18",
+      "word": "かさ",
+      "kanji": "傘",
+      "furigana": "かさ",
+      "romaji": "kasa",
+      "wordType": "noun",
+      "meaningVi": "Cái ô, cái dù",
+      "accentNote": "Đã gặp bài 2 — nay dùng làm vật cho mượn khi trời mưa."
+    },
+    {
+      "id": "voc-n5-7-19",
+      "word": "ちず",
+      "kanji": "地図",
+      "furigana": "ちず",
+      "romaji": "chizu",
+      "wordType": "noun",
+      "meaningVi": "Bản đồ",
+      "accentNote": "地図を 見せて ください = cho tôi xem bản đồ."
+    },
+    {
+      "id": "voc-n5-7-20",
+      "word": "しゅくだい",
+      "kanji": "宿題",
+      "furigana": "しゅくだい",
+      "romaji": "shukudai",
+      "wordType": "noun",
+      "meaningVi": "Bài tập về nhà",
+      "accentNote": "宿題を します = làm bài tập."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n5-7-1",
+      "character": "教",
+      "hanViet": "GIÁO",
+      "strokeCount": 11,
+      "onyomi": [
+        "キョウ (kyou)"
+      ],
+      "kunyomi": [
+        "おし(える)",
+        "おそ(わる)"
+      ],
+      "meaningVi": "Dạy, giáo dục.",
+      "commonWords": [
+        {
+          "word": "教えます",
+          "furigana": "おしえます",
+          "meaningVi": "Dạy"
+        },
+        {
+          "word": "教室",
+          "furigana": "きょうしつ",
+          "meaningVi": "Phòng học"
+        },
+        {
+          "word": "教師",
+          "furigana": "きょうし",
+          "meaningVi": "Giáo viên"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-7-2",
+      "character": "習",
+      "hanViet": "TẬP",
+      "strokeCount": 11,
+      "onyomi": [
+        "シュウ (shuu)"
+      ],
+      "kunyomi": [
+        "なら(う)"
+      ],
+      "meaningVi": "Học, luyện tập, thói quen.",
+      "commonWords": [
+        {
+          "word": "習います",
+          "furigana": "ならいます",
+          "meaningVi": "Học"
+        },
+        {
+          "word": "習慣",
+          "furigana": "しゅうかん",
+          "meaningVi": "Thói quen"
+        },
+        {
+          "word": "練習",
+          "furigana": "れんしゅう",
+          "meaningVi": "Luyện tập"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-7-3",
+      "character": "話",
+      "hanViet": "THOẠI",
+      "strokeCount": 13,
+      "onyomi": [
+        "ワ (wa)"
+      ],
+      "kunyomi": [
+        "はな(す)",
+        "はなし"
+      ],
+      "meaningVi": "Nói, câu chuyện. Bộ 言 (lời nói).",
+      "commonWords": [
+        {
+          "word": "話します",
+          "furigana": "はなします",
+          "meaningVi": "Nói"
+        },
+        {
+          "word": "電話",
+          "furigana": "でんわ",
+          "meaningVi": "Điện thoại"
+        },
+        {
+          "word": "会話",
+          "furigana": "かいわ",
+          "meaningVi": "Hội thoại"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-7-4",
+      "character": "漢",
+      "hanViet": "HÁN",
+      "strokeCount": 13,
+      "onyomi": [
+        "カン (kan)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Nhà Hán (Trung Quốc) — chỉ chữ Hán.",
+      "commonWords": [
+        {
+          "word": "漢字",
+          "furigana": "かんじ",
+          "meaningVi": "Chữ Hán"
+        },
+        {
+          "word": "漢語",
+          "furigana": "かんご",
+          "meaningVi": "Từ Hán"
+        },
+        {
+          "word": "漢方",
+          "furigana": "かんぽう",
+          "meaningVi": "Đông y"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-7-5",
+      "character": "字",
+      "hanViet": "TỰ",
+      "strokeCount": 6,
+      "onyomi": [
+        "ジ (ji)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Chữ viết.",
+      "commonWords": [
+        {
+          "word": "漢字",
+          "furigana": "かんじ",
+          "meaningVi": "Chữ Hán"
+        },
+        {
+          "word": "字",
+          "furigana": "じ",
+          "meaningVi": "Chữ"
+        },
+        {
+          "word": "数字",
+          "furigana": "すうじ",
+          "meaningVi": "Chữ số"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n5-l7-s1",
+      "slideType": "grammar",
+      "title": "1. Công cụ/ngôn ngữ: N[công cụ] + で + V",
+      "grammarFormula": "[Công cụ/ngôn ngữ] + で + Vます",
+      "explanation": "で đã học ở bài 5 (phương tiện) và bài 6 (nơi chốn) — nay thêm nghĩa thứ ba: CÔNG CỤ hoặc NGÔN NGỮ dùng để thực hiện hành động. Cùng một trợ từ, ba chức năng, phân biệt bằng ngữ cảnh.",
+      "teacherTips": "で đã có 3 nghĩa: phương tiện di chuyển (b5), nơi hành động (b6), công cụ/ngôn ngữ (b7) — luôn xét ngữ cảnh.",
+      "culturalNotes": "Trong lớp học tiếng Nhật, 日本語で 話して ください (hãy nói bằng tiếng Nhật) là câu giáo viên nói nhiều nhất.",
+      "examples": [
+        {
+          "id": "ex-n5-l7-s1-1",
+          "tokens": [
+            {
+              "id": "t-l7s1-1",
+              "text": "ペン",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l7s1-2",
+              "text": "で",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l7s1-3",
+              "text": "かきます",
+              "isKeyGrammar": false,
+              "kanji": "書きます",
+              "furigana": "かきます"
+            }
+          ],
+          "meaningVi": "Tôi viết bằng bút."
+        },
+        {
+          "id": "ex-n5-l7-s1-2",
+          "tokens": [
+            {
+              "id": "t-l7s1-4",
+              "text": "にほんご",
+              "isKeyGrammar": false,
+              "kanji": "日本語",
+              "furigana": "にほんご"
+            },
+            {
+              "id": "t-l7s1-5",
+              "text": "で",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l7s1-6",
+              "text": "はなします",
+              "isKeyGrammar": true,
+              "kanji": "話します",
+              "furigana": "はなします"
+            }
+          ],
+          "meaningVi": "Tôi nói bằng tiếng Nhật."
+        },
+        {
+          "id": "ex-n5-l7-s1-3",
+          "tokens": [
+            {
+              "id": "t-l7s1-7",
+              "text": "なに",
+              "isKeyGrammar": true,
+              "kanji": "何",
+              "furigana": "なに"
+            },
+            {
+              "id": "t-l7s1-8",
+              "text": "で",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l7s1-9",
+              "text": "かきますか",
+              "isKeyGrammar": false,
+              "kanji": "書きますか",
+              "furigana": "かきますか"
+            }
+          ],
+          "meaningVi": "Anh viết bằng gì vậy?"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l7-s2",
+      "slideType": "grammar",
+      "title": "2. Tặng: [người cho] は [người nhận] に N を あげます",
+      "grammarFormula": "[Người cho] は [người nhận] に + N + を + あげます",
+      "explanation": "あげます dùng khi NGƯỜI NÓI (hoặc phe người nói) TẶNG cho người khác. Người nhận đánh dấu bằng に. Không dùng あげます khi người khác tặng CHO MÌNH.",
+      "teacherTips": "Với người TRÊN mình (thầy cô, cấp trên) nên dùng 差し上げます thay あげます — sẽ học ở trình độ cao hơn.",
+      "culturalNotes": "Văn hóa tặng quà Nhật rất coi trọng cách GÓI quà hơn cả giá trị món quà.",
+      "examples": [
+        {
+          "id": "ex-n5-l7-s2-1",
+          "tokens": [
+            {
+              "id": "t-l7s2-1",
+              "text": "わたし",
+              "isKeyGrammar": false,
+              "kanji": "私",
+              "furigana": "わたし"
+            },
+            {
+              "id": "t-l7s2-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l7s2-3",
+              "text": "やまださん",
+              "isKeyGrammar": false,
+              "kanji": "山田さん",
+              "furigana": "やまださん"
+            },
+            {
+              "id": "t-l7s2-4",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l7s2-5",
+              "text": "はな",
+              "isKeyGrammar": false,
+              "kanji": "花",
+              "furigana": "はな"
+            },
+            {
+              "id": "t-l7s2-6",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l7s2-7",
+              "text": "あげます",
+              "isKeyGrammar": true,
+              "kanji": "上げます",
+              "furigana": "あげます"
+            }
+          ],
+          "meaningVi": "Tôi tặng hoa cho anh Yamada."
+        },
+        {
+          "id": "ex-n5-l7-s2-2",
+          "tokens": [
+            {
+              "id": "t-l7s2-8",
+              "text": "たんじょうび",
+              "isKeyGrammar": false,
+              "kanji": "誕生日",
+              "furigana": "たんじょうび"
+            },
+            {
+              "id": "t-l7s2-9",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l7s2-10",
+              "text": "なに",
+              "isKeyGrammar": true,
+              "kanji": "何",
+              "furigana": "なに"
+            },
+            {
+              "id": "t-l7s2-11",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l7s2-12",
+              "text": "あげますか",
+              "isKeyGrammar": false,
+              "kanji": "上げますか",
+              "furigana": "あげますか"
+            }
+          ],
+          "meaningVi": "Anh định tặng gì nhân sinh nhật vậy?"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l7-s3",
+      "slideType": "grammar",
+      "title": "3. Nhận: [người nhận] は [người cho] に N を もらいます",
+      "grammarFormula": "[Người nhận] は [người cho] に/から + N + を + もらいます",
+      "explanation": "もらいます là mặt đối lập của あげます — NGƯỜI NÓI NHẬN từ người khác. Người cho đánh dấu bằng に (thường dùng với người) hoặc から (thường dùng với tổ chức/nơi).",
+      "teacherTips": "あげます/もらいます luôn LẤY NGƯỜI NÓI làm gốc — chủ ngữ luôn là phe của người nói, dù câu là hỏi hay kể.",
+      "culturalNotes": "習います nhấn mạnh có người dạy trực tiếp — khác 勉強します (tự học hoặc học nói chung).",
+      "examples": [
+        {
+          "id": "ex-n5-l7-s3-1",
+          "tokens": [
+            {
+              "id": "t-l7s3-1",
+              "text": "わたし",
+              "isKeyGrammar": false,
+              "kanji": "私",
+              "furigana": "わたし"
+            },
+            {
+              "id": "t-l7s3-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l7s3-3",
+              "text": "やまださん",
+              "isKeyGrammar": false,
+              "kanji": "山田さん",
+              "furigana": "やまださん"
+            },
+            {
+              "id": "t-l7s3-4",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l7s3-5",
+              "text": "ほん",
+              "isKeyGrammar": false,
+              "kanji": "本",
+              "furigana": "ほん"
+            },
+            {
+              "id": "t-l7s3-6",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l7s3-7",
+              "text": "もらいました",
+              "isKeyGrammar": true,
+              "kanji": "もらいました",
+              "furigana": "もらいました"
+            }
+          ],
+          "meaningVi": "Tôi đã nhận được quyển sách từ anh Yamada."
+        },
+        {
+          "id": "ex-n5-l7-s3-2",
+          "tokens": [
+            {
+              "id": "t-l7s3-8",
+              "text": "だれ",
+              "isKeyGrammar": false,
+              "kanji": "誰",
+              "furigana": "だれ"
+            },
+            {
+              "id": "t-l7s3-9",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l7s3-10",
+              "text": "にほんご",
+              "isKeyGrammar": false,
+              "kanji": "日本語",
+              "furigana": "にほんご"
+            },
+            {
+              "id": "t-l7s3-11",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l7s3-12",
+              "text": "ならいましたか",
+              "isKeyGrammar": true,
+              "kanji": "習いましたか",
+              "furigana": "ならいましたか"
+            }
+          ],
+          "meaningVi": "Anh học tiếng Nhật từ ai vậy?"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l7-s4",
+      "slideType": "grammar",
+      "title": "4. Đã xong: もう Vました / まだ Vていません",
+      "grammarFormula": "もう + Vました (đã xong rồi)  /  まだ + Vていません (vẫn chưa xong)",
+      "explanation": "もう xác nhận việc ĐÃ HOÀN TẤT. まだ báo việc CHƯA XONG — khi trả lời phủ định cho câu hỏi có もう, phải đổi thành まだ, không lặp lại もう.",
+      "teacherTips": "Trả lời ngắn gọn 「まだです」 rất thông dụng — không cần lặp lại cả câu.",
+      "culturalNotes": "Ở công sở Nhật, câu hỏi 「もう終わりましたか」 (xong chưa) được dùng thường xuyên để theo dõi tiến độ.",
+      "examples": [
+        {
+          "id": "ex-n5-l7-s4-1",
+          "tokens": [
+            {
+              "id": "t-l7s4-1",
+              "text": "もう",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l7s4-2",
+              "text": "しゅくだい",
+              "isKeyGrammar": false,
+              "kanji": "宿題",
+              "furigana": "しゅくだい"
+            },
+            {
+              "id": "t-l7s4-3",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l7s4-4",
+              "text": "しましたか",
+              "isKeyGrammar": false,
+              "kanji": "しましたか",
+              "furigana": "しましたか"
+            }
+          ],
+          "meaningVi": "Anh làm bài tập chưa?"
+        },
+        {
+          "id": "ex-n5-l7-s4-2",
+          "tokens": [
+            {
+              "id": "t-l7s4-5",
+              "text": "はい",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l7s4-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l7s4-7",
+              "text": "もう",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l7s4-8",
+              "text": "しました",
+              "isKeyGrammar": false,
+              "kanji": "しました",
+              "furigana": "しました"
+            }
+          ],
+          "meaningVi": "Vâng, làm rồi."
+        },
+        {
+          "id": "ex-n5-l7-s4-3",
+          "tokens": [
+            {
+              "id": "t-l7s4-9",
+              "text": "いいえ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l7s4-10",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l7s4-11",
+              "text": "まだ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l7s4-12",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Chưa, vẫn chưa ạ."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n5-7-1",
+      "speaker": "ミラー",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l7-1",
+          "text": "グプタさん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-2",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-3",
+          "text": "その",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-4",
+          "text": "じしょ",
+          "isKeyGrammar": true,
+          "kanji": "辞書",
+          "furigana": "じしょ"
+        },
+        {
+          "id": "d-l7-5",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-6",
+          "text": "かして",
+          "isKeyGrammar": true,
+          "kanji": "貸して",
+          "furigana": "かして"
+        },
+        {
+          "id": "d-l7-7",
+          "text": "ください",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Anh Gupta, cho tôi mượn quyển từ điển đó với."
+    },
+    {
+      "id": "dia-n5-7-2",
+      "speaker": "グプタ",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l7-8",
+          "text": "ええ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-9",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-10",
+          "text": "どうぞ",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ừ, đây."
+    },
+    {
+      "id": "dia-n5-7-3",
+      "speaker": "ミラー",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l7-11",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-12",
+          "text": "じしょ",
+          "isKeyGrammar": false,
+          "kanji": "辞書",
+          "furigana": "じしょ"
+        },
+        {
+          "id": "d-l7-13",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-14",
+          "text": "だれ",
+          "isKeyGrammar": false,
+          "kanji": "誰",
+          "furigana": "だれ"
+        },
+        {
+          "id": "d-l7-15",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l7-16",
+          "text": "もらいましたか",
+          "isKeyGrammar": true,
+          "kanji": "もらいましたか",
+          "furigana": "もらいましたか"
+        }
+      ],
+      "meaningVi": "Từ điển này anh nhận từ ai vậy?"
+    },
+    {
+      "id": "dia-n5-7-4",
+      "speaker": "グプタ",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l7-17",
+          "text": "せんせい",
+          "isKeyGrammar": false,
+          "kanji": "先生",
+          "furigana": "せんせい"
+        },
+        {
+          "id": "d-l7-18",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l7-19",
+          "text": "もらいました",
+          "isKeyGrammar": false,
+          "kanji": "もらいました",
+          "furigana": "もらいました"
+        }
+      ],
+      "meaningVi": "Tôi nhận từ thầy giáo."
+    },
+    {
+      "id": "dia-n5-7-5",
+      "speaker": "ミラー",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l7-20",
+          "text": "いいですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-21",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-22",
+          "text": "たんじょうび",
+          "isKeyGrammar": true,
+          "kanji": "誕生日",
+          "furigana": "たんじょうび"
+        },
+        {
+          "id": "d-l7-23",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-24",
+          "text": "プレゼント",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-25",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Hay quá. Quà sinh nhật à?"
+    },
+    {
+      "id": "dia-n5-7-6",
+      "speaker": "グプタ",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l7-26",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-27",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-28",
+          "text": "せんせい",
+          "isKeyGrammar": false,
+          "kanji": "先生",
+          "furigana": "せんせい"
+        },
+        {
+          "id": "d-l7-29",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-30",
+          "text": "にほんご",
+          "isKeyGrammar": false,
+          "kanji": "日本語",
+          "furigana": "にほんご"
+        },
+        {
+          "id": "d-l7-31",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-32",
+          "text": "ならいました",
+          "isKeyGrammar": true,
+          "kanji": "習いました",
+          "furigana": "ならいました"
+        }
+      ],
+      "meaningVi": "Vâng. Tôi cũng học tiếng Nhật từ thầy."
+    },
+    {
+      "id": "dia-n5-7-7",
+      "speaker": "ミラー",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l7-33",
+          "text": "そうですか",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-34",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-35",
+          "text": "もう",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l7-36",
+          "text": "かんじ",
+          "isKeyGrammar": true,
+          "kanji": "漢字",
+          "furigana": "かんじ"
+        },
+        {
+          "id": "d-l7-37",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-38",
+          "text": "ならいましたか",
+          "isKeyGrammar": false,
+          "kanji": "習いましたか",
+          "furigana": "ならいましたか"
+        }
+      ],
+      "meaningVi": "Vậy à. Anh học chữ Hán chưa?"
+    },
+    {
+      "id": "dia-n5-7-8",
+      "speaker": "グプタ",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l7-39",
+          "text": "いいえ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-40",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-41",
+          "text": "まだ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l7-42",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Chưa, vẫn chưa ạ."
+    },
+    {
+      "id": "dia-n5-7-9",
+      "speaker": "ミラー",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l7-43",
+          "text": "じゃ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-44",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-45",
+          "text": "わたし",
+          "isKeyGrammar": false,
+          "kanji": "私",
+          "furigana": "わたし"
+        },
+        {
+          "id": "d-l7-46",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-47",
+          "text": "おしえましょう",
+          "isKeyGrammar": true,
+          "kanji": "教えましょう",
+          "furigana": "おしえましょう"
+        },
+        {
+          "id": "d-l7-48",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vậy để tôi dạy anh nhé?"
+    },
+    {
+      "id": "dia-n5-7-10",
+      "speaker": "グプタ",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l7-49",
+          "text": "ほんとうですか",
+          "isKeyGrammar": false,
+          "kanji": "本当ですか",
+          "furigana": "ほんとうですか"
+        },
+        {
+          "id": "d-l7-50",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-51",
+          "text": "ありがとう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l7-52",
+          "text": "ございます",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Thật vậy à? Cảm ơn anh nhiều lắm."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n5-7-1",
+      "question": "「ペンで 書きます」 và 「電車で 行きます」, chữ で ở hai câu có cùng chức năng không?",
+      "options": [
+        "Không — một là công cụ, một là phương tiện di chuyển",
+        "Có, hoàn toàn giống nhau",
+        "で đầu tiên sai ngữ pháp",
+        "Chỉ dùng で với động vật"
+      ],
+      "correctIndex": 0,
+      "explanation": "で đa chức năng: phương tiện di chuyển (bài 5), nơi hành động (bài 6), công cụ/ngôn ngữ (bài 7) — cùng chữ nhưng khác vai trò theo ngữ cảnh.",
+      "hint": "So sánh ba bài đã học."
+    },
+    {
+      "id": "ex-q-n5-7-2",
+      "question": "Tôi tặng hoa cho anh Yamada — câu nào ĐÚNG?",
+      "options": [
+        "私は 山田さんに 花を あげます",
+        "私は 山田さんが 花を あげます",
+        "山田さんは 私に 花を あげます",
+        "私は 山田さんを 花に あげます"
+      ],
+      "correctIndex": 0,
+      "explanation": "あげます dùng khi CHỦ NGỮ (私) là người tặng, người nhận (山田さん) đánh dấu bằng に.",
+      "hint": "Ai là người tặng trong câu tiếng Việt?"
+    },
+    {
+      "id": "ex-q-n5-7-3",
+      "question": "Tôi nhận sách từ anh Yamada — câu nào ĐÚNG?",
+      "options": [
+        "私は 山田さんに 本を もらいました",
+        "私は 山田さんを 本に もらいました",
+        "山田さんは 私を 本に もらいました",
+        "私が 山田さんに 本を あげました"
+      ],
+      "correctIndex": 0,
+      "explanation": "もらいます dùng khi CHỦ NGỮ là người NHẬN, người cho đánh dấu bằng に.",
+      "hint": "Chú ý chủ ngữ là người nhận, không phải người cho."
+    },
+    {
+      "id": "ex-q-n5-7-4",
+      "question": "「もう 宿題を しましたか」 「いいえ、___」",
+      "options": [
+        "まだです",
+        "もうです",
+        "もうしました",
+        "まだしました"
+      ],
+      "correctIndex": 0,
+      "explanation": "Trả lời phủ định cho câu hỏi có もう phải dùng まだ, không lặp lại もう.",
+      "hint": "もう và まだ đối lập nhau."
+    },
+    {
+      "id": "ex-q-n5-7-5",
+      "question": "習います khác 勉強します ở chỗ nào?",
+      "options": [
+        "習います nhấn mạnh học TỪ AI ĐÓ trực tiếp, 勉強します là học nói chung",
+        "Hoàn toàn giống nhau",
+        "習います chỉ dùng cho trẻ em",
+        "勉強します chỉ dùng cho kỳ thi"
+      ],
+      "correctIndex": 0,
+      "explanation": "習います thường đi kèm 〜に (học từ ai), còn 勉強します là hành động học chung chung, có thể tự học.",
+      "hint": "Xem lại câu ví dụ có 先生に 日本語を 習いました."
+    },
+    {
+      "id": "ex-q-n5-7-6",
+      "question": "貸します và 借ります khác nhau ở chỗ:",
+      "options": [
+        "貸します = cho mượn (từ mình), 借ります = mượn (về mình)",
+        "Cả hai đều nghĩa là mượn",
+        "貸します dùng cho tiền, 借ります dùng cho đồ vật",
+        "Không có gì khác nhau"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đây là cặp động từ ngược hướng: 貸す (cho ai mượn) và 借りる (mượn của ai) — như あげる/もらう.",
+      "hint": "Xem hướng của hành động cho/nhận."
+    },
+    {
+      "id": "ex-q-n5-7-7",
+      "question": "Từ điển này anh nhận từ ai vậy? — trợ từ đúng để hỏi người cho là:",
+      "options": [
+        "に",
+        "を",
+        "で",
+        "へ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Người cho trong cấu trúc もらいます đánh dấu bằng に (hoặc から) — 誰に もらいましたか。",
+      "hint": "Xem lại cấu trúc もらいます."
+    },
+    {
+      "id": "ex-q-n5-7-8",
+      "question": "「日本語で 話して ください」 nghĩa là:",
+      "options": [
+        "Xin hãy nói bằng tiếng Nhật",
+        "Xin hãy học tiếng Nhật",
+        "Xin hãy dạy tiếng Nhật",
+        "Xin đừng nói tiếng Nhật"
+      ],
+      "correctIndex": 0,
+      "explanation": "で ở đây đánh dấu NGÔN NGỮ dùng để nói — 話して ください = xin hãy nói.",
+      "hint": "話す nghĩa là nói/trò chuyện."
+    },
+    {
+      "id": "ex-q-n5-7-9",
+      "question": "Cách trả lời ngắn gọn cho 'chưa làm xong' là:",
+      "options": [
+        "まだです",
+        "もうです",
+        "はい、まだ",
+        "いいえ、もう"
+      ],
+      "correctIndex": 0,
+      "explanation": "まだです là cách trả lời ngắn gọn, tự nhiên, rất thông dụng trong hội thoại hằng ngày.",
+      "hint": "Không cần lặp lại cả câu đầy đủ."
+    },
+    {
+      "id": "ex-q-n5-7-10",
+      "question": "Văn hóa Nhật coi trọng điều gì nhất khi tặng quà?",
+      "options": [
+        "Cách gói quà",
+        "Giá trị món quà",
+        "Thương hiệu món quà",
+        "Số lượng quà"
+      ],
+      "correctIndex": 0,
+      "explanation": "Người Nhật rất chú trọng hình thức và cách gói quà, đôi khi còn quan trọng hơn bản thân món quà.",
+      "hint": "Đây là điểm khác biệt văn hóa đáng chú ý."
+    }
+  ]
+}

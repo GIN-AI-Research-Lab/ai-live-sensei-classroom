@@ -42,11 +42,18 @@ def tokens_of(lesson):
 
 
 def check_level(lvl, errors, warnings, thin_rows):
-    path = os.path.join(ROOT, "curriculum", "%s.json" % lvl)
-    if not os.path.exists(path):
-        errors.append("%s: khong tim thay file" % lvl)
+    dir_path = os.path.join(ROOT, "curriculum", lvl)
+    if not os.path.isdir(dir_path):
+        errors.append("%s: khong tim thay thu muc curriculum/%s" % (lvl, lvl))
         return
-    data = json.load(io.open(path, encoding="utf-8"))
+    data = []
+    for fname in sorted(os.listdir(dir_path)):
+        if not fname.endswith(".json") or fname == "index.json":
+            continue
+        data.append(json.load(io.open(os.path.join(dir_path, fname), encoding="utf-8")))
+    if not data:
+        errors.append("%s: thu muc curriculum/%s rong" % (lvl, lvl))
+        return
 
     seen_ids = Counter()
     seen_lessons = Counter()

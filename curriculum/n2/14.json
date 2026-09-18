@@ -1,0 +1,1341 @@
+{
+  "level": "N2",
+  "lessonNumber": 14,
+  "title": "Bài 14: Khó lòng mà làm được (がたい & かねる)",
+  "description": "がたい gắn sau V-stem diễn tả độ khó KHÁCH QUAN của việc TIN/HIỂU/CHẤP NHẬN một điều gì đó (thường đi với động từ cảm xúc/nhận thức: 信じる, 理解する, 許す, 忘れる); ôn lại かねる (đã học bài 3) là sự từ chối CHỦ ĐỘNG, lịch sự một hành động/yêu cầu cụ thể; bốn cụm cố định cần nhớ: 信じがたい/許しがたい/理解しがたい/忘れがたい.",
+  "vocabList": [
+    {
+      "id": "voc-n2-14-1",
+      "word": "ゆるします",
+      "kanji": "許します",
+      "furigana": "ゆるします",
+      "romaji": "yurushimasu",
+      "wordType": "verb",
+      "meaningVi": "Tha thứ",
+      "accentNote": "失敗を 許します = tha thứ cho thất bại."
+    },
+    {
+      "id": "voc-n2-14-2",
+      "word": "りかいします",
+      "kanji": "理解します",
+      "furigana": "りかいします",
+      "romaji": "rikai shimasu",
+      "wordType": "verb",
+      "meaningVi": "Hiểu, thấu hiểu",
+      "accentNote": "気持ちを 理解します = thấu hiểu cảm xúc."
+    },
+    {
+      "id": "voc-n2-14-3",
+      "word": "がまんします",
+      "kanji": "我慢します",
+      "furigana": "がまんします",
+      "romaji": "gaman shimasu",
+      "wordType": "verb",
+      "meaningVi": "Nhịn, chịu đựng",
+      "accentNote": "痛みを 我慢します = chịu đựng cơn đau."
+    },
+    {
+      "id": "voc-n2-14-4",
+      "word": "みとめます",
+      "kanji": "認めます",
+      "furigana": "みとめます",
+      "romaji": "mitomemasu",
+      "wordType": "verb",
+      "meaningVi": "Công nhận",
+      "accentNote": "誤りを 認めます = công nhận sai lầm."
+    },
+    {
+      "id": "voc-n2-14-5",
+      "word": "しんじます",
+      "kanji": "信じます",
+      "furigana": "しんじます",
+      "romaji": "shinjimasu",
+      "wordType": "verb",
+      "meaningVi": "Tin tưởng",
+      "accentNote": "Đã gặp N5 bài 21."
+    },
+    {
+      "id": "voc-n2-14-6",
+      "word": "わすれます",
+      "kanji": "忘れます",
+      "furigana": "わすれます",
+      "romaji": "wasuremasu",
+      "wordType": "verb",
+      "meaningVi": "Quên",
+      "accentNote": "Đã gặp N4 bài 38."
+    },
+    {
+      "id": "voc-n2-14-7",
+      "word": "かねます",
+      "kanji": "かねます",
+      "furigana": "かねます",
+      "romaji": "kanemasu",
+      "wordType": "expression",
+      "meaningVi": "Khó có thể (từ chối lịch sự)",
+      "accentNote": "Đã gặp N2 bài 3."
+    },
+    {
+      "id": "voc-n2-14-8",
+      "word": "ようきゅう",
+      "kanji": "要求",
+      "furigana": "ようきゅう",
+      "romaji": "youkyuu",
+      "wordType": "noun",
+      "meaningVi": "Yêu cầu",
+      "accentNote": "Đã gặp N2 bài 3."
+    },
+    {
+      "id": "voc-n2-14-9",
+      "word": "せつめいします",
+      "kanji": "説明します",
+      "furigana": "せつめいします",
+      "romaji": "setsumei shimasu",
+      "wordType": "verb",
+      "meaningVi": "Giải thích",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-14-10",
+      "word": "もんだい",
+      "kanji": "問題",
+      "furigana": "もんだい",
+      "romaji": "mondai",
+      "wordType": "noun",
+      "meaningVi": "Vấn đề",
+      "accentNote": "Đã gặp N5 bài 22."
+    },
+    {
+      "id": "voc-n2-14-11",
+      "word": "じじつ",
+      "kanji": "事実",
+      "furigana": "じじつ",
+      "romaji": "jijitsu",
+      "wordType": "noun",
+      "meaningVi": "Sự thật",
+      "accentNote": "Đã gặp N2 bài 10."
+    },
+    {
+      "id": "voc-n2-14-12",
+      "word": "けいけん",
+      "kanji": "経験",
+      "furigana": "けいけん",
+      "romaji": "keiken",
+      "wordType": "noun",
+      "meaningVi": "Kinh nghiệm",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-14-13",
+      "word": "たいど",
+      "kanji": "態度",
+      "furigana": "たいど",
+      "romaji": "taido",
+      "wordType": "noun",
+      "meaningVi": "Thái độ",
+      "accentNote": "Đã gặp N3 bài 5."
+    },
+    {
+      "id": "voc-n2-14-14",
+      "word": "しんぱい",
+      "kanji": "心配",
+      "furigana": "しんぱい",
+      "romaji": "shinpai",
+      "wordType": "noun",
+      "meaningVi": "Sự lo lắng",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-14-15",
+      "word": "かいしゃ",
+      "kanji": "会社",
+      "furigana": "かいしゃ",
+      "romaji": "kaisha",
+      "wordType": "noun",
+      "meaningVi": "Công ty",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-14-16",
+      "word": "きゃく",
+      "kanji": "客",
+      "furigana": "きゃく",
+      "romaji": "kyaku",
+      "wordType": "noun",
+      "meaningVi": "Khách hàng",
+      "accentNote": "Đã gặp N4 bài 41."
+    },
+    {
+      "id": "voc-n2-14-17",
+      "word": "しっぱいします",
+      "kanji": "失敗します",
+      "furigana": "しっぱいします",
+      "romaji": "shippai shimasu",
+      "wordType": "verb",
+      "meaningVi": "Thất bại",
+      "accentNote": "Đã gặp N4 bài 43."
+    },
+    {
+      "id": "voc-n2-14-18",
+      "word": "じこ",
+      "kanji": "事故",
+      "furigana": "じこ",
+      "romaji": "jiko",
+      "wordType": "noun",
+      "meaningVi": "Tai nạn",
+      "accentNote": "Đã gặp N4 bài 34."
+    },
+    {
+      "id": "voc-n2-14-19",
+      "word": "けっか",
+      "kanji": "結果",
+      "furigana": "けっか",
+      "romaji": "kekka",
+      "wordType": "noun",
+      "meaningVi": "Kết quả",
+      "accentNote": "Đã gặp N4 bài 39."
+    },
+    {
+      "id": "voc-n2-14-20",
+      "word": "こと",
+      "kanji": "事",
+      "furigana": "こと",
+      "romaji": "koto",
+      "wordType": "noun",
+      "meaningVi": "Việc, sự việc",
+      "accentNote": "Đã gặp N4 bài 26."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n2-14-1",
+      "character": "許",
+      "hanViet": "HỨA",
+      "strokeCount": 11,
+      "onyomi": [
+        "キョ (kyo)"
+      ],
+      "kunyomi": [
+        "ゆる(す)"
+      ],
+      "meaningVi": "Cho phép, tha thứ.",
+      "commonWords": [
+        {
+          "word": "許します",
+          "furigana": "ゆるします",
+          "meaningVi": "Tha thứ"
+        },
+        {
+          "word": "許可",
+          "furigana": "きょか",
+          "meaningVi": "Cho phép"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-14-2",
+      "character": "慢",
+      "hanViet": "MẠN",
+      "strokeCount": 14,
+      "onyomi": [
+        "マン (man)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Kiêu mạn, chậm chạp.",
+      "commonWords": [
+        {
+          "word": "我慢",
+          "furigana": "がまん",
+          "meaningVi": "Nhịn, chịu đựng"
+        },
+        {
+          "word": "自慢",
+          "furigana": "じまん",
+          "meaningVi": "Tự hào, khoe khoang"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-14-3",
+      "character": "我",
+      "hanViet": "NGÃ",
+      "strokeCount": 7,
+      "onyomi": [
+        "ガ (ga)"
+      ],
+      "kunyomi": [
+        "われ"
+      ],
+      "meaningVi": "Ta, bản ngã.",
+      "commonWords": [
+        {
+          "word": "我慢",
+          "furigana": "がまん",
+          "meaningVi": "Chịu đựng"
+        },
+        {
+          "word": "我々",
+          "furigana": "われわれ",
+          "meaningVi": "Chúng ta"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-14-4",
+      "character": "認",
+      "hanViet": "NHẬN",
+      "strokeCount": 14,
+      "onyomi": [
+        "ニン (nin)"
+      ],
+      "kunyomi": [
+        "みと(める)"
+      ],
+      "meaningVi": "Nhận biết, công nhận.",
+      "commonWords": [
+        {
+          "word": "認めます",
+          "furigana": "みとめます",
+          "meaningVi": "Công nhận"
+        },
+        {
+          "word": "確認",
+          "furigana": "かくにん",
+          "meaningVi": "Xác nhận"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-14-5",
+      "character": "忘",
+      "hanViet": "VONG",
+      "strokeCount": 7,
+      "onyomi": [
+        "ボウ (bou)"
+      ],
+      "kunyomi": [
+        "わす(れる)"
+      ],
+      "meaningVi": "Quên.",
+      "commonWords": [
+        {
+          "word": "忘れます",
+          "furigana": "わすれます",
+          "meaningVi": "Quên"
+        },
+        {
+          "word": "忘れ物",
+          "furigana": "わすれもの",
+          "meaningVi": "Đồ bỏ quên"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n2-l14-s1",
+      "slideType": "grammar",
+      "title": "1. Khó lòng làm được (khách quan, nhận thức/cảm xúc): V-stem + がたい",
+      "grammarFormula": "V-ます-stem + がたい",
+      "explanation": "がたい gắn sau V-stem diễn tả việc KHÓ LÒNG mà thực hiện được hành động đó — mang tính KHÁCH QUAN về độ khó (không phải do năng lực cá nhân), thường đi với động từ CẢM XÚC/NHẬN THỨC (信じる, 理解する, 許す, 忘れる).",
+      "teacherTips": "がたい KHÔNG dùng cho hành động vật lý thông thường (không nói '持ちがたい' - khó cầm) — chỉ dùng cho động từ CẢM XÚC/NHẬN THỨC.",
+      "culturalNotes": "Câu cảm thán quen thuộc trong tiếng Nhật: '信じがたいことが起きた' (một điều khó tin đã xảy ra) — hay dùng khi kể về tin tức bất ngờ.",
+      "examples": [
+        {
+          "id": "ex-n2-l14-s1-1",
+          "tokens": [
+            {
+              "id": "t-l14s1-1",
+              "text": "その",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s1-2",
+              "text": "はなし",
+              "isKeyGrammar": false,
+              "kanji": "話",
+              "furigana": "はなし"
+            },
+            {
+              "id": "t-l14s1-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s1-4",
+              "text": "しんじ",
+              "isKeyGrammar": true,
+              "kanji": "信じ",
+              "furigana": "しんじ"
+            },
+            {
+              "id": "t-l14s1-5",
+              "text": "がたい",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l14s1-6",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Câu chuyện đó khó mà tin được."
+        },
+        {
+          "id": "ex-n2-l14-s1-2",
+          "tokens": [
+            {
+              "id": "t-l14s1-7",
+              "text": "かれ",
+              "isKeyGrammar": false,
+              "kanji": "彼",
+              "furigana": "かれ"
+            },
+            {
+              "id": "t-l14s1-8",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s1-9",
+              "text": "たいど",
+              "isKeyGrammar": true,
+              "kanji": "態度",
+              "furigana": "たいど"
+            },
+            {
+              "id": "t-l14s1-10",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s1-11",
+              "text": "りかい",
+              "isKeyGrammar": true,
+              "kanji": "理解",
+              "furigana": "りかい"
+            },
+            {
+              "id": "t-l14s1-12",
+              "text": "し",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s1-13",
+              "text": "がたい",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l14s1-14",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Thái độ của anh ấy khó mà hiểu được."
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l14-s2",
+      "slideType": "grammar",
+      "title": "2. Ôn lại: かねる (đã học N2 bài 3) — từ chối lịch sự một hành động cụ thể",
+      "grammarFormula": "V-ます-stem + かねる",
+      "explanation": "かねる (đã học ở bài 3) diễn tả 'KHÓ CÓ THỂ' làm gì đó — TRANG TRỌNG, LỊCH SỰ, thường dùng để TỪ CHỐI một YÊU CẦU/HÀNH ĐỘNG CỤ THỂ trong công việc, dịch vụ khách hàng.",
+      "teacherTips": "かねる luôn gắn với một HÀNH ĐỘNG CỤ THỂ mà người nói CHỦ ĐỘNG từ chối thực hiện — khác がたい là cảm nhận KHÁCH QUAN về độ khó của nhận thức.",
+      "culturalNotes": "Nhân viên dịch vụ khách hàng Nhật hay dùng: 'そのご要求にはお応えしかねます' (chúng tôi khó có thể đáp ứng yêu cầu đó của quý khách).",
+      "examples": [
+        {
+          "id": "ex-n2-l14-s2-1",
+          "tokens": [
+            {
+              "id": "t-l14s2-1",
+              "text": "その",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s2-2",
+              "text": "ようきゅう",
+              "isKeyGrammar": true,
+              "kanji": "要求",
+              "furigana": "ようきゅう"
+            },
+            {
+              "id": "t-l14s2-3",
+              "text": "には",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s2-4",
+              "text": "こたえ",
+              "isKeyGrammar": true,
+              "kanji": "答え",
+              "furigana": "こたえ"
+            },
+            {
+              "id": "t-l14s2-5",
+              "text": "かねます",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Chúng tôi khó có thể đáp lại yêu cầu đó."
+        },
+        {
+          "id": "ex-n2-l14-s2-2",
+          "tokens": [
+            {
+              "id": "t-l14s2-6",
+              "text": "わたし",
+              "isKeyGrammar": false,
+              "kanji": "私",
+              "furigana": "わたし"
+            },
+            {
+              "id": "t-l14s2-7",
+              "text": "には",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s2-8",
+              "text": "みとめ",
+              "isKeyGrammar": true,
+              "kanji": "認め",
+              "furigana": "みとめ"
+            },
+            {
+              "id": "t-l14s2-9",
+              "text": "かねます",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Tôi khó có thể công nhận điều đó."
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l14-s3",
+      "slideType": "grammar",
+      "title": "3. So sánh がたい và かねる",
+      "grammarFormula": "がたい: KHÁCH QUAN, độ khó của việc TIN/HIỂU/CẢM NHẬN　vs　かねる: CHỦ QUAN, từ chối một HÀNH ĐỘNG cụ thể",
+      "explanation": "がたい dùng cho ĐỘ KHÓ KHÁCH QUAN của việc CẢM NHẬN/TIN TƯỞNG/HIỂU một điều gì đó (không phải hành động thực hiện được hay không); かねる dùng khi người nói CHỦ ĐỘNG từ chối thực hiện một HÀNH ĐỘNG/YÊU CẦU cụ thể một cách lịch sự.",
+      "teacherTips": "Mẹo: nếu câu nói về việc TIN/HIỂU/CHẤP NHẬN một điều trừu tượng → がたい; nếu câu TỪ CHỐI làm một việc cụ thể theo yêu cầu → かねる.",
+      "culturalNotes": "Cả hai đều là ngữ pháp N2 trọng điểm — nhầm lẫn giữa chúng là lỗi phổ biến của người học vì cùng dịch là 'khó có thể'.",
+      "examples": [
+        {
+          "id": "ex-n2-l14-s3-1",
+          "tokens": [
+            {
+              "id": "t-l14s3-1",
+              "text": "その",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s3-2",
+              "text": "じじつ",
+              "isKeyGrammar": true,
+              "kanji": "事実",
+              "furigana": "じじつ"
+            },
+            {
+              "id": "t-l14s3-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s3-4",
+              "text": "しんじ",
+              "isKeyGrammar": true,
+              "kanji": "信じ",
+              "furigana": "しんじ"
+            },
+            {
+              "id": "t-l14s3-5",
+              "text": "がたい",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l14s3-6",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Sự thật đó khó mà tin được. (về nhận thức, khách quan)"
+        },
+        {
+          "id": "ex-n2-l14-s3-2",
+          "tokens": [
+            {
+              "id": "t-l14s3-7",
+              "text": "その",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s3-8",
+              "text": "ようきゅう",
+              "isKeyGrammar": true,
+              "kanji": "要求",
+              "furigana": "ようきゅう"
+            },
+            {
+              "id": "t-l14s3-9",
+              "text": "には",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s3-10",
+              "text": "こたえ",
+              "isKeyGrammar": true,
+              "kanji": "答え",
+              "furigana": "こたえ"
+            },
+            {
+              "id": "t-l14s3-11",
+              "text": "かねます",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Chúng tôi khó có thể đáp lại yêu cầu đó. (từ chối hành động, chủ động)"
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l14-s4",
+      "slideType": "grammar",
+      "title": "4. Cụm từ cố định phổ biến với がたい",
+      "grammarFormula": "信じがたい／許しがたい／理解しがたい／忘れがたい",
+      "explanation": "がたい tạo thành nhiều CỤM TỪ CỐ ĐỊNH cực kỳ thông dụng trong văn viết và hội thoại trang trọng: 信じがたい (khó tin), 許しがたい (khó tha thứ), 理解しがたい (khó hiểu), 忘れがたい (khó quên).",
+      "teacherTips": "Bốn cụm từ này (信じがたい/許しがたい/理解しがたい/忘れがたい) nên học THUỘC LÒNG như một khối, vì chúng xuất hiện rất thường xuyên trong đề thi N2.",
+      "culturalNotes": "Bài phát biểu cảm ơn ở Nhật hay kết thúc bằng: '皆様のご支援は忘れがたいものです' (sự hỗ trợ của quý vị là điều khó mà quên được).",
+      "examples": [
+        {
+          "id": "ex-n2-l14-s4-1",
+          "tokens": [
+            {
+              "id": "t-l14s4-1",
+              "text": "かれ",
+              "isKeyGrammar": false,
+              "kanji": "彼",
+              "furigana": "かれ"
+            },
+            {
+              "id": "t-l14s4-2",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s4-3",
+              "text": "しっぱい",
+              "isKeyGrammar": true,
+              "kanji": "失敗",
+              "furigana": "しっぱい"
+            },
+            {
+              "id": "t-l14s4-4",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s4-5",
+              "text": "ゆるし",
+              "isKeyGrammar": true,
+              "kanji": "許し",
+              "furigana": "ゆるし"
+            },
+            {
+              "id": "t-l14s4-6",
+              "text": "がたい",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l14s4-7",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Thất bại của anh ấy khó mà tha thứ được."
+        },
+        {
+          "id": "ex-n2-l14-s4-2",
+          "tokens": [
+            {
+              "id": "t-l14s4-8",
+              "text": "あの",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s4-9",
+              "text": "けいけん",
+              "isKeyGrammar": true,
+              "kanji": "経験",
+              "furigana": "けいけん"
+            },
+            {
+              "id": "t-l14s4-10",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s4-11",
+              "text": "わすれ",
+              "isKeyGrammar": true,
+              "kanji": "忘れ",
+              "furigana": "わすれ"
+            },
+            {
+              "id": "t-l14s4-12",
+              "text": "がたい",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l14s4-13",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Kinh nghiệm đó khó mà quên được."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n2-14-1",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d14-1",
+          "text": "あの",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-2",
+          "text": "じこ",
+          "isKeyGrammar": true,
+          "kanji": "事故",
+          "furigana": "じこ"
+        },
+        {
+          "id": "d14-3",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-4",
+          "text": "はなし",
+          "isKeyGrammar": false,
+          "kanji": "話",
+          "furigana": "はなし"
+        },
+        {
+          "id": "d14-5",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-6",
+          "text": "ききました",
+          "isKeyGrammar": false,
+          "kanji": "聞きました",
+          "furigana": "ききました"
+        },
+        {
+          "id": "d14-7",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Bạn có nghe chuyện về tai nạn đó chưa?"
+    },
+    {
+      "id": "dia-n2-14-2",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d14-8",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-9",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-10",
+          "text": "その",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-11",
+          "text": "けっか",
+          "isKeyGrammar": true,
+          "kanji": "結果",
+          "furigana": "けっか"
+        },
+        {
+          "id": "d14-12",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-13",
+          "text": "しんじ",
+          "isKeyGrammar": true,
+          "kanji": "信じ",
+          "furigana": "しんじ"
+        },
+        {
+          "id": "d14-14",
+          "text": "がたい",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d14-15",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng. Kết quả đó khó mà tin được."
+    },
+    {
+      "id": "dia-n2-14-3",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d14-16",
+          "text": "きゃく",
+          "isKeyGrammar": true,
+          "kanji": "客",
+          "furigana": "きゃく"
+        },
+        {
+          "id": "d14-17",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-18",
+          "text": "ようきゅう",
+          "isKeyGrammar": true,
+          "kanji": "要求",
+          "furigana": "ようきゅう"
+        },
+        {
+          "id": "d14-19",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-20",
+          "text": "どうでしたか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Yêu cầu của khách hàng thế nào?"
+    },
+    {
+      "id": "dia-n2-14-4",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d14-21",
+          "text": "その",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-22",
+          "text": "ようきゅう",
+          "isKeyGrammar": true,
+          "kanji": "要求",
+          "furigana": "ようきゅう"
+        },
+        {
+          "id": "d14-23",
+          "text": "には",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-24",
+          "text": "こたえ",
+          "isKeyGrammar": true,
+          "kanji": "答え",
+          "furigana": "こたえ"
+        },
+        {
+          "id": "d14-25",
+          "text": "かねます",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Chúng tôi khó có thể đáp lại yêu cầu đó."
+    },
+    {
+      "id": "dia-n2-14-5",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d14-26",
+          "text": "かれ",
+          "isKeyGrammar": false,
+          "kanji": "彼",
+          "furigana": "かれ"
+        },
+        {
+          "id": "d14-27",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-28",
+          "text": "たいど",
+          "isKeyGrammar": true,
+          "kanji": "態度",
+          "furigana": "たいど"
+        },
+        {
+          "id": "d14-29",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-30",
+          "text": "りかい",
+          "isKeyGrammar": true,
+          "kanji": "理解",
+          "furigana": "りかい"
+        },
+        {
+          "id": "d14-31",
+          "text": "し",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-32",
+          "text": "がたい",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d14-33",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d14-34",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Thái độ của anh ấy khó mà hiểu được nhỉ."
+    },
+    {
+      "id": "dia-n2-14-6",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d14-35",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-36",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-37",
+          "text": "かれ",
+          "isKeyGrammar": false,
+          "kanji": "彼",
+          "furigana": "かれ"
+        },
+        {
+          "id": "d14-38",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-39",
+          "text": "しっぱい",
+          "isKeyGrammar": true,
+          "kanji": "失敗",
+          "furigana": "しっぱい"
+        },
+        {
+          "id": "d14-40",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-41",
+          "text": "ゆるし",
+          "isKeyGrammar": true,
+          "kanji": "許し",
+          "furigana": "ゆるし"
+        },
+        {
+          "id": "d14-42",
+          "text": "がたい",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d14-43",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng. Thất bại của anh ấy khó mà tha thứ được."
+    },
+    {
+      "id": "dia-n2-14-7",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d14-44",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-45",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-46",
+          "text": "もんだい",
+          "isKeyGrammar": true,
+          "kanji": "問題",
+          "furigana": "もんだい"
+        },
+        {
+          "id": "d14-47",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-48",
+          "text": "みとめました",
+          "isKeyGrammar": false,
+          "kanji": "認めました",
+          "furigana": "みとめました"
+        },
+        {
+          "id": "d14-49",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Nhưng, anh ấy đã công nhận vấn đề chưa?"
+    },
+    {
+      "id": "dia-n2-14-8",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d14-50",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-51",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-52",
+          "text": "せつめい",
+          "isKeyGrammar": true,
+          "kanji": "説明",
+          "furigana": "せつめい"
+        },
+        {
+          "id": "d14-53",
+          "text": "して",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d14-54",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-55",
+          "text": "もんだい",
+          "isKeyGrammar": true,
+          "kanji": "問題",
+          "furigana": "もんだい"
+        },
+        {
+          "id": "d14-56",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-57",
+          "text": "みとめました",
+          "isKeyGrammar": false,
+          "kanji": "認めました",
+          "furigana": "みとめました"
+        }
+      ],
+      "meaningVi": "Vâng. Đã giải thích và công nhận vấn đề."
+    },
+    {
+      "id": "dia-n2-14-9",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d14-58",
+          "text": "しんぱい",
+          "isKeyGrammar": true,
+          "kanji": "心配",
+          "furigana": "しんぱい"
+        },
+        {
+          "id": "d14-59",
+          "text": "しない",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d14-60",
+          "text": "で",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d14-61",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-62",
+          "text": "がまん",
+          "isKeyGrammar": true,
+          "kanji": "我慢",
+          "furigana": "がまん"
+        },
+        {
+          "id": "d14-63",
+          "text": "して",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d14-64",
+          "text": "ください",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Đừng lo lắng. Hãy cố nhịn nhé."
+    },
+    {
+      "id": "dia-n2-14-10",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d14-65",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-66",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-67",
+          "text": "あの",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-68",
+          "text": "けいけん",
+          "isKeyGrammar": true,
+          "kanji": "経験",
+          "furigana": "けいけん"
+        },
+        {
+          "id": "d14-69",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-70",
+          "text": "わすれ",
+          "isKeyGrammar": true,
+          "kanji": "忘れ",
+          "furigana": "わすれ"
+        },
+        {
+          "id": "d14-71",
+          "text": "がたい",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d14-72",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d14-73",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-74",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-75",
+          "text": "がんばります",
+          "isKeyGrammar": false,
+          "kanji": "頑張ります",
+          "furigana": "がんばります"
+        }
+      ],
+      "meaningVi": "Vâng. Kinh nghiệm đó khó mà quên được, nhưng tôi sẽ cố gắng."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n2-14-1",
+      "question": "「その話は信じがたいです」 — がたい diễn tả điều gì?",
+      "options": [
+        "Độ khó khách quan của việc tin/hiểu/cảm nhận một điều gì đó",
+        "Sự từ chối lịch sự một hành động cụ thể",
+        "Sự khẳng định chắc chắn",
+        "Sự cho phép làm việc gì đó"
+      ],
+      "correctIndex": 0,
+      "explanation": "がたい diễn tả độ khó KHÁCH QUAN của việc tin tưởng/hiểu/chấp nhận, không liên quan đến năng lực hành động.",
+      "hint": "Xem cấu trúc がたい ở slide 1."
+    },
+    {
+      "id": "ex-q-n2-14-2",
+      "question": "「その要求には答えかねます」 — かねる (đã học bài 3) khác がたい ở điểm nào?",
+      "options": [
+        "かねる là sự từ chối CHỦ ĐỘNG một hành động/yêu cầu cụ thể; がたい là độ khó KHÁCH QUAN của nhận thức",
+        "Hoàn toàn giống nhau, dùng thay thế được cho nhau",
+        "かねる chỉ dùng cho câu hỏi",
+        "がたい chỉ dùng cho phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "かねる gắn với hành động cụ thể mà người nói chủ động từ chối; がたい gắn với cảm nhận/nhận thức khách quan.",
+      "hint": "Xem so sánh ở slide 3."
+    },
+    {
+      "id": "ex-q-n2-14-3",
+      "question": "がたい thường đi với loại động từ nào?",
+      "options": [
+        "Động từ CẢM XÚC/NHẬN THỨC (信じる, 理解する, 許す, 忘れる)",
+        "Động từ hành động vật lý thông thường (持つ, 歩く)",
+        "Chỉ động từ chuyển động",
+        "Chỉ động từ ăn uống"
+      ],
+      "correctIndex": 0,
+      "explanation": "がたい thường gắn với động từ chỉ CẢM XÚC/NHẬN THỨC, không dùng cho hành động vật lý thông thường.",
+      "hint": "Xem lưu ý ngữ pháp ở slide 1."
+    },
+    {
+      "id": "ex-q-n2-14-4",
+      "question": "「彼の失敗は許しがたいです」 nghĩa là:",
+      "options": [
+        "Thất bại của anh ấy khó mà tha thứ được",
+        "Thất bại của anh ấy đã được tha thứ hoàn toàn",
+        "Anh ấy chưa từng thất bại",
+        "Anh ấy đã tha thứ cho người khác"
+      ],
+      "correctIndex": 0,
+      "explanation": "許しがたい là cụm cố định nghĩa 'khó mà tha thứ được' — がたい gắn sau V-stem của 許す.",
+      "hint": "Áp dụng cấu trúc がたい cho động từ 許す."
+    },
+    {
+      "id": "ex-q-n2-14-5",
+      "question": "Bốn cụm từ cố định phổ biến với がたい là gì?",
+      "options": [
+        "信じがたい, 許しがたい, 理解しがたい, 忘れがたい",
+        "食べがたい, 飲みがたい, 歩きがたい, 走りがたい",
+        "高いがたい, 安いがたい, 大きいがたい, 小さいがたい",
+        "行きがたい, 来がたい, 帰りがたい, 出がたい"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bốn cụm từ 信じがたい/許しがたい/理解しがたい/忘れがたい là những cụm cố định phổ biến nhất với がたい.",
+      "hint": "Xem danh sách cụm từ ở slide 4."
+    },
+    {
+      "id": "ex-q-n2-14-6",
+      "question": "「彼の態度は理解しがたいです」 nghĩa là:",
+      "options": [
+        "Thái độ của anh ấy khó mà hiểu được",
+        "Thái độ của anh ấy rất dễ hiểu",
+        "Anh ấy không có thái độ gì đặc biệt",
+        "Mọi người đều hiểu thái độ của anh ấy"
+      ],
+      "correctIndex": 0,
+      "explanation": "理解しがたい là cụm cố định nghĩa 'khó mà hiểu được' — がたい gắn sau V-stem của 理解する.",
+      "hint": "Áp dụng cấu trúc がたい cho động từ 理解する."
+    },
+    {
+      "id": "ex-q-n2-14-7",
+      "question": "Có thể nói '荷物を持ちがたいです' (khó mà cầm hành lý được) một cách tự nhiên không?",
+      "options": [
+        "Không tự nhiên, vì がたい không dùng cho hành động vật lý thông thường như 持つ",
+        "Có, hoàn toàn tự nhiên và đúng ngữ pháp",
+        "Chỉ đúng trong văn viết trang trọng",
+        "Chỉ đúng khi nói về hành lý nặng"
+      ],
+      "correctIndex": 0,
+      "explanation": "がたい giới hạn ở động từ CẢM XÚC/NHẬN THỨC — dùng cho hành động vật lý như 持つ nghe không tự nhiên.",
+      "hint": "Xem lưu ý quan trọng ở slide 1."
+    },
+    {
+      "id": "ex-q-n2-14-8",
+      "question": "Theo hội thoại, Santos nghĩ gì về kết quả của tai nạn?",
+      "options": [
+        "Khó mà tin được (信じがたいです)",
+        "Rất dễ tin",
+        "Không có ý kiến gì",
+        "Đã biết trước kết quả đó"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「その結果は信じがたいです」.",
+      "hint": "Xem câu thoại thứ 2."
+    },
+    {
+      "id": "ex-q-n2-14-9",
+      "question": "Santos có đáp ứng được yêu cầu của khách hàng không?",
+      "options": [
+        "Không, khó có thể đáp lại (その要求には答えかねます)",
+        "Có, đáp ứng ngay lập tức",
+        "Chưa xác định được",
+        "Không được đề cập trong hội thoại"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「その要求には答えかねます」.",
+      "hint": "Xem câu thoại thứ 4."
+    },
+    {
+      "id": "ex-q-n2-14-10",
+      "question": "田中 khuyên Santos điều gì ở cuối hội thoại?",
+      "options": [
+        "Đừng lo lắng, hãy cố nhịn (心配しないで。我慢してください)",
+        "Nên từ bỏ công việc",
+        "Nên phàn nàn với cấp trên",
+        "Không đưa ra lời khuyên nào"
+      ],
+      "correctIndex": 0,
+      "explanation": "田中 nói 「心配しないで。我慢してください」.",
+      "hint": "Xem câu thoại thứ 9."
+    }
+  ]
+}

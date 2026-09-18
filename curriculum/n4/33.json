@@ -1,0 +1,1141 @@
+{
+  "level": "N4",
+  "lessonNumber": 33,
+  "title": "Bài 33: Thể mệnh lệnh (命令形) & Cấm chỉ (禁止形)",
+  "description": "Chia thể mệnh lệnh (nhóm 1: う→え, nhóm 2: bỏ る+ろ, bất quy tắc する→しろ/来る→来い) và cấm chỉ (thể từ điển+な, đơn giản hơn), giới hạn ngữ cảnh sử dụng (biển báo, huấn luyện viên, truyện/phim, khẩn cấp — KHÔNG dùng trong giao tiếp lịch sự thường ngày), và thang mức độ mạnh-nhẹ khi nói 'đừng làm': な > ないでください (N5 b17) > ないほうがいい (N4 b32).",
+  "vocabList": [
+    {
+      "id": "voc-n4-33-1",
+      "word": "はしれ",
+      "kanji": "走れ",
+      "furigana": "はしれ",
+      "romaji": "hashire",
+      "wordType": "verb",
+      "meaningVi": "Chạy đi! (thể mệnh lệnh của 走る)",
+      "accentNote": "Nhóm 1: đổi đuôi う→え. 走る → 走れ."
+    },
+    {
+      "id": "voc-n4-33-2",
+      "word": "まて",
+      "kanji": "待て",
+      "furigana": "まて",
+      "romaji": "mate",
+      "wordType": "verb",
+      "meaningVi": "Đợi đã! (thể mệnh lệnh của 待つ)",
+      "accentNote": "待つ → 待て."
+    },
+    {
+      "id": "voc-n4-33-3",
+      "word": "いそげ",
+      "kanji": "急げ",
+      "furigana": "いそげ",
+      "romaji": "isoge",
+      "wordType": "verb",
+      "meaningVi": "Nhanh lên! (thể mệnh lệnh của 急ぐ)",
+      "accentNote": "急ぐ → 急げ."
+    },
+    {
+      "id": "voc-n4-33-4",
+      "word": "たべろ",
+      "kanji": "食べろ",
+      "furigana": "たべろ",
+      "romaji": "tabero",
+      "wordType": "verb",
+      "meaningVi": "Ăn đi! (thể mệnh lệnh của 食べる)",
+      "accentNote": "Nhóm 2: bỏ る, thêm ろ. 食べる → 食べろ."
+    },
+    {
+      "id": "voc-n4-33-5",
+      "word": "こい",
+      "kanji": "来い",
+      "furigana": "こい",
+      "romaji": "koi",
+      "wordType": "verb",
+      "meaningVi": "Đến đây! (thể mệnh lệnh của 来る)",
+      "accentNote": "来る → 来い (bất quy tắc hoàn toàn)."
+    },
+    {
+      "id": "voc-n4-33-6",
+      "word": "しろ",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "shiro",
+      "wordType": "verb",
+      "meaningVi": "Làm đi! (thể mệnh lệnh của する)",
+      "accentNote": "する → しろ (bất quy tắc)."
+    },
+    {
+      "id": "voc-n4-33-7",
+      "word": "はいるな",
+      "kanji": "入るな",
+      "furigana": "はいるな",
+      "romaji": "hairu na",
+      "wordType": "verb",
+      "meaningVi": "Cấm vào! (thể cấm chỉ của 入る)",
+      "accentNote": "Thể từ điển + な = cấm chỉ, giọng mạnh, ra lệnh."
+    },
+    {
+      "id": "voc-n4-33-8",
+      "word": "とまるな",
+      "kanji": "止まるな",
+      "furigana": "とまるな",
+      "romaji": "tomaru na",
+      "wordType": "verb",
+      "meaningVi": "Cấm dừng lại! (thể cấm chỉ)",
+      "accentNote": "止まる + な."
+    },
+    {
+      "id": "voc-n4-33-9",
+      "word": "きけん",
+      "kanji": "危険",
+      "furigana": "きけん",
+      "romaji": "kiken",
+      "wordType": "adjective",
+      "meaningVi": "Nguy hiểm",
+      "accentNote": "危険！入るな！ = Nguy hiểm! Cấm vào!"
+    },
+    {
+      "id": "voc-n4-33-10",
+      "word": "ちゅうい",
+      "kanji": "注意",
+      "furigana": "ちゅうい",
+      "romaji": "chuui",
+      "wordType": "noun",
+      "meaningVi": "Sự chú ý, cảnh báo",
+      "accentNote": "注意して ください = xin hãy cẩn thận."
+    },
+    {
+      "id": "voc-n4-33-11",
+      "word": "しあい",
+      "kanji": "試合",
+      "furigana": "しあい",
+      "romaji": "shiai",
+      "wordType": "noun",
+      "meaningVi": "Trận đấu, cuộc thi đấu",
+      "accentNote": "試合に 勝て！ = thắng trận đi!"
+    },
+    {
+      "id": "voc-n4-33-12",
+      "word": "いそぎます",
+      "kanji": "急ぎます",
+      "furigana": "いそぎます",
+      "romaji": "isogimasu",
+      "wordType": "verb",
+      "meaningVi": "Vội, gấp",
+      "accentNote": "Đã có ở thể mệnh lệnh 急げ phía trên."
+    },
+    {
+      "id": "voc-n4-33-13",
+      "word": "はしります",
+      "kanji": "走ります",
+      "furigana": "はしります",
+      "romaji": "hashirimasu",
+      "wordType": "verb",
+      "meaningVi": "Chạy",
+      "accentNote": "Đã có ở thể mệnh lệnh 走れ phía trên."
+    },
+    {
+      "id": "voc-n4-33-14",
+      "word": "まんが",
+      "kanji": "漫画",
+      "furigana": "まんが",
+      "romaji": "manga",
+      "wordType": "noun",
+      "meaningVi": "Truyện tranh",
+      "accentNote": "漫画を 読むな = cấm đọc truyện tranh (trong giờ học)."
+    },
+    {
+      "id": "voc-n4-33-15",
+      "word": "べんきょう",
+      "kanji": "勉強",
+      "furigana": "べんきょう",
+      "romaji": "benkyou",
+      "wordType": "noun",
+      "meaningVi": "Việc học",
+      "accentNote": "Đã gặp N5 bài 4."
+    },
+    {
+      "id": "voc-n4-33-16",
+      "word": "せんせい",
+      "kanji": "先生",
+      "furigana": "せんせい",
+      "romaji": "sensei",
+      "wordType": "noun",
+      "meaningVi": "Thầy/cô giáo",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n4-33-17",
+      "word": "こども",
+      "kanji": "子供",
+      "furigana": "こども",
+      "romaji": "kodomo",
+      "wordType": "noun",
+      "meaningVi": "Trẻ con",
+      "accentNote": "Đã gặp N5 bài 23."
+    },
+    {
+      "id": "voc-n4-33-18",
+      "word": "しんぱいします",
+      "kanji": "心配します",
+      "furigana": "しんぱいします",
+      "romaji": "shinpai shimasu",
+      "wordType": "verb",
+      "meaningVi": "Lo lắng",
+      "accentNote": "Đã gặp N5 bài 15 (dạng tính từ)."
+    },
+    {
+      "id": "voc-n4-33-19",
+      "word": "がんばれ",
+      "kanji": "頑張れ",
+      "furigana": "がんばれ",
+      "romaji": "ganbare",
+      "wordType": "phrase",
+      "meaningVi": "Cố lên! (thể mệnh lệnh của 頑張る, dùng riêng làm câu cổ vũ)",
+      "accentNote": "Câu hô cổ vũ phổ biến nhất tiếng Nhật."
+    },
+    {
+      "id": "voc-n4-33-20",
+      "word": "あぶない",
+      "kanji": "危ない",
+      "furigana": "あぶない",
+      "romaji": "abunai",
+      "wordType": "adjective",
+      "meaningVi": "Nguy hiểm, coi chừng!",
+      "accentNote": "Tính từ い, cũng dùng độc lập như câu cảm thán 'Coi chừng!'."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n4-33-1",
+      "character": "命",
+      "hanViet": "MỆNH",
+      "strokeCount": 8,
+      "onyomi": [
+        "メイ (mei)"
+      ],
+      "kunyomi": [
+        "いのち"
+      ],
+      "meaningVi": "Mệnh lệnh, sinh mệnh.",
+      "commonWords": [
+        {
+          "word": "命令",
+          "furigana": "めいれい",
+          "meaningVi": "Mệnh lệnh"
+        },
+        {
+          "word": "命",
+          "furigana": "いのち",
+          "meaningVi": "Sinh mạng"
+        },
+        {
+          "word": "運命",
+          "furigana": "うんめい",
+          "meaningVi": "Vận mệnh"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-33-2",
+      "character": "禁",
+      "hanViet": "CẤM",
+      "strokeCount": 13,
+      "onyomi": [
+        "キン (kin)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Cấm đoán.",
+      "commonWords": [
+        {
+          "word": "禁止",
+          "furigana": "きんし",
+          "meaningVi": "Cấm chỉ"
+        },
+        {
+          "word": "禁煙",
+          "furigana": "きんえん",
+          "meaningVi": "Cấm hút thuốc"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-33-3",
+      "character": "危",
+      "hanViet": "NGUY",
+      "strokeCount": 6,
+      "onyomi": [
+        "キ (ki)"
+      ],
+      "kunyomi": [
+        "あぶ(ない)",
+        "あや(うい)"
+      ],
+      "meaningVi": "Nguy hiểm.",
+      "commonWords": [
+        {
+          "word": "危険",
+          "furigana": "きけん",
+          "meaningVi": "Nguy hiểm"
+        },
+        {
+          "word": "危ない",
+          "furigana": "あぶない",
+          "meaningVi": "Nguy hiểm, coi chừng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-33-4",
+      "character": "険",
+      "hanViet": "HIỂM",
+      "strokeCount": 11,
+      "onyomi": [
+        "ケン (ken)"
+      ],
+      "kunyomi": [
+        "けわ(しい)"
+      ],
+      "meaningVi": "Hiểm trở, hiểm nguy.",
+      "commonWords": [
+        {
+          "word": "危険",
+          "furigana": "きけん",
+          "meaningVi": "Nguy hiểm"
+        },
+        {
+          "word": "保険",
+          "furigana": "ほけん",
+          "meaningVi": "Bảo hiểm"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-33-5",
+      "character": "注",
+      "hanViet": "CHÚ",
+      "strokeCount": 8,
+      "onyomi": [
+        "チュウ (chuu)"
+      ],
+      "kunyomi": [
+        "そそ(ぐ)"
+      ],
+      "meaningVi": "Chú ý, rót vào.",
+      "commonWords": [
+        {
+          "word": "注意",
+          "furigana": "ちゅうい",
+          "meaningVi": "Chú ý"
+        },
+        {
+          "word": "注文",
+          "furigana": "ちゅうもん",
+          "meaningVi": "Đặt hàng"
+        },
+        {
+          "word": "注射",
+          "furigana": "ちゅうしゃ",
+          "meaningVi": "Tiêm"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n4-l33-s1",
+      "slideType": "grammar",
+      "title": "1. Chia thể mệnh lệnh (命令形)",
+      "grammarFormula": "Nhóm 1: đuôi う→え (走る→走れ)　Nhóm 2: bỏ る+ろ (食べる→食べろ)　する→しろ 　来る→来い",
+      "explanation": "Thể mệnh lệnh là dạng RA LỆNH TRỰC TIẾP, RẤT MẠNH và CỘC — chỉ dùng trong tình huống khẩn cấp, giữa nam giới thân thiết, huấn luyện viên với vận động viên, hoặc trích trong biển báo/truyện.",
+      "teacherTips": "頑張れ là ngoại lệ về SẮC THÁI: tuy là thể mệnh lệnh nhưng dùng làm câu CỔ VŨ thân thiện, không hề gay gắt.",
+      "culturalNotes": "Thể mệnh lệnh KHÔNG dùng trực tiếp với người lạ/người trên trong giao tiếp thường ngày — sẽ bị coi là rất thô lỗ, mất lịch sự.",
+      "examples": [
+        {
+          "id": "ex-n4-l33-s1-1",
+          "tokens": [
+            {
+              "id": "t-l33s1-1",
+              "text": "はしれ",
+              "isKeyGrammar": true,
+              "kanji": "走れ",
+              "furigana": "はしれ"
+            },
+            {
+              "id": "t-l33s1-2",
+              "text": "！",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Chạy đi! (mệnh lệnh trực tiếp, rất mạnh)"
+        },
+        {
+          "id": "ex-n4-l33-s1-2",
+          "tokens": [
+            {
+              "id": "t-l33s1-3",
+              "text": "がんばれ",
+              "isKeyGrammar": true,
+              "kanji": "頑張れ",
+              "furigana": "がんばれ"
+            },
+            {
+              "id": "t-l33s1-4",
+              "text": "！",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Cố lên! (câu cổ vũ dùng thể mệnh lệnh, KHÔNG mang nghĩa ra lệnh gay gắt)"
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l33-s2",
+      "slideType": "grammar",
+      "title": "2. Cấm chỉ (禁止形): [Thể từ điển] + な",
+      "grammarFormula": "V(từ điển) + な   (đơn giản hơn menh lệnh — chỉ cần thêm な vào cuối)",
+      "explanation": "Thể cấm chỉ dùng THỂ TỪ ĐIỂN (không biến âm phức tạp như mệnh lệnh), chỉ cần thêm な — cũng mạnh và cộc tương đương thể mệnh lệnh, thường thấy trên biển cấm.",
+      "teacherTips": "Cấm chỉ luôn dùng thể từ điển + な — ĐƠN GIẢN hơn nhiều so với năm kiểu biến âm của thể mệnh lệnh.",
+      "culturalNotes": "危険！入るな！ là mẫu biển báo phổ biến ở công trường, khu vực nguy hiểm tại Nhật — ngắn gọn, dứt khoát, dễ đọc từ xa.",
+      "examples": [
+        {
+          "id": "ex-n4-l33-s2-1",
+          "tokens": [
+            {
+              "id": "t-l33s2-1",
+              "text": "はいるな",
+              "isKeyGrammar": true,
+              "kanji": "入るな",
+              "furigana": "はいるな"
+            },
+            {
+              "id": "t-l33s2-2",
+              "text": "！",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Cấm vào!"
+        },
+        {
+          "id": "ex-n4-l33-s2-2",
+          "tokens": [
+            {
+              "id": "t-l33s2-3",
+              "text": "しんぱいするな",
+              "isKeyGrammar": true,
+              "kanji": "心配するな",
+              "furigana": "しんぱいするな"
+            },
+            {
+              "id": "t-l33s2-4",
+              "text": "！",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Đừng lo lắng! (するな, ngay cả する cũng chỉ cần thêm な)"
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l33-s3",
+      "slideType": "grammar",
+      "title": "3. Ngữ cảnh sử dụng: khi nào dùng mệnh lệnh/cấm chỉ",
+      "grammarFormula": "Biển báo / Trích lời trong truyện, phim / HLV thể thao / Tình huống khẩn cấp",
+      "explanation": "Trong giao tiếp ĐỜI THƯỜNG, người Nhật hầu như không dùng trực tiếp hai thể này với nhau — thay vào đó dùng てください (yêu cầu) hoặc ないでください (N5 bài 17).",
+      "teacherTips": "Nếu muốn cấm ai đó làm gì một cách LỊCH SỰ trong đời thường, dùng Vないでください (N5 bài 17) chứ không dùng thể cấm chỉ な.",
+      "culturalNotes": "Truyện tranh (漫画) và phim hành động Nhật dùng thể mệnh lệnh/cấm chỉ RẤT NHIỀU trong lời thoại nhân vật để tạo kịch tính, khẩn cấp.",
+      "examples": [
+        {
+          "id": "ex-n4-l33-s3-1",
+          "tokens": [
+            {
+              "id": "t-l33s3-1",
+              "text": "きけん",
+              "isKeyGrammar": true,
+              "kanji": "危険",
+              "furigana": "きけん"
+            },
+            {
+              "id": "t-l33s3-2",
+              "text": "！",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l33s3-3",
+              "text": "はいるな",
+              "isKeyGrammar": true,
+              "kanji": "入るな",
+              "furigana": "はいるな"
+            },
+            {
+              "id": "t-l33s3-4",
+              "text": "！",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Nguy hiểm! Cấm vào! (biển báo)"
+        },
+        {
+          "id": "ex-n4-l33-s3-2",
+          "tokens": [
+            {
+              "id": "t-l33s3-5",
+              "text": "しあい",
+              "isKeyGrammar": true,
+              "kanji": "試合",
+              "furigana": "しあい"
+            },
+            {
+              "id": "t-l33s3-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l33s3-7",
+              "text": "がんばれ",
+              "isKeyGrammar": true,
+              "kanji": "頑張れ",
+              "furigana": "がんばれ"
+            },
+            {
+              "id": "t-l33s3-8",
+              "text": "！",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Trận đấu, cố lên! (cổ vũ thể thao)"
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l33-s4",
+      "slideType": "grammar",
+      "title": "4. So sánh mức độ mạnh: な (cấm chỉ) > ないでください (N5 b17) > ないほうがいい (N4 b32)",
+      "grammarFormula": "Từ MẠNH NHẤT (ra lệnh) đến NHẸ NHẤT (gợi ý)",
+      "explanation": "Ba cách nói 'đừng làm gì' theo thang độ MẠNH-NHẸ giảm dần: な (cấm chỉ, ra lệnh) → ないでください (yêu cầu lịch sự) → ないほうがいい (chỉ là lời khuyên, gợi ý).",
+      "teacherTips": "Cha mẹ Nhật quát con thường dùng な (漫画を読むな！); nhưng khi khuyên nhẹ nhàng lại chuyển sang ほうがいい — cùng nội dung, khác sắc thái hoàn toàn.",
+      "culturalNotes": "Ba mức độ này phản ánh rõ văn hóa phân tầng lịch sự trong tiếng Nhật — chọn sai mức có thể gây hiểu lầm nghiêm trọng về thái độ.",
+      "examples": [
+        {
+          "id": "ex-n4-l33-s4-1",
+          "tokens": [
+            {
+              "id": "t-l33s4-1",
+              "text": "まんが",
+              "isKeyGrammar": true,
+              "kanji": "漫画",
+              "furigana": "まんが"
+            },
+            {
+              "id": "t-l33s4-2",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l33s4-3",
+              "text": "よむな",
+              "isKeyGrammar": true,
+              "kanji": "読むな",
+              "furigana": "よむな"
+            },
+            {
+              "id": "t-l33s4-4",
+              "text": "！",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Cấm đọc truyện tranh! (rất mạnh, như quát mắng)"
+        },
+        {
+          "id": "ex-n4-l33-s4-2",
+          "tokens": [
+            {
+              "id": "t-l33s4-5",
+              "text": "べんきょう",
+              "isKeyGrammar": false,
+              "kanji": "勉強",
+              "furigana": "べんきょう"
+            },
+            {
+              "id": "t-l33s4-6",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l33s4-7",
+              "text": "とき",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l33s4-8",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l33s4-9",
+              "text": "まんが",
+              "isKeyGrammar": false,
+              "kanji": "漫画",
+              "furigana": "まんが"
+            },
+            {
+              "id": "t-l33s4-10",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l33s4-11",
+              "text": "よまない",
+              "isKeyGrammar": false,
+              "kanji": "読まない",
+              "furigana": "よまない"
+            },
+            {
+              "id": "t-l33s4-12",
+              "text": "ほうが",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l33s4-13",
+              "text": "いいです",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Lúc học bài thì không nên đọc truyện tranh. (nhẹ nhàng hơn nhiều)"
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n4-33-1",
+      "speaker": "コーチ",
+      "speakerRole": "Huấn luyện viên",
+      "tokens": [
+        {
+          "id": "d-l33-1",
+          "text": "みんな",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-2",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-3",
+          "text": "はしれ",
+          "isKeyGrammar": true,
+          "kanji": "走れ",
+          "furigana": "はしれ"
+        },
+        {
+          "id": "d-l33-4",
+          "text": "！",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-5",
+          "text": "はしれ",
+          "isKeyGrammar": true,
+          "kanji": "走れ",
+          "furigana": "はしれ"
+        },
+        {
+          "id": "d-l33-6",
+          "text": "！",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Mọi người, chạy đi! Chạy đi!"
+    },
+    {
+      "id": "dia-n4-33-2",
+      "speaker": "選手",
+      "speakerRole": "Vận động viên",
+      "tokens": [
+        {
+          "id": "d-l33-7",
+          "text": "はい",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l33-8",
+          "text": "！",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng!"
+    },
+    {
+      "id": "dia-n4-33-3",
+      "speaker": "コーチ",
+      "speakerRole": "Huấn luyện viên",
+      "tokens": [
+        {
+          "id": "d-l33-9",
+          "text": "いそげ",
+          "isKeyGrammar": true,
+          "kanji": "急げ",
+          "furigana": "いそげ"
+        },
+        {
+          "id": "d-l33-10",
+          "text": "！",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-11",
+          "text": "しあい",
+          "isKeyGrammar": true,
+          "kanji": "試合",
+          "furigana": "しあい"
+        },
+        {
+          "id": "d-l33-12",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-13",
+          "text": "はじまる",
+          "isKeyGrammar": false,
+          "kanji": "始まる",
+          "furigana": "はじまる"
+        },
+        {
+          "id": "d-l33-14",
+          "text": "ぞ",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Nhanh lên! Trận đấu sắp bắt đầu rồi đấy!"
+    },
+    {
+      "id": "dia-n4-33-4",
+      "speaker": "選手",
+      "speakerRole": "Vận động viên",
+      "tokens": [
+        {
+          "id": "d-l33-15",
+          "text": "わかりました",
+          "isKeyGrammar": false,
+          "kanji": "分かりました",
+          "furigana": "わかりました"
+        },
+        {
+          "id": "d-l33-16",
+          "text": "！",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Rõ ạ!"
+    },
+    {
+      "id": "dia-n4-33-5",
+      "speaker": "コーチ",
+      "speakerRole": "Huấn luyện viên",
+      "tokens": [
+        {
+          "id": "d-l33-17",
+          "text": "しあい",
+          "isKeyGrammar": true,
+          "kanji": "試合",
+          "furigana": "しあい"
+        },
+        {
+          "id": "d-l33-18",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-19",
+          "text": "まえ",
+          "isKeyGrammar": false,
+          "kanji": "前",
+          "furigana": "まえ"
+        },
+        {
+          "id": "d-l33-20",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-21",
+          "text": "しんぱいするな",
+          "isKeyGrammar": true,
+          "kanji": "心配するな",
+          "furigana": "しんぱいするな"
+        },
+        {
+          "id": "d-l33-22",
+          "text": "！",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-23",
+          "text": "がんばれ",
+          "isKeyGrammar": true,
+          "kanji": "頑張れ",
+          "furigana": "がんばれ"
+        },
+        {
+          "id": "d-l33-24",
+          "text": "！",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Trước trận đấu thì đừng lo lắng! Cố lên!"
+    },
+    {
+      "id": "dia-n4-33-6",
+      "speaker": "選手",
+      "speakerRole": "Vận động viên",
+      "tokens": [
+        {
+          "id": "d-l33-25",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-26",
+          "text": "！",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-27",
+          "text": "がんばります",
+          "isKeyGrammar": false,
+          "kanji": "頑張ります",
+          "furigana": "がんばります"
+        }
+      ],
+      "meaningVi": "Vâng! Em sẽ cố gắng."
+    },
+    {
+      "id": "dia-n4-33-7",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l33-28",
+          "text": "あ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-29",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-30",
+          "text": "あぶない",
+          "isKeyGrammar": true,
+          "kanji": "危ない",
+          "furigana": "あぶない"
+        },
+        {
+          "id": "d-l33-31",
+          "text": "！",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-32",
+          "text": "きをつけて",
+          "isKeyGrammar": false,
+          "kanji": "気を付けて",
+          "furigana": "きをつけて"
+        },
+        {
+          "id": "d-l33-33",
+          "text": "ください",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ơ, nguy hiểm! Cẩn thận nhé!"
+    },
+    {
+      "id": "dia-n4-33-8",
+      "speaker": "山田",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l33-34",
+          "text": "すみません",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-35",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-36",
+          "text": "あそこ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-37",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-38",
+          "text": "きけん",
+          "isKeyGrammar": true,
+          "kanji": "危険",
+          "furigana": "きけん"
+        },
+        {
+          "id": "d-l33-39",
+          "text": "！",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-40",
+          "text": "はいるな",
+          "isKeyGrammar": true,
+          "kanji": "入るな",
+          "furigana": "はいるな"
+        },
+        {
+          "id": "d-l33-41",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-42",
+          "text": "かんばん",
+          "isKeyGrammar": false,
+          "kanji": "看板",
+          "furigana": "かんばん"
+        },
+        {
+          "id": "d-l33-43",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-44",
+          "text": "あります",
+          "isKeyGrammar": false,
+          "kanji": "有ります",
+          "furigana": "あります"
+        }
+      ],
+      "meaningVi": "Xin lỗi. Ở kia có biển 'Nguy hiểm! Cấm vào!' kìa."
+    },
+    {
+      "id": "dia-n4-33-9",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l33-45",
+          "text": "そうですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-46",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-47",
+          "text": "ちゅうい",
+          "isKeyGrammar": true,
+          "kanji": "注意",
+          "furigana": "ちゅうい"
+        },
+        {
+          "id": "d-l33-48",
+          "text": "して",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l33-49",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-50",
+          "text": "こちら",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-51",
+          "text": "から",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-52",
+          "text": "いきましょう",
+          "isKeyGrammar": false,
+          "kanji": "行きましょう",
+          "furigana": "いきましょう"
+        }
+      ],
+      "meaningVi": "Đúng vậy nhỉ. Chúng ta cẩn thận, đi lối này thôi."
+    },
+    {
+      "id": "dia-n4-33-10",
+      "speaker": "山田",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l33-53",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-54",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-55",
+          "text": "そう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l33-56",
+          "text": "しましょう",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng, làm vậy đi."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n4-33-1",
+      "question": "Thể mệnh lệnh của 走る (nhóm 1) là:",
+      "options": [
+        "走れ",
+        "走ろ",
+        "走いれ",
+        "走るえ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nhóm 1 đổi âm cuối gốc từ điển từ hàng う sang hàng え: 走る → 走れ.",
+      "hint": "Áp dụng quy tắc chia thể mệnh lệnh nhóm 1."
+    },
+    {
+      "id": "ex-q-n4-33-2",
+      "question": "Thể mệnh lệnh của 食べる (nhóm 2) là:",
+      "options": [
+        "食べろ",
+        "食べれ",
+        "食べいろ",
+        "食べるろ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nhóm 2 bỏ る, thêm ろ: 食べる → 食べろ.",
+      "hint": "Áp dụng quy tắc chia thể mệnh lệnh nhóm 2."
+    },
+    {
+      "id": "ex-q-n4-33-3",
+      "question": "Thể cấm chỉ của 入る là:",
+      "options": [
+        "入るな",
+        "入らな",
+        "入りな",
+        "入れな"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cấm chỉ chỉ cần dùng THỂ TỪ ĐIỂN + な, không biến âm phức tạp như mệnh lệnh: 入る → 入るな.",
+      "hint": "Cấm chỉ đơn giản hơn mệnh lệnh nhiều."
+    },
+    {
+      "id": "ex-q-n4-33-4",
+      "question": "頑張れ tuy là thể mệnh lệnh nhưng thường dùng với sắc thái nào?",
+      "options": [
+        "Cổ vũ thân thiện, không hề gay gắt",
+        "Ra lệnh nghiêm khắc",
+        "Đe dọa",
+        "Chỉ dùng trong quân đội"
+      ],
+      "correctIndex": 0,
+      "explanation": "頑張れ là ngoại lệ về sắc thái — dù là thể mệnh lệnh nhưng được dùng phổ biến như câu cổ vũ tích cực.",
+      "hint": "Xem ghi chú văn hóa ở slide 1."
+    },
+    {
+      "id": "ex-q-n4-33-5",
+      "question": "Trong giao tiếp đời thường, muốn yêu cầu ai đó ĐỪNG làm gì một cách LỊCH SỰ, nên dùng:",
+      "options": [
+        "Vないでください (N5 bài 17)",
+        "Thể cấm chỉ V+な",
+        "Thể mệnh lệnh",
+        "Cả ba cách đều lịch sự như nhau"
+      ],
+      "correctIndex": 0,
+      "explanation": "Thể cấm chỉ な quá mạnh/cộc cho giao tiếp lịch sự — Vないでください phù hợp hơn nhiều trong đời thường.",
+      "hint": "Xem thang mức độ mạnh-nhẹ ở slide 4."
+    },
+    {
+      "id": "ex-q-n4-33-6",
+      "question": "Xếp theo thứ tự MẠNH đến NHẸ: な / ないでください / ないほうがいい",
+      "options": [
+        "な (mạnh nhất) → ないでください → ないほうがいい (nhẹ nhất)",
+        "ないほうがいい → ないでください → な",
+        "Cả ba đều mạnh như nhau",
+        "な là nhẹ nhất"
+      ],
+      "correctIndex": 0,
+      "explanation": "な là ra lệnh cấm đoán trực tiếp (mạnh nhất); ないでください là yêu cầu lịch sự; ないほうがいい chỉ là lời khuyên nhẹ nhàng.",
+      "hint": "Xem tổng kết thang độ mạnh ở slide 4."
+    },
+    {
+      "id": "ex-q-n4-33-7",
+      "question": "Ai thường dùng thể mệnh lệnh/cấm chỉ trong giao tiếp thực tế?",
+      "options": [
+        "Huấn luyện viên với vận động viên, biển báo, truyện/phim, tình huống khẩn cấp",
+        "Nhân viên với khách hàng",
+        "Học sinh với giáo viên",
+        "Người quen mới gặp lần đầu"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đây là những ngữ cảnh ĐẶC BIỆT cho phép dùng — ngoài các trường hợp này, dùng thể mệnh lệnh/cấm chỉ bị coi là bất lịch sự.",
+      "hint": "Xem danh sách ngữ cảnh ở slide 3."
+    },
+    {
+      "id": "ex-q-n4-33-8",
+      "question": "する chia thể mệnh lệnh là:",
+      "options": [
+        "しろ",
+        "すろ",
+        "しれ",
+        "すれ"
+      ],
+      "correctIndex": 0,
+      "explanation": "する là động từ bất quy tắc, chia thể mệnh lệnh thành しろ, không theo âm gốc.",
+      "hint": "Đây là trường hợp bất quy tắc cần học thuộc."
+    },
+    {
+      "id": "ex-q-n4-33-9",
+      "question": "Trong hội thoại, huấn luyện viên dặn vận động viên điều gì trước trận đấu?",
+      "options": [
+        "Đừng lo lắng, cố lên",
+        "Phải thắng bằng mọi giá",
+        "Nghỉ ngơi thật nhiều",
+        "Không dặn gì cả"
+      ],
+      "correctIndex": 0,
+      "explanation": "HLV nói 「試合の前は心配するな！頑張れ！」.",
+      "hint": "Xem câu thoại thứ 5."
+    },
+    {
+      "id": "ex-q-n4-33-10",
+      "question": "Trong hội thoại thứ hai, Yamada và Tanaka gặp biển báo gì?",
+      "options": [
+        "Biển 'Nguy hiểm! Cấm vào!'",
+        "Biển 'Cấm hút thuốc'",
+        "Biển chỉ đường",
+        "Không có biển báo nào"
+      ],
+      "correctIndex": 0,
+      "explanation": "Yamada nói 「あそこに危険！入るな！の看板があります」.",
+      "hint": "Xem câu thoại thứ 8."
+    }
+  ]
+}

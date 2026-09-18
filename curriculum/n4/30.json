@@ -1,0 +1,1293 @@
+{
+  "level": "N4",
+  "lessonNumber": 30,
+  "title": "Bài 30: Trạng thái có chủ đích (てあります) & Chuẩn bị (ておきます)",
+  "description": "Nối tiếp cặp tự/tha động từ (bài 29): てあります dùng THA động từ để diễn tả trạng thái có CHỦ ĐÍCH (khác ています tự động từ chỉ nói sự thật khách quan), và ておきます diễn tả hành động CHUẨN BỊ TRƯỚC cho tương lai — hai cấu trúc thường xuất hiện nối tiếp trong một câu chuyện (chuẩn bị trước → kết quả còn lưu lại).",
+  "vocabList": [
+    {
+      "id": "voc-n4-30-1",
+      "word": "じゅんびします",
+      "kanji": "準備します",
+      "furigana": "じゅんびします",
+      "romaji": "junbi shimasu",
+      "wordType": "verb",
+      "meaningVi": "Chuẩn bị",
+      "accentNote": "準備しておきます = chuẩn bị sẵn từ trước."
+    },
+    {
+      "id": "voc-n4-30-2",
+      "word": "ようい",
+      "kanji": "用意",
+      "furigana": "ようい",
+      "romaji": "youi",
+      "wordType": "noun",
+      "meaningVi": "Sự chuẩn bị",
+      "accentNote": "用意が できています = đã chuẩn bị xong sẵn sàng."
+    },
+    {
+      "id": "voc-n4-30-3",
+      "word": "かざります",
+      "kanji": "飾ります",
+      "furigana": "かざります",
+      "romaji": "kazarimasu",
+      "wordType": "verb",
+      "meaningVi": "Trang trí, bày biện",
+      "accentNote": "花が 飾ってあります = hoa đã được bày sẵn (có chủ đích)."
+    },
+    {
+      "id": "voc-n4-30-4",
+      "word": "かたづけます",
+      "kanji": "片付けます",
+      "furigana": "かたづけます",
+      "romaji": "katazukemasu",
+      "wordType": "verb",
+      "meaningVi": "Dọn dẹp, sắp xếp",
+      "accentNote": "Đã gặp bài 28."
+    },
+    {
+      "id": "voc-n4-30-5",
+      "word": "あけます",
+      "kanji": "開けます",
+      "furigana": "あけます",
+      "romaji": "akemasu",
+      "wordType": "verb",
+      "meaningVi": "Mở (tha động từ)",
+      "accentNote": "Đã gặp N5 bài 14 — nay dùng làm ví dụ てあります."
+    },
+    {
+      "id": "voc-n4-30-6",
+      "word": "しめます",
+      "kanji": "閉めます",
+      "furigana": "しめます",
+      "romaji": "shimemasu",
+      "wordType": "verb",
+      "meaningVi": "Đóng (tha động từ)",
+      "accentNote": "Đã gặp N5 bài 14."
+    },
+    {
+      "id": "voc-n4-30-7",
+      "word": "かきます",
+      "kanji": "書きます",
+      "furigana": "かきます",
+      "romaji": "kakimasu",
+      "wordType": "verb",
+      "meaningVi": "Viết",
+      "accentNote": "Đã gặp N5 bài 6 — nay dùng làm ví dụ てあります."
+    },
+    {
+      "id": "voc-n4-30-8",
+      "word": "かいます",
+      "kanji": "買います",
+      "furigana": "かいます",
+      "romaji": "kaimasu",
+      "wordType": "verb",
+      "meaningVi": "Mua",
+      "accentNote": "Đã gặp N5 bài 6 — nay dùng làm ví dụ chuẩn bị ておきます."
+    },
+    {
+      "id": "voc-n4-30-9",
+      "word": "しらべます",
+      "kanji": "調べます",
+      "furigana": "しらべます",
+      "romaji": "shirabemasu",
+      "wordType": "verb",
+      "meaningVi": "Tra cứu, kiểm tra",
+      "accentNote": "地図で 調べておきます = tra sẵn bản đồ trước."
+    },
+    {
+      "id": "voc-n4-30-10",
+      "word": "よやくします",
+      "kanji": "予約します",
+      "furigana": "よやくします",
+      "romaji": "yoyaku shimasu",
+      "wordType": "verb",
+      "meaningVi": "Đặt trước, đặt chỗ",
+      "accentNote": "レストランを 予約しておきます = đặt bàn nhà hàng trước."
+    },
+    {
+      "id": "voc-n4-30-11",
+      "word": "パーティー",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "paatii",
+      "wordType": "noun",
+      "meaningVi": "Bữa tiệc",
+      "accentNote": "パーティーの 準備を します = chuẩn bị cho bữa tiệc."
+    },
+    {
+      "id": "voc-n4-30-12",
+      "word": "のみもの",
+      "kanji": "飲み物",
+      "furigana": "のみもの",
+      "romaji": "nomimono",
+      "wordType": "noun",
+      "meaningVi": "Đồ uống",
+      "accentNote": "飲み物が 買ってあります = đồ uống đã được mua sẵn."
+    },
+    {
+      "id": "voc-n4-30-13",
+      "word": "たべもの",
+      "kanji": "食べ物",
+      "furigana": "たべもの",
+      "romaji": "tabemono",
+      "wordType": "noun",
+      "meaningVi": "Đồ ăn",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n4-30-14",
+      "word": "はな",
+      "kanji": "花",
+      "furigana": "はな",
+      "romaji": "hana",
+      "wordType": "noun",
+      "meaningVi": "Hoa",
+      "accentNote": "Đã gặp N5 bài 16 — nay dùng làm ví dụ trang trí có chủ đích."
+    },
+    {
+      "id": "voc-n4-30-15",
+      "word": "しゃしん",
+      "kanji": "写真",
+      "furigana": "しゃしん",
+      "romaji": "shashin",
+      "wordType": "noun",
+      "meaningVi": "Bức ảnh",
+      "accentNote": "Đã gặp N5 bài 6."
+    },
+    {
+      "id": "voc-n4-30-16",
+      "word": "かべ",
+      "kanji": "壁",
+      "furigana": "かべ",
+      "romaji": "kabe",
+      "wordType": "noun",
+      "meaningVi": "Bức tường",
+      "accentNote": "壁に 写真が 貼ってあります = ảnh đã được dán sẵn trên tường."
+    },
+    {
+      "id": "voc-n4-30-17",
+      "word": "ちず",
+      "kanji": "地図",
+      "furigana": "ちず",
+      "romaji": "chizu",
+      "wordType": "noun",
+      "meaningVi": "Bản đồ",
+      "accentNote": "Đã gặp N5 bài 7."
+    },
+    {
+      "id": "voc-n4-30-18",
+      "word": "レストラン",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "resutoran",
+      "wordType": "noun",
+      "meaningVi": "Nhà hàng",
+      "accentNote": "Đã gặp N5 bài 22."
+    },
+    {
+      "id": "voc-n4-30-19",
+      "word": "らいしゅう",
+      "kanji": "来週",
+      "furigana": "らいしゅう",
+      "romaji": "raishuu",
+      "wordType": "noun",
+      "meaningVi": "Tuần sau",
+      "accentNote": "Đã gặp N5 bài 4."
+    },
+    {
+      "id": "voc-n4-30-20",
+      "word": "もう",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "mou",
+      "wordType": "adverb",
+      "meaningVi": "Đã, rồi",
+      "accentNote": "Đã gặp N5 bài 7 — nay dùng cùng てあります."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n4-30-1",
+      "character": "準",
+      "hanViet": "CHUẨN",
+      "strokeCount": 13,
+      "onyomi": [
+        "ジュン (jun)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Chuẩn mực, chuẩn bị.",
+      "commonWords": [
+        {
+          "word": "準備",
+          "furigana": "じゅんび",
+          "meaningVi": "Chuẩn bị"
+        },
+        {
+          "word": "標準",
+          "furigana": "ひょうじゅん",
+          "meaningVi": "Tiêu chuẩn"
+        },
+        {
+          "word": "準決勝",
+          "furigana": "じゅんけっしょう",
+          "meaningVi": "Bán kết"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-30-2",
+      "character": "備",
+      "hanViet": "BỊ",
+      "strokeCount": 12,
+      "onyomi": [
+        "ビ (bi)"
+      ],
+      "kunyomi": [
+        "そな(える)"
+      ],
+      "meaningVi": "Trang bị, phòng bị.",
+      "commonWords": [
+        {
+          "word": "準備",
+          "furigana": "じゅんび",
+          "meaningVi": "Chuẩn bị"
+        },
+        {
+          "word": "備品",
+          "furigana": "びひん",
+          "meaningVi": "Vật dụng trang bị"
+        },
+        {
+          "word": "設備",
+          "furigana": "せつび",
+          "meaningVi": "Thiết bị"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-30-3",
+      "character": "用",
+      "hanViet": "DỤNG",
+      "strokeCount": 5,
+      "onyomi": [
+        "ヨウ (you)"
+      ],
+      "kunyomi": [
+        "もち(いる)"
+      ],
+      "meaningVi": "Dùng, việc cần làm.",
+      "commonWords": [
+        {
+          "word": "用意",
+          "furigana": "ようい",
+          "meaningVi": "Sự chuẩn bị"
+        },
+        {
+          "word": "使用",
+          "furigana": "しよう",
+          "meaningVi": "Sử dụng"
+        },
+        {
+          "word": "用事",
+          "furigana": "ようじ",
+          "meaningVi": "Việc cần làm"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-30-4",
+      "character": "飾",
+      "hanViet": "SỨC",
+      "strokeCount": 13,
+      "onyomi": [
+        "ショク (shoku)"
+      ],
+      "kunyomi": [
+        "かざ(る)"
+      ],
+      "meaningVi": "Trang trí, tô điểm.",
+      "commonWords": [
+        {
+          "word": "飾ります",
+          "furigana": "かざります",
+          "meaningVi": "Trang trí"
+        },
+        {
+          "word": "装飾",
+          "furigana": "そうしょく",
+          "meaningVi": "Trang trí (Hán Việt)"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-30-5",
+      "character": "調",
+      "hanViet": "ĐIỀU",
+      "strokeCount": 15,
+      "onyomi": [
+        "チョウ (chou)"
+      ],
+      "kunyomi": [
+        "しら(べる)"
+      ],
+      "meaningVi": "Tra cứu, điều chỉnh.",
+      "commonWords": [
+        {
+          "word": "調べます",
+          "furigana": "しらべます",
+          "meaningVi": "Tra cứu"
+        },
+        {
+          "word": "調子",
+          "furigana": "ちょうし",
+          "meaningVi": "Tình trạng"
+        },
+        {
+          "word": "調味料",
+          "furigana": "ちょうみりょう",
+          "meaningVi": "Gia vị"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n4-l30-s1",
+      "slideType": "grammar",
+      "title": "1. Trạng thái CÓ CHỦ ĐÍCH: N が Vてあります",
+      "grammarFormula": "N + が + [Tha động từ thể て] + あります",
+      "explanation": "Khác Vています với tự động từ (bài 29, không rõ ai làm), てあります dùng THA ĐỘNG TỪ để nhấn mạnh: có NGƯỜI đã CHỦ ĐỘNG làm việc này VỚI MỤC ĐÍCH nào đó, kết quả còn lưu lại.",
+      "teacherTips": "てあります LUÔN ẩn ý có MỤC ĐÍCH phía sau — khác 開いています (chỉ đơn thuần TRẠNG THÁI, không quan tâm lý do, bài 29).",
+      "culturalNotes": "花が飾ってあります gợi ý ngay rằng có người chuẩn bị tiếp đón khách — rất thường thấy khi miêu tả phòng khách Nhật Bản chỉn chu.",
+      "examples": [
+        {
+          "id": "ex-n4-l30-s1-1",
+          "tokens": [
+            {
+              "id": "t-l30s1-1",
+              "text": "はな",
+              "isKeyGrammar": false,
+              "kanji": "花",
+              "furigana": "はな"
+            },
+            {
+              "id": "t-l30s1-2",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l30s1-3",
+              "text": "かざって",
+              "isKeyGrammar": true,
+              "kanji": "飾って",
+              "furigana": "かざって"
+            },
+            {
+              "id": "t-l30s1-4",
+              "text": "あります",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Hoa đã được bày sẵn. (ai đó cố ý bày để đón khách/trang trí)"
+        },
+        {
+          "id": "ex-n4-l30-s1-2",
+          "tokens": [
+            {
+              "id": "t-l30s1-5",
+              "text": "かべ",
+              "isKeyGrammar": false,
+              "kanji": "壁",
+              "furigana": "かべ"
+            },
+            {
+              "id": "t-l30s1-6",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l30s1-7",
+              "text": "しゃしん",
+              "isKeyGrammar": false,
+              "kanji": "写真",
+              "furigana": "しゃしん"
+            },
+            {
+              "id": "t-l30s1-8",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l30s1-9",
+              "text": "かいて",
+              "isKeyGrammar": true,
+              "kanji": "書いて",
+              "furigana": "かいて"
+            },
+            {
+              "id": "t-l30s1-10",
+              "text": "あります",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Trên tường có ghi/dán sẵn (chữ/ảnh)."
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l30-s2",
+      "slideType": "grammar",
+      "title": "2. So sánh てあります và ています (tự động từ)",
+      "grammarFormula": "窓が開いています (tự động từ — TRẠNG THÁI, có thể do gió)　vs　窓が開けてあります (tha động từ — CÓ CHỦ ĐÍCH)",
+      "explanation": "Cùng miêu tả 'cửa đang mở' nhưng khác hẳn NGỤ Ý: ています chỉ nói sự thật khách quan; てあります khẳng định có AI ĐÓ cố ý mở ra vì một lý do nào đó (thông gió, đón khách...).",
+      "teacherTips": "Nhìn động từ để phân biệt: tự động từ (開く) + ています = trạng thái khách quan; tha động từ (開ける) + てあります = có chủ đích.",
+      "culturalNotes": "てあります thường xuất hiện trong miêu tả cảnh chuẩn bị chu đáo: bàn ăn, phòng khách, sự kiện — ngụ ý 'đã được lo liệu sẵn'.",
+      "examples": [
+        {
+          "id": "ex-n4-l30-s2-1",
+          "tokens": [
+            {
+              "id": "t-l30s2-1",
+              "text": "まど",
+              "isKeyGrammar": false,
+              "kanji": "窓",
+              "furigana": "まど"
+            },
+            {
+              "id": "t-l30s2-2",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l30s2-3",
+              "text": "あいて",
+              "isKeyGrammar": false,
+              "kanji": "開いて",
+              "furigana": "あいて"
+            },
+            {
+              "id": "t-l30s2-4",
+              "text": "います",
+              "isKeyGrammar": false,
+              "kanji": "居ます",
+              "furigana": "います"
+            }
+          ],
+          "meaningVi": "Cửa sổ đang mở. (có thể do gió, không rõ nguyên nhân)"
+        },
+        {
+          "id": "ex-n4-l30-s2-2",
+          "tokens": [
+            {
+              "id": "t-l30s2-5",
+              "text": "まど",
+              "isKeyGrammar": false,
+              "kanji": "窓",
+              "furigana": "まど"
+            },
+            {
+              "id": "t-l30s2-6",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l30s2-7",
+              "text": "あけて",
+              "isKeyGrammar": true,
+              "kanji": "開けて",
+              "furigana": "あけて"
+            },
+            {
+              "id": "t-l30s2-8",
+              "text": "あります",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Cửa sổ đã được mở sẵn. (ai đó cố ý mở, ví dụ để thông gió)"
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l30-s3",
+      "slideType": "grammar",
+      "title": "3. Chuẩn bị trước: V(て) + おきます",
+      "grammarFormula": "[Tha động từ thể て] + おきます   (làm trước một việc ĐỂ chuẩn bị cho sau này)",
+      "explanation": "ておきます nhấn mạnh HÀNH ĐỘNG chuẩn bị (không phải trạng thái như てあります) — 'làm trước một việc gì đó để dùng/tiện lợi về sau'. Nói tắt trong khẩu ngữ: とく.",
+      "teacherTips": "ておきます nhấn TƯƠNG LAI (sắp làm để chuẩn bị); てあります nhấn HIỆN TẠI (kết quả của việc chuẩn bị đã hoàn tất trước đó).",
+      "culturalNotes": "レストランを 予約しておきます (đặt bàn trước) là thói quen phổ biến ở Nhật, đặc biệt vào dịp cuối tuần hay ngày lễ.",
+      "examples": [
+        {
+          "id": "ex-n4-l30-s3-1",
+          "tokens": [
+            {
+              "id": "t-l30s3-1",
+              "text": "パーティー",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l30s3-2",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l30s3-3",
+              "text": "まえに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l30s3-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l30s3-5",
+              "text": "のみもの",
+              "isKeyGrammar": false,
+              "kanji": "飲み物",
+              "furigana": "のみもの"
+            },
+            {
+              "id": "t-l30s3-6",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l30s3-7",
+              "text": "かって",
+              "isKeyGrammar": true,
+              "kanji": "買って",
+              "furigana": "かって"
+            },
+            {
+              "id": "t-l30s3-8",
+              "text": "おきます",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Trước bữa tiệc, tôi sẽ mua đồ uống trước."
+        },
+        {
+          "id": "ex-n4-l30-s3-2",
+          "tokens": [
+            {
+              "id": "t-l30s3-9",
+              "text": "らいしゅう",
+              "isKeyGrammar": false,
+              "kanji": "来週",
+              "furigana": "らいしゅう"
+            },
+            {
+              "id": "t-l30s3-10",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l30s3-11",
+              "text": "かいぎ",
+              "isKeyGrammar": false,
+              "kanji": "会議",
+              "furigana": "かいぎ"
+            },
+            {
+              "id": "t-l30s3-12",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l30s3-13",
+              "text": "まえに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l30s3-14",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l30s3-15",
+              "text": "しらべて",
+              "isKeyGrammar": true,
+              "kanji": "調べて",
+              "furigana": "しらべて"
+            },
+            {
+              "id": "t-l30s3-16",
+              "text": "おきます",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Trước cuộc họp tuần sau, tôi sẽ tra cứu trước."
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l30-s4",
+      "slideType": "grammar",
+      "title": "4. Kết quả của ておきます chính là てあります",
+      "grammarFormula": "Trước: レストランを 予約しておきます (sẽ làm)　→　Sau: レストランが 予約してあります (đã làm, kết quả còn đó)",
+      "explanation": "Hai cấu trúc này thường đi CHUNG một câu chuyện: ておきます mô tả HÀNH ĐỘNG chuẩn bị trước, てあります mô tả KẾT QUẢ của việc chuẩn bị đó khi đã hoàn tất.",
+      "teacherTips": "Câu chuyện tự nhiên: kể việc ĐÃ CHUẨN BỊ bằng ておきました (quá khứ), rồi miêu tả HIỆN TRẠNG bằng てあります.",
+      "culturalNotes": "準備してあります (mọi thứ đã sẵn sàng) là câu trả lời tự tin, chu đáo khi có khách hỏi 'đã chuẩn bị xong chưa'.",
+      "examples": [
+        {
+          "id": "ex-n4-l30-s4-1",
+          "tokens": [
+            {
+              "id": "t-l30s4-1",
+              "text": "もう",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l30s4-2",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l30s4-3",
+              "text": "パーティー",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l30s4-4",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l30s4-5",
+              "text": "じゅんび",
+              "isKeyGrammar": true,
+              "kanji": "準備",
+              "furigana": "じゅんび"
+            },
+            {
+              "id": "t-l30s4-6",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l30s4-7",
+              "text": "して",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l30s4-8",
+              "text": "あります",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Việc chuẩn bị cho bữa tiệc đã xong sẵn rồi."
+        },
+        {
+          "id": "ex-n4-l30-s4-2",
+          "tokens": [
+            {
+              "id": "t-l30s4-9",
+              "text": "たべもの",
+              "isKeyGrammar": false,
+              "kanji": "食べ物",
+              "furigana": "たべもの"
+            },
+            {
+              "id": "t-l30s4-10",
+              "text": "も",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l30s4-11",
+              "text": "かって",
+              "isKeyGrammar": false,
+              "kanji": "買って",
+              "furigana": "かって"
+            },
+            {
+              "id": "t-l30s4-12",
+              "text": "おきました",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Đồ ăn tôi cũng đã mua sẵn từ trước rồi."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n4-30-1",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l30-1",
+          "text": "らいしゅう",
+          "isKeyGrammar": true,
+          "kanji": "来週",
+          "furigana": "らいしゅう"
+        },
+        {
+          "id": "d-l30-2",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-3",
+          "text": "パーティー",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-4",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-5",
+          "text": "じゅんび",
+          "isKeyGrammar": true,
+          "kanji": "準備",
+          "furigana": "じゅんび"
+        },
+        {
+          "id": "d-l30-6",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-7",
+          "text": "どうですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Việc chuẩn bị cho bữa tiệc tuần sau thế nào rồi?"
+    },
+    {
+      "id": "dia-n4-30-2",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l30-8",
+          "text": "レストラン",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-9",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-10",
+          "text": "もう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-11",
+          "text": "よやく",
+          "isKeyGrammar": false,
+          "kanji": "予約",
+          "furigana": "よやく"
+        },
+        {
+          "id": "d-l30-12",
+          "text": "して",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l30-13",
+          "text": "あります",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Nhà hàng thì đã đặt sẵn rồi."
+    },
+    {
+      "id": "dia-n4-30-3",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l30-14",
+          "text": "のみもの",
+          "isKeyGrammar": true,
+          "kanji": "飲み物",
+          "furigana": "のみもの"
+        },
+        {
+          "id": "d-l30-15",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-16",
+          "text": "どうですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Còn đồ uống thì sao?"
+    },
+    {
+      "id": "dia-n4-30-4",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l30-17",
+          "text": "あした",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-18",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-19",
+          "text": "かって",
+          "isKeyGrammar": true,
+          "kanji": "買って",
+          "furigana": "かって"
+        },
+        {
+          "id": "d-l30-20",
+          "text": "おきます",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Ngày mai tôi sẽ mua trước."
+    },
+    {
+      "id": "dia-n4-30-5",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l30-21",
+          "text": "はな",
+          "isKeyGrammar": true,
+          "kanji": "花",
+          "furigana": "はな"
+        },
+        {
+          "id": "d-l30-22",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-23",
+          "text": "かざりましょう",
+          "isKeyGrammar": false,
+          "kanji": "飾りましょう",
+          "furigana": "かざりましょう"
+        }
+      ],
+      "meaningVi": "Cũng bày hoa lên nữa nhé."
+    },
+    {
+      "id": "dia-n4-30-6",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l30-24",
+          "text": "いい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-25",
+          "text": "アイデア",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-26",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-27",
+          "text": "ね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-28",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-29",
+          "text": "パーティー",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-30",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-31",
+          "text": "ひ",
+          "isKeyGrammar": false,
+          "kanji": "日",
+          "furigana": "ひ"
+        },
+        {
+          "id": "d-l30-32",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-33",
+          "text": "はな",
+          "isKeyGrammar": false,
+          "kanji": "花",
+          "furigana": "はな"
+        },
+        {
+          "id": "d-l30-34",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-35",
+          "text": "かざって",
+          "isKeyGrammar": true,
+          "kanji": "飾って",
+          "furigana": "かざって"
+        },
+        {
+          "id": "d-l30-36",
+          "text": "あったら",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l30-37",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-38",
+          "text": "きれい",
+          "isKeyGrammar": false,
+          "kanji": "綺麗",
+          "furigana": "きれい"
+        },
+        {
+          "id": "d-l30-39",
+          "text": "ですね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ý hay đấy nhỉ. Nếu hôm tiệc mà có hoa bày sẵn thì đẹp lắm nhỉ."
+    },
+    {
+      "id": "dia-n4-30-7",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l30-40",
+          "text": "みち",
+          "isKeyGrammar": false,
+          "kanji": "道",
+          "furigana": "みち"
+        },
+        {
+          "id": "d-l30-41",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-42",
+          "text": "しらべて",
+          "isKeyGrammar": true,
+          "kanji": "調べて",
+          "furigana": "しらべて"
+        },
+        {
+          "id": "d-l30-43",
+          "text": "おきました",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l30-44",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Đường đi thì anh tra sẵn chưa?"
+    },
+    {
+      "id": "dia-n4-30-8",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l30-45",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-46",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-47",
+          "text": "ちず",
+          "isKeyGrammar": true,
+          "kanji": "地図",
+          "furigana": "ちず"
+        },
+        {
+          "id": "d-l30-48",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-49",
+          "text": "しらべて",
+          "isKeyGrammar": true,
+          "kanji": "調べて",
+          "furigana": "しらべて"
+        },
+        {
+          "id": "d-l30-50",
+          "text": "おきました",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Vâng, tôi đã tra bằng bản đồ trước rồi."
+    },
+    {
+      "id": "dia-n4-30-9",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l30-51",
+          "text": "さすが",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l30-52",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-53",
+          "text": "ね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-54",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-55",
+          "text": "もう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-56",
+          "text": "なにも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-57",
+          "text": "しんぱい",
+          "isKeyGrammar": false,
+          "kanji": "心配",
+          "furigana": "しんぱい"
+        },
+        {
+          "id": "d-l30-58",
+          "text": "いりません",
+          "isKeyGrammar": false,
+          "kanji": "要りません",
+          "furigana": "いりません"
+        },
+        {
+          "id": "d-l30-59",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Đúng là chu đáo thật đấy. Không cần lo gì nữa nhỉ."
+    },
+    {
+      "id": "dia-n4-30-10",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l30-60",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-61",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-62",
+          "text": "じゅんび",
+          "isKeyGrammar": true,
+          "kanji": "準備",
+          "furigana": "じゅんび"
+        },
+        {
+          "id": "d-l30-63",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-64",
+          "text": "ばっちり",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-65",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l30-66",
+          "text": "！",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng, chuẩn bị hoàn hảo rồi ạ!"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n4-30-1",
+      "question": "「花が 飾ってあります」 — vì sao dùng てあります chứ không phải ています?",
+      "options": [
+        "てあります nhấn mạnh có người CHỦ ĐÍCH bày hoa, không phải trạng thái ngẫu nhiên",
+        "Hoàn toàn giống nhau, dùng cái nào cũng được",
+        "ています mới đúng, てあります sai",
+        "てあります chỉ dùng cho hoa"
+      ],
+      "correctIndex": 0,
+      "explanation": "てあります dùng THA động từ, ngụ ý có người chủ động làm với mục đích — khác ています (tự động từ, trạng thái khách quan).",
+      "hint": "Xem so sánh ở slide 2."
+    },
+    {
+      "id": "ex-q-n4-30-2",
+      "question": "「窓が開いています」 và 「窓が開けてあります」 khác nhau ở:",
+      "options": [
+        "Câu đầu là trạng thái khách quan (có thể do gió), câu sau ngụ ý có người cố ý mở",
+        "Hoàn toàn giống nhau về ý nghĩa",
+        "Câu đầu sai ngữ pháp",
+        "Câu sau chỉ dùng cho câu hỏi"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đây là ví dụ điển hình so sánh trực tiếp tự động từ+ています và tha động từ+てあります (bài 29 và 30).",
+      "hint": "Đọc kỹ ví dụ song song ở slide 2."
+    },
+    {
+      "id": "ex-q-n4-30-3",
+      "question": "「レストランを予約しておきます」 diễn tả điều gì?",
+      "options": [
+        "Hành động CHUẨN BỊ trước cho tương lai (sẽ đặt bàn trước)",
+        "Kết quả đã hoàn tất của việc đặt bàn",
+        "Đang trong quá trình đặt bàn",
+        "Đã hủy đặt bàn"
+      ],
+      "correctIndex": 0,
+      "explanation": "ておきます nhấn mạnh hành động LÀM TRƯỚC để chuẩn bị, hướng tới việc SẮP xảy ra.",
+      "hint": "So sánh với てあります (kết quả hiện tại) ở slide 4."
+    },
+    {
+      "id": "ex-q-n4-30-4",
+      "question": "「レストランが予約してあります」 khác 「レストランを予約しておきます」 ở thì:",
+      "options": [
+        "てあります nói về KẾT QUẢ đã có sẵn; ておきます nói về HÀNH ĐỘNG chuẩn bị (thường ở tương lai/dự định)",
+        "Hoàn toàn giống nhau",
+        "てあります là tương lai",
+        "ておきます là quá khứ hoàn thành"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hai cấu trúc bổ sung cho nhau: ておきます là hành động chuẩn bị, てあります là trạng thái kết quả sau khi chuẩn bị xong.",
+      "hint": "Xem mối quan hệ giữa hai cấu trúc ở slide 4."
+    },
+    {
+      "id": "ex-q-n4-30-5",
+      "question": "Trợ từ nào đi cùng てあります (khác với てvà おきます đi với を)?",
+      "options": [
+        "が (đối tượng của tha động từ trong てあります chuyển thành が)",
+        "を (giữ nguyên như câu chủ động thường)",
+        "に",
+        "へ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Điểm đặc biệt: てあります thường đổi trợ từ を của tha động từ thành が, dù động từ vẫn là tha động từ.",
+      "hint": "So sánh trợ từ trong các câu ví dụ ở slide 1."
+    },
+    {
+      "id": "ex-q-n4-30-6",
+      "question": "Dạng nói tắt của ておきます trong khẩu ngữ là:",
+      "options": [
+        "とく (買っておきます → 買っとく)",
+        "てある",
+        "ています",
+        "たら"
+      ],
+      "correctIndex": 0,
+      "explanation": "ておきます thường rút gọn thành とく trong hội thoại thân mật, thông dụng như くない→ん trong khẩu ngữ.",
+      "hint": "Xem ghi chú ở slide 3."
+    },
+    {
+      "id": "ex-q-n4-30-7",
+      "question": "「壁に写真が書いてあります」 nghĩa là:",
+      "options": [
+        "Trên tường có ghi/dán sẵn (chữ hoặc ảnh, có chủ đích)",
+        "Bức tường tự có ảnh xuất hiện",
+        "Không có gì trên tường",
+        "Ảnh sắp được dán lên tường"
+      ],
+      "correctIndex": 0,
+      "explanation": "てあります khẳng định có người đã CHỦ Ý làm việc này (dán/viết), để lại kết quả nhìn thấy được.",
+      "hint": "Áp dụng đúng nghĩa てあります đã học ở slide 1."
+    },
+    {
+      "id": "ex-q-n4-30-8",
+      "question": "Câu nào ĐÚNG khi nói 'trước cuộc họp, tôi sẽ tra cứu trước'?",
+      "options": [
+        "会議の前に、調べておきます",
+        "会議の前に、調べてあります",
+        "会議の前に、調べています",
+        "会議の前に、調べました"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Trước cuộc họp... SẼ tra cứu' là hành động chuẩn bị hướng tới tương lai → dùng ておきます.",
+      "hint": "Xác định đây là chuẩn bị (hành động) hay kết quả (trạng thái)."
+    },
+    {
+      "id": "ex-q-n4-30-9",
+      "question": "Trong hội thoại, Yamada đã chuẩn bị được những gì cho bữa tiệc?",
+      "options": [
+        "Đặt nhà hàng và tra đường đi sẵn",
+        "Chỉ đặt nhà hàng",
+        "Chưa chuẩn bị gì cả",
+        "Mua hoa và đồ ăn"
+      ],
+      "correctIndex": 0,
+      "explanation": "Yamada nói đã 「レストランは もう予約してあります」 và 「地図で調べておきました」.",
+      "hint": "Xem các câu thoại của Yamada."
+    },
+    {
+      "id": "ex-q-n4-30-10",
+      "question": "Cuối hội thoại, Tanaka nhận xét thế nào về sự chuẩn bị của Yamada?",
+      "options": [
+        "Khen là chu đáo (さすが)",
+        "Chê là chưa đủ",
+        "Không nhận xét gì",
+        "Yêu cầu chuẩn bị thêm"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tanaka nói 「さすがですね。もう何も心配いりませんね」.",
+      "hint": "Xem câu thoại thứ 9."
+    }
+  ]
+}

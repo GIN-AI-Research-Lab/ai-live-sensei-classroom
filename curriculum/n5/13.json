@@ -1,0 +1,1381 @@
+{
+  "level": "N5",
+  "lessonNumber": 13,
+  "title": "Bài 13: Mong muốn & Mục đích (欲しい / Vたい / N へ Vに行きます)",
+  "description": "Diễn đạt mong muốn sở hữu đồ vật bằng 欲しい (đi với が), mong muốn thực hiện hành động bằng Vたい (chia như tính từ い: たくない, たかった), và cách nói mục đích di chuyển bằng [gốc Vます]に + 行く/来る/帰る.",
+  "vocabList": [
+    {
+      "id": "voc-n5-13-1",
+      "word": "ほしい",
+      "kanji": "欲しい",
+      "furigana": "ほしい",
+      "romaji": "hoshii",
+      "wordType": "adjective",
+      "meaningVi": "Muốn có (đồ vật)",
+      "accentNote": "Tính từ い. Đối tượng đánh dấu bằng が, KHÔNG dùng を."
+    },
+    {
+      "id": "voc-n5-13-2",
+      "word": "〜たい",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "-tai",
+      "wordType": "adjective",
+      "meaningVi": "Muốn làm ~ (hành động)",
+      "accentNote": "Gốc Vます bỏ ます + たい. Chia như tính từ い."
+    },
+    {
+      "id": "voc-n5-13-3",
+      "word": "かいもの",
+      "kanji": "買い物",
+      "furigana": "かいもの",
+      "romaji": "kaimono",
+      "wordType": "noun",
+      "meaningVi": "Việc mua sắm",
+      "accentNote": "買い物します = đi mua sắm. 買い物に 行きます = đi mua sắm (mục đích)."
+    },
+    {
+      "id": "voc-n5-13-4",
+      "word": "りょこう",
+      "kanji": "旅行",
+      "furigana": "りょこう",
+      "romaji": "ryokou",
+      "wordType": "noun",
+      "meaningVi": "Du lịch, chuyến đi",
+      "accentNote": "Đã gặp bài 5 — nay dùng làm mục đích di chuyển."
+    },
+    {
+      "id": "voc-n5-13-5",
+      "word": "あそびます",
+      "kanji": "遊びます",
+      "furigana": "あそびます",
+      "romaji": "asobimasu",
+      "wordType": "verb",
+      "meaningVi": "Chơi, đi chơi",
+      "accentNote": "Thể từ điển: 遊ぶ. Nhóm 1."
+    },
+    {
+      "id": "voc-n5-13-6",
+      "word": "およぎます",
+      "kanji": "泳ぎます",
+      "furigana": "およぎます",
+      "romaji": "oyogimasu",
+      "wordType": "verb",
+      "meaningVi": "Bơi",
+      "accentNote": "Thể từ điển: 泳ぐ. Nhóm 1."
+    },
+    {
+      "id": "voc-n5-13-7",
+      "word": "うみ",
+      "kanji": "海",
+      "furigana": "うみ",
+      "romaji": "umi",
+      "wordType": "noun",
+      "meaningVi": "Biển",
+      "accentNote": "海へ 泳ぎに 行きます = đi biển bơi."
+    },
+    {
+      "id": "voc-n5-13-8",
+      "word": "やま",
+      "kanji": "山",
+      "furigana": "やま",
+      "romaji": "yama",
+      "wordType": "noun",
+      "meaningVi": "Núi",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-13-9",
+      "word": "プール",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "puuru",
+      "wordType": "noun",
+      "meaningVi": "Hồ bơi",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-13-10",
+      "word": "えいがかん",
+      "kanji": "映画館",
+      "furigana": "えいがかん",
+      "romaji": "eigakan",
+      "wordType": "noun",
+      "meaningVi": "Rạp chiếu phim",
+      "accentNote": "Đã gặp bài 4 (映画) — nay dùng nơi chốn cụ thể."
+    },
+    {
+      "id": "voc-n5-13-11",
+      "word": "とけい",
+      "kanji": "時計",
+      "furigana": "とけい",
+      "romaji": "tokei",
+      "wordType": "noun",
+      "meaningVi": "Đồng hồ",
+      "accentNote": "Đã gặp bài 2 — nay dùng làm vật muốn sở hữu."
+    },
+    {
+      "id": "voc-n5-13-12",
+      "word": "さいふ",
+      "kanji": "財布",
+      "furigana": "さいふ",
+      "romaji": "saifu",
+      "wordType": "noun",
+      "meaningVi": "Ví tiền",
+      "accentNote": ""
+    },
+    {
+      "id": "voc-n5-13-13",
+      "word": "かばん",
+      "kanji": "鞄",
+      "furigana": "かばん",
+      "romaji": "kaban",
+      "wordType": "noun",
+      "meaningVi": "Cặp, túi xách",
+      "accentNote": "Đã gặp bài 2."
+    },
+    {
+      "id": "voc-n5-13-14",
+      "word": "たくさん",
+      "kanji": "沢山",
+      "furigana": "たくさん",
+      "romaji": "takusan",
+      "wordType": "adverb",
+      "meaningVi": "Nhiều",
+      "accentNote": "友達が たくさん います = có nhiều bạn bè."
+    },
+    {
+      "id": "voc-n5-13-15",
+      "word": "なにか",
+      "kanji": "何か",
+      "furigana": "なにか",
+      "romaji": "nanika",
+      "wordType": "noun",
+      "meaningVi": "Cái gì đó",
+      "accentNote": "何か 買いたいです = tôi muốn mua cái gì đó."
+    },
+    {
+      "id": "voc-n5-13-16",
+      "word": "どこか",
+      "kanji": "何処か",
+      "furigana": "どこか",
+      "romaji": "dokoka",
+      "wordType": "noun",
+      "meaningVi": "Ở đâu đó",
+      "accentNote": "どこか 行きたいです = tôi muốn đi đâu đó."
+    },
+    {
+      "id": "voc-n5-13-17",
+      "word": "しんかんせん",
+      "kanji": "新幹線",
+      "furigana": "しんかんせん",
+      "romaji": "shinkansen",
+      "wordType": "noun",
+      "meaningVi": "Tàu Shinkansen",
+      "accentNote": "新幹線に 乗りたいです = muốn đi tàu Shinkansen."
+    },
+    {
+      "id": "voc-n5-13-18",
+      "word": "おんせん",
+      "kanji": "温泉",
+      "furigana": "おんせん",
+      "romaji": "onsen",
+      "wordType": "noun",
+      "meaningVi": "Suối nước nóng, onsen",
+      "accentNote": "温泉に 入りたいです = muốn ngâm onsen."
+    },
+    {
+      "id": "voc-n5-13-19",
+      "word": "きょう",
+      "kanji": "今日",
+      "furigana": "きょう",
+      "romaji": "kyou",
+      "wordType": "noun",
+      "meaningVi": "Hôm nay",
+      "accentNote": "Đã gặp bài 4 — nay dùng trong câu hỏi mong muốn."
+    },
+    {
+      "id": "voc-n5-13-20",
+      "word": "らいしゅう",
+      "kanji": "来週",
+      "furigana": "らいしゅう",
+      "romaji": "raishuu",
+      "wordType": "noun",
+      "meaningVi": "Tuần sau",
+      "accentNote": "Đã gặp bài 4."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n5-13-1",
+      "character": "欲",
+      "hanViet": "DỤC",
+      "strokeCount": 11,
+      "onyomi": [
+        "ヨク (yoku)"
+      ],
+      "kunyomi": [
+        "ほ(しい)"
+      ],
+      "meaningVi": "Mong muốn, ham muốn.",
+      "commonWords": [
+        {
+          "word": "欲しい",
+          "furigana": "ほしい",
+          "meaningVi": "Muốn có"
+        },
+        {
+          "word": "欲望",
+          "furigana": "よくぼう",
+          "meaningVi": "Ham muốn"
+        },
+        {
+          "word": "食欲",
+          "furigana": "しょくよく",
+          "meaningVi": "Cảm giác thèm ăn"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-13-2",
+      "character": "海",
+      "hanViet": "HẢI",
+      "strokeCount": 9,
+      "onyomi": [
+        "カイ (kai)"
+      ],
+      "kunyomi": [
+        "うみ"
+      ],
+      "meaningVi": "Biển.",
+      "commonWords": [
+        {
+          "word": "海",
+          "furigana": "うみ",
+          "meaningVi": "Biển"
+        },
+        {
+          "word": "海外",
+          "furigana": "かいがい",
+          "meaningVi": "Nước ngoài (hải ngoại)"
+        },
+        {
+          "word": "海岸",
+          "furigana": "かいがん",
+          "meaningVi": "Bờ biển"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-13-3",
+      "character": "山",
+      "hanViet": "SƠN",
+      "strokeCount": 3,
+      "onyomi": [
+        "サン (san)"
+      ],
+      "kunyomi": [
+        "やま"
+      ],
+      "meaningVi": "Núi. Hình vẽ ba đỉnh núi.",
+      "commonWords": [
+        {
+          "word": "山",
+          "furigana": "やま",
+          "meaningVi": "Núi"
+        },
+        {
+          "word": "富士山",
+          "furigana": "ふじさん",
+          "meaningVi": "Núi Phú Sĩ"
+        },
+        {
+          "word": "火山",
+          "furigana": "かざん",
+          "meaningVi": "Núi lửa"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-13-4",
+      "character": "旅",
+      "hanViet": "LỮ",
+      "strokeCount": 10,
+      "onyomi": [
+        "リョ (ryo)"
+      ],
+      "kunyomi": [
+        "たび"
+      ],
+      "meaningVi": "Du lịch, lữ hành.",
+      "commonWords": [
+        {
+          "word": "旅行",
+          "furigana": "りょこう",
+          "meaningVi": "Du lịch"
+        },
+        {
+          "word": "旅館",
+          "furigana": "りょかん",
+          "meaningVi": "Nhà trọ kiểu Nhật"
+        },
+        {
+          "word": "一人旅",
+          "furigana": "ひとりたび",
+          "meaningVi": "Du lịch một mình"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-13-5",
+      "character": "泳",
+      "hanViet": "VỊNH",
+      "strokeCount": 8,
+      "onyomi": [
+        "エイ (ei)"
+      ],
+      "kunyomi": [
+        "およ(ぐ)"
+      ],
+      "meaningVi": "Bơi lội.",
+      "commonWords": [
+        {
+          "word": "泳ぎます",
+          "furigana": "およぎます",
+          "meaningVi": "Bơi"
+        },
+        {
+          "word": "水泳",
+          "furigana": "すいえい",
+          "meaningVi": "Môn bơi lội"
+        },
+        {
+          "word": "平泳ぎ",
+          "furigana": "ひらおよぎ",
+          "meaningVi": "Bơi ếch"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n5-l13-s1",
+      "slideType": "grammar",
+      "title": "1. Muốn có đồ vật: N が 欲しい です",
+      "grammarFormula": "[Đồ vật] + が + 欲しい + です",
+      "explanation": "欲しい là tính từ đuôi い, đối tượng mong muốn đánh dấu bằng が — cùng nhóm với 好き/上手 đã học ở bài 9. CHỈ dùng cho ĐỒ VẬT, không dùng cho hành động (dùng Vたい ở slide 2).",
+      "teacherTips": "欲しい chỉ tự nhiên khi nói về MÌNH hoặc hỏi trực tiếp — nói về người thứ ba cần thêm cách diễn đạt gián tiếp (học ở trình độ cao hơn).",
+      "culturalNotes": "Trẻ em Nhật trước Giáng Sinh/năm mới hay được hỏi 何が欲しい — quà thường được chọn theo đúng mong muốn.",
+      "examples": [
+        {
+          "id": "ex-n5-l13-s1-1",
+          "tokens": [
+            {
+              "id": "t-l13s1-1",
+              "text": "わたし",
+              "isKeyGrammar": false,
+              "kanji": "私",
+              "furigana": "わたし"
+            },
+            {
+              "id": "t-l13s1-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s1-3",
+              "text": "あたらしい",
+              "isKeyGrammar": false,
+              "kanji": "新しい",
+              "furigana": "あたらしい"
+            },
+            {
+              "id": "t-l13s1-4",
+              "text": "とけい",
+              "isKeyGrammar": false,
+              "kanji": "時計",
+              "furigana": "とけい"
+            },
+            {
+              "id": "t-l13s1-5",
+              "text": "が",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s1-6",
+              "text": "ほしい",
+              "isKeyGrammar": true,
+              "kanji": "欲しい",
+              "furigana": "ほしい"
+            },
+            {
+              "id": "t-l13s1-7",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Tôi muốn có một cái đồng hồ mới."
+        },
+        {
+          "id": "ex-n5-l13-s1-2",
+          "tokens": [
+            {
+              "id": "t-l13s1-8",
+              "text": "なにか",
+              "isKeyGrammar": true,
+              "kanji": "何か",
+              "furigana": "なにか"
+            },
+            {
+              "id": "t-l13s1-9",
+              "text": "ほしい",
+              "isKeyGrammar": true,
+              "kanji": "欲しい",
+              "furigana": "ほしい"
+            },
+            {
+              "id": "t-l13s1-10",
+              "text": "もの",
+              "isKeyGrammar": false,
+              "kanji": "物",
+              "furigana": "もの"
+            },
+            {
+              "id": "t-l13s1-11",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s1-12",
+              "text": "ありますか",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Anh có muốn cái gì không?"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l13-s2",
+      "slideType": "grammar",
+      "title": "2. Muốn làm gì: V(ます bỏ ます) + たい です",
+      "grammarFormula": "Vます → bỏ ます, thêm たい + です",
+      "explanation": "たい chia HỆT tính từ đuôi い (phủ định たくない, quá khứ たかった). Tân ngữ của động từ gốc có thể giữ を hoặc đổi thành が để nhấn mạnh mong muốn.",
+      "teacherTips": "たい CHỈ dùng để nói MONG MUỐN CỦA NGƯỜI NÓI (hoặc hỏi trực tiếp đối phương) — không dùng để đoán ý người thứ ba.",
+      "culturalNotes": "欲しい (muốn CÓ vật) và たい (muốn LÀM việc) rất dễ nhầm — kiểm tra xem sau đó là danh từ hay động từ.",
+      "examples": [
+        {
+          "id": "ex-n5-l13-s2-1",
+          "tokens": [
+            {
+              "id": "t-l13s2-1",
+              "text": "うみ",
+              "isKeyGrammar": false,
+              "kanji": "海",
+              "furigana": "うみ"
+            },
+            {
+              "id": "t-l13s2-2",
+              "text": "で",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s2-3",
+              "text": "およぎたい",
+              "isKeyGrammar": true,
+              "kanji": "泳ぎたい",
+              "furigana": "およぎたい"
+            },
+            {
+              "id": "t-l13s2-4",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Tôi muốn bơi ở biển."
+        },
+        {
+          "id": "ex-n5-l13-s2-2",
+          "tokens": [
+            {
+              "id": "t-l13s2-5",
+              "text": "しんかんせん",
+              "isKeyGrammar": false,
+              "kanji": "新幹線",
+              "furigana": "しんかんせん"
+            },
+            {
+              "id": "t-l13s2-6",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s2-7",
+              "text": "のりたい",
+              "isKeyGrammar": true,
+              "kanji": "乗りたい",
+              "furigana": "のりたい"
+            },
+            {
+              "id": "t-l13s2-8",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Tôi muốn đi tàu Shinkansen."
+        },
+        {
+          "id": "ex-n5-l13-s2-3",
+          "tokens": [
+            {
+              "id": "t-l13s2-9",
+              "text": "なにを",
+              "isKeyGrammar": true,
+              "kanji": "何を",
+              "furigana": "なにを"
+            },
+            {
+              "id": "t-l13s2-10",
+              "text": "たべたい",
+              "isKeyGrammar": true,
+              "kanji": "食べたい",
+              "furigana": "たべたい"
+            },
+            {
+              "id": "t-l13s2-11",
+              "text": "ですか",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Anh muốn ăn gì vậy?"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l13-s3",
+      "slideType": "grammar",
+      "title": "3. Phủ định và quá khứ của たい",
+      "grammarFormula": "Vたくない (không muốn) / Vたかった (đã muốn) / Vたくなかった (đã không muốn)",
+      "explanation": "Chia y hệt tính từ đuôi い đã học ở bài 8 và 12 — たい tự thân hoạt động như MỘT TÍNH TỪ, không chia theo quy tắc động từ.",
+      "teacherTips": "Cùng bảng chia với 暑い/暑くない/暑かった/暑くなかった đã học — たい chỉ là một tính từ đặc biệt gắn vào gốc động từ.",
+      "culturalNotes": "Từ chối lời rủ bằng たくない nghe khá thẳng — thường thêm ちょっと… hoặc lý do để giảm nhẹ.",
+      "examples": [
+        {
+          "id": "ex-n5-l13-s3-1",
+          "tokens": [
+            {
+              "id": "t-l13s3-1",
+              "text": "きょう",
+              "isKeyGrammar": false,
+              "kanji": "今日",
+              "furigana": "きょう"
+            },
+            {
+              "id": "t-l13s3-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s3-3",
+              "text": "どこも",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s3-4",
+              "text": "いきたくない",
+              "isKeyGrammar": true,
+              "kanji": "行きたくない",
+              "furigana": "いきたくない"
+            },
+            {
+              "id": "t-l13s3-5",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Hôm nay tôi không muốn đi đâu cả."
+        },
+        {
+          "id": "ex-n5-l13-s3-2",
+          "tokens": [
+            {
+              "id": "t-l13s3-6",
+              "text": "きのう",
+              "isKeyGrammar": false,
+              "kanji": "昨日",
+              "furigana": "きのう"
+            },
+            {
+              "id": "t-l13s3-7",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s3-8",
+              "text": "やま",
+              "isKeyGrammar": false,
+              "kanji": "山",
+              "furigana": "やま"
+            },
+            {
+              "id": "t-l13s3-9",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s3-10",
+              "text": "いきたかった",
+              "isKeyGrammar": true,
+              "kanji": "行きたかった",
+              "furigana": "いきたかった"
+            },
+            {
+              "id": "t-l13s3-11",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Hôm qua tôi đã muốn đi núi."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l13-s4",
+      "slideType": "grammar",
+      "title": "4. Mục đích di chuyển: N へ V(ます bỏ ます) に 行きます/来ます/帰ります",
+      "grammarFormula": "[Nơi chốn] + へ + [gốc Vます] + に + 行きます/来ます/帰ります",
+      "explanation": "に ở đây đánh dấu MỤC ĐÍCH của việc di chuyển — khác hẳn に chỉ thời điểm (bài 4) hay nơi tồn tại (bài 10). Chỉ dùng được với động từ CHUYỂN ĐỘNG (行く/来る/帰る).",
+      "teacherTips": "Nếu mục đích là danh từ hành động (旅行, 買い物, 見物…) thì bỏ luôn ます, chỉ giữ danh từ + に: 旅行に 行きます.",
+      "culturalNotes": "Cấu trúc Vに行く rất tự nhiên khi rủ nhau: 「ご飯を 食べに 行きませんか」 = đi ăn cơm không?",
+      "examples": [
+        {
+          "id": "ex-n5-l13-s4-1",
+          "tokens": [
+            {
+              "id": "t-l13s4-1",
+              "text": "デパート",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s4-2",
+              "text": "へ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s4-3",
+              "text": "かいもの",
+              "isKeyGrammar": false,
+              "kanji": "買い物",
+              "furigana": "かいもの"
+            },
+            {
+              "id": "t-l13s4-4",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s4-5",
+              "text": "いきます",
+              "isKeyGrammar": false,
+              "kanji": "行きます",
+              "furigana": "いきます"
+            }
+          ],
+          "meaningVi": "Tôi đi trung tâm thương mại để mua sắm."
+        },
+        {
+          "id": "ex-n5-l13-s4-2",
+          "tokens": [
+            {
+              "id": "t-l13s4-6",
+              "text": "プール",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s4-7",
+              "text": "へ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s4-8",
+              "text": "およぎ",
+              "isKeyGrammar": false,
+              "kanji": "泳ぎ",
+              "furigana": "およぎ"
+            },
+            {
+              "id": "t-l13s4-9",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s4-10",
+              "text": "いきませんか",
+              "isKeyGrammar": true,
+              "kanji": "行きませんか",
+              "furigana": "いきませんか"
+            }
+          ],
+          "meaningVi": "Ra hồ bơi bơi lội không?"
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n5-13-1",
+      "speaker": "カリナ",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l13-1",
+          "text": "らいしゅう",
+          "isKeyGrammar": false,
+          "kanji": "来週",
+          "furigana": "らいしゅう"
+        },
+        {
+          "id": "d-l13-2",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-3",
+          "text": "なつやすみ",
+          "isKeyGrammar": false,
+          "kanji": "夏休み",
+          "furigana": "なつやすみ"
+        },
+        {
+          "id": "d-l13-4",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-5",
+          "text": "なに",
+          "isKeyGrammar": false,
+          "kanji": "何",
+          "furigana": "なに"
+        },
+        {
+          "id": "d-l13-6",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-7",
+          "text": "したい",
+          "isKeyGrammar": true,
+          "kanji": "したい",
+          "furigana": "したい"
+        },
+        {
+          "id": "d-l13-8",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Kỳ nghỉ hè tuần sau, cậu muốn làm gì?"
+    },
+    {
+      "id": "dia-n5-13-2",
+      "speaker": "山田",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l13-9",
+          "text": "うみ",
+          "isKeyGrammar": true,
+          "kanji": "海",
+          "furigana": "うみ"
+        },
+        {
+          "id": "d-l13-10",
+          "text": "へ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-11",
+          "text": "およぎ",
+          "isKeyGrammar": false,
+          "kanji": "泳ぎ",
+          "furigana": "およぎ"
+        },
+        {
+          "id": "d-l13-12",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l13-13",
+          "text": "いきたい",
+          "isKeyGrammar": true,
+          "kanji": "行きたい",
+          "furigana": "いきたい"
+        },
+        {
+          "id": "d-l13-14",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Tớ muốn đi biển bơi."
+    },
+    {
+      "id": "dia-n5-13-3",
+      "speaker": "カリナ",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l13-15",
+          "text": "いいですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-16",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-17",
+          "text": "わたし",
+          "isKeyGrammar": false,
+          "kanji": "私",
+          "furigana": "わたし"
+        },
+        {
+          "id": "d-l13-18",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-19",
+          "text": "いきたい",
+          "isKeyGrammar": false,
+          "kanji": "行きたい",
+          "furigana": "いきたい"
+        },
+        {
+          "id": "d-l13-20",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Hay đó. Tớ cũng muốn đi."
+    },
+    {
+      "id": "dia-n5-13-4",
+      "speaker": "山田",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l13-21",
+          "text": "じゃ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-22",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-23",
+          "text": "いっしょに",
+          "isKeyGrammar": false,
+          "kanji": "一緒に",
+          "furigana": "いっしょに"
+        },
+        {
+          "id": "d-l13-24",
+          "text": "いきましょう",
+          "isKeyGrammar": false,
+          "kanji": "行きましょう",
+          "furigana": "いきましょう"
+        }
+      ],
+      "meaningVi": "Vậy đi cùng nhau đi."
+    },
+    {
+      "id": "dia-n5-13-5",
+      "speaker": "カリナ",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l13-25",
+          "text": "その",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-26",
+          "text": "まえ",
+          "isKeyGrammar": false,
+          "kanji": "前",
+          "furigana": "まえ"
+        },
+        {
+          "id": "d-l13-27",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-28",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-29",
+          "text": "みずぎ",
+          "isKeyGrammar": false,
+          "kanji": "水着",
+          "furigana": "みずぎ"
+        },
+        {
+          "id": "d-l13-30",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-31",
+          "text": "ほしい",
+          "isKeyGrammar": true,
+          "kanji": "欲しい",
+          "furigana": "ほしい"
+        },
+        {
+          "id": "d-l13-32",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Trước đó, tớ muốn mua đồ bơi."
+    },
+    {
+      "id": "dia-n5-13-6",
+      "speaker": "山田",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l13-33",
+          "text": "じゃ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-34",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-35",
+          "text": "デパート",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-36",
+          "text": "へ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-37",
+          "text": "かいもの",
+          "isKeyGrammar": false,
+          "kanji": "買い物",
+          "furigana": "かいもの"
+        },
+        {
+          "id": "d-l13-38",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l13-39",
+          "text": "いきませんか",
+          "isKeyGrammar": true,
+          "kanji": "行きませんか",
+          "furigana": "いきませんか"
+        }
+      ],
+      "meaningVi": "Vậy mình đi trung tâm thương mại mua sắm không?"
+    },
+    {
+      "id": "dia-n5-13-7",
+      "speaker": "カリナ",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l13-40",
+          "text": "ええ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-41",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-42",
+          "text": "いきましょう",
+          "isKeyGrammar": false,
+          "kanji": "行きましょう",
+          "furigana": "いきましょう"
+        },
+        {
+          "id": "d-l13-43",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-44",
+          "text": "あたらしい",
+          "isKeyGrammar": false,
+          "kanji": "新しい",
+          "furigana": "あたらしい"
+        },
+        {
+          "id": "d-l13-45",
+          "text": "かばん",
+          "isKeyGrammar": false,
+          "kanji": "鞄",
+          "furigana": "かばん"
+        },
+        {
+          "id": "d-l13-46",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-47",
+          "text": "ほしい",
+          "isKeyGrammar": true,
+          "kanji": "欲しい",
+          "furigana": "ほしい"
+        },
+        {
+          "id": "d-l13-48",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ừ, đi thôi. Tớ cũng muốn có một cái cặp mới nữa."
+    },
+    {
+      "id": "dia-n5-13-8",
+      "speaker": "山田",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l13-49",
+          "text": "わたし",
+          "isKeyGrammar": false,
+          "kanji": "私",
+          "furigana": "わたし"
+        },
+        {
+          "id": "d-l13-50",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-51",
+          "text": "きのう",
+          "isKeyGrammar": false,
+          "kanji": "昨日",
+          "furigana": "きのう"
+        },
+        {
+          "id": "d-l13-52",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-53",
+          "text": "デパート",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-54",
+          "text": "へ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-55",
+          "text": "いきたかった",
+          "isKeyGrammar": true,
+          "kanji": "行きたかった",
+          "furigana": "いきたかった"
+        },
+        {
+          "id": "d-l13-56",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-57",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-58",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-59",
+          "text": "じかん",
+          "isKeyGrammar": false,
+          "kanji": "時間",
+          "furigana": "じかん"
+        },
+        {
+          "id": "d-l13-60",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-61",
+          "text": "ありませんでした",
+          "isKeyGrammar": false,
+          "kanji": "有りませんでした",
+          "furigana": "ありませんでした"
+        }
+      ],
+      "meaningVi": "Hôm qua tớ cũng đã muốn đi rồi, nhưng không có thời gian."
+    },
+    {
+      "id": "dia-n5-13-9",
+      "speaker": "カリナ",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l13-62",
+          "text": "そうですか",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-63",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-64",
+          "text": "デパート",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-65",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-66",
+          "text": "あと",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-67",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-68",
+          "text": "なにか",
+          "isKeyGrammar": true,
+          "kanji": "何か",
+          "furigana": "なにか"
+        },
+        {
+          "id": "d-l13-69",
+          "text": "たべたい",
+          "isKeyGrammar": true,
+          "kanji": "食べたい",
+          "furigana": "たべたい"
+        },
+        {
+          "id": "d-l13-70",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ra vậy. Sau khi đi trung tâm thương mại, tớ muốn ăn cái gì đó."
+    },
+    {
+      "id": "dia-n5-13-10",
+      "speaker": "山田",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l13-71",
+          "text": "いいですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-72",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-73",
+          "text": "ラーメン",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-74",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-75",
+          "text": "たべ",
+          "isKeyGrammar": false,
+          "kanji": "食べ",
+          "furigana": "たべ"
+        },
+        {
+          "id": "d-l13-76",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l13-77",
+          "text": "いきましょう",
+          "isKeyGrammar": false,
+          "kanji": "行きましょう",
+          "furigana": "いきましょう"
+        }
+      ],
+      "meaningVi": "Hay đó. Đi ăn ramen nhé."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n5-13-1",
+      "question": "「時計が 欲しいです」 — trợ từ が đúng vì:",
+      "options": [
+        "欲しい cùng nhóm với 好き/上手, đánh dấu đối tượng bằng が",
+        "が chỉ dùng cho câu hỏi",
+        "Đây là lỗi, phải sửa thành を",
+        "が chỉ dùng cho động từ"
+      ],
+      "correctIndex": 0,
+      "explanation": "欲しい là tính từ い đặc biệt, đánh dấu đối tượng mong muốn bằng が giống 好き/嫌い/上手/下手 đã học ở bài 9.",
+      "hint": "So sánh với nhóm từ ở bài 9."
+    },
+    {
+      "id": "ex-q-n5-13-2",
+      "question": "欲しい và たい khác nhau ở chỗ:",
+      "options": [
+        "欲しい dùng cho ĐỒ VẬT, たい dùng cho HÀNH ĐỘNG (gắn vào động từ)",
+        "Cả hai đều giống nhau hoàn toàn",
+        "たい chỉ dùng cho danh từ",
+        "欲しい chỉ dùng cho người"
+      ],
+      "correctIndex": 0,
+      "explanation": "欲しい là tính từ độc lập cho danh từ; たい gắn vào gốc động từ (bỏ ます) để diễn tả muốn LÀM gì.",
+      "hint": "Xem từ loại đứng trước 欲しい và たい."
+    },
+    {
+      "id": "ex-q-n5-13-3",
+      "question": "Muốn nói 'tôi muốn ăn ramen', câu nào ĐÚNG?",
+      "options": [
+        "ラーメンが 食べたいです",
+        "ラーメンが 欲しいです",
+        "ラーメンを 食べですたい",
+        "ラーメンが 食べますたい"
+      ],
+      "correctIndex": 0,
+      "explanation": "食べたい là gốc 食べます bỏ ます + たい. 欲しい chỉ dùng cho đồ vật, không dùng khi có động từ ăn.",
+      "hint": "食べる là hành động, không phải đồ vật."
+    },
+    {
+      "id": "ex-q-n5-13-4",
+      "question": "Phủ định của 行きたい là:",
+      "options": [
+        "行きたくない",
+        "行きませんたい",
+        "行きたいじゃない",
+        "行かないたい"
+      ],
+      "correctIndex": 0,
+      "explanation": "たい chia phủ định giống tính từ い: bỏ い cuối (たい), thêm くない → たくない.",
+      "hint": "So sánh với cách chia phủ định tính từ い đã học ở bài 8."
+    },
+    {
+      "id": "ex-q-n5-13-5",
+      "question": "「海へ 泳ぎに 行きます」 — に ở đây có vai trò gì?",
+      "options": [
+        "Đánh dấu MỤC ĐÍCH của việc di chuyển",
+        "Đánh dấu thời điểm",
+        "Đánh dấu nơi tồn tại",
+        "Đánh dấu phương tiện"
+      ],
+      "correctIndex": 0,
+      "explanation": "に sau gốc động từ (泳ぎ) trước 行きます đánh dấu mục đích — một chức năng khác nữa của に.",
+      "hint": "So sánh với các chức năng に đã học ở bài 4, 10."
+    },
+    {
+      "id": "ex-q-n5-13-6",
+      "question": "Cấu trúc Vに行きます chỉ dùng được với động từ nào theo sau?",
+      "options": [
+        "Động từ chuyển động: 行く/来る/帰る",
+        "Bất kỳ động từ nào",
+        "Chỉ động từ ăn uống",
+        "Chỉ động từ mua bán"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cấu trúc mục đích [Vます-gốc]に + 行く/来る/帰る chỉ áp dụng với BA động từ chuyển động này.",
+      "hint": "Xem lại các động từ đã học ở bài 5."
+    },
+    {
+      "id": "ex-q-n5-13-7",
+      "question": "Nếu mục đích là danh từ hành động như 買い物, cấu trúc rút gọn là:",
+      "options": [
+        "買い物に 行きます (bỏ luôn します)",
+        "買い物しに 行きます (giữ nguyên します)",
+        "買い物を 行きます",
+        "買い物で 行きます"
+      ],
+      "correctIndex": 0,
+      "explanation": "Danh từ hành động (買い物, 旅行, 見物) có thể bỏ luôn します, chỉ cần Nに + 行く/来る/帰る.",
+      "hint": "Xem cách rút gọn ở slide 4."
+    },
+    {
+      "id": "ex-q-n5-13-8",
+      "question": "Quá khứ của 行きたい là:",
+      "options": [
+        "行きたかった",
+        "行きましたい",
+        "行きたいでした",
+        "行っただい"
+      ],
+      "correctIndex": 0,
+      "explanation": "たい chia quá khứ như tính từ い: bỏ い, thêm かった → たかった.",
+      "hint": "Áp dụng đúng quy tắc chia của tính từ い đã học ở bài 12."
+    },
+    {
+      "id": "ex-q-n5-13-9",
+      "question": "「今日は どこも 行きたくないです」 nghĩa là:",
+      "options": [
+        "Hôm nay tôi không muốn đi đâu cả",
+        "Hôm nay tôi muốn đi khắp nơi",
+        "Hôm nay tôi đã đi nhiều nơi",
+        "Hôm nay tôi không có nơi nào để đi"
+      ],
+      "correctIndex": 0,
+      "explanation": "どこも + phủ định = 'không đâu cả' (phủ định toàn bộ), kết hợp với 行きたくない (không muốn đi).",
+      "hint": "も + phủ định tạo nghĩa phủ định toàn bộ."
+    },
+    {
+      "id": "ex-q-n5-13-10",
+      "question": "Trong hội thoại, sau khi mua sắm ở trung tâm thương mại, hai người định làm gì?",
+      "options": [
+        "Đi ăn ramen",
+        "Đi bơi ngay",
+        "Về nhà luôn",
+        "Đi xem phim"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cuối hội thoại, 山田 rủ 「ラーメンを 食べに 行きましょう」.",
+      "hint": "Xem câu thoại cuối cùng."
+    }
+  ]
+}

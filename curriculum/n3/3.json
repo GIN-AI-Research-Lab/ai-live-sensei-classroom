@@ -1,0 +1,1350 @@
+{
+  "level": "N3",
+  "lessonNumber": 3,
+  "title": "Bài 3: Quy định & Dự định (ことになっている & ことにする)",
+  "description": "ことになっている diễn tả QUY ĐỊNH/THÔNG LỆ khách quan đã có sẵn từ tổ chức/xã hội (khác hẳn ことにする đã học N4 bài 31 — quyết định CÁ NHÂN của người nói), kiểm tra bằng câu hỏi 'ai là người quyết định', kết hợp với thể bị động 決まっています (N4 bài 37), và mở rộng cảm xúc quyết tâm bằng 決心する.",
+  "vocabList": [
+    {
+      "id": "voc-n3-3-1",
+      "word": "きまります",
+      "kanji": "決まります",
+      "furigana": "きまります",
+      "romaji": "kimarimasu",
+      "wordType": "verb",
+      "meaningVi": "Được quyết định, được ấn định (tự động từ)",
+      "accentNote": "Đã gặp N4 bài 28. 規則で 決まっています = được quy định bởi nội quy."
+    },
+    {
+      "id": "voc-n3-3-2",
+      "word": "きめます",
+      "kanji": "決めます",
+      "furigana": "きめます",
+      "romaji": "kimemasu",
+      "wordType": "verb",
+      "meaningVi": "Quyết định (tha động từ)",
+      "accentNote": "Đã gặp N4 bài 31."
+    },
+    {
+      "id": "voc-n3-3-3",
+      "word": "まもります",
+      "kanji": "守ります",
+      "furigana": "まもります",
+      "romaji": "mamorimasu",
+      "wordType": "verb",
+      "meaningVi": "Tuân thủ, giữ gìn",
+      "accentNote": "規則を 守ります = tuân thủ quy định."
+    },
+    {
+      "id": "voc-n3-3-4",
+      "word": "きんしします",
+      "kanji": "禁止します",
+      "furigana": "きんしします",
+      "romaji": "kinshi shimasu",
+      "wordType": "verb",
+      "meaningVi": "Cấm chỉ",
+      "accentNote": "この 部屋では 撮影が 禁止されています = phòng này cấm chụp ảnh."
+    },
+    {
+      "id": "voc-n3-3-5",
+      "word": "けっしんします",
+      "kanji": "決心します",
+      "furigana": "けっしんします",
+      "romaji": "kesshin shimasu",
+      "wordType": "verb",
+      "meaningVi": "Quyết tâm",
+      "accentNote": "留学する ことに 決心しました = tôi đã quyết tâm đi du học."
+    },
+    {
+      "id": "voc-n3-3-6",
+      "word": "そつぎょうします",
+      "kanji": "卒業します",
+      "furigana": "そつぎょうします",
+      "romaji": "sotsugyou shimasu",
+      "wordType": "verb",
+      "meaningVi": "Tốt nghiệp",
+      "accentNote": "Đã gặp N4 bài 31."
+    },
+    {
+      "id": "voc-n3-3-7",
+      "word": "きそく",
+      "kanji": "規則",
+      "furigana": "きそく",
+      "romaji": "kisoku",
+      "wordType": "noun",
+      "meaningVi": "Quy tắc, nội quy",
+      "accentNote": "Đã gặp N4 bài 28."
+    },
+    {
+      "id": "voc-n3-3-8",
+      "word": "きまり",
+      "kanji": "決まり",
+      "furigana": "きまり",
+      "romaji": "kimari",
+      "wordType": "noun",
+      "meaningVi": "Quy định, lệ thường",
+      "accentNote": "会社の 決まりです = đây là quy định của công ty."
+    },
+    {
+      "id": "voc-n3-3-9",
+      "word": "ぎむ",
+      "kanji": "義務",
+      "furigana": "ぎむ",
+      "romaji": "gimu",
+      "wordType": "noun",
+      "meaningVi": "Nghĩa vụ, trách nhiệm",
+      "accentNote": "参加は 義務では ありません = tham gia không phải là nghĩa vụ."
+    },
+    {
+      "id": "voc-n3-3-10",
+      "word": "けっしん",
+      "kanji": "決心",
+      "furigana": "けっしん",
+      "romaji": "kesshin",
+      "wordType": "noun",
+      "meaningVi": "Quyết tâm",
+      "accentNote": "決心が つきました = tôi đã có quyết tâm rồi."
+    },
+    {
+      "id": "voc-n3-3-11",
+      "word": "だいがく",
+      "kanji": "大学",
+      "furigana": "だいがく",
+      "romaji": "daigaku",
+      "wordType": "noun",
+      "meaningVi": "Trường đại học",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n3-3-12",
+      "word": "かいしゃ",
+      "kanji": "会社",
+      "furigana": "かいしゃ",
+      "romaji": "kaisha",
+      "wordType": "noun",
+      "meaningVi": "Công ty",
+      "accentNote": "Đã gặp N5 bài 3."
+    },
+    {
+      "id": "voc-n3-3-13",
+      "word": "きてい",
+      "kanji": "規定",
+      "furigana": "きてい",
+      "romaji": "kitei",
+      "wordType": "noun",
+      "meaningVi": "Quy định (chính thức, văn bản)",
+      "accentNote": "会社の 規定に よると = theo quy định của công ty thì."
+    },
+    {
+      "id": "voc-n3-3-14",
+      "word": "しゃいん",
+      "kanji": "社員",
+      "furigana": "しゃいん",
+      "romaji": "shain",
+      "wordType": "noun",
+      "meaningVi": "Nhân viên công ty",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n3-3-15",
+      "word": "がくせい",
+      "kanji": "学生",
+      "furigana": "がくせい",
+      "romaji": "gakusei",
+      "wordType": "noun",
+      "meaningVi": "Học sinh, sinh viên",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n3-3-16",
+      "word": "せいふく",
+      "kanji": "制服",
+      "furigana": "せいふく",
+      "romaji": "seifuku",
+      "wordType": "noun",
+      "meaningVi": "Đồng phục",
+      "accentNote": "学校では 制服を 着る ことに なっています = ở trường quy định phải mặc đồng phục."
+    },
+    {
+      "id": "voc-n3-3-17",
+      "word": "かいぎ",
+      "kanji": "会議",
+      "furigana": "かいぎ",
+      "romaji": "kaigi",
+      "wordType": "noun",
+      "meaningVi": "Cuộc họp",
+      "accentNote": "Đã gặp N5 bài 7."
+    },
+    {
+      "id": "voc-n3-3-18",
+      "word": "まいしゅう",
+      "kanji": "毎週",
+      "furigana": "まいしゅう",
+      "romaji": "maishuu",
+      "wordType": "adverb",
+      "meaningVi": "Mỗi tuần",
+      "accentNote": "毎週 月曜日に 会議を する ことに なっています = quy định mỗi thứ Hai họp."
+    },
+    {
+      "id": "voc-n3-3-19",
+      "word": "りゅうがく",
+      "kanji": "留学",
+      "furigana": "りゅうがく",
+      "romaji": "ryuugaku",
+      "wordType": "noun",
+      "meaningVi": "Du học",
+      "accentNote": "Đã gặp N5 bài 21."
+    },
+    {
+      "id": "voc-n3-3-20",
+      "word": "たいしょく",
+      "kanji": "退職",
+      "furigana": "たいしょく",
+      "romaji": "taishoku",
+      "wordType": "noun",
+      "meaningVi": "Nghỉ hưu, thôi việc",
+      "accentNote": "会社を 退職する ことに しました = tôi đã quyết định thôi việc ở công ty."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n3-3-1",
+      "character": "守",
+      "hanViet": "THỦ",
+      "strokeCount": 6,
+      "onyomi": [
+        "シュ (shu)"
+      ],
+      "kunyomi": [
+        "まも(る)"
+      ],
+      "meaningVi": "Giữ gìn, bảo vệ, tuân thủ.",
+      "commonWords": [
+        {
+          "word": "守ります",
+          "furigana": "まもります",
+          "meaningVi": "Tuân thủ"
+        },
+        {
+          "word": "留守",
+          "furigana": "るす",
+          "meaningVi": "Vắng nhà"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-3-2",
+      "character": "義",
+      "hanViet": "NGHĨA",
+      "strokeCount": 13,
+      "onyomi": [
+        "ギ (gi)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Đạo nghĩa, nghĩa vụ.",
+      "commonWords": [
+        {
+          "word": "義務",
+          "furigana": "ぎむ",
+          "meaningVi": "Nghĩa vụ"
+        },
+        {
+          "word": "意義",
+          "furigana": "いぎ",
+          "meaningVi": "Ý nghĩa"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-3-3",
+      "character": "務",
+      "hanViet": "VỤ",
+      "strokeCount": 11,
+      "onyomi": [
+        "ム (mu)"
+      ],
+      "kunyomi": [
+        "つと(める)"
+      ],
+      "meaningVi": "Nhiệm vụ, công việc.",
+      "commonWords": [
+        {
+          "word": "義務",
+          "furigana": "ぎむ",
+          "meaningVi": "Nghĩa vụ"
+        },
+        {
+          "word": "務めます",
+          "furigana": "つとめます",
+          "meaningVi": "Đảm nhận (chức vụ)"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-3-4",
+      "character": "決",
+      "hanViet": "QUYẾT",
+      "strokeCount": 7,
+      "onyomi": [
+        "ケツ (ketsu)"
+      ],
+      "kunyomi": [
+        "き(める)"
+      ],
+      "meaningVi": "Quyết định. Đã gặp N4 bài 31.",
+      "commonWords": [
+        {
+          "word": "決心",
+          "furigana": "けっしん",
+          "meaningVi": "Quyết tâm"
+        },
+        {
+          "word": "決めます",
+          "furigana": "きめます",
+          "meaningVi": "Quyết định"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-3-5",
+      "character": "制",
+      "hanViet": "CHẾ",
+      "strokeCount": 8,
+      "onyomi": [
+        "セイ (sei)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Chế độ, quy chế.",
+      "commonWords": [
+        {
+          "word": "制服",
+          "furigana": "せいふく",
+          "meaningVi": "Đồng phục"
+        },
+        {
+          "word": "制度",
+          "furigana": "せいど",
+          "meaningVi": "Chế độ"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n3-l3-s1",
+      "slideType": "grammar",
+      "title": "1. Quy định có sẵn: [Thể từ điển/ない] ことに なっている",
+      "grammarFormula": "V(từ điển/ない) + ことに なっている  (quy tắc/thông lệ ĐÃ TỒN TẠI SẴN, không phải do người nói tự đặt ra)",
+      "explanation": "ことになっている diễn tả một QUY ĐỊNH/THÔNG LỆ đã được thiết lập từ trước (luật, nội quy, phong tục) — khác hẳn ことにする (slide 2) là QUYẾT ĐỊNH CÁ NHÂN của người nói.",
+      "teacherTips": "ことになっている luôn hàm ý QUY TẮC KHÁCH QUAN, có sẵn từ trước — không phải người nói vừa quyết định. Kiểm tra: 'ai đặt ra quy tắc này' — nếu là tổ chức/pháp luật thì dùng cấu trúc này.",
+      "culturalNotes": "学校では制服を着ることになっています phản ánh văn hóa đồng phục học đường rất phổ biến và nghiêm ngặt ở Nhật Bản.",
+      "examples": [
+        {
+          "id": "ex-n3-l3-s1-1",
+          "tokens": [
+            {
+              "id": "t-l3s1-1",
+              "text": "がっこう",
+              "isKeyGrammar": false,
+              "kanji": "学校",
+              "furigana": "がっこう"
+            },
+            {
+              "id": "t-l3s1-2",
+              "text": "では",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s1-3",
+              "text": "せいふく",
+              "isKeyGrammar": true,
+              "kanji": "制服",
+              "furigana": "せいふく"
+            },
+            {
+              "id": "t-l3s1-4",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s1-5",
+              "text": "きる",
+              "isKeyGrammar": false,
+              "kanji": "着る",
+              "furigana": "きる"
+            },
+            {
+              "id": "t-l3s1-6",
+              "text": "ことに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s1-7",
+              "text": "なっています",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Ở trường quy định phải mặc đồng phục."
+        },
+        {
+          "id": "ex-n3-l3-s1-2",
+          "tokens": [
+            {
+              "id": "t-l3s1-8",
+              "text": "まいしゅう",
+              "isKeyGrammar": true,
+              "kanji": "毎週",
+              "furigana": "まいしゅう"
+            },
+            {
+              "id": "t-l3s1-9",
+              "text": "げつようび",
+              "isKeyGrammar": false,
+              "kanji": "月曜日",
+              "furigana": "げつようび"
+            },
+            {
+              "id": "t-l3s1-10",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s1-11",
+              "text": "かいぎ",
+              "isKeyGrammar": true,
+              "kanji": "会議",
+              "furigana": "かいぎ"
+            },
+            {
+              "id": "t-l3s1-12",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s1-13",
+              "text": "する",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s1-14",
+              "text": "ことに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s1-15",
+              "text": "なっています",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Theo quy định, mỗi thứ Hai có cuộc họp."
+        }
+      ]
+    },
+    {
+      "slideId": "n3-l3-s2",
+      "slideType": "grammar",
+      "title": "2. Ôn lại quyết định cá nhân: [Thể từ điển/ない] ことに する (N4 bài 31)",
+      "grammarFormula": "V(từ điển/ない) + ことに する/した/しました  (QUYẾT ĐỊNH CỦA CHÍNH NGƯỜI NÓI, đã học N4 bài 31)",
+      "explanation": "So sánh trực tiếp với slide 1: ことにする là quyết định CÁ NHÂN, có thể thay đổi; ことになっている là quy định KHÁCH QUAN, không phải do một cá nhân tự đặt ra.",
+      "teacherTips": "ことにしました có thể thay đổi ý định sau này; ことになっています mang tính RÀNG BUỘC hơn — vi phạm quy định có hậu quả, thay đổi quyết định cá nhân thì không.",
+      "culturalNotes": "留学することに決心しました là câu thể hiện QUYẾT TÂM mạnh mẽ hơn nhiều so với chỉ nói 留学することにしました đơn thuần.",
+      "examples": [
+        {
+          "id": "ex-n3-l3-s2-1",
+          "tokens": [
+            {
+              "id": "t-l3s2-1",
+              "text": "かいしゃ",
+              "isKeyGrammar": true,
+              "kanji": "会社",
+              "furigana": "かいしゃ"
+            },
+            {
+              "id": "t-l3s2-2",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s2-3",
+              "text": "たいしょく",
+              "isKeyGrammar": true,
+              "kanji": "退職",
+              "furigana": "たいしょく"
+            },
+            {
+              "id": "t-l3s2-4",
+              "text": "する",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s2-5",
+              "text": "ことに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s2-6",
+              "text": "しました",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Tôi đã quyết định thôi việc ở công ty. (QUYẾT ĐỊNH CÁ NHÂN — ôn N4 bài 31)"
+        },
+        {
+          "id": "ex-n3-l3-s2-2",
+          "tokens": [
+            {
+              "id": "t-l3s2-7",
+              "text": "りゅうがく",
+              "isKeyGrammar": true,
+              "kanji": "留学",
+              "furigana": "りゅうがく"
+            },
+            {
+              "id": "t-l3s2-8",
+              "text": "する",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s2-9",
+              "text": "ことに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s2-10",
+              "text": "けっしん",
+              "isKeyGrammar": true,
+              "kanji": "決心",
+              "furigana": "けっしん"
+            },
+            {
+              "id": "t-l3s2-11",
+              "text": "しました",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Tôi đã quyết tâm đi du học. (けっしんする nhấn mạnh hơn しました đơn thuần)"
+        }
+      ]
+    },
+    {
+      "slideId": "n3-l3-s3",
+      "slideType": "grammar",
+      "title": "3. Phân biệt chủ thể: TỔ CHỨC/QUY LUẬT vs CÁ NHÂN",
+      "grammarFormula": "ことになっている: 学校が決めた、社会の習慣　vs　ことにする: 私が決めた",
+      "explanation": "Câu hỏi kiểm tra nhanh: 'AI là người đưa ra quyết định này?' — nếu là một CƠ QUAN/TỔ CHỨC/PHONG TỤC thì dùng ことになっている; nếu là CHÍNH BẢN THÂN người nói thì dùng ことにする.",
+      "teacherTips": "規則で決まっています (bị động, N4 bài 37) và ことになっています gần nghĩa nhau — cả hai đều nhấn tính KHÁCH QUAN, không phải ý muốn cá nhân.",
+      "culturalNotes": "Khi bị hỏi lý do một quy tắc khó chịu, người Nhật hay đáp 「規則で決まっているので」 để tránh trách nhiệm cá nhân, giữ hòa khí.",
+      "examples": [
+        {
+          "id": "ex-n3-l3-s3-1",
+          "tokens": [
+            {
+              "id": "t-l3s3-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s3-2",
+              "text": "きそく",
+              "isKeyGrammar": true,
+              "kanji": "規則",
+              "furigana": "きそく"
+            },
+            {
+              "id": "t-l3s3-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s3-4",
+              "text": "だれ",
+              "isKeyGrammar": false,
+              "kanji": "誰",
+              "furigana": "だれ"
+            },
+            {
+              "id": "t-l3s3-5",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s3-6",
+              "text": "きめました",
+              "isKeyGrammar": false,
+              "kanji": "決めました",
+              "furigana": "きめました"
+            },
+            {
+              "id": "t-l3s3-7",
+              "text": "か",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Quy định này là do ai quyết định vậy?"
+        },
+        {
+          "id": "ex-n3-l3-s3-2",
+          "tokens": [
+            {
+              "id": "t-l3s3-8",
+              "text": "かいしゃ",
+              "isKeyGrammar": false,
+              "kanji": "会社",
+              "furigana": "かいしゃ"
+            },
+            {
+              "id": "t-l3s3-9",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s3-10",
+              "text": "きてい",
+              "isKeyGrammar": true,
+              "kanji": "規定",
+              "furigana": "きてい"
+            },
+            {
+              "id": "t-l3s3-11",
+              "text": "で",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s3-12",
+              "text": "きまっています",
+              "isKeyGrammar": true,
+              "kanji": "決まっています",
+              "furigana": "きまっています"
+            }
+          ],
+          "meaningVi": "Được quy định bởi nội quy công ty."
+        }
+      ]
+    },
+    {
+      "slideId": "n3-l3-s4",
+      "slideType": "grammar",
+      "title": "4. Phủ định của ことになっている",
+      "grammarFormula": "V(ない形) + ことに なっている  (quy định là KHÔNG được làm gì)",
+      "explanation": "Ghép thể ない vào trước ことになっている để diễn tả quy định CẤM, khác hẳn 禁止されています (bị động, trang trọng hơn, thường dùng trong văn bản chính thức).",
+      "teacherTips": "ことになっていません (phủ định cả cụm) khác hẳn ないことになっています (phủ định động từ) — luôn phủ định ĐỘNG TỪ, không phủ định なっています.",
+      "culturalNotes": "試験中スマホを使わないことになっています là quy định phổ biến tại mọi kỳ thi ở Nhật, được nhắc đi nhắc lại trước giờ thi.",
+      "examples": [
+        {
+          "id": "ex-n3-l3-s4-1",
+          "tokens": [
+            {
+              "id": "t-l3s4-1",
+              "text": "かいぎしつ",
+              "isKeyGrammar": false,
+              "kanji": "会議室",
+              "furigana": "かいぎしつ"
+            },
+            {
+              "id": "t-l3s4-2",
+              "text": "では",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s4-3",
+              "text": "たばこ",
+              "isKeyGrammar": false,
+              "kanji": "煙草",
+              "furigana": "たばこ"
+            },
+            {
+              "id": "t-l3s4-4",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s4-5",
+              "text": "すわない",
+              "isKeyGrammar": false,
+              "kanji": "吸わない",
+              "furigana": "すわない"
+            },
+            {
+              "id": "t-l3s4-6",
+              "text": "ことに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s4-7",
+              "text": "なっています",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Ở phòng họp quy định là không được hút thuốc."
+        },
+        {
+          "id": "ex-n3-l3-s4-2",
+          "tokens": [
+            {
+              "id": "t-l3s4-8",
+              "text": "がくせい",
+              "isKeyGrammar": false,
+              "kanji": "学生",
+              "furigana": "がくせい"
+            },
+            {
+              "id": "t-l3s4-9",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s4-10",
+              "text": "しけん",
+              "isKeyGrammar": false,
+              "kanji": "試験",
+              "furigana": "しけん"
+            },
+            {
+              "id": "t-l3s4-11",
+              "text": "ちゅう",
+              "isKeyGrammar": false,
+              "kanji": "中",
+              "furigana": "ちゅう"
+            },
+            {
+              "id": "t-l3s4-12",
+              "text": "スマホ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s4-13",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s4-14",
+              "text": "つかわない",
+              "isKeyGrammar": false,
+              "kanji": "使わない",
+              "furigana": "つかわない"
+            },
+            {
+              "id": "t-l3s4-15",
+              "text": "ことに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s4-16",
+              "text": "なっています",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Quy định học sinh không được dùng điện thoại trong lúc thi."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n3-3-1",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d3-1",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-2",
+          "text": "だいがく",
+          "isKeyGrammar": true,
+          "kanji": "大学",
+          "furigana": "だいがく"
+        },
+        {
+          "id": "d3-3",
+          "text": "では",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-4",
+          "text": "せいふく",
+          "isKeyGrammar": true,
+          "kanji": "制服",
+          "furigana": "せいふく"
+        },
+        {
+          "id": "d3-5",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-6",
+          "text": "きる",
+          "isKeyGrammar": false,
+          "kanji": "着る",
+          "furigana": "きる"
+        },
+        {
+          "id": "d3-7",
+          "text": "ことに",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d3-8",
+          "text": "なっています",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d3-9",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Trường đại học này có quy định phải mặc đồng phục không?"
+    },
+    {
+      "id": "dia-n3-3-2",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d3-10",
+          "text": "いいえ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-11",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-12",
+          "text": "だいがく",
+          "isKeyGrammar": false,
+          "kanji": "大学",
+          "furigana": "だいがく"
+        },
+        {
+          "id": "d3-13",
+          "text": "では",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-14",
+          "text": "せいふく",
+          "isKeyGrammar": false,
+          "kanji": "制服",
+          "furigana": "せいふく"
+        },
+        {
+          "id": "d3-15",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-16",
+          "text": "ぎむ",
+          "isKeyGrammar": true,
+          "kanji": "義務",
+          "furigana": "ぎむ"
+        },
+        {
+          "id": "d3-17",
+          "text": "では",
+          "isKeyGrammar": false,
+          "kanji": "では",
+          "furigana": "では"
+        },
+        {
+          "id": "d3-18",
+          "text": "ありません",
+          "isKeyGrammar": false,
+          "kanji": "有りません",
+          "furigana": "ありません"
+        }
+      ],
+      "meaningVi": "Không, ở đại học đồng phục không phải là nghĩa vụ."
+    },
+    {
+      "id": "dia-n3-3-3",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d3-19",
+          "text": "そうですか",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-20",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-21",
+          "text": "かいぎ",
+          "isKeyGrammar": true,
+          "kanji": "会議",
+          "furigana": "かいぎ"
+        },
+        {
+          "id": "d3-22",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-23",
+          "text": "まいしゅう",
+          "isKeyGrammar": true,
+          "kanji": "毎週",
+          "furigana": "まいしゅう"
+        },
+        {
+          "id": "d3-24",
+          "text": "ありますか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vậy à. Cuộc họp có mỗi tuần không?"
+    },
+    {
+      "id": "dia-n3-3-4",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d3-25",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-26",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-27",
+          "text": "まいしゅう",
+          "isKeyGrammar": false,
+          "kanji": "毎週",
+          "furigana": "まいしゅう"
+        },
+        {
+          "id": "d3-28",
+          "text": "げつようび",
+          "isKeyGrammar": false,
+          "kanji": "月曜日",
+          "furigana": "げつようび"
+        },
+        {
+          "id": "d3-29",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-30",
+          "text": "する",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d3-31",
+          "text": "ことに",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d3-32",
+          "text": "なっています",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Vâng, quy định là mỗi thứ Hai đều họp."
+    },
+    {
+      "id": "dia-n3-3-5",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d3-33",
+          "text": "だれ",
+          "isKeyGrammar": false,
+          "kanji": "誰",
+          "furigana": "だれ"
+        },
+        {
+          "id": "d3-34",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-35",
+          "text": "きめました",
+          "isKeyGrammar": false,
+          "kanji": "決めました",
+          "furigana": "きめました"
+        },
+        {
+          "id": "d3-36",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Do ai quyết định vậy?"
+    },
+    {
+      "id": "dia-n3-3-6",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d3-37",
+          "text": "だいがく",
+          "isKeyGrammar": false,
+          "kanji": "大学",
+          "furigana": "だいがく"
+        },
+        {
+          "id": "d3-38",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-39",
+          "text": "きてい",
+          "isKeyGrammar": true,
+          "kanji": "規定",
+          "furigana": "きてい"
+        },
+        {
+          "id": "d3-40",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-41",
+          "text": "きまっています",
+          "isKeyGrammar": true,
+          "kanji": "決まっています",
+          "furigana": "きまっています"
+        }
+      ],
+      "meaningVi": "Được quy định bởi nội quy của trường."
+    },
+    {
+      "id": "dia-n3-3-7",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d3-42",
+          "text": "ところで",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-43",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-44",
+          "text": "サントスさん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-45",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-46",
+          "text": "そつぎょう",
+          "isKeyGrammar": false,
+          "kanji": "卒業",
+          "furigana": "そつぎょう"
+        },
+        {
+          "id": "d3-47",
+          "text": "したら",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-48",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-49",
+          "text": "なに",
+          "isKeyGrammar": false,
+          "kanji": "何",
+          "furigana": "なに"
+        },
+        {
+          "id": "d3-50",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-51",
+          "text": "しますか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "À mà, sau khi tốt nghiệp cậu định làm gì?"
+    },
+    {
+      "id": "dia-n3-3-8",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d3-52",
+          "text": "りゅうがく",
+          "isKeyGrammar": true,
+          "kanji": "留学",
+          "furigana": "りゅうがく"
+        },
+        {
+          "id": "d3-53",
+          "text": "する",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d3-54",
+          "text": "ことに",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d3-55",
+          "text": "けっしん",
+          "isKeyGrammar": true,
+          "kanji": "決心",
+          "furigana": "けっしん"
+        },
+        {
+          "id": "d3-56",
+          "text": "しました",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Tớ đã quyết tâm đi du học."
+    },
+    {
+      "id": "dia-n3-3-9",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d3-57",
+          "text": "すごい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-58",
+          "text": "ですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-59",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-60",
+          "text": "きそく",
+          "isKeyGrammar": true,
+          "kanji": "規則",
+          "furigana": "きそく"
+        },
+        {
+          "id": "d3-61",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-62",
+          "text": "まもって",
+          "isKeyGrammar": true,
+          "kanji": "守って",
+          "furigana": "まもって"
+        },
+        {
+          "id": "d3-63",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-64",
+          "text": "がんばって",
+          "isKeyGrammar": false,
+          "kanji": "頑張って",
+          "furigana": "がんばって"
+        },
+        {
+          "id": "d3-65",
+          "text": "ください",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Giỏi thật đấy. Nhớ tuân thủ quy định và cố gắng nhé."
+    },
+    {
+      "id": "dia-n3-3-10",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d3-66",
+          "text": "ありがとう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-67",
+          "text": "ございます",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-68",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d3-69",
+          "text": "がんばります",
+          "isKeyGrammar": false,
+          "kanji": "頑張ります",
+          "furigana": "がんばります"
+        }
+      ],
+      "meaningVi": "Cảm ơn cậu. Tớ sẽ cố gắng."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n3-3-1",
+      "question": "「学校では制服を着ることになっています」 — ことになっている dùng vì:",
+      "options": [
+        "Đây là QUY ĐỊNH có sẵn của trường, không phải người nói tự đặt ra",
+        "Đây là quyết định cá nhân của người nói",
+        "Câu này diễn tả sở thích",
+        "Câu này diễn tả kinh nghiệm cá nhân"
+      ],
+      "correctIndex": 0,
+      "explanation": "ことになっている dùng cho quy định/thông lệ đã được TỔ CHỨC/xã hội thiết lập từ trước.",
+      "hint": "Xem đặc điểm của ことになっている ở slide 1."
+    },
+    {
+      "id": "ex-q-n3-3-2",
+      "question": "ことになっている (bài 3) khác ことにする (N4 bài 31) ở CHỦ THỂ quyết định:",
+      "options": [
+        "ことになっている: tổ chức/quy luật khách quan; ことにする: chính người nói (cá nhân)",
+        "Hoàn toàn giống nhau",
+        "ことになっている chỉ dùng cho câu hỏi",
+        "ことにする chỉ dùng cho phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đây là điểm khác biệt cốt lõi: AI là người đưa ra quyết định — tổ chức hay cá nhân.",
+      "hint": "Xem so sánh trực tiếp ở slide 2-3."
+    },
+    {
+      "id": "ex-q-n3-3-3",
+      "question": "「留学することに決心しました」 khác 「留学することにしました」 (N4 bài 31) ở:",
+      "options": [
+        "決心しました nhấn mạnh QUYẾT TÂM mạnh mẽ hơn しました đơn thuần",
+        "Hoàn toàn giống nhau",
+        "決心しました là quy định của tổ chức",
+        "しました mạnh hơn 決心しました"
+      ],
+      "correctIndex": 0,
+      "explanation": "決心する (quyết tâm) thêm sắc thái CẢM XÚC MẠNH MẼ vào cấu trúc quyết định cá nhân đã học ở N4.",
+      "hint": "Xem mở rộng từ vựng ở slide 2."
+    },
+    {
+      "id": "ex-q-n3-3-4",
+      "question": "Câu hỏi nào giúp phân biệt ことになっている và ことにする?",
+      "options": [
+        "AI là người đưa ra quyết định này — tổ chức/quy luật hay chính bản thân?",
+        "Câu này ở thì quá khứ hay hiện tại?",
+        "Câu này là khẳng định hay phủ định?",
+        "Có bao nhiêu người tham gia?"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đây là mẹo kiểm tra nhanh đã nêu ở slide 3 — xác định chủ thể quyết định.",
+      "hint": "Áp dụng mẹo phân biệt đã học."
+    },
+    {
+      "id": "ex-q-n3-3-5",
+      "question": "「会議室ではたばこを吸わないことになっています」 nghĩa là:",
+      "options": [
+        "Quy định là không được hút thuốc trong phòng họp",
+        "Được phép hút thuốc trong phòng họp",
+        "Không ai biết có được hút thuốc hay không",
+        "Phòng họp không có quy định gì"
+      ],
+      "correctIndex": 0,
+      "explanation": "V(ない)+ことになっています diễn tả quy định CẤM một cách khách quan.",
+      "hint": "Xem cấu trúc phủ định ở slide 4."
+    },
+    {
+      "id": "ex-q-n3-3-6",
+      "question": "「会社の規定で決まっています」 gần nghĩa với cấu trúc nào đã học?",
+      "options": [
+        "Câu bị động (N4 bài 37) kết hợp ý nghĩa của ことになっている",
+        "Thể sai khiến (N4 bài 48)",
+        "Thể khả năng (N4 bài 27)",
+        "Thể ý chí (N4 bài 31)"
+      ],
+      "correctIndex": 0,
+      "explanation": "決まっています (bị động của 決める) và ことになっている đều nhấn tính KHÁCH QUAN, không phải ý cá nhân — hai cách diễn đạt bổ trợ nhau.",
+      "hint": "Kết hợp kiến thức bị động đã học ở N4 bài 37."
+    },
+    {
+      "id": "ex-q-n3-3-7",
+      "question": "義務 nghĩa là gì?",
+      "options": [
+        "Nghĩa vụ, trách nhiệm bắt buộc",
+        "Sở thích cá nhân",
+        "Kinh nghiệm",
+        "Quyết tâm"
+      ],
+      "correctIndex": 0,
+      "explanation": "義務 (nghĩa vụ) khác hẳn 決まり/規則 (quy định) — nhấn mạnh tính BẮT BUỘC về mặt trách nhiệm.",
+      "hint": "Xem nghĩa từ vựng ở phần từ vựng."
+    },
+    {
+      "id": "ex-q-n3-3-8",
+      "question": "Người Nhật hay dùng câu nào để tránh trách nhiệm cá nhân khi giải thích một quy tắc khó chịu?",
+      "options": [
+        "規則で決まっているので (vì đây là quy định)",
+        "私が決めたので (vì tôi quyết định)",
+        "好きだから (vì tôi thích vậy)",
+        "分かりません (tôi không biết)"
+      ],
+      "correctIndex": 0,
+      "explanation": "規則で決まっているので đặt trách nhiệm vào QUY TẮC khách quan, không phải cá nhân — giữ hòa khí trong giao tiếp.",
+      "hint": "Xem ghi chú văn hóa ở slide 3."
+    },
+    {
+      "id": "ex-q-n3-3-9",
+      "question": "Trong hội thoại, ai quyết định lịch họp mỗi tuần?",
+      "options": [
+        "Nội quy của trường (quy định khách quan)",
+        "Chính Santos quyết định",
+        "Không ai quyết định cả",
+        "Do Wang đề xuất"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「大学の規定で決まっています」.",
+      "hint": "Xem câu thoại thứ 6."
+    },
+    {
+      "id": "ex-q-n3-3-10",
+      "question": "Santos đã quyết tâm làm gì sau khi tốt nghiệp?",
+      "options": [
+        "Đi du học",
+        "Đi làm ngay",
+        "Học tiếp thạc sĩ ở trường cũ",
+        "Chưa quyết định"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「留学することに決心しました」.",
+      "hint": "Xem câu thoại thứ 8."
+    }
+  ]
+}

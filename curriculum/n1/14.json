@@ -1,0 +1,1594 @@
+{
+  "level": "N1",
+  "lessonNumber": 14,
+  "title": "Bài 14: Xu hướng tiêu cực thường thấy (きらいがある)",
+  "description": "きらいがある diễn tả một XU HƯỚNG TIÊU CỰC/không tốt hay LẶP LẠI vốn có trong TÍNH CÁCH/THÓI QUEN của một người, hoặc trong BẢN CHẤT của sự vật/hiện tượng — mang tính NHẬN XÉT KHÁCH QUAN, ĐIỀM TĨNH, khác hẳn các cấu trúc phê phán gay gắt đã học (まじき, ともあろう者が). Có thể làm dịu bằng やや/少し, và thường đi kèm もっとも để bổ sung ý cân bằng; so với がち (đã học ở cấp thấp) vốn chỉ nhấn TẦN SUẤT, きらいがある trang trọng và sâu sắc hơn hẳn, thường dùng trong nhận xét học thuật. Hội thoại: một giáo sư nhận xét luận văn của học trò, thể hiện đúng phong cách phản biện học thuật vừa thẳng thắn vừa tôn trọng.",
+  "vocabList": [
+    {
+      "id": "voc-n1-14-1",
+      "word": "りろん",
+      "kanji": "理論",
+      "furigana": "りろん",
+      "romaji": "riron",
+      "wordType": "noun",
+      "meaningVi": "Lý thuyết",
+      "accentNote": "理論より 実践が 大切です = thực tiễn quan trọng hơn lý thuyết."
+    },
+    {
+      "id": "voc-n1-14-2",
+      "word": "じっせん",
+      "kanji": "実践",
+      "furigana": "じっせん",
+      "romaji": "jissen",
+      "wordType": "noun",
+      "meaningVi": "Thực hành, thực tiễn",
+      "accentNote": "理論を 実践します = đưa lý thuyết vào thực hành."
+    },
+    {
+      "id": "voc-n1-14-3",
+      "word": "がんこ",
+      "kanji": "頑固",
+      "furigana": "がんこ",
+      "romaji": "ganko",
+      "wordType": "adjective",
+      "meaningVi": "Cố chấp, ngoan cố, cứng đầu",
+      "accentNote": "頑固な 性格です = tính cách cố chấp."
+    },
+    {
+      "id": "voc-n1-14-4",
+      "word": "きちょうめん",
+      "kanji": "几帳面",
+      "furigana": "きちょうめん",
+      "romaji": "kichoumen",
+      "wordType": "adjective",
+      "meaningVi": "Tỉ mỉ, cẩn thận (đến mức cứng nhắc)",
+      "accentNote": "几帳面すぎる 性格です = tính cách tỉ mỉ quá mức."
+    },
+    {
+      "id": "voc-n1-14-5",
+      "word": "しんちょう",
+      "kanji": "慎重",
+      "furigana": "しんちょう",
+      "romaji": "shinchou",
+      "wordType": "adjective",
+      "meaningVi": "Thận trọng, cẩn thận",
+      "accentNote": "慎重に 考えます = suy nghĩ một cách thận trọng."
+    },
+    {
+      "id": "voc-n1-14-6",
+      "word": "けってん",
+      "kanji": "欠点",
+      "furigana": "けってん",
+      "romaji": "ketten",
+      "wordType": "noun",
+      "meaningVi": "Khuyết điểm, nhược điểm",
+      "accentNote": "欠点を 直します = sửa khuyết điểm."
+    },
+    {
+      "id": "voc-n1-14-7",
+      "word": "ろんぶん",
+      "kanji": "論文",
+      "furigana": "ろんぶん",
+      "romaji": "ronbun",
+      "wordType": "noun",
+      "meaningVi": "Luận văn, luận án",
+      "accentNote": "論文を 書きます = viết luận văn."
+    },
+    {
+      "id": "voc-n1-14-8",
+      "word": "きょうじゅ",
+      "kanji": "教授",
+      "furigana": "きょうじゅ",
+      "romaji": "kyouju",
+      "wordType": "noun",
+      "meaningVi": "Giáo sư",
+      "accentNote": "教授に 相談します = tham khảo ý kiến giáo sư."
+    },
+    {
+      "id": "voc-n1-14-9",
+      "word": "きゃっかんてき",
+      "kanji": "客観的",
+      "furigana": "きゃっかんてき",
+      "romaji": "kyakkanteki",
+      "wordType": "adjective",
+      "meaningVi": "Khách quan",
+      "accentNote": "客観的に 見ます = nhìn nhận một cách khách quan."
+    },
+    {
+      "id": "voc-n1-14-10",
+      "word": "けいこう",
+      "kanji": "傾向",
+      "furigana": "けいこう",
+      "romaji": "keikou",
+      "wordType": "noun",
+      "meaningVi": "Xu hướng, khuynh hướng",
+      "accentNote": "Đã gặp N3 bài 9."
+    },
+    {
+      "id": "voc-n1-14-11",
+      "word": "せいかく",
+      "kanji": "性格",
+      "furigana": "せいかく",
+      "romaji": "seikaku",
+      "wordType": "noun",
+      "meaningVi": "Tính cách",
+      "accentNote": "Đã gặp N3 bài 1."
+    },
+    {
+      "id": "voc-n1-14-12",
+      "word": "かんぺき",
+      "kanji": "完璧",
+      "furigana": "かんぺき",
+      "romaji": "kanpeki",
+      "wordType": "adjective",
+      "meaningVi": "Hoàn hảo",
+      "accentNote": "Đã gặp N1 bài 3."
+    },
+    {
+      "id": "voc-n1-14-13",
+      "word": "どりょく",
+      "kanji": "努力",
+      "furigana": "どりょく",
+      "romaji": "doryoku",
+      "wordType": "noun",
+      "meaningVi": "Nỗ lực",
+      "accentNote": "Đã gặp N3 bài 2."
+    },
+    {
+      "id": "voc-n1-14-14",
+      "word": "じじつ",
+      "kanji": "事実",
+      "furigana": "じじつ",
+      "romaji": "jijitsu",
+      "wordType": "noun",
+      "meaningVi": "Sự thật",
+      "accentNote": "Đã gặp N2 bài 10."
+    },
+    {
+      "id": "voc-n1-14-15",
+      "word": "しんらい",
+      "kanji": "信頼",
+      "furigana": "しんらい",
+      "romaji": "shinrai",
+      "wordType": "noun",
+      "meaningVi": "Sự tin cậy",
+      "accentNote": "Đã gặp N1 bài 6."
+    },
+    {
+      "id": "voc-n1-14-16",
+      "word": "かんがえます",
+      "kanji": "考えます",
+      "furigana": "かんがえます",
+      "romaji": "kangaemasu",
+      "wordType": "verb",
+      "meaningVi": "Suy nghĩ, cân nhắc",
+      "accentNote": "Đã gặp N5 bài 21."
+    },
+    {
+      "id": "voc-n1-14-17",
+      "word": "せつめいします",
+      "kanji": "説明します",
+      "furigana": "せつめいします",
+      "romaji": "setsumei shimasu",
+      "wordType": "verb",
+      "meaningVi": "Giải thích",
+      "accentNote": "Đã gặp N4 bài 34."
+    },
+    {
+      "id": "voc-n1-14-18",
+      "word": "みとめます",
+      "kanji": "認めます",
+      "furigana": "みとめます",
+      "romaji": "mitomemasu",
+      "wordType": "verb",
+      "meaningVi": "Công nhận",
+      "accentNote": "Đã gặp N2 bài 14."
+    },
+    {
+      "id": "voc-n1-14-19",
+      "word": "もんだい",
+      "kanji": "問題",
+      "furigana": "もんだい",
+      "romaji": "mondai",
+      "wordType": "noun",
+      "meaningVi": "Vấn đề",
+      "accentNote": "Đã gặp N3 bài 13."
+    },
+    {
+      "id": "voc-n1-14-20",
+      "word": "せきにん",
+      "kanji": "責任",
+      "furigana": "せきにん",
+      "romaji": "sekinin",
+      "wordType": "noun",
+      "meaningVi": "Trách nhiệm",
+      "accentNote": "Đã gặp N1 bài 5."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n1-14-1",
+      "character": "固",
+      "hanViet": "CỐ",
+      "strokeCount": 8,
+      "onyomi": [
+        "コ (ko)"
+      ],
+      "kunyomi": [
+        "かた(い)"
+      ],
+      "meaningVi": "Cứng, kiên cố.",
+      "commonWords": [
+        {
+          "word": "頑固",
+          "furigana": "がんこ",
+          "meaningVi": "Cố chấp"
+        },
+        {
+          "word": "固い",
+          "furigana": "かたい",
+          "meaningVi": "Cứng, kiên định"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-14-2",
+      "character": "践",
+      "hanViet": "TIỄN",
+      "strokeCount": 13,
+      "onyomi": [
+        "セン (sen)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Thực hành, giẫm lên.",
+      "commonWords": [
+        {
+          "word": "実践",
+          "furigana": "じっせん",
+          "meaningVi": "Thực hành"
+        },
+        {
+          "word": "実践的",
+          "furigana": "じっせんてき",
+          "meaningVi": "Có tính thực tiễn"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-14-3",
+      "character": "慎",
+      "hanViet": "THẬN",
+      "strokeCount": 13,
+      "onyomi": [
+        "シン (shin)"
+      ],
+      "kunyomi": [
+        "つつし(む)"
+      ],
+      "meaningVi": "Thận trọng, cẩn thận.",
+      "commonWords": [
+        {
+          "word": "慎重",
+          "furigana": "しんちょう",
+          "meaningVi": "Thận trọng"
+        },
+        {
+          "word": "慎む",
+          "furigana": "つつしむ",
+          "meaningVi": "Giữ gìn, kiêng dè"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-14-4",
+      "character": "点",
+      "hanViet": "ĐIỂM",
+      "strokeCount": 9,
+      "onyomi": [
+        "テン (ten)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Điểm, chấm.",
+      "commonWords": [
+        {
+          "word": "欠点",
+          "furigana": "けってん",
+          "meaningVi": "Khuyết điểm"
+        },
+        {
+          "word": "点数",
+          "furigana": "てんすう",
+          "meaningVi": "Điểm số"
+        }
+      ]
+    },
+    {
+      "id": "kan-n1-14-5",
+      "character": "観",
+      "hanViet": "QUAN",
+      "strokeCount": 18,
+      "onyomi": [
+        "カン (kan)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Quan sát, cái nhìn, quan điểm.",
+      "commonWords": [
+        {
+          "word": "客観的",
+          "furigana": "きゃっかんてき",
+          "meaningVi": "Khách quan"
+        },
+        {
+          "word": "主観的",
+          "furigana": "しゅかんてき",
+          "meaningVi": "Chủ quan"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n1-l14-s1",
+      "slideType": "grammar",
+      "title": "1. Có xu hướng... (nhận xét khách quan, điềm tĩnh): V(từ điển)/Nの + きらいがある",
+      "grammarFormula": "V(thể từ điển)/Nの + きらいがある",
+      "explanation": "きらいがある diễn tả một XU HƯỚNG TIÊU CỰC/không tốt hay LẶP LẠI vốn có trong TÍNH CÁCH/THÓI QUEN của một người, hoặc trong BẢN CHẤT của sự vật/hiện tượng — mang tính NHẬN XÉT KHÁCH QUAN, ĐIỀM TĨNH, KHÔNG PHẢI lời chỉ trích gay gắt (khác hẳn まじき, ともあろう者が đã học).",
+      "teacherTips": "きらいがある chỉ dùng cho xu hướng TIÊU CỰC — không dùng để khen ngợi một xu hướng tích cực (không nói '頑張るきらいがある').",
+      "culturalNotes": "きらいがある là văn phong VIẾT/học thuật trang trọng, thường thấy trong bài phê bình sách, nhận xét luận văn, báo cáo đánh giá — hiếm khi dùng trong hội thoại thân mật hằng ngày.",
+      "examples": [
+        {
+          "id": "ex-n1-l14-s1-1",
+          "tokens": [
+            {
+              "id": "t-l14s1-1",
+              "text": "かれ",
+              "isKeyGrammar": false,
+              "kanji": "彼",
+              "furigana": "かれ"
+            },
+            {
+              "id": "t-l14s1-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s1-3",
+              "text": "りろん",
+              "isKeyGrammar": true,
+              "kanji": "理論",
+              "furigana": "りろん"
+            },
+            {
+              "id": "t-l14s1-4",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s1-5",
+              "text": "はしる",
+              "isKeyGrammar": false,
+              "kanji": "走る",
+              "furigana": "はしる"
+            },
+            {
+              "id": "t-l14s1-6",
+              "text": "きらいがある",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Anh ta có xu hướng chạy theo lý thuyết suông."
+        },
+        {
+          "id": "ex-n1-l14-s1-2",
+          "tokens": [
+            {
+              "id": "t-l14s1-7",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s1-8",
+              "text": "ろんぶん",
+              "isKeyGrammar": true,
+              "kanji": "論文",
+              "furigana": "ろんぶん"
+            },
+            {
+              "id": "t-l14s1-9",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s1-10",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s1-11",
+              "text": "じっせん",
+              "isKeyGrammar": true,
+              "kanji": "実践",
+              "furigana": "じっせん"
+            },
+            {
+              "id": "t-l14s1-12",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s1-13",
+              "text": "けいしする",
+              "isKeyGrammar": false,
+              "kanji": "軽視する",
+              "furigana": "けいしする"
+            },
+            {
+              "id": "t-l14s1-14",
+              "text": "きらいがある",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Luận văn này có xu hướng xem nhẹ tính thực tiễn."
+        }
+      ]
+    },
+    {
+      "slideId": "n1-l14-s2",
+      "slideType": "grammar",
+      "title": "2. Làm dịu hoặc bổ sung nhận xét: やや/少し + きらいがある、もっとも〜",
+      "grammarFormula": "やや/少し + V/Nの + きらいがある。もっとも、[ý bổ sung làm cân bằng nhận xét]",
+      "explanation": "Thêm やや/少し (hơi, một chút) trước きらいがある giúp làm DỊU mức độ nhận xét, khiến câu văn KHÁCH QUAN và LỊCH SỰ hơn. Sau khi nêu xu hướng tiêu cực, người nói thường thêm câu bắt đầu bằng もっとも (tuy vậy, dù vậy) để CÂN BẰNG lại nhận xét, chỉ ra rằng xu hướng đó cũng có mặt tích cực hoặc không hoàn toàn đáng lo.",
+      "teacherTips": "もっとも trong cách dùng này KHÁC もっとも nghĩa 'nhất' (một cái もっとも khác) — đây là liên từ đặt đầu câu, nghĩa 'tuy vậy, dù vậy', chuyên dùng để bổ sung ý cân bằng sau một nhận xét.",
+      "culturalNotes": "Trong thư giới thiệu (推薦状) hay đánh giá nhân sự ở Nhật, mẫu câu 'やや〜きらいがあるが、もっとも〜' rất phổ biến để nhận xét thẳng thắn nhưng vẫn giữ thiện chí.",
+      "examples": [
+        {
+          "id": "ex-n1-l14-s2-1",
+          "tokens": [
+            {
+              "id": "t-l14s2-1",
+              "text": "かれ",
+              "isKeyGrammar": false,
+              "kanji": "彼",
+              "furigana": "かれ"
+            },
+            {
+              "id": "t-l14s2-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s2-3",
+              "text": "やや",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l14s2-4",
+              "text": "がんこな",
+              "isKeyGrammar": true,
+              "kanji": "頑固な",
+              "furigana": "がんこな"
+            },
+            {
+              "id": "t-l14s2-5",
+              "text": "きらいがある",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l14s2-6",
+              "text": "。",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s2-7",
+              "text": "もっとも",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l14s2-8",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s2-9",
+              "text": "それ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s2-10",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s2-11",
+              "text": "かれ",
+              "isKeyGrammar": false,
+              "kanji": "彼",
+              "furigana": "かれ"
+            },
+            {
+              "id": "t-l14s2-12",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s2-13",
+              "text": "しんちょうさ",
+              "isKeyGrammar": true,
+              "kanji": "慎重さ",
+              "furigana": "しんちょうさ"
+            },
+            {
+              "id": "t-l14s2-14",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s2-15",
+              "text": "あらわれ",
+              "isKeyGrammar": false,
+              "kanji": "表れ",
+              "furigana": "あらわれ"
+            },
+            {
+              "id": "t-l14s2-16",
+              "text": "でもある",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Anh ta hơi có xu hướng cố chấp. Tuy vậy, đó cũng là biểu hiện của sự thận trọng nơi anh ấy."
+        },
+        {
+          "id": "ex-n1-l14-s2-2",
+          "tokens": [
+            {
+              "id": "t-l14s2-17",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s2-18",
+              "text": "がくせい",
+              "isKeyGrammar": false,
+              "kanji": "学生",
+              "furigana": "がくせい"
+            },
+            {
+              "id": "t-l14s2-19",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s2-20",
+              "text": "すこし",
+              "isKeyGrammar": true,
+              "kanji": "少し",
+              "furigana": "すこし"
+            },
+            {
+              "id": "t-l14s2-21",
+              "text": "きちょうめんすぎる",
+              "isKeyGrammar": true,
+              "kanji": "几帳面すぎる",
+              "furigana": "きちょうめんすぎる"
+            },
+            {
+              "id": "t-l14s2-22",
+              "text": "きらいがある",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l14s2-23",
+              "text": "。",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s2-24",
+              "text": "もっとも",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l14s2-25",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s2-26",
+              "text": "ろんぶん",
+              "isKeyGrammar": true,
+              "kanji": "論文",
+              "furigana": "ろんぶん"
+            },
+            {
+              "id": "t-l14s2-27",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s2-28",
+              "text": "しつ",
+              "isKeyGrammar": false,
+              "kanji": "質",
+              "furigana": "しつ"
+            },
+            {
+              "id": "t-l14s2-29",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s2-30",
+              "text": "たかい",
+              "isKeyGrammar": false,
+              "kanji": "高い",
+              "furigana": "たかい"
+            }
+          ],
+          "meaningVi": "Sinh viên này hơi có xu hướng tỉ mỉ quá mức. Tuy vậy, chất lượng luận văn thì cao."
+        }
+      ]
+    },
+    {
+      "slideId": "n1-l14-s3",
+      "slideType": "grammar",
+      "title": "3. So sánh きらいがある và がち (đã học ở cấp thấp hơn)",
+      "grammarFormula": "きらいがある: TÍNH CÁCH/BẢN CHẤT cố hữu, văn phong TRANG TRỌNG/học thuật　vs　がち: TẦN SUẤT xảy ra thường xuyên, văn phong THÔNG THƯỜNG",
+      "explanation": "きらいがある nhấn mạnh một xu hướng bắt nguồn từ TÍNH CÁCH/BẢN CHẤT sâu xa, thường dùng trong văn viết/nhận xét học thuật TRANG TRỌNG (luận văn, phê bình, báo cáo); がち chỉ đơn giản nhấn mạnh một việc gì đó THƯỜNG XUYÊN xảy ra (tần suất), văn phong THÔNG THƯỜNG hơn, dùng được cả trong hội thoại hằng ngày. Cùng diễn tả 'hay...', nhưng きらいがある sâu sắc và trang trọng hơn hẳn.",
+      "teacherTips": "Mẹo: nếu đang nói về TẦN SUẤT một việc lặp lại (ốm, đi trễ, quên) → がち; nếu đang NHẬN XÉT sâu về bản chất/tính cách trong văn viết trang trọng → きらいがある.",
+      "culturalNotes": "がち xuất hiện tự nhiên trong hội thoại đời thường ('遅刻しがちです'), còn きらいがある gần như chỉ xuất hiện trong văn viết/phát biểu chính thức — đây là dấu hiệu rõ để phân biệt trình độ N1 với N2/N3.",
+      "examples": [
+        {
+          "id": "ex-n1-l14-s3-1",
+          "tokens": [
+            {
+              "id": "t-l14s3-1",
+              "text": "かれ",
+              "isKeyGrammar": false,
+              "kanji": "彼",
+              "furigana": "かれ"
+            },
+            {
+              "id": "t-l14s3-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s3-3",
+              "text": "びょうき",
+              "isKeyGrammar": false,
+              "kanji": "病気",
+              "furigana": "びょうき"
+            },
+            {
+              "id": "t-l14s3-4",
+              "text": "がち",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l14s3-5",
+              "text": "だ",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Anh ấy hay bị ốm."
+        },
+        {
+          "id": "ex-n1-l14-s3-2",
+          "tokens": [
+            {
+              "id": "t-l14s3-6",
+              "text": "かれ",
+              "isKeyGrammar": false,
+              "kanji": "彼",
+              "furigana": "かれ"
+            },
+            {
+              "id": "t-l14s3-7",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s3-8",
+              "text": "がんこすぎる",
+              "isKeyGrammar": true,
+              "kanji": "頑固すぎる",
+              "furigana": "がんこすぎる"
+            },
+            {
+              "id": "t-l14s3-9",
+              "text": "きらいがある",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Anh ta có xu hướng quá cố chấp."
+        }
+      ]
+    },
+    {
+      "slideId": "n1-l14-s4",
+      "slideType": "grammar",
+      "title": "4. Kết hợp trong một buổi nhận xét luận văn hoàn chỉnh",
+      "grammarFormula": "この論文は理論に走るきらいがある。もっとも、教授は長所も認める。(nhận xét khách quan + bổ sung công nhận điểm mạnh)",
+      "explanation": "Khi một GIÁO SƯ nhận xét luận văn của học trò, thường dùng きらいがある để chỉ ra xu hướng CẦN CẢI THIỆN một cách KHÁCH QUAN, ĐIỀM TĨNH (không gay gắt như các cấu trúc phê phán đã học ở bài 6/13), rồi thêm もっとも để CÔNG NHẬN điểm tích cực — đây chính là phong cách phản biện học thuật CHUẨN MỰC, vừa thẳng thắn vừa tôn trọng.",
+      "teacherTips": "Khung phản biện học thuật chuẩn: nêu xu hướng cần cải thiện (きらいがある, khách quan) → bổ sung cân bằng (もっとも) → công nhận điểm mạnh cụ thể.",
+      "culturalNotes": "Đây chính là phong cách 'phê bình mang tính xây dựng' (建設的な批判) rất được coi trọng trong môi trường học thuật Nhật Bản — phê bình thẳng thắn nhưng luôn đi kèm sự công nhận, tôn trọng.",
+      "examples": [
+        {
+          "id": "ex-n1-l14-s4-1",
+          "tokens": [
+            {
+              "id": "t-l14s4-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s4-2",
+              "text": "ろんぶん",
+              "isKeyGrammar": true,
+              "kanji": "論文",
+              "furigana": "ろんぶん"
+            },
+            {
+              "id": "t-l14s4-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s4-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s4-5",
+              "text": "じっせん",
+              "isKeyGrammar": true,
+              "kanji": "実践",
+              "furigana": "じっせん"
+            },
+            {
+              "id": "t-l14s4-6",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s4-7",
+              "text": "けいしし",
+              "isKeyGrammar": false,
+              "kanji": "軽視し",
+              "furigana": "けいしし"
+            },
+            {
+              "id": "t-l14s4-8",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s4-9",
+              "text": "りろん",
+              "isKeyGrammar": true,
+              "kanji": "理論",
+              "furigana": "りろん"
+            },
+            {
+              "id": "t-l14s4-10",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s4-11",
+              "text": "かたよる",
+              "isKeyGrammar": false,
+              "kanji": "偏る",
+              "furigana": "かたよる"
+            },
+            {
+              "id": "t-l14s4-12",
+              "text": "きらいがある",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Luận văn này có xu hướng xem nhẹ thực tiễn và thiên lệch về lý thuyết."
+        },
+        {
+          "id": "ex-n1-l14-s4-2",
+          "tokens": [
+            {
+              "id": "t-l14s4-13",
+              "text": "もっとも",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l14s4-14",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s4-15",
+              "text": "しんちょうに",
+              "isKeyGrammar": true,
+              "kanji": "慎重に",
+              "furigana": "しんちょうに"
+            },
+            {
+              "id": "t-l14s4-16",
+              "text": "かかれており",
+              "isKeyGrammar": false,
+              "kanji": "書かれており",
+              "furigana": "かかれており"
+            },
+            {
+              "id": "t-l14s4-17",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s4-18",
+              "text": "けってん",
+              "isKeyGrammar": true,
+              "kanji": "欠点",
+              "furigana": "けってん"
+            },
+            {
+              "id": "t-l14s4-19",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s4-20",
+              "text": "すくない",
+              "isKeyGrammar": false,
+              "kanji": "少ない",
+              "furigana": "すくない"
+            },
+            {
+              "id": "t-l14s4-21",
+              "text": "と",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s4-22",
+              "text": "きょうじゅ",
+              "isKeyGrammar": true,
+              "kanji": "教授",
+              "furigana": "きょうじゅ"
+            },
+            {
+              "id": "t-l14s4-23",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l14s4-24",
+              "text": "みとめた",
+              "isKeyGrammar": true,
+              "kanji": "認めた",
+              "furigana": "みとめた"
+            }
+          ],
+          "meaningVi": "Tuy vậy, giáo sư đã công nhận rằng luận văn được viết một cách thận trọng và có ít khuyết điểm."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n1-14-1",
+      "speaker": "学生",
+      "speakerRole": "Nghiên cứu sinh",
+      "tokens": [
+        {
+          "id": "d14-1",
+          "text": "せんせい",
+          "isKeyGrammar": false,
+          "kanji": "先生",
+          "furigana": "せんせい"
+        },
+        {
+          "id": "d14-2",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-3",
+          "text": "ろんぶん",
+          "isKeyGrammar": true,
+          "kanji": "論文",
+          "furigana": "ろんぶん"
+        },
+        {
+          "id": "d14-4",
+          "text": "について",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-5",
+          "text": "ご",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-6",
+          "text": "いけん",
+          "isKeyGrammar": false,
+          "kanji": "意見",
+          "furigana": "いけん"
+        },
+        {
+          "id": "d14-7",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-8",
+          "text": "おきかせください",
+          "isKeyGrammar": false,
+          "kanji": "お聞かせください",
+          "furigana": "おきかせください"
+        }
+      ],
+      "meaningVi": "Thưa thầy, xin thầy cho em biết ý kiến về luận văn."
+    },
+    {
+      "id": "dia-n1-14-2",
+      "speaker": "教授",
+      "speakerRole": "Giáo sư",
+      "tokens": [
+        {
+          "id": "d14-9",
+          "text": "そうですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-10",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-11",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-12",
+          "text": "ろんぶん",
+          "isKeyGrammar": true,
+          "kanji": "論文",
+          "furigana": "ろんぶん"
+        },
+        {
+          "id": "d14-13",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-14",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-15",
+          "text": "りろん",
+          "isKeyGrammar": true,
+          "kanji": "理論",
+          "furigana": "りろん"
+        },
+        {
+          "id": "d14-16",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-17",
+          "text": "はしる",
+          "isKeyGrammar": false,
+          "kanji": "走る",
+          "furigana": "はしる"
+        },
+        {
+          "id": "d14-18",
+          "text": "きらいがあります",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Để xem nào. Luận văn này có xu hướng chạy theo lý thuyết suông."
+    },
+    {
+      "id": "dia-n1-14-3",
+      "speaker": "学生",
+      "speakerRole": "Nghiên cứu sinh",
+      "tokens": [
+        {
+          "id": "d14-19",
+          "text": "じっせん",
+          "isKeyGrammar": true,
+          "kanji": "実践",
+          "furigana": "じっせん"
+        },
+        {
+          "id": "d14-20",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-21",
+          "text": "たりない",
+          "isKeyGrammar": false,
+          "kanji": "足りない",
+          "furigana": "たりない"
+        },
+        {
+          "id": "d14-22",
+          "text": "という",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-23",
+          "text": "こと",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-24",
+          "text": "でしょう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-25",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Có phải ý thầy là thiếu tính thực tiễn không ạ?"
+    },
+    {
+      "id": "dia-n1-14-4",
+      "speaker": "教授",
+      "speakerRole": "Giáo sư",
+      "tokens": [
+        {
+          "id": "d14-26",
+          "text": "ええ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-27",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-28",
+          "text": "もっとも",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d14-29",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-30",
+          "text": "あなた",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-31",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-32",
+          "text": "しんちょうな",
+          "isKeyGrammar": true,
+          "kanji": "慎重な",
+          "furigana": "しんちょうな"
+        },
+        {
+          "id": "d14-33",
+          "text": "しせい",
+          "isKeyGrammar": false,
+          "kanji": "姿勢",
+          "furigana": "しせい"
+        },
+        {
+          "id": "d14-34",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-35",
+          "text": "ちょうしょ",
+          "isKeyGrammar": false,
+          "kanji": "長所",
+          "furigana": "ちょうしょ"
+        },
+        {
+          "id": "d14-36",
+          "text": "だ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-37",
+          "text": "と",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-38",
+          "text": "おもいます",
+          "isKeyGrammar": false,
+          "kanji": "思います",
+          "furigana": "おもいます"
+        }
+      ],
+      "meaningVi": "Đúng vậy. Tuy nhiên, thầy nghĩ thái độ thận trọng của em là một điểm mạnh."
+    },
+    {
+      "id": "dia-n1-14-5",
+      "speaker": "学生",
+      "speakerRole": "Nghiên cứu sinh",
+      "tokens": [
+        {
+          "id": "d14-39",
+          "text": "ほかに",
+          "isKeyGrammar": false,
+          "kanji": "他に",
+          "furigana": "ほかに"
+        },
+        {
+          "id": "d14-40",
+          "text": "きをつける",
+          "isKeyGrammar": false,
+          "kanji": "気をつける",
+          "furigana": "きをつける"
+        },
+        {
+          "id": "d14-41",
+          "text": "てん",
+          "isKeyGrammar": false,
+          "kanji": "点",
+          "furigana": "てん"
+        },
+        {
+          "id": "d14-42",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-43",
+          "text": "ありますか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Còn điểm nào khác cần lưu ý không ạ?"
+    },
+    {
+      "id": "dia-n1-14-6",
+      "speaker": "教授",
+      "speakerRole": "Giáo sư",
+      "tokens": [
+        {
+          "id": "d14-44",
+          "text": "あなた",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-45",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-46",
+          "text": "やや",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d14-47",
+          "text": "がんこな",
+          "isKeyGrammar": true,
+          "kanji": "頑固な",
+          "furigana": "がんこな"
+        },
+        {
+          "id": "d14-48",
+          "text": "きらいがあります",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d14-49",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-50",
+          "text": "もっとも",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d14-51",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-52",
+          "text": "それ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-53",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-54",
+          "text": "けんきゅうしゃ",
+          "isKeyGrammar": false,
+          "kanji": "研究者",
+          "furigana": "けんきゅうしゃ"
+        },
+        {
+          "id": "d14-55",
+          "text": "には",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-56",
+          "text": "ひつような",
+          "isKeyGrammar": false,
+          "kanji": "必要な",
+          "furigana": "ひつような"
+        },
+        {
+          "id": "d14-57",
+          "text": "せいかく",
+          "isKeyGrammar": true,
+          "kanji": "性格",
+          "furigana": "せいかく"
+        },
+        {
+          "id": "d14-58",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Em hơi có xu hướng cố chấp. Tuy nhiên, đó cũng là tính cách cần thiết đối với một nhà nghiên cứu."
+    },
+    {
+      "id": "dia-n1-14-7",
+      "speaker": "学生",
+      "speakerRole": "Nghiên cứu sinh",
+      "tokens": [
+        {
+          "id": "d14-59",
+          "text": "けってん",
+          "isKeyGrammar": true,
+          "kanji": "欠点",
+          "furigana": "けってん"
+        },
+        {
+          "id": "d14-60",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-61",
+          "text": "どこ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-62",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-63",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Khuyết điểm nằm ở đâu ạ?"
+    },
+    {
+      "id": "dia-n1-14-8",
+      "speaker": "教授",
+      "speakerRole": "Giáo sư",
+      "tokens": [
+        {
+          "id": "d14-64",
+          "text": "きちょうめんすぎる",
+          "isKeyGrammar": true,
+          "kanji": "几帳面すぎる",
+          "furigana": "きちょうめんすぎる"
+        },
+        {
+          "id": "d14-65",
+          "text": "きらいがあって",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d14-66",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-67",
+          "text": "ときどき",
+          "isKeyGrammar": false,
+          "kanji": "時々",
+          "furigana": "ときどき"
+        },
+        {
+          "id": "d14-68",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-69",
+          "text": "たいせつな",
+          "isKeyGrammar": false,
+          "kanji": "大切な",
+          "furigana": "たいせつな"
+        },
+        {
+          "id": "d14-70",
+          "text": "けつろん",
+          "isKeyGrammar": false,
+          "kanji": "結論",
+          "furigana": "けつろん"
+        },
+        {
+          "id": "d14-71",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-72",
+          "text": "みうしないます",
+          "isKeyGrammar": false,
+          "kanji": "見失います",
+          "furigana": "みうしないます"
+        }
+      ],
+      "meaningVi": "Em có xu hướng tỉ mỉ quá mức, nên đôi khi bị lạc mất kết luận quan trọng."
+    },
+    {
+      "id": "dia-n1-14-9",
+      "speaker": "学生",
+      "speakerRole": "Nghiên cứu sinh",
+      "tokens": [
+        {
+          "id": "d14-73",
+          "text": "わかりました",
+          "isKeyGrammar": false,
+          "kanji": "分かりました",
+          "furigana": "わかりました"
+        },
+        {
+          "id": "d14-74",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-75",
+          "text": "けいこう",
+          "isKeyGrammar": true,
+          "kanji": "傾向",
+          "furigana": "けいこう"
+        },
+        {
+          "id": "d14-76",
+          "text": "として",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-77",
+          "text": "なおします",
+          "isKeyGrammar": false,
+          "kanji": "直します",
+          "furigana": "なおします"
+        }
+      ],
+      "meaningVi": "Em hiểu rồi ạ. Em sẽ sửa cái xu hướng đó."
+    },
+    {
+      "id": "dia-n1-14-10",
+      "speaker": "教授",
+      "speakerRole": "Giáo sư",
+      "tokens": [
+        {
+          "id": "d14-78",
+          "text": "がんばってください",
+          "isKeyGrammar": false,
+          "kanji": "頑張ってください",
+          "furigana": "がんばってください"
+        },
+        {
+          "id": "d14-79",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-80",
+          "text": "もっとも",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d14-81",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-82",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-83",
+          "text": "ろんぶん",
+          "isKeyGrammar": true,
+          "kanji": "論文",
+          "furigana": "ろんぶん"
+        },
+        {
+          "id": "d14-84",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-85",
+          "text": "ちょうしょ",
+          "isKeyGrammar": false,
+          "kanji": "長所",
+          "furigana": "ちょうしょ"
+        },
+        {
+          "id": "d14-86",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d14-87",
+          "text": "じゅうぶんに",
+          "isKeyGrammar": false,
+          "kanji": "十分に",
+          "furigana": "じゅうぶんに"
+        },
+        {
+          "id": "d14-88",
+          "text": "みとめていますよ",
+          "isKeyGrammar": true,
+          "kanji": "認めていますよ",
+          "furigana": "みとめていますよ"
+        }
+      ],
+      "meaningVi": "Cố lên nhé. Tuy nhiên, thầy cũng công nhận đầy đủ những điểm mạnh của luận văn này đấy."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n1-14-1",
+      "question": "「彼は理論に走るきらいがある」 — きらいがある diễn tả điều gì?",
+      "options": [
+        "Một xu hướng TIÊU CỰC/không tốt vốn có trong TÍNH CÁCH/THÓI QUEN, mang tính nhận xét KHÁCH QUAN, ĐIỀM TĨNH",
+        "Một lời khen ngợi mạnh mẽ về tính cách",
+        "Một mệnh lệnh bắt buộc phải làm gì đó",
+        "Một sự việc chỉ xảy ra một lần duy nhất"
+      ],
+      "correctIndex": 0,
+      "explanation": "きらいがある diễn tả một xu hướng tiêu cực vốn có trong tính cách/thói quen, mang tính nhận xét khách quan, điềm tĩnh.",
+      "hint": "Xem cấu trúc きらいがある ở slide 1."
+    },
+    {
+      "id": "ex-q-n1-14-2",
+      "question": "Vì sao きらいがある được coi là cách NHẬN XÉT NHẸ NHÀNG hơn so với まじき hay ともあろう者が đã học ở các bài trước?",
+      "options": [
+        "Vì きらいがある chỉ mang tính NHẬN XÉT KHÁCH QUAN về một xu hướng, không phải lời CHỈ TRÍCH GAY GẮT như hai cấu trúc kia",
+        "Vì きらいがある không có nghĩa tiêu cực nào cả",
+        "Vì きらいがある chỉ dùng được trong hội thoại thân mật",
+        "Vì きらいがある mạnh mẽ và gay gắt hơn nhiều"
+      ],
+      "correctIndex": 0,
+      "explanation": "きらいがある là nhận xét khách quan, điềm tĩnh về một xu hướng — nhẹ nhàng hơn nhiều so với các lời chỉ trích mạnh mẽ như まじき, ともあろう者が.",
+      "hint": "Xem giải thích ở slide 1."
+    },
+    {
+      "id": "ex-q-n1-14-3",
+      "question": "Sự khác biệt giữa きらいがある và がち (đã học ở cấp thấp hơn) là gì?",
+      "options": [
+        "きらいがある nhấn TÍNH CÁCH/BẢN CHẤT sâu xa, văn phong trang trọng/học thuật; がち nhấn TẦN SUẤT xảy ra, văn phong thông thường",
+        "Hoàn toàn giống nhau về ý nghĩa và cách dùng",
+        "がち trang trọng hơn hẳn きらいがある",
+        "きらいがある chỉ dùng cho sự vật, không dùng cho người"
+      ],
+      "correctIndex": 0,
+      "explanation": "きらいがある là nhận xét sâu về bản chất/tính cách, văn phong học thuật trang trọng; がち chỉ đơn thuần nhấn tần suất, văn phong thông thường.",
+      "hint": "Xem bảng so sánh ở slide 3."
+    },
+    {
+      "id": "ex-q-n1-14-4",
+      "question": "「この論文は、実践を軽視するきらいがある」 nghĩa là:",
+      "options": [
+        "Luận văn này có xu hướng xem nhẹ tính thực tiễn",
+        "Luận văn này hoàn toàn không có lý thuyết",
+        "Luận văn này đã bị từ chối",
+        "Luận văn này rất coi trọng thực tiễn"
+      ],
+      "correctIndex": 0,
+      "explanation": "きらいがある ở đây chỉ ra xu hướng của luận văn là xem nhẹ tính thực tiễn.",
+      "hint": "Áp dụng cấu trúc きらいがある cho ngữ cảnh học thuật."
+    },
+    {
+      "id": "ex-q-n1-14-5",
+      "question": "「彼はやや頑固なきらいがある。もっとも、それは彼の慎重さの表れでもある」 — vai trò của もっとも ở đây là gì?",
+      "options": [
+        "Bổ sung một ý CÂN BẰNG lại nhận xét vừa nêu, chỉ ra mặt tích cực của xu hướng đó",
+        "Phủ định hoàn toàn nhận xét vừa nêu",
+        "Nhấn mạnh nhận xét vừa nêu là hoàn toàn đúng, không thể bàn cãi",
+        "Đặt ra một câu hỏi mới"
+      ],
+      "correctIndex": 0,
+      "explanation": "もっとも ở đây đóng vai trò bổ sung, cân bằng lại nhận xét tiêu cực vừa nêu bằng một điểm tích cực.",
+      "hint": "Xem cấu trúc もっとも ở slide 2."
+    },
+    {
+      "id": "ex-q-n1-14-6",
+      "question": "Tại sao trong nhận xét học thuật (như phản biện luận văn), giáo sư thường dùng きらいがある rồi thêm もっとも?",
+      "options": [
+        "Để chỉ ra xu hướng cần cải thiện một cách khách quan, điềm tĩnh, rồi công nhận điểm tích cực — đúng phong cách phản biện học thuật chuẩn mực",
+        "Để phủ nhận hoàn toàn công sức của học trò",
+        "Vì quy tắc bắt buộc phải dùng hai cấu trúc này cùng nhau",
+        "Không có lý do đặc biệt nào"
+      ],
+      "correctIndex": 0,
+      "explanation": "Kết hợp きらいがある và もっとも tạo nên phong cách phản biện vừa thẳng thắn vừa tôn trọng, chuẩn mực trong học thuật.",
+      "hint": "Xem cấu trúc buổi nhận xét hoàn chỉnh ở slide 4."
+    },
+    {
+      "id": "ex-q-n1-14-7",
+      "question": "Câu nào sau đây phù hợp hơn khi MIÊU TẢ TẦN SUẤT một người thường xuyên bị cảm cúm (không phải bàn về tính cách)?",
+      "options": [
+        "彼は風邪をひきがちだ (dùng がち)",
+        "彼は風邪をひくきらいがある (dùng きらいがある)",
+        "Cả hai đều sai ngữ pháp",
+        "Không thể diễn tả ý này bằng tiếng Nhật"
+      ],
+      "correctIndex": 0,
+      "explanation": "がち phù hợp hơn khi chỉ đơn thuần miêu tả tần suất xảy ra thường xuyên, không cần hàm ý về bản chất tính cách.",
+      "hint": "Xem so sánh きらいがある và がち ở slide 3."
+    },
+    {
+      "id": "ex-q-n1-14-8",
+      "question": "Theo hội thoại, giáo sư nhận xét gì đầu tiên về luận văn?",
+      "options": [
+        "Có xu hướng chạy theo lý thuyết suông (理論に走るきらいがあります)",
+        "Hoàn toàn xuất sắc, không có gì cần sửa",
+        "Không đọc được luận văn",
+        "Luận văn quá ngắn"
+      ],
+      "correctIndex": 0,
+      "explanation": "Giáo sư nói 「この論文は、理論に走るきらいがあります」.",
+      "hint": "Xem câu thoại thứ 2."
+    },
+    {
+      "id": "ex-q-n1-14-9",
+      "question": "Theo hội thoại, khuyết điểm khác của học sinh là gì?",
+      "options": [
+        "Có xu hướng tỉ mỉ quá mức, đôi khi làm lạc mất kết luận quan trọng (几帳面すぎるきらいがあって、大切な結論を見失います)",
+        "Quá lười biếng, không chịu nghiên cứu",
+        "Không có khuyết điểm nào khác",
+        "Thường xuyên nghỉ học"
+      ],
+      "correctIndex": 0,
+      "explanation": "Giáo sư nói 「几帳面すぎるきらいがあって、時々、大切な結論を見失います」.",
+      "hint": "Xem câu thoại thứ 8."
+    },
+    {
+      "id": "ex-q-n1-14-10",
+      "question": "Theo hội thoại, giáo sư kết thúc buổi nhận xét bằng thái độ như thế nào?",
+      "options": [
+        "Động viên học sinh cố gắng, đồng thời công nhận đầy đủ điểm mạnh của luận văn (もっとも、この論文の長所も十分に認めていますよ)",
+        "Từ chối nhận xét thêm bất cứ điều gì",
+        "Yêu cầu viết lại hoàn toàn luận văn",
+        "Không hài lòng chút nào với luận văn"
+      ],
+      "correctIndex": 0,
+      "explanation": "Giáo sư nói 「頑張ってください。もっとも、この論文の長所も十分に認めていますよ」.",
+      "hint": "Xem câu thoại thứ 10."
+    }
+  ]
+}

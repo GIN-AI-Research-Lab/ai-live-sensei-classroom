@@ -1,0 +1,1533 @@
+{
+  "level": "N2",
+  "lessonNumber": 13,
+  "title": "Bài 13: Vượt ngoài giới hạn (にとどまらず)",
+  "description": "にとどまらず (từ động từ gốc 留まる - dừng lại) diễn tả việc VƯỢT RA KHỎI một PHẠM VI/GIỚI HẠN ban đầu để mở rộng sang phạm vi RỘNG HƠN — trang trọng, gần với mức độ của のみならず; thường kết hợp với 単に ở vế trước để nhấn mạnh phạm vi ban đầu quá hẹp; dạng bổ nghĩa danh từ: にとどまらない (thể phủ định thông thường của とどまる).",
+  "vocabList": [
+    {
+      "id": "voc-n2-13-1",
+      "word": "とどまります",
+      "kanji": "留まります",
+      "furigana": "とどまります",
+      "romaji": "todomarimasu",
+      "wordType": "verb",
+      "meaningVi": "Dừng lại, ở lại (trong một phạm vi)",
+      "accentNote": "この まちに 留まります = ở lại thị trấn này."
+    },
+    {
+      "id": "voc-n2-13-2",
+      "word": "かくちょうします",
+      "kanji": "拡張します",
+      "furigana": "かくちょうします",
+      "romaji": "kakuchou shimasu",
+      "wordType": "verb",
+      "meaningVi": "Mở rộng",
+      "accentNote": "じぎょうを 拡張します = mở rộng sự nghiệp."
+    },
+    {
+      "id": "voc-n2-13-3",
+      "word": "たんに",
+      "kanji": "単に",
+      "furigana": "たんに",
+      "romaji": "tan ni",
+      "wordType": "adverb",
+      "meaningVi": "Chỉ đơn thuần",
+      "accentNote": "単に 問題だけでなく = không chỉ đơn thuần là vấn đề."
+    },
+    {
+      "id": "voc-n2-13-4",
+      "word": "ぶんや",
+      "kanji": "分野",
+      "furigana": "ぶんや",
+      "romaji": "bun-ya",
+      "wordType": "noun",
+      "meaningVi": "Lĩnh vực",
+      "accentNote": "Đã gặp N3 bài 6."
+    },
+    {
+      "id": "voc-n2-13-5",
+      "word": "えいきょう",
+      "kanji": "影響",
+      "furigana": "えいきょう",
+      "romaji": "eikyou",
+      "wordType": "noun",
+      "meaningVi": "Ảnh hưởng",
+      "accentNote": "Đã gặp N2 bài 7."
+    },
+    {
+      "id": "voc-n2-13-6",
+      "word": "せかい",
+      "kanji": "世界",
+      "furigana": "せかい",
+      "romaji": "sekai",
+      "wordType": "noun",
+      "meaningVi": "Thế giới",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-13-7",
+      "word": "かいしゃ",
+      "kanji": "会社",
+      "furigana": "かいしゃ",
+      "romaji": "kaisha",
+      "wordType": "noun",
+      "meaningVi": "Công ty",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-13-8",
+      "word": "けいざい",
+      "kanji": "経済",
+      "furigana": "けいざい",
+      "romaji": "keizai",
+      "wordType": "noun",
+      "meaningVi": "Kinh tế",
+      "accentNote": "Đã gặp N3 bài 14."
+    },
+    {
+      "id": "voc-n2-13-9",
+      "word": "かんきょう",
+      "kanji": "環境",
+      "furigana": "かんきょう",
+      "romaji": "kankyou",
+      "wordType": "noun",
+      "meaningVi": "Môi trường",
+      "accentNote": "Đã gặp N3 bài 5."
+    },
+    {
+      "id": "voc-n2-13-10",
+      "word": "もんだい",
+      "kanji": "問題",
+      "furigana": "もんだい",
+      "romaji": "mondai",
+      "wordType": "noun",
+      "meaningVi": "Vấn đề",
+      "accentNote": "Đã gặp N5 bài 22."
+    },
+    {
+      "id": "voc-n2-13-11",
+      "word": "ふきゅうします",
+      "kanji": "普及します",
+      "furigana": "ふきゅうします",
+      "romaji": "fukyuu shimasu",
+      "wordType": "verb",
+      "meaningVi": "Phổ biến, lan rộng",
+      "accentNote": "Đã gặp N2 bài 7."
+    },
+    {
+      "id": "voc-n2-13-12",
+      "word": "にほん",
+      "kanji": "日本",
+      "furigana": "にほん",
+      "romaji": "nihon",
+      "wordType": "noun",
+      "meaningVi": "Nhật Bản",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-13-13",
+      "word": "せかいじゅう",
+      "kanji": "世界中",
+      "furigana": "せかいじゅう",
+      "romaji": "sekaijuu",
+      "wordType": "noun",
+      "meaningVi": "Khắp thế giới",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-13-14",
+      "word": "かつどうします",
+      "kanji": "活動します",
+      "furigana": "かつどうします",
+      "romaji": "katsudou shimasu",
+      "wordType": "verb",
+      "meaningVi": "Hoạt động",
+      "accentNote": "Đã gặp N2 bài 6."
+    },
+    {
+      "id": "voc-n2-13-15",
+      "word": "はってんします",
+      "kanji": "発展します",
+      "furigana": "はってんします",
+      "romaji": "hatten shimasu",
+      "wordType": "verb",
+      "meaningVi": "Phát triển",
+      "accentNote": "Đã gặp N3 bài 14."
+    },
+    {
+      "id": "voc-n2-13-16",
+      "word": "ぎじゅつ",
+      "kanji": "技術",
+      "furigana": "ぎじゅつ",
+      "romaji": "gijutsu",
+      "wordType": "noun",
+      "meaningVi": "Kỹ thuật",
+      "accentNote": "Đã gặp N3 bài 14."
+    },
+    {
+      "id": "voc-n2-13-17",
+      "word": "しゃかい",
+      "kanji": "社会",
+      "furigana": "しゃかい",
+      "romaji": "shakai",
+      "wordType": "noun",
+      "meaningVi": "Xã hội",
+      "accentNote": "Đã gặp N3 bài 5."
+    },
+    {
+      "id": "voc-n2-13-18",
+      "word": "だけでなく",
+      "kanji": "だけでなく",
+      "furigana": "だけでなく",
+      "romaji": "dake de naku",
+      "wordType": "expression",
+      "meaningVi": "Không chỉ (trung tính)",
+      "accentNote": "Đã gặp N3 bài 15."
+    },
+    {
+      "id": "voc-n2-13-19",
+      "word": "のみならず",
+      "kanji": "のみならず",
+      "furigana": "のみならず",
+      "romaji": "nomi narazu",
+      "wordType": "expression",
+      "meaningVi": "Không những (cực trang trọng)",
+      "accentNote": "Đã gặp N2 bài 7."
+    },
+    {
+      "id": "voc-n2-13-20",
+      "word": "ばかりか",
+      "kanji": "ばかりか",
+      "furigana": "ばかりか",
+      "romaji": "bakari ka",
+      "wordType": "expression",
+      "meaningVi": "Không những (nhấn mạnh)",
+      "accentNote": "Đã gặp N3 bài 15."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n2-13-1",
+      "character": "留",
+      "hanViet": "LƯU",
+      "strokeCount": 10,
+      "onyomi": [
+        "リュウ (ryuu)"
+      ],
+      "kunyomi": [
+        "と(まる)",
+        "と(どまる)"
+      ],
+      "meaningVi": "Ở lại, dừng lại.",
+      "commonWords": [
+        {
+          "word": "留まる",
+          "furigana": "とどまる",
+          "meaningVi": "Dừng lại, ở lại"
+        },
+        {
+          "word": "留学",
+          "furigana": "りゅうがく",
+          "meaningVi": "Du học"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-13-2",
+      "character": "張",
+      "hanViet": "TRƯƠNG",
+      "strokeCount": 11,
+      "onyomi": [
+        "チョウ (chou)"
+      ],
+      "kunyomi": [
+        "は(る)"
+      ],
+      "meaningVi": "Căng ra, mở rộng.",
+      "commonWords": [
+        {
+          "word": "拡張",
+          "furigana": "かくちょう",
+          "meaningVi": "Mở rộng"
+        },
+        {
+          "word": "主張",
+          "furigana": "しゅちょう",
+          "meaningVi": "Chủ trương"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-13-3",
+      "character": "単",
+      "hanViet": "ĐƠN",
+      "strokeCount": 9,
+      "onyomi": [
+        "タン (tan)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Đơn giản, đơn lẻ.",
+      "commonWords": [
+        {
+          "word": "単に",
+          "furigana": "たんに",
+          "meaningVi": "Chỉ đơn thuần"
+        },
+        {
+          "word": "単語",
+          "furigana": "たんご",
+          "meaningVi": "Từ vựng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-13-4",
+      "character": "拡",
+      "hanViet": "KHOÁCH",
+      "strokeCount": 8,
+      "onyomi": [
+        "カク (kaku)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Mở rộng.",
+      "commonWords": [
+        {
+          "word": "拡張",
+          "furigana": "かくちょう",
+          "meaningVi": "Mở rộng"
+        },
+        {
+          "word": "拡大",
+          "furigana": "かくだい",
+          "meaningVi": "Mở rộng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-13-5",
+      "character": "世",
+      "hanViet": "THẾ",
+      "strokeCount": 5,
+      "onyomi": [
+        "セイ (sei)",
+        "セ (se)"
+      ],
+      "kunyomi": [
+        "よ"
+      ],
+      "meaningVi": "Đời, thế giới.",
+      "commonWords": [
+        {
+          "word": "世界",
+          "furigana": "せかい",
+          "meaningVi": "Thế giới"
+        },
+        {
+          "word": "世界中",
+          "furigana": "せかいじゅう",
+          "meaningVi": "Khắp thế giới"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n2-l13-s1",
+      "slideType": "grammar",
+      "title": "1. Không chỉ dừng lại ở... (vượt ra phạm vi hẹp): N + にとどまらず",
+      "grammarFormula": "N/[thể thường] + にとどまらず、[phạm vi mở rộng hơn]も/まで",
+      "explanation": "にとどまらず (từ động từ gốc 留まる - dừng lại/ở lại) diễn tả việc VƯỢT RA KHỎI một PHẠM VI/GIỚI HẠN ban đầu để mở rộng SANG một phạm vi RỘNG HƠN — văn phong TRANG TRỌNG, học thuật.",
+      "teacherTips": "にとどまらず gần với のみならず về mức độ trang trọng, nhưng nhấn mạnh Ý NGHĨA 'VƯỢT QUA GIỚI HẠN' rõ hơn nhờ nguồn gốc động từ 留まる.",
+      "culturalNotes": "Báo cáo nghiên cứu Nhật hay viết: 'この技術の影響は一つの分野にとどまらない' (ảnh hưởng của công nghệ này không chỉ dừng lại ở một lĩnh vực).",
+      "examples": [
+        {
+          "id": "ex-n2-l13-s1-1",
+          "tokens": [
+            {
+              "id": "t-l13s1-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s1-2",
+              "text": "もんだい",
+              "isKeyGrammar": true,
+              "kanji": "問題",
+              "furigana": "もんだい"
+            },
+            {
+              "id": "t-l13s1-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s1-4",
+              "text": "かんきょう",
+              "isKeyGrammar": true,
+              "kanji": "環境",
+              "furigana": "かんきょう"
+            },
+            {
+              "id": "t-l13s1-5",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s1-6",
+              "text": "とどまらず",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s1-7",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s1-8",
+              "text": "けいざい",
+              "isKeyGrammar": true,
+              "kanji": "経済",
+              "furigana": "けいざい"
+            },
+            {
+              "id": "t-l13s1-9",
+              "text": "にも",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s1-10",
+              "text": "えいきょう",
+              "isKeyGrammar": true,
+              "kanji": "影響",
+              "furigana": "えいきょう"
+            },
+            {
+              "id": "t-l13s1-11",
+              "text": "します",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Vấn đề này không chỉ dừng lại ở môi trường mà còn ảnh hưởng đến cả kinh tế."
+        },
+        {
+          "id": "ex-n2-l13-s1-2",
+          "tokens": [
+            {
+              "id": "t-l13s1-12",
+              "text": "かいしゃ",
+              "isKeyGrammar": true,
+              "kanji": "会社",
+              "furigana": "かいしゃ"
+            },
+            {
+              "id": "t-l13s1-13",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s1-14",
+              "text": "かつどう",
+              "isKeyGrammar": true,
+              "kanji": "活動",
+              "furigana": "かつどう"
+            },
+            {
+              "id": "t-l13s1-15",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s1-16",
+              "text": "にほん",
+              "isKeyGrammar": true,
+              "kanji": "日本",
+              "furigana": "にほん"
+            },
+            {
+              "id": "t-l13s1-17",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s1-18",
+              "text": "とどまらず",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s1-19",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s1-20",
+              "text": "せかいじゅう",
+              "isKeyGrammar": true,
+              "kanji": "世界中",
+              "furigana": "せかいじゅう"
+            },
+            {
+              "id": "t-l13s1-21",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s1-22",
+              "text": "ふきゅう",
+              "isKeyGrammar": true,
+              "kanji": "普及",
+              "furigana": "ふきゅう"
+            },
+            {
+              "id": "t-l13s1-23",
+              "text": "して",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s1-24",
+              "text": "います",
+              "isKeyGrammar": false,
+              "kanji": "居ます",
+              "furigana": "います"
+            }
+          ],
+          "meaningVi": "Hoạt động của công ty không chỉ dừng lại ở Nhật Bản mà còn phổ biến khắp thế giới."
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l13-s2",
+      "slideType": "grammar",
+      "title": "2. Kết hợp với 単に để nhấn mạnh phạm vi ban đầu quá hẹp",
+      "grammarFormula": "単に + N + にとどまらず、[phạm vi rộng hơn]",
+      "explanation": "単に (chỉ đơn thuần) thường đứng TRƯỚC にとどまらず để NHẤN MẠNH rằng phạm vi ban đầu chỉ là một phần NHỎ/ĐƠN GIẢN so với phạm vi THỰC SỰ của vấn đề.",
+      "teacherTips": "単に〜にとどまらず là cụm CỐ ĐỊNH cực kỳ phổ biến trong văn bản học thuật để mở đầu luận điểm về PHẠM VI RỘNG của một vấn đề.",
+      "culturalNotes": "Luận văn khoa học xã hội Nhật thường mở đầu bằng: '単に経済問題にとどまらず、社会問題でもある' (không chỉ đơn thuần là vấn đề kinh tế, mà còn là vấn đề xã hội).",
+      "examples": [
+        {
+          "id": "ex-n2-l13-s2-1",
+          "tokens": [
+            {
+              "id": "t-l13s2-1",
+              "text": "たんに",
+              "isKeyGrammar": true,
+              "kanji": "単に",
+              "furigana": "たんに"
+            },
+            {
+              "id": "t-l13s2-2",
+              "text": "ぎじゅつ",
+              "isKeyGrammar": true,
+              "kanji": "技術",
+              "furigana": "ぎじゅつ"
+            },
+            {
+              "id": "t-l13s2-3",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s2-4",
+              "text": "ぶんや",
+              "isKeyGrammar": true,
+              "kanji": "分野",
+              "furigana": "ぶんや"
+            },
+            {
+              "id": "t-l13s2-5",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s2-6",
+              "text": "とどまらず",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s2-7",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s2-8",
+              "text": "しゃかい",
+              "isKeyGrammar": true,
+              "kanji": "社会",
+              "furigana": "しゃかい"
+            },
+            {
+              "id": "t-l13s2-9",
+              "text": "ぜんたい",
+              "isKeyGrammar": false,
+              "kanji": "全体",
+              "furigana": "ぜんたい"
+            },
+            {
+              "id": "t-l13s2-10",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s2-11",
+              "text": "えいきょう",
+              "isKeyGrammar": true,
+              "kanji": "影響",
+              "furigana": "えいきょう"
+            },
+            {
+              "id": "t-l13s2-12",
+              "text": "します",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Không chỉ đơn thuần dừng lại ở lĩnh vực kỹ thuật, mà còn ảnh hưởng đến toàn xã hội."
+        },
+        {
+          "id": "ex-n2-l13-s2-2",
+          "tokens": [
+            {
+              "id": "t-l13s2-13",
+              "text": "たんに",
+              "isKeyGrammar": true,
+              "kanji": "単に",
+              "furigana": "たんに"
+            },
+            {
+              "id": "t-l13s2-14",
+              "text": "かいしゃ",
+              "isKeyGrammar": true,
+              "kanji": "会社",
+              "furigana": "かいしゃ"
+            },
+            {
+              "id": "t-l13s2-15",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s2-16",
+              "text": "もんだい",
+              "isKeyGrammar": true,
+              "kanji": "問題",
+              "furigana": "もんだい"
+            },
+            {
+              "id": "t-l13s2-17",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s2-18",
+              "text": "とどまらず",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s2-19",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s2-20",
+              "text": "しゃかい",
+              "isKeyGrammar": true,
+              "kanji": "社会",
+              "furigana": "しゃかい"
+            },
+            {
+              "id": "t-l13s2-21",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s2-22",
+              "text": "もんだい",
+              "isKeyGrammar": true,
+              "kanji": "問題",
+              "furigana": "もんだい"
+            },
+            {
+              "id": "t-l13s2-23",
+              "text": "にも",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s2-24",
+              "text": "なりました",
+              "isKeyGrammar": false,
+              "kanji": "成りました",
+              "furigana": "なりました"
+            }
+          ],
+          "meaningVi": "Không chỉ đơn thuần dừng lại ở vấn đề công ty, mà còn trở thành vấn đề xã hội."
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l13-s3",
+      "slideType": "grammar",
+      "title": "3. So sánh にとどまらず với だけでなく/のみならず/ばかりか",
+      "grammarFormula": "Cả 4 đều nghĩa 'không chỉ... mà còn...' nhưng にとどまらず nhấn PHẠM VI BAN ĐẦU quá HẸP so với thực tế",
+      "explanation": "だけでなく (N3, trung tính) < ばかりか (N3, nhấn mạnh) ≈ のみならず (N2, cực trang trọng) ≈ にとどまらず (N2, cực trang trọng, nhấn GIỚI HẠN ban đầu qua hình ảnh 'dừng lại/ở lại') — にとどまらず thường dùng khi phạm vi thực tế LỚN HƠN NHIỀU so với những gì người ta tưởng.",
+      "teacherTips": "Mẹo: bốn cấu trúc gần như thay thế được cho nhau về nghĩa, nhưng にとどまらず tạo ẤN TƯỢNG MẠNH NHẤT về việc 'phạm vi thực tế lớn hơn nhiều so với tưởng tượng'.",
+      "culturalNotes": "Trong đề thi JLPT N2, にとどまらず thường xuất hiện trong đoạn văn mở đầu để giới thiệu QUY MÔ/TẦM QUAN TRỌNG của chủ đề bài đọc.",
+      "examples": [
+        {
+          "id": "ex-n2-l13-s3-1",
+          "tokens": [
+            {
+              "id": "t-l13s3-1",
+              "text": "にほん",
+              "isKeyGrammar": true,
+              "kanji": "日本",
+              "furigana": "にほん"
+            },
+            {
+              "id": "t-l13s3-2",
+              "text": "だけでなく",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s3-3",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s3-4",
+              "text": "せかいじゅう",
+              "isKeyGrammar": true,
+              "kanji": "世界中",
+              "furigana": "せかいじゅう"
+            },
+            {
+              "id": "t-l13s3-5",
+              "text": "にも",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Không chỉ Nhật Bản mà còn khắp thế giới nữa. (trung tính, phổ biến)"
+        },
+        {
+          "id": "ex-n2-l13-s3-2",
+          "tokens": [
+            {
+              "id": "t-l13s3-6",
+              "text": "にほん",
+              "isKeyGrammar": true,
+              "kanji": "日本",
+              "furigana": "にほん"
+            },
+            {
+              "id": "t-l13s3-7",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s3-8",
+              "text": "とどまらず",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s3-9",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s3-10",
+              "text": "せかいじゅう",
+              "isKeyGrammar": true,
+              "kanji": "世界中",
+              "furigana": "せかいじゅう"
+            },
+            {
+              "id": "t-l13s3-11",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s3-12",
+              "text": "ふきゅう",
+              "isKeyGrammar": true,
+              "kanji": "普及",
+              "furigana": "ふきゅう"
+            },
+            {
+              "id": "t-l13s3-13",
+              "text": "して",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s3-14",
+              "text": "います",
+              "isKeyGrammar": false,
+              "kanji": "居ます",
+              "furigana": "います"
+            }
+          ],
+          "meaningVi": "Không chỉ dừng lại ở Nhật Bản mà còn phổ biến khắp thế giới. (nhấn mạnh phạm vi vượt xa)"
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l13-s4",
+      "slideType": "grammar",
+      "title": "4. Dạng bổ nghĩa danh từ: N + にとどまらない + N2",
+      "grammarFormula": "N + にとどまらない + N2",
+      "explanation": "Khi cần bổ nghĩa TRỰC TIẾP cho một danh từ, にとどまらず đổi thành にとどまらない (thể phủ định thông thường của とどまる), đứng NGAY TRƯỚC danh từ mà nó bổ nghĩa.",
+      "teacherTips": "にとどまらないN2 rất phổ biến trong tiêu đề sách/báo cáo để nhấn TẦM ẢNH HƯỞNG RỘNG LỚN của một chủ thể.",
+      "culturalNotes": "Tựa sách công nghệ Nhật thường viết: '一分野にとどまらない技術革新' (sự đổi mới công nghệ không chỉ dừng lại ở một lĩnh vực).",
+      "examples": [
+        {
+          "id": "ex-n2-l13-s4-1",
+          "tokens": [
+            {
+              "id": "t-l13s4-1",
+              "text": "にほん",
+              "isKeyGrammar": true,
+              "kanji": "日本",
+              "furigana": "にほん"
+            },
+            {
+              "id": "t-l13s4-2",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s4-3",
+              "text": "とどまらない",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s4-4",
+              "text": "かつどう",
+              "isKeyGrammar": true,
+              "kanji": "活動",
+              "furigana": "かつどう"
+            },
+            {
+              "id": "t-l13s4-5",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s4-6",
+              "text": "して",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s4-7",
+              "text": "います",
+              "isKeyGrammar": false,
+              "kanji": "居ます",
+              "furigana": "います"
+            }
+          ],
+          "meaningVi": "Đang thực hiện hoạt động không chỉ dừng lại ở Nhật Bản."
+        },
+        {
+          "id": "ex-n2-l13-s4-2",
+          "tokens": [
+            {
+              "id": "t-l13s4-8",
+              "text": "いち",
+              "isKeyGrammar": false,
+              "kanji": "一",
+              "furigana": "いち"
+            },
+            {
+              "id": "t-l13s4-9",
+              "text": "ぶんや",
+              "isKeyGrammar": true,
+              "kanji": "分野",
+              "furigana": "ぶんや"
+            },
+            {
+              "id": "t-l13s4-10",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s4-11",
+              "text": "とどまらない",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l13s4-12",
+              "text": "はってん",
+              "isKeyGrammar": true,
+              "kanji": "発展",
+              "furigana": "はってん"
+            },
+            {
+              "id": "t-l13s4-13",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l13s4-14",
+              "text": "とげました",
+              "isKeyGrammar": false,
+              "kanji": "遂げました",
+              "furigana": "とげました"
+            }
+          ],
+          "meaningVi": "Đã đạt được sự phát triển không chỉ dừng lại ở một lĩnh vực."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n2-13-1",
+      "speaker": "田中",
+      "speakerRole": "Nhà nghiên cứu",
+      "tokens": [
+        {
+          "id": "d13-1",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-2",
+          "text": "もんだい",
+          "isKeyGrammar": true,
+          "kanji": "問題",
+          "furigana": "もんだい"
+        },
+        {
+          "id": "d13-3",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-4",
+          "text": "どこまで",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-5",
+          "text": "えいきょう",
+          "isKeyGrammar": true,
+          "kanji": "影響",
+          "furigana": "えいきょう"
+        },
+        {
+          "id": "d13-6",
+          "text": "しますか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vấn đề này ảnh hưởng đến đâu?"
+    },
+    {
+      "id": "dia-n2-13-2",
+      "speaker": "サントス",
+      "speakerRole": "Nhà nghiên cứu",
+      "tokens": [
+        {
+          "id": "d13-7",
+          "text": "かんきょう",
+          "isKeyGrammar": true,
+          "kanji": "環境",
+          "furigana": "かんきょう"
+        },
+        {
+          "id": "d13-8",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d13-9",
+          "text": "とどまらず",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d13-10",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-11",
+          "text": "けいざい",
+          "isKeyGrammar": true,
+          "kanji": "経済",
+          "furigana": "けいざい"
+        },
+        {
+          "id": "d13-12",
+          "text": "にも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-13",
+          "text": "えいきょう",
+          "isKeyGrammar": true,
+          "kanji": "影響",
+          "furigana": "えいきょう"
+        },
+        {
+          "id": "d13-14",
+          "text": "します",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Không chỉ dừng lại ở môi trường mà còn ảnh hưởng đến cả kinh tế."
+    },
+    {
+      "id": "dia-n2-13-3",
+      "speaker": "田中",
+      "speakerRole": "Nhà nghiên cứu",
+      "tokens": [
+        {
+          "id": "d13-15",
+          "text": "かいしゃ",
+          "isKeyGrammar": true,
+          "kanji": "会社",
+          "furigana": "かいしゃ"
+        },
+        {
+          "id": "d13-16",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-17",
+          "text": "かつどう",
+          "isKeyGrammar": true,
+          "kanji": "活動",
+          "furigana": "かつどう"
+        },
+        {
+          "id": "d13-18",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-19",
+          "text": "にほん",
+          "isKeyGrammar": true,
+          "kanji": "日本",
+          "furigana": "にほん"
+        },
+        {
+          "id": "d13-20",
+          "text": "だけ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-21",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d13-22",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Hoạt động của công ty chỉ ở Nhật Bản thôi à?"
+    },
+    {
+      "id": "dia-n2-13-4",
+      "speaker": "サントス",
+      "speakerRole": "Nhà nghiên cứu",
+      "tokens": [
+        {
+          "id": "d13-23",
+          "text": "いいえ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-24",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-25",
+          "text": "にほん",
+          "isKeyGrammar": true,
+          "kanji": "日本",
+          "furigana": "にほん"
+        },
+        {
+          "id": "d13-26",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d13-27",
+          "text": "とどまらず",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d13-28",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-29",
+          "text": "せかいじゅう",
+          "isKeyGrammar": true,
+          "kanji": "世界中",
+          "furigana": "せかいじゅう"
+        },
+        {
+          "id": "d13-30",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-31",
+          "text": "ふきゅう",
+          "isKeyGrammar": true,
+          "kanji": "普及",
+          "furigana": "ふきゅう"
+        },
+        {
+          "id": "d13-32",
+          "text": "して",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d13-33",
+          "text": "います",
+          "isKeyGrammar": false,
+          "kanji": "居ます",
+          "furigana": "います"
+        }
+      ],
+      "meaningVi": "Không, không chỉ dừng lại ở Nhật Bản mà còn phổ biến khắp thế giới."
+    },
+    {
+      "id": "dia-n2-13-5",
+      "speaker": "田中",
+      "speakerRole": "Nhà nghiên cứu",
+      "tokens": [
+        {
+          "id": "d13-34",
+          "text": "ぎじゅつ",
+          "isKeyGrammar": true,
+          "kanji": "技術",
+          "furigana": "ぎじゅつ"
+        },
+        {
+          "id": "d13-35",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-36",
+          "text": "ぶんや",
+          "isKeyGrammar": true,
+          "kanji": "分野",
+          "furigana": "ぶんや"
+        },
+        {
+          "id": "d13-37",
+          "text": "だけ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-38",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d13-39",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Chỉ trong lĩnh vực kỹ thuật thôi à?"
+    },
+    {
+      "id": "dia-n2-13-6",
+      "speaker": "サントス",
+      "speakerRole": "Nhà nghiên cứu",
+      "tokens": [
+        {
+          "id": "d13-40",
+          "text": "たんに",
+          "isKeyGrammar": true,
+          "kanji": "単に",
+          "furigana": "たんに"
+        },
+        {
+          "id": "d13-41",
+          "text": "ぎじゅつ",
+          "isKeyGrammar": true,
+          "kanji": "技術",
+          "furigana": "ぎじゅつ"
+        },
+        {
+          "id": "d13-42",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-43",
+          "text": "ぶんや",
+          "isKeyGrammar": true,
+          "kanji": "分野",
+          "furigana": "ぶんや"
+        },
+        {
+          "id": "d13-44",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d13-45",
+          "text": "とどまらず",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d13-46",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-47",
+          "text": "しゃかい",
+          "isKeyGrammar": true,
+          "kanji": "社会",
+          "furigana": "しゃかい"
+        },
+        {
+          "id": "d13-48",
+          "text": "ぜんたい",
+          "isKeyGrammar": false,
+          "kanji": "全体",
+          "furigana": "ぜんたい"
+        },
+        {
+          "id": "d13-49",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-50",
+          "text": "えいきょう",
+          "isKeyGrammar": true,
+          "kanji": "影響",
+          "furigana": "えいきょう"
+        },
+        {
+          "id": "d13-51",
+          "text": "します",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Không chỉ đơn thuần dừng lại ở lĩnh vực kỹ thuật mà còn ảnh hưởng đến toàn xã hội."
+    },
+    {
+      "id": "dia-n2-13-7",
+      "speaker": "田中",
+      "speakerRole": "Nhà nghiên cứu",
+      "tokens": [
+        {
+          "id": "d13-52",
+          "text": "かいしゃ",
+          "isKeyGrammar": true,
+          "kanji": "会社",
+          "furigana": "かいしゃ"
+        },
+        {
+          "id": "d13-53",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-54",
+          "text": "はってん",
+          "isKeyGrammar": true,
+          "kanji": "発展",
+          "furigana": "はってん"
+        },
+        {
+          "id": "d13-55",
+          "text": "しますか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Công ty có phát triển không?"
+    },
+    {
+      "id": "dia-n2-13-8",
+      "speaker": "サントス",
+      "speakerRole": "Nhà nghiên cứu",
+      "tokens": [
+        {
+          "id": "d13-56",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-57",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-58",
+          "text": "いち",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-59",
+          "text": "ぶんや",
+          "isKeyGrammar": true,
+          "kanji": "分野",
+          "furigana": "ぶんや"
+        },
+        {
+          "id": "d13-60",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d13-61",
+          "text": "とどまらない",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d13-62",
+          "text": "はってん",
+          "isKeyGrammar": true,
+          "kanji": "発展",
+          "furigana": "はってん"
+        },
+        {
+          "id": "d13-63",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng. Đó là sự phát triển không chỉ dừng lại ở một lĩnh vực."
+    },
+    {
+      "id": "dia-n2-13-9",
+      "speaker": "田中",
+      "speakerRole": "Nhà nghiên cứu",
+      "tokens": [
+        {
+          "id": "d13-64",
+          "text": "かくちょう",
+          "isKeyGrammar": true,
+          "kanji": "拡張",
+          "furigana": "かくちょう"
+        },
+        {
+          "id": "d13-65",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-66",
+          "text": "けいかく",
+          "isKeyGrammar": false,
+          "kanji": "計画",
+          "furigana": "けいかく"
+        },
+        {
+          "id": "d13-67",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-68",
+          "text": "ありますか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Có kế hoạch mở rộng không?"
+    },
+    {
+      "id": "dia-n2-13-10",
+      "speaker": "サントス",
+      "speakerRole": "Nhà nghiên cứu",
+      "tokens": [
+        {
+          "id": "d13-69",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-70",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-71",
+          "text": "せかいじゅう",
+          "isKeyGrammar": true,
+          "kanji": "世界中",
+          "furigana": "せかいじゅう"
+        },
+        {
+          "id": "d13-72",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-73",
+          "text": "かくちょう",
+          "isKeyGrammar": true,
+          "kanji": "拡張",
+          "furigana": "かくちょう"
+        },
+        {
+          "id": "d13-74",
+          "text": "する",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d13-75",
+          "text": "けいかく",
+          "isKeyGrammar": false,
+          "kanji": "計画",
+          "furigana": "けいかく"
+        },
+        {
+          "id": "d13-76",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng. Là kế hoạch mở rộng ra khắp thế giới."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n2-13-1",
+      "question": "「この問題は環境にとどまらず、経済にも影響します」 — にとどまらず diễn tả điều gì?",
+      "options": [
+        "Vượt ra khỏi một phạm vi/giới hạn ban đầu để mở rộng sang phạm vi rộng hơn",
+        "Sự khẳng định chắc chắn tuyệt đối",
+        "Sự từ chối lịch sự",
+        "Phủ định hoàn toàn ảnh hưởng"
+      ],
+      "correctIndex": 0,
+      "explanation": "にとどまらず diễn tả việc vượt ra khỏi phạm vi hẹp ban đầu (môi trường) để ảnh hưởng đến phạm vi rộng hơn (kinh tế).",
+      "hint": "Xem cấu trúc にとどまらず ở slide 1."
+    },
+    {
+      "id": "ex-q-n2-13-2",
+      "question": "「単に技術の分野にとどまらず、社会全体に影響します」 — 単に đóng vai trò gì?",
+      "options": [
+        "Nhấn mạnh rằng phạm vi ban đầu chỉ là một phần nhỏ/đơn giản so với thực tế",
+        "Phủ định hoàn toàn câu",
+        "Không có vai trò ngữ pháp nào",
+        "Chỉ dùng cho câu hỏi"
+      ],
+      "correctIndex": 0,
+      "explanation": "単に đứng trước にとどまらず để nhấn mạnh phạm vi ban đầu (kỹ thuật) chỉ là phần nhỏ so với phạm vi thực (toàn xã hội).",
+      "hint": "Xem cấu trúc kết hợp ở slide 2."
+    },
+    {
+      "id": "ex-q-n2-13-3",
+      "question": "にとどまらず có nguồn gốc từ động từ nào?",
+      "options": [
+        "留まる (とどまる - dừng lại, ở lại)",
+        "止まる (とまる - dừng hẳn)",
+        "泊まる (とまる - ở trọ)",
+        "始まる (はじまる - bắt đầu)"
+      ],
+      "correctIndex": 0,
+      "explanation": "にとどまらず bắt nguồn từ 留まる (とどまる), nghĩa gốc là 'dừng lại/ở lại trong một phạm vi'.",
+      "hint": "Xem giải thích nguồn gốc ở slide 1."
+    },
+    {
+      "id": "ex-q-n2-13-4",
+      "question": "Dạng bổ nghĩa danh từ của にとどまらず là gì?",
+      "options": [
+        "にとどまらない (thể phủ định thông thường của とどまる)",
+        "にとどまらずの",
+        "にとどまっての",
+        "Không có dạng bổ nghĩa danh từ"
+      ],
+      "correctIndex": 0,
+      "explanation": "にとどまらず khi bổ nghĩa danh từ đổi thành にとどまらない: 一分野にとどまらない発展.",
+      "hint": "Xem quy tắc ở slide 4."
+    },
+    {
+      "id": "ex-q-n2-13-5",
+      "question": "にとどまらず khác gì so với だけでなく về mức độ trang trọng?",
+      "options": [
+        "にとどまらず trang trọng hơn nhiều, gần với のみならず, thường dùng trong văn học thuật",
+        "Hoàn toàn giống nhau về mức độ trang trọng",
+        "だけでなく trang trọng hơn にとどまらず",
+        "Không có sự khác biệt nào"
+      ],
+      "correctIndex": 0,
+      "explanation": "にとどまらず (N2) trang trọng hơn だけでなく (N3, trung tính), gần với mức độ của のみならず.",
+      "hint": "Xem bảng so sánh ở slide 3."
+    },
+    {
+      "id": "ex-q-n2-13-6",
+      "question": "「日本にとどまらず、世界中に普及しています」 nhấn mạnh điều gì?",
+      "options": [
+        "Phạm vi thực tế (khắp thế giới) lớn hơn nhiều so với những gì người ta có thể nghĩ (chỉ Nhật Bản)",
+        "Chỉ phổ biến ở Nhật Bản, không có gì khác",
+        "Không phổ biến ở đâu cả",
+        "Nhật Bản đã ngừng sử dụng công nghệ này"
+      ],
+      "correctIndex": 0,
+      "explanation": "にとどまらず tạo ấn tượng mạnh về việc phạm vi thực tế (thế giới) vượt xa những gì ban đầu tưởng (chỉ Nhật Bản).",
+      "hint": "Xem mẹo ghi nhớ ở slide 3."
+    },
+    {
+      "id": "ex-q-n2-13-7",
+      "question": "「一分野にとどまらない発展を遂げました」 nghĩa là:",
+      "options": [
+        "Đã đạt được sự phát triển không chỉ dừng lại ở một lĩnh vực",
+        "Chỉ phát triển trong một lĩnh vực duy nhất",
+        "Không có sự phát triển nào",
+        "Đã ngừng phát triển hoàn toàn"
+      ],
+      "correctIndex": 0,
+      "explanation": "にとどまらない ở đây bổ nghĩa cho 発展 (phát triển), nghĩa là sự phát triển vượt ra khỏi một lĩnh vực duy nhất.",
+      "hint": "Áp dụng cấu trúc Nにとどまらない+N2."
+    },
+    {
+      "id": "ex-q-n2-13-8",
+      "question": "Theo hội thoại, hoạt động của công ty chỉ giới hạn ở Nhật Bản không?",
+      "options": [
+        "Không, không chỉ dừng lại ở Nhật Bản mà còn phổ biến khắp thế giới",
+        "Có, chỉ hoạt động ở Nhật Bản",
+        "Công ty đã ngừng hoạt động",
+        "Không được đề cập trong hội thoại"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「日本にとどまらず、世界中に普及しています」.",
+      "hint": "Xem câu thoại thứ 4."
+    },
+    {
+      "id": "ex-q-n2-13-9",
+      "question": "Ảnh hưởng của công nghệ có chỉ giới hạn ở lĩnh vực kỹ thuật không?",
+      "options": [
+        "Không, còn ảnh hưởng đến toàn xã hội (単に技術の分野にとどまらず、社会全体に影響します)",
+        "Có, chỉ giới hạn ở kỹ thuật",
+        "Không có ảnh hưởng gì cả",
+        "Chỉ ảnh hưởng đến một công ty"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「単に技術の分野にとどまらず、社会全体に影響します」.",
+      "hint": "Xem câu thoại thứ 6."
+    },
+    {
+      "id": "ex-q-n2-13-10",
+      "question": "Kế hoạch mở rộng của công ty là gì?",
+      "options": [
+        "Mở rộng ra khắp thế giới (世界中に拡張する計画です)",
+        "Chỉ mở rộng trong nước",
+        "Không có kế hoạch mở rộng nào",
+        "Thu hẹp quy mô hoạt động"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「世界中に拡張する計画です」.",
+      "hint": "Xem câu thoại cuối cùng."
+    }
+  ]
+}

@@ -1,0 +1,1403 @@
+{
+  "level": "N4",
+  "lessonNumber": 48,
+  "title": "Bài 48: Thể sai khiến (使役形: V-させる)",
+  "description": "Chia thể sai khiến (nhóm 1: う→あ+せる giống thể bị động bài 37 về âm, nhóm 2: bỏ る+させる, する→させる, 来る→来させる), hai sắc thái BẮT BUỘC/CHO PHÉP tùy ngữ cảnh, cách xin phép khiêm nhường bằng Vさせてください (lịch sự hơn Vたいです), và so sánh vai trò chủ ngữ đối lập giữa sai khiến (chủ động điều khiển) và bị động (chịu tác động, bài 37).",
+  "vocabList": [
+    {
+      "id": "voc-n4-48-1",
+      "word": "いかせます",
+      "kanji": "行かせます",
+      "furigana": "いかせます",
+      "romaji": "ikasemasu",
+      "wordType": "verb",
+      "meaningVi": "Bắt/cho đi (thể sai khiến của 行きます)",
+      "accentNote": "行く (nhóm 1) → 行かせる: đổi đuôi う→あ, thêm せる."
+    },
+    {
+      "id": "voc-n4-48-2",
+      "word": "たべさせます",
+      "kanji": "食べさせます",
+      "furigana": "たべさせます",
+      "romaji": "tabesasemasu",
+      "wordType": "verb",
+      "meaningVi": "Bắt/cho ăn (thể sai khiến của 食べます)",
+      "accentNote": "食べる (nhóm 2) → 食べさせる: bỏ る, thêm させる."
+    },
+    {
+      "id": "voc-n4-48-3",
+      "word": "させます",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "sasemasu",
+      "wordType": "verb",
+      "meaningVi": "Bắt/cho làm (thể sai khiến của します)",
+      "accentNote": "する → させる (bất quy tắc)."
+    },
+    {
+      "id": "voc-n4-48-4",
+      "word": "こさせます",
+      "kanji": "来させます",
+      "furigana": "こさせます",
+      "romaji": "kosasemasu",
+      "wordType": "verb",
+      "meaningVi": "Bắt/cho đến (thể sai khiến của 来ます)",
+      "accentNote": "来る → 来させる (bất quy tắc, đọc こさせる)."
+    },
+    {
+      "id": "voc-n4-48-5",
+      "word": "てつだわせます",
+      "kanji": "手伝わせます",
+      "furigana": "てつだわせます",
+      "romaji": "tetsudawasemasu",
+      "wordType": "verb",
+      "meaningVi": "Bắt/cho giúp đỡ",
+      "accentNote": "手伝う → 手伝わせる."
+    },
+    {
+      "id": "voc-n4-48-6",
+      "word": "かたづけさせます",
+      "kanji": "片付けさせます",
+      "furigana": "かたづけさせます",
+      "romaji": "katazukesasemasu",
+      "wordType": "verb",
+      "meaningVi": "Bắt/cho dọn dẹp",
+      "accentNote": "片付ける → 片付けさせる."
+    },
+    {
+      "id": "voc-n4-48-7",
+      "word": "やすませます",
+      "kanji": "休ませます",
+      "furigana": "やすませます",
+      "romaji": "yasumasemasu",
+      "wordType": "verb",
+      "meaningVi": "Cho phép nghỉ (thể sai khiến của 休みます)",
+      "accentNote": "休む → 休ませる. Đã gặp N5 bài 4 (休みます)."
+    },
+    {
+      "id": "voc-n4-48-8",
+      "word": "べんきょうさせます",
+      "kanji": "勉強させます",
+      "furigana": "べんきょうさせます",
+      "romaji": "benkyou sasemasu",
+      "wordType": "verb",
+      "meaningVi": "Bắt/cho học",
+      "accentNote": "勉強する → 勉強させる."
+    },
+    {
+      "id": "voc-n4-48-9",
+      "word": "うんどうさせます",
+      "kanji": "運動させます",
+      "furigana": "うんどうさせます",
+      "romaji": "undou sasemasu",
+      "wordType": "verb",
+      "meaningVi": "Bắt/cho tập thể dục",
+      "accentNote": "運動する → 運動させる. Đã gặp bài 27."
+    },
+    {
+      "id": "voc-n4-48-10",
+      "word": "こども",
+      "kanji": "子供",
+      "furigana": "こども",
+      "romaji": "kodomo",
+      "wordType": "noun",
+      "meaningVi": "Trẻ con, con cái",
+      "accentNote": "子供に 野菜を 食べさせます = cho/bắt con ăn rau."
+    },
+    {
+      "id": "voc-n4-48-11",
+      "word": "おや",
+      "kanji": "親",
+      "furigana": "おや",
+      "romaji": "oya",
+      "wordType": "noun",
+      "meaningVi": "Cha mẹ, bố mẹ",
+      "accentNote": "親は 子供に 勉強させます = cha mẹ bắt con học."
+    },
+    {
+      "id": "voc-n4-48-12",
+      "word": "せんせい",
+      "kanji": "先生",
+      "furigana": "せんせい",
+      "romaji": "sensei",
+      "wordType": "noun",
+      "meaningVi": "Thầy/cô giáo",
+      "accentNote": "先生は 学生に 本を 読ませます = thầy giáo cho học sinh đọc sách."
+    },
+    {
+      "id": "voc-n4-48-13",
+      "word": "がくせい",
+      "kanji": "学生",
+      "furigana": "がくせい",
+      "romaji": "gakusei",
+      "wordType": "noun",
+      "meaningVi": "Học sinh, sinh viên",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n4-48-14",
+      "word": "やさい",
+      "kanji": "野菜",
+      "furigana": "やさい",
+      "romaji": "yasai",
+      "wordType": "noun",
+      "meaningVi": "Rau",
+      "accentNote": "Đã gặp N5 bài 6."
+    },
+    {
+      "id": "voc-n4-48-15",
+      "word": "しゃちょう",
+      "kanji": "社長",
+      "furigana": "しゃちょう",
+      "romaji": "shachou",
+      "wordType": "noun",
+      "meaningVi": "Giám đốc công ty",
+      "accentNote": "Đã gặp bài 41. 社長は 社員を 休ませました = giám đốc cho nhân viên nghỉ."
+    },
+    {
+      "id": "voc-n4-48-16",
+      "word": "しゃいん",
+      "kanji": "社員",
+      "furigana": "しゃいん",
+      "romaji": "shain",
+      "wordType": "noun",
+      "meaningVi": "Nhân viên công ty",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n4-48-17",
+      "word": "びょうき",
+      "kanji": "病気",
+      "furigana": "びょうき",
+      "romaji": "byouki",
+      "wordType": "noun",
+      "meaningVi": "Bệnh, ốm",
+      "accentNote": "Đã gặp bài 17 (N5)."
+    },
+    {
+      "id": "voc-n4-48-18",
+      "word": "しゅくだい",
+      "kanji": "宿題",
+      "furigana": "しゅくだい",
+      "romaji": "shukudai",
+      "wordType": "noun",
+      "meaningVi": "Bài tập về nhà",
+      "accentNote": "Đã gặp N5 bài 7."
+    },
+    {
+      "id": "voc-n4-48-19",
+      "word": "へや",
+      "kanji": "部屋",
+      "furigana": "へや",
+      "romaji": "heya",
+      "wordType": "noun",
+      "meaningVi": "Căn phòng",
+      "accentNote": "Đã gặp N5 bài 3."
+    },
+    {
+      "id": "voc-n4-48-20",
+      "word": "きもち",
+      "kanji": "気持ち",
+      "furigana": "きもち",
+      "romaji": "kimochi",
+      "wordType": "noun",
+      "meaningVi": "Cảm giác, tâm trạng",
+      "accentNote": "行かせて ください = xin hãy cho tôi đi (khiêm nhường, xin phép)."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n4-48-1",
+      "character": "使",
+      "hanViet": "SỬ",
+      "strokeCount": 8,
+      "onyomi": [
+        "シ (shi)"
+      ],
+      "kunyomi": [
+        "つか(う)"
+      ],
+      "meaningVi": "Sử dụng, sai khiến. Đã gặp bài 15.",
+      "commonWords": [
+        {
+          "word": "使役",
+          "furigana": "しえき",
+          "meaningVi": "Sai khiến"
+        },
+        {
+          "word": "使います",
+          "furigana": "つかいます",
+          "meaningVi": "Sử dụng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-48-2",
+      "character": "役",
+      "hanViet": "DỊCH",
+      "strokeCount": 7,
+      "onyomi": [
+        "ヤク (yaku)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Vai trò, nhiệm vụ. Đã gặp bài 42.",
+      "commonWords": [
+        {
+          "word": "使役",
+          "furigana": "しえき",
+          "meaningVi": "Sai khiến"
+        },
+        {
+          "word": "役に立ちます",
+          "furigana": "やくにたちます",
+          "meaningVi": "Có ích"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-48-3",
+      "character": "親",
+      "hanViet": "THÂN",
+      "strokeCount": 16,
+      "onyomi": [
+        "シン (shin)"
+      ],
+      "kunyomi": [
+        "おや",
+        "した(しい)"
+      ],
+      "meaningVi": "Cha mẹ; thân thiết.",
+      "commonWords": [
+        {
+          "word": "親",
+          "furigana": "おや",
+          "meaningVi": "Cha mẹ"
+        },
+        {
+          "word": "両親",
+          "furigana": "りょうしん",
+          "meaningVi": "Cha mẹ (cả hai)"
+        },
+        {
+          "word": "親切",
+          "furigana": "しんせつ",
+          "meaningVi": "Tốt bụng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-48-4",
+      "character": "野",
+      "hanViet": "DÃ",
+      "strokeCount": 11,
+      "onyomi": [
+        "ヤ (ya)"
+      ],
+      "kunyomi": [
+        "の"
+      ],
+      "meaningVi": "Đồng ruộng, hoang dã.",
+      "commonWords": [
+        {
+          "word": "野菜",
+          "furigana": "やさい",
+          "meaningVi": "Rau"
+        },
+        {
+          "word": "野球",
+          "furigana": "やきゅう",
+          "meaningVi": "Bóng chày"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-48-5",
+      "character": "菜",
+      "hanViet": "THÁI",
+      "strokeCount": 11,
+      "onyomi": [
+        "サイ (sai)"
+      ],
+      "kunyomi": [
+        "な"
+      ],
+      "meaningVi": "Rau, món rau.",
+      "commonWords": [
+        {
+          "word": "野菜",
+          "furigana": "やさい",
+          "meaningVi": "Rau"
+        },
+        {
+          "word": "菜食",
+          "furigana": "さいしょく",
+          "meaningVi": "Ăn chay"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n4-l48-s1",
+      "slideType": "grammar",
+      "title": "1. Chia thể sai khiến (使役形)",
+      "grammarFormula": "Nhóm 1: う→あ+せる (行く→行かせる) 　Nhóm 2: bỏ る+させる (食べる→食べさせる) 　する→させる 　来る→来させる",
+      "explanation": "Chú ý: nhóm 1 chia thể sai khiến GIỐNG HỆT thể bị động (bài 37) về phần đổi âm, chỉ khác đuôi cuối (れる/せる) — nếu đã thuộc thể bị động thì học nhanh hơn nhiều.",
+      "teacherTips": "Người GÂY RA hành động (cha mẹ, thầy giáo) làm chủ ngữ với は/が; người BỊ SAI KHIẾN đánh dấu bằng に.",
+      "culturalNotes": "親は子供に野菜を食べさせます phản ánh mối lo chung của phụ huynh Nhật về việc con cái kén ăn rau.",
+      "examples": [
+        {
+          "id": "ex-n4-l48-s1-1",
+          "tokens": [
+            {
+              "id": "t-l48s1-1",
+              "text": "おや",
+              "isKeyGrammar": true,
+              "kanji": "親",
+              "furigana": "おや"
+            },
+            {
+              "id": "t-l48s1-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l48s1-3",
+              "text": "こども",
+              "isKeyGrammar": true,
+              "kanji": "子供",
+              "furigana": "こども"
+            },
+            {
+              "id": "t-l48s1-4",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l48s1-5",
+              "text": "やさい",
+              "isKeyGrammar": false,
+              "kanji": "野菜",
+              "furigana": "やさい"
+            },
+            {
+              "id": "t-l48s1-6",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l48s1-7",
+              "text": "たべさせます",
+              "isKeyGrammar": true,
+              "kanji": "食べさせます",
+              "furigana": "たべさせます"
+            }
+          ],
+          "meaningVi": "Cha mẹ bắt con ăn rau."
+        },
+        {
+          "id": "ex-n4-l48-s1-2",
+          "tokens": [
+            {
+              "id": "t-l48s1-8",
+              "text": "せんせい",
+              "isKeyGrammar": true,
+              "kanji": "先生",
+              "furigana": "せんせい"
+            },
+            {
+              "id": "t-l48s1-9",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l48s1-10",
+              "text": "がくせい",
+              "isKeyGrammar": false,
+              "kanji": "学生",
+              "furigana": "がくせい"
+            },
+            {
+              "id": "t-l48s1-11",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l48s1-12",
+              "text": "ほん",
+              "isKeyGrammar": false,
+              "kanji": "本",
+              "furigana": "ほん"
+            },
+            {
+              "id": "t-l48s1-13",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l48s1-14",
+              "text": "よませます",
+              "isKeyGrammar": true,
+              "kanji": "読ませます",
+              "furigana": "よませます"
+            }
+          ],
+          "meaningVi": "Thầy giáo cho học sinh đọc sách."
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l48-s2",
+      "slideType": "grammar",
+      "title": "2. Hai sắc thái của thể sai khiến: BẮT BUỘC và CHO PHÉP",
+      "grammarFormula": "BẮT BUỘC (cưỡng ép, người dưới không muốn) 　vs　CHO PHÉP (cho làm gì đó người dưới MUỐN làm)",
+      "explanation": "Cùng MỘT hình thức chia nhưng ý nghĩa phụ thuộc NGỮ CẢNH: nếu hành động người dưới không thích thì là ép buộc; nếu hành động họ MUỐN làm thì là cho phép/tạo điều kiện.",
+      "teacherTips": "Với động từ TỰ THÂN (đi, nghỉ, khóc), thường dùng を cho người bị tác động; với động từ CÓ TÂN NGỮ RIÊNG (ăn, đọc), dùng に để tránh trùng を.",
+      "culturalNotes": "Nghỉ phép ở công ty Nhật cần được cấp trên CHO PHÉP (休ませてください: xin cho tôi nghỉ) — cấu trúc sai khiến kết hợp xin phép rất phổ biến.",
+      "examples": [
+        {
+          "id": "ex-n4-l48-s2-1",
+          "tokens": [
+            {
+              "id": "t-l48s2-1",
+              "text": "せんせい",
+              "isKeyGrammar": true,
+              "kanji": "先生",
+              "furigana": "せんせい"
+            },
+            {
+              "id": "t-l48s2-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l48s2-3",
+              "text": "がくせい",
+              "isKeyGrammar": false,
+              "kanji": "学生",
+              "furigana": "がくせい"
+            },
+            {
+              "id": "t-l48s2-4",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l48s2-5",
+              "text": "しゅくだい",
+              "isKeyGrammar": false,
+              "kanji": "宿題",
+              "furigana": "しゅくだい"
+            },
+            {
+              "id": "t-l48s2-6",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l48s2-7",
+              "text": "たくさん",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l48s2-8",
+              "text": "させました",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Thầy giáo bắt học sinh làm rất nhiều bài tập. (BẮT BUỘC, học sinh không muốn)"
+        },
+        {
+          "id": "ex-n4-l48-s2-2",
+          "tokens": [
+            {
+              "id": "t-l48s2-9",
+              "text": "しゃちょう",
+              "isKeyGrammar": true,
+              "kanji": "社長",
+              "furigana": "しゃちょう"
+            },
+            {
+              "id": "t-l48s2-10",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l48s2-11",
+              "text": "しゃいん",
+              "isKeyGrammar": false,
+              "kanji": "社員",
+              "furigana": "しゃいん"
+            },
+            {
+              "id": "t-l48s2-12",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l48s2-13",
+              "text": "やすませました",
+              "isKeyGrammar": true,
+              "kanji": "休ませました",
+              "furigana": "やすませました"
+            }
+          ],
+          "meaningVi": "Giám đốc cho nhân viên nghỉ. (CHO PHÉP, nhân viên muốn nghỉ)"
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l48-s3",
+      "slideType": "grammar",
+      "title": "3. Xin phép bằng thể sai khiến: V(させて) + ください",
+      "grammarFormula": "V(させて) + ください   (khiêm nhường xin ĐƯỢC LÀM gì đó, không phải xin người khác làm)",
+      "explanation": "Đây là cách dùng ĐẶC BIỆT: người nói dùng thể sai khiến CHO CHÍNH MÌNH để xin phép một cách khiêm nhường — 'xin hãy cho tôi làm ~' thay vì chỉ nói 'tôi muốn làm ~' (V たいです).",
+      "teacherTips": "Vさせてください lịch sự và khiêm nhường hơn hẳn Vたいです khi xin phép cấp trên/người lớn tuổi — thể hiện mình tôn trọng quyền quyết định của người nghe.",
+      "culturalNotes": "休ませてください là câu xin nghỉ phép chuẩn mực nhất trong môi trường công sở Nhật, lịch sự hơn nhiều so với 休みたいです.",
+      "examples": [
+        {
+          "id": "ex-n4-l48-s3-1",
+          "tokens": [
+            {
+              "id": "t-l48s3-1",
+              "text": "きょう",
+              "isKeyGrammar": false,
+              "kanji": "今日",
+              "furigana": "きょう"
+            },
+            {
+              "id": "t-l48s3-2",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l48s3-3",
+              "text": "やすませて",
+              "isKeyGrammar": true,
+              "kanji": "休ませて",
+              "furigana": "やすませて"
+            },
+            {
+              "id": "t-l48s3-4",
+              "text": "ください",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Hôm nay, xin hãy cho tôi nghỉ."
+        },
+        {
+          "id": "ex-n4-l48-s3-2",
+          "tokens": [
+            {
+              "id": "t-l48s3-5",
+              "text": "わたし",
+              "isKeyGrammar": false,
+              "kanji": "私",
+              "furigana": "わたし"
+            },
+            {
+              "id": "t-l48s3-6",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l48s3-7",
+              "text": "てつだわせて",
+              "isKeyGrammar": true,
+              "kanji": "手伝わせて",
+              "furigana": "てつだわせて"
+            },
+            {
+              "id": "t-l48s3-8",
+              "text": "ください",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Xin hãy cho tôi giúp đỡ."
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l48-s4",
+      "slideType": "grammar",
+      "title": "4. So sánh thể sai khiến và thể bị động (bài 37)",
+      "grammarFormula": "Sai khiến (させる): CHỦ NGỮ bắt/cho NGƯỜI KHÁC làm　vs　Bị động (られる): CHỦ NGỮ chịu tác động TỪ người khác",
+      "explanation": "Hai thể chia GẦN GIỐNG NHAU về âm (đặc biệt nhóm 1: せる/れる) nhưng vai trò NGƯỢC HẲN nhau — chủ động sai khiến người khác, hay bị động chịu ảnh hưởng từ người khác.",
+      "teacherTips": "Kiểm tra nhanh: chủ ngữ là người RA LỆNH/TẠO ĐIỀU KIỆN → sai khiến; chủ ngữ là người NHẬN tác động → bị động — không nhầm hai vai trò này.",
+      "culturalNotes": "Cả hai thể đều xuất hiện rất nhiều trong kể chuyện về gia đình, trường học — nơi có quan hệ trên dưới rõ ràng (cha mẹ-con cái, thầy-trò).",
+      "examples": [
+        {
+          "id": "ex-n4-l48-s4-1",
+          "tokens": [
+            {
+              "id": "t-l48s4-1",
+              "text": "おや",
+              "isKeyGrammar": true,
+              "kanji": "親",
+              "furigana": "おや"
+            },
+            {
+              "id": "t-l48s4-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l48s4-3",
+              "text": "こども",
+              "isKeyGrammar": false,
+              "kanji": "子供",
+              "furigana": "こども"
+            },
+            {
+              "id": "t-l48s4-4",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l48s4-5",
+              "text": "べんきょうさせました",
+              "isKeyGrammar": true,
+              "kanji": "勉強させました",
+              "furigana": "べんきょうさせました"
+            }
+          ],
+          "meaningVi": "Cha mẹ bắt con học bài. (sai khiến — cha mẹ là người CHỦ ĐỘNG bắt)"
+        },
+        {
+          "id": "ex-n4-l48-s4-2",
+          "tokens": [
+            {
+              "id": "t-l48s4-6",
+              "text": "こども",
+              "isKeyGrammar": true,
+              "kanji": "子供",
+              "furigana": "こども"
+            },
+            {
+              "id": "t-l48s4-7",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l48s4-8",
+              "text": "せんせい",
+              "isKeyGrammar": false,
+              "kanji": "先生",
+              "furigana": "せんせい"
+            },
+            {
+              "id": "t-l48s4-9",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l48s4-10",
+              "text": "しかられました",
+              "isKeyGrammar": false,
+              "kanji": "叱られました",
+              "furigana": "しかられました"
+            }
+          ],
+          "meaningVi": "Đứa trẻ bị thầy giáo mắng. (bị động, bài 37 — đứa trẻ là người CHỊU tác động)"
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n4-48-1",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l48-1",
+          "text": "山田さん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-2",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-3",
+          "text": "こども",
+          "isKeyGrammar": true,
+          "kanji": "子供",
+          "furigana": "こども"
+        },
+        {
+          "id": "d-l48-4",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-5",
+          "text": "やさい",
+          "isKeyGrammar": true,
+          "kanji": "野菜",
+          "furigana": "やさい"
+        },
+        {
+          "id": "d-l48-6",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-7",
+          "text": "すき",
+          "isKeyGrammar": false,
+          "kanji": "好き",
+          "furigana": "すき"
+        },
+        {
+          "id": "d-l48-8",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Con anh Yamada có thích rau không?"
+    },
+    {
+      "id": "dia-n4-48-2",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l48-9",
+          "text": "いいえ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-10",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-11",
+          "text": "あまり",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-12",
+          "text": "すき",
+          "isKeyGrammar": false,
+          "kanji": "好き",
+          "furigana": "すき"
+        },
+        {
+          "id": "d-l48-13",
+          "text": "じゃ ありません",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-14",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-15",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-16",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-17",
+          "text": "けんこう",
+          "isKeyGrammar": false,
+          "kanji": "健康",
+          "furigana": "けんこう"
+        },
+        {
+          "id": "d-l48-18",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-19",
+          "text": "ために",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-20",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-21",
+          "text": "まいにち",
+          "isKeyGrammar": false,
+          "kanji": "毎日",
+          "furigana": "まいにち"
+        },
+        {
+          "id": "d-l48-22",
+          "text": "たべさせて",
+          "isKeyGrammar": true,
+          "kanji": "食べさせて",
+          "furigana": "たべさせて"
+        },
+        {
+          "id": "d-l48-23",
+          "text": "います",
+          "isKeyGrammar": false,
+          "kanji": "居ます",
+          "furigana": "います"
+        }
+      ],
+      "meaningVi": "Không, cháu không thích lắm. Nhưng vì sức khỏe, tôi bắt cháu ăn mỗi ngày."
+    },
+    {
+      "id": "dia-n4-48-3",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l48-24",
+          "text": "たいへんですね",
+          "isKeyGrammar": false,
+          "kanji": "大変ですね",
+          "furigana": "たいへんですね"
+        },
+        {
+          "id": "d-l48-25",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-26",
+          "text": "しゅくだい",
+          "isKeyGrammar": true,
+          "kanji": "宿題",
+          "furigana": "しゅくだい"
+        },
+        {
+          "id": "d-l48-27",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-28",
+          "text": "させて",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l48-29",
+          "text": "います",
+          "isKeyGrammar": false,
+          "kanji": "居ます",
+          "furigana": "います"
+        },
+        {
+          "id": "d-l48-30",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vất vả thật đấy nhỉ. Anh cũng bắt cháu làm bài tập à?"
+    },
+    {
+      "id": "dia-n4-48-4",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l48-31",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-32",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-33",
+          "text": "まいにち",
+          "isKeyGrammar": false,
+          "kanji": "毎日",
+          "furigana": "まいにち"
+        },
+        {
+          "id": "d-l48-34",
+          "text": "すこし",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-35",
+          "text": "べんきょうさせて",
+          "isKeyGrammar": true,
+          "kanji": "勉強させて",
+          "furigana": "べんきょうさせて"
+        },
+        {
+          "id": "d-l48-36",
+          "text": "います",
+          "isKeyGrammar": false,
+          "kanji": "居ます",
+          "furigana": "います"
+        }
+      ],
+      "meaningVi": "Vâng, mỗi ngày tôi cho cháu học một chút."
+    },
+    {
+      "id": "dia-n4-48-5",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l48-37",
+          "text": "いい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-38",
+          "text": "おやこ",
+          "isKeyGrammar": false,
+          "kanji": "親子",
+          "furigana": "おやこ"
+        },
+        {
+          "id": "d-l48-39",
+          "text": "ですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-40",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-41",
+          "text": "ところで",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-42",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-43",
+          "text": "あした",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-44",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-45",
+          "text": "やすませて",
+          "isKeyGrammar": true,
+          "kanji": "休ませて",
+          "furigana": "やすませて"
+        },
+        {
+          "id": "d-l48-46",
+          "text": "いただけません",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l48-47",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Cha con tốt đấy nhỉ. À mà, ngày mai chị có thể cho tôi nghỉ được không?"
+    },
+    {
+      "id": "dia-n4-48-6",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l48-48",
+          "text": "だいじょうぶ",
+          "isKeyGrammar": false,
+          "kanji": "大丈夫",
+          "furigana": "だいじょうぶ"
+        },
+        {
+          "id": "d-l48-49",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d-l48-50",
+          "text": "よ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-51",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-52",
+          "text": "なにか",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-53",
+          "text": "ありました",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-54",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Được thôi. Có chuyện gì vậy?"
+    },
+    {
+      "id": "dia-n4-48-7",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l48-55",
+          "text": "こども",
+          "isKeyGrammar": true,
+          "kanji": "子供",
+          "furigana": "こども"
+        },
+        {
+          "id": "d-l48-56",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-57",
+          "text": "びょうき",
+          "isKeyGrammar": true,
+          "kanji": "病気",
+          "furigana": "びょうき"
+        },
+        {
+          "id": "d-l48-58",
+          "text": "なんです",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l48-59",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-60",
+          "text": "びょういん",
+          "isKeyGrammar": false,
+          "kanji": "病院",
+          "furigana": "びょういん"
+        },
+        {
+          "id": "d-l48-61",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-62",
+          "text": "いかせたい",
+          "isKeyGrammar": true,
+          "kanji": "行かせたい",
+          "furigana": "いかせたい"
+        },
+        {
+          "id": "d-l48-63",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Con tôi bị ốm ạ. Tôi muốn cho cháu đi bệnh viện."
+    },
+    {
+      "id": "dia-n4-48-8",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l48-64",
+          "text": "それ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-65",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-66",
+          "text": "たいへんですね",
+          "isKeyGrammar": false,
+          "kanji": "大変ですね",
+          "furigana": "たいへんですね"
+        },
+        {
+          "id": "d-l48-67",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-68",
+          "text": "ゆっくり",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-69",
+          "text": "やすんで",
+          "isKeyGrammar": false,
+          "kanji": "休んで",
+          "furigana": "やすんで"
+        },
+        {
+          "id": "d-l48-70",
+          "text": "ください",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vất vả quá nhỉ. Chị cứ nghỉ ngơi thoải mái đi."
+    },
+    {
+      "id": "dia-n4-48-9",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d-l48-71",
+          "text": "ありがとう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-72",
+          "text": "ございます",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-73",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-74",
+          "text": "しごと",
+          "isKeyGrammar": false,
+          "kanji": "仕事",
+          "furigana": "しごと"
+        },
+        {
+          "id": "d-l48-75",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-76",
+          "text": "だれ",
+          "isKeyGrammar": false,
+          "kanji": "誰",
+          "furigana": "だれ"
+        },
+        {
+          "id": "d-l48-77",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-78",
+          "text": "てつだわせましょう",
+          "isKeyGrammar": true,
+          "kanji": "手伝わせましょう",
+          "furigana": "てつだわせましょう"
+        },
+        {
+          "id": "d-l48-79",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Cảm ơn anh nhiều. Việc thì để ai giúp đỡ ạ?"
+    },
+    {
+      "id": "dia-n4-48-10",
+      "speaker": "山田",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d-l48-80",
+          "text": "しんぱいしないで",
+          "isKeyGrammar": false,
+          "kanji": "心配しないで",
+          "furigana": "しんぱいしないで"
+        },
+        {
+          "id": "d-l48-81",
+          "text": "ください",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-82",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-83",
+          "text": "わたし",
+          "isKeyGrammar": false,
+          "kanji": "私",
+          "furigana": "わたし"
+        },
+        {
+          "id": "d-l48-84",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l48-85",
+          "text": "やります",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Đừng lo. Để tôi lo cho."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n4-48-1",
+      "question": "Thể sai khiến của 行く (nhóm 1, đuôi く) là:",
+      "options": [
+        "行かせる",
+        "行けせる",
+        "行くさせる",
+        "行させる"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nhóm 1 đổi âm cuối gốc từ điển sang hàng あ, thêm せる: 行く → 行かせる.",
+      "hint": "Áp dụng quy tắc chia thể sai khiến nhóm 1."
+    },
+    {
+      "id": "ex-q-n4-48-2",
+      "question": "Thể sai khiến của 食べる (nhóm 2) là:",
+      "options": [
+        "食べさせる",
+        "食べせる",
+        "食べいさせる",
+        "食べるさせる"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nhóm 2 bỏ る, thêm させる: 食べる → 食べさせる.",
+      "hint": "Áp dụng quy tắc chia thể sai khiến nhóm 2."
+    },
+    {
+      "id": "ex-q-n4-48-3",
+      "question": "「親は子供に野菜を食べさせます」 — trợ từ に đánh dấu:",
+      "options": [
+        "Người BỊ SAI KHIẾN (con) thực hiện hành động",
+        "Người RA LỆNH (cha mẹ)",
+        "Vật bị ăn (rau)",
+        "Nơi chốn xảy ra hành động"
+      ],
+      "correctIndex": 0,
+      "explanation": "に đánh dấu người CHỊU sự sai khiến — người đó thực hiện hành động theo yêu cầu của chủ ngữ.",
+      "hint": "Xem cấu trúc は…に…を… ở slide 1."
+    },
+    {
+      "id": "ex-q-n4-48-4",
+      "question": "「先生は学生に宿題をたくさんさせました」 mang sắc thái nào?",
+      "options": [
+        "BẮT BUỘC (học sinh có thể không muốn làm nhiều bài tập)",
+        "CHO PHÉP (học sinh muốn làm)",
+        "Không có sắc thái gì đặc biệt",
+        "Chỉ mang nghĩa cho phép, không bao giờ ép buộc"
+      ],
+      "correctIndex": 0,
+      "explanation": "Vì làm nhiều bài tập thường không phải điều học sinh mong muốn, câu này mang sắc thái BẮT BUỘC/ép buộc.",
+      "hint": "Xem hai sắc thái của thể sai khiến ở slide 2."
+    },
+    {
+      "id": "ex-q-n4-48-5",
+      "question": "「社長は社員を休ませました」 mang sắc thái nào?",
+      "options": [
+        "CHO PHÉP (nhân viên muốn nghỉ, giám đốc tạo điều kiện)",
+        "BẮT BUỘC (nhân viên không muốn nghỉ)",
+        "Đe dọa nhân viên",
+        "Sa thải nhân viên"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nghỉ ngơi thường là điều nhân viên MONG MUỐN, nên câu này mang sắc thái CHO PHÉP/tạo điều kiện.",
+      "hint": "So sánh với câu 4 để thấy hai sắc thái đối lập."
+    },
+    {
+      "id": "ex-q-n4-48-6",
+      "question": "「休ませてください」 dùng để làm gì?",
+      "options": [
+        "Khiêm nhường xin phép được nghỉ (cho CHÍNH MÌNH)",
+        "Ra lệnh người khác nghỉ",
+        "Cấm ai đó nghỉ",
+        "Hỏi ai đã nghỉ chưa"
+      ],
+      "correctIndex": 0,
+      "explanation": "Vさせてください là cách dùng đặc biệt: người nói dùng thể sai khiến CHO CHÍNH MÌNH để xin phép khiêm nhường.",
+      "hint": "Xem cách dùng đặc biệt này ở slide 3."
+    },
+    {
+      "id": "ex-q-n4-48-7",
+      "question": "「休ませてください」 lịch sự hơn 「休みたいです」 vì:",
+      "options": [
+        "Thể hiện sự tôn trọng quyền quyết định của người nghe (xin ĐƯỢC làm, không chỉ nói muốn làm)",
+        "Hoàn toàn giống nhau về mức độ lịch sự",
+        "休みたいです lịch sự hơn",
+        "Không có khác biệt gì về sắc thái"
+      ],
+      "correctIndex": 0,
+      "explanation": "させてください nhấn mạnh việc XIN PHÉP, trong khi たいです chỉ đơn thuần bày tỏ mong muốn cá nhân.",
+      "hint": "Xem so sánh mức độ lịch sự ở slide 3."
+    },
+    {
+      "id": "ex-q-n4-48-8",
+      "question": "Thể sai khiến và thể bị động (bài 37) khác nhau ở vai trò CHỦ NGỮ:",
+      "options": [
+        "Sai khiến: chủ ngữ CHỦ ĐỘNG bắt/cho người khác làm; Bị động: chủ ngữ CHỊU tác động từ người khác",
+        "Hoàn toàn giống nhau",
+        "Sai khiến chỉ dùng cho câu hỏi",
+        "Bị động chỉ dùng cho câu phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hai thể có vai trò NGƯỢC HẲN: sai khiến là chủ động điều khiển, bị động là chịu ảnh hưởng.",
+      "hint": "So sánh trực tiếp ở slide 4."
+    },
+    {
+      "id": "ex-q-n4-48-9",
+      "question": "Trong hội thoại, vì sao Yamada bắt con ăn rau?",
+      "options": [
+        "Vì sức khỏe của con",
+        "Vì con thích ăn rau",
+        "Vì bác sĩ yêu cầu",
+        "Không có lý do cụ thể"
+      ],
+      "correctIndex": 0,
+      "explanation": "Yamada nói 「健康のために、毎日食べさせています」.",
+      "hint": "Xem câu thoại thứ 2."
+    },
+    {
+      "id": "ex-q-n4-48-10",
+      "question": "Vì sao Tanaka xin nghỉ làm ngày mai?",
+      "options": [
+        "Vì con bị ốm, cần đưa đi bệnh viện",
+        "Vì cô ấy bị ốm",
+        "Vì có việc riêng",
+        "Không có lý do cụ thể"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tanaka nói 「子供が病気なんです。病院に行かせたいです」.",
+      "hint": "Xem câu thoại thứ 7."
+    }
+  ]
+}

@@ -1,0 +1,1382 @@
+{
+  "level": "N4",
+  "lessonNumber": 31,
+  "title": "Bài 31: Thể ý chí (意向形) & Dự định (〜と思っています)",
+  "description": "Chia thể ý chí (nhóm 1: う→おう, nhóm 2: bỏ る+よう, bất quy tắc する→しよう/来る→来よう), phân biệt と思います (ý kiến tức thời, N5 bài 21) với と思っています (dự định đã ấp ủ), và so sánh bốn mức độ chắc chắn: Vましょう → Vよう → と思っています → ことにします (quyết định dứt khoát).",
+  "vocabList": [
+    {
+      "id": "voc-n4-31-1",
+      "word": "いこう",
+      "kanji": "行こう",
+      "furigana": "いこう",
+      "romaji": "ikou",
+      "wordType": "verb",
+      "meaningVi": "Sẽ đi, thôi đi thôi (thể ý chí của 行きます)",
+      "accentNote": "行く (nhóm 1, đuôi く) → 行こう: đổi đuôi く→こう."
+    },
+    {
+      "id": "voc-n4-31-2",
+      "word": "たべよう",
+      "kanji": "食べよう",
+      "furigana": "たべよう",
+      "romaji": "tabeyou",
+      "wordType": "verb",
+      "meaningVi": "Sẽ ăn (thể ý chí của 食べます)",
+      "accentNote": "食べる (nhóm 2) → 食べよう: bỏ る, thêm よう."
+    },
+    {
+      "id": "voc-n4-31-3",
+      "word": "しよう",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "shiyou",
+      "wordType": "verb",
+      "meaningVi": "Sẽ làm (thể ý chí của します)",
+      "accentNote": "する → しよう (bất quy tắc)."
+    },
+    {
+      "id": "voc-n4-31-4",
+      "word": "こよう",
+      "kanji": "来よう",
+      "furigana": "こよう",
+      "romaji": "koyou",
+      "wordType": "verb",
+      "meaningVi": "Sẽ đến (thể ý chí của 来ます)",
+      "accentNote": "来る → 来よう (bất quy tắc, đọc こよう)."
+    },
+    {
+      "id": "voc-n4-31-5",
+      "word": "きめます",
+      "kanji": "決めます",
+      "furigana": "きめます",
+      "romaji": "kimemasu",
+      "wordType": "verb",
+      "meaningVi": "Quyết định",
+      "accentNote": "将来を 決めます = quyết định tương lai."
+    },
+    {
+      "id": "voc-n4-31-6",
+      "word": "かんがえます",
+      "kanji": "考えます",
+      "furigana": "かんがえます",
+      "romaji": "kangaemasu",
+      "wordType": "verb",
+      "meaningVi": "Suy nghĩ, cân nhắc",
+      "accentNote": "Đã gặp N5 bài 21 — nay mở rộng dùng cùng と思っています."
+    },
+    {
+      "id": "voc-n4-31-7",
+      "word": "けいかくします",
+      "kanji": "計画します",
+      "furigana": "けいかくします",
+      "romaji": "keikaku shimasu",
+      "wordType": "verb",
+      "meaningVi": "Lập kế hoạch",
+      "accentNote": "旅行を 計画しています = đang lên kế hoạch du lịch."
+    },
+    {
+      "id": "voc-n4-31-8",
+      "word": "しょうらい",
+      "kanji": "将来",
+      "furigana": "しょうらい",
+      "romaji": "shourai",
+      "wordType": "noun",
+      "meaningVi": "Tương lai",
+      "accentNote": "将来、〜と思っています = trong tương lai, tôi định..."
+    },
+    {
+      "id": "voc-n4-31-9",
+      "word": "ゆめ",
+      "kanji": "夢",
+      "furigana": "ゆめ",
+      "romaji": "yume",
+      "wordType": "noun",
+      "meaningVi": "Giấc mơ, ước mơ",
+      "accentNote": "夢を かなえたいです = tôi muốn thực hiện ước mơ."
+    },
+    {
+      "id": "voc-n4-31-10",
+      "word": "けいかく",
+      "kanji": "計画",
+      "furigana": "けいかく",
+      "romaji": "keikaku",
+      "wordType": "noun",
+      "meaningVi": "Kế hoạch",
+      "accentNote": "計画を 立てます = lập kế hoạch."
+    },
+    {
+      "id": "voc-n4-31-11",
+      "word": "だいがく",
+      "kanji": "大学",
+      "furigana": "だいがく",
+      "romaji": "daigaku",
+      "wordType": "noun",
+      "meaningVi": "Trường đại học",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n4-31-12",
+      "word": "だいがくせい",
+      "kanji": "大学生",
+      "furigana": "だいがくせい",
+      "romaji": "daigakusei",
+      "wordType": "noun",
+      "meaningVi": "Sinh viên đại học",
+      "accentNote": "Đã gặp bài 27."
+    },
+    {
+      "id": "voc-n4-31-13",
+      "word": "かいしゃ",
+      "kanji": "会社",
+      "furigana": "かいしゃ",
+      "romaji": "kaisha",
+      "wordType": "noun",
+      "meaningVi": "Công ty",
+      "accentNote": "Đã gặp N5 bài 3."
+    },
+    {
+      "id": "voc-n4-31-14",
+      "word": "しごと",
+      "kanji": "仕事",
+      "furigana": "しごと",
+      "romaji": "shigoto",
+      "wordType": "noun",
+      "meaningVi": "Công việc",
+      "accentNote": "Đã gặp N5 bài 9."
+    },
+    {
+      "id": "voc-n4-31-15",
+      "word": "せんせい",
+      "kanji": "先生",
+      "furigana": "せんせい",
+      "romaji": "sensei",
+      "wordType": "noun",
+      "meaningVi": "Thầy/cô giáo",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n4-31-16",
+      "word": "りょこう",
+      "kanji": "旅行",
+      "furigana": "りょこう",
+      "romaji": "ryokou",
+      "wordType": "noun",
+      "meaningVi": "Du lịch",
+      "accentNote": "Đã gặp N5 bài 5."
+    },
+    {
+      "id": "voc-n4-31-17",
+      "word": "りゅうがく",
+      "kanji": "留学",
+      "furigana": "りゅうがく",
+      "romaji": "ryuugaku",
+      "wordType": "noun",
+      "meaningVi": "Du học",
+      "accentNote": "留学しようと 思っています = tôi định đi du học."
+    },
+    {
+      "id": "voc-n4-31-18",
+      "word": "そつぎょうします",
+      "kanji": "卒業します",
+      "furigana": "そつぎょうします",
+      "romaji": "sotsugyou shimasu",
+      "wordType": "verb",
+      "meaningVi": "Tốt nghiệp",
+      "accentNote": "大学を 卒業したら = sau khi tốt nghiệp đại học."
+    },
+    {
+      "id": "voc-n4-31-19",
+      "word": "はたらきます",
+      "kanji": "働きます",
+      "furigana": "はたらきます",
+      "romaji": "hatarakimasu",
+      "wordType": "verb",
+      "meaningVi": "Làm việc, đi làm",
+      "accentNote": "Đã gặp N5 bài 4."
+    },
+    {
+      "id": "voc-n4-31-20",
+      "word": "がんばります",
+      "kanji": "頑張ります",
+      "furigana": "がんばります",
+      "romaji": "ganbarimasu",
+      "wordType": "verb",
+      "meaningVi": "Cố gắng, nỗ lực",
+      "accentNote": "Đã gặp N5 bài 19."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n4-31-1",
+      "character": "将",
+      "hanViet": "TƯỚNG",
+      "strokeCount": 10,
+      "onyomi": [
+        "ショウ (shou)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Sắp tới, tương lai.",
+      "commonWords": [
+        {
+          "word": "将来",
+          "furigana": "しょうらい",
+          "meaningVi": "Tương lai"
+        },
+        {
+          "word": "将軍",
+          "furigana": "しょうぐん",
+          "meaningVi": "Tướng quân"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-31-2",
+      "character": "夢",
+      "hanViet": "MỘNG",
+      "strokeCount": 13,
+      "onyomi": [
+        "ム (mu)"
+      ],
+      "kunyomi": [
+        "ゆめ"
+      ],
+      "meaningVi": "Giấc mơ, mộng tưởng.",
+      "commonWords": [
+        {
+          "word": "夢",
+          "furigana": "ゆめ",
+          "meaningVi": "Giấc mơ"
+        },
+        {
+          "word": "夢中",
+          "furigana": "むちゅう",
+          "meaningVi": "Say mê"
+        },
+        {
+          "word": "初夢",
+          "furigana": "はつゆめ",
+          "meaningVi": "Giấc mơ đầu năm"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-31-3",
+      "character": "計",
+      "hanViet": "KẾ",
+      "strokeCount": 9,
+      "onyomi": [
+        "ケイ (kei)"
+      ],
+      "kunyomi": [
+        "はか(る)"
+      ],
+      "meaningVi": "Tính toán, kế hoạch. Đã gặp N5 bài 2.",
+      "commonWords": [
+        {
+          "word": "計画",
+          "furigana": "けいかく",
+          "meaningVi": "Kế hoạch"
+        },
+        {
+          "word": "時計",
+          "furigana": "とけい",
+          "meaningVi": "Đồng hồ"
+        },
+        {
+          "word": "合計",
+          "furigana": "ごうけい",
+          "meaningVi": "Tổng cộng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-31-4",
+      "character": "決",
+      "hanViet": "QUYẾT",
+      "strokeCount": 7,
+      "onyomi": [
+        "ケツ (ketsu)"
+      ],
+      "kunyomi": [
+        "き(める)"
+      ],
+      "meaningVi": "Quyết định.",
+      "commonWords": [
+        {
+          "word": "決めます",
+          "furigana": "きめます",
+          "meaningVi": "Quyết định"
+        },
+        {
+          "word": "決心",
+          "furigana": "けっしん",
+          "meaningVi": "Quyết tâm"
+        },
+        {
+          "word": "解決",
+          "furigana": "かいけつ",
+          "meaningVi": "Giải quyết"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-31-5",
+      "character": "卒",
+      "hanViet": "TỐT",
+      "strokeCount": 9,
+      "onyomi": [
+        "ソツ (sotsu)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Hoàn tất, tốt nghiệp.",
+      "commonWords": [
+        {
+          "word": "卒業",
+          "furigana": "そつぎょう",
+          "meaningVi": "Tốt nghiệp"
+        },
+        {
+          "word": "卒業生",
+          "furigana": "そつぎょうせい",
+          "meaningVi": "Học sinh tốt nghiệp"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n4-l31-s1",
+      "slideType": "grammar",
+      "title": "1. Chia thể ý chí (意向形)",
+      "grammarFormula": "Nhóm 1: う→おう (行こう) 　Nhóm 2: bỏ る+よう (食べよう) 　する→しよう 　来る→来よう",
+      "explanation": "Thể ý chí diễn tả Ý ĐỊNH/QUYẾT TÂM của NGƯỜI NÓI — gần nghĩa với Vましょう (N5 bài 6) nhưng thân mật hơn, thường dùng khi tự nói với mình hoặc trong câu và思っています.",
+      "teacherTips": "Thể ý chí thân mật hơn Vましょう rất nhiều — dùng với bạn thân, hoặc tự nhủ với bản thân, không dùng trực tiếp với người trên.",
+      "culturalNotes": "頑張ろう！ là câu hô hào đồng đội rất phổ biến trong thể thao, câu lạc bộ học sinh Nhật trước một trận đấu/sự kiện.",
+      "examples": [
+        {
+          "id": "ex-n4-l31-s1-1",
+          "tokens": [
+            {
+              "id": "t-l31s1-1",
+              "text": "いこう",
+              "isKeyGrammar": true,
+              "kanji": "行こう",
+              "furigana": "いこう"
+            },
+            {
+              "id": "t-l31s1-2",
+              "text": "！",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Đi thôi! (thể ý chí đơn giản, thân mật)"
+        },
+        {
+          "id": "ex-n4-l31-s1-2",
+          "tokens": [
+            {
+              "id": "t-l31s1-3",
+              "text": "がんばろう",
+              "isKeyGrammar": true,
+              "kanji": "頑張ろう",
+              "furigana": "がんばろう"
+            },
+            {
+              "id": "t-l31s1-4",
+              "text": "！",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Cố lên nào!"
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l31-s2",
+      "slideType": "grammar",
+      "title": "2. Diễn tả dự định: [Thể ý chí] と 思っています",
+      "grammarFormula": "[Thể ý chí] + と + 思っています   (dự định đã có SẴN trong đầu một thời gian)",
+      "explanation": "Khác と思います (N5 bài 21, ý kiến/suy nghĩ TỨC THỜI), と思っています (thể ています) diễn tả một Ý ĐỊNH đã ấp ủ, cân nhắc từ trước, không phải nghĩ ra ngay lúc nói.",
+      "teacherTips": "と思います (N5 b21) là ý kiến/nghĩ NGAY LÚC NÓI; と思っています là Ý ĐỊNH đã CÓ SẴN, ấp ủ từ trước — phân biệt bằng thời gian hình thành ý nghĩ.",
+      "culturalNotes": "将来の夢は 先生に なろうと思っています là mẫu câu điển hình trong bài luận/phỏng vấn học sinh Nhật khi nói về ước mơ nghề nghiệp.",
+      "examples": [
+        {
+          "id": "ex-n4-l31-s2-1",
+          "tokens": [
+            {
+              "id": "t-l31s2-1",
+              "text": "らいねん",
+              "isKeyGrammar": false,
+              "kanji": "来年",
+              "furigana": "らいねん"
+            },
+            {
+              "id": "t-l31s2-2",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l31s2-3",
+              "text": "りゅうがく",
+              "isKeyGrammar": true,
+              "kanji": "留学",
+              "furigana": "りゅうがく"
+            },
+            {
+              "id": "t-l31s2-4",
+              "text": "しよう",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l31s2-5",
+              "text": "と",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l31s2-6",
+              "text": "おもって",
+              "isKeyGrammar": false,
+              "kanji": "思って",
+              "furigana": "おもって"
+            },
+            {
+              "id": "t-l31s2-7",
+              "text": "います",
+              "isKeyGrammar": false,
+              "kanji": "居ます",
+              "furigana": "います"
+            }
+          ],
+          "meaningVi": "Tôi đang định năm sau sẽ đi du học."
+        },
+        {
+          "id": "ex-n4-l31-s2-2",
+          "tokens": [
+            {
+              "id": "t-l31s2-8",
+              "text": "だいがく",
+              "isKeyGrammar": false,
+              "kanji": "大学",
+              "furigana": "だいがく"
+            },
+            {
+              "id": "t-l31s2-9",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l31s2-10",
+              "text": "そつぎょう",
+              "isKeyGrammar": false,
+              "kanji": "卒業",
+              "furigana": "そつぎょう"
+            },
+            {
+              "id": "t-l31s2-11",
+              "text": "したら",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l31s2-12",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l31s2-13",
+              "text": "せんせい",
+              "isKeyGrammar": false,
+              "kanji": "先生",
+              "furigana": "せんせい"
+            },
+            {
+              "id": "t-l31s2-14",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l31s2-15",
+              "text": "なろう",
+              "isKeyGrammar": true,
+              "kanji": "成ろう",
+              "furigana": "なろう"
+            },
+            {
+              "id": "t-l31s2-16",
+              "text": "と",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l31s2-17",
+              "text": "おもって",
+              "isKeyGrammar": false,
+              "kanji": "思って",
+              "furigana": "おもって"
+            },
+            {
+              "id": "t-l31s2-18",
+              "text": "います",
+              "isKeyGrammar": false,
+              "kanji": "居ます",
+              "furigana": "います"
+            }
+          ],
+          "meaningVi": "Sau khi tốt nghiệp đại học, tôi định trở thành giáo viên."
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l31-s3",
+      "slideType": "grammar",
+      "title": "3. Đã quyết định hẳn: [Thể từ điển/ない] ことに します",
+      "grammarFormula": "[Thể từ điển] + ことに します   (QUYẾT ĐỊNH dứt khoát, khác với chỉ ĐỊNH HƯỚNG như と思っています)",
+      "explanation": "ことにします mạnh hơn と思っています — đây là QUYẾT ĐỊNH đã CHỐT, không còn phân vân. Danh từ hóa bằng こと (đã học N5 bài 18) ghép với します để 'biến nó thành quyết định'.",
+      "teacherTips": "と思っています (ý định, có thể còn thay đổi) khác hẳn mức độ dứt khoát so với ことにしました (đã CHỐT quyết định, xong rồi).",
+      "culturalNotes": "ことにしました dùng phổ biến khi thông báo quyết định lớn (nghỉ việc, bỏ thói quen xấu) một cách chững chạc, có trách nhiệm.",
+      "examples": [
+        {
+          "id": "ex-n4-l31-s3-1",
+          "tokens": [
+            {
+              "id": "t-l31s3-1",
+              "text": "らいげつ",
+              "isKeyGrammar": false,
+              "kanji": "来月",
+              "furigana": "らいげつ"
+            },
+            {
+              "id": "t-l31s3-2",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l31s3-3",
+              "text": "かいしゃ",
+              "isKeyGrammar": false,
+              "kanji": "会社",
+              "furigana": "かいしゃ"
+            },
+            {
+              "id": "t-l31s3-4",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l31s3-5",
+              "text": "やめる",
+              "isKeyGrammar": false,
+              "kanji": "止める",
+              "furigana": "やめる"
+            },
+            {
+              "id": "t-l31s3-6",
+              "text": "ことに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l31s3-7",
+              "text": "しました",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Tôi đã quyết định tháng sau sẽ nghỉ việc."
+        },
+        {
+          "id": "ex-n4-l31-s3-2",
+          "tokens": [
+            {
+              "id": "t-l31s3-8",
+              "text": "たばこ",
+              "isKeyGrammar": false,
+              "kanji": "煙草",
+              "furigana": "たばこ"
+            },
+            {
+              "id": "t-l31s3-9",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l31s3-10",
+              "text": "すわない",
+              "isKeyGrammar": false,
+              "kanji": "吸わない",
+              "furigana": "すわない"
+            },
+            {
+              "id": "t-l31s3-11",
+              "text": "ことに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l31s3-12",
+              "text": "しました",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Tôi đã quyết định sẽ không hút thuốc nữa."
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l31-s4",
+      "slideType": "grammar",
+      "title": "4. So sánh bốn cách nói dự định/quyết định",
+      "grammarFormula": "Vましょう (rủ ai, N5 b6) / Vよう (ý chí, thân mật) / と思っています (ý định ấp ủ) / ことにします (quyết định chốt)",
+      "explanation": "Bốn cấu trúc theo mức độ TĂNG DẦN sự chắc chắn: rủ rê nhẹ nhàng → ý chí cá nhân → dự định đã cân nhắc → quyết định dứt khoát không đổi.",
+      "teacherTips": "Khi viết CV/luận văn về ước mơ, kết hợp cả bốn cấu trúc theo trình tự sẽ tạo mạch văn tự nhiên: từ ý tưởng mơ hồ đến quyết tâm cụ thể.",
+      "culturalNotes": "Học sinh Nhật cuối cấp thường được hỏi 将来何になろうと思っていますか trong các buổi tư vấn hướng nghiệp ở trường.",
+      "examples": [
+        {
+          "id": "ex-n4-l31-s4-1",
+          "tokens": [
+            {
+              "id": "t-l31s4-1",
+              "text": "しょうらい",
+              "isKeyGrammar": true,
+              "kanji": "将来",
+              "furigana": "しょうらい"
+            },
+            {
+              "id": "t-l31s4-2",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l31s4-3",
+              "text": "なに",
+              "isKeyGrammar": false,
+              "kanji": "何",
+              "furigana": "なに"
+            },
+            {
+              "id": "t-l31s4-4",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l31s4-5",
+              "text": "しよう",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l31s4-6",
+              "text": "と",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l31s4-7",
+              "text": "かんがえて",
+              "isKeyGrammar": false,
+              "kanji": "考えて",
+              "furigana": "かんがえて"
+            },
+            {
+              "id": "t-l31s4-8",
+              "text": "います",
+              "isKeyGrammar": false,
+              "kanji": "居ます",
+              "furigana": "います"
+            },
+            {
+              "id": "t-l31s4-9",
+              "text": "か",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Trong tương lai, anh đang cân nhắc sẽ làm gì?"
+        },
+        {
+          "id": "ex-n4-l31-s4-2",
+          "tokens": [
+            {
+              "id": "t-l31s4-10",
+              "text": "けいかく",
+              "isKeyGrammar": true,
+              "kanji": "計画",
+              "furigana": "けいかく"
+            },
+            {
+              "id": "t-l31s4-11",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l31s4-12",
+              "text": "まだ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l31s4-13",
+              "text": "きめて",
+              "isKeyGrammar": false,
+              "kanji": "決めて",
+              "furigana": "きめて"
+            },
+            {
+              "id": "t-l31s4-14",
+              "text": "いません",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Kế hoạch thì tôi vẫn chưa quyết định."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n4-31-1",
+      "speaker": "田中",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l31-1",
+          "text": "ワンさん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-2",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-3",
+          "text": "だいがく",
+          "isKeyGrammar": true,
+          "kanji": "大学",
+          "furigana": "だいがく"
+        },
+        {
+          "id": "d-l31-4",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-5",
+          "text": "そつぎょう",
+          "isKeyGrammar": true,
+          "kanji": "卒業",
+          "furigana": "そつぎょう"
+        },
+        {
+          "id": "d-l31-6",
+          "text": "したら",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-7",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-8",
+          "text": "なに",
+          "isKeyGrammar": false,
+          "kanji": "何",
+          "furigana": "なに"
+        },
+        {
+          "id": "d-l31-9",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-10",
+          "text": "しよう",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l31-11",
+          "text": "と",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-12",
+          "text": "おもって",
+          "isKeyGrammar": false,
+          "kanji": "思って",
+          "furigana": "おもって"
+        },
+        {
+          "id": "d-l31-13",
+          "text": "います",
+          "isKeyGrammar": false,
+          "kanji": "居ます",
+          "furigana": "います"
+        },
+        {
+          "id": "d-l31-14",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Wang à, sau khi tốt nghiệp đại học, cậu định làm gì?"
+    },
+    {
+      "id": "dia-n4-31-2",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l31-15",
+          "text": "にほん",
+          "isKeyGrammar": false,
+          "kanji": "日本",
+          "furigana": "にほん"
+        },
+        {
+          "id": "d-l31-16",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-17",
+          "text": "りゅうがく",
+          "isKeyGrammar": true,
+          "kanji": "留学",
+          "furigana": "りゅうがく"
+        },
+        {
+          "id": "d-l31-18",
+          "text": "しよう",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l31-19",
+          "text": "と",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-20",
+          "text": "おもって",
+          "isKeyGrammar": false,
+          "kanji": "思って",
+          "furigana": "おもって"
+        },
+        {
+          "id": "d-l31-21",
+          "text": "います",
+          "isKeyGrammar": false,
+          "kanji": "居ます",
+          "furigana": "います"
+        }
+      ],
+      "meaningVi": "Tớ định đi du học ở Nhật Bản."
+    },
+    {
+      "id": "dia-n4-31-3",
+      "speaker": "田中",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l31-22",
+          "text": "もう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-23",
+          "text": "だいがく",
+          "isKeyGrammar": false,
+          "kanji": "大学",
+          "furigana": "だいがく"
+        },
+        {
+          "id": "d-l31-24",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-25",
+          "text": "きめました",
+          "isKeyGrammar": true,
+          "kanji": "決めました",
+          "furigana": "きめました"
+        },
+        {
+          "id": "d-l31-26",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Cậu đã quyết định trường đại học chưa?"
+    },
+    {
+      "id": "dia-n4-31-4",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l31-27",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-28",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-29",
+          "text": "とうきょう",
+          "isKeyGrammar": false,
+          "kanji": "東京",
+          "furigana": "とうきょう"
+        },
+        {
+          "id": "d-l31-30",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-31",
+          "text": "だいがく",
+          "isKeyGrammar": false,
+          "kanji": "大学",
+          "furigana": "だいがく"
+        },
+        {
+          "id": "d-l31-32",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-33",
+          "text": "いく",
+          "isKeyGrammar": false,
+          "kanji": "行く",
+          "furigana": "いく"
+        },
+        {
+          "id": "d-l31-34",
+          "text": "ことに",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l31-35",
+          "text": "しました",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Rồi. Tớ đã quyết định sẽ đi trường đại học ở Tokyo."
+    },
+    {
+      "id": "dia-n4-31-5",
+      "speaker": "田中",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l31-36",
+          "text": "いいですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-37",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-38",
+          "text": "しょうらい",
+          "isKeyGrammar": true,
+          "kanji": "将来",
+          "furigana": "しょうらい"
+        },
+        {
+          "id": "d-l31-39",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-40",
+          "text": "ゆめ",
+          "isKeyGrammar": true,
+          "kanji": "夢",
+          "furigana": "ゆめ"
+        },
+        {
+          "id": "d-l31-41",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-42",
+          "text": "なん",
+          "isKeyGrammar": false,
+          "kanji": "何",
+          "furigana": "なん"
+        },
+        {
+          "id": "d-l31-43",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Hay quá. Ước mơ tương lai của cậu là gì?"
+    },
+    {
+      "id": "dia-n4-31-6",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l31-44",
+          "text": "せんせい",
+          "isKeyGrammar": true,
+          "kanji": "先生",
+          "furigana": "せんせい"
+        },
+        {
+          "id": "d-l31-45",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-46",
+          "text": "なろう",
+          "isKeyGrammar": true,
+          "kanji": "成ろう",
+          "furigana": "なろう"
+        },
+        {
+          "id": "d-l31-47",
+          "text": "と",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-48",
+          "text": "かんがえて",
+          "isKeyGrammar": false,
+          "kanji": "考えて",
+          "furigana": "かんがえて"
+        },
+        {
+          "id": "d-l31-49",
+          "text": "います",
+          "isKeyGrammar": false,
+          "kanji": "居ます",
+          "furigana": "います"
+        }
+      ],
+      "meaningVi": "Tớ đang cân nhắc sẽ trở thành giáo viên."
+    },
+    {
+      "id": "dia-n4-31-7",
+      "speaker": "田中",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l31-50",
+          "text": "けいかく",
+          "isKeyGrammar": true,
+          "kanji": "計画",
+          "furigana": "けいかく"
+        },
+        {
+          "id": "d-l31-51",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-52",
+          "text": "もう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-53",
+          "text": "たてました",
+          "isKeyGrammar": false,
+          "kanji": "立てました",
+          "furigana": "たてました"
+        },
+        {
+          "id": "d-l31-54",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Kế hoạch cậu lập xong chưa?"
+    },
+    {
+      "id": "dia-n4-31-8",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l31-55",
+          "text": "まだ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-56",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-57",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-58",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-59",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-60",
+          "text": "がんばろう",
+          "isKeyGrammar": true,
+          "kanji": "頑張ろう",
+          "furigana": "がんばろう"
+        },
+        {
+          "id": "d-l31-61",
+          "text": "と",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-62",
+          "text": "おもって",
+          "isKeyGrammar": false,
+          "kanji": "思って",
+          "furigana": "おもって"
+        },
+        {
+          "id": "d-l31-63",
+          "text": "います",
+          "isKeyGrammar": false,
+          "kanji": "居ます",
+          "furigana": "います"
+        }
+      ],
+      "meaningVi": "Vẫn chưa. Nhưng tớ đang định cố gắng hết mình."
+    },
+    {
+      "id": "dia-n4-31-9",
+      "speaker": "田中",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l31-64",
+          "text": "がんばって",
+          "isKeyGrammar": false,
+          "kanji": "頑張って",
+          "furigana": "がんばって"
+        },
+        {
+          "id": "d-l31-65",
+          "text": "ください",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-66",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-67",
+          "text": "おうえん",
+          "isKeyGrammar": false,
+          "kanji": "応援",
+          "furigana": "おうえん"
+        },
+        {
+          "id": "d-l31-68",
+          "text": "して",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l31-69",
+          "text": "います",
+          "isKeyGrammar": false,
+          "kanji": "居ます",
+          "furigana": "います"
+        }
+      ],
+      "meaningVi": "Cố lên nhé. Tớ ủng hộ cậu đấy."
+    },
+    {
+      "id": "dia-n4-31-10",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l31-70",
+          "text": "ありがとう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-71",
+          "text": "ございます",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-72",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-73",
+          "text": "ゆめ",
+          "isKeyGrammar": true,
+          "kanji": "夢",
+          "furigana": "ゆめ"
+        },
+        {
+          "id": "d-l31-74",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l31-75",
+          "text": "かなえたい",
+          "isKeyGrammar": false,
+          "kanji": "叶えたい",
+          "furigana": "かなえたい"
+        },
+        {
+          "id": "d-l31-76",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Cảm ơn cậu nhiều. Tớ muốn thực hiện ước mơ của mình."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n4-31-1",
+      "question": "Thể ý chí của 行きます (nhóm 1, đuôi く) là:",
+      "options": [
+        "行こう",
+        "行よう",
+        "行くう",
+        "行いう"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nhóm 1 đổi đuôi く thành こう: 行く → 行こう.",
+      "hint": "Áp dụng quy tắc đổi hàng う→おう của nhóm 1."
+    },
+    {
+      "id": "ex-q-n4-31-2",
+      "question": "Thể ý chí của 食べます (nhóm 2) là:",
+      "options": [
+        "食べよう",
+        "食べろう",
+        "食べいよう",
+        "食べるよう"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nhóm 2 bỏ る, thêm よう: 食べる → 食べよう.",
+      "hint": "Áp dụng quy tắc nhóm 2."
+    },
+    {
+      "id": "ex-q-n4-31-3",
+      "question": "と思います (N5 bài 21) khác と思っています ở chỗ:",
+      "options": [
+        "と思います là ý kiến/suy nghĩ TỨC THỜI; と思っています là dự định đã ẤP Ủ từ trước",
+        "Hoàn toàn giống nhau",
+        "と思っています chỉ dùng cho quá khứ",
+        "と思います chỉ dùng cho câu hỏi"
+      ],
+      "correctIndex": 0,
+      "explanation": "Điểm khác biệt cốt lõi: thời gian hình thành ý nghĩ — tức thời (と思います) hay đã cân nhắc lâu (と思っています).",
+      "hint": "Xem so sánh ở slide 2."
+    },
+    {
+      "id": "ex-q-n4-31-4",
+      "question": "「大学を卒業したら、先生になろうと思っています」 nghĩa là:",
+      "options": [
+        "Sau khi tốt nghiệp, tôi định trở thành giáo viên (dự định đã ấp ủ)",
+        "Tôi đã là giáo viên rồi",
+        "Tôi không muốn làm giáo viên",
+        "Tôi chưa tốt nghiệp nên không thể làm giáo viên"
+      ],
+      "correctIndex": 0,
+      "explanation": "[Thể ý chí]と思っています diễn tả dự định về nghề nghiệp tương lai đã được cân nhắc.",
+      "hint": "Kết hợp kiến thức たら (N5 bài 25) và と思っています."
+    },
+    {
+      "id": "ex-q-n4-31-5",
+      "question": "「会社をやめることにしました」 khác 「会社をやめようと思っています」 ở mức độ:",
+      "options": [
+        "ことにしました là QUYẾT ĐỊNH đã chốt; と思っています chỉ là Ý ĐỊNH, có thể còn đổi",
+        "Hoàn toàn giống nhau về mức độ chắc chắn",
+        "ことにしました là câu hỏi",
+        "と思っています mạnh hơn ことにしました"
+      ],
+      "correctIndex": 0,
+      "explanation": "ことにします mạnh và dứt khoát hơn nhiều so với と思っています — đây là quyết định đã CHỐT, không còn phân vân.",
+      "hint": "Xem thang mức độ ở slide 4."
+    },
+    {
+      "id": "ex-q-n4-31-6",
+      "question": "「たばこを吸わないことにしました」 — vì sao trước ことに là 吸わない (thể ない)?",
+      "options": [
+        "ことにします ghép được cả với thể từ điển VÀ thể ない để diễn tả quyết định KHÔNG làm gì",
+        "吸わない là lỗi, phải sửa thành 吸う",
+        "ことにします chỉ ghép được với thể ない",
+        "Đây là câu sai ngữ pháp"
+      ],
+      "correctIndex": 0,
+      "explanation": "こと danh từ hóa cả động từ khẳng định lẫn phủ định — ことにします áp dụng được cho cả hai trường hợp.",
+      "hint": "Xem ví dụ 2 ở slide 3."
+    },
+    {
+      "id": "ex-q-n4-31-7",
+      "question": "Sắp xếp bốn cấu trúc theo mức độ TĂNG DẦN sự chắc chắn:",
+      "options": [
+        "Vましょう → Vよう → と思っています → ことにします",
+        "ことにします → と思っています → Vよう → Vましょう",
+        "Cả bốn đều ngang mức độ chắc chắn như nhau",
+        "と思っています → ことにします → Vよう → Vましょう"
+      ],
+      "correctIndex": 0,
+      "explanation": "Từ rủ rê nhẹ nhàng (ましょう), tới ý chí cá nhân (よう), tới dự định cân nhắc (と思っています), tới quyết định chốt (ことにします).",
+      "hint": "Xem tổng kết ở slide 4."
+    },
+    {
+      "id": "ex-q-n4-31-8",
+      "question": "来る (nhóm 3 bất quy tắc) chia thể ý chí là:",
+      "options": [
+        "来よう (こよう)",
+        "来る",
+        "来おう",
+        "来ろう"
+      ],
+      "correctIndex": 0,
+      "explanation": "来る chia bất quy tắc thành 来よう, đọc là こよう — khác âm gốc く hoàn toàn.",
+      "hint": "Đây là động từ bất quy tắc cần học thuộc."
+    },
+    {
+      "id": "ex-q-n4-31-9",
+      "question": "Trong hội thoại, Wang định làm gì sau khi tốt nghiệp đại học?",
+      "options": [
+        "Đi du học ở Nhật Bản",
+        "Đi làm ngay tại quê nhà",
+        "Học tiếp lên thạc sĩ ở nước mình",
+        "Chưa có kế hoạch gì"
+      ],
+      "correctIndex": 0,
+      "explanation": "Wang nói 「日本に留学しようと思っています」.",
+      "hint": "Xem câu thoại thứ 2."
+    },
+    {
+      "id": "ex-q-n4-31-10",
+      "question": "Ước mơ tương lai của Wang là gì?",
+      "options": [
+        "Trở thành giáo viên",
+        "Trở thành bác sĩ",
+        "Trở thành kỹ sư",
+        "Không có ước mơ cụ thể"
+      ],
+      "correctIndex": 0,
+      "explanation": "Wang trả lời 「先生になろうと考えています」.",
+      "hint": "Xem câu thoại thứ 6."
+    }
+  ]
+}

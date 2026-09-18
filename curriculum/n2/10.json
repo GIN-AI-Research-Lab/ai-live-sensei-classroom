@@ -1,0 +1,1338 @@
+{
+  "level": "N2",
+  "lessonNumber": 10,
+  "title": "Bài 10: Căn cứ & Dựa trên (に基づいて & をもとに)",
+  "description": "に基づいて diễn tả việc dựa trên một CĂN CỨ CHÍNH THỨC/KHÁCH QUAN (luật pháp, số liệu, quy tắc) và phải TUÂN THỦ CHÍNH XÁC nội dung đó (dạng bổ nghĩa: に基づく); をもとに diễn tả việc lấy một THÔNG TIN/KINH NGHIỆM làm CƠ SỞ để TẠO RA điều mới, CÓ THỂ biến đổi/sáng tạo (dạng bổ nghĩa: をもとにした) — thường dùng cho tiểu thuyết, phim dựa trên chuyện có thật.",
+  "vocabList": [
+    {
+      "id": "voc-n2-10-1",
+      "word": "とうけい",
+      "kanji": "統計",
+      "furigana": "とうけい",
+      "romaji": "toukei",
+      "wordType": "noun",
+      "meaningVi": "Thống kê",
+      "accentNote": "統計に 基づいて = dựa trên số liệu thống kê."
+    },
+    {
+      "id": "voc-n2-10-2",
+      "word": "きじゅん",
+      "kanji": "基準",
+      "furigana": "きじゅん",
+      "romaji": "kijun",
+      "wordType": "noun",
+      "meaningVi": "Tiêu chuẩn, căn cứ",
+      "accentNote": "基準を つくります = tạo ra tiêu chuẩn."
+    },
+    {
+      "id": "voc-n2-10-3",
+      "word": "しりょう",
+      "kanji": "資料",
+      "furigana": "しりょう",
+      "romaji": "shiryou",
+      "wordType": "noun",
+      "meaningVi": "Tài liệu",
+      "accentNote": "資料を 見ます = xem tài liệu."
+    },
+    {
+      "id": "voc-n2-10-4",
+      "word": "ほうりつ",
+      "kanji": "法律",
+      "furigana": "ほうりつ",
+      "romaji": "houritsu",
+      "wordType": "noun",
+      "meaningVi": "Pháp luật",
+      "accentNote": "法律に 基づいて = dựa trên pháp luật."
+    },
+    {
+      "id": "voc-n2-10-5",
+      "word": "じじつ",
+      "kanji": "事実",
+      "furigana": "じじつ",
+      "romaji": "jijitsu",
+      "wordType": "noun",
+      "meaningVi": "Sự thật",
+      "accentNote": "事実を もとに = lấy sự thật làm cơ sở."
+    },
+    {
+      "id": "voc-n2-10-6",
+      "word": "はんだんします",
+      "kanji": "判断します",
+      "furigana": "はんだんします",
+      "romaji": "handan shimasu",
+      "wordType": "verb",
+      "meaningVi": "Phán đoán, phán xét",
+      "accentNote": "法律に 基づいて 判断します = phán xét dựa trên pháp luật."
+    },
+    {
+      "id": "voc-n2-10-7",
+      "word": "けいけん",
+      "kanji": "経験",
+      "furigana": "けいけん",
+      "romaji": "keiken",
+      "wordType": "noun",
+      "meaningVi": "Kinh nghiệm",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-10-8",
+      "word": "しょうせつ",
+      "kanji": "小説",
+      "furigana": "しょうせつ",
+      "romaji": "shousetsu",
+      "wordType": "noun",
+      "meaningVi": "Tiểu thuyết",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-10-9",
+      "word": "じょうほう",
+      "kanji": "情報",
+      "furigana": "じょうほう",
+      "romaji": "jouhou",
+      "wordType": "noun",
+      "meaningVi": "Thông tin",
+      "accentNote": "Đã gặp N3 bài 7."
+    },
+    {
+      "id": "voc-n2-10-10",
+      "word": "えいが",
+      "kanji": "映画",
+      "furigana": "えいが",
+      "romaji": "eiga",
+      "wordType": "noun",
+      "meaningVi": "Phim",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-10-11",
+      "word": "けいかく",
+      "kanji": "計画",
+      "furigana": "けいかく",
+      "romaji": "keikaku",
+      "wordType": "noun",
+      "meaningVi": "Kế hoạch",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-10-12",
+      "word": "たてます",
+      "kanji": "立てます",
+      "furigana": "たてます",
+      "romaji": "tatemasu",
+      "wordType": "verb",
+      "meaningVi": "Lập, dựng",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-10-13",
+      "word": "つくります",
+      "kanji": "作ります",
+      "furigana": "つくります",
+      "romaji": "tsukurimasu",
+      "wordType": "verb",
+      "meaningVi": "Làm, tạo ra",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-10-14",
+      "word": "かきます",
+      "kanji": "書きます",
+      "furigana": "かきます",
+      "romaji": "kakimasu",
+      "wordType": "verb",
+      "meaningVi": "Viết",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-10-15",
+      "word": "かいしゃ",
+      "kanji": "会社",
+      "furigana": "かいしゃ",
+      "romaji": "kaisha",
+      "wordType": "noun",
+      "meaningVi": "Công ty",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-10-16",
+      "word": "せいじ",
+      "kanji": "政治",
+      "furigana": "せいじ",
+      "romaji": "seiji",
+      "wordType": "noun",
+      "meaningVi": "Chính trị",
+      "accentNote": "Đã gặp N4 bài 40."
+    },
+    {
+      "id": "voc-n2-10-17",
+      "word": "けいざい",
+      "kanji": "経済",
+      "furigana": "けいざい",
+      "romaji": "keizai",
+      "wordType": "noun",
+      "meaningVi": "Kinh tế",
+      "accentNote": "Đã gặp N3 bài 14."
+    },
+    {
+      "id": "voc-n2-10-18",
+      "word": "もんだい",
+      "kanji": "問題",
+      "furigana": "もんだい",
+      "romaji": "mondai",
+      "wordType": "noun",
+      "meaningVi": "Vấn đề",
+      "accentNote": "Đã gặp N5 bài 22."
+    },
+    {
+      "id": "voc-n2-10-19",
+      "word": "かんがえます",
+      "kanji": "考えます",
+      "furigana": "かんがえます",
+      "romaji": "kangaemasu",
+      "wordType": "verb",
+      "meaningVi": "Suy nghĩ",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n2-10-20",
+      "word": "せんせい",
+      "kanji": "先生",
+      "furigana": "せんせい",
+      "romaji": "sensei",
+      "wordType": "noun",
+      "meaningVi": "Giáo viên",
+      "accentNote": "Đã gặp N5 bài 1."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n2-10-1",
+      "character": "法",
+      "hanViet": "PHÁP",
+      "strokeCount": 8,
+      "onyomi": [
+        "ホウ (hou)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Pháp luật, phương pháp.",
+      "commonWords": [
+        {
+          "word": "法律",
+          "furigana": "ほうりつ",
+          "meaningVi": "Pháp luật"
+        },
+        {
+          "word": "方法",
+          "furigana": "ほうほう",
+          "meaningVi": "Phương pháp"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-10-2",
+      "character": "律",
+      "hanViet": "LUẬT",
+      "strokeCount": 9,
+      "onyomi": [
+        "リツ (ritsu)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Luật lệ, kỷ luật.",
+      "commonWords": [
+        {
+          "word": "法律",
+          "furigana": "ほうりつ",
+          "meaningVi": "Pháp luật"
+        },
+        {
+          "word": "規律",
+          "furigana": "きりつ",
+          "meaningVi": "Kỷ luật"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-10-3",
+      "character": "基",
+      "hanViet": "CƠ",
+      "strokeCount": 11,
+      "onyomi": [
+        "キ (ki)"
+      ],
+      "kunyomi": [
+        "もと(づく)"
+      ],
+      "meaningVi": "Nền tảng, cơ sở.",
+      "commonWords": [
+        {
+          "word": "基づいて",
+          "furigana": "もとづいて",
+          "meaningVi": "Dựa trên"
+        },
+        {
+          "word": "基準",
+          "furigana": "きじゅん",
+          "meaningVi": "Tiêu chuẩn"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-10-4",
+      "character": "準",
+      "hanViet": "CHUẨN",
+      "strokeCount": 13,
+      "onyomi": [
+        "ジュン (jun)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Chuẩn mực, dựa theo.",
+      "commonWords": [
+        {
+          "word": "基準",
+          "furigana": "きじゅん",
+          "meaningVi": "Tiêu chuẩn"
+        },
+        {
+          "word": "準備",
+          "furigana": "じゅんび",
+          "meaningVi": "Chuẩn bị"
+        }
+      ]
+    },
+    {
+      "id": "kan-n2-10-5",
+      "character": "統",
+      "hanViet": "THỐNG",
+      "strokeCount": 12,
+      "onyomi": [
+        "トウ (tou)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Thống kê, hệ thống.",
+      "commonWords": [
+        {
+          "word": "統計",
+          "furigana": "とうけい",
+          "meaningVi": "Thống kê"
+        },
+        {
+          "word": "伝統",
+          "furigana": "でんとう",
+          "meaningVi": "Truyền thống"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n2-l10-s1",
+      "slideType": "grammar",
+      "title": "1. Dựa trên căn cứ chính thức (khách quan): N + に基づいて",
+      "grammarFormula": "N(căn cứ chính thức: luật, số liệu, quy tắc) + に基づいて、[hành động/quyết định]",
+      "explanation": "に基づいて diễn tả 'DỰA TRÊN' một CĂN CỨ CHÍNH THỨC/KHÁCH QUAN (luật pháp, số liệu thống kê, quy tắc) — trang trọng, nhấn TÍNH CHÍNH XÁC, KHÔNG được tự ý thay đổi nội dung của căn cứ đó.",
+      "teacherTips": "に基づいて thường dùng trong văn bản pháp lý, báo cáo chính thức — hàm ý phải TUÂN THỦ ĐÚNG nội dung của căn cứ, không sáng tạo thêm.",
+      "culturalNotes": "Văn bản pháp luật Nhật hay ghi: '本法律に基づいて、規則を定める' (dựa trên luật này, quy định được ban hành).",
+      "examples": [
+        {
+          "id": "ex-n2-l10-s1-1",
+          "tokens": [
+            {
+              "id": "t-l10s1-1",
+              "text": "ほうりつ",
+              "isKeyGrammar": true,
+              "kanji": "法律",
+              "furigana": "ほうりつ"
+            },
+            {
+              "id": "t-l10s1-2",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l10s1-3",
+              "text": "もとづいて",
+              "isKeyGrammar": true,
+              "kanji": "基づいて",
+              "furigana": "もとづいて"
+            },
+            {
+              "id": "t-l10s1-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l10s1-5",
+              "text": "はんだん",
+              "isKeyGrammar": true,
+              "kanji": "判断",
+              "furigana": "はんだん"
+            },
+            {
+              "id": "t-l10s1-6",
+              "text": "します",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Phán xét dựa trên pháp luật."
+        },
+        {
+          "id": "ex-n2-l10-s1-2",
+          "tokens": [
+            {
+              "id": "t-l10s1-7",
+              "text": "とうけい",
+              "isKeyGrammar": true,
+              "kanji": "統計",
+              "furigana": "とうけい"
+            },
+            {
+              "id": "t-l10s1-8",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l10s1-9",
+              "text": "もとづいて",
+              "isKeyGrammar": true,
+              "kanji": "基づいて",
+              "furigana": "もとづいて"
+            },
+            {
+              "id": "t-l10s1-10",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l10s1-11",
+              "text": "けいかく",
+              "isKeyGrammar": true,
+              "kanji": "計画",
+              "furigana": "けいかく"
+            },
+            {
+              "id": "t-l10s1-12",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l10s1-13",
+              "text": "たてます",
+              "isKeyGrammar": false,
+              "kanji": "立てます",
+              "furigana": "たてます"
+            }
+          ],
+          "meaningVi": "Lập kế hoạch dựa trên số liệu thống kê."
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l10-s2",
+      "slideType": "grammar",
+      "title": "2. Lấy làm cơ sở sáng tạo (có thể biến đổi): N + をもとに",
+      "grammarFormula": "N(nguồn tham khảo: sự thật, kinh nghiệm, thông tin) + をもとに、[tạo ra điều mới]",
+      "explanation": "をもとに diễn tả việc LẤY một THÔNG TIN/Ý TƯỞNG/KINH NGHIỆM làm CƠ SỞ để TẠO RA điều gì đó MỚI — phạm vi rộng hơn に基づいて, cho phép THAY ĐỔI, BIẾN ĐỔI, sáng tạo dựa trên nguồn đó.",
+      "teacherTips": "をもとに thường dùng cho tác phẩm SÁNG TẠO (tiểu thuyết, phim) 'dựa trên câu chuyện có thật' — nội dung có thể được HƯ CẤU thêm.",
+      "culturalNotes": "Áp phích phim Nhật hay ghi: '実話をもとにした映画' (bộ phim dựa trên câu chuyện có thật) — hàm ý có thể đã được biên kịch sáng tạo thêm.",
+      "examples": [
+        {
+          "id": "ex-n2-l10-s2-1",
+          "tokens": [
+            {
+              "id": "t-l10s2-1",
+              "text": "じじつ",
+              "isKeyGrammar": true,
+              "kanji": "事実",
+              "furigana": "じじつ"
+            },
+            {
+              "id": "t-l10s2-2",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l10s2-3",
+              "text": "もとに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l10s2-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l10s2-5",
+              "text": "しょうせつ",
+              "isKeyGrammar": true,
+              "kanji": "小説",
+              "furigana": "しょうせつ"
+            },
+            {
+              "id": "t-l10s2-6",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l10s2-7",
+              "text": "かきました",
+              "isKeyGrammar": false,
+              "kanji": "書きました",
+              "furigana": "かきました"
+            }
+          ],
+          "meaningVi": "Dựa trên sự thật, đã viết tiểu thuyết."
+        },
+        {
+          "id": "ex-n2-l10-s2-2",
+          "tokens": [
+            {
+              "id": "t-l10s2-8",
+              "text": "けいけん",
+              "isKeyGrammar": true,
+              "kanji": "経験",
+              "furigana": "けいけん"
+            },
+            {
+              "id": "t-l10s2-9",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l10s2-10",
+              "text": "もとに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l10s2-11",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l10s2-12",
+              "text": "ほん",
+              "isKeyGrammar": false,
+              "kanji": "本",
+              "furigana": "ほん"
+            },
+            {
+              "id": "t-l10s2-13",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l10s2-14",
+              "text": "つくりました",
+              "isKeyGrammar": false,
+              "kanji": "作りました",
+              "furigana": "つくりました"
+            }
+          ],
+          "meaningVi": "Dựa trên kinh nghiệm, đã làm sách."
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l10-s3",
+      "slideType": "grammar",
+      "title": "3. So sánh に基づいて và をもとに",
+      "grammarFormula": "に基づいて: căn cứ CHÍNH THỨC, KHÔNG đổi nội dung　vs　をもとに: nguồn THAM KHẢO, CÓ THỂ biến đổi/sáng tạo",
+      "explanation": "に基づいて yêu cầu TUÂN THỦ CHÍNH XÁC nội dung của căn cứ (luật, số liệu) — sai lệch là vi phạm; をもとに chỉ LẤY CẢM HỨNG/THÔNG TIN làm điểm khởi đầu, kết quả cuối có thể khác nhiều so với nguồn gốc (như tiểu thuyết hư cấu từ sự thật).",
+      "teacherTips": "Mẹo: nếu KHÔNG ĐƯỢC sai lệch với căn cứ (luật, quy tắc, số liệu) → に基づいて; nếu là NGUỒN CẢM HỨNG cho sáng tạo → をもとに.",
+      "culturalNotes": "Cả hai đều là ngữ pháp N2 trọng điểm — nhầm lẫn giữa chúng trong văn bản pháp lý có thể gây hiểu lầm nghiêm trọng về tính ràng buộc.",
+      "examples": [
+        {
+          "id": "ex-n2-l10-s3-1",
+          "tokens": [
+            {
+              "id": "t-l10s3-1",
+              "text": "きじゅん",
+              "isKeyGrammar": true,
+              "kanji": "基準",
+              "furigana": "きじゅん"
+            },
+            {
+              "id": "t-l10s3-2",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l10s3-3",
+              "text": "もとづいて",
+              "isKeyGrammar": true,
+              "kanji": "基づいて",
+              "furigana": "もとづいて"
+            },
+            {
+              "id": "t-l10s3-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l10s3-5",
+              "text": "せいじ",
+              "isKeyGrammar": true,
+              "kanji": "政治",
+              "furigana": "せいじ"
+            },
+            {
+              "id": "t-l10s3-6",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l10s3-7",
+              "text": "もんだい",
+              "isKeyGrammar": true,
+              "kanji": "問題",
+              "furigana": "もんだい"
+            },
+            {
+              "id": "t-l10s3-8",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l10s3-9",
+              "text": "はんだん",
+              "isKeyGrammar": true,
+              "kanji": "判断",
+              "furigana": "はんだん"
+            },
+            {
+              "id": "t-l10s3-10",
+              "text": "します",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Phán xét vấn đề chính trị dựa trên tiêu chuẩn (chính xác, không đổi)."
+        },
+        {
+          "id": "ex-n2-l10-s3-2",
+          "tokens": [
+            {
+              "id": "t-l10s3-11",
+              "text": "しりょう",
+              "isKeyGrammar": true,
+              "kanji": "資料",
+              "furigana": "しりょう"
+            },
+            {
+              "id": "t-l10s3-12",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l10s3-13",
+              "text": "もとに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l10s3-14",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l10s3-15",
+              "text": "えいが",
+              "isKeyGrammar": true,
+              "kanji": "映画",
+              "furigana": "えいが"
+            },
+            {
+              "id": "t-l10s3-16",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l10s3-17",
+              "text": "つくりました",
+              "isKeyGrammar": false,
+              "kanji": "作りました",
+              "furigana": "つくりました"
+            }
+          ],
+          "meaningVi": "Dựa trên tài liệu, đã làm phim (có thể sáng tạo thêm)."
+        }
+      ]
+    },
+    {
+      "slideId": "n2-l10-s4",
+      "slideType": "grammar",
+      "title": "4. Dạng bổ nghĩa danh từ: に基づく N / をもとにした N",
+      "grammarFormula": "N1に基づくN2　　N1をもとにしたN2",
+      "explanation": "Khi cần bổ nghĩa TRỰC TIẾP cho một danh từ, に基づいて đổi thành に基づく; をもとに đổi thành をもとにした — cả hai đứng ngay trước danh từ mà chúng bổ nghĩa.",
+      "teacherTips": "に基づく (không có した) khác をもとにした (luôn cần した) — đây là điểm dễ nhầm lẫn về mặt hình thái học.",
+      "culturalNotes": "Tựa đề sách, phim ở Nhật thường ghi rõ: '実話に基づく物語' (câu chuyện dựa trên chuyện có thật, sát thực tế) khác với '実話をもとにした物語' (dựa trên chuyện có thật nhưng có hư cấu).",
+      "examples": [
+        {
+          "id": "ex-n2-l10-s4-1",
+          "tokens": [
+            {
+              "id": "t-l10s4-1",
+              "text": "じょうほう",
+              "isKeyGrammar": true,
+              "kanji": "情報",
+              "furigana": "じょうほう"
+            },
+            {
+              "id": "t-l10s4-2",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l10s4-3",
+              "text": "もとづく",
+              "isKeyGrammar": true,
+              "kanji": "基づく",
+              "furigana": "もとづく"
+            },
+            {
+              "id": "t-l10s4-4",
+              "text": "はんだん",
+              "isKeyGrammar": true,
+              "kanji": "判断",
+              "furigana": "はんだん"
+            }
+          ],
+          "meaningVi": "Sự phán đoán dựa trên thông tin."
+        },
+        {
+          "id": "ex-n2-l10-s4-2",
+          "tokens": [
+            {
+              "id": "t-l10s4-5",
+              "text": "じじつ",
+              "isKeyGrammar": true,
+              "kanji": "事実",
+              "furigana": "じじつ"
+            },
+            {
+              "id": "t-l10s4-6",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l10s4-7",
+              "text": "もとに",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l10s4-8",
+              "text": "した",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l10s4-9",
+              "text": "しょうせつ",
+              "isKeyGrammar": true,
+              "kanji": "小説",
+              "furigana": "しょうせつ"
+            }
+          ],
+          "meaningVi": "Cuốn tiểu thuyết dựa trên sự thật."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n2-10-1",
+      "speaker": "田中",
+      "speakerRole": "Sinh viên luật",
+      "tokens": [
+        {
+          "id": "d10-1",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-2",
+          "text": "もんだい",
+          "isKeyGrammar": true,
+          "kanji": "問題",
+          "furigana": "もんだい"
+        },
+        {
+          "id": "d10-3",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-4",
+          "text": "どう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-5",
+          "text": "はんだん",
+          "isKeyGrammar": true,
+          "kanji": "判断",
+          "furigana": "はんだん"
+        },
+        {
+          "id": "d10-6",
+          "text": "しますか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vấn đề này sẽ phán xét như thế nào?"
+    },
+    {
+      "id": "dia-n2-10-2",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên luật",
+      "tokens": [
+        {
+          "id": "d10-7",
+          "text": "ほうりつ",
+          "isKeyGrammar": true,
+          "kanji": "法律",
+          "furigana": "ほうりつ"
+        },
+        {
+          "id": "d10-8",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d10-9",
+          "text": "もとづいて",
+          "isKeyGrammar": true,
+          "kanji": "基づいて",
+          "furigana": "もとづいて"
+        },
+        {
+          "id": "d10-10",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-11",
+          "text": "はんだん",
+          "isKeyGrammar": true,
+          "kanji": "判断",
+          "furigana": "はんだん"
+        },
+        {
+          "id": "d10-12",
+          "text": "します",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Sẽ phán xét dựa trên pháp luật."
+    },
+    {
+      "id": "dia-n2-10-3",
+      "speaker": "田中",
+      "speakerRole": "Sinh viên luật",
+      "tokens": [
+        {
+          "id": "d10-13",
+          "text": "とうけい",
+          "isKeyGrammar": true,
+          "kanji": "統計",
+          "furigana": "とうけい"
+        },
+        {
+          "id": "d10-14",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-15",
+          "text": "しりょう",
+          "isKeyGrammar": true,
+          "kanji": "資料",
+          "furigana": "しりょう"
+        },
+        {
+          "id": "d10-16",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-17",
+          "text": "つかいます",
+          "isKeyGrammar": false,
+          "kanji": "使います",
+          "furigana": "つかいます"
+        },
+        {
+          "id": "d10-18",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Có dùng cả tài liệu thống kê không?"
+    },
+    {
+      "id": "dia-n2-10-4",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên luật",
+      "tokens": [
+        {
+          "id": "d10-19",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-20",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-21",
+          "text": "とうけい",
+          "isKeyGrammar": true,
+          "kanji": "統計",
+          "furigana": "とうけい"
+        },
+        {
+          "id": "d10-22",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d10-23",
+          "text": "もとづいて",
+          "isKeyGrammar": true,
+          "kanji": "基づいて",
+          "furigana": "もとづいて"
+        },
+        {
+          "id": "d10-24",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-25",
+          "text": "けいかく",
+          "isKeyGrammar": true,
+          "kanji": "計画",
+          "furigana": "けいかく"
+        },
+        {
+          "id": "d10-26",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-27",
+          "text": "たてます",
+          "isKeyGrammar": false,
+          "kanji": "立てます",
+          "furigana": "たてます"
+        }
+      ],
+      "meaningVi": "Vâng. Sẽ lập kế hoạch dựa trên số liệu thống kê."
+    },
+    {
+      "id": "dia-n2-10-5",
+      "speaker": "田中",
+      "speakerRole": "Sinh viên luật",
+      "tokens": [
+        {
+          "id": "d10-28",
+          "text": "きじゅん",
+          "isKeyGrammar": true,
+          "kanji": "基準",
+          "furigana": "きじゅん"
+        },
+        {
+          "id": "d10-29",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-30",
+          "text": "なん",
+          "isKeyGrammar": false,
+          "kanji": "何",
+          "furigana": "なん"
+        },
+        {
+          "id": "d10-31",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d10-32",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Tiêu chuẩn là gì?"
+    },
+    {
+      "id": "dia-n2-10-6",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên luật",
+      "tokens": [
+        {
+          "id": "d10-33",
+          "text": "けいざい",
+          "isKeyGrammar": true,
+          "kanji": "経済",
+          "furigana": "けいざい"
+        },
+        {
+          "id": "d10-34",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-35",
+          "text": "きじゅん",
+          "isKeyGrammar": true,
+          "kanji": "基準",
+          "furigana": "きじゅん"
+        },
+        {
+          "id": "d10-36",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Là tiêu chuẩn kinh tế."
+    },
+    {
+      "id": "dia-n2-10-7",
+      "speaker": "田中",
+      "speakerRole": "Sinh viên luật",
+      "tokens": [
+        {
+          "id": "d10-37",
+          "text": "せんせい",
+          "isKeyGrammar": true,
+          "kanji": "先生",
+          "furigana": "せんせい"
+        },
+        {
+          "id": "d10-38",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-39",
+          "text": "じじつ",
+          "isKeyGrammar": true,
+          "kanji": "事実",
+          "furigana": "じじつ"
+        },
+        {
+          "id": "d10-40",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-41",
+          "text": "もとに",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d10-42",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-43",
+          "text": "しょうせつ",
+          "isKeyGrammar": true,
+          "kanji": "小説",
+          "furigana": "しょうせつ"
+        },
+        {
+          "id": "d10-44",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-45",
+          "text": "かきました",
+          "isKeyGrammar": false,
+          "kanji": "書きました",
+          "furigana": "かきました"
+        }
+      ],
+      "meaningVi": "Thầy giáo đã lấy sự thật làm cơ sở, viết tiểu thuyết."
+    },
+    {
+      "id": "dia-n2-10-8",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên luật",
+      "tokens": [
+        {
+          "id": "d10-46",
+          "text": "その",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-47",
+          "text": "しょうせつ",
+          "isKeyGrammar": true,
+          "kanji": "小説",
+          "furigana": "しょうせつ"
+        },
+        {
+          "id": "d10-48",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-49",
+          "text": "えいが",
+          "isKeyGrammar": true,
+          "kanji": "映画",
+          "furigana": "えいが"
+        },
+        {
+          "id": "d10-50",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-51",
+          "text": "なりました",
+          "isKeyGrammar": false,
+          "kanji": "成りました",
+          "furigana": "なりました"
+        },
+        {
+          "id": "d10-52",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Tiểu thuyết đó có được chuyển thành phim không?"
+    },
+    {
+      "id": "dia-n2-10-9",
+      "speaker": "田中",
+      "speakerRole": "Sinh viên luật",
+      "tokens": [
+        {
+          "id": "d10-53",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-54",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-55",
+          "text": "けいけん",
+          "isKeyGrammar": true,
+          "kanji": "経験",
+          "furigana": "けいけん"
+        },
+        {
+          "id": "d10-56",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-57",
+          "text": "もとに",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d10-58",
+          "text": "した",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-59",
+          "text": "えいが",
+          "isKeyGrammar": true,
+          "kanji": "映画",
+          "furigana": "えいが"
+        },
+        {
+          "id": "d10-60",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng. Là bộ phim dựa trên kinh nghiệm."
+    },
+    {
+      "id": "dia-n2-10-10",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên luật",
+      "tokens": [
+        {
+          "id": "d10-61",
+          "text": "おもしろい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-62",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d10-63",
+          "text": "ね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-64",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d10-65",
+          "text": "かんがえて",
+          "isKeyGrammar": false,
+          "kanji": "考えて",
+          "furigana": "かんがえて"
+        },
+        {
+          "id": "d10-66",
+          "text": "みます",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Thú vị nhỉ. Tôi sẽ thử suy nghĩ về nó."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n2-10-1",
+      "question": "「法律に基づいて、判断します」 — に基づいて diễn tả điều gì?",
+      "options": [
+        "Dựa trên một căn cứ chính thức/khách quan, phải tuân thủ chính xác",
+        "Lấy làm cơ sở để sáng tạo, có thể biến đổi",
+        "Sự khẳng định chắc chắn",
+        "Sự phủ định hoàn toàn"
+      ],
+      "correctIndex": 0,
+      "explanation": "に基づいて diễn tả việc dựa trên một CĂN CỨ CHÍNH THỨC (luật) và phải TUÂN THỦ CHÍNH XÁC nội dung đó.",
+      "hint": "Xem cấu trúc に基づいて ở slide 1."
+    },
+    {
+      "id": "ex-q-n2-10-2",
+      "question": "「事実をもとに、小説を書きました」 — をもとに khác に基づいて ở điểm nào?",
+      "options": [
+        "をもとに cho phép BIẾN ĐỔI/sáng tạo dựa trên nguồn tham khảo, không cần chính xác tuyệt đối",
+        "Hoàn toàn giống nhau, dùng thay thế được cho nhau",
+        "をもとに chỉ dùng cho câu hỏi",
+        "に基づいて chỉ dùng cho phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "をもとに chỉ lấy nguồn làm CẢM HỨNG/điểm khởi đầu, kết quả có thể khác nhiều so với nguồn gốc (hư cấu).",
+      "hint": "Xem giải thích をもとに ở slide 2."
+    },
+    {
+      "id": "ex-q-n2-10-3",
+      "question": "Có thể thay đổi nội dung của căn cứ khi dùng に基づいて không?",
+      "options": [
+        "Không, に基づいて yêu cầu TUÂN THỦ CHÍNH XÁC nội dung căn cứ",
+        "Có, thay đổi thoải mái",
+        "Chỉ được thay đổi một phần nhỏ",
+        "Không có quy tắc nào về việc này"
+      ],
+      "correctIndex": 0,
+      "explanation": "に基づいて mang tính PHÁP LÝ/KHÁCH QUAN, không được tự ý thay đổi nội dung của căn cứ (luật, số liệu).",
+      "hint": "Xem lưu ý ngữ pháp ở slide 1."
+    },
+    {
+      "id": "ex-q-n2-10-4",
+      "question": "Dạng bổ nghĩa danh từ của に基づいて là gì?",
+      "options": [
+        "に基づく (không có した)",
+        "に基づいたした",
+        "に基づいてな",
+        "Không có dạng bổ nghĩa danh từ"
+      ],
+      "correctIndex": 0,
+      "explanation": "に基づいて khi bổ nghĩa danh từ đổi thành に基づく: 情報に基づく判断 (sự phán đoán dựa trên thông tin).",
+      "hint": "Xem quy tắc ở slide 4."
+    },
+    {
+      "id": "ex-q-n2-10-5",
+      "question": "Dạng bổ nghĩa danh từ của をもとに là gì?",
+      "options": [
+        "をもとにした (luôn cần した)",
+        "をもとにする",
+        "をもとにて",
+        "Không có dạng bổ nghĩa danh từ"
+      ],
+      "correctIndex": 0,
+      "explanation": "をもとに khi bổ nghĩa danh từ cần thêm した: 事実をもとにした小説 (tiểu thuyết dựa trên sự thật).",
+      "hint": "Xem quy tắc ở slide 4."
+    },
+    {
+      "id": "ex-q-n2-10-6",
+      "question": "「実話をもとにした映画」 nghĩa là:",
+      "options": [
+        "Bộ phim dựa trên câu chuyện có thật (có thể đã được hư cấu thêm)",
+        "Bộ phim hoàn toàn là sự thật, không có hư cấu",
+        "Bộ phim không liên quan gì đến sự thật",
+        "Bộ phim đã bị cấm chiếu"
+      ],
+      "correctIndex": 0,
+      "explanation": "をもとにした ngụ ý phim LẤY CẢM HỨNG từ câu chuyện thật nhưng có thể đã được biên kịch sáng tạo thêm.",
+      "hint": "Xem văn hóa sử dụng ở slide 2."
+    },
+    {
+      "id": "ex-q-n2-10-7",
+      "question": "「統計に基づいて、計画を立てます」 nghĩa là:",
+      "options": [
+        "Lập kế hoạch dựa trên số liệu thống kê (chính xác, khách quan)",
+        "Lập kế hoạch mà không cần căn cứ gì",
+        "Số liệu thống kê không quan trọng",
+        "Kế hoạch đã bị hủy bỏ"
+      ],
+      "correctIndex": 0,
+      "explanation": "に基づいて ở đây nhấn việc kế hoạch phải PHÙ HỢP CHÍNH XÁC với số liệu thống kê đã có.",
+      "hint": "Áp dụng cấu trúc Nに基づいて cho ngữ cảnh câu."
+    },
+    {
+      "id": "ex-q-n2-10-8",
+      "question": "Theo hội thoại, Santos sẽ phán xét vấn đề dựa trên gì?",
+      "options": [
+        "Pháp luật (法律に基づいて、判断します)",
+        "Cảm tính cá nhân",
+        "Ý kiến của bạn bè",
+        "Không có căn cứ nào"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「法律に基づいて、判断します」.",
+      "hint": "Xem câu thoại thứ 2."
+    },
+    {
+      "id": "ex-q-n2-10-9",
+      "question": "Thầy giáo đã viết tiểu thuyết dựa trên điều gì?",
+      "options": [
+        "Sự thật (事実をもとに、小説を書きました)",
+        "Trí tưởng tượng hoàn toàn",
+        "Không viết tiểu thuyết nào",
+        "Dựa trên luật pháp"
+      ],
+      "correctIndex": 0,
+      "explanation": "田中 nói 「先生は事実をもとに、小説を書きました」.",
+      "hint": "Xem câu thoại thứ 7."
+    },
+    {
+      "id": "ex-q-n2-10-10",
+      "question": "Bộ phim được nhắc đến trong hội thoại dựa trên điều gì?",
+      "options": [
+        "Kinh nghiệm (経験をもとにした映画です)",
+        "Số liệu thống kê",
+        "Luật pháp",
+        "Không được chuyển thể thành phim"
+      ],
+      "correctIndex": 0,
+      "explanation": "田中 nói 「経験をもとにした映画です」.",
+      "hint": "Xem câu thoại thứ 9."
+    }
+  ]
+}

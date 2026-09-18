@@ -1,0 +1,1528 @@
+{
+  "level": "N5",
+  "lessonNumber": 8,
+  "title": "Bài 8: Tính từ đuôi な và Tính từ đuôi い",
+  "description": "Phân biệt hai loại tính từ theo cách chia (い → くない, な → じゃ ありません), quy tắc な bắt buộc khi bổ nghĩa trực tiếp cho danh từ, các ngoại lệ いい/きれい, và cách dùng phó từ mức độ とても/あまり.",
+  "vocabList": [
+    {
+      "id": "voc-n5-8-1",
+      "word": "おおきい",
+      "kanji": "大きい",
+      "furigana": "おおきい",
+      "romaji": "ookii",
+      "wordType": "adjective",
+      "meaningVi": "To, lớn",
+      "accentNote": "Tính từ đuôi い. Trái nghĩa: 小さい."
+    },
+    {
+      "id": "voc-n5-8-2",
+      "word": "ちいさい",
+      "kanji": "小さい",
+      "furigana": "ちいさい",
+      "romaji": "chiisai",
+      "wordType": "adjective",
+      "meaningVi": "Nhỏ, bé",
+      "accentNote": "Tính từ đuôi い."
+    },
+    {
+      "id": "voc-n5-8-3",
+      "word": "あたらしい",
+      "kanji": "新しい",
+      "furigana": "あたらしい",
+      "romaji": "atarashii",
+      "wordType": "adjective",
+      "meaningVi": "Mới",
+      "accentNote": "Tính từ đuôi い. Chỉ dùng cho ĐỒ VẬT, không dùng cho người mới quen."
+    },
+    {
+      "id": "voc-n5-8-4",
+      "word": "ふるい",
+      "kanji": "古い",
+      "furigana": "ふるい",
+      "romaji": "furui",
+      "wordType": "adjective",
+      "meaningVi": "Cũ, cổ",
+      "accentNote": "Tính từ đuôi い. Không dùng để chê tuổi người."
+    },
+    {
+      "id": "voc-n5-8-5",
+      "word": "いい／よい",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "ii/yoi",
+      "wordType": "adjective",
+      "meaningVi": "Tốt, hay, được",
+      "accentNote": "Tính từ đuôi い BẤT QUY TẮC: phủ định phải chia từ よい (よくない), không chia từ いい."
+    },
+    {
+      "id": "voc-n5-8-6",
+      "word": "わるい",
+      "kanji": "悪い",
+      "furigana": "わるい",
+      "romaji": "warui",
+      "wordType": "adjective",
+      "meaningVi": "Xấu, tệ, có lỗi",
+      "accentNote": "Tính từ đuôi い. すみません có gốc liên quan đến 悪い."
+    },
+    {
+      "id": "voc-n5-8-7",
+      "word": "あつい",
+      "kanji": "暑い",
+      "furigana": "あつい",
+      "romaji": "atsui",
+      "wordType": "adjective",
+      "meaningVi": "Nóng (thời tiết)",
+      "accentNote": "Tính từ đuôi い. Nóng của VẬT dùng chữ 熱い khác."
+    },
+    {
+      "id": "voc-n5-8-8",
+      "word": "さむい",
+      "kanji": "寒い",
+      "furigana": "さむい",
+      "romaji": "samui",
+      "wordType": "adjective",
+      "meaningVi": "Lạnh (thời tiết)",
+      "accentNote": "Tính từ đuôi い. Lạnh của VẬT dùng chữ 冷たい khác."
+    },
+    {
+      "id": "voc-n5-8-9",
+      "word": "むずかしい",
+      "kanji": "難しい",
+      "furigana": "むずかしい",
+      "romaji": "muzukashii",
+      "wordType": "adjective",
+      "meaningVi": "Khó",
+      "accentNote": "Tính từ đuôi い."
+    },
+    {
+      "id": "voc-n5-8-10",
+      "word": "やさしい",
+      "kanji": "易しい",
+      "furigana": "やさしい",
+      "romaji": "yasashii",
+      "wordType": "adjective",
+      "meaningVi": "Dễ, đơn giản",
+      "accentNote": "Tính từ đuôi い. Đồng âm với 優しい (dịu dàng) nhưng nghĩa khác."
+    },
+    {
+      "id": "voc-n5-8-11",
+      "word": "たかい",
+      "kanji": "高い",
+      "furigana": "たかい",
+      "romaji": "takai",
+      "wordType": "adjective",
+      "meaningVi": "Cao; đắt",
+      "accentNote": "Tính từ đuôi い. Vừa nghĩa chiều cao vừa nghĩa giá tiền."
+    },
+    {
+      "id": "voc-n5-8-12",
+      "word": "やすい",
+      "kanji": "安い",
+      "furigana": "やすい",
+      "romaji": "yasui",
+      "wordType": "adjective",
+      "meaningVi": "Rẻ",
+      "accentNote": "Tính từ đuôi い. Trái nghĩa với 高い (nghĩa giá tiền)."
+    },
+    {
+      "id": "voc-n5-8-13",
+      "word": "おもしろい",
+      "kanji": "面白い",
+      "furigana": "おもしろい",
+      "romaji": "omoshiroi",
+      "wordType": "adjective",
+      "meaningVi": "Thú vị, hay",
+      "accentNote": "Tính từ đuôi い."
+    },
+    {
+      "id": "voc-n5-8-14",
+      "word": "たのしい",
+      "kanji": "楽しい",
+      "furigana": "たのしい",
+      "romaji": "tanoshii",
+      "wordType": "adjective",
+      "meaningVi": "Vui vẻ",
+      "accentNote": "Tính từ đuôi い."
+    },
+    {
+      "id": "voc-n5-8-15",
+      "word": "いそがしい",
+      "kanji": "忙しい",
+      "furigana": "いそがしい",
+      "romaji": "isogashii",
+      "wordType": "adjective",
+      "meaningVi": "Bận rộn",
+      "accentNote": "Tính từ đuôi い."
+    },
+    {
+      "id": "voc-n5-8-16",
+      "word": "おいしい",
+      "kanji": "美味しい",
+      "furigana": "おいしい",
+      "romaji": "oishii",
+      "wordType": "adjective",
+      "meaningVi": "Ngon",
+      "accentNote": "Tính từ đuôi い."
+    },
+    {
+      "id": "voc-n5-8-17",
+      "word": "きれい",
+      "kanji": "綺麗",
+      "furigana": "きれい",
+      "romaji": "kirei",
+      "wordType": "adjective",
+      "meaningVi": "Đẹp, sạch sẽ",
+      "accentNote": "Tính từ đuôi な dù kết thúc bằng い — NGOẠI LỆ phải nhớ riêng."
+    },
+    {
+      "id": "voc-n5-8-18",
+      "word": "げんき",
+      "kanji": "元気",
+      "furigana": "げんき",
+      "romaji": "genki",
+      "wordType": "adjective",
+      "meaningVi": "Khỏe mạnh, năng động",
+      "accentNote": "Tính từ đuôi な. お元気ですか = anh/chị khỏe không."
+    },
+    {
+      "id": "voc-n5-8-19",
+      "word": "しずか",
+      "kanji": "静か",
+      "furigana": "しずか",
+      "romaji": "shizuka",
+      "wordType": "adjective",
+      "meaningVi": "Yên tĩnh",
+      "accentNote": "Tính từ đuôi な."
+    },
+    {
+      "id": "voc-n5-8-20",
+      "word": "ゆうめい",
+      "kanji": "有名",
+      "furigana": "ゆうめい",
+      "romaji": "yuumei",
+      "wordType": "adjective",
+      "meaningVi": "Nổi tiếng",
+      "accentNote": "Tính từ đuôi な."
+    },
+    {
+      "id": "voc-n5-8-21",
+      "word": "べんり",
+      "kanji": "便利",
+      "furigana": "べんり",
+      "romaji": "benri",
+      "wordType": "adjective",
+      "meaningVi": "Tiện lợi",
+      "accentNote": "Tính từ đuôi な. Trái nghĩa: 不便 (ふべん)."
+    },
+    {
+      "id": "voc-n5-8-22",
+      "word": "とても",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "totemo",
+      "wordType": "adverb",
+      "meaningVi": "Rất",
+      "accentNote": "Đứng trước tính từ, không dùng với thể phủ định."
+    },
+    {
+      "id": "voc-n5-8-23",
+      "word": "あまり",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "amari",
+      "wordType": "adverb",
+      "meaningVi": "Không mấy, không lắm",
+      "accentNote": "CHỈ dùng với thể PHỦ ĐỊNH: あまり 大きくないです."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n5-8-1",
+      "character": "大",
+      "hanViet": "ĐẠI",
+      "strokeCount": 3,
+      "onyomi": [
+        "ダイ (dai)",
+        "タイ (tai)"
+      ],
+      "kunyomi": [
+        "おお(きい)"
+      ],
+      "meaningVi": "To lớn. Hình người dang rộng tay chân.",
+      "commonWords": [
+        {
+          "word": "大きい",
+          "furigana": "おおきい",
+          "meaningVi": "To"
+        },
+        {
+          "word": "大学",
+          "furigana": "だいがく",
+          "meaningVi": "Đại học"
+        },
+        {
+          "word": "大丈夫",
+          "furigana": "だいじょうぶ",
+          "meaningVi": "Ổn, không sao"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-8-2",
+      "character": "小",
+      "hanViet": "TIỂU",
+      "strokeCount": 3,
+      "onyomi": [
+        "ショウ (shou)"
+      ],
+      "kunyomi": [
+        "ちい(さい)",
+        "こ"
+      ],
+      "meaningVi": "Nhỏ bé.",
+      "commonWords": [
+        {
+          "word": "小さい",
+          "furigana": "ちいさい",
+          "meaningVi": "Nhỏ"
+        },
+        {
+          "word": "小学校",
+          "furigana": "しょうがっこう",
+          "meaningVi": "Trường tiểu học"
+        },
+        {
+          "word": "小説",
+          "furigana": "しょうせつ",
+          "meaningVi": "Tiểu thuyết"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-8-3",
+      "character": "新",
+      "hanViet": "TÂN",
+      "strokeCount": 13,
+      "onyomi": [
+        "シン (shin)"
+      ],
+      "kunyomi": [
+        "あたら(しい)",
+        "あら(た)"
+      ],
+      "meaningVi": "Mới.",
+      "commonWords": [
+        {
+          "word": "新しい",
+          "furigana": "あたらしい",
+          "meaningVi": "Mới"
+        },
+        {
+          "word": "新聞",
+          "furigana": "しんぶん",
+          "meaningVi": "Báo"
+        },
+        {
+          "word": "新幹線",
+          "furigana": "しんかんせん",
+          "meaningVi": "Tàu Shinkansen"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-8-4",
+      "character": "古",
+      "hanViet": "CỔ",
+      "strokeCount": 5,
+      "onyomi": [
+        "コ (ko)"
+      ],
+      "kunyomi": [
+        "ふる(い)"
+      ],
+      "meaningVi": "Cũ, xưa.",
+      "commonWords": [
+        {
+          "word": "古い",
+          "furigana": "ふるい",
+          "meaningVi": "Cũ"
+        },
+        {
+          "word": "古本",
+          "furigana": "ふるほん",
+          "meaningVi": "Sách cũ"
+        },
+        {
+          "word": "中古",
+          "furigana": "ちゅうこ",
+          "meaningVi": "Đồ đã qua sử dụng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-8-5",
+      "character": "高",
+      "hanViet": "CAO",
+      "strokeCount": 10,
+      "onyomi": [
+        "コウ (kou)"
+      ],
+      "kunyomi": [
+        "たか(い)"
+      ],
+      "meaningVi": "Cao; đắt. Hình vẽ tòa tháp cao.",
+      "commonWords": [
+        {
+          "word": "高い",
+          "furigana": "たかい",
+          "meaningVi": "Cao/đắt"
+        },
+        {
+          "word": "高校",
+          "furigana": "こうこう",
+          "meaningVi": "Trường cấp 3"
+        },
+        {
+          "word": "高校生",
+          "furigana": "こうこうせい",
+          "meaningVi": "Học sinh cấp 3"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-8-6",
+      "character": "安",
+      "hanViet": "AN",
+      "strokeCount": 6,
+      "onyomi": [
+        "アン (an)"
+      ],
+      "kunyomi": [
+        "やす(い)"
+      ],
+      "meaningVi": "Yên ổn; rẻ.",
+      "commonWords": [
+        {
+          "word": "安い",
+          "furigana": "やすい",
+          "meaningVi": "Rẻ"
+        },
+        {
+          "word": "安全",
+          "furigana": "あんぜん",
+          "meaningVi": "An toàn"
+        },
+        {
+          "word": "不安",
+          "furigana": "ふあん",
+          "meaningVi": "Bất an"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n5-l8-s1",
+      "slideType": "grammar",
+      "title": "1. Tính từ đuôi い: N は A-い です",
+      "grammarFormula": "N + は + [Tính từ い] + です",
+      "explanation": "Tính từ đuôi い tự nó đã mang nghĩa 'là', không cần です đóng vai trò liên từ như với danh từ — です ở đây chỉ thêm SẮC THÁI LỊCH SỰ, không phải bắt buộc về ngữ pháp như với danh từ.",
+      "teacherTips": "Tính từ đuôi い LUÔN kết thúc bằng い ở dạng từ điển — nếu bỏ です câu vẫn đúng ngữ pháp.",
+      "culturalNotes": "いい (tốt) là tính từ đuôi い DUY NHẤT bất quy tắc — chia phủ định phải quay về gốc よい: よくないです.",
+      "examples": [
+        {
+          "id": "ex-n5-l8-s1-1",
+          "tokens": [
+            {
+              "id": "t-l8s1-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s1-2",
+              "text": "かばん",
+              "isKeyGrammar": false,
+              "kanji": "鞄",
+              "furigana": "かばん"
+            },
+            {
+              "id": "t-l8s1-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s1-4",
+              "text": "おおきい",
+              "isKeyGrammar": true,
+              "kanji": "大きい",
+              "furigana": "おおきい"
+            },
+            {
+              "id": "t-l8s1-5",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Cái cặp này to."
+        },
+        {
+          "id": "ex-n5-l8-s1-2",
+          "tokens": [
+            {
+              "id": "t-l8s1-6",
+              "text": "きょう",
+              "isKeyGrammar": false,
+              "kanji": "今日",
+              "furigana": "きょう"
+            },
+            {
+              "id": "t-l8s1-7",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s1-8",
+              "text": "あつい",
+              "isKeyGrammar": true,
+              "kanji": "暑い",
+              "furigana": "あつい"
+            },
+            {
+              "id": "t-l8s1-9",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Hôm nay trời nóng."
+        },
+        {
+          "id": "ex-n5-l8-s1-3",
+          "tokens": [
+            {
+              "id": "t-l8s1-10",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s1-11",
+              "text": "ほん",
+              "isKeyGrammar": false,
+              "kanji": "本",
+              "furigana": "ほん"
+            },
+            {
+              "id": "t-l8s1-12",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s1-13",
+              "text": "おもしろい",
+              "isKeyGrammar": true,
+              "kanji": "面白い",
+              "furigana": "おもしろい"
+            },
+            {
+              "id": "t-l8s1-14",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Quyển sách này thú vị."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l8-s2",
+      "slideType": "grammar",
+      "title": "2. Phủ định tính từ đuôi い: A-くない です",
+      "grammarFormula": "[Tính từ い] bỏ い, thêm くない + です",
+      "explanation": "Quy tắc CỐ ĐỊNH: bỏ い cuối, thêm くない. Không cần です đứng riêng phía trước như danh từ — くない đã tự mang nghĩa phủ định, です chỉ thêm lịch sự.",
+      "teacherTips": "Nhớ đặc biệt: いい → phủ định phải là よくない, không bao giờ nói いくない.",
+      "culturalNotes": "Người Nhật thường tránh nói thẳng 'không tốt' về sản phẩm/dịch vụ — hay dùng câu giảm nhẹ như ちょっと…",
+      "examples": [
+        {
+          "id": "ex-n5-l8-s2-1",
+          "tokens": [
+            {
+              "id": "t-l8s2-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s2-2",
+              "text": "かばん",
+              "isKeyGrammar": false,
+              "kanji": "鞄",
+              "furigana": "かばん"
+            },
+            {
+              "id": "t-l8s2-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s2-4",
+              "text": "おおきくない",
+              "isKeyGrammar": true,
+              "kanji": "大きくない",
+              "furigana": "おおきくない"
+            },
+            {
+              "id": "t-l8s2-5",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Cái cặp này không to."
+        },
+        {
+          "id": "ex-n5-l8-s2-2",
+          "tokens": [
+            {
+              "id": "t-l8s2-6",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s2-7",
+              "text": "テスト",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s2-8",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s2-9",
+              "text": "むずかしくない",
+              "isKeyGrammar": true,
+              "kanji": "難しくない",
+              "furigana": "むずかしくない"
+            },
+            {
+              "id": "t-l8s2-10",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Bài kiểm tra này không khó."
+        },
+        {
+          "id": "ex-n5-l8-s2-3",
+          "tokens": [
+            {
+              "id": "t-l8s2-11",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s2-12",
+              "text": "みせ",
+              "isKeyGrammar": false,
+              "kanji": "店",
+              "furigana": "みせ"
+            },
+            {
+              "id": "t-l8s2-13",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s2-14",
+              "text": "よくない",
+              "isKeyGrammar": true,
+              "kanji": "良くない",
+              "furigana": "よくない"
+            },
+            {
+              "id": "t-l8s2-15",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Cửa hàng này không tốt. (いい → よくない, KHÔNG NÓI いくない)"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l8-s3",
+      "slideType": "grammar",
+      "title": "3. Tính từ đuôi な: N は A-な です",
+      "grammarFormula": "N + は + [Tính từ な] + です   (khi bổ nghĩa danh từ: A + な + N)",
+      "explanation": "Tính từ đuôi な giống danh từ hơn — khi ĐỨNG TRƯỚC です thì bỏ な, nhưng khi BỔ NGHĨA cho danh từ đứng ngay sau thì PHẢI GIỮ な. Đây là khác biệt lớn nhất với tính từ đuôi い.",
+      "teacherTips": "Mẹo phân biệt nhanh: đứng trước です thì KHÔNG な, đứng trước danh từ thì PHẢI CÓ な.",
+      "culturalNotes": "きれい và 元気 tuy kết thúc bằng い nhưng LÀ tính từ な — bẫy kinh điển của người mới học.",
+      "examples": [
+        {
+          "id": "ex-n5-l8-s3-1",
+          "tokens": [
+            {
+              "id": "t-l8s3-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s3-2",
+              "text": "こうえん",
+              "isKeyGrammar": false,
+              "kanji": "公園",
+              "furigana": "こうえん"
+            },
+            {
+              "id": "t-l8s3-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s3-4",
+              "text": "しずか",
+              "isKeyGrammar": true,
+              "kanji": "静か",
+              "furigana": "しずか"
+            },
+            {
+              "id": "t-l8s3-5",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Công viên này yên tĩnh."
+        },
+        {
+          "id": "ex-n5-l8-s3-2",
+          "tokens": [
+            {
+              "id": "t-l8s3-6",
+              "text": "しずか",
+              "isKeyGrammar": true,
+              "kanji": "静か",
+              "furigana": "しずか"
+            },
+            {
+              "id": "t-l8s3-7",
+              "text": "な",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l8s3-8",
+              "text": "こうえん",
+              "isKeyGrammar": false,
+              "kanji": "公園",
+              "furigana": "こうえん"
+            },
+            {
+              "id": "t-l8s3-9",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Là một công viên yên tĩnh. (bổ nghĩa cho danh từ — PHẢI có な)"
+        },
+        {
+          "id": "ex-n5-l8-s3-3",
+          "tokens": [
+            {
+              "id": "t-l8s3-10",
+              "text": "やまださん",
+              "isKeyGrammar": false,
+              "kanji": "山田さん",
+              "furigana": "やまださん"
+            },
+            {
+              "id": "t-l8s3-11",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s3-12",
+              "text": "げんき",
+              "isKeyGrammar": true,
+              "kanji": "元気",
+              "furigana": "げんき"
+            },
+            {
+              "id": "t-l8s3-13",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Anh Yamada khỏe."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l8-s4",
+      "slideType": "grammar",
+      "title": "4. Phủ định tính từ đuôi な: A-じゃ ありません",
+      "grammarFormula": "[Tính từ な] + じゃ ありません   (giống hệt cách phủ định danh từ ở bài 1)",
+      "explanation": "Tính từ な chia y hệt danh từ: khẳng định です, phủ định じゃ ありません — hoàn toàn khác quy tắc くない của tính từ い. Đây là lý do phải phân biệt rõ hai loại ngay từ đầu.",
+      "teacherTips": "Nhầm lẫn phổ biến nhất của người mới học: chia tính từ な theo くない của tính từ い — SAI hoàn toàn.",
+      "culturalNotes": "便利 rất hay xuất hiện khi người Nhật khen hạ tầng công cộng: 「日本の電車は 便利ですね」.",
+      "examples": [
+        {
+          "id": "ex-n5-l8-s4-1",
+          "tokens": [
+            {
+              "id": "t-l8s4-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s4-2",
+              "text": "まち",
+              "isKeyGrammar": false,
+              "kanji": "町",
+              "furigana": "まち"
+            },
+            {
+              "id": "t-l8s4-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s4-4",
+              "text": "しずか",
+              "isKeyGrammar": false,
+              "kanji": "静か",
+              "furigana": "しずか"
+            },
+            {
+              "id": "t-l8s4-5",
+              "text": "じゃ ありません",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Thị trấn này không yên tĩnh."
+        },
+        {
+          "id": "ex-n5-l8-s4-2",
+          "tokens": [
+            {
+              "id": "t-l8s4-6",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s4-7",
+              "text": "でんき",
+              "isKeyGrammar": false,
+              "kanji": "電気",
+              "furigana": "でんき"
+            },
+            {
+              "id": "t-l8s4-8",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s4-9",
+              "text": "べんり",
+              "isKeyGrammar": false,
+              "kanji": "便利",
+              "furigana": "べんり"
+            },
+            {
+              "id": "t-l8s4-10",
+              "text": "じゃ ありません",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Cái đồ điện này không tiện lợi."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l8-s5",
+      "slideType": "grammar",
+      "title": "5. Mức độ: とても / あまり",
+      "grammarFormula": "とても + [Tính từ] + です  (rất)   /   あまり + [Tính từ phủ định]  (không mấy)",
+      "explanation": "とても dùng được cả câu khẳng định và phủ định. あまり CHỈ dùng được với câu PHỦ ĐỊNH — nói あまり với câu khẳng định là sai ngữ pháp.",
+      "teacherTips": "Lỗi rất hay gặp: 「あまり 静かです」 — SAI vì あまり thiếu vế phủ định phía sau.",
+      "culturalNotes": "あまり…ない là cách nói giảm nhẹ rất Nhật — tránh chê thẳng bằng câu khẳng định tiêu cực.",
+      "examples": [
+        {
+          "id": "ex-n5-l8-s5-1",
+          "tokens": [
+            {
+              "id": "t-l8s5-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s5-2",
+              "text": "まち",
+              "isKeyGrammar": false,
+              "kanji": "町",
+              "furigana": "まち"
+            },
+            {
+              "id": "t-l8s5-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s5-4",
+              "text": "とても",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l8s5-5",
+              "text": "きれい",
+              "isKeyGrammar": false,
+              "kanji": "綺麗",
+              "furigana": "きれい"
+            },
+            {
+              "id": "t-l8s5-6",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Thị trấn này rất đẹp."
+        },
+        {
+          "id": "ex-n5-l8-s5-2",
+          "tokens": [
+            {
+              "id": "t-l8s5-7",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s5-8",
+              "text": "テスト",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s5-9",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s5-10",
+              "text": "あまり",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l8s5-11",
+              "text": "むずかしくない",
+              "isKeyGrammar": false,
+              "kanji": "難しくない",
+              "furigana": "むずかしくない"
+            },
+            {
+              "id": "t-l8s5-12",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Bài kiểm tra này không khó lắm."
+        },
+        {
+          "id": "ex-n5-l8-s5-3",
+          "tokens": [
+            {
+              "id": "t-l8s5-13",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s5-14",
+              "text": "まち",
+              "isKeyGrammar": false,
+              "kanji": "町",
+              "furigana": "まち"
+            },
+            {
+              "id": "t-l8s5-15",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l8s5-16",
+              "text": "あまり",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l8s5-17",
+              "text": "しずか",
+              "isKeyGrammar": false,
+              "kanji": "静か",
+              "furigana": "しずか"
+            },
+            {
+              "id": "t-l8s5-18",
+              "text": "じゃ ありません",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Thị trấn này không yên tĩnh lắm."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n5-8-1",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l8-1",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-2",
+          "text": "まち",
+          "isKeyGrammar": false,
+          "kanji": "町",
+          "furigana": "まち"
+        },
+        {
+          "id": "d-l8-3",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-4",
+          "text": "どうですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Thị trấn này thế nào?"
+    },
+    {
+      "id": "dia-n5-8-2",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l8-5",
+          "text": "とても",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l8-6",
+          "text": "しずか",
+          "isKeyGrammar": true,
+          "kanji": "静か",
+          "furigana": "しずか"
+        },
+        {
+          "id": "d-l8-7",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-8",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-9",
+          "text": "そして",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-10",
+          "text": "きれい",
+          "isKeyGrammar": true,
+          "kanji": "綺麗",
+          "furigana": "きれい"
+        },
+        {
+          "id": "d-l8-11",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Rất yên tĩnh. Và đẹp nữa."
+    },
+    {
+      "id": "dia-n5-8-3",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l8-12",
+          "text": "べんり",
+          "isKeyGrammar": true,
+          "kanji": "便利",
+          "furigana": "べんり"
+        },
+        {
+          "id": "d-l8-13",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Có tiện lợi không?"
+    },
+    {
+      "id": "dia-n5-8-4",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l8-14",
+          "text": "うーん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-15",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-16",
+          "text": "あまり",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l8-17",
+          "text": "べんり",
+          "isKeyGrammar": false,
+          "kanji": "便利",
+          "furigana": "べんり"
+        },
+        {
+          "id": "d-l8-18",
+          "text": "じゃ ありません",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l8-19",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-20",
+          "text": "スーパー",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-21",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-22",
+          "text": "ちいさい",
+          "isKeyGrammar": true,
+          "kanji": "小さい",
+          "furigana": "ちいさい"
+        },
+        {
+          "id": "d-l8-23",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ừm, không tiện lợi lắm. Siêu thị nhỏ."
+    },
+    {
+      "id": "dia-n5-8-5",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l8-24",
+          "text": "そうですか",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-25",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-26",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-27",
+          "text": "レストラン",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-28",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-29",
+          "text": "どうですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vậy à. Nhà hàng này thế nào?"
+    },
+    {
+      "id": "dia-n5-8-6",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l8-30",
+          "text": "とても",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l8-31",
+          "text": "おいしい",
+          "isKeyGrammar": true,
+          "kanji": "美味しい",
+          "furigana": "おいしい"
+        },
+        {
+          "id": "d-l8-32",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-33",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-34",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-35",
+          "text": "ちょっと",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-36",
+          "text": "たかい",
+          "isKeyGrammar": true,
+          "kanji": "高い",
+          "furigana": "たかい"
+        },
+        {
+          "id": "d-l8-37",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Rất ngon. Nhưng hơi đắt."
+    },
+    {
+      "id": "dia-n5-8-7",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l8-38",
+          "text": "やすい",
+          "isKeyGrammar": true,
+          "kanji": "安い",
+          "furigana": "やすい"
+        },
+        {
+          "id": "d-l8-39",
+          "text": "みせ",
+          "isKeyGrammar": false,
+          "kanji": "店",
+          "furigana": "みせ"
+        },
+        {
+          "id": "d-l8-40",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-41",
+          "text": "ありませんか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Không có quán nào rẻ hơn à?"
+    },
+    {
+      "id": "dia-n5-8-8",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l8-42",
+          "text": "あります",
+          "isKeyGrammar": false,
+          "kanji": "有ります",
+          "furigana": "あります"
+        },
+        {
+          "id": "d-l8-43",
+          "text": "よ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-44",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-45",
+          "text": "あの",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-46",
+          "text": "しょくどう",
+          "isKeyGrammar": false,
+          "kanji": "食堂",
+          "furigana": "しょくどう"
+        },
+        {
+          "id": "d-l8-47",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-48",
+          "text": "やすくて",
+          "isKeyGrammar": false,
+          "kanji": "安くて",
+          "furigana": "やすくて"
+        },
+        {
+          "id": "d-l8-49",
+          "text": "おいしい",
+          "isKeyGrammar": true,
+          "kanji": "美味しい",
+          "furigana": "おいしい"
+        },
+        {
+          "id": "d-l8-50",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Có chứ. Cái quán ăn kia vừa rẻ vừa ngon."
+    },
+    {
+      "id": "dia-n5-8-9",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l8-51",
+          "text": "ゆうめい",
+          "isKeyGrammar": true,
+          "kanji": "有名",
+          "furigana": "ゆうめい"
+        },
+        {
+          "id": "d-l8-52",
+          "text": "な",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l8-53",
+          "text": "みせ",
+          "isKeyGrammar": false,
+          "kanji": "店",
+          "furigana": "みせ"
+        },
+        {
+          "id": "d-l8-54",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Có phải là quán nổi tiếng không?"
+    },
+    {
+      "id": "dia-n5-8-10",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên",
+      "tokens": [
+        {
+          "id": "d-l8-55",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-56",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-57",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-58",
+          "text": "まち",
+          "isKeyGrammar": false,
+          "kanji": "町",
+          "furigana": "まち"
+        },
+        {
+          "id": "d-l8-59",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l8-60",
+          "text": "いちばん",
+          "isKeyGrammar": false,
+          "kanji": "一番",
+          "furigana": "いちばん"
+        },
+        {
+          "id": "d-l8-61",
+          "text": "ゆうめい",
+          "isKeyGrammar": false,
+          "kanji": "有名",
+          "furigana": "ゆうめい"
+        },
+        {
+          "id": "d-l8-62",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng, đây là quán nổi tiếng nhất thị trấn này."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n5-8-1",
+      "question": "Phủ định của 大きい là:",
+      "options": [
+        "大きくない",
+        "大きじゃない",
+        "大きいない",
+        "大きでない"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tính từ đuôi い: bỏ い cuối, thêm くない. 大きい → 大きくない.",
+      "hint": "Đây là quy tắc cố định của tính từ い."
+    },
+    {
+      "id": "ex-q-n5-8-2",
+      "question": "Phủ định của いい (tốt) là:",
+      "options": [
+        "よくない",
+        "いくない",
+        "いいくない",
+        "いくありません"
+      ],
+      "correctIndex": 0,
+      "explanation": "いい là tính từ đuôi い DUY NHẤT bất quy tắc — phủ định phải quay về gốc よい rồi mới chia くない.",
+      "hint": "いい có gốc từ khác khi chia."
+    },
+    {
+      "id": "ex-q-n5-8-3",
+      "question": "「静かな 公園」 và 「公園は 静かです」 khác nhau ở việc dùng な vì:",
+      "options": [
+        "な xuất hiện khi bổ nghĩa trực tiếp cho danh từ đứng sau",
+        "な là lỗi chính tả",
+        "Cả hai đều sai, phải bỏ な",
+        "な chỉ dùng trong câu hỏi"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tính từ な GIỮ な khi đứng ngay trước danh từ nó bổ nghĩa, nhưng bỏ な khi đứng trước です.",
+      "hint": "Xem vị trí của tính từ trong câu."
+    },
+    {
+      "id": "ex-q-n5-8-4",
+      "question": "Phủ định của 便利 (tiện lợi, tính từ な) là:",
+      "options": [
+        "便利じゃ ありません",
+        "便利くない",
+        "便利じゃ くない",
+        "便利ないです"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tính từ な chia phủ định GIỐNG DANH TỪ: N/な-adj + じゃ ありません, khác hẳn quy tắc くない của tính từ い.",
+      "hint": "So sánh với cách chia danh từ ở bài 1."
+    },
+    {
+      "id": "ex-q-n5-8-5",
+      "question": "きれい (đẹp) là loại tính từ nào dù kết thúc bằng い?",
+      "options": [
+        "Tính từ な (ngoại lệ)",
+        "Tính từ い bình thường",
+        "Vừa な vừa い",
+        "Không phải tính từ"
+      ],
+      "correctIndex": 0,
+      "explanation": "きれい và 有名, 嫌い cũng vậy — nhìn giống tính từ い nhưng thực chất là tính từ な, phải học thuộc riêng.",
+      "hint": "Đây là bẫy ngữ pháp kinh điển."
+    },
+    {
+      "id": "ex-q-n5-8-6",
+      "question": "Câu nào SAI ngữ pháp?",
+      "options": [
+        "この本は あまり 面白いです",
+        "この本は あまり 面白くないです",
+        "この本は とても 面白いです",
+        "この本は とても 面白くないです"
+      ],
+      "correctIndex": 0,
+      "explanation": "あまり CHỈ dùng được với câu PHỦ ĐỊNH. Câu khẳng định với あまり là sai ngữ pháp.",
+      "hint": "Xem lại quy tắc của あまり."
+    },
+    {
+      "id": "ex-q-n5-8-7",
+      "question": "高い vừa có nghĩa 'cao' vừa có nghĩa gì khác?",
+      "options": [
+        "Đắt (giá tiền)",
+        "Xa",
+        "Nặng",
+        "Sâu"
+      ],
+      "correctIndex": 0,
+      "explanation": "高い là tính từ đa nghĩa: vừa chỉ CHIỀU CAO vừa chỉ GIÁ TIỀN cao (đắt).",
+      "hint": "Xem ngữ cảnh câu để biết nghĩa nào."
+    },
+    {
+      "id": "ex-q-n5-8-8",
+      "question": "Muốn nói 'quán này vừa rẻ vừa ngon', nối hai tính từ い bằng cách:",
+      "options": [
+        "安くて 美味しいです",
+        "安いと 美味しいです",
+        "安いも 美味しいです",
+        "安いし 美味しいですが"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nối hai tính từ い liên tiếp: bỏ い cuối tính từ thứ nhất, thêm くて, rồi tính từ thứ hai giữ nguyên.",
+      "hint": "Giống cách chia くない nhưng đổi đuôi thành くて."
+    },
+    {
+      "id": "ex-q-n5-8-9",
+      "question": "新しい chỉ dùng để miêu tả:",
+      "options": [
+        "Đồ vật (không dùng để chê tuổi người)",
+        "Chỉ con người",
+        "Chỉ thức ăn",
+        "Chỉ thời gian"
+      ],
+      "correctIndex": 0,
+      "explanation": "新しい/古い dùng cho đồ vật, nơi chốn. Miêu tả người mới quen không dùng 新しい người.",
+      "hint": "Xem ghi chú của mục từ vựng."
+    },
+    {
+      "id": "ex-q-n5-8-10",
+      "question": "Ở phần hội thoại, quán ăn được khen là:",
+      "options": [
+        "Vừa rẻ vừa ngon và nổi tiếng nhất thị trấn",
+        "Chỉ rẻ nhưng không ngon",
+        "Đắt nhưng rất ngon",
+        "Không nổi tiếng nhưng rẻ"
+      ],
+      "correctIndex": 0,
+      "explanation": "サントス khen quán 安くて 美味しい và là quán 一番 有名 trong thị trấn.",
+      "hint": "Xem lại các câu cuối hội thoại."
+    }
+  ]
+}

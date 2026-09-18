@@ -1,0 +1,1410 @@
+{
+  "level": "N3",
+  "lessonNumber": 6,
+  "title": "Bài 6: Mục đích & Đối tượng (向けに & ために)",
+  "description": "向けに/向けの nêu ĐỐI TƯỢNG cụ thể mà sản phẩm/dịch vụ/hành động nhắm tới (thường dùng trong marketing, sản xuất), có thể kết hợp với ため(に) (đã ôn từ N4 bài 42) để vừa nêu đối tượng vừa nêu mục đích; を対象に(して) là cách nói trang trọng hơn của 向け, dùng trong khảo sát/báo cáo.",
+  "vocabList": [
+    {
+      "id": "voc-n3-6-1",
+      "word": "むけ",
+      "kanji": "向け",
+      "furigana": "むけ",
+      "romaji": "muke",
+      "wordType": "noun",
+      "meaningVi": "Dành cho, nhắm đến (hậu tố gắn sau danh từ đối tượng)",
+      "accentNote": "子供向けの 本 = sách dành cho trẻ em."
+    },
+    {
+      "id": "voc-n3-6-2",
+      "word": "むけます",
+      "kanji": "向けます",
+      "furigana": "むけます",
+      "romaji": "mukemasu",
+      "wordType": "verb",
+      "meaningVi": "Hướng về, nhắm tới (động từ gốc của 向け)",
+      "accentNote": "目を 向けます = hướng ánh mắt về."
+    },
+    {
+      "id": "voc-n3-6-3",
+      "word": "たいしょう",
+      "kanji": "対象",
+      "furigana": "たいしょう",
+      "romaji": "taishou",
+      "wordType": "noun",
+      "meaningVi": "Đối tượng, mục tiêu (của nghiên cứu/dịch vụ)",
+      "accentNote": "主婦を 対象に した 調査 = khảo sát lấy bà nội trợ làm đối tượng."
+    },
+    {
+      "id": "voc-n3-6-4",
+      "word": "しょうひん",
+      "kanji": "商品",
+      "furigana": "しょうひん",
+      "romaji": "shouhin",
+      "wordType": "noun",
+      "meaningVi": "Hàng hóa, sản phẩm thương mại",
+      "accentNote": "新しい 商品 = sản phẩm mới."
+    },
+    {
+      "id": "voc-n3-6-5",
+      "word": "せいひん",
+      "kanji": "製品",
+      "furigana": "せいひん",
+      "romaji": "seihin",
+      "wordType": "noun",
+      "meaningVi": "Sản phẩm, hàng chế tạo",
+      "accentNote": "日本の 製品 = sản phẩm của Nhật Bản."
+    },
+    {
+      "id": "voc-n3-6-6",
+      "word": "はんばいします",
+      "kanji": "販売します",
+      "furigana": "はんばいします",
+      "romaji": "hanbai shimasu",
+      "wordType": "verb",
+      "meaningVi": "Bán hàng, kinh doanh bán",
+      "accentNote": "海外で 販売します = bán ở nước ngoài."
+    },
+    {
+      "id": "voc-n3-6-7",
+      "word": "きぎょう",
+      "kanji": "企業",
+      "furigana": "きぎょう",
+      "romaji": "kigyou",
+      "wordType": "noun",
+      "meaningVi": "Doanh nghiệp, xí nghiệp",
+      "accentNote": "大きい 企業 = doanh nghiệp lớn."
+    },
+    {
+      "id": "voc-n3-6-8",
+      "word": "こうじょう",
+      "kanji": "工場",
+      "furigana": "こうじょう",
+      "romaji": "koujou",
+      "wordType": "noun",
+      "meaningVi": "Nhà máy, xí nghiệp sản xuất",
+      "accentNote": "工場で 作ります = làm ở nhà máy."
+    },
+    {
+      "id": "voc-n3-6-9",
+      "word": "もくてき",
+      "kanji": "目的",
+      "furigana": "もくてき",
+      "romaji": "mokuteki",
+      "wordType": "noun",
+      "meaningVi": "Mục đích",
+      "accentNote": "販売の 目的 = mục đích bán hàng."
+    },
+    {
+      "id": "voc-n3-6-10",
+      "word": "サービス",
+      "kanji": "サービス",
+      "furigana": "サービス",
+      "romaji": "saabisu",
+      "wordType": "noun",
+      "meaningVi": "Dịch vụ",
+      "accentNote": "子供向けの サービス = dịch vụ dành cho trẻ em."
+    },
+    {
+      "id": "voc-n3-6-11",
+      "word": "しゅふ",
+      "kanji": "主婦",
+      "furigana": "しゅふ",
+      "romaji": "shufu",
+      "wordType": "noun",
+      "meaningVi": "Người nội trợ",
+      "accentNote": "主婦向けの 商品 = sản phẩm dành cho các bà nội trợ."
+    },
+    {
+      "id": "voc-n3-6-12",
+      "word": "かいがい",
+      "kanji": "海外",
+      "furigana": "かいがい",
+      "romaji": "kaigai",
+      "wordType": "noun",
+      "meaningVi": "Nước ngoài, hải ngoại",
+      "accentNote": "海外向けに 販売します = bán hàng nhắm tới thị trường nước ngoài."
+    },
+    {
+      "id": "voc-n3-6-13",
+      "word": "こども",
+      "kanji": "子供",
+      "furigana": "こども",
+      "romaji": "kodomo",
+      "wordType": "noun",
+      "meaningVi": "Trẻ em",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n3-6-14",
+      "word": "かいしゃ",
+      "kanji": "会社",
+      "furigana": "かいしゃ",
+      "romaji": "kaisha",
+      "wordType": "noun",
+      "meaningVi": "Công ty",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n3-6-15",
+      "word": "わかい",
+      "kanji": "若い",
+      "furigana": "わかい",
+      "romaji": "wakai",
+      "wordType": "adjective",
+      "meaningVi": "Trẻ, còn trẻ tuổi",
+      "accentNote": "Đã gặp N4 bài 33."
+    },
+    {
+      "id": "voc-n3-6-16",
+      "word": "ひと",
+      "kanji": "人",
+      "furigana": "ひと",
+      "romaji": "hito",
+      "wordType": "noun",
+      "meaningVi": "Người",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n3-6-17",
+      "word": "つかいます",
+      "kanji": "使います",
+      "furigana": "つかいます",
+      "romaji": "tsukaimasu",
+      "wordType": "verb",
+      "meaningVi": "Sử dụng, dùng",
+      "accentNote": "Đã gặp N5 bài 6."
+    },
+    {
+      "id": "voc-n3-6-18",
+      "word": "つくります",
+      "kanji": "作ります",
+      "furigana": "つくります",
+      "romaji": "tsukurimasu",
+      "wordType": "verb",
+      "meaningVi": "Làm, chế tạo",
+      "accentNote": "Đã gặp N5 bài 6."
+    },
+    {
+      "id": "voc-n3-6-19",
+      "word": "あたらしい",
+      "kanji": "新しい",
+      "furigana": "あたらしい",
+      "romaji": "atarashii",
+      "wordType": "adjective",
+      "meaningVi": "Mới",
+      "accentNote": "Đã gặp N5 bài 8."
+    },
+    {
+      "id": "voc-n3-6-20",
+      "word": "やすい",
+      "kanji": "安い",
+      "furigana": "やすい",
+      "romaji": "yasui",
+      "wordType": "adjective",
+      "meaningVi": "Rẻ",
+      "accentNote": "Đã gặp N5 bài 8."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n3-6-1",
+      "character": "向",
+      "hanViet": "HƯỚNG",
+      "strokeCount": 6,
+      "onyomi": [
+        "コウ (kou)"
+      ],
+      "kunyomi": [
+        "む(く)",
+        "む(ける)"
+      ],
+      "meaningVi": "Hướng về, quay về phía.",
+      "commonWords": [
+        {
+          "word": "向け",
+          "furigana": "むけ",
+          "meaningVi": "Dành cho"
+        },
+        {
+          "word": "方向",
+          "furigana": "ほうこう",
+          "meaningVi": "Phương hướng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-6-2",
+      "character": "象",
+      "hanViet": "TƯỢNG",
+      "strokeCount": 12,
+      "onyomi": [
+        "ショウ (shou)",
+        "ゾウ (zou)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Hình tượng, đối tượng.",
+      "commonWords": [
+        {
+          "word": "対象",
+          "furigana": "たいしょう",
+          "meaningVi": "Đối tượng"
+        },
+        {
+          "word": "印象",
+          "furigana": "いんしょう",
+          "meaningVi": "Ấn tượng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-6-3",
+      "character": "販",
+      "hanViet": "BẢN",
+      "strokeCount": 11,
+      "onyomi": [
+        "ハン (han)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Bán, buôn bán.",
+      "commonWords": [
+        {
+          "word": "販売",
+          "furigana": "はんばい",
+          "meaningVi": "Bán hàng"
+        },
+        {
+          "word": "自販機",
+          "furigana": "じはんき",
+          "meaningVi": "Máy bán hàng tự động"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-6-4",
+      "character": "企",
+      "hanViet": "XÍ",
+      "strokeCount": 6,
+      "onyomi": [
+        "キ (ki)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Mưu tính, xí nghiệp.",
+      "commonWords": [
+        {
+          "word": "企業",
+          "furigana": "きぎょう",
+          "meaningVi": "Doanh nghiệp"
+        },
+        {
+          "word": "企画",
+          "furigana": "きかく",
+          "meaningVi": "Kế hoạch"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-6-5",
+      "character": "製",
+      "hanViet": "CHẾ",
+      "strokeCount": 14,
+      "onyomi": [
+        "セイ (sei)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Chế tạo, sản xuất.",
+      "commonWords": [
+        {
+          "word": "製品",
+          "furigana": "せいひん",
+          "meaningVi": "Sản phẩm"
+        },
+        {
+          "word": "日本製",
+          "furigana": "にほんせい",
+          "meaningVi": "Sản xuất tại Nhật"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n3-l6-s1",
+      "slideType": "grammar",
+      "title": "1. Hướng động tới đối tượng: N 向けに、[hành động]",
+      "grammarFormula": "N + 向けに、[hành động]   (N là đối tượng/nhóm người mà hành động NHẮM TỚI)",
+      "explanation": "向けに gắn sau danh từ chỉ ĐỐI TƯỢNG (người, nhóm, thị trường) để nói một hành động được THIẾT KẾ RIÊNG, NHẮM TỚI đối tượng đó — thường dùng trong marketing, sản xuất, truyền thông.",
+      "teacherTips": "向けに thường xuất hiện trong quảng cáo, thông cáo sản phẩm: 女性向けに、若者向けに、初心者向けに...",
+      "culturalNotes": "Từ 向け xuất hiện rất nhiều trên bao bì sản phẩm Nhật: 子供向け (dành cho trẻ em), 大人向け (dành cho người lớn).",
+      "examples": [
+        {
+          "id": "ex-n3-l6-s1-1",
+          "tokens": [
+            {
+              "id": "t-l6s1-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l6s1-2",
+              "text": "しょうひん",
+              "isKeyGrammar": false,
+              "kanji": "商品",
+              "furigana": "しょうひん"
+            },
+            {
+              "id": "t-l6s1-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l6s1-4",
+              "text": "しゅふ",
+              "isKeyGrammar": true,
+              "kanji": "主婦",
+              "furigana": "しゅふ"
+            },
+            {
+              "id": "t-l6s1-5",
+              "text": "むけに",
+              "isKeyGrammar": true,
+              "kanji": "向けに",
+              "furigana": "むけに"
+            },
+            {
+              "id": "t-l6s1-6",
+              "text": "つくられました",
+              "isKeyGrammar": false,
+              "kanji": "作られました",
+              "furigana": "つくられました"
+            }
+          ],
+          "meaningVi": "Sản phẩm này được làm dành riêng cho các bà nội trợ."
+        },
+        {
+          "id": "ex-n3-l6-s1-2",
+          "tokens": [
+            {
+              "id": "t-l6s1-7",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l6s1-8",
+              "text": "せいひん",
+              "isKeyGrammar": false,
+              "kanji": "製品",
+              "furigana": "せいひん"
+            },
+            {
+              "id": "t-l6s1-9",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l6s1-10",
+              "text": "かいがい",
+              "isKeyGrammar": true,
+              "kanji": "海外",
+              "furigana": "かいがい"
+            },
+            {
+              "id": "t-l6s1-11",
+              "text": "むけに",
+              "isKeyGrammar": true,
+              "kanji": "向けに",
+              "furigana": "むけに"
+            },
+            {
+              "id": "t-l6s1-12",
+              "text": "はんばい",
+              "isKeyGrammar": false,
+              "kanji": "販売",
+              "furigana": "はんばい"
+            },
+            {
+              "id": "t-l6s1-13",
+              "text": "します",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Sản phẩm này sẽ được bán hướng tới (thị trường) nước ngoài."
+        }
+      ]
+    },
+    {
+      "slideId": "n3-l6-s2",
+      "slideType": "grammar",
+      "title": "2. Bổ nghĩa danh từ: N1 向けの N2",
+      "grammarFormula": "N1 + 向けの + N2   (N2 là sản phẩm/dịch vụ ĐƯỢC THIẾT KẾ dành cho N1)",
+      "explanation": "Khi 向け đứng trước một danh từ khác (thay vì trước động từ), phải đổi thành 向けの — cấu trúc này rất phổ biến để mô tả tên gọi sản phẩm/dịch vụ theo đối tượng mục tiêu.",
+      "teacherTips": "向けの khác 用の (dùng cho mục đích sử dụng, ví dụ 仕事用の靴) — 向けの nhấn ĐỐI TƯỢNG NGƯỜI, 用の nhấn MỤC ĐÍCH SỬ DỤNG.",
+      "culturalNotes": "Biển hiệu 初心者向け (dành cho người mới bắt đầu) hay thấy ở các lớp học, sách hướng dẫn tại Nhật.",
+      "examples": [
+        {
+          "id": "ex-n3-l6-s2-1",
+          "tokens": [
+            {
+              "id": "t-l6s2-1",
+              "text": "こども",
+              "isKeyGrammar": true,
+              "kanji": "子供",
+              "furigana": "こども"
+            },
+            {
+              "id": "t-l6s2-2",
+              "text": "むけの",
+              "isKeyGrammar": true,
+              "kanji": "向けの",
+              "furigana": "むけの"
+            },
+            {
+              "id": "t-l6s2-3",
+              "text": "サービス",
+              "isKeyGrammar": false,
+              "kanji": "サービス",
+              "furigana": "サービス"
+            },
+            {
+              "id": "t-l6s2-4",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Đây là dịch vụ dành cho trẻ em."
+        },
+        {
+          "id": "ex-n3-l6-s2-2",
+          "tokens": [
+            {
+              "id": "t-l6s2-5",
+              "text": "わかい",
+              "isKeyGrammar": false,
+              "kanji": "若い",
+              "furigana": "わかい"
+            },
+            {
+              "id": "t-l6s2-6",
+              "text": "ひと",
+              "isKeyGrammar": true,
+              "kanji": "人",
+              "furigana": "ひと"
+            },
+            {
+              "id": "t-l6s2-7",
+              "text": "むけの",
+              "isKeyGrammar": true,
+              "kanji": "向けの",
+              "furigana": "むけの"
+            },
+            {
+              "id": "t-l6s2-8",
+              "text": "しょうひん",
+              "isKeyGrammar": true,
+              "kanji": "商品",
+              "furigana": "しょうひん"
+            },
+            {
+              "id": "t-l6s2-9",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l6s2-10",
+              "text": "つくりました",
+              "isKeyGrammar": false,
+              "kanji": "作りました",
+              "furigana": "つくりました"
+            }
+          ],
+          "meaningVi": "Chúng tôi đã tạo ra sản phẩm dành cho người trẻ."
+        }
+      ]
+    },
+    {
+      "slideId": "n3-l6-s3",
+      "slideType": "grammar",
+      "title": "3. Kết hợp với ため(に) đã ôn — vừa nêu đối tượng vừa nêu mục đích",
+      "grammarFormula": "N 向けに、[mục đích]ため(に)、[hành động]",
+      "explanation": "ため(に) (đã học ở N4 bài 42) nhấn MỤC ĐÍCH/LÝ DO của hành động, còn 向け nhấn ĐỐI TƯỢNG cụ thể mà hành động hướng tới — hai cấu trúc có thể kết hợp trong cùng một câu.",
+      "teacherTips": "Thứ tự thường gặp: [đối tượng]向けに → [mục đích]ため(に) → [hành động chính] ở cuối câu.",
+      "culturalNotes": "Câu quảng cáo Nhật hay ghép cả hai: '主婦の皆様向けに、家事を楽にするために開発しました' (phát triển dành cho các bà nội trợ, vì mục đích giúp việc nhà nhẹ nhàng hơn).",
+      "examples": [
+        {
+          "id": "ex-n3-l6-s3-1",
+          "tokens": [
+            {
+              "id": "t-l6s3-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l6s3-2",
+              "text": "せいひん",
+              "isKeyGrammar": false,
+              "kanji": "製品",
+              "furigana": "せいひん"
+            },
+            {
+              "id": "t-l6s3-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l6s3-4",
+              "text": "かいがい",
+              "isKeyGrammar": true,
+              "kanji": "海外",
+              "furigana": "かいがい"
+            },
+            {
+              "id": "t-l6s3-5",
+              "text": "むけに",
+              "isKeyGrammar": true,
+              "kanji": "向けに",
+              "furigana": "むけに"
+            },
+            {
+              "id": "t-l6s3-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l6s3-7",
+              "text": "はんばい",
+              "isKeyGrammar": false,
+              "kanji": "販売",
+              "furigana": "はんばい"
+            },
+            {
+              "id": "t-l6s3-8",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l6s3-9",
+              "text": "ために",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l6s3-10",
+              "text": "つくられました",
+              "isKeyGrammar": false,
+              "kanji": "作られました",
+              "furigana": "つくられました"
+            }
+          ],
+          "meaningVi": "Sản phẩm này được làm dành cho (thị trường) nước ngoài, vì mục đích bán hàng."
+        },
+        {
+          "id": "ex-n3-l6-s3-2",
+          "tokens": [
+            {
+              "id": "t-l6s3-11",
+              "text": "しゅふ",
+              "isKeyGrammar": true,
+              "kanji": "主婦",
+              "furigana": "しゅふ"
+            },
+            {
+              "id": "t-l6s3-12",
+              "text": "むけの",
+              "isKeyGrammar": true,
+              "kanji": "向けの",
+              "furigana": "むけの"
+            },
+            {
+              "id": "t-l6s3-13",
+              "text": "しょうひん",
+              "isKeyGrammar": false,
+              "kanji": "商品",
+              "furigana": "しょうひん"
+            },
+            {
+              "id": "t-l6s3-14",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l6s3-15",
+              "text": "かいしゃ",
+              "isKeyGrammar": false,
+              "kanji": "会社",
+              "furigana": "かいしゃ"
+            },
+            {
+              "id": "t-l6s3-16",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l6s3-17",
+              "text": "ために",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l6s3-18",
+              "text": "つくりました",
+              "isKeyGrammar": false,
+              "kanji": "作りました",
+              "furigana": "つくりました"
+            }
+          ],
+          "meaningVi": "Chúng tôi đã làm ra sản phẩm dành cho các bà nội trợ, vì lợi ích của công ty."
+        }
+      ]
+    },
+    {
+      "slideId": "n3-l6-s4",
+      "slideType": "grammar",
+      "title": "4. Văn phong trang trọng: N を対象に(して)",
+      "grammarFormula": "N + を対象に(して)、[hành động]   (dùng trong khảo sát, nghiên cứu, báo cáo — trang trọng hơn 向け)",
+      "explanation": "を対象に(して) là cách nói TRANG TRỌNG hơn của 向け, thường dùng khi mô tả PHẠM VI/ĐỐI TƯỢNG của một cuộc khảo sát, nghiên cứu, hoặc chính sách — ít dùng trong hội thoại đời thường.",
+      "teacherTips": "を対象にした + N (dạng bổ nghĩa danh từ): 主婦を対象にした調査 (cuộc khảo sát lấy bà nội trợ làm đối tượng).",
+      "culturalNotes": "Trên báo cáo, tin tức Nhật thường thấy câu mở đầu khảo sát: '20代の若者を対象に調査を行った' (đã tiến hành khảo sát lấy thanh niên 20 tuổi làm đối tượng).",
+      "examples": [
+        {
+          "id": "ex-n3-l6-s4-1",
+          "tokens": [
+            {
+              "id": "t-l6s4-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l6s4-2",
+              "text": "サービス",
+              "isKeyGrammar": false,
+              "kanji": "サービス",
+              "furigana": "サービス"
+            },
+            {
+              "id": "t-l6s4-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l6s4-4",
+              "text": "こども",
+              "isKeyGrammar": true,
+              "kanji": "子供",
+              "furigana": "こども"
+            },
+            {
+              "id": "t-l6s4-5",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l6s4-6",
+              "text": "たいしょう",
+              "isKeyGrammar": true,
+              "kanji": "対象",
+              "furigana": "たいしょう"
+            },
+            {
+              "id": "t-l6s4-7",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l6s4-8",
+              "text": "して",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l6s4-9",
+              "text": "います",
+              "isKeyGrammar": false,
+              "kanji": "居ます",
+              "furigana": "います"
+            }
+          ],
+          "meaningVi": "Dịch vụ này lấy trẻ em làm đối tượng."
+        },
+        {
+          "id": "ex-n3-l6-s4-2",
+          "tokens": [
+            {
+              "id": "t-l6s4-10",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l6s4-11",
+              "text": "しょうひん",
+              "isKeyGrammar": false,
+              "kanji": "商品",
+              "furigana": "しょうひん"
+            },
+            {
+              "id": "t-l6s4-12",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l6s4-13",
+              "text": "わかい",
+              "isKeyGrammar": false,
+              "kanji": "若い",
+              "furigana": "わかい"
+            },
+            {
+              "id": "t-l6s4-14",
+              "text": "ひと",
+              "isKeyGrammar": false,
+              "kanji": "人",
+              "furigana": "ひと"
+            },
+            {
+              "id": "t-l6s4-15",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l6s4-16",
+              "text": "たいしょう",
+              "isKeyGrammar": true,
+              "kanji": "対象",
+              "furigana": "たいしょう"
+            },
+            {
+              "id": "t-l6s4-17",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l6s4-18",
+              "text": "はんばい",
+              "isKeyGrammar": false,
+              "kanji": "販売",
+              "furigana": "はんばい"
+            },
+            {
+              "id": "t-l6s4-19",
+              "text": "します",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Sản phẩm này lấy người trẻ làm đối tượng để bán."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n3-6-1",
+      "speaker": "田中",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d6-1",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-2",
+          "text": "しょうひん",
+          "isKeyGrammar": true,
+          "kanji": "商品",
+          "furigana": "しょうひん"
+        },
+        {
+          "id": "d6-3",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-4",
+          "text": "だれ",
+          "isKeyGrammar": false,
+          "kanji": "誰",
+          "furigana": "だれ"
+        },
+        {
+          "id": "d6-5",
+          "text": "むけ",
+          "isKeyGrammar": true,
+          "kanji": "向け",
+          "furigana": "むけ"
+        },
+        {
+          "id": "d6-6",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d6-7",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Sản phẩm này dành cho ai vậy?"
+    },
+    {
+      "id": "dia-n3-6-2",
+      "speaker": "サントス",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d6-8",
+          "text": "しゅふ",
+          "isKeyGrammar": true,
+          "kanji": "主婦",
+          "furigana": "しゅふ"
+        },
+        {
+          "id": "d6-9",
+          "text": "むけに",
+          "isKeyGrammar": true,
+          "kanji": "向けに",
+          "furigana": "むけに"
+        },
+        {
+          "id": "d6-10",
+          "text": "つくりました",
+          "isKeyGrammar": false,
+          "kanji": "作りました",
+          "furigana": "つくりました"
+        }
+      ],
+      "meaningVi": "Chúng tôi đã làm dành cho các bà nội trợ."
+    },
+    {
+      "id": "dia-n3-6-3",
+      "speaker": "田中",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d6-11",
+          "text": "かいがい",
+          "isKeyGrammar": true,
+          "kanji": "海外",
+          "furigana": "かいがい"
+        },
+        {
+          "id": "d6-12",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-13",
+          "text": "はんばい",
+          "isKeyGrammar": true,
+          "kanji": "販売",
+          "furigana": "はんばい"
+        },
+        {
+          "id": "d6-14",
+          "text": "しますか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Có bán ở nước ngoài không?"
+    },
+    {
+      "id": "dia-n3-6-4",
+      "speaker": "サントス",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d6-15",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-16",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-17",
+          "text": "らいねん",
+          "isKeyGrammar": false,
+          "kanji": "来年",
+          "furigana": "らいねん"
+        },
+        {
+          "id": "d6-18",
+          "text": "から",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-19",
+          "text": "かいがい",
+          "isKeyGrammar": true,
+          "kanji": "海外",
+          "furigana": "かいがい"
+        },
+        {
+          "id": "d6-20",
+          "text": "むけに",
+          "isKeyGrammar": true,
+          "kanji": "向けに",
+          "furigana": "むけに"
+        },
+        {
+          "id": "d6-21",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-22",
+          "text": "はんばい",
+          "isKeyGrammar": false,
+          "kanji": "販売",
+          "furigana": "はんばい"
+        },
+        {
+          "id": "d6-23",
+          "text": "します",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng, từ năm sau sẽ bán hướng tới cả thị trường nước ngoài nữa."
+    },
+    {
+      "id": "dia-n3-6-5",
+      "speaker": "田中",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d6-24",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-25",
+          "text": "せいひん",
+          "isKeyGrammar": true,
+          "kanji": "製品",
+          "furigana": "せいひん"
+        },
+        {
+          "id": "d6-26",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-27",
+          "text": "どの",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-28",
+          "text": "こうじょう",
+          "isKeyGrammar": true,
+          "kanji": "工場",
+          "furigana": "こうじょう"
+        },
+        {
+          "id": "d6-29",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-30",
+          "text": "つくります",
+          "isKeyGrammar": false,
+          "kanji": "作ります",
+          "furigana": "つくります"
+        },
+        {
+          "id": "d6-31",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Sản phẩm này được làm ở nhà máy nào?"
+    },
+    {
+      "id": "dia-n3-6-6",
+      "speaker": "サントス",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d6-32",
+          "text": "きぎょう",
+          "isKeyGrammar": true,
+          "kanji": "企業",
+          "furigana": "きぎょう"
+        },
+        {
+          "id": "d6-33",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-34",
+          "text": "こうじょう",
+          "isKeyGrammar": true,
+          "kanji": "工場",
+          "furigana": "こうじょう"
+        },
+        {
+          "id": "d6-35",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-36",
+          "text": "つくります",
+          "isKeyGrammar": false,
+          "kanji": "作ります",
+          "furigana": "つくります"
+        }
+      ],
+      "meaningVi": "Được làm ở nhà máy của doanh nghiệp."
+    },
+    {
+      "id": "dia-n3-6-7",
+      "speaker": "田中",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d6-37",
+          "text": "この",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-38",
+          "text": "サービス",
+          "isKeyGrammar": false,
+          "kanji": "サービス",
+          "furigana": "サービス"
+        },
+        {
+          "id": "d6-39",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-40",
+          "text": "こども",
+          "isKeyGrammar": true,
+          "kanji": "子供",
+          "furigana": "こども"
+        },
+        {
+          "id": "d6-41",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-42",
+          "text": "たいしょう",
+          "isKeyGrammar": true,
+          "kanji": "対象",
+          "furigana": "たいしょう"
+        },
+        {
+          "id": "d6-43",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-44",
+          "text": "して",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d6-45",
+          "text": "います",
+          "isKeyGrammar": false,
+          "kanji": "居ます",
+          "furigana": "います"
+        },
+        {
+          "id": "d6-46",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Dịch vụ này lấy trẻ em làm đối tượng phải không?"
+    },
+    {
+      "id": "dia-n3-6-8",
+      "speaker": "サントス",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d6-47",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-48",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-49",
+          "text": "こども",
+          "isKeyGrammar": false,
+          "kanji": "子供",
+          "furigana": "こども"
+        },
+        {
+          "id": "d6-50",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-51",
+          "text": "たいしょう",
+          "isKeyGrammar": true,
+          "kanji": "対象",
+          "furigana": "たいしょう"
+        },
+        {
+          "id": "d6-52",
+          "text": "に",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d6-53",
+          "text": "して",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d6-54",
+          "text": "います",
+          "isKeyGrammar": false,
+          "kanji": "居ます",
+          "furigana": "います"
+        }
+      ],
+      "meaningVi": "Vâng, lấy trẻ em làm đối tượng."
+    },
+    {
+      "id": "dia-n3-6-9",
+      "speaker": "田中",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d6-55",
+          "text": "はんばい",
+          "isKeyGrammar": true,
+          "kanji": "販売",
+          "furigana": "はんばい"
+        },
+        {
+          "id": "d6-56",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-57",
+          "text": "もくてき",
+          "isKeyGrammar": true,
+          "kanji": "目的",
+          "furigana": "もくてき"
+        },
+        {
+          "id": "d6-58",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-59",
+          "text": "なん",
+          "isKeyGrammar": false,
+          "kanji": "何",
+          "furigana": "なん"
+        },
+        {
+          "id": "d6-60",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d6-61",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Mục đích bán hàng là gì?"
+    },
+    {
+      "id": "dia-n3-6-10",
+      "speaker": "サントス",
+      "speakerRole": "Nhân viên công ty",
+      "tokens": [
+        {
+          "id": "d6-62",
+          "text": "あたらしい",
+          "isKeyGrammar": false,
+          "kanji": "新しい",
+          "furigana": "あたらしい"
+        },
+        {
+          "id": "d6-63",
+          "text": "しょうひん",
+          "isKeyGrammar": false,
+          "kanji": "商品",
+          "furigana": "しょうひん"
+        },
+        {
+          "id": "d6-64",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d6-65",
+          "text": "やすく",
+          "isKeyGrammar": false,
+          "kanji": "安く",
+          "furigana": "やすく"
+        },
+        {
+          "id": "d6-66",
+          "text": "うる",
+          "isKeyGrammar": false,
+          "kanji": "売る",
+          "furigana": "うる"
+        },
+        {
+          "id": "d6-67",
+          "text": "ためです",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Là vì mục đích bán sản phẩm mới với giá rẻ."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n3-6-1",
+      "question": "「この商品は主婦向けに作られました」 — 向けに dùng để:",
+      "options": [
+        "Nêu đối tượng cụ thể mà hành động (làm ra sản phẩm) nhắm tới",
+        "So sánh sản phẩm với sản phẩm khác",
+        "Phủ định việc làm sản phẩm",
+        "Chỉ thời gian làm sản phẩm"
+      ],
+      "correctIndex": 0,
+      "explanation": "向けに gắn sau danh từ chỉ đối tượng (主婦) để nói hành động được thiết kế riêng cho đối tượng đó.",
+      "hint": "Xem cấu trúc N向けに ở slide 1."
+    },
+    {
+      "id": "ex-q-n3-6-2",
+      "question": "「子供向けのサービスです」 — vì sao dùng 向けの chứ không phải 向けに?",
+      "options": [
+        "Vì 向け đứng trước danh từ (サービス) nên phải đổi thành 向けの",
+        "Vì サービス là động từ",
+        "Không có quy tắc, dùng tùy ý",
+        "Vì câu là câu phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "Khi 向け bổ nghĩa cho một danh từ khác (thay vì đứng trước động từ), phải dùng dạng 向けの.",
+      "hint": "Xem cấu trúc N1向けのN2 ở slide 2."
+    },
+    {
+      "id": "ex-q-n3-6-3",
+      "question": "Sự khác biệt giữa 向け và ため(に) là gì?",
+      "options": [
+        "向け nhấn ĐỐI TƯỢNG cụ thể; ため(に) nhấn MỤC ĐÍCH/LÝ DO của hành động",
+        "Hoàn toàn giống nhau, dùng thay thế được cho nhau luôn",
+        "向け chỉ dùng cho phủ định",
+        "ため(に) chỉ dùng cho câu hỏi"
+      ],
+      "correctIndex": 0,
+      "explanation": "向け trả lời 'dành cho AI', còn ため(に) trả lời 'VÌ MỤC ĐÍCH GÌ' — hai câu hỏi khác nhau, có thể kết hợp trong cùng câu.",
+      "hint": "Xem so sánh và ví dụ kết hợp ở slide 3."
+    },
+    {
+      "id": "ex-q-n3-6-4",
+      "question": "「主婦向けの商品を、会社のために作りました」 nghĩa là:",
+      "options": [
+        "Đã làm sản phẩm dành cho bà nội trợ (đối tượng), vì lợi ích của công ty (mục đích)",
+        "Đã làm sản phẩm dành cho công ty, vì lợi ích của bà nội trợ",
+        "Không làm sản phẩm nào cả",
+        "Công ty đã từ chối làm sản phẩm"
+      ],
+      "correctIndex": 0,
+      "explanation": "向けの chỉ đối tượng (主婦), のために chỉ mục đích/lợi ích (会社) — hai vai trò tách biệt trong câu.",
+      "hint": "Phân tích từng cụm từ theo vai trò ngữ pháp."
+    },
+    {
+      "id": "ex-q-n3-6-5",
+      "question": "「この製品は海外向けに販売します」 — 海外向けに có nghĩa là:",
+      "options": [
+        "Hướng tới, nhắm tới thị trường nước ngoài",
+        "Chỉ bán ở trong nước",
+        "So sánh với sản phẩm nước ngoài",
+        "Nhập khẩu từ nước ngoài"
+      ],
+      "correctIndex": 0,
+      "explanation": "向けに sau 海外 (nước ngoài) nghĩa là sản phẩm được nhắm tới bán ở thị trường nước ngoài.",
+      "hint": "Áp dụng cấu trúc N向けに với N=海外."
+    },
+    {
+      "id": "ex-q-n3-6-6",
+      "question": "を対象に(して) khác 向け ở điểm nào?",
+      "options": [
+        "を対象に(して) trang trọng hơn, dùng trong khảo sát/nghiên cứu/báo cáo",
+        "を対象に(して) chỉ dùng trong hội thoại thân mật",
+        "Hoàn toàn giống 向け, không khác gì",
+        "を対象に(して) chỉ dùng cho phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "を対象に(して) là cách nói trang trọng hơn của 向け, ít dùng trong hội thoại đời thường.",
+      "hint": "Xem ghi chú văn phong ở slide 4."
+    },
+    {
+      "id": "ex-q-n3-6-7",
+      "question": "「このサービスは子供を対象にしています」 nghĩa là:",
+      "options": [
+        "Dịch vụ này lấy trẻ em làm đối tượng",
+        "Dịch vụ này so sánh với trẻ em",
+        "Dịch vụ này cấm trẻ em sử dụng",
+        "Trẻ em đã tạo ra dịch vụ này"
+      ],
+      "correctIndex": 0,
+      "explanation": "を対象にしています nghĩa là 'lấy N làm đối tượng', ở đây N=子供 (trẻ em).",
+      "hint": "Áp dụng cấu trúc N を対象に(して) ở slide 4."
+    },
+    {
+      "id": "ex-q-n3-6-8",
+      "question": "Trong hội thoại, công ty của Santos có bán sản phẩm ra nước ngoài không?",
+      "options": [
+        "Có, từ năm sau sẽ bán hướng tới cả thị trường nước ngoài",
+        "Không bao giờ bán ra nước ngoài",
+        "Đã ngừng bán ra nước ngoài từ năm ngoái",
+        "Không được đề cập trong hội thoại"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「来年から海外向けにも販売します」.",
+      "hint": "Xem câu thoại thứ 4."
+    },
+    {
+      "id": "ex-q-n3-6-9",
+      "question": "Sản phẩm trong hội thoại được làm ở đâu?",
+      "options": [
+        "Ở nhà máy của doanh nghiệp",
+        "Ở nhà của Santos",
+        "Ở nước ngoài",
+        "Không được làm ở đâu cả"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos trả lời 「企業の工場で作ります」.",
+      "hint": "Xem câu thoại thứ 6."
+    },
+    {
+      "id": "ex-q-n3-6-10",
+      "question": "Mục đích bán hàng được nêu trong hội thoại là gì?",
+      "options": [
+        "Bán sản phẩm mới với giá rẻ",
+        "Tăng giá sản phẩm cũ",
+        "Ngừng sản xuất sản phẩm",
+        "Không có mục đích cụ thể"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos trả lời 「新しい商品を安く売るためです」.",
+      "hint": "Xem câu thoại cuối cùng."
+    }
+  ]
+}

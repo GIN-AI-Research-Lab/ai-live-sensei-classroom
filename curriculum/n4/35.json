@@ -1,0 +1,1478 @@
+{
+  "level": "N4",
+  "lessonNumber": 35,
+  "title": "Bài 35: Thể điều kiện (〜ば / 〜なら)",
+  "description": "Chia thể ば (nhóm 1: う→えば, nhóm 2: bỏ る+れば, tính từ い: bỏ い+ければ) diễn tả quan hệ nhân quả khách quan, và なら phản hồi CHỦ ĐỀ đang được nhắc tới (khác hẳn と/たら/ば luôn đặt điều kiện giả định về sự việc) — tổng kết bốn thể điều kiện と/たら/ば/なら và cách chọn đúng theo ngữ cảnh.",
+  "vocabList": [
+    {
+      "id": "voc-n4-35-1",
+      "word": "いけば",
+      "kanji": "行けば",
+      "furigana": "いけば",
+      "romaji": "ikeba",
+      "wordType": "verb",
+      "meaningVi": "Nếu đi (thể ば của 行きます)",
+      "accentNote": "行く (nhóm 1) → 行けば: đổi đuôi く→けば."
+    },
+    {
+      "id": "voc-n4-35-2",
+      "word": "たべれば",
+      "kanji": "食べれば",
+      "furigana": "たべれば",
+      "romaji": "tabereba",
+      "wordType": "verb",
+      "meaningVi": "Nếu ăn (thể ば của 食べます)",
+      "accentNote": "食べる (nhóm 2) → 食べれば: bỏ る, thêm れば."
+    },
+    {
+      "id": "voc-n4-35-3",
+      "word": "すれば",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "sureba",
+      "wordType": "verb",
+      "meaningVi": "Nếu làm (thể ば của します)",
+      "accentNote": "する → すれば (bất quy tắc)."
+    },
+    {
+      "id": "voc-n4-35-4",
+      "word": "くれば",
+      "kanji": "来れば",
+      "furigana": "くれば",
+      "romaji": "kureba",
+      "wordType": "verb",
+      "meaningVi": "Nếu đến (thể ば của 来ます)",
+      "accentNote": "来る → 来れば (bất quy tắc, đọc くれば)."
+    },
+    {
+      "id": "voc-n4-35-5",
+      "word": "やすければ",
+      "kanji": "安ければ",
+      "furigana": "やすければ",
+      "romaji": "yasukereba",
+      "wordType": "adjective",
+      "meaningVi": "Nếu rẻ (thể ば của tính từ い)",
+      "accentNote": "安い bỏ い, thêm ければ."
+    },
+    {
+      "id": "voc-n4-35-6",
+      "word": "げんきなら",
+      "kanji": "元気なら",
+      "furigana": "げんきなら",
+      "romaji": "genki nara",
+      "wordType": "adjective",
+      "meaningVi": "Nếu khỏe (thể なら của tính từ な)",
+      "accentNote": "Tính từ な/danh từ + なら, không cần です."
+    },
+    {
+      "id": "voc-n4-35-7",
+      "word": "いなか",
+      "kanji": "田舎",
+      "furigana": "いなか",
+      "romaji": "inaka",
+      "wordType": "noun",
+      "meaningVi": "Vùng quê, nông thôn",
+      "accentNote": "田舎に 住むなら、静かな ところが いいです = nếu sống ở quê thì nên chọn nơi yên tĩnh."
+    },
+    {
+      "id": "voc-n4-35-8",
+      "word": "とかい",
+      "kanji": "都会",
+      "furigana": "とかい",
+      "romaji": "tokai",
+      "wordType": "noun",
+      "meaningVi": "Thành thị, đô thị",
+      "accentNote": "都会に 住めば、便利です = nếu sống ở thành thị thì tiện lợi."
+    },
+    {
+      "id": "voc-n4-35-9",
+      "word": "じんこう",
+      "kanji": "人口",
+      "furigana": "じんこう",
+      "romaji": "jinkou",
+      "wordType": "noun",
+      "meaningVi": "Dân số",
+      "accentNote": "人口が 多ければ = nếu dân số đông."
+    },
+    {
+      "id": "voc-n4-35-10",
+      "word": "ふべん",
+      "kanji": "不便",
+      "furigana": "ふべん",
+      "romaji": "fuben",
+      "wordType": "adjective",
+      "meaningVi": "Bất tiện",
+      "accentNote": "Tính từ な. 田舎は 不便かもしれません = ở quê có thể bất tiện."
+    },
+    {
+      "id": "voc-n4-35-11",
+      "word": "べんり",
+      "kanji": "便利",
+      "furigana": "べんり",
+      "romaji": "benri",
+      "wordType": "adjective",
+      "meaningVi": "Tiện lợi",
+      "accentNote": "Đã gặp N5 bài 8."
+    },
+    {
+      "id": "voc-n4-35-12",
+      "word": "しずか",
+      "kanji": "静か",
+      "furigana": "しずか",
+      "romaji": "shizuka",
+      "wordType": "adjective",
+      "meaningVi": "Yên tĩnh",
+      "accentNote": "Đã gặp N5 bài 8."
+    },
+    {
+      "id": "voc-n4-35-13",
+      "word": "てんき",
+      "kanji": "天気",
+      "furigana": "てんき",
+      "romaji": "tenki",
+      "wordType": "noun",
+      "meaningVi": "Thời tiết",
+      "accentNote": "Đã gặp N5 bài 21."
+    },
+    {
+      "id": "voc-n4-35-14",
+      "word": "おかね",
+      "kanji": "お金",
+      "furigana": "おかね",
+      "romaji": "okane",
+      "wordType": "noun",
+      "meaningVi": "Tiền",
+      "accentNote": "Đã gặp N5 bài 25."
+    },
+    {
+      "id": "voc-n4-35-15",
+      "word": "じかん",
+      "kanji": "時間",
+      "furigana": "じかん",
+      "romaji": "jikan",
+      "wordType": "noun",
+      "meaningVi": "Thời gian",
+      "accentNote": "時間が あれば = nếu có thời gian."
+    },
+    {
+      "id": "voc-n4-35-16",
+      "word": "りょこう",
+      "kanji": "旅行",
+      "furigana": "りょこう",
+      "romaji": "ryokou",
+      "wordType": "noun",
+      "meaningVi": "Du lịch",
+      "accentNote": "Đã gặp N5 bài 5."
+    },
+    {
+      "id": "voc-n4-35-17",
+      "word": "しごと",
+      "kanji": "仕事",
+      "furigana": "しごと",
+      "romaji": "shigoto",
+      "wordType": "noun",
+      "meaningVi": "Công việc",
+      "accentNote": "仕事なら、まかせて ください = nếu là công việc thì cứ giao cho tôi."
+    },
+    {
+      "id": "voc-n4-35-18",
+      "word": "にほんご",
+      "kanji": "日本語",
+      "furigana": "にほんご",
+      "romaji": "nihongo",
+      "wordType": "noun",
+      "meaningVi": "Tiếng Nhật",
+      "accentNote": "日本語なら、少し 話せます = nếu là tiếng Nhật thì tôi nói được một chút."
+    },
+    {
+      "id": "voc-n4-35-19",
+      "word": "わかりません",
+      "kanji": "分かりません",
+      "furigana": "わかりません",
+      "romaji": "wakarimasen",
+      "wordType": "phrase",
+      "meaningVi": "Không hiểu, không biết",
+      "accentNote": "分からなければ = nếu không hiểu."
+    },
+    {
+      "id": "voc-n4-35-20",
+      "word": "せんせい",
+      "kanji": "先生",
+      "furigana": "せんせい",
+      "romaji": "sensei",
+      "wordType": "noun",
+      "meaningVi": "Thầy/cô giáo",
+      "accentNote": "先生に 聞けば = nếu hỏi thầy giáo."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n4-35-1",
+      "character": "田",
+      "hanViet": "ĐIỀN",
+      "strokeCount": 5,
+      "onyomi": [
+        "デン (den)"
+      ],
+      "kunyomi": [
+        "た"
+      ],
+      "meaningVi": "Ruộng đồng.",
+      "commonWords": [
+        {
+          "word": "田舎",
+          "furigana": "いなか",
+          "meaningVi": "Vùng quê"
+        },
+        {
+          "word": "田んぼ",
+          "furigana": "たんぼ",
+          "meaningVi": "Ruộng lúa"
+        },
+        {
+          "word": "水田",
+          "furigana": "すいでん",
+          "meaningVi": "Ruộng nước"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-35-2",
+      "character": "舎",
+      "hanViet": "XÁ",
+      "strokeCount": 8,
+      "onyomi": [
+        "シャ (sha)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Nhà ở, chốn quê mùa (chỉ ghép trong 田舎).",
+      "commonWords": [
+        {
+          "word": "田舎",
+          "furigana": "いなか",
+          "meaningVi": "Vùng quê"
+        },
+        {
+          "word": "校舎",
+          "furigana": "こうしゃ",
+          "meaningVi": "Tòa nhà trường học"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-35-3",
+      "character": "都",
+      "hanViet": "ĐÔ",
+      "strokeCount": 11,
+      "onyomi": [
+        "ト (to)"
+      ],
+      "kunyomi": [
+        "みやこ"
+      ],
+      "meaningVi": "Kinh đô, đô thị. Đã gặp N5 bài 19.",
+      "commonWords": [
+        {
+          "word": "都会",
+          "furigana": "とかい",
+          "meaningVi": "Thành thị"
+        },
+        {
+          "word": "京都",
+          "furigana": "きょうと",
+          "meaningVi": "Kyoto"
+        },
+        {
+          "word": "都市",
+          "furigana": "とし",
+          "meaningVi": "Đô thị"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-35-4",
+      "character": "口",
+      "hanViet": "KHẨU",
+      "strokeCount": 3,
+      "onyomi": [
+        "コウ (kou)"
+      ],
+      "kunyomi": [
+        "くち"
+      ],
+      "meaningVi": "Miệng, cửa ra vào, đầu mối.",
+      "commonWords": [
+        {
+          "word": "人口",
+          "furigana": "じんこう",
+          "meaningVi": "Dân số"
+        },
+        {
+          "word": "入口",
+          "furigana": "いりぐち",
+          "meaningVi": "Lối vào"
+        },
+        {
+          "word": "口",
+          "furigana": "くち",
+          "meaningVi": "Miệng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n4-35-5",
+      "character": "便",
+      "hanViet": "TIỆN",
+      "strokeCount": 9,
+      "onyomi": [
+        "ベン (ben)",
+        "ビン (bin)"
+      ],
+      "kunyomi": [
+        "たよ(り)"
+      ],
+      "meaningVi": "Tiện lợi, thư từ.",
+      "commonWords": [
+        {
+          "word": "便利",
+          "furigana": "べんり",
+          "meaningVi": "Tiện lợi"
+        },
+        {
+          "word": "不便",
+          "furigana": "ふべん",
+          "meaningVi": "Bất tiện"
+        },
+        {
+          "word": "郵便",
+          "furigana": "ゆうびん",
+          "meaningVi": "Bưu điện"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n4-l35-s1",
+      "slideType": "grammar",
+      "title": "1. Chia thể ば",
+      "grammarFormula": "Nhóm 1: う→え+ば (行く→行けば) 　Nhóm 2: bỏ る+れば (食べる→食べれば) 　い-adj: bỏ い+ければ",
+      "explanation": "ば là thể điều kiện GIẢ ĐỊNH thuần túy, nhấn mạnh QUAN HỆ NHÂN QUẢ giữa điều kiện và kết quả hơn たら (N5 bài 25) — thường dùng cho quy luật chung, lời khuyên, hoặc giả định trừu tượng.",
+      "teacherTips": "ば nhấn QUAN HỆ NHÂN QUẢ khách quan (nếu A thì tất yếu/thường B) hơn たら — たら linh hoạt hơn cho tình huống cụ thể một lần.",
+      "culturalNotes": "安ければ買います là câu trả lời điển hình về thói quen mua sắm, nhấn mạnh giá cả là YẾU TỐ QUYẾT ĐỊNH.",
+      "examples": [
+        {
+          "id": "ex-n4-l35-s1-1",
+          "tokens": [
+            {
+              "id": "t-l35s1-1",
+              "text": "はやく",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s1-2",
+              "text": "いけば",
+              "isKeyGrammar": true,
+              "kanji": "行けば",
+              "furigana": "いけば"
+            },
+            {
+              "id": "t-l35s1-3",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s1-4",
+              "text": "まにあいます",
+              "isKeyGrammar": false,
+              "kanji": "間に合います",
+              "furigana": "まにあいます"
+            }
+          ],
+          "meaningVi": "Nếu đi sớm thì sẽ kịp giờ."
+        },
+        {
+          "id": "ex-n4-l35-s1-2",
+          "tokens": [
+            {
+              "id": "t-l35s1-5",
+              "text": "やすければ",
+              "isKeyGrammar": true,
+              "kanji": "安ければ",
+              "furigana": "やすければ"
+            },
+            {
+              "id": "t-l35s1-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s1-7",
+              "text": "かいます",
+              "isKeyGrammar": false,
+              "kanji": "買います",
+              "furigana": "かいます"
+            }
+          ],
+          "meaningVi": "Nếu rẻ thì tôi mua."
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l35-s2",
+      "slideType": "grammar",
+      "title": "2. なら: điều kiện về CHỦ ĐỀ đang bàn tới",
+      "grammarFormula": "N/な-adj (bỏ です) + なら 　hoặc　[Câu thể thông thường] + なら",
+      "explanation": "なら khác hẳn ば/たら/と: nó không diễn tả 'nếu SỰ VIỆC xảy ra' mà diễn tả 'NẾU ĐANG NÓI VỀ chủ đề này thì...' — thường dùng để phản hồi trực tiếp điều người khác vừa nhắc tới.",
+      "teacherTips": "なら PHẢN HỒI lại một chủ đề đã được nhắc tới — khác ba cấu trúc kia luôn ĐẶT RA một điều kiện giả định mới.",
+      "culturalNotes": "なら rất tự nhiên khi ai đó vừa hỏi/nói điều gì, mình đáp lại ngay bằng đúng chủ đề đó: 「田舎ですか。田舎なら、静かなところがいいですよ」.",
+      "examples": [
+        {
+          "id": "ex-n4-l35-s2-1",
+          "tokens": [
+            {
+              "id": "t-l35s2-1",
+              "text": "にほんご",
+              "isKeyGrammar": false,
+              "kanji": "日本語",
+              "furigana": "にほんご"
+            },
+            {
+              "id": "t-l35s2-2",
+              "text": "なら",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l35s2-3",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s2-4",
+              "text": "すこし",
+              "isKeyGrammar": false,
+              "kanji": "少し",
+              "furigana": "すこし"
+            },
+            {
+              "id": "t-l35s2-5",
+              "text": "はなせます",
+              "isKeyGrammar": false,
+              "kanji": "話せます",
+              "furigana": "はなせます"
+            }
+          ],
+          "meaningVi": "Nếu là (nói về) tiếng Nhật thì tôi nói được một chút."
+        },
+        {
+          "id": "ex-n4-l35-s2-2",
+          "tokens": [
+            {
+              "id": "t-l35s2-6",
+              "text": "しごと",
+              "isKeyGrammar": false,
+              "kanji": "仕事",
+              "furigana": "しごと"
+            },
+            {
+              "id": "t-l35s2-7",
+              "text": "なら",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l35s2-8",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s2-9",
+              "text": "まかせて",
+              "isKeyGrammar": false,
+              "kanji": "任せて",
+              "furigana": "まかせて"
+            },
+            {
+              "id": "t-l35s2-10",
+              "text": "ください",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Nếu là (chuyện) công việc thì cứ giao cho tôi."
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l35-s3",
+      "slideType": "grammar",
+      "title": "3. So sánh bốn thể điều kiện: と／たら／ば／なら",
+      "grammarFormula": "と (quy luật tất yếu, N5 b23) / たら (giả định linh hoạt, N5 b25) / ば (nhân quả khách quan) / なら (phản hồi chủ đề)",
+      "explanation": "Bốn cấu trúc đều dịch gần giống 'nếu' nhưng SẮC THÁI khác nhau rõ rệt — chọn đúng cấu trúc giúp câu nói tự nhiên, đúng ý hơn nhiều so với chỉ ghi nhớ một công thức chung.",
+      "teacherTips": "Mẹo chọn nhanh: hỏi đường/quy luật → と; kể chuyện/dự định cụ thể → たら; điều kiện chung/lời khuyên → ば; phản hồi chủ đề đã nhắc → なら.",
+      "culturalNotes": "Người bản xứ dùng bốn thể này gần như theo bản năng — với người học, chọn たら trong hầu hết tình huống vẫn AN TOÀN nhất vì linh hoạt nhất.",
+      "examples": [
+        {
+          "id": "ex-n4-l35-s3-1",
+          "tokens": [
+            {
+              "id": "t-l35s3-1",
+              "text": "みぎ",
+              "isKeyGrammar": false,
+              "kanji": "右",
+              "furigana": "みぎ"
+            },
+            {
+              "id": "t-l35s3-2",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s3-3",
+              "text": "まがると",
+              "isKeyGrammar": true,
+              "kanji": "曲がると",
+              "furigana": "まがると"
+            },
+            {
+              "id": "t-l35s3-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s3-5",
+              "text": "ぎんこう",
+              "isKeyGrammar": false,
+              "kanji": "銀行",
+              "furigana": "ぎんこう"
+            },
+            {
+              "id": "t-l35s3-6",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s3-7",
+              "text": "あります",
+              "isKeyGrammar": false,
+              "kanji": "有ります",
+              "furigana": "あります"
+            }
+          ],
+          "meaningVi": "Hễ rẽ phải là có ngân hàng. (と: quy luật tất yếu — N5 bài 23)"
+        },
+        {
+          "id": "ex-n4-l35-s3-2",
+          "tokens": [
+            {
+              "id": "t-l35s3-8",
+              "text": "でんわ",
+              "isKeyGrammar": false,
+              "kanji": "電話",
+              "furigana": "でんわ"
+            },
+            {
+              "id": "t-l35s3-9",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s3-10",
+              "text": "あれば",
+              "isKeyGrammar": true,
+              "kanji": "有れば",
+              "furigana": "あれば"
+            },
+            {
+              "id": "t-l35s3-11",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s3-12",
+              "text": "でんわします",
+              "isKeyGrammar": false,
+              "kanji": "電話します",
+              "furigana": "でんわします"
+            }
+          ],
+          "meaningVi": "Nếu có điện thoại thì tôi sẽ gọi. (ば: điều kiện khách quan)"
+        }
+      ]
+    },
+    {
+      "slideId": "n4-l35-s4",
+      "slideType": "grammar",
+      "title": "4. なら với câu tư vấn: đưa lời khuyên theo chủ đề",
+      "grammarFormula": "N なら、[lời khuyên]",
+      "explanation": "Cấu trúc なら + lời khuyên (thường kèm ほうがいい, N4 bài 32) rất phổ biến khi TƯ VẤN, PHẢN HỒI câu hỏi/tình huống ai đó vừa đưa ra.",
+      "teacherTips": "Câu tư vấn theo mẫu 'N なら、ほうがいいですよ' rất chuẩn, lịch sự — dùng nhiều khi bạn bè hỏi ý kiến về lựa chọn cuộc sống.",
+      "culturalNotes": "Người Nhật hay so sánh 田舎 (yên tĩnh, bất tiện) và 都会 (tiện lợi, ồn ào, đông đúc) khi bàn về việc chọn nơi sinh sống.",
+      "examples": [
+        {
+          "id": "ex-n4-l35-s4-1",
+          "tokens": [
+            {
+              "id": "t-l35s4-1",
+              "text": "いなか",
+              "isKeyGrammar": true,
+              "kanji": "田舎",
+              "furigana": "いなか"
+            },
+            {
+              "id": "t-l35s4-2",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s4-3",
+              "text": "すむ",
+              "isKeyGrammar": false,
+              "kanji": "住む",
+              "furigana": "すむ"
+            },
+            {
+              "id": "t-l35s4-4",
+              "text": "なら",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l35s4-5",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s4-6",
+              "text": "しずか",
+              "isKeyGrammar": false,
+              "kanji": "静か",
+              "furigana": "しずか"
+            },
+            {
+              "id": "t-l35s4-7",
+              "text": "な",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s4-8",
+              "text": "ところ",
+              "isKeyGrammar": false,
+              "kanji": "所",
+              "furigana": "ところ"
+            },
+            {
+              "id": "t-l35s4-9",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s4-10",
+              "text": "いいです",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Nếu định sống ở quê thì nên chọn nơi yên tĩnh."
+        },
+        {
+          "id": "ex-n4-l35-s4-2",
+          "tokens": [
+            {
+              "id": "t-l35s4-11",
+              "text": "とかい",
+              "isKeyGrammar": true,
+              "kanji": "都会",
+              "furigana": "とかい"
+            },
+            {
+              "id": "t-l35s4-12",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s4-13",
+              "text": "べんり",
+              "isKeyGrammar": false,
+              "kanji": "便利",
+              "furigana": "べんり"
+            },
+            {
+              "id": "t-l35s4-14",
+              "text": "です",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s4-15",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s4-16",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s4-17",
+              "text": "じんこう",
+              "isKeyGrammar": true,
+              "kanji": "人口",
+              "furigana": "じんこう"
+            },
+            {
+              "id": "t-l35s4-18",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l35s4-19",
+              "text": "おおくて",
+              "isKeyGrammar": false,
+              "kanji": "多くて",
+              "furigana": "おおくて"
+            },
+            {
+              "id": "t-l35s4-20",
+              "text": "うるさい",
+              "isKeyGrammar": false,
+              "kanji": "煩い",
+              "furigana": "うるさい"
+            },
+            {
+              "id": "t-l35s4-21",
+              "text": "かもしれません",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Thành thị thì tiện lợi, nhưng dân số đông nên có thể ồn ào."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n4-35-1",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l35-1",
+          "text": "そつぎょう",
+          "isKeyGrammar": false,
+          "kanji": "卒業",
+          "furigana": "そつぎょう"
+        },
+        {
+          "id": "d-l35-2",
+          "text": "したら",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-3",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-4",
+          "text": "いなか",
+          "isKeyGrammar": true,
+          "kanji": "田舎",
+          "furigana": "いなか"
+        },
+        {
+          "id": "d-l35-5",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-6",
+          "text": "すもう",
+          "isKeyGrammar": false,
+          "kanji": "住もう",
+          "furigana": "すもう"
+        },
+        {
+          "id": "d-l35-7",
+          "text": "と",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-8",
+          "text": "おもって",
+          "isKeyGrammar": false,
+          "kanji": "思って",
+          "furigana": "おもって"
+        },
+        {
+          "id": "d-l35-9",
+          "text": "います",
+          "isKeyGrammar": false,
+          "kanji": "居ます",
+          "furigana": "います"
+        }
+      ],
+      "meaningVi": "Sau khi tốt nghiệp, tớ định sống ở vùng quê."
+    },
+    {
+      "id": "dia-n4-35-2",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l35-10",
+          "text": "いなか",
+          "isKeyGrammar": true,
+          "kanji": "田舎",
+          "furigana": "いなか"
+        },
+        {
+          "id": "d-l35-11",
+          "text": "なら",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l35-12",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-13",
+          "text": "しずか",
+          "isKeyGrammar": false,
+          "kanji": "静か",
+          "furigana": "しずか"
+        },
+        {
+          "id": "d-l35-14",
+          "text": "な",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-15",
+          "text": "ところ",
+          "isKeyGrammar": false,
+          "kanji": "所",
+          "furigana": "ところ"
+        },
+        {
+          "id": "d-l35-16",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-17",
+          "text": "いいです",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l35-18",
+          "text": "よ",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Nếu là vùng quê thì cậu nên chọn nơi yên tĩnh đấy."
+    },
+    {
+      "id": "dia-n4-35-3",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l35-19",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-20",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-21",
+          "text": "いなか",
+          "isKeyGrammar": false,
+          "kanji": "田舎",
+          "furigana": "いなか"
+        },
+        {
+          "id": "d-l35-22",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-23",
+          "text": "ふべん",
+          "isKeyGrammar": true,
+          "kanji": "不便",
+          "furigana": "ふべん"
+        },
+        {
+          "id": "d-l35-24",
+          "text": "じゃ ありません",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-25",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Nhưng vùng quê không bất tiện à?"
+    },
+    {
+      "id": "dia-n4-35-4",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l35-26",
+          "text": "すこし",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-27",
+          "text": "ふべん",
+          "isKeyGrammar": true,
+          "kanji": "不便",
+          "furigana": "ふべん"
+        },
+        {
+          "id": "d-l35-28",
+          "text": "かもしれません",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-29",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-30",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-31",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-32",
+          "text": "くるま",
+          "isKeyGrammar": false,
+          "kanji": "車",
+          "furigana": "くるま"
+        },
+        {
+          "id": "d-l35-33",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-34",
+          "text": "あれば",
+          "isKeyGrammar": true,
+          "kanji": "有れば",
+          "furigana": "あれば"
+        },
+        {
+          "id": "d-l35-35",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-36",
+          "text": "だいじょうぶ",
+          "isKeyGrammar": false,
+          "kanji": "大丈夫",
+          "furigana": "だいじょうぶ"
+        },
+        {
+          "id": "d-l35-37",
+          "text": "でしょう",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Có thể hơi bất tiện. Nhưng nếu có xe hơi thì chắc là ổn."
+    },
+    {
+      "id": "dia-n4-35-5",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l35-38",
+          "text": "サントスさん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-39",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-40",
+          "text": "どうですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Còn cậu Santos thì sao?"
+    },
+    {
+      "id": "dia-n4-35-6",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l35-41",
+          "text": "わたし",
+          "isKeyGrammar": false,
+          "kanji": "私",
+          "furigana": "わたし"
+        },
+        {
+          "id": "d-l35-42",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-43",
+          "text": "とかい",
+          "isKeyGrammar": true,
+          "kanji": "都会",
+          "furigana": "とかい"
+        },
+        {
+          "id": "d-l35-44",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-45",
+          "text": "ほう",
+          "isKeyGrammar": false,
+          "kanji": "方",
+          "furigana": "ほう"
+        },
+        {
+          "id": "d-l35-46",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-47",
+          "text": "すき",
+          "isKeyGrammar": false,
+          "kanji": "好き",
+          "furigana": "すき"
+        },
+        {
+          "id": "d-l35-48",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-49",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-50",
+          "text": "とかい",
+          "isKeyGrammar": false,
+          "kanji": "都会",
+          "furigana": "とかい"
+        },
+        {
+          "id": "d-l35-51",
+          "text": "なら",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l35-52",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-53",
+          "text": "しごと",
+          "isKeyGrammar": true,
+          "kanji": "仕事",
+          "furigana": "しごと"
+        },
+        {
+          "id": "d-l35-54",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-55",
+          "text": "みつけやすい",
+          "isKeyGrammar": false,
+          "kanji": "見つけやすい",
+          "furigana": "みつけやすい"
+        },
+        {
+          "id": "d-l35-56",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Tớ thích thành thị hơn. Nếu là thành thị thì dễ tìm việc làm."
+    },
+    {
+      "id": "dia-n4-35-7",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l35-57",
+          "text": "たしかに",
+          "isKeyGrammar": false,
+          "kanji": "確かに",
+          "furigana": "たしかに"
+        },
+        {
+          "id": "d-l35-58",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-59",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-60",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-61",
+          "text": "じんこう",
+          "isKeyGrammar": true,
+          "kanji": "人口",
+          "furigana": "じんこう"
+        },
+        {
+          "id": "d-l35-62",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-63",
+          "text": "おおければ",
+          "isKeyGrammar": true,
+          "kanji": "多ければ",
+          "furigana": "おおければ"
+        },
+        {
+          "id": "d-l35-64",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-65",
+          "text": "うるさい",
+          "isKeyGrammar": false,
+          "kanji": "煩い",
+          "furigana": "うるさい"
+        },
+        {
+          "id": "d-l35-66",
+          "text": "でしょう",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Đúng đấy. Nhưng nếu dân số đông thì chắc là ồn ào nhỉ."
+    },
+    {
+      "id": "dia-n4-35-8",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l35-67",
+          "text": "そうですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-68",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-69",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-70",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-71",
+          "text": "べんり",
+          "isKeyGrammar": true,
+          "kanji": "便利",
+          "furigana": "べんり"
+        },
+        {
+          "id": "d-l35-72",
+          "text": "な",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-73",
+          "text": "ほう",
+          "isKeyGrammar": false,
+          "kanji": "方",
+          "furigana": "ほう"
+        },
+        {
+          "id": "d-l35-74",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-75",
+          "text": "いい",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l35-76",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Đúng vậy. Nhưng tớ vẫn thích tiện lợi hơn."
+    },
+    {
+      "id": "dia-n4-35-9",
+      "speaker": "ワン",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l35-77",
+          "text": "にほんご",
+          "isKeyGrammar": true,
+          "kanji": "日本語",
+          "furigana": "にほんご"
+        },
+        {
+          "id": "d-l35-78",
+          "text": "なら",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l35-79",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-80",
+          "text": "だれ",
+          "isKeyGrammar": false,
+          "kanji": "誰",
+          "furigana": "だれ"
+        },
+        {
+          "id": "d-l35-81",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-82",
+          "text": "きけば",
+          "isKeyGrammar": true,
+          "kanji": "聞けば",
+          "furigana": "きけば"
+        },
+        {
+          "id": "d-l35-83",
+          "text": "いいです",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l35-84",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Nếu là (thắc mắc về) tiếng Nhật thì nên hỏi ai vậy?"
+    },
+    {
+      "id": "dia-n4-35-10",
+      "speaker": "サントス",
+      "speakerRole": "Sinh viên năm cuối",
+      "tokens": [
+        {
+          "id": "d-l35-85",
+          "text": "せんせい",
+          "isKeyGrammar": true,
+          "kanji": "先生",
+          "furigana": "せんせい"
+        },
+        {
+          "id": "d-l35-86",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-87",
+          "text": "きけば",
+          "isKeyGrammar": true,
+          "kanji": "聞けば",
+          "furigana": "きけば"
+        },
+        {
+          "id": "d-l35-88",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-89",
+          "text": "すぐ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l35-90",
+          "text": "わかります",
+          "isKeyGrammar": false,
+          "kanji": "分かります",
+          "furigana": "わかります"
+        }
+      ],
+      "meaningVi": "Nếu hỏi thầy giáo thì sẽ hiểu ngay thôi."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n4-35-1",
+      "question": "Thể ば của 行きます (nhóm 1, đuôi く) là:",
+      "options": [
+        "行けば",
+        "行くば",
+        "行きば",
+        "行いば"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nhóm 1 đổi đuôi く thành けば: 行く → 行けば.",
+      "hint": "Áp dụng quy tắc chia thể ば nhóm 1."
+    },
+    {
+      "id": "ex-q-n4-35-2",
+      "question": "Thể ば của 安い (tính từ い) là:",
+      "options": [
+        "安ければ",
+        "安いば",
+        "安くば",
+        "安かれば"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tính từ い bỏ い, thêm ければ: 安い → 安ければ.",
+      "hint": "Áp dụng quy tắc chia thể ば cho tính từ い."
+    },
+    {
+      "id": "ex-q-n4-35-3",
+      "question": "「日本語なら、少し話せます」 — なら ở đây có nghĩa:",
+      "options": [
+        "Nếu đang nói về (chủ đề) tiếng Nhật thì...",
+        "Nếu tiếng Nhật xảy ra thì...",
+        "Sau khi học tiếng Nhật thì...",
+        "Trong khi học tiếng Nhật thì..."
+      ],
+      "correctIndex": 0,
+      "explanation": "なら phản hồi lại CHỦ ĐỀ đã được nhắc tới, khác với と/たら/ば luôn đặt ra điều kiện giả định về sự việc.",
+      "hint": "Xem đặc điểm riêng của なら ở slide 2."
+    },
+    {
+      "id": "ex-q-n4-35-4",
+      "question": "So sánh と (N5 b23), たら (N5 b25), ば, なら — điểm khác biệt CHÍNH của なら là:",
+      "options": [
+        "なら phản hồi CHỦ ĐỀ đang bàn, ba cái kia đặt điều kiện giả định về SỰ VIỆC",
+        "Cả bốn hoàn toàn giống nhau",
+        "なら chỉ dùng cho câu hỏi",
+        "と/たら/ば chỉ dùng cho câu phủ định"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đây là điểm khác biệt bản chất: なら không giả định 'nếu việc X xảy ra' mà là 'nếu đang nói về X'.",
+      "hint": "Xem tổng kết bốn thể điều kiện ở slide 3."
+    },
+    {
+      "id": "ex-q-n4-35-5",
+      "question": "「右に曲がると、銀行があります」 nên dùng thể điều kiện nào và tại sao?",
+      "options": [
+        "と, vì đây là quy luật/chỉ đường tất yếu luôn đúng (N5 bài 23)",
+        "なら, vì đang nói về chủ đề ngân hàng",
+        "ば, vì là điều kiện khách quan chung",
+        "Không cấu trúc nào phù hợp"
+      ],
+      "correctIndex": 0,
+      "explanation": "Chỉ đường là quy luật khách quan LUÔN đúng — と là lựa chọn phù hợp nhất (đã học ở N5 bài 23).",
+      "hint": "Nhớ lại đặc điểm của と đã học ở N5."
+    },
+    {
+      "id": "ex-q-n4-35-6",
+      "question": "「仕事なら、任せてください」 nghĩa là:",
+      "options": [
+        "Nếu là (chuyện) công việc thì cứ giao cho tôi",
+        "Nếu không có việc thì đừng giao cho tôi",
+        "Công việc đã được giao xong rồi",
+        "Tôi không muốn nhận công việc"
+      ],
+      "correctIndex": 0,
+      "explanation": "なら phản hồi trực tiếp chủ đề 'công việc' vừa được nhắc/ngụ ý trước đó.",
+      "hint": "Áp dụng đúng nghĩa なら đã học."
+    },
+    {
+      "id": "ex-q-n4-35-7",
+      "question": "「人口が多ければ、うるさいでしょう」 kết hợp hai cấu trúc nào?",
+      "options": [
+        "ば (điều kiện) + でしょう (dự đoán có căn cứ, N4 bài 32)",
+        "たら + かもしれません",
+        "と + ほうがいい",
+        "なら + ことにします"
+      ],
+      "correctIndex": 0,
+      "explanation": "Câu này ghép điều kiện ば với dự đoán でしョう để đưa ra suy luận có căn cứ dựa trên điều kiện giả định.",
+      "hint": "Kết hợp kiến thức bài 32 và bài 35."
+    },
+    {
+      "id": "ex-q-n4-35-8",
+      "question": "Trong bốn thể điều kiện, cấu trúc nào AN TOÀN NHẤT để dùng khi chưa chắc chọn đúng?",
+      "options": [
+        "たら (N5 bài 25, linh hoạt nhất, dùng được cho hầu hết tình huống)",
+        "と (giới hạn nhiều nhất)",
+        "ば (trang trọng, ít linh hoạt hơn たら)",
+        "なら (chỉ dùng được khi phản hồi chủ đề)"
+      ],
+      "correctIndex": 0,
+      "explanation": "たら linh hoạt nhất trong bốn cấu trúc, vế sau có thể là mệnh lệnh/lời mời/ý chí — an toàn cho người mới học.",
+      "hint": "Xem mẹo chọn nhanh ở slide 3."
+    },
+    {
+      "id": "ex-q-n4-35-9",
+      "question": "Trong hội thoại, Wang định sống ở đâu sau khi tốt nghiệp?",
+      "options": [
+        "Vùng quê (田舎)",
+        "Thành thị (都会)",
+        "Nước ngoài",
+        "Chưa quyết định"
+      ],
+      "correctIndex": 0,
+      "explanation": "Wang nói 「田舎に住もうと思っています」.",
+      "hint": "Xem câu thoại đầu tiên."
+    },
+    {
+      "id": "ex-q-n4-35-10",
+      "question": "Santos thích sống ở đâu và vì sao?",
+      "options": [
+        "Thành thị, vì dễ tìm việc làm",
+        "Vùng quê, vì yên tĩnh",
+        "Không có ý kiến gì",
+        "Nước ngoài, vì lương cao"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「都会の方が好きです。都会なら、仕事を見つけやすいです」.",
+      "hint": "Xem câu thoại thứ 6."
+    }
+  ]
+}

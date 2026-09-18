@@ -1,0 +1,1749 @@
+{
+  "level": "N5",
+  "lessonNumber": 3,
+  "title": "Bài 3: Nơi chốn & Vị trí (ここ / そこ / あそこ / どこ / こちら / いくら)",
+  "description": "Trỏ nơi chốn theo bộ ここ / そこ / あそこ / どこ và bản lịch sự こちら / そちら / あちら / どちら, hỏi vị trí trong tòa nhà bằng 〜階, hỏi quê quán công ty bằng お〜は どちらですか, và hỏi giá hàng hóa bằng いくらですか kèm cách đọc số đếm theo đơn vị vạn.",
+  "vocabList": [
+    {
+      "id": "voc-n5-3-1",
+      "word": "ここ",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "koko",
+      "wordType": "noun",
+      "meaningVi": "Chỗ này, ở đây (nơi người nói đang đứng)",
+      "accentNote": "Bộ ba こ - そ - あ lặp lại như bài 2."
+    },
+    {
+      "id": "voc-n5-3-2",
+      "word": "そこ",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "soko",
+      "wordType": "noun",
+      "meaningVi": "Chỗ đó (nơi người nghe đang đứng)",
+      "accentNote": "Gần đối phương."
+    },
+    {
+      "id": "voc-n5-3-3",
+      "word": "あそこ",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "asoko",
+      "wordType": "noun",
+      "meaningVi": "Chỗ kia (xa cả hai người)",
+      "accentNote": "Chú ý: あそこ chứ KHÔNG phải あこ."
+    },
+    {
+      "id": "voc-n5-3-4",
+      "word": "どこ",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "doko",
+      "wordType": "noun",
+      "meaningVi": "Ở đâu (từ để hỏi nơi chốn)",
+      "accentNote": "Nhóm ど luôn là từ để hỏi."
+    },
+    {
+      "id": "voc-n5-3-5",
+      "word": "こちら",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "kochira",
+      "wordType": "noun",
+      "meaningVi": "Phía này, đằng này (lịch sự)",
+      "accentNote": "Vừa chỉ hướng vừa thay cho ここ khi cần lịch sự."
+    },
+    {
+      "id": "voc-n5-3-6",
+      "word": "そちら",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "sochira",
+      "wordType": "noun",
+      "meaningVi": "Phía đó, đằng đó (lịch sự)",
+      "accentNote": "Dùng với khách, người trên."
+    },
+    {
+      "id": "voc-n5-3-7",
+      "word": "あちら",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "achira",
+      "wordType": "noun",
+      "meaningVi": "Phía kia, đằng kia (lịch sự)",
+      "accentNote": "Nhân viên cửa hàng dùng suốt."
+    },
+    {
+      "id": "voc-n5-3-8",
+      "word": "どちら",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "dochira",
+      "wordType": "noun",
+      "meaningVi": "Phía nào, ở đâu ạ (lịch sự)",
+      "accentNote": "Hỏi quê quán, công ty thì bắt buộc dùng どちら."
+    },
+    {
+      "id": "voc-n5-3-9",
+      "word": "きょうしつ",
+      "kanji": "教室",
+      "furigana": "きょうしつ",
+      "romaji": "kyoushitsu",
+      "wordType": "noun",
+      "meaningVi": "Phòng học, lớp học",
+      "accentNote": "教 (dạy) + 室 (phòng)."
+    },
+    {
+      "id": "voc-n5-3-10",
+      "word": "しょくどう",
+      "kanji": "食堂",
+      "furigana": "しょくどう",
+      "romaji": "shokudou",
+      "wordType": "noun",
+      "meaningVi": "Nhà ăn, căng tin",
+      "accentNote": "食 (ăn) + 堂 (sảnh)."
+    },
+    {
+      "id": "voc-n5-3-11",
+      "word": "じむしょ",
+      "kanji": "事務所",
+      "furigana": "じむしょ",
+      "romaji": "jimusho",
+      "wordType": "noun",
+      "meaningVi": "Văn phòng",
+      "accentNote": "Nơi làm giấy tờ, hành chính."
+    },
+    {
+      "id": "voc-n5-3-12",
+      "word": "かいぎしつ",
+      "kanji": "会議室",
+      "furigana": "かいぎしつ",
+      "romaji": "kaigishitsu",
+      "wordType": "noun",
+      "meaningVi": "Phòng họp",
+      "accentNote": "会議 = cuộc họp."
+    },
+    {
+      "id": "voc-n5-3-13",
+      "word": "うけつけ",
+      "kanji": "受付",
+      "furigana": "うけつけ",
+      "romaji": "uketsuke",
+      "wordType": "noun",
+      "meaningVi": "Quầy lễ tân, quầy tiếp đón",
+      "accentNote": "Vào tòa nhà Nhật là ghé 受付 trước."
+    },
+    {
+      "id": "voc-n5-3-14",
+      "word": "へや",
+      "kanji": "部屋",
+      "furigana": "へや",
+      "romaji": "heya",
+      "wordType": "noun",
+      "meaningVi": "Căn phòng",
+      "accentNote": "Trọng âm rơi vào や."
+    },
+    {
+      "id": "voc-n5-3-15",
+      "word": "トイレ",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "toire",
+      "wordType": "noun",
+      "meaningVi": "Nhà vệ sinh",
+      "accentNote": "Lịch sự hơn: お手洗い (おてあらい)."
+    },
+    {
+      "id": "voc-n5-3-16",
+      "word": "かいだん",
+      "kanji": "階段",
+      "furigana": "かいだん",
+      "romaji": "kaidan",
+      "wordType": "noun",
+      "meaningVi": "Cầu thang bộ",
+      "accentNote": "階 (tầng) + 段 (bậc)."
+    },
+    {
+      "id": "voc-n5-3-17",
+      "word": "エレベーター",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "erebeetaa",
+      "wordType": "noun",
+      "meaningVi": "Thang máy",
+      "accentNote": "Kéo dài cả ベー lẫn ター."
+    },
+    {
+      "id": "voc-n5-3-18",
+      "word": "エスカレーター",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "esukareetaa",
+      "wordType": "noun",
+      "meaningVi": "Thang cuốn",
+      "accentNote": "Osaka đứng bên phải, Tokyo đứng bên trái."
+    },
+    {
+      "id": "voc-n5-3-19",
+      "word": "くに",
+      "kanji": "国",
+      "furigana": "くに",
+      "romaji": "kuni",
+      "wordType": "noun",
+      "meaningVi": "Đất nước, quê hương",
+      "accentNote": "Hỏi lịch sự thì thêm お: お国."
+    },
+    {
+      "id": "voc-n5-3-20",
+      "word": "かいしゃ",
+      "kanji": "会社",
+      "furigana": "かいしゃ",
+      "romaji": "kaisha",
+      "wordType": "noun",
+      "meaningVi": "Công ty",
+      "accentNote": "会 (hội) + 社 (xã)."
+    },
+    {
+      "id": "voc-n5-3-21",
+      "word": "うち",
+      "kanji": "家",
+      "furigana": "うち",
+      "romaji": "uchi",
+      "wordType": "noun",
+      "meaningVi": "Nhà mình, nhà (của ai đó)",
+      "accentNote": "うち còn nghĩa là 'phe mình, công ty mình'."
+    },
+    {
+      "id": "voc-n5-3-22",
+      "word": "でんわ",
+      "kanji": "電話",
+      "furigana": "でんわ",
+      "romaji": "denwa",
+      "wordType": "noun",
+      "meaningVi": "Điện thoại, cuộc gọi",
+      "accentNote": "電 (điện) + 話 (thoại)."
+    },
+    {
+      "id": "voc-n5-3-23",
+      "word": "くつ",
+      "kanji": "靴",
+      "furigana": "くつ",
+      "romaji": "kutsu",
+      "wordType": "noun",
+      "meaningVi": "Giày",
+      "accentNote": "Vào nhà Nhật là cởi giày ngay ở 玄関."
+    },
+    {
+      "id": "voc-n5-3-24",
+      "word": "ネクタイ",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "nekutai",
+      "wordType": "noun",
+      "meaningVi": "Cà vạt",
+      "accentNote": "Từ tiếng Anh necktie."
+    },
+    {
+      "id": "voc-n5-3-25",
+      "word": "ワイン",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "wain",
+      "wordType": "noun",
+      "meaningVi": "Rượu vang",
+      "accentNote": "Đọc wa-in, hai nhịp."
+    },
+    {
+      "id": "voc-n5-3-26",
+      "word": "うりば",
+      "kanji": "売り場",
+      "furigana": "うりば",
+      "romaji": "uriba",
+      "wordType": "noun",
+      "meaningVi": "Quầy bán hàng, khu bán ~",
+      "accentNote": "売る (bán) + 場 (chỗ)."
+    },
+    {
+      "id": "voc-n5-3-27",
+      "word": "ちか",
+      "kanji": "地下",
+      "furigana": "ちか",
+      "romaji": "chika",
+      "wordType": "noun",
+      "meaningVi": "Tầng hầm, dưới lòng đất",
+      "accentNote": "地下一階 = tầng hầm 1."
+    },
+    {
+      "id": "voc-n5-3-28",
+      "word": "〜かい",
+      "kanji": "〜階",
+      "furigana": "〜かい",
+      "romaji": "-kai",
+      "wordType": "noun",
+      "meaningVi": "Tầng thứ ~",
+      "accentNote": "1階 いっかい, 3階 さんがい, 6階 ろっかい."
+    },
+    {
+      "id": "voc-n5-3-41",
+      "word": "なんがい",
+      "kanji": "何階",
+      "furigana": "なんがい",
+      "romaji": "nangai",
+      "wordType": "noun",
+      "meaningVi": "Tầng mấy",
+      "accentNote": "Biến âm thành がい. なんかい nghĩa là 'mấy lần'."
+    },
+    {
+      "id": "voc-n5-3-42",
+      "word": "ロビー",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "robii",
+      "wordType": "noun",
+      "meaningVi": "Sảnh lớn, hành lang tiếp khách",
+      "accentNote": "Sảnh khách sạn, tòa nhà văn phòng."
+    },
+    {
+      "id": "voc-n5-3-43",
+      "word": "イタリア",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "Itaria",
+      "wordType": "noun",
+      "meaningVi": "Nước Ý",
+      "accentNote": "Danh từ riêng, viết Katakana."
+    },
+    {
+      "id": "voc-n5-3-44",
+      "word": "スイス",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "Suisu",
+      "wordType": "noun",
+      "meaningVi": "Thụy Sĩ",
+      "accentNote": "Nổi tiếng về đồng hồ — hay gặp trong bài này."
+    },
+    {
+      "id": "voc-n5-3-45",
+      "word": "しんおおさか",
+      "kanji": "新大阪",
+      "furigana": "しんおおさか",
+      "romaji": "Shin-Oosaka",
+      "wordType": "noun",
+      "meaningVi": "Ga Shin-Osaka",
+      "accentNote": "Ga tàu Shinkansen ở Osaka."
+    },
+    {
+      "id": "voc-n5-3-29",
+      "word": "〜えん",
+      "kanji": "〜円",
+      "furigana": "〜えん",
+      "romaji": "-en",
+      "wordType": "noun",
+      "meaningVi": "~ yên (tiền Nhật)",
+      "accentNote": "Viết ký hiệu ¥ hoặc 円."
+    },
+    {
+      "id": "voc-n5-3-30",
+      "word": "いくら",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "ikura",
+      "wordType": "noun",
+      "meaningVi": "Bao nhiêu tiền",
+      "accentNote": "Chỉ hỏi GIÁ. Hỏi số lượng thì dùng いくつ."
+    },
+    {
+      "id": "voc-n5-3-31",
+      "word": "ひゃく",
+      "kanji": "百",
+      "furigana": "ひゃく",
+      "romaji": "hyaku",
+      "wordType": "noun",
+      "meaningVi": "Một trăm",
+      "accentNote": "300 さんびゃく, 600 ろっぴゃく, 800 はっぴゃく."
+    },
+    {
+      "id": "voc-n5-3-32",
+      "word": "せん",
+      "kanji": "千",
+      "furigana": "せん",
+      "romaji": "sen",
+      "wordType": "noun",
+      "meaningVi": "Một nghìn",
+      "accentNote": "3000 さんぜん, 8000 はっせん."
+    },
+    {
+      "id": "voc-n5-3-33",
+      "word": "まん",
+      "kanji": "万",
+      "furigana": "まん",
+      "romaji": "man",
+      "wordType": "noun",
+      "meaningVi": "Một vạn (10.000)",
+      "accentNote": "Người Nhật đếm theo VẠN, không theo nghìn."
+    },
+    {
+      "id": "voc-n5-3-34",
+      "word": "すみません",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "sumimasen",
+      "wordType": "phrase",
+      "meaningVi": "Xin lỗi / cho hỏi / cảm ơn",
+      "accentNote": "Câu vạn năng: gọi người, xin lỗi, và cả cảm ơn."
+    },
+    {
+      "id": "voc-n5-3-35",
+      "word": "[〜を]ください",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "[~o] kudasai",
+      "wordType": "phrase",
+      "meaningVi": "Cho tôi ~ (khi mua, khi gọi món)",
+      "accentNote": "Chỉ tay vào vật rồi nói これを ください."
+    },
+    {
+      "id": "voc-n5-3-36",
+      "word": "みせてください",
+      "kanji": "見せて ください",
+      "furigana": "みせて ください",
+      "romaji": "misete kudasai",
+      "wordType": "phrase",
+      "meaningVi": "Cho tôi xem thử với",
+      "accentNote": "Câu cửa miệng khi đi mua sắm."
+    },
+    {
+      "id": "voc-n5-3-37",
+      "word": "じゃ",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "ja",
+      "wordType": "phrase",
+      "meaningVi": "Vậy thì, thế thì",
+      "accentNote": "Dạng nói tắt của では."
+    },
+    {
+      "id": "voc-n5-3-38",
+      "word": "〜でございます",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "-de gozaimasu",
+      "wordType": "phrase",
+      "meaningVi": "Là ~ (kính ngữ của です)",
+      "accentNote": "Nhân viên bán hàng nói với khách."
+    },
+    {
+      "id": "voc-n5-3-39",
+      "word": "おてあらい",
+      "kanji": "お手洗い",
+      "furigana": "おてあらい",
+      "romaji": "otearai",
+      "wordType": "noun",
+      "meaningVi": "Nhà vệ sinh (cách nói lịch sự)",
+      "accentNote": "Nghĩa đen: chỗ rửa tay."
+    },
+    {
+      "id": "voc-n5-3-40",
+      "word": "たばこ",
+      "kanji": "煙草",
+      "furigana": "たばこ",
+      "romaji": "tabako",
+      "wordType": "noun",
+      "meaningVi": "Thuốc lá",
+      "accentNote": "たばこを 吸います = hút thuốc."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n5-3-1",
+      "character": "上",
+      "hanViet": "THƯỢNG",
+      "strokeCount": 3,
+      "onyomi": [
+        "ジョウ (jou)"
+      ],
+      "kunyomi": [
+        "うえ",
+        "あ(がる)"
+      ],
+      "meaningVi": "Ở trên, phía trên. Một vạch nhô LÊN khỏi đường ngang.",
+      "commonWords": [
+        {
+          "word": "上",
+          "furigana": "うえ",
+          "meaningVi": "Phía trên"
+        },
+        {
+          "word": "上手",
+          "furigana": "じょうず",
+          "meaningVi": "Giỏi, khéo"
+        },
+        {
+          "word": "屋上",
+          "furigana": "おくじょう",
+          "meaningVi": "Sân thượng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-3-2",
+      "character": "下",
+      "hanViet": "HẠ",
+      "strokeCount": 3,
+      "onyomi": [
+        "カ (ka)",
+        "ゲ (ge)"
+      ],
+      "kunyomi": [
+        "した",
+        "さ(がる)"
+      ],
+      "meaningVi": "Ở dưới, phía dưới. Ngược hẳn với 上.",
+      "commonWords": [
+        {
+          "word": "下",
+          "furigana": "した",
+          "meaningVi": "Phía dưới"
+        },
+        {
+          "word": "地下",
+          "furigana": "ちか",
+          "meaningVi": "Tầng hầm"
+        },
+        {
+          "word": "下手",
+          "furigana": "へた",
+          "meaningVi": "Kém, vụng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-3-3",
+      "character": "中",
+      "hanViet": "TRUNG",
+      "strokeCount": 4,
+      "onyomi": [
+        "チュウ (chuu)"
+      ],
+      "kunyomi": [
+        "なか"
+      ],
+      "meaningVi": "Ở giữa, bên trong. Một vạch xuyên qua giữa khung.",
+      "commonWords": [
+        {
+          "word": "中",
+          "furigana": "なか",
+          "meaningVi": "Bên trong"
+        },
+        {
+          "word": "中国",
+          "furigana": "ちゅうごく",
+          "meaningVi": "Trung Quốc"
+        },
+        {
+          "word": "食事中",
+          "furigana": "しょくじちゅう",
+          "meaningVi": "Đang dùng bữa"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-3-4",
+      "character": "外",
+      "hanViet": "NGOẠI",
+      "strokeCount": 5,
+      "onyomi": [
+        "ガイ (gai)"
+      ],
+      "kunyomi": [
+        "そと"
+      ],
+      "meaningVi": "Bên ngoài, nước ngoài.",
+      "commonWords": [
+        {
+          "word": "外",
+          "furigana": "そと",
+          "meaningVi": "Bên ngoài"
+        },
+        {
+          "word": "外国",
+          "furigana": "がいこく",
+          "meaningVi": "Nước ngoài"
+        },
+        {
+          "word": "外国人",
+          "furigana": "がいこくじん",
+          "meaningVi": "Người nước ngoài"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-3-5",
+      "character": "国",
+      "hanViet": "QUỐC",
+      "strokeCount": 8,
+      "onyomi": [
+        "コク (koku)"
+      ],
+      "kunyomi": [
+        "くに"
+      ],
+      "meaningVi": "Đất nước. Vua (玉) nằm trong vòng biên giới khép kín.",
+      "commonWords": [
+        {
+          "word": "国",
+          "furigana": "くに",
+          "meaningVi": "Đất nước"
+        },
+        {
+          "word": "外国",
+          "furigana": "がいこく",
+          "meaningVi": "Nước ngoài"
+        },
+        {
+          "word": "中国",
+          "furigana": "ちゅうごく",
+          "meaningVi": "Trung Quốc"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-3-6",
+      "character": "会",
+      "hanViet": "HỘI",
+      "strokeCount": 6,
+      "onyomi": [
+        "カイ (kai)"
+      ],
+      "kunyomi": [
+        "あ(う)"
+      ],
+      "meaningVi": "Gặp gỡ, hội họp.",
+      "commonWords": [
+        {
+          "word": "会社",
+          "furigana": "かいしゃ",
+          "meaningVi": "Công ty"
+        },
+        {
+          "word": "会議",
+          "furigana": "かいぎ",
+          "meaningVi": "Cuộc họp"
+        },
+        {
+          "word": "会います",
+          "furigana": "あいます",
+          "meaningVi": "Gặp mặt"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-3-7",
+      "character": "社",
+      "hanViet": "XÃ",
+      "strokeCount": 7,
+      "onyomi": [
+        "シャ (sha)"
+      ],
+      "kunyomi": [
+        "やしろ"
+      ],
+      "meaningVi": "Công ty, đoàn thể; đền thờ Thần đạo.",
+      "commonWords": [
+        {
+          "word": "会社",
+          "furigana": "かいしゃ",
+          "meaningVi": "Công ty"
+        },
+        {
+          "word": "社員",
+          "furigana": "しゃいん",
+          "meaningVi": "Nhân viên"
+        },
+        {
+          "word": "神社",
+          "furigana": "じんじゃ",
+          "meaningVi": "Đền thờ"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-3-8",
+      "character": "円",
+      "hanViet": "VIÊN",
+      "strokeCount": 4,
+      "onyomi": [
+        "エン (en)"
+      ],
+      "kunyomi": [
+        "まる(い)"
+      ],
+      "meaningVi": "Tròn; đồng yên Nhật.",
+      "commonWords": [
+        {
+          "word": "円",
+          "furigana": "えん",
+          "meaningVi": "Đồng yên"
+        },
+        {
+          "word": "一万円",
+          "furigana": "いちまんえん",
+          "meaningVi": "Một vạn yên"
+        },
+        {
+          "word": "円い",
+          "furigana": "まるい",
+          "meaningVi": "Tròn"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n5-l3-s1",
+      "slideType": "grammar",
+      "title": "1. ここ / そこ / あそこ は N です",
+      "grammarFormula": "ここ / そこ / あそこ + は + [Nơi chốn] + です",
+      "explanation": "Bộ ba nơi chốn chạy đúng luật こ - そ - あ của bài 2: ここ chỗ người nói đứng, そこ chỗ người nghe đứng, あそこ chỗ xa cả hai. Từ để hỏi tương ứng là どこ.",
+      "teacherTips": "Đừng đọc あそこ thành あこ — đây là lỗi phát âm phổ biến nhất của người Việt ở bài này.",
+      "culturalNotes": "Khách vào tòa nhà Nhật luôn được hướng dẫn tới 受付 trước, không tự đi thẳng vào trong.",
+      "examples": [
+        {
+          "id": "ex-n5-l3-s1-1",
+          "tokens": [
+            {
+              "id": "t-l3s1-1",
+              "text": "ここ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s1-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s1-3",
+              "text": "しょくどう",
+              "isKeyGrammar": false,
+              "kanji": "食堂",
+              "furigana": "しょくどう"
+            },
+            {
+              "id": "t-l3s1-4",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Ở đây là nhà ăn."
+        },
+        {
+          "id": "ex-n5-l3-s1-2",
+          "tokens": [
+            {
+              "id": "t-l3s1-5",
+              "text": "そこ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s1-6",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s1-7",
+              "text": "かいぎしつ",
+              "isKeyGrammar": false,
+              "kanji": "会議室",
+              "furigana": "かいぎしつ"
+            },
+            {
+              "id": "t-l3s1-8",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Chỗ đó là phòng họp."
+        },
+        {
+          "id": "ex-n5-l3-s1-3",
+          "tokens": [
+            {
+              "id": "t-l3s1-9",
+              "text": "あそこ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s1-10",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s1-11",
+              "text": "うけつけ",
+              "isKeyGrammar": false,
+              "kanji": "受付",
+              "furigana": "うけつけ"
+            },
+            {
+              "id": "t-l3s1-12",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Đằng kia là quầy lễ tân."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l3-s2",
+      "slideType": "grammar",
+      "title": "2. Hỏi vị trí: N は どこですか",
+      "grammarFormula": "N + は + どこ + ですか  →  N + は + ここ / そこ / あそこ + です",
+      "explanation": "Đảo lại mẫu 1: đưa nơi chốn ra sau, đưa ĐỒ VẬT hoặc NƠI cần tìm lên đầu câu. Câu hỏi có どこ thì KHÔNG đáp はい／いいえ, phải chỉ thẳng vị trí.",
+      "teacherTips": "Muốn hỏi đường cho lịch sự, mở đầu bằng すみません rồi mới đến câu hỏi.",
+      "culturalNotes": "Hỏi nhà vệ sinh thì nói お手洗い nghe nhã hơn hẳn トイレ, nhất là ở nhà hàng.",
+      "examples": [
+        {
+          "id": "ex-n5-l3-s2-1",
+          "tokens": [
+            {
+              "id": "t-l3s2-1",
+              "text": "トイレ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s2-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s2-3",
+              "text": "どこ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s2-4",
+              "text": "ですか",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Nhà vệ sinh ở đâu vậy ạ?"
+        },
+        {
+          "id": "ex-n5-l3-s2-2",
+          "tokens": [
+            {
+              "id": "t-l3s2-5",
+              "text": "あそこ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s2-6",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Ở đằng kia ạ."
+        },
+        {
+          "id": "ex-n5-l3-s2-3",
+          "tokens": [
+            {
+              "id": "t-l3s2-7",
+              "text": "エレベーター",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s2-8",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s2-9",
+              "text": "あちら",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s2-10",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Thang máy ở phía bên kia ạ."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l3-s3",
+      "slideType": "grammar",
+      "title": "3. こちら / そちら / あちら / どちら (lịch sự)",
+      "grammarFormula": "こちら / そちら / あちら / どちら + は + ... です",
+      "explanation": "Bộ này vừa chỉ HƯỚNG, vừa là bản LỊCH SỰ của ここ/そこ/あそこ/どこ. Nói chuyện với khách hàng, cấp trên, người lạ thì luôn ưu tiên bộ ちら.",
+      "teacherTips": "こちら còn dùng để GIỚI THIỆU người: 「こちらは 山田さんです」 = Đây là anh Yamada.",
+      "culturalNotes": "Nhân viên Nhật chỉ đường bằng cả BÀN TAY ngửa, tuyệt đối không chỉ bằng một ngón trỏ.",
+      "examples": [
+        {
+          "id": "ex-n5-l3-s3-1",
+          "tokens": [
+            {
+              "id": "t-l3s3-1",
+              "text": "でんわ",
+              "isKeyGrammar": false,
+              "kanji": "電話",
+              "furigana": "でんわ"
+            },
+            {
+              "id": "t-l3s3-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s3-3",
+              "text": "こちら",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s3-4",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Điện thoại ở phía này ạ."
+        },
+        {
+          "id": "ex-n5-l3-s3-2",
+          "tokens": [
+            {
+              "id": "t-l3s3-5",
+              "text": "おてあらい",
+              "isKeyGrammar": false,
+              "kanji": "お手洗い",
+              "furigana": "おてあらい"
+            },
+            {
+              "id": "t-l3s3-6",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s3-7",
+              "text": "そちら",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s3-8",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Nhà vệ sinh ở phía đó ạ."
+        },
+        {
+          "id": "ex-n5-l3-s3-3",
+          "tokens": [
+            {
+              "id": "t-l3s3-9",
+              "text": "かいだん",
+              "isKeyGrammar": false,
+              "kanji": "階段",
+              "furigana": "かいだん"
+            },
+            {
+              "id": "t-l3s3-10",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s3-11",
+              "text": "どちら",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s3-12",
+              "text": "ですか",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Cầu thang bộ ở phía nào ạ?"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l3-s4",
+      "slideType": "grammar",
+      "title": "4. Hỏi lịch sự nơi thuộc về: お国は どちらですか",
+      "grammarFormula": "お + [国 / 会社 / 大学] + は + どちら + ですか",
+      "explanation": "Hỏi quê quán, công ty, trường học của người khác thì dùng どちら chứ KHÔNG dùng どこ — どこ nghe cộc lốc. Thêm お phía trước danh từ để tỏ sự tôn trọng vật của người đối diện.",
+      "teacherTips": "Chữ お chỉ gắn cho vật CỦA NGƯỜI KHÁC. Nói về mình phải bỏ お: 「国は ベトナムです」.",
+      "culturalNotes": "Người Nhật hỏi 出身 (quê quán) rất sớm trong lần gặp đầu để tìm điểm chung.",
+      "examples": [
+        {
+          "id": "ex-n5-l3-s4-1",
+          "tokens": [
+            {
+              "id": "t-l3s4-1",
+              "text": "おくに",
+              "isKeyGrammar": true,
+              "kanji": "お国",
+              "furigana": "おくに"
+            },
+            {
+              "id": "t-l3s4-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s4-3",
+              "text": "どちら",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s4-4",
+              "text": "ですか",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Anh/chị quê ở đâu ạ?"
+        },
+        {
+          "id": "ex-n5-l3-s4-2",
+          "tokens": [
+            {
+              "id": "t-l3s4-5",
+              "text": "ベトナム",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s4-6",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Tôi người Việt Nam ạ."
+        },
+        {
+          "id": "ex-n5-l3-s4-3",
+          "tokens": [
+            {
+              "id": "t-l3s4-7",
+              "text": "かいしゃ",
+              "isKeyGrammar": false,
+              "kanji": "会社",
+              "furigana": "かいしゃ"
+            },
+            {
+              "id": "t-l3s4-8",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s4-9",
+              "text": "どちら",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s4-10",
+              "text": "ですか",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Anh/chị làm ở công ty nào ạ?"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l3-s5",
+      "slideType": "grammar",
+      "title": "5. Vị trí trong tòa nhà: N は 〜階です",
+      "grammarFormula": "N + は + [số] + 階 (かい) + です",
+      "explanation": "Chỉ tầng bằng 〜階. Cảnh giác biến âm: 1階 いっかい, 3階 さんがい, 6階 ろっかい, 8階 はっかい, 10階 じゅっかい. Tầng hầm là 地下〜階.",
+      "teacherTips": "Hỏi tầng mấy là 何階 (なんがい) — biến thành がい, đừng đọc なんかい (nghĩa là 'mấy lần').",
+      "culturalNotes": "Nhiều tòa nhà Nhật không có tầng 4 vì 四 (し) đồng âm với 死 (chết).",
+      "examples": [
+        {
+          "id": "ex-n5-l3-s5-1",
+          "tokens": [
+            {
+              "id": "t-l3s5-1",
+              "text": "くつ",
+              "isKeyGrammar": false,
+              "kanji": "靴",
+              "furigana": "くつ"
+            },
+            {
+              "id": "t-l3s5-2",
+              "text": "うりば",
+              "isKeyGrammar": false,
+              "kanji": "売り場",
+              "furigana": "うりば"
+            },
+            {
+              "id": "t-l3s5-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s5-4",
+              "text": "ごかい",
+              "isKeyGrammar": true,
+              "kanji": "5階",
+              "furigana": "ごかい"
+            },
+            {
+              "id": "t-l3s5-5",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Quầy giày ở tầng 5."
+        },
+        {
+          "id": "ex-n5-l3-s5-2",
+          "tokens": [
+            {
+              "id": "t-l3s5-6",
+              "text": "しょくどう",
+              "isKeyGrammar": false,
+              "kanji": "食堂",
+              "furigana": "しょくどう"
+            },
+            {
+              "id": "t-l3s5-7",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s5-8",
+              "text": "ちか",
+              "isKeyGrammar": true,
+              "kanji": "地下",
+              "furigana": "ちか"
+            },
+            {
+              "id": "t-l3s5-9",
+              "text": "いっかい",
+              "isKeyGrammar": false,
+              "kanji": "1階",
+              "furigana": "いっかい"
+            },
+            {
+              "id": "t-l3s5-10",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Nhà ăn ở tầng hầm 1."
+        },
+        {
+          "id": "ex-n5-l3-s5-3",
+          "tokens": [
+            {
+              "id": "t-l3s5-11",
+              "text": "じむしょ",
+              "isKeyGrammar": false,
+              "kanji": "事務所",
+              "furigana": "じむしょ"
+            },
+            {
+              "id": "t-l3s5-12",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s5-13",
+              "text": "なんがい",
+              "isKeyGrammar": true,
+              "kanji": "何階",
+              "furigana": "なんがい"
+            },
+            {
+              "id": "t-l3s5-14",
+              "text": "ですか",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Văn phòng ở tầng mấy vậy ạ?"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l3-s6",
+      "slideType": "grammar",
+      "title": "6. Hỏi giá: いくらですか",
+      "grammarFormula": "N + は + いくら + ですか  →  [số] + 円 + です",
+      "explanation": "いくら chỉ hỏi GIÁ TIỀN. Người Nhật đếm theo đơn vị VẠN (万) chứ không theo nghìn: 30.000 đọc là 三万 (さんまん), không phải 'ba mươi nghìn'.",
+      "teacherTips": "Biến âm phải thuộc: 300 さんびゃく, 600 ろっぴゃく, 800 はっぴゃく, 3000 さんぜん, 8000 はっせん.",
+      "culturalNotes": "Trả tiền ở Nhật thì đặt tiền vào KHAY nhỏ trên quầy, không đưa thẳng vào tay thu ngân.",
+      "examples": [
+        {
+          "id": "ex-n5-l3-s6-1",
+          "tokens": [
+            {
+              "id": "t-l3s6-1",
+              "text": "この",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s6-2",
+              "text": "とけい",
+              "isKeyGrammar": false,
+              "kanji": "時計",
+              "furigana": "とけい"
+            },
+            {
+              "id": "t-l3s6-3",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s6-4",
+              "text": "いくら",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-l3s6-5",
+              "text": "ですか",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Cái đồng hồ này bao nhiêu tiền ạ?"
+        },
+        {
+          "id": "ex-n5-l3-s6-2",
+          "tokens": [
+            {
+              "id": "t-l3s6-6",
+              "text": "にまんはっせんえん",
+              "isKeyGrammar": true,
+              "kanji": "2万8千円",
+              "furigana": "にまんはっせんえん"
+            },
+            {
+              "id": "t-l3s6-7",
+              "text": "です",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "28.000 yên ạ."
+        },
+        {
+          "id": "ex-n5-l3-s6-3",
+          "tokens": [
+            {
+              "id": "t-l3s6-8",
+              "text": "じゃ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s6-9",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s6-10",
+              "text": "これ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s6-11",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l3s6-12",
+              "text": "ください",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Vậy thì cho tôi cái này."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n5-3-1",
+      "speaker": "マリア",
+      "speakerRole": "Khách mua hàng",
+      "tokens": [
+        {
+          "id": "d-l3-1",
+          "text": "すみません",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l3-2",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-3",
+          "text": "ワイン",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-4",
+          "text": "うりば",
+          "isKeyGrammar": false,
+          "kanji": "売り場",
+          "furigana": "うりば"
+        },
+        {
+          "id": "d-l3-5",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-6",
+          "text": "どこ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l3-7",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Xin lỗi cho hỏi. Quầy bán rượu vang ở đâu ạ?"
+    },
+    {
+      "id": "dia-n5-3-2",
+      "speaker": "店員",
+      "speakerRole": "Nhân viên cửa hàng",
+      "tokens": [
+        {
+          "id": "d-l3-8",
+          "text": "ちか",
+          "isKeyGrammar": false,
+          "kanji": "地下",
+          "furigana": "ちか"
+        },
+        {
+          "id": "d-l3-9",
+          "text": "いっかい",
+          "isKeyGrammar": true,
+          "kanji": "1階",
+          "furigana": "いっかい"
+        },
+        {
+          "id": "d-l3-10",
+          "text": "で ございます",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Ở tầng hầm 1 ạ."
+    },
+    {
+      "id": "dia-n5-3-3",
+      "speaker": "マリア",
+      "speakerRole": "Khách mua hàng",
+      "tokens": [
+        {
+          "id": "d-l3-11",
+          "text": "エスカレーター",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-12",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-13",
+          "text": "どちら",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l3-14",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Thang cuốn ở phía nào ạ?"
+    },
+    {
+      "id": "dia-n5-3-4",
+      "speaker": "店員",
+      "speakerRole": "Nhân viên cửa hàng",
+      "tokens": [
+        {
+          "id": "d-l3-15",
+          "text": "あちら",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l3-16",
+          "text": "で ございます",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-17",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-18",
+          "text": "どうぞ",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ở đằng kia ạ. Xin mời quý khách."
+    },
+    {
+      "id": "dia-n5-3-5",
+      "speaker": "マリア",
+      "speakerRole": "Khách mua hàng",
+      "tokens": [
+        {
+          "id": "d-l3-19",
+          "text": "どうも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-20",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-21",
+          "text": "あのう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-22",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-23",
+          "text": "その",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-24",
+          "text": "ワイン",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-25",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-26",
+          "text": "みせて ください",
+          "isKeyGrammar": true,
+          "kanji": "見せて ください",
+          "furigana": "みせて ください"
+        }
+      ],
+      "meaningVi": "Cảm ơn ạ. À, cho tôi xem thử chai rượu vang đó với."
+    },
+    {
+      "id": "dia-n5-3-6",
+      "speaker": "店員",
+      "speakerRole": "Nhân viên cửa hàng",
+      "tokens": [
+        {
+          "id": "d-l3-27",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-28",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-29",
+          "text": "どうぞ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-30",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-31",
+          "text": "イタリア",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-32",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-33",
+          "text": "ワイン",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-34",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng, xin mời. Đây là rượu vang của Ý ạ."
+    },
+    {
+      "id": "dia-n5-3-7",
+      "speaker": "マリア",
+      "speakerRole": "Khách mua hàng",
+      "tokens": [
+        {
+          "id": "d-l3-35",
+          "text": "これ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-36",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-37",
+          "text": "いくら",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l3-38",
+          "text": "ですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Chai này bao nhiêu tiền ạ?"
+    },
+    {
+      "id": "dia-n5-3-8",
+      "speaker": "店員",
+      "speakerRole": "Nhân viên cửa hàng",
+      "tokens": [
+        {
+          "id": "d-l3-39",
+          "text": "さんぜんはっぴゃくえん",
+          "isKeyGrammar": true,
+          "kanji": "3千8百円",
+          "furigana": "さんぜんはっぴゃくえん"
+        },
+        {
+          "id": "d-l3-40",
+          "text": "で ございます",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Dạ 3.800 yên ạ."
+    },
+    {
+      "id": "dia-n5-3-9",
+      "speaker": "マリア",
+      "speakerRole": "Khách mua hàng",
+      "tokens": [
+        {
+          "id": "d-l3-41",
+          "text": "じゃ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-42",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-43",
+          "text": "これ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-44",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-45",
+          "text": "ください",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Vậy cho tôi lấy chai này."
+    },
+    {
+      "id": "dia-n5-3-10",
+      "speaker": "店員",
+      "speakerRole": "Nhân viên cửa hàng",
+      "tokens": [
+        {
+          "id": "d-l3-46",
+          "text": "ありがとう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-47",
+          "text": "ございます",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-48",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-49",
+          "text": "レジ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-50",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l3-51",
+          "text": "こちら",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l3-52",
+          "text": "です",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Cảm ơn quý khách. Quầy thu ngân ở phía này ạ."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n5-3-1",
+      "question": "Bạn đang đứng ở nhà ăn và muốn nói 'ở đây là nhà ăn':",
+      "options": [
+        "ここは 食堂です",
+        "そこは 食堂です",
+        "あそこは 食堂です",
+        "どこは 食堂です"
+      ],
+      "correctIndex": 0,
+      "explanation": "ここ chỉ nơi NGƯỜI NÓI đang đứng. そこ là chỗ người nghe, あそこ là chỗ xa cả hai.",
+      "hint": "Bạn đang đứng ngay đó."
+    },
+    {
+      "id": "ex-q-n5-3-2",
+      "question": "Hỏi quê quán của khách hàng, câu nào PHÙ HỢP nhất?",
+      "options": [
+        "お国は どちらですか",
+        "国は どこですか",
+        "お国は どこですか",
+        "国は どちらですか"
+      ],
+      "correctIndex": 0,
+      "explanation": "Với người cần tôn trọng: dùng お + 国 và どちら. どこ nghe cộc lốc, bỏ お thì mất phần kính trọng.",
+      "hint": "Cần cả お lẫn どちら."
+    },
+    {
+      "id": "ex-q-n5-3-3",
+      "question": "「3階」 đọc đúng là:",
+      "options": [
+        "さんがい",
+        "さんかい",
+        "さんげ",
+        "みっかい"
+      ],
+      "correctIndex": 0,
+      "explanation": "階 biến âm sau さん thành がい. Tương tự 何階 đọc なんがい.",
+      "hint": "Có biến âm đục."
+    },
+    {
+      "id": "ex-q-n5-3-4",
+      "question": "Chữ お trong 「お国」 dùng khi nào?",
+      "options": [
+        "Khi nói về đất nước của NGƯỜI KHÁC",
+        "Khi nói về đất nước của MÌNH",
+        "Lúc nào cũng phải có",
+        "Chỉ dùng trong văn viết"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tiền tố お tôn trọng vật của đối phương. Nói về mình phải bỏ đi: 「国は ベトナムです」.",
+      "hint": "Kính ngữ hướng về ai?"
+    },
+    {
+      "id": "ex-q-n5-3-5",
+      "question": "いくら dùng để hỏi gì?",
+      "options": [
+        "Giá tiền",
+        "Số lượng",
+        "Nơi chốn",
+        "Thời gian"
+      ],
+      "correctIndex": 0,
+      "explanation": "いくら chỉ hỏi GIÁ. Hỏi số lượng là いくつ, hỏi nơi chốn là どこ, hỏi giờ là 何時.",
+      "hint": "Liên quan tới tiền."
+    },
+    {
+      "id": "ex-q-n5-3-6",
+      "question": "28.000 yên đọc theo kiểu Nhật là:",
+      "options": [
+        "にまんはっせんえん",
+        "にじゅうはっせんえん",
+        "にせんはちひゃくえん",
+        "にまんはちせんえん"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nhật đếm theo VẠN: 28.000 = 2 vạn + 8 nghìn = 二万八千. Chú ý 8000 biến âm thành はっせん.",
+      "hint": "Tách theo đơn vị 万."
+    },
+    {
+      "id": "ex-q-n5-3-7",
+      "question": "Câu nào nhân viên cửa hàng sẽ nói với khách?",
+      "options": [
+        "あちらで ございます",
+        "あそこだよ",
+        "あそこです",
+        "あちらだ"
+      ],
+      "correctIndex": 0,
+      "explanation": "Với khách hàng dùng bộ ちら + kính ngữ で ございます. です còn được, nhưng だ/だよ là suồng sã.",
+      "hint": "Mức lịch sự cao nhất."
+    },
+    {
+      "id": "ex-q-n5-3-8",
+      "question": "Cách nói nhã nhặn hơn của 「トイレ」 là:",
+      "options": [
+        "お手洗い",
+        "お風呂",
+        "台所",
+        "玄関"
+      ],
+      "correctIndex": 0,
+      "explanation": "お手洗い (chỗ rửa tay) là cách nói giảm nhẹ. お風呂 là bồn tắm, 台所 là bếp, 玄関 là lối vào.",
+      "hint": "Nghĩa đen là 'rửa tay'."
+    },
+    {
+      "id": "ex-q-n5-3-9",
+      "question": "Câu nào dùng để xin xem hàng?",
+      "options": [
+        "見せて ください",
+        "見て ください",
+        "ください",
+        "どうぞ"
+      ],
+      "correctIndex": 0,
+      "explanation": "見せて ください = 'cho tôi xem'. 見て ください là 'bạn hãy nhìn đi' — ngược chiều hành động.",
+      "hint": "Ai là người xem?"
+    },
+    {
+      "id": "ex-q-n5-3-10",
+      "question": "Nhiều tòa nhà Nhật không có tầng 4 vì:",
+      "options": [
+        "四 (し) đồng âm với 死 (chết)",
+        "Xây thiếu tiền",
+        "Luật xây dựng cấm",
+        "Tầng 4 dành cho kho"
+      ],
+      "correctIndex": 0,
+      "explanation": "Kiêng số 4 vì đồng âm với 'tử'. Số 9 (く) đồng âm với 苦 (khổ) cũng bị kiêng.",
+      "hint": "Liên quan tới cách đọc số."
+    }
+  ]
+}

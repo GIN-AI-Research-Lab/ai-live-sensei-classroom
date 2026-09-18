@@ -1,0 +1,1497 @@
+{
+  "level": "N3",
+  "lessonNumber": 16,
+  "title": "Bài 16: Thay thế (代わりに & に代わって)",
+  "description": "代わりに diễn tả 'thay vì' một cách PHỔ BIẾN, dùng được cho cả người và việc; に代わって trang trọng hơn, CHỈ dùng khi một người/tổ chức CHÍNH THỨC đảm nhận vai trò của người/tổ chức khác (công việc, nghi lễ, văn bản); kết hợp với 代理/代表 để nhấn tính hợp pháp của việc thay thế.",
+  "vocabList": [
+    {
+      "id": "voc-n3-16-1",
+      "word": "だいひょう",
+      "kanji": "代表",
+      "furigana": "だいひょう",
+      "romaji": "daihyou",
+      "wordType": "noun",
+      "meaningVi": "Đại diện",
+      "accentNote": "会社の 代表 = đại diện công ty."
+    },
+    {
+      "id": "voc-n3-16-2",
+      "word": "だいり",
+      "kanji": "代理",
+      "furigana": "だいり",
+      "romaji": "dairi",
+      "wordType": "noun",
+      "meaningVi": "Thay mặt, ủy quyền",
+      "accentNote": "社長の 代理 = người được ủy quyền của giám đốc."
+    },
+    {
+      "id": "voc-n3-16-3",
+      "word": "たんとう",
+      "kanji": "担当",
+      "furigana": "たんとう",
+      "romaji": "tantou",
+      "wordType": "noun",
+      "meaningVi": "Phụ trách",
+      "accentNote": "担当の 人 = người phụ trách."
+    },
+    {
+      "id": "voc-n3-16-4",
+      "word": "しはらいます",
+      "kanji": "支払います",
+      "furigana": "しはらいます",
+      "romaji": "shiharaimasu",
+      "wordType": "verb",
+      "meaningVi": "Thanh toán, chi trả",
+      "accentNote": "代金を 支払います = thanh toán tiền hàng."
+    },
+    {
+      "id": "voc-n3-16-5",
+      "word": "しょめい",
+      "kanji": "署名",
+      "furigana": "しょめい",
+      "romaji": "shomei",
+      "wordType": "noun",
+      "meaningVi": "Chữ ký, việc ký tên",
+      "accentNote": "書類に 署名します = ký tên vào tài liệu."
+    },
+    {
+      "id": "voc-n3-16-6",
+      "word": "だいきん",
+      "kanji": "代金",
+      "furigana": "だいきん",
+      "romaji": "daikin",
+      "wordType": "noun",
+      "meaningVi": "Tiền hàng, giá tiền",
+      "accentNote": "代金を 払います = trả tiền hàng."
+    },
+    {
+      "id": "voc-n3-16-7",
+      "word": "ぶちょう",
+      "kanji": "部長",
+      "furigana": "ぶちょう",
+      "romaji": "buchou",
+      "wordType": "noun",
+      "meaningVi": "Trưởng phòng",
+      "accentNote": "Đã gặp N4 bài 41."
+    },
+    {
+      "id": "voc-n3-16-8",
+      "word": "しゃちょう",
+      "kanji": "社長",
+      "furigana": "しゃちょう",
+      "romaji": "shachou",
+      "wordType": "noun",
+      "meaningVi": "Giám đốc",
+      "accentNote": "Đã gặp N4 bài 41."
+    },
+    {
+      "id": "voc-n3-16-9",
+      "word": "かいぎ",
+      "kanji": "会議",
+      "furigana": "かいぎ",
+      "romaji": "kaigi",
+      "wordType": "noun",
+      "meaningVi": "Cuộc họp",
+      "accentNote": "Đã gặp N4 bài 30."
+    },
+    {
+      "id": "voc-n3-16-10",
+      "word": "しゅっせきします",
+      "kanji": "出席します",
+      "furigana": "しゅっせきします",
+      "romaji": "shusseki shimasu",
+      "wordType": "verb",
+      "meaningVi": "Tham dự",
+      "accentNote": "Đã gặp N3 bài 5."
+    },
+    {
+      "id": "voc-n3-16-11",
+      "word": "でんわ",
+      "kanji": "電話",
+      "furigana": "でんわ",
+      "romaji": "denwa",
+      "wordType": "noun",
+      "meaningVi": "Điện thoại",
+      "accentNote": "Đã gặp N4 bài 34."
+    },
+    {
+      "id": "voc-n3-16-12",
+      "word": "れんらくします",
+      "kanji": "連絡します",
+      "furigana": "れんらくします",
+      "romaji": "renraku shimasu",
+      "wordType": "verb",
+      "meaningVi": "Liên lạc",
+      "accentNote": "Đã gặp N4 bài 41."
+    },
+    {
+      "id": "voc-n3-16-13",
+      "word": "おかね",
+      "kanji": "お金",
+      "furigana": "おかね",
+      "romaji": "okane",
+      "wordType": "noun",
+      "meaningVi": "Tiền",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n3-16-14",
+      "word": "かいしゃ",
+      "kanji": "会社",
+      "furigana": "かいしゃ",
+      "romaji": "kaisha",
+      "wordType": "noun",
+      "meaningVi": "Công ty",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n3-16-15",
+      "word": "しごと",
+      "kanji": "仕事",
+      "furigana": "しごと",
+      "romaji": "shigoto",
+      "wordType": "noun",
+      "meaningVi": "Công việc",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n3-16-16",
+      "word": "やすみます",
+      "kanji": "休みます",
+      "furigana": "やすみます",
+      "romaji": "yasumimasu",
+      "wordType": "verb",
+      "meaningVi": "Nghỉ",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n3-16-17",
+      "word": "きょう",
+      "kanji": "今日",
+      "furigana": "きょう",
+      "romaji": "kyou",
+      "wordType": "noun",
+      "meaningVi": "Hôm nay",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n3-16-18",
+      "word": "あした",
+      "kanji": "明日",
+      "furigana": "あした",
+      "romaji": "ashita",
+      "wordType": "noun",
+      "meaningVi": "Ngày mai",
+      "accentNote": "Đã gặp N5 bài 1."
+    },
+    {
+      "id": "voc-n3-16-19",
+      "word": "せつめいします",
+      "kanji": "説明します",
+      "furigana": "せつめいします",
+      "romaji": "setsumei shimasu",
+      "wordType": "verb",
+      "meaningVi": "Giải thích",
+      "accentNote": "Đã gặp N4 bài 26."
+    },
+    {
+      "id": "voc-n3-16-20",
+      "word": "いいます",
+      "kanji": "言います",
+      "furigana": "いいます",
+      "romaji": "iimasu",
+      "wordType": "verb",
+      "meaningVi": "Nói",
+      "accentNote": "Đã gặp N5 bài 6."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n3-16-1",
+      "character": "代",
+      "hanViet": "ĐẠI",
+      "strokeCount": 5,
+      "onyomi": [
+        "ダイ (dai)"
+      ],
+      "kunyomi": [
+        "か(わる)",
+        "か(える)"
+      ],
+      "meaningVi": "Thay thế, thế hệ.",
+      "commonWords": [
+        {
+          "word": "代わり",
+          "furigana": "かわり",
+          "meaningVi": "Sự thay thế"
+        },
+        {
+          "word": "代表",
+          "furigana": "だいひょう",
+          "meaningVi": "Đại diện"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-16-2",
+      "character": "表",
+      "hanViet": "BIỂU",
+      "strokeCount": 8,
+      "onyomi": [
+        "ヒョウ (hyou)"
+      ],
+      "kunyomi": [
+        "おもて",
+        "あらわ(す)"
+      ],
+      "meaningVi": "Bề mặt, biểu thị.",
+      "commonWords": [
+        {
+          "word": "代表",
+          "furigana": "だいひょう",
+          "meaningVi": "Đại diện"
+        },
+        {
+          "word": "表現",
+          "furigana": "ひょうげん",
+          "meaningVi": "Biểu hiện"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-16-3",
+      "character": "理",
+      "hanViet": "LÝ",
+      "strokeCount": 11,
+      "onyomi": [
+        "リ (ri)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Lý lẽ, xử lý.",
+      "commonWords": [
+        {
+          "word": "代理",
+          "furigana": "だいり",
+          "meaningVi": "Thay mặt, ủy quyền"
+        },
+        {
+          "word": "料理",
+          "furigana": "りょうり",
+          "meaningVi": "Nấu ăn"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-16-4",
+      "character": "担",
+      "hanViet": "ĐẢM",
+      "strokeCount": 8,
+      "onyomi": [
+        "タン (tan)"
+      ],
+      "kunyomi": [
+        "にな(う)"
+      ],
+      "meaningVi": "Đảm nhận, gánh vác.",
+      "commonWords": [
+        {
+          "word": "担当",
+          "furigana": "たんとう",
+          "meaningVi": "Phụ trách"
+        },
+        {
+          "word": "負担",
+          "furigana": "ふたん",
+          "meaningVi": "Gánh nặng"
+        }
+      ]
+    },
+    {
+      "id": "kan-n3-16-5",
+      "character": "払",
+      "hanViet": "PHẤT",
+      "strokeCount": 5,
+      "onyomi": [
+        "フツ (futsu)"
+      ],
+      "kunyomi": [
+        "はら(う)"
+      ],
+      "meaningVi": "Trả, thanh toán.",
+      "commonWords": [
+        {
+          "word": "支払う",
+          "furigana": "しはらう",
+          "meaningVi": "Thanh toán"
+        },
+        {
+          "word": "払います",
+          "furigana": "はらいます",
+          "meaningVi": "Trả tiền"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n3-l16-s1",
+      "slideType": "grammar",
+      "title": "1. Thay vì, thay cho (chung chung): N+の代わりに / V+代わりに",
+      "grammarFormula": "N+の代わりに / V(từ điển)+代わりに、[hành động thay thế]",
+      "explanation": "代わりに diễn tả 'THAY VÌ' một điều gì đó, chuyển sang làm một việc khác — dùng PHỔ BIẾN trong cả hội thoại lẫn văn viết, không đòi hỏi tính chính thức, dùng được cho cả người lẫn việc.",
+      "teacherTips": "代わりに có thể dùng cho cả NGƯỜI (thay cho ai) lẫn VIỆC (thay vì làm gì) — phạm vi sử dụng rộng.",
+      "culturalNotes": "Câu quen thuộc trong công sở Nhật: 'メールの代わりに電話で連絡します' (thay vì email, tôi sẽ liên lạc qua điện thoại).",
+      "examples": [
+        {
+          "id": "ex-n3-l16-s1-1",
+          "tokens": [
+            {
+              "id": "t-l16s1-1",
+              "text": "しゃちょう",
+              "isKeyGrammar": true,
+              "kanji": "社長",
+              "furigana": "しゃちょう"
+            },
+            {
+              "id": "t-l16s1-2",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s1-3",
+              "text": "かわりに",
+              "isKeyGrammar": true,
+              "kanji": "代わりに",
+              "furigana": "かわりに"
+            },
+            {
+              "id": "t-l16s1-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s1-5",
+              "text": "ぶちょう",
+              "isKeyGrammar": true,
+              "kanji": "部長",
+              "furigana": "ぶちょう"
+            },
+            {
+              "id": "t-l16s1-6",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s1-7",
+              "text": "かいぎ",
+              "isKeyGrammar": true,
+              "kanji": "会議",
+              "furigana": "かいぎ"
+            },
+            {
+              "id": "t-l16s1-8",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s1-9",
+              "text": "しゅっせき",
+              "isKeyGrammar": false,
+              "kanji": "出席",
+              "furigana": "しゅっせき"
+            },
+            {
+              "id": "t-l16s1-10",
+              "text": "します",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Thay vì giám đốc, trưởng phòng sẽ tham dự cuộc họp."
+        },
+        {
+          "id": "ex-n3-l16-s1-2",
+          "tokens": [
+            {
+              "id": "t-l16s1-11",
+              "text": "かいぎ",
+              "isKeyGrammar": false,
+              "kanji": "会議",
+              "furigana": "かいぎ"
+            },
+            {
+              "id": "t-l16s1-12",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s1-13",
+              "text": "いく",
+              "isKeyGrammar": false,
+              "kanji": "行く",
+              "furigana": "いく"
+            },
+            {
+              "id": "t-l16s1-14",
+              "text": "かわりに",
+              "isKeyGrammar": true,
+              "kanji": "代わりに",
+              "furigana": "かわりに"
+            },
+            {
+              "id": "t-l16s1-15",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s1-16",
+              "text": "でんわ",
+              "isKeyGrammar": true,
+              "kanji": "電話",
+              "furigana": "でんわ"
+            },
+            {
+              "id": "t-l16s1-17",
+              "text": "で",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s1-18",
+              "text": "はなします",
+              "isKeyGrammar": false,
+              "kanji": "話します",
+              "furigana": "はなします"
+            }
+          ],
+          "meaningVi": "Thay vì đi họp, tôi sẽ nói chuyện qua điện thoại."
+        }
+      ]
+    },
+    {
+      "slideId": "n3-l16-s2",
+      "slideType": "grammar",
+      "title": "2. Thay mặt, đại diện cho (trang trọng): N + に代わって",
+      "grammarFormula": "N(người/tổ chức) + に代わって、[hành động thay mặt/đại diện]",
+      "explanation": "に代わって diễn tả một người/tổ chức CHÍNH THỨC đảm nhận VAI TRÒ/NHIỆM VỤ của người/tổ chức khác — trang trọng hơn 代わりに, thường dùng trong ngữ cảnh công việc, nghi lễ, văn bản.",
+      "teacherTips": "に代わって KHÔNG dùng để nói 'thay vì làm việc A, làm việc B' — chỉ dùng khi N là NGƯỜI/TỔ CHỨC được thay thế vai trò.",
+      "culturalNotes": "Trong thư từ công vụ Nhật: '部長に代わってご連絡いたします' (tôi xin thay mặt trưởng phòng liên lạc) là mẫu câu lịch sự chuẩn mực.",
+      "examples": [
+        {
+          "id": "ex-n3-l16-s2-1",
+          "tokens": [
+            {
+              "id": "t-l16s2-1",
+              "text": "しゃちょう",
+              "isKeyGrammar": true,
+              "kanji": "社長",
+              "furigana": "しゃちょう"
+            },
+            {
+              "id": "t-l16s2-2",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s2-3",
+              "text": "かわって",
+              "isKeyGrammar": true,
+              "kanji": "代わって",
+              "furigana": "かわって"
+            },
+            {
+              "id": "t-l16s2-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s2-5",
+              "text": "ぶちょう",
+              "isKeyGrammar": true,
+              "kanji": "部長",
+              "furigana": "ぶちょう"
+            },
+            {
+              "id": "t-l16s2-6",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s2-7",
+              "text": "かいぎ",
+              "isKeyGrammar": false,
+              "kanji": "会議",
+              "furigana": "かいぎ"
+            },
+            {
+              "id": "t-l16s2-8",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s2-9",
+              "text": "しゅっせき",
+              "isKeyGrammar": false,
+              "kanji": "出席",
+              "furigana": "しゅっせき"
+            },
+            {
+              "id": "t-l16s2-10",
+              "text": "します",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Thay mặt giám đốc, trưởng phòng sẽ tham dự cuộc họp."
+        },
+        {
+          "id": "ex-n3-l16-s2-2",
+          "tokens": [
+            {
+              "id": "t-l16s2-11",
+              "text": "たんとうしゃ",
+              "isKeyGrammar": true,
+              "kanji": "担当者",
+              "furigana": "たんとうしゃ"
+            },
+            {
+              "id": "t-l16s2-12",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s2-13",
+              "text": "かわって",
+              "isKeyGrammar": true,
+              "kanji": "代わって",
+              "furigana": "かわって"
+            },
+            {
+              "id": "t-l16s2-14",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s2-15",
+              "text": "わたし",
+              "isKeyGrammar": false,
+              "kanji": "私",
+              "furigana": "わたし"
+            },
+            {
+              "id": "t-l16s2-16",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s2-17",
+              "text": "だいきん",
+              "isKeyGrammar": true,
+              "kanji": "代金",
+              "furigana": "だいきん"
+            },
+            {
+              "id": "t-l16s2-18",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s2-19",
+              "text": "しはらいます",
+              "isKeyGrammar": true,
+              "kanji": "支払います",
+              "furigana": "しはらいます"
+            }
+          ],
+          "meaningVi": "Thay mặt người phụ trách, tôi sẽ thanh toán tiền hàng."
+        }
+      ]
+    },
+    {
+      "slideId": "n3-l16-s3",
+      "slideType": "grammar",
+      "title": "3. So sánh 代わりに và に代わって",
+      "grammarFormula": "代わりに: rộng, dùng cho cả NGƯỜI và VIỆC　vs　に代わって: CHỈ dùng cho NGƯỜI/TỔ CHỨC, luôn trang trọng",
+      "explanation": "代わりに có phạm vi RỘNG HƠN, dùng được cho cả sự việc (thay vì làm A, làm B) lẫn con người; に代わって CHỈ dùng khi thay thế VAI TRÒ của một NGƯỜI/TỔ CHỨC cụ thể, mang tính CHÍNH THỨC.",
+      "teacherTips": "Mẹo: nếu vế trước là ĐỊA ĐIỂM/SỰ VIỆC → dùng 代わりに; nếu vế trước là NGƯỜI/TỔ CHỨC được thay thế vai trò → cả hai đều được, nhưng に代わって trang trọng hơn.",
+      "culturalNotes": "Trong đơn từ, hợp đồng, giấy tờ chính thức của Nhật, に代わって luôn được ưu tiên hơn 代わりに để đảm bảo tính pháp lý.",
+      "examples": [
+        {
+          "id": "ex-n3-l16-s3-1",
+          "tokens": [
+            {
+              "id": "t-l16s3-1",
+              "text": "いつも",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s3-2",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s3-3",
+              "text": "みせ",
+              "isKeyGrammar": false,
+              "kanji": "店",
+              "furigana": "みせ"
+            },
+            {
+              "id": "t-l16s3-4",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s3-5",
+              "text": "かわりに",
+              "isKeyGrammar": true,
+              "kanji": "代わりに",
+              "furigana": "かわりに"
+            },
+            {
+              "id": "t-l16s3-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s3-7",
+              "text": "あたらしい",
+              "isKeyGrammar": false,
+              "kanji": "新しい",
+              "furigana": "あたらしい"
+            },
+            {
+              "id": "t-l16s3-8",
+              "text": "みせ",
+              "isKeyGrammar": false,
+              "kanji": "店",
+              "furigana": "みせ"
+            },
+            {
+              "id": "t-l16s3-9",
+              "text": "で",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s3-10",
+              "text": "かいます",
+              "isKeyGrammar": false,
+              "kanji": "買います",
+              "furigana": "かいます"
+            }
+          ],
+          "meaningVi": "Thay vì cửa hàng thường lệ, tôi mua ở cửa hàng mới. (代わりに cho VIỆC/NƠI CHỐN)"
+        },
+        {
+          "id": "ex-n3-l16-s3-2",
+          "tokens": [
+            {
+              "id": "t-l16s3-11",
+              "text": "だいひょう",
+              "isKeyGrammar": true,
+              "kanji": "代表",
+              "furigana": "だいひょう"
+            },
+            {
+              "id": "t-l16s3-12",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s3-13",
+              "text": "かわって",
+              "isKeyGrammar": true,
+              "kanji": "代わって",
+              "furigana": "かわって"
+            },
+            {
+              "id": "t-l16s3-14",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s3-15",
+              "text": "わたし",
+              "isKeyGrammar": false,
+              "kanji": "私",
+              "furigana": "わたし"
+            },
+            {
+              "id": "t-l16s3-16",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s3-17",
+              "text": "しょめい",
+              "isKeyGrammar": true,
+              "kanji": "署名",
+              "furigana": "しょめい"
+            },
+            {
+              "id": "t-l16s3-18",
+              "text": "します",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Thay mặt đại diện, tôi sẽ ký tên. (に代わって CHỈ cho NGƯỜI)"
+        }
+      ]
+    },
+    {
+      "slideId": "n3-l16-s4",
+      "slideType": "grammar",
+      "title": "4. Kết hợp với 代理/代表 để nhấn tính chính thức",
+      "grammarFormula": "N の代理として、Nに代わって + [hành động]",
+      "explanation": "Khi người thay thế có CHỨC DANH CHÍNH THỨC (代理 - người được ủy quyền, 代表 - người đại diện), thường kết hợp cùng に代わって để nhấn mạnh tính HỢP PHÁP/CHÍNH THỨC của việc thay thế.",
+      "teacherTips": "Cấu trúc 「Nの代理として、Nに代わって」thường thấy trong VĂN BẢN HÀNH CHÍNH, hợp đồng — thể hiện chuỗi ủy quyền rõ ràng.",
+      "culturalNotes": "Trong công ty Nhật, khi cấp trên vắng mặt, việc dùng đúng 代理/代表/に代わって thể hiện sự tôn trọng thứ bậc và quy trình làm việc.",
+      "examples": [
+        {
+          "id": "ex-n3-l16-s4-1",
+          "tokens": [
+            {
+              "id": "t-l16s4-1",
+              "text": "しゃちょう",
+              "isKeyGrammar": true,
+              "kanji": "社長",
+              "furigana": "しゃちょう"
+            },
+            {
+              "id": "t-l16s4-2",
+              "text": "の",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s4-3",
+              "text": "だいり",
+              "isKeyGrammar": true,
+              "kanji": "代理",
+              "furigana": "だいり"
+            },
+            {
+              "id": "t-l16s4-4",
+              "text": "として",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s4-5",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s4-6",
+              "text": "ぶちょう",
+              "isKeyGrammar": false,
+              "kanji": "部長",
+              "furigana": "ぶちょう"
+            },
+            {
+              "id": "t-l16s4-7",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s4-8",
+              "text": "かわって",
+              "isKeyGrammar": true,
+              "kanji": "代わって",
+              "furigana": "かわって"
+            },
+            {
+              "id": "t-l16s4-9",
+              "text": "しょめい",
+              "isKeyGrammar": false,
+              "kanji": "署名",
+              "furigana": "しょめい"
+            },
+            {
+              "id": "t-l16s4-10",
+              "text": "します",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Với tư cách người được ủy quyền của giám đốc, trưởng phòng sẽ ký tên thay."
+        },
+        {
+          "id": "ex-n3-l16-s4-2",
+          "tokens": [
+            {
+              "id": "t-l16s4-11",
+              "text": "たんとうしゃ",
+              "isKeyGrammar": true,
+              "kanji": "担当者",
+              "furigana": "たんとうしゃ"
+            },
+            {
+              "id": "t-l16s4-12",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s4-13",
+              "text": "かわって",
+              "isKeyGrammar": true,
+              "kanji": "代わって",
+              "furigana": "かわって"
+            },
+            {
+              "id": "t-l16s4-14",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s4-15",
+              "text": "だいひょう",
+              "isKeyGrammar": true,
+              "kanji": "代表",
+              "furigana": "だいひょう"
+            },
+            {
+              "id": "t-l16s4-16",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l16s4-17",
+              "text": "せつめい",
+              "isKeyGrammar": false,
+              "kanji": "説明",
+              "furigana": "せつめい"
+            },
+            {
+              "id": "t-l16s4-18",
+              "text": "します",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Thay mặt người phụ trách, đại diện sẽ giải thích."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n3-16-1",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d16-1",
+          "text": "きょう",
+          "isKeyGrammar": true,
+          "kanji": "今日",
+          "furigana": "きょう"
+        },
+        {
+          "id": "d16-2",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-3",
+          "text": "かいぎ",
+          "isKeyGrammar": true,
+          "kanji": "会議",
+          "furigana": "かいぎ"
+        },
+        {
+          "id": "d16-4",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-5",
+          "text": "だれ",
+          "isKeyGrammar": false,
+          "kanji": "誰",
+          "furigana": "だれ"
+        },
+        {
+          "id": "d16-6",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-7",
+          "text": "しゅっせき",
+          "isKeyGrammar": false,
+          "kanji": "出席",
+          "furigana": "しゅっせき"
+        },
+        {
+          "id": "d16-8",
+          "text": "します",
+          "isKeyGrammar": false,
+          "kanji": "為ます",
+          "furigana": "します"
+        },
+        {
+          "id": "d16-9",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Cuộc họp hôm nay ai sẽ tham dự?"
+    },
+    {
+      "id": "dia-n3-16-2",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d16-10",
+          "text": "しゃちょう",
+          "isKeyGrammar": true,
+          "kanji": "社長",
+          "furigana": "しゃちょう"
+        },
+        {
+          "id": "d16-11",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-12",
+          "text": "かわりに",
+          "isKeyGrammar": true,
+          "kanji": "代わりに",
+          "furigana": "かわりに"
+        },
+        {
+          "id": "d16-13",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-14",
+          "text": "ぶちょう",
+          "isKeyGrammar": true,
+          "kanji": "部長",
+          "furigana": "ぶちょう"
+        },
+        {
+          "id": "d16-15",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-16",
+          "text": "しゅっせき",
+          "isKeyGrammar": false,
+          "kanji": "出席",
+          "furigana": "しゅっせき"
+        },
+        {
+          "id": "d16-17",
+          "text": "します",
+          "isKeyGrammar": false,
+          "kanji": "為ます",
+          "furigana": "します"
+        }
+      ],
+      "meaningVi": "Thay vì giám đốc, trưởng phòng sẽ tham dự."
+    },
+    {
+      "id": "dia-n3-16-3",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d16-18",
+          "text": "ぶちょう",
+          "isKeyGrammar": true,
+          "kanji": "部長",
+          "furigana": "ぶちょう"
+        },
+        {
+          "id": "d16-19",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-20",
+          "text": "しゃちょう",
+          "isKeyGrammar": true,
+          "kanji": "社長",
+          "furigana": "しゃちょう"
+        },
+        {
+          "id": "d16-21",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-22",
+          "text": "かわって",
+          "isKeyGrammar": true,
+          "kanji": "代わって",
+          "furigana": "かわって"
+        },
+        {
+          "id": "d16-23",
+          "text": "あいさつ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-24",
+          "text": "しますか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Trưởng phòng sẽ thay mặt giám đốc phát biểu chào hỏi chứ?"
+    },
+    {
+      "id": "dia-n3-16-4",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d16-25",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-26",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-27",
+          "text": "そう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-28",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        }
+      ],
+      "meaningVi": "Vâng, đúng vậy."
+    },
+    {
+      "id": "dia-n3-16-5",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d16-29",
+          "text": "だいきん",
+          "isKeyGrammar": true,
+          "kanji": "代金",
+          "furigana": "だいきん"
+        },
+        {
+          "id": "d16-30",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-31",
+          "text": "だれ",
+          "isKeyGrammar": false,
+          "kanji": "誰",
+          "furigana": "だれ"
+        },
+        {
+          "id": "d16-32",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-33",
+          "text": "しはらいます",
+          "isKeyGrammar": true,
+          "kanji": "支払います",
+          "furigana": "しはらいます"
+        },
+        {
+          "id": "d16-34",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ai sẽ thanh toán tiền hàng?"
+    },
+    {
+      "id": "dia-n3-16-6",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d16-35",
+          "text": "たんとうしゃ",
+          "isKeyGrammar": true,
+          "kanji": "担当者",
+          "furigana": "たんとうしゃ"
+        },
+        {
+          "id": "d16-36",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-37",
+          "text": "かわって",
+          "isKeyGrammar": true,
+          "kanji": "代わって",
+          "furigana": "かわって"
+        },
+        {
+          "id": "d16-38",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-39",
+          "text": "わたし",
+          "isKeyGrammar": false,
+          "kanji": "私",
+          "furigana": "わたし"
+        },
+        {
+          "id": "d16-40",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-41",
+          "text": "しはらいます",
+          "isKeyGrammar": true,
+          "kanji": "支払います",
+          "furigana": "しはらいます"
+        }
+      ],
+      "meaningVi": "Thay mặt người phụ trách, tôi sẽ thanh toán."
+    },
+    {
+      "id": "dia-n3-16-7",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d16-42",
+          "text": "しょるい",
+          "isKeyGrammar": false,
+          "kanji": "書類",
+          "furigana": "しょるい"
+        },
+        {
+          "id": "d16-43",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-44",
+          "text": "しょめい",
+          "isKeyGrammar": true,
+          "kanji": "署名",
+          "furigana": "しょめい"
+        },
+        {
+          "id": "d16-45",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-46",
+          "text": "ひつよう",
+          "isKeyGrammar": false,
+          "kanji": "必要",
+          "furigana": "ひつよう"
+        },
+        {
+          "id": "d16-47",
+          "text": "です",
+          "isKeyGrammar": false,
+          "kanji": "です",
+          "furigana": "です"
+        },
+        {
+          "id": "d16-48",
+          "text": "ね",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Cần chữ ký vào tài liệu nhỉ."
+    },
+    {
+      "id": "dia-n3-16-8",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d16-49",
+          "text": "だいひょう",
+          "isKeyGrammar": true,
+          "kanji": "代表",
+          "furigana": "だいひょう"
+        },
+        {
+          "id": "d16-50",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-51",
+          "text": "かわって",
+          "isKeyGrammar": true,
+          "kanji": "代わって",
+          "furigana": "かわって"
+        },
+        {
+          "id": "d16-52",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-53",
+          "text": "わたし",
+          "isKeyGrammar": false,
+          "kanji": "私",
+          "furigana": "わたし"
+        },
+        {
+          "id": "d16-54",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-55",
+          "text": "しょめい",
+          "isKeyGrammar": true,
+          "kanji": "署名",
+          "furigana": "しょめい"
+        },
+        {
+          "id": "d16-56",
+          "text": "します",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Thay mặt người đại diện, tôi sẽ ký tên."
+    },
+    {
+      "id": "dia-n3-16-9",
+      "speaker": "田中",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d16-57",
+          "text": "あした",
+          "isKeyGrammar": true,
+          "kanji": "明日",
+          "furigana": "あした"
+        },
+        {
+          "id": "d16-58",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-59",
+          "text": "かいぎ",
+          "isKeyGrammar": false,
+          "kanji": "会議",
+          "furigana": "かいぎ"
+        },
+        {
+          "id": "d16-60",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-61",
+          "text": "やすみます",
+          "isKeyGrammar": true,
+          "kanji": "休みます",
+          "furigana": "やすみます"
+        },
+        {
+          "id": "d16-62",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Cuộc họp ngày mai bạn sẽ nghỉ à?"
+    },
+    {
+      "id": "dia-n3-16-10",
+      "speaker": "サントス",
+      "speakerRole": "Đồng nghiệp",
+      "tokens": [
+        {
+          "id": "d16-63",
+          "text": "いいえ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-64",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-65",
+          "text": "だいり",
+          "isKeyGrammar": true,
+          "kanji": "代理",
+          "furigana": "だいり"
+        },
+        {
+          "id": "d16-66",
+          "text": "として",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-67",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d16-68",
+          "text": "せつめい",
+          "isKeyGrammar": true,
+          "kanji": "説明",
+          "furigana": "せつめい"
+        },
+        {
+          "id": "d16-69",
+          "text": "します",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Không. Với tư cách người được ủy quyền, tôi sẽ giải thích."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n3-16-1",
+      "question": "「社長の代わりに、部長が会議に出席します」 — 代わりに diễn tả điều gì?",
+      "options": [
+        "Thay vì một người/việc, chuyển sang làm bằng người/việc khác (dùng phổ biến)",
+        "Thay mặt chính thức, mang tính pháp lý",
+        "So sánh hai người",
+        "Phủ định việc tham dự"
+      ],
+      "correctIndex": 0,
+      "explanation": "代わりに diễn tả 'thay vì' một cách phổ biến, dùng được cho cả người và việc.",
+      "hint": "Xem cấu trúc 代わりに ở slide 1."
+    },
+    {
+      "id": "ex-q-n3-16-2",
+      "question": "「社長に代わって、部長が会議に出席します」 — に代わって khác 代わりに ở điểm nào?",
+      "options": [
+        "に代わって trang trọng hơn, chỉ dùng khi thay thế VAI TRÒ của người/tổ chức",
+        "Hoàn toàn giống nhau, dùng thay thế được cho nhau luôn",
+        "に代わって chỉ dùng cho việc, không dùng cho người",
+        "代わりに chỉ dùng trong văn viết"
+      ],
+      "correctIndex": 0,
+      "explanation": "に代わって trang trọng hơn 代わりに, và CHỈ dùng khi N là người/tổ chức được thay thế vai trò.",
+      "hint": "Xem giải thích に代わって ở slide 2."
+    },
+    {
+      "id": "ex-q-n3-16-3",
+      "question": "Có thể dùng に代わって để nói 'thay vì đi họp, tôi gọi điện' không?",
+      "options": [
+        "Không, vì 会議に行くこと (việc đi họp) không phải là người/tổ chức — phải dùng 代わりに",
+        "Có, hoàn toàn tự nhiên và đúng ngữ pháp",
+        "Chỉ đúng trong văn nói thân mật",
+        "Chỉ đúng khi nói về công ty"
+      ],
+      "correctIndex": 0,
+      "explanation": "に代わって CHỈ dùng cho người/tổ chức được thay thế vai trò, không dùng cho hành động/sự việc.",
+      "hint": "Xem lưu ý quan trọng ở slide 3."
+    },
+    {
+      "id": "ex-q-n3-16-4",
+      "question": "「担当者に代わって、私が代金を支払います」 nghĩa là:",
+      "options": [
+        "Thay mặt người phụ trách, tôi sẽ thanh toán tiền hàng",
+        "Người phụ trách sẽ thanh toán thay tôi",
+        "Không ai thanh toán tiền hàng cả",
+        "Tôi từ chối thanh toán tiền hàng"
+      ],
+      "correctIndex": 0,
+      "explanation": "に代わって ở đây nghĩa là 'thay mặt' người phụ trách — người nói (私) đảm nhận việc thanh toán thay.",
+      "hint": "Áp dụng cấu trúc Nに代わって."
+    },
+    {
+      "id": "ex-q-n3-16-5",
+      "question": "Cấu trúc 代理として、〜に代わって thường xuất hiện ở đâu?",
+      "options": [
+        "Văn bản hành chính, hợp đồng, ngữ cảnh công việc chính thức",
+        "Chỉ trong thơ ca",
+        "Chỉ trong tin nhắn thân mật giữa bạn bè",
+        "Không bao giờ được sử dụng"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cấu trúc kết hợp 代理/代表 với に代わって thể hiện chuỗi ủy quyền rõ ràng, thường thấy trong văn bản hành chính.",
+      "hint": "Xem ví dụ ở slide 4."
+    },
+    {
+      "id": "ex-q-n3-16-6",
+      "question": "「いつもの店の代わりに、新しい店で買います」 — vì sao không dùng に代わって ở đây?",
+      "options": [
+        "Vì 店 (cửa hàng) là một địa điểm/sự việc, không phải người/tổ chức cần thay thế vai trò",
+        "Vì câu này sai ngữ pháp hoàn toàn",
+        "Vì に代わって không tồn tại trong tiếng Nhật",
+        "Vì cả hai đều đúng như nhau"
+      ],
+      "correctIndex": 0,
+      "explanation": "に代わって chỉ dùng cho người/tổ chức; ở đây 店 (cửa hàng) là địa điểm nên dùng 代わりに mới đúng.",
+      "hint": "Xem so sánh ở slide 3."
+    },
+    {
+      "id": "ex-q-n3-16-7",
+      "question": "「代表に代わって、私が署名します」 nghĩa là:",
+      "options": [
+        "Thay mặt người đại diện, tôi sẽ ký tên",
+        "Người đại diện sẽ ký tên thay tôi",
+        "Không ai ký tên cả",
+        "Tôi là người đại diện chính thức"
+      ],
+      "correctIndex": 0,
+      "explanation": "に代わって ở đây nghĩa 'thay mặt' người đại diện (代表) — người nói đảm nhận việc ký tên thay.",
+      "hint": "Áp dụng cấu trúc Nに代わって cho ngữ cảnh ký tên."
+    },
+    {
+      "id": "ex-q-n3-16-8",
+      "question": "Theo hội thoại, ai sẽ tham dự cuộc họp hôm nay?",
+      "options": [
+        "Trưởng phòng, thay vì giám đốc (部長が出席します)",
+        "Giám đốc sẽ tự tham dự",
+        "Không ai tham dự cả",
+        "Cuộc họp bị hủy"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「社長の代わりに、部長が出席します」.",
+      "hint": "Xem câu thoại thứ 2."
+    },
+    {
+      "id": "ex-q-n3-16-9",
+      "question": "Ai sẽ thanh toán tiền hàng theo hội thoại?",
+      "options": [
+        "Santos, thay mặt người phụ trách (担当者に代わって、私が支払います)",
+        "Người phụ trách sẽ tự thanh toán",
+        "Giám đốc sẽ thanh toán",
+        "Không ai thanh toán"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「担当者に代わって、私が支払います」.",
+      "hint": "Xem câu thoại thứ 6."
+    },
+    {
+      "id": "ex-q-n3-16-10",
+      "question": "Santos sẽ làm gì vào cuộc họp ngày mai?",
+      "options": [
+        "Giải thích với tư cách người được ủy quyền (代理として、説明します)",
+        "Nghỉ không tham dự",
+        "Không làm gì cả",
+        "Hủy cuộc họp"
+      ],
+      "correctIndex": 0,
+      "explanation": "Santos nói 「代理として、説明します」.",
+      "hint": "Xem câu thoại cuối cùng."
+    }
+  ]
+}

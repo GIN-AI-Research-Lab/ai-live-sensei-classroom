@@ -1,0 +1,1345 @@
+{
+  "level": "N5",
+  "lessonNumber": 17,
+  "title": "Bài 17: Thể ない (Vないでください / Vなければなりません / Vなくてもいいです)",
+  "description": "Chia động từ sang thể ない (phủ định thân mật, nền tảng cho nhiều cấu trúc), yêu cầu không làm bằng Vないでください, nghĩa vụ bắt buộc bằng Vなければなりません, và việc không bắt buộc bằng Vなくてもいいです — bốn cấu trúc てもいい/てはいけません/なければならない/なくてもいい tạo thành hai cặp đối lập cần nhớ cùng nhau.",
+  "vocabList": [
+    {
+      "id": "voc-n5-17-1",
+      "word": "のみます",
+      "kanji": "飲みます",
+      "furigana": "のみます",
+      "romaji": "nomimasu",
+      "wordType": "verb",
+      "meaningVi": "Uống (thuốc, nước)",
+      "accentNote": "Thể ない: 飲まない. Nhóm 1 đuôi む→まない."
+    },
+    {
+      "id": "voc-n5-17-2",
+      "word": "かきます",
+      "kanji": "書きます",
+      "furigana": "かきます",
+      "romaji": "kakimasu",
+      "wordType": "verb",
+      "meaningVi": "Viết",
+      "accentNote": "Thể ない: 書かない. Nhóm 1 đuôi く→かない."
+    },
+    {
+      "id": "voc-n5-17-3",
+      "word": "たべます",
+      "kanji": "食べます",
+      "furigana": "たべます",
+      "romaji": "tabemasu",
+      "wordType": "verb",
+      "meaningVi": "Ăn",
+      "accentNote": "Thể ない: 食べない. Nhóm 2: bỏ ます thêm ない."
+    },
+    {
+      "id": "voc-n5-17-4",
+      "word": "きます",
+      "kanji": "来ます",
+      "furigana": "きます",
+      "romaji": "kimasu",
+      "wordType": "verb",
+      "meaningVi": "Đến",
+      "accentNote": "Thể ない: 来ない (こない — đọc khác hẳn 来る). Nhóm 3 bất quy tắc."
+    },
+    {
+      "id": "voc-n5-17-5",
+      "word": "します",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "shimasu",
+      "wordType": "verb",
+      "meaningVi": "Làm",
+      "accentNote": "Thể ない: しない. Nhóm 3 bất quy tắc."
+    },
+    {
+      "id": "voc-n5-17-6",
+      "word": "わすれます",
+      "kanji": "忘れます",
+      "furigana": "わすれます",
+      "romaji": "wasuremasu",
+      "wordType": "verb",
+      "meaningVi": "Quên",
+      "accentNote": "Thể ない: 忘れない. Nhóm 2."
+    },
+    {
+      "id": "voc-n5-17-7",
+      "word": "はいります",
+      "kanji": "入ります",
+      "furigana": "はいります",
+      "romaji": "hairimasu",
+      "wordType": "verb",
+      "meaningVi": "Vào",
+      "accentNote": "Đã gặp bài 15. Thể ない: 入らない (nhóm 1 dù trông giống nhóm 2)."
+    },
+    {
+      "id": "voc-n5-17-8",
+      "word": "すいます",
+      "kanji": "吸います",
+      "furigana": "すいます",
+      "romaji": "suimasu",
+      "wordType": "verb",
+      "meaningVi": "Hút thuốc",
+      "accentNote": "Đã gặp bài 6. Thể ない: 吸わない (đuôi う→わない, KHÔNG phải あない)."
+    },
+    {
+      "id": "voc-n5-17-9",
+      "word": "くすり",
+      "kanji": "薬",
+      "furigana": "くすり",
+      "romaji": "kusuri",
+      "wordType": "noun",
+      "meaningVi": "Thuốc",
+      "accentNote": "薬を 飲みます (uống thuốc, KHÔNG nói 食べます thuốc)."
+    },
+    {
+      "id": "voc-n5-17-10",
+      "word": "びょうき",
+      "kanji": "病気",
+      "furigana": "びょうき",
+      "romaji": "byouki",
+      "wordType": "noun",
+      "meaningVi": "Bệnh, ốm",
+      "accentNote": "病気に なります = bị bệnh."
+    },
+    {
+      "id": "voc-n5-17-11",
+      "word": "びょういん",
+      "kanji": "病院",
+      "furigana": "びょういん",
+      "romaji": "byouin",
+      "wordType": "noun",
+      "meaningVi": "Bệnh viện",
+      "accentNote": "Đã gặp bài 3."
+    },
+    {
+      "id": "voc-n5-17-12",
+      "word": "いしゃ",
+      "kanji": "医者",
+      "furigana": "いしゃ",
+      "romaji": "isha",
+      "wordType": "noun",
+      "meaningVi": "Bác sĩ",
+      "accentNote": "Đã gặp bài 1."
+    },
+    {
+      "id": "voc-n5-17-13",
+      "word": "しゅくだい",
+      "kanji": "宿題",
+      "furigana": "しゅくだい",
+      "romaji": "shukudai",
+      "wordType": "noun",
+      "meaningVi": "Bài tập về nhà",
+      "accentNote": "Đã gặp bài 7 — nay dùng làm nghĩa vụ."
+    },
+    {
+      "id": "voc-n5-17-14",
+      "word": "かいぎ",
+      "kanji": "会議",
+      "furigana": "かいぎ",
+      "romaji": "kaigi",
+      "wordType": "noun",
+      "meaningVi": "Cuộc họp",
+      "accentNote": "会議に 出ます = tham dự họp."
+    },
+    {
+      "id": "voc-n5-17-15",
+      "word": "パスポート",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "pasupooto",
+      "wordType": "noun",
+      "meaningVi": "Hộ chiếu",
+      "accentNote": "パスポートを 忘れないで ください = xin đừng quên hộ chiếu."
+    },
+    {
+      "id": "voc-n5-17-16",
+      "word": "うんてん",
+      "kanji": "運転",
+      "furigana": "うんてん",
+      "romaji": "unten",
+      "wordType": "noun",
+      "meaningVi": "Việc lái xe",
+      "accentNote": "運転します = lái xe."
+    },
+    {
+      "id": "voc-n5-17-17",
+      "word": "めんきょ",
+      "kanji": "免許",
+      "furigana": "めんきょ",
+      "romaji": "menkyo",
+      "wordType": "noun",
+      "meaningVi": "Giấy phép, bằng lái",
+      "accentNote": "運転免許 = bằng lái xe."
+    },
+    {
+      "id": "voc-n5-17-18",
+      "word": "テスト",
+      "kanji": "",
+      "furigana": "",
+      "romaji": "tesuto",
+      "wordType": "noun",
+      "meaningVi": "Bài kiểm tra",
+      "accentNote": "Đã gặp bài 15."
+    },
+    {
+      "id": "voc-n5-17-19",
+      "word": "だいじょうぶ",
+      "kanji": "大丈夫",
+      "furigana": "だいじょうぶ",
+      "romaji": "daijoubu",
+      "wordType": "adjective",
+      "meaningVi": "Ổn, không sao",
+      "accentNote": "Đã gặp bài 15."
+    },
+    {
+      "id": "voc-n5-17-20",
+      "word": "しんぱい",
+      "kanji": "心配",
+      "furigana": "しんぱい",
+      "romaji": "shinpai",
+      "wordType": "adjective",
+      "meaningVi": "Lo lắng",
+      "accentNote": "Tính từ な. 心配しないで ください = xin đừng lo."
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kan-n5-17-1",
+      "character": "薬",
+      "hanViet": "DƯỢC",
+      "strokeCount": 16,
+      "onyomi": [
+        "ヤク (yaku)"
+      ],
+      "kunyomi": [
+        "くすり"
+      ],
+      "meaningVi": "Thuốc.",
+      "commonWords": [
+        {
+          "word": "薬",
+          "furigana": "くすり",
+          "meaningVi": "Thuốc"
+        },
+        {
+          "word": "薬局",
+          "furigana": "やっきょく",
+          "meaningVi": "Hiệu thuốc"
+        },
+        {
+          "word": "薬品",
+          "furigana": "やくひん",
+          "meaningVi": "Dược phẩm"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-17-2",
+      "character": "病",
+      "hanViet": "BỆNH",
+      "strokeCount": 10,
+      "onyomi": [
+        "ビョウ (byou)"
+      ],
+      "kunyomi": [
+        "やまい"
+      ],
+      "meaningVi": "Bệnh, ốm.",
+      "commonWords": [
+        {
+          "word": "病気",
+          "furigana": "びょうき",
+          "meaningVi": "Bệnh"
+        },
+        {
+          "word": "病院",
+          "furigana": "びょういん",
+          "meaningVi": "Bệnh viện"
+        },
+        {
+          "word": "急病",
+          "furigana": "きゅうびょう",
+          "meaningVi": "Bệnh cấp tính"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-17-3",
+      "character": "医",
+      "hanViet": "Y",
+      "strokeCount": 7,
+      "onyomi": [
+        "イ (i)"
+      ],
+      "kunyomi": [],
+      "meaningVi": "Y học, chữa bệnh.",
+      "commonWords": [
+        {
+          "word": "医者",
+          "furigana": "いしゃ",
+          "meaningVi": "Bác sĩ"
+        },
+        {
+          "word": "医学",
+          "furigana": "いがく",
+          "meaningVi": "Y học"
+        },
+        {
+          "word": "医院",
+          "furigana": "いいん",
+          "meaningVi": "Phòng khám"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-17-4",
+      "character": "忘",
+      "hanViet": "VONG",
+      "strokeCount": 7,
+      "onyomi": [
+        "ボウ (bou)"
+      ],
+      "kunyomi": [
+        "わす(れる)"
+      ],
+      "meaningVi": "Quên. Bộ 心 (tâm) bên dưới — quên trong lòng.",
+      "commonWords": [
+        {
+          "word": "忘れます",
+          "furigana": "わすれます",
+          "meaningVi": "Quên"
+        },
+        {
+          "word": "忘れ物",
+          "furigana": "わすれもの",
+          "meaningVi": "Đồ bỏ quên"
+        },
+        {
+          "word": "備忘録",
+          "furigana": "びぼうろく",
+          "meaningVi": "Sổ tay ghi nhớ"
+        }
+      ]
+    },
+    {
+      "id": "kan-n5-17-5",
+      "character": "運",
+      "hanViet": "VẬN",
+      "strokeCount": 12,
+      "onyomi": [
+        "ウン (un)"
+      ],
+      "kunyomi": [
+        "はこ(ぶ)"
+      ],
+      "meaningVi": "Vận chuyển, vận may.",
+      "commonWords": [
+        {
+          "word": "運転",
+          "furigana": "うんてん",
+          "meaningVi": "Lái xe"
+        },
+        {
+          "word": "運びます",
+          "furigana": "はこびます",
+          "meaningVi": "Vận chuyển"
+        },
+        {
+          "word": "運動",
+          "furigana": "うんどう",
+          "meaningVi": "Vận động"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "n5-l17-s1",
+      "slideType": "grammar",
+      "title": "1. Chia thể ない (phủ định thông thường)",
+      "grammarFormula": "Nhóm 1: đuôi う→わ, く→か, ぐ→が, す→さ, つ→た, ぬ→な, ぶ→ば, む→ま + ない　/　Nhóm 2: bỏ ます + ない",
+      "explanation": "Thể ない là dạng phủ định THÂN MẬT của động từ — nền tảng cho hàng loạt cấu trúc ngữ pháp ở bài này. Nhóm 1 đổi âm cuối của gốc từ điển sang HÀNG あ rồi thêm ない.",
+      "teacherTips": "Đuôi う đặc biệt: đổi thành わ chứ không phải あ — 吸う → 吸わない, không phải 吸あない.",
+      "culturalNotes": "来る và する chia thể ない hoàn toàn bất quy tắc: 来ない (こない, đọc khác hẳn) và しない — phải học thuộc riêng.",
+      "examples": [
+        {
+          "id": "ex-n5-l17-s1-1",
+          "tokens": [
+            {
+              "id": "t-l17s1-1",
+              "text": "のまない",
+              "isKeyGrammar": true,
+              "kanji": "飲まない",
+              "furigana": "のまない"
+            },
+            {
+              "id": "t-l17s1-2",
+              "text": "で",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l17s1-3",
+              "text": "ください",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Xin đừng uống. (飲む: む→まない)"
+        },
+        {
+          "id": "ex-n5-l17-s1-2",
+          "tokens": [
+            {
+              "id": "t-l17s1-4",
+              "text": "すわない",
+              "isKeyGrammar": true,
+              "kanji": "吸わない",
+              "furigana": "すわない"
+            },
+            {
+              "id": "t-l17s1-5",
+              "text": "で",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l17s1-6",
+              "text": "ください",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Xin đừng hút thuốc. (吸う: う→わない, KHÔNG phải あない)"
+        },
+        {
+          "id": "ex-n5-l17-s1-3",
+          "tokens": [
+            {
+              "id": "t-l17s1-7",
+              "text": "たべない",
+              "isKeyGrammar": true,
+              "kanji": "食べない",
+              "furigana": "たべない"
+            },
+            {
+              "id": "t-l17s1-8",
+              "text": "で",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l17s1-9",
+              "text": "ください",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Xin đừng ăn. (食べる nhóm 2: bỏ ます, thêm ない)"
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l17-s2",
+      "slideType": "grammar",
+      "title": "2. Yêu cầu không làm: Vないで ください",
+      "grammarFormula": "[Thể ない bỏ い] + で + ください",
+      "explanation": "Đối lập với Vてください (bài 14) — Vないでください yêu cầu người nghe ĐỪNG làm gì. Cấu trúc rất giống nhau về hình thức, chỉ khác ở thể khẳng định/phủ định của động từ.",
+      "teacherTips": "So sánh trực tiếp: Vて+ください (làm ơn HÃY làm) khác Vない+で+ください (làm ơn ĐỪNG làm) — chỉ khác đuôi động từ.",
+      "culturalNotes": "Biển báo 「立ち入らないでください」 (xin đừng vào) thường thấy ở khu vực công trường, khu riêng tư tại Nhật.",
+      "examples": [
+        {
+          "id": "ex-n5-l17-s2-1",
+          "tokens": [
+            {
+              "id": "t-l17s2-1",
+              "text": "しんぱい",
+              "isKeyGrammar": false,
+              "kanji": "心配",
+              "furigana": "しんぱい"
+            },
+            {
+              "id": "t-l17s2-2",
+              "text": "しないで",
+              "isKeyGrammar": true,
+              "kanji": "しないで",
+              "furigana": "しないで"
+            },
+            {
+              "id": "t-l17s2-3",
+              "text": "ください",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Xin đừng lo lắng."
+        },
+        {
+          "id": "ex-n5-l17-s2-2",
+          "tokens": [
+            {
+              "id": "t-l17s2-4",
+              "text": "パスポート",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l17s2-5",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l17s2-6",
+              "text": "わすれないで",
+              "isKeyGrammar": true,
+              "kanji": "忘れないで",
+              "furigana": "わすれないで"
+            },
+            {
+              "id": "t-l17s2-7",
+              "text": "ください",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Xin đừng quên hộ chiếu."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l17-s3",
+      "slideType": "grammar",
+      "title": "3. Nghĩa vụ bắt buộc: Vなければ なりません",
+      "grammarFormula": "[Thể ない bỏ い] + ければ + なりません",
+      "explanation": "Diễn tả một việc BẮT BUỘC phải làm — nghĩa đen gần như 'nếu không làm thì không được'. Đây là cấu trúc N5 dài và khó nhớ nhất, nhưng cực kỳ thông dụng trong giao tiếp thực tế.",
+      "teacherTips": "Nói tắt trong giao tiếp thân mật: なければ → なきゃ (くすりを 飲まなきゃ) — sẽ gặp nhiều trong hội thoại tự nhiên.",
+      "culturalNotes": "なければなりません nghe khá trang trọng — bạn bè thân thường dùng dạng rút gọn なきゃ cho tự nhiên hơn.",
+      "examples": [
+        {
+          "id": "ex-n5-l17-s3-1",
+          "tokens": [
+            {
+              "id": "t-l17s3-1",
+              "text": "くすり",
+              "isKeyGrammar": false,
+              "kanji": "薬",
+              "furigana": "くすり"
+            },
+            {
+              "id": "t-l17s3-2",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l17s3-3",
+              "text": "のまなければ",
+              "isKeyGrammar": true,
+              "kanji": "飲まなければ",
+              "furigana": "のまなければ"
+            },
+            {
+              "id": "t-l17s3-4",
+              "text": "なりません",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Tôi phải uống thuốc."
+        },
+        {
+          "id": "ex-n5-l17-s3-2",
+          "tokens": [
+            {
+              "id": "t-l17s3-5",
+              "text": "あした",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l17s3-6",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l17s3-7",
+              "text": "かいぎ",
+              "isKeyGrammar": false,
+              "kanji": "会議",
+              "furigana": "かいぎ"
+            },
+            {
+              "id": "t-l17s3-8",
+              "text": "に",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l17s3-9",
+              "text": "でなければ",
+              "isKeyGrammar": true,
+              "kanji": "出なければ",
+              "furigana": "でなければ"
+            },
+            {
+              "id": "t-l17s3-10",
+              "text": "なりません",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Ngày mai tôi phải tham dự họp."
+        }
+      ]
+    },
+    {
+      "slideId": "n5-l17-s4",
+      "slideType": "grammar",
+      "title": "4. Không bắt buộc: Vなくても いいです",
+      "grammarFormula": "[Thể ない bỏ い] + くても + いいです",
+      "explanation": "Đối lập với Vなければなりません — báo rằng KHÔNG CẦN làm việc đó cũng không sao. So sánh với Vてもいいです (bài 15, xin phép LÀM) — đây là 'được phép KHÔNG làm'.",
+      "teacherTips": "Bốn cấu trúc đối lập cần nhớ theo cặp: てもいい(được làm)⇄てはいけません(cấm), なければならない(phải làm)⇄なくてもいい(không cần làm).",
+      "culturalNotes": "なくてもいいです thường dùng để TRẤN AN ai đó đang lo lắng về việc phải hoàn thành nghĩa vụ nào đó.",
+      "examples": [
+        {
+          "id": "ex-n5-l17-s4-1",
+          "tokens": [
+            {
+              "id": "t-l17s4-1",
+              "text": "きょう",
+              "isKeyGrammar": false,
+              "kanji": "今日",
+              "furigana": "きょう"
+            },
+            {
+              "id": "t-l17s4-2",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l17s4-3",
+              "text": "しゅくだい",
+              "isKeyGrammar": false,
+              "kanji": "宿題",
+              "furigana": "しゅくだい"
+            },
+            {
+              "id": "t-l17s4-4",
+              "text": "を",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l17s4-5",
+              "text": "しなくても",
+              "isKeyGrammar": true,
+              "kanji": "しなくても",
+              "furigana": "しなくても"
+            },
+            {
+              "id": "t-l17s4-6",
+              "text": "いいです",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Hôm nay không cần làm bài tập cũng được."
+        },
+        {
+          "id": "ex-n5-l17-s4-2",
+          "tokens": [
+            {
+              "id": "t-l17s4-7",
+              "text": "テスト",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l17s4-8",
+              "text": "は",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l17s4-9",
+              "text": "らいしゅう",
+              "isKeyGrammar": false,
+              "kanji": "来週",
+              "furigana": "らいしゅう"
+            },
+            {
+              "id": "t-l17s4-10",
+              "text": "です",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l17s4-11",
+              "text": "から",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l17s4-12",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-l17s4-13",
+              "text": "きょう",
+              "isKeyGrammar": false,
+              "kanji": "今日",
+              "furigana": "きょう"
+            },
+            {
+              "id": "t-l17s4-14",
+              "text": "べんきょう",
+              "isKeyGrammar": false,
+              "kanji": "勉強",
+              "furigana": "べんきょう"
+            },
+            {
+              "id": "t-l17s4-15",
+              "text": "しなくても",
+              "isKeyGrammar": true,
+              "kanji": "しなくても",
+              "furigana": "しなくても"
+            },
+            {
+              "id": "t-l17s4-16",
+              "text": "いいです",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Vì kiểm tra tuần sau nên hôm nay không học cũng được."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-n5-17-1",
+      "speaker": "ミラー",
+      "speakerRole": "Bệnh nhân",
+      "tokens": [
+        {
+          "id": "d-l17-1",
+          "text": "せんせい",
+          "isKeyGrammar": false,
+          "kanji": "先生",
+          "furigana": "せんせい"
+        },
+        {
+          "id": "d-l17-2",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-3",
+          "text": "びょうき",
+          "isKeyGrammar": true,
+          "kanji": "病気",
+          "furigana": "びょうき"
+        },
+        {
+          "id": "d-l17-4",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-5",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Thưa bác sĩ, tôi bị bệnh à?"
+    },
+    {
+      "id": "dia-n5-17-2",
+      "speaker": "医者",
+      "speakerRole": "Bác sĩ",
+      "tokens": [
+        {
+          "id": "d-l17-6",
+          "text": "しんぱい",
+          "isKeyGrammar": true,
+          "kanji": "心配",
+          "furigana": "しんぱい"
+        },
+        {
+          "id": "d-l17-7",
+          "text": "しないで",
+          "isKeyGrammar": true,
+          "kanji": "しないで",
+          "furigana": "しないで"
+        },
+        {
+          "id": "d-l17-8",
+          "text": "ください",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-9",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-10",
+          "text": "でも",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-11",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-12",
+          "text": "くすり",
+          "isKeyGrammar": true,
+          "kanji": "薬",
+          "furigana": "くすり"
+        },
+        {
+          "id": "d-l17-13",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-14",
+          "text": "のまなければ",
+          "isKeyGrammar": true,
+          "kanji": "飲まなければ",
+          "furigana": "のまなければ"
+        },
+        {
+          "id": "d-l17-15",
+          "text": "なりません",
+          "isKeyGrammar": true
+        }
+      ],
+      "meaningVi": "Xin đừng lo lắng. Nhưng anh phải uống thuốc."
+    },
+    {
+      "id": "dia-n5-17-3",
+      "speaker": "ミラー",
+      "speakerRole": "Bệnh nhân",
+      "tokens": [
+        {
+          "id": "d-l17-16",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-17",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-18",
+          "text": "わかりました",
+          "isKeyGrammar": false,
+          "kanji": "分かりました",
+          "furigana": "わかりました"
+        },
+        {
+          "id": "d-l17-19",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-20",
+          "text": "しごと",
+          "isKeyGrammar": false,
+          "kanji": "仕事",
+          "furigana": "しごと"
+        },
+        {
+          "id": "d-l17-21",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-22",
+          "text": "どうですか",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng, tôi hiểu rồi. Còn công việc thì sao ạ?"
+    },
+    {
+      "id": "dia-n5-17-4",
+      "speaker": "医者",
+      "speakerRole": "Bác sĩ",
+      "tokens": [
+        {
+          "id": "d-l17-23",
+          "text": "きょう",
+          "isKeyGrammar": false,
+          "kanji": "今日",
+          "furigana": "きょう"
+        },
+        {
+          "id": "d-l17-24",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-25",
+          "text": "はたらかなくても",
+          "isKeyGrammar": true,
+          "kanji": "働かなくても",
+          "furigana": "はたらかなくても"
+        },
+        {
+          "id": "d-l17-26",
+          "text": "いいです",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l17-27",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-28",
+          "text": "うち",
+          "isKeyGrammar": false,
+          "kanji": "家",
+          "furigana": "うち"
+        },
+        {
+          "id": "d-l17-29",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-30",
+          "text": "やすんで",
+          "isKeyGrammar": false,
+          "kanji": "休んで",
+          "furigana": "やすんで"
+        },
+        {
+          "id": "d-l17-31",
+          "text": "ください",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Hôm nay không cần đi làm cũng được. Anh cứ nghỉ ngơi ở nhà."
+    },
+    {
+      "id": "dia-n5-17-5",
+      "speaker": "ミラー",
+      "speakerRole": "Bệnh nhân",
+      "tokens": [
+        {
+          "id": "d-l17-32",
+          "text": "あした",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-33",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-34",
+          "text": "かいぎ",
+          "isKeyGrammar": true,
+          "kanji": "会議",
+          "furigana": "かいぎ"
+        },
+        {
+          "id": "d-l17-35",
+          "text": "が",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-36",
+          "text": "あります",
+          "isKeyGrammar": false,
+          "kanji": "有ります",
+          "furigana": "あります"
+        },
+        {
+          "id": "d-l17-37",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-38",
+          "text": "でなければ",
+          "isKeyGrammar": true,
+          "kanji": "出なければ",
+          "furigana": "でなければ"
+        },
+        {
+          "id": "d-l17-39",
+          "text": "なりません",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l17-40",
+          "text": "か",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ngày mai tôi có cuộc họp. Tôi có phải tham dự không ạ?"
+    },
+    {
+      "id": "dia-n5-17-6",
+      "speaker": "医者",
+      "speakerRole": "Bác sĩ",
+      "tokens": [
+        {
+          "id": "d-l17-41",
+          "text": "あした",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-42",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-43",
+          "text": "でなくても",
+          "isKeyGrammar": true,
+          "kanji": "出なくても",
+          "furigana": "でなくても"
+        },
+        {
+          "id": "d-l17-44",
+          "text": "いいです",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-l17-45",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-46",
+          "text": "ゆっくり",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-47",
+          "text": "やすんで",
+          "isKeyGrammar": false,
+          "kanji": "休んで",
+          "furigana": "やすんで"
+        },
+        {
+          "id": "d-l17-48",
+          "text": "ください",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ngày mai không cần tham dự cũng được. Anh cứ nghỉ ngơi cho khỏe."
+    },
+    {
+      "id": "dia-n5-17-7",
+      "speaker": "ミラー",
+      "speakerRole": "Bệnh nhân",
+      "tokens": [
+        {
+          "id": "d-l17-49",
+          "text": "わかりました",
+          "isKeyGrammar": false,
+          "kanji": "分かりました",
+          "furigana": "わかりました"
+        },
+        {
+          "id": "d-l17-50",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-51",
+          "text": "くすり",
+          "isKeyGrammar": false,
+          "kanji": "薬",
+          "furigana": "くすり"
+        },
+        {
+          "id": "d-l17-52",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-53",
+          "text": "いつ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-54",
+          "text": "のみますか",
+          "isKeyGrammar": false,
+          "kanji": "飲みますか",
+          "furigana": "のみますか"
+        }
+      ],
+      "meaningVi": "Tôi hiểu rồi ạ. Vậy khi nào tôi uống thuốc?"
+    },
+    {
+      "id": "dia-n5-17-8",
+      "speaker": "医者",
+      "speakerRole": "Bác sĩ",
+      "tokens": [
+        {
+          "id": "d-l17-55",
+          "text": "しょくじ",
+          "isKeyGrammar": false,
+          "kanji": "食事",
+          "furigana": "しょくじ"
+        },
+        {
+          "id": "d-l17-56",
+          "text": "の",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-57",
+          "text": "あと",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-58",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-59",
+          "text": "のんで",
+          "isKeyGrammar": true,
+          "kanji": "飲んで",
+          "furigana": "のんで"
+        },
+        {
+          "id": "d-l17-60",
+          "text": "ください",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-61",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-62",
+          "text": "おさけ",
+          "isKeyGrammar": false,
+          "kanji": "お酒",
+          "furigana": "おさけ"
+        },
+        {
+          "id": "d-l17-63",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-64",
+          "text": "のまないで",
+          "isKeyGrammar": true,
+          "kanji": "飲まないで",
+          "furigana": "のまないで"
+        },
+        {
+          "id": "d-l17-65",
+          "text": "ください",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Sau bữa ăn thì uống. Và xin đừng uống rượu nhé."
+    },
+    {
+      "id": "dia-n5-17-9",
+      "speaker": "ミラー",
+      "speakerRole": "Bệnh nhân",
+      "tokens": [
+        {
+          "id": "d-l17-66",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-67",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-68",
+          "text": "わかりました",
+          "isKeyGrammar": false,
+          "kanji": "分かりました",
+          "furigana": "わかりました"
+        }
+      ],
+      "meaningVi": "Vâng, tôi hiểu rồi ạ."
+    },
+    {
+      "id": "dia-n5-17-10",
+      "speaker": "医者",
+      "speakerRole": "Bác sĩ",
+      "tokens": [
+        {
+          "id": "d-l17-69",
+          "text": "だいじょうぶ",
+          "isKeyGrammar": true,
+          "kanji": "大丈夫",
+          "furigana": "だいじょうぶ"
+        },
+        {
+          "id": "d-l17-70",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-71",
+          "text": "よ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-72",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-73",
+          "text": "すぐ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-74",
+          "text": "よく",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-l17-75",
+          "text": "なります",
+          "isKeyGrammar": false,
+          "kanji": "成ります",
+          "furigana": "なります"
+        }
+      ],
+      "meaningVi": "Không sao đâu. Anh sẽ khỏe lại nhanh thôi."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-n5-17-1",
+      "question": "Thể ない của 飲みます (nhóm 1, đuôi む) là:",
+      "options": [
+        "飲まない",
+        "飲みない",
+        "飲まらない",
+        "飲むない"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nhóm 1 đổi đuôi む thành まない: 飲む → 飲まない.",
+      "hint": "Chuyển âm cuối gốc từ điển sang hàng あ."
+    },
+    {
+      "id": "ex-q-n5-17-2",
+      "question": "Thể ない của 吸います (nhóm 1, đuôi う) là:",
+      "options": [
+        "吸わない",
+        "吸あない",
+        "吸いない",
+        "吸うない"
+      ],
+      "correctIndex": 0,
+      "explanation": "Đuôi う là trường hợp đặc biệt: đổi thành わ chứ không phải あ. 吸う → 吸わない.",
+      "hint": "Đây là ngoại lệ hay gây nhầm nhất."
+    },
+    {
+      "id": "ex-q-n5-17-3",
+      "question": "Thể ない của 来ます (nhóm 3) là:",
+      "options": [
+        "来ない (こない)",
+        "来ます thêm ない",
+        "来らない",
+        "きます thêm ない, giữ nguyên cách đọc"
+      ],
+      "correctIndex": 0,
+      "explanation": "来る chia bất quy tắc hoàn toàn ở thể ない: 来ない đọc là こない, khác hẳn cách đọc thông thường.",
+      "hint": "Đây là động từ bất quy tắc, học thuộc riêng."
+    },
+    {
+      "id": "ex-q-n5-17-4",
+      "question": "「たばこを 吸わないで ください」 nghĩa là:",
+      "options": [
+        "Xin đừng hút thuốc",
+        "Xin hãy hút thuốc",
+        "Đã hút thuốc rồi",
+        "Có thể hút thuốc"
+      ],
+      "correctIndex": 0,
+      "explanation": "Vないでください là cấu trúc yêu cầu KHÔNG làm gì — đối lập với Vてください (yêu cầu làm) đã học ở bài 14.",
+      "hint": "So sánh với Vてください."
+    },
+    {
+      "id": "ex-q-n5-17-5",
+      "question": "「薬を 飲まなければ なりません」 nghĩa là:",
+      "options": [
+        "Tôi phải uống thuốc (bắt buộc)",
+        "Tôi không cần uống thuốc",
+        "Tôi không được uống thuốc",
+        "Tôi đã uống thuốc rồi"
+      ],
+      "correctIndex": 0,
+      "explanation": "Vなければなりません diễn tả NGHĨA VỤ bắt buộc phải làm.",
+      "hint": "Đây là cấu trúc nghĩa vụ, không phải cấm đoán hay lựa chọn."
+    },
+    {
+      "id": "ex-q-n5-17-6",
+      "question": "「今日は 働かなくても いいです」 nghĩa là:",
+      "options": [
+        "Hôm nay không cần đi làm cũng được",
+        "Hôm nay bắt buộc phải đi làm",
+        "Hôm nay cấm đi làm",
+        "Hôm nay đã đi làm rồi"
+      ],
+      "correctIndex": 0,
+      "explanation": "Vなくてもいいです báo rằng việc đó KHÔNG BẮT BUỘC, làm hay không đều được.",
+      "hint": "Đối lập với なければなりません ở câu 5."
+    },
+    {
+      "id": "ex-q-n5-17-7",
+      "question": "Bốn cấu trúc nào đối lập theo cặp đúng?",
+      "options": [
+        "てもいい⇄てはいけません, なければならない⇄なくてもいい",
+        "てもいい⇄なくてもいい, てはいけません⇄なければならない",
+        "Tất cả bốn cấu trúc đều đồng nghĩa",
+        "Không có cặp đối lập nào"
+      ],
+      "correctIndex": 0,
+      "explanation": "てもいい (được làm) đối lập てはいけません (cấm); なければならない (phải làm) đối lập なくてもいい (không cần làm).",
+      "hint": "Xem lại ghi chú tổng kết ở slide 4."
+    },
+    {
+      "id": "ex-q-n5-17-8",
+      "question": "Dạng nói tắt thân mật của なければなりません trong hội thoại là:",
+      "options": [
+        "なきゃ",
+        "なくちゃ、なけば",
+        "ないと、なる",
+        "なさい"
+      ],
+      "correctIndex": 0,
+      "explanation": "なければ rút gọn thành なきゃ trong giao tiếp thân mật, thông dụng hơn dạng đầy đủ trong hội thoại hằng ngày.",
+      "hint": "Xem ghi chú văn hóa ở slide 3."
+    },
+    {
+      "id": "ex-q-n5-17-9",
+      "question": "薬を 飲みます — vì sao dùng 飲みます (uống) mà không dùng 食べます (ăn)?",
+      "options": [
+        "Tiếng Nhật coi 'uống thuốc' như một hành động uống, dù thuốc có thể là viên",
+        "Đây là lỗi ngữ pháp phổ biến",
+        "食べます cũng đúng như nhau",
+        "Chỉ dùng 食べます cho thuốc dạng viên"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tiếng Nhật quy ước 薬を飲みます cho MỌI loại thuốc (viên, nước, bột) — khác thói quen 'uống/ăn thuốc' linh hoạt trong tiếng Việt.",
+      "hint": "Đây là quy ước cố định, không tùy dạng thuốc."
+    },
+    {
+      "id": "ex-q-n5-17-10",
+      "question": "Trong hội thoại, bác sĩ dặn bệnh nhân điều gì về rượu?",
+      "options": [
+        "Đừng uống rượu",
+        "Uống rượu thoải mái",
+        "Chỉ uống rượu vang",
+        "Không nhắc tới rượu"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bác sĩ dặn 「お酒は 飲まないで ください」 ở gần cuối hội thoại.",
+      "hint": "Xem câu thoại thứ 8 của bác sĩ."
+    }
+  ]
+}
