@@ -2737,99 +2737,1344 @@
     "level": "N4",
     "lessonNumber": 28,
     "title": "Bài 28: Hành động đồng thời (〜ながら) & Thói quen (〜ています)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "description": "Nối hai hành động cùng chủ thể xảy ra ĐỒNG THỜI bằng V(gốc ます)ながら (khác V1てV2て tuần tự, N5 bài 16), mở rộng ています sang nghĩa thứ ba là THÓI QUEN lặp lại, và giới thiệu cặp tự động từ/tha động từ 続く/続ける làm nền cho bài 29.",
     "vocabList": [
       {
         "id": "voc-n4-28-1",
-        "word": "重要語彙 (N4)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "つづけます",
+        "kanji": "続けます",
+        "furigana": "つづけます",
+        "romaji": "tsuzukemasu",
+        "wordType": "verb",
+        "meaningVi": "Tiếp tục, duy trì",
+        "accentNote": "運動を 続けています = tôi vẫn đang duy trì tập thể dục."
+      },
+      {
+        "id": "voc-n4-28-2",
+        "word": "つづきます",
+        "kanji": "続きます",
+        "furigana": "つづきます",
+        "romaji": "tsuzukimasu",
+        "wordType": "verb",
+        "meaningVi": "Kéo dài, tiếp diễn (tự động từ)",
+        "accentNote": "雨が 続いています = trời vẫn đang mưa kéo dài."
+      },
+      {
+        "id": "voc-n4-28-3",
+        "word": "かよいます",
+        "kanji": "通います",
+        "furigana": "かよいます",
+        "romaji": "kayoimasu",
+        "wordType": "verb",
+        "meaningVi": "Đi lại thường xuyên (đi làm, đi học)",
+        "accentNote": "学校に 通っています = tôi đang đi học (đều đặn)."
+      },
+      {
+        "id": "voc-n4-28-4",
+        "word": "かたづけます",
+        "kanji": "片付けます",
+        "furigana": "かたづけます",
+        "romaji": "katazukemasu",
+        "wordType": "verb",
+        "meaningVi": "Dọn dẹp, sắp xếp",
+        "accentNote": "部屋を 片付けながら = vừa dọn phòng vừa..."
+      },
+      {
+        "id": "voc-n4-28-5",
+        "word": "きまります",
+        "kanji": "決まります",
+        "furigana": "きまります",
+        "romaji": "kimarimasu",
+        "wordType": "verb",
+        "meaningVi": "Được quyết định, được ấn định",
+        "accentNote": "時間が 決まっています = giờ giấc đã được ấn định."
+      },
+      {
+        "id": "voc-n4-28-6",
+        "word": "せいかつします",
+        "kanji": "生活します",
+        "furigana": "せいかつします",
+        "romaji": "seikatsu shimasu",
+        "wordType": "verb",
+        "meaningVi": "Sinh sống, sinh hoạt",
+        "accentNote": "一人で 生活しています = tôi sống một mình."
+      },
+      {
+        "id": "voc-n4-28-7",
+        "word": "しゅみ",
+        "kanji": "趣味",
+        "furigana": "しゅみ",
+        "romaji": "shumi",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 28",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Sở thích",
+        "accentNote": "Đã gặp N5 bài 18 (bổ sung thêm ở N4 pool) — nay dùng làm bối cảnh thói quen."
+      },
+      {
+        "id": "voc-n4-28-8",
+        "word": "しゅうかん",
+        "kanji": "習慣",
+        "furigana": "しゅうかん",
+        "romaji": "shuukan",
+        "wordType": "noun",
+        "meaningVi": "Thói quen, tập quán",
+        "accentNote": "毎朝 走る 習慣が あります = tôi có thói quen chạy bộ mỗi sáng."
+      },
+      {
+        "id": "voc-n4-28-9",
+        "word": "きそく",
+        "kanji": "規則",
+        "furigana": "きそく",
+        "romaji": "kisoku",
+        "wordType": "noun",
+        "meaningVi": "Quy tắc, nội quy",
+        "accentNote": "会社の 規則です = đây là nội quy công ty."
+      },
+      {
+        "id": "voc-n4-28-10",
+        "word": "せいかつ",
+        "kanji": "生活",
+        "furigana": "せいかつ",
+        "romaji": "seikatsu",
+        "wordType": "noun",
+        "meaningVi": "Cuộc sống, sinh hoạt",
+        "accentNote": "毎日の 生活 = cuộc sống hằng ngày."
+      },
+      {
+        "id": "voc-n4-28-11",
+        "word": "うんどう",
+        "kanji": "運動",
+        "furigana": "うんどう",
+        "romaji": "undou",
+        "wordType": "noun",
+        "meaningVi": "Vận động, thể dục",
+        "accentNote": "Đã gặp bài 27."
+      },
+      {
+        "id": "voc-n4-28-12",
+        "word": "さんぽ",
+        "kanji": "散歩",
+        "furigana": "さんぽ",
+        "romaji": "sanpo",
+        "wordType": "noun",
+        "meaningVi": "Việc đi dạo",
+        "accentNote": "Đã gặp N5 bài 18."
+      },
+      {
+        "id": "voc-n4-28-13",
+        "word": "おんがく",
+        "kanji": "音楽",
+        "furigana": "おんがく",
+        "romaji": "ongaku",
+        "wordType": "noun",
+        "meaningVi": "Âm nhạc",
+        "accentNote": "音楽を 聞きながら = vừa nghe nhạc vừa..."
+      },
+      {
+        "id": "voc-n4-28-14",
+        "word": "しんぶん",
+        "kanji": "新聞",
+        "furigana": "しんぶん",
+        "romaji": "shinbun",
+        "wordType": "noun",
+        "meaningVi": "Báo, tờ báo",
+        "accentNote": "新聞を 読みながら = vừa đọc báo vừa..."
+      },
+      {
+        "id": "voc-n4-28-15",
+        "word": "コーヒー",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "koohii",
+        "wordType": "noun",
+        "meaningVi": "Cà phê",
+        "accentNote": "コーヒーを 飲みながら = vừa uống cà phê vừa..."
+      },
+      {
+        "id": "voc-n4-28-16",
+        "word": "がっこう",
+        "kanji": "学校",
+        "furigana": "がっこう",
+        "romaji": "gakkou",
+        "wordType": "noun",
+        "meaningVi": "Trường học",
+        "accentNote": "学校に 通っています = tôi đang đi học đều đặn."
+      },
+      {
+        "id": "voc-n4-28-17",
+        "word": "かいしゃ",
+        "kanji": "会社",
+        "furigana": "かいしゃ",
+        "romaji": "kaisha",
+        "wordType": "noun",
+        "meaningVi": "Công ty",
+        "accentNote": "会社に 通っています = tôi đang đi làm đều đặn."
+      },
+      {
+        "id": "voc-n4-28-18",
+        "word": "へや",
+        "kanji": "部屋",
+        "furigana": "へや",
+        "romaji": "heya",
+        "wordType": "noun",
+        "meaningVi": "Căn phòng",
+        "accentNote": "部屋を 片付けます = dọn phòng."
+      },
+      {
+        "id": "voc-n4-28-19",
+        "word": "まいあさ",
+        "kanji": "毎朝",
+        "furigana": "まいあさ",
+        "romaji": "maiasa",
+        "wordType": "adverb",
+        "meaningVi": "Mỗi sáng",
+        "accentNote": "毎朝 続けています = mỗi sáng đều duy trì."
+      },
+      {
+        "id": "voc-n4-28-20",
+        "word": "ひとりで",
+        "kanji": "一人で",
+        "furigana": "ひとりで",
+        "romaji": "hitori de",
+        "wordType": "adverb",
+        "meaningVi": "Một mình",
+        "accentNote": "一人で 生活しています = tôi sống một mình."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n4-28-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "続",
+        "hanViet": "TỤC",
+        "strokeCount": 13,
         "onyomi": [
-          "ゴ"
+          "ゾク (zoku)"
         ],
         "kunyomi": [
-          "かたる"
+          "つづ(ける)",
+          "つづ(く)"
         ],
-        "meaningVi": "Ngôn ngữ",
+        "meaningVi": "Tiếp tục, liên tục.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "続けます",
+            "furigana": "つづけます",
+            "meaningVi": "Tiếp tục"
+          },
+          {
+            "word": "続きます",
+            "furigana": "つづきます",
+            "meaningVi": "Kéo dài"
+          },
+          {
+            "word": "連続",
+            "furigana": "れんぞく",
+            "meaningVi": "Liên tục"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-28-2",
+        "character": "習",
+        "hanViet": "TẬP",
+        "strokeCount": 11,
+        "onyomi": [
+          "シュウ (shuu)"
+        ],
+        "kunyomi": [
+          "なら(う)"
+        ],
+        "meaningVi": "Học, luyện tập, thói quen. Đã gặp N5 bài 7.",
+        "commonWords": [
+          {
+            "word": "習慣",
+            "furigana": "しゅうかん",
+            "meaningVi": "Thói quen"
+          },
+          {
+            "word": "習います",
+            "furigana": "ならいます",
+            "meaningVi": "Học"
+          },
+          {
+            "word": "練習",
+            "furigana": "れんしゅう",
+            "meaningVi": "Luyện tập"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-28-3",
+        "character": "慣",
+        "hanViet": "QUÁN",
+        "strokeCount": 14,
+        "onyomi": [
+          "カン (kan)"
+        ],
+        "kunyomi": [
+          "な(れる)"
+        ],
+        "meaningVi": "Quen thuộc, thành nếp.",
+        "commonWords": [
+          {
+            "word": "習慣",
+            "furigana": "しゅうかん",
+            "meaningVi": "Thói quen"
+          },
+          {
+            "word": "慣れます",
+            "furigana": "なれます",
+            "meaningVi": "Quen với"
+          },
+          {
+            "word": "習慣的",
+            "furigana": "しゅうかんてき",
+            "meaningVi": "Có tính thói quen"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-28-4",
+        "character": "規",
+        "hanViet": "QUY",
+        "strokeCount": 11,
+        "onyomi": [
+          "キ (ki)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Quy tắc, khuôn phép.",
+        "commonWords": [
+          {
+            "word": "規則",
+            "furigana": "きそく",
+            "meaningVi": "Quy tắc"
+          },
+          {
+            "word": "規定",
+            "furigana": "きてい",
+            "meaningVi": "Quy định"
+          },
+          {
+            "word": "新規",
+            "furigana": "しんき",
+            "meaningVi": "Mới, mới mẻ"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-28-5",
+        "character": "活",
+        "hanViet": "HOẠT",
+        "strokeCount": 9,
+        "onyomi": [
+          "カツ (katsu)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Sống, hoạt động.",
+        "commonWords": [
+          {
+            "word": "生活",
+            "furigana": "せいかつ",
+            "meaningVi": "Cuộc sống"
+          },
+          {
+            "word": "活動",
+            "furigana": "かつどう",
+            "meaningVi": "Hoạt động"
+          },
+          {
+            "word": "活気",
+            "furigana": "かっき",
+            "meaningVi": "Sức sống"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n4-l28-s0",
-        "title": "Trọng tâm: Hành động đồng thời (〜ながら) & Thói quen (〜ています)",
-        "grammarFormula": "V1-ます (bỏ ます) + ながら + V2",
-        "explanation": "Thực hiện hai hành động cùng một lúc (hành động sau là trọng tâm).",
+        "slideId": "n4-l28-s1",
+        "slideType": "grammar",
+        "title": "1. Hai hành động đồng thời: V1(ます bỏ ます) + ながら、V2",
+        "grammarFormula": "V1(gốc ます) + ながら + V2   (V2 là hành động CHÍNH)",
+        "explanation": "ながら nối hai hành động xảy ra CÙNG LÚC do MỘT chủ thể thực hiện — hành động gắn với ながら là hành động PHỤ, hành động ở cuối câu (V2) mới là hành động CHÍNH được nhấn mạnh.",
+        "teacherTips": "ながら CHỈ dùng khi cùng MỘT người thực hiện cả hai hành động — khác V1てV2て (N5 bài 16) không có ràng buộc chủ thể phụ/chính.",
+        "culturalNotes": "音楽を聞きながら勉強する là thói quen phổ biến của học sinh sinh viên Nhật, dù có tranh cãi về hiệu quả học tập.",
         "examples": [
           {
-            "id": "ex-n4-l28-1",
+            "id": "ex-n4-l28-s1-1",
             "tokens": [
               {
-                "id": "tok-n4-l28-1",
-                "text": "音楽を",
+                "id": "t-l28s1-1",
+                "text": "おんがく",
+                "isKeyGrammar": false,
+                "kanji": "音楽",
+                "furigana": "おんがく"
+              },
+              {
+                "id": "t-l28s1-2",
+                "text": "を",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n4-l28-2",
-                "text": "音楽を 聞きながら 勉強します。",
-                "isKeyGrammar": true
+                "id": "t-l28s1-3",
+                "text": "ききながら",
+                "isKeyGrammar": true,
+                "kanji": "聞きながら",
+                "furigana": "ききながら"
+              },
+              {
+                "id": "t-l28s1-4",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l28s1-5",
+                "text": "べんきょう",
+                "isKeyGrammar": false,
+                "kanji": "勉強",
+                "furigana": "べんきょう"
+              },
+              {
+                "id": "t-l28s1-6",
+                "text": "します",
+                "isKeyGrammar": false
               }
             ],
-            "meaningVi": "Tôi vừa nghe nhạc vừa học bài."
+            "meaningVi": "Tôi vừa nghe nhạc vừa học bài. (học bài là hành động chính)"
+          },
+          {
+            "id": "ex-n4-l28-s1-2",
+            "tokens": [
+              {
+                "id": "t-l28s1-7",
+                "text": "コーヒー",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l28s1-8",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l28s1-9",
+                "text": "のみながら",
+                "isKeyGrammar": true,
+                "kanji": "飲みながら",
+                "furigana": "のみながら"
+              },
+              {
+                "id": "t-l28s1-10",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l28s1-11",
+                "text": "しんぶん",
+                "isKeyGrammar": false,
+                "kanji": "新聞",
+                "furigana": "しんぶん"
+              },
+              {
+                "id": "t-l28s1-12",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l28s1-13",
+                "text": "よみます",
+                "isKeyGrammar": false,
+                "kanji": "読みます",
+                "furigana": "よみます"
+              }
+            ],
+            "meaningVi": "Tôi vừa uống cà phê vừa đọc báo."
           }
-        ],
-        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+        ]
+      },
+      {
+        "slideId": "n4-l28-s2",
+        "slideType": "grammar",
+        "title": "2. So sánh ながら và V1てV2て",
+        "grammarFormula": "ながら: đồng thời, một chủ thể, có chính/phụ　　V1てV2て: tuần tự theo thời gian (N5 bài 16)",
+        "explanation": "V1てV2て (N5 bài 16) kể các hành động THEO THỨ TỰ THỜI GIAN, xảy ra lần lượt. ながら nhấn mạnh hai hành động diễn ra CÙNG MỘT LÚC, không có thứ tự trước sau.",
+        "teacherTips": "Đổi ながら thành て sẽ làm thay đổi nghĩa từ 'đồng thời' sang 'tuần tự' — hai câu nghe gần giống nhưng ý khác hẳn.",
+        "culturalNotes": "Lưu ý an toàn: 歩きながらスマホを見る (vừa đi vừa xem điện thoại) là hành vi bị cảnh báo nhiều ở Nhật vì gây tai nạn.",
+        "examples": [
+          {
+            "id": "ex-n4-l28-s2-1",
+            "tokens": [
+              {
+                "id": "t-l28s2-1",
+                "text": "あるきながら",
+                "isKeyGrammar": true,
+                "kanji": "歩きながら",
+                "furigana": "あるきながら"
+              },
+              {
+                "id": "t-l28s2-2",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l28s2-3",
+                "text": "はなします",
+                "isKeyGrammar": false,
+                "kanji": "話します",
+                "furigana": "はなします"
+              }
+            ],
+            "meaningVi": "Tôi vừa đi bộ vừa nói chuyện. (hai việc CÙNG lúc)"
+          },
+          {
+            "id": "ex-n4-l28-s2-2",
+            "tokens": [
+              {
+                "id": "t-l28s2-4",
+                "text": "あるいて",
+                "isKeyGrammar": false,
+                "kanji": "歩いて",
+                "furigana": "あるいて"
+              },
+              {
+                "id": "t-l28s2-5",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l28s2-6",
+                "text": "はなしました",
+                "isKeyGrammar": false,
+                "kanji": "話しました",
+                "furigana": "はなしました"
+              }
+            ],
+            "meaningVi": "Tôi đi bộ, rồi nói chuyện. (hai việc XẢY RA LẦN LƯỢT, nghĩa khác hẳn)"
+          }
+        ]
+      },
+      {
+        "slideId": "n4-l28-s3",
+        "slideType": "grammar",
+        "title": "3. Thói quen lặp lại: Vています (mở rộng từ N5)",
+        "grammarFormula": "[Tần suất] + Vています   (hành động lặp đi lặp lại đều đặn theo thời gian)",
+        "explanation": "Đã học ています cho hành động đang diễn ra và trạng thái kết quả (N5 bài 14-15). Nay thêm nghĩa thứ ba: THÓI QUEN — một hành động lặp lại đều đặn qua thời gian dài.",
+        "teacherTips": "Ba nghĩa của ています cần phân biệt qua ngữ cảnh: hành động tức thời (N5 b14), trạng thái kết quả (N5 b15), và thói quen (N4 b28).",
+        "culturalNotes": "毎朝散歩しています là câu trả lời phổ biến khi ai đó hỏi bí quyết giữ sức khỏe (健康の秘訣) ở người Nhật cao tuổi.",
+        "examples": [
+          {
+            "id": "ex-n4-l28-s3-1",
+            "tokens": [
+              {
+                "id": "t-l28s3-1",
+                "text": "まいあさ",
+                "isKeyGrammar": true,
+                "kanji": "毎朝",
+                "furigana": "まいあさ"
+              },
+              {
+                "id": "t-l28s3-2",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l28s3-3",
+                "text": "さんぽ",
+                "isKeyGrammar": false,
+                "kanji": "散歩",
+                "furigana": "さんぽ"
+              },
+              {
+                "id": "t-l28s3-4",
+                "text": "して",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l28s3-5",
+                "text": "います",
+                "isKeyGrammar": false,
+                "kanji": "居ます",
+                "furigana": "います"
+              }
+            ],
+            "meaningVi": "Mỗi sáng tôi đều đi dạo. (thói quen lặp lại)"
+          },
+          {
+            "id": "ex-n4-l28-s3-2",
+            "tokens": [
+              {
+                "id": "t-l28s3-6",
+                "text": "がっこう",
+                "isKeyGrammar": false,
+                "kanji": "学校",
+                "furigana": "がっこう"
+              },
+              {
+                "id": "t-l28s3-7",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l28s3-8",
+                "text": "かよって",
+                "isKeyGrammar": true,
+                "kanji": "通って",
+                "furigana": "かよって"
+              },
+              {
+                "id": "t-l28s3-9",
+                "text": "います",
+                "isKeyGrammar": false,
+                "kanji": "居ます",
+                "furigana": "います"
+              }
+            ],
+            "meaningVi": "Tôi đang đi học (đều đặn)."
+          }
+        ]
+      },
+      {
+        "slideId": "n4-l28-s4",
+        "slideType": "grammar",
+        "title": "4. Tự động từ tiếp diễn: 続いています",
+        "grammarFormula": "N が 続いています   (tình trạng TỰ kéo dài, không cần ai duy trì)",
+        "explanation": "続きます (tự động từ) khác 続けます (tha động từ, tôi CHỦ ĐỘNG duy trì việc gì). 続いています diễn tả một trạng thái/hiện tượng tự nó kéo dài theo thời gian.",
+        "teacherTips": "Cặp 続く/続ける là ví dụ điển hình của tự động từ/tha động từ — chủ đề chính sẽ học kỹ ở bài 29.",
+        "culturalNotes": "天気が悪い日が続いています (những ngày thời tiết xấu cứ kéo dài) là câu than phiền thời tiết rất tự nhiên trong trò chuyện xã giao Nhật.",
+        "examples": [
+          {
+            "id": "ex-n4-l28-s4-1",
+            "tokens": [
+              {
+                "id": "t-l28s4-1",
+                "text": "あめ",
+                "isKeyGrammar": false,
+                "kanji": "雨",
+                "furigana": "あめ"
+              },
+              {
+                "id": "t-l28s4-2",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l28s4-3",
+                "text": "つづいて",
+                "isKeyGrammar": true,
+                "kanji": "続いて",
+                "furigana": "つづいて"
+              },
+              {
+                "id": "t-l28s4-4",
+                "text": "います",
+                "isKeyGrammar": false,
+                "kanji": "居ます",
+                "furigana": "います"
+              }
+            ],
+            "meaningVi": "Trời vẫn đang mưa kéo dài."
+          },
+          {
+            "id": "ex-n4-l28-s4-2",
+            "tokens": [
+              {
+                "id": "t-l28s4-5",
+                "text": "わたし",
+                "isKeyGrammar": false,
+                "kanji": "私",
+                "furigana": "わたし"
+              },
+              {
+                "id": "t-l28s4-6",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l28s4-7",
+                "text": "うんどう",
+                "isKeyGrammar": false,
+                "kanji": "運動",
+                "furigana": "うんどう"
+              },
+              {
+                "id": "t-l28s4-8",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l28s4-9",
+                "text": "つづけて",
+                "isKeyGrammar": true,
+                "kanji": "続けて",
+                "furigana": "つづけて"
+              },
+              {
+                "id": "t-l28s4-10",
+                "text": "います",
+                "isKeyGrammar": false,
+                "kanji": "居ます",
+                "furigana": "います"
+              }
+            ],
+            "meaningVi": "Tôi vẫn đang duy trì việc tập thể dục. (続けます: tôi CHỦ ĐỘNG)"
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n4-28-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
         "tokens": [
           {
-            "id": "tok-n4-28-d1",
-            "text": "この文法のポイントを"
+            "id": "d-l28-1",
+            "text": "山田さん",
+            "isKeyGrammar": false
           },
           {
-            "id": "tok-n4-28-d2",
-            "text": "復習しましょう。"
+            "id": "d-l28-2",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-3",
+            "text": "しゅみ",
+            "isKeyGrammar": true,
+            "kanji": "趣味",
+            "furigana": "しゅみ"
+          },
+          {
+            "id": "d-l28-4",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-5",
+            "text": "ありますか",
+            "isKeyGrammar": false,
+            "kanji": "有りますか",
+            "furigana": "ありますか"
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Anh Yamada có sở thích gì không?"
+      },
+      {
+        "id": "dia-n4-28-2",
+        "speaker": "山田",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d-l28-6",
+            "text": "まいあさ",
+            "isKeyGrammar": true,
+            "kanji": "毎朝",
+            "furigana": "まいあさ"
+          },
+          {
+            "id": "d-l28-7",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-8",
+            "text": "さんぽ",
+            "isKeyGrammar": false,
+            "kanji": "散歩",
+            "furigana": "さんぽ"
+          },
+          {
+            "id": "d-l28-9",
+            "text": "して",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l28-10",
+            "text": "います",
+            "isKeyGrammar": false,
+            "kanji": "居ます",
+            "furigana": "います"
+          },
+          {
+            "id": "d-l28-11",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-12",
+            "text": "もう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-13",
+            "text": "さんねん",
+            "isKeyGrammar": false,
+            "kanji": "三年",
+            "furigana": "さんねん"
+          },
+          {
+            "id": "d-l28-14",
+            "text": "つづけて",
+            "isKeyGrammar": true,
+            "kanji": "続けて",
+            "furigana": "つづけて"
+          },
+          {
+            "id": "d-l28-15",
+            "text": "います",
+            "isKeyGrammar": false,
+            "kanji": "居ます",
+            "furigana": "います"
+          }
+        ],
+        "meaningVi": "Tôi đi dạo mỗi sáng. Đã duy trì được ba năm rồi."
+      },
+      {
+        "id": "dia-n4-28-3",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d-l28-16",
+            "text": "すごい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-17",
+            "text": "ですね",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-18",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-19",
+            "text": "さんぽ",
+            "isKeyGrammar": false,
+            "kanji": "散歩",
+            "furigana": "さんぽ"
+          },
+          {
+            "id": "d-l28-20",
+            "text": "しながら",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l28-21",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-22",
+            "text": "なに",
+            "isKeyGrammar": false,
+            "kanji": "何",
+            "furigana": "なに"
+          },
+          {
+            "id": "d-l28-23",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-24",
+            "text": "しますか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Giỏi thật đấy. Vừa đi dạo anh vừa làm gì vậy?"
+      },
+      {
+        "id": "dia-n4-28-4",
+        "speaker": "山田",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d-l28-25",
+            "text": "おんがく",
+            "isKeyGrammar": true,
+            "kanji": "音楽",
+            "furigana": "おんがく"
+          },
+          {
+            "id": "d-l28-26",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-27",
+            "text": "ききながら",
+            "isKeyGrammar": true,
+            "kanji": "聞きながら",
+            "furigana": "ききながら"
+          },
+          {
+            "id": "d-l28-28",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-29",
+            "text": "あるきます",
+            "isKeyGrammar": false,
+            "kanji": "歩きます",
+            "furigana": "あるきます"
+          }
+        ],
+        "meaningVi": "Tôi vừa nghe nhạc vừa đi bộ."
+      },
+      {
+        "id": "dia-n4-28-5",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d-l28-30",
+            "text": "わたし",
+            "isKeyGrammar": false,
+            "kanji": "私",
+            "furigana": "わたし"
+          },
+          {
+            "id": "d-l28-31",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-32",
+            "text": "うんどう",
+            "isKeyGrammar": true,
+            "kanji": "運動",
+            "furigana": "うんどう"
+          },
+          {
+            "id": "d-l28-33",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-34",
+            "text": "しゅうかん",
+            "isKeyGrammar": true,
+            "kanji": "習慣",
+            "furigana": "しゅうかん"
+          },
+          {
+            "id": "d-l28-35",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-36",
+            "text": "つくりたい",
+            "isKeyGrammar": false,
+            "kanji": "作りたい",
+            "furigana": "つくりたい"
+          },
+          {
+            "id": "d-l28-37",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Tôi cũng muốn tạo thói quen tập thể dục."
+      },
+      {
+        "id": "dia-n4-28-6",
+        "speaker": "山田",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d-l28-38",
+            "text": "がんばって",
+            "isKeyGrammar": false,
+            "kanji": "頑張って",
+            "furigana": "がんばって"
+          },
+          {
+            "id": "d-l28-39",
+            "text": "ください",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-40",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-41",
+            "text": "さいしょ",
+            "isKeyGrammar": false,
+            "kanji": "最初",
+            "furigana": "さいしょ"
+          },
+          {
+            "id": "d-l28-42",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-43",
+            "text": "たいへん",
+            "isKeyGrammar": false,
+            "kanji": "大変",
+            "furigana": "たいへん"
+          },
+          {
+            "id": "d-l28-44",
+            "text": "でした",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Cố lên nhé. Lúc đầu tôi cũng thấy vất vả lắm."
+      },
+      {
+        "id": "dia-n4-28-7",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d-l28-45",
+            "text": "ところで",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-46",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-47",
+            "text": "きょう",
+            "isKeyGrammar": false,
+            "kanji": "今日",
+            "furigana": "きょう"
+          },
+          {
+            "id": "d-l28-48",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-49",
+            "text": "あめ",
+            "isKeyGrammar": true,
+            "kanji": "雨",
+            "furigana": "あめ"
+          },
+          {
+            "id": "d-l28-50",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-51",
+            "text": "つづいて",
+            "isKeyGrammar": true,
+            "kanji": "続いて",
+            "furigana": "つづいて"
+          },
+          {
+            "id": "d-l28-52",
+            "text": "います",
+            "isKeyGrammar": false,
+            "kanji": "居ます",
+            "furigana": "います"
+          },
+          {
+            "id": "d-l28-53",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "À mà, hôm nay trời vẫn mưa kéo dài nhỉ."
+      },
+      {
+        "id": "dia-n4-28-8",
+        "speaker": "山田",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d-l28-54",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-55",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-56",
+            "text": "でも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-57",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-58",
+            "text": "さんぽ",
+            "isKeyGrammar": true,
+            "kanji": "散歩",
+            "furigana": "さんぽ"
+          },
+          {
+            "id": "d-l28-59",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-60",
+            "text": "つづけて",
+            "isKeyGrammar": true,
+            "kanji": "続けて",
+            "furigana": "つづけて"
+          },
+          {
+            "id": "d-l28-61",
+            "text": "います",
+            "isKeyGrammar": false,
+            "kanji": "居ます",
+            "furigana": "います"
+          }
+        ],
+        "meaningVi": "Vâng. Nhưng tôi vẫn duy trì việc đi dạo đấy."
+      },
+      {
+        "id": "dia-n4-28-9",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d-l28-62",
+            "text": "あめ",
+            "isKeyGrammar": false,
+            "kanji": "雨",
+            "furigana": "あめ"
+          },
+          {
+            "id": "d-l28-63",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-64",
+            "text": "ひ",
+            "isKeyGrammar": false,
+            "kanji": "日",
+            "furigana": "ひ"
+          },
+          {
+            "id": "d-l28-65",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-66",
+            "text": "さんぽ",
+            "isKeyGrammar": false,
+            "kanji": "散歩",
+            "furigana": "さんぽ"
+          },
+          {
+            "id": "d-l28-67",
+            "text": "しますか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Ngay cả ngày mưa anh cũng đi dạo à?"
+      },
+      {
+        "id": "dia-n4-28-10",
+        "speaker": "山田",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d-l28-68",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-69",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-70",
+            "text": "これ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-71",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-72",
+            "text": "わたし",
+            "isKeyGrammar": false,
+            "kanji": "私",
+            "furigana": "わたし"
+          },
+          {
+            "id": "d-l28-73",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-74",
+            "text": "きそく",
+            "isKeyGrammar": true,
+            "kanji": "規則",
+            "furigana": "きそく"
+          },
+          {
+            "id": "d-l28-75",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l28-76",
+            "text": "から",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vâng. Vì đây là quy tắc của riêng tôi mà."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n4-28-1",
-        "question": "Chọn cách kết hợp đúng cho cấu trúc: Hành động đồng thời (〜ながら) & Thói quen (〜ています)",
+        "question": "「音楽を聞きながら、勉強します」 — hành động CHÍNH trong câu là:",
         "options": [
-          "V1-ます (bỏ ます) + ながら + V2",
-          "Thể ý chí + だ",
-          "Thể cấm chỉ",
-          "V-ない + です"
+          "勉強します (học bài)",
+          "音楽を聞きます (nghe nhạc)",
+          "Cả hai đều là hành động chính như nhau",
+          "Không có hành động chính"
         ],
         "correctIndex": 0,
-        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: V1-ます (bỏ ます) + ながら + V2",
-        "hint": "Chú ý dạng thể liên kết của động từ."
+        "explanation": "Hành động gắn với ながら (聞き) là hành động PHỤ; hành động ở CUỐI câu (勉強します) là hành động CHÍNH.",
+        "hint": "Xem quy tắc chính/phụ ở slide 1."
+      },
+      {
+        "id": "ex-q-n4-28-2",
+        "question": "ながら khác V1てV2て (N5 bài 16) ở chỗ:",
+        "options": [
+          "ながら là đồng thời (cùng lúc), てV2て là tuần tự (lần lượt theo thời gian)",
+          "Hoàn toàn giống nhau",
+          "ながら chỉ dùng cho câu phủ định",
+          "てV2て chỉ dùng cho quá khứ"
+        ],
+        "correctIndex": 0,
+        "explanation": "ながら nhấn mạnh HAI hành động XẢY RA CÙNG LÚC; V1てV2て kể các hành động THEO THỨ TỰ, xảy ra lần lượt.",
+        "hint": "So sánh hai ví dụ tương phản ở slide 2."
+      },
+      {
+        "id": "ex-q-n4-28-3",
+        "question": "「毎朝、散歩しています」 — ています ở đây diễn tả:",
+        "options": [
+          "Thói quen lặp lại đều đặn",
+          "Hành động đang xảy ra ngay lúc nói",
+          "Trạng thái kết quả (đã kết hôn, đã biết...)",
+          "Thì tương lai"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đây là nghĩa THỨ BA của ています (thói quen) — khác hành động tức thời (N5 b14) và trạng thái kết quả (N5 b15).",
+        "hint": "Nhớ lại ba nghĩa của ています đã tổng kết ở slide 3."
+      },
+      {
+        "id": "ex-q-n4-28-4",
+        "question": "続きます và 続けます khác nhau ở:",
+        "options": [
+          "続きます là tự động từ (tự kéo dài), 続けます là tha động từ (chủ động duy trì)",
+          "Hoàn toàn giống nhau về nghĩa",
+          "続きます chỉ dùng cho thời tiết",
+          "続けます là thì quá khứ của 続きます"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đây là cặp tự động từ/tha động từ: 続く không cần ai chủ động, 続ける cần người chủ động duy trì.",
+        "hint": "Chủ đề này sẽ học kỹ hơn ở bài 29."
+      },
+      {
+        "id": "ex-q-n4-28-5",
+        "question": "「雨が 続いています」 nghĩa là:",
+        "options": [
+          "Trời vẫn đang mưa kéo dài",
+          "Tôi đang duy trì việc đi dưới mưa",
+          "Trời đã tạnh mưa",
+          "Trời sắp mưa"
+        ],
+        "correctIndex": 0,
+        "explanation": "続いています (tự động từ) diễn tả hiện tượng thời tiết TỰ kéo dài, không có ai chủ động duy trì nó.",
+        "hint": "So sánh với 続けています (tôi chủ động duy trì việc gì đó)."
+      },
+      {
+        "id": "ex-q-n4-28-6",
+        "question": "Câu nào ĐÚNG khi nói 'tôi vừa đi bộ vừa nói chuyện điện thoại'?",
+        "options": [
+          "歩きながら、電話で話します",
+          "歩いて、電話で話します (nghĩa khác: lần lượt)",
+          "歩きます、電話で話しながら",
+          "歩きながらも、電話で話します"
+        ],
+        "correctIndex": 0,
+        "explanation": "Hai hành động xảy ra ĐỒNG THỜI nên dùng ながら, gắn vào hành động phụ (歩き), hành động chính (話します) ở cuối.",
+        "hint": "Áp dụng đúng cấu trúc V1(gốc ます)ながら、V2."
+      },
+      {
+        "id": "ex-q-n4-28-7",
+        "question": "「学校に 通っています」 nghĩa là:",
+        "options": [
+          "Tôi đang đi học (một cách đều đặn, thường xuyên)",
+          "Tôi đã tốt nghiệp trường đó rồi",
+          "Tôi sắp vào học trường đó",
+          "Tôi chỉ đến trường một lần duy nhất"
+        ],
+        "correctIndex": 0,
+        "explanation": "通っています diễn tả việc ĐI LẠI THƯỜNG XUYÊN, đều đặn — một dạng thói quen kéo dài theo thời gian.",
+        "hint": "Xem nghĩa của động từ 通う ở phần từ vựng."
+      },
+      {
+        "id": "ex-q-n4-28-8",
+        "question": "「会社の規則ですから」 — から ở đây có nghĩa:",
+        "options": [
+          "Vì, bởi vì (chỉ lý do, giống N5 bài 9)",
+          "Từ (điểm bắt đầu)",
+          "Sau khi (thứ tự hành động, N5 bài 15)",
+          "Trích dẫn lời nói"
+        ],
+        "correctIndex": 0,
+        "explanation": "から ở cuối câu, sau danh từ+です, đây là から chỉ LÝ DO đã học ở N5 bài 9 — không phải から sau thể て (N5 bài 15).",
+        "hint": "Phân biệt các nghĩa của から đã học qua từng bài."
+      },
+      {
+        "id": "ex-q-n4-28-9",
+        "question": "Trong hội thoại, Yamada đã duy trì thói quen đi dạo được bao lâu?",
+        "options": [
+          "Ba năm",
+          "Một năm",
+          "Sáu tháng",
+          "Mới bắt đầu tuần này"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yamada nói 「もう三年 続けています」.",
+        "hint": "Xem câu thoại thứ 2."
+      },
+      {
+        "id": "ex-q-n4-28-10",
+        "question": "Vừa đi dạo, Yamada vừa làm gì?",
+        "options": [
+          "Vừa nghe nhạc vừa đi bộ",
+          "Vừa đọc báo vừa đi bộ",
+          "Vừa gọi điện vừa đi bộ",
+          "Không làm gì thêm"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yamada trả lời 「音楽を聞きながら、歩きます」.",
+        "hint": "Xem câu thoại thứ 4."
       }
     ]
   },
