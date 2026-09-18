@@ -63,6 +63,17 @@ duy nhất sau khi clone:
 python tools/setup_vendor.py
 ```
 
+### Bước 0b (bắt buộc, chỉ làm 1 lần): tạo file `.env` chứa API key
+Sao chép `.env.example` thành `.env` rồi điền Gemini API key vào (lấy tại
+[aistudio.google.com/apikey](https://aistudio.google.com/apikey)). File `.env`
+**không được commit** — server.py tự sinh `env.js` từ đó cho trình duyệt đọc,
+nên không cần nhập key thủ công trên UI mỗi lần mở trang.
+```bash
+cp .env.example .env
+```
+Sau đó mở `.env` và điền `GEMINI_KEY1` / `GEMINI_KEY2` (xem chú thích trong
+file để biết vai trò của từng key).
+
 ### Cách 1: Chạy bằng file Batch (Windows)
 Click đúp vào file **`start.bat`**. Trình duyệt sẽ tự động mở `http://localhost:3000`.
 
