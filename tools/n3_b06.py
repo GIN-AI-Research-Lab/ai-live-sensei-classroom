@@ -1,0 +1,241 @@
+# -*- coding: utf-8 -*-
+"""N3 — Bai 6: Doi tuong huong toi 向けに/向けの, on lai muc dich ため(に) (N4 b42), va を対象に.
+
+Tu vung minh hoa TU CHON tu pool mo data/jlpt-vocab/n3.csv (xem NOTICE.md).
+"""
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from n3_lib import v, k, t, ex, slide, line, q, lesson, merge
+from jlpt_pool import Pool
+
+L = 6
+pool = Pool("n3")
+
+VOCAB = [
+    v(1,  "むけ", "向け", "むけ", "muke", "noun", "Dành cho, nhắm đến (hậu tố gắn sau danh từ đối tượng)", "子供向けの 本 = sách dành cho trẻ em.", L),
+    v(2,  "むけます", "向けます", "むけます", "mukemasu", "verb", "Hướng về, nhắm tới (động từ gốc của 向け)", "目を 向けます = hướng ánh mắt về.", L),
+    v(3,  "たいしょう", "対象", "たいしょう", "taishou", "noun", "Đối tượng, mục tiêu (của nghiên cứu/dịch vụ)", "主婦を 対象に した 調査 = khảo sát lấy bà nội trợ làm đối tượng.", L),
+    v(4,  "しょうひん", "商品", "しょうひん", "shouhin", "noun", "Hàng hóa, sản phẩm thương mại", "新しい 商品 = sản phẩm mới.", L),
+    v(5,  "せいひん", "製品", "せいひん", "seihin", "noun", "Sản phẩm, hàng chế tạo", "日本の 製品 = sản phẩm của Nhật Bản.", L),
+    v(6,  "はんばいします", "販売します", "はんばいします", "hanbai shimasu", "verb", "Bán hàng, kinh doanh bán", "海外で 販売します = bán ở nước ngoài.", L),
+    v(7,  "きぎょう", "企業", "きぎょう", "kigyou", "noun", "Doanh nghiệp, xí nghiệp", "大きい 企業 = doanh nghiệp lớn.", L),
+    v(8,  "こうじょう", "工場", "こうじょう", "koujou", "noun", "Nhà máy, xí nghiệp sản xuất", "工場で 作ります = làm ở nhà máy.", L),
+    v(9,  "もくてき", "目的", "もくてき", "mokuteki", "noun", "Mục đích", "販売の 目的 = mục đích bán hàng.", L),
+    v(10, "サービス", "サービス", "サービス", "saabisu", "noun", "Dịch vụ", "子供向けの サービス = dịch vụ dành cho trẻ em.", L),
+    v(11, "しゅふ", "主婦", "しゅふ", "shufu", "noun", "Người nội trợ", "主婦向けの 商品 = sản phẩm dành cho các bà nội trợ.", L),
+    v(12, "かいがい", "海外", "かいがい", "kaigai", "noun", "Nước ngoài, hải ngoại", "海外向けに 販売します = bán hàng nhắm tới thị trường nước ngoài.", L),
+    v(13, "こども", "子供", "こども", "kodomo", "noun", "Trẻ em", "Đã gặp N5 bài 1.", L),
+    v(14, "かいしゃ", "会社", "かいしゃ", "kaisha", "noun", "Công ty", "Đã gặp N5 bài 1.", L),
+    v(15, "わかい", "若い", "わかい", "wakai", "adjective", "Trẻ, còn trẻ tuổi", "Đã gặp N4 bài 33.", L),
+    v(16, "ひと", "人", "ひと", "hito", "noun", "Người", "Đã gặp N5 bài 1.", L),
+    v(17, "つかいます", "使います", "つかいます", "tsukaimasu", "verb", "Sử dụng, dùng", "Đã gặp N5 bài 6.", L),
+    v(18, "つくります", "作ります", "つくります", "tsukurimasu", "verb", "Làm, chế tạo", "Đã gặp N5 bài 6.", L),
+    v(19, "あたらしい", "新しい", "あたらしい", "atarashii", "adjective", "Mới", "Đã gặp N5 bài 8.", L),
+    v(20, "やすい", "安い", "やすい", "yasui", "adjective", "Rẻ", "Đã gặp N5 bài 8.", L),
+]
+
+KANJI = [
+    k(1, "向", "HƯỚNG", 6, ["コウ (kou)"], ["む(く)", "む(ける)"], "Hướng về, quay về phía.",
+      [("向け", "むけ", "Dành cho"), ("方向", "ほうこう", "Phương hướng")], L),
+    k(2, "象", "TƯỢNG", 12, ["ショウ (shou)", "ゾウ (zou)"], [], "Hình tượng, đối tượng.",
+      [("対象", "たいしょう", "Đối tượng"), ("印象", "いんしょう", "Ấn tượng")], L),
+    k(3, "販", "BẢN", 11, ["ハン (han)"], [], "Bán, buôn bán.",
+      [("販売", "はんばい", "Bán hàng"), ("自販機", "じはんき", "Máy bán hàng tự động")], L),
+    k(4, "企", "XÍ", 6, ["キ (ki)"], [], "Mưu tính, xí nghiệp.",
+      [("企業", "きぎょう", "Doanh nghiệp"), ("企画", "きかく", "Kế hoạch")], L),
+    k(5, "製", "CHẾ", 14, ["セイ (sei)"], [], "Chế tạo, sản xuất.",
+      [("製品", "せいひん", "Sản phẩm"), ("日本製", "にほんせい", "Sản xuất tại Nhật")], L),
+]
+
+SLIDES = [
+    slide(L, 1,
+        "1. Hướng động tới đối tượng: N 向けに、[hành động]",
+        "N + 向けに、[hành động]   (N là đối tượng/nhóm người mà hành động NHẮM TỚI)",
+        "向けに gắn sau danh từ chỉ ĐỐI TƯỢNG (người, nhóm, thị trường) để nói một hành động được "
+        "THIẾT KẾ RIÊNG, NHẮM TỚI đối tượng đó — thường dùng trong marketing, sản xuất, truyền thông.",
+        [
+            ex(L, 1, 1, [t("t-l6s1-1", "この"), t("t-l6s1-2", "しょうひん", "商品", "しょうひん"), t("t-l6s1-3", "は"),
+                         t("t-l6s1-4", "しゅふ", "主婦", "しゅふ", key=True), t("t-l6s1-5", "むけに", "向けに", "むけに", key=True),
+                         t("t-l6s1-6", "つくられました", "作られました", "つくられました")],
+               "Sản phẩm này được làm dành riêng cho các bà nội trợ."),
+            ex(L, 1, 2, [t("t-l6s1-7", "この"), t("t-l6s1-8", "せいひん", "製品", "せいひん"), t("t-l6s1-9", "は"),
+                         t("t-l6s1-10", "かいがい", "海外", "かいがい", key=True), t("t-l6s1-11", "むけに", "向けに", "むけに", key=True),
+                         t("t-l6s1-12", "はんばい", "販売", "はんばい"), t("t-l6s1-13", "します")],
+               "Sản phẩm này sẽ được bán hướng tới (thị trường) nước ngoài."),
+        ],
+        tips="向けに thường xuất hiện trong quảng cáo, thông cáo sản phẩm: 女性向けに、若者向けに、初心者向けに...",
+        culture="Từ 向け xuất hiện rất nhiều trên bao bì sản phẩm Nhật: 子供向け (dành cho trẻ em), 大人向け (dành cho người lớn)."),
+
+    slide(L, 2,
+        "2. Bổ nghĩa danh từ: N1 向けの N2",
+        "N1 + 向けの + N2   (N2 là sản phẩm/dịch vụ ĐƯỢC THIẾT KẾ dành cho N1)",
+        "Khi 向け đứng trước một danh từ khác (thay vì trước động từ), phải đổi thành 向けの — "
+        "cấu trúc này rất phổ biến để mô tả tên gọi sản phẩm/dịch vụ theo đối tượng mục tiêu.",
+        [
+            ex(L, 2, 1, [t("t-l6s2-1", "こども", "子供", "こども", key=True), t("t-l6s2-2", "むけの", "向けの", "むけの", key=True),
+                         t("t-l6s2-3", "サービス", "サービス", "サービス"), t("t-l6s2-4", "です")],
+               "Đây là dịch vụ dành cho trẻ em."),
+            ex(L, 2, 2, [t("t-l6s2-5", "わかい", "若い", "わかい"), t("t-l6s2-6", "ひと", "人", "ひと", key=True),
+                         t("t-l6s2-7", "むけの", "向けの", "むけの", key=True), t("t-l6s2-8", "しょうひん", "商品", "しょうひん", key=True),
+                         t("t-l6s2-9", "を"), t("t-l6s2-10", "つくりました", "作りました", "つくりました")],
+               "Chúng tôi đã tạo ra sản phẩm dành cho người trẻ."),
+        ],
+        tips="向けの khác 用の (dùng cho mục đích sử dụng, ví dụ 仕事用の靴) — 向けの nhấn ĐỐI TƯỢNG NGƯỜI, 用の nhấn MỤC ĐÍCH SỬ DỤNG.",
+        culture="Biển hiệu 初心者向け (dành cho người mới bắt đầu) hay thấy ở các lớp học, sách hướng dẫn tại Nhật."),
+
+    slide(L, 3,
+        "3. Kết hợp với ため(に) đã ôn — vừa nêu đối tượng vừa nêu mục đích",
+        "N 向けに、[mục đích]ため(に)、[hành động]",
+        "ため(に) (đã học ở N4 bài 42) nhấn MỤC ĐÍCH/LÝ DO của hành động, còn 向け nhấn ĐỐI "
+        "TƯỢNG cụ thể mà hành động hướng tới — hai cấu trúc có thể kết hợp trong cùng một câu.",
+        [
+            ex(L, 3, 1, [t("t-l6s3-1", "この"), t("t-l6s3-2", "せいひん", "製品", "せいひん"), t("t-l6s3-3", "は"),
+                         t("t-l6s3-4", "かいがい", "海外", "かいがい", key=True), t("t-l6s3-5", "むけに", "向けに", "むけに", key=True),
+                         t("t-l6s3-6", "、"), t("t-l6s3-7", "はんばい", "販売", "はんばい"), t("t-l6s3-8", "の"),
+                         t("t-l6s3-9", "ために", key=True), t("t-l6s3-10", "つくられました", "作られました", "つくられました")],
+               "Sản phẩm này được làm dành cho (thị trường) nước ngoài, vì mục đích bán hàng."),
+            ex(L, 3, 2, [t("t-l6s3-11", "しゅふ", "主婦", "しゅふ", key=True), t("t-l6s3-12", "むけの", "向けの", "むけの", key=True),
+                         t("t-l6s3-13", "しょうひん", "商品", "しょうひん"), t("t-l6s3-14", "を"),
+                         t("t-l6s3-15", "かいしゃ", "会社", "かいしゃ"), t("t-l6s3-16", "の"), t("t-l6s3-17", "ために", key=True),
+                         t("t-l6s3-18", "つくりました", "作りました", "つくりました")],
+               "Chúng tôi đã làm ra sản phẩm dành cho các bà nội trợ, vì lợi ích của công ty."),
+        ],
+        tips="Thứ tự thường gặp: [đối tượng]向けに → [mục đích]ため(に) → [hành động chính] ở cuối câu.",
+        culture="Câu quảng cáo Nhật hay ghép cả hai: '主婦の皆様向けに、家事を楽にするために開発しました' (phát triển dành cho các bà nội trợ, vì mục đích giúp việc nhà nhẹ nhàng hơn)."),
+
+    slide(L, 4,
+        "4. Văn phong trang trọng: N を対象に(して)",
+        "N + を対象に(して)、[hành động]   (dùng trong khảo sát, nghiên cứu, báo cáo — trang trọng hơn 向け)",
+        "を対象に(して) là cách nói TRANG TRỌNG hơn của 向け, thường dùng khi mô tả PHẠM VI/ĐỐI "
+        "TƯỢNG của một cuộc khảo sát, nghiên cứu, hoặc chính sách — ít dùng trong hội thoại đời thường.",
+        [
+            ex(L, 4, 1, [t("t-l6s4-1", "この"), t("t-l6s4-2", "サービス", "サービス", "サービス"), t("t-l6s4-3", "は"),
+                         t("t-l6s4-4", "こども", "子供", "こども", key=True), t("t-l6s4-5", "を"),
+                         t("t-l6s4-6", "たいしょう", "対象", "たいしょう", key=True), t("t-l6s4-7", "に"),
+                         t("t-l6s4-8", "して", key=True), t("t-l6s4-9", "います", "居ます", "います")],
+               "Dịch vụ này lấy trẻ em làm đối tượng."),
+            ex(L, 4, 2, [t("t-l6s4-10", "この"), t("t-l6s4-11", "しょうひん", "商品", "しょうひん"), t("t-l6s4-12", "は"),
+                         t("t-l6s4-13", "わかい", "若い", "わかい"), t("t-l6s4-14", "ひと", "人", "ひと"), t("t-l6s4-15", "を"),
+                         t("t-l6s4-16", "たいしょう", "対象", "たいしょう", key=True), t("t-l6s4-17", "に", key=True),
+                         t("t-l6s4-18", "はんばい", "販売", "はんばい"), t("t-l6s4-19", "します")],
+               "Sản phẩm này lấy người trẻ làm đối tượng để bán."),
+        ],
+        tips="を対象にした + N (dạng bổ nghĩa danh từ): 主婦を対象にした調査 (cuộc khảo sát lấy bà nội trợ làm đối tượng).",
+        culture="Trên báo cáo, tin tức Nhật thường thấy câu mở đầu khảo sát: '20代の若者を対象に調査を行った' (đã tiến hành khảo sát lấy thanh niên 20 tuổi làm đối tượng)."),
+]
+
+DIALOGUE = [
+    line(L, 1, "田中", "Nhân viên công ty",
+         [t("d6-1", "この"), t("d6-2", "しょうひん", "商品", "しょうひん", key=True), t("d6-3", "は"),
+          t("d6-4", "だれ", "誰", "だれ"), t("d6-5", "むけ", "向け", "むけ", key=True), t("d6-6", "です", "です", "です"), t("d6-7", "か")],
+         "Sản phẩm này dành cho ai vậy?"),
+    line(L, 2, "サントス", "Nhân viên công ty",
+         [t("d6-8", "しゅふ", "主婦", "しゅふ", key=True), t("d6-9", "むけに", "向けに", "むけに", key=True), t("d6-10", "つくりました", "作りました", "つくりました")],
+         "Chúng tôi đã làm dành cho các bà nội trợ."),
+    line(L, 3, "田中", "Nhân viên công ty",
+         [t("d6-11", "かいがい", "海外", "かいがい", key=True), t("d6-12", "でも"), t("d6-13", "はんばい", "販売", "はんばい", key=True),
+          t("d6-14", "しますか")],
+         "Có bán ở nước ngoài không?"),
+    line(L, 4, "サントス", "Nhân viên công ty",
+         [t("d6-15", "はい"), t("d6-16", "、"), t("d6-17", "らいねん", "来年", "らいねん"), t("d6-18", "から"),
+          t("d6-19", "かいがい", "海外", "かいがい", key=True), t("d6-20", "むけに", "向けに", "むけに", key=True), t("d6-21", "も"),
+          t("d6-22", "はんばい", "販売", "はんばい"), t("d6-23", "します")],
+         "Vâng, từ năm sau sẽ bán hướng tới cả thị trường nước ngoài nữa."),
+    line(L, 5, "田中", "Nhân viên công ty",
+         [t("d6-24", "この"), t("d6-25", "せいひん", "製品", "せいひん", key=True), t("d6-26", "は"),
+          t("d6-27", "どの"), t("d6-28", "こうじょう", "工場", "こうじょう", key=True), t("d6-29", "で"),
+          t("d6-30", "つくります", "作ります", "つくります"), t("d6-31", "か")],
+         "Sản phẩm này được làm ở nhà máy nào?"),
+    line(L, 6, "サントス", "Nhân viên công ty",
+         [t("d6-32", "きぎょう", "企業", "きぎょう", key=True), t("d6-33", "の"), t("d6-34", "こうじょう", "工場", "こうじょう", key=True),
+          t("d6-35", "で"), t("d6-36", "つくります", "作ります", "つくります")],
+         "Được làm ở nhà máy của doanh nghiệp."),
+    line(L, 7, "田中", "Nhân viên công ty",
+         [t("d6-37", "この"), t("d6-38", "サービス", "サービス", "サービス"), t("d6-39", "は"),
+          t("d6-40", "こども", "子供", "こども", key=True), t("d6-41", "を"), t("d6-42", "たいしょう", "対象", "たいしょう", key=True),
+          t("d6-43", "に"), t("d6-44", "して", key=True), t("d6-45", "います", "居ます", "います"), t("d6-46", "か")],
+         "Dịch vụ này lấy trẻ em làm đối tượng phải không?"),
+    line(L, 8, "サントス", "Nhân viên công ty",
+         [t("d6-47", "はい"), t("d6-48", "、"), t("d6-49", "こども", "子供", "こども"), t("d6-50", "を"),
+          t("d6-51", "たいしょう", "対象", "たいしょう", key=True), t("d6-52", "に", key=True), t("d6-53", "して", key=True),
+          t("d6-54", "います", "居ます", "います")],
+         "Vâng, lấy trẻ em làm đối tượng."),
+    line(L, 9, "田中", "Nhân viên công ty",
+         [t("d6-55", "はんばい", "販売", "はんばい", key=True), t("d6-56", "の"), t("d6-57", "もくてき", "目的", "もくてき", key=True),
+          t("d6-58", "は"), t("d6-59", "なん", "何", "なん"), t("d6-60", "です", "です", "です"), t("d6-61", "か")],
+         "Mục đích bán hàng là gì?"),
+    line(L, 10, "サントス", "Nhân viên công ty",
+         [t("d6-62", "あたらしい", "新しい", "あたらしい"), t("d6-63", "しょうひん", "商品", "しょうひん"), t("d6-64", "を"),
+          t("d6-65", "やすく", "安く", "やすく"), t("d6-66", "うる", "売る", "うる"), t("d6-67", "ためです", key=True)],
+         "Là vì mục đích bán sản phẩm mới với giá rẻ."),
+]
+
+EXERCISES = [
+    q(L, 1, "「この商品は主婦向けに作られました」 — 向けに dùng để:",
+      ["Nêu đối tượng cụ thể mà hành động (làm ra sản phẩm) nhắm tới",
+       "So sánh sản phẩm với sản phẩm khác", "Phủ định việc làm sản phẩm", "Chỉ thời gian làm sản phẩm"], 0,
+      "向けに gắn sau danh từ chỉ đối tượng (主婦) để nói hành động được thiết kế riêng cho đối tượng đó.",
+      "Xem cấu trúc N向けに ở slide 1."),
+    q(L, 2, "「子供向けのサービスです」 — vì sao dùng 向けの chứ không phải 向けに?",
+      ["Vì 向け đứng trước danh từ (サービス) nên phải đổi thành 向けの",
+       "Vì サービス là động từ", "Không có quy tắc, dùng tùy ý",
+       "Vì câu là câu phủ định"], 0,
+      "Khi 向け bổ nghĩa cho một danh từ khác (thay vì đứng trước động từ), phải dùng dạng 向けの.",
+      "Xem cấu trúc N1向けのN2 ở slide 2."),
+    q(L, 3, "Sự khác biệt giữa 向け và ため(に) là gì?",
+      ["向け nhấn ĐỐI TƯỢNG cụ thể; ため(に) nhấn MỤC ĐÍCH/LÝ DO của hành động",
+       "Hoàn toàn giống nhau, dùng thay thế được cho nhau luôn",
+       "向け chỉ dùng cho phủ định", "ため(に) chỉ dùng cho câu hỏi"], 0,
+      "向け trả lời 'dành cho AI', còn ため(に) trả lời 'VÌ MỤC ĐÍCH GÌ' — hai câu hỏi khác nhau, có thể kết hợp trong cùng câu.",
+      "Xem so sánh và ví dụ kết hợp ở slide 3."),
+    q(L, 4, "「主婦向けの商品を、会社のために作りました」 nghĩa là:",
+      ["Đã làm sản phẩm dành cho bà nội trợ (đối tượng), vì lợi ích của công ty (mục đích)",
+       "Đã làm sản phẩm dành cho công ty, vì lợi ích của bà nội trợ",
+       "Không làm sản phẩm nào cả", "Công ty đã từ chối làm sản phẩm"], 0,
+      "向けの chỉ đối tượng (主婦), のために chỉ mục đích/lợi ích (会社) — hai vai trò tách biệt trong câu.",
+      "Phân tích từng cụm từ theo vai trò ngữ pháp."),
+    q(L, 5, "「この製品は海外向けに販売します」 — 海外向けに có nghĩa là:",
+      ["Hướng tới, nhắm tới thị trường nước ngoài", "Chỉ bán ở trong nước",
+       "So sánh với sản phẩm nước ngoài", "Nhập khẩu từ nước ngoài"], 0,
+      "向けに sau 海外 (nước ngoài) nghĩa là sản phẩm được nhắm tới bán ở thị trường nước ngoài.",
+      "Áp dụng cấu trúc N向けに với N=海外."),
+    q(L, 6, "を対象に(して) khác 向け ở điểm nào?",
+      ["を対象に(して) trang trọng hơn, dùng trong khảo sát/nghiên cứu/báo cáo",
+       "を対象に(して) chỉ dùng trong hội thoại thân mật", "Hoàn toàn giống 向け, không khác gì",
+       "を対象に(して) chỉ dùng cho phủ định"], 0,
+      "を対象に(して) là cách nói trang trọng hơn của 向け, ít dùng trong hội thoại đời thường.",
+      "Xem ghi chú văn phong ở slide 4."),
+    q(L, 7, "「このサービスは子供を対象にしています」 nghĩa là:",
+      ["Dịch vụ này lấy trẻ em làm đối tượng", "Dịch vụ này so sánh với trẻ em",
+       "Dịch vụ này cấm trẻ em sử dụng", "Trẻ em đã tạo ra dịch vụ này"], 0,
+      "を対象にしています nghĩa là 'lấy N làm đối tượng', ở đây N=子供 (trẻ em).",
+      "Áp dụng cấu trúc N を対象に(して) ở slide 4."),
+    q(L, 8, "Trong hội thoại, công ty của Santos có bán sản phẩm ra nước ngoài không?",
+      ["Có, từ năm sau sẽ bán hướng tới cả thị trường nước ngoài",
+       "Không bao giờ bán ra nước ngoài", "Đã ngừng bán ra nước ngoài từ năm ngoái",
+       "Không được đề cập trong hội thoại"], 0,
+      "Santos nói 「来年から海外向けにも販売します」.",
+      "Xem câu thoại thứ 4."),
+    q(L, 9, "Sản phẩm trong hội thoại được làm ở đâu?",
+      ["Ở nhà máy của doanh nghiệp", "Ở nhà của Santos", "Ở nước ngoài", "Không được làm ở đâu cả"], 0,
+      "Santos trả lời 「企業の工場で作ります」.",
+      "Xem câu thoại thứ 6."),
+    q(L, 10, "Mục đích bán hàng được nêu trong hội thoại là gì?",
+      ["Bán sản phẩm mới với giá rẻ", "Tăng giá sản phẩm cũ", "Ngừng sản xuất sản phẩm",
+       "Không có mục đích cụ thể"], 0,
+      "Santos trả lời 「新しい商品を安く売るためです」.",
+      "Xem câu thoại cuối cùng."),
+]
+
+LESSON = lesson(
+    L,
+    "Bài 6: Mục đích & Đối tượng (向けに & ために)",
+    "向けに/向けの nêu ĐỐI TƯỢNG cụ thể mà sản phẩm/dịch vụ/hành động nhắm tới (thường dùng trong "
+    "marketing, sản xuất), có thể kết hợp với ため(に) (đã ôn từ N4 bài 42) để vừa nêu đối tượng vừa "
+    "nêu mục đích; を対象に(して) là cách nói trang trọng hơn của 向け, dùng trong khảo sát/báo cáo.",
+    VOCAB, KANJI, SLIDES, DIALOGUE, EXERCISES,
+)
+
+if __name__ == "__main__":
+    pool.mark_used([w["word"] for w in VOCAB if w["word"]], lesson=L)
+    merge([LESSON])
