@@ -1529,99 +1529,1434 @@
     "level": "N3",
     "lessonNumber": 2,
     "title": "Bài 2: Thói quen & Biến đổi (ようにする & ようになる)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "description": "ようにする diễn tả NỖ LỰC CHỦ ĐỘNG để đạt một mục tiêu/thói quen (chưa chắc đã thành công), đối lập với ようになる (N4 bài 36, KẾT QUẢ đã đạt được) — hai cấu trúc thường xuất hiện nối tiếp trong mạch kể chuyện thành công (nỗ lực → kết quả), cả hai đều ghép được với thể ない để diễn tả chiều ngược lại (tránh làm/mất khả năng).",
     "vocabList": [
       {
         "id": "voc-n3-2-1",
-        "word": "重要語彙 (N3)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "どりょくします",
+        "kanji": "努力します",
+        "furigana": "どりょくします",
+        "romaji": "doryoku shimasu",
+        "wordType": "verb",
+        "meaningVi": "Nỗ lực, cố gắng",
+        "accentNote": "早く 寝る ように 努力しています = tôi đang nỗ lực để ngủ sớm."
+      },
+      {
+        "id": "voc-n3-2-2",
+        "word": "いしきします",
+        "kanji": "意識します",
+        "furigana": "いしきします",
+        "romaji": "ishiki shimasu",
+        "wordType": "verb",
+        "meaningVi": "Ý thức, chú tâm tới",
+        "accentNote": "健康を 意識する ように なりました = tôi đã trở nên ý thức về sức khỏe."
+      },
+      {
+        "id": "voc-n3-2-3",
+        "word": "きをつけます",
+        "kanji": "気を付けます",
+        "furigana": "きをつけます",
+        "romaji": "ki o tsukemasu",
+        "wordType": "verb",
+        "meaningVi": "Cẩn thận, lưu ý",
+        "accentNote": "Đã gặp N5 bài 15. 忘れない ように 気を付けます = tôi chú ý để không quên."
+      },
+      {
+        "id": "voc-n3-2-4",
+        "word": "こころがけます",
+        "kanji": "心掛けます",
+        "furigana": "こころがけます",
+        "romaji": "kokorogakemasu",
+        "wordType": "verb",
+        "meaningVi": "Luôn để tâm, chú tâm thực hiện",
+        "accentNote": "毎日 運動する ように 心掛けています = tôi luôn để tâm tập thể dục mỗi ngày."
+      },
+      {
+        "id": "voc-n3-2-5",
+        "word": "うんどうします",
+        "kanji": "運動します",
+        "furigana": "うんどうします",
+        "romaji": "undou shimasu",
+        "wordType": "verb",
+        "meaningVi": "Vận động, tập thể dục",
+        "accentNote": "Đã gặp N4 bài 27."
+      },
+      {
+        "id": "voc-n3-2-6",
+        "word": "たべます",
+        "kanji": "食べます",
+        "furigana": "たべます",
+        "romaji": "tabemasu",
+        "wordType": "verb",
+        "meaningVi": "Ăn",
+        "accentNote": "Đã gặp N5 bài 6 — nay dùng làm ví dụ ようにする."
+      },
+      {
+        "id": "voc-n3-2-7",
+        "word": "ねます",
+        "kanji": "寝ます",
+        "furigana": "ねます",
+        "romaji": "nemasu",
+        "wordType": "verb",
+        "meaningVi": "Đi ngủ",
+        "accentNote": "Đã gặp N5 bài 4."
+      },
+      {
+        "id": "voc-n3-2-8",
+        "word": "おきます",
+        "kanji": "起きます",
+        "furigana": "おきます",
+        "romaji": "okimasu",
+        "wordType": "verb",
+        "meaningVi": "Thức dậy",
+        "accentNote": "Đã gặp N5 bài 4."
+      },
+      {
+        "id": "voc-n3-2-9",
+        "word": "けんこう",
+        "kanji": "健康",
+        "furigana": "けんこう",
+        "romaji": "kenkou",
+        "wordType": "adjective",
+        "meaningVi": "Sức khỏe, khỏe mạnh",
+        "accentNote": "Đã gặp N4 bài 32."
+      },
+      {
+        "id": "voc-n3-2-10",
+        "word": "せいかつ",
+        "kanji": "生活",
+        "furigana": "せいかつ",
+        "romaji": "seikatsu",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 2",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Cuộc sống, sinh hoạt",
+        "accentNote": "Đã gặp N4 bài 28."
+      },
+      {
+        "id": "voc-n3-2-11",
+        "word": "しゅうかん",
+        "kanji": "習慣",
+        "furigana": "しゅうかん",
+        "romaji": "shuukan",
+        "wordType": "noun",
+        "meaningVi": "Thói quen",
+        "accentNote": "Đã gặp N4 bài 28."
+      },
+      {
+        "id": "voc-n3-2-12",
+        "word": "やさい",
+        "kanji": "野菜",
+        "furigana": "やさい",
+        "romaji": "yasai",
+        "wordType": "noun",
+        "meaningVi": "Rau",
+        "accentNote": "Đã gặp N5 bài 6."
+      },
+      {
+        "id": "voc-n3-2-13",
+        "word": "たいじゅう",
+        "kanji": "体重",
+        "furigana": "たいじゅう",
+        "romaji": "taijuu",
+        "wordType": "noun",
+        "meaningVi": "Cân nặng",
+        "accentNote": "Đã gặp N4 bài 32."
+      },
+      {
+        "id": "voc-n3-2-14",
+        "word": "いしき",
+        "kanji": "意識",
+        "furigana": "いしき",
+        "romaji": "ishiki",
+        "wordType": "noun",
+        "meaningVi": "Ý thức",
+        "accentNote": "健康を 意識して います = tôi đang có ý thức về sức khỏe."
+      },
+      {
+        "id": "voc-n3-2-15",
+        "word": "どりょく",
+        "kanji": "努力",
+        "furigana": "どりょく",
+        "romaji": "doryoku",
+        "wordType": "noun",
+        "meaningVi": "Sự nỗ lực, sự cố gắng",
+        "accentNote": "努力すれば、できます = nếu nỗ lực thì làm được."
+      },
+      {
+        "id": "voc-n3-2-16",
+        "word": "びょうき",
+        "kanji": "病気",
+        "furigana": "びょうき",
+        "romaji": "byouki",
+        "wordType": "noun",
+        "meaningVi": "Bệnh, ốm",
+        "accentNote": "Đã gặp N5 bài 17."
+      },
+      {
+        "id": "voc-n3-2-17",
+        "word": "しごと",
+        "kanji": "仕事",
+        "furigana": "しごと",
+        "romaji": "shigoto",
+        "wordType": "noun",
+        "meaningVi": "Công việc",
+        "accentNote": "Đã gặp N5 bài 9."
+      },
+      {
+        "id": "voc-n3-2-18",
+        "word": "じかん",
+        "kanji": "時間",
+        "furigana": "じかん",
+        "romaji": "jikan",
+        "wordType": "noun",
+        "meaningVi": "Thời gian",
+        "accentNote": "Đã gặp N5 bài 4."
+      },
+      {
+        "id": "voc-n3-2-19",
+        "word": "からだ",
+        "kanji": "体",
+        "furigana": "からだ",
+        "romaji": "karada",
+        "wordType": "noun",
+        "meaningVi": "Cơ thể, sức khỏe",
+        "accentNote": "Đã gặp N5 bài 16."
+      },
+      {
+        "id": "voc-n3-2-20",
+        "word": "まいにち",
+        "kanji": "毎日",
+        "furigana": "まいにち",
+        "romaji": "mainichi",
+        "wordType": "adverb",
+        "meaningVi": "Mỗi ngày, hằng ngày",
+        "accentNote": "Đã gặp N5 bài 4."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n3-2-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "努",
+        "hanViet": "NỖ",
+        "strokeCount": 7,
         "onyomi": [
-          "ゴ"
+          "ド (do)"
         ],
         "kunyomi": [
-          "かたる"
+          "つと(める)"
         ],
-        "meaningVi": "Ngôn ngữ",
+        "meaningVi": "Nỗ lực, gắng sức.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "努力",
+            "furigana": "どりょく",
+            "meaningVi": "Nỗ lực"
+          },
+          {
+            "word": "努めます",
+            "furigana": "つとめます",
+            "meaningVi": "Cố gắng, làm việc"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-2-2",
+        "character": "力",
+        "hanViet": "LỰC",
+        "strokeCount": 2,
+        "onyomi": [
+          "リョク (ryoku)"
+        ],
+        "kunyomi": [
+          "ちから"
+        ],
+        "meaningVi": "Sức lực, năng lực.",
+        "commonWords": [
+          {
+            "word": "努力",
+            "furigana": "どりょく",
+            "meaningVi": "Nỗ lực"
+          },
+          {
+            "word": "力",
+            "furigana": "ちから",
+            "meaningVi": "Sức mạnh"
+          },
+          {
+            "word": "能力",
+            "furigana": "のうりょく",
+            "meaningVi": "Năng lực"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-2-3",
+        "character": "識",
+        "hanViet": "THỨC",
+        "strokeCount": 19,
+        "onyomi": [
+          "シキ (shiki)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Nhận thức, ý thức.",
+        "commonWords": [
+          {
+            "word": "意識",
+            "furigana": "いしき",
+            "meaningVi": "Ý thức"
+          },
+          {
+            "word": "知識",
+            "furigana": "ちしき",
+            "meaningVi": "Kiến thức"
+          },
+          {
+            "word": "常識",
+            "furigana": "じょうしき",
+            "meaningVi": "Thường thức"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-2-4",
+        "character": "掛",
+        "hanViet": "QUẢI",
+        "strokeCount": 11,
+        "onyomi": [
+          "カイ (kai)"
+        ],
+        "kunyomi": [
+          "か(ける)"
+        ],
+        "meaningVi": "Treo lên; để tâm (chỉ ghép trong 心掛ける).",
+        "commonWords": [
+          {
+            "word": "心掛けます",
+            "furigana": "こころがけます",
+            "meaningVi": "Để tâm thực hiện"
+          },
+          {
+            "word": "眼鏡を掛けます",
+            "furigana": "めがねをかけます",
+            "meaningVi": "Đeo kính"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-2-5",
+        "character": "康",
+        "hanViet": "KHANG",
+        "strokeCount": 11,
+        "onyomi": [
+          "コウ (kou)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "An khang, khỏe mạnh. Đã gặp N4 bài 32.",
+        "commonWords": [
+          {
+            "word": "健康",
+            "furigana": "けんこう",
+            "meaningVi": "Sức khỏe"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n3-l2-s0",
-        "title": "Trọng tâm: Thói quen & Biến đổi (ようにする & ようになる)",
-        "grammarFormula": "V-る / V-ない + ようにする / ようになる",
-        "explanation": "ようにする: Nỗ lực duy trì thói quen tốt. ようになる: Biến đổi từ không thể sang có thể.",
+        "slideId": "n3-l2-s1",
+        "slideType": "grammar",
+        "title": "1. Nỗ lực chủ động: [Thể từ điển/ない] ように します",
+        "grammarFormula": "V(từ điển) + ように します  (đang cố gắng để đạt trạng thái đó, chưa chắc đã thành công)",
+        "explanation": "ようにする diễn tả NỖ LỰC CHỦ ĐỘNG của người nói để đạt được một mục tiêu — nhấn HÀNH ĐỘNG cố gắng, KHÁC HẲN ようになる (N4 bài 36) vốn nhấn KẾT QUẢ đã đạt được.",
+        "teacherTips": "ようにしています (đang trong quá trình nỗ lực) khác hẳn ようになりました (N4 bài 36, ĐÃ đạt kết quả) — chọn đúng để không nói sai mức độ thành công.",
+        "culturalNotes": "早く寝るようにしています là câu trả lời khiêm tốn phổ biến khi được hỏi về thói quen sống lành mạnh — nhấn mạnh đang CỐ GẮNG chứ chưa chắc hoàn hảo.",
         "examples": [
           {
-            "id": "ex-n3-l2-1",
+            "id": "ex-n3-l2-s1-1",
             "tokens": [
               {
-                "id": "tok-n3-l2-1",
-                "text": "毎日 漢",
+                "id": "t-l2s1-1",
+                "text": "はやく",
+                "isKeyGrammar": false,
+                "kanji": "早く",
+                "furigana": "はやく"
+              },
+              {
+                "id": "t-l2s1-2",
+                "text": "ねる",
+                "isKeyGrammar": false,
+                "kanji": "寝る",
+                "furigana": "ねる"
+              },
+              {
+                "id": "t-l2s1-3",
+                "text": "ように",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s1-4",
+                "text": "して",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s1-5",
+                "text": "います",
+                "isKeyGrammar": false,
+                "kanji": "居ます",
+                "furigana": "います"
+              }
+            ],
+            "meaningVi": "Tôi đang cố gắng để ngủ sớm."
+          },
+          {
+            "id": "ex-n3-l2-s1-2",
+            "tokens": [
+              {
+                "id": "t-l2s1-6",
+                "text": "やさい",
+                "isKeyGrammar": false,
+                "kanji": "野菜",
+                "furigana": "やさい"
+              },
+              {
+                "id": "t-l2s1-7",
+                "text": "を",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n3-l2-2",
-                "text": "字を 練習するようにしています。",
+                "id": "t-l2s1-8",
+                "text": "たべる",
+                "isKeyGrammar": false,
+                "kanji": "食べる",
+                "furigana": "たべる"
+              },
+              {
+                "id": "t-l2s1-9",
+                "text": "ように",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s1-10",
+                "text": "しています",
                 "isKeyGrammar": true
               }
             ],
-            "meaningVi": "Tôi luôn cố gắng luyện viết chữ Hán mỗi ngày."
+            "meaningVi": "Tôi đang cố gắng ăn rau (dù có thể chưa thành thói quen hẳn)."
           }
-        ],
-        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+        ]
+      },
+      {
+        "slideId": "n3-l2-s2",
+        "slideType": "grammar",
+        "title": "2. Ôn lại ようになる (N4 bài 36): kết quả đạt được",
+        "grammarFormula": "V(khả năng/từ điển) + ように なりました  (ĐÃ đạt được, thành thói quen/năng lực mới)",
+        "explanation": "So sánh trực tiếp với slide 1: ようになる báo hiệu sự THAY ĐỔI ĐÃ HOÀN TẤT, trong khi ようにする chỉ là NỖ LỰC đang diễn ra, kết quả có thể chưa chắc chắn.",
+        "teacherTips": "Cặp する/なる y hệt cặp させる/られる (bài 48-37): する là CHỦ ĐỘNG nỗ lực, なる là kết quả TỰ NHIÊN hình thành sau quá trình đó.",
+        "culturalNotes": "野菜を食べるようになりました (đã ăn rau được) thường là câu tiếp nối tự nhiên sau khi kể về quá trình 食べるようにしていました (đã từng cố gắng).",
+        "examples": [
+          {
+            "id": "ex-n3-l2-s2-1",
+            "tokens": [
+              {
+                "id": "t-l2s2-1",
+                "text": "やさい",
+                "isKeyGrammar": false,
+                "kanji": "野菜",
+                "furigana": "やさい"
+              },
+              {
+                "id": "t-l2s2-2",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s2-3",
+                "text": "たべる",
+                "isKeyGrammar": false,
+                "kanji": "食べる",
+                "furigana": "たべる"
+              },
+              {
+                "id": "t-l2s2-4",
+                "text": "ように",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s2-5",
+                "text": "なりました",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi đã (dần) ăn rau được rồi. (KẾT QUẢ đã đạt, khác slide 1 chỉ là đang cố gắng)"
+          },
+          {
+            "id": "ex-n3-l2-s2-2",
+            "tokens": [
+              {
+                "id": "t-l2s2-6",
+                "text": "けんこう",
+                "isKeyGrammar": false,
+                "kanji": "健康",
+                "furigana": "けんこう"
+              },
+              {
+                "id": "t-l2s2-7",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s2-8",
+                "text": "いしき",
+                "isKeyGrammar": true,
+                "kanji": "意識",
+                "furigana": "いしき"
+              },
+              {
+                "id": "t-l2s2-9",
+                "text": "する",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s2-10",
+                "text": "ように",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s2-11",
+                "text": "なりました",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Tôi đã trở nên ý thức về sức khỏe."
+          }
+        ]
+      },
+      {
+        "slideId": "n3-l2-s3",
+        "slideType": "grammar",
+        "title": "3. Chuỗi câu chuyện: ようにする (nỗ lực) → ようになる (kết quả)",
+        "grammarFormula": "はじめ、Vようにしていました。 そして、Vように なりました。",
+        "explanation": "Hai cấu trúc thường XUẤT HIỆN NỐI TIẾP trong một câu chuyện: kể lại QUÁ TRÌNH nỗ lực trước, rồi công bố KẾT QUẢ đạt được sau — một mạch kể chuyện rất tự nhiên trong tiếng Nhật.",
+        "teacherTips": "Kể chuyện thành công cá nhân theo trình tự này giúp câu chuyện có mạch NGUYÊN NHÂN (nỗ lực) - KẾT QUẢ (thay đổi) rõ ràng, thuyết phục.",
+        "culturalNotes": "Bài luận, phỏng vấn xin việc ở Nhật thường dùng đúng mẫu 'ようにしていました→ようになりました' để kể về quá trình rèn luyện bản thân.",
+        "examples": [
+          {
+            "id": "ex-n3-l2-s3-1",
+            "tokens": [
+              {
+                "id": "t-l2s3-1",
+                "text": "はじめ",
+                "isKeyGrammar": false,
+                "kanji": "初め",
+                "furigana": "はじめ"
+              },
+              {
+                "id": "t-l2s3-2",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s3-3",
+                "text": "まいにち",
+                "isKeyGrammar": false,
+                "kanji": "毎日",
+                "furigana": "まいにち"
+              },
+              {
+                "id": "t-l2s3-4",
+                "text": "うんどう",
+                "isKeyGrammar": true,
+                "kanji": "運動",
+                "furigana": "うんどう"
+              },
+              {
+                "id": "t-l2s3-5",
+                "text": "する",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s3-6",
+                "text": "ように",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s3-7",
+                "text": "して",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s3-8",
+                "text": "いました",
+                "isKeyGrammar": false,
+                "kanji": "居ました",
+                "furigana": "いました"
+              }
+            ],
+            "meaningVi": "Ban đầu, tôi đã cố gắng tập thể dục mỗi ngày."
+          },
+          {
+            "id": "ex-n3-l2-s3-2",
+            "tokens": [
+              {
+                "id": "t-l2s3-9",
+                "text": "いま",
+                "isKeyGrammar": false,
+                "kanji": "今",
+                "furigana": "いま"
+              },
+              {
+                "id": "t-l2s3-10",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s3-11",
+                "text": "からだ",
+                "isKeyGrammar": true,
+                "kanji": "体",
+                "furigana": "からだ"
+              },
+              {
+                "id": "t-l2s3-12",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s3-13",
+                "text": "つよく",
+                "isKeyGrammar": false,
+                "kanji": "強く",
+                "furigana": "つよく"
+              },
+              {
+                "id": "t-l2s3-14",
+                "text": "なりました",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s3-15",
+                "text": "。",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s3-16",
+                "text": "どりょく",
+                "isKeyGrammar": true,
+                "kanji": "努力",
+                "furigana": "どりょく"
+              },
+              {
+                "id": "t-l2s3-17",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s3-18",
+                "text": "けっか",
+                "isKeyGrammar": false,
+                "kanji": "結果",
+                "furigana": "けっか"
+              },
+              {
+                "id": "t-l2s3-19",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Bây giờ cơ thể tôi đã khỏe hơn. Đây là kết quả của sự nỗ lực."
+          }
+        ]
+      },
+      {
+        "slideId": "n3-l2-s4",
+        "slideType": "grammar",
+        "title": "4. Phủ định: V(ない) ように します／なります",
+        "grammarFormula": "V(ない形) + ように します  (cố gắng ĐỂ KHÔNG làm gì)　　V(ない形) + ように なります (dần KHÔNG làm nữa/mất khả năng)",
+        "explanation": "Cả hai cấu trúc đều ghép được với thể ない để diễn tả hướng NGƯỢC LẠI — cố gắng tránh một hành vi, hoặc dần dần MẤT khả năng làm việc gì đó theo thời gian.",
+        "teacherTips": "気をつけます (chú ý, N5 bài 15) rất hay ghép cùng ないように để diễn tả 'cẩn thận để không...' — cặp cố định thường gặp.",
+        "culturalNotes": "太らないように気をつけています là câu trả lời phổ biến của người Nhật khi được hỏi về bí quyết giữ dáng.",
+        "examples": [
+          {
+            "id": "ex-n3-l2-s4-1",
+            "tokens": [
+              {
+                "id": "t-l2s4-1",
+                "text": "たいじゅう",
+                "isKeyGrammar": true,
+                "kanji": "体重",
+                "furigana": "たいじゅう"
+              },
+              {
+                "id": "t-l2s4-2",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s4-3",
+                "text": "ふえない",
+                "isKeyGrammar": false,
+                "kanji": "増えない",
+                "furigana": "ふえない"
+              },
+              {
+                "id": "t-l2s4-4",
+                "text": "ように",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s4-5",
+                "text": "きを",
+                "isKeyGrammar": false,
+                "kanji": "気を",
+                "furigana": "きを"
+              },
+              {
+                "id": "t-l2s4-6",
+                "text": "つけて",
+                "isKeyGrammar": false,
+                "kanji": "付けて",
+                "furigana": "つけて"
+              },
+              {
+                "id": "t-l2s4-7",
+                "text": "います",
+                "isKeyGrammar": false,
+                "kanji": "居ます",
+                "furigana": "います"
+              }
+            ],
+            "meaningVi": "Tôi đang chú ý để cân nặng không tăng lên."
+          },
+          {
+            "id": "ex-n3-l2-s4-2",
+            "tokens": [
+              {
+                "id": "t-l2s4-8",
+                "text": "びょうき",
+                "isKeyGrammar": true,
+                "kanji": "病気",
+                "furigana": "びょうき"
+              },
+              {
+                "id": "t-l2s4-9",
+                "text": "で",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s4-10",
+                "text": "はしれない",
+                "isKeyGrammar": false,
+                "kanji": "走れない",
+                "furigana": "はしれない"
+              },
+              {
+                "id": "t-l2s4-11",
+                "text": "ように",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s4-12",
+                "text": "なりました",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Vì bệnh nên tôi (dần) không chạy được nữa. (đã học N4 bài 36 — ôn lại chiều nghịch)"
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n3-2-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
         "tokens": [
           {
-            "id": "tok-n3-2-d1",
-            "text": "この文法のポイントを"
+            "id": "d2-1",
+            "text": "さいきん",
+            "isKeyGrammar": false,
+            "kanji": "最近",
+            "furigana": "さいきん"
           },
           {
-            "id": "tok-n3-2-d2",
-            "text": "復習しましょう。"
+            "id": "d2-2",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-3",
+            "text": "けんこう",
+            "isKeyGrammar": true,
+            "kanji": "健康",
+            "furigana": "けんこう"
+          },
+          {
+            "id": "d2-4",
+            "text": "の",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d2-5",
+            "text": "ために",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d2-6",
+            "text": "なにか",
+            "isKeyGrammar": false,
+            "kanji": "何か",
+            "furigana": "なにか"
+          },
+          {
+            "id": "d2-7",
+            "text": "して",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d2-8",
+            "text": "いますか",
+            "isKeyGrammar": false,
+            "kanji": "居ますか",
+            "furigana": "いますか"
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Gần đây, vì sức khỏe anh có làm gì không?"
+      },
+      {
+        "id": "dia-n3-2-2",
+        "speaker": "山田",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d2-9",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-10",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-11",
+            "text": "まいにち",
+            "isKeyGrammar": true,
+            "kanji": "毎日",
+            "furigana": "まいにち"
+          },
+          {
+            "id": "d2-12",
+            "text": "うんどう",
+            "isKeyGrammar": true,
+            "kanji": "運動",
+            "furigana": "うんどう"
+          },
+          {
+            "id": "d2-13",
+            "text": "する",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d2-14",
+            "text": "ように",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d2-15",
+            "text": "して",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d2-16",
+            "text": "います",
+            "isKeyGrammar": false,
+            "kanji": "居ます",
+            "furigana": "います"
+          }
+        ],
+        "meaningVi": "Vâng, tôi đang cố gắng tập thể dục mỗi ngày."
+      },
+      {
+        "id": "dia-n3-2-3",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d2-17",
+            "text": "けっか",
+            "isKeyGrammar": false,
+            "kanji": "結果",
+            "furigana": "けっか"
+          },
+          {
+            "id": "d2-18",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-19",
+            "text": "どうですか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Kết quả thế nào rồi?"
+      },
+      {
+        "id": "dia-n3-2-4",
+        "speaker": "山田",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d2-20",
+            "text": "からだ",
+            "isKeyGrammar": true,
+            "kanji": "体",
+            "furigana": "からだ"
+          },
+          {
+            "id": "d2-21",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-22",
+            "text": "つよく",
+            "isKeyGrammar": false,
+            "kanji": "強く",
+            "furigana": "つよく"
+          },
+          {
+            "id": "d2-23",
+            "text": "なりました",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d2-24",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-25",
+            "text": "やさい",
+            "isKeyGrammar": true,
+            "kanji": "野菜",
+            "furigana": "やさい"
+          },
+          {
+            "id": "d2-26",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-27",
+            "text": "たべる",
+            "isKeyGrammar": false,
+            "kanji": "食べる",
+            "furigana": "たべる"
+          },
+          {
+            "id": "d2-28",
+            "text": "ように",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d2-29",
+            "text": "なりました",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Cơ thể tôi đã khỏe hơn. Tôi cũng đã ăn được rau nữa."
+      },
+      {
+        "id": "dia-n3-2-5",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d2-30",
+            "text": "すごい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-31",
+            "text": "ですね",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-32",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-33",
+            "text": "どりょく",
+            "isKeyGrammar": true,
+            "kanji": "努力",
+            "furigana": "どりょく"
+          },
+          {
+            "id": "d2-34",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-35",
+            "text": "けっか",
+            "isKeyGrammar": false,
+            "kanji": "結果",
+            "furigana": "けっか"
+          },
+          {
+            "id": "d2-36",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-37",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Giỏi thật đấy. Là kết quả của nỗ lực đấy nhỉ."
+      },
+      {
+        "id": "dia-n3-2-6",
+        "speaker": "山田",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d2-38",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-39",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-40",
+            "text": "たいじゅう",
+            "isKeyGrammar": true,
+            "kanji": "体重",
+            "furigana": "たいじゅう"
+          },
+          {
+            "id": "d2-41",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-42",
+            "text": "ふえない",
+            "isKeyGrammar": false,
+            "kanji": "増えない",
+            "furigana": "ふえない"
+          },
+          {
+            "id": "d2-43",
+            "text": "ように",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d2-44",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-45",
+            "text": "きを",
+            "isKeyGrammar": false,
+            "kanji": "気を",
+            "furigana": "きを"
+          },
+          {
+            "id": "d2-46",
+            "text": "つけて",
+            "isKeyGrammar": false,
+            "kanji": "付けて",
+            "furigana": "つけて"
+          },
+          {
+            "id": "d2-47",
+            "text": "います",
+            "isKeyGrammar": false,
+            "kanji": "居ます",
+            "furigana": "います"
+          }
+        ],
+        "meaningVi": "Vâng. Tôi cũng đang chú ý để cân nặng không tăng lên."
+      },
+      {
+        "id": "dia-n3-2-7",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d2-48",
+            "text": "わたし",
+            "isKeyGrammar": false,
+            "kanji": "私",
+            "furigana": "わたし"
+          },
+          {
+            "id": "d2-49",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-50",
+            "text": "けんこう",
+            "isKeyGrammar": true,
+            "kanji": "健康",
+            "furigana": "けんこう"
+          },
+          {
+            "id": "d2-51",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-52",
+            "text": "いしき",
+            "isKeyGrammar": true,
+            "kanji": "意識",
+            "furigana": "いしき"
+          },
+          {
+            "id": "d2-53",
+            "text": "する",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d2-54",
+            "text": "ように",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d2-55",
+            "text": "しよう",
+            "isKeyGrammar": false,
+            "kanji": "しよう",
+            "furigana": "しよう"
+          },
+          {
+            "id": "d2-56",
+            "text": "と",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-57",
+            "text": "おもいます",
+            "isKeyGrammar": false,
+            "kanji": "思います",
+            "furigana": "おもいます"
+          }
+        ],
+        "meaningVi": "Tôi cũng nghĩ sẽ cố gắng ý thức về sức khỏe."
+      },
+      {
+        "id": "dia-n3-2-8",
+        "speaker": "山田",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d2-58",
+            "text": "いいですね",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-59",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-60",
+            "text": "はやく",
+            "isKeyGrammar": false,
+            "kanji": "早く",
+            "furigana": "はやく"
+          },
+          {
+            "id": "d2-61",
+            "text": "ねる",
+            "isKeyGrammar": false,
+            "kanji": "寝る",
+            "furigana": "ねる"
+          },
+          {
+            "id": "d2-62",
+            "text": "ように",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d2-63",
+            "text": "する",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d2-64",
+            "text": "だけ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-65",
+            "text": "でも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-66",
+            "text": "こうかてき",
+            "isKeyGrammar": false,
+            "kanji": "効果的",
+            "furigana": "こうかてき"
+          },
+          {
+            "id": "d2-67",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-68",
+            "text": "よ",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Hay đó. Chỉ cần cố gắng ngủ sớm thôi cũng hiệu quả lắm đấy."
+      },
+      {
+        "id": "dia-n3-2-9",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d2-69",
+            "text": "わかりました",
+            "isKeyGrammar": false,
+            "kanji": "分かりました",
+            "furigana": "わかりました"
+          },
+          {
+            "id": "d2-70",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-71",
+            "text": "きょう",
+            "isKeyGrammar": false,
+            "kanji": "今日",
+            "furigana": "きょう"
+          },
+          {
+            "id": "d2-72",
+            "text": "から",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-73",
+            "text": "はやく",
+            "isKeyGrammar": false,
+            "kanji": "早く",
+            "furigana": "はやく"
+          },
+          {
+            "id": "d2-74",
+            "text": "ねる",
+            "isKeyGrammar": false,
+            "kanji": "寝る",
+            "furigana": "ねる"
+          },
+          {
+            "id": "d2-75",
+            "text": "ように",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d2-76",
+            "text": "します",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Tôi hiểu rồi. Từ hôm nay tôi sẽ cố gắng ngủ sớm."
+      },
+      {
+        "id": "dia-n3-2-10",
+        "speaker": "山田",
+        "speakerRole": "Nhân viên công ty",
+        "tokens": [
+          {
+            "id": "d2-77",
+            "text": "がんばって",
+            "isKeyGrammar": false,
+            "kanji": "頑張って",
+            "furigana": "がんばって"
+          },
+          {
+            "id": "d2-78",
+            "text": "ください",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-79",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-80",
+            "text": "きっと",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d2-81",
+            "text": "できる",
+            "isKeyGrammar": false,
+            "kanji": "できる",
+            "furigana": "できる"
+          },
+          {
+            "id": "d2-82",
+            "text": "ように",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d2-83",
+            "text": "なります",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Cố lên nhé. Chắc chắn anh sẽ làm được thôi."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n3-2-1",
-        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Thói quen & Biến đổi (ようにする & ようになる)'?",
+        "question": "「早く寝るようにしています」 diễn tả điều gì?",
         "options": [
-          "V-る",
-          "V-た + まま",
-          "N + に沿って",
-          "V-る + 途端に"
+          "Đang NỖ LỰC để đạt trạng thái đó (chưa chắc thành công hoàn toàn)",
+          "Đã ĐẠT ĐƯỢC thói quen đó rồi",
+          "Sẽ không bao giờ làm được điều đó",
+          "Đã từng làm nhưng đã bỏ"
         ],
         "correctIndex": 0,
-        "explanation": "Đáp án chính xác: V-る / V-ない + ようにする / ようになる",
-        "hint": "Xem lại công thức chia ở slide lý thuyết."
+        "explanation": "ようにしています nhấn mạnh HÀNH ĐỘNG NỖ LỰC đang diễn ra, khác ようになりました đã đạt kết quả.",
+        "hint": "Xem giải thích ở slide 1."
+      },
+      {
+        "id": "ex-q-n3-2-2",
+        "question": "「野菜を食べるようになりました」 (N4 bài 36) khác 「野菜を食べるようにしています」 ở:",
+        "options": [
+          "ようになりました là KẾT QUẢ đã đạt; ようにしています là NỖ LỰC đang diễn ra",
+          "Hoàn toàn giống nhau",
+          "ようになりました chỉ dùng cho phủ định",
+          "ようにしています là thì quá khứ"
+        ],
+        "correctIndex": 0,
+        "explanation": "Đây là điểm khác biệt cốt lõi giữa hai cấu trúc — する (nỗ lực chủ động) và なる (kết quả tự nhiên).",
+        "hint": "So sánh trực tiếp ở slide 2."
+      },
+      {
+        "id": "ex-q-n3-2-3",
+        "question": "Mạch câu chuyện tự nhiên thường đi theo thứ tự nào?",
+        "options": [
+          "ようにしていました (kể quá trình nỗ lực) → ようになりました (công bố kết quả)",
+          "ようになりました → ようにしていました",
+          "Cả hai luôn xuất hiện cùng lúc",
+          "Không có thứ tự cố định nào"
+        ],
+        "correctIndex": 0,
+        "explanation": "Kể chuyện thành công thường bắt đầu bằng quá trình nỗ lực (する), rồi tới kết quả đạt được (なる).",
+        "hint": "Xem mạch kể chuyện ở slide 3."
+      },
+      {
+        "id": "ex-q-n3-2-4",
+        "question": "「体重が増えないように気をつけています」 — ないように dùng để:",
+        "options": [
+          "Diễn tả nỗ lực để TRÁNH một điều không mong muốn (tăng cân)",
+          "Diễn tả mong muốn tăng cân",
+          "Phủ định việc đã tăng cân",
+          "Ra lệnh phải tăng cân"
+        ],
+        "correctIndex": 0,
+        "explanation": "V(ない)+ように+します diễn tả cố gắng để KHÔNG xảy ra điều gì — ở đây là tránh tăng cân.",
+        "hint": "Xem cấu trúc phủ định ở slide 4."
+      },
+      {
+        "id": "ex-q-n3-2-5",
+        "question": "「病気で走れないようになりました」 (ôn N4 bài 36) diễn tả:",
+        "options": [
+          "Mất dần khả năng chạy theo thời gian (do bệnh)",
+          "Đang cố gắng để không chạy được",
+          "Chưa bao giờ chạy được",
+          "Sắp có thể chạy lại"
+        ],
+        "correctIndex": 0,
+        "explanation": "ようになりました + thể ない diễn tả MẤT dần một khả năng đã từng có — chiều ngược của việc đạt được khả năng mới.",
+        "hint": "Ôn lại kiến thức đã học ở N4 bài 36."
+      },
+      {
+        "id": "ex-q-n3-2-6",
+        "question": "心掛けます gần nghĩa với động từ nào đã học?",
+        "options": [
+          "気を付けます (chú ý, lưu tâm)",
+          "忘れます (quên)",
+          "疲れます (mệt)",
+          "諦めます (từ bỏ, chưa học)"
+        ],
+        "correctIndex": 0,
+        "explanation": "心掛けます và 気を付けます đều diễn tả việc LUÔN ĐỂ TÂM thực hiện điều gì đó một cách có ý thức.",
+        "hint": "Xem nghĩa từ vựng ở phần từ vựng."
+      },
+      {
+        "id": "ex-q-n3-2-7",
+        "question": "「努力の結果です」 nghĩa là:",
+        "options": [
+          "Đây là kết quả của sự nỗ lực",
+          "Đây là điều ngẫu nhiên",
+          "Không có kết quả gì cả",
+          "Nỗ lực đã thất bại"
+        ],
+        "correctIndex": 0,
+        "explanation": "努力の結果 (kết quả của nỗ lực) thường xuất hiện cuối câu chuyện thành công, kết nối trực tiếp với ようにしていました→ようになりました.",
+        "hint": "Xem ví dụ ở slide 3."
+      },
+      {
+        "id": "ex-q-n3-2-8",
+        "question": "Câu nào ĐÚNG khi nói 'tôi sẽ cố gắng ý thức về sức khỏe'?",
+        "options": [
+          "健康を意識するようにしようと思います",
+          "健康を意識するようになろうと思います",
+          "健康を意識したわけではありません",
+          "健康を意識するわけがありません"
+        ],
+        "correctIndex": 0,
+        "explanation": "ようにしよう (thể ý chí của ようにする, N4 bài 31) + と思います diễn tả dự định sẽ NỖ LỰC làm gì.",
+        "hint": "Kết hợp kiến thức thể ý chí (N4 bài 31) với ようにする."
+      },
+      {
+        "id": "ex-q-n3-2-9",
+        "question": "Trong hội thoại, kết quả tập thể dục của Yamada là gì?",
+        "options": [
+          "Cơ thể khỏe hơn và ăn được rau",
+          "Không có thay đổi gì",
+          "Bị ốm nặng hơn",
+          "Tăng cân nhiều"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yamada nói 「体が強くなりました。野菜も食べるようになりました」.",
+        "hint": "Xem câu thoại thứ 4."
+      },
+      {
+        "id": "ex-q-n3-2-10",
+        "question": "Yamada khuyên Tanaka nên làm gì đơn giản mà hiệu quả?",
+        "options": [
+          "Cố gắng ngủ sớm",
+          "Tập thể dục cường độ cao",
+          "Ăn kiêng nghiêm ngặt",
+          "Không cần làm gì"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yamada nói 「早く寝るようにするだけでも効果的ですよ」.",
+        "hint": "Xem câu thoại thứ 8."
       }
     ]
   },

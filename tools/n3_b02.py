@@ -1,0 +1,245 @@
+# -*- coding: utf-8 -*-
+"""N3 — Bai 2: No luc chu dong ようにする, on lai va mo rong ようになる (N4 bai 36).
+
+Tu vung minh hoa TU CHON tu pool mo data/jlpt-vocab/n3.csv (xem NOTICE.md).
+"""
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from n3_lib import v, k, t, ex, slide, line, q, lesson, merge
+from jlpt_pool import Pool
+
+L = 2
+pool = Pool("n3")
+
+VOCAB = [
+    v(1,  "どりょくします", "努力します", "どりょくします", "doryoku shimasu", "verb", "Nỗ lực, cố gắng", "早く 寝る ように 努力しています = tôi đang nỗ lực để ngủ sớm.", L),
+    v(2,  "いしきします", "意識します", "いしきします", "ishiki shimasu", "verb", "Ý thức, chú tâm tới", "健康を 意識する ように なりました = tôi đã trở nên ý thức về sức khỏe.", L),
+    v(3,  "きをつけます", "気を付けます", "きをつけます", "ki o tsukemasu", "verb", "Cẩn thận, lưu ý", "Đã gặp N5 bài 15. 忘れない ように 気を付けます = tôi chú ý để không quên.", L),
+    v(4,  "こころがけます", "心掛けます", "こころがけます", "kokorogakemasu", "verb", "Luôn để tâm, chú tâm thực hiện", "毎日 運動する ように 心掛けています = tôi luôn để tâm tập thể dục mỗi ngày.", L),
+    v(5,  "うんどうします", "運動します", "うんどうします", "undou shimasu", "verb", "Vận động, tập thể dục", "Đã gặp N4 bài 27.", L),
+    v(6,  "たべます", "食べます", "たべます", "tabemasu", "verb", "Ăn", "Đã gặp N5 bài 6 — nay dùng làm ví dụ ようにする.", L),
+    v(7,  "ねます", "寝ます", "ねます", "nemasu", "verb", "Đi ngủ", "Đã gặp N5 bài 4.", L),
+    v(8,  "おきます", "起きます", "おきます", "okimasu", "verb", "Thức dậy", "Đã gặp N5 bài 4.", L),
+    v(9,  "けんこう", "健康", "けんこう", "kenkou", "adjective", "Sức khỏe, khỏe mạnh", "Đã gặp N4 bài 32.", L),
+    v(10, "せいかつ", "生活", "せいかつ", "seikatsu", "noun", "Cuộc sống, sinh hoạt", "Đã gặp N4 bài 28.", L),
+    v(11, "しゅうかん", "習慣", "しゅうかん", "shuukan", "noun", "Thói quen", "Đã gặp N4 bài 28.", L),
+    v(12, "やさい", "野菜", "やさい", "yasai", "noun", "Rau", "Đã gặp N5 bài 6.", L),
+    v(13, "たいじゅう", "体重", "たいじゅう", "taijuu", "noun", "Cân nặng", "Đã gặp N4 bài 32.", L),
+    v(14, "いしき", "意識", "いしき", "ishiki", "noun", "Ý thức", "健康を 意識して います = tôi đang có ý thức về sức khỏe.", L),
+    v(15, "どりょく", "努力", "どりょく", "doryoku", "noun", "Sự nỗ lực, sự cố gắng", "努力すれば、できます = nếu nỗ lực thì làm được.", L),
+    v(16, "びょうき", "病気", "びょうき", "byouki", "noun", "Bệnh, ốm", "Đã gặp N5 bài 17.", L),
+    v(17, "しごと", "仕事", "しごと", "shigoto", "noun", "Công việc", "Đã gặp N5 bài 9.", L),
+    v(18, "じかん", "時間", "じかん", "jikan", "noun", "Thời gian", "Đã gặp N5 bài 4.", L),
+    v(19, "からだ", "体", "からだ", "karada", "noun", "Cơ thể, sức khỏe", "Đã gặp N5 bài 16.", L),
+    v(20, "まいにち", "毎日", "まいにち", "mainichi", "adverb", "Mỗi ngày, hằng ngày", "Đã gặp N5 bài 4.", L),
+]
+
+KANJI = [
+    k(1, "努", "NỖ", 7, ["ド (do)"], ["つと(める)"], "Nỗ lực, gắng sức.",
+      [("努力", "どりょく", "Nỗ lực"), ("努めます", "つとめます", "Cố gắng, làm việc")], L),
+    k(2, "力", "LỰC", 2, ["リョク (ryoku)"], ["ちから"], "Sức lực, năng lực.",
+      [("努力", "どりょく", "Nỗ lực"), ("力", "ちから", "Sức mạnh"), ("能力", "のうりょく", "Năng lực")], L),
+    k(3, "識", "THỨC", 19, ["シキ (shiki)"], [], "Nhận thức, ý thức.",
+      [("意識", "いしき", "Ý thức"), ("知識", "ちしき", "Kiến thức"), ("常識", "じょうしき", "Thường thức")], L),
+    k(4, "掛", "QUẢI", 11, ["カイ (kai)"], ["か(ける)"], "Treo lên; để tâm (chỉ ghép trong 心掛ける).",
+      [("心掛けます", "こころがけます", "Để tâm thực hiện"), ("眼鏡を掛けます", "めがねをかけます", "Đeo kính")], L),
+    k(5, "康", "KHANG", 11, ["コウ (kou)"], [], "An khang, khỏe mạnh. Đã gặp N4 bài 32.",
+      [("健康", "けんこう", "Sức khỏe")], L),
+]
+
+SLIDES = [
+    slide(L, 1,
+        "1. Nỗ lực chủ động: [Thể từ điển/ない] ように します",
+        "V(từ điển) + ように します  (đang cố gắng để đạt trạng thái đó, chưa chắc đã thành công)",
+        "ようにする diễn tả NỖ LỰC CHỦ ĐỘNG của người nói để đạt được một mục tiêu — nhấn HÀNH "
+        "ĐỘNG cố gắng, KHÁC HẲN ようになる (N4 bài 36) vốn nhấn KẾT QUẢ đã đạt được.",
+        [
+            ex(L, 1, 1, [t("t-l2s1-1", "はやく", "早く", "はやく"), t("t-l2s1-2", "ねる", "寝る", "ねる"),
+                         t("t-l2s1-3", "ように", key=True), t("t-l2s1-4", "して", key=True), t("t-l2s1-5", "います", "居ます", "います")],
+               "Tôi đang cố gắng để ngủ sớm."),
+            ex(L, 1, 2, [t("t-l2s1-6", "やさい", "野菜", "やさい"), t("t-l2s1-7", "を"),
+                         t("t-l2s1-8", "たべる", "食べる", "たべる"), t("t-l2s1-9", "ように", key=True),
+                         t("t-l2s1-10", "しています", key=True)],
+               "Tôi đang cố gắng ăn rau (dù có thể chưa thành thói quen hẳn)."),
+        ],
+        tips="ようにしています (đang trong quá trình nỗ lực) khác hẳn ようになりました (N4 bài 36, ĐÃ đạt kết quả) — chọn đúng để không nói sai mức độ thành công.",
+        culture="早く寝るようにしています là câu trả lời khiêm tốn phổ biến khi được hỏi về thói quen sống lành mạnh — nhấn mạnh đang CỐ GẮNG chứ chưa chắc hoàn hảo."),
+
+    slide(L, 2,
+        "2. Ôn lại ようになる (N4 bài 36): kết quả đạt được",
+        "V(khả năng/từ điển) + ように なりました  (ĐÃ đạt được, thành thói quen/năng lực mới)",
+        "So sánh trực tiếp với slide 1: ようになる báo hiệu sự THAY ĐỔI ĐÃ HOÀN TẤT, trong khi "
+        "ようにする chỉ là NỖ LỰC đang diễn ra, kết quả có thể chưa chắc chắn.",
+        [
+            ex(L, 2, 1, [t("t-l2s2-1", "やさい", "野菜", "やさい"), t("t-l2s2-2", "を"),
+                         t("t-l2s2-3", "たべる", "食べる", "たべる"), t("t-l2s2-4", "ように", key=True),
+                         t("t-l2s2-5", "なりました", key=True)],
+               "Tôi đã (dần) ăn rau được rồi. (KẾT QUẢ đã đạt, khác slide 1 chỉ là đang cố gắng)"),
+            ex(L, 2, 2, [t("t-l2s2-6", "けんこう", "健康", "けんこう"), t("t-l2s2-7", "を"),
+                         t("t-l2s2-8", "いしき", "意識", "いしき", key=True), t("t-l2s2-9", "する", key=True),
+                         t("t-l2s2-10", "ように", key=True), t("t-l2s2-11", "なりました", key=True)],
+               "Tôi đã trở nên ý thức về sức khỏe."),
+        ],
+        tips="Cặp する/なる y hệt cặp させる/られる (bài 48-37): する là CHỦ ĐỘNG nỗ lực, なる là kết quả TỰ NHIÊN hình thành sau quá trình đó.",
+        culture="野菜を食べるようになりました (đã ăn rau được) thường là câu tiếp nối tự nhiên sau khi kể về quá trình 食べるようにしていました (đã từng cố gắng)."),
+
+    slide(L, 3,
+        "3. Chuỗi câu chuyện: ようにする (nỗ lực) → ようになる (kết quả)",
+        "はじめ、Vようにしていました。 そして、Vように なりました。",
+        "Hai cấu trúc thường XUẤT HIỆN NỐI TIẾP trong một câu chuyện: kể lại QUÁ TRÌNH nỗ lực "
+        "trước, rồi công bố KẾT QUẢ đạt được sau — một mạch kể chuyện rất tự nhiên trong tiếng Nhật.",
+        [
+            ex(L, 3, 1, [t("t-l2s3-1", "はじめ", "初め", "はじめ"), t("t-l2s3-2", "、"),
+                         t("t-l2s3-3", "まいにち", "毎日", "まいにち"), t("t-l2s3-4", "うんどう", "運動", "うんどう", key=True),
+                         t("t-l2s3-5", "する", key=True), t("t-l2s3-6", "ように", key=True), t("t-l2s3-7", "して", key=True),
+                         t("t-l2s3-8", "いました", "居ました", "いました")],
+               "Ban đầu, tôi đã cố gắng tập thể dục mỗi ngày."),
+            ex(L, 3, 2, [t("t-l2s3-9", "いま", "今", "いま"), t("t-l2s3-10", "は"),
+                         t("t-l2s3-11", "からだ", "体", "からだ", key=True), t("t-l2s3-12", "が"),
+                         t("t-l2s3-13", "つよく", "強く", "つよく"), t("t-l2s3-14", "なりました", key=True), t("t-l2s3-15", "。"),
+                         t("t-l2s3-16", "どりょく", "努力", "どりょく", key=True), t("t-l2s3-17", "の"),
+                         t("t-l2s3-18", "けっか", "結果", "けっか"), t("t-l2s3-19", "です")],
+               "Bây giờ cơ thể tôi đã khỏe hơn. Đây là kết quả của sự nỗ lực."),
+        ],
+        tips="Kể chuyện thành công cá nhân theo trình tự này giúp câu chuyện có mạch NGUYÊN NHÂN (nỗ lực) - KẾT QUẢ (thay đổi) rõ ràng, thuyết phục.",
+        culture="Bài luận, phỏng vấn xin việc ở Nhật thường dùng đúng mẫu 'ようにしていました→ようになりました' để kể về quá trình rèn luyện bản thân."),
+
+    slide(L, 4,
+        "4. Phủ định: V(ない) ように します／なります",
+        "V(ない形) + ように します  (cố gắng ĐỂ KHÔNG làm gì)　　V(ない形) + ように なります (dần KHÔNG làm nữa/mất khả năng)",
+        "Cả hai cấu trúc đều ghép được với thể ない để diễn tả hướng NGƯỢC LẠI — cố gắng tránh một "
+        "hành vi, hoặc dần dần MẤT khả năng làm việc gì đó theo thời gian.",
+        [
+            ex(L, 4, 1, [t("t-l2s4-1", "たいじゅう", "体重", "たいじゅう", key=True), t("t-l2s4-2", "が"),
+                         t("t-l2s4-3", "ふえない", "増えない", "ふえない"), t("t-l2s4-4", "ように", key=True),
+                         t("t-l2s4-5", "きを", "気を", "きを"), t("t-l2s4-6", "つけて", "付けて", "つけて"),
+                         t("t-l2s4-7", "います", "居ます", "います")],
+               "Tôi đang chú ý để cân nặng không tăng lên."),
+            ex(L, 4, 2, [t("t-l2s4-8", "びょうき", "病気", "びょうき", key=True), t("t-l2s4-9", "で"),
+                         t("t-l2s4-10", "はしれない", "走れない", "はしれない"), t("t-l2s4-11", "ように", key=True),
+                         t("t-l2s4-12", "なりました", key=True)],
+               "Vì bệnh nên tôi (dần) không chạy được nữa. (đã học N4 bài 36 — ôn lại chiều nghịch)"),
+        ],
+        tips="気をつけます (chú ý, N5 bài 15) rất hay ghép cùng ないように để diễn tả 'cẩn thận để không...' — cặp cố định thường gặp.",
+        culture="太らないように気をつけています là câu trả lời phổ biến của người Nhật khi được hỏi về bí quyết giữ dáng."),
+]
+
+DIALOGUE = [
+    line(L, 1, "田中", "Đồng nghiệp",
+         [t("d2-1", "さいきん", "最近", "さいきん"), t("d2-2", "、"), t("d2-3", "けんこう", "健康", "けんこう", key=True),
+          t("d2-4", "の", key=True), t("d2-5", "ために", key=True), t("d2-6", "なにか", "何か", "なにか"),
+          t("d2-7", "して", key=True), t("d2-8", "いますか", "居ますか", "いますか")],
+         "Gần đây, vì sức khỏe anh có làm gì không?"),
+    line(L, 2, "山田", "Nhân viên công ty",
+         [t("d2-9", "はい"), t("d2-10", "。"), t("d2-11", "まいにち", "毎日", "まいにち", key=True), t("d2-12", "うんどう", "運動", "うんどう", key=True),
+          t("d2-13", "する", key=True), t("d2-14", "ように", key=True), t("d2-15", "して", key=True),
+          t("d2-16", "います", "居ます", "います")],
+         "Vâng, tôi đang cố gắng tập thể dục mỗi ngày."),
+    line(L, 3, "田中", "Đồng nghiệp",
+         [t("d2-17", "けっか", "結果", "けっか"), t("d2-18", "は"), t("d2-19", "どうですか")],
+         "Kết quả thế nào rồi?"),
+    line(L, 4, "山田", "Nhân viên công ty",
+         [t("d2-20", "からだ", "体", "からだ", key=True), t("d2-21", "が"), t("d2-22", "つよく", "強く", "つよく"),
+          t("d2-23", "なりました", key=True), t("d2-24", "。"), t("d2-25", "やさい", "野菜", "やさい", key=True),
+          t("d2-26", "も"), t("d2-27", "たべる", "食べる", "たべる"), t("d2-28", "ように", key=True), t("d2-29", "なりました", key=True)],
+         "Cơ thể tôi đã khỏe hơn. Tôi cũng đã ăn được rau nữa."),
+    line(L, 5, "田中", "Đồng nghiệp",
+         [t("d2-30", "すごい"), t("d2-31", "ですね"), t("d2-32", "。"), t("d2-33", "どりょく", "努力", "どりょく", key=True),
+          t("d2-34", "の"), t("d2-35", "けっか", "結果", "けっか"), t("d2-36", "です"), t("d2-37", "ね")],
+         "Giỏi thật đấy. Là kết quả của nỗ lực đấy nhỉ."),
+    line(L, 6, "山田", "Nhân viên công ty",
+         [t("d2-38", "はい"), t("d2-39", "。"), t("d2-40", "たいじゅう", "体重", "たいじゅう", key=True),
+          t("d2-41", "が"), t("d2-42", "ふえない", "増えない", "ふえない"), t("d2-43", "ように", key=True),
+          t("d2-44", "も"), t("d2-45", "きを", "気を", "きを"), t("d2-46", "つけて", "付けて", "つけて"),
+          t("d2-47", "います", "居ます", "います")],
+         "Vâng. Tôi cũng đang chú ý để cân nặng không tăng lên."),
+    line(L, 7, "田中", "Đồng nghiệp",
+         [t("d2-48", "わたし", "私", "わたし"), t("d2-49", "も"), t("d2-50", "けんこう", "健康", "けんこう", key=True),
+          t("d2-51", "を"), t("d2-52", "いしき", "意識", "いしき", key=True), t("d2-53", "する", key=True), t("d2-54", "ように", key=True),
+          t("d2-55", "しよう", "しよう", "しよう"), t("d2-56", "と"), t("d2-57", "おもいます", "思います", "おもいます")],
+         "Tôi cũng nghĩ sẽ cố gắng ý thức về sức khỏe."),
+    line(L, 8, "山田", "Nhân viên công ty",
+         [t("d2-58", "いいですね"), t("d2-59", "。"), t("d2-60", "はやく", "早く", "はやく"), t("d2-61", "ねる", "寝る", "ねる"),
+          t("d2-62", "ように", key=True), t("d2-63", "する", key=True), t("d2-64", "だけ"),
+          t("d2-65", "でも"), t("d2-66", "こうかてき", "効果的", "こうかてき"), t("d2-67", "です"), t("d2-68", "よ")],
+         "Hay đó. Chỉ cần cố gắng ngủ sớm thôi cũng hiệu quả lắm đấy."),
+    line(L, 9, "田中", "Đồng nghiệp",
+         [t("d2-69", "わかりました", "分かりました", "わかりました"), t("d2-70", "。"), t("d2-71", "きょう", "今日", "きょう"),
+          t("d2-72", "から"), t("d2-73", "はやく", "早く", "はやく"), t("d2-74", "ねる", "寝る", "ねる"),
+          t("d2-75", "ように", key=True), t("d2-76", "します", key=True)],
+         "Tôi hiểu rồi. Từ hôm nay tôi sẽ cố gắng ngủ sớm."),
+    line(L, 10, "山田", "Nhân viên công ty",
+         [t("d2-77", "がんばって", "頑張って", "がんばって"), t("d2-78", "ください"), t("d2-79", "。"),
+          t("d2-80", "きっと"), t("d2-81", "できる", "できる", "できる"), t("d2-82", "ように", key=True),
+          t("d2-83", "なります", key=True)],
+         "Cố lên nhé. Chắc chắn anh sẽ làm được thôi."),
+]
+
+EXERCISES = [
+    q(L, 1, "「早く寝るようにしています」 diễn tả điều gì?",
+      ["Đang NỖ LỰC để đạt trạng thái đó (chưa chắc thành công hoàn toàn)",
+       "Đã ĐẠT ĐƯỢC thói quen đó rồi", "Sẽ không bao giờ làm được điều đó",
+       "Đã từng làm nhưng đã bỏ"], 0,
+      "ようにしています nhấn mạnh HÀNH ĐỘNG NỖ LỰC đang diễn ra, khác ようになりました đã đạt kết quả.",
+      "Xem giải thích ở slide 1."),
+    q(L, 2, "「野菜を食べるようになりました」 (N4 bài 36) khác 「野菜を食べるようにしています」 ở:",
+      ["ようになりました là KẾT QUẢ đã đạt; ようにしています là NỖ LỰC đang diễn ra",
+       "Hoàn toàn giống nhau", "ようになりました chỉ dùng cho phủ định",
+       "ようにしています là thì quá khứ"], 0,
+      "Đây là điểm khác biệt cốt lõi giữa hai cấu trúc — する (nỗ lực chủ động) và なる (kết quả tự nhiên).",
+      "So sánh trực tiếp ở slide 2."),
+    q(L, 3, "Mạch câu chuyện tự nhiên thường đi theo thứ tự nào?",
+      ["ようにしていました (kể quá trình nỗ lực) → ようになりました (công bố kết quả)",
+       "ようになりました → ようにしていました", "Cả hai luôn xuất hiện cùng lúc",
+       "Không có thứ tự cố định nào"], 0,
+      "Kể chuyện thành công thường bắt đầu bằng quá trình nỗ lực (する), rồi tới kết quả đạt được (なる).",
+      "Xem mạch kể chuyện ở slide 3."),
+    q(L, 4, "「体重が増えないように気をつけています」 — ないように dùng để:",
+      ["Diễn tả nỗ lực để TRÁNH một điều không mong muốn (tăng cân)",
+       "Diễn tả mong muốn tăng cân", "Phủ định việc đã tăng cân",
+       "Ra lệnh phải tăng cân"], 0,
+      "V(ない)+ように+します diễn tả cố gắng để KHÔNG xảy ra điều gì — ở đây là tránh tăng cân.",
+      "Xem cấu trúc phủ định ở slide 4."),
+    q(L, 5, "「病気で走れないようになりました」 (ôn N4 bài 36) diễn tả:",
+      ["Mất dần khả năng chạy theo thời gian (do bệnh)", "Đang cố gắng để không chạy được",
+       "Chưa bao giờ chạy được", "Sắp có thể chạy lại"], 0,
+      "ようになりました + thể ない diễn tả MẤT dần một khả năng đã từng có — chiều ngược của việc đạt được khả năng mới.",
+      "Ôn lại kiến thức đã học ở N4 bài 36."),
+    q(L, 6, "心掛けます gần nghĩa với động từ nào đã học?",
+      ["気を付けます (chú ý, lưu tâm)", "忘れます (quên)",
+       "疲れます (mệt)", "諦めます (từ bỏ, chưa học)"], 0,
+      "心掛けます và 気を付けます đều diễn tả việc LUÔN ĐỂ TÂM thực hiện điều gì đó một cách có ý thức.",
+      "Xem nghĩa từ vựng ở phần từ vựng."),
+    q(L, 7, "「努力の結果です」 nghĩa là:",
+      ["Đây là kết quả của sự nỗ lực", "Đây là điều ngẫu nhiên",
+       "Không có kết quả gì cả", "Nỗ lực đã thất bại"], 0,
+      "努力の結果 (kết quả của nỗ lực) thường xuất hiện cuối câu chuyện thành công, kết nối trực tiếp với ようにしていました→ようになりました.",
+      "Xem ví dụ ở slide 3."),
+    q(L, 8, "Câu nào ĐÚNG khi nói 'tôi sẽ cố gắng ý thức về sức khỏe'?",
+      ["健康を意識するようにしようと思います", "健康を意識するようになろうと思います",
+       "健康を意識したわけではありません", "健康を意識するわけがありません"], 0,
+      "ようにしよう (thể ý chí của ようにする, N4 bài 31) + と思います diễn tả dự định sẽ NỖ LỰC làm gì.",
+      "Kết hợp kiến thức thể ý chí (N4 bài 31) với ようにする."),
+    q(L, 9, "Trong hội thoại, kết quả tập thể dục của Yamada là gì?",
+      ["Cơ thể khỏe hơn và ăn được rau", "Không có thay đổi gì", "Bị ốm nặng hơn", "Tăng cân nhiều"], 0,
+      "Yamada nói 「体が強くなりました。野菜も食べるようになりました」.",
+      "Xem câu thoại thứ 4."),
+    q(L, 10, "Yamada khuyên Tanaka nên làm gì đơn giản mà hiệu quả?",
+      ["Cố gắng ngủ sớm", "Tập thể dục cường độ cao", "Ăn kiêng nghiêm ngặt", "Không cần làm gì"], 0,
+      "Yamada nói 「早く寝るようにするだけでも効果的ですよ」.",
+      "Xem câu thoại thứ 8."),
+]
+
+LESSON = lesson(
+    L,
+    "Bài 2: Thói quen & Biến đổi (ようにする & ようになる)",
+    "ようにする diễn tả NỖ LỰC CHỦ ĐỘNG để đạt một mục tiêu/thói quen (chưa chắc đã thành công), "
+    "đối lập với ようになる (N4 bài 36, KẾT QUẢ đã đạt được) — hai cấu trúc thường xuất hiện nối "
+    "tiếp trong mạch kể chuyện thành công (nỗ lực → kết quả), cả hai đều ghép được với thể ない để "
+    "diễn tả chiều ngược lại (tránh làm/mất khả năng).",
+    VOCAB, KANJI, SLIDES, DIALOGUE, EXERCISES,
+)
+
+if __name__ == "__main__":
+    pool.mark_used([w["word"] for w in VOCAB if w["word"]], lesson=L)
+    merge([LESSON])
