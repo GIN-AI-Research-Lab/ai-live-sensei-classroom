@@ -1,0 +1,242 @@
+# -*- coding: utf-8 -*-
+"""N3 — Bai 10: Nhuong bo bat ngo にもかかわらず (trang trong) va くせに (che trach, than mat).
+
+Tu vung minh hoa TU CHON tu pool mo data/jlpt-vocab/n3.csv (xem NOTICE.md).
+"""
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from n3_lib import v, k, t, ex, slide, line, q, lesson, merge
+from jlpt_pool import Pool
+
+L = 10
+pool = Pool("n3")
+
+VOCAB = [
+    v(1,  "さいのう", "才能", "さいのう", "sainou", "noun", "Tài năng, năng khiếu", "才能が あります = có tài năng.", L),
+    v(2,  "もんく", "文句", "もんく", "monku", "noun", "Lời phàn nàn, ca thán", "文句を 言います = phàn nàn.", L),
+    v(3,  "ふまん", "不満", "ふまん", "fuman", "noun", "Sự bất mãn, không hài lòng", "不満が あります = có sự bất mãn.", L),
+    v(4,  "まずしい", "貧しい", "まずしい", "mazushii", "adjective", "Nghèo", "貧しい 生活 = cuộc sống nghèo khó.", L),
+    v(5,  "さんかします", "参加します", "さんかします", "sanka shimasu", "verb", "Tham gia", "大会に 参加します = tham gia đại hội.", L),
+    v(6,  "ゆうしゅう", "優秀", "ゆうしゅう", "yuushuu", "adjective", "Xuất sắc, ưu tú", "優秀な 学生 = học sinh xuất sắc.", L),
+    v(7,  "ちゅうしします", "中止します", "ちゅうしします", "chuushi shimasu", "verb", "Hủy bỏ, dừng lại", "試合を 中止します = hủy trận đấu.", L),
+    v(8,  "たいど", "態度", "たいど", "taido", "noun", "Thái độ", "Đã gặp N3 bài 5.", L),
+    v(9,  "どりょくします", "努力します", "どりょくします", "doryoku shimasu", "verb", "Nỗ lực, cố gắng", "Đã gặp N3 bài 8.", L),
+    v(10, "しあい", "試合", "しあい", "shiai", "noun", "Trận đấu", "Đã gặp N4 bài 33.", L),
+    v(11, "あめ", "雨", "あめ", "ame", "noun", "Mưa", "Đã gặp N5 bài 1.", L),
+    v(12, "こども", "子供", "こども", "kodomo", "noun", "Trẻ em", "Đã gặp N5 bài 1.", L),
+    v(13, "いいます", "言います", "いいます", "iimasu", "verb", "Nói", "Đã gặp N5 bài 6.", L),
+    v(14, "たいかい", "大会", "たいかい", "taikai", "noun", "Đại hội", "Đã gặp N3 bài 7.", L),
+    v(15, "がんばります", "頑張ります", "がんばります", "ganbarimasu", "verb", "Cố gắng, nỗ lực", "Đã gặp N4 bài 32.", L),
+    v(16, "おかね", "お金", "おかね", "okane", "noun", "Tiền", "Đã gặp N5 bài 1.", L),
+    v(17, "わかい", "若い", "わかい", "wakai", "adjective", "Trẻ, còn trẻ tuổi", "Đã gặp N4 bài 33.", L),
+    v(18, "かいしゃ", "会社", "かいしゃ", "kaisha", "noun", "Công ty", "Đã gặp N5 bài 1.", L),
+    v(19, "しごと", "仕事", "しごと", "shigoto", "noun", "Công việc", "Đã gặp N4 bài 26.", L),
+    v(20, "いそがしい", "忙しい", "いそがしい", "isogashii", "adjective", "Bận rộn", "Đã gặp N4 bài 26.", L),
+]
+
+KANJI = [
+    k(1, "才", "TÀI", 3, ["サイ (sai)"], [], "Tài năng, năng khiếu.",
+      [("才能", "さいのう", "Tài năng"), ("天才", "てんさい", "Thiên tài")], L),
+    k(2, "句", "CÚ", 5, ["ク (ku)"], [], "Câu, cụm từ.",
+      [("文句", "もんく", "Lời phàn nàn"), ("句読点", "くとうてん", "Dấu câu")], L),
+    k(3, "満", "MÃN", 12, ["マン (man)"], [], "Đầy, mãn nguyện.",
+      [("不満", "ふまん", "Bất mãn"), ("満足", "まんぞく", "Mãn nguyện, hài lòng")], L),
+    k(4, "貧", "BẦN", 11, ["ヒン (hin)"], ["まず(しい)"], "Nghèo, bần cùng.",
+      [("貧しい", "まずしい", "Nghèo"), ("貧乏", "びんぼう", "Nghèo túng")], L),
+    k(5, "秀", "TÚ", 7, ["シュウ (shuu)"], [], "Xuất sắc, tú lệ.",
+      [("優秀", "ゆうしゅう", "Xuất sắc")], L),
+]
+
+SLIDES = [
+    slide(L, 1,
+        "1. Bất chấp, trang trọng: [thể thường] にもかかわらず、[kết quả bất ngờ]",
+        "[Thể thường/N+である] + にもかかわらず、[kết quả trái với kỳ vọng]",
+        "にもかかわらず diễn tả 'MẶC DÙ/BẤT CHẤP' một điều kiện, kết quả xảy ra TRÁI VỚI KỲ VỌNG "
+        "THÔNG THƯỜNG — văn phong TRANG TRỌNG, khách quan, thường dùng trong báo cáo, tin tức.",
+        [
+            ex(L, 1, 1, [t("t-l10s1-1", "あめ", "雨", "あめ", key=True), t("t-l10s1-2", "にも", key=True),
+                         t("t-l10s1-3", "かかわらず", key=True), t("t-l10s1-4", "、"), t("t-l10s1-5", "しあい", "試合", "しあい", key=True),
+                         t("t-l10s1-6", "が"), t("t-l10s1-7", "おこなわれました", "行われました", "おこなわれました")],
+               "Mặc dù trời mưa, trận đấu vẫn được tổ chức."),
+            ex(L, 1, 2, [t("t-l10s1-8", "さいのう", "才能", "さいのう", key=True), t("t-l10s1-9", "が"),
+                         t("t-l10s1-10", "ある"), t("t-l10s1-11", "にも", key=True), t("t-l10s1-12", "かかわらず", key=True),
+                         t("t-l10s1-13", "、"), t("t-l10s1-14", "どりょく", "努力", "どりょく", key=True), t("t-l10s1-15", "しません")],
+               "Mặc dù có tài năng, nhưng anh ấy lại không nỗ lực."),
+        ],
+        tips="にもかかわらず có thể đứng sau cả câu văn (chủ thể có thể khác với vế sau) — thường thấy trong văn viết báo cáo, bài luận.",
+        culture="Bản tin thời tiết Nhật hay dùng: '大雨にもかかわらず、大会は予定通り行われました' (mặc dù mưa to, đại hội vẫn được tổ chức theo kế hoạch)."),
+
+    slide(L, 2,
+        "2. Chê trách, thân mật: [thể thường] くせに、[hành động đáng trách]",
+        "[Thể thường/N+の] + くせに、[hành động/thái độ đáng chê trách]",
+        "くせに cũng nghĩa 'MẶC DÙ' nhưng luôn mang SẮC THÁI CHÊ TRÁCH/KHÓ CHỊU của người nói đối "
+        "với chủ thể trong câu — chỉ dùng trong hội thoại THÂN MẬT, KHÔNG dùng để nói về bản thân mình.",
+        [
+            ex(L, 2, 1, [t("t-l10s2-1", "こども", "子供", "こども", key=True), t("t-l10s2-2", "の"),
+                         t("t-l10s2-3", "くせに", key=True), t("t-l10s2-4", "、"), t("t-l10s2-5", "もんく", "文句", "もんく", key=True),
+                         t("t-l10s2-6", "ばかり"), t("t-l10s2-7", "いいます", "言います", "いいます")],
+               "Còn là trẻ con mà cứ phàn nàn suốt."),
+            ex(L, 2, 2, [t("t-l10s2-8", "さいのう", "才能", "さいのう", key=True), t("t-l10s2-9", "が"),
+                         t("t-l10s2-10", "ある"), t("t-l10s2-11", "くせに", key=True), t("t-l10s2-12", "、"),
+                         t("t-l10s2-13", "どりょく", "努力", "どりょく", key=True), t("t-l10s2-14", "しません")],
+               "Có tài mà lại không chịu nỗ lực."),
+        ],
+        tips="くせに TUYỆT ĐỐI không dùng cho bản thân người nói (không nói '私は〜くせに') vì mang tính chê trách người khác.",
+        culture="Câu mắng nhẹ của cha mẹ Nhật với con: '子供のくせに、生意気なことを言わないで' (còn là trẻ con thì đừng nói những lời hỗn xược)."),
+
+    slide(L, 3,
+        "3. So sánh sắc thái: にもかかわらず (khách quan) vs くせに (chê trách)",
+        "Cùng nghĩa 'mặc dù' nhưng にもかかわらず TRANG TRỌNG/KHÁCH QUAN　vs　くせに THÂN MẬT/CHÊ TRÁCH",
+        "Hai câu có cấu trúc giống hệt nhau nhưng SẮC THÁI khác hẳn: にもかかわらず chỉ nêu SỰ "
+        "TƯƠNG PHẢN khách quan (không phán xét); くせに luôn ẩn chứa cảm xúc KHÓ CHỊU/PHÊ PHÁN của người nói.",
+        [
+            ex(L, 3, 1, [t("t-l10s3-1", "まずしい", "貧しい", "まずしい", key=True), t("t-l10s3-2", "にも", key=True),
+                         t("t-l10s3-3", "かかわらず", key=True), t("t-l10s3-4", "、"), t("t-l10s3-5", "しあわせ", "幸せ", "しあわせ"),
+                         t("t-l10s3-6", "そうです", "そうです", "そうです")],
+               "Mặc dù nghèo, nhưng trông có vẻ hạnh phúc. (khách quan, không chê trách)"),
+            ex(L, 3, 2, [t("t-l10s3-7", "おかね", "お金", "おかね", key=True), t("t-l10s3-8", "が"),
+                         t("t-l10s3-9", "ある"), t("t-l10s3-10", "くせに", key=True), t("t-l10s3-11", "、"),
+                         t("t-l10s3-12", "だしません", "出しません", "だしません")],
+               "Có tiền mà lại không chịu chi ra. (chê trách, khó chịu)"),
+        ],
+        tips="Mẹo: nếu câu chỉ MÔ TẢ sự tương phản → にもかかわらず; nếu câu ẩn ý TRÁCH MÓC → くせに.",
+        culture="Trong bài luận, báo cáo chính thức chỉ dùng にもかかわらず — dùng くせに sẽ bị coi là thiếu lịch sự, quá suồng sã."),
+
+    slide(L, 4,
+        "4. Cách chia trước danh từ/tính từ な",
+        "N/Aな + である + にもかかわらず　　N + の / Aな (である) + くせに",
+        "Với DANH TỪ và TÍNH TỪ ĐUÔI な, にもかかわらず cần thêm である (trang trọng); còn くせに "
+        "dùng trực tiếp N+の hoặc Aな, không cần である (thân mật hơn).",
+        [
+            ex(L, 4, 1, [t("t-l10s4-1", "たいかい", "大会", "たいかい", key=True), t("t-l10s4-2", "が"),
+                         t("t-l10s4-3", "ちゅうし", "中止", "ちゅうし", key=True), t("t-l10s4-4", "である"),
+                         t("t-l10s4-5", "にも", key=True), t("t-l10s4-6", "かかわらず", key=True), t("t-l10s4-7", "、"),
+                         t("t-l10s4-8", "みんな"), t("t-l10s4-9", "きました", "来ました", "きました")],
+               "Mặc dù đại hội đã bị hủy, mọi người vẫn đến."),
+            ex(L, 4, 2, [t("t-l10s4-10", "こども", "子供", "こども", key=True), t("t-l10s4-11", "の"),
+                         t("t-l10s4-12", "くせに", key=True), t("t-l10s4-13", "、"), t("t-l10s4-14", "ふまん", "不満", "ふまん", key=True),
+                         t("t-l10s4-15", "ばかり"), t("t-l10s4-16", "いいます", "言います", "いいます")],
+               "Còn là trẻ con mà cứ than phiền suốt."),
+        ],
+        tips="Ghi nhớ: N+である+にもかかわらず (trang trọng) vs N+の+くせに (thân mật) — đừng nhầm lẫn である và の.",
+        culture="Trên báo cáo công ty Nhật: '優秀であるにもかかわらず、評価されなかった' (mặc dù xuất sắc nhưng không được đánh giá cao) — câu than phiền phổ biến về chế độ đãi ngộ."),
+]
+
+DIALOGUE = [
+    line(L, 1, "田中", "Đồng nghiệp",
+         [t("d10-1", "あめ", "雨", "あめ", key=True), t("d10-2", "にも", key=True), t("d10-3", "かかわらず", key=True),
+          t("d10-4", "、"), t("d10-5", "たいかい", "大会", "たいかい", key=True), t("d10-6", "に"),
+          t("d10-7", "さんか", "参加", "さんか", key=True), t("d10-8", "しました", "しました", "しました"), t("d10-9", "か")],
+         "Mặc dù trời mưa, bạn vẫn tham gia đại hội à?"),
+    line(L, 2, "サントス", "Đồng nghiệp",
+         [t("d10-10", "はい"), t("d10-11", "、"), t("d10-12", "しあい", "試合", "しあい", key=True), t("d10-13", "は"),
+          t("d10-14", "ちゅうし", "中止", "ちゅうし", key=True), t("d10-15", "されません"), t("d10-16", "でした")],
+         "Vâng, trận đấu đã không bị hủy."),
+    line(L, 3, "田中", "Đồng nghiệp",
+         [t("d10-17", "あの"), t("d10-18", "ひと", "人", "ひと"), t("d10-19", "は"), t("d10-20", "さいのう", "才能", "さいのう", key=True),
+          t("d10-21", "が"), t("d10-22", "ある"), t("d10-23", "くせに", key=True), t("d10-24", "、"),
+          t("d10-25", "がんばりません", "頑張りません", "がんばりません")],
+         "Người đó có tài mà lại không chịu cố gắng."),
+    line(L, 4, "サントス", "Đồng nghiệp",
+         [t("d10-26", "そうですね"), t("d10-27", "。"), t("d10-28", "どりょく", "努力", "どりょく", key=True), t("d10-29", "しない"),
+          t("d10-30", "たいど", "態度", "たいど", key=True), t("d10-31", "に"), t("d10-32", "ふまん", "不満", "ふまん", key=True),
+          t("d10-33", "が"), t("d10-34", "あります", "有ります", "あります")],
+         "Đúng vậy nhỉ. Tôi thấy bất mãn với thái độ không nỗ lực đó."),
+    line(L, 5, "田中", "Đồng nghiệp",
+         [t("d10-35", "わかい", "若い", "わかい", key=True), t("d10-36", "くせに", key=True), t("d10-37", "、"),
+          t("d10-38", "もんく", "文句", "もんく", key=True), t("d10-39", "ばかり"), t("d10-40", "いいます", "言います", "いいます"), t("d10-41", "ね")],
+         "Còn trẻ mà cứ hay phàn nàn nhỉ."),
+    line(L, 6, "サントス", "Đồng nghiệp",
+         [t("d10-42", "ゆうしゅう", "優秀", "ゆうしゅう", key=True), t("d10-43", "である"), t("d10-44", "にも", key=True),
+          t("d10-45", "かかわらず", key=True), t("d10-46", "、"), t("d10-47", "かいしゃ", "会社", "かいしゃ", key=True),
+          t("d10-48", "で"), t("d10-49", "みとめられません", "認められません", "みとめられません")],
+         "Mặc dù xuất sắc, nhưng lại không được công ty công nhận."),
+    line(L, 7, "田中", "Đồng nghiệp",
+         [t("d10-50", "それは"), t("d10-51", "ふまん", "不満", "ふまん", key=True), t("d10-52", "です", "です", "です"), t("d10-53", "ね")],
+         "Vậy thì đúng là bất mãn thật nhỉ."),
+    line(L, 8, "サントス", "Đồng nghiệp",
+         [t("d10-54", "しごと", "仕事", "しごと", key=True), t("d10-55", "が"), t("d10-56", "いそがしい", "忙しい", "いそがしい", key=True),
+          t("d10-57", "にも", key=True), t("d10-58", "かかわらず", key=True), t("d10-59", "、"),
+          t("d10-60", "きゅうりょう", "給料", "きゅうりょう"), t("d10-61", "は"), t("d10-62", "やすい", "安い", "やすい"), t("d10-63", "です")],
+         "Mặc dù công việc bận rộn, nhưng lương lại thấp."),
+    line(L, 9, "田中", "Đồng nghiệp",
+         [t("d10-64", "まずしい", "貧しい", "まずしい", key=True), t("d10-65", "くせに", key=True), t("d10-66", "、"),
+          t("d10-67", "おかね", "お金", "おかね", key=True), t("d10-68", "を"), t("d10-69", "つかいます", "使います", "つかいます")],
+         "Còn nghèo mà lại tiêu tiền."),
+    line(L, 10, "サントス", "Đồng nghiệp",
+         [t("d10-70", "はい"), t("d10-71", "、"), t("d10-72", "それも"), t("d10-73", "もんだい", "問題", "もんだい"),
+          t("d10-74", "です", "です", "です"), t("d10-75", "ね")],
+         "Vâng, đó cũng là một vấn đề nhỉ."),
+]
+
+EXERCISES = [
+    q(L, 1, "「雨にもかかわらず、試合が行われました」 — にもかかわらず diễn tả:",
+      ["Kết quả trái với kỳ vọng thông thường (dù mưa, trận đấu vẫn diễn ra), văn phong khách quan",
+       "Nguyên nhân trực tiếp của việc mưa", "So sánh hai trận đấu", "Phủ định việc mưa"], 0,
+      "にもかかわらず nêu sự tương phản KHÁCH QUAN giữa điều kiện (mưa) và kết quả (trận đấu vẫn diễn ra).",
+      "Xem cấu trúc にもかかわらず ở slide 1."),
+    q(L, 2, "「才能があるくせに、努力しません」 — くせに khác にもかかわらず ở điểm nào?",
+      ["くせに mang sắc thái CHÊ TRÁCH/khó chịu của người nói, にもかかわらず thì khách quan",
+       "Hoàn toàn giống nhau, không khác gì cả", "くせに chỉ dùng cho câu hỏi",
+       "にもかかわらず chỉ dùng cho phủ định"], 0,
+      "くせに luôn ẩn chứa cảm xúc PHÊ PHÁN của người nói với chủ thể, còn にもかかわらず chỉ mô tả khách quan.",
+      "Xem giải thích くせに ở slide 2."),
+    q(L, 3, "くせに có thể dùng để nói về chính bản thân người nói không?",
+      ["Không, くせに chỉ dùng cho người khác (ngôi thứ 2/3), không dùng cho bản thân",
+       "Có, dùng thoải mái cho mọi ngôi", "Chỉ dùng được cho bản thân",
+       "Chỉ dùng trong văn viết trang trọng"], 0,
+      "くせに mang tính chê trách người khác nên KHÔNG dùng để nói về bản thân mình (không nói '私は〜くせに').",
+      "Xem ghi chú ở slide 2."),
+    q(L, 4, "「貧しいにもかかわらず、幸せそうです」 và câu tương tự dùng くせに khác nhau ở đâu?",
+      ["にもかかわらず không phán xét; nếu đổi thành くせに sẽ mang ý chê trách/mỉa mai",
+       "Không có gì khác nhau cả", "にもかかわらず chỉ dùng cho câu phủ định",
+       "くせに trang trọng hơn にもかかわらず"], 0,
+      "Cùng nội dung nhưng đổi từ nối sẽ đổi hẳn sắc thái: にもかかわらず=khách quan, くせに=chê trách.",
+      "So sánh hai câu ở slide 3."),
+    q(L, 5, "Trước danh từ/tính từ な, にもかかわらず cần thêm từ gì?",
+      ["である (N/Aな + である + にもかかわらず)", "の (N + の + にもかかわらず)",
+       "だ (N + だ + にもかかわらず)", "Không cần thêm gì cả"], 0,
+      "Với danh từ và tính từ đuôi な, にもかかわらず cần thêm である: 中止であるにもかかわらず.",
+      "Xem quy tắc chia ở slide 4."),
+    q(L, 6, "Trước danh từ, くせに thường dùng trợ từ nào?",
+      ["の (N + の + くせに)", "である (N + である + くせに)", "が (N + が + くせに)", "を (N + を + くせに)"], 0,
+      "くせに dùng trực tiếp N+の, không cần である như にもかかわらず: 子供のくせに.",
+      "Xem quy tắc chia ở slide 4."),
+    q(L, 7, "「優秀であるにもかかわらず、会社で認められません」 nghĩa là:",
+      ["Mặc dù xuất sắc, nhưng lại không được công ty công nhận",
+       "Vì xuất sắc nên được công ty công nhận ngay", "Không xuất sắc nên không được công nhận",
+       "Công ty luôn công nhận người xuất sắc"], 0,
+      "にもかかわらず nêu sự tương phản: xuất sắc (優秀である) nhưng kết quả trái ngược (không được công nhận).",
+      "Áp dụng cấu trúc Nである+にもかかわらず."),
+    q(L, 8, "Theo hội thoại, trận đấu có bị hủy vì mưa không?",
+      ["Không, trận đấu đã không bị hủy (試合は中止されませんでした)",
+       "Có, trận đấu đã bị hủy hoàn toàn", "Trận đấu bị hoãn sang tuần sau",
+       "Không được đề cập trong hội thoại"], 0,
+      "Santos trả lời 「試合は中止されませんでした」.",
+      "Xem câu thoại thứ 2."),
+    q(L, 9, "田中 nhận xét gì về người có tài năng trong hội thoại?",
+      ["Có tài mà lại không chịu cố gắng (才能があるくせに、頑張りません)",
+       "Rất chăm chỉ và có tài", "Không có tài năng gì cả",
+       "Đã bỏ cuộc hoàn toàn"], 0,
+      "田中 nói 「あの人は才能があるくせに、頑張りません」.",
+      "Xem câu thoại thứ 3."),
+    q(L, 10, "Santos nhận xét gì về công việc của mình?",
+      ["Công việc bận rộn nhưng lương thấp (忙しいにもかかわらず、給料は安いです)",
+       "Công việc nhàn hạ và lương cao", "Không có công việc gì cả",
+       "Đã nghỉ việc rồi"], 0,
+      "Santos nói 「仕事が忙しいにもかかわらず、給料は安いです」.",
+      "Xem câu thoại thứ 8."),
+]
+
+LESSON = lesson(
+    L,
+    "Bài 10: Nhượng bộ bất ngờ (にもかかわらず & くせに)",
+    "にもかかわらず diễn tả 'mặc dù/bất chấp' một cách KHÁCH QUAN, TRANG TRỌNG — kết quả trái với "
+    "kỳ vọng, không mang phán xét; くせに cũng nghĩa 'mặc dù' nhưng luôn ẩn chứa sắc thái CHÊ "
+    "TRÁCH/khó chịu của người nói với chủ thể (không dùng cho bản thân), chỉ dùng trong hội thoại thân mật.",
+    VOCAB, KANJI, SLIDES, DIALOGUE, EXERCISES,
+)
+
+if __name__ == "__main__":
+    pool.mark_used([w["word"] for w in VOCAB if w["word"]], lesson=L)
+    merge([LESSON])

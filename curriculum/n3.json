@@ -12913,99 +12913,1391 @@
     "level": "N3",
     "lessonNumber": 10,
     "title": "Bài 10: Nhượng bộ bất ngờ (にもかかわらず & くせに)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "description": "にもかかわらず diễn tả 'mặc dù/bất chấp' một cách KHÁCH QUAN, TRANG TRỌNG — kết quả trái với kỳ vọng, không mang phán xét; くせに cũng nghĩa 'mặc dù' nhưng luôn ẩn chứa sắc thái CHÊ TRÁCH/khó chịu của người nói với chủ thể (không dùng cho bản thân), chỉ dùng trong hội thoại thân mật.",
     "vocabList": [
       {
         "id": "voc-n3-10-1",
-        "word": "重要語彙 (N3)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "さいのう",
+        "kanji": "才能",
+        "furigana": "さいのう",
+        "romaji": "sainou",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 10",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Tài năng, năng khiếu",
+        "accentNote": "才能が あります = có tài năng."
+      },
+      {
+        "id": "voc-n3-10-2",
+        "word": "もんく",
+        "kanji": "文句",
+        "furigana": "もんく",
+        "romaji": "monku",
+        "wordType": "noun",
+        "meaningVi": "Lời phàn nàn, ca thán",
+        "accentNote": "文句を 言います = phàn nàn."
+      },
+      {
+        "id": "voc-n3-10-3",
+        "word": "ふまん",
+        "kanji": "不満",
+        "furigana": "ふまん",
+        "romaji": "fuman",
+        "wordType": "noun",
+        "meaningVi": "Sự bất mãn, không hài lòng",
+        "accentNote": "不満が あります = có sự bất mãn."
+      },
+      {
+        "id": "voc-n3-10-4",
+        "word": "まずしい",
+        "kanji": "貧しい",
+        "furigana": "まずしい",
+        "romaji": "mazushii",
+        "wordType": "adjective",
+        "meaningVi": "Nghèo",
+        "accentNote": "貧しい 生活 = cuộc sống nghèo khó."
+      },
+      {
+        "id": "voc-n3-10-5",
+        "word": "さんかします",
+        "kanji": "参加します",
+        "furigana": "さんかします",
+        "romaji": "sanka shimasu",
+        "wordType": "verb",
+        "meaningVi": "Tham gia",
+        "accentNote": "大会に 参加します = tham gia đại hội."
+      },
+      {
+        "id": "voc-n3-10-6",
+        "word": "ゆうしゅう",
+        "kanji": "優秀",
+        "furigana": "ゆうしゅう",
+        "romaji": "yuushuu",
+        "wordType": "adjective",
+        "meaningVi": "Xuất sắc, ưu tú",
+        "accentNote": "優秀な 学生 = học sinh xuất sắc."
+      },
+      {
+        "id": "voc-n3-10-7",
+        "word": "ちゅうしします",
+        "kanji": "中止します",
+        "furigana": "ちゅうしします",
+        "romaji": "chuushi shimasu",
+        "wordType": "verb",
+        "meaningVi": "Hủy bỏ, dừng lại",
+        "accentNote": "試合を 中止します = hủy trận đấu."
+      },
+      {
+        "id": "voc-n3-10-8",
+        "word": "たいど",
+        "kanji": "態度",
+        "furigana": "たいど",
+        "romaji": "taido",
+        "wordType": "noun",
+        "meaningVi": "Thái độ",
+        "accentNote": "Đã gặp N3 bài 5."
+      },
+      {
+        "id": "voc-n3-10-9",
+        "word": "どりょくします",
+        "kanji": "努力します",
+        "furigana": "どりょくします",
+        "romaji": "doryoku shimasu",
+        "wordType": "verb",
+        "meaningVi": "Nỗ lực, cố gắng",
+        "accentNote": "Đã gặp N3 bài 8."
+      },
+      {
+        "id": "voc-n3-10-10",
+        "word": "しあい",
+        "kanji": "試合",
+        "furigana": "しあい",
+        "romaji": "shiai",
+        "wordType": "noun",
+        "meaningVi": "Trận đấu",
+        "accentNote": "Đã gặp N4 bài 33."
+      },
+      {
+        "id": "voc-n3-10-11",
+        "word": "あめ",
+        "kanji": "雨",
+        "furigana": "あめ",
+        "romaji": "ame",
+        "wordType": "noun",
+        "meaningVi": "Mưa",
+        "accentNote": "Đã gặp N5 bài 1."
+      },
+      {
+        "id": "voc-n3-10-12",
+        "word": "こども",
+        "kanji": "子供",
+        "furigana": "こども",
+        "romaji": "kodomo",
+        "wordType": "noun",
+        "meaningVi": "Trẻ em",
+        "accentNote": "Đã gặp N5 bài 1."
+      },
+      {
+        "id": "voc-n3-10-13",
+        "word": "いいます",
+        "kanji": "言います",
+        "furigana": "いいます",
+        "romaji": "iimasu",
+        "wordType": "verb",
+        "meaningVi": "Nói",
+        "accentNote": "Đã gặp N5 bài 6."
+      },
+      {
+        "id": "voc-n3-10-14",
+        "word": "たいかい",
+        "kanji": "大会",
+        "furigana": "たいかい",
+        "romaji": "taikai",
+        "wordType": "noun",
+        "meaningVi": "Đại hội",
+        "accentNote": "Đã gặp N3 bài 7."
+      },
+      {
+        "id": "voc-n3-10-15",
+        "word": "がんばります",
+        "kanji": "頑張ります",
+        "furigana": "がんばります",
+        "romaji": "ganbarimasu",
+        "wordType": "verb",
+        "meaningVi": "Cố gắng, nỗ lực",
+        "accentNote": "Đã gặp N4 bài 32."
+      },
+      {
+        "id": "voc-n3-10-16",
+        "word": "おかね",
+        "kanji": "お金",
+        "furigana": "おかね",
+        "romaji": "okane",
+        "wordType": "noun",
+        "meaningVi": "Tiền",
+        "accentNote": "Đã gặp N5 bài 1."
+      },
+      {
+        "id": "voc-n3-10-17",
+        "word": "わかい",
+        "kanji": "若い",
+        "furigana": "わかい",
+        "romaji": "wakai",
+        "wordType": "adjective",
+        "meaningVi": "Trẻ, còn trẻ tuổi",
+        "accentNote": "Đã gặp N4 bài 33."
+      },
+      {
+        "id": "voc-n3-10-18",
+        "word": "かいしゃ",
+        "kanji": "会社",
+        "furigana": "かいしゃ",
+        "romaji": "kaisha",
+        "wordType": "noun",
+        "meaningVi": "Công ty",
+        "accentNote": "Đã gặp N5 bài 1."
+      },
+      {
+        "id": "voc-n3-10-19",
+        "word": "しごと",
+        "kanji": "仕事",
+        "furigana": "しごと",
+        "romaji": "shigoto",
+        "wordType": "noun",
+        "meaningVi": "Công việc",
+        "accentNote": "Đã gặp N4 bài 26."
+      },
+      {
+        "id": "voc-n3-10-20",
+        "word": "いそがしい",
+        "kanji": "忙しい",
+        "furigana": "いそがしい",
+        "romaji": "isogashii",
+        "wordType": "adjective",
+        "meaningVi": "Bận rộn",
+        "accentNote": "Đã gặp N4 bài 26."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n3-10-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "才",
+        "hanViet": "TÀI",
+        "strokeCount": 3,
         "onyomi": [
-          "ゴ"
+          "サイ (sai)"
         ],
-        "kunyomi": [
-          "かたる"
-        ],
-        "meaningVi": "Ngôn ngữ",
+        "kunyomi": [],
+        "meaningVi": "Tài năng, năng khiếu.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "才能",
+            "furigana": "さいのう",
+            "meaningVi": "Tài năng"
+          },
+          {
+            "word": "天才",
+            "furigana": "てんさい",
+            "meaningVi": "Thiên tài"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-10-2",
+        "character": "句",
+        "hanViet": "CÚ",
+        "strokeCount": 5,
+        "onyomi": [
+          "ク (ku)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Câu, cụm từ.",
+        "commonWords": [
+          {
+            "word": "文句",
+            "furigana": "もんく",
+            "meaningVi": "Lời phàn nàn"
+          },
+          {
+            "word": "句読点",
+            "furigana": "くとうてん",
+            "meaningVi": "Dấu câu"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-10-3",
+        "character": "満",
+        "hanViet": "MÃN",
+        "strokeCount": 12,
+        "onyomi": [
+          "マン (man)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Đầy, mãn nguyện.",
+        "commonWords": [
+          {
+            "word": "不満",
+            "furigana": "ふまん",
+            "meaningVi": "Bất mãn"
+          },
+          {
+            "word": "満足",
+            "furigana": "まんぞく",
+            "meaningVi": "Mãn nguyện, hài lòng"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-10-4",
+        "character": "貧",
+        "hanViet": "BẦN",
+        "strokeCount": 11,
+        "onyomi": [
+          "ヒン (hin)"
+        ],
+        "kunyomi": [
+          "まず(しい)"
+        ],
+        "meaningVi": "Nghèo, bần cùng.",
+        "commonWords": [
+          {
+            "word": "貧しい",
+            "furigana": "まずしい",
+            "meaningVi": "Nghèo"
+          },
+          {
+            "word": "貧乏",
+            "furigana": "びんぼう",
+            "meaningVi": "Nghèo túng"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-10-5",
+        "character": "秀",
+        "hanViet": "TÚ",
+        "strokeCount": 7,
+        "onyomi": [
+          "シュウ (shuu)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Xuất sắc, tú lệ.",
+        "commonWords": [
+          {
+            "word": "優秀",
+            "furigana": "ゆうしゅう",
+            "meaningVi": "Xuất sắc"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n3-l10-s0",
-        "title": "Trọng tâm: Nhượng bộ bất ngờ (にもかかわらず & くせに)",
-        "grammarFormula": "Thể thông thường (Na/Nである) + にもかかわらず / くせに",
-        "explanation": "にもかかわらず: Mặc dù... nhưng vẫn. くせに: Dù... thế mà (mang ý mỉa mai, trách móc).",
+        "slideId": "n3-l10-s1",
+        "slideType": "grammar",
+        "title": "1. Bất chấp, trang trọng: [thể thường] にもかかわらず、[kết quả bất ngờ]",
+        "grammarFormula": "[Thể thường/N+である] + にもかかわらず、[kết quả trái với kỳ vọng]",
+        "explanation": "にもかかわらず diễn tả 'MẶC DÙ/BẤT CHẤP' một điều kiện, kết quả xảy ra TRÁI VỚI KỲ VỌNG THÔNG THƯỜNG — văn phong TRANG TRỌNG, khách quan, thường dùng trong báo cáo, tin tức.",
+        "teacherTips": "にもかかわらず có thể đứng sau cả câu văn (chủ thể có thể khác với vế sau) — thường thấy trong văn viết báo cáo, bài luận.",
+        "culturalNotes": "Bản tin thời tiết Nhật hay dùng: '大雨にもかかわらず、大会は予定通り行われました' (mặc dù mưa to, đại hội vẫn được tổ chức theo kế hoạch).",
         "examples": [
           {
-            "id": "ex-n3-l10-1",
+            "id": "ex-n3-l10-s1-1",
             "tokens": [
               {
-                "id": "tok-n3-l10-1",
-                "text": "雨にもか",
+                "id": "t-l10s1-1",
+                "text": "あめ",
+                "isKeyGrammar": true,
+                "kanji": "雨",
+                "furigana": "あめ"
+              },
+              {
+                "id": "t-l10s1-2",
+                "text": "にも",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l10s1-3",
+                "text": "かかわらず",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l10s1-4",
+                "text": "、",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n3-l10-2",
-                "text": "かわらず、多くの人が 集まった。",
-                "isKeyGrammar": true
+                "id": "t-l10s1-5",
+                "text": "しあい",
+                "isKeyGrammar": true,
+                "kanji": "試合",
+                "furigana": "しあい"
+              },
+              {
+                "id": "t-l10s1-6",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s1-7",
+                "text": "おこなわれました",
+                "isKeyGrammar": false,
+                "kanji": "行われました",
+                "furigana": "おこなわれました"
               }
             ],
-            "meaningVi": "Mặc cho trời mưa, rất nhiều người vẫn tập trung lại."
+            "meaningVi": "Mặc dù trời mưa, trận đấu vẫn được tổ chức."
+          },
+          {
+            "id": "ex-n3-l10-s1-2",
+            "tokens": [
+              {
+                "id": "t-l10s1-8",
+                "text": "さいのう",
+                "isKeyGrammar": true,
+                "kanji": "才能",
+                "furigana": "さいのう"
+              },
+              {
+                "id": "t-l10s1-9",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s1-10",
+                "text": "ある",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s1-11",
+                "text": "にも",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l10s1-12",
+                "text": "かかわらず",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l10s1-13",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s1-14",
+                "text": "どりょく",
+                "isKeyGrammar": true,
+                "kanji": "努力",
+                "furigana": "どりょく"
+              },
+              {
+                "id": "t-l10s1-15",
+                "text": "しません",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Mặc dù có tài năng, nhưng anh ấy lại không nỗ lực."
           }
-        ],
-        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+        ]
+      },
+      {
+        "slideId": "n3-l10-s2",
+        "slideType": "grammar",
+        "title": "2. Chê trách, thân mật: [thể thường] くせに、[hành động đáng trách]",
+        "grammarFormula": "[Thể thường/N+の] + くせに、[hành động/thái độ đáng chê trách]",
+        "explanation": "くせに cũng nghĩa 'MẶC DÙ' nhưng luôn mang SẮC THÁI CHÊ TRÁCH/KHÓ CHỊU của người nói đối với chủ thể trong câu — chỉ dùng trong hội thoại THÂN MẬT, KHÔNG dùng để nói về bản thân mình.",
+        "teacherTips": "くせに TUYỆT ĐỐI không dùng cho bản thân người nói (không nói '私は〜くせに') vì mang tính chê trách người khác.",
+        "culturalNotes": "Câu mắng nhẹ của cha mẹ Nhật với con: '子供のくせに、生意気なことを言わないで' (còn là trẻ con thì đừng nói những lời hỗn xược).",
+        "examples": [
+          {
+            "id": "ex-n3-l10-s2-1",
+            "tokens": [
+              {
+                "id": "t-l10s2-1",
+                "text": "こども",
+                "isKeyGrammar": true,
+                "kanji": "子供",
+                "furigana": "こども"
+              },
+              {
+                "id": "t-l10s2-2",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s2-3",
+                "text": "くせに",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l10s2-4",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s2-5",
+                "text": "もんく",
+                "isKeyGrammar": true,
+                "kanji": "文句",
+                "furigana": "もんく"
+              },
+              {
+                "id": "t-l10s2-6",
+                "text": "ばかり",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s2-7",
+                "text": "いいます",
+                "isKeyGrammar": false,
+                "kanji": "言います",
+                "furigana": "いいます"
+              }
+            ],
+            "meaningVi": "Còn là trẻ con mà cứ phàn nàn suốt."
+          },
+          {
+            "id": "ex-n3-l10-s2-2",
+            "tokens": [
+              {
+                "id": "t-l10s2-8",
+                "text": "さいのう",
+                "isKeyGrammar": true,
+                "kanji": "才能",
+                "furigana": "さいのう"
+              },
+              {
+                "id": "t-l10s2-9",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s2-10",
+                "text": "ある",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s2-11",
+                "text": "くせに",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l10s2-12",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s2-13",
+                "text": "どりょく",
+                "isKeyGrammar": true,
+                "kanji": "努力",
+                "furigana": "どりょく"
+              },
+              {
+                "id": "t-l10s2-14",
+                "text": "しません",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Có tài mà lại không chịu nỗ lực."
+          }
+        ]
+      },
+      {
+        "slideId": "n3-l10-s3",
+        "slideType": "grammar",
+        "title": "3. So sánh sắc thái: にもかかわらず (khách quan) vs くせに (chê trách)",
+        "grammarFormula": "Cùng nghĩa 'mặc dù' nhưng にもかかわらず TRANG TRỌNG/KHÁCH QUAN　vs　くせに THÂN MẬT/CHÊ TRÁCH",
+        "explanation": "Hai câu có cấu trúc giống hệt nhau nhưng SẮC THÁI khác hẳn: にもかかわらず chỉ nêu SỰ TƯƠNG PHẢN khách quan (không phán xét); くせに luôn ẩn chứa cảm xúc KHÓ CHỊU/PHÊ PHÁN của người nói.",
+        "teacherTips": "Mẹo: nếu câu chỉ MÔ TẢ sự tương phản → にもかかわらず; nếu câu ẩn ý TRÁCH MÓC → くせに.",
+        "culturalNotes": "Trong bài luận, báo cáo chính thức chỉ dùng にもかかわらず — dùng くせに sẽ bị coi là thiếu lịch sự, quá suồng sã.",
+        "examples": [
+          {
+            "id": "ex-n3-l10-s3-1",
+            "tokens": [
+              {
+                "id": "t-l10s3-1",
+                "text": "まずしい",
+                "isKeyGrammar": true,
+                "kanji": "貧しい",
+                "furigana": "まずしい"
+              },
+              {
+                "id": "t-l10s3-2",
+                "text": "にも",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l10s3-3",
+                "text": "かかわらず",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l10s3-4",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s3-5",
+                "text": "しあわせ",
+                "isKeyGrammar": false,
+                "kanji": "幸せ",
+                "furigana": "しあわせ"
+              },
+              {
+                "id": "t-l10s3-6",
+                "text": "そうです",
+                "isKeyGrammar": false,
+                "kanji": "そうです",
+                "furigana": "そうです"
+              }
+            ],
+            "meaningVi": "Mặc dù nghèo, nhưng trông có vẻ hạnh phúc. (khách quan, không chê trách)"
+          },
+          {
+            "id": "ex-n3-l10-s3-2",
+            "tokens": [
+              {
+                "id": "t-l10s3-7",
+                "text": "おかね",
+                "isKeyGrammar": true,
+                "kanji": "お金",
+                "furigana": "おかね"
+              },
+              {
+                "id": "t-l10s3-8",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s3-9",
+                "text": "ある",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s3-10",
+                "text": "くせに",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l10s3-11",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s3-12",
+                "text": "だしません",
+                "isKeyGrammar": false,
+                "kanji": "出しません",
+                "furigana": "だしません"
+              }
+            ],
+            "meaningVi": "Có tiền mà lại không chịu chi ra. (chê trách, khó chịu)"
+          }
+        ]
+      },
+      {
+        "slideId": "n3-l10-s4",
+        "slideType": "grammar",
+        "title": "4. Cách chia trước danh từ/tính từ な",
+        "grammarFormula": "N/Aな + である + にもかかわらず　　N + の / Aな (である) + くせに",
+        "explanation": "Với DANH TỪ và TÍNH TỪ ĐUÔI な, にもかかわらず cần thêm である (trang trọng); còn くせに dùng trực tiếp N+の hoặc Aな, không cần である (thân mật hơn).",
+        "teacherTips": "Ghi nhớ: N+である+にもかかわらず (trang trọng) vs N+の+くせに (thân mật) — đừng nhầm lẫn である và の.",
+        "culturalNotes": "Trên báo cáo công ty Nhật: '優秀であるにもかかわらず、評価されなかった' (mặc dù xuất sắc nhưng không được đánh giá cao) — câu than phiền phổ biến về chế độ đãi ngộ.",
+        "examples": [
+          {
+            "id": "ex-n3-l10-s4-1",
+            "tokens": [
+              {
+                "id": "t-l10s4-1",
+                "text": "たいかい",
+                "isKeyGrammar": true,
+                "kanji": "大会",
+                "furigana": "たいかい"
+              },
+              {
+                "id": "t-l10s4-2",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s4-3",
+                "text": "ちゅうし",
+                "isKeyGrammar": true,
+                "kanji": "中止",
+                "furigana": "ちゅうし"
+              },
+              {
+                "id": "t-l10s4-4",
+                "text": "である",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s4-5",
+                "text": "にも",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l10s4-6",
+                "text": "かかわらず",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l10s4-7",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s4-8",
+                "text": "みんな",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s4-9",
+                "text": "きました",
+                "isKeyGrammar": false,
+                "kanji": "来ました",
+                "furigana": "きました"
+              }
+            ],
+            "meaningVi": "Mặc dù đại hội đã bị hủy, mọi người vẫn đến."
+          },
+          {
+            "id": "ex-n3-l10-s4-2",
+            "tokens": [
+              {
+                "id": "t-l10s4-10",
+                "text": "こども",
+                "isKeyGrammar": true,
+                "kanji": "子供",
+                "furigana": "こども"
+              },
+              {
+                "id": "t-l10s4-11",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s4-12",
+                "text": "くせに",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l10s4-13",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s4-14",
+                "text": "ふまん",
+                "isKeyGrammar": true,
+                "kanji": "不満",
+                "furigana": "ふまん"
+              },
+              {
+                "id": "t-l10s4-15",
+                "text": "ばかり",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l10s4-16",
+                "text": "いいます",
+                "isKeyGrammar": false,
+                "kanji": "言います",
+                "furigana": "いいます"
+              }
+            ],
+            "meaningVi": "Còn là trẻ con mà cứ than phiền suốt."
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n3-10-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
         "tokens": [
           {
-            "id": "tok-n3-10-d1",
-            "text": "この文法のポイントを"
+            "id": "d10-1",
+            "text": "あめ",
+            "isKeyGrammar": true,
+            "kanji": "雨",
+            "furigana": "あめ"
           },
           {
-            "id": "tok-n3-10-d2",
-            "text": "復習しましょう。"
+            "id": "d10-2",
+            "text": "にも",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d10-3",
+            "text": "かかわらず",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d10-4",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-5",
+            "text": "たいかい",
+            "isKeyGrammar": true,
+            "kanji": "大会",
+            "furigana": "たいかい"
+          },
+          {
+            "id": "d10-6",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-7",
+            "text": "さんか",
+            "isKeyGrammar": true,
+            "kanji": "参加",
+            "furigana": "さんか"
+          },
+          {
+            "id": "d10-8",
+            "text": "しました",
+            "isKeyGrammar": false,
+            "kanji": "しました",
+            "furigana": "しました"
+          },
+          {
+            "id": "d10-9",
+            "text": "か",
+            "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Mặc dù trời mưa, bạn vẫn tham gia đại hội à?"
+      },
+      {
+        "id": "dia-n3-10-2",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d10-10",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-11",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-12",
+            "text": "しあい",
+            "isKeyGrammar": true,
+            "kanji": "試合",
+            "furigana": "しあい"
+          },
+          {
+            "id": "d10-13",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-14",
+            "text": "ちゅうし",
+            "isKeyGrammar": true,
+            "kanji": "中止",
+            "furigana": "ちゅうし"
+          },
+          {
+            "id": "d10-15",
+            "text": "されません",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-16",
+            "text": "でした",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vâng, trận đấu đã không bị hủy."
+      },
+      {
+        "id": "dia-n3-10-3",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d10-17",
+            "text": "あの",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-18",
+            "text": "ひと",
+            "isKeyGrammar": false,
+            "kanji": "人",
+            "furigana": "ひと"
+          },
+          {
+            "id": "d10-19",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-20",
+            "text": "さいのう",
+            "isKeyGrammar": true,
+            "kanji": "才能",
+            "furigana": "さいのう"
+          },
+          {
+            "id": "d10-21",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-22",
+            "text": "ある",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-23",
+            "text": "くせに",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d10-24",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-25",
+            "text": "がんばりません",
+            "isKeyGrammar": false,
+            "kanji": "頑張りません",
+            "furigana": "がんばりません"
+          }
+        ],
+        "meaningVi": "Người đó có tài mà lại không chịu cố gắng."
+      },
+      {
+        "id": "dia-n3-10-4",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d10-26",
+            "text": "そうですね",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-27",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-28",
+            "text": "どりょく",
+            "isKeyGrammar": true,
+            "kanji": "努力",
+            "furigana": "どりょく"
+          },
+          {
+            "id": "d10-29",
+            "text": "しない",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-30",
+            "text": "たいど",
+            "isKeyGrammar": true,
+            "kanji": "態度",
+            "furigana": "たいど"
+          },
+          {
+            "id": "d10-31",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-32",
+            "text": "ふまん",
+            "isKeyGrammar": true,
+            "kanji": "不満",
+            "furigana": "ふまん"
+          },
+          {
+            "id": "d10-33",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-34",
+            "text": "あります",
+            "isKeyGrammar": false,
+            "kanji": "有ります",
+            "furigana": "あります"
+          }
+        ],
+        "meaningVi": "Đúng vậy nhỉ. Tôi thấy bất mãn với thái độ không nỗ lực đó."
+      },
+      {
+        "id": "dia-n3-10-5",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d10-35",
+            "text": "わかい",
+            "isKeyGrammar": true,
+            "kanji": "若い",
+            "furigana": "わかい"
+          },
+          {
+            "id": "d10-36",
+            "text": "くせに",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d10-37",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-38",
+            "text": "もんく",
+            "isKeyGrammar": true,
+            "kanji": "文句",
+            "furigana": "もんく"
+          },
+          {
+            "id": "d10-39",
+            "text": "ばかり",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-40",
+            "text": "いいます",
+            "isKeyGrammar": false,
+            "kanji": "言います",
+            "furigana": "いいます"
+          },
+          {
+            "id": "d10-41",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Còn trẻ mà cứ hay phàn nàn nhỉ."
+      },
+      {
+        "id": "dia-n3-10-6",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d10-42",
+            "text": "ゆうしゅう",
+            "isKeyGrammar": true,
+            "kanji": "優秀",
+            "furigana": "ゆうしゅう"
+          },
+          {
+            "id": "d10-43",
+            "text": "である",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-44",
+            "text": "にも",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d10-45",
+            "text": "かかわらず",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d10-46",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-47",
+            "text": "かいしゃ",
+            "isKeyGrammar": true,
+            "kanji": "会社",
+            "furigana": "かいしゃ"
+          },
+          {
+            "id": "d10-48",
+            "text": "で",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-49",
+            "text": "みとめられません",
+            "isKeyGrammar": false,
+            "kanji": "認められません",
+            "furigana": "みとめられません"
+          }
+        ],
+        "meaningVi": "Mặc dù xuất sắc, nhưng lại không được công ty công nhận."
+      },
+      {
+        "id": "dia-n3-10-7",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d10-50",
+            "text": "それは",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-51",
+            "text": "ふまん",
+            "isKeyGrammar": true,
+            "kanji": "不満",
+            "furigana": "ふまん"
+          },
+          {
+            "id": "d10-52",
+            "text": "です",
+            "isKeyGrammar": false,
+            "kanji": "です",
+            "furigana": "です"
+          },
+          {
+            "id": "d10-53",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vậy thì đúng là bất mãn thật nhỉ."
+      },
+      {
+        "id": "dia-n3-10-8",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d10-54",
+            "text": "しごと",
+            "isKeyGrammar": true,
+            "kanji": "仕事",
+            "furigana": "しごと"
+          },
+          {
+            "id": "d10-55",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-56",
+            "text": "いそがしい",
+            "isKeyGrammar": true,
+            "kanji": "忙しい",
+            "furigana": "いそがしい"
+          },
+          {
+            "id": "d10-57",
+            "text": "にも",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d10-58",
+            "text": "かかわらず",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d10-59",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-60",
+            "text": "きゅうりょう",
+            "isKeyGrammar": false,
+            "kanji": "給料",
+            "furigana": "きゅうりょう"
+          },
+          {
+            "id": "d10-61",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-62",
+            "text": "やすい",
+            "isKeyGrammar": false,
+            "kanji": "安い",
+            "furigana": "やすい"
+          },
+          {
+            "id": "d10-63",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Mặc dù công việc bận rộn, nhưng lương lại thấp."
+      },
+      {
+        "id": "dia-n3-10-9",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d10-64",
+            "text": "まずしい",
+            "isKeyGrammar": true,
+            "kanji": "貧しい",
+            "furigana": "まずしい"
+          },
+          {
+            "id": "d10-65",
+            "text": "くせに",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d10-66",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-67",
+            "text": "おかね",
+            "isKeyGrammar": true,
+            "kanji": "お金",
+            "furigana": "おかね"
+          },
+          {
+            "id": "d10-68",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-69",
+            "text": "つかいます",
+            "isKeyGrammar": false,
+            "kanji": "使います",
+            "furigana": "つかいます"
+          }
+        ],
+        "meaningVi": "Còn nghèo mà lại tiêu tiền."
+      },
+      {
+        "id": "dia-n3-10-10",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d10-70",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-71",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-72",
+            "text": "それも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d10-73",
+            "text": "もんだい",
+            "isKeyGrammar": false,
+            "kanji": "問題",
+            "furigana": "もんだい"
+          },
+          {
+            "id": "d10-74",
+            "text": "です",
+            "isKeyGrammar": false,
+            "kanji": "です",
+            "furigana": "です"
+          },
+          {
+            "id": "d10-75",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vâng, đó cũng là một vấn đề nhỉ."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n3-10-1",
-        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Nhượng bộ bất ngờ (にもかかわらず & くせに)'?",
+        "question": "「雨にもかかわらず、試合が行われました」 — にもかかわらず diễn tả:",
         "options": [
-          "Thể thông thường (Na/Nである) + にもかかわらず",
-          "V-た + まま",
-          "N + に沿って",
-          "V-る + 途端に"
+          "Kết quả trái với kỳ vọng thông thường (dù mưa, trận đấu vẫn diễn ra), văn phong khách quan",
+          "Nguyên nhân trực tiếp của việc mưa",
+          "So sánh hai trận đấu",
+          "Phủ định việc mưa"
         ],
         "correctIndex": 0,
-        "explanation": "Đáp án chính xác: Thể thông thường (Na/Nである) + にもかかわらず / くせに",
-        "hint": "Xem lại công thức chia ở slide lý thuyết."
+        "explanation": "にもかかわらず nêu sự tương phản KHÁCH QUAN giữa điều kiện (mưa) và kết quả (trận đấu vẫn diễn ra).",
+        "hint": "Xem cấu trúc にもかかわらず ở slide 1."
+      },
+      {
+        "id": "ex-q-n3-10-2",
+        "question": "「才能があるくせに、努力しません」 — くせに khác にもかかわらず ở điểm nào?",
+        "options": [
+          "くせに mang sắc thái CHÊ TRÁCH/khó chịu của người nói, にもかかわらず thì khách quan",
+          "Hoàn toàn giống nhau, không khác gì cả",
+          "くせに chỉ dùng cho câu hỏi",
+          "にもかかわらず chỉ dùng cho phủ định"
+        ],
+        "correctIndex": 0,
+        "explanation": "くせに luôn ẩn chứa cảm xúc PHÊ PHÁN của người nói với chủ thể, còn にもかかわらず chỉ mô tả khách quan.",
+        "hint": "Xem giải thích くせに ở slide 2."
+      },
+      {
+        "id": "ex-q-n3-10-3",
+        "question": "くせに có thể dùng để nói về chính bản thân người nói không?",
+        "options": [
+          "Không, くせに chỉ dùng cho người khác (ngôi thứ 2/3), không dùng cho bản thân",
+          "Có, dùng thoải mái cho mọi ngôi",
+          "Chỉ dùng được cho bản thân",
+          "Chỉ dùng trong văn viết trang trọng"
+        ],
+        "correctIndex": 0,
+        "explanation": "くせに mang tính chê trách người khác nên KHÔNG dùng để nói về bản thân mình (không nói '私は〜くせに').",
+        "hint": "Xem ghi chú ở slide 2."
+      },
+      {
+        "id": "ex-q-n3-10-4",
+        "question": "「貧しいにもかかわらず、幸せそうです」 và câu tương tự dùng くせに khác nhau ở đâu?",
+        "options": [
+          "にもかかわらず không phán xét; nếu đổi thành くせに sẽ mang ý chê trách/mỉa mai",
+          "Không có gì khác nhau cả",
+          "にもかかわらず chỉ dùng cho câu phủ định",
+          "くせに trang trọng hơn にもかかわらず"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cùng nội dung nhưng đổi từ nối sẽ đổi hẳn sắc thái: にもかかわらず=khách quan, くせに=chê trách.",
+        "hint": "So sánh hai câu ở slide 3."
+      },
+      {
+        "id": "ex-q-n3-10-5",
+        "question": "Trước danh từ/tính từ な, にもかかわらず cần thêm từ gì?",
+        "options": [
+          "である (N/Aな + である + にもかかわらず)",
+          "の (N + の + にもかかわらず)",
+          "だ (N + だ + にもかかわらず)",
+          "Không cần thêm gì cả"
+        ],
+        "correctIndex": 0,
+        "explanation": "Với danh từ và tính từ đuôi な, にもかかわらず cần thêm である: 中止であるにもかかわらず.",
+        "hint": "Xem quy tắc chia ở slide 4."
+      },
+      {
+        "id": "ex-q-n3-10-6",
+        "question": "Trước danh từ, くせに thường dùng trợ từ nào?",
+        "options": [
+          "の (N + の + くせに)",
+          "である (N + である + くせに)",
+          "が (N + が + くせに)",
+          "を (N + を + くせに)"
+        ],
+        "correctIndex": 0,
+        "explanation": "くせに dùng trực tiếp N+の, không cần である như にもかかわらず: 子供のくせに.",
+        "hint": "Xem quy tắc chia ở slide 4."
+      },
+      {
+        "id": "ex-q-n3-10-7",
+        "question": "「優秀であるにもかかわらず、会社で認められません」 nghĩa là:",
+        "options": [
+          "Mặc dù xuất sắc, nhưng lại không được công ty công nhận",
+          "Vì xuất sắc nên được công ty công nhận ngay",
+          "Không xuất sắc nên không được công nhận",
+          "Công ty luôn công nhận người xuất sắc"
+        ],
+        "correctIndex": 0,
+        "explanation": "にもかかわらず nêu sự tương phản: xuất sắc (優秀である) nhưng kết quả trái ngược (không được công nhận).",
+        "hint": "Áp dụng cấu trúc Nである+にもかかわらず."
+      },
+      {
+        "id": "ex-q-n3-10-8",
+        "question": "Theo hội thoại, trận đấu có bị hủy vì mưa không?",
+        "options": [
+          "Không, trận đấu đã không bị hủy (試合は中止されませんでした)",
+          "Có, trận đấu đã bị hủy hoàn toàn",
+          "Trận đấu bị hoãn sang tuần sau",
+          "Không được đề cập trong hội thoại"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos trả lời 「試合は中止されませんでした」.",
+        "hint": "Xem câu thoại thứ 2."
+      },
+      {
+        "id": "ex-q-n3-10-9",
+        "question": "田中 nhận xét gì về người có tài năng trong hội thoại?",
+        "options": [
+          "Có tài mà lại không chịu cố gắng (才能があるくせに、頑張りません)",
+          "Rất chăm chỉ và có tài",
+          "Không có tài năng gì cả",
+          "Đã bỏ cuộc hoàn toàn"
+        ],
+        "correctIndex": 0,
+        "explanation": "田中 nói 「あの人は才能があるくせに、頑張りません」.",
+        "hint": "Xem câu thoại thứ 3."
+      },
+      {
+        "id": "ex-q-n3-10-10",
+        "question": "Santos nhận xét gì về công việc của mình?",
+        "options": [
+          "Công việc bận rộn nhưng lương thấp (忙しいにもかかわらず、給料は安いです)",
+          "Công việc nhàn hạ và lương cao",
+          "Không có công việc gì cả",
+          "Đã nghỉ việc rồi"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos nói 「仕事が忙しいにもかかわらず、給料は安いです」.",
+        "hint": "Xem câu thoại thứ 8."
       }
     ]
   },
