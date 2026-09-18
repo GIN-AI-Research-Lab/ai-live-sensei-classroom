@@ -190,6 +190,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let chenNgangTimer = null;
   let dangThuAm = null;        // id cau luyen phat am dang thu, null = khong thu
   let dangChoChamPhatAm = null; // id hop ket qua dang cho Sensei cham xong (sau khi bam gui luyen phat am)
+  let choChamPhatAmTimer = null; // het gio (80s) chua thay cham xong -> tu ket noi lai
 
   // Muc am thanh CAO NHAT tung thay duoc trong lan thu am hien tai — dat lai
   // ve 0 moi khi mo mic. Neu bam Gui ma so nay van thap le te, gan chac hoc
@@ -285,6 +286,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       // bao that bai, khong de nguoi hoc nhin spinner/dai cho vinh vien.
       anChoTraLoi();
       if (dangChoChamPhatAm) {
+        clearTimeout(choChamPhatAmTimer);
         veTinPhatAm(dangChoChamPhatAm, '<i class="fa-solid fa-triangle-exclamation"></i><span>Mất kết nối trước khi Sensei chấm xong — thử lại nhé.</span>', 'amber');
         dangChoChamPhatAm = null;
       }
@@ -368,6 +370,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       // giu spinner vinh vien du that ra da xong.
       anChoTraLoi();
       if (dangChoChamPhatAm) {
+        clearTimeout(choChamPhatAmTimer);
         const idChoCham = dangChoChamPhatAm;
         dangChoChamPhatAm = null;
         veTinPhatAm(idChoCham, `<i class="fa-solid fa-comment-dots"></i><span>${escapeHtml(loiSenseiVuaNoi || 'Sensei đã chấm xong — nghe lại phần vừa nói ở trên.')}</span>`, 'cyan');
@@ -2047,6 +2050,7 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
   let dangChoTraLoi = false;
   let choTraLoiTimer = null;
   let choTraLoiTimer2 = null;
+  let choTraLoiTimer3 = null;
   function hienThiChoTraLoi() {
     dangChoTraLoi = true;
     if (micVolumeWrapper) {
@@ -2058,6 +2062,7 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
     if (micStatusText) micStatusText.innerText = 'Sensei đang xử lý câu trả lời…';
     clearTimeout(choTraLoiTimer);
     clearTimeout(choTraLoiTimer2);
+    clearTimeout(choTraLoiTimer3);
     choTraLoiTimer = setTimeout(() => {
       if (dangChoTraLoi && micStatusText) {
         micStatusText.innerText = 'Câu hỏi bằng giọng nói cần thêm chút thời gian, Sensei vẫn đang xử lý…';
@@ -2072,12 +2077,25 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
         micStatusText.innerText = 'Đợi hơi lâu rồi — nếu vẫn không thấy gì, thử gõ câu hỏi bằng chữ thay vì nói.';
       }
     }, 60000);
+    // 80s+ van im lang tuyet doi: da xac nhan qua thuc te la LUOT HOI DAU TIEN
+    // tren MOT ket noi luon duoc tra loi, nhung mot luot hoi KE TIEP tren
+    // CUNG ket noi do doi khi treo vinh vien du gui dung dinh dang. Chua ro
+    // nguyen nhan goc (co the la trang thai noi bo phia server sau turn dau
+    // tien) — nhung ngat va ket noi lai cho "luot dau" moi la cach phuc hoi
+    // dang tin cay nhat da quan sat duoc, con hon la cho vo han.
+    choTraLoiTimer3 = setTimeout(() => {
+      if (dangChoTraLoi) {
+        showToast('Kết nối có vẻ bị đơ — đang tự làm mới, bạn giơ tay hỏi lại nhé.', 'info', 8000);
+        try { geminiClient.disconnect(); } catch (e) {}
+      }
+    }, 80000);
   }
   function anChoTraLoi() {
     if (!dangChoTraLoi) return;
     dangChoTraLoi = false;
     clearTimeout(choTraLoiTimer);
     clearTimeout(choTraLoiTimer2);
+    clearTimeout(choTraLoiTimer3);
     if (micVolumeWrapper) {
       micVolumeWrapper.classList.add('hidden');
       micVolumeWrapper.classList.remove('is-waiting');
@@ -2780,6 +2798,17 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     senseiChenNgang = true;
     clearTimeout(chenNgangTimer);
     chenNgangTimer = setTimeout(ketThucChenNgang, 45000);
+
+    // 80s+ khong thay cham xong: cung mot kieu treo da quan sat duoc o luot
+    // gio tay hoi (luot dau tren 1 ket noi thi duoc, luot sau doi khi treo
+    // vinh vien) — ngat va ket noi lai; onClose() se tu dien thong bao loi
+    // vao hop ket qua nay (xem dangChoChamPhatAm trong onClose).
+    clearTimeout(choChamPhatAmTimer);
+    choChamPhatAmTimer = setTimeout(() => {
+      if (dangChoChamPhatAm === id) {
+        try { geminiClient.disconnect(); } catch (e) {}
+      }
+    }, 80000);
 
     geminiClient.sendAudioStreamEnd();
   }
