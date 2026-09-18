@@ -32,6 +32,13 @@ class AudioEngine {
     // Khi tam dung: Gemini VAN tiep tuc stream goi am thanh ve. Don hang doi
     // khong du — phai chan ngay o cong vao, khong thi Sensei noi tiep nhu thuong.
     this.suppressed = false;
+
+    // Dang phat MOT CAU thoai da dung san (playPcmClip). Cac beat da tu goi
+    // stopPlayback() truoc khi phat, nhung goi am thanh CU cua Sensei van co
+    // the toi TRE (con dang bay tren WebSocket luc stopPlayback() chay) roi
+    // de vao dung luc nay — khoa cung o day de chan tan goc, khong phu thuoc
+    // vao viec cap tren tinh thoi diem cho dung.
+    this.clipPlaying = false;
   }
 
   ensureOutContext() {
@@ -169,6 +176,10 @@ class AudioEngine {
 
   playPCM24k(base64Chunk) {
     if (this.suppressed) return;   // dang tam dung -> bo goi nay di
+    // Mot cau thoai nhan vat dang phat — goi cua Sensei toi luc nay chac chan
+    // la con soi lai cua luot truoc (phai bi cat khi chuyen sang phat thoai),
+    // khong phai loi noi thuoc nhip dang dien ra. Bo hang, khong de de chong tieng.
+    if (this.clipPlaying) return;
     try {
       this.ensureOutContext();
       if (!this.outCtx) return;
@@ -278,9 +289,17 @@ class AudioEngine {
   playPcmClip(clip) {
     return new Promise((resolve, reject) => {
       if (this.suppressed) return resolve();
+      const xongClip = (fn, val) => { this.clipPlaying = false; fn(val); };
       try {
         this.ensureOutContext();
         if (!this.outCtx) return reject(new Error('khong co AudioContext'));
+
+        // Chan tan goc: cau thoai nhan vat va tieng Sensei KHONG BAO GIO duoc
+        // phat cung luc. Tu cat tieng Sensei o day (khong chi trong dong dieu
+        // phoi ben app.js) de ham nay tu no da an toan, va bat co de playPCM24k
+        // bo qua moi goi cua Sensei toi tre trong luc cau nay dang phat.
+        this.stopPlayback(true);
+        this.clipPlaying = true;
 
         // Nhan ca chuoi base64 (REST TTS) lan Uint8Array (dan dien vien Live)
         let bytes;
@@ -293,7 +312,7 @@ class AudioEngine {
         }
 
         const sampleCount = Math.floor(bytes.length / 2);
-        if (!sampleCount) return resolve();
+        if (!sampleCount) return xongClip(resolve);
 
         const view = new DataView(bytes.buffer, bytes.byteOffset, sampleCount * 2);
         const pcm = new Float32Array(sampleCount);
@@ -313,6 +332,7 @@ class AudioEngine {
         if (!this.isPlaying) { this.isPlaying = true; this.onPlayStateChange(true); }
 
         src.onended = () => {
+          this.clipPlaying = false;
           this.activeSources = this.activeSources.filter(x => x !== src);
           if (!this.activeSources.length) {
             this.isPlaying = false;
@@ -323,7 +343,7 @@ class AudioEngine {
         this.clipSource = src;
         src.start();
       } catch (err) {
-        reject(err);
+        xongClip(reject, err);
       }
     });
   }
