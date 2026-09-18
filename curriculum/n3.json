@@ -10194,99 +10194,1356 @@
     "level": "N3",
     "lessonNumber": 8,
     "title": "Bài 8: Điều kiện & Giả định (さえ〜ば & としたら)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "description": "さえ〜ば diễn tả CHỈ CẦN có N (hoặc thực hiện hành động, dạng V-stem+さえすれば) là ĐỦ để đạt kết quả mong muốn — điều kiện THỰC TẾ có thể xảy ra; としたら dùng để GIẢ ĐỊNH một tình huống (có thể viển vông/chưa xảy ra) rồi suy luận kết quả nếu tình huống đó là thật.",
     "vocabList": [
       {
         "id": "voc-n3-8-1",
-        "word": "重要語彙 (N3)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "じょうけん",
+        "kanji": "条件",
+        "furigana": "じょうけん",
+        "romaji": "jouken",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 8",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Điều kiện",
+        "accentNote": "条件さえ 合えば = chỉ cần điều kiện phù hợp thì."
+      },
+      {
+        "id": "voc-n3-8-2",
+        "word": "せいこうします",
+        "kanji": "成功します",
+        "furigana": "せいこうします",
+        "romaji": "seikou shimasu",
+        "wordType": "verb",
+        "meaningVi": "Thành công",
+        "accentNote": "努力すれば 成功します = nỗ lực thì sẽ thành công."
+      },
+      {
+        "id": "voc-n3-8-3",
+        "word": "あたります",
+        "kanji": "当たります",
+        "furigana": "あたります",
+        "romaji": "atarimasu",
+        "wordType": "verb",
+        "meaningVi": "Trúng, đúng (trúng số, trúng thưởng)",
+        "accentNote": "宝くじが 当たります = trúng xổ số."
+      },
+      {
+        "id": "voc-n3-8-4",
+        "word": "かてい",
+        "kanji": "仮定",
+        "furigana": "かてい",
+        "romaji": "katei",
+        "wordType": "noun",
+        "meaningVi": "Giả định",
+        "accentNote": "仮定の 話 = câu chuyện giả định."
+      },
+      {
+        "id": "voc-n3-8-5",
+        "word": "ごうかくします",
+        "kanji": "合格します",
+        "furigana": "ごうかくします",
+        "romaji": "goukaku shimasu",
+        "wordType": "verb",
+        "meaningVi": "Đậu, đỗ (thi cử)",
+        "accentNote": "試験に 合格します = đậu kỳ thi."
+      },
+      {
+        "id": "voc-n3-8-6",
+        "word": "どりょくします",
+        "kanji": "努力します",
+        "furigana": "どりょくします",
+        "romaji": "doryoku shimasu",
+        "wordType": "verb",
+        "meaningVi": "Nỗ lực, cố gắng",
+        "accentNote": "毎日 努力します = mỗi ngày nỗ lực."
+      },
+      {
+        "id": "voc-n3-8-7",
+        "word": "まんいち",
+        "kanji": "万一",
+        "furigana": "まんいち",
+        "romaji": "man-ichi",
+        "wordType": "adverb",
+        "meaningVi": "Vạn nhất, lỡ như (điều rất hiếm xảy ra)",
+        "accentNote": "万一 失敗したら = lỡ như thất bại thì."
+      },
+      {
+        "id": "voc-n3-8-8",
+        "word": "りゅうがくします",
+        "kanji": "留学します",
+        "furigana": "りゅうがくします",
+        "romaji": "ryuugaku shimasu",
+        "wordType": "verb",
+        "meaningVi": "Du học",
+        "accentNote": "日本に 留学します = du học ở Nhật Bản."
+      },
+      {
+        "id": "voc-n3-8-9",
+        "word": "ゆうしょうします",
+        "kanji": "優勝します",
+        "furigana": "ゆうしょうします",
+        "romaji": "yuushou shimasu",
+        "wordType": "verb",
+        "meaningVi": "Vô địch, giành chức quán quân",
+        "accentNote": "大会で 優勝します = vô địch tại đại hội."
+      },
+      {
+        "id": "voc-n3-8-10",
+        "word": "チャンス",
+        "kanji": "チャンス",
+        "furigana": "チャンス",
+        "romaji": "chansu",
+        "wordType": "noun",
+        "meaningVi": "Cơ hội",
+        "accentNote": "チャンスさえ あれば = chỉ cần có cơ hội thì."
+      },
+      {
+        "id": "voc-n3-8-11",
+        "word": "しかく",
+        "kanji": "資格",
+        "furigana": "しかく",
+        "romaji": "shikaku",
+        "wordType": "noun",
+        "meaningVi": "Tư cách, chứng chỉ",
+        "accentNote": "資格を 取ります = lấy chứng chỉ."
+      },
+      {
+        "id": "voc-n3-8-12",
+        "word": "たからくじ",
+        "kanji": "宝くじ",
+        "furigana": "たからくじ",
+        "romaji": "takarakuji",
+        "wordType": "noun",
+        "meaningVi": "Xổ số",
+        "accentNote": "宝くじが 当たったら = nếu trúng xổ số thì."
+      },
+      {
+        "id": "voc-n3-8-13",
+        "word": "しっぱいします",
+        "kanji": "失敗します",
+        "furigana": "しっぱいします",
+        "romaji": "shippai shimasu",
+        "wordType": "verb",
+        "meaningVi": "Thất bại",
+        "accentNote": "Đã gặp N4 bài 43."
+      },
+      {
+        "id": "voc-n3-8-14",
+        "word": "しけん",
+        "kanji": "試験",
+        "furigana": "しけん",
+        "romaji": "shiken",
+        "wordType": "noun",
+        "meaningVi": "Kỳ thi",
+        "accentNote": "Đã gặp N4 bài 39."
+      },
+      {
+        "id": "voc-n3-8-15",
+        "word": "おかね",
+        "kanji": "お金",
+        "furigana": "おかね",
+        "romaji": "okane",
+        "wordType": "noun",
+        "meaningVi": "Tiền",
+        "accentNote": "Đã gặp N5 bài 1."
+      },
+      {
+        "id": "voc-n3-8-16",
+        "word": "じかん",
+        "kanji": "時間",
+        "furigana": "じかん",
+        "romaji": "jikan",
+        "wordType": "noun",
+        "meaningVi": "Thời gian",
+        "accentNote": "Đã gặp N5 bài 1."
+      },
+      {
+        "id": "voc-n3-8-17",
+        "word": "がんばります",
+        "kanji": "頑張ります",
+        "furigana": "がんばります",
+        "romaji": "ganbarimasu",
+        "wordType": "verb",
+        "meaningVi": "Cố gắng, nỗ lực",
+        "accentNote": "Đã gặp N4 bài 32."
+      },
+      {
+        "id": "voc-n3-8-18",
+        "word": "きめます",
+        "kanji": "決めます",
+        "furigana": "きめます",
+        "romaji": "kimemasu",
+        "wordType": "verb",
+        "meaningVi": "Quyết định",
+        "accentNote": "Đã gặp N4 bài 33."
+      },
+      {
+        "id": "voc-n3-8-19",
+        "word": "しょうらい",
+        "kanji": "将来",
+        "furigana": "しょうらい",
+        "romaji": "shourai",
+        "wordType": "noun",
+        "meaningVi": "Tương lai",
+        "accentNote": "Đã gặp N4 bài 31."
+      },
+      {
+        "id": "voc-n3-8-20",
+        "word": "もし",
+        "kanji": "もし",
+        "furigana": "もし",
+        "romaji": "moshi",
+        "wordType": "adverb",
+        "meaningVi": "Nếu (như)",
+        "accentNote": "Đã gặp N4 bài 35."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n3-8-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "条",
+        "hanViet": "ĐIỀU",
+        "strokeCount": 7,
         "onyomi": [
-          "ゴ"
+          "ジョウ (jou)"
         ],
-        "kunyomi": [
-          "かたる"
-        ],
-        "meaningVi": "Ngôn ngữ",
+        "kunyomi": [],
+        "meaningVi": "Điều khoản, điều kiện.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "条件",
+            "furigana": "じょうけん",
+            "meaningVi": "Điều kiện"
+          },
+          {
+            "word": "条約",
+            "furigana": "じょうやく",
+            "meaningVi": "Điều ước, hiệp ước"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-8-2",
+        "character": "仮",
+        "hanViet": "GIẢ",
+        "strokeCount": 6,
+        "onyomi": [
+          "カ (ka)",
+          "ケ (ke)"
+        ],
+        "kunyomi": [
+          "かり"
+        ],
+        "meaningVi": "Giả định, tạm thời.",
+        "commonWords": [
+          {
+            "word": "仮定",
+            "furigana": "かてい",
+            "meaningVi": "Giả định"
+          },
+          {
+            "word": "仮に",
+            "furigana": "かりに",
+            "meaningVi": "Giả sử"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-8-3",
+        "character": "努",
+        "hanViet": "NỖ",
+        "strokeCount": 7,
+        "onyomi": [
+          "ド (do)"
+        ],
+        "kunyomi": [
+          "つと(める)"
+        ],
+        "meaningVi": "Nỗ lực, cố gắng.",
+        "commonWords": [
+          {
+            "word": "努力",
+            "furigana": "どりょく",
+            "meaningVi": "Nỗ lực"
+          },
+          {
+            "word": "努める",
+            "furigana": "つとめる",
+            "meaningVi": "Cố gắng, nỗ lực"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-8-4",
+        "character": "格",
+        "hanViet": "CÁCH",
+        "strokeCount": 10,
+        "onyomi": [
+          "カク (kaku)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Tư cách, phẩm cách.",
+        "commonWords": [
+          {
+            "word": "資格",
+            "furigana": "しかく",
+            "meaningVi": "Tư cách, chứng chỉ"
+          },
+          {
+            "word": "合格",
+            "furigana": "ごうかく",
+            "meaningVi": "Đậu, đỗ"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-8-5",
+        "character": "資",
+        "hanViet": "TƯ",
+        "strokeCount": 13,
+        "onyomi": [
+          "シ (shi)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Tư chất, tài nguyên.",
+        "commonWords": [
+          {
+            "word": "資格",
+            "furigana": "しかく",
+            "meaningVi": "Tư cách"
+          },
+          {
+            "word": "投資",
+            "furigana": "とうし",
+            "meaningVi": "Đầu tư"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n3-l8-s0",
-        "title": "Trọng tâm: Điều kiện & Giả định (さえ〜ば & としたら)",
-        "grammarFormula": "N + さえ + V-ば / Thể thông thường + としたら",
-        "explanation": "さえ〜ば: Chỉ cần... là đủ. としたら: Giả sử nếu chuyện đó xảy ra...",
+        "slideId": "n3-l8-s1",
+        "slideType": "grammar",
+        "title": "1. Điều kiện tối thiểu đủ: N さえ + Vば",
+        "grammarFormula": "N + さえ + [thể ば]、[kết quả mong muốn]",
+        "explanation": "さえ〜ば diễn tả 'CHỈ CẦN có N (điều kiện tối thiểu) là ĐỦ để đạt được kết quả' — nhấn mạnh N là yếu tố QUAN TRỌNG NHẤT, ngụ ý các yếu tố khác không thật sự cần thiết.",
+        "teacherTips": "さえ〜ば khác với chỉ dùng ば thông thường — さえ thêm sắc thái 'ĐIỀU KIỆN DUY NHẤT/QUAN TRỌNG NHẤT cần có'.",
+        "culturalNotes": "Câu 'お金さえあれば幸せだ' (chỉ cần có tiền là hạnh phúc) là chủ đề tranh luận phổ biến trong hội thoại tiếng Nhật đời thường.",
         "examples": [
           {
-            "id": "ex-n3-l8-1",
+            "id": "ex-n3-l8-s1-1",
             "tokens": [
               {
-                "id": "tok-n3-l8-1",
-                "text": "体さえ ",
+                "id": "t-l8s1-1",
+                "text": "おかね",
+                "isKeyGrammar": true,
+                "kanji": "お金",
+                "furigana": "おかね"
+              },
+              {
+                "id": "t-l8s1-2",
+                "text": "さえ",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s1-3",
+                "text": "あれば",
+                "isKeyGrammar": true,
+                "kanji": "有れば",
+                "furigana": "あれば"
+              },
+              {
+                "id": "t-l8s1-4",
+                "text": "、",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n3-l8-2",
-                "text": "丈夫なら、何でも できる。",
-                "isKeyGrammar": true
+                "id": "t-l8s1-5",
+                "text": "りゅうがく",
+                "isKeyGrammar": true,
+                "kanji": "留学",
+                "furigana": "りゅうがく"
+              },
+              {
+                "id": "t-l8s1-6",
+                "text": "できます",
+                "isKeyGrammar": false,
+                "kanji": "出来ます",
+                "furigana": "できます"
               }
             ],
-            "meaningVi": "Chỉ cần cơ thể khỏe mạnh thì làm gì cũng được."
+            "meaningVi": "Chỉ cần có tiền thì có thể đi du học."
+          },
+          {
+            "id": "ex-n3-l8-s1-2",
+            "tokens": [
+              {
+                "id": "t-l8s1-7",
+                "text": "じかん",
+                "isKeyGrammar": true,
+                "kanji": "時間",
+                "furigana": "じかん"
+              },
+              {
+                "id": "t-l8s1-8",
+                "text": "さえ",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s1-9",
+                "text": "あれば",
+                "isKeyGrammar": true,
+                "kanji": "有れば",
+                "furigana": "あれば"
+              },
+              {
+                "id": "t-l8s1-10",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s1-11",
+                "text": "しかく",
+                "isKeyGrammar": true,
+                "kanji": "資格",
+                "furigana": "しかく"
+              },
+              {
+                "id": "t-l8s1-12",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s1-13",
+                "text": "べんきょう",
+                "isKeyGrammar": false,
+                "kanji": "勉強",
+                "furigana": "べんきょう"
+              },
+              {
+                "id": "t-l8s1-14",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s1-15",
+                "text": "します",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Chỉ cần có thời gian thì tôi sẽ học lấy chứng chỉ."
           }
-        ],
-        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+        ]
+      },
+      {
+        "slideId": "n3-l8-s2",
+        "slideType": "grammar",
+        "title": "2. Nhấn mạnh hành động: V-stem さえすれば",
+        "grammarFormula": "V-ます-stem + さえすれば、[kết quả]",
+        "explanation": "Khi muốn nhấn mạnh một HÀNH ĐỘNG (thay vì một danh từ) là điều kiện tối thiểu đủ, dùng dạng V-stem + さえすれば — bỏ ます, thêm さえすれば.",
+        "teacherTips": "Vる → V-stem+さえすれば (không dùng thể từ điển): 頑張る → 頑張りさえすれば (không phải 頑張るさえすれば).",
+        "culturalNotes": "Khẩu hiệu động viên thi cử ở Nhật hay dùng cấu trúc này: '諦めさえしなければ、合格できる' (chỉ cần không bỏ cuộc thì có thể đậu).",
+        "examples": [
+          {
+            "id": "ex-n3-l8-s2-1",
+            "tokens": [
+              {
+                "id": "t-l8s2-1",
+                "text": "がんばり",
+                "isKeyGrammar": true,
+                "kanji": "頑張り",
+                "furigana": "がんばり"
+              },
+              {
+                "id": "t-l8s2-2",
+                "text": "さえ",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s2-3",
+                "text": "すれば",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s2-4",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s2-5",
+                "text": "ごうかく",
+                "isKeyGrammar": true,
+                "kanji": "合格",
+                "furigana": "ごうかく"
+              },
+              {
+                "id": "t-l8s2-6",
+                "text": "します",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Chỉ cần cố gắng thì sẽ đậu."
+          },
+          {
+            "id": "ex-n3-l8-s2-2",
+            "tokens": [
+              {
+                "id": "t-l8s2-7",
+                "text": "べんきょう",
+                "isKeyGrammar": false,
+                "kanji": "勉強",
+                "furigana": "べんきょう"
+              },
+              {
+                "id": "t-l8s2-8",
+                "text": "し",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s2-9",
+                "text": "さえ",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s2-10",
+                "text": "すれば",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s2-11",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s2-12",
+                "text": "しけん",
+                "isKeyGrammar": true,
+                "kanji": "試験",
+                "furigana": "しけん"
+              },
+              {
+                "id": "t-l8s2-13",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s2-14",
+                "text": "ごうかく",
+                "isKeyGrammar": false,
+                "kanji": "合格",
+                "furigana": "ごうかく"
+              },
+              {
+                "id": "t-l8s2-15",
+                "text": "します",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Chỉ cần chăm chỉ học thì sẽ đậu kỳ thi."
+          }
+        ]
+      },
+      {
+        "slideId": "n3-l8-s3",
+        "slideType": "grammar",
+        "title": "3. Giả định tình huống: Thể thường + としたら",
+        "grammarFormula": "[Thể thông thường] + としたら、[kết quả giả định]",
+        "explanation": "としたら dùng để GIẢ ĐỊNH một tình huống (thường CHƯA xảy ra hoặc mang tính VIỂN VÔNG/giả tưởng), rồi suy luận điều gì sẽ xảy ra NẾU tình huống đó là thật.",
+        "teacherTips": "としたら thường đi cùng câu hỏi 'あなたなら〜' hoặc 'もし〜' để nhấn mạnh tính giả định, khác hẳn ば/たら (điều kiện có thể xảy ra thật).",
+        "culturalNotes": "Câu hỏi phỏng vấn/trò chuyện kinh điển ở Nhật: '宝くじが当たったとしたら、何に使いますか' (nếu trúng số thì bạn sẽ dùng vào việc gì).",
+        "examples": [
+          {
+            "id": "ex-n3-l8-s3-1",
+            "tokens": [
+              {
+                "id": "t-l8s3-1",
+                "text": "たからくじ",
+                "isKeyGrammar": true,
+                "kanji": "宝くじ",
+                "furigana": "たからくじ"
+              },
+              {
+                "id": "t-l8s3-2",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s3-3",
+                "text": "あたった",
+                "isKeyGrammar": true,
+                "kanji": "当たった",
+                "furigana": "あたった"
+              },
+              {
+                "id": "t-l8s3-4",
+                "text": "としたら",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s3-5",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s3-6",
+                "text": "なに",
+                "isKeyGrammar": false,
+                "kanji": "何",
+                "furigana": "なに"
+              },
+              {
+                "id": "t-l8s3-7",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s3-8",
+                "text": "しますか",
+                "isKeyGrammar": false,
+                "kanji": "為ますか",
+                "furigana": "しますか"
+              }
+            ],
+            "meaningVi": "Giả sử trúng xổ số thì bạn sẽ làm gì?"
+          },
+          {
+            "id": "ex-n3-l8-s3-2",
+            "tokens": [
+              {
+                "id": "t-l8s3-9",
+                "text": "まんいち",
+                "isKeyGrammar": true,
+                "kanji": "万一",
+                "furigana": "まんいち"
+              },
+              {
+                "id": "t-l8s3-10",
+                "text": "しっぱい",
+                "isKeyGrammar": false,
+                "kanji": "失敗",
+                "furigana": "しっぱい"
+              },
+              {
+                "id": "t-l8s3-11",
+                "text": "した",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s3-12",
+                "text": "としたら",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s3-13",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s3-14",
+                "text": "どう",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s3-15",
+                "text": "しますか",
+                "isKeyGrammar": false,
+                "kanji": "為ますか",
+                "furigana": "しますか"
+              }
+            ],
+            "meaningVi": "Giả sử vạn nhất mà thất bại thì bạn sẽ làm sao?"
+          }
+        ]
+      },
+      {
+        "slideId": "n3-l8-s4",
+        "slideType": "grammar",
+        "title": "4. So sánh さえ〜ば (điều kiện thực tế) và としたら (giả định viển vông)",
+        "grammarFormula": "さえ〜ば: điều kiện TỐI THIỂU, CÓ THỂ xảy ra thật　vs　としたら: GIẢ ĐỊNH một tình huống, có thể KHÔNG THỰC",
+        "explanation": "さえ〜ば nói về điều kiện THỰC TẾ (chỉ cần X là đủ để đạt Y); としたら nói về một GIẢ ĐỊNH (nếu tình huống X xảy ra, dù viển vông, thì Y sẽ thế nào) — cần phân biệt tính THỰC/GIẢ của mệnh đề điều kiện.",
+        "teacherTips": "Mẹo: さえ〜ば trả lời 'cần điều kiện gì để Y xảy ra'; としたら trả lời 'nếu X (giả sử) thì Y sẽ ra sao'.",
+        "culturalNotes": "Cả hai đều là ngữ pháp N3 quan trọng, hay xuất hiện trong phần đọc hiểu và ngữ pháp của đề thi JLPT.",
+        "examples": [
+          {
+            "id": "ex-n3-l8-s4-1",
+            "tokens": [
+              {
+                "id": "t-l8s4-1",
+                "text": "チャンス",
+                "isKeyGrammar": true,
+                "kanji": "チャンス",
+                "furigana": "チャンス"
+              },
+              {
+                "id": "t-l8s4-2",
+                "text": "さえ",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s4-3",
+                "text": "あれば",
+                "isKeyGrammar": true,
+                "kanji": "有れば",
+                "furigana": "あれば"
+              },
+              {
+                "id": "t-l8s4-4",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s4-5",
+                "text": "ゆうしょう",
+                "isKeyGrammar": true,
+                "kanji": "優勝",
+                "furigana": "ゆうしょう"
+              },
+              {
+                "id": "t-l8s4-6",
+                "text": "できます",
+                "isKeyGrammar": false,
+                "kanji": "出来ます",
+                "furigana": "できます"
+              }
+            ],
+            "meaningVi": "Chỉ cần có cơ hội thì có thể vô địch. (điều kiện thực tế)"
+          },
+          {
+            "id": "ex-n3-l8-s4-2",
+            "tokens": [
+              {
+                "id": "t-l8s4-7",
+                "text": "もし",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s4-8",
+                "text": "ゆうしょう",
+                "isKeyGrammar": true,
+                "kanji": "優勝",
+                "furigana": "ゆうしょう"
+              },
+              {
+                "id": "t-l8s4-9",
+                "text": "した",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s4-10",
+                "text": "としたら",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l8s4-11",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l8s4-12",
+                "text": "うれしい",
+                "isKeyGrammar": false,
+                "kanji": "嬉しい",
+                "furigana": "うれしい"
+              },
+              {
+                "id": "t-l8s4-13",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Giả sử nếu vô địch thì sẽ vui. (giả định)"
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n3-8-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "田中",
+        "speakerRole": "Bạn cùng lớp",
         "tokens": [
           {
-            "id": "tok-n3-8-d1",
-            "text": "この文法のポイントを"
+            "id": "d8-1",
+            "text": "しょうらい",
+            "isKeyGrammar": true,
+            "kanji": "将来",
+            "furigana": "しょうらい"
           },
           {
-            "id": "tok-n3-8-d2",
-            "text": "復習しましょう。"
+            "id": "d8-2",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-3",
+            "text": "ゆめ",
+            "isKeyGrammar": false,
+            "kanji": "夢",
+            "furigana": "ゆめ"
+          },
+          {
+            "id": "d8-4",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-5",
+            "text": "なん",
+            "isKeyGrammar": false,
+            "kanji": "何",
+            "furigana": "なん"
+          },
+          {
+            "id": "d8-6",
+            "text": "です",
+            "isKeyGrammar": false,
+            "kanji": "です",
+            "furigana": "です"
+          },
+          {
+            "id": "d8-7",
+            "text": "か",
+            "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Ước mơ tương lai của bạn là gì?"
+      },
+      {
+        "id": "dia-n3-8-2",
+        "speaker": "サントス",
+        "speakerRole": "Bạn cùng lớp",
+        "tokens": [
+          {
+            "id": "d8-8",
+            "text": "おかね",
+            "isKeyGrammar": true,
+            "kanji": "お金",
+            "furigana": "おかね"
+          },
+          {
+            "id": "d8-9",
+            "text": "さえ",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d8-10",
+            "text": "あれば",
+            "isKeyGrammar": true,
+            "kanji": "有れば",
+            "furigana": "あれば"
+          },
+          {
+            "id": "d8-11",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-12",
+            "text": "にほん",
+            "isKeyGrammar": false,
+            "kanji": "日本",
+            "furigana": "にほん"
+          },
+          {
+            "id": "d8-13",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-14",
+            "text": "りゅうがく",
+            "isKeyGrammar": true,
+            "kanji": "留学",
+            "furigana": "りゅうがく"
+          },
+          {
+            "id": "d8-15",
+            "text": "したいです",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Chỉ cần có tiền thì tôi muốn đi du học ở Nhật."
+      },
+      {
+        "id": "dia-n3-8-3",
+        "speaker": "田中",
+        "speakerRole": "Bạn cùng lớp",
+        "tokens": [
+          {
+            "id": "d8-16",
+            "text": "しかく",
+            "isKeyGrammar": true,
+            "kanji": "資格",
+            "furigana": "しかく"
+          },
+          {
+            "id": "d8-17",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-18",
+            "text": "しけん",
+            "isKeyGrammar": true,
+            "kanji": "試験",
+            "furigana": "しけん"
+          },
+          {
+            "id": "d8-19",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-20",
+            "text": "どうでしたか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Kỳ thi lấy chứng chỉ thế nào rồi?"
+      },
+      {
+        "id": "dia-n3-8-4",
+        "speaker": "サントス",
+        "speakerRole": "Bạn cùng lớp",
+        "tokens": [
+          {
+            "id": "d8-21",
+            "text": "べんきょう",
+            "isKeyGrammar": false,
+            "kanji": "勉強",
+            "furigana": "べんきょう"
+          },
+          {
+            "id": "d8-22",
+            "text": "し",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-23",
+            "text": "さえ",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d8-24",
+            "text": "すれば",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d8-25",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-26",
+            "text": "ごうかく",
+            "isKeyGrammar": true,
+            "kanji": "合格",
+            "furigana": "ごうかく"
+          },
+          {
+            "id": "d8-27",
+            "text": "できる",
+            "isKeyGrammar": false,
+            "kanji": "出来る",
+            "furigana": "できる"
+          },
+          {
+            "id": "d8-28",
+            "text": "と",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-29",
+            "text": "おもいます",
+            "isKeyGrammar": false,
+            "kanji": "思います",
+            "furigana": "おもいます"
+          }
+        ],
+        "meaningVi": "Tôi nghĩ chỉ cần chăm chỉ học là sẽ đậu."
+      },
+      {
+        "id": "dia-n3-8-5",
+        "speaker": "田中",
+        "speakerRole": "Bạn cùng lớp",
+        "tokens": [
+          {
+            "id": "d8-30",
+            "text": "たからくじ",
+            "isKeyGrammar": true,
+            "kanji": "宝くじ",
+            "furigana": "たからくじ"
+          },
+          {
+            "id": "d8-31",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-32",
+            "text": "あたった",
+            "isKeyGrammar": true,
+            "kanji": "当たった",
+            "furigana": "あたった"
+          },
+          {
+            "id": "d8-33",
+            "text": "としたら",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d8-34",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-35",
+            "text": "なに",
+            "isKeyGrammar": false,
+            "kanji": "何",
+            "furigana": "なに"
+          },
+          {
+            "id": "d8-36",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-37",
+            "text": "しますか",
+            "isKeyGrammar": false,
+            "kanji": "為ますか",
+            "furigana": "しますか"
+          }
+        ],
+        "meaningVi": "Giả sử trúng xổ số thì bạn sẽ làm gì?"
+      },
+      {
+        "id": "dia-n3-8-6",
+        "speaker": "サントス",
+        "speakerRole": "Bạn cùng lớp",
+        "tokens": [
+          {
+            "id": "d8-38",
+            "text": "りゅうがく",
+            "isKeyGrammar": true,
+            "kanji": "留学",
+            "furigana": "りゅうがく"
+          },
+          {
+            "id": "d8-39",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-40",
+            "text": "じょうけん",
+            "isKeyGrammar": true,
+            "kanji": "条件",
+            "furigana": "じょうけん"
+          },
+          {
+            "id": "d8-41",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-42",
+            "text": "そろいます",
+            "isKeyGrammar": false,
+            "kanji": "揃います",
+            "furigana": "そろいます"
+          }
+        ],
+        "meaningVi": "Điều kiện đi du học sẽ được đáp ứng đầy đủ."
+      },
+      {
+        "id": "dia-n3-8-7",
+        "speaker": "田中",
+        "speakerRole": "Bạn cùng lớp",
+        "tokens": [
+          {
+            "id": "d8-43",
+            "text": "まんいち",
+            "isKeyGrammar": true,
+            "kanji": "万一",
+            "furigana": "まんいち"
+          },
+          {
+            "id": "d8-44",
+            "text": "しっぱい",
+            "isKeyGrammar": true,
+            "kanji": "失敗",
+            "furigana": "しっぱい"
+          },
+          {
+            "id": "d8-45",
+            "text": "した",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-46",
+            "text": "としたら",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d8-47",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-48",
+            "text": "どう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-49",
+            "text": "しますか",
+            "isKeyGrammar": false,
+            "kanji": "為ますか",
+            "furigana": "しますか"
+          }
+        ],
+        "meaningVi": "Giả sử vạn nhất mà thất bại thì bạn sẽ làm sao?"
+      },
+      {
+        "id": "dia-n3-8-8",
+        "speaker": "サントス",
+        "speakerRole": "Bạn cùng lớp",
+        "tokens": [
+          {
+            "id": "d8-50",
+            "text": "また",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-51",
+            "text": "どりょく",
+            "isKeyGrammar": true,
+            "kanji": "努力",
+            "furigana": "どりょく"
+          },
+          {
+            "id": "d8-52",
+            "text": "します",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Tôi sẽ nỗ lực lại lần nữa."
+      },
+      {
+        "id": "dia-n3-8-9",
+        "speaker": "田中",
+        "speakerRole": "Bạn cùng lớp",
+        "tokens": [
+          {
+            "id": "d8-53",
+            "text": "チャンス",
+            "isKeyGrammar": true,
+            "kanji": "チャンス",
+            "furigana": "チャンス"
+          },
+          {
+            "id": "d8-54",
+            "text": "さえ",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d8-55",
+            "text": "あれば",
+            "isKeyGrammar": true,
+            "kanji": "有れば",
+            "furigana": "あれば"
+          },
+          {
+            "id": "d8-56",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-57",
+            "text": "せいこう",
+            "isKeyGrammar": true,
+            "kanji": "成功",
+            "furigana": "せいこう"
+          },
+          {
+            "id": "d8-58",
+            "text": "します",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Chỉ cần có cơ hội thì bạn sẽ thành công."
+      },
+      {
+        "id": "dia-n3-8-10",
+        "speaker": "サントス",
+        "speakerRole": "Bạn cùng lớp",
+        "tokens": [
+          {
+            "id": "d8-59",
+            "text": "きめました",
+            "isKeyGrammar": true,
+            "kanji": "決めました",
+            "furigana": "きめました"
+          },
+          {
+            "id": "d8-60",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d8-61",
+            "text": "ぜったい",
+            "isKeyGrammar": false,
+            "kanji": "絶対",
+            "furigana": "ぜったい"
+          },
+          {
+            "id": "d8-62",
+            "text": "ごうかく",
+            "isKeyGrammar": true,
+            "kanji": "合格",
+            "furigana": "ごうかく"
+          },
+          {
+            "id": "d8-63",
+            "text": "します",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Tôi đã quyết định rồi. Nhất định sẽ đậu."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n3-8-1",
-        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Điều kiện & Giả định (さえ〜ば & としたら)'?",
+        "question": "「お金さえあれば、留学できます」 — さえ〜ば diễn tả:",
         "options": [
-          "N + さえ + V-ば",
-          "V-た + まま",
-          "N + に沿って",
-          "V-る + 途端に"
+          "Chỉ cần N (điều kiện tối thiểu) là đủ để đạt kết quả",
+          "Phủ định việc có tiền",
+          "So sánh tiền bạc với thời gian",
+          "Ra lệnh phải có tiền"
         ],
         "correctIndex": 0,
-        "explanation": "Đáp án chính xác: N + さえ + V-ば / Thể thông thường + としたら",
-        "hint": "Xem lại công thức chia ở slide lý thuyết."
+        "explanation": "さえ〜ば nhấn mạnh N (お金) là điều kiện DUY NHẤT/QUAN TRỌNG NHẤT cần có để đạt được kết quả.",
+        "hint": "Xem cấu trúc Nさえ〜ば ở slide 1."
+      },
+      {
+        "id": "ex-q-n3-8-2",
+        "question": "「頑張りさえすれば、合格します」 — vì sao dùng 頑張り (stem) mà không phải 頑張る?",
+        "options": [
+          "Vì cấu trúc V-stem+さえすれば yêu cầu bỏ ます, dùng dạng thân động từ",
+          "Vì 頑張る là danh từ",
+          "Không có quy tắc, dùng tùy ý",
+          "Vì câu là câu phủ định"
+        ],
+        "correctIndex": 0,
+        "explanation": "Khi nhấn mạnh HÀNH ĐỘNG là điều kiện, dùng V-stem (bỏ ます) + さえすれば: 頑張ります → 頑張りさえすれば.",
+        "hint": "Xem cấu trúc V-stemさえすれば ở slide 2."
+      },
+      {
+        "id": "ex-q-n3-8-3",
+        "question": "「宝くじが当たったとしたら、何をしますか」 — としたら diễn tả điều gì?",
+        "options": [
+          "Giả định một tình huống (có thể viển vông), rồi hỏi kết quả nếu nó là thật",
+          "Một sự thật đã xảy ra rồi",
+          "So sánh hai tình huống đã xảy ra",
+          "Phủ định việc trúng số"
+        ],
+        "correctIndex": 0,
+        "explanation": "としたら giả định một tình huống (trúng số) dù có thể chưa/không xảy ra, để hỏi kết quả giả định.",
+        "hint": "Xem cấu trúc としたら ở slide 3."
+      },
+      {
+        "id": "ex-q-n3-8-4",
+        "question": "Sự khác biệt cốt lõi giữa さえ〜ば và としたら là gì?",
+        "options": [
+          "さえ〜ば nói về điều kiện THỰC TẾ có thể xảy ra; としたら nói về GIẢ ĐỊNH có thể KHÔNG THỰC",
+          "Hoàn toàn giống nhau, dùng thay thế được cho nhau",
+          "さえ〜ば chỉ dùng cho câu hỏi",
+          "としたら chỉ dùng cho phủ định"
+        ],
+        "correctIndex": 0,
+        "explanation": "さえ〜ば diễn tả điều kiện tối thiểu THỰC TẾ; としたら diễn tả một GIẢ ĐỊNH có thể viển vông.",
+        "hint": "Xem bảng so sánh ở slide 4."
+      },
+      {
+        "id": "ex-q-n3-8-5",
+        "question": "「万一失敗したとしたら、どうしますか」 — 万一 nghĩa là gì?",
+        "options": [
+          "Vạn nhất, lỡ như (điều rất hiếm khi xảy ra)",
+          "Chắc chắn sẽ xảy ra",
+          "Đã xảy ra rồi",
+          "Không bao giờ xảy ra"
+        ],
+        "correctIndex": 0,
+        "explanation": "万一 nhấn mạnh tình huống RẤT HIẾM xảy ra, thường đi cùng としたら/たら để giả định trường hợp xấu nhất.",
+        "hint": "Xem nghĩa của 万一 trong từ vựng bài học."
+      },
+      {
+        "id": "ex-q-n3-8-6",
+        "question": "「チャンスさえあれば、優勝できます」 nghĩa là:",
+        "options": [
+          "Chỉ cần có cơ hội thì có thể vô địch",
+          "Không có cơ hội nào để vô địch",
+          "Đã vô địch rồi, không cần cơ hội",
+          "So sánh cơ hội với thất bại"
+        ],
+        "correctIndex": 0,
+        "explanation": "さえあれば nhấn mạnh 'chỉ cần có cơ hội (チャンス) là đủ' để đạt kết quả vô địch (優勝できます).",
+        "hint": "Áp dụng cấu trúc Nさえあれば."
+      },
+      {
+        "id": "ex-q-n3-8-7",
+        "question": "「勉強しさえすれば、試験に合格します」 — cấu trúc này nhấn mạnh điều gì?",
+        "options": [
+          "Hành động chăm chỉ học là điều kiện tối thiểu đủ để đậu kỳ thi",
+          "Không cần học vẫn đậu được",
+          "Kỳ thi đã kết thúc rồi",
+          "So sánh việc học với việc chơi"
+        ],
+        "correctIndex": 0,
+        "explanation": "V-stemさえすれば (勉強しさえすれば) nhấn mạnh hành động học là điều kiện đủ để đạt kết quả đậu thi.",
+        "hint": "Xem lại cấu trúc V-stemさえすれば ở slide 2."
+      },
+      {
+        "id": "ex-q-n3-8-8",
+        "question": "Santos nghĩ điều gì sẽ giúp mình đậu kỳ thi lấy chứng chỉ?",
+        "options": [
+          "Chỉ cần chăm chỉ học (勉強しさえすれば)",
+          "Chỉ cần may mắn",
+          "Không cần làm gì cả",
+          "Chỉ cần có nhiều tiền"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos nói 「勉強しさえすれば、合格できると思います」.",
+        "hint": "Xem câu thoại thứ 4."
+      },
+      {
+        "id": "ex-q-n3-8-9",
+        "question": "Nếu vạn nhất thất bại, Santos sẽ làm gì?",
+        "options": [
+          "Nỗ lực lại lần nữa (また努力します)",
+          "Từ bỏ hoàn toàn",
+          "Không làm gì cả",
+          "Đi du học ngay lập tức"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos trả lời 「また努力します」.",
+        "hint": "Xem câu thoại thứ 8."
+      },
+      {
+        "id": "ex-q-n3-8-10",
+        "question": "Santos đã quyết định điều gì ở cuối hội thoại?",
+        "options": [
+          "Nhất định sẽ đậu (絶対合格します)",
+          "Sẽ bỏ thi",
+          "Sẽ đi du học ngay",
+          "Chưa quyết định gì cả"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos nói 「決めました。絶対合格します」.",
+        "hint": "Xem câu thoại cuối cùng."
       }
     ]
   },

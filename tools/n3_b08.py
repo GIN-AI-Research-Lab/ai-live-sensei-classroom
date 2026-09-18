@@ -1,0 +1,240 @@
+# -*- coding: utf-8 -*-
+"""N3 — Bai 8: Dieu kien toi thieu さえ〜ば, gia dinh としたら.
+
+Tu vung minh hoa TU CHON tu pool mo data/jlpt-vocab/n3.csv (xem NOTICE.md).
+"""
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from n3_lib import v, k, t, ex, slide, line, q, lesson, merge
+from jlpt_pool import Pool
+
+L = 8
+pool = Pool("n3")
+
+VOCAB = [
+    v(1,  "じょうけん", "条件", "じょうけん", "jouken", "noun", "Điều kiện", "条件さえ 合えば = chỉ cần điều kiện phù hợp thì.", L),
+    v(2,  "せいこうします", "成功します", "せいこうします", "seikou shimasu", "verb", "Thành công", "努力すれば 成功します = nỗ lực thì sẽ thành công.", L),
+    v(3,  "あたります", "当たります", "あたります", "atarimasu", "verb", "Trúng, đúng (trúng số, trúng thưởng)", "宝くじが 当たります = trúng xổ số.", L),
+    v(4,  "かてい", "仮定", "かてい", "katei", "noun", "Giả định", "仮定の 話 = câu chuyện giả định.", L),
+    v(5,  "ごうかくします", "合格します", "ごうかくします", "goukaku shimasu", "verb", "Đậu, đỗ (thi cử)", "試験に 合格します = đậu kỳ thi.", L),
+    v(6,  "どりょくします", "努力します", "どりょくします", "doryoku shimasu", "verb", "Nỗ lực, cố gắng", "毎日 努力します = mỗi ngày nỗ lực.", L),
+    v(7,  "まんいち", "万一", "まんいち", "man-ichi", "adverb", "Vạn nhất, lỡ như (điều rất hiếm xảy ra)", "万一 失敗したら = lỡ như thất bại thì.", L),
+    v(8,  "りゅうがくします", "留学します", "りゅうがくします", "ryuugaku shimasu", "verb", "Du học", "日本に 留学します = du học ở Nhật Bản.", L),
+    v(9,  "ゆうしょうします", "優勝します", "ゆうしょうします", "yuushou shimasu", "verb", "Vô địch, giành chức quán quân", "大会で 優勝します = vô địch tại đại hội.", L),
+    v(10, "チャンス", "チャンス", "チャンス", "chansu", "noun", "Cơ hội", "チャンスさえ あれば = chỉ cần có cơ hội thì.", L),
+    v(11, "しかく", "資格", "しかく", "shikaku", "noun", "Tư cách, chứng chỉ", "資格を 取ります = lấy chứng chỉ.", L),
+    v(12, "たからくじ", "宝くじ", "たからくじ", "takarakuji", "noun", "Xổ số", "宝くじが 当たったら = nếu trúng xổ số thì.", L),
+    v(13, "しっぱいします", "失敗します", "しっぱいします", "shippai shimasu", "verb", "Thất bại", "Đã gặp N4 bài 43.", L),
+    v(14, "しけん", "試験", "しけん", "shiken", "noun", "Kỳ thi", "Đã gặp N4 bài 39.", L),
+    v(15, "おかね", "お金", "おかね", "okane", "noun", "Tiền", "Đã gặp N5 bài 1.", L),
+    v(16, "じかん", "時間", "じかん", "jikan", "noun", "Thời gian", "Đã gặp N5 bài 1.", L),
+    v(17, "がんばります", "頑張ります", "がんばります", "ganbarimasu", "verb", "Cố gắng, nỗ lực", "Đã gặp N4 bài 32.", L),
+    v(18, "きめます", "決めます", "きめます", "kimemasu", "verb", "Quyết định", "Đã gặp N4 bài 33.", L),
+    v(19, "しょうらい", "将来", "しょうらい", "shourai", "noun", "Tương lai", "Đã gặp N4 bài 31.", L),
+    v(20, "もし", "もし", "もし", "moshi", "adverb", "Nếu (như)", "Đã gặp N4 bài 35.", L),
+]
+
+KANJI = [
+    k(1, "条", "ĐIỀU", 7, ["ジョウ (jou)"], [], "Điều khoản, điều kiện.",
+      [("条件", "じょうけん", "Điều kiện"), ("条約", "じょうやく", "Điều ước, hiệp ước")], L),
+    k(2, "仮", "GIẢ", 6, ["カ (ka)", "ケ (ke)"], ["かり"], "Giả định, tạm thời.",
+      [("仮定", "かてい", "Giả định"), ("仮に", "かりに", "Giả sử")], L),
+    k(3, "努", "NỖ", 7, ["ド (do)"], ["つと(める)"], "Nỗ lực, cố gắng.",
+      [("努力", "どりょく", "Nỗ lực"), ("努める", "つとめる", "Cố gắng, nỗ lực")], L),
+    k(4, "格", "CÁCH", 10, ["カク (kaku)"], [], "Tư cách, phẩm cách.",
+      [("資格", "しかく", "Tư cách, chứng chỉ"), ("合格", "ごうかく", "Đậu, đỗ")], L),
+    k(5, "資", "TƯ", 13, ["シ (shi)"], [], "Tư chất, tài nguyên.",
+      [("資格", "しかく", "Tư cách"), ("投資", "とうし", "Đầu tư")], L),
+]
+
+SLIDES = [
+    slide(L, 1,
+        "1. Điều kiện tối thiểu đủ: N さえ + Vば",
+        "N + さえ + [thể ば]、[kết quả mong muốn]",
+        "さえ〜ば diễn tả 'CHỈ CẦN có N (điều kiện tối thiểu) là ĐỦ để đạt được kết quả' — nhấn "
+        "mạnh N là yếu tố QUAN TRỌNG NHẤT, ngụ ý các yếu tố khác không thật sự cần thiết.",
+        [
+            ex(L, 1, 1, [t("t-l8s1-1", "おかね", "お金", "おかね", key=True), t("t-l8s1-2", "さえ", key=True),
+                         t("t-l8s1-3", "あれば", "有れば", "あれば", key=True), t("t-l8s1-4", "、"),
+                         t("t-l8s1-5", "りゅうがく", "留学", "りゅうがく", key=True), t("t-l8s1-6", "できます", "出来ます", "できます")],
+               "Chỉ cần có tiền thì có thể đi du học."),
+            ex(L, 1, 2, [t("t-l8s1-7", "じかん", "時間", "じかん", key=True), t("t-l8s1-8", "さえ", key=True),
+                         t("t-l8s1-9", "あれば", "有れば", "あれば", key=True), t("t-l8s1-10", "、"),
+                         t("t-l8s1-11", "しかく", "資格", "しかく", key=True), t("t-l8s1-12", "の"),
+                         t("t-l8s1-13", "べんきょう", "勉強", "べんきょう"), t("t-l8s1-14", "を"), t("t-l8s1-15", "します")],
+               "Chỉ cần có thời gian thì tôi sẽ học lấy chứng chỉ."),
+        ],
+        tips="さえ〜ば khác với chỉ dùng ば thông thường — さえ thêm sắc thái 'ĐIỀU KIỆN DUY NHẤT/QUAN TRỌNG NHẤT cần có'.",
+        culture="Câu 'お金さえあれば幸せだ' (chỉ cần có tiền là hạnh phúc) là chủ đề tranh luận phổ biến trong hội thoại tiếng Nhật đời thường."),
+
+    slide(L, 2,
+        "2. Nhấn mạnh hành động: V-stem さえすれば",
+        "V-ます-stem + さえすれば、[kết quả]",
+        "Khi muốn nhấn mạnh một HÀNH ĐỘNG (thay vì một danh từ) là điều kiện tối thiểu đủ, dùng "
+        "dạng V-stem + さえすれば — bỏ ます, thêm さえすれば.",
+        [
+            ex(L, 2, 1, [t("t-l8s2-1", "がんばり", "頑張り", "がんばり", key=True), t("t-l8s2-2", "さえ", key=True),
+                         t("t-l8s2-3", "すれば", key=True), t("t-l8s2-4", "、"), t("t-l8s2-5", "ごうかく", "合格", "ごうかく", key=True),
+                         t("t-l8s2-6", "します")],
+               "Chỉ cần cố gắng thì sẽ đậu."),
+            ex(L, 2, 2, [t("t-l8s2-7", "べんきょう", "勉強", "べんきょう"), t("t-l8s2-8", "し"), t("t-l8s2-9", "さえ", key=True),
+                         t("t-l8s2-10", "すれば", key=True), t("t-l8s2-11", "、"), t("t-l8s2-12", "しけん", "試験", "しけん", key=True),
+                         t("t-l8s2-13", "に"), t("t-l8s2-14", "ごうかく", "合格", "ごうかく"), t("t-l8s2-15", "します")],
+               "Chỉ cần chăm chỉ học thì sẽ đậu kỳ thi."),
+        ],
+        tips="Vる → V-stem+さえすれば (không dùng thể từ điển): 頑張る → 頑張りさえすれば (không phải 頑張るさえすれば).",
+        culture="Khẩu hiệu động viên thi cử ở Nhật hay dùng cấu trúc này: '諦めさえしなければ、合格できる' (chỉ cần không bỏ cuộc thì có thể đậu)."),
+
+    slide(L, 3,
+        "3. Giả định tình huống: Thể thường + としたら",
+        "[Thể thông thường] + としたら、[kết quả giả định]",
+        "としたら dùng để GIẢ ĐỊNH một tình huống (thường CHƯA xảy ra hoặc mang tính VIỂN VÔNG/giả "
+        "tưởng), rồi suy luận điều gì sẽ xảy ra NẾU tình huống đó là thật.",
+        [
+            ex(L, 3, 1, [t("t-l8s3-1", "たからくじ", "宝くじ", "たからくじ", key=True), t("t-l8s3-2", "が"),
+                         t("t-l8s3-3", "あたった", "当たった", "あたった", key=True), t("t-l8s3-4", "としたら", key=True),
+                         t("t-l8s3-5", "、"), t("t-l8s3-6", "なに", "何", "なに"), t("t-l8s3-7", "を"),
+                         t("t-l8s3-8", "しますか", "為ますか", "しますか")],
+               "Giả sử trúng xổ số thì bạn sẽ làm gì?"),
+            ex(L, 3, 2, [t("t-l8s3-9", "まんいち", "万一", "まんいち", key=True), t("t-l8s3-10", "しっぱい", "失敗", "しっぱい"),
+                         t("t-l8s3-11", "した"), t("t-l8s3-12", "としたら", key=True), t("t-l8s3-13", "、"),
+                         t("t-l8s3-14", "どう"), t("t-l8s3-15", "しますか", "為ますか", "しますか")],
+               "Giả sử vạn nhất mà thất bại thì bạn sẽ làm sao?"),
+        ],
+        tips="としたら thường đi cùng câu hỏi 'あなたなら〜' hoặc 'もし〜' để nhấn mạnh tính giả định, khác hẳn ば/たら (điều kiện có thể xảy ra thật).",
+        culture="Câu hỏi phỏng vấn/trò chuyện kinh điển ở Nhật: '宝くじが当たったとしたら、何に使いますか' (nếu trúng số thì bạn sẽ dùng vào việc gì)."),
+
+    slide(L, 4,
+        "4. So sánh さえ〜ば (điều kiện thực tế) và としたら (giả định viển vông)",
+        "さえ〜ば: điều kiện TỐI THIỂU, CÓ THỂ xảy ra thật　vs　としたら: GIẢ ĐỊNH một tình huống, có thể KHÔNG THỰC",
+        "さえ〜ば nói về điều kiện THỰC TẾ (chỉ cần X là đủ để đạt Y); としたら nói về một GIẢ ĐỊNH "
+        "(nếu tình huống X xảy ra, dù viển vông, thì Y sẽ thế nào) — cần phân biệt tính THỰC/GIẢ của mệnh đề điều kiện.",
+        [
+            ex(L, 4, 1, [t("t-l8s4-1", "チャンス", "チャンス", "チャンス", key=True), t("t-l8s4-2", "さえ", key=True),
+                         t("t-l8s4-3", "あれば", "有れば", "あれば", key=True), t("t-l8s4-4", "、"),
+                         t("t-l8s4-5", "ゆうしょう", "優勝", "ゆうしょう", key=True), t("t-l8s4-6", "できます", "出来ます", "できます")],
+               "Chỉ cần có cơ hội thì có thể vô địch. (điều kiện thực tế)"),
+            ex(L, 4, 2, [t("t-l8s4-7", "もし"), t("t-l8s4-8", "ゆうしょう", "優勝", "ゆうしょう", key=True), t("t-l8s4-9", "した"),
+                         t("t-l8s4-10", "としたら", key=True), t("t-l8s4-11", "、"), t("t-l8s4-12", "うれしい", "嬉しい", "うれしい"),
+                         t("t-l8s4-13", "です")],
+               "Giả sử nếu vô địch thì sẽ vui. (giả định)"),
+        ],
+        tips="Mẹo: さえ〜ば trả lời 'cần điều kiện gì để Y xảy ra'; としたら trả lời 'nếu X (giả sử) thì Y sẽ ra sao'.",
+        culture="Cả hai đều là ngữ pháp N3 quan trọng, hay xuất hiện trong phần đọc hiểu và ngữ pháp của đề thi JLPT."),
+]
+
+DIALOGUE = [
+    line(L, 1, "田中", "Bạn cùng lớp",
+         [t("d8-1", "しょうらい", "将来", "しょうらい", key=True), t("d8-2", "の"), t("d8-3", "ゆめ", "夢", "ゆめ"),
+          t("d8-4", "は"), t("d8-5", "なん", "何", "なん"), t("d8-6", "です", "です", "です"), t("d8-7", "か")],
+         "Ước mơ tương lai của bạn là gì?"),
+    line(L, 2, "サントス", "Bạn cùng lớp",
+         [t("d8-8", "おかね", "お金", "おかね", key=True), t("d8-9", "さえ", key=True), t("d8-10", "あれば", "有れば", "あれば", key=True),
+          t("d8-11", "、"), t("d8-12", "にほん", "日本", "にほん"), t("d8-13", "に"), t("d8-14", "りゅうがく", "留学", "りゅうがく", key=True),
+          t("d8-15", "したいです")],
+         "Chỉ cần có tiền thì tôi muốn đi du học ở Nhật."),
+    line(L, 3, "田中", "Bạn cùng lớp",
+         [t("d8-16", "しかく", "資格", "しかく", key=True), t("d8-17", "の"), t("d8-18", "しけん", "試験", "しけん", key=True),
+          t("d8-19", "は"), t("d8-20", "どうでしたか")],
+         "Kỳ thi lấy chứng chỉ thế nào rồi?"),
+    line(L, 4, "サントス", "Bạn cùng lớp",
+         [t("d8-21", "べんきょう", "勉強", "べんきょう"), t("d8-22", "し"), t("d8-23", "さえ", key=True),
+          t("d8-24", "すれば", key=True), t("d8-25", "、"), t("d8-26", "ごうかく", "合格", "ごうかく", key=True),
+          t("d8-27", "できる", "出来る", "できる"), t("d8-28", "と"), t("d8-29", "おもいます", "思います", "おもいます")],
+         "Tôi nghĩ chỉ cần chăm chỉ học là sẽ đậu."),
+    line(L, 5, "田中", "Bạn cùng lớp",
+         [t("d8-30", "たからくじ", "宝くじ", "たからくじ", key=True), t("d8-31", "が"), t("d8-32", "あたった", "当たった", "あたった", key=True),
+          t("d8-33", "としたら", key=True), t("d8-34", "、"), t("d8-35", "なに", "何", "なに"), t("d8-36", "を"),
+          t("d8-37", "しますか", "為ますか", "しますか")],
+         "Giả sử trúng xổ số thì bạn sẽ làm gì?"),
+    line(L, 6, "サントス", "Bạn cùng lớp",
+         [t("d8-38", "りゅうがく", "留学", "りゅうがく", key=True), t("d8-39", "の"), t("d8-40", "じょうけん", "条件", "じょうけん", key=True),
+          t("d8-41", "が"), t("d8-42", "そろいます", "揃います", "そろいます")],
+         "Điều kiện đi du học sẽ được đáp ứng đầy đủ."),
+    line(L, 7, "田中", "Bạn cùng lớp",
+         [t("d8-43", "まんいち", "万一", "まんいち", key=True), t("d8-44", "しっぱい", "失敗", "しっぱい", key=True),
+          t("d8-45", "した"), t("d8-46", "としたら", key=True), t("d8-47", "、"), t("d8-48", "どう"),
+          t("d8-49", "しますか", "為ますか", "しますか")],
+         "Giả sử vạn nhất mà thất bại thì bạn sẽ làm sao?"),
+    line(L, 8, "サントス", "Bạn cùng lớp",
+         [t("d8-50", "また"), t("d8-51", "どりょく", "努力", "どりょく", key=True), t("d8-52", "します")],
+         "Tôi sẽ nỗ lực lại lần nữa."),
+    line(L, 9, "田中", "Bạn cùng lớp",
+         [t("d8-53", "チャンス", "チャンス", "チャンス", key=True), t("d8-54", "さえ", key=True), t("d8-55", "あれば", "有れば", "あれば", key=True),
+          t("d8-56", "、"), t("d8-57", "せいこう", "成功", "せいこう", key=True), t("d8-58", "します")],
+         "Chỉ cần có cơ hội thì bạn sẽ thành công."),
+    line(L, 10, "サントス", "Bạn cùng lớp",
+         [t("d8-59", "きめました", "決めました", "きめました", key=True), t("d8-60", "。"), t("d8-61", "ぜったい", "絶対", "ぜったい"),
+          t("d8-62", "ごうかく", "合格", "ごうかく", key=True), t("d8-63", "します")],
+         "Tôi đã quyết định rồi. Nhất định sẽ đậu."),
+]
+
+EXERCISES = [
+    q(L, 1, "「お金さえあれば、留学できます」 — さえ〜ば diễn tả:",
+      ["Chỉ cần N (điều kiện tối thiểu) là đủ để đạt kết quả", "Phủ định việc có tiền",
+       "So sánh tiền bạc với thời gian", "Ra lệnh phải có tiền"], 0,
+      "さえ〜ば nhấn mạnh N (お金) là điều kiện DUY NHẤT/QUAN TRỌNG NHẤT cần có để đạt được kết quả.",
+      "Xem cấu trúc Nさえ〜ば ở slide 1."),
+    q(L, 2, "「頑張りさえすれば、合格します」 — vì sao dùng 頑張り (stem) mà không phải 頑張る?",
+      ["Vì cấu trúc V-stem+さえすれば yêu cầu bỏ ます, dùng dạng thân động từ",
+       "Vì 頑張る là danh từ", "Không có quy tắc, dùng tùy ý",
+       "Vì câu là câu phủ định"], 0,
+      "Khi nhấn mạnh HÀNH ĐỘNG là điều kiện, dùng V-stem (bỏ ます) + さえすれば: 頑張ります → 頑張りさえすれば.",
+      "Xem cấu trúc V-stemさえすれば ở slide 2."),
+    q(L, 3, "「宝くじが当たったとしたら、何をしますか」 — としたら diễn tả điều gì?",
+      ["Giả định một tình huống (có thể viển vông), rồi hỏi kết quả nếu nó là thật",
+       "Một sự thật đã xảy ra rồi", "So sánh hai tình huống đã xảy ra",
+       "Phủ định việc trúng số"], 0,
+      "としたら giả định một tình huống (trúng số) dù có thể chưa/không xảy ra, để hỏi kết quả giả định.",
+      "Xem cấu trúc としたら ở slide 3."),
+    q(L, 4, "Sự khác biệt cốt lõi giữa さえ〜ば và としたら là gì?",
+      ["さえ〜ば nói về điều kiện THỰC TẾ có thể xảy ra; としたら nói về GIẢ ĐỊNH có thể KHÔNG THỰC",
+       "Hoàn toàn giống nhau, dùng thay thế được cho nhau", "さえ〜ば chỉ dùng cho câu hỏi",
+       "としたら chỉ dùng cho phủ định"], 0,
+      "さえ〜ば diễn tả điều kiện tối thiểu THỰC TẾ; としたら diễn tả một GIẢ ĐỊNH có thể viển vông.",
+      "Xem bảng so sánh ở slide 4."),
+    q(L, 5, "「万一失敗したとしたら、どうしますか」 — 万一 nghĩa là gì?",
+      ["Vạn nhất, lỡ như (điều rất hiếm khi xảy ra)", "Chắc chắn sẽ xảy ra",
+       "Đã xảy ra rồi", "Không bao giờ xảy ra"], 0,
+      "万一 nhấn mạnh tình huống RẤT HIẾM xảy ra, thường đi cùng としたら/たら để giả định trường hợp xấu nhất.",
+      "Xem nghĩa của 万一 trong từ vựng bài học."),
+    q(L, 6, "「チャンスさえあれば、優勝できます」 nghĩa là:",
+      ["Chỉ cần có cơ hội thì có thể vô địch", "Không có cơ hội nào để vô địch",
+       "Đã vô địch rồi, không cần cơ hội", "So sánh cơ hội với thất bại"], 0,
+      "さえあれば nhấn mạnh 'chỉ cần có cơ hội (チャンス) là đủ' để đạt kết quả vô địch (優勝できます).",
+      "Áp dụng cấu trúc Nさえあれば."),
+    q(L, 7, "「勉強しさえすれば、試験に合格します」 — cấu trúc này nhấn mạnh điều gì?",
+      ["Hành động chăm chỉ học là điều kiện tối thiểu đủ để đậu kỳ thi",
+       "Không cần học vẫn đậu được", "Kỳ thi đã kết thúc rồi",
+       "So sánh việc học với việc chơi"], 0,
+      "V-stemさえすれば (勉強しさえすれば) nhấn mạnh hành động học là điều kiện đủ để đạt kết quả đậu thi.",
+      "Xem lại cấu trúc V-stemさえすれば ở slide 2."),
+    q(L, 8, "Santos nghĩ điều gì sẽ giúp mình đậu kỳ thi lấy chứng chỉ?",
+      ["Chỉ cần chăm chỉ học (勉強しさえすれば)", "Chỉ cần may mắn", "Không cần làm gì cả",
+       "Chỉ cần có nhiều tiền"], 0,
+      "Santos nói 「勉強しさえすれば、合格できると思います」.",
+      "Xem câu thoại thứ 4."),
+    q(L, 9, "Nếu vạn nhất thất bại, Santos sẽ làm gì?",
+      ["Nỗ lực lại lần nữa (また努力します)", "Từ bỏ hoàn toàn", "Không làm gì cả",
+       "Đi du học ngay lập tức"], 0,
+      "Santos trả lời 「また努力します」.",
+      "Xem câu thoại thứ 8."),
+    q(L, 10, "Santos đã quyết định điều gì ở cuối hội thoại?",
+      ["Nhất định sẽ đậu (絶対合格します)", "Sẽ bỏ thi", "Sẽ đi du học ngay",
+       "Chưa quyết định gì cả"], 0,
+      "Santos nói 「決めました。絶対合格します」.",
+      "Xem câu thoại cuối cùng."),
+]
+
+LESSON = lesson(
+    L,
+    "Bài 8: Điều kiện & Giả định (さえ〜ば & としたら)",
+    "さえ〜ば diễn tả CHỈ CẦN có N (hoặc thực hiện hành động, dạng V-stem+さえすれば) là ĐỦ để đạt "
+    "kết quả mong muốn — điều kiện THỰC TẾ có thể xảy ra; としたら dùng để GIẢ ĐỊNH một tình huống "
+    "(có thể viển vông/chưa xảy ra) rồi suy luận kết quả nếu tình huống đó là thật.",
+    VOCAB, KANJI, SLIDES, DIALOGUE, EXERCISES,
+)
+
+if __name__ == "__main__":
+    pool.mark_used([w["word"] for w in VOCAB if w["word"]], lesson=L)
+    merge([LESSON])
