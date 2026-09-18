@@ -17242,99 +17242,1306 @@
     "level": "N4",
     "lessonNumber": 39,
     "title": "Bài 39: Nguyên nhân lý do khách quan (〜ので / V-て)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "description": "Nêu lý do khách quan, lịch sự bằng ので (danh từ/tính từ な dùng な, khác だ; không hợp câu mệnh lệnh mạnh — khác から N5 bài 9), và ngụ ý lý do nhẹ nhàng bằng thể て/で — tổng kết bốn cách nêu lý do trong tiếng Nhật theo mức độ trang trọng tăng dần: て → から → ので.",
     "vocabList": [
       {
         "id": "voc-n4-39-1",
-        "word": "重要語彙 (N4)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "やすみます",
+        "kanji": "休みます",
+        "furigana": "やすみます",
+        "romaji": "yasumimasu",
+        "wordType": "verb",
+        "meaningVi": "Nghỉ (làm/học)",
+        "accentNote": "Đã gặp N5 bài 4 — nay dùng làm ví dụ ので."
+      },
+      {
+        "id": "voc-n4-39-2",
+        "word": "おくれます",
+        "kanji": "遅れます",
+        "furigana": "おくれます",
+        "romaji": "okuremasu",
+        "wordType": "verb",
+        "meaningVi": "Đến muộn, trễ",
+        "accentNote": "Đã gặp bài 26."
+      },
+      {
+        "id": "voc-n4-39-3",
+        "word": "こまります",
+        "kanji": "困ります",
+        "furigana": "こまります",
+        "romaji": "komarimasu",
+        "wordType": "verb",
+        "meaningVi": "Khó xử, gặp khó khăn",
+        "accentNote": "電車が 止まったので、困りました = tàu ngừng chạy nên tôi gặp khó khăn."
+      },
+      {
+        "id": "voc-n4-39-4",
+        "word": "とまります",
+        "kanji": "止まります",
+        "furigana": "とまります",
+        "romaji": "tomarimasu",
+        "wordType": "verb",
+        "meaningVi": "Ngừng lại, dừng (tự động từ)",
+        "accentNote": "電車が 止まりました = tàu điện ngừng chạy."
+      },
+      {
+        "id": "voc-n4-39-5",
+        "word": "よういします",
+        "kanji": "用意します",
+        "furigana": "よういします",
+        "romaji": "youi shimasu",
+        "wordType": "verb",
+        "meaningVi": "Chuẩn bị",
+        "accentNote": "Đã có ở N4 bài 30."
+      },
+      {
+        "id": "voc-n4-39-6",
+        "word": "たいふう",
+        "kanji": "台風",
+        "furigana": "たいふう",
+        "romaji": "taifuu",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 39",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Bão (bão nhiệt đới)",
+        "accentNote": "Đã gặp N5 bài 21."
+      },
+      {
+        "id": "voc-n4-39-7",
+        "word": "ようじ",
+        "kanji": "用事",
+        "furigana": "ようじ",
+        "romaji": "youji",
+        "wordType": "noun",
+        "meaningVi": "Việc bận, việc riêng",
+        "accentNote": "用事が あるので、休みます = vì có việc bận nên tôi xin nghỉ."
+      },
+      {
+        "id": "voc-n4-39-8",
+        "word": "じこ",
+        "kanji": "事故",
+        "furigana": "じこ",
+        "romaji": "jiko",
+        "wordType": "noun",
+        "meaningVi": "Tai nạn",
+        "accentNote": "Đã gặp bài 26."
+      },
+      {
+        "id": "voc-n4-39-9",
+        "word": "こうつう",
+        "kanji": "交通",
+        "furigana": "こうつう",
+        "romaji": "koutsuu",
+        "wordType": "noun",
+        "meaningVi": "Giao thông",
+        "accentNote": "交通が 込んでいるので = vì giao thông tắc nghẽn."
+      },
+      {
+        "id": "voc-n4-39-10",
+        "word": "でんしゃ",
+        "kanji": "電車",
+        "furigana": "でんしゃ",
+        "romaji": "densha",
+        "wordType": "noun",
+        "meaningVi": "Tàu điện",
+        "accentNote": "Đã gặp N5 bài 5."
+      },
+      {
+        "id": "voc-n4-39-11",
+        "word": "びょうき",
+        "kanji": "病気",
+        "furigana": "びょうき",
+        "romaji": "byouki",
+        "wordType": "noun",
+        "meaningVi": "Bệnh, ốm",
+        "accentNote": "Đã gặp bài 17 (N5)."
+      },
+      {
+        "id": "voc-n4-39-12",
+        "word": "しごと",
+        "kanji": "仕事",
+        "furigana": "しごと",
+        "romaji": "shigoto",
+        "wordType": "noun",
+        "meaningVi": "Công việc",
+        "accentNote": "Đã gặp N5 bài 9."
+      },
+      {
+        "id": "voc-n4-39-13",
+        "word": "がっこう",
+        "kanji": "学校",
+        "furigana": "がっこう",
+        "romaji": "gakkou",
+        "wordType": "noun",
+        "meaningVi": "Trường học",
+        "accentNote": "Đã gặp bài 28."
+      },
+      {
+        "id": "voc-n4-39-14",
+        "word": "かいぎ",
+        "kanji": "会議",
+        "furigana": "かいぎ",
+        "romaji": "kaigi",
+        "wordType": "noun",
+        "meaningVi": "Cuộc họp",
+        "accentNote": "Đã gặp N5 bài 7."
+      },
+      {
+        "id": "voc-n4-39-15",
+        "word": "もうしわけありません",
+        "kanji": "申し訳ありません",
+        "furigana": "もうしわけありません",
+        "romaji": "moushiwake arimasen",
+        "wordType": "phrase",
+        "meaningVi": "Thành thật xin lỗi (trang trọng)",
+        "accentNote": "Trang trọng hơn すみません nhiều."
+      },
+      {
+        "id": "voc-n4-39-16",
+        "word": "しつれいします",
+        "kanji": "失礼します",
+        "furigana": "しつれいします",
+        "romaji": "shitsurei shimasu",
+        "wordType": "phrase",
+        "meaningVi": "Xin phép (khi rời đi/vào phòng)",
+        "accentNote": "Đã gặp N5 bài 3 (失礼ですが)."
+      },
+      {
+        "id": "voc-n4-39-17",
+        "word": "きゅうに",
+        "kanji": "急に",
+        "furigana": "きゅうに",
+        "romaji": "kyuu ni",
+        "wordType": "adverb",
+        "meaningVi": "Đột ngột, bỗng nhiên",
+        "accentNote": "Đã gặp bài 29."
+      },
+      {
+        "id": "voc-n4-39-18",
+        "word": "たいへん",
+        "kanji": "大変",
+        "furigana": "たいへん",
+        "romaji": "taihen",
+        "wordType": "adjective",
+        "meaningVi": "Vất vả, khó khăn",
+        "accentNote": "Đã gặp N5 bài 21."
+      },
+      {
+        "id": "voc-n4-39-19",
+        "word": "しんぱいします",
+        "kanji": "心配します",
+        "furigana": "しんぱいします",
+        "romaji": "shinpai shimasu",
+        "wordType": "verb",
+        "meaningVi": "Lo lắng",
+        "accentNote": "Đã gặp N5 bài 15."
+      },
+      {
+        "id": "voc-n4-39-20",
+        "word": "だいじょうぶ",
+        "kanji": "大丈夫",
+        "furigana": "だいじょうぶ",
+        "romaji": "daijoubu",
+        "wordType": "adjective",
+        "meaningVi": "Ổn, không sao",
+        "accentNote": "Đã gặp N5 bài 15."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n4-39-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "困",
+        "hanViet": "KHỐN",
+        "strokeCount": 7,
         "onyomi": [
-          "ゴ"
+          "コン (kon)"
         ],
         "kunyomi": [
-          "かたる"
+          "こま(る)"
         ],
-        "meaningVi": "Ngôn ngữ",
+        "meaningVi": "Khó xử, khốn khó.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "困ります",
+            "furigana": "こまります",
+            "meaningVi": "Khó xử"
+          },
+          {
+            "word": "困難",
+            "furigana": "こんなん",
+            "meaningVi": "Khó khăn"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-39-2",
+        "character": "台",
+        "hanViet": "ĐÀI",
+        "strokeCount": 5,
+        "onyomi": [
+          "ダイ (dai)",
+          "タイ (tai)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Bệ, đài. Đã gặp N5 bài 11.",
+        "commonWords": [
+          {
+            "word": "台風",
+            "furigana": "たいふう",
+            "meaningVi": "Bão"
+          },
+          {
+            "word": "一台",
+            "furigana": "いちだい",
+            "meaningVi": "Một chiếc (máy)"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-39-3",
+        "character": "風",
+        "hanViet": "PHONG",
+        "strokeCount": 9,
+        "onyomi": [
+          "フウ (fuu)"
+        ],
+        "kunyomi": [
+          "かぜ"
+        ],
+        "meaningVi": "Gió; cảm cúm.",
+        "commonWords": [
+          {
+            "word": "台風",
+            "furigana": "たいふう",
+            "meaningVi": "Bão"
+          },
+          {
+            "word": "風邪",
+            "furigana": "かぜ",
+            "meaningVi": "Cảm cúm"
+          },
+          {
+            "word": "風",
+            "furigana": "かぜ",
+            "meaningVi": "Gió"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-39-4",
+        "character": "用",
+        "hanViet": "DỤNG",
+        "strokeCount": 5,
+        "onyomi": [
+          "ヨウ (you)"
+        ],
+        "kunyomi": [
+          "もち(いる)"
+        ],
+        "meaningVi": "Dùng, việc cần làm. Đã gặp bài 30.",
+        "commonWords": [
+          {
+            "word": "用事",
+            "furigana": "ようじ",
+            "meaningVi": "Việc bận"
+          },
+          {
+            "word": "用意",
+            "furigana": "ようい",
+            "meaningVi": "Chuẩn bị"
+          },
+          {
+            "word": "使用",
+            "furigana": "しよう",
+            "meaningVi": "Sử dụng"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-39-5",
+        "character": "交",
+        "hanViet": "GIAO",
+        "strokeCount": 6,
+        "onyomi": [
+          "コウ (kou)"
+        ],
+        "kunyomi": [
+          "まじ(わる)"
+        ],
+        "meaningVi": "Giao lưu, qua lại.",
+        "commonWords": [
+          {
+            "word": "交通",
+            "furigana": "こうつう",
+            "meaningVi": "Giao thông"
+          },
+          {
+            "word": "交番",
+            "furigana": "こうばん",
+            "meaningVi": "Đồn công an"
+          },
+          {
+            "word": "交流",
+            "furigana": "こうりゅう",
+            "meaningVi": "Giao lưu"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n4-l39-s0",
-        "title": "Trọng tâm: Nguyên nhân lý do khách quan (〜ので / V-て)",
-        "grammarFormula": "Thể thông thường (Na/Nな) + ので",
-        "explanation": "Giải thích nguyên nhân khách quan, mang tính lịch sự hơn から.",
+        "slideId": "n4-l39-s1",
+        "slideType": "grammar",
+        "title": "1. Lý do khách quan, lịch sự: [Thể thông thường] ので",
+        "grammarFormula": "[Thể thông thường, tính từ な/danh từ dùng な thay だ] + ので",
+        "explanation": "ので diễn tả lý do MANG TÍNH KHÁCH QUAN, LỊCH SỰ hơn から (N5 bài 9) — thường dùng khi xin phép, xin lỗi, giải thích với người trên/khách hàng. Không mang cảm giác biện minh cá nhân.",
+        "teacherTips": "Danh từ/tính từ な trước ので dùng な (không phải だ) — 病気なので (ĐÚNG), không nói 病気だので.",
+        "culturalNotes": "Xin nghỉ phép với sếp ở công ty Nhật luôn dùng ので thay vì から để giữ giọng khách quan, tránh nghe như đang bào chữa.",
         "examples": [
           {
-            "id": "ex-n4-l39-1",
+            "id": "ex-n4-l39-s1-1",
             "tokens": [
               {
-                "id": "tok-n4-l39-1",
-                "text": "雨が",
+                "id": "t-l39s1-1",
+                "text": "びょうき",
+                "isKeyGrammar": false,
+                "kanji": "病気",
+                "furigana": "びょうき"
+              },
+              {
+                "id": "t-l39s1-2",
+                "text": "な",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l39s1-3",
+                "text": "ので",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l39s1-4",
+                "text": "、",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n4-l39-2",
-                "text": "雨が 降ったので、遅刻しました。",
-                "isKeyGrammar": true
+                "id": "t-l39s1-5",
+                "text": "やすみます",
+                "isKeyGrammar": false,
+                "kanji": "休みます",
+                "furigana": "やすみます"
               }
             ],
-            "meaningVi": "Vì trời mưa nên tôi đã bị muộn."
+            "meaningVi": "Vì bị bệnh nên tôi xin nghỉ. (danh từ + な + ので)"
+          },
+          {
+            "id": "ex-n4-l39-s1-2",
+            "tokens": [
+              {
+                "id": "t-l39s1-6",
+                "text": "ようじ",
+                "isKeyGrammar": true,
+                "kanji": "用事",
+                "furigana": "ようじ"
+              },
+              {
+                "id": "t-l39s1-7",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l39s1-8",
+                "text": "ある",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l39s1-9",
+                "text": "ので",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l39s1-10",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l39s1-11",
+                "text": "はやく",
+                "isKeyGrammar": false,
+                "kanji": "早く",
+                "furigana": "はやく"
+              },
+              {
+                "id": "t-l39s1-12",
+                "text": "かえります",
+                "isKeyGrammar": false,
+                "kanji": "帰ります",
+                "furigana": "かえります"
+              }
+            ],
+            "meaningVi": "Vì có việc bận nên tôi về sớm."
           }
-        ],
-        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+        ]
+      },
+      {
+        "slideId": "n4-l39-s2",
+        "slideType": "grammar",
+        "title": "2. So sánh ので và から (N5 bài 9)",
+        "grammarFormula": "ので: khách quan, lịch sự, dùng với người trên　vs　から: chủ quan hơn, thân mật, có thể dùng độc lập cuối câu",
+        "explanation": "から có thể đứng MỘT MÌNH ở cuối câu để nhấn mạnh lý do (đã học N5 bài 9: 「だから」), còn ので LUÔN cần vế sau — không dùng độc lập, và không hợp với câu ra lệnh/cấm đoán mạnh.",
+        "teacherTips": "ので không dùng được trong câu MỆNH LỆNH/CẤM ĐOÁN mạnh (không nói 危ないので入るな — nghe kỳ, hợp lý hơn là から+な).",
+        "culturalNotes": "Thông báo công cộng (nhà ga, sân bay) hầu như luôn dùng ので thay vì から: 「電車が遅れておりますので、ご了承ください」.",
+        "examples": [
+          {
+            "id": "ex-n4-l39-s2-1",
+            "tokens": [
+              {
+                "id": "t-l39s2-1",
+                "text": "あめ",
+                "isKeyGrammar": false,
+                "kanji": "雨",
+                "furigana": "あめ"
+              },
+              {
+                "id": "t-l39s2-2",
+                "text": "な",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l39s2-3",
+                "text": "ので",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l39s2-4",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l39s2-5",
+                "text": "でかけません",
+                "isKeyGrammar": false,
+                "kanji": "出かけません",
+                "furigana": "でかけません"
+              }
+            ],
+            "meaningVi": "Vì trời mưa nên tôi không ra ngoài. (ので lịch sự, khách quan)"
+          },
+          {
+            "id": "ex-n4-l39-s2-2",
+            "tokens": [
+              {
+                "id": "t-l39s2-6",
+                "text": "あめ",
+                "isKeyGrammar": false,
+                "kanji": "雨",
+                "furigana": "あめ"
+              },
+              {
+                "id": "t-l39s2-7",
+                "text": "だ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l39s2-8",
+                "text": "から",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l39s2-9",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l39s2-10",
+                "text": "でかけません",
+                "isKeyGrammar": false,
+                "kanji": "出かけません",
+                "furigana": "でかけません"
+              }
+            ],
+            "meaningVi": "Vì trời mưa nên tôi không ra ngoài. (から, thân mật/trung tính hơn)"
+          }
+        ]
+      },
+      {
+        "slideId": "n4-l39-s3",
+        "slideType": "grammar",
+        "title": "3. Lý do bằng thể て (Vて/A くて/N で)",
+        "grammarFormula": "Vて／Aくて／Nで、[kết quả]   (nhẹ nhàng hơn cả ので, chỉ NGỤ Ý lý do qua ngữ cảnh)",
+        "explanation": "Thể て (đã học N5 bài 14) còn dùng để NGỤ Ý LÝ DO một cách rất nhẹ nhàng, không cần từ nối rõ ràng như から/ので — người nghe tự hiểu qua ngữ cảnh.",
+        "teacherTips": "Thể て chỉ ngụ ý lý do NHẸ, không nhấn mạnh quan hệ nhân quả mạnh như から/ので — phù hợp cho tường thuật tự nhiên, không cần giải thích kỹ.",
+        "culturalNotes": "病気で休みました ngắn gọn, tự nhiên hơn 病気なので休みました trong nhiều tình huống nói chuyện thường ngày.",
+        "examples": [
+          {
+            "id": "ex-n4-l39-s3-1",
+            "tokens": [
+              {
+                "id": "t-l39s3-1",
+                "text": "でんしゃ",
+                "isKeyGrammar": true,
+                "kanji": "電車",
+                "furigana": "でんしゃ"
+              },
+              {
+                "id": "t-l39s3-2",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l39s3-3",
+                "text": "とまって",
+                "isKeyGrammar": true,
+                "kanji": "止まって",
+                "furigana": "とまって"
+              },
+              {
+                "id": "t-l39s3-4",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l39s3-5",
+                "text": "こまりました",
+                "isKeyGrammar": true,
+                "kanji": "困りました",
+                "furigana": "こまりました"
+              }
+            ],
+            "meaningVi": "Vì tàu điện ngừng chạy nên tôi gặp khó khăn. (て ngụ ý lý do)"
+          },
+          {
+            "id": "ex-n4-l39-s3-2",
+            "tokens": [
+              {
+                "id": "t-l39s3-6",
+                "text": "びょうき",
+                "isKeyGrammar": false,
+                "kanji": "病気",
+                "furigana": "びょうき"
+              },
+              {
+                "id": "t-l39s3-7",
+                "text": "で",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l39s3-8",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l39s3-9",
+                "text": "がっこう",
+                "isKeyGrammar": false,
+                "kanji": "学校",
+                "furigana": "がっこう"
+              },
+              {
+                "id": "t-l39s3-10",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l39s3-11",
+                "text": "やすみました",
+                "isKeyGrammar": false,
+                "kanji": "休みました",
+                "furigana": "やすみました"
+              }
+            ],
+            "meaningVi": "Vì bị bệnh nên tôi đã nghỉ học. (danh từ + で ngụ ý lý do)"
+          }
+        ]
+      },
+      {
+        "slideId": "n4-l39-s4",
+        "slideType": "grammar",
+        "title": "4. Tổng kết bốn cách nêu lý do",
+        "grammarFormula": "から (N5 b9, chủ quan/thân mật) / ので (khách quan/lịch sự) / て (ngụ ý nhẹ) / から+độc lập (đã học N5)",
+        "explanation": "Xin lỗi/giải thích với người TRÊN, khách hàng → ưu tiên ので. Nói chuyện bạn bè, nhấn mạnh lý do cá nhân → から. Tường thuật ngắn gọn, tự nhiên → て.",
+        "teacherTips": "申し訳ありません + ので là cặp mở đầu xin lỗi CHUẨN MỰC nhất trong môi trường công sở, dịch vụ khách hàng Nhật.",
+        "culturalNotes": "Nhân viên Nhật khi trễ giờ hầu như luôn mở đầu bằng 申し訳ありません rồi mới giải thích lý do bằng ので, tuyệt đối tránh から nghe như đổ lỗi.",
+        "examples": [
+          {
+            "id": "ex-n4-l39-s4-1",
+            "tokens": [
+              {
+                "id": "t-l39s4-1",
+                "text": "もうしわけありません",
+                "isKeyGrammar": true,
+                "kanji": "申し訳ありません",
+                "furigana": "もうしわけありません"
+              },
+              {
+                "id": "t-l39s4-2",
+                "text": "。",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l39s4-3",
+                "text": "こうつう",
+                "isKeyGrammar": true,
+                "kanji": "交通",
+                "furigana": "こうつう"
+              },
+              {
+                "id": "t-l39s4-4",
+                "text": "じこ",
+                "isKeyGrammar": false,
+                "kanji": "事故",
+                "furigana": "じこ"
+              },
+              {
+                "id": "t-l39s4-5",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l39s4-6",
+                "text": "あった",
+                "isKeyGrammar": false,
+                "kanji": "有った",
+                "furigana": "あった"
+              },
+              {
+                "id": "t-l39s4-7",
+                "text": "ので",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l39s4-8",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l39s4-9",
+                "text": "おくれました",
+                "isKeyGrammar": false,
+                "kanji": "遅れました",
+                "furigana": "おくれました"
+              }
+            ],
+            "meaningVi": "Thành thật xin lỗi. Vì có tai nạn giao thông nên tôi đến muộn."
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n4-39-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "田中",
+        "speakerRole": "Nhân viên",
         "tokens": [
           {
-            "id": "tok-n4-39-d1",
-            "text": "この文法のポイントを"
+            "id": "d-l39-1",
+            "text": "もしもし",
+            "isKeyGrammar": false
           },
           {
-            "id": "tok-n4-39-d2",
-            "text": "復習しましょう。"
+            "id": "d-l39-2",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-3",
+            "text": "たなか",
+            "isKeyGrammar": false,
+            "kanji": "田中",
+            "furigana": "たなか"
+          },
+          {
+            "id": "d-l39-4",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-5",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-6",
+            "text": "きょう",
+            "isKeyGrammar": false,
+            "kanji": "今日",
+            "furigana": "きょう"
+          },
+          {
+            "id": "d-l39-7",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-8",
+            "text": "ようじ",
+            "isKeyGrammar": true,
+            "kanji": "用事",
+            "furigana": "ようじ"
+          },
+          {
+            "id": "d-l39-9",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-10",
+            "text": "ある",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l39-11",
+            "text": "ので",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l39-12",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-13",
+            "text": "やすみたい",
+            "isKeyGrammar": false,
+            "kanji": "休みたい",
+            "furigana": "やすみたい"
+          },
+          {
+            "id": "d-l39-14",
+            "text": "です",
+            "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Alô, tôi là Tanaka. Hôm nay vì có việc bận nên tôi muốn xin nghỉ ạ."
+      },
+      {
+        "id": "dia-n4-39-2",
+        "speaker": "上司",
+        "speakerRole": "Cấp trên",
+        "tokens": [
+          {
+            "id": "d-l39-15",
+            "text": "わかりました",
+            "isKeyGrammar": false,
+            "kanji": "分かりました",
+            "furigana": "わかりました"
+          },
+          {
+            "id": "d-l39-16",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-17",
+            "text": "だいじょうぶ",
+            "isKeyGrammar": false,
+            "kanji": "大丈夫",
+            "furigana": "だいじょうぶ"
+          },
+          {
+            "id": "d-l39-18",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-19",
+            "text": "よ",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Tôi hiểu rồi. Không sao đâu."
+      },
+      {
+        "id": "dia-n4-39-3",
+        "speaker": "田中",
+        "speakerRole": "Nhân viên",
+        "tokens": [
+          {
+            "id": "d-l39-20",
+            "text": "ありがとう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-21",
+            "text": "ございます",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-22",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-23",
+            "text": "しつれいします",
+            "isKeyGrammar": true,
+            "kanji": "失礼します",
+            "furigana": "しつれいします"
+          }
+        ],
+        "meaningVi": "Cảm ơn anh nhiều. Xin phép ạ."
+      },
+      {
+        "id": "dia-n4-39-4",
+        "speaker": "山田",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d-l39-24",
+            "text": "すみません",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-25",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-26",
+            "text": "でんしゃ",
+            "isKeyGrammar": true,
+            "kanji": "電車",
+            "furigana": "でんしゃ"
+          },
+          {
+            "id": "d-l39-27",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-28",
+            "text": "とまって",
+            "isKeyGrammar": true,
+            "kanji": "止まって",
+            "furigana": "とまって"
+          },
+          {
+            "id": "d-l39-29",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-30",
+            "text": "おくれました",
+            "isKeyGrammar": false,
+            "kanji": "遅れました",
+            "furigana": "おくれました"
+          }
+        ],
+        "meaningVi": "Xin lỗi, vì tàu điện ngừng chạy nên tôi đến muộn."
+      },
+      {
+        "id": "dia-n4-39-5",
+        "speaker": "上司",
+        "speakerRole": "Cấp trên",
+        "tokens": [
+          {
+            "id": "d-l39-31",
+            "text": "たいへん",
+            "isKeyGrammar": true,
+            "kanji": "大変",
+            "furigana": "たいへん"
+          },
+          {
+            "id": "d-l39-32",
+            "text": "でした",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-33",
+            "text": "ね",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-34",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-35",
+            "text": "なにか",
+            "isKeyGrammar": false,
+            "kanji": "何か",
+            "furigana": "なにか"
+          },
+          {
+            "id": "d-l39-36",
+            "text": "あった",
+            "isKeyGrammar": false,
+            "kanji": "有った",
+            "furigana": "あった"
+          },
+          {
+            "id": "d-l39-37",
+            "text": "んです",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l39-38",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vất vả thật đấy nhỉ. Có chuyện gì xảy ra à?"
+      },
+      {
+        "id": "dia-n4-39-6",
+        "speaker": "山田",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d-l39-39",
+            "text": "こうつう",
+            "isKeyGrammar": true,
+            "kanji": "交通",
+            "furigana": "こうつう"
+          },
+          {
+            "id": "d-l39-40",
+            "text": "じこ",
+            "isKeyGrammar": false,
+            "kanji": "事故",
+            "furigana": "じこ"
+          },
+          {
+            "id": "d-l39-41",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-42",
+            "text": "あった",
+            "isKeyGrammar": false,
+            "kanji": "有った",
+            "furigana": "あった"
+          },
+          {
+            "id": "d-l39-43",
+            "text": "ので",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l39-44",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-45",
+            "text": "でんしゃ",
+            "isKeyGrammar": false,
+            "kanji": "電車",
+            "furigana": "でんしゃ"
+          },
+          {
+            "id": "d-l39-46",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-47",
+            "text": "とまりました",
+            "isKeyGrammar": false,
+            "kanji": "止まりました",
+            "furigana": "とまりました"
+          }
+        ],
+        "meaningVi": "Vì có tai nạn giao thông nên tàu điện đã ngừng chạy."
+      },
+      {
+        "id": "dia-n4-39-7",
+        "speaker": "上司",
+        "speakerRole": "Cấp trên",
+        "tokens": [
+          {
+            "id": "d-l39-48",
+            "text": "もうしわけありません",
+            "isKeyGrammar": false,
+            "kanji": "申し訳ありません",
+            "furigana": "もうしわけありません"
+          },
+          {
+            "id": "d-l39-49",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-50",
+            "text": "いいです",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l39-51",
+            "text": "よ",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Không cần xin lỗi vậy đâu."
+      },
+      {
+        "id": "dia-n4-39-8",
+        "speaker": "山田",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d-l39-52",
+            "text": "きゅうに",
+            "isKeyGrammar": true,
+            "kanji": "急に",
+            "furigana": "きゅうに"
+          },
+          {
+            "id": "d-l39-53",
+            "text": "とまった",
+            "isKeyGrammar": false,
+            "kanji": "止まった",
+            "furigana": "とまった"
+          },
+          {
+            "id": "d-l39-54",
+            "text": "ので",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l39-55",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-56",
+            "text": "こまりました",
+            "isKeyGrammar": true,
+            "kanji": "困りました",
+            "furigana": "こまりました"
+          }
+        ],
+        "meaningVi": "Vì đột nhiên ngừng chạy nên tôi cũng gặp khó khăn."
+      },
+      {
+        "id": "dia-n4-39-9",
+        "speaker": "上司",
+        "speakerRole": "Cấp trên",
+        "tokens": [
+          {
+            "id": "d-l39-57",
+            "text": "しんぱい",
+            "isKeyGrammar": true,
+            "kanji": "心配",
+            "furigana": "しんぱい"
+          },
+          {
+            "id": "d-l39-58",
+            "text": "しないで",
+            "isKeyGrammar": false,
+            "kanji": "しないで",
+            "furigana": "しないで"
+          },
+          {
+            "id": "d-l39-59",
+            "text": "ください",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-60",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-61",
+            "text": "かいぎ",
+            "isKeyGrammar": true,
+            "kanji": "会議",
+            "furigana": "かいぎ"
+          },
+          {
+            "id": "d-l39-62",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-63",
+            "text": "まだ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-64",
+            "text": "はじまって",
+            "isKeyGrammar": false,
+            "kanji": "始まって",
+            "furigana": "はじまって"
+          },
+          {
+            "id": "d-l39-65",
+            "text": "いません",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Đừng lo. Cuộc họp vẫn chưa bắt đầu đâu."
+      },
+      {
+        "id": "dia-n4-39-10",
+        "speaker": "山田",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d-l39-66",
+            "text": "よかった",
+            "isKeyGrammar": false,
+            "kanji": "良かった",
+            "furigana": "よかった"
+          },
+          {
+            "id": "d-l39-67",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-68",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-69",
+            "text": "すぐ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l39-70",
+            "text": "いきます",
+            "isKeyGrammar": false,
+            "kanji": "行きます",
+            "furigana": "いきます"
+          }
+        ],
+        "meaningVi": "May quá. Tôi đến ngay đây."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n4-39-1",
-        "question": "Chọn cách kết hợp đúng cho cấu trúc: Nguyên nhân lý do khách quan (〜ので / V-て)",
+        "question": "「病気なので、休みます」 — vì sao trước ので là な, không phải だ?",
         "options": [
-          "Thể thông thường (Na/Nな) + ので",
-          "Thể ý chí + だ",
-          "Thể cấm chỉ",
-          "V-ない + です"
+          "Danh từ/tính từ な trước ので dùng な, không dùng だ",
+          "だ mới đúng, な là lỗi",
+          "な chỉ dùng cho câu hỏi",
+          "ので chỉ ghép được với động từ"
         ],
         "correctIndex": 0,
-        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Thể thông thường (Na/Nな) + ので",
-        "hint": "Chú ý dạng thể liên kết của động từ."
+        "explanation": "Khác thể thông thường bình thường (病気だ), trước ので danh từ/tính từ な dùng な: 病気なので.",
+        "hint": "Đây là quy tắc riêng của ので, khác cách chia trước です/だ thông thường."
+      },
+      {
+        "id": "ex-q-n4-39-2",
+        "question": "ので khác から (N5 bài 9) chủ yếu ở:",
+        "options": [
+          "ので khách quan, lịch sự hơn; から chủ quan, thân mật hơn, có thể đứng độc lập",
+          "Hoàn toàn giống nhau",
+          "ので chỉ dùng cho câu hỏi",
+          "から chỉ dùng được với tính từ"
+        ],
+        "correctIndex": 0,
+        "explanation": "ので tạo cảm giác lý do khách quan, phù hợp giao tiếp lịch sự/công sở; から thân mật, có thể dùng độc lập (だから).",
+        "hint": "Xem so sánh chi tiết ở slide 2."
+      },
+      {
+        "id": "ex-q-n4-39-3",
+        "question": "「危ないので、入るな」 nghe không tự nhiên vì:",
+        "options": [
+          "ので không hợp với câu MỆNH LỆNH/CẤM ĐOÁN mạnh như 入るな",
+          "危ない sai chính tả",
+          "ので chỉ dùng cho câu hỏi",
+          "入るな không phải mệnh lệnh"
+        ],
+        "correctIndex": 0,
+        "explanation": "ので mang tính khách quan, nhẹ nhàng — không hợp với câu mệnh lệnh/cấm đoán mạnh (thường dùng から thay thế).",
+        "hint": "Xem giới hạn sử dụng ở slide 2."
+      },
+      {
+        "id": "ex-q-n4-39-4",
+        "question": "「電車が止まって、困りました」 — thể て ở đây có vai trò gì?",
+        "options": [
+          "Ngụ ý LÝ DO một cách nhẹ nhàng, không cần từ nối rõ ràng",
+          "Chỉ nối hành động theo thứ tự (giống N5 bài 16), không liên quan tới lý do",
+          "Ra lệnh dừng tàu điện",
+          "Phủ định việc tàu điện dừng"
+        ],
+        "correctIndex": 0,
+        "explanation": "Thể て còn có chức năng ngụ ý lý do nhẹ nhàng — người nghe tự suy luận quan hệ nhân quả qua ngữ cảnh.",
+        "hint": "Xem chức năng mới của thể て ở slide 3."
+      },
+      {
+        "id": "ex-q-n4-39-5",
+        "question": "「病気で、学校を休みました」 — で ở đây có vai trò gì?",
+        "options": [
+          "Ngụ ý lý do (danh từ + で = vì...)",
+          "Đánh dấu nơi hành động (N5 bài 6)",
+          "Đánh dấu phương tiện (N5 bài 5)",
+          "Đánh dấu công cụ (N5 bài 7)"
+        ],
+        "correctIndex": 0,
+        "explanation": "で sau danh từ ở đây mang chức năng ngụ ý LÝ DO, khác các chức năng で đã học trước (nơi chốn, phương tiện, công cụ).",
+        "hint": "Đây là chức năng thứ tư của で, thêm vào ba chức năng đã học ở N5."
+      },
+      {
+        "id": "ex-q-n4-39-6",
+        "question": "Trong môi trường công sở, xin nghỉ phép nên ưu tiên dùng:",
+        "options": [
+          "ので (khách quan, lịch sự)",
+          "から (thân mật, có thể nghe như biện minh)",
+          "て (quá ngắn gọn, thiếu trang trọng)",
+          "Không cần nêu lý do gì cả"
+        ],
+        "correctIndex": 0,
+        "explanation": "ので giữ giọng khách quan, phù hợp môi trường trang trọng/công sở hơn từ から.",
+        "hint": "Xem văn hóa công sở đã nêu ở slide 1 và 4."
+      },
+      {
+        "id": "ex-q-n4-39-7",
+        "question": "「申し訳ありません」 khác 「すみません」 ở mức độ:",
+        "options": [
+          "申し訳ありません trang trọng hơn nhiều, dùng khi lỗi nghiêm trọng/với cấp trên-khách hàng",
+          "Hoàn toàn giống nhau",
+          "申し訳ありません chỉ dùng cho câu hỏi",
+          "すみません trang trọng hơn"
+        ],
+        "correctIndex": 0,
+        "explanation": "申し訳ありません là mức xin lỗi TRANG TRỌNG cao hơn すみません nhiều, phù hợp môi trường công sở, dịch vụ khách hàng.",
+        "hint": "Xem ghi chú văn hóa và nghĩa từ ở phần từ vựng."
+      },
+      {
+        "id": "ex-q-n4-39-8",
+        "question": "Câu nào ĐÚNG khi kết hợp thông báo trang trọng?",
+        "options": [
+          "電車が遅れておりますので、ご了承ください",
+          "電車が遅れておりますから、ご了承しろ",
+          "電車が遅れて、ご了承しろ",
+          "電車が遅れましたので、ご了承するな"
+        ],
+        "correctIndex": 0,
+        "explanation": "Thông báo công cộng trang trọng dùng ので kết hợp câu yêu cầu lịch sự, không dùng から hay câu mệnh lệnh cộc.",
+        "hint": "Xem ví dụ thông báo công cộng ở slide 2."
+      },
+      {
+        "id": "ex-q-n4-39-9",
+        "question": "Trong hội thoại, vì sao Yamada đến muộn?",
+        "options": [
+          "Vì có tai nạn giao thông làm tàu điện ngừng chạy",
+          "Vì ngủ quên",
+          "Vì xe hỏng",
+          "Không có lý do cụ thể"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yamada giải thích 「交通事故があったので、電車が止まりました」.",
+        "hint": "Xem câu thoại thứ 6."
+      },
+      {
+        "id": "ex-q-n4-39-10",
+        "question": "Cuối hội thoại, cấp trên trấn an Yamada điều gì?",
+        "options": [
+          "Cuộc họp vẫn chưa bắt đầu",
+          "Yamada bị phạt",
+          "Không cần đến công ty nữa",
+          "Sẽ hủy cuộc họp"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cấp trên nói 「会議はまだ始まっていません」.",
+        "hint": "Xem câu thoại thứ 9."
       }
     ]
   },
