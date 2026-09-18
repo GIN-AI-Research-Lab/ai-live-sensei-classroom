@@ -350,5 +350,14 @@
     count() {
       return Object.keys(ART).length;
     },
+    /**
+     * Nạp thêm tu vung tu cac tep minh hoa khac (vd js/illustrations-n5-batch1.js).
+     * Tach rieng tep de nhieu nguoi/agent cung ve song song ma khong dam vao
+     * nhau — moi tep chi tu goi extend() voi phan cua minh, khong ai sua
+     * truc tiep vao ART trong file nay.
+     */
+    extend(entries) {
+      Object.assign(ART, entries);
+    },
   };
 })();
