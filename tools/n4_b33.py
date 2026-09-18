@@ -12,10 +12,10 @@ L = 33
 pool = Pool("n4")
 
 VOCAB = [
-    v(1,  "はしれ", "走れ", "はしれ", "hashire", "verb", "Chạy đi! (thể mệnh lệnh của 走る)", "Nhóm I: đổi đuôi う→え. 走る → 走れ.", L),
+    v(1,  "はしれ", "走れ", "はしれ", "hashire", "verb", "Chạy đi! (thể mệnh lệnh của 走る)", "Nhóm 1: đổi đuôi う→え. 走る → 走れ.", L),
     v(2,  "まて", "待て", "まて", "mate", "verb", "Đợi đã! (thể mệnh lệnh của 待つ)", "待つ → 待て.", L),
     v(3,  "いそげ", "急げ", "いそげ", "isoge", "verb", "Nhanh lên! (thể mệnh lệnh của 急ぐ)", "急ぐ → 急げ.", L),
-    v(4,  "たべろ", "食べろ", "たべろ", "tabero", "verb", "Ăn đi! (thể mệnh lệnh của 食べる)", "Nhóm II: bỏ る, thêm ろ. 食べる → 食べろ.", L),
+    v(4,  "たべろ", "食べろ", "たべろ", "tabero", "verb", "Ăn đi! (thể mệnh lệnh của 食べる)", "Nhóm 2: bỏ る, thêm ろ. 食べる → 食べろ.", L),
     v(5,  "こい", "来い", "こい", "koi", "verb", "Đến đây! (thể mệnh lệnh của 来る)", "来る → 来い (bất quy tắc hoàn toàn).", L),
     v(6,  "しろ", "", "", "shiro", "verb", "Làm đi! (thể mệnh lệnh của する)", "する → しろ (bất quy tắc).", L),
     v(7,  "はいるな", "入るな", "はいるな", "hairu na", "verb", "Cấm vào! (thể cấm chỉ của 入る)", "Thể từ điển + な = cấm chỉ, giọng mạnh, ra lệnh.", L),
@@ -50,7 +50,7 @@ KANJI = [
 SLIDES = [
     slide(L, 1,
         "1. Chia thể mệnh lệnh (命令形)",
-        "Nhóm I: đuôi う→え (走る→走れ)　Nhóm II: bỏ る+ろ (食べる→食べろ)　する→しろ 　来る→来い",
+        "Nhóm 1: đuôi う→え (走る→走れ)　Nhóm 2: bỏ る+ろ (食べる→食べろ)　する→しろ 　来る→来い",
         "Thể mệnh lệnh là dạng RA LỆNH TRỰC TIẾP, RẤT MẠNH và CỘC — chỉ dùng trong tình huống khẩn "
         "cấp, giữa nam giới thân thiết, huấn luyện viên với vận động viên, hoặc trích trong biển báo/truyện.",
         [
@@ -154,14 +154,14 @@ DIALOGUE = [
 ]
 
 EXERCISES = [
-    q(L, 1, "Thể mệnh lệnh của 走る (nhóm I) là:",
+    q(L, 1, "Thể mệnh lệnh của 走る (nhóm 1) là:",
       ["走れ", "走ろ", "走いれ", "走るえ"], 0,
-      "Nhóm I đổi âm cuối gốc từ điển từ hàng う sang hàng え: 走る → 走れ.",
-      "Áp dụng quy tắc chia thể mệnh lệnh nhóm I."),
-    q(L, 2, "Thể mệnh lệnh của 食べる (nhóm II) là:",
+      "Nhóm 1 đổi âm cuối gốc từ điển từ hàng う sang hàng え: 走る → 走れ.",
+      "Áp dụng quy tắc chia thể mệnh lệnh nhóm 1."),
+    q(L, 2, "Thể mệnh lệnh của 食べる (nhóm 2) là:",
       ["食べろ", "食べれ", "食べいろ", "食べるろ"], 0,
-      "Nhóm II bỏ る, thêm ろ: 食べる → 食べろ.",
-      "Áp dụng quy tắc chia thể mệnh lệnh nhóm II."),
+      "Nhóm 2 bỏ る, thêm ろ: 食べる → 食べろ.",
+      "Áp dụng quy tắc chia thể mệnh lệnh nhóm 2."),
     q(L, 3, "Thể cấm chỉ của 入る là:",
       ["入るな", "入らな", "入りな", "入れな"], 0,
       "Cấm chỉ chỉ cần dùng THỂ TỪ ĐIỂN + な, không biến âm phức tạp như mệnh lệnh: 入る → 入るな.",
@@ -206,7 +206,7 @@ EXERCISES = [
 LESSON = lesson(
     L,
     "Bài 33: Thể mệnh lệnh (命令形) & Cấm chỉ (禁止形)",
-    "Chia thể mệnh lệnh (nhóm I: う→え, nhóm II: bỏ る+ろ, bất quy tắc する→しろ/来る→来い) và cấm "
+    "Chia thể mệnh lệnh (nhóm 1: う→え, nhóm 2: bỏ る+ろ, bất quy tắc する→しろ/来る→来い) và cấm "
     "chỉ (thể từ điển+な, đơn giản hơn), giới hạn ngữ cảnh sử dụng (biển báo, huấn luyện viên, "
     "truyện/phim, khẩn cấp — KHÔNG dùng trong giao tiếp lịch sự thường ngày), và thang mức độ "
     "mạnh-nhẹ khi nói 'đừng làm': な > ないでください (N5 b17) > ないほうがいい (N4 b32).",

@@ -19,7 +19,7 @@ VOCAB = [
     v(4,  "おしえます", "教えます", "おしえます", "oshiemasu", "verb", "Dạy, chỉ bảo", "Đã gặp bài 7. 道を 教えて くれました = đã chỉ đường giúp tôi.", L),
     v(5,  "かします", "貸します", "かします", "kashimasu", "verb", "Cho mượn", "Đã gặp bài 7.", L),
     v(6,  "もちます", "持ちます", "もちます", "mochimasu", "verb", "Cầm, mang, xách", "Đã gặp bài 14. 荷物を 持って くれました = đã cầm hành lý giúp tôi.", L),
-    v(7,  "あらいます", "洗います", "あらいます", "araimasu", "verb", "Rửa, giặt", "Thể từ điển: 洗う. Nhóm I.", L),
+    v(7,  "あらいます", "洗います", "あらいます", "araimasu", "verb", "Rửa, giặt", "Thể từ điển: 洗う. Nhóm 1.", L),
     v(8,  "つくります", "作ります", "つくります", "tsukurimasu", "verb", "Làm, nấu", "Đã gặp bài 6. 料理を 作って あげました = đã nấu ăn giúp.", L),
     v(9,  "かいます", "買います", "かいます", "kaimasu", "verb", "Mua", "Đã gặp bài 6. 買って きて くれました = đã mua giúp mang tới.", L),
     v(10, "にもつ", "荷物", "にもつ", "nimotsu", "noun", "Hành lý, đồ đạc", "重い 荷物 = hành lý nặng.", L),

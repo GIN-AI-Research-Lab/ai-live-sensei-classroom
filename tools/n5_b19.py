@@ -52,7 +52,7 @@ KANJI = [
 SLIDES = [
     slide(L, 1,
         "1. Chia thể た (giống hệt quy tắc thể て, đổi て→た)",
-        "Nhóm I: 5 kiểu biến âm giống thể て / Nhóm II: bỏ ます + た / Nhóm III bất quy tắc",
+        "Nhóm 1: 5 kiểu biến âm giống thể て / Nhóm 2: bỏ ます + た / Nhóm 3 bất quy tắc",
         "Thể た chia HỆT thể て đã học ở bài 14 — chỉ cần đổi て→た, で→だ ở mọi vị trí. "
         "Nếu đã thuộc thể て thì thể た gần như không cần học lại từ đầu.",
         [

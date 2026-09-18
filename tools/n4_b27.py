@@ -15,12 +15,12 @@ L = 27
 pool = Pool("n4")
 
 VOCAB = [
-    v(1,  "はなせます", "話せます", "はなせます", "hanasemasu", "verb", "Nói được (thể khả năng của 話します)", "話す (nhóm I) → 話せる: đổi đuôi う→え, thêm る.", L),
+    v(1,  "はなせます", "話せます", "はなせます", "hanasemasu", "verb", "Nói được (thể khả năng của 話します)", "話す (nhóm 1) → 話せる: đổi đuôi う→え, thêm る.", L),
     v(2,  "かけます", "書けます", "かけます", "kakemasu", "verb", "Viết được (thể khả năng của 書きます)", "書く → 書ける.", L),
     v(3,  "およげます", "泳げます", "およげます", "oyogemasu", "verb", "Bơi được", "泳ぐ → 泳げる.", L),
     v(4,  "のめます", "飲めます", "のめます", "nomemasu", "verb", "Uống được", "飲む → 飲める.", L),
-    v(5,  "たべられます", "食べられます", "たべられます", "taberaremasu", "verb", "Ăn được (thể khả năng của 食べます)", "食べる (nhóm II) → 食べられる: bỏ る, thêm られる.", L),
-    v(6,  "みられます", "見られます", "みられます", "miraremasu", "verb", "Xem được, nhìn thấy được", "見る (nhóm II) → 見られる.", L),
+    v(5,  "たべられます", "食べられます", "たべられます", "taberaremasu", "verb", "Ăn được (thể khả năng của 食べます)", "食べる (nhóm 2) → 食べられる: bỏ る, thêm られる.", L),
+    v(6,  "みられます", "見られます", "みられます", "miraremasu", "verb", "Xem được, nhìn thấy được", "見る (nhóm 2) → 見られる.", L),
     v(7,  "こられます", "来られます", "こられます", "koraremasu", "verb", "Đến được", "来る → 来られる (bất quy tắc, đọc こられる).", L),
     v(8,  "できます", "", "", "dekimasu", "verb", "Làm được", "する → できる (bất quy tắc hoàn toàn, khác âm gốc).", L),
     v(9,  "うんてんします", "運転します", "うんてんします", "unten shimasu", "verb", "Lái xe", "運転できます = lái xe được. Đã gặp N5 bài 17.", L),
@@ -52,9 +52,9 @@ KANJI = [
 
 SLIDES = [
     slide(L, 1,
-        "1. Chia thể khả năng — Nhóm I: đuôi う → え + る",
+        "1. Chia thể khả năng — Nhóm 1: đuôi う → え + る",
         "話す→話せる　書く→書ける　泳ぐ→泳げる　飲む→飲める",
-        "Nhóm I đổi âm cuối của gốc từ điển từ HÀNG う sang HÀNG え, rồi thêm る. Đây là cách gọn "
+        "Nhóm 1 đổi âm cuối của gốc từ điển từ HÀNG う sang HÀNG え, rồi thêm る. Đây là cách gọn "
         "hơn nhiều so với ことができます (N5 bài 18) dù diễn tả cùng ý nghĩa khả năng.",
         [
             ex(L, 1, 1, [t("t-l27s1-1", "にほんご", "日本語", "にほんご"), t("t-l27s1-2", "が"),
@@ -68,9 +68,9 @@ SLIDES = [
         culture="話せます gọn và tự nhiên hơn 話すことができます rất nhiều trong giao tiếp hằng ngày — dạng ことができます nghe trang trọng, dùng nhiều trong văn viết."),
 
     slide(L, 2,
-        "2. Chia thể khả năng — Nhóm II và Nhóm III",
+        "2. Chia thể khả năng — Nhóm 2 và Nhóm 3",
         "食べる→食べられる（bỏ る thêm られる）　　来る→来られる　　する→できる（bất quy tắc）",
-        "Nhóm II chỉ cần bỏ る, thêm られる — không có biến âm phức tạp như nhóm I. する chia HOÀN "
+        "Nhóm 2 chỉ cần bỏ る, thêm られる — không có biến âm phức tạp như nhóm 1. する chia HOÀN "
         "TOÀN KHÁC gốc thành できる, phải học thuộc riêng như một từ mới.",
         [
             ex(L, 2, 1, [t("t-l27s2-1", "さしみ", "刺身", "さしみ"), t("t-l27s2-2", "が"),
@@ -161,14 +161,14 @@ DIALOGUE = [
 ]
 
 EXERCISES = [
-    q(L, 1, "Thể khả năng của 話す (nhóm I) là:",
+    q(L, 1, "Thể khả năng của 話す (nhóm 1) là:",
       ["話せる", "話られる", "話できる", "話える"], 0,
-      "Nhóm I đổi âm cuối gốc từ điển sang hàng え, thêm る: 話す → 話せる.",
-      "Áp dụng quy tắc nhóm I ở slide 1."),
-    q(L, 2, "Thể khả năng của 食べる (nhóm II) là:",
+      "Nhóm 1 đổi âm cuối gốc từ điển sang hàng え, thêm る: 話す → 話せる.",
+      "Áp dụng quy tắc nhóm 1 ở slide 1."),
+    q(L, 2, "Thể khả năng của 食べる (nhóm 2) là:",
       ["食べられる", "食べれる (chỉ dùng khẩu ngữ, không chuẩn)", "食べえる", "食べできる"], 0,
-      "Nhóm II bỏ る, thêm られる: 食べる → 食べられる. Dạng 食べれる (bỏ ら) là khẩu ngữ, không phải chuẩn.",
-      "Xem quy tắc nhóm II ở slide 2."),
+      "Nhóm 2 bỏ る, thêm られる: 食べる → 食べられる. Dạng 食べれる (bỏ ら) là khẩu ngữ, không phải chuẩn.",
+      "Xem quy tắc nhóm 2 ở slide 2."),
     q(L, 3, "Thể khả năng của する là:",
       ["できる", "しれる", "すきる", "しできる"], 0,
       "する chia hoàn toàn bất quy tắc thành できる — không theo âm gốc する như các nhóm khác.",
@@ -214,7 +214,7 @@ EXERCISES = [
 LESSON = lesson(
     L,
     "Bài 27: Động từ thể khả năng (可能形)",
-    "Chia thể khả năng trực tiếp từ gốc động từ: nhóm I đổi đuôi う→え+る, nhóm II bỏ る thêm "
+    "Chia thể khả năng trực tiếp từ gốc động từ: nhóm 1 đổi đuôi う→え+る, nhóm 2 bỏ る thêm "
     "られる, する bất quy tắc thành できる — gọn hơn ことができます (N5 bài 18) dù tương đương về "
     "nghĩa, kèm điều kiện tuổi tác 〜歳以上／以下.",
     VOCAB, KANJI, SLIDES, DIALOGUE, EXERCISES,

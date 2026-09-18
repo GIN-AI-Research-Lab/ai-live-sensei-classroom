@@ -13,9 +13,9 @@ pool = Pool("n5")
 
 VOCAB = [
     v(1,  "おきます", "起きます", "おきます", "okimasu", "verb", "Thức dậy", "Đã gặp bài 4 — nay dùng làm hành động đầu chuỗi.", L),
-    v(2,  "はをみがきます", "歯を磨きます", "はをみがきます", "ha o migakimasu", "verb", "Đánh răng", "磨きます: nhóm I.", L),
-    v(3,  "シャワーをあびます", "シャワーを浴びます", "シャワーをあびます", "shawaa o abimasu", "verb", "Tắm vòi sen", "浴びます: nhóm II.", L),
-    v(4,  "でかけます", "出かけます", "でかけます", "dekakemasu", "verb", "Ra ngoài, đi ra", "Nhóm II. Khác 出ます (ra khỏi một nơi cụ thể).", L),
+    v(2,  "はをみがきます", "歯を磨きます", "はをみがきます", "ha o migakimasu", "verb", "Đánh răng", "磨きます: nhóm 1.", L),
+    v(3,  "シャワーをあびます", "シャワーを浴びます", "シャワーをあびます", "shawaa o abimasu", "verb", "Tắm vòi sen", "浴びます: nhóm 2.", L),
+    v(4,  "でかけます", "出かけます", "でかけます", "dekakemasu", "verb", "Ra ngoài, đi ra", "Nhóm 2. Khác 出ます (ra khỏi một nơi cụ thể).", L),
     v(5,  "かえります", "帰ります", "かえります", "kaerimasu", "verb", "Về nhà", "Đã gặp bài 5 — nay dùng làm hành động cuối chuỗi.", L),
     v(6,  "かお", "顔", "かお", "kao", "noun", "Khuôn mặt", "顔を 洗います = rửa mặt.", L),
     v(7,  "め", "目", "め", "me", "noun", "Mắt", "目が 大きいです = mắt to.", L),

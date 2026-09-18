@@ -202,7 +202,7 @@ EXERCISES = [
       "Đây là cặp từ dễ nhầm đã nêu ở slide 4."),
     q(L, 7, "電気が 壊れています — 壊れる là loại động từ nào?",
       ["Tự động từ (đã gặp ở bài 26, đèn TỰ hỏng)", "Tha động từ",
-       "Động từ nhóm III", "Tính từ"], 0,
+       "Động từ nhóm 3", "Tính từ"], 0,
       "壊れる đã học ở bài 26 là tự động từ — vật TỰ trải qua trạng thái hỏng, không cần nói rõ ai làm hỏng.",
       "Nhớ lại kiến thức đã học ở bài 26."),
     q(L, 8, "「誰が壊しましたか」 dùng động từ nào và vì sao?",

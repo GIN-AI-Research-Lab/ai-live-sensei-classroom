@@ -12,10 +12,10 @@ L = 23
 pool = Pool("n5")
 
 VOCAB = [
-    v(1,  "おします", "押します", "おします", "oshimasu", "verb", "Ấn, nhấn", "Thể từ điển: 押す. Nhóm I. ボタンを 押すと = hễ ấn nút thì.", L),
-    v(2,  "わたります", "渡ります", "わたります", "watarimasu", "verb", "Băng qua, đi qua", "Thể từ điển: 渡る. Nhóm I.", L),
-    v(3,  "まがります", "曲がります", "まがります", "magarimasu", "verb", "Rẽ, quẹo", "Thể từ điển: 曲がる. Nhóm I.", L),
-    v(4,  "あきます", "開きます", "あきます", "akimasu", "verb", "Mở ra (tự động)", "Thể từ điển: 開く. Nhóm I. Khác 開けます (tha động từ, bài 14).", L),
+    v(1,  "おします", "押します", "おします", "oshimasu", "verb", "Ấn, nhấn", "Thể từ điển: 押す. Nhóm 1. ボタンを 押すと = hễ ấn nút thì.", L),
+    v(2,  "わたります", "渡ります", "わたります", "watarimasu", "verb", "Băng qua, đi qua", "Thể từ điển: 渡る. Nhóm 1.", L),
+    v(3,  "まがります", "曲がります", "まがります", "magarimasu", "verb", "Rẽ, quẹo", "Thể từ điển: 曲がる. Nhóm 1.", L),
+    v(4,  "あきます", "開きます", "あきます", "akimasu", "verb", "Mở ra (tự động)", "Thể từ điển: 開く. Nhóm 1. Khác 開けます (tha động từ, bài 14).", L),
     v(5,  "でかけます", "出かけます", "でかけます", "dekakemasu", "verb", "Ra ngoài", "Đã gặp bài 16 — nay dùng làm mốc thời điểm.", L),
     v(6,  "かえります", "帰ります", "かえります", "kaerimasu", "verb", "Về nhà", "Đã gặp bài 5.", L),
     v(7,  "ボタン", "", "", "botan", "noun", "Cái nút (bấm)", "ボタンを 押します = ấn nút.", L),

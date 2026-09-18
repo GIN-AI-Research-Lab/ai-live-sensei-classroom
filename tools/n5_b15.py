@@ -12,12 +12,12 @@ L = 15
 pool = Pool("n5")
 
 VOCAB = [
-    v(1,  "つかいます", "使います", "つかいます", "tsukaimasu", "verb", "Sử dụng, dùng", "Thể từ điển: 使う. Nhóm I.", L),
-    v(2,  "はいります", "入ります", "はいります", "hairimasu", "verb", "Vào, gia nhập", "Thể từ điển: 入る. Nhóm I (dù trông giống nhóm II).", L),
-    v(3,  "でます", "出ます", "でます", "demasu", "verb", "Ra, rời khỏi, xuất hiện", "Thể từ điển: 出る. Nhóm II.", L),
-    v(4,  "ぬぎます", "脱ぎます", "ぬぎます", "nugimasu", "verb", "Cởi (giày, áo)", "Thể từ điển: 脱ぐ. Nhóm I. Đuôi ぐ → いで.", L),
+    v(1,  "つかいます", "使います", "つかいます", "tsukaimasu", "verb", "Sử dụng, dùng", "Thể từ điển: 使う. Nhóm 1.", L),
+    v(2,  "はいります", "入ります", "はいります", "hairimasu", "verb", "Vào, gia nhập", "Thể từ điển: 入る. Nhóm 1 (dù trông giống nhóm 2).", L),
+    v(3,  "でます", "出ます", "でます", "demasu", "verb", "Ra, rời khỏi, xuất hiện", "Thể từ điển: 出る. Nhóm 2.", L),
+    v(4,  "ぬぎます", "脱ぎます", "ぬぎます", "nugimasu", "verb", "Cởi (giày, áo)", "Thể từ điển: 脱ぐ. Nhóm 1. Đuôi ぐ → いで.", L),
     v(5,  "すいます", "吸います", "すいます", "suimasu", "verb", "Hút (thuốc), hít vào", "Đã gặp bài 6 — nay dùng làm ví dụ điều cấm.", L),
-    v(6,  "とめます", "止めます", "とめます", "tomemasu", "verb", "Dừng, đỗ (xe)", "Nhóm II. 駐車禁止 = cấm đỗ xe.", L),
+    v(6,  "とめます", "止めます", "とめます", "tomemasu", "verb", "Dừng, đỗ (xe)", "Nhóm 2. 駐車禁止 = cấm đỗ xe.", L),
     v(7,  "しゃしん", "写真", "しゃしん", "shashin", "noun", "Bức ảnh", "Đã gặp bài 6 — nay dùng làm đối tượng của điều cấm chụp ảnh.", L),
     v(8,  "でんき", "電気", "でんき", "denki", "noun", "Điện, đèn điện", "電気を 消します/つけます = tắt/bật đèn.", L),
     v(9,  "まど", "窓", "まど", "mado", "noun", "Cửa sổ", "Đã gặp bài 14.", L),

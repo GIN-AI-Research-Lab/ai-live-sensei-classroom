@@ -43,12 +43,12 @@ VOCAB = [
     v(26, "えいが", "映画", "えいが", "eiga", "noun", "Phim, điện ảnh", "映画館 = rạp chiếu phim.", L),
     v(27, "やすみ", "休み", "やすみ", "yasumi", "noun", "Ngày nghỉ, kỳ nghỉ", "休みます = nghỉ, vắng mặt.", L),
     v(28, "ばんごう", "番号", "ばんごう", "bangou", "noun", "Số hiệu, số điện thoại", "電話番号 = số điện thoại.", L),
-    v(29, "おきます", "起きます", "おきます", "okimasu", "verb", "Thức dậy", "Nhóm II (Vて = 起きて).", L),
-    v(30, "ねます", "寝ます", "ねます", "nemasu", "verb", "Đi ngủ", "Nhóm II.", L),
-    v(31, "はたらきます", "働きます", "はたらきます", "hatarakimasu", "verb", "Làm việc", "Nhóm I.", L),
-    v(32, "やすみます", "休みます", "やすみます", "yasumimasu", "verb", "Nghỉ ngơi, nghỉ (làm/học)", "Nhóm I.", L),
-    v(33, "べんきょうします", "勉強します", "べんきょうします", "benkyoushimasu", "verb", "Học, học tập", "Nhóm III (します).", L),
-    v(34, "おわります", "終わります", "おわります", "owarimasu", "verb", "Kết thúc, xong", "Nhóm I. Trái nghĩa với 始まります.", L),
+    v(29, "おきます", "起きます", "おきます", "okimasu", "verb", "Thức dậy", "Nhóm 2 (Vて = 起きて).", L),
+    v(30, "ねます", "寝ます", "ねます", "nemasu", "verb", "Đi ngủ", "Nhóm 2.", L),
+    v(31, "はたらきます", "働きます", "はたらきます", "hatarakimasu", "verb", "Làm việc", "Nhóm 1.", L),
+    v(32, "やすみます", "休みます", "やすみます", "yasumimasu", "verb", "Nghỉ ngơi, nghỉ (làm/học)", "Nhóm 1.", L),
+    v(33, "べんきょうします", "勉強します", "べんきょうします", "benkyoushimasu", "verb", "Học, học tập", "Nhóm 3 (します).", L),
+    v(34, "おわります", "終わります", "おわります", "owarimasu", "verb", "Kết thúc, xong", "Nhóm 1. Trái nghĩa với 始まります.", L),
 ]
 
 KANJI = [

@@ -12,7 +12,7 @@ L = 10
 pool = Pool("n5")
 
 VOCAB = [
-    v(1,  "あります", "有ります", "あります", "arimasu", "verb", "Có, tồn tại (vật vô tri, thực vật)", "Chia giống động từ nhóm I bình thường.", L),
+    v(1,  "あります", "有ります", "あります", "arimasu", "verb", "Có, tồn tại (vật vô tri, thực vật)", "Chia giống động từ nhóm 1 bình thường.", L),
     v(2,  "います", "居ます", "います", "imasu", "verb", "Có, tồn tại (người, động vật)", "Chỉ dùng cho SINH VẬT SỐNG có thể tự di chuyển.", L),
     v(3,  "うえ", "上", "うえ", "ue", "noun", "Trên, phía trên", "Đã gặp kanji ở bài 3, nay dùng làm từ chỉ vị trí độc lập.", L),
     v(4,  "した", "下", "した", "shita", "noun", "Dưới, phía dưới", "Trái nghĩa với 上.", L),

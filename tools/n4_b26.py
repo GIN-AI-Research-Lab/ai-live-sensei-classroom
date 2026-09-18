@@ -202,7 +202,7 @@ EXERCISES = [
       "Xem cấu trúc ở slide 2."),
     q(L, 5, "壊れます là loại động từ nào?",
       ["Tự động từ (vật tự hỏng, không cần ai tác động)",
-       "Tha động từ (cần người làm hỏng)", "Động từ nhóm III bất quy tắc",
+       "Tha động từ (cần người làm hỏng)", "Động từ nhóm 3 bất quy tắc",
        "Tính từ"], 0,
       "壊れる là tự động từ — chủ ngữ (máy tính) TỰ trải qua trạng thái hỏng, không có tác nhân gây ra được nói tới.",
       "Sẽ học kỹ hơn về cặp tự/tha động từ ở bài 29."),

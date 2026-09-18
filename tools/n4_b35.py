@@ -13,8 +13,8 @@ L = 35
 pool = Pool("n4")
 
 VOCAB = [
-    v(1,  "いけば", "行けば", "いけば", "ikeba", "verb", "Nếu đi (thể ば của 行きます)", "行く (nhóm I) → 行けば: đổi đuôi く→けば.", L),
-    v(2,  "たべれば", "食べれば", "たべれば", "tabereba", "verb", "Nếu ăn (thể ば của 食べます)", "食べる (nhóm II) → 食べれば: bỏ る, thêm れば.", L),
+    v(1,  "いけば", "行けば", "いけば", "ikeba", "verb", "Nếu đi (thể ば của 行きます)", "行く (nhóm 1) → 行けば: đổi đuôi く→けば.", L),
+    v(2,  "たべれば", "食べれば", "たべれば", "tabereba", "verb", "Nếu ăn (thể ば của 食べます)", "食べる (nhóm 2) → 食べれば: bỏ る, thêm れば.", L),
     v(3,  "すれば", "", "", "sureba", "verb", "Nếu làm (thể ば của します)", "する → すれば (bất quy tắc).", L),
     v(4,  "くれば", "来れば", "くれば", "kureba", "verb", "Nếu đến (thể ば của 来ます)", "来る → 来れば (bất quy tắc, đọc くれば).", L),
     v(5,  "やすければ", "安ければ", "やすければ", "yasukereba", "adjective", "Nếu rẻ (thể ば của tính từ い)", "安い bỏ い, thêm ければ.", L),
@@ -51,7 +51,7 @@ KANJI = [
 SLIDES = [
     slide(L, 1,
         "1. Chia thể ば",
-        "Nhóm I: う→え+ば (行く→行けば) 　Nhóm II: bỏ る+れば (食べる→食べれば) 　い-adj: bỏ い+ければ",
+        "Nhóm 1: う→え+ば (行く→行けば) 　Nhóm 2: bỏ る+れば (食べる→食べれば) 　い-adj: bỏ い+ければ",
         "ば là thể điều kiện GIẢ ĐỊNH thuần túy, nhấn mạnh QUAN HỆ NHÂN QUẢ giữa điều kiện và kết "
         "quả hơn たら (N5 bài 25) — thường dùng cho quy luật chung, lời khuyên, hoặc giả định trừu tượng.",
         [
@@ -178,10 +178,10 @@ DIALOGUE = [
 ]
 
 EXERCISES = [
-    q(L, 1, "Thể ば của 行きます (nhóm I, đuôi く) là:",
+    q(L, 1, "Thể ば của 行きます (nhóm 1, đuôi く) là:",
       ["行けば", "行くば", "行きば", "行いば"], 0,
-      "Nhóm I đổi đuôi く thành けば: 行く → 行けば.",
-      "Áp dụng quy tắc chia thể ば nhóm I."),
+      "Nhóm 1 đổi đuôi く thành けば: 行く → 行けば.",
+      "Áp dụng quy tắc chia thể ば nhóm 1."),
     q(L, 2, "Thể ば của 安い (tính từ い) là:",
       ["安ければ", "安いば", "安くば", "安かれば"], 0,
       "Tính từ い bỏ い, thêm ければ: 安い → 安ければ.",
@@ -233,7 +233,7 @@ EXERCISES = [
 LESSON = lesson(
     L,
     "Bài 35: Thể điều kiện (〜ば / 〜なら)",
-    "Chia thể ば (nhóm I: う→えば, nhóm II: bỏ る+れば, tính từ い: bỏ い+ければ) diễn tả quan hệ "
+    "Chia thể ば (nhóm 1: う→えば, nhóm 2: bỏ る+れば, tính từ い: bỏ い+ければ) diễn tả quan hệ "
     "nhân quả khách quan, và なら phản hồi CHỦ ĐỀ đang được nhắc tới (khác hẳn と/たら/ば luôn đặt "
     "điều kiện giả định về sự việc) — tổng kết bốn thể điều kiện と/たら/ば/なら và cách chọn đúng "
     "theo ngữ cảnh.",

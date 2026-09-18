@@ -12,9 +12,9 @@ L = 5
 pool = Pool("n5")
 
 VOCAB = [
-    v(1,  "いきます", "行きます", "いきます", "ikimasu", "verb", "Đi (đến một nơi)", "Thể từ điển: 行く. Nhóm I.", L),
-    v(2,  "きます", "来ます", "きます", "kimasu", "verb", "Đến, tới (về phía người nói)", "Thể từ điển: 来る. Nhóm II bất quy tắc.", L),
-    v(3,  "かえります", "帰ります", "かえります", "kaerimasu", "verb", "Về, trở về (nhà, quê)", "Thể từ điển: 帰る. Nhóm I (trông giống nhóm II nhưng chia như nhóm I).", L),
+    v(1,  "いきます", "行きます", "いきます", "ikimasu", "verb", "Đi (đến một nơi)", "Thể từ điển: 行く. Nhóm 1.", L),
+    v(2,  "きます", "来ます", "きます", "kimasu", "verb", "Đến, tới (về phía người nói)", "Thể từ điển: 来る. Nhóm 2 bất quy tắc.", L),
+    v(3,  "かえります", "帰ります", "かえります", "kaerimasu", "verb", "Về, trở về (nhà, quê)", "Thể từ điển: 帰る. Nhóm 1 (trông giống nhóm 2 nhưng chia như nhóm 1).", L),
     v(4,  "のります", "乗ります", "のります", "norimasu", "verb", "Lên, đi (phương tiện)", "Đi kèm trợ từ に: 電車に 乗ります.", L),
     v(5,  "おります", "降ります", "おります", "orimasu", "verb", "Xuống (phương tiện)", "Đi kèm trợ từ を: バスを 降ります.", L),
     v(6,  "えき", "駅", "えき", "eki", "noun", "Nhà ga", "駅員 = nhân viên nhà ga.", L),

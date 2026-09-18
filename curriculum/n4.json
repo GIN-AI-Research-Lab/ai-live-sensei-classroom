@@ -1406,7 +1406,7 @@
         "options": [
           "Tự động từ (vật tự hỏng, không cần ai tác động)",
           "Tha động từ (cần người làm hỏng)",
-          "Động từ nhóm III bất quy tắc",
+          "Động từ nhóm 3 bất quy tắc",
           "Tính từ"
         ],
         "correctIndex": 0,
@@ -1484,7 +1484,7 @@
     "level": "N4",
     "lessonNumber": 27,
     "title": "Bài 27: Động từ thể khả năng (可能形)",
-    "description": "Chia thể khả năng trực tiếp từ gốc động từ: nhóm I đổi đuôi う→え+る, nhóm II bỏ る thêm られる, する bất quy tắc thành できる — gọn hơn ことができます (N5 bài 18) dù tương đương về nghĩa, kèm điều kiện tuổi tác 〜歳以上／以下.",
+    "description": "Chia thể khả năng trực tiếp từ gốc động từ: nhóm 1 đổi đuôi う→え+る, nhóm 2 bỏ る thêm られる, する bất quy tắc thành できる — gọn hơn ことができます (N5 bài 18) dù tương đương về nghĩa, kèm điều kiện tuổi tác 〜歳以上／以下.",
     "vocabList": [
       {
         "id": "voc-n4-27-1",
@@ -1494,7 +1494,7 @@
         "romaji": "hanasemasu",
         "wordType": "verb",
         "meaningVi": "Nói được (thể khả năng của 話します)",
-        "accentNote": "話す (nhóm I) → 話せる: đổi đuôi う→え, thêm る."
+        "accentNote": "話す (nhóm 1) → 話せる: đổi đuôi う→え, thêm る."
       },
       {
         "id": "voc-n4-27-2",
@@ -1534,7 +1534,7 @@
         "romaji": "taberaremasu",
         "wordType": "verb",
         "meaningVi": "Ăn được (thể khả năng của 食べます)",
-        "accentNote": "食べる (nhóm II) → 食べられる: bỏ る, thêm られる."
+        "accentNote": "食べる (nhóm 2) → 食べられる: bỏ る, thêm られる."
       },
       {
         "id": "voc-n4-27-6",
@@ -1544,7 +1544,7 @@
         "romaji": "miraremasu",
         "wordType": "verb",
         "meaningVi": "Xem được, nhìn thấy được",
-        "accentNote": "見る (nhóm II) → 見られる."
+        "accentNote": "見る (nhóm 2) → 見られる."
       },
       {
         "id": "voc-n4-27-7",
@@ -1841,9 +1841,9 @@
       {
         "slideId": "n4-l27-s1",
         "slideType": "grammar",
-        "title": "1. Chia thể khả năng — Nhóm I: đuôi う → え + る",
+        "title": "1. Chia thể khả năng — Nhóm 1: đuôi う → え + る",
         "grammarFormula": "話す→話せる　書く→書ける　泳ぐ→泳げる　飲む→飲める",
-        "explanation": "Nhóm I đổi âm cuối của gốc từ điển từ HÀNG う sang HÀNG え, rồi thêm る. Đây là cách gọn hơn nhiều so với ことができます (N5 bài 18) dù diễn tả cùng ý nghĩa khả năng.",
+        "explanation": "Nhóm 1 đổi âm cuối của gốc từ điển từ HÀNG う sang HÀNG え, rồi thêm る. Đây là cách gọn hơn nhiều so với ことができます (N5 bài 18) dù diễn tả cùng ý nghĩa khả năng.",
         "teacherTips": "Đối tượng của động từ khả năng đánh dấu bằng が (không phải を) — giống nhóm 好き/上手 đã học ở N5 bài 9.",
         "culturalNotes": "話せます gọn và tự nhiên hơn 話すことができます rất nhiều trong giao tiếp hằng ngày — dạng ことができます nghe trang trọng, dùng nhiều trong văn viết.",
         "examples": [
@@ -1907,9 +1907,9 @@
       {
         "slideId": "n4-l27-s2",
         "slideType": "grammar",
-        "title": "2. Chia thể khả năng — Nhóm II và Nhóm III",
+        "title": "2. Chia thể khả năng — Nhóm 2 và Nhóm 3",
         "grammarFormula": "食べる→食べられる（bỏ る thêm られる）　　来る→来られる　　する→できる（bất quy tắc）",
-        "explanation": "Nhóm II chỉ cần bỏ る, thêm られる — không có biến âm phức tạp như nhóm I. する chia HOÀN TOÀN KHÁC gốc thành できる, phải học thuộc riêng như một từ mới.",
+        "explanation": "Nhóm 2 chỉ cần bỏ る, thêm られる — không có biến âm phức tạp như nhóm 1. する chia HOÀN TOÀN KHÁC gốc thành できる, phải học thuộc riêng như một từ mới.",
         "teacherTips": "できます còn ghép được với DANH TỪ HÀNH ĐỘNG trực tiếp (運転が できます) mà không cần chia động từ gốc — rất tiện lợi.",
         "culturalNotes": "食べられる cũng có dạng nói tắt ら抜き言葉 (食べれる, bỏ ら) rất phổ biến trong khẩu ngữ trẻ, tuy không chuẩn văn viết.",
         "examples": [
@@ -2603,7 +2603,7 @@
     "exercises": [
       {
         "id": "ex-q-n4-27-1",
-        "question": "Thể khả năng của 話す (nhóm I) là:",
+        "question": "Thể khả năng của 話す (nhóm 1) là:",
         "options": [
           "話せる",
           "話られる",
@@ -2611,12 +2611,12 @@
           "話える"
         ],
         "correctIndex": 0,
-        "explanation": "Nhóm I đổi âm cuối gốc từ điển sang hàng え, thêm る: 話す → 話せる.",
-        "hint": "Áp dụng quy tắc nhóm I ở slide 1."
+        "explanation": "Nhóm 1 đổi âm cuối gốc từ điển sang hàng え, thêm る: 話す → 話せる.",
+        "hint": "Áp dụng quy tắc nhóm 1 ở slide 1."
       },
       {
         "id": "ex-q-n4-27-2",
-        "question": "Thể khả năng của 食べる (nhóm II) là:",
+        "question": "Thể khả năng của 食べる (nhóm 2) là:",
         "options": [
           "食べられる",
           "食べれる (chỉ dùng khẩu ngữ, không chuẩn)",
@@ -2624,8 +2624,8 @@
           "食べできる"
         ],
         "correctIndex": 0,
-        "explanation": "Nhóm II bỏ る, thêm られる: 食べる → 食べられる. Dạng 食べれる (bỏ ら) là khẩu ngữ, không phải chuẩn.",
-        "hint": "Xem quy tắc nhóm II ở slide 2."
+        "explanation": "Nhóm 2 bỏ る, thêm られる: 食べる → 食べられる. Dạng 食べれる (bỏ ら) là khẩu ngữ, không phải chuẩn.",
+        "hint": "Xem quy tắc nhóm 2 ở slide 2."
       },
       {
         "id": "ex-q-n4-27-3",
@@ -5244,7 +5244,7 @@
         "options": [
           "Tự động từ (đã gặp ở bài 26, đèn TỰ hỏng)",
           "Tha động từ",
-          "Động từ nhóm III",
+          "Động từ nhóm 3",
           "Tính từ"
         ],
         "correctIndex": 0,
@@ -6589,7 +6589,7 @@
     "level": "N4",
     "lessonNumber": 31,
     "title": "Bài 31: Thể ý chí (意向形) & Dự định (〜と思っています)",
-    "description": "Chia thể ý chí (nhóm I: う→おう, nhóm II: bỏ る+よう, bất quy tắc する→しよう/来る→来よう), phân biệt と思います (ý kiến tức thời, N5 bài 21) với と思っています (dự định đã ấp ủ), và so sánh bốn mức độ chắc chắn: Vましょう → Vよう → と思っています → ことにします (quyết định dứt khoát).",
+    "description": "Chia thể ý chí (nhóm 1: う→おう, nhóm 2: bỏ る+よう, bất quy tắc する→しよう/来る→来よう), phân biệt と思います (ý kiến tức thời, N5 bài 21) với と思っています (dự định đã ấp ủ), và so sánh bốn mức độ chắc chắn: Vましょう → Vよう → と思っています → ことにします (quyết định dứt khoát).",
     "vocabList": [
       {
         "id": "voc-n4-31-1",
@@ -6599,7 +6599,7 @@
         "romaji": "ikou",
         "wordType": "verb",
         "meaningVi": "Sẽ đi, thôi đi thôi (thể ý chí của 行きます)",
-        "accentNote": "行く (nhóm I, đuôi く) → 行こう: đổi đuôi く→こう."
+        "accentNote": "行く (nhóm 1, đuôi く) → 行こう: đổi đuôi く→こう."
       },
       {
         "id": "voc-n4-31-2",
@@ -6609,7 +6609,7 @@
         "romaji": "tabeyou",
         "wordType": "verb",
         "meaningVi": "Sẽ ăn (thể ý chí của 食べます)",
-        "accentNote": "食べる (nhóm II) → 食べよう: bỏ る, thêm よう."
+        "accentNote": "食べる (nhóm 2) → 食べよう: bỏ る, thêm よう."
       },
       {
         "id": "voc-n4-31-3",
@@ -6935,7 +6935,7 @@
         "slideId": "n4-l31-s1",
         "slideType": "grammar",
         "title": "1. Chia thể ý chí (意向形)",
-        "grammarFormula": "Nhóm I: う→おう (行こう) 　Nhóm II: bỏ る+よう (食べよう) 　する→しよう 　来る→来よう",
+        "grammarFormula": "Nhóm 1: う→おう (行こう) 　Nhóm 2: bỏ る+よう (食べよう) 　する→しよう 　来る→来よう",
         "explanation": "Thể ý chí diễn tả Ý ĐỊNH/QUYẾT TÂM của NGƯỜI NÓI — gần nghĩa với Vましょう (N5 bài 6) nhưng thân mật hơn, thường dùng khi tự nói với mình hoặc trong câu và思っています.",
         "teacherTips": "Thể ý chí thân mật hơn Vましょう rất nhiều — dùng với bạn thân, hoặc tự nhủ với bản thân, không dùng trực tiếp với người trên.",
         "culturalNotes": "頑張ろう！ là câu hô hào đồng đội rất phổ biến trong thể thao, câu lạc bộ học sinh Nhật trước một trận đấu/sự kiện.",
@@ -7837,7 +7837,7 @@
     "exercises": [
       {
         "id": "ex-q-n4-31-1",
-        "question": "Thể ý chí của 行きます (nhóm I, đuôi く) là:",
+        "question": "Thể ý chí của 行きます (nhóm 1, đuôi く) là:",
         "options": [
           "行こう",
           "行よう",
@@ -7845,12 +7845,12 @@
           "行いう"
         ],
         "correctIndex": 0,
-        "explanation": "Nhóm I đổi đuôi く thành こう: 行く → 行こう.",
-        "hint": "Áp dụng quy tắc đổi hàng う→おう của nhóm I."
+        "explanation": "Nhóm 1 đổi đuôi く thành こう: 行く → 行こう.",
+        "hint": "Áp dụng quy tắc đổi hàng う→おう của nhóm 1."
       },
       {
         "id": "ex-q-n4-31-2",
-        "question": "Thể ý chí của 食べます (nhóm II) là:",
+        "question": "Thể ý chí của 食べます (nhóm 2) là:",
         "options": [
           "食べよう",
           "食べろう",
@@ -7858,8 +7858,8 @@
           "食べるよう"
         ],
         "correctIndex": 0,
-        "explanation": "Nhóm II bỏ る, thêm よう: 食べる → 食べよう.",
-        "hint": "Áp dụng quy tắc nhóm II."
+        "explanation": "Nhóm 2 bỏ る, thêm よう: 食べる → 食べよう.",
+        "hint": "Áp dụng quy tắc nhóm 2."
       },
       {
         "id": "ex-q-n4-31-3",
@@ -7928,7 +7928,7 @@
       },
       {
         "id": "ex-q-n4-31-8",
-        "question": "来る (nhóm III bất quy tắc) chia thể ý chí là:",
+        "question": "来る (nhóm 3 bất quy tắc) chia thể ý chí là:",
         "options": [
           "来よう (こよう)",
           "来る",
@@ -9290,7 +9290,7 @@
     "level": "N4",
     "lessonNumber": 33,
     "title": "Bài 33: Thể mệnh lệnh (命令形) & Cấm chỉ (禁止形)",
-    "description": "Chia thể mệnh lệnh (nhóm I: う→え, nhóm II: bỏ る+ろ, bất quy tắc する→しろ/来る→来い) và cấm chỉ (thể từ điển+な, đơn giản hơn), giới hạn ngữ cảnh sử dụng (biển báo, huấn luyện viên, truyện/phim, khẩn cấp — KHÔNG dùng trong giao tiếp lịch sự thường ngày), và thang mức độ mạnh-nhẹ khi nói 'đừng làm': な > ないでください (N5 b17) > ないほうがいい (N4 b32).",
+    "description": "Chia thể mệnh lệnh (nhóm 1: う→え, nhóm 2: bỏ る+ろ, bất quy tắc する→しろ/来る→来い) và cấm chỉ (thể từ điển+な, đơn giản hơn), giới hạn ngữ cảnh sử dụng (biển báo, huấn luyện viên, truyện/phim, khẩn cấp — KHÔNG dùng trong giao tiếp lịch sự thường ngày), và thang mức độ mạnh-nhẹ khi nói 'đừng làm': な > ないでください (N5 b17) > ないほうがいい (N4 b32).",
     "vocabList": [
       {
         "id": "voc-n4-33-1",
@@ -9300,7 +9300,7 @@
         "romaji": "hashire",
         "wordType": "verb",
         "meaningVi": "Chạy đi! (thể mệnh lệnh của 走る)",
-        "accentNote": "Nhóm I: đổi đuôi う→え. 走る → 走れ."
+        "accentNote": "Nhóm 1: đổi đuôi う→え. 走る → 走れ."
       },
       {
         "id": "voc-n4-33-2",
@@ -9330,7 +9330,7 @@
         "romaji": "tabero",
         "wordType": "verb",
         "meaningVi": "Ăn đi! (thể mệnh lệnh của 食べる)",
-        "accentNote": "Nhóm II: bỏ る, thêm ろ. 食べる → 食べろ."
+        "accentNote": "Nhóm 2: bỏ る, thêm ろ. 食べる → 食べろ."
       },
       {
         "id": "voc-n4-33-5",
@@ -9634,7 +9634,7 @@
         "slideId": "n4-l33-s1",
         "slideType": "grammar",
         "title": "1. Chia thể mệnh lệnh (命令形)",
-        "grammarFormula": "Nhóm I: đuôi う→え (走る→走れ)　Nhóm II: bỏ る+ろ (食べる→食べろ)　する→しろ 　来る→来い",
+        "grammarFormula": "Nhóm 1: đuôi う→え (走る→走れ)　Nhóm 2: bỏ る+ろ (食べる→食べろ)　する→しろ 　来る→来い",
         "explanation": "Thể mệnh lệnh là dạng RA LỆNH TRỰC TIẾP, RẤT MẠNH và CỘC — chỉ dùng trong tình huống khẩn cấp, giữa nam giới thân thiết, huấn luyện viên với vận động viên, hoặc trích trong biển báo/truyện.",
         "teacherTips": "頑張れ là ngoại lệ về SẮC THÁI: tuy là thể mệnh lệnh nhưng dùng làm câu CỔ VŨ thân thiện, không hề gay gắt.",
         "culturalNotes": "Thể mệnh lệnh KHÔNG dùng trực tiếp với người lạ/người trên trong giao tiếp thường ngày — sẽ bị coi là rất thô lỗ, mất lịch sự.",
@@ -10297,7 +10297,7 @@
     "exercises": [
       {
         "id": "ex-q-n4-33-1",
-        "question": "Thể mệnh lệnh của 走る (nhóm I) là:",
+        "question": "Thể mệnh lệnh của 走る (nhóm 1) là:",
         "options": [
           "走れ",
           "走ろ",
@@ -10305,12 +10305,12 @@
           "走るえ"
         ],
         "correctIndex": 0,
-        "explanation": "Nhóm I đổi âm cuối gốc từ điển từ hàng う sang hàng え: 走る → 走れ.",
-        "hint": "Áp dụng quy tắc chia thể mệnh lệnh nhóm I."
+        "explanation": "Nhóm 1 đổi âm cuối gốc từ điển từ hàng う sang hàng え: 走る → 走れ.",
+        "hint": "Áp dụng quy tắc chia thể mệnh lệnh nhóm 1."
       },
       {
         "id": "ex-q-n4-33-2",
-        "question": "Thể mệnh lệnh của 食べる (nhóm II) là:",
+        "question": "Thể mệnh lệnh của 食べる (nhóm 2) là:",
         "options": [
           "食べろ",
           "食べれ",
@@ -10318,8 +10318,8 @@
           "食べるろ"
         ],
         "correctIndex": 0,
-        "explanation": "Nhóm II bỏ る, thêm ろ: 食べる → 食べろ.",
-        "hint": "Áp dụng quy tắc chia thể mệnh lệnh nhóm II."
+        "explanation": "Nhóm 2 bỏ る, thêm ろ: 食べる → 食べろ.",
+        "hint": "Áp dụng quy tắc chia thể mệnh lệnh nhóm 2."
       },
       {
         "id": "ex-q-n4-33-3",
@@ -11757,7 +11757,7 @@
     "level": "N4",
     "lessonNumber": 35,
     "title": "Bài 35: Thể điều kiện (〜ば / 〜なら)",
-    "description": "Chia thể ば (nhóm I: う→えば, nhóm II: bỏ る+れば, tính từ い: bỏ い+ければ) diễn tả quan hệ nhân quả khách quan, và なら phản hồi CHỦ ĐỀ đang được nhắc tới (khác hẳn と/たら/ば luôn đặt điều kiện giả định về sự việc) — tổng kết bốn thể điều kiện と/たら/ば/なら và cách chọn đúng theo ngữ cảnh.",
+    "description": "Chia thể ば (nhóm 1: う→えば, nhóm 2: bỏ る+れば, tính từ い: bỏ い+ければ) diễn tả quan hệ nhân quả khách quan, và なら phản hồi CHỦ ĐỀ đang được nhắc tới (khác hẳn と/たら/ば luôn đặt điều kiện giả định về sự việc) — tổng kết bốn thể điều kiện と/たら/ば/なら và cách chọn đúng theo ngữ cảnh.",
     "vocabList": [
       {
         "id": "voc-n4-35-1",
@@ -11767,7 +11767,7 @@
         "romaji": "ikeba",
         "wordType": "verb",
         "meaningVi": "Nếu đi (thể ば của 行きます)",
-        "accentNote": "行く (nhóm I) → 行けば: đổi đuôi く→けば."
+        "accentNote": "行く (nhóm 1) → 行けば: đổi đuôi く→けば."
       },
       {
         "id": "voc-n4-35-2",
@@ -11777,7 +11777,7 @@
         "romaji": "tabereba",
         "wordType": "verb",
         "meaningVi": "Nếu ăn (thể ば của 食べます)",
-        "accentNote": "食べる (nhóm II) → 食べれば: bỏ る, thêm れば."
+        "accentNote": "食べる (nhóm 2) → 食べれば: bỏ る, thêm れば."
       },
       {
         "id": "voc-n4-35-3",
@@ -12111,7 +12111,7 @@
         "slideId": "n4-l35-s1",
         "slideType": "grammar",
         "title": "1. Chia thể ば",
-        "grammarFormula": "Nhóm I: う→え+ば (行く→行けば) 　Nhóm II: bỏ る+れば (食べる→食べれば) 　い-adj: bỏ い+ければ",
+        "grammarFormula": "Nhóm 1: う→え+ば (行く→行けば) 　Nhóm 2: bỏ る+れば (食べる→食べれば) 　い-adj: bỏ い+ければ",
         "explanation": "ば là thể điều kiện GIẢ ĐỊNH thuần túy, nhấn mạnh QUAN HỆ NHÂN QUẢ giữa điều kiện và kết quả hơn たら (N5 bài 25) — thường dùng cho quy luật chung, lời khuyên, hoặc giả định trừu tượng.",
         "teacherTips": "ば nhấn QUAN HỆ NHÂN QUẢ khách quan (nếu A thì tất yếu/thường B) hơn たら — たら linh hoạt hơn cho tình huống cụ thể một lần.",
         "culturalNotes": "安ければ買います là câu trả lời điển hình về thói quen mua sắm, nhấn mạnh giá cả là YẾU TỐ QUYẾT ĐỊNH.",
@@ -13101,7 +13101,7 @@
     "exercises": [
       {
         "id": "ex-q-n4-35-1",
-        "question": "Thể ば của 行きます (nhóm I, đuôi く) là:",
+        "question": "Thể ば của 行きます (nhóm 1, đuôi く) là:",
         "options": [
           "行けば",
           "行くば",
@@ -13109,8 +13109,8 @@
           "行いば"
         ],
         "correctIndex": 0,
-        "explanation": "Nhóm I đổi đuôi く thành けば: 行く → 行けば.",
-        "hint": "Áp dụng quy tắc chia thể ば nhóm I."
+        "explanation": "Nhóm 1 đổi đuôi く thành けば: 行く → 行けば.",
+        "hint": "Áp dụng quy tắc chia thể ば nhóm 1."
       },
       {
         "id": "ex-q-n4-35-2",
@@ -14525,7 +14525,7 @@
     "level": "N4",
     "lessonNumber": 37,
     "title": "Bài 37: Thể bị động (受身形)",
-    "description": "Chia thể bị động (nhóm I: う→あ+れる giống thể ない bài 17, nhóm II: bỏ る+られる, する→される), và ba loại bị động: PHIỀN TOÁI (迷惑の受身: 雨に降られる, 泣かれる — đặc trưng tiếng Nhật, không có tương đương tiếng Việt), MẤT MÁT (giữ を cho vật cụ thể bị lấy: 財布を盗まれる), và TRUNG TÍNH (miêu tả sự thật khách quan: 車は工場で作られる).",
+    "description": "Chia thể bị động (nhóm 1: う→あ+れる giống thể ない bài 17, nhóm 2: bỏ る+られる, する→される), và ba loại bị động: PHIỀN TOÁI (迷惑の受身: 雨に降られる, 泣かれる — đặc trưng tiếng Nhật, không có tương đương tiếng Việt), MẤT MÁT (giữ を cho vật cụ thể bị lấy: 財布を盗まれる), và TRUNG TÍNH (miêu tả sự thật khách quan: 車は工場で作られる).",
     "vocabList": [
       {
         "id": "voc-n4-37-1",
@@ -14535,7 +14535,7 @@
         "romaji": "shikararemasu",
         "wordType": "verb",
         "meaningVi": "Bị mắng (thể bị động của 叱る)",
-        "accentNote": "叱る (nhóm I) → 叱られる: đổi đuôi う→あ, thêm れる."
+        "accentNote": "叱る (nhóm 1) → 叱られる: đổi đuôi う→あ, thêm れる."
       },
       {
         "id": "voc-n4-37-2",
@@ -14545,7 +14545,7 @@
         "romaji": "homeraremasu",
         "wordType": "verb",
         "meaningVi": "Được khen (thể bị động của 褒める)",
-        "accentNote": "褒める (nhóm II) → 褒められる: bỏ る, thêm られる."
+        "accentNote": "褒める (nhóm 2) → 褒められる: bỏ る, thêm られる."
       },
       {
         "id": "voc-n4-37-3",
@@ -14870,8 +14870,8 @@
         "slideId": "n4-l37-s1",
         "slideType": "grammar",
         "title": "1. Chia thể bị động",
-        "grammarFormula": "Nhóm I: う→あ+れる (叱る→叱られる) 　Nhóm II: bỏ る+られる (褒める→褒められる) 　する→される 　来る→来られる",
-        "explanation": "Chú ý: nhóm I chia thể bị động GIỐNG HỆT thể ない (bài 17) về phần đổi âm, chỉ khác đuôi cuối (ない vs られる) — nếu đã thuộc thể ない thì học thể bị động rất nhanh.",
+        "grammarFormula": "Nhóm 1: う→あ+れる (叱る→叱られる) 　Nhóm 2: bỏ る+られる (褒める→褒められる) 　する→される 　来る→来られる",
+        "explanation": "Chú ý: nhóm 1 chia thể bị động GIỐNG HỆT thể ない (bài 17) về phần đổi âm, chỉ khác đuôi cuối (ない vs られる) — nếu đã thuộc thể ない thì học thể bị động rất nhanh.",
         "teacherTips": "に đánh dấu người GÂY RA hành động trong câu bị động (先生に = bởi thầy giáo) — khác は/が đánh dấu chủ ngữ chịu tác động.",
         "culturalNotes": "叱られました/褒められました là hai câu học sinh Nhật hay dùng để kể chuyện ở trường với cha mẹ, gia đình.",
         "examples": [
@@ -15727,7 +15727,7 @@
     "exercises": [
       {
         "id": "ex-q-n4-37-1",
-        "question": "Thể bị động của 叱る (nhóm I) là:",
+        "question": "Thể bị động của 叱る (nhóm 1) là:",
         "options": [
           "叱られる",
           "叱ける",
@@ -15735,8 +15735,8 @@
           "叱るれる"
         ],
         "correctIndex": 0,
-        "explanation": "Nhóm I đổi âm cuối gốc từ điển sang hàng あ, thêm れる: 叱る → 叱られる.",
-        "hint": "Áp dụng quy tắc chia thể bị động nhóm I."
+        "explanation": "Nhóm 1 đổi âm cuối gốc từ điển sang hàng あ, thêm れる: 叱る → 叱られる.",
+        "hint": "Áp dụng quy tắc chia thể bị động nhóm 1."
       },
       {
         "id": "ex-q-n4-37-2",
@@ -29306,7 +29306,7 @@
     "level": "N4",
     "lessonNumber": 48,
     "title": "Bài 48: Thể sai khiến (使役形: V-させる)",
-    "description": "Chia thể sai khiến (nhóm I: う→あ+せる giống thể bị động bài 37 về âm, nhóm II: bỏ る+させる, する→させる, 来る→来させる), hai sắc thái BẮT BUỘC/CHO PHÉP tùy ngữ cảnh, cách xin phép khiêm nhường bằng Vさせてください (lịch sự hơn Vたいです), và so sánh vai trò chủ ngữ đối lập giữa sai khiến (chủ động điều khiển) và bị động (chịu tác động, bài 37).",
+    "description": "Chia thể sai khiến (nhóm 1: う→あ+せる giống thể bị động bài 37 về âm, nhóm 2: bỏ る+させる, する→させる, 来る→来させる), hai sắc thái BẮT BUỘC/CHO PHÉP tùy ngữ cảnh, cách xin phép khiêm nhường bằng Vさせてください (lịch sự hơn Vたいです), và so sánh vai trò chủ ngữ đối lập giữa sai khiến (chủ động điều khiển) và bị động (chịu tác động, bài 37).",
     "vocabList": [
       {
         "id": "voc-n4-48-1",
@@ -29316,7 +29316,7 @@
         "romaji": "ikasemasu",
         "wordType": "verb",
         "meaningVi": "Bắt/cho đi (thể sai khiến của 行きます)",
-        "accentNote": "行く (nhóm I) → 行かせる: đổi đuôi う→あ, thêm せる."
+        "accentNote": "行く (nhóm 1) → 行かせる: đổi đuôi う→あ, thêm せる."
       },
       {
         "id": "voc-n4-48-2",
@@ -29326,7 +29326,7 @@
         "romaji": "tabesasemasu",
         "wordType": "verb",
         "meaningVi": "Bắt/cho ăn (thể sai khiến của 食べます)",
-        "accentNote": "食べる (nhóm II) → 食べさせる: bỏ る, thêm させる."
+        "accentNote": "食べる (nhóm 2) → 食べさせる: bỏ る, thêm させる."
       },
       {
         "id": "voc-n4-48-3",
@@ -29645,8 +29645,8 @@
         "slideId": "n4-l48-s1",
         "slideType": "grammar",
         "title": "1. Chia thể sai khiến (使役形)",
-        "grammarFormula": "Nhóm I: う→あ+せる (行く→行かせる) 　Nhóm II: bỏ る+させる (食べる→食べさせる) 　する→させる 　来る→来させる",
-        "explanation": "Chú ý: nhóm I chia thể sai khiến GIỐNG HỆT thể bị động (bài 37) về phần đổi âm, chỉ khác đuôi cuối (れる/せる) — nếu đã thuộc thể bị động thì học nhanh hơn nhiều.",
+        "grammarFormula": "Nhóm 1: う→あ+せる (行く→行かせる) 　Nhóm 2: bỏ る+させる (食べる→食べさせる) 　する→させる 　来る→来させる",
+        "explanation": "Chú ý: nhóm 1 chia thể sai khiến GIỐNG HỆT thể bị động (bài 37) về phần đổi âm, chỉ khác đuôi cuối (れる/せる) — nếu đã thuộc thể bị động thì học nhanh hơn nhiều.",
         "teacherTips": "Người GÂY RA hành động (cha mẹ, thầy giáo) làm chủ ngữ với は/が; người BỊ SAI KHIẾN đánh dấu bằng に.",
         "culturalNotes": "親は子供に野菜を食べさせます phản ánh mối lo chung của phụ huynh Nhật về việc con cái kén ăn rau.",
         "examples": [
@@ -29926,7 +29926,7 @@
         "slideType": "grammar",
         "title": "4. So sánh thể sai khiến và thể bị động (bài 37)",
         "grammarFormula": "Sai khiến (させる): CHỦ NGỮ bắt/cho NGƯỜI KHÁC làm　vs　Bị động (られる): CHỦ NGỮ chịu tác động TỪ người khác",
-        "explanation": "Hai thể chia GẦN GIỐNG NHAU về âm (đặc biệt nhóm I: せる/れる) nhưng vai trò NGƯỢC HẲN nhau — chủ động sai khiến người khác, hay bị động chịu ảnh hưởng từ người khác.",
+        "explanation": "Hai thể chia GẦN GIỐNG NHAU về âm (đặc biệt nhóm 1: せる/れる) nhưng vai trò NGƯỢC HẲN nhau — chủ động sai khiến người khác, hay bị động chịu ảnh hưởng từ người khác.",
         "teacherTips": "Kiểm tra nhanh: chủ ngữ là người RA LỆNH/TẠO ĐIỀU KIỆN → sai khiến; chủ ngữ là người NHẬN tác động → bị động — không nhầm hai vai trò này.",
         "culturalNotes": "Cả hai thể đều xuất hiện rất nhiều trong kể chuyện về gia đình, trường học — nơi có quan hệ trên dưới rõ ràng (cha mẹ-con cái, thầy-trò).",
         "examples": [
@@ -30575,7 +30575,7 @@
     "exercises": [
       {
         "id": "ex-q-n4-48-1",
-        "question": "Thể sai khiến của 行く (nhóm I, đuôi く) là:",
+        "question": "Thể sai khiến của 行く (nhóm 1, đuôi く) là:",
         "options": [
           "行かせる",
           "行けせる",
@@ -30583,12 +30583,12 @@
           "行させる"
         ],
         "correctIndex": 0,
-        "explanation": "Nhóm I đổi âm cuối gốc từ điển sang hàng あ, thêm せる: 行く → 行かせる.",
-        "hint": "Áp dụng quy tắc chia thể sai khiến nhóm I."
+        "explanation": "Nhóm 1 đổi âm cuối gốc từ điển sang hàng あ, thêm せる: 行く → 行かせる.",
+        "hint": "Áp dụng quy tắc chia thể sai khiến nhóm 1."
       },
       {
         "id": "ex-q-n4-48-2",
-        "question": "Thể sai khiến của 食べる (nhóm II) là:",
+        "question": "Thể sai khiến của 食べる (nhóm 2) là:",
         "options": [
           "食べさせる",
           "食べせる",
@@ -30596,8 +30596,8 @@
           "食べるさせる"
         ],
         "correctIndex": 0,
-        "explanation": "Nhóm II bỏ る, thêm させる: 食べる → 食べさせる.",
-        "hint": "Áp dụng quy tắc chia thể sai khiến nhóm II."
+        "explanation": "Nhóm 2 bỏ る, thêm させる: 食べる → 食べさせる.",
+        "hint": "Áp dụng quy tắc chia thể sai khiến nhóm 2."
       },
       {
         "id": "ex-q-n4-48-3",

@@ -5662,7 +5662,7 @@
         "romaji": "okimasu",
         "wordType": "verb",
         "meaningVi": "Thức dậy",
-        "accentNote": "Nhóm II (Vて = 起きて)."
+        "accentNote": "Nhóm 2 (Vて = 起きて)."
       },
       {
         "id": "voc-n5-4-30",
@@ -5672,7 +5672,7 @@
         "romaji": "nemasu",
         "wordType": "verb",
         "meaningVi": "Đi ngủ",
-        "accentNote": "Nhóm II."
+        "accentNote": "Nhóm 2."
       },
       {
         "id": "voc-n5-4-31",
@@ -5682,7 +5682,7 @@
         "romaji": "hatarakimasu",
         "wordType": "verb",
         "meaningVi": "Làm việc",
-        "accentNote": "Nhóm I."
+        "accentNote": "Nhóm 1."
       },
       {
         "id": "voc-n5-4-32",
@@ -5692,7 +5692,7 @@
         "romaji": "yasumimasu",
         "wordType": "verb",
         "meaningVi": "Nghỉ ngơi, nghỉ (làm/học)",
-        "accentNote": "Nhóm I."
+        "accentNote": "Nhóm 1."
       },
       {
         "id": "voc-n5-4-33",
@@ -5702,7 +5702,7 @@
         "romaji": "benkyoushimasu",
         "wordType": "verb",
         "meaningVi": "Học, học tập",
-        "accentNote": "Nhóm III (します)."
+        "accentNote": "Nhóm 3 (します)."
       },
       {
         "id": "voc-n5-4-34",
@@ -5712,7 +5712,7 @@
         "romaji": "owarimasu",
         "wordType": "verb",
         "meaningVi": "Kết thúc, xong",
-        "accentNote": "Nhóm I. Trái nghĩa với 始まります."
+        "accentNote": "Nhóm 1. Trái nghĩa với 始まります."
       }
     ],
     "kanjiList": [
@@ -6978,7 +6978,7 @@
         "romaji": "ikimasu",
         "wordType": "verb",
         "meaningVi": "Đi (đến một nơi)",
-        "accentNote": "Thể từ điển: 行く. Nhóm I."
+        "accentNote": "Thể từ điển: 行く. Nhóm 1."
       },
       {
         "id": "voc-n5-5-2",
@@ -6988,7 +6988,7 @@
         "romaji": "kimasu",
         "wordType": "verb",
         "meaningVi": "Đến, tới (về phía người nói)",
-        "accentNote": "Thể từ điển: 来る. Nhóm II bất quy tắc."
+        "accentNote": "Thể từ điển: 来る. Nhóm 2 bất quy tắc."
       },
       {
         "id": "voc-n5-5-3",
@@ -6998,7 +6998,7 @@
         "romaji": "kaerimasu",
         "wordType": "verb",
         "meaningVi": "Về, trở về (nhà, quê)",
-        "accentNote": "Thể từ điển: 帰る. Nhóm I (trông giống nhóm II nhưng chia như nhóm I)."
+        "accentNote": "Thể từ điển: 帰る. Nhóm 1 (trông giống nhóm 2 nhưng chia như nhóm 1)."
       },
       {
         "id": "voc-n5-5-4",
@@ -8551,7 +8551,7 @@
         "romaji": "tabemasu",
         "wordType": "verb",
         "meaningVi": "Ăn",
-        "accentNote": "Thể từ điển: 食べる. Nhóm II."
+        "accentNote": "Thể từ điển: 食べる. Nhóm 2."
       },
       {
         "id": "voc-n5-6-2",
@@ -8561,7 +8561,7 @@
         "romaji": "nomimasu",
         "wordType": "verb",
         "meaningVi": "Uống",
-        "accentNote": "Thể từ điển: 飲む. Nhóm I."
+        "accentNote": "Thể từ điển: 飲む. Nhóm 1."
       },
       {
         "id": "voc-n5-6-3",
@@ -8571,7 +8571,7 @@
         "romaji": "mimasu",
         "wordType": "verb",
         "meaningVi": "Xem, nhìn",
-        "accentNote": "Thể từ điển: 見る. Nhóm II."
+        "accentNote": "Thể từ điển: 見る. Nhóm 2."
       },
       {
         "id": "voc-n5-6-4",
@@ -8581,7 +8581,7 @@
         "romaji": "kikimasu",
         "wordType": "verb",
         "meaningVi": "Nghe, hỏi",
-        "accentNote": "Thể từ điển: 聞く. Nhóm I. Vừa nghĩa nghe vừa nghĩa hỏi."
+        "accentNote": "Thể từ điển: 聞く. Nhóm 1. Vừa nghĩa nghe vừa nghĩa hỏi."
       },
       {
         "id": "voc-n5-6-5",
@@ -8591,7 +8591,7 @@
         "romaji": "yomimasu",
         "wordType": "verb",
         "meaningVi": "Đọc",
-        "accentNote": "Thể từ điển: 読む. Nhóm I."
+        "accentNote": "Thể từ điển: 読む. Nhóm 1."
       },
       {
         "id": "voc-n5-6-6",
@@ -8601,7 +8601,7 @@
         "romaji": "kakimasu",
         "wordType": "verb",
         "meaningVi": "Viết, vẽ",
-        "accentNote": "Thể từ điển: 書く. Nhóm I."
+        "accentNote": "Thể từ điển: 書く. Nhóm 1."
       },
       {
         "id": "voc-n5-6-7",
@@ -8611,7 +8611,7 @@
         "romaji": "kaimasu",
         "wordType": "verb",
         "meaningVi": "Mua",
-        "accentNote": "Thể từ điển: 買う. Nhóm I."
+        "accentNote": "Thể từ điển: 買う. Nhóm 1."
       },
       {
         "id": "voc-n5-6-8",
@@ -8621,7 +8621,7 @@
         "romaji": "torimasu",
         "wordType": "verb",
         "meaningVi": "Chụp (ảnh)",
-        "accentNote": "Thể từ điển: 撮る. Nhóm I. Khác 取ります (lấy)."
+        "accentNote": "Thể từ điển: 撮る. Nhóm 1. Khác 取ります (lấy)."
       },
       {
         "id": "voc-n5-6-9",
@@ -8631,7 +8631,7 @@
         "romaji": "tsukurimasu",
         "wordType": "verb",
         "meaningVi": "Làm, chế tạo, nấu",
-        "accentNote": "Thể từ điển: 作る. Nhóm I."
+        "accentNote": "Thể từ điển: 作る. Nhóm 1."
       },
       {
         "id": "voc-n5-6-10",
@@ -14049,7 +14049,7 @@
         "romaji": "arimasu",
         "wordType": "verb",
         "meaningVi": "Có, tồn tại (vật vô tri, thực vật)",
-        "accentNote": "Chia giống động từ nhóm I bình thường."
+        "accentNote": "Chia giống động từ nhóm 1 bình thường."
       },
       {
         "id": "voc-n5-10-2",
@@ -18181,7 +18181,7 @@
         "romaji": "asobimasu",
         "wordType": "verb",
         "meaningVi": "Chơi, đi chơi",
-        "accentNote": "Thể từ điển: 遊ぶ. Nhóm I."
+        "accentNote": "Thể từ điển: 遊ぶ. Nhóm 1."
       },
       {
         "id": "voc-n5-13-6",
@@ -18191,7 +18191,7 @@
         "romaji": "oyogimasu",
         "wordType": "verb",
         "meaningVi": "Bơi",
-        "accentNote": "Thể từ điển: 泳ぐ. Nhóm I."
+        "accentNote": "Thể từ điển: 泳ぐ. Nhóm 1."
       },
       {
         "id": "voc-n5-13-7",
@@ -19522,7 +19522,7 @@
         "romaji": "kaimasu",
         "wordType": "verb",
         "meaningVi": "Mua",
-        "accentNote": "Đuôi う → って. Nhóm I. Đã gặp bài 6."
+        "accentNote": "Đuôi う → って. Nhóm 1. Đã gặp bài 6."
       },
       {
         "id": "voc-n5-14-2",
@@ -19532,7 +19532,7 @@
         "romaji": "machimasu",
         "wordType": "verb",
         "meaningVi": "Chờ, đợi",
-        "accentNote": "Đuôi つ → って. Nhóm I."
+        "accentNote": "Đuôi つ → って. Nhóm 1."
       },
       {
         "id": "voc-n5-14-3",
@@ -19542,7 +19542,7 @@
         "romaji": "shinimasu",
         "wordType": "verb",
         "meaningVi": "Chết, mất",
-        "accentNote": "Đuôi ぬ → んで. Nhóm I. Động từ DUY NHẤT có đuôi ぬ trong tiếng Nhật hiện đại."
+        "accentNote": "Đuôi ぬ → んで. Nhóm 1. Động từ DUY NHẤT có đuôi ぬ trong tiếng Nhật hiện đại."
       },
       {
         "id": "voc-n5-14-4",
@@ -19552,7 +19552,7 @@
         "romaji": "asobimasu",
         "wordType": "verb",
         "meaningVi": "Chơi, đi chơi",
-        "accentNote": "Đuôi ぶ → んで. Nhóm I. Đã gặp bài 13."
+        "accentNote": "Đuôi ぶ → んで. Nhóm 1. Đã gặp bài 13."
       },
       {
         "id": "voc-n5-14-5",
@@ -19562,7 +19562,7 @@
         "romaji": "sumimasu",
         "wordType": "verb",
         "meaningVi": "Sống, cư trú",
-        "accentNote": "Đuôi む → んで. Nhóm I."
+        "accentNote": "Đuôi む → んで. Nhóm 1."
       },
       {
         "id": "voc-n5-14-6",
@@ -19572,7 +19572,7 @@
         "romaji": "hanashimasu",
         "wordType": "verb",
         "meaningVi": "Nói, trò chuyện",
-        "accentNote": "Đuôi す → して (KHÔNG âm tiện, ngoại lệ trong nhóm I). Đã gặp bài 7."
+        "accentNote": "Đuôi す → して (KHÔNG âm tiện, ngoại lệ trong nhóm 1). Đã gặp bài 7."
       },
       {
         "id": "voc-n5-14-7",
@@ -19582,7 +19582,7 @@
         "romaji": "isogimasu",
         "wordType": "verb",
         "meaningVi": "Vội, gấp",
-        "accentNote": "Đuôi ぐ → いで. Nhóm I."
+        "accentNote": "Đuôi ぐ → いで. Nhóm 1."
       },
       {
         "id": "voc-n5-14-8",
@@ -19592,7 +19592,7 @@
         "romaji": "tsukurimasu",
         "wordType": "verb",
         "meaningVi": "Làm, chế tạo, nấu",
-        "accentNote": "Đuôi る (nhóm I) → って. Đã gặp bài 6."
+        "accentNote": "Đuôi る (nhóm 1) → って. Đã gặp bài 6."
       },
       {
         "id": "voc-n5-14-9",
@@ -19602,7 +19602,7 @@
         "romaji": "tachimasu",
         "wordType": "verb",
         "meaningVi": "Đứng dậy",
-        "accentNote": "Đuôi つ → って. Nhóm I."
+        "accentNote": "Đuôi つ → って. Nhóm 1."
       },
       {
         "id": "voc-n5-14-10",
@@ -19612,7 +19612,7 @@
         "romaji": "suwarimasu",
         "wordType": "verb",
         "meaningVi": "Ngồi xuống",
-        "accentNote": "Đuôi る (nhóm I) → って."
+        "accentNote": "Đuôi る (nhóm 1) → って."
       },
       {
         "id": "voc-n5-14-11",
@@ -19632,7 +19632,7 @@
         "romaji": "shirimasu",
         "wordType": "verb",
         "meaningVi": "Biết (bắt đầu biết)",
-        "accentNote": "Đuôi る (nhóm I) → って. 知っています = đã biết (trạng thái)."
+        "accentNote": "Đuôi る (nhóm 1) → って. 知っています = đã biết (trạng thái)."
       },
       {
         "id": "voc-n5-14-13",
@@ -19642,7 +19642,7 @@
         "romaji": "akemasu",
         "wordType": "verb",
         "meaningVi": "Mở (tha động từ)",
-        "accentNote": "Nhóm II: bỏ ます thêm て → 開けて."
+        "accentNote": "Nhóm 2: bỏ ます thêm て → 開けて."
       },
       {
         "id": "voc-n5-14-14",
@@ -19652,7 +19652,7 @@
         "romaji": "shimemasu",
         "wordType": "verb",
         "meaningVi": "Đóng (tha động từ)",
-        "accentNote": "Nhóm II."
+        "accentNote": "Nhóm 2."
       },
       {
         "id": "voc-n5-14-15",
@@ -19662,7 +19662,7 @@
         "romaji": "keshimasu",
         "wordType": "verb",
         "meaningVi": "Tắt, xóa",
-        "accentNote": "Đuôi す → して. Nhóm I."
+        "accentNote": "Đuôi す → して. Nhóm 1."
       },
       {
         "id": "voc-n5-14-16",
@@ -19672,7 +19672,7 @@
         "romaji": "tetsudaimasu",
         "wordType": "verb",
         "meaningVi": "Giúp đỡ, phụ giúp",
-        "accentNote": "Đuôi う → って. Nhóm I."
+        "accentNote": "Đuôi う → って. Nhóm 1."
       },
       {
         "id": "voc-n5-14-17",
@@ -19682,7 +19682,7 @@
         "romaji": "kekkonshimasu",
         "wordType": "verb",
         "meaningVi": "Kết hôn",
-        "accentNote": "Nhóm III (します). 結婚しています = đã kết hôn (trạng thái, không phải đang cưới)."
+        "accentNote": "Nhóm 3 (します). 結婚しています = đã kết hôn (trạng thái, không phải đang cưới)."
       },
       {
         "id": "voc-n5-14-18",
@@ -19692,7 +19692,7 @@
         "romaji": "kimasu",
         "wordType": "verb",
         "meaningVi": "Đến",
-        "accentNote": "Nhóm II bất quy tắc: 来て. Đã gặp bài 5."
+        "accentNote": "Nhóm 2 bất quy tắc: 来て. Đã gặp bài 5."
       },
       {
         "id": "voc-n5-14-19",
@@ -19702,7 +19702,7 @@
         "romaji": "shimasu",
         "wordType": "verb",
         "meaningVi": "Làm",
-        "accentNote": "Nhóm III bất quy tắc: して. Đã gặp bài 6."
+        "accentNote": "Nhóm 3 bất quy tắc: して. Đã gặp bài 6."
       },
       {
         "id": "voc-n5-14-20",
@@ -19873,10 +19873,10 @@
         "slideId": "n5-l14-s1",
         "slideType": "grammar",
         "title": "1. Ba nhóm động từ tiếng Nhật",
-        "grammarFormula": "Nhóm I (五段) / Nhóm II (一段) / Nhóm III (bất quy tắc: する, 来る)",
-        "explanation": "Nhóm I: gốc kết thúc bằng âm う (う/つ/る/む/ぶ/ぬ/ぐ/す). Nhóm II: gốc kết thúc bằng え/い + る (ăn, xem…). Nhóm III: chỉ có đúng 2 từ しますvà来ます, chia hoàn toàn riêng.",
+        "grammarFormula": "Nhóm 1 (五段) / Nhóm 2 (一段) / Nhóm 3 (bất quy tắc: する, 来る)",
+        "explanation": "Nhóm 1: gốc kết thúc bằng âm う (う/つ/る/む/ぶ/ぬ/ぐ/す). Nhóm 2: gốc kết thúc bằng え/い + る (ăn, xem…). Nhóm 3: chỉ có đúng 2 từ しますvà来ます, chia hoàn toàn riêng.",
         "teacherTips": "Nhận nhóm SAI sẽ chia thể て SAI hoàn toàn — đây là kỹ năng nền tảng của mọi ngữ pháp N5 còn lại.",
-        "culturalNotes": "帰ります trông giống nhóm II (kết thúc ります) nhưng THỰC RA là nhóm I — một trong vài ngoại lệ hình thức cần nhớ riêng.",
+        "culturalNotes": "帰ります trông giống nhóm 2 (kết thúc ります) nhưng THỰC RA là nhóm 1 — một trong vài ngoại lệ hình thức cần nhớ riêng.",
         "examples": [
           {
             "id": "ex-n5-l14-s1-1",
@@ -19901,7 +19901,7 @@
                 "furigana": "かう"
               }
             ],
-            "meaningVi": "買います (nhóm I) — gốc từ điển 買う kết thúc bằng う."
+            "meaningVi": "買います (nhóm 1) — gốc từ điển 買う kết thúc bằng う."
           },
           {
             "id": "ex-n5-l14-s1-2",
@@ -19926,7 +19926,7 @@
                 "furigana": "あける"
               }
             ],
-            "meaningVi": "開けます (nhóm II) — gốc từ điển 開ける kết thúc bằng ける."
+            "meaningVi": "開けます (nhóm 2) — gốc từ điển 開ける kết thúc bằng ける."
           },
           {
             "id": "ex-n5-l14-s1-3",
@@ -19949,16 +19949,16 @@
                 "isKeyGrammar": true
               }
             ],
-            "meaningVi": "来ます, します — hai động từ nhóm III, chia hoàn toàn riêng, phải học thuộc."
+            "meaningVi": "来ます, します — hai động từ nhóm 3, chia hoàn toàn riêng, phải học thuộc."
           }
         ]
       },
       {
         "slideId": "n5-l14-s2",
         "slideType": "grammar",
-        "title": "2. Chia thể て — Nhóm I (5 kiểu biến âm)",
+        "title": "2. Chia thể て — Nhóm 1 (5 kiểu biến âm)",
         "grammarFormula": "う/つ/る→って　　ぬ/ぶ/む→んで　　く→いて　　ぐ→いで　　す→して",
-        "explanation": "Nhóm I có NĂM kiểu biến âm theo âm cuối của gốc từ điển. Đây là phần khó nhớ nhất — phải luyện qua nhiều động từ mẫu để phản xạ tự nhiên, không suy nghĩ từng bước.",
+        "explanation": "Nhóm 1 có NĂM kiểu biến âm theo âm cuối của gốc từ điển. Đây là phần khó nhớ nhất — phải luyện qua nhiều động từ mẫu để phản xạ tự nhiên, không suy nghĩ từng bước.",
         "teacherTips": "死にます (chết) là động từ DUY NHẤT có đuôi ぬ trong tiếng Nhật — học nó cũng là học luôn quy tắc ぬ→んで.",
         "culturalNotes": "Nhóm す không bao giờ biến âm thành っ hay ん — đây là 'lối thoát' dễ nhớ nhất trong 5 kiểu biến âm.",
         "examples": [
@@ -20021,11 +20021,11 @@
       {
         "slideId": "n5-l14-s3",
         "slideType": "grammar",
-        "title": "3. Chia thể て — Nhóm II và Nhóm III",
-        "grammarFormula": "Nhóm II: bỏ ます, thêm て   /   します→して   /   来ます→来て",
-        "explanation": "Nhóm II ĐƠN GIẢN NHẤT: chỉ cần bỏ ます, thêm て — không có biến âm nào cả. Nhóm III chỉ có hai từ, chia riêng và phải học thuộc lòng.",
-        "teacherTips": "Nhóm II dễ chia nhất — nếu nhận diện SAI một động từ nhóm I thành nhóm II, cả câu sẽ sai theo.",
-        "culturalNotes": "Ghi nhớ ba từ nhóm I dễ nhầm với nhóm II vì đều kết thúc bằng ります: 帰ります、要ります、走ります.",
+        "title": "3. Chia thể て — Nhóm 2 và Nhóm 3",
+        "grammarFormula": "Nhóm 2: bỏ ます, thêm て   /   します→して   /   来ます→来て",
+        "explanation": "Nhóm 2 ĐƠN GIẢN NHẤT: chỉ cần bỏ ます, thêm て — không có biến âm nào cả. Nhóm 3 chỉ có hai từ, chia riêng và phải học thuộc lòng.",
+        "teacherTips": "Nhóm 2 dễ chia nhất — nếu nhận diện SAI một động từ nhóm 1 thành nhóm 2, cả câu sẽ sai theo.",
+        "culturalNotes": "Ghi nhớ ba từ nhóm 1 dễ nhầm với nhóm 2 vì đều kết thúc bằng ります: 帰ります、要ります、走ります.",
         "examples": [
           {
             "id": "ex-n5-l14-s3-1",
@@ -20043,7 +20043,7 @@
                 "isKeyGrammar": false
               }
             ],
-            "meaningVi": "Xin hãy đóng lại. (閉めます nhóm II: bỏ ます, thêm て)"
+            "meaningVi": "Xin hãy đóng lại. (閉めます nhóm 2: bỏ ます, thêm て)"
           },
           {
             "id": "ex-n5-l14-s3-2",
@@ -20068,7 +20068,7 @@
                 "furigana": "います"
               }
             ],
-            "meaningVi": "Anh ấy đã kết hôn. (結婚します nhóm III: します → して)"
+            "meaningVi": "Anh ấy đã kết hôn. (結婚します nhóm 3: します → して)"
           }
         ]
       },
@@ -20606,31 +20606,31 @@
         "id": "ex-q-n5-14-1",
         "question": "買います thuộc nhóm động từ nào?",
         "options": [
-          "Nhóm I (gốc 買う kết thúc bằng う)",
-          "Nhóm II",
-          "Nhóm III",
+          "Nhóm 1 (gốc 買う kết thúc bằng う)",
+          "Nhóm 2",
+          "Nhóm 3",
           "Không thuộc nhóm nào"
         ],
         "correctIndex": 0,
-        "explanation": "買う kết thúc bằng âm う, thuộc nhóm I (五段動詞).",
+        "explanation": "買う kết thúc bằng âm う, thuộc nhóm 1 (五段動詞).",
         "hint": "Xem đuôi của thể từ điển."
       },
       {
         "id": "ex-q-n5-14-2",
-        "question": "帰ります trông giống nhóm II nhưng thực ra là:",
+        "question": "帰ります trông giống nhóm 2 nhưng thực ra là:",
         "options": [
-          "Nhóm I (ngoại lệ hình thức)",
-          "Nhóm II thật sự",
-          "Nhóm III",
+          "Nhóm 1 (ngoại lệ hình thức)",
+          "Nhóm 2 thật sự",
+          "Nhóm 3",
           "Không phải động từ"
         ],
         "correctIndex": 0,
-        "explanation": "帰る là một trong vài động từ đặc biệt: hình thức giống nhóm II (kết thúc ります) nhưng chia theo quy tắc nhóm I.",
+        "explanation": "帰る là một trong vài động từ đặc biệt: hình thức giống nhóm 2 (kết thúc ります) nhưng chia theo quy tắc nhóm 1.",
         "hint": "Đây là ngoại lệ cần nhớ riêng, đã nhắc ở slide 3."
       },
       {
         "id": "ex-q-n5-14-3",
-        "question": "Thể て của 待ちます (nhóm I, đuôi つ) là:",
+        "question": "Thể て của 待ちます (nhóm 1, đuôi つ) là:",
         "options": [
           "待って",
           "待んで",
@@ -20638,12 +20638,12 @@
           "待して"
         ],
         "correctIndex": 0,
-        "explanation": "Nhóm I có đuôi う/つ/る đều biến thành って khi chia thể て.",
+        "explanation": "Nhóm 1 có đuôi う/つ/る đều biến thành って khi chia thể て.",
         "hint": "つ nằm trong nhóm biến âm って."
       },
       {
         "id": "ex-q-n5-14-4",
-        "question": "Thể て của 遊びます (nhóm I, đuôi ぶ) là:",
+        "question": "Thể て của 遊びます (nhóm 1, đuôi ぶ) là:",
         "options": [
           "遊んで",
           "遊って",
@@ -20651,12 +20651,12 @@
           "遊して"
         ],
         "correctIndex": 0,
-        "explanation": "Nhóm I có đuôi ぬ/ぶ/む đều biến thành んで.",
+        "explanation": "Nhóm 1 có đuôi ぬ/ぶ/む đều biến thành んで.",
         "hint": "ぶ nằm trong nhóm biến âm んで."
       },
       {
         "id": "ex-q-n5-14-5",
-        "question": "Thể て của 話します (nhóm I, đuôi す) là:",
+        "question": "Thể て của 話します (nhóm 1, đuôi す) là:",
         "options": [
           "話して",
           "話んで",
@@ -20664,12 +20664,12 @@
           "話いて"
         ],
         "correctIndex": 0,
-        "explanation": "Nhóm I có đuôi す biến thành して — KHÔNG biến âm っ hay ん như các đuôi khác.",
+        "explanation": "Nhóm 1 có đuôi す biến thành して — KHÔNG biến âm っ hay ん như các đuôi khác.",
         "hint": "す là 'lối thoát' dễ nhớ nhất trong 5 kiểu biến âm."
       },
       {
         "id": "ex-q-n5-14-6",
-        "question": "Thể て của 閉めます (nhóm II) là:",
+        "question": "Thể て của 閉めます (nhóm 2) là:",
         "options": [
           "閉めて",
           "閉めって",
@@ -20677,7 +20677,7 @@
           "閉まって"
         ],
         "correctIndex": 0,
-        "explanation": "Nhóm II chỉ cần bỏ ます, thêm て — không có biến âm nào.",
+        "explanation": "Nhóm 2 chỉ cần bỏ ます, thêm て — không có biến âm nào.",
         "hint": "Đây là nhóm dễ chia nhất."
       },
       {
@@ -20725,7 +20725,7 @@
         "options": [
           "Là động từ DUY NHẤT có đuôi ぬ trong thể từ điển",
           "Không chia được thể て",
-          "Thuộc nhóm II",
+          "Thuộc nhóm 2",
           "Không có nghĩa"
         ],
         "correctIndex": 0,
@@ -20748,7 +20748,7 @@
         "romaji": "tsukaimasu",
         "wordType": "verb",
         "meaningVi": "Sử dụng, dùng",
-        "accentNote": "Thể từ điển: 使う. Nhóm I."
+        "accentNote": "Thể từ điển: 使う. Nhóm 1."
       },
       {
         "id": "voc-n5-15-2",
@@ -20758,7 +20758,7 @@
         "romaji": "hairimasu",
         "wordType": "verb",
         "meaningVi": "Vào, gia nhập",
-        "accentNote": "Thể từ điển: 入る. Nhóm I (dù trông giống nhóm II)."
+        "accentNote": "Thể từ điển: 入る. Nhóm 1 (dù trông giống nhóm 2)."
       },
       {
         "id": "voc-n5-15-3",
@@ -20768,7 +20768,7 @@
         "romaji": "demasu",
         "wordType": "verb",
         "meaningVi": "Ra, rời khỏi, xuất hiện",
-        "accentNote": "Thể từ điển: 出る. Nhóm II."
+        "accentNote": "Thể từ điển: 出る. Nhóm 2."
       },
       {
         "id": "voc-n5-15-4",
@@ -20778,7 +20778,7 @@
         "romaji": "nugimasu",
         "wordType": "verb",
         "meaningVi": "Cởi (giày, áo)",
-        "accentNote": "Thể từ điển: 脱ぐ. Nhóm I. Đuôi ぐ → いで."
+        "accentNote": "Thể từ điển: 脱ぐ. Nhóm 1. Đuôi ぐ → いで."
       },
       {
         "id": "voc-n5-15-5",
@@ -20798,7 +20798,7 @@
         "romaji": "tomemasu",
         "wordType": "verb",
         "meaningVi": "Dừng, đỗ (xe)",
-        "accentNote": "Nhóm II. 駐車禁止 = cấm đỗ xe."
+        "accentNote": "Nhóm 2. 駐車禁止 = cấm đỗ xe."
       },
       {
         "id": "voc-n5-15-7",
@@ -22152,7 +22152,7 @@
         "romaji": "ha o migakimasu",
         "wordType": "verb",
         "meaningVi": "Đánh răng",
-        "accentNote": "磨きます: nhóm I."
+        "accentNote": "磨きます: nhóm 1."
       },
       {
         "id": "voc-n5-16-3",
@@ -22162,7 +22162,7 @@
         "romaji": "shawaa o abimasu",
         "wordType": "verb",
         "meaningVi": "Tắm vòi sen",
-        "accentNote": "浴びます: nhóm II."
+        "accentNote": "浴びます: nhóm 2."
       },
       {
         "id": "voc-n5-16-4",
@@ -22172,7 +22172,7 @@
         "romaji": "dekakemasu",
         "wordType": "verb",
         "meaningVi": "Ra ngoài, đi ra",
-        "accentNote": "Nhóm II. Khác 出ます (ra khỏi một nơi cụ thể)."
+        "accentNote": "Nhóm 2. Khác 出ます (ra khỏi một nơi cụ thể)."
       },
       {
         "id": "voc-n5-16-5",
@@ -23461,7 +23461,7 @@
         "romaji": "nomimasu",
         "wordType": "verb",
         "meaningVi": "Uống (thuốc, nước)",
-        "accentNote": "Thể ない: 飲まない. Nhóm I đuôi む→まない."
+        "accentNote": "Thể ない: 飲まない. Nhóm 1 đuôi む→まない."
       },
       {
         "id": "voc-n5-17-2",
@@ -23471,7 +23471,7 @@
         "romaji": "kakimasu",
         "wordType": "verb",
         "meaningVi": "Viết",
-        "accentNote": "Thể ない: 書かない. Nhóm I đuôi く→かない."
+        "accentNote": "Thể ない: 書かない. Nhóm 1 đuôi く→かない."
       },
       {
         "id": "voc-n5-17-3",
@@ -23481,7 +23481,7 @@
         "romaji": "tabemasu",
         "wordType": "verb",
         "meaningVi": "Ăn",
-        "accentNote": "Thể ない: 食べない. Nhóm II: bỏ ます thêm ない."
+        "accentNote": "Thể ない: 食べない. Nhóm 2: bỏ ます thêm ない."
       },
       {
         "id": "voc-n5-17-4",
@@ -23491,7 +23491,7 @@
         "romaji": "kimasu",
         "wordType": "verb",
         "meaningVi": "Đến",
-        "accentNote": "Thể ない: 来ない (こない — đọc khác hẳn 来る). Nhóm III bất quy tắc."
+        "accentNote": "Thể ない: 来ない (こない — đọc khác hẳn 来る). Nhóm 3 bất quy tắc."
       },
       {
         "id": "voc-n5-17-5",
@@ -23501,7 +23501,7 @@
         "romaji": "shimasu",
         "wordType": "verb",
         "meaningVi": "Làm",
-        "accentNote": "Thể ない: しない. Nhóm III bất quy tắc."
+        "accentNote": "Thể ない: しない. Nhóm 3 bất quy tắc."
       },
       {
         "id": "voc-n5-17-6",
@@ -23511,7 +23511,7 @@
         "romaji": "wasuremasu",
         "wordType": "verb",
         "meaningVi": "Quên",
-        "accentNote": "Thể ない: 忘れない. Nhóm II."
+        "accentNote": "Thể ない: 忘れない. Nhóm 2."
       },
       {
         "id": "voc-n5-17-7",
@@ -23521,7 +23521,7 @@
         "romaji": "hairimasu",
         "wordType": "verb",
         "meaningVi": "Vào",
-        "accentNote": "Đã gặp bài 15. Thể ない: 入らない (nhóm I dù trông giống nhóm II)."
+        "accentNote": "Đã gặp bài 15. Thể ない: 入らない (nhóm 1 dù trông giống nhóm 2)."
       },
       {
         "id": "voc-n5-17-8",
@@ -23809,8 +23809,8 @@
         "slideId": "n5-l17-s1",
         "slideType": "grammar",
         "title": "1. Chia thể ない (phủ định thông thường)",
-        "grammarFormula": "Nhóm I: đuôi う→わ, く→か, ぐ→が, す→さ, つ→た, ぬ→な, ぶ→ば, む→ま + ない　/　Nhóm II: bỏ ます + ない",
-        "explanation": "Thể ない là dạng phủ định THÂN MẬT của động từ — nền tảng cho hàng loạt cấu trúc ngữ pháp ở bài này. Nhóm I đổi âm cuối của gốc từ điển sang HÀNG あ rồi thêm ない.",
+        "grammarFormula": "Nhóm 1: đuôi う→わ, く→か, ぐ→が, す→さ, つ→た, ぬ→な, ぶ→ば, む→ま + ない　/　Nhóm 2: bỏ ます + ない",
+        "explanation": "Thể ない là dạng phủ định THÂN MẬT của động từ — nền tảng cho hàng loạt cấu trúc ngữ pháp ở bài này. Nhóm 1 đổi âm cuối của gốc từ điển sang HÀNG あ rồi thêm ない.",
         "teacherTips": "Đuôi う đặc biệt: đổi thành わ chứ không phải あ — 吸う → 吸わない, không phải 吸あない.",
         "culturalNotes": "来る và する chia thể ない hoàn toàn bất quy tắc: 来ない (こない, đọc khác hẳn) và しない — phải học thuộc riêng.",
         "examples": [
@@ -23881,7 +23881,7 @@
                 "isKeyGrammar": false
               }
             ],
-            "meaningVi": "Xin đừng ăn. (食べる nhóm II: bỏ ます, thêm ない)"
+            "meaningVi": "Xin đừng ăn. (食べる nhóm 2: bỏ ます, thêm ない)"
           }
         ]
       },
@@ -24662,7 +24662,7 @@
     "exercises": [
       {
         "id": "ex-q-n5-17-1",
-        "question": "Thể ない của 飲みます (nhóm I, đuôi む) là:",
+        "question": "Thể ない của 飲みます (nhóm 1, đuôi む) là:",
         "options": [
           "飲まない",
           "飲みない",
@@ -24670,12 +24670,12 @@
           "飲むない"
         ],
         "correctIndex": 0,
-        "explanation": "Nhóm I đổi đuôi む thành まない: 飲む → 飲まない.",
+        "explanation": "Nhóm 1 đổi đuôi む thành まない: 飲む → 飲まない.",
         "hint": "Chuyển âm cuối gốc từ điển sang hàng あ."
       },
       {
         "id": "ex-q-n5-17-2",
-        "question": "Thể ない của 吸います (nhóm I, đuôi う) là:",
+        "question": "Thể ない của 吸います (nhóm 1, đuôi う) là:",
         "options": [
           "吸わない",
           "吸あない",
@@ -24688,7 +24688,7 @@
       },
       {
         "id": "ex-q-n5-17-3",
-        "question": "Thể ない của 来ます (nhóm III) là:",
+        "question": "Thể ない của 来ます (nhóm 3) là:",
         "options": [
           "来ない (こない)",
           "来ます thêm ない",
@@ -24806,7 +24806,7 @@
         "romaji": "utaimasu",
         "wordType": "verb",
         "meaningVi": "Hát",
-        "accentNote": "Thể từ điển: 歌う. Nhóm I."
+        "accentNote": "Thể từ điển: 歌う. Nhóm 1."
       },
       {
         "id": "voc-n5-18-2",
@@ -24826,7 +24826,7 @@
         "romaji": "hikimasu",
         "wordType": "verb",
         "meaningVi": "Chơi (đàn dây, piano)",
-        "accentNote": "Thể từ điển: 弾く. Nhóm I. ピアノを 弾きます = chơi piano."
+        "accentNote": "Thể từ điển: 弾く. Nhóm 1. ピアノを 弾きます = chơi piano."
       },
       {
         "id": "voc-n5-18-4",
@@ -24856,7 +24856,7 @@
         "romaji": "untenshimasu",
         "wordType": "verb",
         "meaningVi": "Lái xe",
-        "accentNote": "Thể từ điển: 運転する. Nhóm III."
+        "accentNote": "Thể từ điển: 運転する. Nhóm 3."
       },
       {
         "id": "voc-n5-18-7",
@@ -24866,7 +24866,7 @@
         "romaji": "sanposhimasu",
         "wordType": "verb",
         "meaningVi": "Đi dạo",
-        "accentNote": "Thể từ điển: 散歩する. Nhóm III."
+        "accentNote": "Thể từ điển: 散歩する. Nhóm 3."
       },
       {
         "id": "voc-n5-18-8",
@@ -25186,7 +25186,7 @@
                 "furigana": "およぐ"
               }
             ],
-            "meaningVi": "泳ぎます → 泳ぐ (nhóm I: đổi đuôi ます thành âu tương ứng)"
+            "meaningVi": "泳ぎます → 泳ぐ (nhóm 1: đổi đuôi ます thành âu tương ứng)"
           },
           {
             "id": "ex-n5-l18-s1-2",
@@ -25211,7 +25211,7 @@
                 "furigana": "たべる"
               }
             ],
-            "meaningVi": "食べます → 食べる (nhóm II: bỏ ます, thêm る)"
+            "meaningVi": "食べます → 食べる (nhóm 2: bỏ ます, thêm る)"
           }
         ]
       },
@@ -26048,8 +26048,8 @@
           "飲み"
         ],
         "correctIndex": 0,
-        "explanation": "Nhóm I: đổi đuôi ます (i-âm) thành đuôi う tương ứng ở gốc từ điển. 飲みます → 飲む.",
-        "hint": "Áp dụng quy tắc chuyển đổi nhóm I."
+        "explanation": "Nhóm 1: đổi đuôi ます (i-âm) thành đuôi う tương ứng ở gốc từ điển. 飲みます → 飲む.",
+        "hint": "Áp dụng quy tắc chuyển đổi nhóm 1."
       },
       {
         "id": "ex-q-n5-18-2",
@@ -26061,7 +26061,7 @@
           "食べ"
         ],
         "correctIndex": 0,
-        "explanation": "Nhóm II: bỏ ます, thêm る. 食べます → 食べる.",
+        "explanation": "Nhóm 2: bỏ ます, thêm る. 食べます → 食べる.",
         "hint": "Đây là quy tắc dễ nhất trong ba nhóm."
       },
       {
@@ -26532,7 +26532,7 @@
         "slideId": "n5-l19-s1",
         "slideType": "grammar",
         "title": "1. Chia thể た (giống hệt quy tắc thể て, đổi て→た)",
-        "grammarFormula": "Nhóm I: 5 kiểu biến âm giống thể て / Nhóm II: bỏ ます + た / Nhóm III bất quy tắc",
+        "grammarFormula": "Nhóm 1: 5 kiểu biến âm giống thể て / Nhóm 2: bỏ ます + た / Nhóm 3 bất quy tắc",
         "explanation": "Thể た chia HỆT thể て đã học ở bài 14 — chỉ cần đổi て→た, で→だ ở mọi vị trí. Nếu đã thuộc thể て thì thể た gần như không cần học lại từ đầu.",
         "teacherTips": "Học thể た gần như MIỄN PHÍ nếu đã nắm chắc thể て ở bài 14 — chỉ đổi て/で thành た/だ.",
         "culturalNotes": "Thể た còn gọi là 'thể ngắn quá khứ' (普通形), dùng trong văn viết thân mật, nhật ký, và làm gốc cho rất nhiều ngữ pháp N4 trở lên.",
@@ -30199,7 +30199,7 @@
         "romaji": "kimasu",
         "wordType": "verb",
         "meaningVi": "Mặc (áo, đồ phía trên eo)",
-        "accentNote": "Thể từ điển: 着る. Nhóm II. 眼鏡をかける (đeo kính) dùng động từ khác."
+        "accentNote": "Thể từ điển: 着る. Nhóm 2. 眼鏡をかける (đeo kính) dùng động từ khác."
       },
       {
         "id": "voc-n5-22-2",
@@ -30209,7 +30209,7 @@
         "romaji": "kakemasu",
         "wordType": "verb",
         "meaningVi": "Đeo (kính), treo",
-        "accentNote": "眼鏡を かけます = đeo kính. Nhóm II."
+        "accentNote": "眼鏡を かけます = đeo kính. Nhóm 2."
       },
       {
         "id": "voc-n5-22-3",
@@ -30219,7 +30219,7 @@
         "romaji": "kaburimasu",
         "wordType": "verb",
         "meaningVi": "Đội (mũ, nón)",
-        "accentNote": "帽子を かぶります = đội mũ. Nhóm I."
+        "accentNote": "帽子を かぶります = đội mũ. Nhóm 1."
       },
       {
         "id": "voc-n5-22-4",
@@ -30229,7 +30229,7 @@
         "romaji": "tatemasu",
         "wordType": "verb",
         "meaningVi": "Xây dựng",
-        "accentNote": "Nhóm II. あの 建物を 建てました = đã xây tòa nhà đó."
+        "accentNote": "Nhóm 2. あの 建物を 建てました = đã xây tòa nhà đó."
       },
       {
         "id": "voc-n5-22-5",
@@ -31698,7 +31698,7 @@
         "romaji": "oshimasu",
         "wordType": "verb",
         "meaningVi": "Ấn, nhấn",
-        "accentNote": "Thể từ điển: 押す. Nhóm I. ボタンを 押すと = hễ ấn nút thì."
+        "accentNote": "Thể từ điển: 押す. Nhóm 1. ボタンを 押すと = hễ ấn nút thì."
       },
       {
         "id": "voc-n5-23-2",
@@ -31708,7 +31708,7 @@
         "romaji": "watarimasu",
         "wordType": "verb",
         "meaningVi": "Băng qua, đi qua",
-        "accentNote": "Thể từ điển: 渡る. Nhóm I."
+        "accentNote": "Thể từ điển: 渡る. Nhóm 1."
       },
       {
         "id": "voc-n5-23-3",
@@ -31718,7 +31718,7 @@
         "romaji": "magarimasu",
         "wordType": "verb",
         "meaningVi": "Rẽ, quẹo",
-        "accentNote": "Thể từ điển: 曲がる. Nhóm I."
+        "accentNote": "Thể từ điển: 曲がる. Nhóm 1."
       },
       {
         "id": "voc-n5-23-4",
@@ -31728,7 +31728,7 @@
         "romaji": "akimasu",
         "wordType": "verb",
         "meaningVi": "Mở ra (tự động)",
-        "accentNote": "Thể từ điển: 開く. Nhóm I. Khác 開けます (tha động từ, bài 14)."
+        "accentNote": "Thể từ điển: 開く. Nhóm 1. Khác 開けます (tha động từ, bài 14)."
       },
       {
         "id": "voc-n5-23-5",
@@ -33266,7 +33266,7 @@
         "romaji": "araimasu",
         "wordType": "verb",
         "meaningVi": "Rửa, giặt",
-        "accentNote": "Thể từ điển: 洗う. Nhóm I."
+        "accentNote": "Thể từ điển: 洗う. Nhóm 1."
       },
       {
         "id": "voc-n5-24-8",

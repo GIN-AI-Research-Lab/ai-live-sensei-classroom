@@ -12,8 +12,8 @@ L = 31
 pool = Pool("n4")
 
 VOCAB = [
-    v(1,  "いこう", "行こう", "いこう", "ikou", "verb", "Sẽ đi, thôi đi thôi (thể ý chí của 行きます)", "行く (nhóm I, đuôi く) → 行こう: đổi đuôi く→こう.", L),
-    v(2,  "たべよう", "食べよう", "たべよう", "tabeyou", "verb", "Sẽ ăn (thể ý chí của 食べます)", "食べる (nhóm II) → 食べよう: bỏ る, thêm よう.", L),
+    v(1,  "いこう", "行こう", "いこう", "ikou", "verb", "Sẽ đi, thôi đi thôi (thể ý chí của 行きます)", "行く (nhóm 1, đuôi く) → 行こう: đổi đuôi く→こう.", L),
+    v(2,  "たべよう", "食べよう", "たべよう", "tabeyou", "verb", "Sẽ ăn (thể ý chí của 食べます)", "食べる (nhóm 2) → 食べよう: bỏ る, thêm よう.", L),
     v(3,  "しよう", "", "", "shiyou", "verb", "Sẽ làm (thể ý chí của します)", "する → しよう (bất quy tắc).", L),
     v(4,  "こよう", "来よう", "こよう", "koyou", "verb", "Sẽ đến (thể ý chí của 来ます)", "来る → 来よう (bất quy tắc, đọc こよう).", L),
     v(5,  "きめます", "決めます", "きめます", "kimemasu", "verb", "Quyết định", "将来を 決めます = quyết định tương lai.", L),
@@ -50,7 +50,7 @@ KANJI = [
 SLIDES = [
     slide(L, 1,
         "1. Chia thể ý chí (意向形)",
-        "Nhóm I: う→おう (行こう) 　Nhóm II: bỏ る+よう (食べよう) 　する→しよう 　来る→来よう",
+        "Nhóm 1: う→おう (行こう) 　Nhóm 2: bỏ る+よう (食べよう) 　する→しよう 　来る→来よう",
         "Thể ý chí diễn tả Ý ĐỊNH/QUYẾT TÂM của NGƯỜI NÓI — gần nghĩa với Vましょう (N5 bài 6) "
         "nhưng thân mật hơn, thường dùng khi tự nói với mình hoặc trong câu và思っています.",
         [
@@ -175,14 +175,14 @@ DIALOGUE = [
 ]
 
 EXERCISES = [
-    q(L, 1, "Thể ý chí của 行きます (nhóm I, đuôi く) là:",
+    q(L, 1, "Thể ý chí của 行きます (nhóm 1, đuôi く) là:",
       ["行こう", "行よう", "行くう", "行いう"], 0,
-      "Nhóm I đổi đuôi く thành こう: 行く → 行こう.",
-      "Áp dụng quy tắc đổi hàng う→おう của nhóm I."),
-    q(L, 2, "Thể ý chí của 食べます (nhóm II) là:",
+      "Nhóm 1 đổi đuôi く thành こう: 行く → 行こう.",
+      "Áp dụng quy tắc đổi hàng う→おう của nhóm 1."),
+    q(L, 2, "Thể ý chí của 食べます (nhóm 2) là:",
       ["食べよう", "食べろう", "食べいよう", "食べるよう"], 0,
-      "Nhóm II bỏ る, thêm よう: 食べる → 食べよう.",
-      "Áp dụng quy tắc nhóm II."),
+      "Nhóm 2 bỏ る, thêm よう: 食べる → 食べよう.",
+      "Áp dụng quy tắc nhóm 2."),
     q(L, 3, "と思います (N5 bài 21) khác と思っています ở chỗ:",
       ["と思います là ý kiến/suy nghĩ TỨC THỜI; と思っています là dự định đã ẤP Ủ từ trước",
        "Hoàn toàn giống nhau", "と思っています chỉ dùng cho quá khứ",
@@ -214,7 +214,7 @@ EXERCISES = [
        "と思っています → ことにします → Vよう → Vましょう"], 0,
       "Từ rủ rê nhẹ nhàng (ましょう), tới ý chí cá nhân (よう), tới dự định cân nhắc (と思っています), tới quyết định chốt (ことにします).",
       "Xem tổng kết ở slide 4."),
-    q(L, 8, "来る (nhóm III bất quy tắc) chia thể ý chí là:",
+    q(L, 8, "来る (nhóm 3 bất quy tắc) chia thể ý chí là:",
       ["来よう (こよう)", "来る", "来おう", "来ろう"], 0,
       "来る chia bất quy tắc thành 来よう, đọc là こよう — khác âm gốc く hoàn toàn.",
       "Đây là động từ bất quy tắc cần học thuộc."),
@@ -232,7 +232,7 @@ EXERCISES = [
 LESSON = lesson(
     L,
     "Bài 31: Thể ý chí (意向形) & Dự định (〜と思っています)",
-    "Chia thể ý chí (nhóm I: う→おう, nhóm II: bỏ る+よう, bất quy tắc する→しよう/来る→来よう), "
+    "Chia thể ý chí (nhóm 1: う→おう, nhóm 2: bỏ る+よう, bất quy tắc する→しよう/来る→来よう), "
     "phân biệt と思います (ý kiến tức thời, N5 bài 21) với と思っています (dự định đã ấp ủ), và "
     "so sánh bốn mức độ chắc chắn: Vましょう → Vよう → と思っています → ことにします (quyết định "
     "dứt khoát).",

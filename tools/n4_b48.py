@@ -12,8 +12,8 @@ L = 48
 pool = Pool("n4")
 
 VOCAB = [
-    v(1,  "いかせます", "行かせます", "いかせます", "ikasemasu", "verb", "Bắt/cho đi (thể sai khiến của 行きます)", "行く (nhóm I) → 行かせる: đổi đuôi う→あ, thêm せる.", L),
-    v(2,  "たべさせます", "食べさせます", "たべさせます", "tabesasemasu", "verb", "Bắt/cho ăn (thể sai khiến của 食べます)", "食べる (nhóm II) → 食べさせる: bỏ る, thêm させる.", L),
+    v(1,  "いかせます", "行かせます", "いかせます", "ikasemasu", "verb", "Bắt/cho đi (thể sai khiến của 行きます)", "行く (nhóm 1) → 行かせる: đổi đuôi う→あ, thêm せる.", L),
+    v(2,  "たべさせます", "食べさせます", "たべさせます", "tabesasemasu", "verb", "Bắt/cho ăn (thể sai khiến của 食べます)", "食べる (nhóm 2) → 食べさせる: bỏ る, thêm させる.", L),
     v(3,  "させます", "", "", "sasemasu", "verb", "Bắt/cho làm (thể sai khiến của します)", "する → させる (bất quy tắc).", L),
     v(4,  "こさせます", "来させます", "こさせます", "kosasemasu", "verb", "Bắt/cho đến (thể sai khiến của 来ます)", "来る → 来させる (bất quy tắc, đọc こさせる).", L),
     v(5,  "てつだわせます", "手伝わせます", "てつだわせます", "tetsudawasemasu", "verb", "Bắt/cho giúp đỡ", "手伝う → 手伝わせる.", L),
@@ -50,8 +50,8 @@ KANJI = [
 SLIDES = [
     slide(L, 1,
         "1. Chia thể sai khiến (使役形)",
-        "Nhóm I: う→あ+せる (行く→行かせる) 　Nhóm II: bỏ る+させる (食べる→食べさせる) 　する→させる 　来る→来させる",
-        "Chú ý: nhóm I chia thể sai khiến GIỐNG HỆT thể bị động (bài 37) về phần đổi âm, chỉ khác "
+        "Nhóm 1: う→あ+せる (行く→行かせる) 　Nhóm 2: bỏ る+させる (食べる→食べさせる) 　する→させる 　来る→来させる",
+        "Chú ý: nhóm 1 chia thể sai khiến GIỐNG HỆT thể bị động (bài 37) về phần đổi âm, chỉ khác "
         "đuôi cuối (れる/せる) — nếu đã thuộc thể bị động thì học nhanh hơn nhiều.",
         [
             ex(L, 1, 1, [t("t-l48s1-1", "おや", "親", "おや", key=True), t("t-l48s1-2", "は"),
@@ -106,7 +106,7 @@ SLIDES = [
     slide(L, 4,
         "4. So sánh thể sai khiến và thể bị động (bài 37)",
         "Sai khiến (させる): CHỦ NGỮ bắt/cho NGƯỜI KHÁC làm　vs　Bị động (られる): CHỦ NGỮ chịu tác động TỪ người khác",
-        "Hai thể chia GẦN GIỐNG NHAU về âm (đặc biệt nhóm I: せる/れる) nhưng vai trò NGƯỢC HẲN "
+        "Hai thể chia GẦN GIỐNG NHAU về âm (đặc biệt nhóm 1: せる/れる) nhưng vai trò NGƯỢC HẲN "
         "nhau — chủ động sai khiến người khác, hay bị động chịu ảnh hưởng từ người khác.",
         [
             ex(L, 4, 1, [t("t-l48s4-1", "おや", "親", "おや", key=True), t("t-l48s4-2", "は"),
@@ -175,14 +175,14 @@ DIALOGUE = [
 ]
 
 EXERCISES = [
-    q(L, 1, "Thể sai khiến của 行く (nhóm I, đuôi く) là:",
+    q(L, 1, "Thể sai khiến của 行く (nhóm 1, đuôi く) là:",
       ["行かせる", "行けせる", "行くさせる", "行させる"], 0,
-      "Nhóm I đổi âm cuối gốc từ điển sang hàng あ, thêm せる: 行く → 行かせる.",
-      "Áp dụng quy tắc chia thể sai khiến nhóm I."),
-    q(L, 2, "Thể sai khiến của 食べる (nhóm II) là:",
+      "Nhóm 1 đổi âm cuối gốc từ điển sang hàng あ, thêm せる: 行く → 行かせる.",
+      "Áp dụng quy tắc chia thể sai khiến nhóm 1."),
+    q(L, 2, "Thể sai khiến của 食べる (nhóm 2) là:",
       ["食べさせる", "食べせる", "食べいさせる", "食べるさせる"], 0,
-      "Nhóm II bỏ る, thêm させる: 食べる → 食べさせる.",
-      "Áp dụng quy tắc chia thể sai khiến nhóm II."),
+      "Nhóm 2 bỏ る, thêm させる: 食べる → 食べさせる.",
+      "Áp dụng quy tắc chia thể sai khiến nhóm 2."),
     q(L, 3, "「親は子供に野菜を食べさせます」 — trợ từ に đánh dấu:",
       ["Người BỊ SAI KHIẾN (con) thực hiện hành động", "Người RA LỆNH (cha mẹ)",
        "Vật bị ăn (rau)", "Nơi chốn xảy ra hành động"], 0,
@@ -230,7 +230,7 @@ EXERCISES = [
 LESSON = lesson(
     L,
     "Bài 48: Thể sai khiến (使役形: V-させる)",
-    "Chia thể sai khiến (nhóm I: う→あ+せる giống thể bị động bài 37 về âm, nhóm II: bỏ る+させる, "
+    "Chia thể sai khiến (nhóm 1: う→あ+せる giống thể bị động bài 37 về âm, nhóm 2: bỏ る+させる, "
     "する→させる, 来る→来させる), hai sắc thái BẮT BUỘC/CHO PHÉP tùy ngữ cảnh, cách xin phép khiêm "
     "nhường bằng Vさせてください (lịch sự hơn Vたいです), và so sánh vai trò chủ ngữ đối lập giữa "
     "sai khiến (chủ động điều khiển) và bị động (chịu tác động, bài 37).",

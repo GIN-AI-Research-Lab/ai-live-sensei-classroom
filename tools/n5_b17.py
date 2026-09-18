@@ -13,13 +13,13 @@ L = 17
 pool = Pool("n5")
 
 VOCAB = [
-    v(1,  "のみます", "飲みます", "のみます", "nomimasu", "verb", "Uống (thuốc, nước)", "Thể ない: 飲まない. Nhóm I đuôi む→まない.", L),
-    v(2,  "かきます", "書きます", "かきます", "kakimasu", "verb", "Viết", "Thể ない: 書かない. Nhóm I đuôi く→かない.", L),
-    v(3,  "たべます", "食べます", "たべます", "tabemasu", "verb", "Ăn", "Thể ない: 食べない. Nhóm II: bỏ ます thêm ない.", L),
-    v(4,  "きます", "来ます", "きます", "kimasu", "verb", "Đến", "Thể ない: 来ない (こない — đọc khác hẳn 来る). Nhóm III bất quy tắc.", L),
-    v(5,  "します", "", "", "shimasu", "verb", "Làm", "Thể ない: しない. Nhóm III bất quy tắc.", L),
-    v(6,  "わすれます", "忘れます", "わすれます", "wasuremasu", "verb", "Quên", "Thể ない: 忘れない. Nhóm II.", L),
-    v(7,  "はいります", "入ります", "はいります", "hairimasu", "verb", "Vào", "Đã gặp bài 15. Thể ない: 入らない (nhóm I dù trông giống nhóm II).", L),
+    v(1,  "のみます", "飲みます", "のみます", "nomimasu", "verb", "Uống (thuốc, nước)", "Thể ない: 飲まない. Nhóm 1 đuôi む→まない.", L),
+    v(2,  "かきます", "書きます", "かきます", "kakimasu", "verb", "Viết", "Thể ない: 書かない. Nhóm 1 đuôi く→かない.", L),
+    v(3,  "たべます", "食べます", "たべます", "tabemasu", "verb", "Ăn", "Thể ない: 食べない. Nhóm 2: bỏ ます thêm ない.", L),
+    v(4,  "きます", "来ます", "きます", "kimasu", "verb", "Đến", "Thể ない: 来ない (こない — đọc khác hẳn 来る). Nhóm 3 bất quy tắc.", L),
+    v(5,  "します", "", "", "shimasu", "verb", "Làm", "Thể ない: しない. Nhóm 3 bất quy tắc.", L),
+    v(6,  "わすれます", "忘れます", "わすれます", "wasuremasu", "verb", "Quên", "Thể ない: 忘れない. Nhóm 2.", L),
+    v(7,  "はいります", "入ります", "はいります", "hairimasu", "verb", "Vào", "Đã gặp bài 15. Thể ない: 入らない (nhóm 1 dù trông giống nhóm 2).", L),
     v(8,  "すいます", "吸います", "すいます", "suimasu", "verb", "Hút thuốc", "Đã gặp bài 6. Thể ない: 吸わない (đuôi う→わない, KHÔNG phải あない).", L),
     v(9,  "くすり", "薬", "くすり", "kusuri", "noun", "Thuốc", "薬を 飲みます (uống thuốc, KHÔNG nói 食べます thuốc).", L),
     v(10, "びょうき", "病気", "びょうき", "byouki", "noun", "Bệnh, ốm", "病気に なります = bị bệnh.", L),
@@ -51,9 +51,9 @@ KANJI = [
 SLIDES = [
     slide(L, 1,
         "1. Chia thể ない (phủ định thông thường)",
-        "Nhóm I: đuôi う→わ, く→か, ぐ→が, す→さ, つ→た, ぬ→な, ぶ→ば, む→ま + ない　/　Nhóm II: bỏ ます + ない",
+        "Nhóm 1: đuôi う→わ, く→か, ぐ→が, す→さ, つ→た, ぬ→な, ぶ→ば, む→ま + ない　/　Nhóm 2: bỏ ます + ない",
         "Thể ない là dạng phủ định THÂN MẬT của động từ — nền tảng cho hàng loạt cấu trúc ngữ pháp "
-        "ở bài này. Nhóm I đổi âm cuối của gốc từ điển sang HÀNG あ rồi thêm ない.",
+        "ở bài này. Nhóm 1 đổi âm cuối của gốc từ điển sang HÀNG あ rồi thêm ない.",
         [
             ex(L, 1, 1, [t("t-l17s1-1", "のまない", "飲まない", "のまない", key=True), t("t-l17s1-2", "で"),
                          t("t-l17s1-3", "ください")],
@@ -63,7 +63,7 @@ SLIDES = [
                "Xin đừng hút thuốc. (吸う: う→わない, KHÔNG phải あない)"),
             ex(L, 1, 3, [t("t-l17s1-7", "たべない", "食べない", "たべない", key=True), t("t-l17s1-8", "で"),
                          t("t-l17s1-9", "ください")],
-               "Xin đừng ăn. (食べる nhóm II: bỏ ます, thêm ない)"),
+               "Xin đừng ăn. (食べる nhóm 2: bỏ ます, thêm ない)"),
         ],
         tips="Đuôi う đặc biệt: đổi thành わ chứ không phải あ — 吸う → 吸わない, không phải 吸あない.",
         culture="来る và する chia thể ない hoàn toàn bất quy tắc: 来ない (こない, đọc khác hẳn) và しない — phải học thuộc riêng."),
@@ -172,15 +172,15 @@ DIALOGUE = [
 ]
 
 EXERCISES = [
-    q(L, 1, "Thể ない của 飲みます (nhóm I, đuôi む) là:",
+    q(L, 1, "Thể ない của 飲みます (nhóm 1, đuôi む) là:",
       ["飲まない", "飲みない", "飲まらない", "飲むない"], 0,
-      "Nhóm I đổi đuôi む thành まない: 飲む → 飲まない.",
+      "Nhóm 1 đổi đuôi む thành まない: 飲む → 飲まない.",
       "Chuyển âm cuối gốc từ điển sang hàng あ."),
-    q(L, 2, "Thể ない của 吸います (nhóm I, đuôi う) là:",
+    q(L, 2, "Thể ない của 吸います (nhóm 1, đuôi う) là:",
       ["吸わない", "吸あない", "吸いない", "吸うない"], 0,
       "Đuôi う là trường hợp đặc biệt: đổi thành わ chứ không phải あ. 吸う → 吸わない.",
       "Đây là ngoại lệ hay gây nhầm nhất."),
-    q(L, 3, "Thể ない của 来ます (nhóm III) là:",
+    q(L, 3, "Thể ない của 来ます (nhóm 3) là:",
       ["来ない (こない)", "来ます thêm ない", "来らない", "きます thêm ない, giữ nguyên cách đọc"], 0,
       "来る chia bất quy tắc hoàn toàn ở thể ない: 来ない đọc là こない, khác hẳn cách đọc thông thường.",
       "Đây là động từ bất quy tắc, học thuộc riêng."),

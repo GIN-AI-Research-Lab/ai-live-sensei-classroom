@@ -12,8 +12,8 @@ L = 37
 pool = Pool("n4")
 
 VOCAB = [
-    v(1,  "しかられます", "叱られます", "しかられます", "shikararemasu", "verb", "Bị mắng (thể bị động của 叱る)", "叱る (nhóm I) → 叱られる: đổi đuôi う→あ, thêm れる.", L),
-    v(2,  "ほめられます", "褒められます", "ほめられます", "homeraremasu", "verb", "Được khen (thể bị động của 褒める)", "褒める (nhóm II) → 褒められる: bỏ る, thêm られる.", L),
+    v(1,  "しかられます", "叱られます", "しかられます", "shikararemasu", "verb", "Bị mắng (thể bị động của 叱る)", "叱る (nhóm 1) → 叱られる: đổi đuôi う→あ, thêm れる.", L),
+    v(2,  "ほめられます", "褒められます", "ほめられます", "homeraremasu", "verb", "Được khen (thể bị động của 褒める)", "褒める (nhóm 2) → 褒められる: bỏ る, thêm られる.", L),
     v(3,  "ぬすまれます", "盗まれます", "ぬすまれます", "nusumaremasu", "verb", "Bị trộm mất (thể bị động của 盗む)", "盗む → 盗まれる.", L),
     v(4,  "ふまれます", "踏まれます", "ふまれます", "fumaremasu", "verb", "Bị giẫm phải (thể bị động của 踏む)", "踏む → 踏まれる.", L),
     v(5,  "なかれます", "泣かれます", "なかれます", "nakaremasu", "verb", "Bị (ai đó) khóc (bị động PHIỀN TOÁI)", "泣く → 泣かれる. Câu 'bị làm phiền' kiểu Nhật đặc trưng, không có tương đương trực tiếp trong tiếng Việt.", L),
@@ -50,8 +50,8 @@ KANJI = [
 SLIDES = [
     slide(L, 1,
         "1. Chia thể bị động",
-        "Nhóm I: う→あ+れる (叱る→叱られる) 　Nhóm II: bỏ る+られる (褒める→褒められる) 　する→される 　来る→来られる",
-        "Chú ý: nhóm I chia thể bị động GIỐNG HỆT thể ない (bài 17) về phần đổi âm, chỉ khác đuôi "
+        "Nhóm 1: う→あ+れる (叱る→叱られる) 　Nhóm 2: bỏ る+られる (褒める→褒められる) 　する→される 　来る→来られる",
+        "Chú ý: nhóm 1 chia thể bị động GIỐNG HỆT thể ない (bài 17) về phần đổi âm, chỉ khác đuôi "
         "cuối (ない vs られる) — nếu đã thuộc thể ない thì học thể bị động rất nhanh.",
         [
             ex(L, 1, 1, [t("t-l37s1-1", "せんせい", "先生", "せんせい"), t("t-l37s1-2", "に"),
@@ -171,10 +171,10 @@ DIALOGUE = [
 ]
 
 EXERCISES = [
-    q(L, 1, "Thể bị động của 叱る (nhóm I) là:",
+    q(L, 1, "Thể bị động của 叱る (nhóm 1) là:",
       ["叱られる", "叱ける", "叱いれる", "叱るれる"], 0,
-      "Nhóm I đổi âm cuối gốc từ điển sang hàng あ, thêm れる: 叱る → 叱られる.",
-      "Áp dụng quy tắc chia thể bị động nhóm I."),
+      "Nhóm 1 đổi âm cuối gốc từ điển sang hàng あ, thêm れる: 叱る → 叱られる.",
+      "Áp dụng quy tắc chia thể bị động nhóm 1."),
     q(L, 2, "「電車の中で足を踏まれました」 — trợ từ を dùng ở đây vì:",
       ["Có VẬT CỤ THỂ (足) bị tác động, giữ を dù cả câu ở thể bị động",
        "を là lỗi, phải sửa thành が", "を chỉ dùng cho câu hỏi",
@@ -229,7 +229,7 @@ EXERCISES = [
 LESSON = lesson(
     L,
     "Bài 37: Thể bị động (受身形)",
-    "Chia thể bị động (nhóm I: う→あ+れる giống thể ない bài 17, nhóm II: bỏ る+られる, する→さ"
+    "Chia thể bị động (nhóm 1: う→あ+れる giống thể ない bài 17, nhóm 2: bỏ る+られる, する→さ"
     "れる), và ba loại bị động: PHIỀN TOÁI (迷惑の受身: 雨に降られる, 泣かれる — đặc trưng tiếng "
     "Nhật, không có tương đương tiếng Việt), MẤT MÁT (giữ を cho vật cụ thể bị lấy: 財布を盗まれ"
     "る), và TRUNG TÍNH (miêu tả sự thật khách quan: 車は工場で作られる).",

@@ -12,10 +12,10 @@ L = 22
 pool = Pool("n5")
 
 VOCAB = [
-    v(1,  "きます", "着ます", "きます", "kimasu", "verb", "Mặc (áo, đồ phía trên eo)", "Thể từ điển: 着る. Nhóm II. 眼鏡をかける (đeo kính) dùng động từ khác.", L),
-    v(2,  "かけます", "掛けます", "かけます", "kakemasu", "verb", "Đeo (kính), treo", "眼鏡を かけます = đeo kính. Nhóm II.", L),
-    v(3,  "かぶります", "被ります", "かぶります", "kaburimasu", "verb", "Đội (mũ, nón)", "帽子を かぶります = đội mũ. Nhóm I.", L),
-    v(4,  "たてます", "建てます", "たてます", "tatemasu", "verb", "Xây dựng", "Nhóm II. あの 建物を 建てました = đã xây tòa nhà đó.", L),
+    v(1,  "きます", "着ます", "きます", "kimasu", "verb", "Mặc (áo, đồ phía trên eo)", "Thể từ điển: 着る. Nhóm 2. 眼鏡をかける (đeo kính) dùng động từ khác.", L),
+    v(2,  "かけます", "掛けます", "かけます", "kakemasu", "verb", "Đeo (kính), treo", "眼鏡を かけます = đeo kính. Nhóm 2.", L),
+    v(3,  "かぶります", "被ります", "かぶります", "kaburimasu", "verb", "Đội (mũ, nón)", "帽子を かぶります = đội mũ. Nhóm 1.", L),
+    v(4,  "たてます", "建てます", "たてます", "tatemasu", "verb", "Xây dựng", "Nhóm 2. あの 建物を 建てました = đã xây tòa nhà đó.", L),
     v(5,  "かきます", "書きます", "かきます", "kakimasu", "verb", "Viết", "Đã gặp bài 6 — nay dùng làm mệnh đề định ngữ (sách do ai viết).", L),
     v(6,  "つくります", "作ります", "つくります", "tsukurimasu", "verb", "Làm, chế tạo, nấu", "Đã gặp bài 6 — nay dùng làm mệnh đề định ngữ (món ăn do ai nấu).", L),
     v(7,  "めがね", "眼鏡", "めがね", "megane", "noun", "Kính mắt", "眼鏡を かけている人 = người đang đeo kính.", L),
