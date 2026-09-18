@@ -24,9 +24,11 @@ function baoHongKhoiDong(loi, o) {
   const el = document.createElement('div');
   el.id = 'bangHongKhoiDong';
   el.className = 'hong-khoi-dong';
+  // Chi tiet ky thuat (ten model, key, thong diep loi goc) CHI ghi vao console
+  // va nhat ky noi bo — man hinh chi hien mot cau chung chung, khong lo gi ca.
   el.innerHTML =
     '<strong>Lớp học chưa mở được</strong>'
-    + '<span>' + String((loi && loi.message) || loi || 'lỗi không rõ').slice(0, 200) + '</span>'
+    + '<span>Đã có trục trặc khi khởi động. Vui lòng tải lại trang.</span>'
     + '<button type="button">Tải lại trang</button>';
   el.querySelector('button').addEventListener('click', () => location.reload());
   (document.body || document.documentElement).appendChild(el);
@@ -2937,9 +2939,11 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
           res.loai === 'hetQuota'
             ? `Hết lượt gọi miễn phí của cả hai tài khoản.${doiBaoLau(res.status)} Vẫn dùng bộ đề soạn tay.`
           : res.loai === 'quaTai'
-            ? 'Google báo model đang quá tải — đã thử lại 3 lần ở cả hai model. '
+            ? 'Hệ thống soạn đề đang quá tải — đã thử lại vài lần. '
               + 'Đây là lỗi nhất thời, thử lại sau vài phút. Vẫn dùng bộ đề soạn tay.'
-            : `Chưa soạn được đề mới — ${res.status}. Vẫn dùng bộ đề soạn tay.`;
+            // Chi tiet ky thuat (ten model, ma loi API) chi ghi console.warn o
+            // tren, khong dua vao thong bao hien man hinh cho hoc vien.
+            : 'Chưa soạn được đề mới lúc này. Vẫn dùng bộ đề soạn tay.';
         showToast(loi, 'info', 9000);
       }
       return;
