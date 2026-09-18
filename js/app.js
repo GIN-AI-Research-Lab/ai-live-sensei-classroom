@@ -2314,39 +2314,73 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
     const todo = [...byVoice.values()].reduce((n, a) => n + a.length, 0);
     if (!todo) return;
 
-    // Co tu 2 giong VA tu 2 key tro len: giao moi giong mot key (vong tron),
-    // cac KHOI o KHAC KEY chay SONG SONG — gioi han "so phien Live dong thoi"
-    // la tinh THEO TUNG KEY (tai khoan), khong phai toan cuc, nen nhieu key
-    // thi chay cung luc ma khong cham tran mã 1000. Chi 1 giong hoac 1 key
-    // thi dung mot khoi tuan tu don, chinh la duong cu da kiem chung ky.
-    const dungSongSong = voices.length > 1 && keys.length > 1;
+    // Tu 2 key tro len la chay song song duoc — KHONG con khoa cung theo so
+    // giong nua. Neu mot nhan vat noi nhieu cau han han cac nhan vat khac,
+    // xe le cau cua giong do ra nhieu manh cho nhieu key cung doc, thay vi
+    // giu nguyen ca giong do tren MOT key trong khi cac key khac da xong
+    // ngoi cho khong. Gioi han "so phien Live dong thoi" la tinh THEO TUNG
+    // KEY (tai khoan), khong phai toan cuc, nen nhieu key thi chay cung luc
+    // ma khong cham tran mã 1000.
+    const dungSongSong = keys.length > 1 && todo > 1;
+
+    // Xe cau cua tung giong thanh nhieu manh (khi giong do dai hon han cac
+    // giong khac) roi rai deu cac manh cho tung key theo kieu "manh dai nhat
+    // vao key dang it viec nhat" (LPT scheduling) — de key cham nhat trong
+    // dot chay cung it viec nhat co the.
+    function chiaCongViec() {
+      let manh = voices.map(voice => ({ voice, items: byVoice.get(voice).slice() }));
+      const soManhMucTieu = Math.min(keys.length, todo);
+      while (manh.length < soManhMucTieu) {
+        let idx = -1, max = 1;
+        manh.forEach((m, i) => { if (m.items.length > max) { max = m.items.length; idx = i; } });
+        if (idx === -1) break;   // khong con manh nao du dai de cat nua
+        const m = manh[idx];
+        const giua = Math.ceil(m.items.length / 2);
+        manh.splice(idx, 1,
+          { voice: m.voice, items: m.items.slice(0, giua) },
+          { voice: m.voice, items: m.items.slice(giua) });
+      }
+      manh.sort((a, b) => b.items.length - a.items.length);
+      const gio = keys.map(() => ({ nhom: [], tai: 0 }));
+      manh.forEach(m => {
+        let idx = 0;
+        for (let i = 1; i < gio.length; i++) if (gio[i].tai < gio[idx].tai) idx = i;
+        gio[idx].nhom.push(m);
+        gio[idx].tai += m.items.length;
+      });
+      return gio.map(g => g.nhom).filter(nhom => nhom.length);
+    }
 
     // Long tieng la viec nen tu dong, hoc vien khong can thay tien trinh noi
     // bo nay tren man hinh — chi ghi console de chan doan khi can.
     console.log(dungSongSong
       ? `[long tieng] bắt đầu ${todo} lượt thoại, ${voices.length} giọng `
-        + `(song song trên ${Math.min(keys.length, voices.length)} tài khoản)`
+        + `(song song trên tối đa ${Math.min(keys.length, todo)} tài khoản)`
       : `[long tieng] bắt đầu ${todo} lượt thoại, ${voices.length} giọng`);
 
     let made = 0;
     const ketQua = { permanentFail: false, sessionLimitHit: false };
 
     /**
-     * Doc het loi cua MOT nhom giong, tuan tu trong nhom (dung nhu duong cu).
+     * Doc het loi cua MOT nhom, tuan tu trong nhom (dung nhu duong cu). Mot
+     * "nhom" la danh sach cac manh {voice, items} — CO THE la nhieu manh
+     * CUNG mot giong (khi giong do bi xe le cho nhieu key), nen van phai
+     * dong phien cua giong nay truoc khi mo phien giong khac trong CUNG mot
+     * nhom, tranh mo hai phien tren CUNG mot key.
      * candidateKeys: cac key duoc phep thu cho nhom nay, theo dung thu tu —
      * nhom song song chi nhan DUNG MOT key (khong tranh voi nhom khac); nhom
      * don (khong song song) nhan CA DANH SACH de con xoay key khi het quota.
      */
-    async function chayNhom(candidateKeys, danhSachGiong) {
+    async function chayNhom(candidateKeys, danhSachManh) {
       let keyIdx = 0, modelIdx = 0;
       const moPool = () => new VoiceActorPool({ apiKey: candidateKeys[keyIdx], model: ACTOR_MODELS[modelIdx] });
       let pool = moPool();
       if (dungSongSong) actorPools.set(candidateKeys[0], pool); else actorPool = pool;
 
-      for (const voice of danhSachGiong) {
+      for (const { voice, items } of danhSachManh) {
         if (slideEngine.currentLevel !== lvl || slideEngine.currentLesson !== Number(lessonNum)) break;
 
-        for (const { line, jp } of byVoice.get(voice)) {
+        for (const { line, jp } of items) {
           if (dialogueAudio[line.id]) { made++; continue; }
           datCho('kaiwa', `Đang lồng tiếng ${made + 1}/${todo} lượt thoại…`,
             `${line.speaker || 'Nhân vật'} — giọng ${voice}.`
@@ -2411,15 +2445,10 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
     }
 
     if (dungSongSong) {
-      const nhom = new Map();     // key -> [giong,...], chia vong tron
-      voices.forEach((voice, i) => {
-        const key = keys[i % keys.length];
-        if (!nhom.has(key)) nhom.set(key, []);
-        nhom.get(key).push(voice);
-      });
-      await Promise.all([...nhom.entries()].map(([key, ds]) => chayNhom([key], ds)));
+      const nhomTheoKey = chiaCongViec();
+      await Promise.all(nhomTheoKey.map((nhom, i) => chayNhom([keys[i]], nhom)));
     } else {
-      await chayNhom(keys, voices);
+      await chayNhom(keys, voices.map(voice => ({ voice, items: byVoice.get(voice) })));
     }
 
     // Xu ly hau ky CHUNG cho ca hai duong chay.
