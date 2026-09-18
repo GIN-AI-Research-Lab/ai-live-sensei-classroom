@@ -4082,99 +4082,1213 @@
     "level": "N4",
     "lessonNumber": 29,
     "title": "Bài 29: Tự động từ & Tha động từ, Trạng thái (V-ています)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "description": "Phân biệt cặp tự động từ (自動詞: 開く/閉まる/消える/始まる, chủ ngữ tự trải qua thay đổi, đi với が) và tha động từ (他動詞: 開ける/閉める/消す/始める, có chủ thể tác động, đi với を), mở rộng Vています sang trạng thái với tự động từ, và phân biệt 止める (dừng tạm) với やめる (từ bỏ hẳn).",
     "vocabList": [
       {
         "id": "voc-n4-29-1",
-        "word": "重要語彙 (N4)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "あきます",
+        "kanji": "開きます",
+        "furigana": "あきます",
+        "romaji": "akimasu",
+        "wordType": "verb",
+        "meaningVi": "Mở ra (tự động từ)",
+        "accentNote": "Đã gặp N5 bài 23. 自動詞: cửa TỰ mở, không cần ai tác động."
+      },
+      {
+        "id": "voc-n4-29-2",
+        "word": "あけます",
+        "kanji": "開けます",
+        "furigana": "あけます",
+        "romaji": "akemasu",
+        "wordType": "verb",
+        "meaningVi": "Mở (tha động từ)",
+        "accentNote": "Đã gặp N5 bài 14. 他動詞: CÓ NGƯỜI mở cửa."
+      },
+      {
+        "id": "voc-n4-29-3",
+        "word": "しまります",
+        "kanji": "閉まります",
+        "furigana": "しまります",
+        "romaji": "shimarimasu",
+        "wordType": "verb",
+        "meaningVi": "Đóng lại (tự động từ)",
+        "accentNote": "ドアが 閉まりました = cửa tự đóng lại."
+      },
+      {
+        "id": "voc-n4-29-4",
+        "word": "しめます",
+        "kanji": "閉めます",
+        "furigana": "しめます",
+        "romaji": "shimemasu",
+        "wordType": "verb",
+        "meaningVi": "Đóng (tha động từ)",
+        "accentNote": "Đã gặp N5 bài 14. だれかが 閉めました = ai đó đã đóng cửa."
+      },
+      {
+        "id": "voc-n4-29-5",
+        "word": "きえます",
+        "kanji": "消えます",
+        "furigana": "きえます",
+        "romaji": "kiemasu",
+        "wordType": "verb",
+        "meaningVi": "Tắt đi, biến mất (tự động từ)",
+        "accentNote": "電気が 消えました = đèn tự tắt (mất điện...)."
+      },
+      {
+        "id": "voc-n4-29-6",
+        "word": "けします",
+        "kanji": "消します",
+        "furigana": "けします",
+        "romaji": "keshimasu",
+        "wordType": "verb",
+        "meaningVi": "Tắt, xóa (tha động từ)",
+        "accentNote": "Đã gặp N5 bài 15. だれかが 消しました = ai đó đã tắt đèn."
+      },
+      {
+        "id": "voc-n4-29-7",
+        "word": "はじまります",
+        "kanji": "始まります",
+        "furigana": "はじまります",
+        "romaji": "hajimarimasu",
+        "wordType": "verb",
+        "meaningVi": "Bắt đầu (tự động từ)",
+        "accentNote": "映画が 始まりました = phim tự bắt đầu (đến giờ chiếu)."
+      },
+      {
+        "id": "voc-n4-29-8",
+        "word": "はじめます",
+        "kanji": "始めます",
+        "furigana": "はじめます",
+        "romaji": "hajimemasu",
+        "wordType": "verb",
+        "meaningVi": "Bắt đầu (tha động từ)",
+        "accentNote": "だれかが 始めました = ai đó bắt đầu việc gì."
+      },
+      {
+        "id": "voc-n4-29-9",
+        "word": "つきます",
+        "kanji": "点きます",
+        "furigana": "つきます",
+        "romaji": "tsukimasu",
+        "wordType": "verb",
+        "meaningVi": "Được bật lên, sáng lên (tự động từ)",
+        "accentNote": "電気が 点きました = đèn tự sáng lên (đến giờ hẹn...)."
+      },
+      {
+        "id": "voc-n4-29-10",
+        "word": "こわれます",
+        "kanji": "壊れます",
+        "furigana": "こわれます",
+        "romaji": "kowaremasu",
+        "wordType": "verb",
+        "meaningVi": "Bị hỏng (tự động từ)",
+        "accentNote": "Đã gặp bài 26."
+      },
+      {
+        "id": "voc-n4-29-11",
+        "word": "こわします",
+        "kanji": "壊します",
+        "furigana": "こわします",
+        "romaji": "kowashimasu",
+        "wordType": "verb",
+        "meaningVi": "Làm hỏng (tha động từ)",
+        "accentNote": "だれかが 壊しました = ai đó làm hỏng."
+      },
+      {
+        "id": "voc-n4-29-12",
+        "word": "とめます",
+        "kanji": "止めます",
+        "furigana": "とめます",
+        "romaji": "tomemasu",
+        "wordType": "verb",
+        "meaningVi": "Dừng lại, đỗ (tha động từ)",
+        "accentNote": "Đã gặp N5 bài 15. 車を 止めます = đỗ xe (có người điều khiển)."
+      },
+      {
+        "id": "voc-n4-29-13",
+        "word": "やめます",
+        "kanji": "止めます／辞めます",
+        "furigana": "やめます",
+        "romaji": "yamemasu",
+        "wordType": "verb",
+        "meaningVi": "Dừng hẳn, từ bỏ (thói quen/công việc)",
+        "accentNote": "たばこを やめます = bỏ thuốc lá. 仕事を やめます = nghỉ việc."
+      },
+      {
+        "id": "voc-n4-29-14",
+        "word": "でんき",
+        "kanji": "電気",
+        "furigana": "でんき",
+        "romaji": "denki",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 29",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Điện, đèn điện",
+        "accentNote": "Đã gặp N5 bài 15."
+      },
+      {
+        "id": "voc-n4-29-15",
+        "word": "まど",
+        "kanji": "窓",
+        "furigana": "まど",
+        "romaji": "mado",
+        "wordType": "noun",
+        "meaningVi": "Cửa sổ",
+        "accentNote": "Đã gặp N5 bài 14."
+      },
+      {
+        "id": "voc-n4-29-16",
+        "word": "ドア",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "doa",
+        "wordType": "noun",
+        "meaningVi": "Cửa (kiểu phương Tây)",
+        "accentNote": ""
+      },
+      {
+        "id": "voc-n4-29-17",
+        "word": "えいが",
+        "kanji": "映画",
+        "furigana": "えいが",
+        "romaji": "eiga",
+        "wordType": "noun",
+        "meaningVi": "Phim, điện ảnh",
+        "accentNote": "Đã gặp N5 bài 6."
+      },
+      {
+        "id": "voc-n4-29-18",
+        "word": "うつくしい",
+        "kanji": "美しい",
+        "furigana": "うつくしい",
+        "romaji": "utsukushii",
+        "wordType": "adjective",
+        "meaningVi": "Đẹp, tráng lệ",
+        "accentNote": "Tính từ い, trang trọng hơn きれい."
+      },
+      {
+        "id": "voc-n4-29-19",
+        "word": "おもいだします",
+        "kanji": "思い出します",
+        "furigana": "おもいだします",
+        "romaji": "omoidashimasu",
+        "wordType": "verb",
+        "meaningVi": "Nhớ lại, hồi tưởng",
+        "accentNote": "急に 思い出しました = bỗng nhớ lại."
+      },
+      {
+        "id": "voc-n4-29-20",
+        "word": "きゅうに",
+        "kanji": "急に",
+        "furigana": "きゅうに",
+        "romaji": "kyuu ni",
+        "wordType": "adverb",
+        "meaningVi": "Đột ngột, bỗng nhiên",
+        "accentNote": "急に 電気が 消えました = đèn bỗng nhiên tắt."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n4-29-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "開",
+        "hanViet": "KHAI",
+        "strokeCount": 12,
         "onyomi": [
-          "ゴ"
+          "カイ (kai)"
         ],
         "kunyomi": [
-          "かたる"
+          "あ(く)",
+          "あ(ける)"
         ],
-        "meaningVi": "Ngôn ngữ",
+        "meaningVi": "Mở. Đã gặp N5 bài 14.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "開きます",
+            "furigana": "あきます",
+            "meaningVi": "Mở ra (tự)"
+          },
+          {
+            "word": "開けます",
+            "furigana": "あけます",
+            "meaningVi": "Mở (tha)"
+          },
+          {
+            "word": "開発",
+            "furigana": "かいはつ",
+            "meaningVi": "Phát triển"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-29-2",
+        "character": "閉",
+        "hanViet": "BẾ",
+        "strokeCount": 11,
+        "onyomi": [
+          "ヘイ (hei)"
+        ],
+        "kunyomi": [
+          "し(まる)",
+          "し(める)"
+        ],
+        "meaningVi": "Đóng. Đã gặp N5 bài 14.",
+        "commonWords": [
+          {
+            "word": "閉まります",
+            "furigana": "しまります",
+            "meaningVi": "Đóng lại (tự)"
+          },
+          {
+            "word": "閉めます",
+            "furigana": "しめます",
+            "meaningVi": "Đóng (tha)"
+          },
+          {
+            "word": "閉店",
+            "furigana": "へいてん",
+            "meaningVi": "Đóng cửa hàng"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-29-3",
+        "character": "消",
+        "hanViet": "TIÊU",
+        "strokeCount": 10,
+        "onyomi": [
+          "ショウ (shou)"
+        ],
+        "kunyomi": [
+          "き(える)",
+          "け(す)"
+        ],
+        "meaningVi": "Tắt, biến mất, tiêu hao.",
+        "commonWords": [
+          {
+            "word": "消えます",
+            "furigana": "きえます",
+            "meaningVi": "Tắt (tự)"
+          },
+          {
+            "word": "消します",
+            "furigana": "けします",
+            "meaningVi": "Tắt (tha)"
+          },
+          {
+            "word": "消防車",
+            "furigana": "しょうぼうしゃ",
+            "meaningVi": "Xe cứu hỏa"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-29-4",
+        "character": "始",
+        "hanViet": "THỦY",
+        "strokeCount": 8,
+        "onyomi": [
+          "シ (shi)"
+        ],
+        "kunyomi": [
+          "はじ(まる)",
+          "はじ(める)"
+        ],
+        "meaningVi": "Bắt đầu, khởi đầu.",
+        "commonWords": [
+          {
+            "word": "始まります",
+            "furigana": "はじまります",
+            "meaningVi": "Bắt đầu (tự)"
+          },
+          {
+            "word": "始めます",
+            "furigana": "はじめます",
+            "meaningVi": "Bắt đầu (tha)"
+          },
+          {
+            "word": "開始",
+            "furigana": "かいし",
+            "meaningVi": "Sự khởi đầu"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-29-5",
+        "character": "美",
+        "hanViet": "MỸ",
+        "strokeCount": 9,
+        "onyomi": [
+          "ビ (bi)"
+        ],
+        "kunyomi": [
+          "うつく(しい)"
+        ],
+        "meaningVi": "Đẹp.",
+        "commonWords": [
+          {
+            "word": "美しい",
+            "furigana": "うつくしい",
+            "meaningVi": "Đẹp"
+          },
+          {
+            "word": "美術",
+            "furigana": "びじゅつ",
+            "meaningVi": "Mỹ thuật"
+          },
+          {
+            "word": "美人",
+            "furigana": "びじん",
+            "meaningVi": "Người đẹp"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n4-l29-s0",
-        "title": "Trọng tâm: Tự động từ & Tha động từ, Trạng thái (V-ています)",
-        "grammarFormula": "Tự động từ + ています (kết quả còn lưu lại)",
-        "explanation": "Biểu thị trạng thái của sự vật hiện hữu trước mắt.",
+        "slideId": "n4-l29-s1",
+        "slideType": "grammar",
+        "title": "1. Cặp tự động từ (自動詞) & tha động từ (他動詞)",
+        "grammarFormula": "開く(tự)/開ける(tha)　閉まる(tự)/閉める(tha)　消える(tự)/消す(tha)　始まる(tự)/始める(tha)",
+        "explanation": "Tự động từ: chủ ngữ TỰ trải qua thay đổi, KHÔNG có ai tác động (thường đi với が). Tha động từ: CÓ người/vật tác động lên đối tượng để gây ra thay đổi đó (đi với を).",
+        "teacherTips": "Mẹo nhận diện nhanh: câu có chủ ngữ RÕ RÀNG là người + を → tha động từ; chủ ngữ là VẬT + が, không nói ai làm → tự động từ.",
+        "culturalNotes": "Biển báo tự động ở cửa hàng Nhật thường dùng tự động từ: 自動ドア (cửa tự động) khi 開きます mà không cần ai đẩy.",
         "examples": [
           {
-            "id": "ex-n4-l29-1",
+            "id": "ex-n4-l29-s1-1",
             "tokens": [
               {
-                "id": "tok-n4-l29-1",
-                "text": "窓が",
+                "id": "t-l29s1-1",
+                "text": "ドア",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n4-l29-2",
-                "text": "窓が 開いています。",
-                "isKeyGrammar": true
+                "id": "t-l29s1-2",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l29s1-3",
+                "text": "あきました",
+                "isKeyGrammar": true,
+                "kanji": "開きました",
+                "furigana": "あきました"
               }
             ],
-            "meaningVi": "Cửa sổ đang mở."
+            "meaningVi": "Cửa tự mở ra. (không rõ/không cần biết ai mở — có thể do gió)"
+          },
+          {
+            "id": "ex-n4-l29-s1-2",
+            "tokens": [
+              {
+                "id": "t-l29s1-4",
+                "text": "わたし",
+                "isKeyGrammar": false,
+                "kanji": "私",
+                "furigana": "わたし"
+              },
+              {
+                "id": "t-l29s1-5",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l29s1-6",
+                "text": "ドア",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l29s1-7",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l29s1-8",
+                "text": "あけました",
+                "isKeyGrammar": true,
+                "kanji": "開けました",
+                "furigana": "あけました"
+              }
+            ],
+            "meaningVi": "Tôi đã mở cửa. (rõ ràng CÓ người chủ động mở)"
           }
-        ],
-        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+        ]
+      },
+      {
+        "slideId": "n4-l29-s2",
+        "slideType": "grammar",
+        "title": "2. Trạng thái với tự động từ: Nが V(tự)ています",
+        "grammarFormula": "N が [tự động từ]ています   (miêu tả TRẠNG THÁI hiện tại của vật, không rõ/không quan tâm ai gây ra)",
+        "explanation": "Đây là điểm khác biệt N4 so với N5: với tự động từ, Vています diễn tả TRẠNG THÁI HIỆN TẠI của vật (kết quả để lại), khác với tha động từ +てあります sẽ học ở bài 30.",
+        "teacherTips": "窓が開いています (trạng thái) khác 窓を開けています (ai đó ĐANG THỰC HIỆN hành động mở, tức thời) — chọn đúng động từ quyết định nghĩa.",
+        "culturalNotes": "Mô tả hiện trường/tình huống trong tiếng Nhật ưu tiên tự động từ+ています khi không cần chỉ rõ ai là người gây ra thay đổi.",
+        "examples": [
+          {
+            "id": "ex-n4-l29-s2-1",
+            "tokens": [
+              {
+                "id": "t-l29s2-1",
+                "text": "まど",
+                "isKeyGrammar": false,
+                "kanji": "窓",
+                "furigana": "まど"
+              },
+              {
+                "id": "t-l29s2-2",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l29s2-3",
+                "text": "あいて",
+                "isKeyGrammar": true,
+                "kanji": "開いて",
+                "furigana": "あいて"
+              },
+              {
+                "id": "t-l29s2-4",
+                "text": "います",
+                "isKeyGrammar": false,
+                "kanji": "居ます",
+                "furigana": "います"
+              }
+            ],
+            "meaningVi": "Cửa sổ đang mở. (miêu tả trạng thái, không cần biết ai mở)"
+          },
+          {
+            "id": "ex-n4-l29-s2-2",
+            "tokens": [
+              {
+                "id": "t-l29s2-5",
+                "text": "でんき",
+                "isKeyGrammar": false,
+                "kanji": "電気",
+                "furigana": "でんき"
+              },
+              {
+                "id": "t-l29s2-6",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l29s2-7",
+                "text": "きえて",
+                "isKeyGrammar": true,
+                "kanji": "消えて",
+                "furigana": "きえて"
+              },
+              {
+                "id": "t-l29s2-8",
+                "text": "います",
+                "isKeyGrammar": false,
+                "kanji": "居ます",
+                "furigana": "います"
+              }
+            ],
+            "meaningVi": "Đèn đang tắt."
+          }
+        ]
+      },
+      {
+        "slideId": "n4-l29-s3",
+        "slideType": "grammar",
+        "title": "3. Bắt đầu/kết thúc: 始まります/始めます",
+        "grammarFormula": "N が 始まります (自: tự đến giờ)　　N を 始めます (他: ai đó chủ động bắt đầu)",
+        "explanation": "Sự kiện có LỊCH TRÌNH cố định (phim, buổi họp) thường dùng tự động từ 始まります vì nó 'tự' đến giờ mà bắt đầu. Việc CHỦ ĐỘNG khởi xướng thì dùng tha động từ 始めます.",
+        "teacherTips": "Vましょう (rủ rê, N5 bài 6) chỉ ghép được với THA động từ vì cần một chủ thể chủ động thực hiện — không nói 始まりましょう.",
+        "culturalNotes": "Người dẫn chương trình/chủ trì cuộc họp ở Nhật luôn dùng 始めます (tha động từ) để mở đầu, thể hiện họ là người chủ động điều khiển.",
+        "examples": [
+          {
+            "id": "ex-n4-l29-s3-1",
+            "tokens": [
+              {
+                "id": "t-l29s3-1",
+                "text": "えいが",
+                "isKeyGrammar": false,
+                "kanji": "映画",
+                "furigana": "えいが"
+              },
+              {
+                "id": "t-l29s3-2",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l29s3-3",
+                "text": "はじまりました",
+                "isKeyGrammar": true,
+                "kanji": "始まりました",
+                "furigana": "はじまりました"
+              }
+            ],
+            "meaningVi": "Phim đã bắt đầu. (đến giờ chiếu tự nhiên)"
+          },
+          {
+            "id": "ex-n4-l29-s3-2",
+            "tokens": [
+              {
+                "id": "t-l29s3-4",
+                "text": "かいぎ",
+                "isKeyGrammar": false,
+                "kanji": "会議",
+                "furigana": "かいぎ"
+              },
+              {
+                "id": "t-l29s3-5",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l29s3-6",
+                "text": "はじめましょう",
+                "isKeyGrammar": true,
+                "kanji": "始めましょう",
+                "furigana": "はじめましょう"
+              }
+            ],
+            "meaningVi": "Chúng ta bắt đầu cuộc họp thôi. (chủ động khởi xướng)"
+          }
+        ]
+      },
+      {
+        "slideId": "n4-l29-s4",
+        "slideType": "grammar",
+        "title": "4. Dừng lại/từ bỏ: 止めます vs やめます",
+        "grammarFormula": "止めます (dừng một HÀNH ĐỘNG/chuyển động cụ thể)　　やめます (từ bỏ HẲN một thói quen/công việc)",
+        "explanation": "Hai từ đọc GIỐNG NHAU (cùng chữ 止める đọc とめる/やめる tùy nghĩa, hoặc viết riêng 辞める cho việc nghỉ làm) nhưng phạm vi khác nhau — 止める tạm dừng, やめる bỏ luôn không làm nữa.",
+        "teacherTips": "仕事を やめます (nghỉ việc HẲN, thường viết 辞めます) khác 仕事を 休みます (nghỉ TẠM, N5 bài 17) — đừng nhầm hai từ này.",
+        "culturalNotes": "たばこをやめました là câu tự hào phổ biến của người Nhật đã cai thuốc thành công, thường được khen ngợi khi chia sẻ.",
+        "examples": [
+          {
+            "id": "ex-n4-l29-s4-1",
+            "tokens": [
+              {
+                "id": "t-l29s4-1",
+                "text": "くるま",
+                "isKeyGrammar": false,
+                "kanji": "車",
+                "furigana": "くるま"
+              },
+              {
+                "id": "t-l29s4-2",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l29s4-3",
+                "text": "とめました",
+                "isKeyGrammar": true,
+                "kanji": "止めました",
+                "furigana": "とめました"
+              }
+            ],
+            "meaningVi": "Tôi đã dừng/đỗ xe lại. (tạm dừng chuyển động)"
+          },
+          {
+            "id": "ex-n4-l29-s4-2",
+            "tokens": [
+              {
+                "id": "t-l29s4-4",
+                "text": "たばこ",
+                "isKeyGrammar": false,
+                "kanji": "煙草",
+                "furigana": "たばこ"
+              },
+              {
+                "id": "t-l29s4-5",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l29s4-6",
+                "text": "やめました",
+                "isKeyGrammar": true,
+                "kanji": "止めました",
+                "furigana": "やめました"
+              }
+            ],
+            "meaningVi": "Tôi đã bỏ thuốc lá. (từ bỏ hẳn thói quen)"
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n4-29-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên năm 3",
         "tokens": [
           {
-            "id": "tok-n4-29-d1",
-            "text": "この文法のポイントを"
+            "id": "d-l29-1",
+            "text": "あれ",
+            "isKeyGrammar": false
           },
           {
-            "id": "tok-n4-29-d2",
-            "text": "復習しましょう。"
+            "id": "d-l29-2",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-3",
+            "text": "でんき",
+            "isKeyGrammar": true,
+            "kanji": "電気",
+            "furigana": "でんき"
+          },
+          {
+            "id": "d-l29-4",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-5",
+            "text": "きえて",
+            "isKeyGrammar": true,
+            "kanji": "消えて",
+            "furigana": "きえて"
+          },
+          {
+            "id": "d-l29-6",
+            "text": "います",
+            "isKeyGrammar": false,
+            "kanji": "居ます",
+            "furigana": "います"
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Ơ, đèn đang tắt kìa."
+      },
+      {
+        "id": "dia-n4-29-2",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên năm 3",
+        "tokens": [
+          {
+            "id": "d-l29-7",
+            "text": "きゅうに",
+            "isKeyGrammar": true,
+            "kanji": "急に",
+            "furigana": "きゅうに"
+          },
+          {
+            "id": "d-l29-8",
+            "text": "きえました",
+            "isKeyGrammar": false,
+            "kanji": "消えました",
+            "furigana": "きえました"
+          },
+          {
+            "id": "d-l29-9",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-10",
+            "text": "だれ",
+            "isKeyGrammar": false,
+            "kanji": "誰",
+            "furigana": "だれ"
+          },
+          {
+            "id": "d-l29-11",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-12",
+            "text": "けしません",
+            "isKeyGrammar": false,
+            "kanji": "消しません",
+            "furigana": "けしません"
+          },
+          {
+            "id": "d-l29-13",
+            "text": "でした",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Nó tự nhiên tắt vậy đấy. Không ai tắt cả."
+      },
+      {
+        "id": "dia-n4-29-3",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên năm 3",
+        "tokens": [
+          {
+            "id": "d-l29-14",
+            "text": "まど",
+            "isKeyGrammar": true,
+            "kanji": "窓",
+            "furigana": "まど"
+          },
+          {
+            "id": "d-l29-15",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-16",
+            "text": "あいて",
+            "isKeyGrammar": true,
+            "kanji": "開いて",
+            "furigana": "あいて"
+          },
+          {
+            "id": "d-l29-17",
+            "text": "います",
+            "isKeyGrammar": false,
+            "kanji": "居ます",
+            "furigana": "居ます"
+          }
+        ],
+        "meaningVi": "Cửa sổ cũng đang mở nữa."
+      },
+      {
+        "id": "dia-n4-29-4",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên năm 3",
+        "tokens": [
+          {
+            "id": "d-l29-18",
+            "text": "だれ",
+            "isKeyGrammar": false,
+            "kanji": "誰",
+            "furigana": "だれ"
+          },
+          {
+            "id": "d-l29-19",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-20",
+            "text": "あけました",
+            "isKeyGrammar": true,
+            "kanji": "開けました",
+            "furigana": "あけました"
+          },
+          {
+            "id": "d-l29-21",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Ai đã mở nó vậy nhỉ?"
+      },
+      {
+        "id": "dia-n4-29-5",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên năm 3",
+        "tokens": [
+          {
+            "id": "d-l29-22",
+            "text": "わかりません",
+            "isKeyGrammar": false,
+            "kanji": "分かりません",
+            "furigana": "わかりません"
+          },
+          {
+            "id": "d-l29-23",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-24",
+            "text": "あ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-25",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-26",
+            "text": "えいが",
+            "isKeyGrammar": true,
+            "kanji": "映画",
+            "furigana": "えいが"
+          },
+          {
+            "id": "d-l29-27",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-28",
+            "text": "はじまります",
+            "isKeyGrammar": true,
+            "kanji": "始まります",
+            "furigana": "はじまります"
+          },
+          {
+            "id": "d-l29-29",
+            "text": "よ",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Không biết nữa. À, phim sắp bắt đầu rồi kìa."
+      },
+      {
+        "id": "dia-n4-29-6",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên năm 3",
+        "tokens": [
+          {
+            "id": "d-l29-30",
+            "text": "じゃ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-31",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-32",
+            "text": "まど",
+            "isKeyGrammar": false,
+            "kanji": "窓",
+            "furigana": "まど"
+          },
+          {
+            "id": "d-l29-33",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-34",
+            "text": "しめましょう",
+            "isKeyGrammar": true,
+            "kanji": "閉めましょう",
+            "furigana": "しめましょう"
+          }
+        ],
+        "meaningVi": "Vậy đóng cửa sổ lại thôi."
+      },
+      {
+        "id": "dia-n4-29-7",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên năm 3",
+        "tokens": [
+          {
+            "id": "d-l29-35",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-36",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-37",
+            "text": "でんき",
+            "isKeyGrammar": true,
+            "kanji": "電気",
+            "furigana": "でんき"
+          },
+          {
+            "id": "d-l29-38",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-39",
+            "text": "つけましょう",
+            "isKeyGrammar": false,
+            "kanji": "点けましょう",
+            "furigana": "つけましょう"
+          }
+        ],
+        "meaningVi": "Vâng. Bật đèn lên luôn nhé."
+      },
+      {
+        "id": "dia-n4-29-8",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên năm 3",
+        "tokens": [
+          {
+            "id": "d-l29-40",
+            "text": "あ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-41",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-42",
+            "text": "おもいだしました",
+            "isKeyGrammar": true,
+            "kanji": "思い出しました",
+            "furigana": "おもいだしました"
+          },
+          {
+            "id": "d-l29-43",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-44",
+            "text": "でんき",
+            "isKeyGrammar": false,
+            "kanji": "電気",
+            "furigana": "でんき"
+          },
+          {
+            "id": "d-l29-45",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-46",
+            "text": "こわれて",
+            "isKeyGrammar": true,
+            "kanji": "壊れて",
+            "furigana": "こわれて"
+          },
+          {
+            "id": "d-l29-47",
+            "text": "います",
+            "isKeyGrammar": false,
+            "kanji": "居ます",
+            "furigana": "います"
+          }
+        ],
+        "meaningVi": "À, tôi nhớ ra rồi. Đèn đang bị hỏng đấy."
+      },
+      {
+        "id": "dia-n4-29-9",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên năm 3",
+        "tokens": [
+          {
+            "id": "d-l29-48",
+            "text": "だれ",
+            "isKeyGrammar": false,
+            "kanji": "誰",
+            "furigana": "だれ"
+          },
+          {
+            "id": "d-l29-49",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-50",
+            "text": "こわしました",
+            "isKeyGrammar": true,
+            "kanji": "壊しました",
+            "furigana": "こわしました"
+          },
+          {
+            "id": "d-l29-51",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Ai làm hỏng vậy?"
+      },
+      {
+        "id": "dia-n4-29-10",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên năm 3",
+        "tokens": [
+          {
+            "id": "d-l29-52",
+            "text": "わかりません",
+            "isKeyGrammar": false,
+            "kanji": "分かりません",
+            "furigana": "わかりません"
+          },
+          {
+            "id": "d-l29-53",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-54",
+            "text": "でも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-55",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-56",
+            "text": "えいが",
+            "isKeyGrammar": true,
+            "kanji": "映画",
+            "furigana": "えいが"
+          },
+          {
+            "id": "d-l29-57",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-58",
+            "text": "はじまりました",
+            "isKeyGrammar": true,
+            "kanji": "始まりました",
+            "furigana": "はじまりました"
+          },
+          {
+            "id": "d-l29-59",
+            "text": "から",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-60",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-61",
+            "text": "あとで",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l29-62",
+            "text": "しらべましょう",
+            "isKeyGrammar": false,
+            "kanji": "調べましょう",
+            "furigana": "しらべましょう"
+          }
+        ],
+        "meaningVi": "Không biết nữa. Nhưng phim bắt đầu rồi nên lát nữa kiểm tra sau nhé."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n4-29-1",
-        "question": "Chọn cách kết hợp đúng cho cấu trúc: Tự động từ & Tha động từ, Trạng thái (V-ています)",
+        "question": "「ドアが開きました」 và 「ドアを開けました」 khác nhau ở:",
         "options": [
-          "Tự động từ + ています (kết quả còn lưu lại)",
-          "Thể ý chí + だ",
-          "Thể cấm chỉ",
-          "V-ない + です"
+          "Câu đầu là tự động từ (không rõ ai mở), câu sau là tha động từ (có người chủ động mở)",
+          "Hoàn toàn giống nhau",
+          "Câu đầu sai ngữ pháp",
+          "Câu sau chỉ dùng cho cửa sổ"
         ],
         "correctIndex": 0,
-        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Tự động từ + ています (kết quả còn lưu lại)",
-        "hint": "Chú ý dạng thể liên kết của động từ."
+        "explanation": "開く (tự) dùng が, không cần chủ thể; 開ける (tha) dùng を, cần người/vật tác động.",
+        "hint": "So sánh trợ từ が và を đi kèm."
+      },
+      {
+        "id": "ex-q-n4-29-2",
+        "question": "「窓が開いています」 diễn tả điều gì?",
+        "options": [
+          "Trạng thái HIỆN TẠI của cửa sổ (đang mở), không quan tâm ai mở",
+          "Ai đó đang trong quá trình mở cửa sổ",
+          "Cửa sổ sắp mở",
+          "Cửa sổ đã đóng lại rồi"
+        ],
+        "correctIndex": 0,
+        "explanation": "Tự động từ + ています diễn tả TRẠNG THÁI đang tồn tại của vật — điểm ngữ pháp N4 mới so với N5.",
+        "hint": "Đây là điểm khác biệt N4 nêu ở slide 2."
+      },
+      {
+        "id": "ex-q-n4-29-3",
+        "question": "「映画が始まりました」 vì sao dùng tự động từ 始まる?",
+        "options": [
+          "Phim có lịch chiếu cố định, tự đến giờ mà bắt đầu, không cần nhấn mạnh ai bắt đầu",
+          "始める là từ sai, phải sửa lại",
+          "始まる chỉ dùng cho câu hỏi",
+          "Không có lý do gì đặc biệt"
+        ],
+        "correctIndex": 0,
+        "explanation": "Sự kiện có LỊCH TRÌNH cố định thường dùng tự động từ vì nó 'tự' đến giờ mà xảy ra.",
+        "hint": "So sánh với 会議を始めましょう (chủ động khởi xướng) ở slide 3."
+      },
+      {
+        "id": "ex-q-n4-29-4",
+        "question": "Câu nào KHÔNG được phép nói (vì thiếu chủ thể chủ động)?",
+        "options": [
+          "会議が 始まりましょう",
+          "会議を 始めましょう",
+          "映画が 始まりました",
+          "電気が 消えました"
+        ],
+        "correctIndex": 0,
+        "explanation": "Vましょう (rủ rê) cần một chủ thể CHỦ ĐỘNG hành động, nên chỉ ghép được với THA động từ (始める), không ghép được với tự động từ (始まる).",
+        "hint": "Xem ghi chú về Vましょう ở slide 3."
+      },
+      {
+        "id": "ex-q-n4-29-5",
+        "question": "止めます và やめます khác nhau ở:",
+        "options": [
+          "止める là dừng một hành động/chuyển động cụ thể; やめる là từ bỏ hẳn thói quen/công việc",
+          "Hoàn toàn giống nhau",
+          "止める chỉ dùng cho xe cộ",
+          "やめる chỉ dùng cho thuốc lá"
+        ],
+        "correctIndex": 0,
+        "explanation": "止める (đỗ xe, dừng tạm) khác hẳn phạm vi với やめる (bỏ hẳn một thói quen/nghề nghiệp lâu dài).",
+        "hint": "So sánh hai ví dụ ở slide 4."
+      },
+      {
+        "id": "ex-q-n4-29-6",
+        "question": "「仕事を やめます」 khác 「仕事を 休みます」 (N5 bài 17) ở:",
+        "options": [
+          "やめます là nghỉ việc HẲN (từ chức); 休みます là nghỉ TẠM THỜI (nghỉ phép)",
+          "Hoàn toàn giống nhau",
+          "やめます là nghỉ một ngày",
+          "休みます là nghỉ việc vĩnh viễn"
+        ],
+        "correctIndex": 0,
+        "explanation": "やめる (thường viết 辞める cho nghỉ việc) mang tính VĨNH VIỄN; 休む chỉ là tạm nghỉ, sẽ quay lại làm tiếp.",
+        "hint": "Đây là cặp từ dễ nhầm đã nêu ở slide 4."
+      },
+      {
+        "id": "ex-q-n4-29-7",
+        "question": "電気が 壊れています — 壊れる là loại động từ nào?",
+        "options": [
+          "Tự động từ (đã gặp ở bài 26, đèn TỰ hỏng)",
+          "Tha động từ",
+          "Động từ nhóm III",
+          "Tính từ"
+        ],
+        "correctIndex": 0,
+        "explanation": "壊れる đã học ở bài 26 là tự động từ — vật TỰ trải qua trạng thái hỏng, không cần nói rõ ai làm hỏng.",
+        "hint": "Nhớ lại kiến thức đã học ở bài 26."
+      },
+      {
+        "id": "ex-q-n4-29-8",
+        "question": "「誰が壊しましたか」 dùng động từ nào và vì sao?",
+        "options": [
+          "壊しました (tha động từ) vì đang hỏi AI là người gây ra hành động",
+          "壊れました (tự động từ) vì không cần biết ai làm",
+          "Cả hai đều đúng như nhau",
+          "Câu này sai ngữ pháp"
+        ],
+        "correctIndex": 0,
+        "explanation": "Khi hỏi 'AI đã làm gì', phải dùng THA động từ vì câu hỏi cần một chủ thể hành động rõ ràng.",
+        "hint": "So sánh với câu hỏi không cần chủ thể ở các câu khác."
+      },
+      {
+        "id": "ex-q-n4-29-9",
+        "question": "Trong hội thoại, vì sao đèn trong phòng chiếu bị tắt?",
+        "options": [
+          "Tự nhiên tắt, không rõ ai tắt (rồi phát hiện ra đèn bị hỏng)",
+          "Sinh viên tự tắt để xem phim",
+          "Nhân viên rạp tắt",
+          "Không được nhắc tới lý do"
+        ],
+        "correctIndex": 0,
+        "explanation": "サントス nói 「急に消えました。誰も消しませんでした」, sau đó nhớ ra 「電気が壊れています」.",
+        "hint": "Xem toàn bộ diễn biến hội thoại."
+      },
+      {
+        "id": "ex-q-n4-29-10",
+        "question": "Cuối hội thoại, hai người quyết định làm gì với vấn đề đèn hỏng?",
+        "options": [
+          "Kiểm tra sau khi phim kết thúc",
+          "Kiểm tra ngay lập tức",
+          "Bỏ qua không quan tâm",
+          "Gọi nhân viên ngay"
+        ],
+        "correctIndex": 0,
+        "explanation": "サントス nói 「映画が始まりましたから、あとで調べましょう」.",
+        "hint": "Xem câu thoại cuối cùng."
       }
     ]
   },
