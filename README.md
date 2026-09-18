@@ -54,6 +54,15 @@ f:\Project Ai\TecherAiJapanese\
 
 ## 🚀 Hướng Dẫn Khởi Động Nhanh
 
+### Bước 0 (bắt buộc, chỉ làm 1 lần sau khi clone): tải thư viện frontend
+Thư mục `vendor/` (Tailwind CSS, Font Awesome) **không được commit vào git**
+(theo `.gitignore`, đúng thông lệ). Nếu thiếu thư mục này, trang sẽ **vỡ layout
+hoàn toàn** — không có style, icon hiện thành ô trống. Chạy lệnh sau một lần
+duy nhất sau khi clone:
+```bash
+python tools/setup_vendor.py
+```
+
 ### Cách 1: Chạy bằng file Batch (Windows)
 Click đúp vào file **`start.bat`**. Trình duyệt sẽ tự động mở `http://localhost:3000`.
 
