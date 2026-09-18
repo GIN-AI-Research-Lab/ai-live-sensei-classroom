@@ -8588,99 +8588,1347 @@
     "level": "N1",
     "lessonNumber": 7,
     "title": "Bài 7: Khẳng định đanh thép (にほかならない & に相違ない)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N1.",
+    "description": "に相違ない (trang trọng hơn にちがいない) dùng để SUY ĐOÁN CHẮC CHẮN một sự thật CHƯA xác nhận dựa trên chứng cứ/lý luận; にほかならない dùng để KHẲNG ĐỊNH MẠNH bản chất/nguyên nhân THỰC SỰ của một sự việc ĐÃ RÕ RÀNG, loại trừ mọi khả năng khác — cả hai đều là văn phong trang trọng, thường kết hợp trong một bài suy luận điều tra: kết luận ai là thủ phạm rồi khẳng định căn cứ của kết luận đó.",
     "vocabList": [
       {
         "id": "voc-n1-7-1",
-        "word": "重要語彙 (N1)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "どうき",
+        "kanji": "動機",
+        "furigana": "どうき",
+        "romaji": "douki",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 7",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Động cơ (gây án, hành động)",
+        "accentNote": "動機に 相違ない = chắc chắn là động cơ."
+      },
+      {
+        "id": "voc-n1-7-2",
+        "word": "しょうこ",
+        "kanji": "証拠",
+        "furigana": "しょうこ",
+        "romaji": "shouko",
+        "wordType": "noun",
+        "meaningVi": "Chứng cứ, bằng chứng",
+        "accentNote": "証拠に ほかならない = chính là chứng cứ."
+      },
+      {
+        "id": "voc-n1-7-3",
+        "word": "すいり",
+        "kanji": "推理",
+        "furigana": "すいり",
+        "romaji": "suiri",
+        "wordType": "noun",
+        "meaningVi": "Suy luận, suy lý",
+        "accentNote": "推理の 結果 = kết quả của sự suy luận."
+      },
+      {
+        "id": "voc-n1-7-4",
+        "word": "たいほします",
+        "kanji": "逮捕します",
+        "furigana": "たいほします",
+        "romaji": "taiho shimasu",
+        "wordType": "verb",
+        "meaningVi": "Bắt giữ",
+        "accentNote": "犯人を 逮捕します = bắt giữ thủ phạm."
+      },
+      {
+        "id": "voc-n1-7-5",
+        "word": "うたがいます",
+        "kanji": "疑います",
+        "furigana": "うたがいます",
+        "romaji": "utagaimasu",
+        "wordType": "verb",
+        "meaningVi": "Nghi ngờ",
+        "accentNote": "彼を 疑います = nghi ngờ anh ta."
+      },
+      {
+        "id": "voc-n1-7-6",
+        "word": "りゆう",
+        "kanji": "理由",
+        "furigana": "りゆう",
+        "romaji": "riyuu",
+        "wordType": "noun",
+        "meaningVi": "Lý do",
+        "accentNote": "Đã gặp N4 bài 26."
+      },
+      {
+        "id": "voc-n1-7-7",
+        "word": "はんにん",
+        "kanji": "犯人",
+        "furigana": "はんにん",
+        "romaji": "hannin",
+        "wordType": "noun",
+        "meaningVi": "Thủ phạm, kẻ phạm tội",
+        "accentNote": "Đã gặp N3 bài 12."
+      },
+      {
+        "id": "voc-n1-7-8",
+        "word": "げんば",
+        "kanji": "現場",
+        "furigana": "げんば",
+        "romaji": "genba",
+        "wordType": "noun",
+        "meaningVi": "Hiện trường",
+        "accentNote": "Đã gặp N3 bài 12."
+      },
+      {
+        "id": "voc-n1-7-9",
+        "word": "かんがえます",
+        "kanji": "考えます",
+        "furigana": "かんがえます",
+        "romaji": "kangaemasu",
+        "wordType": "verb",
+        "meaningVi": "Suy nghĩ",
+        "accentNote": "Đã gặp N5 bài 21."
+      },
+      {
+        "id": "voc-n1-7-10",
+        "word": "どりょく",
+        "kanji": "努力",
+        "furigana": "どりょく",
+        "romaji": "doryoku",
+        "wordType": "noun",
+        "meaningVi": "Nỗ lực",
+        "accentNote": "Đã gặp N3 bài 2."
+      },
+      {
+        "id": "voc-n1-7-11",
+        "word": "けっか",
+        "kanji": "結果",
+        "furigana": "けっか",
+        "romaji": "kekka",
+        "wordType": "noun",
+        "meaningVi": "Kết quả",
+        "accentNote": "Đã gặp N3 bài 1."
+      },
+      {
+        "id": "voc-n1-7-12",
+        "word": "しんじます",
+        "kanji": "信じます",
+        "furigana": "しんじます",
+        "romaji": "shinjimasu",
+        "wordType": "verb",
+        "meaningVi": "Tin tưởng",
+        "accentNote": "Đã gặp N3 bài 1."
+      },
+      {
+        "id": "voc-n1-7-13",
+        "word": "ぎいん",
+        "kanji": "議員",
+        "furigana": "ぎいん",
+        "romaji": "giin",
+        "wordType": "noun",
+        "meaningVi": "Nghị sĩ",
+        "accentNote": "Đã gặp N1 bài 6."
+      },
+      {
+        "id": "voc-n1-7-14",
+        "word": "ふせい",
+        "kanji": "不正",
+        "furigana": "ふせい",
+        "romaji": "fusei",
+        "wordType": "noun",
+        "meaningVi": "Sự bất chính, gian lận",
+        "accentNote": "Đã gặp N1 bài 6."
+      },
+      {
+        "id": "voc-n1-7-15",
+        "word": "はんざい",
+        "kanji": "犯罪",
+        "furigana": "はんざい",
+        "romaji": "hanzai",
+        "wordType": "noun",
+        "meaningVi": "Tội ác, tội phạm",
+        "accentNote": "Đã gặp N1 bài 6."
+      },
+      {
+        "id": "voc-n1-7-16",
+        "word": "せいじか",
+        "kanji": "政治家",
+        "furigana": "せいじか",
+        "romaji": "seijika",
+        "wordType": "noun",
+        "meaningVi": "Chính trị gia",
+        "accentNote": "Đã gặp N1 bài 3."
+      },
+      {
+        "id": "voc-n1-7-17",
+        "word": "しゃちょう",
+        "kanji": "社長",
+        "furigana": "しゃちょう",
+        "romaji": "shachou",
+        "wordType": "noun",
+        "meaningVi": "Giám đốc",
+        "accentNote": "Đã gặp N4 bài 41."
+      },
+      {
+        "id": "voc-n1-7-18",
+        "word": "とうさん",
+        "kanji": "倒産",
+        "furigana": "とうさん",
+        "romaji": "tousan",
+        "wordType": "noun",
+        "meaningVi": "Phá sản",
+        "accentNote": "Đã gặp N1 bài 5."
+      },
+      {
+        "id": "voc-n1-7-19",
+        "word": "じたい",
+        "kanji": "事態",
+        "furigana": "じたい",
+        "romaji": "jitai",
+        "wordType": "noun",
+        "meaningVi": "Tình thế, tình huống",
+        "accentNote": "Đã gặp N1 bài 5."
+      },
+      {
+        "id": "voc-n1-7-20",
+        "word": "かいしゃ",
+        "kanji": "会社",
+        "furigana": "かいしゃ",
+        "romaji": "kaisha",
+        "wordType": "noun",
+        "meaningVi": "Công ty",
+        "accentNote": "Đã gặp N5 bài 3."
+      },
+      {
+        "id": "voc-n1-7-21",
+        "word": "もんだい",
+        "kanji": "問題",
+        "furigana": "もんだい",
+        "romaji": "mondai",
+        "wordType": "noun",
+        "meaningVi": "Vấn đề",
+        "accentNote": "Đã gặp N3 bài 13."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n1-7-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "相",
+        "hanViet": "TƯƠNG",
+        "strokeCount": 9,
         "onyomi": [
-          "ゴ"
+          "ソウ (sou)",
+          "ショウ (shou)"
         ],
         "kunyomi": [
-          "かたる"
+          "あい"
         ],
-        "meaningVi": "Ngôn ngữ",
+        "meaningVi": "Lẫn nhau, cùng.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "相違",
+            "furigana": "そうい",
+            "meaningVi": "Sai lệch, khác biệt"
+          },
+          {
+            "word": "相談",
+            "furigana": "そうだん",
+            "meaningVi": "Bàn bạc"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-7-2",
+        "character": "違",
+        "hanViet": "VI",
+        "strokeCount": 13,
+        "onyomi": [
+          "イ (i)"
+        ],
+        "kunyomi": [
+          "ちが(う)"
+        ],
+        "meaningVi": "Khác biệt, sai.",
+        "commonWords": [
+          {
+            "word": "相違",
+            "furigana": "そうい",
+            "meaningVi": "Sai lệch"
+          },
+          {
+            "word": "違います",
+            "furigana": "ちがいます",
+            "meaningVi": "Khác, sai"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-7-3",
+        "character": "証",
+        "hanViet": "CHỨNG",
+        "strokeCount": 12,
+        "onyomi": [
+          "ショウ (shou)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Chứng cứ, chứng minh.",
+        "commonWords": [
+          {
+            "word": "証拠",
+            "furigana": "しょうこ",
+            "meaningVi": "Chứng cứ"
+          },
+          {
+            "word": "証明",
+            "furigana": "しょうめい",
+            "meaningVi": "Chứng minh"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-7-4",
+        "character": "拠",
+        "hanViet": "CỨ",
+        "strokeCount": 8,
+        "onyomi": [
+          "キョ (kyo)",
+          "コ (ko)"
+        ],
+        "kunyomi": [
+          "よ(る)"
+        ],
+        "meaningVi": "Căn cứ, dựa vào.",
+        "commonWords": [
+          {
+            "word": "証拠",
+            "furigana": "しょうこ",
+            "meaningVi": "Chứng cứ"
+          },
+          {
+            "word": "根拠",
+            "furigana": "こんきょ",
+            "meaningVi": "Căn cứ"
+          }
+        ]
+      },
+      {
+        "id": "kan-n1-7-5",
+        "character": "捕",
+        "hanViet": "BỘ",
+        "strokeCount": 10,
+        "onyomi": [
+          "ホ (ho)"
+        ],
+        "kunyomi": [
+          "と(らえる)",
+          "つか(まえる)"
+        ],
+        "meaningVi": "Bắt, tóm giữ.",
+        "commonWords": [
+          {
+            "word": "逮捕",
+            "furigana": "たいほ",
+            "meaningVi": "Bắt giữ"
+          },
+          {
+            "word": "捕まえます",
+            "furigana": "つかまえます",
+            "meaningVi": "Bắt, tóm được"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n1-l7-s0",
-        "title": "Trọng tâm: Khẳng định đanh thép (にほかならない & に相違ない)",
-        "grammarFormula": "Thể thông thường + にほかならない (chính là, không gì khác ngoài)",
-        "explanation": "Khẳng định tuyệt đối nguyên nhân hoặc bản chất vấn đề.",
+        "slideId": "n1-l7-s1",
+        "slideType": "grammar",
+        "title": "1. Chắc chắn là... (suy đoán chắc chắn dựa trên bằng chứng): N/普通形 + に相違ない",
+        "grammarFormula": "N/Vる/Aい/Aな + に相違ない (lịch sự: 〜に相違ありません)",
+        "explanation": "に相違ない giống にちがいない (N4/N3) nhưng TRANG TRỌNG HƠN NHIỀU — dùng để SUY ĐOÁN một cách CHẮC CHẮN dựa trên CHỨNG CỨ/LÝ LUẬN rõ ràng, hay gặp trong văn phong điều tra, báo cáo, tòa án.",
+        "teacherTips": "Dạng lịch sự là 〜に相違ありません (thay vì 〜に相違ないです) — hay dùng trong báo cáo cảnh sát, phát biểu chính thức.",
+        "culturalNotes": "に相違ない là từ ngữ ĐIỀU TRA kinh điển trong tiểu thuyết/phim trinh thám Nhật (推理小説) — thám tử dùng khi công bố kết luận sau khi phân tích đầy đủ chứng cứ.",
         "examples": [
           {
-            "id": "ex-n1-l7-1",
+            "id": "ex-n1-l7-s1-1",
             "tokens": [
               {
-                "id": "tok-n1-l7-1",
-                "text": "今回の成功は",
+                "id": "t-l7s1-1",
+                "text": "げんば",
+                "isKeyGrammar": true,
+                "kanji": "現場",
+                "furigana": "げんば"
+              },
+              {
+                "id": "t-l7s1-2",
+                "text": "の",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n1-l7-2",
-                "text": " 努力の結晶に ほかならない。",
+                "id": "t-l7s1-3",
+                "text": "しょうこ",
+                "isKeyGrammar": true,
+                "kanji": "証拠",
+                "furigana": "しょうこ"
+              },
+              {
+                "id": "t-l7s1-4",
+                "text": "から",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s1-5",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s1-6",
+                "text": "かれ",
+                "isKeyGrammar": false,
+                "kanji": "彼",
+                "furigana": "かれ"
+              },
+              {
+                "id": "t-l7s1-7",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s1-8",
+                "text": "はんにん",
+                "isKeyGrammar": true,
+                "kanji": "犯人",
+                "furigana": "はんにん"
+              },
+              {
+                "id": "t-l7s1-9",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s1-10",
+                "text": "そういない",
+                "isKeyGrammar": true,
+                "kanji": "相違ない",
+                "furigana": "そういない"
+              }
+            ],
+            "meaningVi": "Từ chứng cứ tại hiện trường, chắc chắn anh ta là thủ phạm."
+          },
+          {
+            "id": "ex-n1-l7-s1-2",
+            "tokens": [
+              {
+                "id": "t-l7s1-11",
+                "text": "これ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s1-12",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s1-13",
+                "text": "かれ",
+                "isKeyGrammar": false,
+                "kanji": "彼",
+                "furigana": "かれ"
+              },
+              {
+                "id": "t-l7s1-14",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s1-15",
+                "text": "どうき",
+                "isKeyGrammar": true,
+                "kanji": "動機",
+                "furigana": "どうき"
+              },
+              {
+                "id": "t-l7s1-16",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s1-17",
+                "text": "そういない",
+                "isKeyGrammar": true,
+                "kanji": "相違ない",
+                "furigana": "そういない"
+              }
+            ],
+            "meaningVi": "Đây chắc chắn là động cơ của anh ta."
+          }
+        ]
+      },
+      {
+        "slideId": "n1-l7-s2",
+        "slideType": "grammar",
+        "title": "2. Chính là..., không gì khác ngoài... (khẳng định bản chất/nguyên nhân): N/普通形 + にほかならない",
+        "grammarFormula": "N + にほかならない (lịch sự: 〜にほかなりません)",
+        "explanation": "にほかならない dùng để KHẲNG ĐỊNH MẠNH rằng một điều gì đó CHÍNH LÀ bản chất/nguyên nhân THỰC SỰ của sự việc — 'không gì khác ngoài N', loại trừ mọi khả năng khác. Khác に相違ない (suy đoán về một SỰ THẬT chưa xác nhận), にほかならない dùng để giải thích BẢN CHẤT của một điều đã biết.",
+        "teacherTips": "にほかならない KHÔNG dùng để suy đoán sự việc chưa biết — nó dùng để KHẲNG ĐỊNH nguyên nhân/bản chất của một sự việc ĐÃ XẢY RA.",
+        "culturalNotes": "Diễn văn cảm ơn ở Nhật hay dùng '〜のは、皆様のおかげにほかなりません' (điều đó chính là nhờ ơn của mọi người, không gì khác) để bày tỏ lòng biết ơn một cách trang trọng.",
+        "examples": [
+          {
+            "id": "ex-n1-l7-s2-1",
+            "tokens": [
+              {
+                "id": "t-l7s2-1",
+                "text": "かれ",
+                "isKeyGrammar": false,
+                "kanji": "彼",
+                "furigana": "かれ"
+              },
+              {
+                "id": "t-l7s2-2",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s2-3",
+                "text": "せいこうした",
+                "isKeyGrammar": false,
+                "kanji": "成功した",
+                "furigana": "せいこうした"
+              },
+              {
+                "id": "t-l7s2-4",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s2-5",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s2-6",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s2-7",
+                "text": "どりょく",
+                "isKeyGrammar": true,
+                "kanji": "努力",
+                "furigana": "どりょく"
+              },
+              {
+                "id": "t-l7s2-8",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s2-9",
+                "text": "けっか",
+                "isKeyGrammar": true,
+                "kanji": "結果",
+                "furigana": "けっか"
+              },
+              {
+                "id": "t-l7s2-10",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s2-11",
+                "text": "ほかならない",
                 "isKeyGrammar": true
               }
             ],
-            "meaningVi": "Thành công lần này không gì khác ngoài chính là kết tinh của sự nỗ lực."
+            "meaningVi": "Anh ấy thành công chính là kết quả của nỗ lực, không gì khác."
+          },
+          {
+            "id": "ex-n1-l7-s2-2",
+            "tokens": [
+              {
+                "id": "t-l7s2-12",
+                "text": "これ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s2-13",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s2-14",
+                "text": "すいり",
+                "isKeyGrammar": true,
+                "kanji": "推理",
+                "furigana": "すいり"
+              },
+              {
+                "id": "t-l7s2-15",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s2-16",
+                "text": "けっか",
+                "isKeyGrammar": true,
+                "kanji": "結果",
+                "furigana": "けっか"
+              },
+              {
+                "id": "t-l7s2-17",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s2-18",
+                "text": "ほかならない",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Đây chính là kết quả của sự suy luận, không gì khác."
           }
-        ],
-        "culturalNotes": "Mẫu ngữ pháp đỉnh cao của N1 dùng trong các bài xã luận, diễn văn trang trọng."
+        ]
+      },
+      {
+        "slideId": "n1-l7-s3",
+        "slideType": "grammar",
+        "title": "3. So sánh に相違ない và にほかならない",
+        "grammarFormula": "に相違ない: SUY ĐOÁN chắc chắn (sự thật CHƯA xác nhận)　vs　にほかならない: KHẲNG ĐỊNH bản chất (sự việc ĐÃ biết)",
+        "explanation": "に相違ない dùng khi NGƯỜI NÓI đang SUY LUẬN để đi đến một kết luận về điều CHƯA được xác nhận chắc chắn (ai là thủ phạm?); にほかならない dùng khi GIẢI THÍCH bản chất/nguyên nhân của một sự việc ĐÃ RÕ RÀNG xảy ra (tại sao anh ấy lại thành công?).",
+        "teacherTips": "Mẹo: câu hỏi 'liệu có đúng không?' → dùng に相違ない; câu hỏi 'vì sao/bản chất là gì?' → dùng にほかならない.",
+        "culturalNotes": "Cả hai đều là văn phong VIẾT/TRANG TRỌNG — báo cáo điều tra dùng に相違ない khi CHƯA bắt được thủ phạm, và にほかならない khi giải thích lý do SAU KHI đã có kết luận.",
+        "examples": [
+          {
+            "id": "ex-n1-l7-s3-1",
+            "tokens": [
+              {
+                "id": "t-l7s3-1",
+                "text": "しょうこ",
+                "isKeyGrammar": true,
+                "kanji": "証拠",
+                "furigana": "しょうこ"
+              },
+              {
+                "id": "t-l7s3-2",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s3-3",
+                "text": "なければ",
+                "isKeyGrammar": false,
+                "kanji": "無ければ",
+                "furigana": "なければ"
+              },
+              {
+                "id": "t-l7s3-4",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s3-5",
+                "text": "はんにん",
+                "isKeyGrammar": true,
+                "kanji": "犯人",
+                "furigana": "はんにん"
+              },
+              {
+                "id": "t-l7s3-6",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s3-7",
+                "text": "そういない",
+                "isKeyGrammar": true,
+                "kanji": "相違ない",
+                "furigana": "そういない"
+              },
+              {
+                "id": "t-l7s3-8",
+                "text": "とは",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s3-9",
+                "text": "いえません",
+                "isKeyGrammar": false,
+                "kanji": "言えません",
+                "furigana": "いえません"
+              }
+            ],
+            "meaningVi": "Nếu không có chứng cứ, thì không thể nói chắc chắn là thủ phạm. (suy đoán về điều chưa xác nhận)"
+          },
+          {
+            "id": "ex-n1-l7-s3-2",
+            "tokens": [
+              {
+                "id": "t-l7s3-10",
+                "text": "たいほ",
+                "isKeyGrammar": true,
+                "kanji": "逮捕",
+                "furigana": "たいほ"
+              },
+              {
+                "id": "t-l7s3-11",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s3-12",
+                "text": "りゆう",
+                "isKeyGrammar": true,
+                "kanji": "理由",
+                "furigana": "りゆう"
+              },
+              {
+                "id": "t-l7s3-13",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s3-14",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s3-15",
+                "text": "しょうこ",
+                "isKeyGrammar": true,
+                "kanji": "証拠",
+                "furigana": "しょうこ"
+              },
+              {
+                "id": "t-l7s3-16",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s3-17",
+                "text": "ほかならない",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Lý do bắt giữ chính là chứng cứ, không gì khác. (khẳng định bản chất đã rõ)"
+          }
+        ]
+      },
+      {
+        "slideId": "n1-l7-s4",
+        "slideType": "grammar",
+        "title": "4. Kết hợp trong một đoạn suy luận điều tra hoàn chỉnh",
+        "grammarFormula": "証拠から〜に相違ない (suy đoán ai là thủ phạm) → 逮捕の理由は〜にほかならない (khẳng định lý do)",
+        "explanation": "Trong một bài suy luận điều tra hoàn chỉnh, thường dùng に相違ない để CÔNG BỐ kết luận về thủ phạm dựa trên chứng cứ, rồi dùng にほかならない để KHẲNG ĐỊNH rõ lý do/căn cứ của quyết định đó.",
+        "teacherTips": "Trong hội thoại trang trọng (phỏng vấn, báo cáo), luôn ưu tiên dạng lịch sự 〜に相違ありません / 〜にほかなりません.",
+        "culturalNotes": "Cấu trúc suy luận kinh điển của thám tử trong tiểu thuyết trinh thám Nhật: nêu chứng cứ → kết luận chắc chắn (に相違ない) → giải thích căn cứ (にほかならない).",
+        "examples": [
+          {
+            "id": "ex-n1-l7-s4-1",
+            "tokens": [
+              {
+                "id": "t-l7s4-1",
+                "text": "しょうこ",
+                "isKeyGrammar": true,
+                "kanji": "証拠",
+                "furigana": "しょうこ"
+              },
+              {
+                "id": "t-l7s4-2",
+                "text": "から",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s4-3",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s4-4",
+                "text": "かれ",
+                "isKeyGrammar": false,
+                "kanji": "彼",
+                "furigana": "かれ"
+              },
+              {
+                "id": "t-l7s4-5",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s4-6",
+                "text": "はんにん",
+                "isKeyGrammar": true,
+                "kanji": "犯人",
+                "furigana": "はんにん"
+              },
+              {
+                "id": "t-l7s4-7",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s4-8",
+                "text": "そういありません",
+                "isKeyGrammar": true,
+                "kanji": "相違ありません",
+                "furigana": "そういありません"
+              }
+            ],
+            "meaningVi": "Từ chứng cứ, chắc chắn anh ta là thủ phạm."
+          },
+          {
+            "id": "ex-n1-l7-s4-2",
+            "tokens": [
+              {
+                "id": "t-l7s4-9",
+                "text": "たいほ",
+                "isKeyGrammar": true,
+                "kanji": "逮捕",
+                "furigana": "たいほ"
+              },
+              {
+                "id": "t-l7s4-10",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s4-11",
+                "text": "りゆう",
+                "isKeyGrammar": true,
+                "kanji": "理由",
+                "furigana": "りゆう"
+              },
+              {
+                "id": "t-l7s4-12",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s4-13",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s4-14",
+                "text": "しょうこ",
+                "isKeyGrammar": true,
+                "kanji": "証拠",
+                "furigana": "しょうこ"
+              },
+              {
+                "id": "t-l7s4-15",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l7s4-16",
+                "text": "ほかなりません",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Lý do bắt giữ chính là chứng cứ, không gì khác."
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n1-7-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "田中",
+        "speakerRole": "Người dẫn chương trình",
         "tokens": [
           {
-            "id": "tok-n1-7-d1",
-            "text": "この文法のポイントを"
+            "id": "d7-1",
+            "text": "げんば",
+            "isKeyGrammar": true,
+            "kanji": "現場",
+            "furigana": "げんば"
           },
           {
-            "id": "tok-n1-7-d2",
-            "text": "復習しましょう。"
+            "id": "d7-2",
+            "text": "で",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-3",
+            "text": "なに",
+            "isKeyGrammar": false,
+            "kanji": "何",
+            "furigana": "なに"
+          },
+          {
+            "id": "d7-4",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-5",
+            "text": "ありましたか",
+            "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Ở hiện trường đã có gì?"
+      },
+      {
+        "id": "dia-n1-7-2",
+        "speaker": "山本",
+        "speakerRole": "Thám tử",
+        "tokens": [
+          {
+            "id": "d7-6",
+            "text": "しょうこ",
+            "isKeyGrammar": true,
+            "kanji": "証拠",
+            "furigana": "しょうこ"
+          },
+          {
+            "id": "d7-7",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-8",
+            "text": "たくさん",
+            "isKeyGrammar": false,
+            "kanji": "沢山",
+            "furigana": "たくさん"
+          },
+          {
+            "id": "d7-9",
+            "text": "ありました",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Có rất nhiều chứng cứ."
+      },
+      {
+        "id": "dia-n1-7-3",
+        "speaker": "田中",
+        "speakerRole": "Người dẫn chương trình",
+        "tokens": [
+          {
+            "id": "d7-10",
+            "text": "はんにん",
+            "isKeyGrammar": true,
+            "kanji": "犯人",
+            "furigana": "はんにん"
+          },
+          {
+            "id": "d7-11",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-12",
+            "text": "だれ",
+            "isKeyGrammar": false,
+            "kanji": "誰",
+            "furigana": "だれ"
+          },
+          {
+            "id": "d7-13",
+            "text": "ですか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Thủ phạm là ai?"
+      },
+      {
+        "id": "dia-n1-7-4",
+        "speaker": "山本",
+        "speakerRole": "Thám tử",
+        "tokens": [
+          {
+            "id": "d7-14",
+            "text": "しょうこ",
+            "isKeyGrammar": true,
+            "kanji": "証拠",
+            "furigana": "しょうこ"
+          },
+          {
+            "id": "d7-15",
+            "text": "から",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-16",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-17",
+            "text": "かれ",
+            "isKeyGrammar": false,
+            "kanji": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "id": "d7-18",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-19",
+            "text": "はんにん",
+            "isKeyGrammar": true,
+            "kanji": "犯人",
+            "furigana": "はんにん"
+          },
+          {
+            "id": "d7-20",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-21",
+            "text": "そういありません",
+            "isKeyGrammar": true,
+            "kanji": "相違ありません",
+            "furigana": "そういありません"
+          }
+        ],
+        "meaningVi": "Từ chứng cứ, chắc chắn anh ta là thủ phạm."
+      },
+      {
+        "id": "dia-n1-7-5",
+        "speaker": "田中",
+        "speakerRole": "Người dẫn chương trình",
+        "tokens": [
+          {
+            "id": "d7-22",
+            "text": "どうき",
+            "isKeyGrammar": true,
+            "kanji": "動機",
+            "furigana": "どうき"
+          },
+          {
+            "id": "d7-23",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-24",
+            "text": "なん",
+            "isKeyGrammar": false,
+            "kanji": "何",
+            "furigana": "なん"
+          },
+          {
+            "id": "d7-25",
+            "text": "ですか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Động cơ là gì?"
+      },
+      {
+        "id": "dia-n1-7-6",
+        "speaker": "山本",
+        "speakerRole": "Thám tử",
+        "tokens": [
+          {
+            "id": "d7-26",
+            "text": "どうき",
+            "isKeyGrammar": true,
+            "kanji": "動機",
+            "furigana": "どうき"
+          },
+          {
+            "id": "d7-27",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-28",
+            "text": "おかね",
+            "isKeyGrammar": false,
+            "kanji": "お金",
+            "furigana": "おかね"
+          },
+          {
+            "id": "d7-29",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-30",
+            "text": "もんだい",
+            "isKeyGrammar": true,
+            "kanji": "問題",
+            "furigana": "もんだい"
+          },
+          {
+            "id": "d7-31",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-32",
+            "text": "そういありません",
+            "isKeyGrammar": true,
+            "kanji": "相違ありません",
+            "furigana": "そういありません"
+          }
+        ],
+        "meaningVi": "Động cơ chắc chắn là vấn đề tiền bạc."
+      },
+      {
+        "id": "dia-n1-7-7",
+        "speaker": "田中",
+        "speakerRole": "Người dẫn chương trình",
+        "tokens": [
+          {
+            "id": "d7-33",
+            "text": "なぜ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-34",
+            "text": "うたがいましたか",
+            "isKeyGrammar": false,
+            "kanji": "疑いましたか",
+            "furigana": "うたがいましたか"
+          }
+        ],
+        "meaningVi": "Tại sao đã nghi ngờ [anh ta]?"
+      },
+      {
+        "id": "dia-n1-7-8",
+        "speaker": "山本",
+        "speakerRole": "Thám tử",
+        "tokens": [
+          {
+            "id": "d7-35",
+            "text": "すいり",
+            "isKeyGrammar": true,
+            "kanji": "推理",
+            "furigana": "すいり"
+          },
+          {
+            "id": "d7-36",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-37",
+            "text": "けっか",
+            "isKeyGrammar": true,
+            "kanji": "結果",
+            "furigana": "けっか"
+          },
+          {
+            "id": "d7-38",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-39",
+            "text": "ほかなりません",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Đó chính là kết quả của sự suy luận, không gì khác."
+      },
+      {
+        "id": "dia-n1-7-9",
+        "speaker": "田中",
+        "speakerRole": "Người dẫn chương trình",
+        "tokens": [
+          {
+            "id": "d7-40",
+            "text": "いつ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-41",
+            "text": "たいほします",
+            "isKeyGrammar": true,
+            "kanji": "逮捕します",
+            "furigana": "たいほします"
+          },
+          {
+            "id": "d7-42",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Khi nào sẽ bắt giữ?"
+      },
+      {
+        "id": "dia-n1-7-10",
+        "speaker": "山本",
+        "speakerRole": "Thám tử",
+        "tokens": [
+          {
+            "id": "d7-43",
+            "text": "たいほ",
+            "isKeyGrammar": true,
+            "kanji": "逮捕",
+            "furigana": "たいほ"
+          },
+          {
+            "id": "d7-44",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-45",
+            "text": "りゆう",
+            "isKeyGrammar": true,
+            "kanji": "理由",
+            "furigana": "りゆう"
+          },
+          {
+            "id": "d7-46",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-47",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-48",
+            "text": "しょうこ",
+            "isKeyGrammar": true,
+            "kanji": "証拠",
+            "furigana": "しょうこ"
+          },
+          {
+            "id": "d7-49",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d7-50",
+            "text": "ほかなりません",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Lý do bắt giữ chính là chứng cứ, không gì khác."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n1-7-1",
-        "question": "Chọn cấu trúc chuẩn xác mang ý nghĩa: 'Khẳng định đanh thép (にほかならない & に相違ない)'",
+        "question": "「彼が犯人に相違ない」 — に相違ない diễn tả điều gì?",
         "options": [
-          "Thể thông thường + にほかならない (chính là, không gì khác ngoài)",
-          "V-た + ところで",
-          "N + にかこつけて",
-          "V-る + べく"
+          "Suy đoán CHẮC CHẮN dựa trên bằng chứng — trang trọng hơn にちがいない",
+          "Khẳng định bản chất/nguyên nhân của một sự việc đã rõ",
+          "Sự cho phép làm việc gì đó",
+          "Lời khuyên nhẹ nhàng"
         ],
         "correctIndex": 0,
-        "explanation": "Cấu trúc hàn lâm N1 chuẩn xác: Thể thông thường + にほかならない (chính là, không gì khác ngoài)",
-        "hint": "Xem công thức ngữ pháp N1 cao cấp."
+        "explanation": "に相違ない giống にちがいない nhưng trang trọng hơn, dùng khi suy đoán chắc chắn dựa trên chứng cứ/lý luận.",
+        "hint": "Xem cấu trúc に相違ない ở slide 1."
+      },
+      {
+        "id": "ex-q-n1-7-2",
+        "question": "「努力の結果にほかならない」 — にほかならない dùng để làm gì?",
+        "options": [
+          "Khẳng định mạnh rằng đó CHÍNH LÀ bản chất/nguyên nhân thực sự, không gì khác",
+          "Suy đoán về một sự việc chưa xác nhận",
+          "Xin phép làm việc gì đó",
+          "Đưa ra lời khuyên"
+        ],
+        "correctIndex": 0,
+        "explanation": "にほかならない dùng để khẳng định bản chất/nguyên nhân THỰC SỰ của một sự việc đã biết, loại trừ mọi khả năng khác.",
+        "hint": "Xem cấu trúc にほかならない ở slide 2."
+      },
+      {
+        "id": "ex-q-n1-7-3",
+        "question": "Sự khác biệt cốt lõi giữa に相違ない và にほかならない là gì?",
+        "options": [
+          "に相違ない là SUY ĐOÁN về điều chưa xác nhận; にほかならない là KHẲNG ĐỊNH bản chất của điều đã biết",
+          "Hoàn toàn giống nhau, dùng thay thế được cho nhau",
+          "に相違ない chỉ dùng cho câu hỏi",
+          "にほかならない chỉ dùng cho phủ định"
+        ],
+        "correctIndex": 0,
+        "explanation": "に相違ない suy đoán một sự thật chưa rõ; にほかならない khẳng định bản chất/nguyên nhân của một sự việc đã xảy ra.",
+        "hint": "Xem bảng so sánh ở slide 3."
+      },
+      {
+        "id": "ex-q-n1-7-4",
+        "question": "Dạng lịch sự của に相違ない và にほかならない là gì?",
+        "options": [
+          "に相違ありません và にほかなりません",
+          "に相違でした và にほかならなかった",
+          "に相違ますです và にほかなりです",
+          "Không có dạng lịch sự"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cả hai đều chuyển đuôi ない thành ありません/なりません để thành dạng lịch sự trang trọng.",
+        "hint": "Xem lưu ý ngữ pháp ở slide 1 và 4."
+      },
+      {
+        "id": "ex-q-n1-7-5",
+        "question": "「証拠がなければ、犯人に相違ないとは言えません」 nghĩa là:",
+        "options": [
+          "Nếu không có chứng cứ, thì không thể nói chắc chắn là thủ phạm",
+          "Dù không có chứng cứ vẫn chắc chắn là thủ phạm",
+          "Chứng cứ không quan trọng",
+          "Thủ phạm đã tự thú nhận"
+        ],
+        "correctIndex": 0,
+        "explanation": "Câu này nhấn mạnh に相違ない cần dựa trên CHỨNG CỨ mới có thể kết luận chắc chắn.",
+        "hint": "Áp dụng cấu trúc に相違ない cho ngữ cảnh thiếu chứng cứ."
+      },
+      {
+        "id": "ex-q-n1-7-6",
+        "question": "Tại sao に相違ない và にほかならない thường xuất hiện CÙNG NHAU trong một bài suy luận điều tra?",
+        "options": [
+          "Để công bố kết luận về thủ phạm (に相違ない) rồi khẳng định rõ căn cứ của kết luận đó (にほかならない)",
+          "Vì chúng có nghĩa giống hệt nhau nên dùng thay phiên",
+          "Không có lý do đặc biệt",
+          "Vì quy tắc ngữ pháp bắt buộc phải dùng chung"
+        ],
+        "correctIndex": 0,
+        "explanation": "に相違ない dùng để kết luận ai là thủ phạm; にほかならない dùng để khẳng định rõ căn cứ/lý do của kết luận ấy.",
+        "hint": "Xem kỹ thuật suy luận ở slide 4."
+      },
+      {
+        "id": "ex-q-n1-7-7",
+        "question": "「これは推理の結果にほかならない」 nghĩa là:",
+        "options": [
+          "Đây chính là kết quả của sự suy luận, không gì khác",
+          "Đây có thể là kết quả của sự may mắn",
+          "Đây không liên quan gì đến suy luận",
+          "Đây là một sự việc chưa được xác nhận"
+        ],
+        "correctIndex": 0,
+        "explanation": "にほかならない ở đây khẳng định BẢN CHẤT của kết quả: chính là suy luận, không phải điều gì khác.",
+        "hint": "Áp dụng cấu trúc にほかならない cho ngữ cảnh suy luận."
+      },
+      {
+        "id": "ex-q-n1-7-8",
+        "question": "Theo hội thoại, động cơ gây án được thám tử kết luận là gì?",
+        "options": [
+          "Vấn đề tiền bạc (お金の問題に相違ありません)",
+          "Sự thù hận cá nhân",
+          "Không có động cơ nào cả",
+          "Không được đề cập trong hội thoại"
+        ],
+        "correctIndex": 0,
+        "explanation": "Thám tử nói 「動機はお金の問題に相違ありません」.",
+        "hint": "Xem câu thoại thứ 6."
+      },
+      {
+        "id": "ex-q-n1-7-9",
+        "question": "Theo hội thoại, tại sao thám tử đã nghi ngờ nghi phạm?",
+        "options": [
+          "Đó chính là kết quả của sự suy luận (推理の結果にほかなりません)",
+          "Vì nghi phạm đã tự thú",
+          "Vì có người mách bảo",
+          "Không được đề cập trong hội thoại"
+        ],
+        "correctIndex": 0,
+        "explanation": "Thám tử nói 「推理の結果にほかなりません」.",
+        "hint": "Xem câu thoại thứ 8."
+      },
+      {
+        "id": "ex-q-n1-7-10",
+        "question": "Theo hội thoại, lý do bắt giữ nghi phạm là gì?",
+        "options": [
+          "Chính là chứng cứ (証拠にほかなりません)",
+          "Vì áp lực từ dư luận",
+          "Vì nghi phạm đã bỏ trốn",
+          "Không được đề cập trong hội thoại"
+        ],
+        "correctIndex": 0,
+        "explanation": "Thám tử kết luận 「逮捕の理由は、証拠にほかなりません」.",
+        "hint": "Xem câu thoại thứ 10."
       }
     ]
   },
