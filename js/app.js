@@ -1184,7 +1184,7 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
     currentLectureSteps = buildLecturePlan(lvl, lessonNum);
 
     if (!currentLectureSteps.length) {
-      showToast('Không tìm thấy giáo án của bài này.', 'error');
+      showToast('Không tìm thấy giáo án của bài này.', 'info');
       return;
     }
 
@@ -1330,7 +1330,7 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
       await ensureConnected();
     } catch (err) {
       if (err && err.message === 'timeout') {
-        showToast('Không vào được lớp — kiểm tra lại API Key và mạng.', 'error', 6000);
+        showToast('Không vào được lớp — kiểm tra lại API Key và mạng.', 'info', 6000);
       }
       updateLectureControlsUI();
       return;
@@ -1476,7 +1476,11 @@ CHỈ DẪN QUAN TRỌNG DÀNH CHO SENSEI:
       isRaisingHand = false;
       updateAskUI();
       updateLectureControlsUI();
-      addLog("Error", "Không thể mở Microphone: " + err.message);
+      // Day la loi HANH DONG cua chinh hoc vien vua bam (khong mo duoc mic) —
+      // phai cho thay, khac voi loi ky thuat noi bo. addLog("Error",...) se
+      // di qua showToast(kind='error') va bi an mat, hoc vien bam nut xong
+      // khong hieu vi sao khong co gi xay ra.
+      showToast('Không mở được micro: ' + (err.message || 'không rõ lý do') + '. Thử tải lại trang.', 'info', 7000);
     }
   }
 
@@ -2061,7 +2065,10 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
     const text = chatInput.value.trim();
     if (!text) return;
     if (!geminiClient.isConnected) {
-      showToast("Cần kết nối phiên trước khi gửi câu hỏi.", 'error');
+      // Day la loi HANH DONG (chua bam vao lop) chu khong phai loi ky thuat
+      // noi bo — dung kind='error' thi showToast() se an di, hoc vien go
+      // xong bam gui ma khong hieu vi sao im lang.
+      showToast("Cần vào lớp trước khi gửi câu hỏi — bấm nút ▶ để bắt đầu nhé.", 'info');
       return;
     }
 
@@ -3347,7 +3354,7 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
     // Vào lớp ngay khi mở trang, chạy ngầm. Từ đây nút Bắt đầu / Tạm dừng
     // chỉ còn điều khiển BUỔI GIẢNG, không dính tới việc kết nối nữa.
     ensureConnected().catch(() => {
-      showToast('Chưa vào được lớp — kiểm tra API Key hoặc mạng.', 'error', 6000);
+      showToast('Chưa vào được lớp — kiểm tra API Key hoặc mạng.', 'info', 6000);
     });
   } else {
     showToast('Chưa đọc được GEMINI_KEY1 từ .env — mở trang qua server.py rồi tải lại.', 'info', 10000);
