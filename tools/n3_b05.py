@@ -1,0 +1,246 @@
+# -*- coding: utf-8 -*-
+"""N3 — Bai 5: So sanh に比べて, tuong quan/thai do に対して.
+
+Tu vung minh hoa TU CHON tu pool mo data/jlpt-vocab/n3.csv (xem NOTICE.md).
+"""
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from n3_lib import v, k, t, ex, slide, line, q, lesson, merge
+from jlpt_pool import Pool
+
+L = 5
+pool = Pool("n3")
+
+VOCAB = [
+    v(1,  "くらべます", "比べます", "くらべます", "kurabemasu", "verb", "So sánh", "以前に 比べて = so với trước đây.", L),
+    v(2,  "たいします", "対します", "たいします", "taishimasu", "verb", "Đối với, hướng tới (thường dùng dạng に対して)", "その 質問に 対して = đối với câu hỏi đó.", L),
+    v(3,  "へんかします", "変化します", "へんかします", "henka shimasu", "verb", "Thay đổi, biến đổi", "環境が 変化しました = môi trường đã thay đổi.", L),
+    v(4,  "じょうしょうします", "上昇します", "じょうしょうします", "joushou shimasu", "verb", "Tăng lên, đi lên", "物価が 上昇しました = giá cả đã tăng lên.", L),
+    v(5,  "げんしょうします", "減少します", "げんしょうします", "genshou shimasu", "verb", "Giảm xuống", "人口が 減少しました = dân số đã giảm xuống.", L),
+    v(6,  "いぜん", "以前", "いぜん", "izen", "noun", "Trước đây, ngày xưa", "以前に 比べて、便利に なりました = so với trước đây, đã trở nên tiện lợi hơn.", L),
+    v(7,  "げんざい", "現在", "げんざい", "genzai", "noun", "Hiện tại, bây giờ", "現在に 比べて、昔は 不便でした = so với hiện tại, ngày xưa bất tiện hơn.", L),
+    v(8,  "かんきょう", "環境", "かんきょう", "kankyou", "noun", "Môi trường", "環境問題に 対して 関心が あります = tôi quan tâm đối với vấn đề môi trường.", L),
+    v(9,  "とかい", "都会", "とかい", "tokai", "noun", "Thành thị, đô thị", "Đã gặp N4 bài 35.", L),
+    v(10, "いなか", "田舎", "いなか", "inaka", "noun", "Vùng quê, nông thôn", "Đã gặp N4 bài 35.", L),
+    v(11, "ぶっか", "物価", "ぶっか", "bukka", "noun", "Vật giá, giá cả sinh hoạt", "都会は 田舎に 比べて 物価が 高いです = thành thị so với nông thôn thì giá cả cao hơn.", L),
+    v(12, "じんこう", "人口", "じんこう", "jinkou", "noun", "Dân số", "Đã gặp bài 27 (N4).", L),
+    v(13, "かんしん", "関心", "かんしん", "kanshin", "noun", "Sự quan tâm, hứng thú", "政治に 対する 関心が 低いです = sự quan tâm đối với chính trị thấp.", L),
+    v(14, "たいど", "態度", "たいど", "taido", "noun", "Thái độ", "彼の 態度に 対して 怒りました = tôi đã tức giận với thái độ của anh ấy.", L),
+    v(15, "いけん", "意見", "いけん", "iken", "noun", "Ý kiến, quan điểm", "Đã gặp N4 bài 26.", L),
+    v(16, "べんり", "便利", "べんり", "benri", "adjective", "Tiện lợi", "Đã gặp N5 bài 8.", L),
+    v(17, "ふべん", "不便", "ふべん", "fuben", "adjective", "Bất tiện", "Đã gặp N4 bài 35.", L),
+    v(18, "むかし", "昔", "むかし", "mukashi", "noun", "Ngày xưa, thuở xưa", "昔に 比べて = so với ngày xưa.", L),
+    v(19, "せいかつ", "生活", "せいかつ", "seikatsu", "noun", "Cuộc sống, sinh hoạt", "Đã gặp N4 bài 28.", L),
+    v(20, "しゃかい", "社会", "しゃかい", "shakai", "noun", "Xã hội", "現代 社会に 対する 意見 = ý kiến đối với xã hội hiện đại.", L),
+]
+
+KANJI = [
+    k(1, "比", "TỈ", 4, ["ヒ (hi)"], ["くら(べる)"], "So sánh.",
+      [("比べます", "くらべます", "So sánh"), ("比較", "ひかく", "So sánh (Hán Việt)")], L),
+    k(2, "対", "ĐỐI", 7, ["タイ (tai)"], [], "Đối diện, đối với.",
+      [("対して", "たいして", "Đối với"), ("反対", "はんたい", "Phản đối"), ("絶対", "ぜったい", "Tuyệt đối")], L),
+    k(3, "境", "CẢNH", 14, ["キョウ (kyou)"], ["さかい"], "Ranh giới, hoàn cảnh.",
+      [("環境", "かんきょう", "Môi trường"), ("国境", "こっきょう", "Biên giới")], L),
+    k(4, "価", "GIÁ", 8, ["カ (ka)"], [], "Giá cả, giá trị.",
+      [("物価", "ぶっか", "Vật giá"), ("価格", "かかく", "Giá cả"), ("評価", "ひょうか", "Đánh giá")], L),
+    k(5, "態", "THÁI", 14, ["タイ (tai)"], [], "Hình thái, trạng thái.",
+      [("態度", "たいど", "Thái độ"), ("状態", "じょうたい", "Trạng thái")], L),
+]
+
+SLIDES = [
+    slide(L, 1,
+        "1. So sánh với mốc trước đó: N に比べて、[sự thay đổi]",
+        "N + に比べて、[so sánh/thay đổi]   (đặt một MỐC để so sánh, thường là thời gian hoặc đối tượng khác)",
+        "に比べて (so với) đặt ra một MỐC SO SÁNH rõ ràng — khác より (N5 bài 12, so sánh đơn giản "
+        "hai vật), に比べて thường dùng cho so sánh có DỮ LIỆU/SỰ THAY ĐỔI theo thời gian.",
+        [
+            ex(L, 1, 1, [t("t-l5s1-1", "いぜん", "以前", "いぜん", key=True), t("t-l5s1-2", "に", key=True),
+                         t("t-l5s1-3", "くらべて", "比べて", "くらべて", key=True), t("t-l5s1-4", "、"),
+                         t("t-l5s1-5", "せいかつ", "生活", "せいかつ"), t("t-l5s1-6", "が"), t("t-l5s1-7", "べんり", "便利", "べんり"),
+                         t("t-l5s1-8", "に"), t("t-l5s1-9", "なりました", key=True)],
+               "So với trước đây, cuộc sống đã trở nên tiện lợi hơn."),
+            ex(L, 1, 2, [t("t-l5s1-10", "とかい", "都会", "とかい", key=True), t("t-l5s1-11", "は"),
+                         t("t-l5s1-12", "いなか", "田舎", "いなか", key=True), t("t-l5s1-13", "に", key=True),
+                         t("t-l5s1-14", "くらべて", "比べて", "くらべて", key=True), t("t-l5s1-15", "、"),
+                         t("t-l5s1-16", "ぶっか", "物価", "ぶっか", key=True), t("t-l5s1-17", "が"),
+                         t("t-l5s1-18", "たかい", "高い", "たかい"), t("t-l5s1-19", "です")],
+               "Thành thị so với nông thôn thì giá cả cao hơn."),
+        ],
+        tips="に比べて thường xuất hiện trong báo cáo, thống kê, bài luận vì tính KHÁCH QUAN — hơn hẳn より vốn thân mật, dùng nhiều trong hội thoại.",
+        culture="都会は田舎に比べて物価が高いです là nhận định thường được nêu khi bàn về việc chọn nơi sinh sống ở Nhật — chủ đề dân sinh phổ biến."),
+
+    slide(L, 2,
+        "2. Đối tượng của thái độ/hành động: N に対して、[thái độ/hành động]",
+        "N + に対して、[thái độ/hành động]   (hướng THẲNG một hành động/cảm xúc VÀO một đối tượng cụ thể)",
+        "に対して đánh dấu ĐỐI TƯỢNG mà một thái độ, cảm xúc, hoặc hành động HƯỚNG TỚI — khác "
+        "に比べて (so sánh), に対して nhấn MỐI QUAN HỆ TRỰC TIẾP giữa chủ thể và đối tượng.",
+        [
+            ex(L, 2, 1, [t("t-l5s2-1", "かんきょう", "環境", "かんきょう", key=True), t("t-l5s2-2", "もんだい", "問題", "もんだい"),
+                         t("t-l5s2-3", "に", key=True), t("t-l5s2-4", "たいして", "対して", "たいして", key=True),
+                         t("t-l5s2-5", "、"), t("t-l5s2-6", "かんしん", "関心", "かんしん", key=True), t("t-l5s2-7", "が"),
+                         t("t-l5s2-8", "あります", "有ります", "あります")],
+               "Tôi có sự quan tâm đối với vấn đề môi trường."),
+            ex(L, 2, 2, [t("t-l5s2-9", "かれ", "彼", "かれ"), t("t-l5s2-10", "の"), t("t-l5s2-11", "たいど", "態度", "たいど", key=True),
+                         t("t-l5s2-12", "に", key=True), t("t-l5s2-13", "たいして", "対して", "たいして", key=True),
+                         t("t-l5s2-14", "おこりました", "怒りました", "おこりました")],
+               "Tôi đã tức giận với thái độ của anh ấy."),
+        ],
+        tips="に対する (dạng bổ nghĩa danh từ): 環境に対する関心 (sự quan tâm ĐỐI VỚI môi trường) — cần đổi して thành する khi đứng trước danh từ.",
+        culture="社会に対する意見 (ý kiến đối với xã hội) là cụm từ phổ biến trong bài luận, phỏng vấn về quan điểm xã hội tại Nhật."),
+
+    slide(L, 3,
+        "3. Phân biệt に比べて và に対して",
+        "に比べて: SO SÁNH giữa hai đối tượng/thời điểm　vs　に対して: HƯỚNG một thái độ/hành động VÀO một đối tượng",
+        "Hai cấu trúc dễ nhầm vì đều có に + động từ — nhưng に比べて luôn cần HAI THỨ để so sánh, "
+        "còn に対して chỉ cần MỘT đối tượng để hướng thái độ/hành động vào.",
+        [
+            ex(L, 3, 1, [t("t-l5s3-1", "むかし", "昔", "むかし", key=True), t("t-l5s3-2", "に", key=True),
+                         t("t-l5s3-3", "くらべて", "比べて", "くらべて", key=True), t("t-l5s3-4", "、"),
+                         t("t-l5s3-5", "じんこう", "人口", "じんこう", key=True), t("t-l5s3-6", "が"),
+                         t("t-l5s3-7", "げんしょう", "減少", "げんしょう"), t("t-l5s3-8", "しました")],
+               "So với ngày xưa, dân số đã giảm xuống. (に比べて: so sánh 2 mốc thời gian)"),
+            ex(L, 3, 2, [t("t-l5s3-9", "せいふ", "政府", "せいふ"), t("t-l5s3-10", "は"),
+                         t("t-l5s3-11", "この"), t("t-l5s3-12", "もんだい", "問題", "もんだい"), t("t-l5s3-13", "に", key=True),
+                         t("t-l5s3-14", "たいして", "対して", "たいして", key=True), t("t-l5s3-15", "、"),
+                         t("t-l5s3-16", "なにも", "何も", "なにも"), t("t-l5s3-17", "しませんでした")],
+               "Chính phủ đã không làm gì đối với vấn đề này. (に対して: hướng hành động vào MỘT đối tượng)"),
+        ],
+        tips="Mẹo phân biệt: nếu câu có 'A so với B' → に比べて; nếu câu có 'đối với X, [ai đó] làm/cảm thấy gì' → に対して.",
+        culture="Cả hai cấu trúc đều xuất hiện dày đặc trong tin tức, báo cáo thống kê tiếng Nhật — kỹ năng đọc hiểu N3 cần nắm vững cả hai."),
+
+    slide(L, 4,
+        "4. Kết hợp với thay đổi theo thời gian: 上昇します／減少します",
+        "N が [thời gian] に比べて、上昇/減少 しました",
+        "Hai động từ 上昇する (tăng) và 減少する (giảm) rất hay xuất hiện cùng に比べて trong VĂN "
+        "PHONG THỐNG KÊ, BÁO CÁO — mô tả xu hướng biến đổi theo thời gian một cách khách quan.",
+        [
+            ex(L, 4, 1, [t("t-l5s4-1", "ぶっか", "物価", "ぶっか", key=True), t("t-l5s4-2", "は"),
+                         t("t-l5s4-3", "きょねん", "去年", "きょねん"), t("t-l5s4-4", "に", key=True),
+                         t("t-l5s4-5", "くらべて", "比べて", "くらべて", key=True), t("t-l5s4-6", "、"),
+                         t("t-l5s4-7", "じょうしょう", "上昇", "じょうしょう", key=True), t("t-l5s4-8", "しました")],
+               "So với năm ngoái, vật giá đã tăng lên."),
+            ex(L, 4, 2, [t("t-l5s4-9", "とかい", "都会", "とかい"), t("t-l5s4-10", "の"), t("t-l5s4-11", "じんこう", "人口", "じんこう", key=True),
+                         t("t-l5s4-12", "が"), t("t-l5s4-13", "げんしょう", "減少", "げんしょう", key=True), t("t-l5s4-14", "して", key=True),
+                         t("t-l5s4-15", "います", "居ます", "います")],
+               "Dân số thành thị đang giảm xuống."),
+        ],
+        tips="上昇/減少 trang trọng, khách quan hơn nhiều so với 増える/減る thông thường — hợp với văn phong báo cáo, tin tức hơn hội thoại đời thường.",
+        culture="都会の人口が減少しています là một chủ đề xã hội thực tế đang được bàn luận nhiều ở Nhật do tình trạng già hóa dân số và di cư."),
+]
+
+DIALOGUE = [
+    line(L, 1, "田中", "Đồng nghiệp",
+         [t("d5-1", "さいきん", "最近", "さいきん"), t("d5-2", "、"), t("d5-3", "ぶっか", "物価", "ぶっか", key=True),
+          t("d5-4", "が"), t("d5-5", "たかく", "高く", "たかく"), t("d5-6", "なりました", key=True), t("d5-7", "ね")],
+         "Gần đây, vật giá đã tăng lên nhỉ."),
+    line(L, 2, "サントス", "Đồng nghiệp",
+         [t("d5-8", "はい"), t("d5-9", "。"), t("d5-10", "いぜん", "以前", "いぜん", key=True), t("d5-11", "に", key=True),
+          t("d5-12", "くらべて", "比べて", "くらべて", key=True), t("d5-13", "、"), t("d5-14", "じょうしょう", "上昇", "じょうしょう", key=True),
+          t("d5-15", "しました", "しました", "しました")],
+         "Vâng. So với trước đây, đã tăng lên rồi."),
+    line(L, 3, "田中", "Đồng nghiệp",
+         [t("d5-16", "とかい", "都会", "とかい", key=True), t("d5-17", "は"), t("d5-18", "とくに"),
+          t("d5-19", "たかい", "高い", "たかい"), t("d5-20", "です", "です", "です"), t("d5-21", "ね")],
+         "Thành thị đặc biệt đắt nhỉ."),
+    line(L, 4, "サントス", "Đồng nghiệp",
+         [t("d5-22", "そうですね"), t("d5-23", "。"), t("d5-24", "いなか", "田舎", "いなか", key=True), t("d5-25", "に", key=True),
+          t("d5-26", "くらべて", "比べて", "くらべて", key=True), t("d5-27", "、"), t("d5-28", "とかい", "都会", "とかい"),
+          t("d5-29", "の"), t("d5-30", "ぶっか", "物価", "ぶっか"), t("d5-31", "は"), t("d5-32", "たかい", "高い", "たかい"),
+          t("d5-33", "です")],
+         "Đúng vậy nhỉ. So với nông thôn, vật giá thành thị cao hơn."),
+    line(L, 5, "田中", "Đồng nghiệp",
+         [t("d5-34", "かんきょう", "環境", "かんきょう", key=True), t("d5-35", "もんだい", "問題", "もんだい"), t("d5-36", "に", key=True),
+          t("d5-37", "たいして", "対して", "たいして", key=True), t("d5-38", "、"), t("d5-39", "かんしん", "関心", "かんしん", key=True),
+          t("d5-40", "が"), t("d5-41", "ありますか")],
+         "Anh có quan tâm đối với vấn đề môi trường không?"),
+    line(L, 6, "サントス", "Đồng nghiệp",
+         [t("d5-42", "はい"), t("d5-43", "、"), t("d5-44", "とても"), t("d5-45", "かんしん", "関心", "かんしん"),
+          t("d5-46", "が"), t("d5-47", "あります", "有ります", "あります")],
+         "Vâng, tôi rất quan tâm."),
+    line(L, 7, "田中", "Đồng nghiệp",
+         [t("d5-48", "じんこう", "人口", "じんこう", key=True), t("d5-49", "も"), t("d5-50", "げんしょう", "減少", "げんしょう", key=True),
+          t("d5-51", "して", key=True), t("d5-52", "いますね")],
+         "Dân số cũng đang giảm nữa nhỉ."),
+    line(L, 8, "サントス", "Đồng nghiệp",
+         [t("d5-53", "そうですね"), t("d5-54", "。"), t("d5-55", "むかし", "昔", "むかし", key=True), t("d5-56", "に", key=True),
+          t("d5-57", "くらべて", "比べて", "くらべて", key=True), t("d5-58", "、"), t("d5-59", "しゃかい", "社会", "しゃかい", key=True),
+          t("d5-60", "が"), t("d5-61", "おおきく", "大きく", "おおきく"), t("d5-62", "かわりました", "変わりました", "かわりました")],
+         "Đúng vậy. So với ngày xưa, xã hội đã thay đổi rất nhiều."),
+    line(L, 9, "田中", "Đồng nghiệp",
+         [t("d5-63", "この"), t("d5-64", "しゃかい", "社会", "しゃかい"), t("d5-65", "の"), t("d5-66", "へんか", "変化", "へんか"),
+          t("d5-67", "に", key=True), t("d5-68", "たいして", "対して", "たいして", key=True), t("d5-69", "、"),
+          t("d5-70", "どう"), t("d5-71", "おもいます", "思います", "おもいます"), t("d5-72", "か")],
+         "Đối với sự thay đổi này của xã hội, anh nghĩ sao?"),
+    line(L, 10, "サントス", "Đồng nghiệp",
+         [t("d5-73", "わたし", "私", "わたし"), t("d5-74", "は"), t("d5-75", "いい"), t("d5-76", "へんか", "変化", "へんか"),
+          t("d5-77", "だ"), t("d5-78", "と"), t("d5-79", "おもいます", "思います", "おもいます")],
+         "Tôi nghĩ đó là sự thay đổi tốt."),
+]
+
+EXERCISES = [
+    q(L, 1, "「以前に比べて、生活が便利になりました」 — に比べて dùng để:",
+      ["Đặt mốc so sánh (trước đây) để đối chiếu với hiện tại",
+       "Hướng thái độ vào một đối tượng", "Ra lệnh so sánh",
+       "Phủ định việc so sánh"], 0,
+      "に比べて đặt một MỐC (以前) làm cơ sở so sánh, khác より chỉ so sánh đơn giản.",
+      "Xem cấu trúc に比べて ở slide 1."),
+    q(L, 2, "「環境問題に対して、関心があります」 — に対して dùng để:",
+      ["Đánh dấu ĐỐI TƯỢNG mà một cảm xúc/thái độ hướng tới",
+       "So sánh hai đối tượng", "Chỉ nơi chốn", "Chỉ thời gian"], 0,
+      "に対して đánh dấu đối tượng cụ thể mà thái độ/cảm xúc (関心, quan tâm) hướng vào.",
+      "Xem cấu trúc に対して ở slide 2."),
+    q(L, 3, "に比べて và に対して khác nhau chủ yếu ở:",
+      ["に比べて cần HAI đối tượng để SO SÁNH; に対して chỉ cần MỘT đối tượng để HƯỚNG thái độ vào",
+       "Hoàn toàn giống nhau", "に比べて chỉ dùng cho câu hỏi",
+       "に対して chỉ dùng cho phủ định"], 0,
+      "Đây là điểm khác biệt cốt lõi: số lượng đối tượng và mối quan hệ (so sánh vs hướng tới).",
+      "Xem so sánh trực tiếp ở slide 3."),
+    q(L, 4, "「彼の態度に対して怒りました」 nghĩa là:",
+      ["Tôi đã tức giận VỚI thái độ của anh ấy (thái độ là đối tượng của cảm xúc)",
+       "Tôi đã so sánh thái độ của anh ấy với người khác", "Tôi không tức giận",
+       "Anh ấy đã tức giận với tôi"], 0,
+      "に対して hướng cảm xúc tức giận (怒りました) vào đối tượng cụ thể (態度 - thái độ của anh ấy).",
+      "Áp dụng đúng nghĩa に対して."),
+    q(L, 5, "Dạng bổ nghĩa danh từ của に対して là gì?",
+      ["に対する (đổi して thành する)", "に対しての", "に対してな", "Không có dạng bổ nghĩa danh từ"], 0,
+      "Khi đứng trước danh từ, に対して đổi thành に対する: 環境に対する関心 (sự quan tâm đối với môi trường).",
+      "Xem ghi chú ngữ pháp ở slide 2."),
+    q(L, 6, "「物価は去年に比べて、上昇しました」 — 上昇します mang văn phong nào?",
+      ["Trang trọng, khách quan, hợp với báo cáo/thống kê", "Thân mật, dùng trong hội thoại đời thường",
+       "Chỉ dùng trong thơ ca", "Chỉ dùng cho câu hỏi"], 0,
+      "上昇する/減少する trang trọng hơn 増える/減る thông thường, thường thấy trong văn phong báo cáo, tin tức.",
+      "Xem ghi chú văn phong ở slide 4."),
+    q(L, 7, "「都会は田舎に比べて物価が高いです」 — có bao nhiêu đối tượng được so sánh?",
+      ["Hai: đô thị và nông thôn", "Một: chỉ có đô thị", "Ba: đô thị, nông thôn và giá cả",
+       "Không có đối tượng so sánh nào"], 0,
+      "に比べて luôn cần HAI đối tượng để so sánh — ở đây là 都会 (đô thị) và 田舎 (nông thôn).",
+      "Đếm số đối tượng xuất hiện trong câu."),
+    q(L, 8, "「政府はこの問題に対して、何もしませんでした」 — に対して ở đây đánh dấu:",
+      ["Đối tượng (vấn đề) mà hành động (không làm gì) của chính phủ hướng tới",
+       "So sánh chính phủ với vấn đề", "Nơi chốn xảy ra vấn đề",
+       "Thời gian vấn đề xảy ra"], 0,
+      "に対して đánh dấu đối tượng (この問題) mà hành động của chủ thể (政府) hướng tới/liên quan tới.",
+      "Áp dụng đúng nghĩa に対して cho ngữ cảnh hành động."),
+    q(L, 9, "Trong hội thoại, Santos có quan tâm đến vấn đề môi trường không?",
+      ["Có, rất quan tâm", "Không quan tâm chút nào", "Không được hỏi", "Chỉ quan tâm một chút"], 0,
+      "Santos trả lời 「はい、とても関心があります」.",
+      "Xem câu thoại thứ 6."),
+    q(L, 10, "Santos nghĩ gì về sự thay đổi của xã hội?",
+      ["Đó là sự thay đổi tốt", "Đó là sự thay đổi xấu", "Không có ý kiến gì", "Xã hội không thay đổi"], 0,
+      "Santos nói 「私はいい変化だと思います」.",
+      "Xem câu thoại cuối cùng."),
+]
+
+LESSON = lesson(
+    L,
+    "Bài 5: So sánh & Tương quan (に比べて & に対して)",
+    "に比べて đặt một MỐC để SO SÁNH (thời gian/đối tượng khác, khách quan hơn より của N5 bài 12), "
+    "và に対して đánh dấu ĐỐI TƯỢNG mà một thái độ/cảm xúc/hành động HƯỚNG TỚI (dạng bổ nghĩa danh "
+    "từ: に対する) — hai cấu trúc thường gặp trong văn phong báo cáo, thống kê cùng cặp động từ "
+    "上昇する/減少する mô tả xu hướng biến đổi.",
+    VOCAB, KANJI, SLIDES, DIALOGUE, EXERCISES,
+)
+
+if __name__ == "__main__":
+    pool.mark_used([w["word"] for w in VOCAB if w["word"]], lesson=L)
+    merge([LESSON])
