@@ -28706,8 +28706,8 @@
   {
     "level": "N5",
     "lessonNumber": 21,
-    "title": "Bài 21: Ý kiến, Phán đoán & Trích dẫn (〜と 思います / 〜と 言いました / でしょう)",
-    "description": "Học cách bày tỏ suy nghĩ, quan điểm cá nhân (Tôi nghĩ rằng...), trích dẫn lời người khác và câu hỏi xác nhận đồng tình.",
+    "title": "Bài 21: Ý kiến, Phán đoán & Trích dẫn (〜と思います / 〜と言いました / でしょう)",
+    "description": "Nêu ý kiến cá nhân bằng [thể thông thường]と思います, trích dẫn lời người khác bằng [thể thông thường]と言いました, phán đoán không chắc chắn bằng でしょう (kèm たぶん/きっと), và so sánh sắc thái giữa 思います (ý kiến tức thời), 考えます (cân nhắc kỹ) và でしょう (phán đoán khách quan hơn).",
     "vocabList": [
       {
         "id": "voc-n5-21-1",
@@ -28716,8 +28716,8 @@
         "furigana": "おもいます",
         "romaji": "omoimasu",
         "wordType": "verb",
-        "meaningVi": "Nghĩ rằng",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "meaningVi": "Nghĩ rằng, cho rằng",
+        "accentNote": "と思います đứng sau cả câu (thể thông thường) để nêu ý kiến."
       },
       {
         "id": "voc-n5-21-2",
@@ -28727,47 +28727,187 @@
         "romaji": "iimasu",
         "wordType": "verb",
         "meaningVi": "Nói",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "accentNote": "と言いました để trích dẫn lời ai đó."
       },
       {
         "id": "voc-n5-21-3",
-        "word": "かちます",
-        "kanji": "勝ちます",
-        "furigana": "かちます",
-        "romaji": "kachimasu",
+        "word": "かんがえます",
+        "kanji": "考えます",
+        "furigana": "かんがえます",
+        "romaji": "kangaemasu",
         "wordType": "verb",
-        "meaningVi": "Thắng",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "meaningVi": "Suy nghĩ, cân nhắc",
+        "accentNote": "Khác 思います (ý kiến tức thời) — 考えます nhấn mạnh QUÁ TRÌNH suy nghĩ kỹ."
       },
       {
         "id": "voc-n5-21-4",
-        "word": "まけます",
-        "kanji": "負けます",
-        "furigana": "まけます",
-        "romaji": "makemasu",
-        "wordType": "verb",
-        "meaningVi": "Thua",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "word": "てんき",
+        "kanji": "天気",
+        "furigana": "てんき",
+        "romaji": "tenki",
+        "wordType": "noun",
+        "meaningVi": "Thời tiết",
+        "accentNote": "天気予報 = dự báo thời tiết."
       },
       {
         "id": "voc-n5-21-5",
-        "word": "やくにたちます",
-        "kanji": "役に立ちます",
-        "furigana": "yakunitachimasu",
-        "romaji": "yakunitachimasu",
-        "wordType": "verb",
-        "meaningVi": "Có ích, hữu dụng",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "word": "あめ",
+        "kanji": "雨",
+        "furigana": "あめ",
+        "romaji": "ame",
+        "wordType": "noun",
+        "meaningVi": "Mưa",
+        "accentNote": "雨が 降ります = trời mưa."
       },
       {
         "id": "voc-n5-21-6",
-        "word": "うごきます",
-        "kanji": "動きます",
-        "furigana": "うごきます",
-        "romaji": "ugokimasu",
-        "wordType": "verb",
-        "meaningVi": "Chuyển động, hoạt động",
-        "accentNote": "Phát âm chuẩn Tokyo."
+        "word": "ゆき",
+        "kanji": "雪",
+        "furigana": "ゆき",
+        "romaji": "yuki",
+        "wordType": "noun",
+        "meaningVi": "Tuyết",
+        "accentNote": "雪が 降ります = trời có tuyết rơi."
+      },
+      {
+        "id": "voc-n5-21-7",
+        "word": "たいふう",
+        "kanji": "台風",
+        "furigana": "たいふう",
+        "romaji": "taifuu",
+        "wordType": "noun",
+        "meaningVi": "Bão (bão nhiệt đới)",
+        "accentNote": "台風が 来ます = bão sắp tới."
+      },
+      {
+        "id": "voc-n5-21-8",
+        "word": "ニュース",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "nyuusu",
+        "wordType": "noun",
+        "meaningVi": "Tin tức",
+        "accentNote": "ニュースで 聞きました = tôi đã nghe được từ tin tức."
+      },
+      {
+        "id": "voc-n5-21-9",
+        "word": "しんぶん",
+        "kanji": "新聞",
+        "furigana": "しんぶん",
+        "romaji": "shinbun",
+        "wordType": "noun",
+        "meaningVi": "Báo, tờ báo",
+        "accentNote": "Đã gặp bài 2 — nay dùng làm nguồn trích dẫn."
+      },
+      {
+        "id": "voc-n5-21-10",
+        "word": "たいせつ",
+        "kanji": "大切",
+        "furigana": "たいせつ",
+        "romaji": "taisetsu",
+        "wordType": "adjective",
+        "meaningVi": "Quan trọng, quý giá",
+        "accentNote": "Tính từ な."
+      },
+      {
+        "id": "voc-n5-21-11",
+        "word": "たいへん",
+        "kanji": "大変",
+        "furigana": "たいへん",
+        "romaji": "taihen",
+        "wordType": "adjective",
+        "meaningVi": "Vất vả, ghê gớm (cả nghĩa xấu và mức độ mạnh)",
+        "accentNote": "Tính từ な. Cũng dùng làm cảm thán: 大変だ = gay rồi!"
+      },
+      {
+        "id": "voc-n5-21-12",
+        "word": "べんり",
+        "kanji": "便利",
+        "furigana": "べんり",
+        "romaji": "benri",
+        "wordType": "adjective",
+        "meaningVi": "Tiện lợi",
+        "accentNote": "Đã gặp bài 8."
+      },
+      {
+        "id": "voc-n5-21-13",
+        "word": "あした",
+        "kanji": "明日",
+        "furigana": "あした",
+        "romaji": "ashita",
+        "wordType": "noun",
+        "meaningVi": "Ngày mai",
+        "accentNote": "Đã gặp bài 4 — nay dùng trong câu phán đoán thời tiết."
+      },
+      {
+        "id": "voc-n5-21-14",
+        "word": "らいねん",
+        "kanji": "来年",
+        "furigana": "らいねん",
+        "romaji": "rainen",
+        "wordType": "noun",
+        "meaningVi": "Năm sau",
+        "accentNote": "Đã gặp bài 5."
+      },
+      {
+        "id": "voc-n5-21-15",
+        "word": "たぶん",
+        "kanji": "多分",
+        "furigana": "たぶん",
+        "romaji": "tabun",
+        "wordType": "adverb",
+        "meaningVi": "Có lẽ, chắc là",
+        "accentNote": "Thường đi cùng でしょう để giảm nhẹ mức độ chắc chắn."
+      },
+      {
+        "id": "voc-n5-21-16",
+        "word": "きっと",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "kitto",
+        "wordType": "adverb",
+        "meaningVi": "Chắc chắn, nhất định",
+        "accentNote": "Mức độ chắc chắn cao hơn たぶん."
+      },
+      {
+        "id": "voc-n5-21-17",
+        "word": "でしょう",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "deshou",
+        "wordType": "phrase",
+        "meaningVi": "Chắc là, phải không nào (phán đoán/xác nhận)",
+        "accentNote": "Xuống giọng = phán đoán; lên giọng = xác nhận đồng tình."
+      },
+      {
+        "id": "voc-n5-21-18",
+        "word": "せんせい",
+        "kanji": "先生",
+        "furigana": "せんせい",
+        "romaji": "sensei",
+        "wordType": "noun",
+        "meaningVi": "Thầy/cô giáo",
+        "accentNote": "Đã gặp bài 1 — nay dùng làm chủ thể của lời trích dẫn."
+      },
+      {
+        "id": "voc-n5-21-19",
+        "word": "がいこくじん",
+        "kanji": "外国人",
+        "furigana": "がいこくじん",
+        "romaji": "gaikokujin",
+        "wordType": "noun",
+        "meaningVi": "Người nước ngoài",
+        "accentNote": "Đã gặp bài 1 — nay dùng làm chủ đề ý kiến."
+      },
+      {
+        "id": "voc-n5-21-20",
+        "word": "むずかしい",
+        "kanji": "難しい",
+        "furigana": "むずかしい",
+        "romaji": "muzukashii",
+        "wordType": "adjective",
+        "meaningVi": "Khó",
+        "accentNote": "Đã gặp bài 8 — nay dùng làm nội dung ý kiến/trích dẫn."
       }
     ],
     "kanjiList": [
@@ -28777,17 +28917,27 @@
         "hanViet": "TƯ",
         "strokeCount": 9,
         "onyomi": [
-          "シ"
+          "シ (shi)"
         ],
         "kunyomi": [
-          "おも・う"
+          "おも(う)"
         ],
-        "meaningVi": "Suy nghĩ, tư tưởng",
+        "meaningVi": "Suy nghĩ, cảm nghĩ. Bộ 心 (tâm) bên dưới.",
         "commonWords": [
           {
-            "word": "思",
-            "furigana": "おも・う",
-            "meaningVi": "Suy nghĩ, tư tưởng"
+            "word": "思います",
+            "furigana": "おもいます",
+            "meaningVi": "Nghĩ rằng"
+          },
+          {
+            "word": "思い出",
+            "furigana": "おもいで",
+            "meaningVi": "Kỷ niệm"
+          },
+          {
+            "word": "意思",
+            "furigana": "いし",
+            "meaningVi": "Ý chí"
           }
         ]
       },
@@ -28797,107 +28947,1241 @@
         "hanViet": "NGÔN",
         "strokeCount": 7,
         "onyomi": [
-          "ゲン",
-          "ゴン"
+          "ゲン (gen)",
+          "ゴン (gon)"
         ],
         "kunyomi": [
-          "い・う"
+          "い(う)",
+          "こと"
         ],
-        "meaningVi": "Nói, ngôn ngữ",
+        "meaningVi": "Lời nói.",
         "commonWords": [
           {
-            "word": "言",
-            "furigana": "い・う",
-            "meaningVi": "Nói, ngôn ngữ"
+            "word": "言います",
+            "furigana": "いいます",
+            "meaningVi": "Nói"
+          },
+          {
+            "word": "言葉",
+            "furigana": "ことば",
+            "meaningVi": "Ngôn từ"
+          },
+          {
+            "word": "方言",
+            "furigana": "ほうげん",
+            "meaningVi": "Phương ngữ"
           }
         ]
       },
       {
         "id": "kan-n5-21-3",
-        "character": "勝",
-        "hanViet": "THẮNG",
-        "strokeCount": 12,
+        "character": "考",
+        "hanViet": "KHẢO",
+        "strokeCount": 6,
         "onyomi": [
-          "ショウ"
+          "コウ (kou)"
         ],
         "kunyomi": [
-          "か・つ"
+          "かんが(える)"
         ],
-        "meaningVi": "Chiến thắng",
+        "meaningVi": "Suy xét, cân nhắc.",
         "commonWords": [
           {
-            "word": "勝",
-            "furigana": "か・つ",
-            "meaningVi": "Chiến thắng"
+            "word": "考えます",
+            "furigana": "かんがえます",
+            "meaningVi": "Suy nghĩ"
+          },
+          {
+            "word": "考え方",
+            "furigana": "かんがえかた",
+            "meaningVi": "Cách suy nghĩ"
+          },
+          {
+            "word": "参考",
+            "furigana": "さんこう",
+            "meaningVi": "Tham khảo"
+          }
+        ]
+      },
+      {
+        "id": "kan-n5-21-4",
+        "character": "天",
+        "hanViet": "THIÊN",
+        "strokeCount": 4,
+        "onyomi": [
+          "テン (ten)"
+        ],
+        "kunyomi": [
+          "あめ",
+          "あま"
+        ],
+        "meaningVi": "Trời.",
+        "commonWords": [
+          {
+            "word": "天気",
+            "furigana": "てんき",
+            "meaningVi": "Thời tiết"
+          },
+          {
+            "word": "天国",
+            "furigana": "てんごく",
+            "meaningVi": "Thiên đường"
+          },
+          {
+            "word": "天才",
+            "furigana": "てんさい",
+            "meaningVi": "Thiên tài"
+          }
+        ]
+      },
+      {
+        "id": "kan-n5-21-5",
+        "character": "雨",
+        "hanViet": "VŨ",
+        "strokeCount": 8,
+        "onyomi": [
+          "ウ (u)"
+        ],
+        "kunyomi": [
+          "あめ"
+        ],
+        "meaningVi": "Mưa. Hình vẽ những giọt mưa rơi từ đám mây.",
+        "commonWords": [
+          {
+            "word": "雨",
+            "furigana": "あめ",
+            "meaningVi": "Mưa"
+          },
+          {
+            "word": "大雨",
+            "furigana": "おおあめ",
+            "meaningVi": "Mưa to"
+          },
+          {
+            "word": "雨季",
+            "furigana": "うき",
+            "meaningVi": "Mùa mưa"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n5-l21-s0",
+        "slideId": "n5-l21-s1",
         "slideType": "grammar",
-        "title": "Mẫu câu trọng tâm: Ý kiến, Phán đoán & Trích dẫn",
-        "grammarFormula": "[Thể thông thường 普通形] + と 思います / と 言いました",
-        "explanation": "Nội dung suy nghĩ hoặc lời trích dẫn luôn được đưa về thể ngắn (普通形) rồi gắn với trợ từ と.",
-        "teacherTips": "Hãy chú ý cách chia trợ từ và thể của động từ trong mẫu câu này nhé.",
+        "title": "1. Nêu ý kiến: [Câu thể thông thường] と 思います",
+        "grammarFormula": "[Câu ở thể thông thường] + と + 思います",
+        "explanation": "Toàn bộ câu TRƯỚC と phải chia ở THỂ THÔNG THƯỜNG (đã học ở bài 20) — kể cả khi diễn đạt cả câu nghe lịch sự nhờ 思います ở cuối. と đóng vai trò trích dẫn nội dung suy nghĩ.",
+        "teacherTips": "Lỗi hay gặp: chia câu trước と ở thể lịch sự (雨ですと思います) — SAI, phải là thể thông thường (雨だと).",
+        "culturalNotes": "Người Nhật hay mở đầu ý kiến bằng 「私は…と思います」 để giữ giọng khiêm tốn, tránh khẳng định tuyệt đối.",
         "examples": [
           {
-            "id": "ex-n5-l21-1",
+            "id": "ex-n5-l21-s1-1",
             "tokens": [
               {
-                "id": "tok-n5-21-1",
-                "text": "明日は 雨が 降ると 思います。",
+                "id": "t-l21s1-1",
+                "text": "あした",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s1-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s1-3",
+                "text": "あめ",
+                "isKeyGrammar": false,
+                "kanji": "雨",
+                "furigana": "あめ"
+              },
+              {
+                "id": "t-l21s1-4",
+                "text": "だ",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l21s1-5",
+                "text": "と",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l21s1-6",
+                "text": "おもいます",
+                "isKeyGrammar": true,
+                "kanji": "思います",
+                "furigana": "おもいます"
+              }
+            ],
+            "meaningVi": "Tôi nghĩ ngày mai sẽ mưa."
+          },
+          {
+            "id": "ex-n5-l21-s1-2",
+            "tokens": [
+              {
+                "id": "t-l21s1-7",
+                "text": "にほんご",
+                "isKeyGrammar": false,
+                "kanji": "日本語",
+                "furigana": "にほんご"
+              },
+              {
+                "id": "t-l21s1-8",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s1-9",
+                "text": "むずかしい",
+                "isKeyGrammar": true,
+                "kanji": "難しい",
+                "furigana": "むずかしい"
+              },
+              {
+                "id": "t-l21s1-10",
+                "text": "と",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l21s1-11",
+                "text": "おもいます",
+                "isKeyGrammar": false,
+                "kanji": "思います",
+                "furigana": "おもいます"
+              }
+            ],
+            "meaningVi": "Tôi nghĩ tiếng Nhật khó."
+          }
+        ]
+      },
+      {
+        "slideId": "n5-l21-s2",
+        "slideType": "grammar",
+        "title": "2. Trích dẫn lời nói: [Câu thể thông thường] と 言いました",
+        "grammarFormula": "[Câu ở thể thông thường] + と + 言いました",
+        "explanation": "Cùng khung と như 思います, nhưng dùng để THUẬT LẠI lời ai đó đã nói — と đóng vai trò trích dẫn trực tiếp nội dung lời nói.",
+        "teacherTips": "言っていました (thể ています của 言う) thường tự nhiên hơn 言いました khi trích dẫn nguồn tin đã nghe trước đó (báo, đài).",
+        "culturalNotes": "ニュースで 聞きました hoặc 新聞で 読みました hay đi kèm câu trích dẫn để chỉ rõ nguồn thông tin.",
+        "examples": [
+          {
+            "id": "ex-n5-l21-s2-1",
+            "tokens": [
+              {
+                "id": "t-l21s2-1",
+                "text": "せんせい",
+                "isKeyGrammar": false,
+                "kanji": "先生",
+                "furigana": "せんせい"
+              },
+              {
+                "id": "t-l21s2-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s2-3",
+                "text": "「",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s2-4",
+                "text": "あした",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s2-5",
+                "text": "テスト",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s2-6",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s2-7",
+                "text": "ある",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l21s2-8",
+                "text": "」",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s2-9",
+                "text": "と",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l21s2-10",
+                "text": "いいました",
+                "isKeyGrammar": true,
+                "kanji": "言いました",
+                "furigana": "いいました"
+              }
+            ],
+            "meaningVi": "Thầy giáo nói rằng ngày mai có kiểm tra."
+          },
+          {
+            "id": "ex-n5-l21-s2-2",
+            "tokens": [
+              {
+                "id": "t-l21s2-11",
+                "text": "てんきよほう",
+                "isKeyGrammar": false,
+                "kanji": "天気予報",
+                "furigana": "てんきよほう"
+              },
+              {
+                "id": "t-l21s2-12",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s2-13",
+                "text": "たいふう",
+                "isKeyGrammar": false,
+                "kanji": "台風",
+                "furigana": "たいふう"
+              },
+              {
+                "id": "t-l21s2-14",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s2-15",
+                "text": "くる",
+                "isKeyGrammar": false,
+                "kanji": "来る",
+                "furigana": "くる"
+              },
+              {
+                "id": "t-l21s2-16",
+                "text": "と",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l21s2-17",
+                "text": "いっていました",
+                "isKeyGrammar": false,
+                "kanji": "言っていました",
+                "furigana": "いっていました"
+              }
+            ],
+            "meaningVi": "Dự báo thời tiết nói rằng bão sắp tới."
+          }
+        ]
+      },
+      {
+        "slideId": "n5-l21-s3",
+        "slideType": "grammar",
+        "title": "3. Phán đoán: [Câu thể thông thường, bỏ だ] + でしょう",
+        "grammarFormula": "[Câu thể thông thường bỏ だ nếu có] + でしょう",
+        "explanation": "でしょう là dạng LỊCH SỰ của だろう, diễn tả PHÁN ĐOÁN không chắc chắn tuyệt đối. Xuống giọng = phán đoán một mình; lên giọng ở cuối = hỏi xác nhận, mong đối phương đồng tình.",
+        "teacherTips": "たぶん thường đi kèm でしょう để nhấn thêm sắc thái không chắc chắn — nói でしょう một mình vẫn đúng nhưng thiếu tự nhiên.",
+        "culturalNotes": "Người dẫn chương trình dự báo thời tiết Nhật luôn dùng でしょう thay vì です để giữ tính khách quan, tránh khẳng định tuyệt đối về tương lai.",
+        "examples": [
+          {
+            "id": "ex-n5-l21-s3-1",
+            "tokens": [
+              {
+                "id": "t-l21s3-1",
+                "text": "あした",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s3-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s3-3",
+                "text": "たぶん",
+                "isKeyGrammar": true,
+                "kanji": "多分",
+                "furigana": "たぶん"
+              },
+              {
+                "id": "t-l21s3-4",
+                "text": "あめ",
+                "isKeyGrammar": false,
+                "kanji": "雨",
+                "furigana": "あめ"
+              },
+              {
+                "id": "t-l21s3-5",
+                "text": "でしょう",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Ngày mai có lẽ sẽ mưa."
+          },
+          {
+            "id": "ex-n5-l21-s3-2",
+            "tokens": [
+              {
+                "id": "t-l21s3-6",
+                "text": "これ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s3-7",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s3-8",
+                "text": "べんり",
+                "isKeyGrammar": false,
+                "kanji": "便利",
+                "furigana": "べんり"
+              },
+              {
+                "id": "t-l21s3-9",
+                "text": "でしょう",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l21s3-10",
+                "text": "？",
                 "isKeyGrammar": false
               }
             ],
-            "meaningVi": "Tôi nghĩ ngày mai trời sẽ mưa."
+            "meaningVi": "Cái này tiện lợi đúng không nào? (lên giọng, mong đồng tình)"
           }
-        ],
-        "culturalNotes": "Trong tiếng Nhật giao tiếp, ngữ điệu và sắc thái kính ngữ là yếu tố thể hiện sự tôn trọng đối phương."
+        ]
+      },
+      {
+        "slideId": "n5-l21-s4",
+        "slideType": "grammar",
+        "title": "4. So sánh 思います / 考えます / でしょう",
+        "grammarFormula": "思います (ý kiến cá nhân) / 考えます (suy nghĩ kỹ, cân nhắc) / でしょう (phán đoán khách quan hơn)",
+        "explanation": "Ba cách diễn đạt gần nghĩa nhưng SẮC THÁI khác nhau: 思います chủ quan, tức thời; 考えます nhấn mạnh quá trình cân nhắc; でしょう nghiêng về dự đoán dựa trên căn cứ.",
+        "teacherTips": "考えています (đang cân nhắc) khác 考えました (đã quyết định sau khi suy nghĩ) — chú ý thì của câu để chọn đúng.",
+        "culturalNotes": "Trong họp hành công sở Nhật, 考えさせてください (cho tôi suy nghĩ thêm) là câu từ chối/hoãn quyết định lịch sự phổ biến.",
+        "examples": [
+          {
+            "id": "ex-n5-l21-s4-1",
+            "tokens": [
+              {
+                "id": "t-l21s4-1",
+                "text": "らいねん",
+                "isKeyGrammar": false,
+                "kanji": "来年",
+                "furigana": "らいねん"
+              },
+              {
+                "id": "t-l21s4-2",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s4-3",
+                "text": "にほん",
+                "isKeyGrammar": false,
+                "kanji": "日本",
+                "furigana": "にほん"
+              },
+              {
+                "id": "t-l21s4-4",
+                "text": "へ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s4-5",
+                "text": "いこう",
+                "isKeyGrammar": false,
+                "kanji": "行こう",
+                "furigana": "いこう"
+              },
+              {
+                "id": "t-l21s4-6",
+                "text": "と",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s4-7",
+                "text": "かんがえて",
+                "isKeyGrammar": true,
+                "kanji": "考えて",
+                "furigana": "かんがえて"
+              },
+              {
+                "id": "t-l21s4-8",
+                "text": "います",
+                "isKeyGrammar": false,
+                "kanji": "居ます",
+                "furigana": "います"
+              }
+            ],
+            "meaningVi": "Tôi đang cân nhắc chuyện năm sau đi Nhật."
+          },
+          {
+            "id": "ex-n5-l21-s4-2",
+            "tokens": [
+              {
+                "id": "t-l21s4-9",
+                "text": "がいこくじん",
+                "isKeyGrammar": true,
+                "kanji": "外国人",
+                "furigana": "がいこくじん"
+              },
+              {
+                "id": "t-l21s4-10",
+                "text": "に",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s4-11",
+                "text": "とって",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s4-12",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s4-13",
+                "text": "かんじ",
+                "isKeyGrammar": false,
+                "kanji": "漢字",
+                "furigana": "かんじ"
+              },
+              {
+                "id": "t-l21s4-14",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l21s4-15",
+                "text": "たいへん",
+                "isKeyGrammar": true,
+                "kanji": "大変",
+                "furigana": "たいへん"
+              },
+              {
+                "id": "t-l21s4-16",
+                "text": "でしょう",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Đối với người nước ngoài, chữ Hán chắc là vất vả."
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n5-21-1",
-        "speaker": "A (Người hỏi)",
-        "speakerRole": "personA",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
         "tokens": [
           {
-            "id": "tok-d21-1",
-            "text": "明日は 雨が 降ると 思います。",
+            "id": "d-l21-1",
+            "text": "あした",
             "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-2",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-3",
+            "text": "てんき",
+            "isKeyGrammar": true,
+            "kanji": "天気",
+            "furigana": "てんき"
+          },
+          {
+            "id": "d-l21-4",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-5",
+            "text": "どう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-6",
+            "text": "おもいますか",
+            "isKeyGrammar": true,
+            "kanji": "思いますか",
+            "furigana": "おもいますか"
           }
         ],
-        "meaningVi": "Tôi nghĩ ngày mai trời sẽ mưa."
+        "meaningVi": "Cậu nghĩ thời tiết ngày mai thế nào?"
       },
       {
         "id": "dia-n5-21-2",
-        "speaker": "B (Người đáp)",
-        "speakerRole": "personB",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
         "tokens": [
           {
-            "id": "tok-d21-2",
-            "text": "田中さんは 来週 出張すると 言いました。",
+            "id": "d-l21-7",
+            "text": "たぶん",
+            "isKeyGrammar": true,
+            "kanji": "多分",
+            "furigana": "たぶん"
+          },
+          {
+            "id": "d-l21-8",
+            "text": "あめ",
+            "isKeyGrammar": false,
+            "kanji": "雨",
+            "furigana": "あめ"
+          },
+          {
+            "id": "d-l21-9",
+            "text": "でしょう",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l21-10",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-11",
+            "text": "ニュース",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-12",
+            "text": "で",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-13",
+            "text": "たいふう",
+            "isKeyGrammar": true,
+            "kanji": "台風",
+            "furigana": "たいふう"
+          },
+          {
+            "id": "d-l21-14",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-15",
+            "text": "くる",
+            "isKeyGrammar": false,
+            "kanji": "来る",
+            "furigana": "くる"
+          },
+          {
+            "id": "d-l21-16",
+            "text": "と",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l21-17",
+            "text": "いっていました",
+            "isKeyGrammar": true,
+            "kanji": "言っていました",
+            "furigana": "いっていました"
+          }
+        ],
+        "meaningVi": "Có lẽ sẽ mưa. Tin tức nói là bão sắp tới."
+      },
+      {
+        "id": "dia-n5-21-3",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l21-18",
+            "text": "ほんとうです",
+            "isKeyGrammar": false,
+            "kanji": "本当ですか",
+            "furigana": "ほんとうですか"
+          },
+          {
+            "id": "d-l21-19",
+            "text": "か",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-20",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-21",
+            "text": "たいへん",
+            "isKeyGrammar": true,
+            "kanji": "大変",
+            "furigana": "たいへん"
+          },
+          {
+            "id": "d-l21-22",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-23",
+            "text": "ね",
             "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Anh Tanaka đã nói tuần sau sẽ đi công tác."
+        "meaningVi": "Vậy à. Vất vả thật đấy."
+      },
+      {
+        "id": "dia-n5-21-4",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l21-24",
+            "text": "せんせい",
+            "isKeyGrammar": true,
+            "kanji": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "id": "d-l21-25",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-26",
+            "text": "「",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-27",
+            "text": "あした",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-28",
+            "text": "がっこう",
+            "isKeyGrammar": false,
+            "kanji": "学校",
+            "furigana": "がっこう"
+          },
+          {
+            "id": "d-l21-29",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-30",
+            "text": "やすみ",
+            "isKeyGrammar": false,
+            "kanji": "休み",
+            "furigana": "やすみ"
+          },
+          {
+            "id": "d-l21-31",
+            "text": "だ",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l21-32",
+            "text": "」",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-33",
+            "text": "と",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l21-34",
+            "text": "いいました",
+            "isKeyGrammar": true,
+            "kanji": "言いました",
+            "furigana": "いいました"
+          }
+        ],
+        "meaningVi": "Thầy giáo cũng nói là ngày mai trường nghỉ học."
+      },
+      {
+        "id": "dia-n5-21-5",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l21-35",
+            "text": "そうですか",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-36",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-37",
+            "text": "じゃ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-38",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-39",
+            "text": "うち",
+            "isKeyGrammar": false,
+            "kanji": "家",
+            "furigana": "うち"
+          },
+          {
+            "id": "d-l21-40",
+            "text": "で",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-41",
+            "text": "べんきょう",
+            "isKeyGrammar": false,
+            "kanji": "勉強",
+            "furigana": "べんきょう"
+          },
+          {
+            "id": "d-l21-42",
+            "text": "しましょう",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vậy à. Vậy học ở nhà thôi."
+      },
+      {
+        "id": "dia-n5-21-6",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l21-43",
+            "text": "いい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-44",
+            "text": "かんがえ",
+            "isKeyGrammar": true,
+            "kanji": "考え",
+            "furigana": "かんがえ"
+          },
+          {
+            "id": "d-l21-45",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-46",
+            "text": "ね",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-47",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-48",
+            "text": "かんじ",
+            "isKeyGrammar": false,
+            "kanji": "漢字",
+            "furigana": "かんじ"
+          },
+          {
+            "id": "d-l21-49",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-50",
+            "text": "むずかしい",
+            "isKeyGrammar": true,
+            "kanji": "難しい",
+            "furigana": "むずかしい"
+          },
+          {
+            "id": "d-l21-51",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-52",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Ý hay đấy. Chữ Hán khó thật nhỉ."
+      },
+      {
+        "id": "dia-n5-21-7",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l21-53",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-54",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-55",
+            "text": "でも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-56",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-57",
+            "text": "がいこくじん",
+            "isKeyGrammar": true,
+            "kanji": "外国人",
+            "furigana": "がいこくじん"
+          },
+          {
+            "id": "d-l21-58",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-59",
+            "text": "とって",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-60",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-61",
+            "text": "たいせつ",
+            "isKeyGrammar": true,
+            "kanji": "大切",
+            "furigana": "たいせつ"
+          },
+          {
+            "id": "d-l21-62",
+            "text": "だ",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l21-63",
+            "text": "と",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l21-64",
+            "text": "おもいます",
+            "isKeyGrammar": true,
+            "kanji": "思います",
+            "furigana": "おもいます"
+          }
+        ],
+        "meaningVi": "Vâng. Nhưng tớ nghĩ, với người nước ngoài thì việc học nó là quan trọng."
+      },
+      {
+        "id": "dia-n5-21-8",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l21-65",
+            "text": "そうですね",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-66",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-67",
+            "text": "わたし",
+            "isKeyGrammar": false,
+            "kanji": "私",
+            "furigana": "わたし"
+          },
+          {
+            "id": "d-l21-68",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-69",
+            "text": "そう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-70",
+            "text": "おもいます",
+            "isKeyGrammar": true,
+            "kanji": "思います",
+            "furigana": "おもいます"
+          }
+        ],
+        "meaningVi": "Đúng vậy nhỉ. Tớ cũng nghĩ vậy."
+      },
+      {
+        "id": "dia-n5-21-9",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l21-71",
+            "text": "じゃ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-72",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-73",
+            "text": "きょう",
+            "isKeyGrammar": false,
+            "kanji": "今日",
+            "furigana": "きょう"
+          },
+          {
+            "id": "d-l21-74",
+            "text": "から",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-75",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-76",
+            "text": "まいにち",
+            "isKeyGrammar": false,
+            "kanji": "毎日",
+            "furigana": "まいにち"
+          },
+          {
+            "id": "d-l21-77",
+            "text": "かんじ",
+            "isKeyGrammar": false,
+            "kanji": "漢字",
+            "furigana": "かんじ"
+          },
+          {
+            "id": "d-l21-78",
+            "text": "を",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-79",
+            "text": "べんきょう",
+            "isKeyGrammar": false,
+            "kanji": "勉強",
+            "furigana": "べんきょう"
+          },
+          {
+            "id": "d-l21-80",
+            "text": "しよう",
+            "isKeyGrammar": false,
+            "kanji": "しよう",
+            "furigana": "しよう"
+          },
+          {
+            "id": "d-l21-81",
+            "text": "と",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l21-82",
+            "text": "おもいます",
+            "isKeyGrammar": true,
+            "kanji": "思います",
+            "furigana": "おもいます"
+          }
+        ],
+        "meaningVi": "Vậy thì, tớ nghĩ là từ hôm nay sẽ học chữ Hán mỗi ngày."
+      },
+      {
+        "id": "dia-n5-21-10",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên",
+        "tokens": [
+          {
+            "id": "d-l21-83",
+            "text": "いいですね",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-84",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-85",
+            "text": "わたし",
+            "isKeyGrammar": false,
+            "kanji": "私",
+            "furigana": "わたし"
+          },
+          {
+            "id": "d-l21-86",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l21-87",
+            "text": "がんばります",
+            "isKeyGrammar": false,
+            "kanji": "頑張ります",
+            "furigana": "がんばります"
+          }
+        ],
+        "meaningVi": "Hay đó. Tớ cũng sẽ cố gắng."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n5-21-1",
-        "question": "日本は 物価が 高い ___ 思います。(Trợ từ trích dẫn suy nghĩ)",
+        "question": "「明日は 雨だと 思います」 — vì sao trước と là だ chứ không phải です?",
         "options": [
-          "と",
-          "を",
-          "に",
-          "で"
+          "Câu trước と phải chia ở thể thông thường",
+          "だ là lỗi chính tả",
+          "です mới đúng, だ sai",
+          "だ chỉ dùng cho câu hỏi"
         ],
         "correctIndex": 0,
-        "explanation": "Trợ từ trích dẫn ý nghĩ hoặc phát ngôn trước 思います / 言います luôn là と.",
-        "hint": "Gợi ý: Hãy quan sát kỹ trợ từ hoặc thể của động từ đứng trước."
+        "explanation": "Nội dung trước と (nêu ý kiến/trích dẫn) luôn chia ở THỂ THÔNG THƯỜNG đã học ở bài 20.",
+        "hint": "Xem lại quy tắc chia trước と."
+      },
+      {
+        "id": "ex-q-n5-21-2",
+        "question": "「先生は 明日 テストが あると 言いました」 nghĩa là:",
+        "options": [
+          "Thầy giáo nói rằng ngày mai có kiểm tra",
+          "Thầy giáo hỏi có kiểm tra không",
+          "Thầy giáo nghĩ có thể có kiểm tra",
+          "Ngày mai không có kiểm tra"
+        ],
+        "correctIndex": 0,
+        "explanation": "と言いました dùng để THUẬT LẠI lời một ai đó đã nói ra.",
+        "hint": "So sánh với と思います (ý kiến của người nói, câu 1)."
+      },
+      {
+        "id": "ex-q-n5-21-3",
+        "question": "でしょう xuống giọng và でしょう lên giọng khác nhau ở:",
+        "options": [
+          "Xuống giọng = phán đoán một mình, lên giọng = hỏi xác nhận đồng tình",
+          "Hoàn toàn giống nhau",
+          "Xuống giọng là câu hỏi",
+          "Lên giọng là phủ định"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cùng một từ nhưng ngữ điệu quyết định ý nghĩa: phán đoán khách quan hay mời đối phương đồng tình.",
+        "hint": "Đây là điểm ngữ điệu quan trọng của でしょう."
+      },
+      {
+        "id": "ex-q-n5-21-4",
+        "question": "たぶん thường đi kèm với từ nào cuối câu?",
+        "options": [
+          "でしょう",
+          "です",
+          "ました",
+          "ますか"
+        ],
+        "correctIndex": 0,
+        "explanation": "たぶん (có lẽ) và でしょう (phán đoán không chắc chắn) thường xuất hiện cùng nhau để nhấn mạnh mức độ không chắc chắn.",
+        "hint": "Xem ví dụ ở slide 3."
+      },
+      {
+        "id": "ex-q-n5-21-5",
+        "question": "考えます khác 思います ở chỗ:",
+        "options": [
+          "考えます nhấn mạnh QUÁ TRÌNH suy nghĩ/cân nhắc kỹ, 思います là ý kiến tức thời",
+          "Hoàn toàn giống nhau",
+          "考えます chỉ dùng cho câu hỏi",
+          "思います chỉ dùng cho quá khứ"
+        ],
+        "correctIndex": 0,
+        "explanation": "思います là phản ứng/quan điểm ngay lập tức; 考えます nhấn mạnh việc CÂN NHẮC có thời gian suy xét.",
+        "hint": "So sánh sắc thái hai động từ ở slide 4."
+      },
+      {
+        "id": "ex-q-n5-21-6",
+        "question": "「考えています」 khác 「考えました」 ở thì:",
+        "options": [
+          "考えています = đang cân nhắc (chưa quyết định); 考えました = đã suy nghĩ xong (đã quyết định)",
+          "Hoàn toàn giống nhau về nghĩa",
+          "考えています là quá khứ",
+          "考えました là hiện tại tiếp diễn"
+        ],
+        "correctIndex": 0,
+        "explanation": "ています diễn tả QUÁ TRÌNH đang diễn ra; ました báo đã HOÀN TẤT việc suy nghĩ và ra quyết định.",
+        "hint": "Áp dụng kiến thức về Vています đã học ở bài 14-15."
+      },
+      {
+        "id": "ex-q-n5-21-7",
+        "question": "「日本語は 難しいと 思います」 — câu này chia đúng vì:",
+        "options": [
+          "難しい (tính từ い) không đổi ở thể thông thường, giữ nguyên trước と",
+          "難しい phải đổi thành 難しいだ",
+          "難しい phải đổi thành 難しく",
+          "Câu này sai ngữ pháp"
+        ],
+        "correctIndex": 0,
+        "explanation": "Tính từ い giữ NGUYÊN dạng ở thể thông thường (không thêm だ như danh từ/tính từ な).",
+        "hint": "So sánh với danh từ/tính từ な cần thêm だ trước と."
+      },
+      {
+        "id": "ex-q-n5-21-8",
+        "question": "「外国人にとって、漢字は大変でしょう」 nghĩa là:",
+        "options": [
+          "Đối với người nước ngoài, chữ Hán chắc là vất vả",
+          "Người nước ngoài không thích chữ Hán",
+          "Chữ Hán dễ đối với người nước ngoài",
+          "Chữ Hán không liên quan tới người nước ngoài"
+        ],
+        "correctIndex": 0,
+        "explanation": "にとって (đối với) + でしょう (phán đoán) diễn tả nhận định có căn cứ về một nhóm đối tượng cụ thể.",
+        "hint": "にとって đánh dấu góc nhìn/đối tượng được nhận định."
+      },
+      {
+        "id": "ex-q-n5-21-9",
+        "question": "Trong hội thoại, tin tức nói gì về thời tiết ngày mai?",
+        "options": [
+          "Bão sắp tới",
+          "Trời sẽ nắng đẹp",
+          "Sẽ có tuyết",
+          "Không có tin gì đặc biệt"
+        ],
+        "correctIndex": 0,
+        "explanation": "サントス nói 「ニュースで 台風が来ると言っていました」.",
+        "hint": "Xem câu thoại thứ 2."
+      },
+      {
+        "id": "ex-q-n5-21-10",
+        "question": "Cuối hội thoại, hai người quyết định làm gì?",
+        "options": [
+          "Học chữ Hán mỗi ngày từ hôm nay",
+          "Đi chơi vì được nghỉ học",
+          "Ngủ cả ngày",
+          "Đi xem bão"
+        ],
+        "correctIndex": 0,
+        "explanation": "ワン nói 「今日から、毎日 漢字を勉強しようと思います」 và サントス đồng ý cố gắng cùng.",
+        "hint": "Xem hai câu thoại cuối cùng."
       }
     ]
   },
