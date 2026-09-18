@@ -2996,40 +2996,6 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
       }));
   }
 
-  /* ----------------------------------------------------------------------
-     KHO DE DA SOAN — giu qua nhung lan tai lai trang
-
-     Han muc free tier rat chat (20 luot/phut). Soan xong ma khong luu thi moi
-     lan F5 lai ton them mot luot cho DUNG bo de vua co. Giu 7 ngay.
-     ---------------------------------------------------------------------- */
-  const KHO_DE = 'sensei_quiz_v1';
-  const KHO_DE_HAN = 7 * 24 * 60 * 60 * 1000;
-
-  function docKhoDe() {
-    try {
-      const o = JSON.parse(localStorage.getItem(KHO_DE) || '{}');
-      const now = Date.now();
-      for (const k of Object.keys(o)) {
-        if (!o[k] || now - o[k].at > KHO_DE_HAN) delete o[k];
-      }
-      return o;
-    } catch (e) { return {}; }
-  }
-
-  function luuKhoDe(key, items) {
-    try {
-      const o = docKhoDe();
-      o[key] = { at: Date.now(), items };
-      localStorage.setItem(KHO_DE, JSON.stringify(o));
-    } catch (e) { /* het cho trong localStorage — khong sao, chi mat cache */ }
-  }
-
-  // Nap lai nhung bo de da soan tu lan truoc
-  (() => {
-    const o = docKhoDe();
-    for (const k of Object.keys(o)) quizGenCache[k] = o[k].items;
-  })();
-
   /**
    * Goi model soan de, thu lan luot tung cap (model x key).
    *
@@ -3182,7 +3148,6 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
     }
 
     quizGenCache[key] = items;
-    luuKhoDe(key, items);
     delete quizGenNghiDen[key];
 
     // Chi gan vao bai dang mo, va chi khi chua bat dau giang de ke hoach nhip con dung
@@ -3346,6 +3311,15 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
     slideEngine.currentSlideIndex = 0;
     // setTab tu lo viec hien "dang tai bai hoc..." neu chi tiet chua co san
     slideEngine.setTab('vocab');
+
+    // Mo lai bai la coi nhu mot luot hoc moi: xoa bo de da soan lan truoc (neu
+    // co) — hoc vien bao muon moi lan MO LAI bai la co de moi de luyen tiep,
+    // khong phai dung mai mot bo cu tu lan hoc truoc (ke ca sau khi F5 lai
+    // trang). Chi xoa cache, KHONG tu soan o day — van doi den luc thuc su mo
+    // chuong Bai tap moi goi AI, de khong dot han muc vao bai chi luot qua.
+    const quizKeyMoi = `${lvl}-${Number(lessonNum)}`;
+    delete quizGenCache[quizKeyMoi];
+    delete quizGenNghiDen[quizKeyMoi];
 
     closePicker();
 
