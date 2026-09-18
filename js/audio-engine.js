@@ -86,9 +86,15 @@ class AudioEngine {
     this._daGanMoKhoa = true;
 
     // iPhone: nut gat im lang ben canh may khoa luon tieng cua Web Audio, du
-    // may da mo khoa va da tang am. Khai bao day la tieng "phat lai" thi thoat.
+    // may da mo khoa va da tang am. Khai bao audio session de thoat khoi do.
+    // PHAI dung 'play-and-record', KHONG duoc 'playback': trang nay vua PHAT
+    // tieng Sensei vua THU mic hoc vien. Category 'playback' chi danh cho
+    // ung dung CHI PHAT — dat no roi thi getUserMedia() xin mic se bi Safari
+    // tu choi voi loi "audio session category" (mic khong dung chung duoc voi
+    // category chi-phat). 'play-and-record' van tranh duoc nut gat im lang
+    // giong 'playback', nhung cho phep ca hai chieu cung luc.
     try {
-      if (navigator.audioSession) navigator.audioSession.type = 'playback';
+      if (navigator.audioSession) navigator.audioSession.type = 'play-and-record';
     } catch (e) {}
 
     const moKhoa = () => {
