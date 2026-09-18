@@ -18368,99 +18368,1364 @@
     "level": "N3",
     "lessonNumber": 14,
     "title": "Bài 14: Biến đổi liên tục (一方だ & ばかりだ)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N3.",
+    "description": "一方だ diễn tả xu hướng thay đổi theo MỘT CHIỀU liên tục, không dừng lại — trang trọng, khách quan, dùng được cho cả xu hướng tích cực lẫn tiêu cực; ばかりだ cũng diễn tả xu hướng một chiều nhưng thân mật hơn, hầu như CHỈ dùng cho xu hướng XẤU ĐI và mang cảm xúc thất vọng/lo lắng của người nói.",
     "vocabList": [
       {
         "id": "voc-n3-14-1",
-        "word": "重要語彙 (N3)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "ぞうかします",
+        "kanji": "増加します",
+        "furigana": "ぞうかします",
+        "romaji": "zouka shimasu",
+        "wordType": "verb",
+        "meaningVi": "Tăng lên, gia tăng",
+        "accentNote": "人口が 増加します = dân số gia tăng."
+      },
+      {
+        "id": "voc-n3-14-2",
+        "word": "しつぎょう",
+        "kanji": "失業",
+        "furigana": "しつぎょう",
+        "romaji": "shitsugyou",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 14",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Sự thất nghiệp",
+        "accentNote": "失業が 増えます = thất nghiệp tăng lên."
+      },
+      {
+        "id": "voc-n3-14-3",
+        "word": "しんぽします",
+        "kanji": "進歩します",
+        "furigana": "しんぽします",
+        "romaji": "shinpo shimasu",
+        "wordType": "verb",
+        "meaningVi": "Tiến bộ",
+        "accentNote": "技術が 進歩します = kỹ thuật tiến bộ."
+      },
+      {
+        "id": "voc-n3-14-4",
+        "word": "かくだいします",
+        "kanji": "拡大します",
+        "furigana": "かくだいします",
+        "romaji": "kakudai shimasu",
+        "wordType": "verb",
+        "meaningVi": "Mở rộng",
+        "accentNote": "事業を 拡大します = mở rộng sự nghiệp."
+      },
+      {
+        "id": "voc-n3-14-5",
+        "word": "はってんします",
+        "kanji": "発展します",
+        "furigana": "はってんします",
+        "romaji": "hatten shimasu",
+        "wordType": "verb",
+        "meaningVi": "Phát triển",
+        "accentNote": "経済が 発展します = kinh tế phát triển."
+      },
+      {
+        "id": "voc-n3-14-6",
+        "word": "へります",
+        "kanji": "減ります",
+        "furigana": "へります",
+        "romaji": "herimasu",
+        "wordType": "verb",
+        "meaningVi": "Giảm xuống, giảm đi",
+        "accentNote": "人口が 減ります = dân số giảm xuống."
+      },
+      {
+        "id": "voc-n3-14-7",
+        "word": "ふえます",
+        "kanji": "増えます",
+        "furigana": "ふえます",
+        "romaji": "fuemasu",
+        "wordType": "verb",
+        "meaningVi": "Tăng lên",
+        "accentNote": "物価が 増えます = vật giá tăng lên."
+      },
+      {
+        "id": "voc-n3-14-8",
+        "word": "げんしょう",
+        "kanji": "減少",
+        "furigana": "げんしょう",
+        "romaji": "genshou",
+        "wordType": "noun",
+        "meaningVi": "Sự giảm sút",
+        "accentNote": "Đã gặp N3 bài 5."
+      },
+      {
+        "id": "voc-n3-14-9",
+        "word": "じんこう",
+        "kanji": "人口",
+        "furigana": "じんこう",
+        "romaji": "jinkou",
+        "wordType": "noun",
+        "meaningVi": "Dân số",
+        "accentNote": "Đã gặp N3 bài 5."
+      },
+      {
+        "id": "voc-n3-14-10",
+        "word": "ぶっか",
+        "kanji": "物価",
+        "furigana": "ぶっか",
+        "romaji": "bukka",
+        "wordType": "noun",
+        "meaningVi": "Vật giá",
+        "accentNote": "Đã gặp N3 bài 5."
+      },
+      {
+        "id": "voc-n3-14-11",
+        "word": "かんきょう",
+        "kanji": "環境",
+        "furigana": "かんきょう",
+        "romaji": "kankyou",
+        "wordType": "noun",
+        "meaningVi": "Môi trường",
+        "accentNote": "Đã gặp N3 bài 5."
+      },
+      {
+        "id": "voc-n3-14-12",
+        "word": "けいざい",
+        "kanji": "経済",
+        "furigana": "けいざい",
+        "romaji": "keizai",
+        "wordType": "noun",
+        "meaningVi": "Kinh tế",
+        "accentNote": "Đã gặp N5 bài 25."
+      },
+      {
+        "id": "voc-n3-14-13",
+        "word": "わるい",
+        "kanji": "悪い",
+        "furigana": "わるい",
+        "romaji": "warui",
+        "wordType": "adjective",
+        "meaningVi": "Xấu, tệ",
+        "accentNote": "Đã gặp N4 bài 34."
+      },
+      {
+        "id": "voc-n3-14-14",
+        "word": "ふとります",
+        "kanji": "太ります",
+        "furigana": "ふとります",
+        "romaji": "futorimasu",
+        "wordType": "verb",
+        "meaningVi": "Béo lên",
+        "accentNote": "Đã gặp N4 bài 44."
+      },
+      {
+        "id": "voc-n3-14-15",
+        "word": "つづけます",
+        "kanji": "続けます",
+        "furigana": "つづけます",
+        "romaji": "tsuzukemasu",
+        "wordType": "verb",
+        "meaningVi": "Tiếp tục",
+        "accentNote": "Đã gặp N4 bài 28."
+      },
+      {
+        "id": "voc-n3-14-16",
+        "word": "あがります",
+        "kanji": "上がります",
+        "furigana": "あがります",
+        "romaji": "agarimasu",
+        "wordType": "verb",
+        "meaningVi": "Tăng lên, đi lên",
+        "accentNote": "Đã gặp N4 bài 34."
+      },
+      {
+        "id": "voc-n3-14-17",
+        "word": "かいしゃ",
+        "kanji": "会社",
+        "furigana": "かいしゃ",
+        "romaji": "kaisha",
+        "wordType": "noun",
+        "meaningVi": "Công ty",
+        "accentNote": "Đã gặp N4 bài 26."
+      },
+      {
+        "id": "voc-n3-14-18",
+        "word": "じょうきょう",
+        "kanji": "状況",
+        "furigana": "じょうきょう",
+        "romaji": "joukyou",
+        "wordType": "noun",
+        "meaningVi": "Tình huống",
+        "accentNote": "Đã gặp N3 bài 13."
+      },
+      {
+        "id": "voc-n3-14-19",
+        "word": "もんだい",
+        "kanji": "問題",
+        "furigana": "もんだい",
+        "romaji": "mondai",
+        "wordType": "noun",
+        "meaningVi": "Vấn đề",
+        "accentNote": "Đã gặp N5 bài 22."
+      },
+      {
+        "id": "voc-n3-14-20",
+        "word": "なります",
+        "kanji": "成ります",
+        "furigana": "なります",
+        "romaji": "narimasu",
+        "wordType": "verb",
+        "meaningVi": "Trở thành, trở nên",
+        "accentNote": "Đã gặp N5 bài 8."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n3-14-1",
-        "character": "語",
-        "hanViet": "NGỮ",
+        "character": "増",
+        "hanViet": "TĂNG",
         "strokeCount": 14,
         "onyomi": [
-          "ゴ"
+          "ゾウ (zou)"
         ],
         "kunyomi": [
-          "かたる"
+          "ふ(える)",
+          "ま(す)"
         ],
-        "meaningVi": "Ngôn ngữ",
+        "meaningVi": "Tăng thêm.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "増加",
+            "furigana": "ぞうか",
+            "meaningVi": "Tăng lên"
+          },
+          {
+            "word": "増えます",
+            "furigana": "ふえます",
+            "meaningVi": "Tăng lên"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-14-2",
+        "character": "失",
+        "hanViet": "THẤT",
+        "strokeCount": 5,
+        "onyomi": [
+          "シツ (shitsu)"
+        ],
+        "kunyomi": [
+          "うしな(う)"
+        ],
+        "meaningVi": "Mất, thất bại.",
+        "commonWords": [
+          {
+            "word": "失業",
+            "furigana": "しつぎょう",
+            "meaningVi": "Thất nghiệp"
+          },
+          {
+            "word": "失敗",
+            "furigana": "しっぱい",
+            "meaningVi": "Thất bại"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-14-3",
+        "character": "歩",
+        "hanViet": "BỘ",
+        "strokeCount": 8,
+        "onyomi": [
+          "ホ (ho)"
+        ],
+        "kunyomi": [
+          "ある(く)"
+        ],
+        "meaningVi": "Bước đi, tiến bộ.",
+        "commonWords": [
+          {
+            "word": "進歩",
+            "furigana": "しんぽ",
+            "meaningVi": "Tiến bộ"
+          },
+          {
+            "word": "歩きます",
+            "furigana": "あるきます",
+            "meaningVi": "Đi bộ"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-14-4",
+        "character": "拡",
+        "hanViet": "KHOÁCH",
+        "strokeCount": 8,
+        "onyomi": [
+          "カク (kaku)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Mở rộng.",
+        "commonWords": [
+          {
+            "word": "拡大",
+            "furigana": "かくだい",
+            "meaningVi": "Mở rộng"
+          }
+        ]
+      },
+      {
+        "id": "kan-n3-14-5",
+        "character": "展",
+        "hanViet": "TRIỂN",
+        "strokeCount": 10,
+        "onyomi": [
+          "テン (ten)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Triển khai, phát triển.",
+        "commonWords": [
+          {
+            "word": "発展",
+            "furigana": "はってん",
+            "meaningVi": "Phát triển"
+          },
+          {
+            "word": "展示",
+            "furigana": "てんじ",
+            "meaningVi": "Trưng bày"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n3-l14-s0",
-        "title": "Trọng tâm: Biến đổi liên tục (一方だ & ばかりだ)",
-        "grammarFormula": "V-る + 一方だ / ばかりだ",
-        "explanation": "Trạng thái đang liên tục tiến triển theo một chiều hướng (thường là tiêu cực).",
+        "slideId": "n3-l14-s1",
+        "slideType": "grammar",
+        "title": "1. Xu hướng một chiều (trang trọng): V(từ điển) + 一方だ",
+        "grammarFormula": "V(thể từ điển, chỉ sự biến đổi) + 一方だ",
+        "explanation": "一方だ diễn tả một xu hướng thay đổi THEO MỘT CHIỀU DUY NHẤT, KHÔNG NGỪNG LẠI/không đảo ngược — thường dùng trong văn viết, báo cáo, mang sắc thái khách quan nhưng thường ngụ ý một điều đáng lo ngại.",
+        "teacherTips": "一方だ có thể dùng cho cả xu hướng TÍCH CỰC lẫn TIÊU CỰC, miễn là thay đổi theo một chiều liên tục không dừng.",
+        "culturalNotes": "Báo cáo kinh tế Nhật hay dùng: '少子高齢化は進む一方だ' (tình trạng ít con và già hóa dân số chỉ ngày càng tiến triển).",
         "examples": [
           {
-            "id": "ex-n3-l14-1",
+            "id": "ex-n3-l14-s1-1",
             "tokens": [
               {
-                "id": "tok-n3-l14-1",
-                "text": "物価は ",
+                "id": "t-l14s1-1",
+                "text": "にほん",
+                "isKeyGrammar": false,
+                "kanji": "日本",
+                "furigana": "にほん"
+              },
+              {
+                "id": "t-l14s1-2",
+                "text": "の",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n3-l14-2",
-                "text": "上がる一方だ。",
-                "isKeyGrammar": true
+                "id": "t-l14s1-3",
+                "text": "じんこう",
+                "isKeyGrammar": true,
+                "kanji": "人口",
+                "furigana": "じんこう"
+              },
+              {
+                "id": "t-l14s1-4",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s1-5",
+                "text": "へる",
+                "isKeyGrammar": true,
+                "kanji": "減る",
+                "furigana": "へる"
+              },
+              {
+                "id": "t-l14s1-6",
+                "text": "いっぽう",
+                "isKeyGrammar": true,
+                "kanji": "一方",
+                "furigana": "いっぽう"
+              },
+              {
+                "id": "t-l14s1-7",
+                "text": "だ",
+                "isKeyGrammar": false
               }
             ],
-            "meaningVi": "Giá cả hàng hóa cứ không ngừng tăng lên."
+            "meaningVi": "Dân số Nhật Bản chỉ ngày càng giảm."
+          },
+          {
+            "id": "ex-n3-l14-s1-2",
+            "tokens": [
+              {
+                "id": "t-l14s1-8",
+                "text": "ぶっか",
+                "isKeyGrammar": true,
+                "kanji": "物価",
+                "furigana": "ぶっか"
+              },
+              {
+                "id": "t-l14s1-9",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s1-10",
+                "text": "あがる",
+                "isKeyGrammar": true,
+                "kanji": "上がる",
+                "furigana": "あがる"
+              },
+              {
+                "id": "t-l14s1-11",
+                "text": "いっぽう",
+                "isKeyGrammar": true,
+                "kanji": "一方",
+                "furigana": "いっぽう"
+              },
+              {
+                "id": "t-l14s1-12",
+                "text": "だ",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Vật giá chỉ ngày càng tăng."
           }
-        ],
-        "culturalNotes": "Cấu trúc then chốt của bài thi JLPT N3 yêu cầu nắm vững sắc thái biểu cảm."
+        ]
+      },
+      {
+        "slideId": "n3-l14-s2",
+        "slideType": "grammar",
+        "title": "2. Xu hướng một chiều (thân mật, thất vọng): V(từ điển) + ばかりだ",
+        "grammarFormula": "V(thể từ điển, thường chỉ sự biến đổi tiêu cực) + ばかりだ",
+        "explanation": "ばかりだ cũng diễn tả xu hướng MỘT CHIỀU liên tục, nhưng dùng phổ biến hơn trong hội thoại, thường NHẤN MẠNH cảm xúc THẤT VỌNG/LO LẮNG của người nói về một xu hướng ĐANG XẤU ĐI.",
+        "teacherTips": "ばかりだ hầu như chỉ dùng cho xu hướng TIÊU CỰC (xấu đi, giảm sút) — khác 一方だ có thể dùng cho cả tích cực lẫn tiêu cực.",
+        "culturalNotes": "Câu than phiền quen thuộc của người Nhật về công việc: '仕事が増えるばかりだ' (công việc chỉ ngày càng tăng thôi).",
+        "examples": [
+          {
+            "id": "ex-n3-l14-s2-1",
+            "tokens": [
+              {
+                "id": "t-l14s2-1",
+                "text": "かいしゃ",
+                "isKeyGrammar": true,
+                "kanji": "会社",
+                "furigana": "かいしゃ"
+              },
+              {
+                "id": "t-l14s2-2",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s2-3",
+                "text": "じょうきょう",
+                "isKeyGrammar": true,
+                "kanji": "状況",
+                "furigana": "じょうきょう"
+              },
+              {
+                "id": "t-l14s2-4",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s2-5",
+                "text": "わるく",
+                "isKeyGrammar": true,
+                "kanji": "悪く",
+                "furigana": "わるく"
+              },
+              {
+                "id": "t-l14s2-6",
+                "text": "なる",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s2-7",
+                "text": "ばかり",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l14s2-8",
+                "text": "だ",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Tình hình công ty chỉ ngày càng xấu đi thôi."
+          },
+          {
+            "id": "ex-n3-l14-s2-2",
+            "tokens": [
+              {
+                "id": "t-l14s2-9",
+                "text": "しつぎょうしゃ",
+                "isKeyGrammar": true,
+                "kanji": "失業者",
+                "furigana": "しつぎょうしゃ"
+              },
+              {
+                "id": "t-l14s2-10",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s2-11",
+                "text": "ふえる",
+                "isKeyGrammar": true,
+                "kanji": "増える",
+                "furigana": "ふえる"
+              },
+              {
+                "id": "t-l14s2-12",
+                "text": "ばかり",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l14s2-13",
+                "text": "だ",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Người thất nghiệp chỉ ngày càng tăng thôi."
+          }
+        ]
+      },
+      {
+        "slideId": "n3-l14-s3",
+        "slideType": "grammar",
+        "title": "3. So sánh 一方だ và ばかりだ",
+        "grammarFormula": "一方だ: TRANG TRỌNG, khách quan, dùng cho cả tích cực/tiêu cực　vs　ばかりだ: THÂN MẬT, thường chỉ TIÊU CỰC, mang cảm xúc thất vọng",
+        "explanation": "Cả hai đều nghĩa 'chỉ ngày càng...', nhưng 一方だ có thể mô tả cả tiến bộ tích cực (dùng trong báo cáo khách quan), còn ばかりだ gần như CHỈ dùng cho xu hướng xấu đi và luôn ẩn chứa cảm xúc của người nói.",
+        "teacherTips": "Mẹo chọn: viết báo cáo/tin tức khách quan → 一方だ; than phiền trong hội thoại đời thường → ばかりだ.",
+        "culturalNotes": "Cả hai đều là ngữ pháp N3 trọng điểm, hay xuất hiện trong bài đọc hiểu về xã hội, kinh tế, môi trường.",
+        "examples": [
+          {
+            "id": "ex-n3-l14-s3-1",
+            "tokens": [
+              {
+                "id": "t-l14s3-1",
+                "text": "ぎじゅつ",
+                "isKeyGrammar": false,
+                "kanji": "技術",
+                "furigana": "ぎじゅつ"
+              },
+              {
+                "id": "t-l14s3-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s3-3",
+                "text": "しんぽ",
+                "isKeyGrammar": true,
+                "kanji": "進歩",
+                "furigana": "しんぽ"
+              },
+              {
+                "id": "t-l14s3-4",
+                "text": "する",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s3-5",
+                "text": "いっぽう",
+                "isKeyGrammar": true,
+                "kanji": "一方",
+                "furigana": "いっぽう"
+              },
+              {
+                "id": "t-l14s3-6",
+                "text": "だ",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Công nghệ chỉ ngày càng tiến bộ. (tích cực, khách quan → dùng 一方だ)"
+          },
+          {
+            "id": "ex-n3-l14-s3-2",
+            "tokens": [
+              {
+                "id": "t-l14s3-7",
+                "text": "かんきょう",
+                "isKeyGrammar": true,
+                "kanji": "環境",
+                "furigana": "かんきょう"
+              },
+              {
+                "id": "t-l14s3-8",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s3-9",
+                "text": "わるく",
+                "isKeyGrammar": true,
+                "kanji": "悪く",
+                "furigana": "わるく"
+              },
+              {
+                "id": "t-l14s3-10",
+                "text": "なる",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s3-11",
+                "text": "ばかり",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l14s3-12",
+                "text": "だ",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Môi trường chỉ ngày càng xấu đi thôi. (tiêu cực, cảm xúc → dùng ばかりだ)"
+          }
+        ]
+      },
+      {
+        "slideId": "n3-l14-s4",
+        "slideType": "grammar",
+        "title": "4. Mở rộng với các động từ tăng/giảm/phát triển",
+        "grammarFormula": "増加する/拡大する/発展する + 一方だ　　悪化する/減少する + ばかりだ",
+        "explanation": "Kết hợp các động từ chỉ XU HƯỚNG (増加する, 拡大する, 発展する, 減少する) với 一方だ/ばかりだ để diễn tả sự biến đổi liên tục trong văn phong TRANG TRỌNG hơn dạng V thường + いっぽう/ばかり.",
+        "teacherTips": "Cấu trúc N(する動詞) + する + 一方だ/ばかりだ thường thấy trong tiêu đề báo, bài phân tích kinh tế-xã hội.",
+        "culturalNotes": "Tiêu đề báo Nhật thường viết: '失業率は増加する一方だ' (tỷ lệ thất nghiệp chỉ ngày càng tăng).",
+        "examples": [
+          {
+            "id": "ex-n3-l14-s4-1",
+            "tokens": [
+              {
+                "id": "t-l14s4-1",
+                "text": "かいしゃ",
+                "isKeyGrammar": true,
+                "kanji": "会社",
+                "furigana": "かいしゃ"
+              },
+              {
+                "id": "t-l14s4-2",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s4-3",
+                "text": "じぎょう",
+                "isKeyGrammar": false,
+                "kanji": "事業",
+                "furigana": "じぎょう"
+              },
+              {
+                "id": "t-l14s4-4",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s4-5",
+                "text": "かくだい",
+                "isKeyGrammar": true,
+                "kanji": "拡大",
+                "furigana": "かくだい"
+              },
+              {
+                "id": "t-l14s4-6",
+                "text": "する",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s4-7",
+                "text": "いっぽう",
+                "isKeyGrammar": true,
+                "kanji": "一方",
+                "furigana": "いっぽう"
+              },
+              {
+                "id": "t-l14s4-8",
+                "text": "だ",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Sự nghiệp kinh doanh của công ty chỉ ngày càng mở rộng."
+          },
+          {
+            "id": "ex-n3-l14-s4-2",
+            "tokens": [
+              {
+                "id": "t-l14s4-9",
+                "text": "けいざい",
+                "isKeyGrammar": true,
+                "kanji": "経済",
+                "furigana": "けいざい"
+              },
+              {
+                "id": "t-l14s4-10",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s4-11",
+                "text": "もんだい",
+                "isKeyGrammar": true,
+                "kanji": "問題",
+                "furigana": "もんだい"
+              },
+              {
+                "id": "t-l14s4-12",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s4-13",
+                "text": "ぞうか",
+                "isKeyGrammar": true,
+                "kanji": "増加",
+                "furigana": "ぞうか"
+              },
+              {
+                "id": "t-l14s4-14",
+                "text": "する",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l14s4-15",
+                "text": "ばかり",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l14s4-16",
+                "text": "だ",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Vấn đề kinh tế chỉ ngày càng tăng lên thôi."
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n3-14-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
         "tokens": [
           {
-            "id": "tok-n3-14-d1",
-            "text": "この文法のポイントを"
+            "id": "d14-1",
+            "text": "にほん",
+            "isKeyGrammar": false,
+            "kanji": "日本",
+            "furigana": "にほん"
           },
           {
-            "id": "tok-n3-14-d2",
-            "text": "復習しましょう。"
+            "id": "d14-2",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-3",
+            "text": "じんこう",
+            "isKeyGrammar": true,
+            "kanji": "人口",
+            "furigana": "じんこう"
+          },
+          {
+            "id": "d14-4",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-5",
+            "text": "へる",
+            "isKeyGrammar": true,
+            "kanji": "減る",
+            "furigana": "へる"
+          },
+          {
+            "id": "d14-6",
+            "text": "いっぽう",
+            "isKeyGrammar": true,
+            "kanji": "一方",
+            "furigana": "いっぽう"
+          },
+          {
+            "id": "d14-7",
+            "text": "です",
+            "isKeyGrammar": false,
+            "kanji": "です",
+            "furigana": "です"
+          },
+          {
+            "id": "d14-8",
+            "text": "ね",
+            "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Dân số Nhật Bản chỉ ngày càng giảm nhỉ."
+      },
+      {
+        "id": "dia-n3-14-2",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d14-9",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-10",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-11",
+            "text": "でも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-12",
+            "text": "ぎじゅつ",
+            "isKeyGrammar": false,
+            "kanji": "技術",
+            "furigana": "ぎじゅつ"
+          },
+          {
+            "id": "d14-13",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-14",
+            "text": "しんぽ",
+            "isKeyGrammar": true,
+            "kanji": "進歩",
+            "furigana": "しんぽ"
+          },
+          {
+            "id": "d14-15",
+            "text": "する",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-16",
+            "text": "いっぽう",
+            "isKeyGrammar": true,
+            "kanji": "一方",
+            "furigana": "いっぽう"
+          },
+          {
+            "id": "d14-17",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vâng. Nhưng công nghệ thì chỉ ngày càng tiến bộ."
+      },
+      {
+        "id": "dia-n3-14-3",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d14-18",
+            "text": "ぶっか",
+            "isKeyGrammar": true,
+            "kanji": "物価",
+            "furigana": "ぶっか"
+          },
+          {
+            "id": "d14-19",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-20",
+            "text": "あがる",
+            "isKeyGrammar": true,
+            "kanji": "上がる",
+            "furigana": "あがる"
+          },
+          {
+            "id": "d14-21",
+            "text": "いっぽう",
+            "isKeyGrammar": true,
+            "kanji": "一方",
+            "furigana": "いっぽう"
+          },
+          {
+            "id": "d14-22",
+            "text": "です",
+            "isKeyGrammar": false,
+            "kanji": "です",
+            "furigana": "です"
+          },
+          {
+            "id": "d14-23",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vật giá cũng chỉ ngày càng tăng nhỉ."
+      },
+      {
+        "id": "dia-n3-14-4",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d14-24",
+            "text": "しつぎょうしゃ",
+            "isKeyGrammar": true,
+            "kanji": "失業者",
+            "furigana": "しつぎょうしゃ"
+          },
+          {
+            "id": "d14-25",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-26",
+            "text": "ふえる",
+            "isKeyGrammar": true,
+            "kanji": "増える",
+            "furigana": "ふえる"
+          },
+          {
+            "id": "d14-27",
+            "text": "ばかり",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d14-28",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Người thất nghiệp cũng chỉ ngày càng tăng thôi."
+      },
+      {
+        "id": "dia-n3-14-5",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d14-29",
+            "text": "かいしゃ",
+            "isKeyGrammar": true,
+            "kanji": "会社",
+            "furigana": "かいしゃ"
+          },
+          {
+            "id": "d14-30",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-31",
+            "text": "じょうきょう",
+            "isKeyGrammar": true,
+            "kanji": "状況",
+            "furigana": "じょうきょう"
+          },
+          {
+            "id": "d14-32",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-33",
+            "text": "どうですか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Tình hình công ty thì sao?"
+      },
+      {
+        "id": "dia-n3-14-6",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d14-34",
+            "text": "わるく",
+            "isKeyGrammar": true,
+            "kanji": "悪く",
+            "furigana": "わるく"
+          },
+          {
+            "id": "d14-35",
+            "text": "なる",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-36",
+            "text": "ばかり",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d14-37",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Chỉ ngày càng xấu đi thôi."
+      },
+      {
+        "id": "dia-n3-14-7",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d14-38",
+            "text": "でも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-39",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-40",
+            "text": "けいざい",
+            "isKeyGrammar": true,
+            "kanji": "経済",
+            "furigana": "けいざい"
+          },
+          {
+            "id": "d14-41",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-42",
+            "text": "はってん",
+            "isKeyGrammar": true,
+            "kanji": "発展",
+            "furigana": "はってん"
+          },
+          {
+            "id": "d14-43",
+            "text": "する",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-44",
+            "text": "いっぽう",
+            "isKeyGrammar": true,
+            "kanji": "一方",
+            "furigana": "いっぽう"
+          },
+          {
+            "id": "d14-45",
+            "text": "だ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-46",
+            "text": "と",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-47",
+            "text": "おもいます",
+            "isKeyGrammar": false,
+            "kanji": "思います",
+            "furigana": "おもいます"
+          }
+        ],
+        "meaningVi": "Nhưng tôi nghĩ kinh tế chỉ ngày càng phát triển thôi."
+      },
+      {
+        "id": "dia-n3-14-8",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d14-48",
+            "text": "かんきょう",
+            "isKeyGrammar": true,
+            "kanji": "環境",
+            "furigana": "かんきょう"
+          },
+          {
+            "id": "d14-49",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-50",
+            "text": "もんだい",
+            "isKeyGrammar": true,
+            "kanji": "問題",
+            "furigana": "もんだい"
+          },
+          {
+            "id": "d14-51",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-52",
+            "text": "ぞうか",
+            "isKeyGrammar": true,
+            "kanji": "増加",
+            "furigana": "ぞうか"
+          },
+          {
+            "id": "d14-53",
+            "text": "する",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-54",
+            "text": "ばかり",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d14-55",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vấn đề môi trường thì chỉ ngày càng tăng thôi."
+      },
+      {
+        "id": "dia-n3-14-9",
+        "speaker": "田中",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d14-56",
+            "text": "しんぱい",
+            "isKeyGrammar": false,
+            "kanji": "心配",
+            "furigana": "しんぱい"
+          },
+          {
+            "id": "d14-57",
+            "text": "な",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-58",
+            "text": "じょうきょう",
+            "isKeyGrammar": true,
+            "kanji": "状況",
+            "furigana": "じょうきょう"
+          },
+          {
+            "id": "d14-59",
+            "text": "です",
+            "isKeyGrammar": false,
+            "kanji": "です",
+            "furigana": "です"
+          },
+          {
+            "id": "d14-60",
+            "text": "ね",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Đó là tình huống đáng lo ngại nhỉ."
+      },
+      {
+        "id": "dia-n3-14-10",
+        "speaker": "サントス",
+        "speakerRole": "Đồng nghiệp",
+        "tokens": [
+          {
+            "id": "d14-61",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-62",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-63",
+            "text": "でも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-64",
+            "text": "かいしゃ",
+            "isKeyGrammar": true,
+            "kanji": "会社",
+            "furigana": "かいしゃ"
+          },
+          {
+            "id": "d14-65",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-66",
+            "text": "じぎょう",
+            "isKeyGrammar": false,
+            "kanji": "事業",
+            "furigana": "じぎょう"
+          },
+          {
+            "id": "d14-67",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-68",
+            "text": "かくだい",
+            "isKeyGrammar": true,
+            "kanji": "拡大",
+            "furigana": "かくだい"
+          },
+          {
+            "id": "d14-69",
+            "text": "する",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d14-70",
+            "text": "いっぽう",
+            "isKeyGrammar": true,
+            "kanji": "一方",
+            "furigana": "いっぽう"
+          },
+          {
+            "id": "d14-71",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vâng. Nhưng sự nghiệp kinh doanh của công ty thì chỉ ngày càng mở rộng."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n3-14-1",
-        "question": "Cấu trúc nào diễn đạt đúng ý nghĩa: 'Biến đổi liên tục (一方だ & ばかりだ)'?",
+        "question": "「人口は減る一方だ」 — 一方だ diễn tả điều gì?",
         "options": [
-          "V-る + 一方だ",
-          "V-た + まま",
-          "N + に沿って",
-          "V-る + 途端に"
+          "Xu hướng thay đổi theo MỘT CHIỀU liên tục, không ngừng lại",
+          "Sự đảo ngược của xu hướng",
+          "Sự dừng lại hoàn toàn",
+          "So sánh hai xu hướng khác nhau"
         ],
         "correctIndex": 0,
-        "explanation": "Đáp án chính xác: V-る + 一方だ / ばかりだ",
-        "hint": "Xem lại công thức chia ở slide lý thuyết."
+        "explanation": "一方だ diễn tả xu hướng theo MỘT CHIỀU DUY NHẤT, liên tục không dừng lại (ở đây là dân số chỉ giảm).",
+        "hint": "Xem cấu trúc V(từ điển)+一方だ ở slide 1."
+      },
+      {
+        "id": "ex-q-n3-14-2",
+        "question": "「失業者が増えるばかりだ」 — ばかりだ mang sắc thái gì?",
+        "options": [
+          "Thất vọng/lo lắng của người nói về xu hướng xấu đi",
+          "Vui mừng về xu hướng tốt lên",
+          "Khách quan, không cảm xúc",
+          "Nghi ngờ về tính chính xác của thông tin"
+        ],
+        "correctIndex": 0,
+        "explanation": "ばかりだ luôn ẩn chứa cảm xúc THẤT VỌNG/LO LẮNG của người nói khi nói về xu hướng đang XẤU ĐI.",
+        "hint": "Xem giải thích ばかりだ ở slide 2."
+      },
+      {
+        "id": "ex-q-n3-14-3",
+        "question": "一方だ có thể dùng cho xu hướng tích cực (tốt lên) không?",
+        "options": [
+          "Có, 一方だ dùng được cho cả xu hướng tích cực lẫn tiêu cực",
+          "Không, chỉ dùng được cho xu hướng tiêu cực",
+          "Chỉ dùng được trong câu hỏi",
+          "Chỉ dùng được trong câu phủ định"
+        ],
+        "correctIndex": 0,
+        "explanation": "一方だ khách quan hơn ばかりだ, có thể mô tả cả tiến bộ tích cực (technology tiến bộ) lẫn xu hướng tiêu cực.",
+        "hint": "Xem ví dụ về 技術 (công nghệ) ở slide 3."
+      },
+      {
+        "id": "ex-q-n3-14-4",
+        "question": "ばかりだ có thể dùng cho xu hướng tích cực một cách tự nhiên không?",
+        "options": [
+          "Gần như không, ばかりだ hầu như chỉ dùng cho xu hướng tiêu cực",
+          "Có, dùng thoải mái cho cả hai loại xu hướng",
+          "Chỉ dùng được cho câu hỏi",
+          "Chỉ dùng được trong văn viết trang trọng"
+        ],
+        "correctIndex": 0,
+        "explanation": "ばかりだ gần như CHỈ tự nhiên khi nói về xu hướng xấu đi, khác hẳn 一方だ có thể dùng cho cả hai.",
+        "hint": "Xem bảng so sánh ở slide 3."
+      },
+      {
+        "id": "ex-q-n3-14-5",
+        "question": "Sự khác biệt về VĂN PHONG giữa 一方だ và ばかりだ là gì?",
+        "options": [
+          "一方だ trang trọng, khách quan (báo cáo); ばかりだ thân mật (hội thoại đời thường)",
+          "Hoàn toàn giống nhau về văn phong",
+          "一方だ chỉ dùng trong hội thoại thân mật",
+          "ばかりだ chỉ dùng trong văn viết trang trọng"
+        ],
+        "correctIndex": 0,
+        "explanation": "一方だ phù hợp văn viết/báo cáo khách quan; ばかりだ phù hợp hội thoại đời thường, mang cảm xúc.",
+        "hint": "Xem mẹo chọn ở slide 3."
+      },
+      {
+        "id": "ex-q-n3-14-6",
+        "question": "「会社の事業は拡大する一方だ」 nghĩa là:",
+        "options": [
+          "Sự nghiệp kinh doanh của công ty chỉ ngày càng mở rộng",
+          "Sự nghiệp kinh doanh của công ty đang thu hẹp lại",
+          "Công ty đã phá sản",
+          "Công ty không có sự nghiệp kinh doanh nào"
+        ],
+        "correctIndex": 0,
+        "explanation": "拡大する一方だ nghĩa là 'chỉ ngày càng mở rộng' — xu hướng mở rộng liên tục, không dừng lại.",
+        "hint": "Áp dụng cấu trúc V-する+一方だ."
+      },
+      {
+        "id": "ex-q-n3-14-7",
+        "question": "「経済の問題は増加するばかりだ」 nghĩa là:",
+        "options": [
+          "Vấn đề kinh tế chỉ ngày càng tăng lên thôi (mang sắc thái lo lắng)",
+          "Vấn đề kinh tế đã được giải quyết hoàn toàn",
+          "Không có vấn đề kinh tế nào cả",
+          "Vấn đề kinh tế giảm dần"
+        ],
+        "correctIndex": 0,
+        "explanation": "増加するばかりだ nghĩa là 'chỉ ngày càng tăng lên', mang sắc thái lo lắng của người nói về vấn đề kinh tế.",
+        "hint": "Áp dụng cấu trúc V-する+ばかりだ."
+      },
+      {
+        "id": "ex-q-n3-14-8",
+        "question": "Theo hội thoại, Santos nhận xét công nghệ đang thế nào?",
+        "options": [
+          "Chỉ ngày càng tiến bộ (技術は進歩する一方です)",
+          "Đang thụt lùi",
+          "Không thay đổi gì cả",
+          "Không được đề cập trong hội thoại"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos nói 「技術は進歩する一方です」.",
+        "hint": "Xem câu thoại thứ 2."
+      },
+      {
+        "id": "ex-q-n3-14-9",
+        "question": "Tình hình công ty của Santos đang thế nào?",
+        "options": [
+          "Chỉ ngày càng xấu đi (悪くなるばかりです)",
+          "Chỉ ngày càng tốt lên",
+          "Không thay đổi gì cả",
+          "Đã phá sản hoàn toàn"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos nói 「悪くなるばかりです」khi được hỏi về tình hình công ty.",
+        "hint": "Xem câu thoại thứ 5-6."
+      },
+      {
+        "id": "ex-q-n3-14-10",
+        "question": "Điều gì ở công ty của Santos vẫn đang tăng trưởng theo hội thoại?",
+        "options": [
+          "Sự nghiệp kinh doanh (事業は拡大する一方です)",
+          "Số lượng nhân viên nghỉ việc",
+          "Vấn đề môi trường của công ty",
+          "Không có gì tăng trưởng cả"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos nói ở cuối 「会社の事業は拡大する一方です」.",
+        "hint": "Xem câu thoại cuối cùng."
       }
     ]
   },

@@ -1,0 +1,246 @@
+# -*- coding: utf-8 -*-
+"""N3 — Bai 14: Bien doi lien tuc mot chieu 一方だ (trang trong, khach quan) va ばかりだ (than mat, that vong).
+
+Tu vung minh hoa TU CHON tu pool mo data/jlpt-vocab/n3.csv (xem NOTICE.md).
+"""
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from n3_lib import v, k, t, ex, slide, line, q, lesson, merge
+from jlpt_pool import Pool
+
+L = 14
+pool = Pool("n3")
+
+VOCAB = [
+    v(1,  "ぞうかします", "増加します", "ぞうかします", "zouka shimasu", "verb", "Tăng lên, gia tăng", "人口が 増加します = dân số gia tăng.", L),
+    v(2,  "しつぎょう", "失業", "しつぎょう", "shitsugyou", "noun", "Sự thất nghiệp", "失業が 増えます = thất nghiệp tăng lên.", L),
+    v(3,  "しんぽします", "進歩します", "しんぽします", "shinpo shimasu", "verb", "Tiến bộ", "技術が 進歩します = kỹ thuật tiến bộ.", L),
+    v(4,  "かくだいします", "拡大します", "かくだいします", "kakudai shimasu", "verb", "Mở rộng", "事業を 拡大します = mở rộng sự nghiệp.", L),
+    v(5,  "はってんします", "発展します", "はってんします", "hatten shimasu", "verb", "Phát triển", "経済が 発展します = kinh tế phát triển.", L),
+    v(6,  "へります", "減ります", "へります", "herimasu", "verb", "Giảm xuống, giảm đi", "人口が 減ります = dân số giảm xuống.", L),
+    v(7,  "ふえます", "増えます", "ふえます", "fuemasu", "verb", "Tăng lên", "物価が 増えます = vật giá tăng lên.", L),
+    v(8,  "げんしょう", "減少", "げんしょう", "genshou", "noun", "Sự giảm sút", "Đã gặp N3 bài 5.", L),
+    v(9,  "じんこう", "人口", "じんこう", "jinkou", "noun", "Dân số", "Đã gặp N3 bài 5.", L),
+    v(10, "ぶっか", "物価", "ぶっか", "bukka", "noun", "Vật giá", "Đã gặp N3 bài 5.", L),
+    v(11, "かんきょう", "環境", "かんきょう", "kankyou", "noun", "Môi trường", "Đã gặp N3 bài 5.", L),
+    v(12, "けいざい", "経済", "けいざい", "keizai", "noun", "Kinh tế", "Đã gặp N5 bài 25.", L),
+    v(13, "わるい", "悪い", "わるい", "warui", "adjective", "Xấu, tệ", "Đã gặp N4 bài 34.", L),
+    v(14, "ふとります", "太ります", "ふとります", "futorimasu", "verb", "Béo lên", "Đã gặp N4 bài 44.", L),
+    v(15, "つづけます", "続けます", "つづけます", "tsuzukemasu", "verb", "Tiếp tục", "Đã gặp N4 bài 28.", L),
+    v(16, "あがります", "上がります", "あがります", "agarimasu", "verb", "Tăng lên, đi lên", "Đã gặp N4 bài 34.", L),
+    v(17, "かいしゃ", "会社", "かいしゃ", "kaisha", "noun", "Công ty", "Đã gặp N4 bài 26.", L),
+    v(18, "じょうきょう", "状況", "じょうきょう", "joukyou", "noun", "Tình huống", "Đã gặp N3 bài 13.", L),
+    v(19, "もんだい", "問題", "もんだい", "mondai", "noun", "Vấn đề", "Đã gặp N5 bài 22.", L),
+    v(20, "なります", "成ります", "なります", "narimasu", "verb", "Trở thành, trở nên", "Đã gặp N5 bài 8.", L),
+]
+
+KANJI = [
+    k(1, "増", "TĂNG", 14, ["ゾウ (zou)"], ["ふ(える)", "ま(す)"], "Tăng thêm.",
+      [("増加", "ぞうか", "Tăng lên"), ("増えます", "ふえます", "Tăng lên")], L),
+    k(2, "失", "THẤT", 5, ["シツ (shitsu)"], ["うしな(う)"], "Mất, thất bại.",
+      [("失業", "しつぎょう", "Thất nghiệp"), ("失敗", "しっぱい", "Thất bại")], L),
+    k(3, "歩", "BỘ", 8, ["ホ (ho)"], ["ある(く)"], "Bước đi, tiến bộ.",
+      [("進歩", "しんぽ", "Tiến bộ"), ("歩きます", "あるきます", "Đi bộ")], L),
+    k(4, "拡", "KHOÁCH", 8, ["カク (kaku)"], [], "Mở rộng.",
+      [("拡大", "かくだい", "Mở rộng")], L),
+    k(5, "展", "TRIỂN", 10, ["テン (ten)"], [], "Triển khai, phát triển.",
+      [("発展", "はってん", "Phát triển"), ("展示", "てんじ", "Trưng bày")], L),
+]
+
+SLIDES = [
+    slide(L, 1,
+        "1. Xu hướng một chiều (trang trọng): V(từ điển) + 一方だ",
+        "V(thể từ điển, chỉ sự biến đổi) + 一方だ",
+        "一方だ diễn tả một xu hướng thay đổi THEO MỘT CHIỀU DUY NHẤT, KHÔNG NGỪNG LẠI/không đảo "
+        "ngược — thường dùng trong văn viết, báo cáo, mang sắc thái khách quan nhưng thường ngụ ý một điều đáng lo ngại.",
+        [
+            ex(L, 1, 1, [t("t-l14s1-1", "にほん", "日本", "にほん"), t("t-l14s1-2", "の"),
+                         t("t-l14s1-3", "じんこう", "人口", "じんこう", key=True), t("t-l14s1-4", "は"),
+                         t("t-l14s1-5", "へる", "減る", "へる", key=True), t("t-l14s1-6", "いっぽう", "一方", "いっぽう", key=True),
+                         t("t-l14s1-7", "だ")],
+               "Dân số Nhật Bản chỉ ngày càng giảm."),
+            ex(L, 1, 2, [t("t-l14s1-8", "ぶっか", "物価", "ぶっか", key=True), t("t-l14s1-9", "は"),
+                         t("t-l14s1-10", "あがる", "上がる", "あがる", key=True), t("t-l14s1-11", "いっぽう", "一方", "いっぽう", key=True),
+                         t("t-l14s1-12", "だ")],
+               "Vật giá chỉ ngày càng tăng."),
+        ],
+        tips="一方だ có thể dùng cho cả xu hướng TÍCH CỰC lẫn TIÊU CỰC, miễn là thay đổi theo một chiều liên tục không dừng.",
+        culture="Báo cáo kinh tế Nhật hay dùng: '少子高齢化は進む一方だ' (tình trạng ít con và già hóa dân số chỉ ngày càng tiến triển)."),
+
+    slide(L, 2,
+        "2. Xu hướng một chiều (thân mật, thất vọng): V(từ điển) + ばかりだ",
+        "V(thể từ điển, thường chỉ sự biến đổi tiêu cực) + ばかりだ",
+        "ばかりだ cũng diễn tả xu hướng MỘT CHIỀU liên tục, nhưng dùng phổ biến hơn trong hội thoại, "
+        "thường NHẤN MẠNH cảm xúc THẤT VỌNG/LO LẮNG của người nói về một xu hướng ĐANG XẤU ĐI.",
+        [
+            ex(L, 2, 1, [t("t-l14s2-1", "かいしゃ", "会社", "かいしゃ", key=True), t("t-l14s2-2", "の"),
+                         t("t-l14s2-3", "じょうきょう", "状況", "じょうきょう", key=True), t("t-l14s2-4", "は"),
+                         t("t-l14s2-5", "わるく", "悪く", "わるく", key=True), t("t-l14s2-6", "なる"),
+                         t("t-l14s2-7", "ばかり", key=True), t("t-l14s2-8", "だ")],
+               "Tình hình công ty chỉ ngày càng xấu đi thôi."),
+            ex(L, 2, 2, [t("t-l14s2-9", "しつぎょうしゃ", "失業者", "しつぎょうしゃ", key=True), t("t-l14s2-10", "が"),
+                         t("t-l14s2-11", "ふえる", "増える", "ふえる", key=True), t("t-l14s2-12", "ばかり", key=True),
+                         t("t-l14s2-13", "だ")],
+               "Người thất nghiệp chỉ ngày càng tăng thôi."),
+        ],
+        tips="ばかりだ hầu như chỉ dùng cho xu hướng TIÊU CỰC (xấu đi, giảm sút) — khác 一方だ có thể dùng cho cả tích cực lẫn tiêu cực.",
+        culture="Câu than phiền quen thuộc của người Nhật về công việc: '仕事が増えるばかりだ' (công việc chỉ ngày càng tăng thôi)."),
+
+    slide(L, 3,
+        "3. So sánh 一方だ và ばかりだ",
+        "一方だ: TRANG TRỌNG, khách quan, dùng cho cả tích cực/tiêu cực　vs　ばかりだ: THÂN MẬT, thường chỉ TIÊU CỰC, mang cảm xúc thất vọng",
+        "Cả hai đều nghĩa 'chỉ ngày càng...', nhưng 一方だ có thể mô tả cả tiến bộ tích cực (dùng "
+        "trong báo cáo khách quan), còn ばかりだ gần như CHỈ dùng cho xu hướng xấu đi và luôn ẩn "
+        "chứa cảm xúc của người nói.",
+        [
+            ex(L, 3, 1, [t("t-l14s3-1", "ぎじゅつ", "技術", "ぎじゅつ"), t("t-l14s3-2", "は"),
+                         t("t-l14s3-3", "しんぽ", "進歩", "しんぽ", key=True), t("t-l14s3-4", "する"),
+                         t("t-l14s3-5", "いっぽう", "一方", "いっぽう", key=True), t("t-l14s3-6", "だ")],
+               "Công nghệ chỉ ngày càng tiến bộ. (tích cực, khách quan → dùng 一方だ)"),
+            ex(L, 3, 2, [t("t-l14s3-7", "かんきょう", "環境", "かんきょう", key=True), t("t-l14s3-8", "は"),
+                         t("t-l14s3-9", "わるく", "悪く", "わるく", key=True), t("t-l14s3-10", "なる"),
+                         t("t-l14s3-11", "ばかり", key=True), t("t-l14s3-12", "だ")],
+               "Môi trường chỉ ngày càng xấu đi thôi. (tiêu cực, cảm xúc → dùng ばかりだ)"),
+        ],
+        tips="Mẹo chọn: viết báo cáo/tin tức khách quan → 一方だ; than phiền trong hội thoại đời thường → ばかりだ.",
+        culture="Cả hai đều là ngữ pháp N3 trọng điểm, hay xuất hiện trong bài đọc hiểu về xã hội, kinh tế, môi trường."),
+
+    slide(L, 4,
+        "4. Mở rộng với các động từ tăng/giảm/phát triển",
+        "増加する/拡大する/発展する + 一方だ　　悪化する/減少する + ばかりだ",
+        "Kết hợp các động từ chỉ XU HƯỚNG (増加する, 拡大する, 発展する, 減少する) với 一方だ/ばかりだ "
+        "để diễn tả sự biến đổi liên tục trong văn phong TRANG TRỌNG hơn dạng V thường + いっぽう/ばかり.",
+        [
+            ex(L, 4, 1, [t("t-l14s4-1", "かいしゃ", "会社", "かいしゃ", key=True), t("t-l14s4-2", "の"),
+                         t("t-l14s4-3", "じぎょう", "事業", "じぎょう"), t("t-l14s4-4", "は"),
+                         t("t-l14s4-5", "かくだい", "拡大", "かくだい", key=True), t("t-l14s4-6", "する"),
+                         t("t-l14s4-7", "いっぽう", "一方", "いっぽう", key=True), t("t-l14s4-8", "だ")],
+               "Sự nghiệp kinh doanh của công ty chỉ ngày càng mở rộng."),
+            ex(L, 4, 2, [t("t-l14s4-9", "けいざい", "経済", "けいざい", key=True), t("t-l14s4-10", "の"),
+                         t("t-l14s4-11", "もんだい", "問題", "もんだい", key=True), t("t-l14s4-12", "は"),
+                         t("t-l14s4-13", "ぞうか", "増加", "ぞうか", key=True), t("t-l14s4-14", "する"),
+                         t("t-l14s4-15", "ばかり", key=True), t("t-l14s4-16", "だ")],
+               "Vấn đề kinh tế chỉ ngày càng tăng lên thôi."),
+        ],
+        tips="Cấu trúc N(する動詞) + する + 一方だ/ばかりだ thường thấy trong tiêu đề báo, bài phân tích kinh tế-xã hội.",
+        culture="Tiêu đề báo Nhật thường viết: '失業率は増加する一方だ' (tỷ lệ thất nghiệp chỉ ngày càng tăng)."),
+]
+
+DIALOGUE = [
+    line(L, 1, "田中", "Đồng nghiệp",
+         [t("d14-1", "にほん", "日本", "にほん"), t("d14-2", "の"), t("d14-3", "じんこう", "人口", "じんこう", key=True),
+          t("d14-4", "は"), t("d14-5", "へる", "減る", "へる", key=True), t("d14-6", "いっぽう", "一方", "いっぽう", key=True),
+          t("d14-7", "です", "です", "です"), t("d14-8", "ね")],
+         "Dân số Nhật Bản chỉ ngày càng giảm nhỉ."),
+    line(L, 2, "サントス", "Đồng nghiệp",
+         [t("d14-9", "はい"), t("d14-10", "。"), t("d14-11", "でも"), t("d14-12", "ぎじゅつ", "技術", "ぎじゅつ"),
+          t("d14-13", "は"), t("d14-14", "しんぽ", "進歩", "しんぽ", key=True), t("d14-15", "する"),
+          t("d14-16", "いっぽう", "一方", "いっぽう", key=True), t("d14-17", "です")],
+         "Vâng. Nhưng công nghệ thì chỉ ngày càng tiến bộ."),
+    line(L, 3, "田中", "Đồng nghiệp",
+         [t("d14-18", "ぶっか", "物価", "ぶっか", key=True), t("d14-19", "も"), t("d14-20", "あがる", "上がる", "あがる", key=True),
+          t("d14-21", "いっぽう", "一方", "いっぽう", key=True), t("d14-22", "です", "です", "です"), t("d14-23", "ね")],
+         "Vật giá cũng chỉ ngày càng tăng nhỉ."),
+    line(L, 4, "サントス", "Đồng nghiệp",
+         [t("d14-24", "しつぎょうしゃ", "失業者", "しつぎょうしゃ", key=True), t("d14-25", "も"),
+          t("d14-26", "ふえる", "増える", "ふえる", key=True), t("d14-27", "ばかり", key=True), t("d14-28", "です")],
+         "Người thất nghiệp cũng chỉ ngày càng tăng thôi."),
+    line(L, 5, "田中", "Đồng nghiệp",
+         [t("d14-29", "かいしゃ", "会社", "かいしゃ", key=True), t("d14-30", "の"), t("d14-31", "じょうきょう", "状況", "じょうきょう", key=True),
+          t("d14-32", "は"), t("d14-33", "どうですか")],
+         "Tình hình công ty thì sao?"),
+    line(L, 6, "サントス", "Đồng nghiệp",
+         [t("d14-34", "わるく", "悪く", "わるく", key=True), t("d14-35", "なる"), t("d14-36", "ばかり", key=True),
+          t("d14-37", "です")],
+         "Chỉ ngày càng xấu đi thôi."),
+    line(L, 7, "田中", "Đồng nghiệp",
+         [t("d14-38", "でも"), t("d14-39", "、"), t("d14-40", "けいざい", "経済", "けいざい", key=True), t("d14-41", "は"),
+          t("d14-42", "はってん", "発展", "はってん", key=True), t("d14-43", "する"), t("d14-44", "いっぽう", "一方", "いっぽう", key=True),
+          t("d14-45", "だ"), t("d14-46", "と"), t("d14-47", "おもいます", "思います", "おもいます")],
+         "Nhưng tôi nghĩ kinh tế chỉ ngày càng phát triển thôi."),
+    line(L, 8, "サントス", "Đồng nghiệp",
+         [t("d14-48", "かんきょう", "環境", "かんきょう", key=True), t("d14-49", "の"), t("d14-50", "もんだい", "問題", "もんだい", key=True),
+          t("d14-51", "は"), t("d14-52", "ぞうか", "増加", "ぞうか", key=True), t("d14-53", "する"), t("d14-54", "ばかり", key=True),
+          t("d14-55", "です")],
+         "Vấn đề môi trường thì chỉ ngày càng tăng thôi."),
+    line(L, 9, "田中", "Đồng nghiệp",
+         [t("d14-56", "しんぱい", "心配", "しんぱい"), t("d14-57", "な"), t("d14-58", "じょうきょう", "状況", "じょうきょう", key=True),
+          t("d14-59", "です", "です", "です"), t("d14-60", "ね")],
+         "Đó là tình huống đáng lo ngại nhỉ."),
+    line(L, 10, "サントス", "Đồng nghiệp",
+         [t("d14-61", "はい"), t("d14-62", "。"), t("d14-63", "でも"), t("d14-64", "かいしゃ", "会社", "かいしゃ", key=True),
+          t("d14-65", "の"), t("d14-66", "じぎょう", "事業", "じぎょう"), t("d14-67", "は"), t("d14-68", "かくだい", "拡大", "かくだい", key=True),
+          t("d14-69", "する"), t("d14-70", "いっぽう", "一方", "いっぽう", key=True), t("d14-71", "です")],
+         "Vâng. Nhưng sự nghiệp kinh doanh của công ty thì chỉ ngày càng mở rộng."),
+]
+
+EXERCISES = [
+    q(L, 1, "「人口は減る一方だ」 — 一方だ diễn tả điều gì?",
+      ["Xu hướng thay đổi theo MỘT CHIỀU liên tục, không ngừng lại", "Sự đảo ngược của xu hướng",
+       "Sự dừng lại hoàn toàn", "So sánh hai xu hướng khác nhau"], 0,
+      "一方だ diễn tả xu hướng theo MỘT CHIỀU DUY NHẤT, liên tục không dừng lại (ở đây là dân số chỉ giảm).",
+      "Xem cấu trúc V(từ điển)+一方だ ở slide 1."),
+    q(L, 2, "「失業者が増えるばかりだ」 — ばかりだ mang sắc thái gì?",
+      ["Thất vọng/lo lắng của người nói về xu hướng xấu đi", "Vui mừng về xu hướng tốt lên",
+       "Khách quan, không cảm xúc", "Nghi ngờ về tính chính xác của thông tin"], 0,
+      "ばかりだ luôn ẩn chứa cảm xúc THẤT VỌNG/LO LẮNG của người nói khi nói về xu hướng đang XẤU ĐI.",
+      "Xem giải thích ばかりだ ở slide 2."),
+    q(L, 3, "一方だ có thể dùng cho xu hướng tích cực (tốt lên) không?",
+      ["Có, 一方だ dùng được cho cả xu hướng tích cực lẫn tiêu cực",
+       "Không, chỉ dùng được cho xu hướng tiêu cực", "Chỉ dùng được trong câu hỏi",
+       "Chỉ dùng được trong câu phủ định"], 0,
+      "一方だ khách quan hơn ばかりだ, có thể mô tả cả tiến bộ tích cực (technology tiến bộ) lẫn xu hướng tiêu cực.",
+      "Xem ví dụ về 技術 (công nghệ) ở slide 3."),
+    q(L, 4, "ばかりだ có thể dùng cho xu hướng tích cực một cách tự nhiên không?",
+      ["Gần như không, ばかりだ hầu như chỉ dùng cho xu hướng tiêu cực",
+       "Có, dùng thoải mái cho cả hai loại xu hướng", "Chỉ dùng được cho câu hỏi",
+       "Chỉ dùng được trong văn viết trang trọng"], 0,
+      "ばかりだ gần như CHỈ tự nhiên khi nói về xu hướng xấu đi, khác hẳn 一方だ có thể dùng cho cả hai.",
+      "Xem bảng so sánh ở slide 3."),
+    q(L, 5, "Sự khác biệt về VĂN PHONG giữa 一方だ và ばかりだ là gì?",
+      ["一方だ trang trọng, khách quan (báo cáo); ばかりだ thân mật (hội thoại đời thường)",
+       "Hoàn toàn giống nhau về văn phong", "一方だ chỉ dùng trong hội thoại thân mật",
+       "ばかりだ chỉ dùng trong văn viết trang trọng"], 0,
+      "一方だ phù hợp văn viết/báo cáo khách quan; ばかりだ phù hợp hội thoại đời thường, mang cảm xúc.",
+      "Xem mẹo chọn ở slide 3."),
+    q(L, 6, "「会社の事業は拡大する一方だ」 nghĩa là:",
+      ["Sự nghiệp kinh doanh của công ty chỉ ngày càng mở rộng",
+       "Sự nghiệp kinh doanh của công ty đang thu hẹp lại", "Công ty đã phá sản",
+       "Công ty không có sự nghiệp kinh doanh nào"], 0,
+      "拡大する一方だ nghĩa là 'chỉ ngày càng mở rộng' — xu hướng mở rộng liên tục, không dừng lại.",
+      "Áp dụng cấu trúc V-する+一方だ."),
+    q(L, 7, "「経済の問題は増加するばかりだ」 nghĩa là:",
+      ["Vấn đề kinh tế chỉ ngày càng tăng lên thôi (mang sắc thái lo lắng)",
+       "Vấn đề kinh tế đã được giải quyết hoàn toàn", "Không có vấn đề kinh tế nào cả",
+       "Vấn đề kinh tế giảm dần"], 0,
+      "増加するばかりだ nghĩa là 'chỉ ngày càng tăng lên', mang sắc thái lo lắng của người nói về vấn đề kinh tế.",
+      "Áp dụng cấu trúc V-する+ばかりだ."),
+    q(L, 8, "Theo hội thoại, Santos nhận xét công nghệ đang thế nào?",
+      ["Chỉ ngày càng tiến bộ (技術は進歩する一方です)", "Đang thụt lùi", "Không thay đổi gì cả",
+       "Không được đề cập trong hội thoại"], 0,
+      "Santos nói 「技術は進歩する一方です」.",
+      "Xem câu thoại thứ 2."),
+    q(L, 9, "Tình hình công ty của Santos đang thế nào?",
+      ["Chỉ ngày càng xấu đi (悪くなるばかりです)", "Chỉ ngày càng tốt lên",
+       "Không thay đổi gì cả", "Đã phá sản hoàn toàn"], 0,
+      "Santos nói 「悪くなるばかりです」khi được hỏi về tình hình công ty.",
+      "Xem câu thoại thứ 5-6."),
+    q(L, 10, "Điều gì ở công ty của Santos vẫn đang tăng trưởng theo hội thoại?",
+      ["Sự nghiệp kinh doanh (事業は拡大する一方です)", "Số lượng nhân viên nghỉ việc",
+       "Vấn đề môi trường của công ty", "Không có gì tăng trưởng cả"], 0,
+      "Santos nói ở cuối 「会社の事業は拡大する一方です」.",
+      "Xem câu thoại cuối cùng."),
+]
+
+LESSON = lesson(
+    L,
+    "Bài 14: Biến đổi liên tục (一方だ & ばかりだ)",
+    "一方だ diễn tả xu hướng thay đổi theo MỘT CHIỀU liên tục, không dừng lại — trang trọng, khách "
+    "quan, dùng được cho cả xu hướng tích cực lẫn tiêu cực; ばかりだ cũng diễn tả xu hướng một "
+    "chiều nhưng thân mật hơn, hầu như CHỈ dùng cho xu hướng XẤU ĐI và mang cảm xúc thất vọng/lo lắng của người nói.",
+    VOCAB, KANJI, SLIDES, DIALOGUE, EXERCISES,
+)
+
+if __name__ == "__main__":
+    pool.mark_used([w["word"] for w in VOCAB if w["word"]], lesson=L)
+    merge([LESSON])
