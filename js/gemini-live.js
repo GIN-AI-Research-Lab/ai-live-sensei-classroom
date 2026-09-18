@@ -577,7 +577,23 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
   }
 
   /**
-   * Gửi gói âm thanh Micro (PCM 16kHz Mono Base64) qua WebSocket
+   * Gửi gói âm thanh Micro (PCM 16kHz Mono Base64) qua WebSocket.
+   *
+   * SAI TEN TRUONG suot tu truoc: goi la "mediaChunks: [{mimeType, data}]"
+   * (mang) trong khi truong dung theo tai lieu BidiGenerateContentRealtimeInput
+   * (ai.google.dev/api/live) la "audio: {data, mimeType}" (MOT object Blob
+   * don, khong phai mang). Server van chap nhan ket noi va van bao
+   * "interrupted" khi co nang luong am thanh toi (co the server chi kiem tra
+   * CO tin hieu, khong parse sau vao noi dung) — nhung vi sai ten truong nen
+   * server khong bao gio doc duoc NOI DUNG am thanh vao dung cho, dan den
+   * giơ tay hoi / cham phat am ghi mic xong roi im lang, khong bao gio co
+   * cau tra loi.
+   * Da kiem chung PHAN GUI (frame gui dung dinh dang "audio" moi khi mic
+   * hoat dong). CHUA kiem chung duoc PHAN SENSEI CO TRA LOI HAY KHONG bang
+   * giong that qua API — luc test lai thi ca phien dang dung deu ngung tra
+   * loi (nghi do het han muc goi API sau nhieu lan test lien tuc trong
+   * phien lam viec nay, thay dung loi "mã 1011: exceeded quota" o mot phien
+   * khac cung luc). Can nguoi dung tu xac nhan lai tren thiet bi that.
    */
   sendRealtimeAudio(base64AudioChunk) {
     if (!this.ws || this.ws.readyState !== WebSocket.OPEN) return;
@@ -585,12 +601,10 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
 
     const payload = {
       realtimeInput: {
-        mediaChunks: [
-          {
-            mimeType: "audio/pcm;rate=16000",
-            data: base64AudioChunk
-          }
-        ]
+        audio: {
+          data: base64AudioChunk,
+          mimeType: "audio/pcm;rate=16000"
+        }
       }
     };
 
