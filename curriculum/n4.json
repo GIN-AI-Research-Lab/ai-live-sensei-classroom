@@ -1484,99 +1484,1252 @@
     "level": "N4",
     "lessonNumber": 27,
     "title": "Bài 27: Động từ thể khả năng (可能形)",
-    "description": "Học và rèn luyện các mẫu câu ngữ pháp trọng điểm của trình độ N4.",
+    "description": "Chia thể khả năng trực tiếp từ gốc động từ: nhóm I đổi đuôi う→え+る, nhóm II bỏ る thêm られる, する bất quy tắc thành できる — gọn hơn ことができます (N5 bài 18) dù tương đương về nghĩa, kèm điều kiện tuổi tác 〜歳以上／以下.",
     "vocabList": [
       {
         "id": "voc-n4-27-1",
-        "word": "重要語彙 (N4)",
-        "kanji": "語彙",
-        "furigana": "ごい",
-        "romaji": "goi",
+        "word": "はなせます",
+        "kanji": "話せます",
+        "furigana": "はなせます",
+        "romaji": "hanasemasu",
+        "wordType": "verb",
+        "meaningVi": "Nói được (thể khả năng của 話します)",
+        "accentNote": "話す (nhóm I) → 話せる: đổi đuôi う→え, thêm る."
+      },
+      {
+        "id": "voc-n4-27-2",
+        "word": "かけます",
+        "kanji": "書けます",
+        "furigana": "かけます",
+        "romaji": "kakemasu",
+        "wordType": "verb",
+        "meaningVi": "Viết được (thể khả năng của 書きます)",
+        "accentNote": "書く → 書ける."
+      },
+      {
+        "id": "voc-n4-27-3",
+        "word": "およげます",
+        "kanji": "泳げます",
+        "furigana": "およげます",
+        "romaji": "oyogemasu",
+        "wordType": "verb",
+        "meaningVi": "Bơi được",
+        "accentNote": "泳ぐ → 泳げる."
+      },
+      {
+        "id": "voc-n4-27-4",
+        "word": "のめます",
+        "kanji": "飲めます",
+        "furigana": "のめます",
+        "romaji": "nomemasu",
+        "wordType": "verb",
+        "meaningVi": "Uống được",
+        "accentNote": "飲む → 飲める."
+      },
+      {
+        "id": "voc-n4-27-5",
+        "word": "たべられます",
+        "kanji": "食べられます",
+        "furigana": "たべられます",
+        "romaji": "taberaremasu",
+        "wordType": "verb",
+        "meaningVi": "Ăn được (thể khả năng của 食べます)",
+        "accentNote": "食べる (nhóm II) → 食べられる: bỏ る, thêm られる."
+      },
+      {
+        "id": "voc-n4-27-6",
+        "word": "みられます",
+        "kanji": "見られます",
+        "furigana": "みられます",
+        "romaji": "miraremasu",
+        "wordType": "verb",
+        "meaningVi": "Xem được, nhìn thấy được",
+        "accentNote": "見る (nhóm II) → 見られる."
+      },
+      {
+        "id": "voc-n4-27-7",
+        "word": "こられます",
+        "kanji": "来られます",
+        "furigana": "こられます",
+        "romaji": "koraremasu",
+        "wordType": "verb",
+        "meaningVi": "Đến được",
+        "accentNote": "来る → 来られる (bất quy tắc, đọc こられる)."
+      },
+      {
+        "id": "voc-n4-27-8",
+        "word": "できます",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "dekimasu",
+        "wordType": "verb",
+        "meaningVi": "Làm được",
+        "accentNote": "する → できる (bất quy tắc hoàn toàn, khác âm gốc)."
+      },
+      {
+        "id": "voc-n4-27-9",
+        "word": "うんてんします",
+        "kanji": "運転します",
+        "furigana": "うんてんします",
+        "romaji": "unten shimasu",
+        "wordType": "verb",
+        "meaningVi": "Lái xe",
+        "accentNote": "運転できます = lái xe được. Đã gặp N5 bài 17."
+      },
+      {
+        "id": "voc-n4-27-10",
+        "word": "かいわ",
+        "kanji": "会話",
+        "furigana": "かいわ",
+        "romaji": "kaiwa",
         "wordType": "noun",
-        "meaningVi": "Từ vựng then chốt của bài 27",
-        "accentNote": "Nắm vững phát âm."
+        "meaningVi": "Hội thoại, đàm thoại",
+        "accentNote": "英語で 会話できます = có thể đàm thoại bằng tiếng Anh."
+      },
+      {
+        "id": "voc-n4-27-11",
+        "word": "すいえい",
+        "kanji": "水泳",
+        "furigana": "すいえい",
+        "romaji": "suiei",
+        "wordType": "noun",
+        "meaningVi": "Môn bơi lội",
+        "accentNote": "水泳が できます = biết bơi (danh từ hành động + できます)."
+      },
+      {
+        "id": "voc-n4-27-12",
+        "word": "うんどう",
+        "kanji": "運動",
+        "furigana": "うんどう",
+        "romaji": "undou",
+        "wordType": "noun",
+        "meaningVi": "Vận động, thể dục",
+        "accentNote": "運動が できません = tôi không tập thể dục được."
+      },
+      {
+        "id": "voc-n4-27-13",
+        "word": "ピアノ",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "piano",
+        "wordType": "noun",
+        "meaningVi": "Đàn piano",
+        "accentNote": "Đã gặp N5 bài 18."
+      },
+      {
+        "id": "voc-n4-27-14",
+        "word": "うんてんしゅ",
+        "kanji": "運転手",
+        "furigana": "うんてんしゅ",
+        "romaji": "untenshu",
+        "wordType": "noun",
+        "meaningVi": "Tài xế (nghề)",
+        "accentNote": "運転手に なりたいです = tôi muốn làm tài xế."
+      },
+      {
+        "id": "voc-n4-27-15",
+        "word": "だいがくせい",
+        "kanji": "大学生",
+        "furigana": "だいがくせい",
+        "romaji": "daigakusei",
+        "wordType": "noun",
+        "meaningVi": "Sinh viên đại học",
+        "accentNote": "大学生に なったら = khi trở thành sinh viên đại học."
+      },
+      {
+        "id": "voc-n4-27-16",
+        "word": "にゅうがくします",
+        "kanji": "入学します",
+        "furigana": "にゅうがくします",
+        "romaji": "nyuugaku shimasu",
+        "wordType": "verb",
+        "meaningVi": "Nhập học",
+        "accentNote": "大学に 入学できました = tôi đã đậu vào đại học (được nhập học)."
+      },
+      {
+        "id": "voc-n4-27-17",
+        "word": "いじょう",
+        "kanji": "以上",
+        "furigana": "いじょう",
+        "romaji": "ijou",
+        "wordType": "noun",
+        "meaningVi": "Trên, từ ~ trở lên",
+        "accentNote": "18歳 以上 = từ 18 tuổi trở lên (điều kiện để được cấp phép)."
+      },
+      {
+        "id": "voc-n4-27-18",
+        "word": "いか",
+        "kanji": "以下",
+        "furigana": "いか",
+        "romaji": "ika",
+        "wordType": "noun",
+        "meaningVi": "Dưới, từ ~ trở xuống",
+        "accentNote": "18歳 以下は できません = dưới 18 tuổi thì không làm được."
+      },
+      {
+        "id": "voc-n4-27-19",
+        "word": "めんきょ",
+        "kanji": "免許",
+        "furigana": "めんきょ",
+        "romaji": "menkyo",
+        "wordType": "noun",
+        "meaningVi": "Bằng lái, giấy phép",
+        "accentNote": "Đã gặp N5 bài 17. 免許が あれば 運転できます = có bằng thì lái được."
+      },
+      {
+        "id": "voc-n4-27-20",
+        "word": "ざんねん",
+        "kanji": "残念",
+        "furigana": "ざんねん",
+        "romaji": "zannen",
+        "wordType": "adjective",
+        "meaningVi": "Tiếc, đáng tiếc",
+        "accentNote": "Tính từ な. 残念ですが、できません = tiếc là tôi không làm được."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n4-27-1",
-        "character": "語",
-        "hanViet": "NGỮ",
-        "strokeCount": 14,
+        "character": "運",
+        "hanViet": "VẬN",
+        "strokeCount": 12,
         "onyomi": [
-          "ゴ"
+          "ウン (un)"
         ],
         "kunyomi": [
-          "かたる"
+          "はこ(ぶ)"
         ],
-        "meaningVi": "Ngôn ngữ",
+        "meaningVi": "Vận chuyển, vận may. Đã gặp N5 bài 18.",
         "commonWords": [
           {
-            "word": "言語",
-            "furigana": "げんご",
-            "meaningVi": "Ngôn ngữ"
+            "word": "運転",
+            "furigana": "うんてん",
+            "meaningVi": "Lái xe"
+          },
+          {
+            "word": "運動",
+            "furigana": "うんどう",
+            "meaningVi": "Vận động"
+          },
+          {
+            "word": "運転手",
+            "furigana": "うんてんしゅ",
+            "meaningVi": "Tài xế"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-27-2",
+        "character": "動",
+        "hanViet": "ĐỘNG",
+        "strokeCount": 11,
+        "onyomi": [
+          "ドウ (dou)"
+        ],
+        "kunyomi": [
+          "うご(く)"
+        ],
+        "meaningVi": "Chuyển động, hoạt động.",
+        "commonWords": [
+          {
+            "word": "運動",
+            "furigana": "うんどう",
+            "meaningVi": "Vận động"
+          },
+          {
+            "word": "動きます",
+            "furigana": "うごきます",
+            "meaningVi": "Chuyển động"
+          },
+          {
+            "word": "自動車",
+            "furigana": "じどうしゃ",
+            "meaningVi": "Ô tô"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-27-3",
+        "character": "泳",
+        "hanViet": "VỊNH",
+        "strokeCount": 8,
+        "onyomi": [
+          "エイ (ei)"
+        ],
+        "kunyomi": [
+          "およ(ぐ)"
+        ],
+        "meaningVi": "Bơi lội. Đã gặp N5 bài 13.",
+        "commonWords": [
+          {
+            "word": "水泳",
+            "furigana": "すいえい",
+            "meaningVi": "Môn bơi lội"
+          },
+          {
+            "word": "泳げます",
+            "furigana": "およげます",
+            "meaningVi": "Bơi được"
+          },
+          {
+            "word": "平泳ぎ",
+            "furigana": "ひらおよぎ",
+            "meaningVi": "Bơi ếch"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-27-4",
+        "character": "以",
+        "hanViet": "DĨ",
+        "strokeCount": 5,
+        "onyomi": [
+          "イ (i)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Lấy làm mốc; từ (đó).",
+        "commonWords": [
+          {
+            "word": "以上",
+            "furigana": "いじょう",
+            "meaningVi": "Trở lên"
+          },
+          {
+            "word": "以下",
+            "furigana": "いか",
+            "meaningVi": "Trở xuống"
+          },
+          {
+            "word": "以前",
+            "furigana": "いぜん",
+            "meaningVi": "Trước đây"
+          }
+        ]
+      },
+      {
+        "id": "kan-n4-27-5",
+        "character": "残",
+        "hanViet": "TÀN",
+        "strokeCount": 10,
+        "onyomi": [
+          "ザン (zan)"
+        ],
+        "kunyomi": [
+          "のこ(る)"
+        ],
+        "meaningVi": "Còn lại, tiếc nuối.",
+        "commonWords": [
+          {
+            "word": "残念",
+            "furigana": "ざんねん",
+            "meaningVi": "Đáng tiếc"
+          },
+          {
+            "word": "残ります",
+            "furigana": "のこります",
+            "meaningVi": "Còn lại"
+          },
+          {
+            "word": "残業",
+            "furigana": "ざんぎょう",
+            "meaningVi": "Làm thêm giờ"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n4-l27-s0",
-        "title": "Trọng tâm: Động từ thể khả năng (可能形)",
-        "grammarFormula": "Nhóm 1: う->える / Nhóm 2: られる / Nhóm 3: できる, こられる",
-        "explanation": "Biểu thị năng lực hoặc điều kiện cho phép thực hiện hành động. Trợ từ を thường đổi thành が.",
+        "slideId": "n4-l27-s1",
+        "slideType": "grammar",
+        "title": "1. Chia thể khả năng — Nhóm I: đuôi う → え + る",
+        "grammarFormula": "話す→話せる　書く→書ける　泳ぐ→泳げる　飲む→飲める",
+        "explanation": "Nhóm I đổi âm cuối của gốc từ điển từ HÀNG う sang HÀNG え, rồi thêm る. Đây là cách gọn hơn nhiều so với ことができます (N5 bài 18) dù diễn tả cùng ý nghĩa khả năng.",
+        "teacherTips": "Đối tượng của động từ khả năng đánh dấu bằng が (không phải を) — giống nhóm 好き/上手 đã học ở N5 bài 9.",
+        "culturalNotes": "話せます gọn và tự nhiên hơn 話すことができます rất nhiều trong giao tiếp hằng ngày — dạng ことができます nghe trang trọng, dùng nhiều trong văn viết.",
         "examples": [
           {
-            "id": "ex-n4-l27-1",
+            "id": "ex-n4-l27-s1-1",
             "tokens": [
               {
-                "id": "tok-n4-l27-1",
-                "text": "わたしは",
+                "id": "t-l27s1-1",
+                "text": "にほんご",
+                "isKeyGrammar": false,
+                "kanji": "日本語",
+                "furigana": "にほんご"
+              },
+              {
+                "id": "t-l27s1-2",
+                "text": "が",
                 "isKeyGrammar": false
               },
               {
-                "id": "tok-n4-l27-2",
-                "text": "わたしは 日本語が 話せます。",
+                "id": "t-l27s1-3",
+                "text": "はなせます",
+                "isKeyGrammar": true,
+                "kanji": "話せます",
+                "furigana": "はなせます"
+              }
+            ],
+            "meaningVi": "Tôi nói được tiếng Nhật."
+          },
+          {
+            "id": "ex-n4-l27-s1-2",
+            "tokens": [
+              {
+                "id": "t-l27s1-4",
+                "text": "うみ",
+                "isKeyGrammar": false,
+                "kanji": "海",
+                "furigana": "うみ"
+              },
+              {
+                "id": "t-l27s1-5",
+                "text": "で",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l27s1-6",
+                "text": "およげます",
+                "isKeyGrammar": true,
+                "kanji": "泳げます",
+                "furigana": "およげます"
+              },
+              {
+                "id": "t-l27s1-7",
+                "text": "か",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Anh bơi được ở biển không?"
+          }
+        ]
+      },
+      {
+        "slideId": "n4-l27-s2",
+        "slideType": "grammar",
+        "title": "2. Chia thể khả năng — Nhóm II và Nhóm III",
+        "grammarFormula": "食べる→食べられる（bỏ る thêm られる）　　来る→来られる　　する→できる（bất quy tắc）",
+        "explanation": "Nhóm II chỉ cần bỏ る, thêm られる — không có biến âm phức tạp như nhóm I. する chia HOÀN TOÀN KHÁC gốc thành できる, phải học thuộc riêng như một từ mới.",
+        "teacherTips": "できます còn ghép được với DANH TỪ HÀNH ĐỘNG trực tiếp (運転が できます) mà không cần chia động từ gốc — rất tiện lợi.",
+        "culturalNotes": "食べられる cũng có dạng nói tắt ら抜き言葉 (食べれる, bỏ ら) rất phổ biến trong khẩu ngữ trẻ, tuy không chuẩn văn viết.",
+        "examples": [
+          {
+            "id": "ex-n4-l27-s2-1",
+            "tokens": [
+              {
+                "id": "t-l27s2-1",
+                "text": "さしみ",
+                "isKeyGrammar": false,
+                "kanji": "刺身",
+                "furigana": "さしみ"
+              },
+              {
+                "id": "t-l27s2-2",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l27s2-3",
+                "text": "たべられません",
+                "isKeyGrammar": true,
+                "kanji": "食べられません",
+                "furigana": "たべられません"
+              }
+            ],
+            "meaningVi": "Tôi không ăn được sashimi."
+          },
+          {
+            "id": "ex-n4-l27-s2-2",
+            "tokens": [
+              {
+                "id": "t-l27s2-4",
+                "text": "うんてん",
+                "isKeyGrammar": true,
+                "kanji": "運転",
+                "furigana": "うんてん"
+              },
+              {
+                "id": "t-l27s2-5",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l27s2-6",
+                "text": "できます",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l27s2-7",
+                "text": "か",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Anh lái xe được không?"
+          }
+        ]
+      },
+      {
+        "slideId": "n4-l27-s3",
+        "slideType": "grammar",
+        "title": "3. So sánh thể khả năng và ことができます",
+        "grammarFormula": "Vれる／られる (gọn, khẩu ngữ)　=　V(từ điển)ことができます (trang trọng, N5 bài 18)",
+        "explanation": "Hai cách diễn đạt TƯƠNG ĐƯƠNG về nghĩa. Thể khả năng ngắn gọn hơn, dùng nhiều trong nói chuyện; ことができます trang trọng hơn, thường gặp trong văn bản, hồ sơ, phỏng vấn.",
+        "teacherTips": "Trong hồ sơ xin việc, phỏng vấn trang trọng nên ưu tiên ことができます; nói chuyện bạn bè thì thể khả năng ngắn tự nhiên hơn nhiều.",
+        "culturalNotes": "免許があれば 運転できます (nếu có bằng thì lái được) — ghép điều kiện ば/たら (N5 bài 25) với thể khả năng rất phổ biến.",
+        "examples": [
+          {
+            "id": "ex-n4-l27-s3-1",
+            "tokens": [
+              {
+                "id": "t-l27s3-1",
+                "text": "ピアノ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l27s3-2",
+                "text": "が",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l27s3-3",
+                "text": "ひけます",
+                "isKeyGrammar": true,
+                "kanji": "弾けます",
+                "furigana": "ひけます"
+              }
+            ],
+            "meaningVi": "Tôi chơi được piano. (gọn, thân mật)"
+          },
+          {
+            "id": "ex-n4-l27-s3-2",
+            "tokens": [
+              {
+                "id": "t-l27s3-4",
+                "text": "ピアノ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l27s3-5",
+                "text": "を",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l27s3-6",
+                "text": "ひく",
+                "isKeyGrammar": false,
+                "kanji": "弾く",
+                "furigana": "ひく"
+              },
+              {
+                "id": "t-l27s3-7",
+                "text": "ことが",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l27s3-8",
+                "text": "できます",
                 "isKeyGrammar": true
               }
             ],
-            "meaningVi": "Tôi có thể nói tiếng Nhật."
+            "meaningVi": "Tôi có khả năng chơi piano. (trang trọng, giống nghĩa câu trên)"
           }
-        ],
-        "culturalNotes": "Đây là mẫu ngữ pháp then chốt thường xuất hiện trong đề thi JLPT N4."
+        ]
+      },
+      {
+        "slideId": "n4-l27-s4",
+        "slideType": "grammar",
+        "title": "4. Điều kiện độ tuổi: 〜歳以上／以下",
+        "grammarFormula": "[số]歳 + 以上 (từ ~ trở lên) / 以下 (từ ~ trở xuống) + は + [khả năng/quy định]",
+        "explanation": "以上/以下 xác định một MỐC rồi bao gồm CẢ mốc đó — 18歳以上 nghĩa là tính TỪ 18 tuổi trở lên (bao gồm đúng 18 tuổi), khác 未満 (dưới, không bao gồm mốc — học ở trình độ cao hơn).",
+        "teacherTips": "以上/以下 dùng nhiều trong quy định, biển báo, điều kiện tuyển dụng — cần đọc kỹ để biết mốc có được TÍNH VÀO hay không.",
+        "culturalNotes": "Biển hiệu quán rượu Nhật luôn ghi 20歳以上 (từ 20 tuổi — độ tuổi hợp pháp uống rượu ở Nhật, khác 18 tuổi ở nhiều nước).",
+        "examples": [
+          {
+            "id": "ex-n4-l27-s4-1",
+            "tokens": [
+              {
+                "id": "t-l27s4-1",
+                "text": "じゅうはっさい",
+                "isKeyGrammar": false,
+                "kanji": "18歳",
+                "furigana": "じゅうはっさい"
+              },
+              {
+                "id": "t-l27s4-2",
+                "text": "いじょう",
+                "isKeyGrammar": true,
+                "kanji": "以上",
+                "furigana": "いじょう"
+              },
+              {
+                "id": "t-l27s4-3",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l27s4-4",
+                "text": "うんてん",
+                "isKeyGrammar": false,
+                "kanji": "運転",
+                "furigana": "うんてん"
+              },
+              {
+                "id": "t-l27s4-5",
+                "text": "できます",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Từ 18 tuổi trở lên thì lái xe được."
+          },
+          {
+            "id": "ex-n4-l27-s4-2",
+            "tokens": [
+              {
+                "id": "t-l27s4-6",
+                "text": "だいがくせい",
+                "isKeyGrammar": true,
+                "kanji": "大学生",
+                "furigana": "だいがくせい"
+              },
+              {
+                "id": "t-l27s4-7",
+                "text": "いか",
+                "isKeyGrammar": true,
+                "kanji": "以下",
+                "furigana": "いか"
+              },
+              {
+                "id": "t-l27s4-8",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l27s4-9",
+                "text": "むりょう",
+                "isKeyGrammar": false,
+                "kanji": "無料",
+                "furigana": "むりょう"
+              },
+              {
+                "id": "t-l27s4-10",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Từ sinh viên đại học trở xuống thì miễn phí."
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n4-27-1",
-        "speaker": "Sensei",
-        "speakerRole": "sensei",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên năm 2",
         "tokens": [
           {
-            "id": "tok-n4-27-d1",
-            "text": "この文法のポイントを"
+            "id": "d-l27-1",
+            "text": "サントスさん",
+            "isKeyGrammar": false
           },
           {
-            "id": "tok-n4-27-d2",
-            "text": "復習しましょう。"
+            "id": "d-l27-2",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-3",
+            "text": "うんてん",
+            "isKeyGrammar": true,
+            "kanji": "運転",
+            "furigana": "うんてん"
+          },
+          {
+            "id": "d-l27-4",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-5",
+            "text": "できます",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l27-6",
+            "text": "か",
+            "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
+        "meaningVi": "Anh Santos lái xe được không?"
+      },
+      {
+        "id": "dia-n4-27-2",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên năm 2",
+        "tokens": [
+          {
+            "id": "d-l27-7",
+            "text": "いいえ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-8",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-9",
+            "text": "できません",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l27-10",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-11",
+            "text": "めんきょ",
+            "isKeyGrammar": true,
+            "kanji": "免許",
+            "furigana": "めんきょ"
+          },
+          {
+            "id": "d-l27-12",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-13",
+            "text": "ありません",
+            "isKeyGrammar": false,
+            "kanji": "有りません",
+            "furigana": "ありません"
+          }
+        ],
+        "meaningVi": "Không, tôi không lái được. Tôi không có bằng lái."
+      },
+      {
+        "id": "dia-n4-27-3",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên năm 2",
+        "tokens": [
+          {
+            "id": "d-l27-14",
+            "text": "そうですか",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-15",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-16",
+            "text": "じゃ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-17",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-18",
+            "text": "うんどう",
+            "isKeyGrammar": true,
+            "kanji": "運動",
+            "furigana": "うんどう"
+          },
+          {
+            "id": "d-l27-19",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-20",
+            "text": "どうですか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vậy à. Còn thể thao thì sao?"
+      },
+      {
+        "id": "dia-n4-27-4",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên năm 2",
+        "tokens": [
+          {
+            "id": "d-l27-21",
+            "text": "すいえい",
+            "isKeyGrammar": true,
+            "kanji": "水泳",
+            "furigana": "すいえい"
+          },
+          {
+            "id": "d-l27-22",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-23",
+            "text": "とくい",
+            "isKeyGrammar": false,
+            "kanji": "得意",
+            "furigana": "とくい"
+          },
+          {
+            "id": "d-l27-24",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-25",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-26",
+            "text": "うみ",
+            "isKeyGrammar": false,
+            "kanji": "海",
+            "furigana": "うみ"
+          },
+          {
+            "id": "d-l27-27",
+            "text": "でも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-28",
+            "text": "プール",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-29",
+            "text": "でも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-30",
+            "text": "およげます",
+            "isKeyGrammar": true,
+            "kanji": "泳げます",
+            "furigana": "およげます"
+          }
+        ],
+        "meaningVi": "Bơi lội thì tôi giỏi. Cả biển lẫn hồ bơi tôi đều bơi được."
+      },
+      {
+        "id": "dia-n4-27-5",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên năm 2",
+        "tokens": [
+          {
+            "id": "d-l27-31",
+            "text": "すごい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-32",
+            "text": "ですね",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-33",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-34",
+            "text": "がいこくご",
+            "isKeyGrammar": false,
+            "kanji": "外国語",
+            "furigana": "がいこくご"
+          },
+          {
+            "id": "d-l27-35",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-36",
+            "text": "なに",
+            "isKeyGrammar": false,
+            "kanji": "何",
+            "furigana": "なに"
+          },
+          {
+            "id": "d-l27-37",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-38",
+            "text": "はなせます",
+            "isKeyGrammar": true,
+            "kanji": "話せます",
+            "furigana": "はなせます"
+          },
+          {
+            "id": "d-l27-39",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Giỏi thật đấy. Ngoại ngữ thì anh nói được tiếng gì?"
+      },
+      {
+        "id": "dia-n4-27-6",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên năm 2",
+        "tokens": [
+          {
+            "id": "d-l27-40",
+            "text": "えいご",
+            "isKeyGrammar": false,
+            "kanji": "英語",
+            "furigana": "えいご"
+          },
+          {
+            "id": "d-l27-41",
+            "text": "と",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-42",
+            "text": "すこし",
+            "isKeyGrammar": false,
+            "kanji": "少し",
+            "furigana": "すこし"
+          },
+          {
+            "id": "d-l27-43",
+            "text": "にほんご",
+            "isKeyGrammar": false,
+            "kanji": "日本語",
+            "furigana": "にほんご"
+          },
+          {
+            "id": "d-l27-44",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-45",
+            "text": "はなせます",
+            "isKeyGrammar": false,
+            "kanji": "話せます",
+            "furigana": "はなせます"
+          }
+        ],
+        "meaningVi": "Tôi nói được tiếng Anh và một chút tiếng Nhật."
+      },
+      {
+        "id": "dia-n4-27-7",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên năm 2",
+        "tokens": [
+          {
+            "id": "d-l27-46",
+            "text": "ピアノ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-47",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-48",
+            "text": "ひけます",
+            "isKeyGrammar": true,
+            "kanji": "弾けます",
+            "furigana": "ひけます"
+          },
+          {
+            "id": "d-l27-49",
+            "text": "か",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Anh chơi piano được không?"
+      },
+      {
+        "id": "dia-n4-27-8",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên năm 2",
+        "tokens": [
+          {
+            "id": "d-l27-50",
+            "text": "ざんねん",
+            "isKeyGrammar": true,
+            "kanji": "残念",
+            "furigana": "ざんねん"
+          },
+          {
+            "id": "d-l27-51",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-52",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-53",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-54",
+            "text": "それ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-55",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-56",
+            "text": "できません",
+            "isKeyGrammar": true
+          }
+        ],
+        "meaningVi": "Tiếc là cái đó tôi không làm được."
+      },
+      {
+        "id": "dia-n4-27-9",
+        "speaker": "ワン",
+        "speakerRole": "Sinh viên năm 2",
+        "tokens": [
+          {
+            "id": "d-l27-57",
+            "text": "だいじょうぶ",
+            "isKeyGrammar": false,
+            "kanji": "大丈夫",
+            "furigana": "だいじょうぶ"
+          },
+          {
+            "id": "d-l27-58",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-59",
+            "text": "よ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-60",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-61",
+            "text": "だいがくせい",
+            "isKeyGrammar": true,
+            "kanji": "大学生",
+            "furigana": "だいがくせい"
+          },
+          {
+            "id": "d-l27-62",
+            "text": "に",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-63",
+            "text": "なったら",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l27-64",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-65",
+            "text": "ならう",
+            "isKeyGrammar": false,
+            "kanji": "習う",
+            "furigana": "ならう"
+          },
+          {
+            "id": "d-l27-66",
+            "text": "こと",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-67",
+            "text": "が",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-68",
+            "text": "できますよ",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Không sao đâu. Khi thành sinh viên đại học, anh học được mà."
+      },
+      {
+        "id": "dia-n4-27-10",
+        "speaker": "サントス",
+        "speakerRole": "Sinh viên năm 2",
+        "tokens": [
+          {
+            "id": "d-l27-69",
+            "text": "そうですね",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-70",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l27-71",
+            "text": "がんばります",
+            "isKeyGrammar": false,
+            "kanji": "頑張ります",
+            "furigana": "がんばります"
+          }
+        ],
+        "meaningVi": "Đúng vậy nhỉ. Tôi sẽ cố gắng."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n4-27-1",
-        "question": "Chọn cách kết hợp đúng cho cấu trúc: Động từ thể khả năng (可能形)",
+        "question": "Thể khả năng của 話す (nhóm I) là:",
         "options": [
-          "Nhóm 1: う->える",
-          "Thể ý chí + だ",
-          "Thể cấm chỉ",
-          "V-ない + です"
+          "話せる",
+          "話られる",
+          "話できる",
+          "話える"
         ],
         "correctIndex": 0,
-        "explanation": "Công thức chính xác theo quy tắc ngữ pháp là: Nhóm 1: う->える / Nhóm 2: られる / Nhóm 3: できる, こられる",
-        "hint": "Chú ý dạng thể liên kết của động từ."
+        "explanation": "Nhóm I đổi âm cuối gốc từ điển sang hàng え, thêm る: 話す → 話せる.",
+        "hint": "Áp dụng quy tắc nhóm I ở slide 1."
+      },
+      {
+        "id": "ex-q-n4-27-2",
+        "question": "Thể khả năng của 食べる (nhóm II) là:",
+        "options": [
+          "食べられる",
+          "食べれる (chỉ dùng khẩu ngữ, không chuẩn)",
+          "食べえる",
+          "食べできる"
+        ],
+        "correctIndex": 0,
+        "explanation": "Nhóm II bỏ る, thêm られる: 食べる → 食べられる. Dạng 食べれる (bỏ ら) là khẩu ngữ, không phải chuẩn.",
+        "hint": "Xem quy tắc nhóm II ở slide 2."
+      },
+      {
+        "id": "ex-q-n4-27-3",
+        "question": "Thể khả năng của する là:",
+        "options": [
+          "できる",
+          "しれる",
+          "すきる",
+          "しできる"
+        ],
+        "correctIndex": 0,
+        "explanation": "する chia hoàn toàn bất quy tắc thành できる — không theo âm gốc する như các nhóm khác.",
+        "hint": "Đây là trường hợp bất quy tắc phải học thuộc."
+      },
+      {
+        "id": "ex-q-n4-27-4",
+        "question": "「日本語が話せます」 — vì sao dùng が chứ không phải を?",
+        "options": [
+          "Động từ khả năng đánh dấu đối tượng bằng が, giống nhóm 好き/上手 (N5 bài 9)",
+          "が là lỗi thừa, phải sửa thành を",
+          "を chỉ dùng cho câu hỏi",
+          "が chỉ dùng khi phủ định"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cùng quy tắc với 好き/上手/欲しい đã học ở N5 — nhóm động từ/tính từ đặc biệt này luôn dùng が.",
+        "hint": "Nhớ lại quy tắc が đã học ở N5 bài 9, 13."
+      },
+      {
+        "id": "ex-q-n4-27-5",
+        "question": "話せます và 話すことができます khác nhau ở:",
+        "options": [
+          "Nghĩa giống nhau, khác mức độ trang trọng (thể khả năng gọn/khẩu ngữ hơn)",
+          "Nghĩa hoàn toàn khác nhau",
+          "話せます sai ngữ pháp",
+          "ことができます chỉ dùng cho phủ định"
+        ],
+        "correctIndex": 0,
+        "explanation": "Hai cách diễn đạt tương đương về nghĩa; thể khả năng ngắn gọn, dùng nhiều trong nói chuyện; ことができます trang trọng hơn.",
+        "hint": "Xem so sánh ở slide 3."
+      },
+      {
+        "id": "ex-q-n4-27-6",
+        "question": "「18歳以上は 運転できます」 — 以上 bao gồm cả 18 tuổi không?",
+        "options": [
+          "Có, 以上 tính TỪ mốc đó trở lên, bao gồm cả mốc",
+          "Không, 18 tuổi không được tính",
+          "以上 chỉ tính trên 18 tuổi, không rõ có 18 không",
+          "以上 không liên quan tới tuổi tác"
+        ],
+        "correctIndex": 0,
+        "explanation": "以上 (trở lên) LUÔN bao gồm chính mốc đó — khác 未満 (dưới, không bao gồm mốc, học ở trình độ cao hơn).",
+        "hint": "Xem giải thích ở slide 4."
+      },
+      {
+        "id": "ex-q-n4-27-7",
+        "question": "Câu nào dùng để nói 'tôi không lái xe được vì không có bằng'?",
+        "options": [
+          "免許が ありませんから、運転できません",
+          "免許が あります、運転できません",
+          "免許が なければ、運転します",
+          "免許が あっても、運転できません"
+        ],
+        "correctIndex": 0,
+        "explanation": "から (lý do, N5 bài 9) + できません (khả năng phủ định) diễn tả đúng quan hệ nhân quả: không có bằng nên không lái được.",
+        "hint": "Kết hợp kiến thức から đã học ở N5."
+      },
+      {
+        "id": "ex-q-n4-27-8",
+        "question": "残念ですが、それはできません — 残念 có nghĩa là:",
+        "options": [
+          "Đáng tiếc, tiếc nuối",
+          "Vui mừng",
+          "Tức giận",
+          "Bình thường"
+        ],
+        "correctIndex": 0,
+        "explanation": "残念 (tính từ な) diễn tả cảm giác tiếc nuối khi không thể đáp ứng được điều gì đó.",
+        "hint": "Xem nghĩa từ vựng và ngữ cảnh sử dụng trong hội thoại."
+      },
+      {
+        "id": "ex-q-n4-27-9",
+        "question": "Trong hội thoại, Santos giỏi môn thể thao nào?",
+        "options": [
+          "Bơi lội",
+          "Bóng đá",
+          "Chạy bộ",
+          "Không giỏi môn nào"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos nói 「水泳が得意です。海でもプールでも泳げます」.",
+        "hint": "Xem câu thoại thứ 4."
+      },
+      {
+        "id": "ex-q-n4-27-10",
+        "question": "Santos nói được những ngoại ngữ nào?",
+        "options": [
+          "Tiếng Anh và một chút tiếng Nhật",
+          "Chỉ tiếng Anh",
+          "Tiếng Anh, Nhật và Pháp",
+          "Không nói được ngoại ngữ nào"
+        ],
+        "correctIndex": 0,
+        "explanation": "Santos trả lời 「英語と 少し 日本語が話せます」.",
+        "hint": "Xem câu thoại thứ 6."
       }
     ]
   },
