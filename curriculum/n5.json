@@ -1693,8 +1693,8 @@
   {
     "level": "N5",
     "lessonNumber": 2,
-    "title": "Bài 2: Chỉ thị từ đồ vật (これ / それ / あれ) & (この / その / あの)",
-    "description": "Nắm vững cách trỏ đồ vật theo khoảng cách cự ly: これ (gần người nói), それ (gần người nghe), あれ (xa cả hai), cụm bổ nghĩa この/その/あの + Danh từ, và cách xác nhận そうです/ちがいます.",
+    "title": "Bài 2: Chỉ thị từ đồ vật (これ / それ / あれ) & trợ từ の",
+    "description": "Trỏ đồ vật theo khoảng cách これ / それ / あれ, cụm bổ nghĩa この / その / あの + Danh từ, xác nhận そうです / ちがいます, trợ từ の nối và thay thế danh từ, hỏi tên vật bằng 何ですか.",
     "vocabList": [
       {
         "id": "voc-n5-2-1",
@@ -1703,10 +1703,8 @@
         "furigana": "",
         "romaji": "kore",
         "wordType": "noun",
-        "meaningVi": "Cái này (gần người nói)",
-        "accentNote": "Âm phẳng.",
-        "imageUrl": "https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=400&q=80",
-        "imageAlt": "Cái này (gần người nói)"
+        "meaningVi": "Cái này (vật ở gần NGƯỜI NÓI)",
+        "accentNote": "Trong tầm tay mình."
       },
       {
         "id": "voc-n5-2-2",
@@ -1715,10 +1713,8 @@
         "furigana": "",
         "romaji": "sore",
         "wordType": "noun",
-        "meaningVi": "Cái đó (gần người nghe)",
-        "accentNote": "Âm phẳng.",
-        "imageUrl": "https://images.unsplash.com/photo-1589254065909-b7086229d08c?auto=format&fit=crop&w=400&q=80",
-        "imageAlt": "Cái đó (gần người nghe)"
+        "meaningVi": "Cái đó (vật ở gần NGƯỜI NGHE)",
+        "accentNote": "Trong tầm tay đối phương."
       },
       {
         "id": "voc-n5-2-3",
@@ -1727,40 +1723,38 @@
         "furigana": "",
         "romaji": "are",
         "wordType": "noun",
-        "meaningVi": "Cái kia (xa cả hai)",
-        "accentNote": "Âm phẳng.",
-        "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
-        "imageAlt": "Cái kia (xa cả hai)"
+        "meaningVi": "Cái kia (vật XA cả hai người)",
+        "accentNote": "Cả hai cùng phải chỉ tay."
       },
       {
         "id": "voc-n5-2-4",
-        "word": "この〜",
+        "word": "この",
         "kanji": "",
         "furigana": "",
-        "romaji": "kono-",
-        "wordType": "adnominal",
-        "meaningVi": "~ này (bắt buộc đi liền với Danh từ)",
-        "accentNote": "Không đứng một mình."
+        "romaji": "kono",
+        "wordType": "particle",
+        "meaningVi": "~ này (この + Danh từ)",
+        "accentNote": "この KHÔNG đứng một mình được."
       },
       {
         "id": "voc-n5-2-5",
-        "word": "その〜",
+        "word": "その",
         "kanji": "",
         "furigana": "",
-        "romaji": "sono-",
-        "wordType": "adnominal",
-        "meaningVi": "~ đó (kèm Danh từ)",
-        "accentNote": "Không đứng một mình."
+        "romaji": "sono",
+        "wordType": "particle",
+        "meaningVi": "~ đó (その + Danh từ)",
+        "accentNote": "Luôn dính liền danh từ phía sau."
       },
       {
         "id": "voc-n5-2-6",
-        "word": "あの〜",
+        "word": "あの",
         "kanji": "",
         "furigana": "",
-        "romaji": "ano-",
-        "wordType": "adnominal",
-        "meaningVi": "~ kia (kèm Danh từ)",
-        "accentNote": "Không đứng một mình."
+        "romaji": "ano",
+        "wordType": "particle",
+        "meaningVi": "~ kia (あの + Danh từ)",
+        "accentNote": "あの人 = người kia."
       },
       {
         "id": "voc-n5-2-7",
@@ -1769,10 +1763,8 @@
         "furigana": "ほん",
         "romaji": "hon",
         "wordType": "noun",
-        "meaningVi": "Sách, quyển sách",
-        "accentNote": "Âm mũi ほん.",
-        "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=400&q=80",
-        "imageAlt": "Quyển sách"
+        "meaningVi": "Quyển sách",
+        "accentNote": "Cũng là lượng từ đếm vật dài."
       },
       {
         "id": "voc-n5-2-8",
@@ -1782,9 +1774,7 @@
         "romaji": "jisho",
         "wordType": "noun",
         "meaningVi": "Từ điển",
-        "accentNote": "Nhấn ở âm じ.",
-        "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=400&q=80",
-        "imageAlt": "Cuốn từ điển"
+        "accentNote": "電子辞書 = từ điển điện tử."
       },
       {
         "id": "voc-n5-2-9",
@@ -1794,9 +1784,7 @@
         "romaji": "zasshi",
         "wordType": "noun",
         "meaningVi": "Tạp chí",
-        "accentNote": "Có âm ngắt っ.",
-        "imageUrl": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=400&q=80",
-        "imageAlt": "Tạp chí màu"
+        "accentNote": "Âm ngắt っ, bật mạnh."
       },
       {
         "id": "voc-n5-2-10",
@@ -1805,49 +1793,323 @@
         "furigana": "しんぶん",
         "romaji": "shinbun",
         "wordType": "noun",
-        "meaningVi": "Tờ báo",
-        "accentNote": "Âm phẳng.",
-        "imageUrl": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=400&q=80",
-        "imageAlt": "Tờ báo tin tức"
+        "meaningVi": "Báo, tờ báo",
+        "accentNote": "Đừng lẫn với ニュース (bản tin)."
       },
       {
         "id": "voc-n5-2-11",
+        "word": "ノート",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "nooto",
+        "wordType": "noun",
+        "meaningVi": "Quyển vở",
+        "accentNote": "Từ ngoại lai, kéo dài âm ノー."
+      },
+      {
+        "id": "voc-n5-2-12",
+        "word": "てちょう",
+        "kanji": "手帳",
+        "furigana": "てちょう",
+        "romaji": "techou",
+        "wordType": "noun",
+        "meaningVi": "Sổ tay",
+        "accentNote": "Dân văn phòng Nhật ai cũng có một quyển."
+      },
+      {
+        "id": "voc-n5-2-13",
+        "word": "めいし",
+        "kanji": "名刺",
+        "furigana": "めいし",
+        "romaji": "meishi",
+        "wordType": "noun",
+        "meaningVi": "Danh thiếp",
+        "accentNote": "Trao bằng HAI tay, mặt chữ hướng về người nhận."
+      },
+      {
+        "id": "voc-n5-2-14",
+        "word": "カード",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "kaado",
+        "wordType": "noun",
+        "meaningVi": "Thẻ, card",
+        "accentNote": "テレホンカード = thẻ điện thoại."
+      },
+      {
+        "id": "voc-n5-2-15",
+        "word": "えんぴつ",
+        "kanji": "鉛筆",
+        "furigana": "えんぴつ",
+        "romaji": "enpitsu",
+        "wordType": "noun",
+        "meaningVi": "Bút chì",
+        "accentNote": "Đếm: 1本 いっぽん, 3本 さんぼん."
+      },
+      {
+        "id": "voc-n5-2-16",
+        "word": "ボールペン",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "boorupen",
+        "wordType": "noun",
+        "meaningVi": "Bút bi",
+        "accentNote": "Ghép ball + pen."
+      },
+      {
+        "id": "voc-n5-2-17",
+        "word": "シャープペンシル",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "shaapupenshiru",
+        "wordType": "noun",
+        "meaningVi": "Bút chì kim",
+        "accentNote": "Nói tắt hằng ngày: シャーペン."
+      },
+      {
+        "id": "voc-n5-2-18",
+        "word": "かぎ",
+        "kanji": "鍵",
+        "furigana": "かぎ",
+        "romaji": "kagi",
+        "wordType": "noun",
+        "meaningVi": "Chìa khóa, ổ khóa",
+        "accentNote": "かぎを かけます = khóa cửa lại."
+      },
+      {
+        "id": "voc-n5-2-19",
         "word": "とけい",
         "kanji": "時計",
         "furigana": "とけい",
         "romaji": "tokei",
         "wordType": "noun",
         "meaningVi": "Đồng hồ",
-        "accentNote": "Nhấn ở âm け.",
-        "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400&q=80",
-        "imageAlt": "Đồng hồ đeo tay / treo tường"
+        "accentNote": "腕時計 うでどけい = đồng hồ đeo tay."
       },
       {
-        "id": "voc-n5-2-12",
+        "id": "voc-n5-2-20",
         "word": "かさ",
         "kanji": "傘",
         "furigana": "かさ",
         "romaji": "kasa",
         "wordType": "noun",
-        "meaningVi": "Cái ô / dù",
-        "accentNote": "Nhấn ở âm か.",
-        "imageUrl": "https://images.unsplash.com/photo-1534353436294-0dbd4bdac845?auto=format&fit=crop&w=400&q=80",
-        "imageAlt": "Cái ô / dù đi mưa"
+        "meaningVi": "Cái ô, cái dù",
+        "accentNote": "Trọng âm phẳng."
+      },
+      {
+        "id": "voc-n5-2-21",
+        "word": "かばん",
+        "kanji": "鞄",
+        "furigana": "かばん",
+        "romaji": "kaban",
+        "wordType": "noun",
+        "meaningVi": "Cặp, túi xách",
+        "accentNote": "Thường viết Hiragana."
+      },
+      {
+        "id": "voc-n5-2-22",
+        "word": "テープ",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "teepu",
+        "wordType": "noun",
+        "meaningVi": "Băng, cuộn băng",
+        "accentNote": "カセットテープ = băng cát-xét."
+      },
+      {
+        "id": "voc-n5-2-23",
+        "word": "テレビ",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "terebi",
+        "wordType": "noun",
+        "meaningVi": "Ti vi",
+        "accentNote": "Nói tắt của テレビジョン."
+      },
+      {
+        "id": "voc-n5-2-24",
+        "word": "ラジオ",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "rajio",
+        "wordType": "noun",
+        "meaningVi": "Radio",
+        "accentNote": "Đọc ra-ji-o, không phải 'rây-đi-ô'."
+      },
+      {
+        "id": "voc-n5-2-25",
+        "word": "カメラ",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "kamera",
+        "wordType": "noun",
+        "meaningVi": "Máy ảnh",
+        "accentNote": "Nhấn ở âm カ."
+      },
+      {
+        "id": "voc-n5-2-26",
+        "word": "コンピューター",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "konpyuutaa",
+        "wordType": "noun",
+        "meaningVi": "Máy vi tính",
+        "accentNote": "Nói tắt: パソコン (máy cá nhân)."
+      },
+      {
+        "id": "voc-n5-2-27",
+        "word": "つくえ",
+        "kanji": "机",
+        "furigana": "つくえ",
+        "romaji": "tsukue",
+        "wordType": "noun",
+        "meaningVi": "Cái bàn (bàn học, bàn làm việc)",
+        "accentNote": "Bàn ăn thì dùng テーブル."
+      },
+      {
+        "id": "voc-n5-2-28",
+        "word": "いす",
+        "kanji": "椅子",
+        "furigana": "いす",
+        "romaji": "isu",
+        "wordType": "noun",
+        "meaningVi": "Cái ghế",
+        "accentNote": "Trọng âm phẳng."
+      },
+      {
+        "id": "voc-n5-2-29",
+        "word": "えいご",
+        "kanji": "英語",
+        "furigana": "えいご",
+        "romaji": "eigo",
+        "wordType": "noun",
+        "meaningVi": "Tiếng Anh",
+        "accentNote": "Tên nước + 語 = tiếng nước đó."
+      },
+      {
+        "id": "voc-n5-2-30",
+        "word": "にほんご",
+        "kanji": "日本語",
+        "furigana": "にほんご",
+        "romaji": "nihongo",
+        "wordType": "noun",
+        "meaningVi": "Tiếng Nhật",
+        "accentNote": "Riêng tiếng Anh là 英語, không phải イギリス語."
+      },
+      {
+        "id": "voc-n5-2-31",
+        "word": "なん",
+        "kanji": "何",
+        "furigana": "なん",
+        "romaji": "nan",
+        "wordType": "noun",
+        "meaningVi": "Cái gì (từ để hỏi vật)",
+        "accentNote": "Trước です đọc なん, đứng riêng đọc なに."
+      },
+      {
+        "id": "voc-n5-2-32",
+        "word": "そうです",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "sou desu",
+        "wordType": "phrase",
+        "meaningVi": "Đúng vậy (xác nhận là đúng)",
+        "accentNote": "Đáp cho câu hỏi はい／いいえ."
+      },
+      {
+        "id": "voc-n5-2-33",
+        "word": "ちがいます",
+        "kanji": "違います",
+        "furigana": "ちがいます",
+        "romaji": "chigaimasu",
+        "wordType": "phrase",
+        "meaningVi": "Không phải, nhầm rồi",
+        "accentNote": "Nhẹ nhàng hơn いいえ nói trống không."
+      },
+      {
+        "id": "voc-n5-2-34",
+        "word": "そうですか",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "sou desu ka",
+        "wordType": "phrase",
+        "meaningVi": "Thế à, ra vậy",
+        "accentNote": "Hạ giọng cuối câu — đây KHÔNG phải câu hỏi."
+      },
+      {
+        "id": "voc-n5-2-35",
+        "word": "あのう",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "anou",
+        "wordType": "phrase",
+        "meaningVi": "À, ừm… (đệm trước khi mở lời)",
+        "accentNote": "Kéo dài để xin phép nói xen vào."
+      },
+      {
+        "id": "voc-n5-2-36",
+        "word": "どうぞ",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "douzo",
+        "wordType": "phrase",
+        "meaningVi": "Xin mời (khi đưa vật cho ai)",
+        "accentNote": "Đưa bằng hai tay."
+      },
+      {
+        "id": "voc-n5-2-37",
+        "word": "どうも",
+        "kanji": "",
+        "furigana": "",
+        "romaji": "doumo",
+        "wordType": "phrase",
+        "meaningVi": "Cảm ơn (ngắn gọn, thân mật)",
+        "accentNote": "Đầy đủ: どうも ありがとう ございます."
+      },
+      {
+        "id": "voc-n5-2-38",
+        "word": "ほんのきもちです",
+        "kanji": "ほんの気持ちです",
+        "furigana": "ほんのきもちです",
+        "romaji": "hon no kimochi desu",
+        "wordType": "phrase",
+        "meaningVi": "Chút quà nhỏ gọi là (khi tặng quà)",
+        "accentNote": "Câu khiêm tốn bắt buộc khi biếu quà."
+      },
+      {
+        "id": "voc-n5-2-39",
+        "word": "これからおせわになります",
+        "kanji": "これからお世話になります",
+        "furigana": "これからおせわになります",
+        "romaji": "korekara osewa ni narimasu",
+        "wordType": "phrase",
+        "meaningVi": "Từ nay mong được anh/chị giúp đỡ",
+        "accentNote": "Nói khi mới chuyển đến, mới vào làm."
+      },
+      {
+        "id": "voc-n5-2-40",
+        "word": "〜ご",
+        "kanji": "〜語",
+        "furigana": "〜ご",
+        "romaji": "-go",
+        "wordType": "particle",
+        "meaningVi": "Tiếng ~ (ベトナム語 = tiếng Việt)",
+        "accentNote": "Gắn sau tên nước."
       }
     ],
     "kanjiList": [
       {
         "id": "kan-n5-2-1",
         "character": "本",
-        "hanViet": "BẢN / BỔN",
+        "hanViet": "BẢN",
         "strokeCount": 5,
         "onyomi": [
           "ホン (hon)"
         ],
         "kunyomi": [
-          "もと (moto)"
+          "もと"
         ],
-        "meaningVi": "Gốc rễ, sách vở.",
+        "meaningVi": "Gốc rễ; quyển sách. Vẽ thân cây có gạch đánh dấu phần gốc.",
         "commonWords": [
           {
             "word": "本",
@@ -1857,12 +2119,49 @@
           {
             "word": "日本",
             "furigana": "にほん",
-            "meaningVi": "Nước Nhật Bản"
+            "meaningVi": "Nhật Bản"
+          },
+          {
+            "word": "本当",
+            "furigana": "ほんとう",
+            "meaningVi": "Thật, đúng là"
           }
         ]
       },
       {
         "id": "kan-n5-2-2",
+        "character": "日",
+        "hanViet": "NHẬT",
+        "strokeCount": 4,
+        "onyomi": [
+          "ニチ (nichi)",
+          "ジツ (jitsu)"
+        ],
+        "kunyomi": [
+          "ひ",
+          "か"
+        ],
+        "meaningVi": "Mặt trời; ngày. Hình vẽ ông mặt trời.",
+        "commonWords": [
+          {
+            "word": "日本",
+            "furigana": "にほん",
+            "meaningVi": "Nhật Bản"
+          },
+          {
+            "word": "毎日",
+            "furigana": "まいにち",
+            "meaningVi": "Hằng ngày"
+          },
+          {
+            "word": "今日",
+            "furigana": "きょう",
+            "meaningVi": "Hôm nay"
+          }
+        ]
+      },
+      {
+        "id": "kan-n5-2-3",
         "character": "語",
         "hanViet": "NGỮ",
         "strokeCount": 14,
@@ -1870,9 +2169,9 @@
           "ゴ (go)"
         ],
         "kunyomi": [
-          "かた・る"
+          "かた(る)"
         ],
-        "meaningVi": "Ngôn ngữ, lời nói.",
+        "meaningVi": "Ngôn ngữ, lời nói. Bộ 言 (nói) bên trái.",
         "commonWords": [
           {
             "word": "日本語",
@@ -1883,11 +2182,104 @@
             "word": "英語",
             "furigana": "えいご",
             "meaningVi": "Tiếng Anh"
+          },
+          {
+            "word": "単語",
+            "furigana": "たんご",
+            "meaningVi": "Từ vựng"
           }
         ]
       },
       {
-        "id": "kan-n5-2-3",
+        "id": "kan-n5-2-4",
+        "character": "英",
+        "hanViet": "ANH",
+        "strokeCount": 8,
+        "onyomi": [
+          "エイ (ei)"
+        ],
+        "kunyomi": [],
+        "meaningVi": "Xuất chúng, tinh hoa; nước Anh.",
+        "commonWords": [
+          {
+            "word": "英語",
+            "furigana": "えいご",
+            "meaningVi": "Tiếng Anh"
+          },
+          {
+            "word": "英国",
+            "furigana": "えいこく",
+            "meaningVi": "Nước Anh"
+          },
+          {
+            "word": "英会話",
+            "furigana": "えいかいわ",
+            "meaningVi": "Hội thoại tiếng Anh"
+          }
+        ]
+      },
+      {
+        "id": "kan-n5-2-5",
+        "character": "時",
+        "hanViet": "THỜI",
+        "strokeCount": 10,
+        "onyomi": [
+          "ジ (ji)"
+        ],
+        "kunyomi": [
+          "とき"
+        ],
+        "meaningVi": "Thời gian, giờ. Bộ 日 (mặt trời) + 寺.",
+        "commonWords": [
+          {
+            "word": "時計",
+            "furigana": "とけい",
+            "meaningVi": "Đồng hồ"
+          },
+          {
+            "word": "何時",
+            "furigana": "なんじ",
+            "meaningVi": "Mấy giờ"
+          },
+          {
+            "word": "時々",
+            "furigana": "ときどき",
+            "meaningVi": "Thỉnh thoảng"
+          }
+        ]
+      },
+      {
+        "id": "kan-n5-2-6",
+        "character": "計",
+        "hanViet": "KẾ",
+        "strokeCount": 9,
+        "onyomi": [
+          "ケイ (kei)"
+        ],
+        "kunyomi": [
+          "はか(る)"
+        ],
+        "meaningVi": "Đo đếm, tính toán, kế hoạch.",
+        "commonWords": [
+          {
+            "word": "時計",
+            "furigana": "とけい",
+            "meaningVi": "Đồng hồ"
+          },
+          {
+            "word": "計画",
+            "furigana": "けいかく",
+            "meaningVi": "Kế hoạch"
+          },
+          {
+            "word": "合計",
+            "furigana": "ごうけい",
+            "meaningVi": "Tổng cộng"
+          }
+        ]
+      },
+      {
+        "id": "kan-n5-2-7",
         "character": "何",
         "hanViet": "HÀ",
         "strokeCount": 7,
@@ -1895,10 +2287,10 @@
           "カ (ka)"
         ],
         "kunyomi": [
-          "なに (nani)",
-          "なん (nan)"
+          "なに",
+          "なん"
         ],
-        "meaningVi": "Cái gì, mấy.",
+        "meaningVi": "Cái gì, bao nhiêu. Từ để hỏi.",
         "commonWords": [
           {
             "word": "何",
@@ -1909,205 +2301,1241 @@
             "word": "何時",
             "furigana": "なんじ",
             "meaningVi": "Mấy giờ"
+          },
+          {
+            "word": "何人",
+            "furigana": "なんにん",
+            "meaningVi": "Mấy người"
+          }
+        ]
+      },
+      {
+        "id": "kan-n5-2-8",
+        "character": "車",
+        "hanViet": "XA",
+        "strokeCount": 7,
+        "onyomi": [
+          "シャ (sha)"
+        ],
+        "kunyomi": [
+          "くるま"
+        ],
+        "meaningVi": "Xe cộ. Hình vẽ chiếc xe hai bánh nhìn từ trên.",
+        "commonWords": [
+          {
+            "word": "車",
+            "furigana": "くるま",
+            "meaningVi": "Xe hơi"
+          },
+          {
+            "word": "自動車",
+            "furigana": "じどうしゃ",
+            "meaningVi": "Ô tô"
+          },
+          {
+            "word": "電車",
+            "furigana": "でんしゃ",
+            "meaningVi": "Tàu điện"
           }
         ]
       }
     ],
     "slides": [
       {
-        "slideId": "n5-l2-s0",
+        "slideId": "n5-l2-s1",
         "slideType": "grammar",
-        "title": "1. Chỉ thị đồ vật: これ / それ / あれ + は + N + です",
+        "title": "1. これ / それ / あれ は N です",
         "grammarFormula": "これ / それ / あれ + は + [Danh từ] + です",
-        "explanation": "Đại từ chỉ định độc lập: これ dùng khi đồ vật ở gần người nói; それ dùng khi vật ở gần người nghe; あれ dùng khi vật ở xa cả hai người.",
-        "teacherTips": "Khi người hỏi dùng 'これは...', người đáp nếu đang đứng xa vật đó phải đổi thành 'それは...'.",
+        "explanation": "Ba từ này THAY THẾ luôn tên đồ vật nên đứng một mình được. Chọn từ nào là theo KHOẢNG CÁCH: これ vật trong tầm tay người nói, それ vật trong tầm tay người nghe, あれ vật xa cả hai.",
+        "teacherTips": "Vật nằm giữa hai người, ai cũng với tới được thì người nói vẫn chọn これ.",
+        "culturalNotes": "Người Nhật ít chỉ tay thẳng vào vật. Họ ngửa bàn tay hướng về phía đó cho lịch sự.",
         "examples": [
           {
-            "id": "ex-n5-l2-1",
+            "id": "ex-n5-l2-s1-1",
             "tokens": [
               {
-                "id": "tok-kore-1",
+                "id": "t-l2s1-1",
                 "text": "これ",
                 "isKeyGrammar": true
               },
               {
-                "id": "tok-wa-21",
+                "id": "t-l2s1-2",
                 "text": "は",
-                "isKeyGrammar": true
+                "isKeyGrammar": false
               },
               {
-                "id": "tok-jisho-1",
-                "text": "じしょ",
-                "isKeyGrammar": false,
-                "kanji": "辞書",
-                "furigana": "じしょ"
-              },
-              {
-                "id": "tok-desu-21",
-                "text": "です",
-                "isKeyGrammar": true
-              }
-            ],
-            "meaningVi": "Cái này là từ điển."
-          },
-          {
-            "id": "ex-n5-l2-2",
-            "tokens": [
-              {
-                "id": "tok-sore-1",
-                "text": "それ",
-                "isKeyGrammar": true
-              },
-              {
-                "id": "tok-wa-22",
-                "text": "は",
-                "isKeyGrammar": true
-              },
-              {
-                "id": "tok-kasa-1",
-                "text": "かさ",
-                "isKeyGrammar": false,
-                "kanji": "傘",
-                "furigana": "かさ"
-              },
-              {
-                "id": "tok-desu-22",
-                "text": "です",
-                "isKeyGrammar": true
-              }
-            ],
-            "meaningVi": "Cái đó là cái ô (dù)."
-          }
-        ],
-        "culturalNotes": "Khi chỉ đồ vật của đối phương, người Nhật dùng cử chỉ bàn tay mở ra hướng về đồ vật thay vì chỉ 1 ngón tay."
-      },
-      {
-        "slideId": "n5-l2-s1",
-        "slideType": "grammar",
-        "title": "2. Bổ nghĩa danh từ: この / その / あの + Danh từ",
-        "grammarFormula": "この / その / あの + [Danh từ] + は + ... です",
-        "explanation": "Khác với これ/それ/あれ đứng độc lập, nhóm この/その/あの KHÔNG BAO GIỜ đứng một mình mà bắt buộc phải gắn liền trước Danh từ: この本 (quyển sách này).",
-        "teacherTips": "Quy tắc vàng: Có danh từ theo sau -> dùng KO-NO / SO-NO / A-NO. Không có danh từ -> dùng KO-RE / SO-RE / A-RE.",
-        "examples": [
-          {
-            "id": "ex-n5-l2-3",
-            "tokens": [
-              {
-                "id": "tok-kono-1",
-                "text": "この",
-                "isKeyGrammar": true
-              },
-              {
-                "id": "tok-hon-1",
+                "id": "t-l2s1-3",
                 "text": "ほん",
                 "isKeyGrammar": false,
                 "kanji": "本",
                 "furigana": "ほん"
               },
               {
-                "id": "tok-wa-23",
-                "text": "は",
+                "id": "t-l2s1-4",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Cái này là quyển sách."
+          },
+          {
+            "id": "ex-n5-l2-s1-2",
+            "tokens": [
+              {
+                "id": "t-l2s1-5",
+                "text": "それ",
                 "isKeyGrammar": true
               },
               {
-                "id": "tok-watashi-21",
+                "id": "t-l2s1-6",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s1-7",
+                "text": "じしょ",
+                "isKeyGrammar": false,
+                "kanji": "辞書",
+                "furigana": "じしょ"
+              },
+              {
+                "id": "t-l2s1-8",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Cái đó là quyển từ điển."
+          },
+          {
+            "id": "ex-n5-l2-s1-3",
+            "tokens": [
+              {
+                "id": "t-l2s1-9",
+                "text": "あれ",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s1-10",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s1-11",
+                "text": "なん",
+                "isKeyGrammar": true,
+                "kanji": "何",
+                "furigana": "なん"
+              },
+              {
+                "id": "t-l2s1-12",
+                "text": "ですか",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Cái kia là cái gì vậy?"
+          }
+        ]
+      },
+      {
+        "slideId": "n5-l2-s2",
+        "slideType": "grammar",
+        "title": "2. この / その / あの + Danh từ",
+        "grammarFormula": "この / その / あの + [Danh từ] + は + ... です",
+        "explanation": "Khác với これ/それ/あれ, ba từ này KHÔNG đứng một mình — bắt buộc phải dính một danh từ ngay sau. Dùng khi muốn nói rõ tên vật: cái ô này chứ không chỉ cái này.",
+        "teacherTips": "Nhớ mẹo: これ tự đứng được vì nó ĐÃ là danh từ; この còn thiếu danh từ nên phải mượn một cái.",
+        "culturalNotes": "Gọi người thì luôn dùng あの人 hoặc あの方 — đừng bao giờ dùng あれ cho người.",
+        "examples": [
+          {
+            "id": "ex-n5-l2-s2-1",
+            "tokens": [
+              {
+                "id": "t-l2s2-1",
+                "text": "この",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s2-2",
+                "text": "かさ",
+                "isKeyGrammar": false,
+                "kanji": "傘",
+                "furigana": "かさ"
+              },
+              {
+                "id": "t-l2s2-3",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s2-4",
                 "text": "わたし",
                 "isKeyGrammar": false,
                 "kanji": "私",
                 "furigana": "わたし"
               },
               {
-                "id": "tok-no-21",
+                "id": "t-l2s2-5",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s2-6",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Cái ô này là của tôi."
+          },
+          {
+            "id": "ex-n5-l2-s2-2",
+            "tokens": [
+              {
+                "id": "t-l2s2-7",
+                "text": "その",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s2-8",
+                "text": "ざっし",
+                "isKeyGrammar": false,
+                "kanji": "雑誌",
+                "furigana": "ざっし"
+              },
+              {
+                "id": "t-l2s2-9",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s2-10",
+                "text": "にほんご",
+                "isKeyGrammar": false,
+                "kanji": "日本語",
+                "furigana": "にほんご"
+              },
+              {
+                "id": "t-l2s2-11",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s2-12",
+                "text": "ざっし",
+                "isKeyGrammar": false,
+                "kanji": "雑誌",
+                "furigana": "ざっし"
+              },
+              {
+                "id": "t-l2s2-13",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Quyển tạp chí đó là tạp chí tiếng Nhật."
+          },
+          {
+            "id": "ex-n5-l2-s2-3",
+            "tokens": [
+              {
+                "id": "t-l2s2-14",
+                "text": "あの",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s2-15",
+                "text": "ひと",
+                "isKeyGrammar": false,
+                "kanji": "人",
+                "furigana": "ひと"
+              },
+              {
+                "id": "t-l2s2-16",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s2-17",
+                "text": "やまだ",
+                "isKeyGrammar": false,
+                "kanji": "山田",
+                "furigana": "やまだ"
+              },
+              {
+                "id": "t-l2s2-18",
+                "text": "さん",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s2-19",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Người kia là anh Yamada."
+          }
+        ]
+      },
+      {
+        "slideId": "n5-l2-s3",
+        "slideType": "grammar",
+        "title": "3. Xác nhận: そうです / ちがいます",
+        "grammarFormula": "はい、そうです。 / いいえ、ちがいます。",
+        "explanation": "Với câu hỏi dạng N ですか chỉ cần đúng-sai, đáp nhanh bằng そうです (đúng vậy) hoặc ちがいます (không phải). Còn câu hỏi có TỪ ĐỂ HỎI (なん, だれ…) thì KHÔNG được đáp kiểu này.",
+        "teacherTips": "ちがいます nghe mềm hơn いいえ nói trống không rất nhiều — nên tập phản xạ dùng nó.",
+        "culturalNotes": "Nghe xong thông tin mới, người Nhật đệm そうですか hạ giọng để báo 'tôi đã nắm được'.",
+        "examples": [
+          {
+            "id": "ex-n5-l2-s3-1",
+            "tokens": [
+              {
+                "id": "t-l2s3-1",
+                "text": "それ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s3-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s3-3",
+                "text": "てちょう",
+                "isKeyGrammar": false,
+                "kanji": "手帳",
+                "furigana": "てちょう"
+              },
+              {
+                "id": "t-l2s3-4",
+                "text": "ですか",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Cái đó là quyển sổ tay phải không?"
+          },
+          {
+            "id": "ex-n5-l2-s3-2",
+            "tokens": [
+              {
+                "id": "t-l2s3-5",
+                "text": "はい",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s3-6",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s3-7",
+                "text": "そうです",
+                "isKeyGrammar": true
+              }
+            ],
+            "meaningVi": "Vâng, đúng vậy."
+          },
+          {
+            "id": "ex-n5-l2-s3-3",
+            "tokens": [
+              {
+                "id": "t-l2s3-8",
+                "text": "いいえ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s3-9",
+                "text": "、",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s3-10",
+                "text": "ちがいます",
+                "isKeyGrammar": true,
+                "kanji": "違います",
+                "furigana": "ちがいます"
+              },
+              {
+                "id": "t-l2s3-11",
+                "text": "。",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s3-12",
+                "text": "ノート",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s3-13",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Không phải, đây là quyển vở."
+          }
+        ]
+      },
+      {
+        "slideId": "n5-l2-s4",
+        "slideType": "grammar",
+        "title": "4. Trợ từ の: sở hữu và thuộc tính",
+        "grammarFormula": "N1 + の + N2   (N1 sở hữu / quy định N2)",
+        "explanation": "の nối hai danh từ theo thứ tự NGƯỢC tiếng Việt: cái sở hữu đứng TRƯỚC. Ngoài người sở hữu, の còn diễn tả nội dung, chất liệu, nơi sản xuất của vật.",
+        "teacherTips": "Đọc từ PHẢI sang TRÁI sẽ ra nghĩa tiếng Việt: 日本語の本 → sách ← tiếng Nhật.",
+        "culturalNotes": "Người Nhật giới thiệu công ty trước tên mình: IMCの ミラーです — tập thể đứng trên cá nhân.",
+        "examples": [
+          {
+            "id": "ex-n5-l2-s4-1",
+            "tokens": [
+              {
+                "id": "t-l2s4-1",
+                "text": "わたし",
+                "isKeyGrammar": false,
+                "kanji": "私",
+                "furigana": "わたし"
+              },
+              {
+                "id": "t-l2s4-2",
                 "text": "の",
                 "isKeyGrammar": true
               },
               {
-                "id": "tok-desu-23",
+                "id": "t-l2s4-3",
+                "text": "かばん",
+                "isKeyGrammar": false,
+                "kanji": "鞄",
+                "furigana": "かばん"
+              },
+              {
+                "id": "t-l2s4-4",
                 "text": "です",
-                "isKeyGrammar": true
+                "isKeyGrammar": false
               }
             ],
-            "meaningVi": "Quyển sách này là của tôi."
+            "meaningVi": "Là cái cặp của tôi."
+          },
+          {
+            "id": "ex-n5-l2-s4-2",
+            "tokens": [
+              {
+                "id": "t-l2s4-5",
+                "text": "にほんご",
+                "isKeyGrammar": false,
+                "kanji": "日本語",
+                "furigana": "にほんご"
+              },
+              {
+                "id": "t-l2s4-6",
+                "text": "の",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s4-7",
+                "text": "ほん",
+                "isKeyGrammar": false,
+                "kanji": "本",
+                "furigana": "ほん"
+              },
+              {
+                "id": "t-l2s4-8",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Là quyển sách tiếng Nhật."
+          },
+          {
+            "id": "ex-n5-l2-s4-3",
+            "tokens": [
+              {
+                "id": "t-l2s4-9",
+                "text": "にほん",
+                "isKeyGrammar": false,
+                "kanji": "日本",
+                "furigana": "にほん"
+              },
+              {
+                "id": "t-l2s4-10",
+                "text": "の",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s4-11",
+                "text": "くるま",
+                "isKeyGrammar": false,
+                "kanji": "車",
+                "furigana": "くるま"
+              },
+              {
+                "id": "t-l2s4-12",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Là xe hơi của Nhật."
           }
-        ],
-        "culturalNotes": "Khi muốn khen món đồ người khác đang mặc: 'その服、とても素敵ですね' (Bộ quần áo đó đẹp quá nhỉ)."
+        ]
+      },
+      {
+        "slideId": "n5-l2-s5",
+        "slideType": "grammar",
+        "title": "5. の thay thế danh từ đã biết",
+        "grammarFormula": "N1 + の  (lược bỏ N2 vì ai cũng hiểu)",
+        "explanation": "Khi danh từ phía sau đã quá rõ trong ngữ cảnh, người Nhật CẮT luôn nó và để の đứng cuối. わたしの かさ rút thành わたしの. Riêng danh từ chỉ NGƯỜI thì không lược được.",
+        "teacherTips": "Sai kinh điển: あの人は 先生のです — SAI. Người thì phải nói đủ 先生です.",
+        "culturalNotes": "Đồ dùng trong văn phòng Nhật hay dán tên. Hỏi だれのですか là câu cửa miệng.",
+        "examples": [
+          {
+            "id": "ex-n5-l2-s5-1",
+            "tokens": [
+              {
+                "id": "t-l2s5-1",
+                "text": "この",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s5-2",
+                "text": "かさ",
+                "isKeyGrammar": false,
+                "kanji": "傘",
+                "furigana": "かさ"
+              },
+              {
+                "id": "t-l2s5-3",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s5-4",
+                "text": "だれ",
+                "isKeyGrammar": false,
+                "kanji": "誰",
+                "furigana": "だれ"
+              },
+              {
+                "id": "t-l2s5-5",
+                "text": "の",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s5-6",
+                "text": "ですか",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Cái ô này là của ai vậy?"
+          },
+          {
+            "id": "ex-n5-l2-s5-2",
+            "tokens": [
+              {
+                "id": "t-l2s5-7",
+                "text": "わたし",
+                "isKeyGrammar": false,
+                "kanji": "私",
+                "furigana": "わたし"
+              },
+              {
+                "id": "t-l2s5-8",
+                "text": "の",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s5-9",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Là của tôi."
+          },
+          {
+            "id": "ex-n5-l2-s5-3",
+            "tokens": [
+              {
+                "id": "t-l2s5-10",
+                "text": "それ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s5-11",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s5-12",
+                "text": "サントス",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s5-13",
+                "text": "さん",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s5-14",
+                "text": "の",
+                "isKeyGrammar": true
+              },
+              {
+                "id": "t-l2s5-15",
+                "text": "じゃ ありません",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Cái đó không phải của anh Santos."
+          }
+        ]
+      },
+      {
+        "slideId": "n5-l2-s6",
+        "slideType": "grammar",
+        "title": "6. Hỏi tên vật: N は 何ですか",
+        "grammarFormula": "N + は + 何 (なん) + ですか",
+        "explanation": "何 đọc là なん khi đứng ngay trước です hoặc phụ âm た/だ/な. Câu hỏi có 何 thì KHÔNG đáp はい／いいえ mà phải trả lời thẳng tên vật.",
+        "teacherTips": "何の + N hỏi NỘI DUNG (tạp chí về gì), còn だれの + N hỏi CHỦ SỞ HỮU (của ai).",
+        "culturalNotes": "Khi chưa rõ vật gì, người Nhật mở lời bằng あのう、これは… rồi bỏ lửng cho đối phương tiếp lời.",
+        "examples": [
+          {
+            "id": "ex-n5-l2-s6-1",
+            "tokens": [
+              {
+                "id": "t-l2s6-1",
+                "text": "これ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s6-2",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s6-3",
+                "text": "なん",
+                "isKeyGrammar": true,
+                "kanji": "何",
+                "furigana": "なん"
+              },
+              {
+                "id": "t-l2s6-4",
+                "text": "ですか",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Cái này là cái gì vậy?"
+          },
+          {
+            "id": "ex-n5-l2-s6-2",
+            "tokens": [
+              {
+                "id": "t-l2s6-5",
+                "text": "それ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s6-6",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s6-7",
+                "text": "めいし",
+                "isKeyGrammar": false,
+                "kanji": "名刺",
+                "furigana": "めいし"
+              },
+              {
+                "id": "t-l2s6-8",
+                "text": "です",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Cái đó là danh thiếp."
+          },
+          {
+            "id": "ex-n5-l2-s6-3",
+            "tokens": [
+              {
+                "id": "t-l2s6-9",
+                "text": "これ",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s6-10",
+                "text": "は",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s6-11",
+                "text": "なん",
+                "isKeyGrammar": true,
+                "kanji": "何",
+                "furigana": "なん"
+              },
+              {
+                "id": "t-l2s6-12",
+                "text": "の",
+                "isKeyGrammar": false
+              },
+              {
+                "id": "t-l2s6-13",
+                "text": "ざっし",
+                "isKeyGrammar": false,
+                "kanji": "雑誌",
+                "furigana": "ざっし"
+              },
+              {
+                "id": "t-l2s6-14",
+                "text": "ですか",
+                "isKeyGrammar": false
+              }
+            ],
+            "meaningVi": "Đây là tạp chí về cái gì vậy?"
+          }
+        ]
       }
     ],
     "dialogue": [
       {
         "id": "dia-n5-2-1",
-        "speaker": "A",
-        "speakerRole": "personA",
+        "speaker": "サントス",
+        "speakerRole": "Hàng xóm mới chuyển đến",
         "tokens": [
           {
-            "id": "tok-d2-1",
-            "text": "すみません、",
+            "id": "d-l2-1",
+            "text": "あのう",
             "isKeyGrammar": false
           },
           {
-            "id": "tok-d2-2",
-            "text": "それは",
+            "id": "d-l2-2",
+            "text": "、",
             "isKeyGrammar": false
           },
           {
-            "id": "tok-d2-3",
-            "text": "なんですか。",
+            "id": "d-l2-3",
+            "text": "これから",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-4",
+            "text": "おせわに なります",
+            "isKeyGrammar": true,
+            "kanji": "お世話に なります",
+            "furigana": "おせわに なります"
+          },
+          {
+            "id": "d-l2-5",
+            "text": "。",
             "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Xin lỗi, cái đó là cái gì vậy?"
+        "meaningVi": "À, từ nay mong được anh chị giúp đỡ ạ."
       },
       {
         "id": "dia-n5-2-2",
-        "speaker": "B",
-        "speakerRole": "personB",
+        "speaker": "山田一郎",
+        "speakerRole": "Hàng xóm",
         "tokens": [
           {
-            "id": "tok-d2-4",
-            "text": "これは",
+            "id": "d-l2-6",
+            "text": "こちらこそ",
             "isKeyGrammar": false
           },
           {
-            "id": "tok-d2-5",
-            "text": "にほんごの",
+            "id": "d-l2-7",
+            "text": "、",
             "isKeyGrammar": false
           },
           {
-            "id": "tok-d2-6",
-            "text": "じしょです。",
+            "id": "d-l2-8",
+            "text": "よろしく",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-9",
+            "text": "おねがいします",
+            "isKeyGrammar": false,
+            "kanji": "お願いします",
+            "furigana": "おねがいします"
+          },
+          {
+            "id": "d-l2-10",
+            "text": "。",
             "isKeyGrammar": false
           }
         ],
-        "meaningVi": "Cái này là từ điển tiếng Nhật."
+        "meaningVi": "Tôi mới là người phải nhờ cậy chứ, rất mong được giúp đỡ."
+      },
+      {
+        "id": "dia-n5-2-3",
+        "speaker": "サントス",
+        "speakerRole": "Hàng xóm mới chuyển đến",
+        "tokens": [
+          {
+            "id": "d-l2-11",
+            "text": "これ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-12",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-13",
+            "text": "ほんのきもちです",
+            "isKeyGrammar": true,
+            "kanji": "ほんの気持ちです",
+            "furigana": "ほんのきもちです"
+          },
+          {
+            "id": "d-l2-14",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-15",
+            "text": "どうぞ",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Đây, chút quà nhỏ gọi là. Xin mời anh nhận cho."
+      },
+      {
+        "id": "dia-n5-2-4",
+        "speaker": "山田一郎",
+        "speakerRole": "Hàng xóm",
+        "tokens": [
+          {
+            "id": "d-l2-16",
+            "text": "どうも",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-17",
+            "text": "ありがとう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-18",
+            "text": "ございます",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-19",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-20",
+            "text": "これ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-21",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-22",
+            "text": "なん",
+            "isKeyGrammar": true,
+            "kanji": "何",
+            "furigana": "なん"
+          },
+          {
+            "id": "d-l2-23",
+            "text": "ですか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Cảm ơn anh nhiều. Đây là cái gì vậy?"
+      },
+      {
+        "id": "dia-n5-2-5",
+        "speaker": "サントス",
+        "speakerRole": "Hàng xóm mới chuyển đến",
+        "tokens": [
+          {
+            "id": "d-l2-24",
+            "text": "コーヒー",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-25",
+            "text": "です",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-26",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-27",
+            "text": "ブラジル",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-28",
+            "text": "の",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l2-29",
+            "text": "コーヒー",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-30",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Là cà phê ạ. Cà phê của Brazil."
+      },
+      {
+        "id": "dia-n5-2-6",
+        "speaker": "山田一郎",
+        "speakerRole": "Hàng xóm",
+        "tokens": [
+          {
+            "id": "d-l2-31",
+            "text": "そうですか",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l2-32",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-33",
+            "text": "ありがとう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-34",
+            "text": "ございます",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Thế à. Cảm ơn anh nhiều lắm."
+      },
+      {
+        "id": "dia-n5-2-7",
+        "speaker": "山田一郎",
+        "speakerRole": "Hàng xóm",
+        "tokens": [
+          {
+            "id": "d-l2-35",
+            "text": "あのう",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-36",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-37",
+            "text": "その",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-38",
+            "text": "かばん",
+            "isKeyGrammar": false,
+            "kanji": "鞄",
+            "furigana": "かばん"
+          },
+          {
+            "id": "d-l2-39",
+            "text": "は",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-40",
+            "text": "ブラジル",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-41",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-42",
+            "text": "ですか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "À, cái cặp đó cũng là hàng Brazil à?"
+      },
+      {
+        "id": "dia-n5-2-8",
+        "speaker": "サントス",
+        "speakerRole": "Hàng xóm mới chuyển đến",
+        "tokens": [
+          {
+            "id": "d-l2-43",
+            "text": "いいえ",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-44",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-45",
+            "text": "ちがいます",
+            "isKeyGrammar": true,
+            "kanji": "違います",
+            "furigana": "ちがいます"
+          },
+          {
+            "id": "d-l2-46",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-47",
+            "text": "にほん",
+            "isKeyGrammar": false,
+            "kanji": "日本",
+            "furigana": "にほん"
+          },
+          {
+            "id": "d-l2-48",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-49",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Không phải đâu. Là hàng Nhật ạ."
+      },
+      {
+        "id": "dia-n5-2-9",
+        "speaker": "山田一郎",
+        "speakerRole": "Hàng xóm",
+        "tokens": [
+          {
+            "id": "d-l2-50",
+            "text": "あの",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-51",
+            "text": "くるま",
+            "isKeyGrammar": false,
+            "kanji": "車",
+            "furigana": "くるま"
+          },
+          {
+            "id": "d-l2-52",
+            "text": "も",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-53",
+            "text": "サントス",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-54",
+            "text": "さん",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-55",
+            "text": "の",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l2-56",
+            "text": "ですか",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Chiếc xe kia cũng là của anh Santos phải không?"
+      },
+      {
+        "id": "dia-n5-2-10",
+        "speaker": "サントス",
+        "speakerRole": "Hàng xóm mới chuyển đến",
+        "tokens": [
+          {
+            "id": "d-l2-57",
+            "text": "はい",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-58",
+            "text": "、",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-59",
+            "text": "そうです",
+            "isKeyGrammar": true
+          },
+          {
+            "id": "d-l2-60",
+            "text": "。",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-61",
+            "text": "わたし",
+            "isKeyGrammar": false,
+            "kanji": "私",
+            "furigana": "わたし"
+          },
+          {
+            "id": "d-l2-62",
+            "text": "の",
+            "isKeyGrammar": false
+          },
+          {
+            "id": "d-l2-63",
+            "text": "です",
+            "isKeyGrammar": false
+          }
+        ],
+        "meaningVi": "Vâng, đúng vậy. Là xe của tôi."
       }
     ],
     "exercises": [
       {
         "id": "ex-q-n5-2-1",
-        "question": "A: ___ は 何ですか。(A chỉ vào vật đang cầm trên tay B)\nB: これは ペンです。",
+        "question": "Vật đang nằm trong tay NGƯỜI NGHE, bạn gọi là gì?",
         "options": [
           "それ",
           "これ",
           "あれ",
-          "この"
+          "どれ"
         ],
         "correctIndex": 0,
-        "explanation": "Vật ở gần người nghe B, nên người hỏi A phải dùng 'それ' (cái đó).",
-        "hint": "Cự ly đối với người nói A.",
-        "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80"
+        "explanation": "それ chỉ vật ở gần người nghe. これ là gần người nói, あれ là xa cả hai.",
+        "hint": "Khoảng cách tính từ người nghe."
       },
       {
         "id": "ex-q-n5-2-2",
-        "question": "___ 傘は わたしのです。(Chọn từ chỉ định đi liền trước danh từ)",
+        "question": "Chọn câu ĐÚNG ngữ pháp:",
         "options": [
-          "この",
-          "これ",
-          "ここ",
-          "こちら"
+          "この かさは わたしのです",
+          "これ かさは わたしのです",
+          "この かさは わたしです",
+          "これの かさは わたしのです"
         ],
         "correctIndex": 0,
-        "explanation": "Đứng ngay trước danh từ '傘' (ô) bắt buộc phải dùng dạng 'この' (cái ô này).",
-        "hint": "Bổ nghĩa trực tiếp cho danh từ."
+        "explanation": "この bắt buộc đi kèm danh từ (かさ). Vế sau dùng わたしの để lược bỏ かさ đã nhắc ở đầu câu.",
+        "hint": "この đứng một mình được không?"
+      },
+      {
+        "id": "ex-q-n5-2-3",
+        "question": "「これは 何の 本ですか」 đang hỏi điều gì?",
+        "options": [
+          "Sách về nội dung gì",
+          "Sách của ai",
+          "Sách ở đâu",
+          "Sách giá bao nhiêu"
+        ],
+        "correctIndex": 0,
+        "explanation": "何の + N hỏi NỘI DUNG, chủ đề. Muốn hỏi chủ sở hữu phải dùng だれの + N.",
+        "hint": "何 nghĩa là 'cái gì'."
+      },
+      {
+        "id": "ex-q-n5-2-4",
+        "question": "Đáp lại 「それは 辞書ですか」 khi đúng là từ điển:",
+        "options": [
+          "はい、そうです。",
+          "はい、辞書の です。",
+          "いいえ、ちがいます。",
+          "はい、そうですか。"
+        ],
+        "correctIndex": 0,
+        "explanation": "Câu hỏi đúng-sai thì đáp はい、そうです。 Còn そうですか là câu tiếp nhận thông tin, không phải câu đáp.",
+        "hint": "Xác nhận là ĐÚNG."
+      },
+      {
+        "id": "ex-q-n5-2-5",
+        "question": "「わたしの 傘」 rút gọn khi đã biết đang nói về cái ô:",
+        "options": [
+          "わたしの",
+          "わたしは",
+          "わたしのの",
+          "わたし"
+        ],
+        "correctIndex": 0,
+        "explanation": "Danh từ phía sau đã rõ thì cắt bỏ, giữ lại の: わたしの です.",
+        "hint": "Giữ lại trợ từ nối."
+      },
+      {
+        "id": "ex-q-n5-2-6",
+        "question": "Câu nào SAI?",
+        "options": [
+          "あの人は 先生のです",
+          "あの人は 先生です",
+          "この本は 先生のです",
+          "その傘は 先生のです"
+        ],
+        "correctIndex": 0,
+        "explanation": "の chỉ lược được danh từ chỉ VẬT. Danh từ chỉ NGƯỜI không lược được, phải nói đủ 先生です.",
+        "hint": "Có câu nói về người."
+      },
+      {
+        "id": "ex-q-n5-2-7",
+        "question": "「日本語の 本」 dịch sang tiếng Việt là:",
+        "options": [
+          "Sách tiếng Nhật",
+          "Tiếng Nhật của sách",
+          "Sách và tiếng Nhật",
+          "Sách của người Nhật"
+        ],
+        "correctIndex": 0,
+        "explanation": "Trong N1のN2, N1 bổ nghĩa cho N2. Dịch ngược từ phải sang trái: 本 ← 日本語.",
+        "hint": "Danh từ chính đứng sau cùng."
+      },
+      {
+        "id": "ex-q-n5-2-8",
+        "question": "何 trong 「これは 何ですか」 đọc là:",
+        "options": [
+          "なん",
+          "なに",
+          "か",
+          "どう"
+        ],
+        "correctIndex": 0,
+        "explanation": "何 đọc なん khi đứng trước です và các âm た/だ/な. Đứng riêng hoặc trước を thì đọc なに.",
+        "hint": "Để ý âm đứng liền sau."
+      },
+      {
+        "id": "ex-q-n5-2-9",
+        "question": "Khi tặng quà, người Nhật thường nói:",
+        "options": [
+          "ほんの 気持ちです",
+          "これは 高いです",
+          "どうぞ よろしく",
+          "お世話に なりました"
+        ],
+        "correctIndex": 0,
+        "explanation": "ほんの気持ちです = 'chút lòng thành nhỏ mọn', câu khiêm tốn chuẩn mực khi biếu quà.",
+        "hint": "Nói giảm giá trị món quà."
+      },
+      {
+        "id": "ex-q-n5-2-10",
+        "question": "「そうですか」 hạ giọng khác với lên giọng ở chỗ nào?",
+        "options": [
+          "Hạ giọng là tiếp nhận thông tin, lên giọng là hỏi lại",
+          "Hoàn toàn giống nhau",
+          "Hạ giọng là câu hỏi",
+          "Chỉ dùng được với người trên"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cùng một chữ nhưng ngữ điệu quyết định: hạ giọng = 'ra vậy', lên giọng = 'thật thế à?' (ngạc nhiên).",
+        "hint": "Nghe ngữ điệu cuối câu."
       }
     ]
   },

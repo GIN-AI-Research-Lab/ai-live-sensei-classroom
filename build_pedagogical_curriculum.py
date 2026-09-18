@@ -544,7 +544,7 @@ def upgrade_other_levels():
                         "id": f"dia-{lvl}-{num}-1",
                         "speaker": "Sensei",
                         "speakerRole": "sensei",
-                        "tokens": [{"id": f"tok-{lvl}-d1", "text": "この文法のポイントを"}, {"id": f"tok-{lvl}-d2", "text": "復習しましょう。"}],
+                        "tokens": [{"id": f"tok-{lvl}-{num}-d1", "text": "この文法のポイントを"}, {"id": f"tok-{lvl}-{num}-d2", "text": "復習しましょう。"}],
                         "meaningVi": "Chúng ta hãy cùng ôn lại trọng tâm ngữ pháp này nhé."
                     }
                 ]
