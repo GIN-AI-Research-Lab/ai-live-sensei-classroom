@@ -2324,6 +2324,7 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
     });
   }
 
+  const tabReflexBtn = document.getElementById('tabReflexBtn');
   const tabVocabBtn = document.getElementById('tabVocabBtn');
   const tabKanjiBtn = document.getElementById('tabKanjiBtn');
   const tabGrammarBtn = document.getElementById('tabGrammarBtn') || document.getElementById('tabSlideBtn');
@@ -2334,6 +2335,7 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
   if (tabGrammarBtn) tabGrammarBtn.addEventListener('click', () => handleManualTabChange('grammar', slideEngine.currentSlideIndex || 0));
   if (tabKaiwaBtn) tabKaiwaBtn.addEventListener('click', () => handleManualTabChange('kaiwa'));
   if (tabQuizBtn) tabQuizBtn.addEventListener('click', () => handleManualTabChange('quiz'));
+  if (tabReflexBtn) tabReflexBtn.addEventListener('click', () => handleManualTabChange('reflex'));
 
   if (prevSlideBtn) prevSlideBtn.addEventListener('click', () => {
     if (lectureState === 'PLAYING') pauseLecture(false);
