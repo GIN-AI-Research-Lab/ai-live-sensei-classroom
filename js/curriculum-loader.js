@@ -226,6 +226,80 @@ class CurriculumLoader {
     });
   }
 
+
+  /**
+   * Bo de LUYEN VIET TAY cho chuong Bai tap.
+   *
+   * Lay tu vung cua bai dang hoc + cac bai da hoc (xoay vong theo `doi` giong
+   * getPronunciationSet), KHONG goi AI de ra de. Moi muc co hai kieu hoi:
+   *   - 'khuyet'  : cho mot cau that trong giao trinh, khoet di dung tu do
+   *   - 'phatam'  : chi cho cach doc + nghia, nguoi hoc tu nho mat chu
+   * Chi lay tu NGAN (toi da 3 ky tu) vi chi co 10 giay de viet.
+   */
+  getHandwritingSet(level, lessonNumber, doi = 0, soChu = 5) {
+    const lvl = (level || 'N5').toUpperCase();
+    const no = Number(lessonNumber) || 1;
+    const ds = this.database[lvl] || [];
+
+    const cauCuaBai = (bai) => {
+      const out = [];
+      const day = (tokens) => {
+        const jp = (tokens || []).map(t => t.kanji || t.text || '').join('').trim();
+        if (jp.length >= 4) out.push(jp);
+      };
+      (bai.slides || []).forEach(sl => (sl.examples || []).forEach(e => day(e.tokens)));
+      (bai.dialogue || []).forEach(d => day(d.tokens));
+      return out;
+    };
+
+    const tuCuaBai = (bai) => {
+      const cauMau = cauCuaBai(bai);
+      return (bai.vocabList || []).map(v => {
+        const kanji = String(v.kanji || '').trim();
+        const word = String(v.word || '').trim();
+        const dapAn = (kanji && kanji !== word) ? kanji : word;
+        if (!dapAn || dapAn.length > 3) return null;
+        const cau = cauMau.find(c => c.includes(dapAn));
+        return {
+          id: 'vt-' + lvl + '-' + bai.lessonNumber + '-' + (v.id || dapAn),
+          dapAn,
+          kana: String(v.furigana || word || '').trim(),
+          doc: String(v.romaji || '').trim(),
+          nghia: String(v.meaningVi || '').trim(),
+          kieu: cau ? 'khuyet' : 'phatam',
+          cauHoi: cau ? cau.split(dapAn).join('＿＿') : '',
+          tuBai: bai.lessonNumber,
+        };
+      }).filter(Boolean);
+    };
+
+    const baiNay = ds.find(l => l.lessonNumber === no);
+    const nguonNay = baiNay ? tuCuaBai(baiNay) : [];
+
+    const theoBai = ds.filter(l => l.lessonNumber < no).map(tuCuaBai).filter(a => a.length);
+    const nguonCu = [];
+    for (let v = 0; theoBai.some(a => v < a.length); v++) {
+      for (const a of theoBai) if (v < a.length) nguonCu.push(a[v]);
+    }
+
+    const lay = (kho, can, lech) => {
+      const ra = [];
+      for (let i = 0; i < Math.min(can, kho.length); i++) ra.push(kho[(lech + i) % kho.length]);
+      return ra;
+    };
+
+    const canNay = nguonCu.length ? Math.ceil(soChu / 2) : soChu;
+    const phanNay = lay(nguonNay, canNay, doi * canNay);
+    const phanCu = lay(nguonCu, soChu - phanNay.length, doi * (soChu - canNay) + no);
+
+    const daCo = new Set();
+    return [...phanNay, ...phanCu].filter(c => {
+      if (daCo.has(c.dapAn)) return false;
+      daCo.add(c.dapAn);
+      return true;
+    });
+  }
+
   getAllCurriculumSummary() {
     // l.slideCount/exerciseCount la dem so tu index.json (luon co san). Neu
     // bai da duoc tai chi tiet day du thi l.slides/l.exercises cung co that,

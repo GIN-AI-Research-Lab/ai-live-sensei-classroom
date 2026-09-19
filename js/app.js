@@ -2817,6 +2817,213 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     geminiClient.sendAudioStreamEnd();
   }
 
+
+  /* ----------------------------------------------------------------------
+     LUYEN VIET TAY
+
+     Hoc vien co 10 giay viet lai chu bang tay tren khung canvas, het gio tu
+     nop. Sensei NHIN ANH de cham (model co thi giac), vi kho net chu KanjiVG
+     trong may chi co 78 chu Han va khong co kana nao — khong the doi chieu
+     net cho da so truong hop.
+     ---------------------------------------------------------------------- */
+  const vietTay = {};   // id -> { ctx, dangVe, demTimer, conLai, daNop }
+
+  function timChuVietTay(id) {
+    return (slideEngine.handwritingSet || []).find(c => c.id === id) || null;
+  }
+
+  function veKhungGiay(ctx, w, h) {
+    ctx.fillStyle = '#fffdf7';
+    ctx.fillRect(0, 0, w, h);
+    // Duong ke mo kieu giay tap viet: chia doi ngang doc
+    ctx.save();
+    ctx.strokeStyle = '#d9cfbb';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([6, 6]);
+    ctx.beginPath();
+    ctx.moveTo(w / 2, 0); ctx.lineTo(w / 2, h);
+    ctx.moveTo(0, h / 2); ctx.lineTo(w, h / 2);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function veLaiTrang(id) {
+    const cv = document.getElementById('vtkhung-' + id);
+    if (!cv) return null;
+    const ctx = cv.getContext('2d');
+    veKhungGiay(ctx, cv.width, cv.height);
+    ctx.lineWidth = 9;
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.strokeStyle = '#1f1d19';
+    return ctx;
+  }
+
+  window.xoaNetViet = (id) => {
+    veLaiTrang(id);
+    const t = vietTay[id];
+    if (t) t.coNet = false;
+  };
+
+  function ganTayVe(id) {
+    const cv = document.getElementById('vtkhung-' + id);
+    if (!cv || cv.__daGanTay) return;
+    cv.__daGanTay = true;
+
+    const toaDo = (e) => {
+      const r = cv.getBoundingClientRect();
+      return [(e.clientX - r.left) * (cv.width / r.width),
+              (e.clientY - r.top) * (cv.height / r.height)];
+    };
+    cv.addEventListener('pointerdown', (e) => {
+      const t = vietTay[id];
+      if (!t || !t.dangChay) return;   // chua bam "Bat dau" thi khong viet duoc
+      cv.setPointerCapture(e.pointerId);
+      t.dangVe = true; t.coNet = true;
+      const xy = toaDo(e);
+      t.ctx.beginPath(); t.ctx.moveTo(xy[0], xy[1]);
+    });
+    cv.addEventListener('pointermove', (e) => {
+      const t = vietTay[id];
+      if (!t || !t.dangVe) return;
+      const xy = toaDo(e);
+      t.ctx.lineTo(xy[0], xy[1]); t.ctx.stroke();
+    });
+    const nhacTay = () => { const t = vietTay[id]; if (t) t.dangVe = false; };
+    cv.addEventListener('pointerup', nhacTay);
+    cv.addEventListener('pointercancel', nhacTay);
+    cv.addEventListener('pointerleave', nhacTay);
+  }
+
+  window.batDauVietTay = (id) => {
+    const ctx = veLaiTrang(id);
+    if (!ctx) return;
+    if (vietTay[id]) clearInterval(vietTay[id].demTimer);
+    vietTay[id] = { ctx, dangChay: true, dangVe: false, coNet: false, conLai: 10, daNop: false };
+    ganTayVe(id);
+
+    const nhan = document.getElementById('vtdem-' + id);
+    const nut = document.getElementById('vtbd-' + id);
+    if (nut) nut.innerHTML = '<i class="fa-solid fa-pen text-[10px] mr-1"></i>Đang viết…';
+    const veDem = () => {
+      if (!nhan || !vietTay[id]) return;
+      nhan.innerText = vietTay[id].conLai + 's';
+      nhan.className = 'ml-auto px-2 py-0.5 rounded font-mono text-[11px] '
+        + (vietTay[id].conLai <= 3 ? 'bg-rose-500/20 text-rose-300' : 'bg-amber-500/20 text-amber-300');
+    };
+    veDem();
+    vietTay[id].demTimer = setInterval(() => {
+      const t = vietTay[id];
+      if (!t) return;
+      t.conLai--;
+      veDem();
+      if (t.conLai <= 0) {
+        clearInterval(t.demTimer);
+        window.nopChuViet(id);     // het gio thi tu nop
+      }
+    }, 1000);
+  };
+
+  function veKetQuaViet(id, mau, html) {
+    const box = document.getElementById('vtkq-' + id);
+    if (!box) return;
+    const bang = {
+      sage:  'bg-emerald-950/60 border-emerald-500/40 text-emerald-200',
+      amber: 'bg-amber-950/60 border-amber-500/40 text-amber-200',
+      cyan:  'bg-cyan-950/60 border-cyan-500/40 text-cyan-200',
+    };
+    box.className = 'p-2.5 rounded-xl text-xs border flex items-start gap-2 ' + (bang[mau] || bang.cyan);
+    box.innerHTML = html;
+  }
+
+  window.nopChuViet = async (id) => {
+    const t = vietTay[id];
+    const cau = timChuVietTay(id);
+    if (!cau) return;
+    if (!t || t.daNop) return;
+    t.daNop = true;
+    t.dangChay = false;
+    clearInterval(t.demTimer);
+
+    const nhan = document.getElementById('vtdem-' + id);
+    if (nhan) {
+      nhan.innerText = 'hết giờ';
+      nhan.className = 'ml-auto px-2 py-0.5 rounded bg-slate-800 text-slate-500 font-mono text-[11px]';
+    }
+    const nut = document.getElementById('vtbd-' + id);
+    if (nut) nut.innerHTML = '<i class="fa-solid fa-rotate-left text-[10px] mr-1"></i>Viết lại';
+
+    if (!t.coNet) {
+      veKetQuaViet(id, 'amber', 'Chưa viết nét nào — bấm "Viết lại" rồi thử nhé.');
+      return;
+    }
+
+    veKetQuaViet(id, 'cyan', '<i class="fa-solid fa-spinner fa-spin"></i> Sensei đang nhìn nét chữ…');
+    const cv = document.getElementById('vtkhung-' + id);
+    const anh = cv.toDataURL('image/png').split(',')[1];
+    const kq = await chamChuVietBangAI(anh, cau);
+    if (kq.ok) {
+      const dau = kq.dung ? '<i class="fa-solid fa-check"></i> ' : '<i class="fa-solid fa-xmark"></i> ';
+      const loi = escapeHtml(kq.phan || (kq.dung ? 'Đúng rồi.' : 'Chưa đúng.'));
+      veKetQuaViet(id, kq.dung ? 'sage' : 'amber',
+        dau + loi + ' <span class="opacity-70">(đáp án: ' + escapeHtml(cau.dapAn) + ')</span>');
+    } else {
+      veKetQuaViet(id, 'amber', 'Chưa chấm được lúc này — đáp án là ' + escapeHtml(cau.dapAn) + '.');
+    }
+  };
+
+  window.doiChuVietTay = () => {
+    Object.keys(vietTay).forEach(k => { clearInterval(vietTay[k].demTimer); delete vietTay[k]; });
+    slideEngine.handwritingRound = (slideEngine.handwritingRound || 0) + 1;
+    slideEngine.setTab('quiz');
+  };
+
+  /** Gui anh net chu cho model co thi giac cham. */
+  async function chamChuVietBangAI(anhBase64, cau) {
+    const moTa = cau.kieu === 'khuyet'
+      ? 'Cau hoi khoet tu: "' + cau.cauHoi + '". Tu dung de dien vao cho trong la "' + cau.dapAn + '".'
+      : 'Hoc vien phai viet tu co nghia "' + cau.nghia + '", doc la "' + (cau.doc || cau.kana) + '".';
+
+    const prompt = [
+      'Anh dinh kem la chu VIET TAY cua mot hoc vien tieng Nhat, viet tren khung giay co duong ke mo.',
+      'Bo qua cac duong ke dut net mo nhat — do la duong dan giay, khong phai net chu.',
+      moTa,
+      'Dap an dung la: "' + cau.dapAn + '".',
+      '',
+      'Cham nhu mot ong thay kho tinh nhung cong bang:',
+      '- Net xieu veo, ty le xau nhung VAN DOC RA dung chu thi van tinh la DUNG.',
+      '- Viet ra chu khac, thieu net lam sai chu, hoac khong doc duoc thi la SAI.',
+      'Tra ve JSON: {"dung": true/false, "docDuoc": "ky tu doc duoc tu anh", "phan": "mot cau nhan xet ngan bang tieng Viet, xung tao-may, hoi ca khia nhung phai chi ra cho sai neu sai"}',
+    ].join('\n');
+
+    for (const key of allKeys()) {
+      for (const model of (SENSEI_MODELS.quizModels || [SENSEI_MODELS.quiz])) {
+        try {
+          const res = await fetch(
+            'https://generativelanguage.googleapis.com/v1beta/' + model + ':generateContent?key=' + key,
+            {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                contents: [{ parts: [{ text: prompt }, { inlineData: { mimeType: 'image/png', data: anhBase64 } }] }],
+                generationConfig: { temperature: 0.6, maxOutputTokens: 400, responseMimeType: 'application/json' },
+              }),
+            }
+          );
+          if (!res.ok) continue;   // het han muc / model tu choi -> thu cap tiep theo
+          const data = await res.json();
+          const txt = data && data.candidates && data.candidates[0]
+            && data.candidates[0].content && data.candidates[0].content.parts
+            && data.candidates[0].content.parts[0] && data.candidates[0].content.parts[0].text;
+          if (!txt) continue;
+          const o = JSON.parse(stripFence(txt));
+          return { ok: true, dung: !!o.dung, phan: String(o.phan || '').trim(), docDuoc: o.docDuoc };
+        } catch (e) { /* thu cap ke tiep */ }
+      }
+    }
+    return { ok: false };
+  }
+
   function huyThuAm() {
     const id = dangThuAm;
     dangThuAm = null;

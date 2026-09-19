@@ -903,6 +903,7 @@ class SlideEngine {
             <p class="font-medium">Chưa có câu trắc nghiệm nào cho bài này.</p>
           </div>
           ${this.buildPronunciationBlock()}
+          ${this.buildHandwritingBlock()}
         `;
       }
       return;
@@ -991,6 +992,7 @@ class SlideEngine {
         <div class="space-y-3 deck-scroll custom-scrollbar">
           ${quizHtml}
           ${this.buildPronunciationBlock()}
+          ${this.buildHandwritingBlock()}
         </div>
       `;
     }
@@ -1005,6 +1007,89 @@ class SlideEngine {
    * Khoi luyen phat am o cuoi chuong Bai tap.
    * Cau lay tu giao trinh (bai dang hoc + cac bai da hoc), khong goi AI.
    */
+
+  /**
+   * Khoi LUYEN VIET TAY o cuoi chuong Bai tap.
+   *
+   * Cho 10 giay de viet lai chu bang tay tren khung, roi Sensei nhin anh cham.
+   * De lay tu giao trinh (getHandwritingSet), khong goi AI de ra de.
+   */
+  buildHandwritingBlock() {
+    if (!this.loader.getHandwritingSet) return '';
+    const bo = this.loader.getHandwritingSet(
+      this.currentLevel, this.currentLesson, this.handwritingRound || 0);
+    if (!bo.length) return '';
+
+    this.handwritingSet = bo;
+
+    const the = bo.map((c, i) => {
+      const id = this.escapeHtml(c.id);
+      const goiYKana = (c.kana && c.kana !== c.dapAn)
+        ? `<span class="text-ink font-medium">${this.escapeHtml(c.kana)}</span>` : '';
+      const goiYDoc = c.doc ? `<span class="text-slate-400 font-mono text-xs">${this.escapeHtml(c.doc)}</span>` : '';
+      const deBai = c.kieu === 'khuyet'
+        ? `<div class="text-lg md:text-xl text-ink leading-relaxed">${this.escapeHtml(c.cauHoi)}</div>`
+        : `<div class="text-sm text-slate-300">Viết lại chữ của từ này:</div>`;
+
+      return `
+      <div class="p-3.5 bg-slate-950/80 border border-slate-800 rounded-2xl space-y-2.5">
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-[11px] shrink-0">Chữ ${i + 1}</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-400 font-mono text-[10px] shrink-0">
+            ${c.tuBai === this.currentLesson ? 'Bài này' : 'Ôn bài ' + c.tuBai}
+          </span>
+          <span id="vtdem-${id}" class="ml-auto px-2 py-0.5 rounded bg-slate-800 text-slate-500 font-mono text-[11px]">10s</span>
+        </div>
+        ${deBai}
+        <div class="flex items-center gap-2 text-xs flex-wrap">
+          ${goiYKana}${goiYDoc}
+          <span class="text-slate-400">— ${this.escapeHtml(c.nghia)}</span>
+        </div>
+        <canvas id="vtkhung-${id}" width="320" height="320"
+                class="w-full aspect-square rounded-xl border border-slate-700 cursor-crosshair mx-auto block"
+                style="touch-action:none;background:#fffdf7;max-width:210px"></canvas>
+        <div class="flex gap-2">
+          <button type="button" id="vtbd-${id}" onclick="window.batDauVietTay && window.batDauVietTay('${this.jsAttr(c.id)}')"
+                  class="flex-1 py-2 rounded-lg bg-amber-950/70 hover:bg-amber-900 border border-amber-500/40 text-amber-200 text-xs font-medium transition cursor-pointer active:scale-95">
+            <i class="fa-solid fa-play text-[10px] mr-1"></i>Bắt đầu 10 giây
+          </button>
+          <button type="button" onclick="window.xoaNetViet && window.xoaNetViet('${this.jsAttr(c.id)}')"
+                  class="px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 text-xs transition cursor-pointer active:scale-95"
+                  title="Xoá nét đã viết">
+            <i class="fa-solid fa-eraser text-[10px]"></i>
+          </button>
+          <button type="button" onclick="window.nopChuViet && window.nopChuViet('${this.jsAttr(c.id)}')"
+                  class="px-3 py-2 rounded-lg bg-cyan-950/70 hover:bg-cyan-900 border border-cyan-500/40 text-cyan-300 text-xs transition cursor-pointer active:scale-95"
+                  title="Nộp cho Sensei chấm">
+            <i class="fa-solid fa-paper-plane text-[10px]"></i>
+          </button>
+        </div>
+        <div id="vtkq-${id}" class="hidden"></div>
+      </div>`;
+    }).join('');
+
+    return `
+      <div class="pt-5 mt-2 border-t border-slate-800">
+        <div class="mb-3 flex items-start justify-between gap-3">
+          <div>
+            <h3 class="text-lg md:text-xl font-bold text-ink flex items-center gap-2.5">
+              <i class="fa-solid fa-pen-nib text-amber-400"></i>
+              <span>Luyện viết tay</span>
+            </h3>
+            <p class="text-xs text-slate-400 mt-0.5">
+              Bấm "Bắt đầu" rồi viết lại chữ bằng tay trong 10 giây — hết giờ tự nộp.
+              Sensei sẽ nhìn nét chữ rồi phán. Có cả chữ của bài này lẫn chữ ôn lại bài trước.
+            </p>
+          </div>
+          <button type="button" onclick="window.doiChuVietTay && window.doiChuVietTay()"
+                  class="shrink-0 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 text-xs transition cursor-pointer active:scale-95">
+            <i class="fa-solid fa-rotate text-[10px] mr-1"></i>Đổi chữ khác
+          </button>
+        </div>
+        <div class="grid gap-3 md:grid-cols-2">${the}</div>
+      </div>`;
+  }
+
   buildPronunciationBlock() {
     if (!this.loader.getPronunciationSet) return '';
     const bo = this.loader.getPronunciationSet(
