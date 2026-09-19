@@ -120,6 +120,7 @@ class SlideEngine {
     this.tabGrammarBtn = document.getElementById('tabGrammarBtn') || document.getElementById('tabSlideBtn');
     this.tabKaiwaBtn = document.getElementById('tabKaiwaBtn');
     this.tabQuizBtn = document.getElementById('tabQuizBtn');
+    this.tabReflexBtn = document.getElementById('tabReflexBtn');
 
     this.prevSlideBtn = document.getElementById('prevSlideBtn');
     this.nextSlideBtn = document.getElementById('nextSlideBtn');
@@ -302,6 +303,7 @@ class SlideEngine {
     if (this.tabGrammarBtn) this.tabGrammarBtn.onclick = () => this.setTab('grammar');
     if (this.tabKaiwaBtn) this.tabKaiwaBtn.onclick = () => this.setTab('kaiwa');
     if (this.tabQuizBtn) this.tabQuizBtn.onclick = () => this.setTab('quiz');
+    if (this.tabReflexBtn) this.tabReflexBtn.onclick = () => this.setTab('reflex');
   }
 
   setTab(tabName, subIndex = null) {
@@ -319,7 +321,8 @@ class SlideEngine {
       { id: 'tabKanjiBtn', el: this.tabKanjiBtn, name: 'kanji' },
       { id: 'tabGrammarBtn', el: this.tabGrammarBtn, name: 'grammar' },
       { id: 'tabKaiwaBtn', el: this.tabKaiwaBtn, name: 'kaiwa' },
-      { id: 'tabQuizBtn', el: this.tabQuizBtn, name: 'quiz' }
+      { id: 'tabQuizBtn', el: this.tabQuizBtn, name: 'quiz' },
+      { id: 'tabReflexBtn', el: this.tabReflexBtn, name: 'reflex' }
     ];
 
     tabs.forEach(t => {
@@ -377,6 +380,8 @@ class SlideEngine {
       this.renderKanji();
     } else if (tabName === 'kaiwa') {
       this.renderKaiwa();
+    } else if (tabName === 'reflex') {
+      this.renderReflex();
     } else if (tabName === 'quiz') {
       this.renderQuiz(subIndex !== null && subIndex !== undefined ? Number(subIndex) : null);
     } else {
@@ -1014,6 +1019,51 @@ class SlideEngine {
    * Cho 10 giay de viet lai chu bang tay tren khung, roi Sensei nhin anh cham.
    * De lay tu giao trinh (getHandwritingSet), khong goi AI de ra de.
    */
+
+  /**
+   * Chuong PHAN XA — luyen phan xa cap toc, Sensei (phien live) cham truc tiep.
+   *
+   * Chi dung vo: toan bo noi dung tung muc do app.js bom vao #pxThan theo
+   * tung nhip cua vong luyen (xem phanXa trong app.js).
+   */
+  renderReflex() {
+    if (this.levelBadge) this.levelBadge.innerText = this.currentLevel;
+    if (this.lessonNum) this.lessonNum.innerText = this.currentLesson;
+    if (this.slideIndexLabel) this.slideIndexLabel.innerText = 'phản xạ';
+    this.clearHighlights();
+    if (!this.slideContent) return;
+
+    this.slideContent.innerHTML = `
+      <div class="max-w-2xl mx-auto">
+        <div class="mb-4">
+          <h2 class="text-xl md:text-2xl font-bold text-ink flex items-center gap-2.5">
+            <i class="fa-solid fa-bolt text-amber-400"></i>
+            <span>Phản xạ nhanh</span>
+          </h2>
+          <p class="text-xs text-slate-400 mt-1">
+            Không có thời gian nghĩ. Đề hiện ra là làm luôn — Sensei nghe/nhìn rồi phán ngay tại chỗ.
+          </p>
+        </div>
+
+        <div class="flex gap-2 mb-4">
+          <button type="button" id="pxCheViet"
+                  onclick="window.doiCheDoPhanXa && window.doiCheDoPhanXa('viet')"
+                  class="flex-1 py-2.5 rounded-xl border text-sm font-medium transition cursor-pointer active:scale-95">
+            <i class="fa-solid fa-pen-nib text-xs mr-1.5"></i>Viết nhanh
+          </button>
+          <button type="button" id="pxCheNoi"
+                  onclick="window.doiCheDoPhanXa && window.doiCheDoPhanXa('noi')"
+                  class="flex-1 py-2.5 rounded-xl border text-sm font-medium transition cursor-pointer active:scale-95">
+            <i class="fa-solid fa-microphone-lines text-xs mr-1.5"></i>Nói nhanh
+          </button>
+        </div>
+
+        <div id="pxThan"></div>
+      </div>`;
+
+    if (typeof window.veManPhanXa === 'function') window.veManPhanXa();
+  }
+
   buildHandwritingBlock() {
     if (!this.loader.getHandwritingSet) return '';
     const bo = this.loader.getHandwritingSet(

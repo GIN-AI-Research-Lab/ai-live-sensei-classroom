@@ -369,6 +369,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       // vi du bi loc/rong) -> vẫn phải tắt bao "dang cho", khong thi ket qua
       // giu spinner vinh vien du that ra da xong.
       anChoTraLoi();
+      // Cau phan xa dang doi Sensei phan thi lay loi do cham diem luon
+      if (typeof pxNhanLoiPhan === 'function' && pxNhanLoiPhan(loiSenseiVuaNoi)) return;
       if (dangChoChamPhatAm) {
         clearTimeout(choChamPhatAmTimer);
         const idChoCham = dangChoChamPhatAm;
@@ -2675,6 +2677,10 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
   }
 
   function khiDoiTab(tab) {
+    // Roi chuong Phan xa giua chung: tat dong ho va dong mic lai, khong
+    // thi dem nguoc van chay ngam va mic van bat o chuong khac.
+    if (tab !== 'reflex') dungPhanXaKhiRoiTab();
+
     veLaiCho();
     // Chi soan de khi nguoi hoc thuc su mo chuong Bai tap — de khong dot han
     // muc vao nhung bai ho chi luot qua.
@@ -3022,6 +3028,319 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
       }
     }
     return { ok: false };
+  }
+
+
+  /* ----------------------------------------------------------------------
+     CHUONG PHAN XA
+
+     Hai bai tap cap toc, deu do CHINH PHIEN LIVE cua Sensei (gemini-3.8-live)
+     cham — khong dung model REST nao khac:
+       - 'viet': hien de, 7 giay viet tay, het gio tu chup khung gui ANH vao
+                 phien live (clientContent + inlineData)
+       - 'noi' : hien nghia tieng Viet, 7 giay noi tu tieng Nhat, tieng di qua
+                 realtimeInput (activityStart -> audio -> activityEnd)
+     Loi phan cua Sensei phat ra bang giong noi; ban ghi loi do (onTranscript)
+     duoc bat lai o onTurnComplete de cham diem va hien len man hinh.
+     ---------------------------------------------------------------------- */
+  const PX_SO_CAU = 6;
+  const PX_GIAY = 7;
+
+  const phanXa = {
+    che: 'viet',        // 'viet' | 'noi'
+    dsCau: [],
+    viTri: 0,
+    diem: 0,
+    dangChay: false,
+    dangCho: false,     // dang doi Sensei phan
+    ctx: null,
+    coNet: false,
+    dangVe: false,
+    demTimer: null,
+    conLai: 0,
+  };
+
+  function dungPhanXaKhiRoiTab() {
+    if (!phanXa.dangChay && !phanXa.demTimer) return;
+    pxDungDongHo();
+    if (phanXa.che === 'noi' && audioEngine && audioEngine.isMicActive) {
+      audioEngine.stopMic();
+      geminiClient.sendAudioStreamEnd();   // dong moc "dang noi" lai
+    }
+    phanXa.dangChay = false;
+    phanXa.dangCho = false;
+    pxChoPhan = false;
+  }
+
+  function pxThan() { return document.getElementById('pxThan'); }
+
+  function pxCauHienTai() { return phanXa.dsCau[phanXa.viTri] || null; }
+
+  function pxDungDongHo() {
+    clearInterval(phanXa.demTimer);
+    phanXa.demTimer = null;
+  }
+
+  window.doiCheDoPhanXa = (che) => {
+    pxDungDongHo();
+    if (audioEngine && audioEngine.isMicActive) audioEngine.stopMic();
+    phanXa.che = che;
+    phanXa.dangChay = false;
+    phanXa.dangCho = false;
+    veManPhanXa();
+  };
+
+  /** Ve lai toan bo than chuong theo trang thai hien tai. */
+  window.veManPhanXa = () => {
+    const than = pxThan();
+    if (!than) return;
+
+    const nutViet = document.getElementById('pxCheViet');
+    const nutNoi = document.getElementById('pxCheNoi');
+    const bat = 'bg-amber-950/70 border-amber-500/40 text-amber-200';
+    const tat = 'bg-slate-900 border-slate-700 text-slate-400 hover:bg-slate-800';
+    if (nutViet) nutViet.className = 'flex-1 py-2.5 rounded-xl border text-sm font-medium transition cursor-pointer active:scale-95 ' + (phanXa.che === 'viet' ? bat : tat);
+    if (nutNoi) nutNoi.className = 'flex-1 py-2.5 rounded-xl border text-sm font-medium transition cursor-pointer active:scale-95 ' + (phanXa.che === 'noi' ? bat : tat);
+
+    if (!phanXa.dangChay) { than.innerHTML = pxManChuanBi(); return; }
+    if (phanXa.viTri >= phanXa.dsCau.length) { than.innerHTML = pxManKetThuc(); return; }
+    than.innerHTML = pxManCauHoi();
+    if (phanXa.che === 'viet') pxChuanBiKhungVe();
+  };
+
+  function pxManChuanBi() {
+    const moTa = phanXa.che === 'viet'
+      ? `Đề hiện ra, mày có <b class="text-ink">${PX_GIAY} giây</b> viết lại chữ bằng tay. Hết giờ tự nộp, Sensei nhìn nét chữ rồi phán.`
+      : `Hiện nghĩa tiếng Việt, mày có <b class="text-ink">${PX_GIAY} giây</b> nói to từ tiếng Nhật. Hết giờ tự gửi, Sensei nghe rồi phán.`;
+    return `
+      <div class="p-5 bg-slate-950/80 border border-slate-800 rounded-2xl text-center space-y-4">
+        <div class="text-sm text-slate-300">${moTa}</div>
+        <div class="text-xs text-slate-500">${PX_SO_CAU} câu liên tiếp · lấy từ bài đang học và các bài đã học</div>
+        <button type="button" onclick="window.batDauPhanXa && window.batDauPhanXa()"
+                class="w-full py-3 rounded-xl bg-amber-950/70 hover:bg-amber-900 border border-amber-500/40 text-amber-200 font-semibold transition cursor-pointer active:scale-95">
+          <i class="fa-solid fa-bolt mr-1.5"></i>Vào luyện
+        </button>
+      </div>`;
+  }
+
+  function pxManKetThuc() {
+    const d = phanXa.diem, t = phanXa.dsCau.length;
+    const loi = d === t ? 'Sạch bài. Được đấy.' : (d >= t / 2 ? 'Tạm được, còn phải luyện.' : 'Yếu. Làm lại đi.');
+    return `
+      <div class="p-5 bg-slate-950/80 border border-slate-800 rounded-2xl text-center space-y-3">
+        <div class="text-3xl font-bold text-ink">${d}/${t}</div>
+        <div class="text-sm text-slate-400">${loi}</div>
+        <button type="button" onclick="window.batDauPhanXa && window.batDauPhanXa()"
+                class="w-full py-3 rounded-xl bg-amber-950/70 hover:bg-amber-900 border border-amber-500/40 text-amber-200 font-semibold transition cursor-pointer active:scale-95">
+          <i class="fa-solid fa-rotate mr-1.5"></i>Luyện vòng khác
+        </button>
+      </div>`;
+  }
+
+  function pxManCauHoi() {
+    const c = pxCauHienTai();
+    if (!c) return '';
+    const tien = `<div class="flex items-center gap-2 mb-3">
+        <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-400 font-mono text-[11px]">${phanXa.viTri + 1}/${phanXa.dsCau.length}</span>
+        <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[11px]">${phanXa.diem} đúng</span>
+        <span id="pxDem" class="ml-auto px-2.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-sm font-bold">${PX_GIAY}s</span>
+      </div>`;
+
+    if (phanXa.che === 'viet') {
+      const goiY = (c.kana && c.kana !== c.dapAn) ? escapeHtml(c.kana) : '';
+      const de = c.kieu === 'khuyet'
+        ? `<div class="text-xl md:text-2xl text-ink leading-relaxed">${escapeHtml(c.cauHoi)}</div>`
+        : `<div class="text-sm text-slate-300">Viết lại chữ của từ này</div>`;
+      return `
+        <div class="p-4 bg-slate-950/80 border border-slate-800 rounded-2xl space-y-3">
+          ${tien}
+          ${de}
+          <div class="text-xs text-slate-400">${goiY ? '<span class="text-ink font-medium">' + goiY + '</span> · ' : ''}${escapeHtml(c.nghia)}</div>
+          <canvas id="pxKhung" width="320" height="320"
+                  class="w-full aspect-square rounded-xl border border-slate-700 cursor-crosshair mx-auto block"
+                  style="touch-action:none;background:#fffdf7;max-width:240px"></canvas>
+          <button type="button" onclick="window.nopPhanXa && window.nopPhanXa()"
+                  class="w-full py-2.5 rounded-xl bg-cyan-950/70 hover:bg-cyan-900 border border-cyan-500/40 text-cyan-300 text-sm font-medium transition cursor-pointer active:scale-95">
+            <i class="fa-solid fa-paper-plane text-xs mr-1.5"></i>Nộp sớm
+          </button>
+          <div id="pxKq" class="hidden"></div>
+        </div>`;
+    }
+
+    return `
+      <div class="p-4 bg-slate-950/80 border border-slate-800 rounded-2xl space-y-3">
+        ${tien}
+        <div class="text-center py-3">
+          <div class="text-xs text-slate-500 mb-1.5">Nói to bằng tiếng Nhật</div>
+          <div class="text-2xl md:text-3xl font-bold text-ink">${escapeHtml(c.nghia)}</div>
+        </div>
+        <div id="pxSong" class="h-1.5 rounded-full bg-slate-800 overflow-hidden">
+          <div id="pxSongTrong" class="h-full bg-cyan-500/70" style="width:0%"></div>
+        </div>
+        <button type="button" onclick="window.nopPhanXa && window.nopPhanXa()"
+                class="w-full py-2.5 rounded-xl bg-cyan-950/70 hover:bg-cyan-900 border border-cyan-500/40 text-cyan-300 text-sm font-medium transition cursor-pointer active:scale-95">
+          <i class="fa-solid fa-paper-plane text-xs mr-1.5"></i>Nói xong rồi
+        </button>
+        <div id="pxKq" class="hidden"></div>
+      </div>`;
+  }
+
+  function pxChuanBiKhungVe() {
+    const cv = document.getElementById('pxKhung');
+    if (!cv) return;
+    const ctx = cv.getContext('2d');
+    veKhungGiay(ctx, cv.width, cv.height);
+    ctx.lineWidth = 9; ctx.lineCap = 'round'; ctx.lineJoin = 'round'; ctx.strokeStyle = '#1f1d19';
+    phanXa.ctx = ctx; phanXa.coNet = false; phanXa.dangVe = false;
+
+    const toaDo = (e) => {
+      const r = cv.getBoundingClientRect();
+      return [(e.clientX - r.left) * (cv.width / r.width), (e.clientY - r.top) * (cv.height / r.height)];
+    };
+    cv.addEventListener('pointerdown', (e) => {
+      if (!phanXa.dangChay || phanXa.dangCho) return;
+      cv.setPointerCapture(e.pointerId);
+      phanXa.dangVe = true; phanXa.coNet = true;
+      const xy = toaDo(e); ctx.beginPath(); ctx.moveTo(xy[0], xy[1]);
+    });
+    cv.addEventListener('pointermove', (e) => {
+      if (!phanXa.dangVe) return;
+      const xy = toaDo(e); ctx.lineTo(xy[0], xy[1]); ctx.stroke();
+    });
+    const nhac = () => { phanXa.dangVe = false; };
+    cv.addEventListener('pointerup', nhac);
+    cv.addEventListener('pointercancel', nhac);
+    cv.addEventListener('pointerleave', nhac);
+  }
+
+  window.batDauPhanXa = async () => {
+    try {
+      await ensureConnected();
+    } catch (err) {
+      showToast('Chưa vào được lớp — kiểm tra mạng rồi thử lại.', 'info', 6000);
+      return;
+    }
+    const lvl = slideEngine.currentLevel, no = slideEngine.currentLesson;
+    await curriculumLoader.ensureLessonLoaded(lvl, no);
+    const kho = curriculumLoader.getHandwritingSet(lvl, no, phanXa.vong || 0, PX_SO_CAU);
+    if (!kho.length) { showToast('Bài này chưa có từ nào hợp để luyện phản xạ.', 'info'); return; }
+    phanXa.vong = (phanXa.vong || 0) + 1;
+    phanXa.dsCau = kho;
+    phanXa.viTri = 0;
+    phanXa.diem = 0;
+    phanXa.dangChay = true;
+    phanXa.dangCho = false;
+    veManPhanXa();
+    pxVaoCau();
+  };
+
+  /** Bat dau dem gio cho cau dang hien. */
+  async function pxVaoCau() {
+    const c = pxCauHienTai();
+    if (!c) { veManPhanXa(); return; }
+    phanXa.conLai = PX_GIAY;
+    phanXa.dangCho = false;
+
+    if (phanXa.che === 'noi') {
+      // Nap ngu canh TRUOC (chua ket thuc luot) roi moi mo mic, giong luong
+      // gio tay hoi — nho vay Sensei biet dang cham cai gi.
+      geminiClient.sendContextNote(
+        '[PHAN XA — NOI NHANH] Tao dang cho hoc vien ' + PX_GIAY + ' giay de noi TU TIENG NHAT co nghia "' + c.nghia + '". '
+        + 'Dap an dung la "' + c.dapAn + '" (doc: ' + (c.kana || c.doc) + '). '
+        + 'Nghe xong tieng no noi thi cham NGAY: mo dau bang dung mot tu DUNG hoac SAI, roi mot cau ngan kieu mày-tao. Khong giang dai.'
+      );
+      try {
+        mucAmThanhCaoNhat = 0;
+        await audioEngine.startMic();
+        geminiClient.sendActivityStart();
+      } catch (err) {
+        veKetQuaPhanXa('amber', 'Không mở được micro: ' + (err.message || ''));
+        return;
+      }
+    }
+
+    const nhan = () => {
+      const el = document.getElementById('pxDem');
+      if (!el) return;
+      el.innerText = phanXa.conLai + 's';
+      el.className = 'ml-auto px-2.5 py-0.5 rounded font-mono text-sm font-bold '
+        + (phanXa.conLai <= 2 ? 'bg-rose-500/20 text-rose-300' : 'bg-amber-500/20 text-amber-300');
+      const song = document.getElementById('pxSongTrong');
+      if (song) song.style.width = Math.round((1 - phanXa.conLai / PX_GIAY) * 100) + '%';
+    };
+    nhan();
+    pxDungDongHo();
+    phanXa.demTimer = setInterval(() => {
+      phanXa.conLai--;
+      nhan();
+      if (phanXa.conLai <= 0) { pxDungDongHo(); window.nopPhanXa(); }
+    }, 1000);
+  }
+
+  window.nopPhanXa = async () => {
+    if (!phanXa.dangChay || phanXa.dangCho) return;
+    const c = pxCauHienTai();
+    if (!c) return;
+    pxDungDongHo();
+    phanXa.dangCho = true;
+
+    if (phanXa.che === 'viet') {
+      const cv = document.getElementById('pxKhung');
+      if (!cv || !phanXa.coNet) { pxChotCau(false, 'Không viết gì cả.'); return; }
+      veKetQuaPhanXa('cyan', '<i class="fa-solid fa-spinner fa-spin"></i> Sensei đang nhìn…');
+      const anh = cv.toDataURL('image/png').split(',')[1];
+      const loiNhac = '[PHAN XA — VIET NHANH] Anh dinh kem la chu VIET TAY cua hoc vien (bo qua cac duong ke dut net mo). '
+        + 'Dap an dung la "' + c.dapAn + '". Net xau nhung doc ra dung chu thi van tinh DUNG. '
+        + 'Cham ngay: mo dau bang dung mot tu DUNG hoac SAI, roi mot cau ngan kieu mày-tao. Khong giang dai.';
+      pxChoPhan = true;
+      geminiClient.sendImageTurn(loiNhac, anh);
+    } else {
+      if (audioEngine.isMicActive) audioEngine.stopMic();
+      geminiClient.sendAudioStreamEnd();     // = activityEnd
+      if (mucAmThanhCaoNhat <= NGUONG_AM_THANH_RO) { pxChotCau(false, 'Không nghe thấy tiếng nào.'); return; }
+      veKetQuaPhanXa('cyan', '<i class="fa-solid fa-spinner fa-spin"></i> Sensei đang nghe lại…');
+      pxChoPhan = true;
+    }
+  };
+
+  let pxChoPhan = false;   // dang doi loi phan cua Sensei cho cau phan xa
+
+  /** Goi tu onTurnComplete khi Sensei phan xong mot cau phan xa. */
+  function pxNhanLoiPhan(loiSensei) {
+    if (!pxChoPhan) return false;
+    pxChoPhan = false;
+    const txt = String(loiSensei || '').trim();
+    // Da dan Sensei mo dau bang DUNG hoac SAI — bat dung tu dau cho chac
+    const dau = txt.slice(0, 24).toUpperCase();
+    const dung = /\bĐÚNG\b|\bDUNG\b/.test(dau) && !/\bSAI\b/.test(dau);
+    pxChotCau(dung, txt || (dung ? 'Đúng.' : 'Sai.'));
+    return true;
+  }
+
+  function pxChotCau(dung, loi) {
+    phanXa.dangCho = false;
+    if (dung) phanXa.diem++;
+    veKetQuaPhanXa(dung ? 'sage' : 'amber',
+      (dung ? '<i class="fa-solid fa-check"></i> ' : '<i class="fa-solid fa-xmark"></i> ')
+      + escapeHtml(loi) + ' <span class="opacity-70">(đáp án: ' + escapeHtml((pxCauHienTai() || {}).dapAn || '') + ')</span>');
+    setTimeout(() => {
+      phanXa.viTri++;
+      if (phanXa.viTri >= phanXa.dsCau.length) { phanXa.dangChay = false; veManPhanXa(); return; }
+      veManPhanXa();
+      pxVaoCau();
+    }, 2600);
+  }
+
+  function veKetQuaPhanXa(mau, html) {
+    const box = document.getElementById('pxKq');
+    if (!box) return;
+    const bang = {
+      sage:  'bg-emerald-950/60 border-emerald-500/40 text-emerald-200',
+      amber: 'bg-amber-950/60 border-amber-500/40 text-amber-200',
+      cyan:  'bg-cyan-950/60 border-cyan-500/40 text-cyan-200',
+    };
+    box.className = 'p-2.5 rounded-xl text-xs border flex items-start gap-2 ' + (bang[mau] || bang.cyan);
+    box.innerHTML = html;
   }
 
   function huyThuAm() {

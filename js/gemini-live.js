@@ -675,6 +675,35 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
    * Dùng khi học viên bấm "Giơ tay hỏi": nạp nội dung màn hình trước,
    * chờ học viên nói xong mới để Sensei giải đáp.
    */
+
+  /**
+   * Gui MOT LUOT co kem ANH cho phien live (vd anh net chu viet tay).
+   *
+   * gemini-3.8-live nhan duoc anh qua clientContent.inlineData va tra loi
+   * bang giong noi nhu moi luot khac — da do thuc te: anh 240x240 ton ~836
+   * token dau vao va Sensei doc duoc mat chu.
+   */
+  sendImageTurn(text, base64Png, mimeType) {
+    if (!this.ws || this.ws.readyState !== WebSocket.OPEN) return false;
+    if (this.onBeforeUserMessage) {
+      try { this.onBeforeUserMessage(); } catch (e) {}
+    }
+    this.isModelTurnActive = true;
+    this.lastClientSendTime = Date.now();
+    return this.safeSend({
+      clientContent: {
+        turns: [{
+          role: 'user',
+          parts: [
+            { text: text || '' },
+            { inlineData: { mimeType: mimeType || 'image/png', data: base64Png } },
+          ],
+        }],
+        turnComplete: true,
+      },
+    });
+  }
+
   sendContextNote(text) {
     if (!text) return;
     this.lastClientSendTime = Date.now();
