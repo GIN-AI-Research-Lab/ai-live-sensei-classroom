@@ -75,6 +75,29 @@ class AudioEngine {
   }
 
   /**
+   * Moi tieng Sensei phat ra deu di qua mot bo do (analyser) truoc khi ra loa,
+   * de nhan vat hoat hinh doc do to ma map may mieng cho khop.
+   */
+  outBus() {
+    if (!this.outAnalyser || this.outAnalyser.context !== this.outCtx) {
+      this.outAnalyser = this.outCtx.createAnalyser();
+      this.outAnalyser.fftSize = 512;
+      this.outAnalyser.connect(this.outCtx.destination);
+      this._mauDo = new Float32Array(this.outAnalyser.fftSize);
+    }
+    return this.outAnalyser;
+  }
+
+  /** Do to (RMS, 0..~0.5) cua tieng dang phat — 0 khi dang im */
+  getOutputLevel() {
+    if (!this.outAnalyser) return 0;
+    this.outAnalyser.getFloatTimeDomainData(this._mauDo);
+    let tong = 0;
+    for (let i = 0; i < this._mauDo.length; i++) tong += this._mauDo[i] * this._mauDo[i];
+    return Math.sqrt(tong / this._mauDo.length);
+  }
+
+  /**
    * Mo khoa am thanh o cu cham DAU TIEN bat ky cho nao tren trang.
    *
    * Dien thoai chi cho chay AudioContext khi lenh resume nam trong tay mot cu
@@ -243,7 +266,7 @@ class AudioEngine {
 
       const source = this.outCtx.createBufferSource();
       source.buffer = audioBuffer;
-      source.connect(this.outCtx.destination);
+      source.connect(this.outBus());
 
       // Tự động ngắt Web Speech API nếu đang đọc dở để tránh 2 giọng nói đè lên nhau
       if (window.speechSynthesis && (window.speechSynthesis.speaking || window.speechSynthesis.pending)) {
@@ -332,7 +355,7 @@ class AudioEngine {
 
         const src = this.outCtx.createBufferSource();
         src.buffer = buf;
-        src.connect(this.outCtx.destination);
+        src.connect(this.outBus());
 
         this.activeSources.push(src);
         if (!this.isPlaying) { this.isPlaying = true; this.onPlayStateChange(true); }

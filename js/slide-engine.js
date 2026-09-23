@@ -1311,6 +1311,8 @@ class SlideEngine {
     this.setCaption(comment, styleType);
     this.openSpotlight(targetId, found, opts);
     this.tuKhoanhNguPhap(found);
+    // Sensei hoat hinh di toi chi vao (va dien dong tac neu la dong tu)
+    if (window.SenseiAvatar) window.SenseiAvatar.khiRoiMuc(targetId, found, styleType);
     return true;
   }
 

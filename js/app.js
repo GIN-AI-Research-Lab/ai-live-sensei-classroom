@@ -618,6 +618,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     else if (name === "change_section") {
       const { section, sub_index } = args;
+      // Sensei hoat hinh di toi bam vao nut tab (chi la hinh anh, tab van doi ngay)
+      const nutTab = { vocab: 'tabVocabBtn', kanji: 'tabKanjiBtn', grammar: 'tabGrammarBtn',
+                       kaiwa: 'tabKaiwaBtn', quiz: 'tabQuizBtn' }[section];
+      if (window.SenseiAvatar && nutTab) window.SenseiAvatar.bamVao(nutTab);
       slideEngine.setTab(section, sub_index !== undefined ? sub_index : null);
       return { success: true, activeSection: section, subIndex: sub_index };
     }
@@ -654,7 +658,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     else if (name === "mark_error") {
       const { wrong_phrase, corrected_phrase, explanation } = args;
       slideEngine.markError(wrong_phrase, corrected_phrase, explanation);
+      if (window.SenseiAvatar) window.SenseiAvatar.dienDongTac('gian', 2.5);
       return { success: true, marked: wrong_phrase };
+    }
+    else if (name === "act_out") {
+      const ok = !!(window.SenseiAvatar && window.SenseiAvatar.dienDongTac(args.action));
+      return ok ? { success: true, acted: args.action }
+                : { success: false, error: "nhan vat chua san sang hoac khong co dong tac nay" };
+    }
+    else if (name === "set_emotion") {
+      const ok = !!(window.SenseiAvatar && window.SenseiAvatar.camXuc(args.emotion, 3));
+      return { success: ok, emotion: args.emotion };
     }
     else if (name === "draw_on_board") {
       const { target_id, kind, to_id } = args;
