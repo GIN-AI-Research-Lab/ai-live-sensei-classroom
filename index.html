@@ -354,8 +354,19 @@
   <script src="js/gemini-live.js"></script>
   <script src="js/app.js"></script>
 
-  <!-- Sensei hoat hinh (nhan vat anime 3D chuan VRM). Nap sau cung va chay
-       rieng: loi o day khong duoc lam chet bai hoc. -->
+  <!-- Sensei hoat hinh. Mac dinh la MEO SENSEI 2D (js/sensei-cat.js).
+       Ban nguoi anime 3D (VRM) van giu lai: localStorage.senseiAvatarKieu = 'nguoi'
+       roi tai lai trang. Nap sau cung va chay rieng: loi o day khong lam chet bai hoc. -->
+  <script>
+    (function () {
+      var kieu = 'meo';
+      try { kieu = localStorage.getItem('senseiAvatarKieu') || 'meo'; } catch (e) {}
+      var sc = document.createElement('script');
+      if (kieu === 'nguoi') { sc.type = 'module'; sc.src = 'js/sensei-avatar.js'; }
+      else sc.src = 'js/sensei-cat.js';
+      document.body.appendChild(sc);
+    })();
+  </script>
   <script type="importmap">
     { "imports": {
         "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
@@ -363,7 +374,6 @@
         "@pixiv/three-vrm": "https://cdn.jsdelivr.net/npm/@pixiv/three-vrm@3/lib/three-vrm.module.min.js"
     } }
   </script>
-  <script type="module" src="js/sensei-avatar.js"></script>
 
   <!-- ====================================================================
        CANH GAC TRANG TRANG
