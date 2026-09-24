@@ -12,7 +12,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-const SO_LOP = 24;
+const SO_LOP = 20;
 
 const GLSL_CHUNG = /* glsl */`
   uniform float uH, uDai, uThoiGian;
@@ -28,15 +28,12 @@ const GLSL_LONG = /* glsl */`
     p += dot(p, p.yxz + 33.33);
     return fract((p.xxy + p.yxx) * p.zyx);
   }
+  // Moi o nho la mot soi: chi xet chinh o do (1 lan bam) thay vi 27 o lang gieng —
+  // re hon ~27 lan ma o kich co soi long nay mat thuong khong phan biet duoc
   float soiLong(vec3 p) {
     vec3 o = floor(p), f = fract(p);
-    float gan = 9.;
-    for (int k = -1; k <= 1; k++) for (int j = -1; j <= 1; j++) for (int i = -1; i <= 1; i++) {
-      vec3 b = vec3(float(i), float(j), float(k));
-      vec3 c = b + bam3(o + b) - f;
-      gan = min(gan, dot(c, c));
-    }
-    return sqrt(gan);
+    vec3 tam = .25 + .5 * bam3(o);
+    return length(f - tam) * 1.6;
   }
   // Vung long: cam (vang cam) hoac trang sang. Mau khan do, ao nau toi, mieng va bi loai.
   float laLong(vec3 c) {
@@ -133,16 +130,27 @@ export function napMeoNangCap(url, scene) {
     };
     vl.userData.u = u;
     luoi.material = vatLieuLop(vl, 0);
+    const cacLop = [];
     for (let i = 1; i <= SO_LOP; i++) {
       const lop = new THREE.Mesh(luoi.geometry, vatLieuLop(vl, i / SO_LOP));
       lop.renderOrder = i;
       luoi.add(lop);
+      cacLop.push(lop);
     }
 
     scene.add(goc);
     let truocY = 0, vanToc = new THREE.Vector3(), lech = new THREE.Vector3();
     ok({
       doiTuong: goc,
+      /** Giu lai n lop (rai deu tu goc den ngon) — dung de ha chat luong khi may cham */
+      datSoLop(n) {
+        n = Math.max(4, Math.min(SO_LOP, Math.round(n)));
+        cacLop.forEach((l, i) => { l.visible = (i % Math.ceil(SO_LOP / n)) === 0 || i === SO_LOP - 1; });
+      },
+      huy() {
+        goc.traverse((o) => { if (o.isMesh) { o.material.dispose?.(); } });
+        luoi.geometry.dispose();
+      },
       capNhat(t, dt) {
         u.uThoiGian.value = t;
         // Lac lu nhe de thay long + duoi co quan tinh
