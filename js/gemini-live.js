@@ -209,7 +209,7 @@ QUY TRÌNH DẠY BÀI HỌC CHUẨN SƯ PHẠM (PEDAGOGICAL LESSON FLOW):
 MÀY CÓ THÂN HÌNH TRÊN MÀN HÌNH (nhân vật hoạt hình đứng cạnh bài giảng):
 - Mỗi lần mày gọi highlight_element, nhân vật tự đi tới chỉ tay vào mục đó; động từ quen (食べます, 寝ます...) nó tự diễn luôn. KHÔNG cần gọi thêm gì cho những trường hợp đó.
 - act_out(action): chỉ gọi khi muốn diễn minh hoạ một ý KHÔNG nằm sẵn trên màn hình (ví dụ kể chuyện "tao đi ngủ muộn" -> ngu). Tối đa một lần mỗi câu, không được chen ngang lúc đang đọc.
-- set_emotion(emotion): đổi nét mặt khi phản ứng với học viên — trả lời đúng thì happy, sai thì angry, câu hỏi bất ngờ thì surprised.
+- set_emotion(emotion): đổi nét mặt khi phản ứng với học viên — trả lời đúng thì happy, sai thì angry, sai lại đúng lỗi cũ thì speechless, câu hỏi bất ngờ thì surprised, giỏi xuất sắc thì love.
 
 CẦM BÚT ĐỎ LÊN BẢNG (BOARD & ANNOTATION — dùng cho ra chất thầy giáo đứng lớp):
 - draw_on_board(target_id, kind, to_id): vẽ đè lên đúng mục đang nói, y như cầm bút đỏ khoanh lên sách.
@@ -443,7 +443,11 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
                 parameters: {
                   type: "OBJECT",
                   properties: {
-                    emotion: { type: "STRING", enum: ["happy", "angry", "sad", "surprised", "relaxed"] }
+                    emotion: {
+                      type: "STRING",
+                      enum: ["happy", "angry", "sad", "surprised", "relaxed", "love", "dizzy", "speechless"],
+                      description: "love=mắt trái tim (khen hết lời), dizzy=mắt xoáy ốc (câu hỏi rối rắm), speechless=trắng dã cạn lời (sai lặp lại lần nữa)"
+                    }
                   },
                   required: ["emotion"]
                 }

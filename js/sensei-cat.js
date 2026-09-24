@@ -228,7 +228,11 @@
     return { W, H, cao, rong: cao * 200 / 220, chan, hep };
   };
   const tiLe = () => kichThuoc().cao / 220;
-  const viTriNha = () => { const { W, rong } = kichThuoc(); return W - rong * 0.62; };
+  const hub = window.SenseiAvatarHub;
+  const viTriNha = () => {
+    const { W, rong } = kichThuoc();
+    return W - (hub ? hub.rongTruoc(api) : 0) - rong * 0.62;
+  };
 
   function dungSanKhau() {
     hop = document.createElement('div');
@@ -259,6 +263,7 @@
       @keyframes senseiGon { from { transform: scale(.3); opacity: 1 } to { transform: scale(3.2); opacity: 0 } }`;
     document.head.appendChild(st);
 
+    if (!hub) {
     nut = document.createElement('button');
     nut.type = 'button';
     nut.title = 'Ẩn / hiện Mèo Sensei';
@@ -266,15 +271,16 @@
     Object.assign(nut.style, { position: 'fixed', right: '10px', zIndex: '87', width: '34px', height: '34px',
       borderRadius: '50%', border: '1px solid rgba(0,0,0,.12)', background: 'rgba(255,255,255,.85)',
       fontSize: '17px', cursor: 'pointer', boxShadow: '0 2px 6px rgba(0,0,0,.12)' });
-    nut.addEventListener('click', () => window.SenseiAvatar.an(!S.tat));
+    nut.addEventListener('click', () => api.an(!S.tat));
     document.body.appendChild(nut);
+    }
 
     const doiCo = () => {
       const { W, H, cao, rong, chan } = kichThuoc();
       hop.style.width = rong + 'px';
       hop.style.height = cao + 'px';
       laser.width = W * devicePixelRatio; laser.height = H * devicePixelRatio;
-      nut.style.bottom = (H - chan + 6) + 'px';
+      if (nut) nut.style.bottom = (H - chan + 6) + 'px';
       if (S.x === null) S.x = S.dichX = viTriNha();
       S.x = Math.min(S.x, W - rong * 0.4);
     };
@@ -502,7 +508,8 @@
     const { W, rong, hep } = kichThuoc();
     const tam = r.left + r.width / 2;
     // Dung canh phan tu (uu tien ben phai), khong de len no
-    let dung = r.right + rong * 0.55;
+    const benTrai = hub && hub.thuTu(api) === 1;
+    let dung = benTrai ? r.left - rong * 0.55 : r.right + rong * 0.55;
     if (dung > W - rong * 0.5) dung = r.left - rong * 0.55;
     if (dung < rong * 0.5) dung = Math.min(W - rong * 0.5, tam + rong);
     const the = document.querySelector('.spotlight:not(.hidden) .spot-dock');
@@ -548,7 +555,8 @@
 
   function camXuc(ten, giay = 3) {
     const map = { vui: 'happy', gian: 'angry', buon: 'sad', ngac_nhien: 'surprised', thu_gian: 'relaxed' };
-    const t = map[ten] || ten;
+    const gan = { love: 'happy', dizzy: 'surprised', speechless: 'sad' };
+    const t = gan[map[ten] || ten] || map[ten] || ten;
     if (!S.san || !CAM_XUC[t]) return false;
     S.camXuc = { ten: t, den: performance.now() / 1000 + giay };
     return true;
@@ -576,17 +584,23 @@
     setTimeout(() => clearInterval(hen), 8000);
   }
 
-  window.SenseiAvatar = {
-    kieu: 'meo',
+  const api = {
+    kieu: 'meo', uuTien: 0,
+    get tat() { return S.tat; },
+    rongHienTai: () => kichThuoc().rong,
     chiVao, bamVao, dienDongTac, camXuc, khiRoiMuc, dongTacChoTu,
     DANH_SACH_DONG_TAC: [...Object.keys(DONG_TAC), ...Object.keys(DI_BO)],
     get san() { return S.san; },
     an(anDi = true) {
       S.tat = anDi;
+      if (!hop) return;
       hop.style.display = laser.style.display = anDi ? 'none' : '';
       if (anDi) anBong();
-      nut.style.opacity = anDi ? '0.55' : '1';
-      try { localStorage.setItem('senseiAvatarAn', anDi ? '1' : '0'); } catch (e) {}
+      else { S.x = S.dichX = viTriNha(); S.truoc = performance.now(); }
+      if (nut) {
+        nut.style.opacity = anDi ? '0.55' : '1';
+        try { localStorage.setItem('senseiAvatarAn', anDi ? '1' : '0'); } catch (e) {}
+      }
     },
     _S: S, _P: P, _capNhat: capNhat,
   };
@@ -594,11 +608,16 @@
   function batDau() {
     dungSanKhau();
     S.san = true;
-    let an = false;
-    try { an = localStorage.getItem('senseiAvatarAn') === '1'; } catch (e) {}
-    if (an) window.SenseiAvatar.an(true);
+    if (hub) hub.dangKy(api);
+    else {
+      window.SenseiAvatar = api;
+      let an = false;
+      try { an = localStorage.getItem('senseiAvatarAn') === '1'; } catch (e) {}
+      if (an) api.an(true);
+    }
+    S.x = S.dichX = viTriNha();
     khungHinh();
-    setTimeout(() => dienDongTac('vay', 2.5), 600);
+    setTimeout(() => { if (!S.tat) dienDongTac('vay', 2.5); }, 600);
   }
   if (document.body) batDau(); else addEventListener('DOMContentLoaded', batDau);
 })();

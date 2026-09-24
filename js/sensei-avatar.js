@@ -300,9 +300,9 @@ function dungSanKhau() {
     borderRadius: '50%', border: '1px solid rgba(0,0,0,.12)', background: 'rgba(255,255,255,.85)',
     fontSize: '17px', cursor: 'pointer', boxShadow: '0 2px 6px rgba(0,0,0,.12)' });
   const datNut = () => { nut.style.bottom = (innerHeight - kichThuoc().chan + 8) + 'px'; nut.style.opacity = S.tat ? '0.55' : '1'; };
-  nut.addEventListener('click', () => { window.SenseiAvatar.an(!S.tat); datNut(); });
+  nut.addEventListener('click', () => { apiNguoi.an(!S.tat); datNut(); });
   addEventListener('resize', datNut);
-  document.body.appendChild(nut);
+  if (!window.SenseiAvatarHub) document.body.appendChild(nut);
   S._datNut = datNut;
   setTimeout(datNut, 500);
 
@@ -676,19 +676,25 @@ function khiRoiMuc(targetId, found, styleType) {
   }
 }
 
-window.SenseiAvatar = {
+const apiNguoi = {
+  kieu: 'nguoi', uuTien: 0,
+  get tat() { return S.tat; },
+  rongHienTai: () => kichThuoc().cao * 0.6,
   chiVao, bamVao, dienDongTac, camXuc, khiRoiMuc, dongTacChoTu,
   DANH_SACH_DONG_TAC: [...Object.keys(TU_THE).filter((k) => k !== 'dung'), ...Object.keys(DI_BO)],
   get san() { return S.san; },
   an(anDi = true) {
     S.tat = anDi;
+    if (!khung) return;
     khung.style.display = laser.style.display = anDi ? 'none' : '';
     if (anDi) anBong();
-    try { localStorage.setItem('senseiAvatarAn', anDi ? '1' : '0'); } catch (e) {}
+    if (!window.SenseiAvatarHub) { try { localStorage.setItem('senseiAvatarAn', anDi ? '1' : '0'); } catch (e) {} }
     S._datNut?.();
   },
   _S: S, _capNhat: capNhat,
 };
+if (window.SenseiAvatarHub) window.SenseiAvatarHub.dangKy(apiNguoi);
+else window.SenseiAvatar = apiNguoi;
 
 (async () => {
   try {
@@ -697,8 +703,8 @@ window.SenseiAvatar = {
     await napNhanVat();
     S.san = true;
     let an = false;
-    try { an = localStorage.getItem('senseiAvatarAn') === '1'; } catch (e) {}
-    if (an) window.SenseiAvatar.an(true);
+    if (!window.SenseiAvatarHub) { try { an = localStorage.getItem('senseiAvatarAn') === '1'; } catch (e) {} }
+    if (an) apiNguoi.an(true);
     console.log('[SenseiAvatar] da nap nhan vat');
     dienDongTac('vay', 2.5);
   } catch (e) {
