@@ -79,7 +79,7 @@
   const vien = new THREE.DirectionalLight(0xffe6c8, 1.4); vien.position.set(1.5, 2.5, -3); scene.add(vien);
   scene.add(new THREE.HemisphereLight(0xffffff, 0xd8c8b0, 0.35));
 
-  let meo = null, xoay = true, nangCap = null, soLop = 20, tbKhung = 16;
+  let meo = null, xoay = true, nangCap = null, soLop = 20, tbKhung = 16, thuNoi = false;
   const loader = new GLTFLoader();
   function datVao(o) {
     const box = new THREE.Box3().setFromObject(o), size = box.getSize(new THREE.Vector3());
@@ -132,9 +132,9 @@
   // Nut dong tac (chi hien voi ban co xuong) + dau nhin theo con tro
   const hopDongTac = document.createElement('div'); hopDongTac.className = 'nut'; hopDongTac.style.display = 'none';
   document.getElementById('nut3d').after(hopDongTac);
-  for (const [ten, nhan] of [['nghi', 'Đứng nghỉ'], ['vay', '👋 Vẫy tay'], ['gat', 'Gật đầu'], ['chi', '👉 Chỉ tay'], ['vui', '✨ Vui']]) {
+  for (const [ten, nhan] of [['nghi', 'Đứng nghỉ'], ['vay', '👋 Vẫy tay'], ['gat', 'Gật đầu'], ['chi', '👉 Chỉ tay'], ['vui', '✨ Vui'], ['an', '🐟 Ăn'], ['ngu', '💤 Ngủ'], ['cui', '🙇 Cúi chào'], ['nghi', '❓ Suy nghĩ'], ['noi', '💬 Nói']]) {
     const b = document.createElement('button'); b.textContent = nhan;
-    b.onclick = () => { nangCap?.hanhDong(ten); hopDongTac.querySelectorAll('button').forEach((x) => x.classList.toggle('dang', x === b)); };
+    b.onclick = () => { thuNoi = ten === 'noi'; nangCap?.hanhDong(thuNoi ? 'nghi' : ten); hopDongTac.querySelectorAll('button').forEach((x) => x.classList.toggle('dang', x === b)); };
     hopDongTac.appendChild(b);
   }
   addEventListener('pointermove', (e) => {
@@ -180,6 +180,11 @@
     }
     if (meo) {
       meo.userData.goc = (meo.userData.goc || 0) + (xoay ? dt * 0.5 : 0);
+      // Nut "Noi": gia lap giong noi de xem mieng mo va tay khoa chan
+      if (nangCap?.dieuKhien) {
+        const gia = thuNoi ? (.08 + .07 * Math.sin(t * 11) * Math.sin(t * 3.7)) : 0;
+        nangCap.dieuKhien.noi(thuNoi ? 1 : 0); nangCap.dieuKhien.mieng(Math.max(0, gia));
+      }
       if (nangCap) nangCap.capNhat(t, dt);
       // Ban nang cap lac lu nhe quanh goc dang xem de thay long va duoi co quan tinh
       meo.rotation.y = meo.userData.goc + (nangCap && !nangCap.coXuong ? meo.userData.lac || 0 : 0);

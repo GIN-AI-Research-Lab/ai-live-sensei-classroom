@@ -19,6 +19,10 @@ const GLSL_CHUNG = /* glsl */`
   uniform vec3 uLuc;
   uniform vec4 uDuoi;        // xyz = goc duoi (toa do vat), w = bien do
   uniform sampler2D uKhongLong;   // ban do cam moc long (UV): mom, mieng, bang dan
+  uniform sampler2D uMatMieng;    // R vung mat, G vi tri doc trong mat, B/A vi tri trong mieng
+  uniform vec2 uMi;               // x: mi tren khep (0..1), y: mi duoi day len (0..1)
+  uniform float uMieng;           // do mo mieng 0..1
+  uniform vec3 uMauMi;
   varying vec3 vViTriGoc;
 `;
 
@@ -58,10 +62,13 @@ const GLSL_LONG = /* glsl */`
 
 function vatLieuLop(goc, h) {
   const m = goc.clone();
+  // clone() sao chep userData bang JSON -> mat tham chieu. Dung THANG bo uniform cua vat lieu goc
+  // de moi lop long cung nhan cap nhat (thoi gian, quan tinh, mi mat, mieng) va giu dung kieu du lieu.
+  const uChung = goc.userData.u;
   // Chi lop nen can lop bong mat; bat cho ca 24 lop long thi nang gap doi ma khong de lam gi
   if (h > 0) m.clearcoat = 0;
   m.onBeforeCompile = (sh) => {
-    Object.assign(sh.uniforms, m.userData.u);
+    Object.assign(sh.uniforms, uChung);
     sh.uniforms.uH = { value: h };
     sh.vertexShader = GLSL_CHUNG + sh.vertexShader.replace('#include <begin_vertex>', /* glsl */`
       #include <begin_vertex>
@@ -96,6 +103,26 @@ function vatLieuLop(goc, h) {
       float vung = laLong(diffuseColor.rgb);
       #ifdef USE_MAP
         vung *= 1. - step(.5, texture2D(uKhongLong, vMapUv).r);
+        vec4 mm = texture2D(uMatMieng, vMapUv);
+        vung *= 1. - step(.3, mm.r);                       // khong moc long len mat
+        if (uH == 0.) {
+          // Mi mat: mi tren phu tu mep tren xuong toi uMi.x, mi duoi tu mep duoi len
+          float trongMat = smoothstep(.3, .6, mm.r);
+          float phu = max(1. - smoothstep(uMi.x - .04, uMi.x + .04, mm.g), smoothstep(1. - uMi.y - .04, 1. - uMi.y + .04, mm.g));
+          phu *= trongMat * step(.001, uMi.x + uMi.y);
+          diffuseColor.rgb = mix(diffuseColor.rgb, uMauMi, phu);
+          // Vien mi toi o mep mi tren (nhu long mi)
+          float vien = (1. - smoothstep(.0, .045, abs(mm.g - uMi.x))) * step(.03, uMi.x) * trongMat;
+          diffuseColor.rgb = mix(diffuseColor.rgb, vec3(.08, .05, .03), vien * .85);
+          // Mieng mo khi noi: elip toi, luoi hong o nua duoi
+          if (mm.b > .05 && uMieng > .02) {
+            float mu = (mm.b - .1) / .9, mv = (mm.a - .2) / .8;
+            vec2 d = vec2((mu - .5) / .27, (mv - .52) / (.08 + .46 * uMieng));
+            float trong = 1. - smoothstep(.8, 1., length(d));
+            vec3 mauMieng = mix(vec3(.18, .03, .03), vec3(.75, .32, .36), smoothstep(.1, .9, d.y * .5 + .5));
+            diffuseColor.rgb = mix(diffuseColor.rgb, mauMieng, trong);
+          }
+        }
       #endif
       if (uH > 0.) {
         float d = soiLong(vViTriGoc * 420.);
@@ -115,7 +142,7 @@ function vatLieuLop(goc, h) {
 // DIEU KHIEN XUONG: moi phep xoay khai bao trong he toa do CUA MEO (x: trai meo -> phai man hinh,
 // y: len, z: huong ve nguoi xem), khong phu thuoc truc rieng (roll) cua tung xuong.
 // ---------------------------------------------------------------------------
-function taoDieuKhien(goc, skeleton) {
+function taoDieuKhien(goc, skeleton, u) {
   const X = {};
   for (const b of skeleton.bones) X[b.name.replace(/[.]/g, '')] = b;
   const nghi = new Map(skeleton.bones.map((b) => [b, b.quaternion.clone()]));
@@ -143,6 +170,7 @@ function taoDieuKhien(goc, skeleton) {
   }
   let dang = 'nghi', batDau = 0, nhinX = 0, nhinY = 0, giatTai = 0;
   let chiBen = 'R', chiHuong = new THREE.Vector3(-1, 0, .3), dangNoi = 0, diMuc = 0, diPha = 0;
+  let chop = 0, moMieng = 0, dauYTruoc = 0, taiLech = 0, taiVT = 0, muiMi = 0, miDuoi = 0;
   const tron = { v: 0 };      // muc do dong tac (0 -> 1, len xuong mem)
   return {
     hanhDong(ten) { if (ten !== dang) batDau = performance.now() / 1000; dang = ten; },
@@ -153,6 +181,8 @@ function taoDieuKhien(goc, skeleton) {
     noi(m) { dangNoi += (m - dangNoi) * .2; },
     /** Buoc chan khi di: muc 0..1, pha tang theo quang duong */
     di(muc, pha) { diMuc = muc; diPha = pha; },
+    /** Do to cua giong dang phat (0..~0.3) -> mieng mo */
+    mieng(muc) { moMieng += (Math.min(1, muc * 7) - moMieng) * .45; },
     capNhat(t) {
       for (const [b, q] of nghi) b.quaternion.copy(q);             // ve tu the nghi roi cong dong tac
       const tt = performance.now() / 1000 - batDau;          // thoi gian tu luc bat dau dong tac
@@ -170,14 +200,34 @@ function taoDieuKhien(goc, skeleton) {
       const gat = (dang === 'gat' ? Math.max(0, Math.sin(tt * 7)) * .28 * tron.v : 0)
                 + dangNoi * Math.max(0, Math.sin(t * 6.5)) * .07;
       const lacDau = dang === 'lac' ? Math.sin(tt * 9) * .3 * tron.v : 0;
-      xoay(X.dau, truc(0, 1, 0, Math.sin(t * .45) * .08 + nhinX * .35 + lacDau)
-        .multiply(truc(1, 0, 0, Math.sin(t * .7) * .04 - nhinY * .2 + gat))
-        .multiply(truc(0, 0, 1, Math.sin(t * .33) * .05)));
+      const ngu = dang === 'ngu', cui = dang === 'cui', suyNghi = dang === 'nghi', an = dang === 'an';
+      const cuiK = cui ? Math.max(0, Math.sin(Math.min(tt, 1.6) / 1.6 * Math.PI)) * tron.v : 0;
+      if (cuiK) { xoay(X.bung, truc(1, 0, 0, cuiK * .25)); xoay(X.nguc, truc(1, 0, 0, cuiK * .3)); }
+      const dauY = Math.sin(t * .45) * .08 + nhinX * .35 + lacDau;
+      xoay(X.dau, truc(0, 1, 0, dauY)
+        .multiply(truc(1, 0, 0, Math.sin(t * .7) * .04 - nhinY * .2 + gat + (ngu ? .18 : 0) * tron.v + cuiK * .35
+                              + (an ? Math.max(0, Math.sin(tt * 5)) * .06 : 0)))
+        .multiply(truc(0, 0, 1, Math.sin(t * .33) * .05 + ((ngu ? .3 : 0) + (suyNghi ? .16 : 0)) * tron.v)));
+      // Tai lo xo: dau quay nhanh thi tai bi keo tre lai roi nay ve
+      const vDau = (dauY - dauYTruoc) * 60; dauYTruoc = dauY;
+      taiVT += (-vDau * .6 - taiLech) * .25 - taiVT * .18; taiLech += taiVT * .5;
+      // Mi mat: chop ngau nhien; ngu nham han; vui hip mat (mi duoi); lac dau / nghi thi lim dim
+      if (t > chop) chop = t + 2.2 + Math.random() * 3.5;
+      const dangChop = 1 - Math.min(1, Math.abs(chop - t - .08) / .08);
+      const miTren = Math.max(dangChop, ngu ? tron.v : 0, dang === 'lac' || suyNghi ? .38 * tron.v : 0, cuiK * .9);
+      miDuoi += (((vui ? .42 : 0) + (an ? .3 : 0)) * tron.v - miDuoi) * .2;
+      muiMi += (miTren - muiMi) * .5;
+      if (u) {
+        u.uMi.value.set(muiMi, miDuoi);
+        const nhai = an ? Math.max(0, Math.sin(tt * 5)) * .7 * tron.v : 0;
+        u.uMieng.value = Math.max(moMieng * (.6 + .4 * Math.abs(Math.sin(t * 13))), nhai, vui ? .35 * tron.v : 0);
+      }
       // Tai: thinh thoang giat mot cai
       if (t > giatTai) giatTai = t + 2.5 + Math.random() * 4;
       const giat = Math.max(0, 1 - Math.abs(giatTai - t - .1) * 12);
-      xoay(X.taiL, truc(0, 0, 1, -giat * .35 * (Math.floor(giatTai) % 2)));
-      xoay(X.taiR, truc(0, 0, 1, giat * .35 * (1 - Math.floor(giatTai) % 2)));
+      const cup = ngu ? .25 * tron.v : 0;          // ngu: tai cup xuong
+      xoay(X.taiL, truc(0, 0, 1, -giat * .35 * (Math.floor(giatTai) % 2) + taiLech - cup));
+      xoay(X.taiR, truc(0, 0, 1, giat * .35 * (1 - Math.floor(giatTai) % 2) + taiLech + cup));
       // Duoi: song lan tu goc ra ngon, vui thi nhanh va manh
       for (let i = 0; i < 4; i++) {
         const a = (vui ? .5 : .28) * Math.sin(t * (vui ? 7 : 2.2) - i * .8);
@@ -189,6 +239,21 @@ function taoDieuKhien(goc, skeleton) {
       if (dang === 'vay') {
         nham(X.baptayR, new THREE.Vector3(-.55, .85, .25), tron.v);
         nham(X.cangtayR, new THREE.Vector3(-.15 + Math.sin(tt * 9) * .45, 1, .25), tron.v);
+      } else if (an) {
+        // Dua mon an len mieng roi ha xuong, lap lai
+        const len = Math.max(0, Math.sin(tt * 5));
+        nham(X.baptayR, new THREE.Vector3(-.2, -.55, .8), tron.v);
+        nham(X.cangtayR, new THREE.Vector3(.45 * len + .1, .35 + .5 * len, .6), tron.v);
+        nham(X.baptayL, new THREE.Vector3(.2, -.55, .8), tron.v * .8);
+        nham(X.cangtayL, new THREE.Vector3(-.2, .1, .95), tron.v * .8);
+      } else if (suyNghi) {
+        // Chong cam suy nghi
+        nham(X.baptayR, new THREE.Vector3(-.2, -.5, .85), tron.v);
+        nham(X.cangtayR, new THREE.Vector3(.5, .8, .3), tron.v);
+      } else if (ngu) {
+        // Hai tay chap lai ke ma
+        nham(X.baptayL, new THREE.Vector3(.1, -.5, .85), tron.v); nham(X.cangtayL, new THREE.Vector3(-.4, .8, .3), tron.v);
+        nham(X.baptayR, new THREE.Vector3(-.1, -.5, .85), tron.v); nham(X.cangtayR, new THREE.Vector3(.2, .85, .4), tron.v);
       } else if (dang === 'chi-huong') {
         nham(X['baptay' + chiBen], chiHuong, tron.v); nham(X['cangtay' + chiBen], chiHuong, tron.v);
         nham(X['bantay' + chiBen], chiHuong, tron.v);
@@ -219,6 +284,14 @@ export function napMeoNangCap(url, scene) {
   new THREE.TextureLoader().load(url.replace(/.glb$/, '-khong-long.png'), (t) => {
     t.flipY = false; t.colorSpace = THREE.NoColorSpace; matNa.value = t;
   }, undefined, () => {});
+  // Ban do mat-mieng (neu co): <ten>-mat-mieng.png
+  const matMieng = { value: KHONG_CAM };
+  new THREE.TextureLoader().load(url.replace(/.glb$/, '-mat-mieng.png'), (t) => {
+    t.flipY = false; t.colorSpace = THREE.NoColorSpace; t.premultiplyAlpha = false;
+    t.minFilter = THREE.LinearFilter; t.generateMipmaps = false; matMieng.value = t;
+  }, undefined, () => {});
+  const uMat = { uMatMieng: matMieng, uMi: { value: new THREE.Vector2() }, uMieng: { value: 0 },
+                 uMauMi: { value: new THREE.Color(0xcd9669).convertSRGBToLinear() } };
   return new Promise((ok, loi) => new GLTFLoader().load(url, (gltf) => {
     const goc = gltf.scene;
     let luoi = null;
@@ -234,6 +307,7 @@ export function napMeoNangCap(url, scene) {
     luoi.geometry.computeBoundingBox();
     const bb = luoi.geometry.boundingBox, cao = bb.max.y - bb.min.y;
     const u = {
+      ...uMat,
       uKhongLong: matNa,
       uDai: { value: cao * .016 }, uThoiGian: { value: 0 }, uLuc: { value: new THREE.Vector3() },
       // Goc duoi: phia sau-ben phai, thap (uoc luong tu khung bao)
@@ -255,7 +329,7 @@ export function napMeoNangCap(url, scene) {
       luoi.add(lop);
       cacLop.push(lop);
     }
-    const dc = coXuong ? taoDieuKhien(goc, luoi.skeleton) : null;
+    const dc = coXuong ? taoDieuKhien(goc, luoi.skeleton, u) : null;
 
     scene.add(goc);
     let truocY = 0, vanToc = new THREE.Vector3(), lech = new THREE.Vector3();

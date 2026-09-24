@@ -16,11 +16,12 @@ const MO_HINH = 'assets/sensei-meo/3d/meo-xuong.glb';
 const hub = window.SenseiAvatarHub;
 
 // act_out cua Gemini -> dong tac co san cua meo 3D
-const DONG_TAC = { vay: 'vay', cui: 'gat', gat_dau: 'gat', vui: 'vui', hat: 'vui', gian: 'lac', noi: 'gat',
-                   ngac_nhien: 'vui', ban: 'chi', toi: 'gat', doc: 'gat', nghi: 'lac' };
-const THOI_LUONG = { vay: 2.6, gat: 1.8, vui: 2.4, lac: 1.8, chi: 2.5 };
+const DONG_TAC = { vay: 'vay', cui: 'cui', gat_dau: 'gat', vui: 'vui', hat: 'vui', gian: 'lac', noi: 'gat',
+                   ngac_nhien: 'vui', ban: 'chi', toi: 'gat', doc: 'nghi', nghi: 'nghi', viet: 'nghi',
+                   an: 'an', uong: 'an', ngu: 'ngu', day: 'vui', cho: 'nghi', mua: 'chi', nhin: 'nghi', nghe: 'nghi' };
+const THOI_LUONG = { vay: 2.6, gat: 1.8, vui: 2.4, lac: 1.8, chi: 2.5, an: 3.2, ngu: 3.6, cui: 2, nghi: 3 };
 const CAM_XUC = { happy: 'vui', love: 'vui', angry: 'lac', speechless: 'lac', sad: 'gat', dizzy: 'lac', surprised: 'vui' };
-const BONG = { vay: '👋', vui: '✨', lac: '💢', gat: '', chi: '' };
+const BONG = { vay: '👋', vui: '✨', lac: '💢', gat: '', chi: '', an: '🐟', ngu: '💤', cui: '🙇', nghi: '❓' };
 
 const S = {
   san: false, tat: false, x: null, dichX: null, chi: null, dongTac: null, nghiTu: 0,
@@ -128,6 +129,7 @@ function capNhat() {
   const muc = window.__audioEngine?.getOutputLevel?.() || 0;
   if (muc > .02) S.noiDen = now + .5;
   meo.dieuKhien.noi(now < S.noiDen ? 1 : 0);
+  meo.dieuKhien.mieng(muc);
 
   // Chi tay: huong tu vai toi muc tren man hinh -> he meo (x phai man hinh, y len)
   let banTay = null;
@@ -277,7 +279,7 @@ const api = {
     khung.style.display = laser.style.display = anDi ? 'none' : '';
     if (anDi) anBong(); else { S.x = S.dichX = viTriNha(); S.truoc = performance.now(); }
   },
-  _S: S, _capNhat: capNhat, _meo: () => meo, _cam: () => cam,
+  _S: S, _capNhat: capNhat, _meo: () => meo,
 };
 
 dungSanKhau();
