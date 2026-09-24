@@ -142,10 +142,17 @@ function taoDieuKhien(goc, skeleton) {
     xoay(b, new THREE.Quaternion().slerp(q, tron));
   }
   let dang = 'nghi', batDau = 0, nhinX = 0, nhinY = 0, giatTai = 0;
+  let chiBen = 'R', chiHuong = new THREE.Vector3(-1, 0, .3), dangNoi = 0, diMuc = 0, diPha = 0;
   const tron = { v: 0 };      // muc do dong tac (0 -> 1, len xuong mem)
   return {
-    hanhDong(ten) { dang = ten; batDau = performance.now() / 1000; },
+    hanhDong(ten) { if (ten !== dang) batDau = performance.now() / 1000; dang = ten; },
     nhin(x, y) { nhinX = x; nhinY = y; },
+    /** Chi tay ben 'L' (trai meo, phia +x) hoac 'R' theo huong d (he meo) */
+    chi(ben, d) { chiBen = ben; chiHuong.copy(d).normalize(); if (dang !== 'chi-huong') this.hanhDong('chi-huong'); },
+    /** Dang noi (0..1): dau gat nhe, tay khoa chan nho */
+    noi(m) { dangNoi += (m - dangNoi) * .2; },
+    /** Buoc chan khi di: muc 0..1, pha tang theo quang duong */
+    di(muc, pha) { diMuc = muc; diPha = pha; },
     capNhat(t) {
       for (const [b, q] of nghi) b.quaternion.copy(q);             // ve tu the nghi roi cong dong tac
       const tt = performance.now() / 1000 - batDau;          // thoi gian tu luc bat dau dong tac
@@ -153,10 +160,17 @@ function taoDieuKhien(goc, skeleton) {
       tron.v += (k - tron.v) * .15;
       const vui = dang === 'vui';
       // Than: tho
+      // Hong: nhun + nghieng khi di
+      xoay(X.hong, truc(0, 0, 1, Math.sin(diPha) * .06 * diMuc));
       xoay(X.nguc, truc(1, 0, 0, Math.sin(t * 1.7) * .025));
+      // Chan buoc luan phien khi di
+      xoay(X.duiL, truc(1, 0, 0, Math.sin(diPha) * .45 * diMuc));
+      xoay(X.duiR, truc(1, 0, 0, -Math.sin(diPha) * .45 * diMuc));
       // Dau: lac nhe + nhin theo con tro + gat dau
-      const gat = dang === 'gat' ? Math.max(0, Math.sin(tt * 7)) * .28 * tron.v : 0;
-      xoay(X.dau, truc(0, 1, 0, Math.sin(t * .45) * .08 + nhinX * .35)
+      const gat = (dang === 'gat' ? Math.max(0, Math.sin(tt * 7)) * .28 * tron.v : 0)
+                + dangNoi * Math.max(0, Math.sin(t * 6.5)) * .07;
+      const lacDau = dang === 'lac' ? Math.sin(tt * 9) * .3 * tron.v : 0;
+      xoay(X.dau, truc(0, 1, 0, Math.sin(t * .45) * .08 + nhinX * .35 + lacDau)
         .multiply(truc(1, 0, 0, Math.sin(t * .7) * .04 - nhinY * .2 + gat))
         .multiply(truc(0, 0, 1, Math.sin(t * .33) * .05)));
       // Tai: thinh thoang giat mot cai
@@ -175,6 +189,14 @@ function taoDieuKhien(goc, skeleton) {
       if (dang === 'vay') {
         nham(X.baptayR, new THREE.Vector3(-.55, .85, .25), tron.v);
         nham(X.cangtayR, new THREE.Vector3(-.15 + Math.sin(tt * 9) * .45, 1, .25), tron.v);
+      } else if (dang === 'chi-huong') {
+        nham(X['baptay' + chiBen], chiHuong, tron.v); nham(X['cangtay' + chiBen], chiHuong, tron.v);
+        nham(X['bantay' + chiBen], chiHuong, tron.v);
+      } else if (dangNoi > .05 && dang === 'nghi') {
+        // Vua noi vua khoa tay nhe nhu dang giang
+        const g = Math.sin(t * 2.3) * .5 + .5;
+        nham(X.cangtayL, new THREE.Vector3(.35, -.3 + g * .5, .8), dangNoi * .7);
+        nham(X.cangtayR, new THREE.Vector3(-.35, .2 - g * .5, .8), dangNoi * .7);
       } else if (dang === 'chi') {
         const d = new THREE.Vector3(-.85, .35, .55);
         nham(X.baptayR, d, tron.v); nham(X.cangtayR, d, tron.v); nham(X.bantayR, d, tron.v);
@@ -239,6 +261,9 @@ export function napMeoNangCap(url, scene) {
     let truocY = 0, vanToc = new THREE.Vector3(), lech = new THREE.Vector3();
     ok({
       doiTuong: goc,
+      dieuKhien: dc,
+      /** Xuong theo ten (bo dau cham), vi du 'bantayR' */
+      xuong: (ten) => (coXuong ? luoi.skeleton.bones.find((b) => b.name.replace(/[.]/g, '') === ten) : null),
       /** Giu lai n lop (rai deu tu goc den ngon) — dung de ha chat luong khi may cham */
       datSoLop(n) {
         n = Math.max(4, Math.min(SO_LOP, Math.round(n)));

@@ -6,6 +6,7 @@
  * chuyen lenh do toi MOI nhan vat dang hien.
  *
  * Che do (luu o localStorage.senseiAvatarKieu):
+ *   that   : meo 3D that (dung tu anh, long nhieu lop, 23 xuong) — mac dinh
  *   video  : meo lam tu video AI (Veo), giong het anh goc
  *   ca-hai : meo 2D + meo 3D dung canh nhau      meo   : chi meo 2D
  *   meo3d  : chi meo 3D                          an    : an het
@@ -21,17 +22,18 @@
   const TEP = {
     meo:   { src: 'js/sensei-cat.js' },
     'meo-video': { src: 'js/sensei-cat-video.js' },
+    'meo3d-that': { src: 'js/sensei-cat3d-that.js', module: true },
     meo3d: { src: 'js/sensei-cat3d.js', module: true },
     nguoi: { src: 'js/sensei-avatar.js', module: true },
   };
-  const CAN = { video: ['meo-video'], 'ca-hai': ['meo', 'meo3d'], meo: ['meo'], meo3d: ['meo3d'], nguoi: ['nguoi'], an: [] };
-  const VONG = ['video', 'ca-hai', 'meo', 'meo3d', 'an'];
-  const NHAN = { video: '🎬', 'ca-hai': '🐱🐯', meo: '🐱', meo3d: '🐯', nguoi: '🧑‍🏫', an: '🙈' };
-  const TEN = { video: 'Mèo video AI', 'ca-hai': 'Cả hai mèo', meo: 'Mèo 2D', meo3d: 'Mèo 3D', nguoi: 'Người anime 3D', an: 'Đang ẩn' };
+  const CAN = { that: ['meo3d-that'], video: ['meo-video'], 'ca-hai': ['meo', 'meo3d'], meo: ['meo'], meo3d: ['meo3d'], nguoi: ['nguoi'], an: [] };
+  const VONG = ['that', 'video', 'ca-hai', 'meo', 'meo3d', 'an'];
+  const NHAN = { that: '🐈', video: '🎬', 'ca-hai': '🐱🐯', meo: '🐱', meo3d: '🐯', nguoi: '🧑‍🏫', an: '🙈' };
+  const TEN = { that: 'Mèo 3D', video: 'Mèo video AI', 'ca-hai': 'Cả hai mèo', meo: 'Mèo 2D', meo3d: 'Mèo 3D', nguoi: 'Người anime 3D', an: 'Đang ẩn' };
 
   // Moi lan them kieu nhan vat moi thi tang PHIEN_BAN: may nao dang nho che do cu
   // se duoc dua ve mac dinh moi mot lan, de thay ngay nhan vat vua them.
-  const PHIEN_BAN = '2', MAC_DINH = 'video';
+  const PHIEN_BAN = '3', MAC_DINH = 'that';
   let cheDo = MAC_DINH;
   try {
     if (localStorage.getItem('senseiAvatarPhienBan') !== PHIEN_BAN) {
