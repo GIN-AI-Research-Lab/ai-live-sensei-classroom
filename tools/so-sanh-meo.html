@@ -103,6 +103,7 @@
   import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
   import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
   import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+  import { napMeoNangCap } from './meo3d-nang-cap.js';
 
   const cv = document.getElementById('cv3d');
   const r = new THREE.WebGLRenderer({ canvas: cv, antialias: true, alpha: true });
@@ -121,10 +122,27 @@
   const vien = new THREE.DirectionalLight(0xffe6c8, 1.4); vien.position.set(1.5, 2.5, -3); scene.add(vien);
   scene.add(new THREE.HemisphereLight(0xffffff, 0xd8c8b0, 0.35));
 
-  let meo = null, xoay = true;
+  let meo = null, xoay = true, nangCap = null;
   const loader = new GLTFLoader();
+  function datVao(o) {
+    const box = new THREE.Box3().setFromObject(o), size = box.getSize(new THREE.Vector3());
+    o.scale.setScalar(1.8 / size.y);
+    box.setFromObject(o);
+    const c = box.getCenter(new THREE.Vector3());
+    o.position.sub(new THREE.Vector3(c.x, box.min.y, c.z));
+  }
   function napBan(ten) {
     document.getElementById('ghi3d').textContent = 'Đang nạp mô hình…';
+    if (ten === 'nang-cap') {
+      napMeoNangCap('../assets/sensei-meo/3d/meo-1234-chi-tiet.glb', scene).then((m) => {
+        if (meo) scene.remove(meo);
+        nangCap = m; meo = m.doiTuong; datVao(meo);
+        document.getElementById('ghi3d').textContent =
+          'Bản nâng cấp: lông nhiều lớp có quán tính, ánh lông mềm, chi tiết vải chép từ bản 1,7 triệu mặt, mắt rời bóng loáng, đuôi vẫy.';
+      }, (e) => { document.getElementById('ghi3d').textContent = 'Lỗi: ' + e.message; });
+      return;
+    }
+    nangCap = null;
     loader.load(`../assets/sensei-meo/3d/${ten}.glb`, (gltf) => {
     if (meo) scene.remove(meo);
     meo = gltf.scene;
@@ -151,7 +169,7 @@
 
   const hopBan = document.createElement('div'); hopBan.className = 'nut'; hopBan.style.paddingBottom = '0';
   document.getElementById('nut3d').before(hopBan);
-  for (const [ten, nhan] of [['meo-1234-web', 'Bản A (seed 1234)'], ['meo-42-web', 'Bản B (seed 42)']]) {
+  for (const [ten, nhan] of [['nang-cap', 'Bản nâng cấp'], ['meo-1234-web', 'Bản A (seed 1234)'], ['meo-42-web', 'Bản B (seed 42)']]) {
     const b = document.createElement('button'); b.textContent = nhan; b.dataset.ten = ten;
     b.onclick = () => { napBan(ten); hopBan.querySelectorAll('button').forEach((x) => x.classList.toggle('dang', x === b)); };
     hopBan.appendChild(b);
@@ -162,7 +180,7 @@
   const goc = { 'Chính diện': 0, 'Nghiêng 35°': 35, 'Bên hông': 90, 'Sau lưng': 180 };
   for (const [nhan, do_] of Object.entries(goc)) {
     const b = document.createElement('button'); b.textContent = nhan;
-    b.onclick = () => { xoay = false; if (meo) meo.rotation.y = -do_ * Math.PI / 180; tb.classList.remove('dang'); };
+    b.onclick = () => { xoay = false; if (meo) meo.userData.goc = -do_ * Math.PI / 180; tb.classList.remove('dang'); };
     hop.appendChild(b);
   }
   const tb = document.createElement('button'); tb.textContent = 'Tự xoay'; tb.className = 'dang';
@@ -173,7 +191,13 @@
   const dong = new THREE.Clock();
   (function lap() {
     requestAnimationFrame(lap); co();
-    if (meo && xoay) meo.rotation.y += dong.getDelta() * 0.5; else dong.getDelta();
+    const dt = dong.getDelta(), t = dong.elapsedTime;
+    if (meo) {
+      meo.userData.goc = (meo.userData.goc || 0) + (xoay ? dt * 0.5 : 0);
+      if (nangCap) nangCap.capNhat(t, dt);
+      // Ban nang cap lac lu nhe quanh goc dang xem de thay long va duoi co quan tinh
+      meo.rotation.y = meo.userData.goc + (nangCap ? meo.userData.lac || 0 : 0);
+    }
     ctl.update(); r.render(scene, cam);
   })();
 </script>
