@@ -18,6 +18,7 @@ const GLSL_CHUNG = /* glsl */`
   uniform float uH, uDai, uThoiGian;
   uniform vec3 uLuc;
   uniform vec4 uDuoi;        // xyz = goc duoi (toa do vat), w = bien do
+  uniform sampler2D uKhongLong;   // ban do cam moc long (UV): mom, mieng, bang dan
   varying vec3 vViTriGoc;
 `;
 
@@ -93,6 +94,9 @@ function vatLieuLop(goc, h) {
       .replace('#include <map_fragment>', /* glsl */`
       #include <map_fragment>
       float vung = laLong(diffuseColor.rgb);
+      #ifdef USE_MAP
+        vung *= 1. - step(.5, texture2D(uKhongLong, vMapUv).r);
+      #endif
       if (uH > 0.) {
         float d = soiLong(vViTriGoc * 420.);
         if (vung < .5 || d > .55 * (1. - uH)) discard;
@@ -107,7 +111,16 @@ function vatLieuLop(goc, h) {
   return m;
 }
 
+// Anh 1x1 den: dung khi mo hinh khong co ban do cam moc long
+const KHONG_CAM = new THREE.DataTexture(new Uint8Array([0, 0, 0, 255]), 1, 1);
+KHONG_CAM.needsUpdate = true;
+
 export function napMeoNangCap(url, scene) {
+  // Ban do cam moc long di kem (neu co): <ten>-khong-long.png
+  const matNa = { value: KHONG_CAM };
+  new THREE.TextureLoader().load(url.replace(/.glb$/, '-khong-long.png'), (t) => {
+    t.flipY = false; t.colorSpace = THREE.NoColorSpace; matNa.value = t;
+  }, undefined, () => {});
   return new Promise((ok, loi) => new GLTFLoader().load(url, (gltf) => {
     const goc = gltf.scene;
     let luoi = null;
@@ -123,6 +136,7 @@ export function napMeoNangCap(url, scene) {
     luoi.geometry.computeBoundingBox();
     const bb = luoi.geometry.boundingBox, cao = bb.max.y - bb.min.y;
     const u = {
+      uKhongLong: matNa,
       uDai: { value: cao * .016 }, uThoiGian: { value: 0 }, uLuc: { value: new THREE.Vector3() },
       // Goc duoi: phia sau-ben phai, thap (uoc luong tu khung bao)
       uDuoi: { value: new THREE.Vector4(bb.min.x + (bb.max.x - bb.min.x) * .62, bb.min.y + cao * .3,
