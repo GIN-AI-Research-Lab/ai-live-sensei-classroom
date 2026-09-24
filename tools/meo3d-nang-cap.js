@@ -97,7 +97,7 @@ function vatLieuLop(goc, h) {
         float d = soiLong(vViTriGoc * 420.);
         if (vung < .5 || d > .55 * (1. - uH)) discard;
         // Goc long toi hon ngon (cac soi che bong nhau) -> co chieu sau
-        diffuseColor.rgb *= mix(.72, 1.08, uH);
+        diffuseColor.rgb *= mix(.72, 1.0, uH);
       } else {
         diffuseColor.rgb *= mix(1., .72, vung);
       }
@@ -116,7 +116,7 @@ export function napMeoNangCap(url, scene) {
     const vl = new THREE.MeshPhysicalMaterial({
       map: m0.map, normalMap: m0.normalMap, normalScale: new THREE.Vector2(.7, .7),
       roughness: .82, metalness: 0, specularIntensity: .3,
-      sheen: 1, sheenRoughness: .55, sheenColor: new THREE.Color(0xffd9a8),
+      sheen: .45, sheenRoughness: .6, sheenColor: new THREE.Color(0xffc88a),
       clearcoat: .001,      // bat nhanh clearcoat trong shader; do bong thuc dat theo vung mat
     });
     if (vl.map) { vl.map.colorSpace = THREE.SRGBColorSpace; vl.map.anisotropy = 8; }

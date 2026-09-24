@@ -11,7 +11,7 @@
   header { padding: 18px 16px 6px; max-width: 1280px; margin: 0 auto; }
   h1 { margin: 0; font-size: 22px; }
   header p { margin: 4px 0 0; color: var(--phu); }
-  main { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; padding: 14px 16px 24px;
+  main { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; padding: 14px 16px 24px;
          max-width: 1280px; margin: 0 auto; }
   @media (max-width: 860px) { main { grid-template-columns: 1fr; } }
   .the { background: var(--the); border: 1px solid var(--vien); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
@@ -34,21 +34,14 @@
 </head>
 <body>
 <header>
-  <h1>So sánh 3 bản Mèo Sensei</h1>
-  <p>Ảnh gốc · Video AI (Veo 3.1) · Mô hình 3D (Hunyuan3D 2.1). Kéo chuột để xoay mèo 3D.</p>
+  <h1>Mèo Sensei 3D so với ảnh gốc</h1>
+  <p>Mô hình 3D (Hunyuan3D 2.1) chạy thời gian thực. Kéo chuột để xoay.</p>
 </header>
 <main>
   <section class="the">
     <h2>Ảnh gốc <small>— mục tiêu</small></h2>
     <div class="khung"><img src="../assets/sensei-meo/goc-vuong.png" alt="Ảnh gốc mèo Sensei"></div>
     <div class="ghi">Ảnh thiết kế đã sửa theo phong cách nghèo mà ngầu.</div>
-  </section>
-
-  <section class="the">
-    <h2>Video AI <small>— Veo 3.1, nền đã xoá</small></h2>
-    <div class="khung"><canvas id="cvVideo"></canvas></div>
-    <div class="nut" id="nutVideo"></div>
-    <div class="ghi">Giống hệt ảnh vì tạo từ chính ảnh đó. Mỗi đoạn bắt đầu và kết thúc ở cùng một tư thế.</div>
   </section>
 
   <section class="the">
@@ -59,49 +52,7 @@
   </section>
 </main>
 
-<script>
-  // ---- Video: xoa nen xanh tren GPU (WebGL), chi ve lai khi video co khung moi
-  (function () {
-    const cv = document.getElementById('cvVideo');
-    const gl = cv.getContext('webgl', { premultipliedAlpha: true, alpha: true });
-    const v = document.createElement('video');
-    v.muted = true; v.playsInline = true; v.loop = true;
-    const DOAN = { 'dung-tho': 'Đứng thở', 'dang-giang': 'Đang giảng', 'vay-tay': 'Vẫy tay' };
-    const hop = document.getElementById('nutVideo');
-    const chon = (ten) => {
-      v.src = `../assets/sensei-meo/video/${ten}.mp4`; v.play().catch(() => {});
-      hop.querySelectorAll('button').forEach((b) => b.classList.toggle('dang', b.dataset.ten === ten));
-    };
-    for (const [ten, nhan] of Object.entries(DOAN)) {
-      const b = document.createElement('button'); b.textContent = nhan; b.dataset.ten = ten;
-      b.onclick = () => chon(ten); hop.appendChild(b);
-    }
-    const sh = (t, src) => { const x = gl.createShader(t); gl.shaderSource(x, src); gl.compileShader(x); return x; };
-    const p = gl.createProgram();
-    gl.attachShader(p, sh(gl.VERTEX_SHADER, 'attribute vec2 a; varying vec2 u; void main(){ u = vec2(a.x*.5+.5, .5-a.y*.5); gl_Position = vec4(a,0.,1.); }'));
-    gl.attachShader(p, sh(gl.FRAGMENT_SHADER, `precision mediump float; varying vec2 u; uniform sampler2D t;
-      vec2 cc(vec3 c){ return vec2(-.169*c.r-.331*c.g+.5*c.b, .5*c.r-.419*c.g-.081*c.b); }
-      void main(){ vec3 c = texture2D(t,u).rgb; float d = distance(cc(c), cc(vec3(.443,.761,.204)));
-        float al = smoothstep(.07,.16,d); float m = max(c.r,c.b); if (c.g > m) c.g = mix(m, c.g, al*al);
-        gl_FragColor = vec4(c*al, al); }`));
-    gl.linkProgram(p); gl.useProgram(p);
-    gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,1,1]), gl.STATIC_DRAW);
-    gl.enableVertexAttribArray(0); gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
-    const tx = gl.createTexture(); gl.bindTexture(gl.TEXTURE_2D, tx);
-    for (const [k, val] of [[gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE], [gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE], [gl.TEXTURE_MIN_FILTER, gl.LINEAR]])
-      gl.texParameteri(gl.TEXTURE_2D, k, val);
-    function ve() {
-      if (v.readyState >= 2) {
-        if (cv.width !== v.videoWidth) { cv.width = v.videoWidth; cv.height = v.videoHeight; gl.viewport(0, 0, cv.width, cv.height); }
-        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, v);
-        gl.clearColor(0, 0, 0, 0); gl.clear(gl.COLOR_BUFFER_BIT); gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-      }
-      if (v.requestVideoFrameCallback) v.requestVideoFrameCallback(ve); else requestAnimationFrame(ve);
-    }
-    chon('dung-tho'); v.addEventListener('loadeddata', ve, { once: true });
-  })();
-</script>
+
 
 <script type="module">
   import * as THREE from 'three';
@@ -113,8 +64,9 @@
   const cv = document.getElementById('cv3d');
   const r = new THREE.WebGLRenderer({ canvas: cv, antialias: true, alpha: true });
   r.setPixelRatio(Math.min(devicePixelRatio, 1.5));
-  r.toneMapping = THREE.ACESFilmicToneMapping;
-  r.toneMappingExposure = 1.0;
+  // Neutral giu dung sac do mau (ACES lam bac mau cam sang)
+  r.toneMapping = THREE.NeutralToneMapping;
+  r.toneMappingExposure = 0.95;
   r.outputColorSpace = THREE.SRGBColorSpace;
   const scene = new THREE.Scene();
   scene.environment = new THREE.PMREMGenerator(r).fromScene(new RoomEnvironment(), 0.04).texture;
@@ -138,7 +90,7 @@
   }
   function napBan(ten) {
     document.getElementById('ghi3d').textContent = 'Đang nạp mô hình…';
-    const TEP_NANG_CAP = { 'nang-cap': 'meo-1234-chi-tiet', 'nang-cap-2': 'meo-mv-chi-tiet' };
+    const TEP_NANG_CAP = { 'nang-cap': 'meo-1234-chi-tiet', 'nang-cap-2': 'meo-mv-chi-tiet', 'nang-cap-3': 'meo-mv-in' };
     if (TEP_NANG_CAP[ten]) {
       napMeoNangCap(`../assets/sensei-meo/3d/${TEP_NANG_CAP[ten]}.glb`, scene).then((m) => {
         if (meo) scene.remove(meo);
@@ -177,7 +129,7 @@
 
   const hopBan = document.createElement('div'); hopBan.className = 'nut'; hopBan.style.paddingBottom = '0';
   document.getElementById('nut3d').before(hopBan);
-  for (const [ten, nhan] of [['nang-cap-2', 'Bản mới (nhiều góc)'], ['nang-cap', 'Bản nâng cấp 1'], ['meo-1234-web', 'Bản thô A'], ['meo-42-web', 'Bản thô B']]) {
+  for (const [ten, nhan] of [['nang-cap-3', 'Bản in ảnh gốc'], ['nang-cap-2', 'Bản nhiều góc'], ['nang-cap', 'Bản nâng cấp 1'], ['meo-1234-web', 'Bản thô A'], ['meo-42-web', 'Bản thô B']]) {
     const b = document.createElement('button'); b.textContent = nhan; b.dataset.ten = ten;
     b.onclick = () => { napBan(ten); hopBan.querySelectorAll('button').forEach((x) => x.classList.toggle('dang', x === b)); };
     hopBan.appendChild(b);
