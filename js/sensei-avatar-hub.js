@@ -6,6 +6,7 @@
  * chuyen lenh do toi MOI nhan vat dang hien.
  *
  * Che do (luu o localStorage.senseiAvatarKieu):
+ *   video  : meo lam tu video AI (Veo), giong het anh goc
  *   ca-hai : meo 2D + meo 3D dung canh nhau      meo   : chi meo 2D
  *   meo3d  : chi meo 3D                          an    : an het
  *   nguoi  : co gai anime 3D (VRM) — chi bat bang tay, khong nam trong vong bam
@@ -19,17 +20,27 @@
 
   const TEP = {
     meo:   { src: 'js/sensei-cat.js' },
+    'meo-video': { src: 'js/sensei-cat-video.js' },
     meo3d: { src: 'js/sensei-cat3d.js', module: true },
     nguoi: { src: 'js/sensei-avatar.js', module: true },
   };
-  const CAN = { 'ca-hai': ['meo', 'meo3d'], meo: ['meo'], meo3d: ['meo3d'], nguoi: ['nguoi'], an: [] };
-  const VONG = ['ca-hai', 'meo', 'meo3d', 'an'];
-  const NHAN = { 'ca-hai': '🐱🐯', meo: '🐱', meo3d: '🐯', nguoi: '🧑‍🏫', an: '🙈' };
-  const TEN = { 'ca-hai': 'Cả hai mèo', meo: 'Mèo 2D', meo3d: 'Mèo 3D', nguoi: 'Người anime 3D', an: 'Đang ẩn' };
+  const CAN = { video: ['meo-video'], 'ca-hai': ['meo', 'meo3d'], meo: ['meo'], meo3d: ['meo3d'], nguoi: ['nguoi'], an: [] };
+  const VONG = ['video', 'ca-hai', 'meo', 'meo3d', 'an'];
+  const NHAN = { video: '🎬', 'ca-hai': '🐱🐯', meo: '🐱', meo3d: '🐯', nguoi: '🧑‍🏫', an: '🙈' };
+  const TEN = { video: 'Mèo video AI', 'ca-hai': 'Cả hai mèo', meo: 'Mèo 2D', meo3d: 'Mèo 3D', nguoi: 'Người anime 3D', an: 'Đang ẩn' };
 
-  let cheDo = 'ca-hai';
-  try { cheDo = localStorage.getItem('senseiAvatarKieu') || 'ca-hai'; } catch (e) {}
-  if (!CAN[cheDo]) cheDo = 'ca-hai';
+  // Moi lan them kieu nhan vat moi thi tang PHIEN_BAN: may nao dang nho che do cu
+  // se duoc dua ve mac dinh moi mot lan, de thay ngay nhan vat vua them.
+  const PHIEN_BAN = '2', MAC_DINH = 'video';
+  let cheDo = MAC_DINH;
+  try {
+    if (localStorage.getItem('senseiAvatarPhienBan') !== PHIEN_BAN) {
+      localStorage.setItem('senseiAvatarPhienBan', PHIEN_BAN);
+      localStorage.setItem('senseiAvatarKieu', MAC_DINH);
+    }
+    cheDo = localStorage.getItem('senseiAvatarKieu') || MAC_DINH;
+  } catch (e) {}
+  if (!CAN[cheDo]) cheDo = MAC_DINH;
 
   const ds = [];            // nhan vat da nap
   const daNap = {};         // kieu -> true khi da chen the script
@@ -67,7 +78,7 @@
     dongTacChoTu: (r) => (ds[0] ? ds[0].dongTacChoTu(r) : null),
     get san() { return dangHien().some((x) => x.san); },
     get DANH_SACH_DONG_TAC() { return ds[0]?.DANH_SACH_DONG_TAC || []; },
-    an(anDi = true) { datCheDo(anDi ? 'an' : 'ca-hai'); },
+    an(anDi = true) { datCheDo(anDi ? 'an' : MAC_DINH); },
     _ds: ds,
   };
 

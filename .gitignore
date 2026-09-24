@@ -12,3 +12,6 @@ __pycache__/
 *.pyc
 cert.pem
 key.pem
+
+# Video goc do Veo xuat ra (nang), app chi dung ban da nen trong assets/sensei-meo/video/
+assets/sensei-meo/video/goc/
