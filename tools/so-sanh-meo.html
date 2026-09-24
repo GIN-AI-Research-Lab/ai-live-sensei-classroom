@@ -90,13 +90,15 @@
   }
   function napBan(ten) {
     document.getElementById('ghi3d').textContent = 'Đang nạp mô hình…';
-    const TEP_NANG_CAP = { 'nang-cap': 'meo-1234-chi-tiet', 'nang-cap-2': 'meo-mv-chi-tiet', 'nang-cap-3': 'meo-mv-in', 'nang-cap-4': 'meo-mv-nan-in' };
+    const TEP_NANG_CAP = { 'nang-cap': 'meo-1234-chi-tiet', 'nang-cap-2': 'meo-mv-chi-tiet', 'nang-cap-3': 'meo-mv-in', 'nang-cap-4': 'meo-mv-nan-in', 'co-xuong': 'meo-xuong' };
     if (TEP_NANG_CAP[ten]) {
       napMeoNangCap(`../assets/sensei-meo/3d/${TEP_NANG_CAP[ten]}.glb`, scene).then((m) => {
         if (meo) scene.remove(meo);
         nangCap?.huy();
         nangCap = m; meo = m.doiTuong; datVao(meo);
         soLop = 20; m.datSoLop(soLop);
+        hopDongTac.style.display = m.coXuong ? '' : 'none';
+        if (m.coXuong) { xoay = false; tb.classList.remove('dang'); meo.userData.goc = 0; }
         document.getElementById('ghi3d').textContent =
           'Bản nâng cấp: lông nhiều lớp có quán tính, ánh lông mềm, chi tiết vải chép từ bản 1,7 triệu mặt, mắt rời bóng loáng, đuôi vẫy.';
       }, (e) => { document.getElementById('ghi3d').textContent = 'Lỗi: ' + e.message; });
@@ -127,9 +129,22 @@
     }, undefined, (e) => { document.getElementById('ghi3d').textContent = 'Không nạp được mô hình: ' + e.message; });
   }
 
+  // Nut dong tac (chi hien voi ban co xuong) + dau nhin theo con tro
+  const hopDongTac = document.createElement('div'); hopDongTac.className = 'nut'; hopDongTac.style.display = 'none';
+  document.getElementById('nut3d').after(hopDongTac);
+  for (const [ten, nhan] of [['nghi', 'Đứng nghỉ'], ['vay', '👋 Vẫy tay'], ['gat', 'Gật đầu'], ['chi', '👉 Chỉ tay'], ['vui', '✨ Vui']]) {
+    const b = document.createElement('button'); b.textContent = nhan;
+    b.onclick = () => { nangCap?.hanhDong(ten); hopDongTac.querySelectorAll('button').forEach((x) => x.classList.toggle('dang', x === b)); };
+    hopDongTac.appendChild(b);
+  }
+  addEventListener('pointermove', (e) => {
+    const rc = cv.getBoundingClientRect();
+    const x = ((e.clientX - rc.left) / rc.width - .5) * 2, y = ((e.clientY - rc.top) / rc.height - .35) * 2;
+    nangCap?.nhin(Math.max(-1, Math.min(1, x)), Math.max(-1, Math.min(1, y)));
+  });
   const hopBan = document.createElement('div'); hopBan.className = 'nut'; hopBan.style.paddingBottom = '0';
   document.getElementById('nut3d').before(hopBan);
-  for (const [ten, nhan] of [['nang-cap-4', 'Bản nắn hình'], ['nang-cap-3', 'Bản in ảnh gốc'], ['nang-cap-2', 'Bản nhiều góc'], ['nang-cap', 'Bản nâng cấp 1'], ['meo-1234-web', 'Bản thô A'], ['meo-42-web', 'Bản thô B']]) {
+  for (const [ten, nhan] of [['co-xuong', 'Bản cử động'], ['nang-cap-4', 'Bản nắn hình'], ['nang-cap-3', 'Bản in ảnh gốc'], ['nang-cap-2', 'Bản nhiều góc'], ['nang-cap', 'Bản nâng cấp 1'], ['meo-1234-web', 'Bản thô A'], ['meo-42-web', 'Bản thô B']]) {
     const b = document.createElement('button'); b.textContent = nhan; b.dataset.ten = ten;
     b.onclick = () => { napBan(ten); hopBan.querySelectorAll('button').forEach((x) => x.classList.toggle('dang', x === b)); };
     hopBan.appendChild(b);
@@ -167,7 +182,7 @@
       meo.userData.goc = (meo.userData.goc || 0) + (xoay ? dt * 0.5 : 0);
       if (nangCap) nangCap.capNhat(t, dt);
       // Ban nang cap lac lu nhe quanh goc dang xem de thay long va duoi co quan tinh
-      meo.rotation.y = meo.userData.goc + (nangCap ? meo.userData.lac || 0 : 0);
+      meo.rotation.y = meo.userData.goc + (nangCap && !nangCap.coXuong ? meo.userData.lac || 0 : 0);
     }
     ctl.update(); r.render(scene, cam);
   })();
