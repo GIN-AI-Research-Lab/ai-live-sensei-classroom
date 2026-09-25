@@ -76,6 +76,19 @@
 
   const overrides = {};   // người dùng ép giọng cho nhân vật cụ thể
 
+  /**
+   * Giong CHOT SAN cho vai ma giong bam theo ten dung hang voi ban dien trong
+   * cung mot doan thoai. Kho moi gioi chi con 3 giong nen bam ten de trung:
+   * truoc day 29/100 bai co hai vai cung mot giong (ワン va サントス cung Orus
+   * trong 20 bai). Bang nay chon sao cho KHONG bai nao trong giao trinh hien
+   * tai con hai vai trung giong, ma moi vai van giu mot giong o moi bai.
+   * Ten moi / bai moi van co castOf() tu doi giong khi trung (xem ben duoi).
+   */
+  const GHIM = {
+    'ワン': 'Fenrir', 'グプタ': 'Fenrir', '先生': 'Puck', 'コーチ': 'Orus',
+    '通行人': 'Puck', '学生': 'Kore', '記者': 'Kore',
+  };
+
   const SenseiVoices = {
     /** 'm' | 'f' — đoán giới tính của nhân vật */
     genderOf(speaker, explicit) {
@@ -95,10 +108,16 @@
      * Cùng một tên luôn cho ra cùng một giọng (băm theo tên), nên Miller
      * ở bài 1 và bài 12 vẫn nghe là một người.
      */
-    voiceFor(speaker, explicitGender) {
+    voiceFor(speaker, explicitGender, dialogue) {
       const key = String(speaker || '').trim();
       if (overrides[key]) return overrides[key];
+      // Biet ca doan thoai thi lay giong da tranh trung voi ban dien
+      if (dialogue) {
+        const vai = this.castOf(dialogue).find(c => c.speaker === key);
+        if (vai) return vai.voice;
+      }
       const pool = khoGiong(this.genderOf(key, explicitGender));
+      if (GHIM[key] && pool.includes(GHIM[key])) return GHIM[key];
       return pool[hash(key) % pool.length];
     },
 
@@ -112,7 +131,13 @@
       overrides[String(speaker || '').trim()] = voiceName;
     },
 
-    /** Bản tóm tắt dàn nhân vật của một đoạn hội thoại — dùng cho lời dẫn mở màn */
+    /**
+     * Bản tóm tắt dàn nhân vật của một đoạn hội thoại — dùng cho lời dẫn mở màn.
+     * Hai vai ma giong ua thich trung nhau thi vai sau doi sang giong trong ke
+     * tiep trong kho. Xet theo thu tu CO DINH (ep giong, ghim truoc, roi theo
+     * ten) chu khong theo thu tu len tieng, de cung mot cap vai luon ra cung
+     * mot ket qua o moi bai.
+     */
     castOf(dialogue) {
       const seen = new Map();
       (dialogue || []).forEach(line => {
@@ -126,6 +151,23 @@
           voice: this.voiceFor(name, line.speakerGender),
         });
       });
+
+      const hang = (n) => (overrides[n] ? 0 : GHIM[n] ? 1 : 2);
+      const thuTu = [...seen.keys()].sort((a, b) => (hang(a) - hang(b)) || (a < b ? -1 : a > b ? 1 : 0));
+      const daDung = new Set();
+      for (const name of thuTu) {
+        const vai = seen.get(name);
+        if (!overrides[name] && daDung.has(vai.voice)) {
+          const pool = khoGiong(vai.gender);
+          const tu = Math.max(0, pool.indexOf(vai.voice));
+          for (let i = 1; i < pool.length; i++) {
+            const v = pool[(tu + i) % pool.length];
+            if (!daDung.has(v)) { vai.voice = v; break; }
+          }
+          // Kho het giong trong thi dang dung giong ua thich — van hon khong co tieng
+        }
+        daDung.add(vai.voice);
+      }
       return [...seen.values()];
     },
 
@@ -137,8 +179,13 @@
      * May thuong chi cai 1-2 giong ja-JP, nen ngoai viec chon giong khac nhau
      * con chinh cao do (pitch) de hai vai nghe ra khac nhau chac chan.
      */
-    browserVoice(speaker, explicitGender) {
+    browserVoice(speaker, explicitGender, dialogue) {
       const gender = this.genderOf(speaker, explicitGender);
+      // Hai vai cung gioi deu ra cung mot giong may + cung cao do -> nghe nhu
+      // mot nguoi. Lech cao do theo giong Gemini da cap (hai vai khong trung
+      // giong Gemini thi cung khong trung cao do).
+      const viTri = khoGiong(gender).indexOf(this.voiceFor(speaker, explicitGender, dialogue));
+      const lech = [0, 0.14, -0.14][viTri < 0 ? 0 : viTri % 3];
       let list = [];
       try {
         list = (window.speechSynthesis ? speechSynthesis.getVoices() : [])
@@ -159,7 +206,7 @@
       return {
         voice,
         // Chenh cao do du de tai nghe ra hai nguoi khac nhau
-        pitch: gender === 'f' ? 1.28 : 0.78,
+        pitch: (gender === 'f' ? 1.28 : 0.78) + lech,
         rate: 0.92,
       };
     },

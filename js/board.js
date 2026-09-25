@@ -124,19 +124,20 @@
 
       ghi.g.innerHTML = '';
       let d = '';
+      const rg = this.rungCua(ghi);
 
       if (ghi.kieu === 'gach_chan') {
-        d = this.netThang(r.left - 2, r.bottom + 2, r.right + 2, r.bottom + 2);
+        d = this.netThang(r.left - 2, r.bottom + 2, r.right + 2, r.bottom + 2, rg);
       } else if (ghi.kieu === 'gach_xoa') {
-        d = this.netThang(r.left - 2, r.top + r.height / 2, r.right + 2, r.top + r.height / 2);
+        d = this.netThang(r.left - 2, r.top + r.height / 2, r.right + 2, r.top + r.height / 2, rg);
       } else if (ghi.kieu === 'khung') {
-        d = this.netKhung(r);
+        d = this.netKhung(r, rg);
       } else if (ghi.kieu === 'mui_ten') {
         const toEl = this.timPhanTu(ghi.toId);
         if (!toEl) return;
-        d = this.netMuiTen(r, toEl.getBoundingClientRect(), ghi.g);
+        d = this.netMuiTen(r, toEl.getBoundingClientRect(), ghi.g, rg);
       } else {
-        d = this.netKhoanh(r);
+        d = this.netKhoanh(r, rg);
       }
 
       const p = document.createElementNS(NS, 'path');
@@ -144,30 +145,43 @@
       p.setAttribute('class', 'bang-duong');
       ghi.g.insertBefore(p, ghi.g.firstChild);
 
-      // Chay net dan ra nhu dang duoc viet, thay vi hien bup mot cai
+      // Chay net dan ra nhu dang duoc viet, thay vi hien bup mot cai.
+      // pathLength=1 chuan hoa net dut: ve lai 'd' khi do lai toa do (dai ngan
+      // khac di) khong cat ngang hieu ung, net xong roi cung khong ho khuc nao.
       const dai = p.getTotalLength();
-      p.style.strokeDasharray = dai;
-      p.style.strokeDashoffset = dai;
+      p.setAttribute('pathLength', '1');
+      p.style.strokeDasharray = '1';
+      p.style.strokeDashoffset = '1';
       p.style.animation = `bangVeRa ${Math.min(1.1, 0.25 + dai / 900)}s ease-out forwards`;
     }
 
+    /**
+     * Do song tay CO DINH cua mot net: sinh mot lan, lan ve lai nao cung doc
+     * dung day so do -> hinh giu nguyen, khong giat moi lan do lai / cuon trang.
+     */
+    rungCua(ghi) {
+      if (!ghi.lech) ghi.lech = Array.from({ length: 40 }, rung);
+      let i = 0;
+      return () => ghi.lech[i++ % ghi.lech.length];
+    }
+
     /** Net thang co song tay */
-    netThang(x1, y1, x2, y2) {
+    netThang(x1, y1, x2, y2, rg = rung) {
       const giua = (x1 + x2) / 2;
-      return `M${x1 + rung()},${y1 + rung()} Q${giua},${(y1 + y2) / 2 + rung() * 2.5} ${x2 + rung()},${y2 + rung()}`;
+      return `M${x1 + rg()},${y1 + rg()} Q${giua},${(y1 + y2) / 2 + rg() * 2.5} ${x2 + rg()},${y2 + rg()}`;
     }
 
     /**
      * Vong khoanh: bon cung Bezier, moi diem lech mot chut, va ve QUA diem dau
      * mot doan — giong het nguoi that khoanh bang but, khong khep kin hoan hao.
      */
-    netKhoanh(r) {
+    netKhoanh(r, rg = rung) {
       const cx = r.left + r.width / 2;
       const cy = r.top + r.height / 2;
       const rx = r.width / 2 + 10;
       const ry = r.height / 2 + 7;
       const k = 0.5523;   // he so xap xi cung tron bang Bezier
-      const P = (gx, gy) => `${gx + rung()},${gy + rung()}`;
+      const P = (gx, gy) => `${gx + rg()},${gy + rg()}`;
 
       return `M${P(cx, cy - ry)}`
         + ` C${P(cx + rx * k, cy - ry)} ${P(cx + rx, cy - ry * k)} ${P(cx + rx, cy)}`
@@ -177,38 +191,47 @@
         + ` C${P(cx + rx * 0.4, cy - ry)} ${P(cx + rx * 0.72, cy - ry * 0.82)} ${P(cx + rx * 0.62, cy - ry * 0.55)}`;
     }
 
-    netKhung(r) {
+    netKhung(r, rg = rung) {
       const x1 = r.left - 6, y1 = r.top - 5, x2 = r.right + 6, y2 = r.bottom + 5;
-      const P = (gx, gy) => `${gx + rung()},${gy + rung()}`;
+      const P = (gx, gy) => `${gx + rg()},${gy + rg()}`;
       return `M${P(x1, y1)} L${P(x2, y1)} L${P(x2, y2)} L${P(x1, y2)} L${P(x1, y1)} L${P(x2 * 0.2 + x1 * 0.8, y1)}`;
     }
 
-    /** Mui ten noi hai muc, cong nhe cho ra net tay */
-    netMuiTen(tu, den, g) {
+    /** Hinh hoc mui ten: than cong + hai net dau. Tach rieng de ve lai tai cho. */
+    hinhMuiTen(tu, den, rg = rung) {
       const x1 = tu.left + tu.width / 2;
       const y1 = tu.bottom + 4;
       const x2 = den.left + den.width / 2;
       const y2 = den.top - 8;
       const cx = (x1 + x2) / 2 + (y2 - y1) * 0.18;
       const cy = (y1 + y2) / 2;
-
-      // Dau mui ten: hai net ngan o dau cuoi, ve rieng de khong dinh vao
-      // hieu ung chay net cua than mui ten
       const goc = Math.atan2(y2 - cy, x2 - cx);
       const L = 11;
-      for (const lech of [2.5, -2.5]) {
+      const dau = [2.5, -2.5].map(lech =>
+        `M${x2},${y2} L${x2 - L * Math.cos(goc - lech * 0.22)},${y2 - L * Math.sin(goc - lech * 0.22)}`);
+      return { than: `M${x1 + rg()},${y1 + rg()} Q${cx},${cy} ${x2 + rg()},${y2 + rg()}`, dau };
+    }
+
+    /** Mui ten noi hai muc, cong nhe cho ra net tay */
+    netMuiTen(tu, den, g, rg = rung) {
+      const h = this.hinhMuiTen(tu, den, rg);
+      // Dau mui ten: hai net ngan o dau cuoi, ve rieng de khong dinh vao
+      // hieu ung chay net cua than mui ten
+      for (const d of h.dau) {
         const p = document.createElementNS(NS, 'path');
-        p.setAttribute('d', `M${x2},${y2} L${x2 - L * Math.cos(goc - lech * 0.22)},${y2 - L * Math.sin(goc - lech * 0.22)}`);
+        p.setAttribute('d', d);
         p.setAttribute('class', 'bang-duong bang-duong-dau');
         g.appendChild(p);
       }
-      return `M${x1 + rung()},${y1 + rung()} Q${cx},${cy} ${x2 + rung()},${y2 + rung()}`;
+      return h.than;
     }
 
     veLaiTatCa() {
-      this.ghiChu.forEach(ghi => {
+      // Lap tren BAN SAO: xoaMot() cat ghi chu khoi this.ghiChu ngay trong vong lap
+      [...this.ghiChu].forEach(ghi => {
         const el = this.timPhanTu(ghi.targetId);
-        if (!el) return;
+        // Muc da bien mat (doi slide / doi chuong) -> net khong con cho bam, bo luon
+        if (!el) { this.xoaMot(ghi); return; }
         const r = el.getBoundingClientRect();
         // Cuon khuat khoi man hinh thi an di cho do roi mat
         ghi.g.style.opacity = (r.bottom < 0 || r.top > window.innerHeight) ? '0' : '';
@@ -216,26 +239,49 @@
       });
     }
 
+    /**
+     * Goi ngay sau khi slide-engine ve lai noi dung: net nao ma muc cua no da
+     * bien mat thi xoa (khong treo lo lung tren slide moi). Net con muc thi do
+     * lai sau khi hieu ung hien slide chay xong.
+     */
+    donMoCoi() {
+      [...this.ghiChu].forEach(ghi => {
+        if (!this.timPhanTu(ghi.targetId) || (ghi.toId && !this.timPhanTu(ghi.toId))) this.xoaMot(ghi);
+      });
+      clearTimeout(this._henDoLai);
+      if (this.ghiChu.length) this._henDoLai = setTimeout(() => this.veLaiTatCa(), 650);
+    }
+
     /** Ve lai vi tri nhung KHONG chay lai hieu ung — dung khi cuon trang */
     veMotKhongChay(ghi) {
       const p = ghi.g.querySelector('.bang-duong:not(.bang-duong-dau)');
-      if (!p) return;
+      // Lan dau chua ve duoc (muc chua co kich thuoc) -> ve lan dau, co hieu ung
+      if (!p) return this.veMot(ghi);
       const el = this.timPhanTu(ghi.targetId);
       if (!el) return;
       const r = el.getBoundingClientRect();
       if (r.width < 2) return;
 
+      const rg = this.rungCua(ghi);
       let d;
-      if (ghi.kieu === 'gach_chan') d = this.netThang(r.left - 2, r.bottom + 2, r.right + 2, r.bottom + 2);
-      else if (ghi.kieu === 'gach_xoa') d = this.netThang(r.left - 2, r.top + r.height / 2, r.right + 2, r.top + r.height / 2);
-      else if (ghi.kieu === 'khung') d = this.netKhung(r);
-      else if (ghi.kieu === 'mui_ten') return this.veMot(ghi);
-      else d = this.netKhoanh(r);
+      if (ghi.kieu === 'gach_chan') d = this.netThang(r.left - 2, r.bottom + 2, r.right + 2, r.bottom + 2, rg);
+      else if (ghi.kieu === 'gach_xoa') d = this.netThang(r.left - 2, r.top + r.height / 2, r.right + 2, r.top + r.height / 2, rg);
+      else if (ghi.kieu === 'khung') d = this.netKhung(r, rg);
+      else if (ghi.kieu === 'mui_ten') {
+        // Sua tai cho than + dau, KHONG dung lai <g> — dung lai la chay lai net tu dau
+        const toEl = this.timPhanTu(ghi.toId);
+        if (!toEl) return;
+        const h = this.hinhMuiTen(r, toEl.getBoundingClientRect(), rg);
+        ghi.g.querySelectorAll('.bang-duong-dau').forEach((dau, i) => {
+          if (h.dau[i] && dau.getAttribute('d') !== h.dau[i]) dau.setAttribute('d', h.dau[i]);
+        });
+        d = h.than;
+      }
+      else d = this.netKhoanh(r, rg);
 
-      p.setAttribute('d', d);
-      p.style.strokeDasharray = '';
-      p.style.strokeDashoffset = '';
-      p.style.animation = '';
+      // Chi doi 'd': net dut da chuan hoa (pathLength=1) nen hieu ung dang chay
+      // khong bi cat, va do song tay co dinh nen hinh khong giat.
+      if (p.getAttribute('d') !== d) p.setAttribute('d', d);
     }
 
     xoaMot(ghi) {

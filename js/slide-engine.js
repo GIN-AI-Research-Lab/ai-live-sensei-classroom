@@ -22,6 +22,10 @@ if (window.speechSynthesis) {
   window.speechSynthesis.onvoiceschanged = updateJaVoices;
 }
 
+// Lan doc gan nhat (va muc cua no) — de su kien ket thuc cua cau CU khong go nham dau cua cau moi
+let cauDangDoc = null;
+let mucDangDoc = null;
+
 window.playSpeech = function(text, targetId = null) {
   if (!window.speechSynthesis || !text) return;
   // Dừng bất kỳ âm thanh nào đang phát từ Gemini Live để tránh 2 giọng nói chèn nhau
@@ -41,14 +45,30 @@ window.playSpeech = function(text, targetId = null) {
       utter.voice = cachedJaVoices[0];
     }
 
+    cauDangDoc = utter;
+    mucDangDoc = targetId;
+
     if (targetId && window.__slideEngine) {
       window.__slideEngine.prepareReadingTarget(targetId);
-      utter.onend = () => {
-        if (window.__slideEngine) window.__slideEngine.clearReadingFocus(targetId);
+      // Doc xong chi go dau "dang doc" cua CHINH lan doc nay. Truoc day goi
+      // clearReadingFocus() -> muc dang duoc roi (the ben trai dang mo) bi dong theo.
+      const xong = () => {
+        const se = window.__slideEngine;
+        if (!se) return;
+        // cancel() cau cu de doc lai CHINH muc nay -> loi 'interrupted' cua cau cu
+        // khong duoc go dau cua cau moi dang doc
+        if (cauDangDoc !== utter && mucDangDoc === targetId) return;
+        if (se.activeFocusId === targetId) {
+          // Muc dang roi (spotlight / Sensei): giu vien sang + the, chi bo huy hieu
+          const el = se.resolveElement(targetId);
+          const b = el && el.querySelector('.reading-badge-indicator');
+          if (b) b.remove();
+          return;
+        }
+        se.clearFocusClasses(targetId);
       };
-      utter.onerror = () => {
-        if (window.__slideEngine) window.__slideEngine.clearReadingFocus(targetId);
-      };
+      utter.onend = xong;
+      utter.onerror = xong;
     }
 
     window.speechSynthesis.speak(utter);
@@ -369,8 +389,42 @@ class SlideEngine {
       // Trong luc cho, hoc vien da chuyen sang bai/tab khac roi thi thoi,
       // khong ve de nay chong len muc hien tai nua.
       if (this.currentLevel !== lvl || this.currentLesson !== baiSo || this.activeTab !== tabName) return;
+
+      // Loader da thu lai ma van hong: bao loi + nut thu lai, KHONG de spinner
+      // treo mai hay de cac chuong kia bao nham "chua co noi dung".
+      const baiSau = this.loader.getLesson(lvl, baiSo);
+      if (!baiSau || !Array.isArray(baiSau.vocabList)) {
+        this._veLoiTaiBai(tabName, subIndex);
+        return;
+      }
     }
     this._renderTabContentNow(tabName, subIndex);
+  }
+
+  /** The bao loi tai bai. Loi khong bi ghi nho, nen bam thu lai la tai lai tu dau. */
+  _veLoiTaiBai(tabName, subIndex) {
+    if (this.levelBadge) this.levelBadge.innerText = this.currentLevel;
+    if (this.lessonNum) this.lessonNum.innerText = this.currentLesson;
+    if (this.slideIndexLabel) this.slideIndexLabel.innerText = '—';
+    if (!this.slideContent) return;
+    this.slideContent.className = "deck-content slide-fade-enter";
+    this.slideContent.innerHTML = `
+      <div class="text-center py-16 text-slate-400">
+        <i class="fa-solid fa-triangle-exclamation text-2xl mb-2 text-rose-400"></i>
+        <p class="font-medium">Không tải được bài học. Kiểm tra mạng rồi thử lại.</p>
+        <button type="button" data-thu-lai class="ctl ctl-ghost mt-3">
+          <i class="fa-solid fa-rotate-right"></i> Thử lại
+        </button>
+      </div>`;
+    const nut = this.slideContent.querySelector('[data-thu-lai]');
+    if (nut) nut.addEventListener('click', () => this.setTab(tabName, subIndex));
+    this.reapplyBusy();
+    if (this.prevSlideBtn) this.prevSlideBtn.disabled = true;
+    if (this.nextSlideBtn) this.nextSlideBtn.disabled = true;
+    if (window.SenseiBoard && window.SenseiBoard.donMoCoi) window.SenseiBoard.donMoCoi();
+    // Van bao doi tab nhu _renderTabContentNow: app.js tat phan xa/mic, huy dong ho
+    // viet tay, ve lai lop cho. Bo 'quiz': khiDoiTab se goi AI soan de tren bai rong.
+    if (typeof this.onTabChange === 'function' && tabName !== 'quiz') this.onTabChange(tabName);
   }
 
   _renderTabContentNow(tabName, subIndex) {
@@ -392,6 +446,7 @@ class SlideEngine {
     // cho viec gi khong (soan de / long tieng) de bat lai lop cho.
     this.danhDauChuNhat();
     this.reapplyBusy();
+    if (window.SenseiBoard && window.SenseiBoard.donMoCoi) window.SenseiBoard.donMoCoi();
     if (typeof this.onTabChange === 'function') this.onTabChange(tabName);
   }
 
@@ -399,11 +454,18 @@ class SlideEngine {
     this.setTab(this.activeTab);
   }
 
+  /** @returns {boolean} false khi cap/bai khong ton tai (vd N4 bai 1) — khong doi gi ca */
   renderSlide(level, lessonId, slideIdx) {
-    this.currentLevel = (level || "N5").toUpperCase();
-    this.currentLesson = Number(lessonId) || 1;
+    const lvl = (level || "N5").toUpperCase();
+    const n = Number(lessonId) || 1;
+    // Bai khong co that thi getLesson() tut ve bai dau cap -> hien noi dung bai
+    // khac duoi so bai sai. Chan tu dau va bao that bai cho ben goi (tool Gemini).
+    if (!this.loader.getLessonsForLevel(lvl).some(l => l.lessonNumber === n)) return false;
+    this.currentLevel = lvl;
+    this.currentLesson = n;
     this.currentSlideIndex = Number(slideIdx) || 0;
     this.setTab('grammar', this.currentSlideIndex);
+    return true;
   }
 
   // 1. Phân môn Từ vựng (Vocabulary)
@@ -437,7 +499,15 @@ class SlideEngine {
       "particle": { text: "Trợ từ", color: "bg-purple-500/20 text-purple-300 border-purple-500/30" },
       "adnominal": { text: "Đại từ chỉ định", color: "bg-cyan-500/20 text-cyan-300 border-cyan-500/30" },
       "counter": { text: "Lượng từ đếm", color: "bg-teal-500/20 text-teal-300 border-teal-500/30" },
-      "phrase": { text: "Thành ngữ / Câu", color: "bg-pink-500/20 text-pink-300 border-pink-500/30" }
+      "phrase": { text: "Thành ngữ / Câu", color: "bg-pink-500/20 text-pink-300 border-pink-500/30" },
+      // Giao trinh thuc te ghi loai tu bang tieng Anh day du (adjective, adverb...)
+      // — thieu khoa thi nhan hien nguyen chu Anh mau xam. Chi dung ho mau da
+      // chinh cho nen giay (index.html), lime/sky mac dinh qua nhat tren nen sang.
+      "adjective": { text: "Tính từ", color: "bg-amber-500/20 text-amber-300 border-amber-500/30" },
+      "adverb": { text: "Phó từ", color: "bg-teal-500/20 text-teal-300 border-teal-500/30" },
+      "pronoun": { text: "Đại từ", color: "bg-orange-500/20 text-orange-300 border-orange-500/30" },
+      "expression": { text: "Cụm từ / Mẫu câu", color: "bg-pink-500/20 text-pink-300 border-pink-500/30" },
+      "determiner": { text: "Từ chỉ định", color: "bg-cyan-500/20 text-cyan-300 border-cyan-500/30" }
     };
 
     const typeIcons = {
@@ -448,14 +518,19 @@ class SlideEngine {
       "particle": "fa-link",
       "adnominal": "fa-hand-pointer",
       "counter": "fa-arrow-down-1-9",
-      "phrase": "fa-comment-dots"
+      "phrase": "fa-comment-dots",
+      "adjective": "fa-wand-magic-sparkles",
+      "adverb": "fa-gauge",
+      "pronoun": "fa-user",
+      "expression": "fa-comment-dots",
+      "determiner": "fa-hand-pointer"
     };
 
     const vocabCardsHtml = vocabs.map((v, idx) => {
-      const typeInfo = typeLabels[v.wordType] || { text: v.wordType || "Từ vựng", color: "bg-slate-700/50 text-slate-300 border-slate-600" };
+      const typeInfo = typeLabels[v.wordType] || { text: this.escapeHtml(v.wordType) || "Từ vựng", color: "bg-slate-700/50 text-slate-300 border-slate-600" };
       const iconClass = typeIcons[v.wordType] || "fa-book";
       const kanjiOrWord = v.kanji || v.word;
-      const displayWord = v.kanji && v.furigana 
+      const displayWord = v.kanji && v.furigana && v.furigana !== v.kanji
         ? `<ruby class="text-xl md:text-2xl font-bold text-ink">${this.escapeHtml(v.kanji)}<rt class="text-[11px] text-indigo-300 font-normal font-sans">${this.escapeHtml(v.furigana)}</rt></ruby>`
         : `<span class="text-xl md:text-2xl font-bold text-ink">${this.escapeHtml(v.word)}</span>`;
 
@@ -658,6 +733,21 @@ class SlideEngine {
 
     if (!data || !data.slide) {
       console.warn("Slide not found:", { level: this.currentLevel, lesson: this.currentLesson, slideIdx });
+      // Khong de nguyen DOM cu (spinner / chuong truoc) duoi tab Ngu phap
+      if (this.levelBadge) this.levelBadge.innerText = this.currentLevel;
+      if (this.lessonNum) this.lessonNum.innerText = this.currentLesson;
+      if (this.slideIndexLabel) this.slideIndexLabel.innerText = '0 slide';
+      if (this.prevSlideBtn) this.prevSlideBtn.disabled = true;
+      if (this.nextSlideBtn) this.nextSlideBtn.disabled = true;
+      this.clearHighlights();
+      if (this.slideContent) {
+        this.slideContent.innerHTML = `
+          <div class="text-center py-12 text-slate-400">
+            <i class="fa-solid fa-chalkboard-user text-3xl mb-2 text-indigo-400"></i>
+            <p class="font-medium">Chưa có slide ngữ pháp cho bài này.</p>
+          </div>
+        `;
+      }
       return false;
     }
 
@@ -667,6 +757,10 @@ class SlideEngine {
     if (this.levelBadge) this.levelBadge.innerText = this.currentLevel;
     if (this.lessonNum) this.lessonNum.innerText = this.currentLesson;
     if (this.slideIndexLabel) this.slideIndexLabel.innerText = `Slide ${slideIndex + 1}/${totalSlides}`;
+    // Chan hai dau: nut bi disabled thi khong bam duoc, ben app.js cung khong
+    // tam dung bai giang / cat tieng vi mot cu bam khong di dau ca.
+    if (this.prevSlideBtn) this.prevSlideBtn.disabled = slideIndex <= 0;
+    if (this.nextSlideBtn) this.nextSlideBtn.disabled = slideIndex >= totalSlides - 1;
 
     this.clearHighlights();
 
@@ -677,8 +771,9 @@ class SlideEngine {
         fullSentenceText += (tok.kanji || tok.text || "");
 
         let innerText = "";
-        if (tok.kanji && tok.furigana) {
-          innerText = `<ruby>${this.escapeHtml(tok.kanji)}<rt class="text-[10px] text-slate-400 font-sans">${this.escapeHtml(tok.furigana)}</rt></ruby>`;
+        const rt = this.rtCua(tok);
+        if (rt) {
+          innerText = `<ruby>${this.escapeHtml(tok.kanji)}<rt class="text-[10px] text-slate-400 font-sans">${this.escapeHtml(rt)}</rt></ruby>`;
         } else {
           innerText = this.escapeHtml(tok.text || "");
         }
@@ -779,6 +874,12 @@ class SlideEngine {
           ${culturalNoteHtml}
         </div>
       `;
+      // Next/Prev/focusItem goi thang ham nay, khong qua _renderTabContentNow:
+      // phai tu danh dau .jp-sel (khong thi khong boi den duoc) va bat lai lop cho.
+      this.danhDauChuNhat();
+      this.reapplyBusy();
+      // Net khoanh cua slide cu khong con cho bam -> xoa, khong de treo lo lung
+      if (window.SenseiBoard && window.SenseiBoard.donMoCoi) window.SenseiBoard.donMoCoi();
     }
 
     return true;
@@ -813,8 +914,9 @@ class SlideEngine {
         fullText += (tok.kanji || tok.text || "");
 
         let innerText = "";
-        if (tok.kanji && tok.furigana) {
-          innerText = `<ruby>${this.escapeHtml(tok.kanji)}<rt class="text-[10px] text-slate-400 font-sans">${this.escapeHtml(tok.furigana)}</rt></ruby>`;
+        const rt = this.rtCua(tok);
+        if (rt) {
+          innerText = `<ruby>${this.escapeHtml(tok.kanji)}<rt class="text-[10px] text-slate-400 font-sans">${this.escapeHtml(rt)}</rt></ruby>`;
         } else {
           innerText = this.escapeHtml(tok.text || "");
         }
@@ -1201,10 +1303,15 @@ class SlideEngine {
       </div>`;
   }
 
+  /** @returns {boolean} false khi cap/bai khong ton tai — giong renderSlide */
   openExercise(level, lessonId, exerciseIdx = 0) {
-    this.currentLevel = (level || this.currentLevel).toUpperCase();
-    this.currentLesson = Number(lessonId) || this.currentLesson;
+    const lvl = (level || this.currentLevel).toUpperCase();
+    const n = Number(lessonId) || this.currentLesson;
+    if (!this.loader.getLessonsForLevel(lvl).some(l => l.lessonNumber === n)) return false;
+    this.currentLevel = lvl;
+    this.currentLesson = n;
     this.setTab('quiz', Number(exerciseIdx) || 0);
+    return true;
   }
 
   resolveElement(targetId) {
@@ -1238,13 +1345,26 @@ class SlideEngine {
         const badge = document.createElement('span');
         badge.className = 'reading-badge-indicator inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-indigo-600/90 text-white font-bold text-[10px] shadow-md ml-2';
         badge.innerHTML = '<i class="fa-solid fa-volume-high text-[9px] animate-pulse"></i> Đang đọc...';
-        const titleArea = el.querySelector('h2, h3, .font-bold, .text-xs, ruby, span');
+        const titleArea = this.choGanHuyHieu(el, 'h2, h3, .font-bold, .text-xs, ruby, span');
         if (titleArea && titleArea.parentElement) {
           titleArea.parentElement.appendChild(badge);
         }
       }
     }
     el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  /**
+   * Cho gan huy hieu "Dang doc": phan tu khop dau tien KHONG nam trong anh nho
+   * (o chu thay hinh cua the tu vung la .shrink-0, hinh ve la .sensei-art) —
+   * gan vao do thi huy hieu chui vao o 64px, vo dong va de len chu.
+   */
+  choGanHuyHieu(el, chon) {
+    for (const n of el.querySelectorAll(chon)) {
+      const hop = n.parentElement && n.parentElement.closest('.shrink-0, .sensei-art');
+      if (!hop || hop === el || !el.contains(hop)) return n;
+    }
+    return null;
   }
 
   focusReadingElement(targetId) {
@@ -1307,7 +1427,7 @@ class SlideEngine {
     }
 
     this.activeFocusId = targetId;
-    this.applyFocusStyle(targetId, styleType);
+    this.applyFocusStyle(targetId, styleType, opts);
     this.setCaption(comment, styleType);
     this.openSpotlight(targetId, found, opts);
     this.tuKhoanhNguPhap(found);
@@ -1368,7 +1488,7 @@ class SlideEngine {
     return this.focusItem(targetId, styleType, comment);
   }
 
-  applyFocusStyle(targetId, styleType) {
+  applyFocusStyle(targetId, styleType, opts = {}) {
     this.clearHighlights();
     let el = document.getElementById(targetId);
 
@@ -1406,11 +1526,13 @@ class SlideEngine {
           el.classList.add('hl-grammar');
         }
       }
-      if (styleType === 'reading_focus' && isBlockCard && !el.querySelector('.reading-badge-indicator')) {
+      // Hoc vien tu bam (doBam) thi khong co gi dang doc ca -> khong gan "Dang doc…",
+      // chi giu vien sang cho biet the nao dang chon.
+      if (styleType === 'reading_focus' && isBlockCard && !(opts && opts.doBam) && !el.querySelector('.reading-badge-indicator')) {
         const badge = document.createElement('span');
         badge.className = 'reading-badge-indicator inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-white font-bold text-[10px] shadow-md ml-2';
         badge.innerHTML = '<i class="fa-solid fa-volume-high text-[9px]"></i> Đang đọc…';
-        const anchor = el.querySelector('h2, h3, .font-bold, ruby, span');
+        const anchor = this.choGanHuyHieu(el, 'h2, h3, .font-bold, ruby, span');
         if (anchor && anchor.parentElement) anchor.parentElement.appendChild(badge);
       }
       el.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -1522,9 +1644,11 @@ class SlideEngine {
       this.setTab('grammar');
       return;
     }
+    // getSlide() kep chi so ve slide cuoi -> phai so slideIndex that, khong thi
+    // bam Next o slide cuoi van ve lai chinh no (mat cuon, mat lop cho...)
     const data = this.loader.getSlide(this.currentLevel, this.currentLesson, this.currentSlideIndex + 1);
-    if (data && data.slide) {
-      this.renderGrammar(this.currentSlideIndex + 1);
+    if (data && data.slide && data.slideIndex > this.currentSlideIndex) {
+      this.renderGrammar(data.slideIndex);
     }
   }
 
@@ -1558,18 +1682,23 @@ class SlideEngine {
       + '</aside>';
     document.body.appendChild(el);
 
-    el.querySelector('.spot-dong').addEventListener('click', () => this.closeSpotlight());
+    // Hoc vien dong the = tat han den roi: go luon vien sang + huy hieu tren the
+    // nguon, khong de "Dang doc…" treo lai sau khi the da dong.
+    el.querySelector('.spot-dong').addEventListener('click', () => this.clearReadingFocus());
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') this.closeSpotlight();
+      // Esc la phim chung (lightbox, o chat...) — chi xu ly khi the dang mo
+      if (e.key === 'Escape' && this.spotOpenId) this.clearReadingFocus();
     });
 
     // Mui ten noi the voi muc that — phai bam theo khi cuon trang hay doi co
     // man hinh, khong thi no tro vao khoang khong.
     let cho = false;
-    const veLai = () => {
+    const veLai = (e) => {
+      // Cuon ben trong chinh the thi muc that khong xe dich, khoi ve lai
+      if (e && e.type === 'scroll' && e.target && e.target.closest && e.target.closest('.spot-card')) return;
       if (cho) return;
       cho = true;
-      requestAnimationFrame(() => { cho = false; this.veMuiTenNoi(); });
+      requestAnimationFrame(() => { cho = false; this.veMuiTenNoi(false); });
     };
     window.addEventListener('scroll', veLai, true);
     window.addEventListener('resize', veLai);
@@ -1585,20 +1714,24 @@ class SlideEngine {
    * Muc cuon khuat khoi man hinh thi an mui ten di — tro vao mep man hinh
    * con kho hieu hon la khong tro gi.
    */
-  veMuiTenNoi() {
+  veMuiTenNoi(hoatHinh = false) {
     if (!this.spotEl || this.spotEl.classList.contains('hidden') || !this.spotNoi) return;
-    this.spotNoi.innerHTML = '';
+    const an = () => { this.spotNoi.style.display = 'none'; };
+    // Muc moi mo, dang cho lan ve dau (openSpotlight hen ~340ms, co hieu ung):
+    // cuon trang luc nay chi an mui ten cu di, khong ve truoc. Het hen ma muc
+    // van khuat (cuon muot chua xong) thi khung hinh cuon sau se ve lan dau.
+    if (!hoatHinh && this._noiCho && this._noiId !== this.spotOpenId) return an();
 
     const dock = this.spotEl.querySelector('.spot-dock');
     const dich = this.resolveElement(this.spotOpenId);
-    if (!dock || !dich) return;
+    if (!dock || !dich) return an();
 
     // Man hinh hep: the nam duoi day, khong con cho ma keo mui ten
-    if (window.innerWidth < 860) return;
+    if (window.innerWidth < 860) return an();
 
     const d = dock.getBoundingClientRect();
     const t = dich.getBoundingClientRect();
-    if (t.width < 2 || t.bottom < 8 || t.top > window.innerHeight - 8) return;
+    if (t.width < 2 || t.bottom < 8 || t.top > window.innerHeight - 8) return an();
 
     const x1 = d.right - 2;
     const y1 = Math.min(Math.max(t.top + t.height / 2, d.top + 24), d.bottom - 24);
@@ -1609,27 +1742,43 @@ class SlideEngine {
     const NS = 'http://www.w3.org/2000/svg';
     const duong = `M${x1},${y1} C${giua},${y1} ${giua},${y2} ${x2},${y2}`;
 
-    // Net nen mau giay, day hon, nam duoi: duong noi di ngang qua cac the o
-    // giua nen khong co no thi doc nham thanh gach ngang chu.
-    const nen = document.createElementNS(NS, 'path');
+    // Tao 3 net MOT LAN cho moi muc; cuon trang / doi co chi sua 'd' tai cho.
+    // Truoc day moi khung hinh cuon lai dung net moi -> hieu ung chay tu dau,
+    // mui ten nhap nhay gan nhu khong thay.
+    let [nen, than, dau] = this.spotNoi.children;
+    const moi = !dau || this._noiId !== this.spotOpenId;
+    if (moi) {
+      this.spotNoi.innerHTML = '';
+      // Net nen mau giay, day hon, nam duoi: duong noi di ngang qua cac the o
+      // giua nen khong co no thi doc nham thanh gach ngang chu.
+      nen = document.createElementNS(NS, 'path');
+      nen.setAttribute('class', 'spot-noi-nen');
+      this.spotNoi.appendChild(nen);
+
+      than = document.createElementNS(NS, 'path');
+      than.setAttribute('class', 'spot-noi-than');
+      // Net dut chuan hoa theo pathLength=1: doi 'd' (dai ngan khac) khong ho khuc
+      than.setAttribute('pathLength', '1');
+      than.style.strokeDasharray = '1';
+      this.spotNoi.appendChild(than);
+
+      dau = document.createElementNS(NS, 'path');
+      dau.setAttribute('class', 'spot-noi-dau');
+      this.spotNoi.appendChild(dau);
+    }
+    this._noiId = this.spotOpenId;
+
     nen.setAttribute('d', duong);
-    nen.setAttribute('class', 'spot-noi-nen');
-    this.spotNoi.appendChild(nen);
-
-    const than = document.createElementNS(NS, 'path');
     than.setAttribute('d', duong);
-    than.setAttribute('class', 'spot-noi-than');
-    this.spotNoi.appendChild(than);
-
-    const dau = document.createElementNS(NS, 'path');
     dau.setAttribute('d', `M${x2},${y2} l-8,-5 M${x2},${y2} l-8,5`);
-    dau.setAttribute('class', 'spot-noi-dau');
-    this.spotNoi.appendChild(dau);
+    this.spotNoi.style.display = '';
 
-    const dai = than.getTotalLength();
-    than.style.strokeDasharray = dai;
-    than.style.strokeDashoffset = dai;
-    than.style.animation = 'spotNoiChay .45s ease-out forwards';
+    if (hoatHinh || moi) {
+      than.style.strokeDashoffset = '1';
+      than.style.animation = 'none';
+      void than.getBoundingClientRect();   // ep nhan 'none' roi moi chay lai tu dau
+      than.style.animation = 'spotNoiChay .45s ease-out forwards';
+    }
   }
 
   /** Vai trò của trợ từ / đuôi câu — để vẽ sơ đồ cấu trúc cho dễ hiểu */
@@ -1670,11 +1819,23 @@ class SlideEngine {
       </div>`;
   }
 
+  /**
+   * Chu nho tren dau (rt) cua mot token, '' = khong ve ruby.
+   * Giao trinh co ~200 token furigana TRUNG chinh chu (山田さん / 山田さん) ->
+   * in lap hai tang. Trung thi lay text (cach doc) neu khac, khong thi bo ruby.
+   */
+  rtCua(tk) {
+    if (!tk || !tk.kanji || !tk.furigana) return '';
+    if (tk.furigana !== tk.kanji) return tk.furigana;
+    return (tk.text && tk.text !== tk.kanji) ? tk.text : '';
+  }
+
   /** Câu đầy đủ có ruby, token trọng tâm được tô sáng */
   buildSentence(tokens, focusTokenId = null) {
     return (tokens || []).map(tk => {
-      const inner = (tk.kanji && tk.furigana)
-        ? `<ruby>${this.escapeHtml(tk.kanji)}<rt>${this.escapeHtml(tk.furigana)}</rt></ruby>`
+      const rt = this.rtCua(tk);
+      const inner = rt
+        ? `<ruby>${this.escapeHtml(tk.kanji)}<rt>${this.escapeHtml(rt)}</rt></ruby>`
         : this.escapeHtml(tk.text || '');
       const cls = (focusTokenId && tk.id === focusTokenId) ? 'stok is-focus'
                 : (tk.isKeyGrammar ? 'stok is-key' : 'stok');
@@ -1742,7 +1903,7 @@ class SlideEngine {
     if (found.type === 'vocab') {
       const v = found.data;
       const word = v.kanji || v.word;
-      const head = (v.kanji && v.furigana)
+      const head = (v.kanji && v.furigana && v.furigana !== v.kanji)
         ? `<ruby>${this.escapeHtml(v.kanji)}<rt>${this.escapeHtml(v.furigana)}</rt></ruby>`
         : this.escapeHtml(v.word);
       // Thu tu uu tien: anh co san trong giao trinh -> hinh ve SVG.
@@ -1771,7 +1932,11 @@ class SlideEngine {
       // thu giao trinh thieu: no ghi "8 net" ma khong chi duoc 8 net do la gi.
       const coNet = !!(window.SenseiStrokes && window.SenseiStrokes.get(k.character));
       if (coNet) {
-        setTimeout(() => {
+        // Mot hen gio cho ca engine: doi chu nhanh (bam 私 roi 人) thi hen cua chu
+        // cu khong duoc viet 私 vao the cua 人.
+        clearTimeout(this._vietNetTimer);
+        this._vietNetTimer = setTimeout(() => {
+          if (this.spotOpenId !== k.id) return;
           const o = this.spotCard && this.spotCard.querySelector('[data-viet-net]');
           if (o && window.SenseiBoard) {
             o.innerHTML = '';
@@ -1820,8 +1985,9 @@ class SlideEngine {
     if (found.type === 'token') {
       const tk = found.data, sen = found.sentence || {};
       const role = this.tokenRole(tk.text);
-      const head = (tk.kanji && tk.furigana)
-        ? `<ruby>${this.escapeHtml(tk.kanji)}<rt>${this.escapeHtml(tk.furigana)}</rt></ruby>`
+      const rt = this.rtCua(tk);
+      const head = rt
+        ? `<ruby>${this.escapeHtml(tk.kanji)}<rt>${this.escapeHtml(rt)}</rt></ruby>`
         : this.escapeHtml(tk.text || '');
       return `
         <div class="spot-head">${head}</div>
@@ -1924,7 +2090,9 @@ class SlideEngine {
     // Muc that phai nam trong tam nhin thi mui ten moi co cho ma tro
     if (src) src.scrollIntoView({ behavior: 'smooth', block: 'center' });
     // Cho cuon va layout on dinh roi moi do toa do
-    setTimeout(() => this.veMuiTenNoi(), 340);
+    clearTimeout(this._noiTimer);
+    this._noiCho = true;
+    this._noiTimer = setTimeout(() => { this._noiCho = false; this.veMuiTenNoi(true); }, 340);
     return true;
   }
 
@@ -1932,6 +2100,9 @@ class SlideEngine {
     if (!this.spotEl || this.spotEl.classList.contains('hidden')) return;
     this.spotOpenId = null;
     if (this.spotNoi) this.spotNoi.innerHTML = '';
+    this._noiId = null;
+    this._noiCho = false;
+    clearTimeout(this._noiTimer);
     document.body.classList.remove('co-the-trai');
     const card = this.spotCard;
     if (card && card.getAnimations) card.getAnimations().forEach(a => a.cancel());

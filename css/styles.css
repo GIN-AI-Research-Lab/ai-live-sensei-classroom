@@ -1745,3 +1745,9 @@ body.co-the-trai.co-bang #slideContent .grid {
   border: none;
   cursor: pointer;
 }
+
+/* SENSEI 3D — cho trong cho meo */
+/* Mèo 3D đứng ở góc phải dưới, trên nội dung bài. js/sensei-cat3d-that.js ghi chiều cao mèo vào
+   --sensei-cao: vùng cuộn chừa bấy nhiêu chỗ trống ở cuối, nên hàng thẻ cuối vẫn cuộn lên khỏi mèo.
+   Không có mèo (đang ẩn / nhân vật khác) thì vẫn chừa 40px cho nút bật / tắt Sensei. */
+.deck-scroll { padding-bottom: var(--sensei-cao, 40px); }

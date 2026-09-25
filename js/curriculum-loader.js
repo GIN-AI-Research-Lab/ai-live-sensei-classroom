@@ -35,6 +35,12 @@ class CurriculumLoader {
     const levels = ["n5", "n4", "n3", "n2", "n1"];
 
     const napMot = async (lvl) => {
+      const L = lvl.toUpperCase();
+      // Lan nap lai (nut 'Nap lai'): cap do da co muc luc that thi giu nguyen
+      // object cu — thay bang muc luc moi la mat chi tiet cac bai da tai.
+      if (this.capDoThieu && !this.capDoThieu.includes(L) && this.database[L].length) {
+        return { lvl, ok: true, lan: 0 };
+      }
       let loiCuoi = null;
       for (let lan = 1; lan <= 3; lan++) {
         try {
@@ -103,12 +109,20 @@ class CurriculumLoader {
 
     const p = (async () => {
       try {
-        const res = await fetch(`curriculum/${lvl.toLowerCase()}/${no}.json`, { cache: 'no-store' });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const full = await res.json();
-        Object.assign(entry, full);   // giu nguyen object entry, chi bom them khoa
-      } catch (err) {
-        console.warn(`[giao trinh] khong tai duoc chi tiet ${lvl} bai ${no}:`, err.message || err);
+        // Thu lai 3 lan giong init(): mang cham / duong ham hay rot le mot yeu cau.
+        // Van hong thi entry khong co vocabList — ben goi tu nhan ra va bao loi.
+        for (let lan = 1; lan <= 3; lan++) {
+          try {
+            const res = await fetch(`curriculum/${lvl.toLowerCase()}/${no}.json`, { cache: 'no-store' });
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const full = await res.json();
+            Object.assign(entry, full);   // giu nguyen object entry, chi bom them khoa
+            break;
+          } catch (err) {
+            if (lan < 3) { await new Promise(r => setTimeout(r, 250 * lan)); continue; }
+            console.warn(`[giao trinh] khong tai duoc chi tiet ${lvl} bai ${no}:`, err.message || err);
+          }
+        }
       } finally {
         this._dangTai.delete(key);
       }
@@ -165,10 +179,32 @@ class CurriculumLoader {
   }
 
   /**
+   * Nap chi tiet cac bai DA HOC gan nhat (toi da soBai bai lien truoc, cung cap
+   * do) cho phan on bai cua getPronunciationSet / getHandwritingSet. Muc luc nhe
+   * khong co slides/dialogue/vocabList, nen bai cu chua nap thi coi nhu khong co
+   * gi de on — truoc day chi on duoc nhung bai tinh co da mo trong phien.
+   *
+   * Co gioi han de khong tai ca cap do (moi bai ~40-50KB). Bai nao nap roi thi
+   * bo qua; goi chong van an toan vi ensureLessonLoaded tu gop yeu cau trung.
+   * Khong bao gio tu choi: bai tai hong chi thieu phan on cua bai do.
+   */
+  ensureReviewLoaded(level, lessonNumber, soBai = 5) {
+    const lvl = (level || 'N5').toUpperCase();
+    const no = Number(lessonNumber) || 1;
+    const truoc = (this.database[lvl] || [])
+      .filter(l => l.lessonNumber < no)
+      .sort((a, b) => a.lessonNumber - b.lessonNumber)
+      .slice(-soBai)
+      .filter(l => !Array.isArray(l.vocabList));
+    return Promise.all(truoc.map(l => this.ensureLessonLoaded(lvl, l.lessonNumber).catch(() => null)));
+  }
+
+  /**
    * Bo cau luyen phat am: tron cau cua bai DANG HOC voi cau cua nhung bai DA HOC.
    *
    * Vi sao tron: doc mai cau cua moi bai hien tai thi chi luyen duoc mot mau ngu
    * phap. Bai 6 ma on lai cau cua bai 1-5 moi ra duoc phan xa that.
+   * Chi tron duoc bai cu DA nap chi tiet — goi ensureReviewLoaded() truoc.
    *
    * @param {number} doi  Doi so de "doi cau khac" lay duoc bo khac
    */
@@ -235,6 +271,7 @@ class CurriculumLoader {
    *   - 'khuyet'  : cho mot cau that trong giao trinh, khoet di dung tu do
    *   - 'phatam'  : chi cho cach doc + nghia, nguoi hoc tu nho mat chu
    * Chi lay tu NGAN (toi da 3 ky tu) vi chi co 10 giay de viet.
+   * Bai cu phai DA nap chi tiet moi co tu de on — goi ensureReviewLoaded() truoc.
    */
   getHandwritingSet(level, lessonNumber, doi = 0, soChu = 5) {
     const lvl = (level || 'N5').toUpperCase();
@@ -245,7 +282,7 @@ class CurriculumLoader {
       const out = [];
       const day = (tokens) => {
         const jp = (tokens || []).map(t => t.kanji || t.text || '').join('').trim();
-        if (jp.length >= 4) out.push(jp);
+        if (jp.length >= 4) out.push({ jp, tokens: tokens || [] });
       };
       (bai.slides || []).forEach(sl => (sl.examples || []).forEach(e => day(e.tokens)));
       (bai.dialogue || []).forEach(d => day(d.tokens));
@@ -254,12 +291,26 @@ class CurriculumLoader {
 
     const tuCuaBai = (bai) => {
       const cauMau = cauCuaBai(bai);
+      const chuCua = (t) => t.kanji || t.text || '';
       return (bai.vocabList || []).map(v => {
         const kanji = String(v.kanji || '').trim();
         const word = String(v.word || '').trim();
         const dapAn = (kanji && kanji !== word) ? kanji : word;
         if (!dapAn || dapAn.length > 3) return null;
-        const cau = cauMau.find(c => c.includes(dapAn));
+        // Uu tien cau co MOT TOKEN dung bang dap an: khoet dung token do. Cat theo
+        // chuoi thi khoet ca cho nam giua tu khac (犯＿＿はあの＿＿) va ra nhieu o trong.
+        const khop = cauMau.find(c => c.tokens.some(t => chuCua(t) === dapAn));
+        const cau = khop || cauMau.find(c => c.jp.includes(dapAn));
+        let cauHoi = '';
+        if (khop) {
+          let daKhoet = false;
+          cauHoi = khop.tokens.map(t => {
+            if (!daKhoet && chuCua(t) === dapAn) { daKhoet = true; return '＿＿'; }
+            return chuCua(t);
+          }).join('').trim();
+        } else if (cau) {
+          cauHoi = cau.jp.replace(dapAn, '＿＿');   // chi o dau tien
+        }
         return {
           id: 'vt-' + lvl + '-' + bai.lessonNumber + '-' + (v.id || dapAn),
           dapAn,
@@ -267,7 +318,7 @@ class CurriculumLoader {
           doc: String(v.romaji || '').trim(),
           nghia: String(v.meaningVi || '').trim(),
           kieu: cau ? 'khuyet' : 'phatam',
-          cauHoi: cau ? cau.split(dapAn).join('＿＿') : '',
+          cauHoi,
           tuBai: bai.lessonNumber,
         };
       }).filter(Boolean);

@@ -90,9 +90,11 @@
   }
   function napBan(ten) {
     document.getElementById('ghi3d').textContent = 'Đang nạp mô hình…';
-    const TEP_NANG_CAP = { 'nang-cap': 'meo-1234-chi-tiet', 'nang-cap-2': 'meo-mv-chi-tiet', 'nang-cap-3': 'meo-mv-in', 'nang-cap-4': 'meo-mv-nan-in', 'co-xuong': 'meo-xuong', 'tripo-xuong': 'meo-tripo' };
+    const TEP_NANG_CAP = { 'nang-cap': 'meo-1234-chi-tiet', 'nang-cap-2': 'meo-mv-chi-tiet', 'nang-cap-3': 'meo-mv-in', 'nang-cap-4': 'meo-mv-nan-in', 'co-xuong': 'meo-xuong', 'tripo-xuong': 'meo-tripo', 'tripo-nhe': 'meo-tripo-nhe' };
+    // Ban nhe (app dang dung) dung chung anh phu voi ban goc
+    const ANH_PHU = { 'tripo-nhe': '../assets/sensei-meo/3d/meo-tripo' };
     if (TEP_NANG_CAP[ten]) {
-      napMeoNangCap(`../assets/sensei-meo/3d/${TEP_NANG_CAP[ten]}.glb`, scene).then((m) => {
+      napMeoNangCap(`../assets/sensei-meo/3d/${TEP_NANG_CAP[ten]}.glb`, scene, { anhPhu: ANH_PHU[ten] }).then((m) => {
         if (meo) scene.remove(meo);
         nangCap?.huy();
         nangCap = m; meo = m.doiTuong; datVao(meo);
@@ -144,7 +146,7 @@
   });
   const hopBan = document.createElement('div'); hopBan.className = 'nut'; hopBan.style.paddingBottom = '0';
   document.getElementById('nut3d').before(hopBan);
-  for (const [ten, nhan] of [['tripo-xuong', 'Tripo hoàn chỉnh'], ['tripo-goc', 'Tripo (gốc)'], ['co-xuong', 'Bản cử động'], ['nang-cap-4', 'Bản nắn hình'], ['nang-cap-3', 'Bản in ảnh gốc'], ['nang-cap-2', 'Bản nhiều góc'], ['nang-cap', 'Bản nâng cấp 1'], ['meo-1234-web', 'Bản thô A'], ['meo-42-web', 'Bản thô B']]) {
+  for (const [ten, nhan] of [['tripo-xuong', 'Tripo hoàn chỉnh'], ['tripo-nhe', 'Tripo bản nhẹ (app)'], ['tripo-goc', 'Tripo (gốc)'], ['co-xuong', 'Bản cử động'], ['nang-cap-4', 'Bản nắn hình'], ['nang-cap-3', 'Bản in ảnh gốc'], ['nang-cap-2', 'Bản nhiều góc'], ['nang-cap', 'Bản nâng cấp 1'], ['meo-1234-web', 'Bản thô A'], ['meo-42-web', 'Bản thô B']]) {
     const b = document.createElement('button'); b.textContent = nhan; b.dataset.ten = ten;
     b.onclick = () => { napBan(ten); hopBan.querySelectorAll('button').forEach((x) => x.classList.toggle('dang', x === b)); };
     hopBan.appendChild(b);

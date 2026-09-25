@@ -61,11 +61,11 @@ const GLSL_LONG = /* glsl */`
   }
 `;
 
-function vatLieuLop(goc, h) {
+function vatLieuLop(goc, h, uChung) {
   const m = goc.clone();
-  // clone() sao chep userData bang JSON -> mat tham chieu. Dung THANG bo uniform cua vat lieu goc
-  // de moi lop long cung nhan cap nhat (thoi gian, quan tinh, mi mat, mieng) va giu dung kieu du lieu.
-  const uChung = goc.userData.u;
+  // uChung truyen THANG vao (khong qua userData: clone() chep userData bang JSON -> ma hoa lai ca
+  // anh mat na thanh PNG moi lan, ~15 ms/lop, ma van mat tham chieu). Moi lop long cung nhan cap nhat
+  // (thoi gian, quan tinh, mi mat, mieng) va giu dung kieu du lieu.
   // Chi lop nen can lop bong mat; bat cho ca 24 lop long thi nang gap doi ma khong de lam gi
   if (h > 0) m.clearcoat = 0;
   m.onBeforeCompile = (sh) => {
@@ -138,7 +138,9 @@ function vatLieuLop(goc, h) {
       }
     `);
   };
-  m.customProgramCacheKey = () => 'long' + h.toFixed(3);
+  // Ma shader giong het nhau o moi lop (h chi la uniform uH rieng tung vat lieu) -> CHUNG mot chuong
+  // trinh cho ca 20 lop long: dich 1 lan thay vi 20, doi so lop luc chay cung khong phai dich them
+  m.customProgramCacheKey = () => (h > 0 ? 'long-lop' : 'long-nen');
   return m;
 }
 
@@ -187,7 +189,7 @@ function taoDieuKhien(goc, skeleton, u) {
     di(muc, pha) { diMuc = muc; diPha = pha; },
     /** Do to cua giong dang phat (0..~0.3) -> mieng mo */
     mieng(muc) { moMieng += (Math.min(1, muc * 7) - moMieng) * .45; },
-    capNhat(t) {
+    capNhat(t, dt) {
       for (const [b, q] of nghi) b.quaternion.copy(q);             // ve tu the nghi roi cong dong tac
       const tt = performance.now() / 1000 - batDau;          // thoi gian tu luc bat dau dong tac
       const k = dang === 'nghi' ? 0 : Math.min(1, (performance.now() / 1000 - batDau) / .35);
@@ -213,7 +215,8 @@ function taoDieuKhien(goc, skeleton, u) {
                               + (an ? Math.max(0, Math.sin(tt * 5)) * .06 : 0)))
         .multiply(truc(0, 0, 1, Math.sin(t * .33) * .05 + ((ngu ? .3 : 0) + (suyNghi ? .16 : 0)) * tron.v)));
       // Tai lo xo: dau quay nhanh thi tai bi keo tre lai roi nay ve
-      const vDau = (dauY - dauYTruoc) * 60; dauYTruoc = dauY;
+      // Van toc theo thoi gian that (luc dung yen app chi ve ~30 khung/giay; man 120 Hz)
+      const vDau = (dauY - dauYTruoc) / (dt > 0 ? dt : 1 / 60); dauYTruoc = dauY;
       taiVT += (-vDau * .6 - taiLech) * .25 - taiVT * .18; taiLech += taiVT * .5;
       // Mi mat: chop ngau nhien; ngu nham han; vui hip mat (mi duoi); lac dau / nghi thi lim dim
       if (t > chop) chop = t + 2.2 + Math.random() * 3.5;
@@ -439,15 +442,20 @@ function suaTrongSoDau(luoi) {
 const KHONG_CAM = new THREE.DataTexture(new Uint8Array([0, 0, 0, 255]), 1, 1);
 KHONG_CAM.needsUpdate = true;
 
-export function napMeoNangCap(url, scene) {
+/**
+ * tuyChon.anhPhu: ten goc cua cac anh di kem (mac dinh = url bo '.glb'), dung khi mot ban nhe
+ * cua mo hinh dung chung anh phu voi ban goc (cung UV).
+ */
+export function napMeoNangCap(url, scene, tuyChon = {}) {
+  const goc0 = tuyChon.anhPhu || url.replace(/.glb$/, '');
   // Ban do cam moc long di kem (neu co): <ten>-khong-long.png
   const matNa = { value: KHONG_CAM };
-  new THREE.TextureLoader().load(url.replace(/.glb$/, '-khong-long.png'), (t) => {
+  new THREE.TextureLoader().load(goc0 + '-khong-long.png', (t) => {
     t.flipY = false; t.colorSpace = THREE.NoColorSpace; matNa.value = t;
   }, undefined, () => {});
   // Ban do mat-mieng (neu co): <ten>-mat-mieng.png
   const matMieng = { value: KHONG_CAM };
-  new THREE.TextureLoader().load(url.replace(/.glb$/, '-mat-mieng.png'), (t) => {
+  new THREE.TextureLoader().load(goc0 + '-mat-mieng.png', (t) => {
     t.flipY = false; t.colorSpace = THREE.NoColorSpace; t.premultiplyAlpha = false;
     t.minFilter = THREE.LinearFilter; t.generateMipmaps = false; matMieng.value = t;
   }, undefined, () => {});
@@ -478,21 +486,26 @@ export function napMeoNangCap(url, scene) {
                                         (bb.min.z + bb.max.z) / 2, .18) },
     };
     const coXuong = !!luoi.isSkinnedMesh;
+    const g = luoi.geometry, qs = new URLSearchParams(location.search);
     // ?tia=0 tren dia chi trang: bo buoc tia (de so sanh)
-    if (new URLSearchParams(location.search).get('tia') !== '0') tiaMoHinh(luoi.geometry);
-    else {
-      const n = luoi.geometry.attributes.position.count;
-      luoi.geometry.setAttribute('aAO', new THREE.BufferAttribute(new Float32Array(n).fill(1), 1));
-      luoi.geometry.setAttribute('aDai', new THREE.BufferAttribute(new Float32Array(n).fill(1), 1));
-    }
+    if (qs.get('tia') === '0') {
+      const n = g.attributes.position.count;
+      g.setAttribute('aAO', new THREE.BufferAttribute(new Float32Array(n).fill(1), 1));
+      g.setAttribute('aDai', new THREE.BufferAttribute(new Float32Array(n).fill(1), 1));
+    } else if (g.attributes._ao && g.attributes._dai && qs.get('muot') !== '1') {
+      // Tep da nuong san ket qua tiaMoHinh (thuoc tinh _AO/_DAI, GLTFLoader doi ra chu thuong):
+      // dung thang, khoi ~100 ms tinh lai tren luong chinh moi lan nap
+      g.setAttribute('aAO', g.attributes._ao);
+      g.setAttribute('aDai', g.attributes._dai);
+    } else tiaMoHinh(g);
+    g.deleteAttribute('_ao'); g.deleteAttribute('_dai');
     if (coXuong) suaTrongSoDau(luoi);
     if (coXuong) u.uDuoi.value.w = 0;          // co xuong duoi that thi khong can bien dang gia trong shader
-    vl.userData.u = u;
-    luoi.material = vatLieuLop(vl, 0);
+    luoi.material = vatLieuLop(vl, 0, u);
     luoi.frustumCulled = false;
     const cacLop = [];
     for (let i = 1; i <= SO_LOP; i++) {
-      const mat = vatLieuLop(vl, i / SO_LOP);
+      const mat = vatLieuLop(vl, i / SO_LOP, u);
       const lop = coXuong ? new THREE.SkinnedMesh(luoi.geometry, mat) : new THREE.Mesh(luoi.geometry, mat);
       if (coXuong) { lop.bind(luoi.skeleton, luoi.bindMatrix); lop.bindMode = luoi.bindMode; }
       lop.renderOrder = i;
@@ -514,10 +527,15 @@ export function napMeoNangCap(url, scene) {
         // ?long=0 tren dia chi trang: tat han long (de kiem tra mo hinh tran)
         if (new URLSearchParams(location.search).get('long') === '0') { cacLop.forEach((l) => { l.visible = false; }); return; }
         n = Math.max(4, Math.min(SO_LOP, Math.round(n)));
-        cacLop.forEach((l, i) => { l.visible = (i % Math.ceil(SO_LOP / n)) === 0 || i === SO_LOP - 1; });
+        // Dung n lop rai deu tu lop sat da (0) toi ngon (SO_LOP - 1): moi n cho mot bo lop KHAC nhau
+        // (cach cu i % ceil(20/n) cho n = 10..18 deu ra cung 11 lop -> buoc tu chinh khong tac dung)
+        const giu = new Set();
+        for (let k = 0; k < n; k++) giu.add(Math.round(k * (SO_LOP - 1) / (n - 1)));
+        cacLop.forEach((l, i) => { l.visible = giu.has(i); });
       },
       huy() {
         goc.traverse((o) => { if (o.isMesh) { o.material.dispose?.(); } });
+        vl.map?.dispose(); vl.normalMap?.dispose();
         luoi.geometry.dispose();
       },
       coXuong,

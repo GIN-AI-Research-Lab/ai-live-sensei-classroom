@@ -24,7 +24,9 @@ class AudioEngine {
     this.micProcessor = null;
     this.micSource = null;
     this.micMuteGain = null;
-    this.isMicActive = false;
+    this.isMicActive = false;   // true ca luc DANG MO (cho quyen mic) — xem startMic
+    this._luotMic = 0;          // stopMic() tang so nay de huy lan mo dang cho
+    this._dangMoMic = null;     // Promise cua lan mo mic dang cho
 
     this.isPlaying = false;
     this.idleTimeout = null;
@@ -39,6 +41,7 @@ class AudioEngine {
     // de vao dung luc nay — khoa cung o day de chan tan goc, khong phu thuoc
     // vao viec cap tren tinh thoi diem cho dung.
     this.clipPlaying = false;
+    this._dungClip = null;      // ket thuc clip dang phat (playPcmClip), stopPlayback goi
   }
 
   ensureOutContext() {
@@ -90,7 +93,8 @@ class AudioEngine {
 
   /** Do to (RMS, 0..~0.5) cua tieng dang phat — 0 khi dang im */
   getOutputLevel() {
-    if (!this.outAnalyser) return 0;
+    // Analyser cua context da dong giu nguyen mau cuoi -> meo cu "noi" mai
+    if (!this.outAnalyser || this.outAnalyser.context !== this.outCtx) return 0;
     this.outAnalyser.getFloatTimeDomainData(this._mauDo);
     let tong = 0;
     for (let i = 0; i < this._mauDo.length; i++) tong += this._mauDo[i] * this._mauDo[i];
@@ -173,7 +177,10 @@ class AudioEngine {
       el.id = 'audioUnlockPrompt';
       // Dat giua man hinh chu khong nem goc: tren dien thoai, o nho o goc phai
       // gan nhu khong ai thay, ma khong cham vao no thi ca buoi hoc im tieng.
-      el.className = 'fixed left-1/2 bottom-24 -translate-x-1/2 z-50 bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 text-sm cursor-pointer border-2 border-indigo-300 animate-bounce transition text-center';
+      // Can giua bang inset-x-0 + mx-auto + w-max, KHONG dung -translate-x-1/2:
+      // keyframes cua animate-bounce ghi de transform nen o bi day lech sang nua
+      // phai. z-[88] de nam tren canvas meo 3D (85-87).
+      el.className = 'fixed inset-x-0 mx-auto w-max max-w-[calc(100vw_-_32px)] bottom-24 z-[88] bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 text-sm cursor-pointer border-2 border-indigo-300 animate-bounce transition text-center';
       el.innerHTML = '<i class="fa-solid fa-volume-high text-lg"></i> <span>Chạm để bật tiếng Sensei 🔊</span>';
       el.onclick = () => {
         this.ensureOutContext();
@@ -293,6 +300,9 @@ class AudioEngine {
       }
 
       source.onended = () => {
+        // stopPlayback() da go nguon nay ra (dung tay) -> KHONG phai Sensei noi
+        // xong tu nhien; bo qua, khong thi 350ms sau bao nham "da giang xong nhip"
+        if (!this.activeSources.includes(source)) return;
         this.activeSources = this.activeSources.filter(s => s !== source);
         if (this.activeSources.length === 0) {
           // Debounce 350ms phòng trường hợp gói âm thanh tiếp theo đang truyền qua WebSocket
@@ -318,7 +328,18 @@ class AudioEngine {
   playPcmClip(clip) {
     return new Promise((resolve, reject) => {
       if (this.suppressed) return resolve();
-      const xongClip = (fn, val) => { this.clipPlaying = false; fn(val); };
+      // Moi clip mot ham ket thuc rieng, goi duoc tu onended LAN stopPlayback():
+      // dong AudioContext (cleanup luc mat ket noi) thi onended khong bao gio ban,
+      // clipPlaying ket true -> moi goi tieng Sensei ve sau bi bo, lop cam tieng.
+      // Chi clip dang giu co (this._dungClip === dungClip) moi duoc ha co.
+      let daXong = false;
+      const xongClip = (fn, val) => {
+        if (daXong) return;
+        daXong = true;
+        if (this._dungClip === dungClip) { this._dungClip = null; this.clipPlaying = false; }
+        fn(val);
+      };
+      const dungClip = () => xongClip(resolve);
       try {
         this.ensureOutContext();
         if (!this.outCtx) return reject(new Error('khong co AudioContext'));
@@ -329,6 +350,7 @@ class AudioEngine {
         // bo qua moi goi cua Sensei toi tre trong luc cau nay dang phat.
         this.stopPlayback(true);
         this.clipPlaying = true;
+        this._dungClip = dungClip;
 
         // Nhan ca chuoi base64 (REST TTS) lan Uint8Array (dan dien vien Live)
         let bytes;
@@ -361,13 +383,15 @@ class AudioEngine {
         if (!this.isPlaying) { this.isPlaying = true; this.onPlayStateChange(true); }
 
         src.onended = () => {
-          this.clipPlaying = false;
+          const conTrongHang = this.activeSources.includes(src);
+          dungClip();
+          // stopPlayback() da cat clip nay va da bao trang thai roi — khong bao lan hai
+          if (!conTrongHang) return;
           this.activeSources = this.activeSources.filter(x => x !== src);
           if (!this.activeSources.length) {
             this.isPlaying = false;
             this.onPlayStateChange(false, { clip: true });
           }
-          resolve();
         };
         this.clipSource = src;
         src.start();
@@ -395,6 +419,9 @@ class AudioEngine {
    * Hủy toàn bộ âm thanh đang phát ngay lập tức (Barge-in)
    */
   stopPlayback(isManual = true) {
+    // Cau thoai dang phat cung ket thuc ngay (ha clipPlaying, tra Promise) —
+    // khong trong cho onended, vi AudioContext sap dong thi no khong ban nua
+    if (this._dungClip) this._dungClip();
     if (this.idleTimeout) {
       clearTimeout(this.idleTimeout);
       this.idleTimeout = null;
@@ -440,7 +467,15 @@ class AudioEngine {
     return result;
   }
 
+  /**
+   * Mo mic. Tra ve true khi mic da chay, false neu lan mo bi stopMic() huy
+   * giua chung (dang cho quyen mic / dung AudioContext).
+   */
   async startMic() {
+    // Dang mo do -> dung chung lan mo do. Truoc day bam hai lan (hoac hai
+    // nut) luc dang cho quyen mic se mo HAI luong: luong dau mat dau, den mic
+    // sang mai, va hai ScriptProcessor cung gui tieng (tieng doi len Gemini).
+    if (this._dangMoMic) return this._dangMoMic;
     if (this.isMicActive) return true;
 
     if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
@@ -455,8 +490,32 @@ class AudioEngine {
       throw err;
     }
 
+    const luot = ++this._luotMic;
+    // Bat co ngay tu luc BAT DAU mo: cac nut Huy / Gui / doi tab chi goi
+    // stopMic() khi isMicActive — thieu co nay thi huy luc dang cho quyen mic
+    // khong tat duoc, mic van mo va gui tieng sau khi da huy.
+    this.isMicActive = true;
+    const p = this._moMic(luot);
+    this._dangMoMic = p;
     try {
-      this.micStream = await navigator.mediaDevices.getUserMedia({
+      return await p;
+    } finally {
+      if (this._dangMoMic === p) this._dangMoMic = null;
+    }
+  }
+
+  async _moMic(luot) {
+    let stream = null, ctx = null;
+    // Lan mo nay da bi stopMic() huy trong luc cho -> tra mic lai ngay
+    const biHuy = () => {
+      if (luot === this._luotMic) return false;
+      if (stream) stream.getTracks().forEach(t => t.stop());
+      if (ctx) { try { ctx.close().catch(() => {}); } catch (e) {} }
+      return true;
+    };
+
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({
         audio: {
           channelCount: 1,
           echoCancellation: true,
@@ -464,19 +523,24 @@ class AudioEngine {
           autoGainControl: true
         }
       });
+      if (biHuy()) return false;
 
       const AudioContextClass = window.AudioContext || window.webkitAudioContext;
       try {
-        this.inCtx = new AudioContextClass({ sampleRate: 16000 });
+        ctx = new AudioContextClass({ sampleRate: 16000 });
       } catch (errCtx) {
         console.warn("Input AudioContext 16kHz không được phần cứng hỗ trợ, fallback default rate:", errCtx);
-        this.inCtx = new AudioContextClass();
+        ctx = new AudioContextClass();
       }
 
       // Đảm bảo AudioContext đang chạy, mở khóa trạng thái suspended
-      if (this.inCtx.state === 'suspended') {
-        await this.inCtx.resume();
+      if (ctx.state === 'suspended') {
+        await ctx.resume();
       }
+      if (biHuy()) return false;
+
+      this.micStream = stream;
+      this.inCtx = ctx;
 
       const inputRate = this.inCtx.sampleRate || 48000;
       console.log(`[AudioEngine] Mic khởi động thành công: Hardware Rate = ${inputRate}Hz -> Gemini Target = 16000Hz`);
@@ -484,10 +548,11 @@ class AudioEngine {
       this.micSource = this.inCtx.createMediaStreamSource(this.micStream);
 
       // ScriptProcessor 2048 buffersize để stream thời gian thực
-      this.micProcessor = this.inCtx.createScriptProcessor(2048, 1, 1);
+      const proc = this.micProcessor = this.inCtx.createScriptProcessor(2048, 1, 1);
 
       this.micProcessor.onaudioprocess = (e) => {
-        if (!this.isMicActive) return;
+        // Chi processor cua lan mo hien tai moi duoc gui tieng
+        if (!this.isMicActive || this.micProcessor !== proc) return;
 
         const inputData = e.inputBuffer.getChannelData(0);
 
@@ -533,6 +598,10 @@ class AudioEngine {
       this.isMicActive = true;
       return true;
     } catch (err) {
+      if (biHuy()) return false;   // da huy roi thi loi nay khong con y nghia
+      // Chua kip gan vao engine thi stopMic() khong thay -> tu don
+      if (stream && this.micStream !== stream) stream.getTracks().forEach(t => t.stop());
+      if (ctx && this.inCtx !== ctx) { try { ctx.close().catch(() => {}); } catch (e) {} }
       this.onError(err);
       this.stopMic();
       throw err;
@@ -543,6 +612,9 @@ class AudioEngine {
    * Tắt thu âm Micro
    */
   stopMic() {
+    // Huy luon lan mo mic con dang cho (quyen mic / AudioContext) neu co
+    this._luotMic++;
+    this._dangMoMic = null;
     this.isMicActive = false;
     this.onMicVolume(0);
     if (this.micStream) {
@@ -570,6 +642,12 @@ class AudioEngine {
   cleanup() {
     this.stopPlayback();
     this.stopMic();
+    // Bo analyser cung luc dong context: no dong bang o mau tieng cuoi cung,
+    // getOutputLevel se tra mai muc "dang noi" (meo 3D ha mieng mai khong ngung)
+    if (this.outAnalyser) {
+      try { this.outAnalyser.disconnect(); } catch (e) {}
+      this.outAnalyser = null;
+    }
     if (this.outCtx) {
       try { this.outCtx.close(); } catch (e) {}
       this.outCtx = null;

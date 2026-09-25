@@ -31,6 +31,9 @@ class GeminiLiveClient {
     // Ban ghi loi noi: cua Sensei (output) va cua hoc vien (input)
     this.onTranscript = options.onTranscript || (() => {});
     this.onUserTranscript = options.onUserTranscript || (() => {});
+    // Server bao sap cat ket noi (goAway) — app nen handover() GIUA hai nhip giang,
+    // truoc khi server tu cat. Tham so: (msConLai | null, goAway goc)
+    this.onGoAway = options.onGoAway || (() => {});
 
     this.ws = null;
     this.isConnected = false;
@@ -38,12 +41,41 @@ class GeminiLiveClient {
     this.isSetupComplete = false;   // Chi duoc gui clientContent SAU khi server tra ve setupComplete
     this.pendingQueue = [];         // Hang doi payload trong khi cho setupComplete
     this.lastClientSendTime = 0;    // Moc gui prompt gan nhat (de phan biet self-interrupt)
+
+    // Quan ly vong doi phien: moi ket noi chi song ~10 phut, phien audio khong
+    // nen ngu canh chi ~15 phut. Bat nen ngu canh + noi phien (sessionResumption).
+    // Model tu choi hai truong nay thi tu thu lai MOT lan khong co chung va nho
+    // luon cho ca phien lam viec (xem _thuLaiSetup).
+    this.dungQuanLyPhien = options.sessionManagement !== false;
+    this.resumeHandle = null;       // handle moi nhat server cap (sessionResumptionUpdate)
+    this.goAwayPending = false;     // server da bao goAway cho ket noi hien tai
+    // goAway toi -> tu handover() o luc RANH dau tien (khong luot nao dang cho
+    // tra loi, mic khong dang thu), app khong can goi. false = de app tu goi.
+    this.autoHandover = options.autoHandover !== false;
+    // Da gui luot, chua co turnComplete cua MOT luot co noi dung ve SAU lan gui
+    // do (turnComplete cua luot cu bi ngat khong tinh — xem handleMessage)
+    this._choTraLoi = false;
+    this._coNoiDungMoi = false;
+    this._micDangThu = false;       // da activityStart, chua activityEnd
   }
 
   connect(apiKey, model, voiceName) {
-    if (this.isConnected) this.disconnect();
+    const keyMoi = (apiKey || this.apiKey).trim();
+    // Handle noi phien gan voi key + model cu — doi mot trong hai thi bo
+    if (keyMoi !== this.apiKey || (model && model !== this.model)) this.resumeHandle = null;
 
-    this.apiKey = (apiKey || this.apiKey).trim();
+    // Socket cu con do (dang ket noi / cho setup qua lau) -> dong han truoc,
+    // khong thi no mo muon roi gui setup / dong muon de len phien moi, va ro
+    // mot phien treo. Phien treo thi vao lai tu dau, tru khi dang handover
+    // (khi do giu ca cac luot app da gui xep hang, socket moi gui tiep).
+    let hangHandover = null;
+    if (this.ws) {
+      if (!this._choHandover) this.resumeHandle = null;
+      else hangHandover = { q: this.pendingQueue, cho: this._choTraLoi };
+      this._thaSocket();
+    }
+
+    this.apiKey = keyMoi;
     if (model) this.model = model;
     if (voiceName) this.voiceName = voiceName;
 
@@ -51,25 +83,48 @@ class GeminiLiveClient {
       throw new Error("Gemini API Key không được để trống!");
     }
 
+    // Lan tat truong quan ly phien truoc chua duoc xac nhan -> thu lai co truong
+    if (this._tatQuanLyPhienTam) { this.dungQuanLyPhien = true; this._tatQuanLyPhienTam = false; }
+    this._daThuLaiSetup = false;
+    this._moSocket();
+    if (hangHandover) { this.pendingQueue = hangHandover.q; this._choTraLoi = hangHandover.cho; }
+  }
+
+  /**
+   * Mo mot WebSocket moi. Moi handler bam vao DUNG socket cua no (ws), khong
+   * phai this.ws: socket cu mo muon / dong muon khong duoc dung vao trang thai
+   * cua phien moi (truoc day onopen cu gui setup len socket moi dang CONNECTING
+   * -> InvalidStateError, onclose cu reset isSetupComplete cua phien dang song).
+   */
+  _moSocket() {
     const endpoint = `wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1alpha.GenerativeService.BidiGenerateContent?key=${this.apiKey}`;
     this.onLog("System", `Đang thiết lập WebSocket BidiGenerateContent tới Gemini Live (${this.model})...`);
 
-    this.ws = new WebSocket(endpoint);
+    const ws = this.ws = new WebSocket(endpoint);
 
     this.isSetupComplete = false;
     this.pendingQueue = [];
+    this.goAwayPending = false;
+    this._loiSetup = '';
+    this._choTraLoi = false;
+    this._coNoiDungMoi = false;
+    this._micDangThu = false;
+    clearTimeout(this._henHandover);
 
-    this.ws.onopen = () => {
+    ws.onopen = () => {
+      if (this.ws !== ws) { try { ws.close(); } catch (e) {} return; }
       this.isConnected = true;
-      this.sendSetup();
+      this.sendSetup(ws);
       this.onOpen();
     };
 
-    this.ws.onmessage = async (e) => {
+    ws.onmessage = async (e) => {
+      if (this.ws !== ws) return;
       try {
         let rawData = e.data;
         if (rawData instanceof Blob) {
           rawData = await rawData.text();
+          if (this.ws !== ws) return;
         }
         const msg = JSON.parse(rawData);
         this.handleMessage(msg);
@@ -78,21 +133,179 @@ class GeminiLiveClient {
       }
     };
 
-    this.ws.onerror = (err) => {
+    ws.onerror = (err) => {
+      if (this.ws !== ws) return;
       this.onError(err);
       this.onLog("Error", `Lỗi kết nối WebSocket: ${err.message || 'Không xác định'}`);
     };
 
-    this.ws.onclose = (e) => {
+    ws.onclose = (e) => {
+      // Da co socket moi thay the -> bo qua. this.ws == null (vua disconnect())
+      // thi van chay tiep de app biet phien da dong.
+      if (this.ws && this.ws !== ws) return;
       if (this._voiceProbe) {
         this._voiceProbe({ ok: false, reason: `server dong phien (ma ${e.code}${e.reason ? ': ' + e.reason : ''})` });
       }
+      // Server tu choi setup -> thu lai MOT lan, app khong can biet
+      if (this.ws === ws && !this.isSetupComplete && this._thuLaiSetup(e)) return;
+      if (this.ws === ws) this.ws = null;
       this.isConnected = false;
       this.isSetupComplete = false;
       this.pendingQueue = [];
+      this.goAwayPending = false;
+      this._xongHandover(false);
       this.onClose(e);
       this.onLog("System", `Đã đóng phiên kết nối (Mã: ${e.code}, Lý do: ${e.reason || 'Bình thường'})`);
     };
+  }
+
+  /** Bo socket hien tai ma KHONG bao onClose cho app (thay socket moi / handover) */
+  _thaSocket() {
+    const old = this.ws;
+    this.ws = null;
+    if (old) {
+      old.onopen = old.onmessage = old.onerror = old.onclose = null;
+      try { old.close(); } catch (e) {}
+    }
+    this.isConnected = false;
+    this.isModelTurnActive = false;
+    this.isSetupComplete = false;
+    this.pendingQueue = [];
+  }
+
+  /**
+   * Socket dong TRUOC setupComplete: thu lai dung MOT lan neu nghi do chinh
+   * cac truong quan ly phien (handle het han, hoac model khong nhan
+   * contextWindowCompression / sessionResumption). Tra ve true neu da mo
+   * socket thu lai — khi do KHONG bao onClose, ben app van cho onReady.
+   */
+  _thuLaiSetup(e) {
+    if (this._daThuLaiSetup) {
+      // Bo truong roi ma van hong -> loi khong phai do chung, bat lai lan sau
+      if (this._tatQuanLyPhienTam) { this.dungQuanLyPhien = true; this._tatQuanLyPhienTam = false; }
+      return false;
+    }
+    const code = e ? e.code : 0;
+    const lyDo = [e && e.reason, this._loiSetup].filter(Boolean).join(' | ');
+    // Het han muc / rot mang: khong phai loi cau hinh — de app tu xu ly (xoay key...).
+    // KHONG chan theo ma 1011: server co the dong 1011 "Internal error" khi handle
+    // het han — khong thu lai thi handle hong bi gui lai mai, vao lop khong duoc
+    // toi khi tai lai trang. 1011 khong handle thi nhanh duoi cung tra false.
+    if (code === 1006 || /quota/i.test(lyDo)) return false;
+
+    let viec = '';
+    if (this._setupCoHandle) {
+      this.resumeHandle = null;   // handle het han / khong hop le -> vao phien moi
+      viec = 'bỏ handle nối phiên cũ';
+    } else if (this._setupCoQuanLyPhien && GeminiLiveClient.laLoiTruongSetup(lyDo)) {
+      this.dungQuanLyPhien = false;
+      this._tatQuanLyPhienTam = true;   // chot khi lan thu lai toi setupComplete
+      viec = 'bỏ contextWindowCompression / sessionResumption';
+    }
+    if (!viec) return false;
+
+    this._daThuLaiSetup = true;
+    this.onLog("System", `Server từ chối setup (Mã: ${code}${lyDo ? ', Lý do: ' + lyDo : ''}) — thử lại một lần, ${viec}.`);
+    this.ws = null;
+    this.isConnected = !!this._choHandover;   // dang handover: app van coi la dang noi
+    // Giu cac goi da xep hang (gui trong luc handover / cho setup) cho socket thu lai
+    const hang = this.pendingQueue, cho = this._choTraLoi, mic = this._micDangThu;
+    try { this._moSocket(); } catch (err) { this.ws = null; return false; }
+    this.pendingQueue = hang; this._choTraLoi = cho; this._micDangThu = mic;
+    return true;
+  }
+
+  /** Ly do dong phien / loi co ve la server khong nhan mot truong trong setup */
+  static laLoiTruongSetup(text) {
+    return /unknown name|unknown field|cannot find field|unrecognized|invalid json|invalid argument|not supported|unsupported|session_?resumption|context_?window_?compression|sliding_?window/i
+      .test(String(text || ''));
+  }
+
+  /** Duration cua proto ("12.5s" hoac {seconds, nanos}) -> mili giay, null neu khong doc duoc */
+  static doiThoiLuongMs(t) {
+    if (t == null) return null;
+    if (typeof t === 'object') return (Number(t.seconds) || 0) * 1000 + Math.round((Number(t.nanos) || 0) / 1e6);
+    const s = parseFloat(String(t));
+    return isFinite(s) ? Math.round(s * 1000) : null;
+  }
+
+  /**
+   * Chuyen sang ket noi moi GIU NGU CANH (dung resumeHandle) ma khong bao
+   * onClose cho app. Goi khi goAwayPending, GIUA hai nhip giang — dang noi do
+   * thi mat phan con lai. Tra ve Promise<boolean>: true khi phien moi san sang.
+   * KHONG bao gio reject (unhandledrejection se bat man hinh loi cua app).
+   * Mac dinh client tu goi luc ranh (autoHandover, xem _thuHandoverTuDong).
+   * Trong luc cho: isConnected van true (app khong bo nhip giang vi tuong mat
+   * ket noi), cac luot gui xep hang va di ngay khi phien moi setupComplete.
+   */
+  handover() {
+    if (this._choHandover) return this._choHandover.promise;
+    if (!this.apiKey) return Promise.resolve(false);
+    let resolve;
+    const promise = new Promise(r => { resolve = r; });
+    this._choHandover = { resolve, promise };
+    this.onLog("System", this.resumeHandle
+      ? 'Chuyển sang kết nối mới, nối tiếp ngữ cảnh phiên cũ...'
+      : 'Chuyển sang kết nối mới (chưa có handle nối phiên — ngữ cảnh bắt đầu lại)...');
+    this._thaSocket();
+    this.isConnected = true;
+    if (this._tatQuanLyPhienTam) { this.dungQuanLyPhien = true; this._tatQuanLyPhienTam = false; }
+    this._daThuLaiSetup = false;
+    try {
+      this._moSocket();
+    } catch (err) {
+      this.ws = null;
+      this.isConnected = false;
+      this._xongHandover(false);
+      this.onClose({ code: 1006, reason: String((err && err.message) || err) });
+    }
+    return promise;
+  }
+
+  _xongHandover(ok) {
+    const h = this._choHandover;
+    if (!h) return;
+    this._choHandover = null;
+    h.resolve(ok);
+  }
+
+  /** Dang ranh: khong luot nao cho tra loi, model khong noi, mic khong thu */
+  _dangRanh() {
+    return !this._choTraLoi && !this.isModelTurnActive && !this._micDangThu;
+  }
+
+  /** Vua gui mot luot can Sensei tra loi */
+  _daGuiLuot() {
+    this._choTraLoi = true;
+    this._coNoiDungMoi = false;
+  }
+
+  /**
+   * goAway da toi: chuyen ket noi ngay luc ranh (goi o goAway va sau moi
+   * turnComplete). Dang cho tra loi thi doi luot xong — handover luc do mat
+   * cau tra loi. Doi them 400ms: handle cua luot vua xong thuong toi SAU
+   * turnComplete. Tieng da ve loa van phat tiep, khong bi cat.
+   * Luot khong bao gio xong -> server tu cat, app nhan onClose nhu truoc.
+   * 5 phut khong gui gi (de trang o man chon bai / tam dung lau) thi thoi,
+   * de server dong — lan bam sau tu vao lai (van giu handle), khong noi
+   * phien mai mai cho mot tab bo quen.
+   */
+  _thuHandoverTuDong() {
+    clearTimeout(this._henHandover);
+    if (!this.autoHandover || !this.goAwayPending || this._choHandover || !this._dangRanh()) return;
+    if (Date.now() - this.lastClientSendTime > 5 * 60 * 1000) return;
+    const ws = this.ws;
+    this._henHandover = setTimeout(() => {
+      if (this.ws !== ws || !this.goAwayPending || this._choHandover || !this._dangRanh()) return;
+      this.handover();
+    }, 400);
+  }
+
+  /** Socket gui duoc (hoac xep hang duoc): OPEN, hoac socket moi cua handover dang CONNECTING */
+  _guiDuoc() {
+    if (!this.ws) return false;
+    if (this.ws.readyState === WebSocket.OPEN) return true;
+    return !!this._choHandover && this.ws.readyState === WebSocket.CONNECTING;
   }
 
   /**
@@ -104,7 +317,12 @@ class GeminiLiveClient {
     return /gemini-3/.test(m) || /thinking/i.test(m);
   }
 
-  sendSetup() {
+  sendSetup(ws = this.ws) {
+    // Nho lai setup nay co gui truong quan ly phien / handle khong — server tu
+    // choi thi _thuLaiSetup biet phai bo cai nao
+    const quanLyPhien = this.dungQuanLyPhien;
+    this._setupCoQuanLyPhien = quanLyPhien;
+    this._setupCoHandle = !!(quanLyPhien && this.resumeHandle);
     const setupPayload = {
       setup: {
         model: this.model,
@@ -131,6 +349,13 @@ class GeminiLiveClient {
         },
         outputAudioTranscription: {},
         inputAudioTranscription: {},
+        // Nen ngu canh (cua so truot) de phien audio khong bi cat o ~15 phut, va
+        // xin handle noi phien (co handle cu thi noi tiep) de khi server thay ket
+        // noi (~10 phut/ket noi, co goAway bao truoc) bai giang khong mat ngu canh.
+        ...(quanLyPhien ? {
+          contextWindowCompression: { slidingWindow: {} },
+          sessionResumption: this.resumeHandle ? { handle: this.resumeHandle } : {}
+        } : {}),
         // TU DANH DAU LUC NOI — KHONG de server tu do (VAD).
         //
         // gemini-3.8-live KHONG tu nhan dien duoc moc bat dau/ket thuc loi noi:
@@ -458,7 +683,7 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
       }
     };
 
-    this.ws.send(JSON.stringify(setupPayload));
+    ws.send(JSON.stringify(setupPayload));
     this.onLog("System", `Đã gửi cấu hình thiết lập ban đầu (Setup payload) thành công.`);
   }
 
@@ -507,9 +732,32 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
         this._voiceProbe({ ok: true, reason: 'server chap nhan setup lan hai, giong da doi sang ' + this.voiceName });
         return;
       }
+      if (this._tatQuanLyPhienTam) {
+        // Bo truong quan ly phien thi vao duoc -> model khong ho tro, nho cho ca phien lam viec
+        this._tatQuanLyPhienTam = false;
+        this.onLog("System", `Model ${this.model} không nhận contextWindowCompression / sessionResumption — đã tắt cho cả phiên làm việc này.`);
+      }
       this.flushPendingQueue();
+      this._xongHandover(true);
       this.onReady();
       return;
+    }
+
+    // 0b. Handle noi phien moi. resumable=false (dang goi tool / dang sinh loi)
+    // thi newHandle rong — giu handle cu, mat it con hon mat het.
+    const capNhatPhien = msg.sessionResumptionUpdate;
+    if (capNhatPhien && capNhatPhien.resumable && capNhatPhien.newHandle) {
+      this.resumeHandle = capNhatPhien.newHandle;
+    }
+
+    // 0c. Server bao sap cat ket noi nay -> bao app chuyen ket noi chu dong
+    // (handover() giua hai nhip), khong thi server tu cat va onClose chay.
+    if (msg.goAway) {
+      this.goAwayPending = true;
+      const msConLai = GeminiLiveClient.doiThoiLuongMs(msg.goAway.timeLeft);
+      this.onLog("System", `Server báo sắp đóng kết nối${msConLai != null ? ` (còn khoảng ${Math.round(msConLai / 1000)} giây)` : ''}.`);
+      try { this.onGoAway(msConLai, msg.goAway); } catch (err) { console.error(err); }
+      this._thuHandoverTuDong();
     }
 
     if (msg.error || msg.serverContent?.error) {
@@ -518,6 +766,8 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
         this._voiceProbe({ ok: false, reason: 'server tu choi: ' + (e.message || JSON.stringify(e)) });
         return;
       }
+      // Nho loi truoc setupComplete de _thuLaiSetup doc duoc ly do tu choi
+      if (!this.isSetupComplete) this._loiSetup = String(e.message || JSON.stringify(e));
       this.onLog("Error", `Máy chủ Gemini báo lỗi: ${e.message || JSON.stringify(e)}`);
       return;
     }
@@ -527,6 +777,7 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
     // Đó KHÔNG phải học viên ngắt lời, không được tạm dừng bài giảng.
     if (msg.serverContent?.interrupted) {
       this.isModelTurnActive = false;
+      this._coNoiDungMoi = false;   // noi dung ve truoc do la cua luot vua bi ngat
       if ((Date.now() - this.lastClientSendTime) < 2000) {
         this.onSelfInterrupt();
       } else {
@@ -568,10 +819,17 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
       this.executeAndAcknowledgeTool(call);
     }
 
+    // Co noi dung ve sau lan gui gan nhat -> turnComplete cua luot nay moi la
+    // luot dang cho (turnComplete tre cua luot cu bi ngat thi khong tinh)
+    if (msg.serverContent?.modelTurn || outTx || toolCalls.length) this._coNoiDungMoi = true;
+
     // 4. Kiểm tra lượt nói kết thúc (turnComplete)
     if (msg.serverContent?.turnComplete) {
       this.isModelTurnActive = false;
+      if (this._coNoiDungMoi) this._choTraLoi = false;
       this.onTurnComplete();
+      // Luot vua xong ma server da bao goAway -> chuyen ket noi luc nay (neu app chua gui luot moi)
+      this._thuHandoverTuDong();
     }
   }
 
@@ -609,7 +867,7 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
    * tránh lỗi "client content before setup complete" làm rớt phiên ngay khi vừa kết nối.
    */
   safeSend(payload) {
-    if (!this.ws || this.ws.readyState !== WebSocket.OPEN) return false;
+    if (!this._guiDuoc()) return false;
     if (!this.isSetupComplete) {
       this.pendingQueue.push(payload);
       return false;
@@ -679,10 +937,12 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
    * bi tat" — dung y voi luc bam nut Gui/tat mic o day.
    */
   sendAudioStreamEnd() {
-    if (!this.ws || this.ws.readyState !== WebSocket.OPEN) return;
+    if (!this._guiDuoc()) return;
 
     this.isModelTurnActive = true;
     this.lastClientSendTime = Date.now();
+    this._micDangThu = false;
+    this._daGuiLuot();
     this.safeSend({
       realtimeInput: {
         activityEnd: {}
@@ -698,8 +958,9 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
    * Thieu activityStart thi toan bo goi tieng gui len bi bo qua im lang.
    */
   sendActivityStart() {
-    if (!this.ws || this.ws.readyState !== WebSocket.OPEN) return;
+    if (!this._guiDuoc()) return;
     this.lastClientSendTime = Date.now();
+    this._micDangThu = true;
     this.safeSend({
       realtimeInput: {
         activityStart: {}
@@ -721,12 +982,13 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
    * token dau vao va Sensei doc duoc mat chu.
    */
   sendImageTurn(text, base64Png, mimeType) {
-    if (!this.ws || this.ws.readyState !== WebSocket.OPEN) return false;
+    if (!this._guiDuoc()) return false;
     if (this.onBeforeUserMessage) {
       try { this.onBeforeUserMessage(); } catch (e) {}
     }
     this.isModelTurnActive = true;
     this.lastClientSendTime = Date.now();
+    this._daGuiLuot();
     return this.safeSend({
       clientContent: {
         turns: [{
@@ -756,7 +1018,7 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
    * Gửi tin nhắn Text của người học
    */
   sendUserMessage(text) {
-    if (!this.ws || this.ws.readyState !== WebSocket.OPEN) return;
+    if (!this._guiDuoc()) return;
 
     if (this.onBeforeUserMessage) {
       try { this.onBeforeUserMessage(); } catch (e) {}
@@ -764,6 +1026,7 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
 
     this.isModelTurnActive = true;
     this.lastClientSendTime = Date.now();
+    this._daGuiLuot();
 
     this.safeSend({
       clientContent: {
@@ -778,7 +1041,15 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
     });
   }
 
-  disconnect() {
+  /**
+   * Dong phien (onClose cua app van chay khi socket dong han). Mac dinh bo
+   * luon handle noi phien: tu tay ngat thuong la de vao lai tu dau (vd phien
+   * bi do — "luot dau" moi moi phuc hoi duoc). giuNguCanh=true thi giu handle,
+   * lan connect() sau noi tiep ngu canh cu.
+   */
+  disconnect(giuNguCanh = false) {
+    if (!giuNguCanh) this.resumeHandle = null;
+    this._xongHandover(false);
     if (this.ws) {
       try { this.ws.close(); } catch (e) {}
       this.ws = null;
@@ -787,6 +1058,7 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
     this.isModelTurnActive = false;
     this.isSetupComplete = false;
     this.pendingQueue = [];
+    this.goAwayPending = false;
   }
 }
 

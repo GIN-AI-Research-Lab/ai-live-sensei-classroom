@@ -34,16 +34,27 @@ function baoHongKhoiDong(loi, o) {
   (document.body || document.documentElement).appendChild(el);
 }
 
+// Khoi dong xong (cuoi khoi try ben duoi) thi thoi hien bang hong: loi le
+// ve sau (mot cu bam, nhan vat 3D khong co WebGL...) khong phai "lop chua mo".
+let daKhoiDong = false;
+
 window.addEventListener('error', (e) => {
-  // Tep script tai thieu cung vao day (e.target la the script, khong co message)
+  // Tep script tai thieu cung vao day (e.target la the script, khong co message).
+  // Script nap SAU app.js chi con nhan vat hoat hinh (tuy chon) — tep loi thi bo
+  // qua, khong chan lop; tep loi chinh da co canh gac trong index.html bao.
   if (e.target && e.target.tagName === 'SCRIPT') {
-    baoHongKhoiDong(new Error('không tải được ' + (e.target.src || 'một tệp mã')), 'script');
+    console.warn('[khoi dong] không tải được', e.target.src || 'một tệp mã');
     return;
   }
-  if (e.error) baoHongKhoiDong(e.error, 'runtime');
+  if (!e.error) return;
+  if (daKhoiDong) console.error('[loi sau khoi dong]', e.error);
+  else baoHongKhoiDong(e.error, 'runtime');
 }, true);
 
-window.addEventListener('unhandledrejection', (e) => baoHongKhoiDong(e.reason, 'promise'));
+window.addEventListener('unhandledrejection', (e) => {
+  if (daKhoiDong) console.error('[loi sau khoi dong]', e.reason);
+  else baoHongKhoiDong(e.reason, 'promise');
+});
 
 document.addEventListener('DOMContentLoaded', async () => {
  try {
@@ -85,9 +96,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const SENSEI_VOICE = 'Charon';
   // Bao cho kho giong biet, de khong cap trung giong nay cho nhan vat nao
   if (window.SenseiVoices) SenseiVoices.setSenseiVoice(SENSEI_VOICE);
-  const connectBtn = document.getElementById('connectBtn');
-  const connectIcon = document.getElementById('connectIcon');
-  const connectText = document.getElementById('connectText');
   const micStatusText = document.getElementById('micStatusText');
 
   // Luồng hỏi bài: Giơ tay → thu âm → Gửi hoặc Hủy
@@ -110,7 +118,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const dismissErrBtn = document.getElementById('dismissErrBtn');
   const tabSlideBtn = document.getElementById('tabSlideBtn');
   const tabQuizBtn = document.getElementById('tabQuizBtn');
-  const syllabusModal = document.getElementById('syllabusModal');
 
   // Auto-Lecture & Raise Hand Elements & State
   const autoLectureBtn = document.getElementById('autoLectureBtn');
@@ -120,7 +127,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const raiseHandIcon = document.getElementById('raiseHandIcon');
   const raiseHandText = document.getElementById('raiseHandText');
   const nextStepBtn = document.getElementById('nextStepBtn');
-  const nextStepText = document.getElementById('nextStepText');
 
   // State Machine for Lecture: 'IDLE' | 'PLAYING' | 'PAUSED'
   let lectureState = 'IDLE';
@@ -131,19 +137,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     level: 'N5',
     lessonNum: 1
   };
-  let isAutoLectureActive = false; // backward compatibility
   let isRaisingHand = false;
+  let luotGioTay = 0;   // tang moi lan gio tay: lan mo mic cu (con dang cho quyen) thay lech thi thoi
   let currentLectureSteps = [];
   let currentLectureStepIndex = -1;
   let autoStepTransitionTimer = null;
   let currentStepStartTime = 0;
   let currentStepRetryCount = 0;
-  // Sensei đã gọi section_complete cho bước hiện tại chưa?
-  // Không có cờ này thì một lượt nói kết thúc đã bị hiểu nhầm là "giảng xong chương",
-  // trong khi một chương 30 từ vựng thường phải trải qua nhiều lượt.
-  // Sensei van co the goi section_complete, nhung nhip gio do client cam,
-  // co nay chi con de ghi nhan chu khong dieu khien viec chuyen buoc nua.
-  let stepSignaledDone = false;
   let lastTabSwitchTime = 0;
 
   // Bộ đệm bản ghi lời nói (transcription) để gom thành 1 dòng log thay vì spam từng mảnh
@@ -155,6 +155,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Lời hứa đang chờ phiên sẵn sàng (bấm "Giảng bài" khi chưa kết nối)
   let pendingReady = null;
   let isConnecting = false;
+  // App dang TU ngat phien (ngatPhienChuDong) — onClose khong bao "mat ket noi"
+  let tuNgatPhien = false;
 
   // Cập nhật danh sách bài học động theo cấp độ
   function populateLessons(level, selectedLessonNum = 1) {
@@ -191,6 +193,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   let dangThuAm = null;        // id cau luyen phat am dang thu, null = khong thu
   let dangChoChamPhatAm = null; // id hop ket qua dang cho Sensei cham xong (sau khi bam gui luyen phat am)
   let choChamPhatAmTimer = null; // het gio (80s) chua thay cham xong -> tu ket noi lai
+  // Ngoai gio giang, turnComplete ve khi loa con doc dở: hen tat den toi luc
+  // loa doc xong han (onPlayStateChange), khong tat ngay giua cau tra loi.
+  let tatDenKhiHetTieng = false;
 
   // Muc am thanh CAO NHAT tung thay duoc trong lan thu am hien tai — dat lai
   // ve 0 moi khi mo mic. Neu bam Gui ma so nay van thap le te, gan chac hoc
@@ -217,6 +222,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     onPlayStateChange: (isPlaying, meta) => {
       setWaveformActive(isPlaying);
 
+      if (!isPlaying) {
+        // Bi cat ngang (doi tab / prompt moi) -> cac hen roi den theo loi con lai vo nghia
+        // Cat ngang thi luot do khong bao gio "doc xong" nua -> bo hen tat den,
+        // khong thi hen cu tat nham den cua cau tra loi sau (giu den dang sang).
+        if (meta && meta.manual) { clearPendingFocus(); tatDenKhiHetTieng = false; }
+        // Loa doc XONG cau tra loi ngoai gio giang -> gio moi tat den (xem onTurnComplete)
+        if (tatDenKhiHetTieng && !(meta && (meta.manual || meta.clip)) && lectureState !== 'PLAYING') {
+          tatDenKhiHetTieng = false;
+          clearPendingFocus();
+          slideEngine.clearReadingFocus();
+        }
+      }
+
       // Sensei vua noi xong mot cau NGOAI bai giang (cham bai / cham phat am).
       // Lan tat tieng nay la cua cau do, khong phai cua nhip dang giang —
       // tinh nham thi bai giang nhay sang muc sau ma chua giang muc nay.
@@ -231,7 +249,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       //                 Bo sot cai nay thi luot 2 cua chuong Hoi thoai chay vut
       //                 qua ca 10 cau, loi giang cua Sensei roi lech sang nhip khac.
       const boQua = meta && (meta.manual || meta.clip);
-      if (!isPlaying && !boQua && (isAutoLectureActive || lectureState === 'PLAYING')) {
+      if (!isPlaying && !boQua && lectureState === 'PLAYING') {
         checkAutoLectureStepComplete();
       }
     },
@@ -249,17 +267,24 @@ document.addEventListener('DOMContentLoaded', async () => {
   const geminiClient = new GeminiLiveClient({
     onBeforeUserMessage: () => {
       // Trước khi gửi bất kỳ tin nhắn mới nào, lập tức ngắt toàn bộ âm thanh đang phát dở
-      if (audioEngine) audioEngine.stopPlayback();
+      if (audioEngine) {
+        audioEngine.stopPlayback();
+        // Luot moi (go chat, nhip giang, cham bai, anh viet tay) luon phai nghe
+        // duoc: tam dung / huy cau hoi truoc do co the dang dong cong am thanh.
+        audioEngine.setSuppressed(false);
+      }
+      boQuaLuotHuy = false;          // luot moi thay cho luot vua huy
+      tatDenKhiHetTieng = false;     // cau tra loi moi tu lo den cua no
       if (window.speechSynthesis) {
         try { window.speechSynthesis.cancel(); } catch (e) {}
       }
     },
     onOpen: () => {
-      updateConnectUI(true);
       updateMicUI(true, false);
     },
     // Server đã xác nhận cấu hình — từ giây này mới gửi được nội dung bài giảng
     onReady: () => {
+      tuNgatPhien = false;   // phien moi: lan ngat chu dong truoc (neu socket da chet san) het hieu luc
       if (pendingReady) {
         const r = pendingReady; pendingReady = null;
         clearTimeout(r.timer);
@@ -272,13 +297,42 @@ document.addEventListener('DOMContentLoaded', async () => {
     // key khac va vao lop lai, khong thi hoc vien ket noi lai cung trung
     // dung key vua het, im lang y het lan truoc.
     onClose: (e) => {
-      updateConnectUI(false);
+      // Luoi an toan: socket CU dong tre sau khi connect() da mo socket moi —
+      // phien moi dang vao, khong duoc don dep hay cuop loi hua cho cua no.
+      const wsDong = e && e.target;
+      if (wsDong && geminiClient.ws && wsDong !== geminiClient.ws) return;
+      // App tu ngat (ngatPhienChuDong) thi khong phai mat ket noi bat ngo
+      const tuNgat = tuNgatPhien;
+      tuNgatPhien = false;
+
+      // Dong khi CHUA toi setupComplete: go loi hua cho ra, khong thi
+      // ensureConnected() cu tra lai loi hua cu (khong mo socket voi key moi)
+      // va nut treo "Đang vào lớp…" toi het 20s.
+      const cho = pendingReady;
+      if (cho) { pendingReady = null; clearTimeout(cho.timer); isConnecting = false; }
+
       updateMicUI(false, false);
       updateSessionState();
 
       const dangGiang = lectureState === 'PLAYING';
+      // Giu PAUSED, khong ve IDLE: nut hien "Giảng tiếp", bam la vao lop lai
+      // va hoc tiep dung nhip dang dở thay vi giang lai tu dau chuong.
       if (dangGiang) pauseLecture(false);   // luu checkpoint truoc khi don sach
-      lectureState = 'IDLE';
+      // Dang thu cau hoi / ban doc phat am ma mat ket noi -> tra nut ve nhu cu,
+      // khong de Gui/Huy treo tren mot mic da tat (bam Gui la cho suong 80s).
+      let baoMatKhiThu = '';
+      if (isRaisingHand) {
+        isRaisingHand = false;
+        lectureWasPlayingBeforeAsk = false;
+        updateAskUI();
+        baoMatKhiThu = 'Mất kết nối trong lúc thu âm — bấm "Giơ tay hỏi" để hỏi lại nhé.';
+      }
+      if (dangThuAm) {
+        const idThu = dangThuAm;
+        dangThuAm = null;
+        veNutThuAm(idThu, false);
+        veTinPhatAm(idThu, '<i class="fa-solid fa-triangle-exclamation"></i><span>Mất kết nối trong lúc thu âm — bấm lại để thử.</span>', 'amber');
+      }
       updateLectureControlsUI();
       audioEngine.cleanup();
 
@@ -290,18 +344,36 @@ document.addEventListener('DOMContentLoaded', async () => {
         veTinPhatAm(dangChoChamPhatAm, '<i class="fa-solid fa-triangle-exclamation"></i><span>Mất kết nối trước khi Sensei chấm xong — thử lại nhé.</span>', 'amber');
         dangChoChamPhatAm = null;
       }
+      if (typeof pxKhiMatKetNoi === 'function') pxKhiMatKetNoi();   // vong Phan xa dang chay
+      if (baoMatKhiThu) showToast(baoMatKhiThu, 'info', 6000);
 
       const lyDo = (e && e.reason) || '';
       const hetHanMuc = /quota|1011/i.test(lyDo);
-      if (!hetHanMuc) return;
 
-      if (senseiKeyIdx < allKeys().length - 1) {
+      if (hetHanMuc && senseiKeyIdx < allKeys().length - 1) {
         senseiKeyIdx++;
         showToast('Tài khoản Sensei tạm hết hạn mức — đang chuyển sang tài khoản khác…', 'info', 5000);
-        ensureConnected().then(() => { if (dangGiang) resumeLecture(); }).catch(() => {});
-      } else {
-        showToast(`Cả ${allKeys().length} tài khoản Gemini đều đã hết hạn mức — thử lại sau ít phút.`, 'info', 9000);
+        const p = ensureConnected();
+        // Ai dang cho lan vao lop vua hong (tu vao lop luc mo trang, gio tay...)
+        // thi cho luon ket qua cua key moi, khong bao loi som.
+        if (cho) p.then(cho.resolve, cho.reject);
+        p.then(() => { if (dangGiang) resumeLecture(); }).catch((err) => {
+          // Key moi cung khong vao duoc ma khong ai cho ket qua -> phien dang hoc
+          // mat han (lan vao lop hong ben duoi khong bao, xem !cho o duoi)
+          if (!cho && lectureState === 'PAUSED' && err && (err.message === 'timeout' || err.message === 'closed')) {
+            showToast('Mất kết nối với Sensei — bấm "Giảng tiếp" để học tiếp từ chỗ dừng.', 'info', 6000);
+          }
+        });
+        return;
       }
+      if (hetHanMuc) {
+        showToast(`Cả ${allKeys().length} tài khoản Gemini đều đã hết hạn mức — thử lại sau ít phút.`, 'info', 9000);
+      } else if (!cho && !tuNgat && !baoMatKhiThu && lectureState === 'PAUSED') {
+        // Co cho = lan VAO LOP dang thu bi hong (khong phai mat phien dang hoc) —
+        // noi goi ensureConnected tu bao "Không vào được lớp…", khong bao doi.
+        showToast('Mất kết nối với Sensei — bấm "Giảng tiếp" để học tiếp từ chỗ dừng.', 'info', 6000);
+      }
+      if (cho) cho.reject(new Error(hetHanMuc ? 'quota' : 'closed'));
     },
     onError: (err) => {
       addLog("Error", `Lỗi kết nối: ${err.message || 'Không thể kết nối'}`);
@@ -321,6 +393,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       audioEngine.stopPlayback();
     },
     onTranscript: (chunk) => {
+      // Luot tra loi cho cau / ban thu hoc vien da HUY: tieng da chan, chu cung
+      // bo luon — khong de no doi tab, roi den hay cham to cau da bo.
+      if (boQuaLuotHuy) return;
       // Ghép thêm ~60 ký tự cũ để không hụt từ bị cắt đôi giữa hai mảnh,
       // nhưng KHÔNG quét lại toàn bộ bản ghi (sẽ rọi lại những từ đã đọc từ lâu).
       const overlap = senseiTranscript.slice(-60);
@@ -352,8 +427,14 @@ document.addEventListener('DOMContentLoaded', async () => {
       // van con doc dở goi am thanh trong hang doi. Tat o day gay ra dung canh
       // "vua mo da tat" va "doc sang tu khac ma van sang tu cu".
       // Den chi tat khi: sang nhip khac, doi chuong/bai, hoac ket thuc bai giang.
-      clearPendingFocus();
-      if (lectureState !== 'PLAYING') {
+      // Ngoai gio giang cung vay: loa con doc thi hen tat toi luc doc xong han
+      // (onPlayStateChange), khong tat ngay khi Sensei moi noi toi nua cau.
+      if (lectureState === 'PLAYING') {
+        clearPendingFocus();
+      } else if (audioEngine.isPlaybackActive()) {
+        tatDenKhiHetTieng = true;
+      } else {
+        clearPendingFocus();
         slideEngine.clearReadingFocus();
       }
       if (userTranscript.trim()) {
@@ -378,7 +459,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         veTinPhatAm(idChoCham, `<i class="fa-solid fa-comment-dots"></i><span>${escapeHtml(loiSenseiVuaNoi || 'Sensei đã chấm xong — nghe lại phần vừa nói ở trên.')}</span>`, 'cyan');
       }
       // Khi lượt nói của Gemini hoàn tất trên server
-      if (isAutoLectureActive || lectureState === 'PLAYING') {
+      if (lectureState === 'PLAYING') {
         checkAutoLectureStepComplete();
       }
     },
@@ -390,6 +471,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Tự động phân tích Intent & chuyển Active Tab khi Sensei hoặc học viên muốn xem lại mục bài học
   function detectAndSwitchTabFromIntent(text, source = 'sensei') {
     if (!text || typeof text !== 'string') return;
+    // Dang giang theo giao an: moi nhip tu mo dung chuong / roi dung muc, Sensei
+    // con co change_section. Nghe loi giang ("nhìn vào chữ Hán này...") ma doi
+    // tab thi ve lai chuong va tat den giua nhip.
+    if (source === 'sensei' && lectureState === 'PLAYING') return;
     const now = Date.now();
     if (now - lastTabSwitchTime < 2000) return; // Debounce 2s tránh giật nhảy tab liên tục
 
@@ -399,10 +484,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     const hasIntent = /(quay lại|xem lại|về phần|mở lại|nhìn vào|chuyển sang|mở phần|cho em xem|chúng ta cùng nhìn|chuyển qua|trở lại|về lại|về mục)/i.test(lower);
     if (!hasIntent) return;
 
+    // Dang mo san dung chuong (va dung slide) roi thi thoi — setTab ve lai tu
+    // dau va tat den dang roi, du chang doi gi.
+    const dangMo = (tab, slide) => slideEngine.activeTab === tab
+      && (tab !== 'grammar' || slide === undefined || slide === slideEngine.currentSlideIndex);
+
     // 1. Phân môn Ngữ pháp (Grammar) với số slide cụ thể
     const slideMatch = lower.match(/(?:ngữ pháp|grammar|slide|mẫu câu)\s*(?:số\s*)?(\d+)/i);
     if (slideMatch && slideMatch[1]) {
       const targetSlide = Math.max(0, parseInt(slideMatch[1], 10) - 1);
+      if (dangMo('grammar', targetSlide)) return;
       lastTabSwitchTime = now;
       slideEngine.setTab('grammar', targetSlide);
       lectureCheckpoint.sectionName = 'grammar';
@@ -413,6 +504,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 2. Phân môn Từ vựng (Vocab)
     if (/(?:từ vựng|vocab|từ mới|danh sách từ)/i.test(lower)) {
+      if (dangMo('vocab')) return;
       lastTabSwitchTime = now;
       slideEngine.setTab('vocab');
       lectureCheckpoint.sectionName = 'vocab';
@@ -423,6 +515,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 3. Phân môn Chữ Hán (Kanji)
     if (/(?:chữ hán|kanji|hán tự|bảng chữ hán)/i.test(lower)) {
+      if (dangMo('kanji')) return;
       lastTabSwitchTime = now;
       slideEngine.setTab('kanji');
       lectureCheckpoint.sectionName = 'kanji';
@@ -433,6 +526,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 4. Phân môn Ngữ pháp chung (Grammar)
     if (/(?:ngữ pháp|grammar|cấu trúc câu|mẫu ngữ pháp)/i.test(lower)) {
+      if (dangMo('grammar')) return;
       lastTabSwitchTime = now;
       const targetSlide = slideEngine.currentSlideIndex || 0;
       slideEngine.setTab('grammar', targetSlide);
@@ -444,6 +538,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 5. Phân môn Hội thoại (Kaiwa)
     if (/(?:hội thoại|kaiwa|đàm thoại|đoạn đối thoại)/i.test(lower)) {
+      if (dangMo('kaiwa')) return;
       lastTabSwitchTime = now;
       slideEngine.setTab('kaiwa');
       lectureCheckpoint.sectionName = 'kaiwa';
@@ -454,6 +549,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 6. Phân môn Bài tập (Quiz)
     if (/(?:bài tập|quiz|trắc nghiệm|luyện tập|câu hỏi ôn tập)/i.test(lower)) {
+      if (dangMo('quiz')) return;
       lastTabSwitchTime = now;
       slideEngine.setTab('quiz');
       lectureCheckpoint.sectionName = 'quiz';
@@ -529,6 +625,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function autoTrackSenseiSpeech(text) {
     if (!text || typeof text !== 'string') return;
+    // Dang giang: moi nhip dung MOT muc va client da tu roi den muc do
+    // (executeLectureStep) — bam theo loi giang chi lam den nhay lung tung.
+    if (lectureState === 'PLAYING') return;
     // Sensei đang tự gọi highlight_element -> để Sensei dẫn, không chen vào
     if (Date.now() - lastToolFocusAt < TOOL_PRIORITY_MS) return;
     if (!canFocusNow()) return;
@@ -561,8 +660,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         .filter(k => k.id !== lastTrackedTargetId)
         .map(k => ({
           id: k.id,
-          keys: [(k.character || "").toLowerCase(), (k.hanViet || "").toLowerCase()]
-                  .filter(x => x.length >= 1)
+          // Chi khop MAT CHU. Am Han Viet la mot tieng Viet thuong ("học", "tiên",
+          // "nhật") — khop tran thi "học viên", "đầu tiên", "tiếng Nhật" roi nham chu.
+          keys: [k.character || ""].filter(Boolean)
         }));
       const hit = pickLatestMatch(lower, cands);
       if (hit) {
@@ -611,9 +711,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   function handleToolCall(call) {
     const { name, args, id } = call;
     addLog("Tool", `Gọi công cụ [${name}]: ${JSON.stringify(args)}`);
+    // Luot cua cau / ban thu da huy: khong cho ve bang, doi tab, danh loi
+    if (boQuaLuotHuy) return { success: false, error: 'hoc vien da huy luot nay' };
 
     if (name === "section_complete") {
-      stepSignaledDone = true;
+      // Nhip giang do client cam — chi xac nhan cho Sensei, khong dieu khien gi
       return { success: true, acknowledged: args && args.section };
     }
     else if (name === "change_section") {
@@ -628,10 +730,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     else if (name === "change_slide") {
       const { level, lesson_id, slide_index } = args;
       const lvl = (level || "N5").toUpperCase();
+      const no = Number(lesson_id) || 1;
+      // Dang giang theo giao an: sang bai khac giua chung thi cac nhip sau van
+      // la cua bai cu (roi sai id, prompt lech bai) -> khong cho doi bai.
+      const doiBai = lvl !== slideEngine.currentLevel || no !== Number(slideEngine.currentLesson);
+      if (doiBai && lectureState === 'PLAYING') {
+        return { success: false, error: 'dang giang bai hien tai theo giao an, khong doi bai giua chung' };
+      }
+      if (slideEngine.renderSlide(lvl, no, slide_index) === false) {
+        return { success: false, error: `khong co bai ${lvl}-${no}` };
+      }
       if (levelSelect) levelSelect.value = lvl;
-      populateLessons(lvl, lesson_id);
-      const success = slideEngine.renderSlide(lvl, lesson_id, slide_index);
-      return { success: success, currentLevel: lvl, lesson: lesson_id, slide: slide_index };
+      populateLessons(lvl, no);
+      return { success: true, currentLevel: lvl, lesson: no, slide: slide_index };
     }
     else if (name === "highlight_element") {
       const { target_id, style_type, comment } = args;
@@ -699,8 +810,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // 6. Điều phối Chế độ Giảng bài Theo Kịch bản (Start / Pause / Resume / Raise Hand)
   function updateLectureControlsUI() {
-    isAutoLectureActive = (lectureState === 'PLAYING');
-
     // 1. Cập nhật nút autoLectureBtn (Start / Pause / Resume)
     if (autoLectureBtn) {
       const currentStep = currentLectureSteps[currentLectureStepIndex];
@@ -727,6 +836,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (autoLectureIcon) autoLectureIcon.className = "fa-solid fa-play";
         if (autoLectureText) autoLectureText.innerText = "Bắt đầu giảng bài";
       }
+      // Dang thu cau hoi: giang tiep luc nay la Sensei noi vao mic dang mo va
+      // nhip khong bao gio sang (dang gio tay) — phai Gui hoac Huy truoc.
+      if (isRaisingHand) autoLectureBtn.disabled = true;
     }
 
     // 2. Nút giơ tay (ẩn khi đang thu âm — lúc đó hiện Gửi/Hủy). KHÔNG khoá
@@ -740,16 +852,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     if (askSendBtn) askSendBtn.classList.toggle('hidden', !isRaisingHand);
     if (askCancelBtn) askCancelBtn.classList.toggle('hidden', !isRaisingHand);
-  }
-
-  // Tương thích ngược với các lời gọi cũ
-  function updateAutoLectureUI(active, statusText = null) {
-    if (active) {
-      lectureState = 'PLAYING';
-    } else if (lectureState === 'PLAYING') {
-      lectureState = 'PAUSED';
-    }
-    updateLectureControlsUI();
   }
 
   function cancelStepTransition() {
@@ -1039,6 +1141,10 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
     currentLectureStepIndex = stepIndex;
     currentStepStartTime = Date.now();
     currentStepRetryCount = 0;
+    // Nhip moi thay cho loi cham bai con dở (vd bam "Giảng tiếp" khi Sensei
+    // chua cham xong): khong de co "dang chen ngang" cu chan nhip nay mai.
+    senseiChenNgang = false;
+    clearTimeout(chenNgangTimer);
     cancelStepTransition();
 
     lectureCheckpoint = {
@@ -1170,7 +1276,6 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
   function finishLecture() {
     if (audioEngine) audioEngine.setSuppressed(false);
     lectureState = 'IDLE';
-    isAutoLectureActive = false;
     cancelStepTransition();
     slideEngine.clearReadingFocus();
     updateLectureControlsUI();
@@ -1219,17 +1324,8 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
 
     const next = currentLectureSteps[nextIdx];
 
-    if (nextStepBtn) {
-      nextStepBtn.className = 'ctl ctl-next';
-      if (nextStepText) nextStepText.textContent = next.isChapterStart
-        ? `Sang ${CHAPTER_LABEL[next.chapter]}`
-        : 'Tiếp theo';
-      nextStepBtn.onclick = () => {
-        cancelStepTransition();
-        executeLectureStep(nextIdx);
-      };
-    }
-
+    // KHONG hien nut "Tiếp theo" trong khoang nghi nay: no chi hien 0.7-1.6s
+    // (bam khong kip), lai lam nut Tam dung nhay qua lai / xuong dong moi nhip.
     // Nhịp nhỏ nên đệm ngắn; sang chương mới thì nghỉ lâu hơn một chút
     const gap = next.isChapterStart ? 1600 : 700;
     autoStepTransitionTimer = setTimeout(() => {
@@ -1274,7 +1370,6 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
       : firstBeatOfCurrentView();
 
     lectureState = 'PLAYING';
-    isAutoLectureActive = true;
     updateLectureControlsUI();
 
     const b = currentLectureSteps[startIdx];
@@ -1305,7 +1400,6 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
     };
 
     lectureState = 'PAUSED';
-    isAutoLectureActive = false;
     updateLectureControlsUI();
 
     if (isManual) {
@@ -1326,7 +1420,6 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
       currentLectureSteps = buildLecturePlan(lvl, lessonNum);
       const stepIdx = Math.min(Math.max(0, lectureCheckpoint.stepIndex), currentLectureSteps.length - 1);
       lectureState = 'PLAYING';
-      isAutoLectureActive = true;
       updateLectureControlsUI();
       executeLectureStep(stepIdx, true);
     } else {
@@ -1346,6 +1439,16 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
     daBatTay: geminiClient.isSetupComplete,
     giong: SENSEI_VOICE,
   });
+
+  /**
+   * App TU ngat phien (tu lam moi khi treo, tam roi lop de long tieng...).
+   * Dung ham nay thay vi goi geminiClient.disconnect() tran, de onClose biet
+   * day khong phai mat ket noi bat ngo va khong bao "Mất kết nối" thua.
+   */
+  function ngatPhienChuDong() {
+    tuNgatPhien = true;
+    try { geminiClient.disconnect(); } catch (e) {}
+  }
 
   /**
    * Bảo đảm phiên đã sẵn sàng. Chưa kết nối thì tự kết nối và chờ setupComplete.
@@ -1385,8 +1488,10 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
     }, 20000);
     pendingReady = { resolve, reject, timer, promise };
 
-    promise.then(() => { isConnecting = false; updateSessionState(); })
-           .catch(() => { isConnecting = false; updateSessionState(); });
+    // Xong (duoc hay hong) deu phai ve lai nut giang: khong thi no ket o
+    // "Đang vào lớp…" (disabled) cho toi khi hoc vien tinh co bam tab khac.
+    promise.then(() => { isConnecting = false; updateSessionState(); updateLectureControlsUI(); })
+           .catch(() => { isConnecting = false; updateSessionState(); updateLectureControlsUI(); });
 
     try {
       geminiClient.connect(key, model, voice);
@@ -1395,12 +1500,14 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
       pendingReady = null;
       isConnecting = false;
       updateSessionState();
+      updateLectureControlsUI();
       return Promise.reject(err);
     }
     return promise;
   }
 
   async function handleAutoLectureClick() {
+    if (isRaisingHand) return;   // dang thu cau hoi: Gui hoac Huy truoc (nut cung da khoa)
     if (lectureState === 'PLAYING') {
       pauseLecture(true);
       return;
@@ -1410,7 +1517,9 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
     try {
       await ensureConnected();
     } catch (err) {
-      if (err && err.message === 'timeout') {
+      // 'closed' = server dong phien truoc khi vao lop (sai key, mat mang);
+      // 'quota' da co bao rieng trong onClose, 'missing-key' trong ensureConnected
+      if (err && (err.message === 'timeout' || err.message === 'closed')) {
         showToast('Không vào được lớp — kiểm tra lại API Key và mạng.', 'info', 6000);
       }
       updateLectureControlsUI();
@@ -1434,6 +1543,7 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
     if (!isRaisingHand) return;
     // Sensei sap tra loi -> phai mo cong, khong thi cau tra loi bi nuot
     if (audioEngine) audioEngine.setSuppressed(false);
+    boQuaLuotHuy = false;   // cau hoi moi thay cho luot vua huy (neu co)
     isRaisingHand = false;
     if (audioEngine.isMicActive) audioEngine.stopMic();
     const khongNgheRo = mucAmThanhCaoNhat <= NGUONG_AM_THANH_RO;
@@ -1455,9 +1565,16 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
   // Bấm "Hủy": bỏ câu hỏi, Sensei giảng tiếp từ chỗ đang dở
   function cancelQuestion() {
     if (!isRaisingHand) return;
-    if (audioEngine) audioEngine.setSuppressed(false);
     isRaisingHand = false;
     if (audioEngine.isMicActive) audioEngine.stopMic();
+    // activityEnd van phai gui (khong thi server treo), nhung no CHOT luot nen
+    // Sensei van se tra loi cau vua huy -> chan tieng + chu + tool cua luot do
+    // (pxNhanLoiPhan mo lai o turnComplete, luot moi mo lai o onBeforeUserMessage).
+    // Giang tiep thi thoi: nhip giang gui ngay sau se de len luot do.
+    if (!lectureWasPlayingBeforeAsk && geminiClient.isConnected) {
+      boQuaLuotHuy = true;
+      audioEngine.setSuppressed(true);
+    }
     geminiClient.sendAudioStreamEnd();   // dong moc "dang noi" du la huy
     updateAskUI();
     stopAllAudio();
@@ -1465,7 +1582,7 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
     if (lectureWasPlayingBeforeAsk) {
       lectureWasPlayingBeforeAsk = false;
       showToast('Đã hủy câu hỏi — Sensei giảng tiếp.');
-      resumeLecture();
+      resumeLecture();   // executeLectureStep tu mo lai cong am thanh
     } else {
       updateLectureControlsUI();
       showToast('Đã hủy câu hỏi.');
@@ -1475,7 +1592,13 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
   async function handleRaiseHandClick() {
     try {
       await ensureConnected();
-    } catch (err) { return; }
+    } catch (err) {
+      // Bam nut ma khong co gi xay ra thi hoc vien khong hieu vi sao
+      if (err && (err.message === 'timeout' || err.message === 'closed')) {
+        showToast('Không vào được lớp — kiểm tra lại API Key và mạng.', 'info', 6000);
+      }
+      return;
+    }
     if (isRaisingHand) return;
     anChoTraLoi(); // hoi cau moi -> bo dai "dang cho" cua cau truoc (neu con)
 
@@ -1532,6 +1655,18 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
       tabDisplayName = "Bài tập trắc nghiệm (Quiz)";
       const exercises = curriculumLoader.getExercises(lvl, lessonNum);
       screenContent = exercises.map((e, i) => `Câu ${i + 1}: ${e.question} (Đáp án: ${e.options ? e.options[e.correctIndex] : ''})`).join('\n');
+    } else if (tab === 'reflex') {
+      tabDisplayName = `Phản xạ nhanh (${phanXa.che === 'noi' ? 'Nói nhanh' : 'Viết nhanh'})`;
+      const c = phanXa.dangChay ? pxCauHienTai() : null;
+      screenContent = c
+        ? `Câu ${phanXa.viTri + 1}/${phanXa.dsCau.length}: ${c.kieu === 'khuyet' ? c.cauHoi : 'Từ có nghĩa "' + c.nghia + '"'} (Đáp án: ${c.dapAn}${c.kana ? ', đọc ' + c.kana : ''})`
+        : 'Chưa bắt đầu vòng luyện.';
+      // Dang chay vong thi dung han: dem nguoc 7s ma con chay se tu nop, tat
+      // mat mic cua cau hoi va lay loi giai dap lam loi phan cau phan xa.
+      if (phanXa.dangChay || phanXa.demTimer) {
+        dungPhanXaKhiRoiTab();
+        if (window.veManPhanXa) window.veManPhanXa();
+      }
     }
 
     const contextPrompt = `[HỌC SINH GIƠ TAY CÓ Ý KIẾN / ĐẶT CÂU HỎI TRONG LỚP]
@@ -1562,12 +1697,25 @@ CHỈ DẪN QUAN TRỌNG DÀNH CHO SENSEI:
 
     // 5. Mở Micro
     mucAmThanhCaoNhat = 0;
+    const luot = ++luotGioTay;
+    const micDaMoSan = audioEngine.isMicActive;
     try {
       await audioEngine.startMic();
+      // Trong luc cho mo mic (hop xin quyen dang mo...), hoc vien co the da
+      // bam Gui/Huy, go chat, hoac mat ket noi: khong mo luot "dang noi" nao
+      // nua — khong thi mic cu thu va activityStart treo ma khong con nut tat.
+      // Lan gio tay moi hon da thay cho lan nay thi de lan do tu lo.
+      if (luot !== luotGioTay) return;
+      if (!isRaisingHand) {
+        if (!micDaMoSan && !dangThuAm && audioEngine.isMicActive) audioEngine.stopMic();
+        updateMicUI(true, false);
+        return;
+      }
       geminiClient.sendActivityStart();   // thieu cai nay thi server bo qua het tieng gui len
       updateMicUI(true, true);
       addLog("System", "✋ Bạn đã giơ tay hỏi bài! Bài giảng đã tạm dừng. Mic đã bật — nói câu hỏi xong hãy bấm lại nút để gửi cho Sensei!");
     } catch (err) {
+      if (luot !== luotGioTay) return;
       isRaisingHand = false;
       updateAskUI();
       updateLectureControlsUI();
@@ -1600,12 +1748,18 @@ CHỈ DẪN QUAN TRỌNG DÀNH CHO SENSEI:
         idx = currentLectureSteps.findIndex(b => b.chapter === 'grammar' && b.subIndex === (subIndex || 0));
       }
       if (idx === -1) idx = currentLectureSteps.findIndex(b => b.chapter === section);
-      if (idx !== -1) {
+      // Bam lai dung chuong (va dung slide) dang dở thi giu nguyen cho dung —
+      // khong phai doi chuong, "Giảng tiếp" van phai hoc tiep tu do.
+      const dangDo = currentLectureSteps[lectureCheckpoint.stepIndex];
+      const cungCho = dangDo && dangDo.chapter === section
+        && (section !== 'grammar' || dangDo.subIndex === (subIndex || 0));
+      if (idx !== -1 && !cungCho) {
         // Nguoi hoc chu dong doi chuong -> khong "hoc tiep" o cho cu nua,
         // ma bat dau lai tu DAU chuong vua chon.
         lectureCheckpoint.stepIndex = idx;
         lectureCheckpoint.sectionName = section;
         lectureCheckpoint.subIndex = subIndex;
+        lectureCheckpoint.nhipDangDo = undefined;   // bo nhip nho khi lat slide (dongBoCheckpointTheoSlide)
         currentLectureStepIndex = idx;
       }
     }
@@ -1645,6 +1799,11 @@ CHỈ DẪN QUAN TRỌNG DÀNH CHO SENSEI:
   function senseiNoiNgoaiBai(loiNhac, hanGiay = 30) {
     if (!loiNhac) return false;
     if (!geminiClient.isConnected || !geminiClient.isSetupComplete) return false;
+
+    // Dang giang thi tam dung han (nhu luc cham phat am): loi cham bai de len
+    // nhip dang giang, xong loi cham thi khong ai chay lai nhip do nua -> bai
+    // giang dung im o "Tạm dừng". Tam dung thi "Giảng tiếp" hoc lai dung nhip.
+    if (lectureState === 'PLAYING') pauseLecture(false);
 
     senseiChenNgang = true;
     clearTimeout(chenNgangTimer);
@@ -1741,11 +1900,14 @@ ${isCorrect
 
 Kèm 1 câu giải thích ngắn gọn, dễ hiểu — phần này nói tử tế, đừng đùa nữa.
 Trả về JSON duy nhất:
-{"roast": "câu nhận xét hài hước", "tip": "câu giải thích ngắn gọn"}`;
+{"items": [{"roast": "câu nhận xét hài hước", "tip": "câu giải thích ngắn gọn"}]}`;
 
       // REST: model Live khong sinh duoc chu (ma 1007). Hong thi dung cau soan san.
+      // callTextModel chi nhan MANG (layMang) — mot object tran {roast, tip} bi
+      // coi la hong nen truoc day luon roi ve cau soan san. Xin boc trong "items".
       const out = await callTextModel(key, SENSEI_MODELS.roast, prompt, 400);
-      if (out.ok && out.items && out.items.roast && out.items.tip) return out.items;
+      const kq = out.ok && out.items && out.items[0];
+      if (kq && kq.roast && kq.tip) return kq;
     } catch (err) {
       console.warn("Không sinh được câu nhận xét, dùng câu soạn sẵn:", err);
     }
@@ -1963,30 +2125,6 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
   };
 
   // 8. UI Handlers
-  window.toggleConnection = () => {
-    // Mở khóa AudioContext ngay trong thao tác click của người dùng
-    if (audioEngine) {
-      audioEngine.ensureOutContext();
-    }
-
-    if (geminiClient.isConnected) {
-      geminiClient.disconnect();
-      audioEngine.cleanup();
-      updateAutoLectureUI(false);
-    } else {
-      const key = senseiKey();
-      if (!key) { showToast('Chưa đọc được key từ .env', 'info', 8000); return; }
-      const model = SENSEI_MODELS.sensei;
-      const voice = SENSEI_VOICE;
-
-      try {
-        geminiClient.connect(key, model, voice);
-      } catch (err) {
-        showToast(err.message, 'error');
-      }
-    }
-  };
-
   const micVolumeWrapper = document.getElementById('micVolumeWrapper');
   const micVolumeBar = document.getElementById('micVolumeBar');
   const micVolumePercent = document.getElementById('micVolumePercent');
@@ -2001,32 +2139,6 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
     }
   }
 
-  window.toggleMic = async () => {
-    if (audioEngine) {
-      audioEngine.ensureOutContext();
-    }
-
-    if (!geminiClient.isConnected) {
-      showToast("Cần bấm 'Bắt đầu phiên' trước khi mở Microphone.", 'error');
-      return;
-    }
-
-    if (audioEngine.isMicActive) {
-      audioEngine.stopMic();
-      updateMicUI(true, false);
-      geminiClient.sendAudioStreamEnd();
-      addLog("System", "Đã tắt Microphone và gửi câu hỏi. Sensei đang xử lý câu trả lời...");
-    } else {
-      try {
-        await audioEngine.startMic();
-        updateMicUI(true, true);
-        addLog("System", "Microphone đang mở (16kHz PCM). Bạn có thể nói để đàm thoại hoặc ngắt lời Sensei.");
-      } catch (err) {
-        showToast("Không thể khởi động Microphone: " + err.message, 'error', 6000);
-      }
-    }
-  };
-
   // Mở khóa AudioContext tự động cho các thiết bị truy cập từ xa (Tailscale, Mobile Safari, Autoplay Policy)
   const unlockAudioOnUserGesture = () => {
     if (audioEngine) {
@@ -2039,12 +2151,6 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
   ['click', 'touchstart', 'touchend', 'pointerdown', 'keydown'].forEach(evt => {
     window.addEventListener(evt, unlockAudioOnUserGesture, { passive: true });
   });
-
-  function updateConnectUI(connected) {
-    if (connectBtn) connectBtn.classList.toggle('is-live', connected);
-    if (connectIcon) connectIcon.className = connected ? "fa-solid fa-power-off" : "fa-solid fa-plug";
-    if (connectText) connectText.innerText = connected ? "Ngắt phiên" : "Bắt đầu phiên";
-  }
 
   // Không còn nút mic riêng: mic chỉ mở trong lúc học viên giơ tay hỏi bài.
   // Hàm này giờ chỉ điều khiển dải "đang thu âm" ở thanh dưới.
@@ -2103,8 +2209,11 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
     // dang tin cay nhat da quan sat duoc, con hon la cho vo han.
     choTraLoiTimer3 = setTimeout(() => {
       if (dangChoTraLoi) {
-        showToast('Kết nối có vẻ bị đơ — đang tự làm mới, bạn giơ tay hỏi lại nhé.', 'info', 8000);
-        try { geminiClient.disconnect(); } catch (e) {}
+        showToast('Kết nối có vẻ bị đơ — đang tự làm mới, bạn hỏi lại (giơ tay hoặc gõ chữ) nhé.', 'info', 8000);
+        // Tat dai "dang cho" ngay, khong trong vao onClose: socket da chet san
+        // thi disconnect() khong ban onclose nua va dai cho se treo mai.
+        anChoTraLoi();
+        ngatPhienChuDong();
       }
     }, 80000);
   }
@@ -2176,35 +2285,6 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
       return;
     }
     console.debug('[' + sender + ']', text);
-    if (true) return;
-    const item = document.createElement('div');
-    item.className = "p-2 rounded-lg bg-slate-950/60 border border-slate-800/80 text-xs space-y-1";
-
-    let headerBadge = "";
-    if (sender === "Sensei") {
-      headerBadge = '<span class="text-emerald-400 font-bold flex items-center gap-1.5"><i class="fa-solid fa-user-graduate"></i> Sensei:</span>';
-    } else if (sender === "Học viên") {
-      headerBadge = '<span class="text-indigo-400 font-bold flex items-center gap-1.5"><i class="fa-solid fa-microphone"></i> Học viên:</span>';
-    } else if (sender === "Thinking") {
-      headerBadge = '<span class="text-amber-400 italic font-semibold flex items-center gap-1.5"><i class="fa-solid fa-brain"></i> Interleaved Reasoning:</span>';
-    } else if (sender === "Tool") {
-      headerBadge = '<span class="text-purple-400 font-bold flex items-center gap-1.5"><i class="fa-solid fa-wand-magic-sparkles"></i> Function Calling:</span>';
-    } else if (sender === "Barge-in") {
-      headerBadge = '<span class="text-rose-400 font-bold flex items-center gap-1.5"><i class="fa-solid fa-bolt"></i> Barge-in Triggered:</span>';
-    } else {
-      headerBadge = `<span class="text-slate-400 font-semibold flex items-center gap-1.5"><i class="fa-solid fa-circle-info"></i> ${sender}:</span>`;
-    }
-
-    item.innerHTML = `
-      <div class="flex items-center justify-between">
-        ${headerBadge}
-        <span class="text-[10px] text-slate-500 font-mono">${new Date().toLocaleTimeString()}</span>
-      </div>
-      <div class="text-slate-300 whitespace-pre-wrap leading-relaxed">${escapeHtml(text)}</div>
-    `;
-
-    logArea.appendChild(item);
-    logArea.scrollTop = logArea.scrollHeight;
   }
 
   function escapeHtml(str) {
@@ -2216,15 +2296,27 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
   }
 
   // 10. Chat Input & Quick Action Prompts
-  function handleSendMessage() {
+  let dangGuiChat = false;   // dang cho vao lop de gui cau go -> Enter/bam them khong gui trung
+  async function handleSendMessage() {
     const text = chatInput.value.trim();
-    if (!text) return;
-    if (!geminiClient.isConnected) {
-      // Day la loi HANH DONG (chua bam vao lop) chu khong phai loi ky thuat
-      // noi bo — dung kind='error' thi showToast() se an di, hoc vien go
-      // xong bam gui ma khong hieu vi sao im lang.
-      showToast("Cần vào lớp trước khi gửi câu hỏi — bấm nút ▶ để bắt đầu nhé.", 'info');
-      return;
+    if (!text || dangGuiChat) return;
+    if (!geminiClient.isConnected || !geminiClient.isSetupComplete) {
+      // Go chu cung TU vao lop nhu gio tay — "Bắt đầu giảng bài" chi dieu
+      // khien viec GIANG, khong phai dieu kien de duoc hoi. Chu van giu trong o.
+      dangGuiChat = true;
+      showToast('Đang vào lớp để gửi câu hỏi…');
+      try {
+        await ensureConnected();
+      } catch (err) {
+        // 'missing-key' / 'quota' da co bao rieng
+        if (!err || (err.message !== 'missing-key' && err.message !== 'quota')) {
+          showToast('Chưa vào được lớp — kiểm tra API Key hoặc mạng rồi gửi lại.', 'info', 6000);
+        }
+        return;
+      } finally {
+        dangGuiChat = false;
+      }
+      if (!geminiClient.isSetupComplete) return;
     }
 
     cancelStepTransition();
@@ -2238,6 +2330,9 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
       if (audioEngine.isMicActive) {
         audioEngine.stopMic();
       }
+      // Dong moc activityStart mo luc gio tay (automaticActivityDetection da
+      // tat): thieu cai nay thi server cho mai, luot noi sau mo chong len.
+      geminiClient.sendAudioStreamEnd();
       updateMicUI(true, false);
       updateLectureControlsUI();
     }
@@ -2280,42 +2375,25 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
   if (sendChatBtn) sendChatBtn.addEventListener('click', handleSendMessage);
   if (chatInput) {
     chatInput.addEventListener('keydown', (e) => {
+      // Dang go IME (tieng Nhat / Telex tren Mac): Enter la chot chu, Esc la bo
+      // chu dang go — thuoc ve bo go. Safari bao keyCode 229 ma isComposing=false.
+      if (e.isComposing || e.keyCode === 229) return;
       if (e.key === 'Enter') handleSendMessage();
+      else if (e.key === 'Escape') closeChat();   // o nhap luon co focus nen phim Esc chung khong dong duoc
     });
   }
-
-  // Quick Action Buttons
-  document.querySelectorAll('.quick-prompt-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const promptText = btn.getAttribute('data-prompt');
-      if (promptText) {
-        if (!geminiClient.isConnected) {
-          alert("Vui lòng bấm 'Bắt đầu phiên' trước khi gửi câu hỏi mẫu.");
-          return;
-        }
-        cancelStepTransition();
-        if (lectureState === 'PLAYING') {
-          pauseLecture(false);
-        }
-        geminiClient.sendUserMessage(promptText);
-        addLog("Học viên", promptText);
-      }
-    });
-  });
 
   // Manual Navigation & Listeners
   if (levelSelect) {
     levelSelect.addEventListener('change', (e) => {
       const selectedLevel = e.target.value;
-      if (lectureState === 'PLAYING') pauseLecture(false);
-      lectureState = 'IDLE';
-      updateLectureControlsUI();
       // N4 bắt đầu từ bài 26 chứ không phải bài 1 -> phải lấy số bài thực tế,
       // nếu không nhãn hiện "Bài 1" trong khi nội dung là bài 26.
       const firstLesson = (curriculumLoader.getLessonsForLevel(selectedLevel) || [])[0];
       const firstNum = firstLesson ? firstLesson.lessonNumber : 1;
-      populateLessons(selectedLevel, firstNum);
-      slideEngine.renderSlide(selectedLevel, firstNum, 0);
+      // Di chung duong voi man chon bai: dung giang, lau bang, mo Từ vựng,
+      // dung lai giao an va long tieng hoi thoai cho bai moi.
+      openLesson(selectedLevel, firstNum);
     });
   }
 
@@ -2330,11 +2408,7 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
     lessonSelect.addEventListener('change', (e) => {
       const lvl = levelSelect ? levelSelect.value : "N5";
       const chosenLessonNum = Number(e.target.value) || 1;
-      if (lectureState === 'PLAYING') pauseLecture(false);
-      lectureState = 'IDLE';
-      updateLectureControlsUI();
-      stopAllAudio();
-      slideEngine.renderSlide(lvl, chosenLessonNum, 0);
+      openLesson(lvl, chosenLessonNum);   // nhu man chon bai (xem levelSelect)
     });
   }
 
@@ -2351,20 +2425,37 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
   if (tabQuizBtn) tabQuizBtn.addEventListener('click', () => handleManualTabChange('quiz'));
   if (tabReflexBtn) tabReflexBtn.addEventListener('click', () => handleManualTabChange('reflex'));
 
+  // Lat slide bang tay -> "Giảng tiếp" hoc tu slide dang mo (nhu bam tab
+  // Ngữ pháp), khong nhay ve slide cu. resumeLecture chi doc stepIndex.
+  function dongBoCheckpointTheoSlide() {
+    lectureCheckpoint.sectionName = 'grammar';
+    lectureCheckpoint.subIndex = slideEngine.currentSlideIndex;
+    if (currentLectureSteps.length) {
+      // Nho nhip dang dở THAT (truoc lan lat dau; checkpoint moi o
+      // executeLectureStep / pauseLecture / openLesson tu xoa no). Lat di roi
+      // lat ve dung slide do -> hoc tiep tu nhip do (vd vi du 3), khong giang
+      // lai tu phan gioi thieu (nhu bam lai dung tab o handleManualTabChange).
+      if (lectureCheckpoint.nhipDangDo === undefined) lectureCheckpoint.nhipDangDo = lectureCheckpoint.stepIndex;
+      const dangDo = currentLectureSteps[lectureCheckpoint.nhipDangDo];
+      const i = (dangDo && dangDo.chapter === 'grammar' && dangDo.subIndex === (slideEngine.currentSlideIndex || 0))
+        ? lectureCheckpoint.nhipDangDo
+        : firstBeatOfCurrentView();
+      lectureCheckpoint.stepIndex = i;
+      currentLectureStepIndex = i;
+    }
+  }
   if (prevSlideBtn) prevSlideBtn.addEventListener('click', () => {
     if (lectureState === 'PLAYING') pauseLecture(false);
     stopAllAudio();
     slideEngine.prevSlide();
-    lectureCheckpoint.sectionName = 'grammar';
-    lectureCheckpoint.subIndex = slideEngine.currentSlideIndex;
+    dongBoCheckpointTheoSlide();
     updateLectureControlsUI();
   });
   if (nextSlideBtn) nextSlideBtn.addEventListener('click', () => {
     if (lectureState === 'PLAYING') pauseLecture(false);
     stopAllAudio();
     slideEngine.nextSlide();
-    lectureCheckpoint.sectionName = 'grammar';
-    lectureCheckpoint.subIndex = slideEngine.currentSlideIndex;
+    dongBoCheckpointTheoSlide();
     updateLectureControlsUI();
   });
   if (dismissErrBtn) dismissErrBtn.addEventListener('click', () => slideEngine.dismissError());
@@ -2446,13 +2537,29 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
    * là giọng đã nằm sẵn trong bộ nhớ, phát ra là liền mạch.
    */
   async function prefetchDialogueAudio(lvl, lessonNum, opts = {}) {
-    // Boc mot lop chi de chac chan tat duoc lop cho: ben trong co toi bon
-    // duong thoat (doi model, tam roi lop, loi vinh vien, xong xuoi).
-    try {
-      return await chayLongTieng(lvl, lessonNum, opts);
-    } finally {
-      datCho('kaiwa', null);
+    // Moi bai chi MOT luot long tieng mot luc: goi chong (mo lai bai dang long
+    // tieng, dong danh sach, __voice) thi dung chung luot dang chay, khong mo
+    // them phien dien vien tren cung key (de cham tran mã 1000). Luot solo goi
+    // tu BEN TRONG luot dang chay nen phai lach qua, khong thi no cho chinh no.
+    const k = String(lvl).toUpperCase() + '-' + Number(lessonNum);
+    if (!opts.soloMode && dialogueAudioInFlight[k]) return dialogueAudioInFlight[k];
+    const p = (async () => {
+      // Boc mot lop chi de chac chan tat duoc lop cho: ben trong co toi bon
+      // duong thoat (doi model, tam roi lop, loi vinh vien, xong xuoi).
+      try {
+        return await chayLongTieng(lvl, lessonNum, opts);
+      } finally {
+        // Lop cho la cua bai dang mo: luot cu cua bai da roi di khong duoc tat
+        // lop cho cua luot bai moi dang chay.
+        const kNay = String(slideEngine.currentLevel).toUpperCase() + '-' + Number(slideEngine.currentLesson);
+        if (kNay === k || !dialogueAudioInFlight[kNay]) datCho('kaiwa', null);
+      }
+    })();
+    if (!opts.soloMode) {
+      dialogueAudioInFlight[k] = p;
+      p.finally(() => { if (dialogueAudioInFlight[k] === p) delete dialogueAudioInFlight[k]; }).catch(() => {});
     }
+    return p;
   }
 
   async function chayLongTieng(lvl, lessonNum, opts = {}) {
@@ -2523,7 +2630,13 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
       : `[long tieng] bắt đầu ${todo} lượt thoại, ${voices.length} giọng`);
 
     let made = 0;
-    const ketQua = { permanentFail: false, sessionLimitHit: false };
+    // keyHetHan/hong: key nao het quota giua chung va nhung cau no bo lai —
+    // de sau dot song song dua cho cac key con han muc doc lai.
+    const ketQua = { permanentFail: false, sessionLimitHit: false, keyHetHan: new Set(), hong: [] };
+    const vanOBaiNay = () => slideEngine.currentLevel === lvl && slideEngine.currentLesson === Number(lessonNum);
+    // Chi chu het quota that. KHONG khop ma 1011 tran: Gemini cung dong 1011
+    // cho loi noi bo nhat thoi — loi do van phai thu lai nhu thuong.
+    const hetQuota = /quota|RESOURCE_EXHAUSTED|\b429\b/i;
 
     /**
      * Doc het loi cua MOT nhom, tuan tu trong nhom (dung nhu duong cu). Mot
@@ -2545,6 +2658,9 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
         if (slideEngine.currentLevel !== lvl || slideEngine.currentLesson !== Number(lessonNum)) break;
 
         for (const { line, jp } of items) {
+          // Xet tung cau chu khong chi tung manh: moi key thuong chi co mot
+          // manh, xet o ngoai thi bai cu van doc het tren cung key voi bai moi.
+          if (!vanOBaiNay()) break;
           if (dialogueAudio[line.id]) { made++; continue; }
           datCho('kaiwa', `Đang lồng tiếng ${made + 1}/${todo} lượt thoại…`,
             `${line.speaker || 'Nhân vật'} — giọng ${voice}.`
@@ -2557,6 +2673,7 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
           for (let attempt = 1; attempt <= 3; attempt++) {
             res = await pool.speak(voice, jp);
             if (res.ok) break;
+            if (hetQuota.test(res.reason || '')) break;   // het quota: thu lai cung cho la vo ich
             if (attempt < 3) {
               console.warn(`[long tieng] thu lai lan ${attempt + 1} (${voice}):`, res.reason);
               pool.close(voice);
@@ -2602,6 +2719,10 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
           if (/không được phép|permission|API key|not found|không tìm thấy|403|404/i.test((res && res.reason) || '')) {
             ketQua.permanentFail = true;
           }
+          if (hetQuota.test((res && res.reason) || '')) {
+            ketQua.keyHetHan.add(candidateKeys[keyIdx]);
+            ketQua.hong.push({ voice, line, jp });
+          }
         }
 
         pool.close(voice);   // xong giong nay thi dong phien lai roi moi sang giong ke
@@ -2611,18 +2732,48 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
     if (dungSongSong) {
       const nhomTheoKey = chiaCongViec();
       await Promise.all(nhomTheoKey.map((nhom, i) => chayNhom([keys[i]], nhom)));
+
+      // Nhom song song chi co MOT key: key do het quota giua chung thi cau cua
+      // no bi bo trong khi key khac da xong ngoi khong. Dua cac cau con thieu
+      // cho cac key con han muc doc lai MOT lan (tuan tu, xoay key khi can).
+      const conSong = keys.filter(k => !ketQua.keyHetHan.has(k));
+      const conThieu = ketQua.hong.filter(h => !dialogueAudio[h.line.id]);
+      if (conThieu.length && conSong.length && vanOBaiNay()) {
+        const theoGiong = new Map();
+        conThieu.forEach(h => {
+          if (!theoGiong.has(h.voice)) theoGiong.set(h.voice, []);
+          theoGiong.get(h.voice).push({ line: h.line, jp: h.jp });
+        });
+        console.log(`[long tieng] thu lai ${conThieu.length} câu trên ${conSong.length} tài khoản còn hạn mức`);
+        await chayNhom(conSong, [...theoGiong].map(([voice, items]) => ({ voice, items })));
+      }
     } else {
       await chayNhom(keys, voices.map(voice => ({ voice, items: byVoice.get(voice) })));
     }
 
+    // Hoc vien da sang bai khac trong luc long tieng: dung o day — khong ngat
+    // Sensei (solo) hay bao loi cho mot bai ho da roi di.
+    if (!vanOBaiNay()) {
+      if (ketQua.permanentFail) ttsDisabled = true;
+      return;
+    }
+
     // Xu ly hau ky CHUNG cho ca hai duong chay.
-    if (ketQua.sessionLimitHit && !soloRetryDone
+    // Dang co ai dung phien Sensei (gio tay, thu am, phan xa, cho tra loi,
+    // Sensei dang noi...) thi KHONG ngat ngang giua chung — bo qua lan nay,
+    // Sensei tu doc phan thieu, lan mo bai sau se thu lai.
+    const dangBan = isRaisingHand || dangThuAm || dangMoMicPA || dangChoChamPhatAm || dangChoTraLoi
+      || phanXa.dangChay || pxChoPhan || senseiChenNgang || isConnecting
+      || audioEngine.isMicActive || geminiClient.isTurnActive() || audioEngine.isPlaybackActive();
+    if (ketQua.sessionLimitHit && !soloRetryDone && !dangBan
         && geminiClient.isConnected && lectureState !== 'PLAYING') {
       soloRetryDone = true;
       closeAllActorPools();
       ttsDisabled = false;
       showToast('Tạm rời lớp một lát để lồng tiếng hội thoại…');
-      geminiClient.disconnect();
+      // Tu ngat (khong bao "Mất kết nối"); onClose giu nguyen PAUSED nen
+      // vao lop lai la "Giảng tiếp" van con, khong can tra trang thai tay.
+      ngatPhienChuDong();
       await new Promise(r => setTimeout(r, 600));
       await prefetchDialogueAudio(lvl, lessonNum, { soloMode: true });
       showToast('Lồng tiếng xong — đang vào lớp lại…');
@@ -2693,9 +2844,18 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
   }
 
   function khiDoiTab(tab) {
+    // Moi lan ve (ke ca ve lai chinh Bai tap) la khung viet tay cu bi thay:
+    // dung dong ho cu, khong thi het gio no nop khung trong / khung da mat.
+    huyVietTay();
     // Roi chuong Phan xa giua chung: tat dong ho va dong mic lai, khong
     // thi dem nguoc van chay ngam va mic van bat o chuong khac.
     if (tab !== 'reflex') dungPhanXaKhiRoiTab();
+
+    // Nap ngam chi tiet vai bai lien truoc cho phan on bai (Bai tap / Phan xa)
+    // — muc luc nhe khong co cau/tu nao de on. Da nap roi thi khong tai lai.
+    if (curriculumLoader.ensureReviewLoaded) {
+      curriculumLoader.ensureReviewLoaded(slideEngine.currentLevel, slideEngine.currentLesson).catch(() => {});
+    }
 
     veLaiCho();
     // Chi soan de khi nguoi hoc thuc su mo chuong Bai tap — de khong dot han
@@ -2747,9 +2907,19 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
     box.innerHTML = html;
   }
 
+  let dangMoMicPA = false;   // dang vao lop / cho quyen mic cho mot ban thu — bam them thi bo qua
+
   window.thuAmPhatAm = async (id) => {
     // Bam lan hai tren chinh cau dang thu = ket thuc, gui cho Sensei cham
     if (dangThuAm === id) return ketThucThuAm();
+    // Bam them luc dang cho (hop xin quyen mic dang mo...) thi bo qua, khong
+    // thi gui hai lan ngu canh va mo hai luong mic, luong dau khong tat duoc.
+    if (dangMoMicPA) return;
+    dangMoMicPA = true;
+    try { await moMicPhatAm(id); } finally { dangMoMicPA = false; }
+  };
+
+  async function moMicPhatAm(id) {
     // Dang thu cau khac ma bam sang cau moi: bo ban thu do di
     if (dangThuAm) huyThuAm();
 
@@ -2772,7 +2942,8 @@ Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn 
     // Dang giang bai thi dung lai da, khong de hai giong chong len nhau
     if (lectureState === 'PLAYING') pauseLecture(false);
     stopAllAudio();
-    audioEngine.setSuppressed(false);
+    // KHONG mo lai tieng o day: ban thu vua huy (huyThuAm o tren) chua cham
+    // xong — mo o ketThucThuAm, luc gui ban thu moi.
 
     // Nap ngu canh TRUOC, chua ket thuc luot -> Sensei im lang cho hoc vien doc
     geminiClient.sendContextNote(`[KIỂM TRA PHÁT ÂM — HỌC VIÊN SẮP ĐỌC TO MỘT CÂU]
@@ -2798,7 +2969,7 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     } catch (err) {
       veTinPhatAm(id, '<i class="fa-solid fa-triangle-exclamation"></i><span>Không mở được micro: ' + escapeHtml(err.message || '') + '</span>', 'amber');
     }
-  };
+  }
 
   function ketThucThuAm() {
     const id = dangThuAm;
@@ -2807,6 +2978,10 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
 
     if (audioEngine.isMicActive) audioEngine.stopMic();
     veNutThuAm(id, false);
+    // Gui ban thu MOI (ca hai nhanh duoi) -> mo lai tieng / chu da chan cho
+    // ban thu huy truoc do; luot nay la cua ban nay, phai nghe duoc loi cham.
+    boQuaLuotHuy = false;
+    audioEngine.setSuppressed(false);
 
     if (mucAmThanhCaoNhat <= NGUONG_AM_THANH_RO) {
       // Khong co tieng nao vuot nguong ro suot luot thu. Van phai dong moc
@@ -2849,6 +3024,11 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
      net cho da so truong hop.
      ---------------------------------------------------------------------- */
   const vietTay = {};   // id -> { ctx, dangVe, demTimer, conLai, daNop }
+
+  /** Bo het cac luot viet tay dang do (dong ho + trang thai) — khung da bi ve lai. */
+  function huyVietTay() {
+    Object.keys(vietTay).forEach(k => { clearInterval(vietTay[k].demTimer); delete vietTay[k]; });
+  }
 
   function timChuVietTay(id) {
     return (slideEngine.handwritingSet || []).find(c => c.id === id) || null;
@@ -2941,7 +3121,8 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
       veDem();
       if (t.conLai <= 0) {
         clearInterval(t.demTimer);
-        window.nopChuViet(id);     // het gio thi tu nop
+        // het gio thi tu nop; loi o day khong duoc leo len thanh bang "loi khoi dong"
+        window.nopChuViet(id).catch(e => console.warn('[viet tay]', e));
       }
     }, 1000);
   };
@@ -2963,6 +3144,10 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     const cau = timChuVietTay(id);
     if (!cau) return;
     if (!t || t.daNop) return;
+    // Chi cham DUNG khung da bat dau viet; khung do da bi ve lai / roi chuong
+    // thi bo luot nay (khong gui khung trong moi, khong vo vi khung da mat).
+    const cv = t.ctx && t.ctx.canvas;
+    if (!cv || !cv.isConnected) { clearInterval(t.demTimer); delete vietTay[id]; return; }
     t.daNop = true;
     t.dangChay = false;
     clearInterval(t.demTimer);
@@ -2981,7 +3166,6 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     }
 
     veKetQuaViet(id, 'cyan', '<i class="fa-solid fa-spinner fa-spin"></i> Sensei đang nhìn nét chữ…');
-    const cv = document.getElementById('vtkhung-' + id);
     const anh = cv.toDataURL('image/png').split(',')[1];
     const kq = await chamChuVietBangAI(anh, cau);
     if (kq.ok) {
@@ -2995,7 +3179,7 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
   };
 
   window.doiChuVietTay = () => {
-    Object.keys(vietTay).forEach(k => { clearInterval(vietTay[k].demTimer); delete vietTay[k]; });
+    huyVietTay();
     slideEngine.handwritingRound = (slideEngine.handwritingRound || 0) + 1;
     slideEngine.setTab('quiz');
   };
@@ -3020,12 +3204,16 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
 
     for (const key of allKeys()) {
       for (const model of (SENSEI_MODELS.quizModels || [SENSEI_MODELS.quiz])) {
+        // Moi cap mot han 30s (tinh ca luc doc than) — treo thi sang cap sau, khong quay mai
+        const ctrl = new AbortController();
+        const timer = setTimeout(() => ctrl.abort(), 30000);
         try {
           const res = await fetch(
             'https://generativelanguage.googleapis.com/v1beta/' + model + ':generateContent?key=' + key,
             {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
+              signal: ctrl.signal,
               body: JSON.stringify({
                 contents: [{ parts: [{ text: prompt }, { inlineData: { mimeType: 'image/png', data: anhBase64 } }] }],
                 generationConfig: { temperature: 0.6, maxOutputTokens: 400, responseMimeType: 'application/json' },
@@ -3041,6 +3229,7 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
           const o = JSON.parse(stripFence(txt));
           return { ok: true, dung: !!o.dung, phan: String(o.phan || '').trim(), docDuoc: o.docDuoc };
         } catch (e) { /* thu cap ke tiep */ }
+        finally { clearTimeout(timer); }
       }
     }
     return { ok: false };
@@ -3074,13 +3263,19 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     dangVe: false,
     demTimer: null,
     conLai: 0,
+    luot: 0,            // tang moi khi bat dau / dung vong: hen gio cu thay lech thi thoi
   };
 
   function dungPhanXaKhiRoiTab() {
+    pxHuyCho();
+    phanXa.luot++;
     if (!phanXa.dangChay && !phanXa.demTimer) return;
     pxDungDongHo();
     if (phanXa.che === 'noi' && audioEngine && audioEngine.isMicActive) {
       audioEngine.stopMic();
+      // Bo giua chung: van dong moc "dang noi" nhung chan tieng luot tra loi
+      // do, khong de Sensei cham to cau bo do o chuong khac.
+      if (geminiClient.isConnected) { boQuaLuotHuy = true; audioEngine.setSuppressed(true); }
       geminiClient.sendAudioStreamEnd();   // dong moc "dang noi" lai
     }
     phanXa.dangChay = false;
@@ -3098,11 +3293,10 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
   }
 
   window.doiCheDoPhanXa = (che) => {
-    pxDungDongHo();
-    if (audioEngine && audioEngine.isMicActive) audioEngine.stopMic();
+    // Dung chung cach don cua luc roi tab: dong mic + activityEnd (chi khi dang
+    // noi nhanh, khong dung mic cua Gio tay hoi), bo cho phan, doi luot.
+    dungPhanXaKhiRoiTab();
     phanXa.che = che;
-    phanXa.dangChay = false;
-    phanXa.dangCho = false;
     veManPhanXa();
   };
 
@@ -3229,31 +3423,49 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     cv.addEventListener('pointerleave', nhac);
   }
 
+  let pxDangMo = false;   // dang cho vao lop / nap bai cho vong moi — bam lan hai thi bo qua
+
   window.batDauPhanXa = async () => {
+    if (pxDangMo || phanXa.dangChay) return;
+    pxDangMo = true;
     try {
-      await ensureConnected();
-    } catch (err) {
-      showToast('Chưa vào được lớp — kiểm tra mạng rồi thử lại.', 'info', 6000);
-      return;
+      try {
+        await ensureConnected();
+      } catch (err) {
+        showToast('Chưa vào được lớp — kiểm tra mạng rồi thử lại.', 'info', 6000);
+        return;
+      }
+      const lvl = slideEngine.currentLevel, no = slideEngine.currentLesson;
+      // Phan on bai lay tu cac bai lien truoc — muc luc nhe chua co chi tiet nen
+      // nap them (co gioi han) truoc khi boc de. Mang cham thi khong doi qua 4s.
+      await Promise.all([
+        curriculumLoader.ensureLessonLoaded(lvl, no),
+        Promise.race([curriculumLoader.ensureReviewLoaded ? curriculumLoader.ensureReviewLoaded(lvl, no) : null, nghi(4000)]),
+      ]);
+      // Trong luc cho, hoc vien da roi chuong / doi bai thi thoi — khong mo mic o cho khac
+      if (slideEngine.currentLevel !== lvl || slideEngine.currentLesson !== no || slideEngine.activeTab !== 'reflex') return;
+      const kho = curriculumLoader.getHandwritingSet(lvl, no, phanXa.vong || 0, PX_SO_CAU);
+      if (!kho.length) { showToast('Bài này chưa có từ nào hợp để luyện phản xạ.', 'info'); return; }
+      phanXa.vong = (phanXa.vong || 0) + 1;
+      phanXa.dsCau = kho;
+      phanXa.viTri = 0;
+      phanXa.diem = 0;
+      phanXa.luot++;
+      phanXa.dangChay = true;
+      phanXa.dangCho = false;
+      veManPhanXa();
+      pxVaoCau();
+    } finally {
+      pxDangMo = false;
     }
-    const lvl = slideEngine.currentLevel, no = slideEngine.currentLesson;
-    await curriculumLoader.ensureLessonLoaded(lvl, no);
-    const kho = curriculumLoader.getHandwritingSet(lvl, no, phanXa.vong || 0, PX_SO_CAU);
-    if (!kho.length) { showToast('Bài này chưa có từ nào hợp để luyện phản xạ.', 'info'); return; }
-    phanXa.vong = (phanXa.vong || 0) + 1;
-    phanXa.dsCau = kho;
-    phanXa.viTri = 0;
-    phanXa.diem = 0;
-    phanXa.dangChay = true;
-    phanXa.dangCho = false;
-    veManPhanXa();
-    pxVaoCau();
   };
 
   /** Bat dau dem gio cho cau dang hien. */
   async function pxVaoCau() {
+    if (!phanXa.dangChay) return;   // vong da dung (roi tab / doi che do) thi khong mo mic nua
     const c = pxCauHienTai();
     if (!c) { veManPhanXa(); return; }
+    const luot = phanXa.luot;
     phanXa.conLai = PX_GIAY;
     phanXa.dangCho = false;
 
@@ -3267,7 +3479,14 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
       );
       try {
         mucAmThanhCaoNhat = 0;
+        const micDaMoSan = audioEngine.isMicActive;
         await audioEngine.startMic();
+        // Trong luc cho mo mic, vong da dung / da nop / da sang cau khac: tat
+        // mic cua minh di, khong mo luot "dang noi" nao nua.
+        if (!phanXa.dangChay || luot !== phanXa.luot || phanXa.dangCho || pxCauHienTai() !== c) {
+          if (!micDaMoSan && audioEngine.isMicActive) audioEngine.stopMic();
+          return;
+        }
         geminiClient.sendActivityStart();
       } catch (err) {
         veKetQuaPhanXa('amber', 'Không mở được micro: ' + (err.message || ''));
@@ -3308,43 +3527,108 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
       const loiNhac = '[PHAN XA — VIET NHANH] Anh dinh kem la chu VIET TAY cua hoc vien (bo qua cac duong ke dut net mo). '
         + 'Dap an dung la "' + c.dapAn + '". Net xau nhung doc ra dung chu thi van tinh DUNG. '
         + 'Cham ngay: mo dau bang dung mot tu DUNG hoac SAI, roi mot cau ngan kieu mày-tao. Khong giang dai.';
-      pxChoPhan = true;
-      geminiClient.sendImageTurn(loiNhac, anh);
+      // Lop dang tam dung thi cong tieng dang chan — mo ra ngay truoc luot can
+      // nghe, khong thi chi thay chu ma khong nghe Sensei phan.
+      boQuaLuotHuy = false;
+      audioEngine.setSuppressed(false);
+      // false ma van con ket noi = dang xep hang cho bat tay xong, se tu gui
+      if (!geminiClient.sendImageTurn(loiNhac, anh) && !geminiClient.isConnected) {
+        pxChotCau(false, 'Mất kết nối — chưa gửi được bài.');
+        return;
+      }
+      pxBatDauCho(60000);
     } else {
       if (audioEngine.isMicActive) audioEngine.stopMic();
+      boQuaLuotHuy = false;
+      audioEngine.setSuppressed(false);
       geminiClient.sendAudioStreamEnd();     // = activityEnd
       if (mucAmThanhCaoNhat <= NGUONG_AM_THANH_RO) { pxChotCau(false, 'Không nghe thấy tiếng nào.'); return; }
+      if (!geminiClient.isConnected) { pxChotCau(false, 'Mất kết nối — chưa gửi được câu trả lời.'); return; }
       veKetQuaPhanXa('cyan', '<i class="fa-solid fa-spinner fa-spin"></i> Sensei đang nghe lại…');
-      pxChoPhan = true;
+      pxBatDauCho(90000);   // luot mic von cham hon luot chu nhieu
     }
   };
 
   let pxChoPhan = false;   // dang doi loi phan cua Sensei cho cau phan xa
+  let pxChoTimer = null;   // luoi an toan: Sensei khong phan thi khong treo mai
+  // Vua huy ban thu phat am: activityEnd da dong luot nen Sensei van tra loi
+  // ban thu do -> chan tieng den het luot, khong cham to ban hoc vien da bo.
+  let boQuaLuotHuy = false;
+
+  function pxHuyCho() {
+    pxChoPhan = false;
+    clearTimeout(pxChoTimer);
+    pxChoTimer = null;
+  }
+
+  /** Bat dau doi loi phan; qua han ma chua co thi tinh la bo qua cau nay. */
+  function pxBatDauCho(ms) {
+    pxHuyCho();
+    pxChoPhan = true;
+    const luot = phanXa.luot, vt = phanXa.viTri;
+    pxChoTimer = setTimeout(() => {
+      if (!pxChoPhan || luot !== phanXa.luot || vt !== phanXa.viTri) return;
+      pxHuyCho();
+      pxChotCau(false, 'Sensei chưa phán kịp — tính là bỏ qua.');
+    }, ms);
+  }
+
+  /** Goi tu onClose: mat ket noi giua vong thi dung ca vong, khong treo spinner. */
+  function pxKhiMatKetNoi() {
+    if (!phanXa.dangChay) { pxHuyCho(); return; }
+    const dangCho = pxChoPhan;
+    dungPhanXaKhiRoiTab();
+    veKetQuaPhanXa('amber', 'Mất kết nối' + (dangCho ? ' trước khi Sensei phán xong' : '') + ' — bấm lại để luyện tiếp.');
+    setTimeout(() => { if (!phanXa.dangChay) veManPhanXa(); }, 2500);
+  }
 
   /** Goi tu onTurnComplete khi Sensei phan xong mot cau phan xa. */
   function pxNhanLoiPhan(loiSensei) {
+    // onTurnComplete goi ham nay o MOI luot: het luot cua ban thu vua huy thi mo tieng lai
+    if (boQuaLuotHuy) { boQuaLuotHuy = false; audioEngine.setSuppressed(false); }
     if (!pxChoPhan) return false;
-    pxChoPhan = false;
+    pxHuyCho();
     const txt = String(loiSensei || '').trim();
-    // Da dan Sensei mo dau bang DUNG hoac SAI — bat dung tu dau cho chac
-    const dau = txt.slice(0, 24).toUpperCase();
-    const dung = /\bĐÚNG\b|\bDUNG\b/.test(dau) && !/\bSAI\b/.test(dau);
+    // Da dan Sensei mo dau bang DUNG hoac SAI — chi xet tu dau tien. \b cua JS
+    // chi hieu ASCII nen /\bĐÚNG/ khong bao gio khop: so ca tu, giu nguyen dau
+    // (bo dau thi "Dũng", "Dùng", "Đụng" cung thanh DUNG).
+    const m = txt.normalize('NFC').toUpperCase().match(/^[^\p{L}\p{N}]*([\p{L}\p{M}\p{N}]+)/u);
+    const tuDau = m ? m[1] : '';
+    const dung = tuDau === 'ĐÚNG' || tuDau === 'DUNG';
     pxChotCau(dung, txt || (dung ? 'Đúng.' : 'Sai.'));
     return true;
   }
 
   function pxChotCau(dung, loi) {
-    phanXa.dangCho = false;
+    // KHONG tra dangCho ve false o day: con giu den khi sang cau sau (pxVaoCau
+    // tu tra), khong thi bam "Nộp sớm" lan nua luc dang hien loi phan se nhay
+    // cau / cong diem hai lan.
+    if (!phanXa.dangChay) return;
     if (dung) phanXa.diem++;
     veKetQuaPhanXa(dung ? 'sage' : 'amber',
       (dung ? '<i class="fa-solid fa-check"></i> ' : '<i class="fa-solid fa-xmark"></i> ')
       + escapeHtml(loi) + ' <span class="opacity-70">(đáp án: ' + escapeHtml((pxCauHienTai() || {}).dapAn || '') + ')</span>');
-    setTimeout(() => {
-      phanXa.viTri++;
-      if (phanXa.viTri >= phanXa.dsCau.length) { phanXa.dangChay = false; veManPhanXa(); return; }
-      veManPhanXa();
-      pxVaoCau();
-    }, 2600);
+    const luot = phanXa.luot, batDau = Date.now();
+    const tiepTuc = () => {
+      if (!phanXa.dangChay || luot !== phanXa.luot) return;   // da roi tab / doi che do / vong moi
+      // Sensei con doc loi phan thi doi doc xong (toi da 15s) moi sang cau,
+      // khong thi dem gio va mic cua cau sau chong len tieng Sensei.
+      if (audioEngine.isPlaybackActive() && Date.now() - batDau < 15000) { setTimeout(tiepTuc, 250); return; }
+      setTimeout(() => {
+        if (!phanXa.dangChay || luot !== phanXa.luot) return;
+        phanXa.viTri++;
+        if (phanXa.viTri >= phanXa.dsCau.length) {
+          // Ve thang man ket thuc: veManPhanXa thay dangChay=false se ve man chuan bi
+          phanXa.dangChay = false;
+          const than = pxThan();
+          if (than) than.innerHTML = pxManKetThuc();
+          return;
+        }
+        veManPhanXa();
+        pxVaoCau();
+      }, 300);   // de tieng vang qua loa tat han roi moi mo mic
+    };
+    setTimeout(tiepTuc, 2600);
   }
 
   function veKetQuaPhanXa(mau, html) {
@@ -3364,6 +3648,9 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     dangThuAm = null;
     if (!id) return;
     if (audioEngine.isMicActive) audioEngine.stopMic();
+    // activityEnd dong luot nen Sensei van se cham ban thu nay: chan tieng den
+    // het luot do (pxNhanLoiPhan mo lai o turnComplete ke tiep).
+    if (geminiClient.isConnected) { boQuaLuotHuy = true; audioEngine.setSuppressed(true); }
     geminiClient.sendAudioStreamEnd();   // dong moc "dang noi" du la huy
     veNutThuAm(id, false);
     const box = document.getElementById('kq-' + id);
@@ -3379,7 +3666,8 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
   // Nut "Doi de khac" tren dau chuong Bai tap
   window.regenerateQuiz = () => {
     const lvl = slideEngine.currentLevel, no = slideEngine.currentLesson;
-    delete quizGenCache[`${lvl}-${no}`];
+    // Khong xoa cache: verbose da bo qua nhanh "co san", con giu cache thi soan
+    // hong van con de cu, lan mo chuong sau khong tu dot them mot luot soan.
     prefetchGeneratedQuiz(lvl, no, true);
   };
 
@@ -3494,7 +3782,8 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
           }),
         }
       );
-      clearTimeout(timer);
+      // KHONG tat hen gio o day: doc than (res.json) cung phai nam trong han
+      // 45s, khong thi than treo la de ket "dang soan" mai.
       if (!res.ok) {
         let detail = res.status;
         try {
@@ -3520,8 +3809,9 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
       }
       return { ok: true, items };
     } catch (err) {
-      clearTimeout(timer);
       return { ok: false, status: String((err && err.message) || err) };
+    } finally {
+      clearTimeout(timer);
     }
   }
 
@@ -3587,6 +3877,13 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
 
   const LEVEL_TAG = { de: 'Dễ', vua: 'Vừa', kho: 'Khó' };
 
+  // Model doi khi cho hai lua chon y het nhau (vd dap an dung lap lai o D):
+  // chon ban lap cung dung ma bi cham sai vi chi tinh correctIndex -> bo cau do.
+  function luaChonHong(options) {
+    const o = (options || []).map(s => String(s).trim());
+    return o.some(s => !s) || new Set(o).size !== o.length;
+  }
+
   function normalizeGeneratedQuiz(items, lvl, lessonNum) {
     return (items || [])
       .map(q => {
@@ -3597,7 +3894,8 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
         const dap = Number(q.correctIndex);
         if (!q.question || !Array.isArray(q.options) || q.options.length !== 4) return null;
         if (!Number.isInteger(dap) || dap < 0 || dap > 3) return null;
-        return { ...q, correctIndex: dap };
+        if (luaChonHong(q.options)) return null;
+        return { ...q, options: q.options.map(s => String(s).trim()), correctIndex: dap };
       })
       .filter(Boolean)
       .map((q, i) => ({
@@ -3644,7 +3942,12 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
   // Nap lai nhung bo de da soan tu lan truoc
   (() => {
     const o = docKhoDe();
-    for (const k of Object.keys(o)) quizGenCache[k] = o[k].items;
+    for (const k of Object.keys(o)) {
+      // Bo luu tu truoc khi co bo loc van co the con cau trung lua chon — loc lai
+      const items = (Array.isArray(o[k].items) ? o[k].items : [])
+        .filter(q => q && Array.isArray(q.options) && !luaChonHong(q.options));
+      if (items.length) quizGenCache[k] = items;
+    }
   })();
 
   /**
@@ -3830,9 +4133,12 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
     const lesson = curriculumLoader.getLesson(lvl, lessonNum);
     if (!lesson) return false;
 
-    // Da gan roi thi thoi — gan lai se keo theo setTab() va tao vong lap vo
-    // tan (setTab -> onTabChange -> prefetchGeneratedQuiz -> gan lai -> ...).
-    if ((lesson.exercises || []).some(q => q.generated)) return false;
+    // Dung bo nay da gan roi thi thoi — gan lai se keo theo setTab() va tao
+    // vong lap vo tan (setTab -> onTabChange -> prefetchGeneratedQuiz -> gan
+    // lai -> ...). Chi so bo dang gan voi bo moi (id co moc thoi gian nen hai
+    // bo khac nhau khong trung id): chan moi bo AI thi "Đổi đề khác" vo dung.
+    const dangGan = (lesson.exercises || []).find(q => q.generated);
+    if (dangGan && dangGan.id === items[0].id) return false;
 
     const base = (lesson.exercises || []).filter(q => !q.generated);
     // De AI len TRUOC. Neu de sau thi 10 cau dau van y nguyen moi lan mo,
@@ -3868,6 +4174,10 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
   const pickerBtn = document.getElementById('pickerBtn');
   const pickerCloseBtn = document.getElementById('pickerCloseBtn');
   const pickerSearch = document.getElementById('pickerSearch');
+  // Da mo bai nao chua (bam the bai, hoac dong danh sach de hoc bai hien san).
+  // Chua thi khong gan nhan "ĐANG HỌC" — lan dau vao trang chua hoc gi ca.
+  // Phai khai bao TRUOC lan openPicker() dau tien ben duoi (TDZ).
+  let daMoBai = false;
 
   // l chi la muc luc nhe (chua bam mo bao gio) thi dung dem so co san trong
   // index (vocabCount...); bai nao da tung mo roi thi mang that (vocabList...)
@@ -3899,7 +4209,7 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
         const st = lessonStats(l);
         // Bài chỉ có một từ vựng / một slide là bài mới dựng khung, chưa soạn đủ
         const thin = st.vocab <= 2 || st.slides <= 1;
-        const isCurrent = slideEngine.currentLevel === lvl && slideEngine.currentLesson === l.lessonNumber;
+        const isCurrent = daMoBai && slideEngine.currentLevel === lvl && slideEngine.currentLesson === l.lessonNumber;
         const title = l.title.includes(':') ? l.title.split(':').slice(1).join(':').trim() : l.title;
         return `
           <button type="button" class="lesson-card${isCurrent ? ' is-current' : ''}"
@@ -3974,6 +4284,7 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
    * của mọi bài. Muốn giảng từ chương khác thì bấm chương đó rồi mới bấm giảng.
    */
   async function openLesson(lvl, lessonNum) {
+    daMoBai = true;
     if (lectureState !== 'IDLE') {
       pauseLecture(false);
       lectureState = 'IDLE';
@@ -4005,8 +4316,8 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
     lectureCheckpoint = { stepIndex: 0, sectionName: 'vocab', subIndex: null, level: lvl, lessonNum: Number(lessonNum) };
     updateLectureControlsUI();
 
-    const lesson = curriculumLoader.getLesson(lvl, lessonNum);
-    if (lesson) showToast(`${lvl} · Bài ${lessonNum} — ${lesson.title.split(':').slice(1).join(':').trim() || lesson.title}`);
+    // Khong bao ten bai bang toast nua: o chon bai tren dau va tieu de chuong
+    // da hien san, toast lai de dung len tieu de do.
 
     // Bai tap: KHONG soan o day nua. Mo bai chi de luot xem cung ton mot luot
     // goi, ma han muc free tier chi 20 luot. Doi den khi mo chuong Bai tap.
@@ -4025,11 +4336,31 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
     if (!pickerEl) return;
     renderPicker(pickerSearch ? pickerSearch.value : '');
     pickerEl.classList.remove('hidden');
-    if (pickerSearch) setTimeout(() => pickerSearch.focus(), 60);
+    // Cuon toi bai dang hoc — phai SAU khi bo 'hidden', luc con display:none
+    // thi scrollIntoView khong lam gi. Bi loc mat the do thi thoi.
+    const theDangHoc = pickerBody && pickerBody.querySelector('.lesson-card.is-current');
+    if (theDangHoc) theDangHoc.scrollIntoView({ block: 'center' });
+    // Chi tu dat con tro vao o tim khi co chuot: may cam ung ma focus la bat
+    // ban phim ao len che nua danh sach.
+    const coChuot = window.matchMedia && window.matchMedia('(pointer: fine)').matches;
+    if (pickerSearch && coChuot) setTimeout(() => pickerSearch.focus(), 60);
   }
 
   function closePicker() {
     if (pickerEl) pickerEl.classList.add('hidden');
+  }
+
+  // Dong danh sach (nut X / Esc) ma chua bam bai nao — lan dau vao trang: coi
+  // nhu hoc bai dang hien san phia sau, luc do moi long tieng cho bai do.
+  // Truoc day long tieng chay ngay luc tai trang, khi hoc vien con o man chon bai.
+  function dongPickerVeBaiDangHoc() {
+    closePicker();
+    if (daMoBai) return;
+    daMoBai = true;
+    const lvl = slideEngine.currentLevel, no = slideEngine.currentLesson;
+    setTimeout(() => {
+      if (slideEngine.currentLevel === lvl && slideEngine.currentLesson === no) prefetchDialogueAudio(lvl, no);
+    }, 2500);
   }
 
   // Mo danh sach bai NGAY o day, khong doi toi cuoi ham khoi dong. Tu day den
@@ -4041,11 +4372,17 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
   openPicker();
 
   if (pickerBtn) pickerBtn.addEventListener('click', openPicker);
-  if (pickerCloseBtn) pickerCloseBtn.addEventListener('click', closePicker);
+  if (pickerCloseBtn) pickerCloseBtn.addEventListener('click', dongPickerVeBaiDangHoc);
   if (pickerSearch) {
     pickerSearch.addEventListener('input', () => renderPicker(pickerSearch.value));
     pickerSearch.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') { pickerSearch.value = ''; renderPicker(''); }
+      // O dang co chu: Esc chi xoa o tim, khong de noi len document dong luon
+      // danh sach. O trong roi thi Esc lan nua moi dong.
+      if (e.key !== 'Escape' || !pickerSearch.value) return;
+      e.preventDefault();
+      e.stopPropagation();
+      pickerSearch.value = '';
+      renderPicker('');
     });
   }
 
@@ -4092,7 +4429,7 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
   // ---- Phím tắt: Esc đóng lớp phủ đang mở (theo thứ tự ưu tiên) ----
   document.addEventListener('keydown', (e) => {
     if (e.key !== 'Escape') return;
-    if (pickerEl && !pickerEl.classList.contains('hidden')) { closePicker(); return; }
+    if (pickerEl && !pickerEl.classList.contains('hidden')) { dongPickerVeBaiDangHoc(); return; }
     if (chatDock && !chatDock.classList.contains('hidden') && document.activeElement !== chatInput) closeChat();
   });
 
@@ -4118,13 +4455,14 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
 
   // (Danh sach bai da duoc mo som hon, ngay sau khi openPicker san sang)
 
-  // Khong soan de luc khoi dong: nguoi hoc dang o man chon bai, chua biet
-  // se hoc bai nao. Doi den khi ho mo chuong Bai tap.
-  setTimeout(() => prefetchDialogueAudio(slideEngine.currentLevel, slideEngine.currentLesson), 3000);
+  // Khong soan de, cung KHONG long tieng luc khoi dong: nguoi hoc dang o man
+  // chon bai, chua biet se hoc bai nao. Long tieng chay khi mo bai (openLesson)
+  // hoac khi dong danh sach de hoc bai hien san (dongPickerVeBaiDangHoc).
 
   // Giữ tương thích cho các lời gọi cũ
   window.jumpToLesson = openLesson;   // openSyllabusModal/closeSyllabusModal da gan som hon
 
+  daKhoiDong = true;   // tu day loi le chi ghi console, khong hien bang "chua mo duoc"
  } catch (err) {
    // Khoi dong gay giua chung: van co gang dung lai man chon bai, de con
    // duong vao lop. Dung duoc thi nguoi hoc khong mat gi ngoai vai tinh nang.

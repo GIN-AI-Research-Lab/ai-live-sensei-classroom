@@ -12,46 +12,85 @@ import * as THREE from 'three';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { napMeoNangCap } from './meo3d-long.js';
 
-// Ban dung tu Tripo (H2.5): muot, can doi hon ban Hunyuan (meo-xuong.glb, van giu de so sanh)
-const MO_HINH = 'assets/sensei-meo/3d/meo-tripo.glb';
+// Ban dung tu Tripo (H2.5): muot, can doi hon ban Hunyuan (meo-xuong.glb, van giu de so sanh).
+// Ban "nhe" cua meo-tripo.glb: anh mau 2048 thay 4096, bo anh metallicRoughness khong dung toi,
+// nuong san bong khe / do dai long (_AO/_DAI) -> khong phai tinh lai luc nap. Anh phu dung chung ban goc.
+const MO_HINH = 'assets/sensei-meo/3d/meo-tripo-nhe.glb';
+const ANH_PHU = 'assets/sensei-meo/3d/meo-tripo';
 const hub = window.SenseiAvatarHub;
 
-// act_out cua Gemini -> dong tac co san cua meo 3D
+// act_out cua Gemini -> dong tac co san cua meo 3D (du moi gia tri trong enum cua gemini-live.js)
 const DONG_TAC = { vay: 'vay', cui: 'cui', gat_dau: 'gat', vui: 'vui', hat: 'vui', gian: 'lac', noi: 'gat',
                    ngac_nhien: 'vui', ban: 'chi', toi: 'gat', doc: 'nghi', nghi: 'nghi', viet: 'nghi',
-                   an: 'an', uong: 'an', ngu: 'ngu', day: 'vui', cho: 'nghi', mua: 'chi', nhin: 'nghi', nghe: 'nghi' };
+                   an: 'an', uong: 'an', ngu: 'ngu', day: 'vui', cho: 'nghi', mua: 'chi', nhin: 'nghi', nghe: 'nghi',
+                   boi: 'vui', rua: 'an' };
 const THOI_LUONG = { vay: 2.6, gat: 1.8, vui: 2.4, lac: 1.8, chi: 2.5, an: 3.2, ngu: 3.6, cui: 2, nghi: 3 };
-const CAM_XUC = { happy: 'vui', love: 'vui', angry: 'lac', speechless: 'lac', sad: 'gat', dizzy: 'lac', surprised: 'vui' };
+const CAM_XUC = { happy: 'vui', love: 'vui', angry: 'lac', speechless: 'lac', sad: 'gat', dizzy: 'lac', surprised: 'vui',
+                  relaxed: 'gat' };
 const BONG = { vay: '👋', vui: '✨', lac: '💢', gat: '', chi: '', an: '🐟', ngu: '💤', cui: '🙇', nghi: '❓' };
+// So lop long toi da (11 = muc mac dinh cu: datSoLop cu cho 14 thi thuc ra ve 11 lop)
+const LOP_TOI_DA = 11;
 
 const S = {
   san: false, tat: false, x: null, dichX: null, chi: null, dongTac: null, nghiTu: 0,
-  truoc: performance.now(), pha: 0, dangDi: 0, noiDen: 0, soLop: 14, tbKhung: 16,
+  truoc: performance.now(), pha: 0, dangDi: 0, noiDen: 0, soLop: LOP_TOI_DA, tbKhung: 16, boQua: 0,
 };
-let renderer, scene, cam, meo = null, khung, laser, ctx2d, bong;
+let renderer, scene, cam, meo = null, khung, laser, ctx2d, bong, laserBan = false;
+
+// He dieu hanh bat "giam chuyen dong": meo khong di bo qua man hinh (dich thang toi cho), laser dung yen
+const mqGiam = matchMedia('(prefers-reduced-motion: reduce)');
+const giam = () => mqGiam.matches;
+// Bang chon bai (phu kin, nen dac) dang mo thi khong ve meo
+let pickerEl = null;
+const pickerMo = () => {
+  pickerEl = pickerEl || document.getElementById('lessonPicker');
+  return !!pickerEl && !pickerEl.classList.contains('hidden');
+};
+// Bang phan dang mo o cot phai (man rong; man hep bang nam day, khong can tranh ngang)
+const bangPhai = (W) => (W > 860 && document.body.classList.contains('co-bang') ? document.getElementById('bangPhan') : null);
+const conHien = (el) => el.isConnected && el.getClientRects().length > 0;
 
 function kichThuoc() {
-  const W = innerWidth, H = innerHeight, hep = W < 700;
-  const cao = hep ? Math.max(140, Math.min(H * .22, 180)) : Math.max(200, Math.min(H * .36, 320));
+  const W = innerWidth, H = innerHeight, hep = W < 700 || H < 500;
+  // Theo ca ngang lan doc: dien thoai (ca nam ngang) nho han nhieu, man doc hep (iPad dung) khong to 320 px
+  const cao = hep ? Math.min(130, Math.max(96, H * .15)) : Math.max(150, Math.min(H * .3, W * .22, 300));
   const chan = H - (document.querySelector('.deck-bottom')?.offsetHeight || 64);
   return { W, H, hep, cao, rong: cao * 1.3, khungCao: cao * 1.18, chan };
 }
+// Cho dung nghi: goc phai. Bang phan mo (cot phai) thi dung ben trai bang; the ron ben trai mo thi khong lan len the.
 const viTriNha = () => {
   const { W, rong } = kichThuoc();
-  return W - (hub ? hub.rongTruoc(api) : 0) - rong * .5;
+  let x = W - (hub ? hub.rongTruoc(api) : 0) - rong * .5;
+  const bang = bangPhai(W);
+  if (bang) x = Math.min(x, bang.offsetLeft - 8 - rong * .5);
+  const the = W > 860 && document.body.classList.contains('co-the-trai') && document.querySelector('.spotlight:not(.hidden) .spot-dock');
+  if (the && the.offsetWidth) x = Math.max(x, the.offsetLeft + the.offsetWidth + rong * .5);
+  return Math.max(rong * .5, x);
 };
+// Chieu cao meo -> bien CSS --sensei-cao: .deck-scroll chua bay nhieu cho trong o cuoi, hang cuoi cuon len khoi meo
+function datChoTrong() {
+  const r = document.documentElement.style;
+  if (S.san && !S.tat && khung && khung.isConnected) r.setProperty('--sensei-cao', Math.max(40, Math.round(kichThuoc().khungCao * .9)) + 'px');
+  else r.removeProperty('--sensei-cao');
+}
+
+const dprLaser = () => Math.min(devicePixelRatio, 1.5);
 
 function dungSanKhau() {
+  // Thu tu lop: meo (3) tren noi dung bai (.deck-canvas 1) nhung DUOI moi lop phu — bang sua loi (5),
+  // thanh tren / duoi (30), o chat (40), bang phan (44), anh phong to (50), thong bao (70), the ron (80),
+  // chon bai (90). Laser + bong chu (31-32) chi can noi len tren thanh duoi (nut tab) va noi dung.
   khung = document.createElement('canvas');
-  Object.assign(khung.style, { position: 'fixed', left: '0', top: '0', pointerEvents: 'none', zIndex: '85',
+  Object.assign(khung.style, { position: 'fixed', left: '0', top: '0', pointerEvents: 'none', zIndex: '3',
     transformOrigin: '50% 100%', willChange: 'transform' });
   document.body.appendChild(khung);
   laser = document.createElement('canvas');
-  Object.assign(laser.style, { position: 'fixed', inset: '0', width: '100vw', height: '100vh', pointerEvents: 'none', zIndex: '84' });
+  // Co CSS dat bang px trong doiCo (100vh tren dien thoai lon hon innerHeight -> anh bi keo gian, lech dich)
+  Object.assign(laser.style, { position: 'fixed', left: '0', top: '0', pointerEvents: 'none', zIndex: '31' });
   document.body.appendChild(laser);
   ctx2d = laser.getContext('2d');
   bong = document.createElement('div');
-  Object.assign(bong.style, { position: 'fixed', zIndex: '86', pointerEvents: 'none', fontSize: '28px',
+  Object.assign(bong.style, { position: 'fixed', zIndex: '32', pointerEvents: 'none', fontSize: '28px',
     transition: 'opacity .25s', opacity: '0', transform: 'translate(-50%,-100%)' });
   document.body.appendChild(bong);
 
@@ -73,13 +112,22 @@ function dungSanKhau() {
 
   const doiCo = () => {
     const { W, H, rong, khungCao } = kichThuoc();
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));     // phong to trang / doi man hinh
     renderer.setSize(rong, khungCao);
     cam.aspect = rong / khungCao; cam.updateProjectionMatrix();
-    laser.width = W * devicePixelRatio; laser.height = H * devicePixelRatio;
+    const d = dprLaser();
+    laser.width = Math.round(W * d); laser.height = Math.round(H * d);
+    laser.style.width = W + 'px'; laser.style.height = H + 'px';
+    laserBan = false;                                              // doi width da xoa trang
     // Doi co cua so: ve lai goc (khong di bo cham rai qua ca man hinh)
     if (S.x === null || !S.chi) S.x = S.dichX = viTriNha();
+    datChoTrong();
   };
   addEventListener('resize', doiCo);
+  // Keo cua so sang man hinh khac ti le diem anh: co khi khong phat 'resize'
+  const theoDpr = () => matchMedia(`(resolution: ${devicePixelRatio}dppx)`)
+    .addEventListener?.('change', () => { doiCo(); theoDpr(); }, { once: true });
+  theoDpr();
   doiCo();
 }
 
@@ -100,25 +148,53 @@ function viTriTrang(b) {
 }
 
 // ---------------------------------------------------------------------------
-function khungHinh() { requestAnimationFrame(khungHinh); capNhat(); }
+let dangChay = false;
+function khungHinh() {
+  // Tab bi an: dung han vong ve, hien lai thi visibilitychange goi tiep
+  if (document.hidden) { dangChay = false; return; }
+  dangChay = true;
+  requestAnimationFrame(khungHinh); capNhat();
+}
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden && !dangChay && S.san) { S.truoc = performance.now(); khungHinh(); }
+});
 
 function capNhat() {
   const nowMs = performance.now();
-  const dt = Math.min((nowMs - S.truoc) / 1000, .05);
+  const dtKhung = Math.min((nowMs - S.truoc) / 1000, .05);       // nhip rAF (de do may nhanh / cham)
   S.truoc = nowMs;
-  if (!S.san || S.tat || !meo || dt <= 0) return;
+  // Bang chon bai che kin: khong ve (van giu nhip thoi gian o tren de luc dong bang khong bi giat)
+  if (!S.san || S.tat || !meo || dtKhung <= 0 || pickerMo()) return;
   const now = nowMs / 1000;
+  // Dung yen (khong di, khong chi tay, khong dong tac, khong noi): chi ve ~30 khung/giay cho nhe GPU.
+  // Thoi gian cac khung bo qua cong vao dt cua khung ve tiep -> chuyen dong van dung toc do.
+  const ranh = !S.chi && !S.dongTac && S.dangDi < .01 && Math.abs(S.dichX - S.x) <= 1 && now >= S.noiDen
+    && (window.__audioEngine?.getOutputLevel?.() || 0) <= .02;
+  S.boQua += dtKhung;
+  if (ranh && S.boQua < .028) return;             // 60 Hz: ve cach 1 khung; 120 Hz: cach 3 (du lech nhip vai ms)
+  const dt = Math.min(S.boQua, .05);
+  S.boQua = 0;
   const { W, rong, khungCao, chan } = kichThuoc();
 
+  // Muc dang chi bi go khoi trang (doi tab ve lai noi dung) hay bi an: tim lai theo id, khong thay thi thoi chi
+  // (khong thi hop bao {0,0,0,0} -> tay va laser chi ve goc tren trai)
+  if (S.chi && !conHien(S.chi.el)) {
+    const moi = S.chi.id && timPhanTu(S.chi.id);
+    if (moi && conHien(moi)) S.chi.el = moi; else S.chi.den = 0;
+  }
   if (S.chi && now > S.chi.den) { S.chi = null; meo.dieuKhien.hanhDong('nghi'); }
   if (S.dongTac && now > S.dongTac.den) { S.dongTac = null; anBong(); if (!S.chi) meo.dieuKhien.hanhDong('nghi'); }
-  if (!S.chi && !S.dongTac && now - S.nghiTu > 9) S.dichX = viTriNha();
+  if (!S.chi && !S.dongTac) {
+    // Bang phan vua mo ma meo dang dung cho bang: tranh ngay, khong doi het 9 giay nghi
+    const bang = bangPhai(W);
+    if (now - S.nghiTu > 9 || (bang && S.dichX > bang.offsetLeft - rong * .5)) S.dichX = viTriNha();
+  }
 
-  // Truot ngang toi cho dung, buoc chan theo quang duong
+  // Truot ngang toi cho dung, buoc chan theo quang duong (giam chuyen dong: dich thang toi cho, khong buoc)
   const conLai = S.dichX - S.x;
-  const buoc = Math.sign(conLai) * Math.min(Math.abs(conLai), rong * 2.2 * dt);
+  const buoc = giam() ? conLai : Math.sign(conLai) * Math.min(Math.abs(conLai), rong * 2.2 * dt);
   S.x += buoc;
-  const dangDi = Math.abs(conLai) > 1;
+  const dangDi = !giam() && Math.abs(conLai) > 1;
   S.dangDi += ((dangDi ? 1 : 0) - S.dangDi) * Math.min(1, dt * 8);
   S.pha += Math.abs(buoc) / rong * 9;
   meo.dieuKhien.di(S.dangDi, S.pha);
@@ -158,27 +234,30 @@ function capNhat() {
     bong.style.left = (p.x + rong * .22) + 'px'; bong.style.top = (p.y - khungCao * .3) + 'px';
   }
 
-  // Tu ha so lop long khi may ve cham (chi khi cua so dang duoc dung)
-  S.tbKhung += (dt * 1000 - S.tbKhung) * .05;
-  if (document.hasFocus() && now > 3) {
-    if (S.tbKhung > 26 && S.soLop > 6) { S.soLop -= 2; meo.datSoLop(S.soLop); S.tbKhung = 20; }
-    else if (S.tbKhung < 13 && S.soLop < 18) { S.soLop += 2; meo.datSoLop(S.soLop); S.tbKhung = 20; }
+  // Tu ha so lop long khi may ve cham (chi khi cua so dang duoc dung); moi buoc deu doi so lop that.
+  // Dung yen (ve cach khung) thi nhip rAF khong con do duoc gi -> khong chinh, doi luc ve moi khung.
+  if (!ranh) S.tbKhung += (dtKhung * 1000 - S.tbKhung) * .05;
+  if (!ranh && document.hasFocus() && now > 3) {
+    if (S.tbKhung > 26 && S.soLop > 6) { S.soLop = Math.max(6, S.soLop - 2); meo.datSoLop(S.soLop); S.tbKhung = 20; }
+    else if (S.tbKhung < 13 && S.soLop < LOP_TOI_DA) { S.soLop = Math.min(LOP_TOI_DA, S.soLop + 2); meo.datSoLop(S.soLop); S.tbKhung = 20; }
   }
 }
 
 function veLaser(banTay, now) {
-  const W = laser.width, H = laser.height, dp = devicePixelRatio;
-  ctx2d.clearRect(0, 0, W, H);
-  if (!banTay || !S.chi) return;
+  const W = laser.width, H = laser.height, dp = dprLaser();
+  // Khong chi gi: chi xoa MOT lan (xoa ca lop phu kin man hinh moi khung la bat trinh duyet ghep lai ca man)
+  if (!banTay || !S.chi) { if (laserBan) { ctx2d.clearRect(0, 0, W, H); laserBan = false; } return; }
+  ctx2d.clearRect(0, 0, W, H); laserBan = true;
+  const tinh = giam();
   const a = viTriTrang(banTay);
   const r = S.chi.el.getBoundingClientRect();
   const bx = Math.max(r.left, Math.min(r.right, a.x)), by = Math.max(r.top, Math.min(r.bottom, a.y));
   ctx2d.save(); ctx2d.scale(dp, dp);
-  ctx2d.setLineDash([6, 6]); ctx2d.lineDashOffset = -now * 40;
+  ctx2d.setLineDash([6, 6]); ctx2d.lineDashOffset = tinh ? 0 : -now * 40;
   ctx2d.strokeStyle = 'rgba(231,76,60,.7)'; ctx2d.lineWidth = 2.5;
   ctx2d.beginPath(); ctx2d.moveTo(a.x, a.y); ctx2d.lineTo(bx, by); ctx2d.stroke();
   ctx2d.setLineDash([]); ctx2d.fillStyle = 'rgba(231,76,60,.9)';
-  ctx2d.beginPath(); ctx2d.arc(bx, by, 5 + Math.sin(now * 8) * 1.5, 0, Math.PI * 2); ctx2d.fill();
+  ctx2d.beginPath(); ctx2d.arc(bx, by, tinh ? 5 : 5 + Math.sin(now * 8) * 1.5, 0, Math.PI * 2); ctx2d.fill();
   ctx2d.restore();
 }
 function hienBong(chu) { if (!chu) return; bong.textContent = chu; bong.style.opacity = '1'; }
@@ -205,9 +284,13 @@ function chiVao(elHoacId, giay = 4) {
   const the = document.querySelector('.spotlight:not(.hidden) .spot-dock');
   const rt = the && the.getBoundingClientRect();
   if (rt && rt.width && rt.width < W * .6) dung = Math.max(dung, rt.right + rong * .45);
-  S.dichX = hep ? viTriNha() : Math.min(dung, W - rong * .5);
+  // Bang phan mo ben phai: khong dung len bang (meo nam duoi bang, chi con thay laser)
+  const bang = bangPhai(W);
+  if (bang) dung = Math.min(dung, bang.offsetLeft - rong * .45);
+  S.dichX = hep ? viTriNha() : Math.max(rong * .5, Math.min(dung, W - rong * .5));
   const now = performance.now() / 1000;
-  S.chi = { el, den: now + giay };
+  // Giu id de tim lai muc khi trang ve lai cung noi dung
+  S.chi = { el, id: typeof elHoacId === 'string' ? elHoacId : el.id, den: now + giay };
   S.nghiTu = now + giay;
   S.dongTac = null; anBong();
   return true;
@@ -223,6 +306,7 @@ function bamVao(elHoacId) {
     const g = document.createElement('div');
     g.className = 'sensei-gon';
     g.style.left = (r.left + r.width / 2) + 'px'; g.style.top = (r.top + r.height / 2) + 'px';
+    g.style.zIndex = '32';            // tren thanh duoi (nut tab), duoi cac lop phu (css chung dat 86)
     document.body.appendChild(g);
     setTimeout(() => g.remove(), 700);
   }, 60);
@@ -231,16 +315,20 @@ function bamVao(elHoacId) {
 }
 
 function dienDongTac(ten, giay) {
-  const dt = DONG_TAC[ten] || (ten === 'di' || ten === 'chay' ? 'di' : null);
+  let dt = DONG_TAC[ten] || (ten === 'di' || ten === 'chay' ? 'di' : null);
   if (!S.san || !meo || !dt) return false;
+  if (dt === 'di' && giam()) dt = 'gat';          // giam chuyen dong: khong di qua lai, gat dau tai cho
   const now = performance.now() / 1000;
   S.chi = null;
   if (dt === 'di') {
-    // Di bo minh hoa: truot qua lai mot doan
+    // Di bo minh hoa: truot sang trai mot doan roi quay ve cho cu (cho cu von nam trong man hinh)
     const { rong } = kichThuoc();
-    S.dichX = Math.max(rong * .6, S.x - rong * 1.2);
-    setTimeout(() => { S.dichX = S.x + rong * 1.2; }, 1200);
-    S.dongTac = { den: now + (giay || 3) }; S.nghiTu = S.dongTac.den;
+    const goc = S.x;
+    meo.dieuKhien.hanhDong('nghi'); anBong();     // thoi chi tay / vay truoc khi di
+    S.dichX = Math.max(rong * .6, goc - rong * 1.2);
+    const lan = S.dongTac = { den: now + (giay || 3) }; S.nghiTu = lan.den;
+    // chiVao / dong tac / cam xuc khac chen vao (thay S.dongTac) thi bo buoc quay ve
+    setTimeout(() => { if (S.dongTac === lan) S.dichX = goc; }, 1200);
     return true;
   }
   meo.dieuKhien.hanhDong(dt);
@@ -253,7 +341,9 @@ function dienDongTac(ten, giay) {
 function camXuc(ten, giay = 2.5) {
   const map = { vui: 'happy', gian: 'angry', buon: 'sad', ngac_nhien: 'surprised' };
   const dt = CAM_XUC[map[ten] || ten];
-  if (!S.san || !meo || !dt || S.chi) return false;
+  if (!S.san || !meo || !dt) return false;
+  // Phan ung voi hoc vien quan trong hon chi tay: dang chi thi thoi chi (nhu dienDongTac), khong tra ve that bai
+  S.chi = null;
   meo.dieuKhien.hanhDong(dt);
   S.dongTac = { den: performance.now() / 1000 + giay };
   hienBong(BONG[dt]);
@@ -263,8 +353,10 @@ function camXuc(ten, giay = 2.5) {
 function khiRoiMuc(targetId, found, styleType) {
   if (!S.san) return;
   clearTimeout(S._henChi);
-  S._henChi = setTimeout(() => chiVao(targetId), 350);
-  if (styleType === 'warning') setTimeout(() => camXuc('angry', 2), 400);
+  // Muc 'warning' (bay / loi hay gap): lac dau nhac truoc roi moi chi vao
+  let tre = 350;
+  if (styleType === 'warning' && camXuc('angry', 1.2)) tre = 1300;
+  S._henChi = setTimeout(() => chiVao(targetId), tre);
 }
 
 const api = {
@@ -280,11 +372,23 @@ const api = {
     if (!khung) return;
     khung.style.display = laser.style.display = anDi ? 'none' : '';
     if (anDi) anBong(); else { S.x = S.dichX = viTriNha(); S.truoc = performance.now(); }
+    datChoTrong();
   },
-  _S: S, _capNhat: capNhat, _meo: () => meo,
+  _S: S, _capNhat: capNhat, _meo: () => meo, _ve: () => renderer,
 };
 
-dungSanKhau();
+// Khong co WebGL (tat / GPU bi chan / may ao), hong tep mo hinh: go cac lop ve, bao hub doi sang meo 2D.
+// Chi ghi console, khong hien loi ra man hinh.
+function boCuoc(e) {
+  console.warn('[Meo3D] khong dung duoc meo 3D, doi sang meo 2D:', e);
+  S.san = false;
+  [khung, laser, bong].forEach((x) => x?.remove());
+  datChoTrong();
+  hub?.loi?.(api.kieu);
+}
+
+let loiDung = null;
+try { dungSanKhau(); } catch (e) { loiDung = e; }
 if (!document.getElementById('senseiGonCss')) {
   const st = document.createElement('style'); st.id = 'senseiGonCss';
   st.textContent = `.sensei-gon { position: fixed; z-index: 86; pointer-events: none; width: 16px; height: 16px;
@@ -292,14 +396,24 @@ if (!document.getElementById('senseiGonCss')) {
     @keyframes senseiGon { from { transform: scale(.3); opacity: 1 } to { transform: scale(3.2); opacity: 0 } }`;
   document.head.appendChild(st);
 }
-napMeoNangCap(MO_HINH, scene).then((m) => {
+if (loiDung) boCuoc(loiDung);
+else napMeoNangCap(MO_HINH, scene, { anhPhu: ANH_PHU }).then(async (m) => {
   meo = m; datVao(m.doiTuong);
   // Dien thoai: bat dau voi it lop long hon cho nhe (van tu tang neu may du khoe)
   if (kichThuoc().hep) S.soLop = 8;
   m.datSoLop(S.soLop);
+  // Dich shader truoc, song song (KHR_parallel_shader_compile) -> khung dau khong khoa trang
+  try { await renderer.compileAsync(scene, cam); } catch (e) {}
   S.san = true;
   if (hub) hub.dangKy(api); else window.SenseiAvatar = api;
   S.x = S.dichX = viTriNha();
+  datChoTrong();
+  // Ve mot khung ngay (dua anh len GPU) luc con sau bang chon bai, de luc vao bai khong bi khung
+  if (!S.tat && pickerMo()) renderer.render(scene, cam);
   khungHinh();
-  setTimeout(() => { if (!S.tat) dienDongTac('vay'); }, 900);
-}, (e) => console.warn('[Meo3D] khong nap duoc mo hinh:', e));
+  // Vay chao khi hoc vien thay duoc (bang chon bai da dong)
+  setTimeout(function chao() {
+    if (pickerMo()) { setTimeout(chao, 400); return; }
+    if (!S.tat) dienDongTac('vay');
+  }, 900);
+}).catch(boCuoc);
