@@ -24,6 +24,7 @@ const GLSL_CHUNG = /* glsl */`
   uniform float uMieng;           // do mo mieng 0..1
   uniform vec3 uMauMi;
   varying vec3 vViTriGoc;
+  varying float vAO;
 `;
 
 // Te bao ngau nhien 3D -> moi o la mot soi long, ban kinh nho dan ve ngon
@@ -70,7 +71,7 @@ function vatLieuLop(goc, h) {
   m.onBeforeCompile = (sh) => {
     Object.assign(sh.uniforms, uChung);
     sh.uniforms.uH = { value: h };
-    sh.vertexShader = GLSL_CHUNG + sh.vertexShader.replace('#include <begin_vertex>', /* glsl */`
+    sh.vertexShader = 'attribute float aAO; attribute float aDai;\n' + GLSL_CHUNG + sh.vertexShader.replace('#include <begin_vertex>', /* glsl */`
       #include <begin_vertex>
       vViTriGoc = position;
       // Duoi vay: chi cac dinh o phia SAU, ben phai va thap (khong dung vao tay/chan),
@@ -81,7 +82,9 @@ function vatLieuLop(goc, h) {
       float lac = sin(uThoiGian * 2.4 - kx * 5.) * uDuoi.w * wDuoi;
       transformed.z += lac * kx;
       // Day lop long ra ngoai + ngon long lech theo quan tinh (h^2: goc cung, ngon mem)
-      transformed += normalize(objectNormal) * uDai * uH + uLuc * uDai * uH * uH;
+      vAO = aAO;
+      // aDai: he so do dai long theo vung (ma / dinh dau dai hon, giua mat ngan)
+      transformed += normalize(objectNormal) * uDai * aDai * uH + uLuc * uDai * aDai * uH * uH;
     `);
     sh.fragmentShader = GLSL_CHUNG + GLSL_LONG + sh.fragmentShader
       .replace('#include <roughnessmap_fragment>', /* glsl */`
@@ -126,11 +129,12 @@ function vatLieuLop(goc, h) {
       #endif
       if (uH > 0.) {
         float d = soiLong(vViTriGoc * 420.);
+        // (Da thu lam mo ngon bang alphaToCoverage: 20 lop chong nhau ra nhieu hat nhu kim tuyen -> bo)
         if (vung < .5 || d > .55 * (1. - uH)) discard;
         // Goc long toi hon ngon (cac soi che bong nhau) -> co chieu sau
-        diffuseColor.rgb *= mix(.72, 1.0, uH);
+        diffuseColor.rgb *= mix(.72, 1.0, uH) * mix(1., vAO, .7);
       } else {
-        diffuseColor.rgb *= mix(1., .72, vung);
+        diffuseColor.rgb *= mix(1., .72, vung) * mix(1., vAO, .85);
       }
     `);
   };
@@ -279,6 +283,131 @@ function taoDieuKhien(goc, skeleton, u) {
  * ngan) -> quay dau la mat bi keo gian thanh vet. Tren duong co: 100% xuong 'dau' (rieng vanh tai
  * giu mot phan cho xuong tai), dai co chuyen muot dau <-> co. Lam luc nap nen khong can dung lai file.
  */
+/**
+ * TIA MO HINH luc nap (khong can may GPU / Blender):
+ *  1. (Tuy chon ?muot=1) Lam muot chom long dung nhu gai tren dinh dau (Taubin: muot ma khong teo)
+ *  2. Bong khe (AO) cho tung dinh: voxel hoa be mat, ban tia ra nua cau phap tuyen
+ *  3. He so do dai long theo vung: ma / dinh dau dai hon, giua mat ngan
+ * Luoi to mau bi tach dinh o duong noi UV -> gop dinh theo vi tri de lang gieng lien mach.
+ */
+function tiaMoHinh(g) {
+  const P = g.attributes.position, N = g.attributes.normal, n = P.count;
+  const idx = g.index ? g.index.array : null;
+  // Gop dinh trung vi tri
+  const ma = new Map(), goc = new Int32Array(n);
+  let soGop = 0;
+  for (let i = 0; i < n; i++) {
+    const k = Math.round(P.getX(i) * 1e4) + ',' + Math.round(P.getY(i) * 1e4) + ',' + Math.round(P.getZ(i) * 1e4);
+    let id = ma.get(k);
+    if (id === undefined) { id = soGop++; ma.set(k, id); }
+    goc[i] = id;
+  }
+  const vt = new Float32Array(soGop * 3);
+  for (let i = 0; i < n; i++) { const j = goc[i]; vt[j * 3] = P.getX(i); vt[j * 3 + 1] = P.getY(i); vt[j * 3 + 2] = P.getZ(i); }
+  const ke = Array.from({ length: soGop }, () => new Set());
+  const soTG = idx ? idx.length / 3 : n / 3;
+  const dinhTG = (t, c) => goc[idx ? idx[t * 3 + c] : t * 3 + c];
+  for (let t = 0; t < soTG; t++) {
+    const a = dinhTG(t, 0), b = dinhTG(t, 1), c = dinhTG(t, 2);
+    ke[a].add(b); ke[a].add(c); ke[b].add(a); ke[b].add(c); ke[c].add(a); ke[c].add(b);
+  }
+  const keMang = ke.map((st) => Int32Array.from(st));
+
+  // 1. Lam muot chom gai: vung dinh dau (y cao), tat dan xuong duoi
+  const w = new Float32Array(soGop);
+  for (let j = 0; j < soGop; j++) w[j] = Math.min(1, Math.max(0, (vt[j * 3 + 1] - .6) / .15));
+  const tam = new Float32Array(soGop * 3);
+  const buoc = (lam) => {
+    for (let j = 0; j < soGop; j++) {
+      if (!w[j]) continue;
+      const k = keMang[j]; if (!k.length) continue;
+      let x = 0, y = 0, z = 0;
+      for (const q of k) { x += vt[q * 3]; y += vt[q * 3 + 1]; z += vt[q * 3 + 2]; }
+      const m = k.length;
+      tam[j * 3] = vt[j * 3] + (x / m - vt[j * 3]) * lam * w[j];
+      tam[j * 3 + 1] = vt[j * 3 + 1] + (y / m - vt[j * 3 + 1]) * lam * w[j];
+      tam[j * 3 + 2] = vt[j * 3 + 2] + (z / m - vt[j * 3 + 2]) * lam * w[j];
+    }
+    for (let j = 0; j < soGop; j++) if (w[j]) { vt[j * 3] = tam[j * 3]; vt[j * 3 + 1] = tam[j * 3 + 1]; vt[j * 3 + 2] = tam[j * 3 + 2]; }
+  };
+  // Mac dinh KHONG lam muot: ep chom gai nam rap xuong van mang mau ngon sang cua no -> vet trang.
+  // (Anh goc cung co tum long dung tren dinh dau.) Bat thu bang ?muot=1 tren dia chi trang.
+  if (new URLSearchParams(location.search).get('muot') !== '1') w.fill(0);
+  for (let l = 0; l < 12; l++) { buoc(.55); buoc(-.58); }
+  for (let i = 0; i < n; i++) { const j = goc[i]; if (w[j]) P.setXYZ(i, vt[j * 3], vt[j * 3 + 1], vt[j * 3 + 2]); }
+  P.needsUpdate = true;
+
+  // Phap tuyen gop (lien mach qua duong noi UV) — dung cho bong khe, va ghi lai o vung vua lam muot
+  const pt = new Float32Array(soGop * 3);
+  const A = new THREE.Vector3(), B = new THREE.Vector3(), C = new THREE.Vector3();
+  for (let t = 0; t < soTG; t++) {
+    const a = dinhTG(t, 0), b = dinhTG(t, 1), c = dinhTG(t, 2);
+    A.fromArray(vt, a * 3); B.fromArray(vt, b * 3); C.fromArray(vt, c * 3);
+    const nn = B.sub(A).cross(C.sub(A));
+    for (const q of [a, b, c]) { pt[q * 3] += nn.x; pt[q * 3 + 1] += nn.y; pt[q * 3 + 2] += nn.z; }
+  }
+  for (let i = 0; i < n; i++) {
+    const j = goc[i]; if (!w[j]) continue;
+    A.fromArray(pt, j * 3).normalize(); N.setXYZ(i, A.x, A.y, A.z);
+  }
+  N.needsUpdate = true;
+
+  // 2. Bong khe: luoi voxel be mat, ban 14 tia trong nua cau phap tuyen
+  g.computeBoundingBox();
+  const bb = g.boundingBox, R = 72, co = bb.getSize(new THREE.Vector3());
+  const o = new Uint8Array(R * R * R);
+  const vx = (x, y, z) => {
+    const i = Math.floor((x - bb.min.x) / co.x * (R - 1)), j = Math.floor((y - bb.min.y) / co.y * (R - 1)),
+          k = Math.floor((z - bb.min.z) / co.z * (R - 1));
+    return (i < 0 || j < 0 || k < 0 || i >= R || j >= R || k >= R) ? -1 : (k * R + j) * R + i;
+  };
+  for (let j = 0; j < soGop; j++) { const v = vx(vt[j * 3], vt[j * 3 + 1], vt[j * 3 + 2]); if (v >= 0) o[v] = 1; }
+  const buocVox = Math.max(co.x, co.y, co.z) / R;
+  const huong = [];
+  for (let k = 0; k < 14; k++) {            // phan bo xoan oc Fibonacci tren mat cau
+    const yy = 1 - (k + .5) / 14 * 2, rr = Math.sqrt(1 - yy * yy), ph = k * 2.39996;
+    huong.push(new THREE.Vector3(Math.cos(ph) * rr, yy, Math.sin(ph) * rr));
+  }
+  const ao = new Float32Array(soGop), nv = new THREE.Vector3(), d = new THREE.Vector3();
+  for (let j = 0; j < soGop; j++) {
+    nv.fromArray(pt, j * 3).normalize();
+    let che = 0, tong = 0;
+    for (const h of huong) {
+      const c = h.dot(nv); if (c <= .05) continue;
+      tong += c;
+      for (let st = 2; st <= 9; st++) {
+        d.copy(h).multiplyScalar(st * buocVox * 1.5);
+        const v = vx(vt[j * 3] + d.x, vt[j * 3 + 1] + d.y, vt[j * 3 + 2] + d.z);
+        if (v >= 0 && o[v]) { che += c * (1 - (st - 2) / 9); break; }
+      }
+    }
+    ao[j] = tong ? 1 - Math.min(1, che / tong) * .85 : 1;
+  }
+  for (let l = 0; l < 2; l++) {             // lam mem bong khe qua lang gieng
+    const moi = new Float32Array(soGop);
+    for (let j = 0; j < soGop; j++) { let t = ao[j], m = 1; for (const q of keMang[j]) { t += ao[q]; m++; } moi[j] = t / m; }
+    ao.set(moi);
+  }
+
+  // 3. Do dai long theo vung (toa do meo: x trai-phai, y len, z huong ra truoc)
+  const dai = new Float32Array(soGop);
+  for (let j = 0; j < soGop; j++) {
+    const x = vt[j * 3], y = vt[j * 3 + 1], z = vt[j * 3 + 2];
+    let k = 1;
+    if (y > .15) {
+      const giuaMat = Math.max(0, 1 - Math.hypot(x / .32, (y - .35) / .3)) * (z > 0 ? 1 : 0);
+      const maBong = Math.min(1, Math.max(0, (Math.abs(x) - .3) / .2)) * (y < .7 ? 1 : .6);
+      k = 1 + maBong * .9 + Math.max(0, (y - .75) / .25) * .5 - giuaMat * .6;
+    }
+    dai[j] = k;
+  }
+  const aAO = new Float32Array(n), aDai = new Float32Array(n);
+  for (let i = 0; i < n; i++) { aAO[i] = ao[goc[i]]; aDai[i] = dai[goc[i]]; }
+  g.setAttribute('aAO', new THREE.BufferAttribute(aAO, 1));
+  g.setAttribute('aDai', new THREE.BufferAttribute(aDai, 1));
+  return { soGop };
+}
+
 function suaTrongSoDau(luoi) {
   const sk = luoi.skeleton, g = luoi.geometry;
   const so = (ten) => sk.bones.findIndex((b) => b.name.replace(/[.]/g, '') === ten);
@@ -349,6 +478,13 @@ export function napMeoNangCap(url, scene) {
                                         (bb.min.z + bb.max.z) / 2, .18) },
     };
     const coXuong = !!luoi.isSkinnedMesh;
+    // ?tia=0 tren dia chi trang: bo buoc tia (de so sanh)
+    if (new URLSearchParams(location.search).get('tia') !== '0') tiaMoHinh(luoi.geometry);
+    else {
+      const n = luoi.geometry.attributes.position.count;
+      luoi.geometry.setAttribute('aAO', new THREE.BufferAttribute(new Float32Array(n).fill(1), 1));
+      luoi.geometry.setAttribute('aDai', new THREE.BufferAttribute(new Float32Array(n).fill(1), 1));
+    }
     if (coXuong) suaTrongSoDau(luoi);
     if (coXuong) u.uDuoi.value.w = 0;          // co xuong duoi that thi khong can bien dang gia trong shader
     vl.userData.u = u;
