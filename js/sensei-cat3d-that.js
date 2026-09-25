@@ -2,7 +2,7 @@
  * MEO SENSEI 3D THAT — mo hinh dung tu anh meo (Hunyuan3D), co long nhieu lop va 23 xuong.
  *
  * Khung ve chi to bang con meo va di theo no (khong phu kin man hinh) de nhe may.
- * Chi vao muc: truot toi canh muc, gio dung canh tay phia muc ve dung huong
+ * Chi vao muc: (man doc vua) truot toi canh muc / (man rong, dien thoai) dung o cho nghi, gio dung canh tay phia muc ve dung huong
  * (tinh tu vi tri vai tren man hinh), tia laser tu ban tay toi the.
  * Dang noi: dau gat nhe, tay khoa chan. Dong tac / cam xuc: vay, gat, chi, vui, lac dau.
  *
@@ -34,6 +34,7 @@ const LOP_TOI_DA = 11;
 const S = {
   san: false, tat: false, x: null, dichX: null, chi: null, dongTac: null, nghiTu: 0,
   truoc: performance.now(), pha: 0, dangDi: 0, noiDen: 0, soLop: LOP_TOI_DA, tbKhung: 16, boQua: 0,
+  xetLuc: 0, moDen: 0, nutDen: 0, doRo: 1, nho: 0, bangMo: false, veNha: false,
 };
 let renderer, scene, cam, meo = null, khung, laser, ctx2d, bong, laserBan = false;
 
@@ -48,30 +49,128 @@ const pickerMo = () => {
 };
 // Bang phan dang mo o cot phai (man rong; man hep bang nam day, khong can tranh ngang)
 const bangPhai = (W) => (W > 860 && document.body.classList.contains('co-bang') ? document.getElementById('bangPhan') : null);
+// Bang mo: chi man >= 1280 (khong mo them the trai) moi du cho cho meo dung nghi canh bang — styles.css chua lan
+// do cung moc nay. Hep hon: meo nghi o goc, nup sau bang (an han, xem biChe), chi ra khi chi tay.
+const nghiCanhBang = (W) => W >= 1280 && !document.body.classList.contains('co-the-trai');
 const conHien = (el) => el.isConnected && el.getClientRects().length > 0;
 
 function kichThuoc() {
   const W = innerWidth, H = innerHeight, hep = W < 700 || H < 500;
-  // Theo ca ngang lan doc: dien thoai (ca nam ngang) nho han nhieu, man doc hep (iPad dung) khong to 320 px
-  const cao = hep ? Math.min(130, Math.max(96, H * .15)) : Math.max(150, Math.min(H * .3, W * .22, 300));
-  const chan = H - (document.querySelector('.deck-bottom')?.offsetHeight || 64);
-  return { W, H, hep, cao, rong: cao * 1.3, khungCao: cao * 1.18, chan };
+  // Theo ca ngang lan doc: dien thoai doc nho nhat (72-80px, dung de len goc danh sach), nam ngang 96-130
+  // (co lan rieng ben phai), man doc hep (iPad dung) khong to 320 px
+  const cao = W < 700 ? Math.min(80, Math.max(72, H * .095))
+    : hep ? Math.min(130, Math.max(96, H * .15)) : Math.max(150, Math.min(H * .3, W * .22, 300));
+  const khungCao = cao * 1.18;
+  // day = mep tren thanh duoi. Dien thoai doc: dung nghi thi meo lun gan nua khung sau hang tab chuong (thanh
+  // duoi nam tren, che than) -> chi lo cai dau, khong de len cot loa / anh / mic cua the cuoi danh sach.
+  // Dang noi / chi tay / lam dong tac thi nho len them noiLen (lo vai + tay, xem capNhat).
+  // chan = cho ban chan meo luc nghi (thap hon day).
+  const day = H - (document.querySelector('.deck-bottom')?.offsetHeight || 64);
+  const lun = W < 700 && H >= 500 ? Math.round(khungCao * .45) : 0;
+  return { W, H, hep, cao, rong: cao * 1.3, khungCao, chan: day + lun, day, lun,
+           noiLen: lun ? Math.round(khungCao * .21) : 0 };
 }
-// Cho dung nghi: goc phai. Bang phan mo (cot phai) thi dung ben trai bang; the ron ben trai mo thi khong lan len the.
+// Nut an / hien Sensei (js/sensei-avatar-hub.js) o goc phai: meo nho (dien thoai) ma dung sat goc thi nut de len
+// than meo -> lui meo sang trai nut. Meo ve trong 16%..85% be ngang khung, mep phai khung con trong 15%.
+function luiNut(W, rong) {
+  const nut = document.querySelector('.sensei-nut');
+  if (!nut || !nut.offsetWidth || nut.classList.contains('is-tren')) return 0;   // dien thoai: nut tren thanh tren
+  const r = nut.getBoundingClientRect();
+  if (r.right < W - 60) return 0;              // nut dang dung cho khac (canh bang phan)
+  return Math.max(0, W - r.left + 4 - rong * .15);
+}
+// Cho dung nghi: goc phai, ben trai nut an / hien. Bang phan mo (cot phai): man >= 1280 dung ben trai bang, hep hon
+// nup sau bang (nghiCanhBang). The ron ben trai mo thi khong lan len the.
 const viTriNha = () => {
   const { W, rong } = kichThuoc();
-  let x = W - (hub ? hub.rongTruoc(api) : 0) - rong * .5;
+  let x = W - (hub ? hub.rongTruoc(api) : 0) - rong * .5 - luiNut(W, rong);
   const bang = bangPhai(W);
-  if (bang) x = Math.min(x, bang.offsetLeft - 8 - rong * .5);
+  if (bang && nghiCanhBang(W)) x = Math.min(x, bang.offsetLeft - 8 - rong * .5);
   const the = W > 860 && document.body.classList.contains('co-the-trai') && document.querySelector('.spotlight:not(.hidden) .spot-dock');
   if (the && the.offsetWidth) x = Math.max(x, the.offsetLeft + the.offsetWidth + rong * .5);
   return Math.max(rong * .5, x);
 };
-// Chieu cao meo -> bien CSS --sensei-cao: .deck-scroll chua bay nhieu cho trong o cuoi, hang cuoi cuon len khoi meo
+// Cho cua meo -> CSS: --sensei-cao (chieu cao: .deck-scroll chua bay nhieu cho trong o cuoi, hang cuoi cuon len
+// khoi meo), --sensei-rong (tu mep phai man hinh toi diem trai nhat cua meo dung nghi: meo ve trong khoang
+// 16%..85% be ngang khung, lay 86% cho du canh tay) va body.co-meo (man rong: san khau chua lan phai cho meo).
+// Chua lan ngay khi co khung ve (khong doi nap xong mo hinh vai MB): dong chon bai som thi luoi the
+// khong bi dan lai lan nua luc meo hien. kichThuoc() khong can mo hinh; nap loi thi boCuoc go khung -> bo lan.
 function datChoTrong() {
   const r = document.documentElement.style;
-  if (S.san && !S.tat && khung && khung.isConnected) r.setProperty('--sensei-cao', Math.max(40, Math.round(kichThuoc().khungCao * .9)) + 'px');
-  else r.removeProperty('--sensei-cao');
+  const coMeo = !!(!S.tat && khung && khung.isConnected && !(hub && hub.cheDo === 'an'));
+  document.body.classList.toggle('co-meo', coMeo);
+  if (coMeo) {
+    const { W, khungCao, rong, lun } = kichThuoc();
+    r.setProperty('--sensei-cao', Math.max(40, Math.round(khungCao * .9 - lun)) + 'px');
+    r.setProperty('--sensei-rong', Math.round((hub ? hub.rongTruoc(api) : 0) + rong * .86 + luiNut(W, rong)) + 'px');
+  } else {
+    r.removeProperty('--sensei-cao');
+    r.removeProperty('--sensei-rong');
+  }
+}
+
+// Bang phan / tam the / o chat o day che gan het meo (man vua: meo nup sau bang; dien thoai: tam truot o day)?
+// Khi do an han meo, khong de chan / dau lo ra qua khe 8-16px giua tam va thanh duoi.
+function biChe() {
+  const { rong, khungCao, chan, day } = kichThuoc();
+  const b = document.body.classList;
+  const ds = [b.contains('co-bang') && document.getElementById('bangPhan'),
+              b.contains('co-the-trai') && document.querySelector('.spotlight:not(.hidden) .spot-dock'),
+              b.contains('co-chat') && document.getElementById('chatDock')];
+  return ds.some((el) => {
+    if (!el) return false;
+    const r = el.getBoundingClientRect();
+    return r.width > 0 && r.left <= S.x - rong * .3 && r.right >= S.x + rong * .3
+      && r.top <= chan - khungCao * .7 && r.bottom >= Math.min(chan, day) - 24;
+  });
+}
+// Noi dung bai (the, nut, chu) dang nam duoi than meo? Lay mau 3 cot x 6 hang trong vung ve con meo — khung ve
+// khong an chuot nen elementFromPoint tra ve phan tu ben duoi. Man rong co lan rieng thi khong bao gio dung.
+// Tra ve 0 = trong, 1 = de len the / chu, 2 = de len nut bam / o nhap (loa, mic, "Thu âm", dap an trac nghiem).
+// Chi lay mau phan meo con THAY duoc tren danh sach: tu dinh dau toi mep duoi vung cuon (dien thoai doc meo
+// lun sau thanh duoi, chi cai dau ~50px con lo) — rai deu 6 hang thi nut loa 40px khong lot qua khe giua hai hang.
+const NOI_DUNG = '.deck-card, button, a, input, select, textarea, img, .deck-head, .deck-note, .gp-formula, .gp-explain';
+const NUT_BAM = 'button, a[href], input, select, textarea, [role="button"]';
+function deLenNoiDung() {
+  const nd = document.getElementById('slideContent');
+  if (!nd) return 0;
+  const { rong, khungCao, chan, day } = kichThuoc();
+  const cuon = nd.querySelector('.deck-scroll');
+  const tren = chan - khungCao * .9 - (S.nho || 0);   // tinh ca phan meo nho len khi dang noi
+  const duoi = Math.min(chan - khungCao * .2, day - 4, cuon ? cuon.getBoundingClientRect().bottom - 2 : day);
+  if (duoi < tren) return 0;
+  const hang = [0, 1, 2, 3, 4, 5].map((i) => tren + (duoi - tren) * i / 5);
+  let kq = 0;
+  for (const fx of [-.25, 0, .25]) {
+    for (const y of hang) {
+      const el = document.elementFromPoint(S.x + fx * rong, y);
+      if (!el || !nd.contains(el) || !el.closest(NOI_DUNG)) continue;
+      if (el.closest(NUT_BAM)) return 2;
+      kq = 1;
+    }
+  }
+  return kq;
+}
+// Do ro cua meo: 0 = bi tam che, hoac dien thoai doc dung nghi DE LEN NUT BAM (an han, khoi ve — cai dau meo
+// luc nghi khong che nut loa / mic / "Thu âm" / dap an o hang cuoi danh sach), .35 = dung nghi tren noi dung
+// (dien thoai, man doc: chu va nut ben duoi van doc / thay duoc; cuon toi cuoi da chua cho thi ro lai),
+// 1 = binh thuong. Dang noi / chi tay / dong tac thi luon ro (dien thoai: nho len khoi hang tab).
+// Man doc vua (700-999, meo cao ~170px) chi mo .35: meo to gan nhu luc nao cung dung tren mot nut nao do,
+// an theo nut thi luc nghi khong bao gio thay meo.
+// Xet ~7 lan/giay; mo / an di thi giu them .6 giay de khong nhap nhay khi khe giua hai the luot qua.
+function capNhatDoRo(now) {
+  if (now < S.xetLuc) return;
+  S.xetLuc = now + .15;
+  // Dang noi khong tinh la nghi: meo phai hien ro (dung nhu chu thich tren), khong bi an vi dung tren nut
+  const nghi = !S.chi && !S.dongTac && Math.abs(S.dichX - S.x) <= 1 && now >= S.noiDen;
+  const de = nghi ? deLenNoiDung() : 0;
+  if (de) S.moDen = now + .6;
+  if (de === 2 && kichThuoc().lun) S.nutDen = now + .6;
+  const ro = biChe() ? 0 : !nghi ? 1 : now < S.nutDen ? 0 : now < S.moDen ? .35 : 1;
+  if (ro === S.doRo) return;
+  S.doRo = ro;
+  khung.style.opacity = ro === 1 ? '' : String(ro);
+  bong.style.visibility = ro === 0 ? 'hidden' : '';
 }
 
 const dprLaser = () => Math.min(devicePixelRatio, 1.5);
@@ -82,7 +181,7 @@ function dungSanKhau() {
   // chon bai (90). Laser + bong chu (31-32) chi can noi len tren thanh duoi (nut tab) va noi dung.
   khung = document.createElement('canvas');
   Object.assign(khung.style, { position: 'fixed', left: '0', top: '0', pointerEvents: 'none', zIndex: '3',
-    transformOrigin: '50% 100%', willChange: 'transform' });
+    transformOrigin: '50% 100%', willChange: 'transform', transition: 'opacity .2s ease-out' });
   document.body.appendChild(khung);
   laser = document.createElement('canvas');
   // Co CSS dat bang px trong doiCo (100vh tren dien thoai lon hon innerHeight -> anh bi keo gian, lech dich)
@@ -174,7 +273,7 @@ function capNhat() {
   if (ranh && S.boQua < .028) return;             // 60 Hz: ve cach 1 khung; 120 Hz: cach 3 (du lech nhip vai ms)
   const dt = Math.min(S.boQua, .05);
   S.boQua = 0;
-  const { W, rong, khungCao, chan } = kichThuoc();
+  const { W, rong, khungCao, chan, noiLen } = kichThuoc();
 
   // Muc dang chi bi go khoi trang (doi tab ve lai noi dung) hay bi an: tim lai theo id, khong thay thi thoi chi
   // (khong thi hop bao {0,0,0,0} -> tay va laser chi ve goc tren trai)
@@ -182,12 +281,24 @@ function capNhat() {
     const moi = S.chi.id && timPhanTu(S.chi.id);
     if (moi && conHien(moi)) S.chi.el = moi; else S.chi.den = 0;
   }
-  if (S.chi && now > S.chi.den) { S.chi = null; meo.dieuKhien.hanhDong('nghi'); }
+  if (S.chi && now > S.chi.den) {
+    S.chi = null; meo.dieuKhien.hanhDong('nghi');
+    // Chi xong ma dang dung de len the / nut (canh muc vua chi): ve cho nghi sau ~.6 giay, khong dung lai 9 giay
+    if (Math.abs(S.x - viTriNha()) > 1 && deLenNoiDung()) S.nghiTu = now - 8.4;
+  }
   if (S.dongTac && now > S.dongTac.den) { S.dongTac = null; anBong(); if (!S.chi) meo.dieuKhien.hanhDong('nghi'); }
+  // Bang phan vua dong: cho nghi doi lai (>= 1280 meo dang dung ben trai bang — gio la giua danh sach)
+  // -> ve goc ngay khi ranh tay, khong doi het 9 giay nghi ke tu lan chi / vay chao gan nhat
+  const bangMo = document.body.classList.contains('co-bang');
+  if (S.bangMo && !bangMo) S.veNha = true;
+  S.bangMo = bangMo;
   if (!S.chi && !S.dongTac) {
-    // Bang phan vua mo ma meo dang dung cho bang: tranh ngay, khong doi het 9 giay nghi
+    // Bang phan vua mo ma meo dang dung cho bang: ve cho nghi ngay, khong doi het 9 giay nghi
+    // (>= 1280: ben trai bang; hep hon cho nghi chinh la goc sau bang -> dung yen, biChe an meo)
     const bang = bangPhai(W);
-    if (now - S.nghiTu > 9 || (bang && S.dichX > bang.offsetLeft - rong * .5)) S.dichX = viTriNha();
+    if (S.veNha || now - S.nghiTu > 9 || (bang && S.dichX > bang.offsetLeft - rong * .5)) {
+      S.dichX = viTriNha(); S.veNha = false;
+    }
   }
 
   // Truot ngang toi cho dung, buoc chan theo quang duong (giam chuyen dong: dich thang toi cho, khong buoc)
@@ -199,7 +310,10 @@ function capNhat() {
   S.pha += Math.abs(buoc) / rong * 9;
   meo.dieuKhien.di(S.dangDi, S.pha);
   const nhun = -Math.abs(Math.sin(S.pha)) * khungCao * .012 * S.dangDi;
-  khung.style.transform = `translate(${S.x - rong / 2}px, ${chan - khungCao + nhun}px)`;
+  // Dien thoai doc: dang noi / chi / dong tac thi nho len khoi hang tab, xong thi lun xuong lai (kichThuoc)
+  const len = noiLen && (S.chi || S.dongTac || now < S.noiDen) ? noiLen : 0;
+  S.nho += giam() ? len - S.nho : (len - S.nho) * Math.min(1, dt * 6);
+  khung.style.transform = `translate(${S.x - rong / 2}px, ${chan - khungCao + nhun - S.nho}px)`;
   // Quay nguoi nhe ve huong di
   meo.doiTuong.rotation.y += ((dangDi ? Math.sign(conLai) * .5 : 0) - meo.doiTuong.rotation.y) * Math.min(1, dt * 6);
 
@@ -227,7 +341,8 @@ function capNhat() {
   } else if (!S.chi) meo.dieuKhien.nhin(Math.sin(now * .3) * .25, 0);
 
   meo.capNhat(now, dt);
-  renderer.render(scene, cam);
+  capNhatDoRo(now);
+  if (S.doRo > 0) renderer.render(scene, cam);    // dang bi tam che: khoi ve cho nhe GPU
   veLaser(banTay, now);
   if (bong.style.opacity !== '0') {
     const p = viTriTrang(meo.xuong('dau') || meo.doiTuong);
@@ -287,7 +402,10 @@ function chiVao(elHoacId, giay = 4) {
   // Bang phan mo ben phai: khong dung len bang (meo nam duoi bang, chi con thay laser)
   const bang = bangPhai(W);
   if (bang) dung = Math.min(dung, bang.offsetLeft - rong * .45);
-  S.dichX = hep ? viTriNha() : Math.max(rong * .5, Math.min(dung, W - rong * .5));
+  // Man >= 1000px (meo co lan rieng / dung o goc): chi tai cho bang tay + laser, khong di vao giua danh sach
+  // dung de len the canh muc. Chi di khi cho nghi dang nup sau bang phan (meo an) hoac man doc vua (700-999).
+  const tuNha = hep || (W >= 1000 && !(bang && !nghiCanhBang(W)));
+  S.dichX = tuNha ? viTriNha() : Math.max(rong * .5, Math.min(dung, W - rong * .5));
   const now = performance.now() / 1000;
   // Giu id de tim lai muc khi trang ve lai cung noi dung
   S.chi = { el, id: typeof elHoacId === 'string' ? elHoacId : el.id, den: now + giay };
@@ -356,7 +474,7 @@ function khiRoiMuc(targetId, found, styleType) {
   // Muc 'warning' (bay / loi hay gap): lac dau nhac truoc roi moi chi vao
   let tre = 350;
   if (styleType === 'warning' && camXuc('angry', 1.2)) tre = 1300;
-  S._henChi = setTimeout(() => chiVao(targetId), tre);
+  S._henChi = setTimeout(() => chiVao(targetId, 3), tre);
 }
 
 const api = {

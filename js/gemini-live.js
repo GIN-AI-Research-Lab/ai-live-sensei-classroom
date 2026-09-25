@@ -837,6 +837,11 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
     return this.isModelTurnActive;
   }
 
+  /** Da gui mot luot va dang cho Sensei tra loi (app.js dangChoSensei doc qua day, khong doc thang _choTraLoi) */
+  dangChoTraLoi() {
+    return this._choTraLoi;
+  }
+
   executeAndAcknowledgeTool(call) {
     this.isModelTurnActive = true;
     // Thực thi callback trong app/slide-engine

@@ -55,7 +55,7 @@
             /* Cau truc: giay & muc */
             slate: {
               50:  '#14120f', 100: '#1f1d19', 200: '#2e2a24', 300: '#453e34',
-              400: '#6b6355', 500: '#8c8272', 600: '#b3a794', 700: '#d3c5af',
+              400: '#6b6355', 500: '#70675a', 600: '#b3a794', 700: '#d3c5af',
               800: '#e5dbcb', 900: '#faf7f2', 950: '#f0ebe1',
             },
             /* Nhan chinh: terracotta */
@@ -110,8 +110,13 @@
   <link rel="stylesheet" href="vendor/fontawesome/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" />
+  <!-- Font web nap KHONG chan ve trang: mang chan Google thi trang van hien ngay bang font he thong
+       (display=swap). Chi lay dung cac nac dang dung: Inter 400-700, Noto Sans JP 400/500/700,
+       Noto Serif JP 700 (chi cho chu hien thi lon). -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700&display=swap" /></noscript>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/lesson.css" />
 </head>
 <body class="deck bg-slate-950 text-slate-100 font-sans antialiased">
 
@@ -119,21 +124,30 @@
        THANH TRÊN — chỉ danh tính bài học + 2 lối vào phụ
        ==================================================================== -->
   <header class="deck-top">
-    <div class="flex items-center gap-3 min-w-0">
-      <div class="deck-mark">
+    <div class="deck-brand">
+      <div class="deck-mark" aria-hidden="true">
         <i class="fa-solid fa-chalkboard-user"></i>
       </div>
 
-      <div class="flex items-baseline gap-2.5 min-w-0">
+      <div class="deck-id">
+        <!-- 2 nhan duoi trung voi 2 o chon nen CSS an di; JS van ghi vao -->
         <span id="levelBadge" class="deck-level">N5</span>
         <span class="deck-lesson-no">Bài <span id="lessonNum">1</span></span>
-        <select id="lessonSelect" class="deck-lesson-select" title="Chọn bài học"></select>
+        <!-- Cap do + bai dung canh nhau: "N5 · Bài 1: …" doc thanh mot danh tinh -->
+        <select id="levelSelect" class="deck-level-select" title="Chọn trình độ" aria-label="Chọn trình độ">
+          <option value="N5" selected>N5</option>
+          <option value="N4">N4</option>
+          <option value="N3">N3</option>
+          <option value="N2">N2</option>
+          <option value="N1">N1</option>
+        </select>
+        <select id="lessonSelect" class="deck-lesson-select" title="Chọn bài học" aria-label="Chọn bài học"></select>
       </div>
     </div>
 
-    <div class="flex items-center gap-2 shrink-0">
-      <!-- Sensei đang nói -->
-      <div id="waveform" class="deck-wave" title="Giọng Sensei">
+    <div class="deck-top-tools">
+      <!-- Sensei đang nói (im lặng thì mờ đi; điện thoại: nằm đè lên logo, không chiếm chỗ tên bài) -->
+      <div id="waveform" class="deck-wave" title="Giọng Sensei" aria-hidden="true">
         <div class="wave-bar"></div>
         <div class="wave-bar" style="animation-delay:.1s"></div>
         <div class="wave-bar" style="animation-delay:.2s"></div>
@@ -141,15 +155,7 @@
         <div class="wave-bar" style="animation-delay:.4s"></div>
       </div>
 
-      <select id="levelSelect" class="deck-level-select" title="Chọn trình độ">
-        <option value="N5" selected>N5</option>
-        <option value="N4">N4</option>
-        <option value="N3">N3</option>
-        <option value="N2">N2</option>
-        <option value="N1">N1</option>
-      </select>
-
-      <button id="pickerBtn" class="ctl-icon" title="Chọn bài học khác">
+      <button id="pickerBtn" class="ctl-icon" title="Chọn bài học khác" aria-label="Chọn bài học khác">
         <i class="fa-solid fa-table-cells-large"></i>
       </button>
     </div>
@@ -204,17 +210,17 @@
     <nav class="deck-chapters" aria-label="Phân môn bài học">
       <button id="tabVocabBtn"   class="chapter" title="Từ vựng & Phát âm"><i class="fa-solid fa-book"></i><span>Từ vựng</span></button>
       <button id="tabKanjiBtn"   class="chapter" title="Chữ Hán Kanji & Từ ghép"><i class="fa-solid fa-square-pen"></i><span>Chữ Hán</span></button>
-      <button id="tabGrammarBtn" class="chapter is-active" title="Ngữ pháp & Mẫu câu"><i class="fa-solid fa-chalkboard"></i><span>Ngữ pháp</span></button>
+      <button id="tabGrammarBtn" class="chapter is-active" title="Ngữ pháp & Mẫu câu"><i class="fa-solid fa-diagram-project"></i><span>Ngữ pháp</span></button>
       <button id="tabKaiwaBtn"   class="chapter" title="Hội thoại thực tế"><i class="fa-solid fa-comments"></i><span>Hội thoại</span></button>
-      <button id="tabQuizBtn"    class="chapter" title="Bài tập trắc nghiệm"><i class="fa-solid fa-pen-clip"></i><span>Bài tập</span></button>
+      <button id="tabQuizBtn"    class="chapter" title="Bài tập trắc nghiệm"><i class="fa-solid fa-list-check"></i><span>Bài tập</span></button>
       <button id="tabReflexBtn"  class="chapter" title="Phản xạ nhanh — viết và nói cấp tốc, Sensei chấm ngay"><i class="fa-solid fa-bolt"></i><span>Phản xạ</span></button>
     </nav>
 
-    <!-- Điều hướng slide trong chương Ngữ pháp -->
+    <!-- Điều hướng slide trong chương Ngữ pháp (chỉ hiện ở chương đó; phím ← → cũng dùng được) -->
     <div class="deck-nav">
-      <button id="prevSlideBtn" class="ctl-icon ctl-icon-sm" title="Slide trước"><i class="fa-solid fa-chevron-left"></i></button>
-      <span id="slideIndexLabel" class="deck-counter">Slide 1/1</span>
-      <button id="nextSlideBtn" class="ctl-icon ctl-icon-sm" title="Slide sau"><i class="fa-solid fa-chevron-right"></i></button>
+      <button id="prevSlideBtn" class="ctl-icon ctl-icon-sm" title="Slide trước (←)" aria-label="Slide trước"><i class="fa-solid fa-chevron-left"></i></button>
+      <span id="slideIndexLabel" class="deck-counter" aria-live="polite">Slide 1/1</span>
+      <button id="nextSlideBtn" class="ctl-icon ctl-icon-sm" title="Slide sau (→)" aria-label="Slide sau"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
 
     <!-- Điều khiển buổi học -->
@@ -244,11 +250,11 @@
         <span>Hủy</span>
       </button>
 
-      <button id="boardToggleBtn" class="ctl-icon" title="Mở / cất bảng của Sensei">
-        <i class="fa-solid fa-chalkboard-user"></i>
+      <button id="boardToggleBtn" class="ctl-icon" title="Mở / cất bảng của Sensei" aria-label="Bảng của Sensei" aria-pressed="false">
+        <i class="fa-solid fa-chalkboard"></i>
       </button>
 
-      <button id="chatToggleBtn" class="ctl-icon" title="Gõ câu hỏi cho Sensei">
+      <button id="chatToggleBtn" class="ctl-icon" title="Gõ câu hỏi cho Sensei" aria-label="Gõ câu hỏi cho Sensei" aria-controls="chatDock" aria-expanded="false">
         <i class="fa-solid fa-keyboard"></i>
       </button>
     </div>
@@ -264,10 +270,10 @@
 
   <!-- Ô gõ câu hỏi — trượt lên từ thanh dưới -->
   <div id="chatDock" class="deck-chatdock hidden">
-    <i class="fa-solid fa-comment-dots text-indigo-400"></i>
-    <input id="chatInput" type="text" placeholder="Gõ câu hỏi cho Sensei rồi nhấn Enter..." class="deck-chatinput" />
-    <button id="sendChatBtn" class="ctl ctl-connect" title="Gửi"><i class="fa-solid fa-paper-plane"></i></button>
-    <button id="chatCloseBtn" class="ctl-icon ctl-icon-sm" title="Đóng"><i class="fa-solid fa-xmark"></i></button>
+    <i class="fa-solid fa-comment-dots text-indigo-400" aria-hidden="true"></i>
+    <input id="chatInput" type="text" placeholder="Hỏi Sensei…" title="Gõ câu hỏi cho Sensei rồi nhấn Enter để gửi" enterkeyhint="send" class="deck-chatinput" aria-label="Câu hỏi cho Sensei" />
+    <button id="sendChatBtn" class="ctl ctl-connect" title="Gửi" aria-label="Gửi câu hỏi"><i class="fa-solid fa-paper-plane"></i></button>
+    <button id="chatCloseBtn" class="ctl-icon ctl-icon-sm" title="Đóng (Esc)" aria-label="Đóng ô gõ câu hỏi"><i class="fa-solid fa-xmark"></i></button>
   </div>
 
 
@@ -280,22 +286,32 @@
   <!-- ====================================================================
        MÀN CHỌN BÀI HỌC — 5 cấp độ, mỗi cấp một dải bài
        ==================================================================== -->
-  <div id="lessonPicker" class="picker">
+  <!-- Hop thoai phu kin: app.js dat inert cho phan phia sau khi mo, focus khong lot ra sau -->
+  <div id="lessonPicker" class="picker" role="dialog" aria-modal="true" aria-labelledby="pickerTitle">
     <header class="picker-top">
       <div class="picker-brand">
-        <div class="deck-mark"><i class="fa-solid fa-chalkboard-user"></i></div>
+        <div class="deck-mark" aria-hidden="true"><i class="fa-solid fa-chalkboard-user"></i></div>
         <div>
-          <h1>Chọn bài học</h1>
+          <h1 id="pickerTitle" tabindex="-1">Chọn bài học</h1>
           <p>Lộ trình JLPT N5 → N1 — Minna no Nihongo &amp; Shin Kanzen Master</p>
         </div>
       </div>
 
       <div class="picker-tools">
-        <div class="picker-search">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input id="pickerSearch" type="search" placeholder="Tìm theo số bài, mẫu ngữ pháp, chủ đề…" autocomplete="off" />
-        </div>
-        <button id="pickerCloseBtn" class="ctl-icon" title="Đóng, quay lại bài đang học">
+        <!-- Nhay nhanh toi tung cap do (app.js gan su kien + danh dau cap dang xem) -->
+        <nav id="pickerJump" class="deck-seg picker-jump" aria-label="Chuyển nhanh tới cấp độ">
+          <button type="button" data-jump="N5">N5</button>
+          <button type="button" data-jump="N4">N4</button>
+          <button type="button" data-jump="N3">N3</button>
+          <button type="button" data-jump="N2">N2</button>
+          <button type="button" data-jump="N1">N1</button>
+        </nav>
+        <!-- label (khong phai div): cham vao le / bieu tuong kinh lup cua o cung dua focus vao o tim -->
+        <label class="picker-search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <input id="pickerSearch" type="search" placeholder="Tìm bài, ngữ pháp, chủ đề…" autocomplete="off" aria-label="Tìm bài học theo số bài, mẫu ngữ pháp hoặc chủ đề" />
+        </label>
+        <button id="pickerCloseBtn" class="ctl-icon" title="Đóng, quay lại bài đang học (Esc)" aria-label="Đóng danh sách bài">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
@@ -305,7 +321,8 @@
   </div>
 
   <!-- Phóng to tranh minh hoạ -->
-  <div id="imageLightboxModal" class="hidden fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-4" onclick="window.closeImageLightbox(event)">
+  <!-- z-[96]: tren meo (3-4), the ron (80), thong bao (95) -->
+  <div id="imageLightboxModal" class="hidden fixed inset-0 z-[96] bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" onclick="window.closeImageLightbox(event)">
     <div class="bg-slate-900 border border-slate-700/80 rounded-2xl max-w-lg w-full p-4 shadow-2xl relative flex flex-col items-center gap-3 animate-zoom-in" onclick="event.stopPropagation()">
       <button onclick="window.closeImageLightbox()" class="ctl-icon ctl-icon-sm absolute -top-3 -right-3 shadow-lg" title="Đóng">
         <i class="fa-solid fa-xmark"></i>
@@ -353,6 +370,8 @@
   <script src="js/audio-engine.js"></script>
   <script src="js/gemini-live.js"></script>
   <script src="js/app.js"></script>
+  <!-- Vo giao dien: do chieu cao thanh tren / duoi, dong bo trang thai nut, phim ← → -->
+  <script src="js/ui-shell.js"></script>
 
   <!-- Sensei hoat hinh: meo 2D, meo 3D, hoac ca hai cung luc de so sanh.
        js/sensei-avatar-hub.js nap nhan vat theo che do va chuyen lenh toi tung con;

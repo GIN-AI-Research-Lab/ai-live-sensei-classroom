@@ -23,9 +23,11 @@
   --ink:          #1f1d19;
   --ink-2:        #2e2a24;
   --muted:        #6b6355;
-  --faint:        #8c8272;
+  --faint:        #70675a;          /* dat AA tren nen giay (4.7:1) */
+  --card:         #fffdf9;          /* mat the noi dung: sang hon giay mot bac */
 
   --accent:       #c96442;
+  --accent-strong:#b4543a;          /* nen nut co chu trang: 4.9:1 (--accent chi 3.9:1) */
   --accent-deep:  #a9492b;
   --sage:         #6b8a5e;
   --sage-deep:    #4f6d45;
@@ -36,11 +38,28 @@
   --ease-out:     cubic-bezier(0.22, 1, 0.36, 1);
   --ease-spring:  cubic-bezier(0.34, 1.4, 0.5, 1);
 
-  --shadow-card:  0 1px 2px rgba(74, 56, 34, .05), 0 6px 16px -8px rgba(74, 56, 34, .16);
-  --shadow-bar:   0 -1px 0 var(--line), 0 -10px 30px -18px rgba(74, 56, 34, .3);
+  --shadow-card:  0 1px 2px rgba(74, 56, 34, .06), 0 4px 14px -8px rgba(74, 56, 34, .14);
+  --shadow-pop:   0 18px 44px -20px rgba(74, 56, 34, .5);
+  --radius:       14px;
+  --radius-sm:    10px;
 
-  --top-h:        56px;
-  --bottom-h:     68px;
+  --font-jp:       "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", Meiryo, system-ui, sans-serif;
+  --font-jp-serif: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  --fs-lg:        22px;             /* tieu de chuong */
+
+  --dur-fast:     .15s;
+  --dur:          .22s;
+  /* vien tren do border-top ve roi, bong chi con lop mo */
+  --shadow-bar:   0 -8px 24px -18px rgba(74, 56, 34, .25);
+  --focus-ring:   2px solid var(--accent);
+
+  /* Chieu cao DAT cua hai thanh (doi theo man hinh) ... */
+  --bar-top:      56px;
+  --bar-bottom:   68px;
+  /* ... va chieu cao THAT do luc chay (js/ui-shell.js ghi de len :root). Moi lop phu neo
+     theo --top-h / --bottom-h, nen thanh duoi xuong 2 dong thi lop phu cung lui len theo. */
+  --top-h:        var(--bar-top);
+  --bottom-h:     var(--bar-bottom);
 }
 
 /* ==========================================================================
@@ -56,15 +75,15 @@ body.deck {
   flex-direction: column;
   overflow: hidden;                 /* deck không cuộn — chỉ sân khấu cuộn */
   background-color: var(--paper);
-  background-image:
-    radial-gradient(900px 500px at 10% -10%, rgba(201, 100, 66, .06), transparent 62%),
-    radial-gradient(800px 500px at 94% 0%,  rgba(107, 138, 94, .05), transparent 60%);
+  /* mot quang sang rat nhe duy nhat — san khau / man chon bai de nen phang */
+  background-image: radial-gradient(900px 500px at 10% -10%, rgba(201, 100, 66, .05), transparent 62%);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-ruby, .font-serif {
+/* Chi chu hien thi (o chu Han, chu lon trong the ron) moi dung Mincho; ruby theo chu quanh no */
+.font-serif {
   font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", Georgia, serif;
 }
 ruby rt {
@@ -100,83 +119,94 @@ ruby rt {
    1. THANH TRÊN
    ========================================================================== */
 
+/* Thanh nam trong dong chay (khong de len noi dung) -> nen dac, khong backdrop-filter */
 .deck-top {
-  height: var(--top-h);
+  height: var(--bar-top);
   flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
   padding: 0 16px;
   border-bottom: 1px solid var(--line);
-  background: rgba(250, 247, 242, .82);
-  backdrop-filter: blur(12px);
+  background: var(--surface);
   z-index: 30;
 }
+.deck-brand { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 12px; }
+.deck-id    { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 8px; }
+.deck-top-tools { flex: 0 0 auto; display: flex; align-items: center; gap: 8px; }
 
 .deck-mark {
   width: 30px; height: 30px;
   flex: 0 0 auto;
   display: grid; place-items: center;
   border-radius: 9px;
-  background: linear-gradient(140deg, var(--accent), var(--accent-deep));
-  color: #fff;
-  font-size: 13px;
-  box-shadow: 0 4px 12px -5px rgba(201, 100, 66, .8);
-}
-
-.deck-level {
-  font-family: ui-monospace, "SFMono-Regular", monospace;
-  font-size: 11px; font-weight: 700; letter-spacing: .06em;
-  color: var(--accent-deep);
   background: rgba(201, 100, 66, .12);
-  border: 1px solid rgba(201, 100, 66, .26);
-  padding: 2px 8px;
-  border-radius: 6px;
+  color: var(--accent-deep);
+  font-size: 13px;
 }
 
-.deck-lesson-no {
-  font-size: 11px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: .08em;
-  color: var(--muted);
-  white-space: nowrap;
-}
+/* Cap do + so bai da co trong 2 o chon: JS van ghi vao 2 the nay nen chi an di */
+.deck-level,
+.deck-lesson-no { display: none; }
 
 .deck-lesson-select,
 .deck-level-select {
-  font-size: 12px; font-weight: 500;
-  color: var(--ink-2);
+  font: inherit;
+  color: var(--ink);
   background: transparent;
   border: 1px solid transparent;
   border-radius: 8px;
+  min-height: 30px;           /* cung cao voi logo: cap do + ten bai thanh mot hang deu */
   padding: 4px 6px;
   cursor: pointer;
-  max-width: 300px;
   text-overflow: ellipsis;
+  transition: border-color var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out);
 }
-.deck-lesson-select:hover,
-.deck-level-select:hover { border-color: var(--line-strong); background: var(--surface-hi); }
-.deck-level-select { max-width: 74px; font-family: ui-monospace, monospace; font-weight: 700; }
+.deck-lesson-select {
+  flex: 1 1 auto; min-width: 0; max-width: 520px;
+  font-size: 13px; font-weight: 600;
+}
+@media (hover: hover) {
+  .deck-lesson-select:hover { border-color: var(--line-strong); background: var(--surface-hi); }
+}
+/* O chon cap do dong vai nhan cap do */
+.deck-level-select {
+  flex: 0 0 auto;
+  font-size: 12px; font-weight: 700; letter-spacing: .02em;
+  color: var(--accent-deep);
+  background: rgba(201, 100, 66, .10);
+  padding: 4px 4px 4px 8px;
+}
+@media (hover: hover) {
+  .deck-level-select:hover { background: rgba(201, 100, 66, .16); }
+}
 
+/* Song am cua Sensei: chi hien khi co vach dang chay; im lang thi mo di (van giu cho) */
 .deck-wave {
   display: flex; align-items: center; gap: 3px;
+  flex: 0 0 auto;
   height: 22px; padding: 0 8px;
   border-radius: 99px;
   background: var(--paper-deep);
+  transition: opacity .2s var(--ease-out);
 }
+.deck-wave:not(:has(.wave-bar.active)) { opacity: 0; }
+/* Vach cao co dinh, chi co gian bang transform: khong tinh lai bo cuc moi khung hinh */
 .wave-bar {
-  width: 3px; height: 5px;
+  width: 3px; height: 18px;
   border-radius: 99px;
   background: var(--line-strong);
+  transform: scaleY(.28);
   transition: background-color .25s var(--ease-out);
 }
 .wave-bar.active {
-  background: var(--accent) !important;
+  background: var(--accent);
   animation: pulseBar .85s var(--ease-out) infinite;
 }
 @keyframes pulseBar {
-  0%, 100% { height: 5px;  opacity: .55; }
-  50%      { height: 18px; opacity: 1; }
+  0%, 100% { transform: scaleY(.28); opacity: .55; }
+  50%      { transform: scaleY(1);   opacity: 1; }
 }
 
 /* ==========================================================================
@@ -193,14 +223,6 @@ ruby rt {
      scrollIntoView đẩy lệch cả sân khấu sang trái. */
   overflow: hidden;
   overflow: clip;
-
-  /* Quyền sáng ấm ở hai góc.
-     Trước đây là hai thẻ riêng có filter: blur(80px) — mỗi thẻ tạo một layer GPU,
-     làm cả sân khấu không được vẽ trên máy yếu hoặc khi cửa sổ bị che.
-     Dùng gradient nền cho cùng hiệu ứng mà không sinh layer nào. */
-  background-image:
-    radial-gradient(520px 420px at 100% 0%,   rgba(201, 100, 66, .14), transparent 70%),
-    radial-gradient(480px 400px at 0% 100%,   rgba(107, 138, 94, .13), transparent 70%);
 }
 
 .deck-canvas {
@@ -243,24 +265,34 @@ ruby rt {
   pointer-events: none;
 }
 
-/* Bảng sửa lỗi nổi trên sân khấu */
+/* Bảng sửa lỗi nổi trên sân khấu.
+   Can giua bang left/right 0 + margin auto (KHONG dung transform): hieu ung rung .roast-shake
+   va dockIn doi transform / translate thoai mai ma bang khong nhay lech nua be ngang. */
 .deck-errdock {
   position: absolute;
-  left: 50%; bottom: 44px;
-  transform: translateX(-50%);
+  left: 0; right: 0; bottom: 44px;
+  margin: 0 auto;
   z-index: 5;
   width: min(760px, calc(100% - 48px));
   padding: 14px 16px;
   border-radius: 16px;
   border: 1px solid rgba(194, 90, 76, .45);
-  background: rgba(252, 243, 240, .96);
-  backdrop-filter: blur(10px);
+  background: rgb(252, 243, 240);
   box-shadow: 0 18px 44px -20px rgba(120, 50, 40, .5);
-  animation: dockIn .34s var(--ease-spring) both;
+  animation: dockIn .3s var(--ease-out) both;
 }
+/* O chat dang mo chiem ~12..68px tren thanh duoi: day bang sua loi len tren no, khong bi che */
+body.co-chat .deck-errdock { bottom: 76px; }
+/* Dien thoai: gon lai (hai o "Bạn đã nói" / "Sửa chuẩn" canh nhau thay vi chong hai tang) — che it the hon */
+@media (max-width: 640px) {
+  .deck-errdock { width: calc(100% - 24px); padding: 10px 12px; }
+  .deck-errdock > .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* Truot len + hien dan. Dung thuoc tinh 'translate' rieng: khong de len transform cua phan tu
+   (vd nut dang bam scale), nen dung chung duoc cho moi lop phu, du can giua hay neo phai. */
 @keyframes dockIn {
-  from { opacity: 0; transform: translate(-50%, 14px); }
-  to   { opacity: 1; transform: translate(-50%, 0); }
+  from { opacity: 0; translate: 0 12px; }
+  to   { opacity: 1; translate: 0 0; }
 }
 .deck-errcell {
   background: rgba(255, 255, 255, .7);
@@ -272,8 +304,8 @@ ruby rt {
 .deck-errcell-ok { border-color: rgba(107, 138, 94, .4); }
 .deck-errlabel {
   display: block;
-  font-size: 10px; text-transform: uppercase; letter-spacing: .07em;
-  font-weight: 700; color: var(--faint); margin-bottom: 2px;
+  font-size: 12px; letter-spacing: .02em;
+  font-weight: 600; color: var(--muted); margin-bottom: 2px;
 }
 .deck-errnote {
   margin-top: 10px;
@@ -289,155 +321,180 @@ ruby rt {
    3. CHUYỂN CẢNH
    ========================================================================== */
 
-.slide-fade-enter { animation: sceneIn .5s var(--ease-out) both; }
+/* Mot lop chuyen dong: khung hien dan .2s, the ben trong nhich len 6px + hien dan .24s,
+   so le 25ms cho 8 the dau (xong het < 420ms). Khong phong to / thu nho khi vao.
+   Fill 'backwards' (khong 'both'): het hieu ung la tra transform / opacity ve cho CSS thuong,
+   nen .reading-focus, .is-busy... khong bi gia tri cuoi cua animation de mat.
+   Khong dung filter: blur() — moi khung hinh blur bat GPU tao layer rieng. */
+.slide-fade-enter { animation: sceneIn .2s var(--ease-out) backwards; }
+@keyframes sceneIn { from { opacity: 0; } }
 
-/* Khong dung filter: blur() o day: moi khung hinh blur bat GPU tao layer rieng,
-   tren may yeu se lam ca san khau khong kip ve. Chi opacity + dich chuyen la du muot. */
-@keyframes sceneIn {
-  from { opacity: 0; transform: translate3d(0, 20px, 0) scale(.985); }
-  to   { opacity: 1; transform: none; }
-}
+.slide-fade-enter > * > * { animation: cardIn .24s var(--ease-out) backwards; }
+.slide-fade-enter > * > *:nth-child(2)   { animation-delay: .025s; }
+.slide-fade-enter > * > *:nth-child(3)   { animation-delay: .05s; }
+.slide-fade-enter > * > *:nth-child(4)   { animation-delay: .075s; }
+.slide-fade-enter > * > *:nth-child(5)   { animation-delay: .1s; }
+.slide-fade-enter > * > *:nth-child(6)   { animation-delay: .125s; }
+.slide-fade-enter > * > *:nth-child(7)   { animation-delay: .15s; }
+.slide-fade-enter > * > *:nth-child(n+8) { animation-delay: .175s; }
 
-.slide-fade-enter > * { animation: blockIn .48s var(--ease-out) both; }
-.slide-fade-enter > *:nth-child(1) { animation-delay: .05s; }
-.slide-fade-enter > *:nth-child(2) { animation-delay: .12s; }
-.slide-fade-enter > *:nth-child(3) { animation-delay: .19s; }
-
-@keyframes blockIn {
-  from { opacity: 0; transform: translate3d(0, 12px, 0); }
-  to   { opacity: 1; transform: none; }
-}
-
-.slide-fade-enter > * > * { animation: cardIn .46s var(--ease-out) both; }
-.slide-fade-enter > * > *:nth-child(1)   { animation-delay: .10s; }
-.slide-fade-enter > * > *:nth-child(2)   { animation-delay: .145s; }
-.slide-fade-enter > * > *:nth-child(3)   { animation-delay: .19s; }
-.slide-fade-enter > * > *:nth-child(4)   { animation-delay: .235s; }
-.slide-fade-enter > * > *:nth-child(5)   { animation-delay: .28s; }
-.slide-fade-enter > * > *:nth-child(6)   { animation-delay: .325s; }
-.slide-fade-enter > * > *:nth-child(7)   { animation-delay: .37s; }
-.slide-fade-enter > * > *:nth-child(8)   { animation-delay: .415s; }
-.slide-fade-enter > * > *:nth-child(n+9) { animation-delay: .46s; }
-
+/* Dich bang thuoc tinh 'translate' / 'scale' rieng: cong don voi transform san co cua phan tu
+   (vd huy hieu -translate-x-1/2 cua Tailwind) thay vi thay the no trong luc chay */
 @keyframes cardIn {
-  from { opacity: 0; transform: translate3d(0, 14px, 0) scale(.99); }
-  to   { opacity: 1; transform: none; }
+  from { opacity: 0; translate: 0 6px; }
+}
+@keyframes blockIn {
+  from { opacity: 0; translate: 0 8px; }
 }
 
 @keyframes zoomIn {
-  from { opacity: 0; transform: scale(.94); }
-  to   { opacity: 1; transform: scale(1); }
+  from { opacity: 0; scale: .96; }
 }
-.animate-zoom-in { animation: zoomIn .28s var(--ease-spring) both; }
+.animate-zoom-in { animation: zoomIn .2s var(--ease-out) backwards; }
 
 /* ==========================================================================
    4. THANH DƯỚI
    ========================================================================== */
 
+/* Mot dong: chuong (trai) · nut truoc/sau slide (chi o Ngu phap) · dieu khien (phai).
+   Khong xuong dong (nowrap): cho hep dan thi nhan duoc thu gon theo moc man hinh ben duoi;
+   thieu nua thi dai chuong tu co lai va cuon ngang, chu thanh khong bao gio cao gap doi. */
 .deck-bottom {
   position: relative;
   flex: 0 0 auto;
-  min-height: var(--bottom-h);
+  min-height: var(--bar-bottom);
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 10px 16px;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
   border-top: 1px solid var(--line);
-  background: rgba(250, 247, 242, .9);
-  backdrop-filter: blur(12px);
+  background: var(--surface);
   box-shadow: var(--shadow-bar);
   z-index: 30;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .deck-chapters {
   display: flex; align-items: center; gap: 2px;
+  flex: 0 1 auto; min-width: 0;
   padding: 3px;
   border-radius: 12px;
   background: var(--paper-deep);
-  border: 1px solid var(--line);
   overflow-x: auto;
   scrollbar-width: none;
 }
 .deck-chapters::-webkit-scrollbar { display: none; }
 
 .chapter {
-  display: inline-flex; align-items: center; gap: 6px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
   flex: 0 0 auto;
+  min-height: 30px;
   padding: 6px 11px;
   border: 0; border-radius: 9px;
   background: transparent;
-  color: var(--muted);
+  color: #625a4c;                    /* --muted tren nen tab (--paper-deep) chi 4.48:1 */
   font: inherit; font-size: 12px; font-weight: 600;
   cursor: pointer; white-space: nowrap;
+  transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out),
+              box-shadow var(--dur-fast) var(--ease-out);
 }
 .chapter i { font-size: 11px; opacity: .8; }
-.chapter:hover { color: var(--ink); background: rgba(255, 255, 255, .7); }
-.chapter.is-active {
-  background: var(--accent); color: #fff;
-  box-shadow: 0 4px 12px -5px rgba(201, 100, 66, .9);
+@media (hover: hover) {
+  .chapter:hover { color: var(--ink); background: rgba(255, 255, 255, .5); }
 }
-.chapter.is-active i { opacity: 1; }
+/* Chuong dang mo: vien giay noi len + bieu tuong mau nhan (khong to dac terracotta) */
+.chapter.is-active {
+  background: var(--surface-hi); color: var(--ink);
+  box-shadow: 0 1px 2px rgba(74, 56, 34, .14), 0 0 0 1px var(--line);
+}
+.chapter.is-active i { color: var(--accent); opacity: 1; }
 
-.deck-nav { display: flex; align-items: center; gap: 5px; }
+/* Truoc / sau chi co nghia o chuong Ngu phap (slide-engine setTab ghi body[data-tab]) */
+.deck-nav { display: flex; align-items: center; gap: 4px; flex: 0 0 auto; }
+body:not([data-tab="grammar"]) .deck-nav { display: none; }
 .deck-counter {
   font-family: ui-monospace, monospace;
-  font-size: 11px; color: var(--muted);
-  min-width: 74px; text-align: center; white-space: nowrap;
+  font-size: 12px; color: var(--muted);
+  min-width: 40px; text-align: center; white-space: nowrap;
 }
 
 .deck-actions {
   display: flex; align-items: center; gap: 8px;
-  margin-left: auto; flex-wrap: wrap;
+  flex: 0 0 auto;
+  margin-left: auto; flex-wrap: nowrap;
 }
+/* nut chu, nut chi con bieu tuong va nut bat / tat cung mot khung 36px (bang dai chuong).
+   Man cam ung / dien thoai nang len 40 o cac quy tac phia sau. */
+.deck-actions .ctl { height: 36px; min-height: 36px; min-width: 36px; }
+.deck-actions .ctl-icon { width: 36px; height: 36px; }
 
 /* --- nút --- */
 .ctl {
-  display: inline-flex; align-items: center; gap: 7px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  flex-shrink: 0;
   padding: 8px 14px;
   border: 1px solid transparent;
   border-radius: 11px;
-  font: inherit; font-size: 12px; font-weight: 700;
+  font: inherit; font-size: 12.5px; font-weight: 700;
   cursor: pointer; white-space: nowrap;
   transition: transform .16s var(--ease-spring), background-color .18s var(--ease-out),
               border-color .18s var(--ease-out), color .18s var(--ease-out), box-shadow .18s var(--ease-out);
 }
 .ctl:active:not(:disabled) { transform: scale(.97); }
-.ctl:disabled { cursor: not-allowed; opacity: .5; }
+.ctl:disabled { cursor: not-allowed; opacity: .5; box-shadow: none; }
 
-.ctl-go      { background: var(--sage-deep); color: #fff; box-shadow: 0 5px 14px -7px rgba(79, 109, 69, .9); }
-.ctl-go:hover:not(:disabled) { background: #5c7d50; }
+/* Hanh dong chinh: terracotta dac (dam hon --accent mot bac de chu trang dat AA) */
+.ctl-go,
+.ctl-resume,
+.ctl-connect { background: var(--accent-strong); color: #fff; box-shadow: 0 4px 12px -6px rgba(180, 84, 58, .8); }
+@media (hover: hover) {
+  .ctl-go:hover:not(:disabled),
+  .ctl-resume:hover:not(:disabled),
+  .ctl-connect:hover:not(:disabled) { background: var(--accent-deep); }
+}
+.ctl-connect.is-live { background: var(--clay-deep); box-shadow: 0 4px 12px -6px rgba(172, 71, 57, .8); }
+@media (hover: hover) {
+  .ctl-connect.is-live:hover { background: #963c30; }
+}
 
-.ctl-pause   { background: var(--gold); color: var(--ink); box-shadow: 0 5px 14px -7px rgba(192, 149, 47, .9); }
-.ctl-pause:hover:not(:disabled) { background: #cfa23a; }
+/* Dang giang: nut tam dung la nut phu (giay + bieu tuong nhan), khong tranh mau voi noi dung */
+.ctl-pause   { background: var(--surface-hi); color: var(--ink); border-color: var(--line-strong); }
+.ctl-pause i { color: var(--accent); }
+@media (hover: hover) {
+  .ctl-pause:hover:not(:disabled) { border-color: rgba(201, 100, 66, .45); }
+}
 
-.ctl-resume  { background: var(--accent); color: #fff; box-shadow: 0 5px 14px -7px rgba(201, 100, 66, .9); }
-.ctl-resume:hover:not(:disabled) { background: var(--accent-deep); }
-
-.ctl-warn    { background: transparent; color: #8f6a1c; border-color: rgba(192, 149, 47, .5); }
-.ctl-warn:hover:not(:disabled) { background: rgba(192, 149, 47, .14); }
+/* Gio tay: nut ma, chi bieu tuong mang mau vang */
+.ctl-warn    { background: transparent; color: var(--ink-2); border-color: var(--line-strong); }
+.ctl-warn i  { color: var(--gold); }
+@media (hover: hover) {
+  .ctl-warn:hover:not(:disabled) { background: var(--surface-hi); color: var(--ink); }
+}
 
 .ctl-ghost   { background: transparent; color: var(--muted); border-color: var(--line-strong); }
-.ctl-ghost:hover:not(:disabled) { color: var(--ink); background: var(--surface-hi); }
+@media (hover: hover) {
+  .ctl-ghost:hover:not(:disabled) { color: var(--ink); background: var(--surface-hi); }
+}
 
-.ctl-connect { background: var(--accent); color: #fff; box-shadow: 0 5px 14px -7px rgba(201, 100, 66, .9); }
-.ctl-connect:hover:not(:disabled) { background: var(--accent-deep); }
-.ctl-connect.is-live { background: var(--clay-deep); box-shadow: 0 5px 14px -7px rgba(172, 71, 57, .9); }
-.ctl-connect.is-live:hover { background: #963c30; }
-
+/* "Tiep theo": nhac 2 lan roi dung yen (khong lap mai) */
 .ctl-next {
-  background: var(--accent); color: #fff;
-  box-shadow: 0 5px 16px -6px rgba(201, 100, 66, .95);
-  animation: nudge 1.6s var(--ease-out) infinite;
+  background: var(--accent-strong); color: #fff;
+  box-shadow: 0 4px 12px -6px rgba(180, 84, 58, .8);
+  animation: nudge 1.6s var(--ease-out) 2;
+}
+@media (hover: hover) {
+  .ctl-next:hover { background: var(--accent-deep); }
 }
 @keyframes nudge {
-  0%, 100% { transform: translateX(0); }
-  50%      { transform: translateX(3px); }
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 3px 0; }
 }
 
 .ctl-icon {
   display: inline-grid; place-items: center;
+  flex-shrink: 0;
   width: 34px; height: 34px;
+  padding: 0;
   border: 1px solid var(--line-strong);
   border-radius: 10px;
   background: var(--surface-hi);
@@ -446,26 +503,46 @@ ruby rt {
   transition: transform .16s var(--ease-spring), color .18s var(--ease-out),
               border-color .18s var(--ease-out), background-color .18s var(--ease-out);
 }
-.ctl-icon:hover { color: var(--accent-deep); border-color: rgba(201, 100, 66, .45); }
+@media (hover: hover) {
+  .ctl-icon:hover { color: var(--accent-deep); border-color: rgba(201, 100, 66, .45); }
+}
 .ctl-icon:active { transform: scale(.94); }
+.ctl-icon:disabled { opacity: .38; cursor: default; }
+.ctl-icon:disabled:hover { color: var(--muted); border-color: var(--line-strong); }
+.ctl-icon:disabled:active { transform: none; }
 .ctl-icon-sm { width: 28px; height: 28px; font-size: 11px; border-radius: 8px; }
+/* Nut bat / tat dang mo (bang, o chat): nen nhat mau nhan — js/ui-shell.js dong bo .is-live */
+.ctl-icon.is-live {
+  background: rgba(201, 100, 66, .12);
+  color: var(--accent-deep);
+  border-color: rgba(201, 100, 66, .45);
+}
+/* Nut an / hien Sensei (js/sensei-avatar-hub.js): giu dang .ctl-icon, bieu tuong la emoji */
+.sensei-nut { font-size: 16px; line-height: 1; }
+/* Man hep: o chat (rong gan het man, neo tren thanh duoi) phu len nut — nut lo vien vai px quanh nut x
+   cua o chat trong nhu vien kep. An nut trong luc o chat mo (dong chat la hien lai). */
+@media (max-width: 780px) {
+  body.co-chat .sensei-nut:not(.is-tren) { visibility: hidden; }
+}
 
 /* ==========================================================================
    5. ĐANG THU ÂM CÂU HỎI
    ========================================================================== */
 
+/* Nam trong .deck-bottom, neo ngay tren mep tren cua thanh (cao bao nhieu cung theo) */
 .deck-recording {
   position: absolute;
-  top: -44px; right: 16px;
+  bottom: calc(100% + 8px); right: 16px;
   display: flex; align-items: center; gap: 10px;
+  max-width: calc(100vw - 16px);
   padding: 7px 13px;
   border-radius: 99px;
   border: 1px solid rgba(172, 71, 57, .45);
-  background: rgba(252, 243, 240, .97);
-  backdrop-filter: blur(10px);
+  background: rgb(252, 243, 240);
   box-shadow: 0 12px 30px -14px rgba(120, 50, 40, .55);
-  font-size: 11.5px; font-weight: 600; color: var(--clay-deep);
-  animation: dockIn .26s var(--ease-spring) both;
+  font-size: 12px; font-weight: 600; color: var(--clay-deep);
+  white-space: nowrap;
+  animation: dockIn .26s var(--ease-out) both;
 }
 .rec-dot {
   width: 9px; height: 9px; border-radius: 50%;
@@ -485,11 +562,14 @@ ruby rt {
 .deck-recording.is-waiting .deck-micpct { display: none; }
 @keyframes waitPulse { 0%, 100% { opacity: .5; transform: scale(.85); } 50% { opacity: 1; transform: scale(1.05); } }
 
-.deck-micbar { width: 92px; height: 5px; border-radius: 99px; background: var(--paper-deep); overflow: hidden; }
+/* JS (app.js updateLiveMicVolume) ghi style.transform = scaleX(muc) moi nhip am luong: chi ghep lop,
+   khong tinh lai bo cuc; contain: strict giu moi thay doi trong cai vach 5px nay */
+.deck-micbar { width: 92px; height: 5px; border-radius: 99px; background: var(--paper-deep); overflow: hidden; contain: strict; }
 .deck-micbar > div {
-  height: 100%; width: 0; border-radius: 99px;
+  height: 100%; width: 100%; border-radius: 99px;
   background: linear-gradient(90deg, var(--sage), var(--gold), var(--accent));
-  transition: width .075s linear;
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .075s linear;
 }
 .deck-micpct { font-family: ui-monospace, monospace; font-weight: 700; min-width: 30px; }
 
@@ -497,61 +577,62 @@ ruby rt {
    6. Ô GÕ CÂU HỎI
    ========================================================================== */
 
+/* Can giua bang left/right + margin auto (khong transform) nen dockIn khong lam lech.
+   Neo theo chieu cao THAT cua thanh duoi (--bottom-h), z 45: tren bang phan (44). */
 .deck-chatdock {
   position: fixed;
-  left: 50%; bottom: calc(var(--bottom-h) + 14px);
-  transform: translateX(-50%);
-  z-index: 40;
+  left: 16px; right: 16px; bottom: calc(var(--bottom-h) + 12px);
+  margin: 0 auto;
+  z-index: 45;
   display: flex; align-items: center; gap: 9px;
-  width: min(680px, calc(100vw - 32px));
-  padding: 9px 11px;
+  width: auto; max-width: 680px;
+  padding: 7px 7px 7px 13px;
   border-radius: 14px;
   border: 1px solid var(--line-strong);
-  background: rgba(250, 247, 242, .97);
-  backdrop-filter: blur(12px);
+  background: var(--surface);
   box-shadow: 0 18px 44px -20px rgba(74, 56, 34, .55);
-  animation: dockIn .26s var(--ease-spring) both;
+  animation: dockIn .24s var(--ease-out) both;
+  transition: border-color var(--dur-fast) var(--ease-out);
 }
+.deck-chatdock:focus-within { border-color: rgba(201, 100, 66, .6); }
 .deck-chatinput {
   flex: 1; min-width: 0;
+  min-height: 34px;
+  /* Phu kin chieu cao o chat (ca le 7px tren / duoi): cham vao le o van vao o nhap */
+  align-self: stretch; margin: -7px 0; padding: 7px 0;
   border: 0; background: transparent;
-  font: inherit; font-size: 13px; color: var(--ink);
+  font: inherit; font-size: 14px; color: var(--ink);
 }
 .deck-chatinput:focus { outline: none; }
 .deck-chatinput::placeholder { color: var(--faint); }
 
 /* ==========================================================================
-   7. BẢNG CẤU HÌNH
-   ========================================================================== */
-
-@keyframes panelIn {
-  from { opacity: 0; transform: translateY(-10px) scale(.97); }
-  to   { opacity: 1; transform: none; }
-}
-
-/* ==========================================================================
    8. THÔNG BÁO
    ========================================================================== */
 
+/* z 95: tren man chon bai (90) — canh bao luc mo trang (thieu khoa, mat mang) hien khi picker dang mo */
 .deck-toasts {
   position: fixed;
-  top: calc(var(--top-h) + 12px); left: 50%;
-  transform: translateX(-50%);
-  z-index: 70;
+  top: calc(var(--top-h) + 12px); left: 16px; right: 16px;
+  z-index: 95;
   display: flex; flex-direction: column; gap: 8px; align-items: center;
   pointer-events: none;
 }
+/* Man chon bai dang mo: thong bao xuong day, khong de len o tim bai */
+body:has(#lessonPicker:not(.hidden)) .deck-toasts {
+  top: auto; bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  flex-direction: column-reverse;
+}
 .toast {
   display: flex; align-items: center; gap: 9px;
-  max-width: min(560px, calc(100vw - 32px));
+  max-width: min(560px, 100%);
   padding: 9px 14px;
   border-radius: 11px;
   border: 1px solid var(--line-strong);
-  background: rgba(250, 247, 242, .97);
-  backdrop-filter: blur(10px);
+  background: var(--surface);
   box-shadow: 0 14px 34px -16px rgba(74, 56, 34, .55);
-  font-size: 12.5px; font-weight: 500; color: var(--ink-2);
-  animation: toastIn .3s var(--ease-spring) both;
+  font-size: 13px; font-weight: 500; color: var(--ink-2);
+  animation: toastIn .24s var(--ease-out) both;
 }
 .toast.is-out { animation: toastOut .3s var(--ease-out) both; }
 .toast i { flex: 0 0 auto; }
@@ -559,44 +640,45 @@ ruby rt {
 .toast-error i { color: var(--clay); }
 .toast-info i { color: var(--accent); }
 
-@keyframes toastIn  { from { opacity: 0; transform: translateY(-10px) scale(.96); } to { opacity: 1; transform: none; } }
-@keyframes toastOut { to   { opacity: 0; transform: translateY(-8px) scale(.97); } }
+@keyframes toastIn  { from { opacity: 0; translate: 0 -8px; } to { opacity: 1; translate: 0 0; } }
+@keyframes toastOut { to   { opacity: 0; translate: 0 -6px; } }
 
 /* ==========================================================================
    9. RỌI SÁNG (tool highlight_element)
    ========================================================================== */
 
+/* Nhip sang chi chay 2 lan roi dung o vien tinh (khong lap mai trong ca buoi giang) */
 .hl-grammar {
   background: rgba(107, 138, 94, .16); color: #33512b;
   border-radius: 6px; padding: 1px 5px;
   box-shadow: 0 0 0 1px rgba(107, 138, 94, .42);
-  animation: grammarPulse 1.8s var(--ease-out) infinite;
+  animation: grammarPulse 1.8s var(--ease-out) 2;
 }
 .hl-vocab {
   background: rgba(192, 149, 47, .18); color: #6d5214;
   border-radius: 6px; padding: 1px 5px;
   box-shadow: 0 0 0 1px rgba(192, 149, 47, .45);
-  animation: vocabPulse 1.8s var(--ease-out) infinite;
+  animation: vocabPulse 1.8s var(--ease-out) 2;
 }
 .hl-warning {
   background: rgba(194, 90, 76, .16); color: #8b3628;
   border-radius: 6px; padding: 1px 5px;
   box-shadow: 0 0 0 1px rgba(194, 90, 76, .5);
-  animation: warningPulse 1.1s var(--ease-out) infinite;
+  animation: warningPulse 1.1s var(--ease-out) 2;
 }
 .hl-reading-inline {
   background: rgba(201, 100, 66, .16); color: var(--accent-deep);
   border-radius: 6px; padding: 1px 5px;
   box-shadow: 0 0 0 1px rgba(201, 100, 66, .48);
-  animation: readingPulse 1.35s var(--ease-out) infinite;
+  animation: readingPulse 1.35s var(--ease-out) 2;
 }
 
+/* The dang doc: nen nhat + vien nhan + bong, khong phong to (chu mo, lam xo lech luoi the) */
 .reading-focus {
-  background: linear-gradient(180deg, rgba(201, 100, 66, .10), rgba(201, 100, 66, .04)) !important;
+  background: rgba(201, 100, 66, .07) !important;
   border-color: rgba(201, 100, 66, .55) !important;
   box-shadow: 0 0 0 1px rgba(201, 100, 66, .3), 0 14px 30px -16px rgba(201, 100, 66, .65) !important;
-  transform: translateZ(0) scale(1.012);
-  transition: transform .4s var(--ease-spring), box-shadow .4s var(--ease-out);
+  transition: box-shadow .2s var(--ease-out), border-color .2s var(--ease-out), background-color .2s var(--ease-out);
 }
 .hl-card-grammar {
   border-color: rgba(107, 138, 94, .6) !important;
@@ -612,11 +694,11 @@ ruby rt {
 }
 
 .reading-badge-indicator {
-  animation: fadeInBadge .3s var(--ease-spring) both;
-  background: var(--accent) !important;
+  animation: fadeInBadge .2s var(--ease-out) backwards;
+  background: var(--accent-strong) !important;
   color: #fff !important;
 }
-@keyframes fadeInBadge { from { opacity: 0; transform: translateY(-4px) scale(.9); } to { opacity: 1; transform: none; } }
+@keyframes fadeInBadge { from { opacity: 0; translate: 0 -4px; } }
 
 @keyframes readingPulse { 0%,100% { box-shadow: 0 0 0 1px rgba(201,100,66,.48); } 50% { box-shadow: 0 0 0 1px rgba(201,100,66,.48), 0 0 16px -2px rgba(201,100,66,.5); } }
 @keyframes grammarPulse { 0%,100% { box-shadow: 0 0 0 1px rgba(107,138,94,.42); } 50% { box-shadow: 0 0 0 1px rgba(107,138,94,.42), 0 0 16px -2px rgba(107,138,94,.45); } }
@@ -634,12 +716,6 @@ ruby rt {
   86%       { transform: translateX(-2px); }
 }
 .roast-shake { animation: roastShake .5s var(--ease-out) 1; }
-
-@keyframes flamePulse {
-  0%, 100% { box-shadow: 0 0 0 1px rgba(194, 90, 76, .5), 0 10px 26px -14px rgba(194, 90, 76, .8); }
-  50%      { box-shadow: 0 0 0 1px rgba(194, 90, 76, .7), 0 12px 34px -12px rgba(176, 74, 62, .95); }
-}
-.flame-border { animation: flamePulse 1.5s var(--ease-out) infinite; }
 
 .opt-locked { cursor: default !important; opacity: .92; }
 .opt-locked:hover { transform: none; }
@@ -666,35 +742,145 @@ button:not(:disabled):not(.ctl):not(.ctl-icon):not(.chapter) {
 }
 button:not(:disabled):not(.ctl):not(.ctl-icon):not(.chapter):active { transform: scale(.97); }
 
-input:focus, select:focus { outline: none; }
+/* Vong focus ban phim cho moi phan tu bam duoc; bam chuot thi khong hien.
+   O go chu (o chat, o tim bai) hien vien tren khung bao ngoai (:focus-within) thay vong nay. */
+:focus-visible { outline: var(--focus-ring); outline-offset: 2px; }
+:focus:not(:focus-visible) { outline: none; }
+.deck-chatinput:focus-visible,
+.picker-search input:focus-visible { outline: none; }
+.chapter:focus-visible { outline-offset: 0; }
+/* .deck-seg chi dem 3px + overflow-x:auto (cat ca chieu doc): vong sat nut moi khong bi xen */
+.deck-seg > button:focus-visible,
+.deck-seg > a:focus-visible { outline-offset: 0; }
+/* Tieu de hop chon bai nhan focus bang JS (may cam ung) chi de dua trinh doc man hinh vao hop */
+#pickerTitle:focus { outline: none; }
+
 ::selection { background: rgba(201, 100, 66, .22); color: var(--ink); }
+
+/* Man hinh cam ung: vung bam toi thieu 40px */
+@media (pointer: coarse) {
+  /* ca nut nho (dong o chat / bang sua loi / anh phong to) cung 40px */
+  .ctl, .ctl-icon, .ctl-icon-sm { min-width: 40px; min-height: 40px; }
+  .ctl-icon-sm { font-size: 13px; }
+  .chapter { min-width: 40px; min-height: 40px; }
+  /* 16px: iOS Safari tu phong to trang khi cham vao o chon / o nhap chu nho hon 16px */
+  .deck-lesson-select, .deck-level-select { min-height: 40px; font-size: 16px; }
+  .deck-chatinput { font-size: 16px; }
+  /* Thanh duoi: quy tac 36px o muc thanh duoi (.deck-actions .ctl, do dac hieu 0,2,0) thang .ctl o tren —
+     nang lai ca hang len 40 (dien thoai nam ngang > 640px khong co quy tac rieng cua man <= 640) */
+  .deck-actions .ctl,
+  .deck-actions .ctl-icon { height: 40px; min-height: 40px; min-width: 40px; }
+}
 
 /* ==========================================================================
    12. MÀN HÌNH HẸP
    ========================================================================== */
 
-@media (max-width: 980px) {
-  :root { --bottom-h: 60px; }
-  .deck-canvas { padding: 18px 16px 14px; }
-  .deck-nav { display: none; }
-  .chapter span { display: none; }
-  .chapter { padding: 7px 10px; }
-  .deck-lesson-select { max-width: 150px; }
+/* 981–1200px: thanh duoi van MOT dong — thu gon khoang dem chuong, nut phu chi con bieu tuong
+   (ten nut nam o title). Nut chinh giu nguyen chu. */
+@media (max-width: 1200px) {
+  .deck-bottom { gap: 10px; }
+  .chapter { padding: 6px 9px; gap: 5px; }
   .deck-actions { gap: 6px; }
-  .ctl { padding: 7px 11px; font-size: 11.5px; }
+  .deck-actions .ctl-warn > span,
+  .deck-actions .ctl-ghost > span { display: none; }
+  .deck-actions .ctl-warn,
+  .deck-actions .ctl-ghost { padding-left: 11px; padding-right: 11px; }
+  /* Dang gio tay: nut giang (dang khoa) chi con bieu tuong, "Gui cau hoi" la nut chinh */
+  .deck-actions:has(> #askSendBtn:not(.hidden)) #autoLectureBtn > span { display: none; }
+}
+/* Dang giang co "Tiep theo" / dang gio tay (3 nut chu): chuong chi con bieu tuong, tru chuong dang mo.
+   Chi cho thanh mot dong (>=641px) — dien thoai luon giu ten duoi bieu tuong. */
+@media (min-width: 641px) and (max-width: 1200px) {
+  .deck-bottom:has(.deck-actions > .ctl:not(.hidden) ~ .ctl:not(.hidden) ~ .ctl:not(.hidden)) .chapter:not(.is-active) span { display: none; }
 }
 
+/* May tinh bang / dien thoai nam ngang: chuong chi con bieu tuong, rieng chuong dang mo giu ten */
+@media (max-width: 980px) {
+  :root { --bar-bottom: 60px; }
+  .deck-canvas { padding: 18px 16px 14px; }
+  .chapter { padding: 7px 10px; }
+  .chapter:not(.is-active) span { display: none; }
+  .ctl { padding: 7px 11px; font-size: 12px; }
+  .deck-actions:has(> #nextStepBtn:not(.hidden)) #autoLectureBtn > span { display: none; }
+}
+@media (min-width: 641px) and (max-width: 980px) {
+  .deck-bottom:has(.deck-actions > .ctl:not(.hidden) ~ .ctl:not(.hidden) ~ .ctl:not(.hidden)) .chapter span { display: none; }
+}
+
+/* Dien thoai doc: thanh duoi 2 dong.
+   Dong 1: 6 chuong chia deu, bieu tuong tren / ten duoi, cao 44px.
+   Dong 2: truoc / sau slide (chi Ngu phap) ben trai, dieu khien ben phai — nut chinh giu chu ngan,
+   con lai chi bieu tuong 40px. */
 @media (max-width: 640px) {
-  .ctl-go span, .ctl-warn span, .ctl-connect span, .ctl-ghost span { display: none; }
-  .ctl { padding: 8px 11px; }
-  .deck-top { padding: 0 12px; }
-  .deck-recording { right: 8px; font-size: 10.5px; }
-  .deck-micbar { width: 60px; }
+  .deck-top { padding: 0 12px; gap: 8px; }
+  .deck-brand { gap: 8px; }
+  .deck-lesson-select { max-width: none; }
+  /* Song am ra khoi hang, nam de len logo (logo thanh dau hieu "Sensei dang noi"):
+     im lang thi mo di ma khong con chiem ~50px cua ten bai */
+  .deck-top { position: relative; }
+  .deck-wave {
+    position: absolute; left: 12px; top: 50%; translate: 0 -50%;
+    width: 30px; height: 30px; padding: 0; gap: 2px;
+    justify-content: center;
+    border-radius: 9px;
+    background: #f4e5dd;   /* dung mau nen cua .deck-mark (12% nhan tren --surface) */
+  }
+
+  .deck-bottom {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas: "tabs tabs" "nav act";
+    align-items: center;
+    gap: 6px 8px;
+    padding: 6px 8px calc(6px + env(safe-area-inset-bottom, 0px));
+  }
+  .deck-chapters {
+    grid-area: tabs;
+    display: grid; grid-template-columns: repeat(6, minmax(0, 1fr));
+    overflow: visible;
+  }
+  .chapter {
+    flex-direction: column; gap: 3px;
+    min-width: 0; min-height: 44px;
+    padding: 5px 2px;
+    font-size: 11px; line-height: 1.1;
+  }
+  .chapter i { font-size: 15px; }
+  .chapter span,
+  .chapter:not(.is-active) span { display: block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+
+  .deck-nav { grid-area: nav; gap: 2px; }
+  .deck-nav .ctl-icon { width: 40px; height: 40px; font-size: 13px; }
+  .deck-counter { min-width: 26px; font-size: 12px; }
+
+  .deck-actions { grid-area: act; justify-self: end; gap: 4px; margin-left: 0; }
+  .deck-actions .ctl,
+  .deck-actions .ctl-icon { min-width: 40px; height: 40px; }
+  .deck-actions .ctl { padding: 0 9px; gap: 5px; font-size: 12px; }
+  .deck-actions .ctl > span { display: none; }
+  /* Nut chinh: chu ngan theo trang thai (chu day du van o title / trong the span bi an) */
+  #autoLectureBtn::after            { content: 'Giảng bài'; }
+  #autoLectureBtn.ctl-pause::after  { content: 'Dừng'; }
+  #autoLectureBtn.ctl-resume::after { content: 'Giảng tiếp'; }
+  #autoLectureBtn:has(.fa-spin)::after { content: 'Đang vào…'; }
+  /* Dang hien 3 nut chu tro len (Tiep theo / dang gio tay) thi nut chinh cung chi con bieu tuong */
+  .deck-actions:has(> .ctl:not(.hidden) ~ .ctl:not(.hidden) ~ .ctl:not(.hidden)) #autoLectureBtn::after { content: none; }
+  /* "Tiep theo" khong co bieu tuong rieng: ve mui ten bang font Font Awesome */
+  .deck-actions .ctl-next::before { content: "\f051"; font: var(--fa-font-solid); }
+
+  .deck-recording { right: 8px; font-size: 12px; }
+  .deck-micbar { width: 52px; }
+}
+/* 360px: "Ngữ pháp" vua khit o 55px */
+@media (max-width: 380px) {
+  .chapter { font-size: 10.5px; letter-spacing: -.01em; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: .01ms !important;
+    animation-delay: 0s !important;
     animation-iteration-count: 1 !important;
     transition-duration: .01ms !important;
   }
@@ -712,17 +898,24 @@ input:focus, select:focus { outline: none; }
   z-index: 80;
   pointer-events: none;   /* chi thang the moi an chuot, phan con lai van bam duoc */
 }
-.spotlight.hidden { display: none; }
 
-/* Thẻ neo sát mép trái, cao gần hết màn hình — đọc kỹ được mà vẫn thấy bài */
+/* Thẻ neo sát mép trái, cao gần hết màn hình — đọc kỹ được mà vẫn thấy bài.
+   Tren / duoi tinh tu chieu cao THAT cua hai thanh, khong bao gio de len nut chuong. */
 .spot-dock {
   position: absolute;
   left: 14px;
-  top: 76px;
-  bottom: 84px;
+  top: calc(var(--top-h) + 20px);
+  bottom: calc(var(--bottom-h) + 16px);
   width: min(360px, 38vw);
   display: flex;
   pointer-events: auto;
+}
+/* Man rong: the cao theo noi dung (khong keo gian het lan, de trong mot phan ba duoi), dai qua thi cuon.
+   Dien thoai giu keo gian: tam day khong co chieu cao dinh san, the lay dung chieu cao tam (max-height). */
+@media (min-width: 861px) {
+  .spot-dock { align-items: flex-start; pointer-events: none; }
+  .spot-dock > * { pointer-events: auto; }
+  .spot-dock > .spot-card { max-height: 100%; }
 }
 .spotlight.is-closing .spot-dock { opacity: 0; transition: opacity .2s var(--ease-out); }
 
@@ -743,7 +936,9 @@ input:focus, select:focus { outline: none; }
   cursor: pointer;
   transition: color .15s ease, border-color .15s ease;
 }
-.spot-dong:hover { color: var(--ink); border-color: var(--line-strong); }
+@media (hover: hover) {
+  .spot-dong:hover { color: var(--ink); border-color: var(--line-strong); }
+}
 
 /* Mũi tên nối thẻ với mục thật trong bài */
 .spot-noi {
@@ -781,7 +976,7 @@ input:focus, select:focus { outline: none; }
   border-radius: 24px;
   border: 1px solid var(--line-strong);
   background: var(--surface);
-  box-shadow: 0 40px 90px -30px rgba(60, 45, 28, .65);
+  box-shadow: 0 24px 60px -28px rgba(60, 45, 28, .35);
   scrollbar-width: thin;
   scrollbar-color: var(--line-strong) transparent;
 }
@@ -860,7 +1055,7 @@ input:focus, select:focus { outline: none; }
 .stok { padding: 1px 3px; border-radius: 5px; }
 .stok.is-key { background: rgba(201, 100, 66, .14); color: var(--accent-deep); }
 .stok.is-focus {
-  background: var(--accent); color: #fff;
+  background: var(--accent-strong); color: #fff;
   box-shadow: 0 6px 16px -7px rgba(201, 100, 66, .95);
 }
 .stok.is-focus rt { color: rgba(255, 255, 255, .85); }
@@ -967,12 +1162,14 @@ input:focus, select:focus { outline: none; }
   display: inline-flex; align-items: center; gap: 8px;
   margin-top: 20px; padding: 10px 20px;
   border: 0; border-radius: 99px;
-  background: var(--accent); color: #fff;
+  background: var(--accent-strong); color: #fff;
   font: inherit; font-size: 13px; font-weight: 700;
   cursor: pointer;
   box-shadow: 0 8px 20px -9px rgba(201, 100, 66, .95);
 }
-.spot-speak:hover { background: var(--accent-deep); }
+@media (hover: hover) {
+  .spot-speak:hover { background: var(--accent-deep); }
+}
 .spot-speak:active { transform: scale(.96); }
 
 .spot-incontext {
@@ -1031,19 +1228,9 @@ input:focus, select:focus { outline: none; }
 
 [hidden] { display: none !important; }
 
-/* Tiền tố -webkit- cho Safari: thiếu thì chỉ mất hiệu ứng mờ, không vỡ layout,
-   nhưng thêm vào thì máy Mac/iPad nhìn giống hệt máy Windows. */
-.deck-top,
-.deck-bottom,
-.deck-errdock,
-.deck-chatdock,
-.toast {
-  -webkit-backdrop-filter: blur(12px);
-}
-
 /* Màn hình thấp (laptop 13", cửa sổ chia đôi): thu gọn chrome để sân khấu còn chỗ */
 @media (max-height: 700px) {
-  :root { --top-h: 48px; --bottom-h: 58px; }
+  :root { --bar-top: 48px; --bar-bottom: 58px; }
   .deck-canvas { padding: 14px 20px 10px; }
   .spot-card { padding: 20px 22px; }
   .sensei-art-lg { width: min(170px, 42vw); height: min(170px, 42vw); }
@@ -1074,18 +1261,10 @@ input:focus, select:focus { outline: none; }
   display: flex;
   flex-direction: column;
   background-color: var(--paper);
-  background-image:
-    radial-gradient(900px 520px at 8% -12%,  rgba(201, 100, 66, .10), transparent 62%),
-    radial-gradient(760px 480px at 96% 2%,   rgba(107, 138, 94, .09), transparent 60%),
-    radial-gradient(900px 600px at 50% 112%, rgba(192, 149, 47, .07), transparent 64%);
-  animation: pickerIn .34s var(--ease-out) both;
+  animation: pickerIn .2s var(--ease-out) backwards;
 }
-.picker.hidden { display: none; }
 
-@keyframes pickerIn {
-  from { opacity: 0; transform: scale(1.012); }
-  to   { opacity: 1; transform: none; }
-}
+@keyframes pickerIn { from { opacity: 0; } }
 
 /* ---------- thanh trên ---------- */
 .picker-top {
@@ -1093,18 +1272,16 @@ input:focus, select:focus { outline: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 12px 20px;
   flex-wrap: wrap;
-  padding: 18px 28px;
+  padding: 14px 28px;
   border-bottom: 1px solid var(--line);
-  background: rgba(250, 247, 242, .8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: var(--surface);
 }
-.picker-brand { display: flex; align-items: center; gap: 13px; min-width: 0; }
+.picker-brand { display: flex; align-items: center; gap: 12px; flex: 0 0 auto; min-width: 0; }
 .picker-brand h1 {
   margin: 0;
-  font-size: 19px; font-weight: 800; letter-spacing: -.01em;
+  font-size: 19px; font-weight: 700; letter-spacing: -.01em;
   color: var(--ink);
 }
 .picker-brand p {
@@ -1112,22 +1289,44 @@ input:focus, select:focus { outline: none; }
   font-size: 12px; color: var(--muted);
 }
 
-.picker-tools { display: flex; align-items: center; gap: 10px; }
+/* Co gian tu 0 (khong theo be rong noi dung): chung dong voi tieu de, o tim tu co lai truoc khi xuong dong */
+.picker-tools {
+  display: flex; align-items: center; justify-content: flex-end; gap: 10px;
+  flex: 1 1 0; min-width: 0; flex-wrap: nowrap;
+}
+/* Nhay nhanh toi cap do (dang .deck-seg) — app.js danh dau cap dang nam trong khung nhin.
+   Chon kem .deck-seg de thang quy tac chung trong css/lesson.css (nap sau tep nay). */
+.picker-jump { flex: 0 0 auto; }
+.deck-seg.picker-jump > button { min-width: 38px; font-weight: 700; }
+.deck-seg.picker-jump > button:disabled { opacity: .4; cursor: default; }
 .picker-search {
   display: flex; align-items: center; gap: 9px;
-  width: min(360px, 52vw);
-  padding: 9px 14px;
+  flex: 0 1 360px; min-width: 180px;
+  padding: 8px 12px;
   border-radius: 12px;
   border: 1px solid var(--line-strong);
   background: var(--surface-hi);
+  transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
 }
 .picker-search i { color: var(--faint); font-size: 12px; }
+.picker-search { cursor: text; }
 .picker-search input {
   flex: 1; min-width: 0;
   border: 0; background: transparent;
-  font: inherit; font-size: 13px; color: var(--ink);
+  font: inherit; font-size: 13.5px; color: var(--ink);
 }
 .picker-search input:focus { outline: none; }
+/* Nut xoa o tim cua Chrome (x xanh) nam sat nut dong danh sach (x) — hai dau x khac nghia canh nhau.
+   Doi thanh vong tron x nho mau mo cua giao dien: van xoa duoc o tim, khong nham voi nut dong. */
+.picker-search input::-webkit-search-cancel-button {
+  -webkit-appearance: none; appearance: none;
+  width: 16px; height: 16px; margin-left: 6px;
+  cursor: pointer;
+  background-color: var(--faint);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0Zm2.9 4 1.1 1.1L9.1 8l2.9 2.9-1.1 1.1L8 9.1 5.1 12 4 10.9 6.9 8 4 5.1 5.1 4 8 6.9Z'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0Zm2.9 4 1.1 1.1L9.1 8l2.9 2.9-1.1 1.1L8 9.1 5.1 12 4 10.9 6.9 8 4 5.1 5.1 4 8 6.9Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.picker-search input::-webkit-search-cancel-button:hover { background-color: var(--muted); }
 .picker-search:focus-within {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(201, 100, 66, .14);
@@ -1135,129 +1334,121 @@ input:focus, select:focus { outline: none; }
 
 /* ---------- thân ---------- */
 .picker-body {
+  --pk-pad: 18px;
   flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;
-  padding: 26px 28px 60px;
+  /* Giu cho thanh cuon ca khi loc con it bai (khong cuon): luoi khong nhay tu 4 sang 5 cot */
+  scrollbar-gutter: stable;
+  padding: var(--pk-pad) 28px 60px;
 }
 
-.picker-level { margin-bottom: 38px; animation: blockIn .5s var(--ease-out) both; }
-.picker-level:nth-child(1) { animation-delay: .04s; }
-.picker-level:nth-child(2) { animation-delay: .09s; }
-.picker-level:nth-child(3) { animation-delay: .14s; }
-.picker-level:nth-child(4) { animation-delay: .19s; }
-.picker-level:nth-child(5) { animation-delay: .24s; }
+.picker-level { margin-bottom: 30px; animation: blockIn .24s var(--ease-out) backwards; }
+.picker-level:nth-child(2) { animation-delay: .03s; }
+.picker-level:nth-child(3) { animation-delay: .06s; }
+.picker-level:nth-child(n+4) { animation-delay: .09s; }
 
+/* Mau rieng tung cap chi con la mot vach mong tren o ky hieu */
+.lv-n5 { --lv: #6b8a5e; }
+.lv-n4 { --lv: #2f8a87; }
+.lv-n3 { --lv: #c0952f; }
+.lv-n2 { --lv: #c96442; }
+.lv-n1 { --lv: #8a5e90; }
+
+/* Dau cap do dinh o dinh vung cuon: luot giua 25 bai van biet dang o cap nao */
 .picker-level-head {
-  display: flex; align-items: center; gap: 14px;
-  padding-bottom: 12px; margin-bottom: 16px;
-  border-bottom: 1px solid var(--line);
+  /* top am = dem tren cua vung cuon: dinh sat mep, khong de ho mot dai the lot len tren */
+  position: sticky; top: calc(-1 * var(--pk-pad)); z-index: 2;
+  display: flex; align-items: center; gap: 12px;
+  margin: 0 -6px 12px;
+  padding: 10px 6px;
+  background: var(--paper);
+  box-shadow: 0 1px 0 var(--line);
 }
 .picker-level-mark {
   display: grid; place-items: center;
-  width: 52px; height: 52px;
+  width: 38px; height: 38px;
   flex: 0 0 auto;
-  border-radius: 15px;
-  font: 800 18px/1 ui-monospace, monospace;
+  border-radius: 10px;
+  font-size: 13px; font-weight: 700; line-height: 1;
   letter-spacing: .02em;
-  color: #fff;
-  box-shadow: 0 8px 20px -10px rgba(74, 56, 34, .75);
+  color: var(--ink);
+  background: var(--surface-hi);
+  box-shadow: inset 0 3px 0 var(--lv, var(--line-strong)), 0 0 0 1px var(--line);
 }
-.lv-n5 { background: linear-gradient(145deg, #6b8a5e, #4f6d45); }
-.lv-n4 { background: linear-gradient(145deg, #2f8a87, #1f5c5c); }
-.lv-n3 { background: linear-gradient(145deg, #c0952f, #9a7726); }
-.lv-n2 { background: linear-gradient(145deg, #c96442, #a9492b); }
-.lv-n1 { background: linear-gradient(145deg, #8a5e90, #5e3f63); }
 
 .picker-level-title {
   margin: 0;
-  font-size: 15px; font-weight: 800; color: var(--ink);
-  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  font-size: 15px; font-weight: 700; color: var(--ink);
+  display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;
 }
-.picker-level-count {
-  font: 600 11px ui-monospace, monospace;
-  color: var(--muted);
-  padding: 2px 9px;
-  border-radius: 99px;
-  background: var(--paper-deep);
-  border: 1px solid var(--line);
-}
-.picker-level-desc { margin: 3px 0 0; font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+.picker-level-count { font-size: 12px; font-weight: 500; color: var(--muted); }
+.picker-level-desc { margin: 2px 0 0; font-size: 12.5px; color: var(--muted); line-height: 1.5; max-width: 90ch; }
 
 /* ---------- lưới thẻ bài ---------- */
 .picker-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
-  gap: 12px;
+  gap: 10px;
 }
 
+/* The bai: mat sang + bong mem, khong vien; so bai la chu mau nhan (khong o vuong) */
 .lesson-card {
   position: relative;
   display: flex;
-  align-items: flex-start;
-  gap: 13px;
-  padding: 14px 15px;
+  align-items: baseline;
+  gap: 12px;
+  padding: 12px 14px;
   text-align: left;
-  border-radius: 15px;
-  border: 1px solid var(--line);
-  background: var(--surface);
+  border-radius: 14px;
+  border: 1px solid transparent;
+  background: var(--card);
+  box-shadow: var(--shadow-card);
   cursor: pointer;
   font: inherit;
-  transition: transform .18s var(--ease-spring), border-color .18s var(--ease-out),
-              box-shadow .18s var(--ease-out), background-color .18s var(--ease-out);
+  color: var(--ink);
+  transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out),
+              background-color var(--dur-fast) var(--ease-out);
 }
-.lesson-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(201, 100, 66, .5);
-  background: var(--surface-hi);
-  box-shadow: 0 14px 30px -18px rgba(74, 56, 34, .55);
+@media (hover: hover) {
+  .lesson-card:hover {
+    border-color: rgba(201, 100, 66, .4);
+    background: var(--surface-hi);
+    box-shadow: 0 10px 24px -16px rgba(74, 56, 34, .45);
+  }
 }
-.lesson-card:active { transform: translateY(0) scale(.99); }
 
 .lesson-no {
-  display: grid; place-items: center;
-  width: 40px; height: 40px;
   flex: 0 0 auto;
-  border-radius: 11px;
-  background: var(--paper-deep);
-  border: 1px solid var(--line);
-  font: 800 15px/1 ui-monospace, monospace;
+  min-width: 22px;
+  text-align: right;
+  font-size: 14px; font-weight: 700; line-height: 1.4;
+  font-variant-numeric: tabular-nums;
   color: var(--accent-deep);
 }
-.lesson-card:hover .lesson-no { background: rgba(201, 100, 66, .12); border-color: rgba(201, 100, 66, .35); }
 
 .lesson-main { flex: 1; min-width: 0; }
 .lesson-title {
-  font-size: 13px; font-weight: 700; line-height: 1.4;
+  font-size: 14px; font-weight: 600; line-height: 1.4;
   color: var(--ink);
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
   overflow: hidden;
 }
+/* So lieu: mot dong chu mo, noi bang " · " */
 .lesson-stats {
-  display: flex; flex-wrap: wrap; gap: 5px;
-  margin-top: 7px;
-}
-.lesson-stat {
-  font: 600 10px ui-monospace, monospace;
+  display: block;
+  margin-top: 4px;
+  font-size: 12px; line-height: 1.5;
   color: var(--muted);
-  padding: 2px 7px;
-  border-radius: 6px;
-  background: var(--paper-deep);
 }
-.lesson-stat.is-thin { color: #8f6a1c; background: rgba(192, 149, 47, .14); }
+/* Xuong dong tron tung muc ("20 bài" / "tập" thi khong): chi ngat duoc o dau cach cua " · " */
+.lesson-stat { white-space: nowrap; }
+.lesson-stat + .lesson-stat::before { content: " · "; color: var(--faint); white-space: normal; }
+.lesson-stat.is-thin { color: #8f6a1c; }
 
-/* Bài đang học */
-.lesson-card.is-current {
-  border-color: var(--accent);
-  background: linear-gradient(160deg, rgba(201, 100, 66, .10), rgba(201, 100, 66, .03));
-}
-.lesson-card.is-current .lesson-no { background: var(--accent); color: #fff; border-color: transparent; }
-.lesson-now {
-  position: absolute; top: 10px; right: 12px;
-  font: 700 9px/1 ui-monospace, monospace;
-  letter-spacing: .06em;
-  color: var(--accent-deep);
-}
+/* Bài đang học: vien nhan + "Đang học" la muc dau tien cua dong so lieu */
+.lesson-card.is-current { border-color: var(--accent); background: var(--surface-hi); }
+.lesson-now { color: var(--accent-deep); font-weight: 700; }
 
 .picker-empty {
   padding: 60px 20px;
@@ -1267,12 +1458,32 @@ input:focus, select:focus { outline: none; }
 }
 .picker-empty i { display: block; font-size: 26px; margin-bottom: 10px; color: var(--line-strong); }
 
-@media (max-width: 720px) {
-  .picker-top { padding: 14px 16px; }
-  .picker-body { padding: 18px 16px 48px; }
-  .picker-grid { grid-template-columns: 1fr; }
-  .picker-search { width: 100%; }
+/* Man vua: dong phu duoi ten chiem ~200px, o tim con ~200px cat cut chu goi y -> bo dong phu */
+@media (max-width: 1100px) {
   .picker-brand p { display: none; }
+}
+@media (max-width: 720px) {
+  .picker-top { padding: 12px 16px; gap: 10px; }
+  .picker-body { --pk-pad: 12px; padding: var(--pk-pad) 16px 48px; }
+  .picker-grid { grid-template-columns: 1fr; }
+  /* Tim bai chiem tron dong, nut dong giu 34px+; thanh cap do xuong dong rieng, chia deu */
+  .picker-tools { flex: 1 1 100%; flex-wrap: wrap; }
+  .picker-search { flex: 1 1 auto; min-width: 0; }
+  .picker-jump { order: 3; flex: 1 1 100%; display: flex; }
+  .deck-seg.picker-jump > button { flex: 1 1 0; }
+  .picker-level-desc { display: none; }
+}
+@media (pointer: coarse) {
+  .picker-search input { font-size: 16px; }    /* iOS khong tu phong to trang khi cham vao o tim */
+}
+/* Dien thoai nam ngang: bo dong phu de than danh sach con cho */
+@media (max-height: 500px) {
+  .picker-top { padding-top: 8px; padding-bottom: 8px; }
+  .picker-brand p { display: none; }
+  /* dau cap do dinh tren danh sach thap: chi con ten (mo ta day du o title cua dau cap), gon ~42px */
+  .picker-level-desc { display: none; }
+  .picker-level-head { padding-top: 6px; padding-bottom: 6px; }
+  .picker-level-mark { width: 30px; height: 30px; }
 }
 
 /* ==========================================================================
@@ -1282,14 +1493,13 @@ input:focus, select:focus { outline: none; }
    ========================================================================== */
 
 .deck-content.is-busy {
-  /* !important la BAT BUOC o day: #slideContent dang chay animation sceneIn voi
-     fill: both, ma gia tri cuoi cua animation de len khai bao CSS thuong.
-     Theo thu tu cascade, chi khai bao !important cua tac gia moi thang animation. */
-  opacity: .3 !important;
-  filter: blur(2px) !important;
+  /* !important: trong .2s dau #slideContent con chay sceneIn (opacity), gia tri cua
+     animation de len khai bao thuong — chi !important moi thang duoc. */
+  /* Chi mo di (khong blur: loc ca vung noi dung lon ton GPU, chuyen dan blur con nang hon) */
+  opacity: .25 !important;
   pointer-events: none;
   user-select: none;
-  transition: opacity .25s var(--ease-out), filter .25s var(--ease-out);
+  transition: opacity .25s var(--ease-out);
 }
 
 .deck-busy {
@@ -1309,9 +1519,9 @@ input:focus, select:focus { outline: none; }
   padding: 16px 22px;
   border-radius: 16px;
   border: 1px solid var(--line-strong);
-  background: rgba(250, 247, 242, .97);
+  background: var(--surface);
   box-shadow: 0 20px 48px -22px rgba(74, 56, 34, .6);
-  animation: dockIn .3s var(--ease-spring) both;
+  animation: dockIn .26s var(--ease-out) both;
 }
 
 .deck-busy-card > i {
@@ -1323,6 +1533,27 @@ input:focus, select:focus { outline: none; }
 .deck-busy-text { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
 .deck-busy-text strong { font-size: 14px; font-weight: 700; color: var(--ink); }
 .deck-busy-text span { font-size: 12px; color: var(--muted); line-height: 1.45; }
+
+/* Kiểu nhẹ (lồng tiếng hội thoại): chỉ một nhãn nhỏ ở tiêu đề chương, lời thoại vẫn đọc / bấm được.
+   align-self: center — nằm gọn trong hàng tiêu đề (canh baseline thì hàng cao thêm 2px, danh sách nhảy khi nhãn tắt) */
+.deck-busy-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  align-self: center;
+  max-width: 100%;
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: var(--paper-deep);
+  font-size: 12px; font-weight: 600; line-height: 1.5; color: var(--muted);
+  animation: fadeInBadge .2s var(--ease-out) backwards;
+}
+.deck-busy-chip > i { flex: 0 0 auto; font-size: 11px; color: var(--accent); }
+.deck-busy-chip > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* Chi lay phan con lai cua hang tieu de (chu dai qua thi ba cham), khong day xuong hang moi */
+.deck-head > .deck-busy-chip { flex: 1 1 0; min-width: 0; max-width: max-content; }
+/* Dien thoai: tieu de + dong phu + nhan khong vua mot hang -> an dong phu trong luc long tieng */
+@media (max-width: 640px) {
+  .deck-head:has(> .deck-busy-chip) > .deck-meta { display: none; }
+}
 
 /* Nút đang khoá trong lúc chờ */
 .ctl:disabled i { opacity: .6; }
@@ -1340,10 +1571,12 @@ input:focus, select:focus { outline: none; }
   transition: transform .15s var(--ease-spring), border-color .18s var(--ease-out),
               background-color .18s var(--ease-out);
 }
-.spot-opt:hover:not(.is-locked) {
-  border-color: rgba(201, 100, 66, .5);
-  background: var(--surface);
-  transform: translateX(2px);
+@media (hover: hover) {
+  .spot-opt:hover:not(.is-locked) {
+    border-color: rgba(201, 100, 66, .5);
+    background: var(--surface);
+    transform: translateX(2px);
+  }
 }
 .spot-opt:active:not(.is-locked) { transform: scale(.99); }
 .spot-opt.is-locked { cursor: default; }
@@ -1369,7 +1602,6 @@ input:focus, select:focus { outline: none; }
   border-radius: 12px; text-align: left;
   font-size: 13px;
 }
-.spot-result.hidden { display: none; }
 .spot-result strong { font-size: 14px; }
 .spot-result span { color: var(--ink-2); line-height: 1.55; }
 .spot-result.is-ok { background: rgba(107, 138, 94, .12); border: 1px solid rgba(107, 138, 94, .4); }
@@ -1383,8 +1615,6 @@ input:focus, select:focus { outline: none; }
 .deck-content [id^="ex-"],
 .deck-content [id^="dia-"],
 .deck-content [id^="card-"] { cursor: zoom-in; }
-
-/* Anh lay tu Pixabay — ghi nguon o goc */
 
 /* ==========================================================================
    BẢNG PHẤN — Sensei viết, vẽ và khoanh đỏ lên màn hình
@@ -1495,14 +1725,16 @@ input:focus, select:focus { outline: none; }
   cursor: pointer;
   transition: background .15s ease;
 }
-.bang-kanji-lai:hover { background: rgba(255, 255, 255, .2); }
+@media (hover: hover) {
+  .bang-kanji-lai:hover { background: rgba(255, 255, 255, .2); }
+}
 
 /* ------------------------------------------------------ bảng phấn tự do */
 .bang-phan {
   position: fixed;
   right: 14px;
-  top: 76px;
-  bottom: 84px;
+  top: calc(var(--top-h) + 20px);
+  bottom: calc(var(--bottom-h) + 16px);
   width: min(320px, calc(100vw - 28px));
   z-index: 44;
   display: flex;
@@ -1513,13 +1745,11 @@ input:focus, select:focus { outline: none; }
   background: linear-gradient(160deg, #2f4038, #26332d);
   border: 3px solid #7a5c38;
   box-shadow: 0 24px 60px -24px rgba(50, 38, 22, .75);
-  animation: bangTruotVao .32s var(--ease-spring, ease-out) both;
+  animation: bangTruotVao .24s var(--ease-out) backwards;
 }
 @keyframes bangTruotVao {
-  from { opacity: 0; transform: translateX(18px) scale(.98); }
-  to   { opacity: 1; transform: none; }
+  from { opacity: 0; translate: 18px 0; }
 }
-.bang-phan.hidden { display: none; }
 
 .bang-phan-dau {
   display: flex;
@@ -1545,7 +1775,9 @@ input:focus, select:focus { outline: none; }
   font-size: 11px;
   transition: background .15s ease;
 }
-.bang-phan-nut button:hover { background: rgba(255, 255, 255, .2); }
+@media (hover: hover) {
+  .bang-phan-nut button:hover { background: rgba(255, 255, 255, .2); }
+}
 
 .bang-phan-than {
   flex: 1;
@@ -1577,18 +1809,6 @@ input:focus, select:focus { outline: none; }
 }
 .bang-dong-nhat { font-size: 12.5px; opacity: .72; }
 
-@media (max-width: 860px) {
-  /* Điện thoại: bảng nằm dưới đáy, không che mất bài học */
-  .bang-phan {
-    right: 8px;
-    left: 8px;
-    top: auto;
-    bottom: 72px;
-    width: auto;
-    max-height: 46vh;
-  }
-}
-
 .spot-viet-net { margin-bottom: 10px; }
 .spot-viet-net .bang-kanji { background: rgba(60,45,28,.055); border-color: rgba(60,45,28,.12); }
 .spot-viet-net .bang-kanji-o { background: rgba(60,45,28,.05); }
@@ -1598,18 +1818,19 @@ input:focus, select:focus { outline: none; }
 .spot-viet-net .bang-kanji-ten { color: #3b2f1e; }
 .spot-viet-net .bang-kanji-lai { color: #5b4a33; background: rgba(60,45,28,.07); border-color: rgba(60,45,28,.16); }
 
-/* Bảng mở thì thu hẹp sân khấu lại, không để bảng đè lên cột thẻ bên phải */
+/* ==========================================================================
+   19. LỚP PHỦ CẠNH SÂN KHẤU — thẻ rọi (trái), bảng phấn (phải), mèo Sensei (phải dưới)
+   Màn rộng: mỗi lớp có làn riêng, sân khấu chừa đúng làn đó.
+   Điện thoại: thẻ và bảng thành tấm trượt ở đáy, neo trên thanh chương theo chiều cao THẬT
+   (--bottom-h, --spot-h, --bang-h do js/ui-shell.js đo), không bao giờ đè lên nút chương.
+   ========================================================================== */
+
+/* Bảng mở thì thu hẹp sân khấu lại, không để bảng đè lên cột thẻ bên phải.
+   Chừa thêm 44px: nút ẩn / hiện Sensei (34px, js/sensei-avatar-hub.js) đứng sát trái bảng. */
 body.co-bang .deck-canvas {
   max-width: none;
   margin: 0;
-  padding-right: calc(320px + 26px);
-}
-@media (max-width: 860px) {
-  /* Điện thoại: bảng nằm dưới đáy nên chỉ cần chừa chiều cao, không chừa chiều ngang */
-  body.co-bang .deck-canvas {
-    padding-right: 28px;
-    padding-bottom: calc(46vh + 16px);
-  }
+  padding-right: calc(320px + 26px + 44px);
 }
 
 /* Thẻ trái mở thì đẩy sân khấu sang, không để thẻ đè lên bài học */
@@ -1619,20 +1840,53 @@ body.co-the-trai .deck-canvas {
   padding-left: calc(min(360px, 38vw) + 26px);
 }
 
-@media (max-width: 860px) {
-  /* Điện thoại: không đủ bề ngang cho hai cột, thẻ xuống nằm dưới đáy.
-     Mũi tên cũng tắt luôn — kéo ngang màn hình hẹp thì rối chứ không rõ hơn. */
-  .spot-dock {
-    left: 8px;
-    right: 8px;
-    top: auto;
-    bottom: 72px;
-    width: auto;
-    max-height: 52vh;
+/* Ô chat tránh làn thẻ trái / bảng phải (không thì bảng che nút đóng, thẻ che nút gửi) */
+@media (min-width: 861px) {
+  body.co-the-trai .deck-chatdock { left: calc(min(360px, 38vw) + 28px); }
+  /* ...và không đè lên nút ẩn / hiện Sensei đứng sát trái bảng */
+  body.co-bang .deck-chatdock { right: calc(320px + 28px + 44px); }
+}
+
+/* Mèo 3D đứng nghỉ ở góc phải: màn rộng cho nó một làn riêng, thẻ không nằm dưới mèo.
+   js/sensei-cat3d-that.js bật body.co-meo và ghi --sensei-rong = khoảng từ mép phải màn hình
+   tới điểm trái nhất của mèo. Sân khấu căn giữa (max-width) nên chỉ chừa phần mèo lấn vào.
+   Bảng phấn mở: ≥1280px (không mở thẻ trái) mèo đứng nghỉ ngay trái bảng — sân khấu chừa cả
+   làn bảng lẫn làn mèo; hẹp hơn thì mèo nấp sau bảng (sensei-cat3d-that.js ẩn hẳn), chỉ chừa bảng. */
+@media (min-width: 1000px) {
+  body.co-meo .deck-canvas {
+    padding-right: max(28px, calc(var(--sensei-rong, 0px) + 8px - max(0px, (100vw - 1180px) / 2)));
   }
-  body.co-the-trai .deck-canvas {
-    padding-left: 28px;
-    padding-bottom: calc(52vh + 16px);
+  body.co-meo.co-the-trai .deck-canvas { padding-right: calc(var(--sensei-rong, 0px) + 8px); }
+  body.co-meo.co-bang .deck-canvas { padding-right: calc(320px + 26px + 44px); }
+  /* Mèo có làn riêng thì cuối danh sách không cần chừa chỗ cho mèo nữa */
+  body.co-meo:not(.co-bang) { --cho-meo: 24px; }
+  /* O chat khong de len than meo: thu hep deu hai ben (van can giua); mo the trai thi neo phai o lan meo */
+  body.co-meo:not(.co-bang) .deck-chatdock { max-width: min(680px, calc(100vw - 2 * var(--sensei-rong, 0px) - 16px)); }
+  body.co-meo.co-the-trai:not(.co-bang) .deck-chatdock { right: calc(var(--sensei-rong, 0px) + 8px); max-width: 680px; }
+}
+/* 1000–1099px mở thẻ trái: thẻ 360px + làn mèo ~264px còn một cột ~370px ở giữa — vẫn giữ làn mèo
+   (bỏ làn thì mèo đứng đè lên cột thẻ bên phải). Không có mèo: còn ~590px, hai cột ~290px như ở 1280
+   (thắng quy tắc một cột ≤1100px ở mục số cột bên dưới). */
+@media (min-width: 1000px) and (max-width: 1099px) {
+  body.co-the-trai:not(.co-meo):not(.co-bang) #slideContent .deck-scroll.grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1280px) {
+  /* Mép phải canvas mèo = mép trái bảng − 8px (bảng: right 14 + rộng 320) */
+  body.co-meo.co-bang:not(.co-the-trai) .deck-canvas { padding-right: calc(350px + var(--sensei-rong, 0px)); }
+  body.co-meo.co-bang:not(.co-the-trai) { --cho-meo: 24px; }
+  body.co-meo.co-bang:not(.co-the-trai) .deck-chatdock { right: calc(350px + var(--sensei-rong, 0px)); }
+}
+/* Điện thoại nằm ngang (thấp, còn rộng ~700px trở lên): mèo nhỏ nhưng chiếm gần nửa chiều cao sân khấu —
+   cũng cho nó làn riêng. Bảng mở thì mèo nấp sau bảng, sân khấu chỉ chừa bảng (khối max-height 500 dưới). */
+@media (min-width: 700px) and (max-width: 999px) and (max-height: 500px) {
+  body.co-meo:not(.co-bang) .deck-canvas { padding-right: calc(var(--sensei-rong, 0px) + 8px); }
+  body.co-meo:not(.co-bang) { --cho-meo: 24px; }
+  /* O chat dung truoc lan meo (khong cat ngang than meo) */
+  body.co-meo:not(.co-bang) .deck-chatdock { right: calc(var(--sensei-rong, 0px) + 8px); }
+}
+@media (min-width: 1500px) {
+  body.co-meo .deck-canvas {
+    padding-right: max(28px, calc(var(--sensei-rong, 0px) + 8px - max(0px, (100vw - 1320px) / 2)));
   }
 }
 
@@ -1643,41 +1897,105 @@ body.co-the-trai .deck-canvas {
    mà các mốc md/xl đo theo VIEWPORT. Mở thẻ trái và bảng phải thì chỗ thật
    còn lại chỉ hơn 500px, nhưng viewport vẫn là 1280 nên lưới vẫn cố nhồi 3
    cột: mỗi thẻ còn 183px, chữ vỡ thành cột dọc không đọc nổi.
+   Chỉ áp cho lưới thẻ cấp trên cùng (.deck-scroll.grid) — lưới con bên trong thẻ
+   (On / Kun, đáp án trắc nghiệm) giữ số cột của nó.
    -------------------------------------------------------------------------- */
-body.co-the-trai #slideContent .grid,
-body.co-bang     #slideContent .grid {
+body.co-the-trai #slideContent .deck-scroll.grid,
+body.co-bang     #slideContent .deck-scroll.grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
-body.co-the-trai.co-bang #slideContent .grid {
+body.co-the-trai.co-bang #slideContent .deck-scroll.grid {
   grid-template-columns: minmax(0, 1fr);
 }
 @media (max-width: 1100px) {
   /* Màn hình vừa: mở một panel là đã hết chỗ cho hai cột */
-  body.co-the-trai #slideContent .grid,
-  body.co-bang     #slideContent .grid {
+  body.co-the-trai #slideContent .deck-scroll.grid,
+  body.co-bang     #slideContent .deck-scroll.grid {
     grid-template-columns: minmax(0, 1fr);
   }
 }
 
 /* --------------------------------------------------------------------------
-   ĐIỆN THOẠI: THẺ VÀ BẢNG KHÔNG ĐƯỢC ĐÈ NHAU
-
-   Cả hai đều neo đáy màn hình, nên mở cùng lúc là thẻ che kín bảng (đo được:
-   thẻ 318–740, bảng 631–739). Mở cùng lúc thì xếp tầng: bảng lên trên, thẻ ở
-   dưới, mỗi cái thu bớt chiều cao cho vừa.
+   ĐIỆN THOẠI (≤860px): tấm trượt ở đáy
    -------------------------------------------------------------------------- */
 @media (max-width: 860px) {
+  /* Bảng phấn: nằm trên thanh chương; sân khấu chừa đúng chiều cao thật của bảng */
+  .bang-phan {
+    left: 8px; right: 8px;
+    top: auto; bottom: calc(var(--bottom-h) + 8px);
+    width: auto;
+    max-height: 40vh;
+  }
+  body.co-bang .deck-canvas {
+    padding-right: 16px;
+    padding-bottom: calc(var(--bang-h, 40vh) + 16px);
+  }
+
+  /* Thẻ rọi: tấm trượt đè lên danh sách. Danh sách giữ nguyên chiều cao, chỉ được thêm chỗ
+     cuộn ở cuối, và cuộn tới thẻ nào thì thẻ đó dừng phía trên tấm (scroll-padding). */
+  .spot-dock {
+    left: 8px; right: 8px;
+    top: auto; bottom: calc(var(--bottom-h) + 8px);
+    width: auto;
+    max-height: 46vh;
+  }
+  body.co-the-trai .deck-canvas { padding-left: 16px; }
+  body.co-the-trai .deck-scroll { scroll-padding-bottom: calc(var(--spot-h, 46vh) + 8px); }
+  body.co-the-trai { --cho-the: calc(var(--spot-h, 46vh) + 8px); }
+
+  /* Mở cả hai: bảng xếp tầng trên tấm thẻ, mỗi tấm thấp bớt */
+  body.co-the-trai .bang-phan { bottom: calc(var(--bottom-h) + var(--spot-h, 36vh) + 16px); max-height: 28vh; }
+  body.co-bang .spot-dock { max-height: 36vh; }
+  body.co-the-trai.co-bang .deck-canvas { padding-bottom: calc(var(--spot-h, 36vh) + var(--bang-h, 28vh) + 24px); }
+
+  /* Ô chat luôn nằm trên cùng chồng tấm ở đáy */
+  body.co-the-trai .deck-chatdock { bottom: calc(var(--bottom-h) + var(--spot-h, 0px) + 16px); }
+  body.co-bang .deck-chatdock { bottom: calc(var(--bottom-h) + var(--bang-h, 0px) + 16px); }
+  body.co-the-trai.co-bang .deck-chatdock { bottom: calc(var(--bottom-h) + var(--spot-h, 0px) + var(--bang-h, 0px) + 24px); }
+}
+
+/* Man cam ung: nut dong the ron va nut tren bang phan du 40px */
+@media (pointer: coarse) {
+  .spot-dong { width: 40px; height: 40px; }
+  .bang-phan-nut button { width: 40px; height: 40px; font-size: 13px; }
+  .bang-kanji-lai { min-height: 40px; }
+}
+
+/* Điện thoại nằm ngang (thấp, còn rộng): tấm đáy sẽ nuốt hết sân khấu — dùng lại làn hai bên */
+@media (max-width: 860px) and (max-height: 500px) {
+  .spot-dock {
+    top: calc(var(--top-h) + 8px); bottom: calc(var(--bottom-h) + 8px);
+    left: 8px; right: auto;
+    width: min(320px, 40vw);
+    max-height: none;
+  }
+  body.co-the-trai .deck-canvas { padding-left: calc(min(320px, 40vw) + 16px); }
+  body.co-the-trai .deck-scroll { scroll-padding-bottom: 0; }
+  body.co-the-trai { --cho-the: 0px; }
+
+  .bang-phan,
   body.co-the-trai .bang-phan {
-    bottom: calc(72px + 36vh + 10px);
-    max-height: 28vh;
+    top: calc(var(--top-h) + 8px); bottom: calc(var(--bottom-h) + 8px);
+    left: auto; right: 8px;
+    width: min(280px, 36vw);
+    max-height: none;
   }
-  body.co-bang .spot-dock {
-    max-height: 36vh;
-  }
-  /* Mở cả hai thì nội dung bài phải chừa chỗ cho cả hai tầng */
-  body.co-the-trai.co-bang .deck-canvas {
-    padding-bottom: calc(36vh + 28vh + 26px);
-  }
+  body.co-bang .spot-dock { max-height: none; }
+  body.co-bang .deck-canvas,
+  body.co-the-trai.co-bang .deck-canvas { padding-right: calc(min(280px, 36vw) + 16px); padding-bottom: 14px; }
+
+  body.co-the-trai .deck-chatdock,
+  body.co-bang .deck-chatdock,
+  body.co-the-trai.co-bang .deck-chatdock { bottom: calc(var(--bottom-h) + 8px); }
+  body.co-the-trai .deck-chatdock { left: calc(min(320px, 40vw) + 16px); }
+  body.co-bang .deck-chatdock { right: calc(min(280px, 36vw) + 16px); }
+  /* Ca the + bang + chat: chen giua hai lan o chat chi con ~210px (o nhap ~70px, cut chu goi y) ->
+     o chat lan sang ca duoi lan the (lan the ngan lai nhuong day, --chat-h do trong ui-shell.js), van dung
+     truoc lan bang. Bang giu nguyen chieu cao: meo nup sau bang, rut bang lai thi than meo lo ra duoi bang. */
+  body.co-chat.co-the-trai.co-bang .deck-chatdock { left: 16px; }
+  body.co-chat.co-the-trai.co-bang .spot-dock { bottom: calc(var(--bottom-h) + var(--chat-h, 56px) + 16px); }
+  /* Mo ca hai lan: danh sach o giua chi ~210px — dong phu cua tieu de chuong xuong dong, bo di */
+  body.co-the-trai.co-bang .deck-head > .deck-meta { display: none; }
 }
 
 /* Báo khi có cấp độ chưa nạp được — kèm nút nạp lại riêng phần đó */
@@ -1746,8 +2064,20 @@ body.co-the-trai.co-bang #slideContent .grid {
   cursor: pointer;
 }
 
-/* SENSEI 3D — cho trong cho meo */
+/* SENSEI 3D — cho trong cuoi vung cuon */
 /* Mèo 3D đứng ở góc phải dưới, trên nội dung bài. js/sensei-cat3d-that.js ghi chiều cao mèo vào
-   --sensei-cao: vùng cuộn chừa bấy nhiêu chỗ trống ở cuối, nên hàng thẻ cuối vẫn cuộn lên khỏi mèo.
-   Không có mèo (đang ẩn / nhân vật khác) thì vẫn chừa 40px cho nút bật / tắt Sensei. */
-.deck-scroll { padding-bottom: var(--sensei-cao, 40px); }
+   --sensei-cao: cuối vùng cuộn có một khoảng trống cao bấy nhiêu, nên hàng thẻ cuối vẫn cuộn lên
+   khỏi mèo. Không có mèo (đang ẩn / nhân vật khác) thì vẫn chừa 40px cho nút bật / tắt Sensei.
+   Dùng phần tử giả ::after chứ không padding-bottom: padding ép vùng cuộn không thể thấp hơn
+   nó (màn thấp nằm ngang mất hẳn danh sách); khoảng trống ở cuối thì chỉ thêm chỗ để cuộn.
+   Lấy khoảng lớn nhất trong: mèo (--cho-meo), ô chat đang mở (--cho-chat), tấm thẻ ở đáy (--cho-the). */
+.deck-scroll::after {
+  content: "";
+  display: block;
+  flex: none;
+  grid-column: 1 / -1;
+  height: max(var(--cho-meo, var(--sensei-cao, 40px)), var(--cho-chat, 0px), var(--cho-the, 0px));
+  pointer-events: none;
+}
+/* Ô chat nổi trên đáy sân khấu (~64px): hàng cuối phải cuộn lên được khỏi nó */
+body.co-chat { --cho-chat: 72px; }

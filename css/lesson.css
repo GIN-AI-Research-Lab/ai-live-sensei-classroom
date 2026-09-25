@@ -1,0 +1,827 @@
+/* ==========================================================================
+   AI Live Sensei Classroom — noi dung bai hoc
+   Thanh phan dung chung cho 6 chuong (tu vung, chu Han, ngu phap, hoi thoai,
+   bai tap, phan xa). Khung man hinh (thanh tren / duoi, lop phu, man chon bai)
+   nam o css/styles.css.
+   ========================================================================== */
+
+/* ==========================================================================
+   0. NEN TANG — the, nut bieu tuong, tieu de chuong, chu Nhat
+   ========================================================================== */
+
+/* The noi dung: nen sang hon trang giay + bong mem, KHONG vien.
+   Vien trong suot 1px giu cho .reading-focus / .hl-card-* (border-color !important) van doi mau duoc. */
+.deck-card {
+  background: var(--card);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out),
+              opacity var(--dur) var(--ease-out);
+}
+@media (hover: hover) {
+  .deck-card:hover { border-color: rgba(201, 100, 66, .28); }
+}
+
+/* Nut bieu tuong lang (loa, nghe lai) */
+.icon-btn {
+  display: inline-grid; place-items: center;
+  flex: 0 0 auto;
+  width: 32px; height: 32px;
+  border: 0; border-radius: 9px;
+  background: transparent;
+  color: var(--faint);
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+@media (hover: hover) {
+  .icon-btn:hover { background: var(--paper-deep); color: var(--accent-deep); }
+}
+.icon-btn:active { transform: scale(.94); }
+@media (pointer: coarse) { .icon-btn { width: 40px; height: 40px; } }
+
+/* Tieu de chuong: ten chuong + mot dong phu */
+.deck-head {
+  display: flex; align-items: baseline; flex-wrap: wrap;
+  gap: 4px 12px;
+  margin-bottom: 14px;
+}
+.deck-h2 {
+  margin: 0;
+  font-size: var(--fs-lg); font-weight: 700; line-height: 1.3;
+  letter-spacing: -.01em;
+  color: var(--ink);
+}
+.deck-meta { font-size: 13px; color: var(--muted); }
+.deck-head > .ctl, .deck-head > .deck-head-end { margin-left: auto; }
+
+/* Chu Nhat: mot kieu chu cho ca cau (furigana khong keo chu Han sang Mincho) */
+[lang="ja"], .jp { font-family: var(--font-jp); }
+.jp-serif { font-family: var(--font-jp-serif); }
+.jp-sentence {
+  font-family: var(--font-jp);
+  font-size: clamp(20px, 1rem + .55vw, 26px);
+  line-height: 2;
+  font-weight: 500;
+  color: var(--ink);
+}
+.deck-content ruby rt {
+  font-size: max(11px, .5em);
+  line-height: 1.1;
+  color: var(--muted);
+  font-weight: 500;
+}
+/* Mac dinh space-around: furigana dai hon chu thi gian chu Han ra ("上　昇"), chu dai hon furigana
+   thi rai furigana tung chu ("は じ め ま し て"). Giu ca hai lien nhau, can giua. */
+.deck-content ruby, .spot-card ruby { ruby-align: center; }
+/* ...nhung o chu van rong bang furigana ("比べて、　上昇　しました"): token trong cau (slide-engine rubyCau)
+   cho furigana tran sang ben canh — --rt / --cj: so chu furigana / chu goc, --tl / --tp: toi da moi ben */
+.deck-content ruby[style*="--rt"] {
+  --tran: calc((max(11px, .5em) * 1.02 * var(--rt) - 1em * var(--cj)) / 2);
+  margin-left: calc(-1 * clamp(0px, var(--tran), var(--tl)));
+  margin-right: calc(-1 * clamp(0px, var(--tran), var(--tp)));
+}
+/* Dau cau dinh vao chu truoc, khong cach */
+.tok-dau { padding: 0; margin-left: -.15em; }
+
+/* Ghi chu: gach trai, khong hop */
+.deck-note {
+  padding: 2px 0 2px 12px;
+  border-left: 2px solid var(--line-strong);
+  font-size: 14px; line-height: 1.65;
+  color: var(--ink-2);
+  max-width: 68ch;
+}
+.deck-note b, .deck-note strong { color: var(--ink); font-weight: 700; }
+.deck-note.is-gold { border-left-color: var(--gold); }
+.deck-note.is-accent { border-left-color: var(--accent); }
+
+/* Nut phan doan (cung dang voi tab chuong) */
+.deck-seg {
+  display: inline-flex; align-items: center; gap: 2px;
+  padding: 3px;
+  border-radius: 12px;
+  background: var(--paper-deep);
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.deck-seg::-webkit-scrollbar { display: none; }
+.deck-seg > button, .deck-seg > a {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  flex: 0 0 auto;
+  padding: 6px 12px;
+  border: 0; border-radius: 9px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit; font-size: 12.5px; font-weight: 600;
+  text-decoration: none;
+  cursor: pointer; white-space: nowrap;
+  transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out),
+              box-shadow var(--dur-fast) var(--ease-out);
+}
+@media (hover: hover) {
+  .deck-seg > button:hover, .deck-seg > a:hover { color: var(--ink); }
+}
+.deck-seg > .is-active {
+  background: var(--surface-hi);
+  color: var(--ink);
+  box-shadow: 0 1px 2px rgba(74, 56, 34, .14), 0 0 0 1px var(--line);
+}
+@media (pointer: coarse) { .deck-seg > button, .deck-seg > a { min-height: 40px; } }
+
+.muted { color: var(--muted); }
+.faint { color: var(--faint); }
+
+/* ==========================================================================
+   1. TU VUNG + CHU HAN + THE SPOTLIGHT (R2a)
+   ========================================================================== */
+
+/* Luoi the: it the thi hang khong bi keo gian cho day khung cuon */
+.vc-list, .kj-list { align-content: start; }
+
+/* Dong tron Viet + Nhat: khong ngat giua mot tu Nhat ("dùng あな / た.") — cung cong thuc
+   .jp-keep (muc 2). Tieng Viet van xuong dong o dau cach; tu Nhat dai qua dong van ngat. */
+.vc-word, .vc-mean, .vc-note,
+.kj-mean, .kj-read dd, .kj-m,
+.spot-meaning, .spot-note, .spot-row-vi, .spot-readings span[lang="ja"] {
+  word-break: keep-all; overflow-wrap: anywhere; line-break: strict;
+}
+
+/* --- Tu vung ---------------------------------------------------------------- */
+.vc-card { display: flex; align-items: flex-start; gap: 12px; min-width: 0; }
+.vc-body { flex: 1 1 auto; min-width: 0; }
+/* Cot phai: loa o goc tren, anh nho ngay duoi — tu luon thang mep trai du the co anh hay khong */
+.vc-side {
+  flex: 0 0 auto;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 6px;
+}
+.vc-side > .icon-btn { margin: -2px -4px 0 0; }
+.vc-word-row {
+  min-width: 0;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px;
+}
+.vc-word {
+  font-size: 24px; font-weight: 700; line-height: 1.3;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+  /* Can trai ca chu lan furigana: furigana dai hon chu (私 / わたし) thi chu van thang mep trai voi
+     romaji + nghia ben duoi, khong lui vao giua; chu van lien nhau, khong gian ra "環 境" */
+  ruby-align: start;
+}
+.deck-content ruby.vc-word { ruby-align: start; }   /* thang .deck-content ruby (muc 0) */
+.vc-meta { margin-top: 1px; font-size: 13px; line-height: 1.4; color: var(--muted); }
+.vc-mean { margin-top: 6px; font-size: 15px; font-weight: 500; line-height: 1.5; color: var(--ink-2); }
+/* Ghi chu cach dung: toi da 2 dong (title tren the giu ban day du) */
+.vc-note {
+  margin-top: 6px;
+  font-size: 12px; line-height: 1.5; color: var(--muted);
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2;
+  overflow: hidden;
+}
+/* Anh nho: nen giay phang, khong vien */
+.vc-card .sensei-art-sm,
+.vc-thumb {
+  flex: 0 0 auto;
+  width: 56px; height: 56px;
+  border: 0; border-radius: 12px;
+  background: var(--paper-deep);
+}
+.vc-card .sensei-art-sm { padding: 5px; }
+/* Chu trong hinh ve chi con 5-7px o co nay — nghia da in ngay ben canh (F164) */
+.vc-card .sensei-art-sm svg text { display: none; }
+.vc-thumb { overflow: hidden; cursor: zoom-in; }
+.vc-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+@media (min-width: 768px) {
+  .vc-word { font-size: 28px; }
+  .vc-mean { font-size: 16px; }
+  .vc-card .sensei-art-sm, .vc-thumb { width: 64px; height: 64px; }
+}
+
+/* --- Chu Han ---------------------------------------------------------------- */
+.kj-card { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.kj-top { display: flex; align-items: flex-start; gap: 14px; }
+.kj-top > .icon-btn { margin: -4px -6px 0 0; }
+.kj-glyph {
+  flex: 0 0 auto;
+  width: 64px; height: 64px;
+  display: grid; place-items: center;
+  border-radius: 12px;
+  background: var(--paper-deep);
+  color: var(--ink);
+  font-size: 40px; font-weight: 700; line-height: 1;
+}
+.kj-id { flex: 1 1 auto; min-width: 0; padding-top: 6px; }
+.kj-line1 { line-height: 1.4; }
+.kj-hv { font-size: 13px; font-weight: 700; letter-spacing: .06em; color: var(--ink); }
+.kj-strokes { font-size: 13px; color: var(--muted); }
+.kj-mean { margin-top: 3px; font-size: 14px; line-height: 1.5; color: var(--ink-2); }
+/* Am On / Kun: luoi 2 cot nho, khong hop long trong the */
+.kj-read {
+  display: grid; grid-template-columns: auto minmax(0, 1fr);
+  gap: 4px 14px; align-items: baseline;
+  margin: 0;
+}
+.kj-read dt { font-size: 12px; color: var(--muted); }
+.kj-read dd { margin: 0; font-size: 15px; line-height: 1.5; color: var(--ink); overflow-wrap: anywhere; }
+/* Tu ghep: danh sach phang, gach manh giua dong; nghia ngay canh tu (subgrid giu cot thang hang) */
+.kj-label { margin-bottom: 2px; font-size: 12px; color: var(--muted); }
+.kj-words {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 14px;
+}
+.kj-words > li {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-columns: subgrid;
+  column-gap: 14px;
+  align-items: baseline;
+  padding: 6px 0;
+  border-top: 1px solid var(--line);
+}
+.kj-wj { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 6px; }
+.kj-w { font-size: 15px; font-weight: 500; color: var(--ink); }
+.kj-r { font-size: 12px; color: var(--muted); }
+.kj-m { font-size: 13px; line-height: 1.45; color: var(--ink-2); }
+
+/* --- The spotlight (.spot-*) — cung thang chu voi the ------------------------
+   Khung dat o dau (.spot-dock) thuoc styles.css; o day chi chu va noi dung the.
+   Chu Nhat dung Noto Sans JP, rieng chu Han lon (.spot-kanji) giu serif. */
+.spot-card ruby { font-family: inherit; }
+.spot-head {
+  font-family: var(--font-jp);
+  font-size: clamp(34px, 1.5rem + 1.6vw, 48px);
+  font-weight: 700; line-height: 1.3;
+}
+.spot-head ruby { ruby-align: center; }
+.spot-head rt { font-size: max(12px, .32em); color: var(--muted); font-weight: 500; }
+.spot-kanji { text-shadow: none; }
+.spot-romaji { font-family: inherit; font-size: 14px; color: var(--muted); }
+.spot-sub { gap: 6px; margin-bottom: 10px; }
+.spot-chip {
+  padding: 3px 10px;
+  border: 0; border-radius: 99px;
+  background: var(--paper-deep); color: var(--ink-2);
+  font-size: 12px; font-weight: 600; letter-spacing: 0;
+}
+.spot-chip b { color: var(--ink); font-weight: 700; letter-spacing: .05em; }
+.spot-chip.is-key { background: rgba(201, 100, 66, .12); color: var(--accent-deep); }
+.spot-speaker {
+  font-size: 12px; font-weight: 600; letter-spacing: 0;
+  text-transform: none; color: var(--muted);
+}
+.spot-sentence {
+  font-family: var(--font-jp);
+  font-size: clamp(22px, 1.1rem + .9vw, 30px);
+  font-weight: 500; line-height: 1.9;
+}
+.spot-sentence.is-small { font-size: clamp(18px, 1rem + .4vw, 21px); line-height: 1.9; }
+.spot-sentence rt { font-size: max(11px, .45em); }
+.spot-meaning { font-size: 17px; font-weight: 500; line-height: 1.55; color: var(--ink-2); }
+.spot-meaning.is-small { font-size: 14px; font-style: normal; color: var(--ink-2); }
+/* Ghi chu: gach trai nhu .deck-note, khong hop vang. Khong dat `display` — styles.css
+   an ghi chu tren man thap (max-height 560px), dat o day se de len luat do. */
+.spot-note {
+  margin: 14px 0 0; padding: 2px 0 2px 12px;
+  border: 0; border-left: 2px solid var(--line-strong); border-radius: 0;
+  background: none;
+  font-size: 13px; line-height: 1.6; color: var(--ink-2);
+  text-align: left;
+}
+.spot-note.spot-origin { border-left-color: var(--gold); margin: 0 0 14px; }
+.spot-origin strong { color: var(--ink); }
+/* Am On / Kun: nen giay phang */
+.spot-readings { gap: 8px; margin: 16px 0 4px; }
+.spot-readings > div {
+  padding: 8px 12px;
+  border: 0; border-radius: 10px;
+  background: var(--paper-deep);
+  font-size: 16px; line-height: 1.45; color: var(--ink);
+  text-align: left;
+}
+.spot-rlabel {
+  margin-bottom: 2px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0;
+  text-transform: none; color: var(--muted);
+}
+.spot-diagram-label {
+  margin-bottom: 6px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0;
+  text-transform: none; color: var(--muted);
+}
+/* Tu ghep: dong phang + gach manh, nghia can trai ngay canh tu */
+.spot-words {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 14px;
+  margin-top: 18px;
+}
+.spot-words > .spot-diagram-label { grid-column: 1 / -1; }
+.spot-row {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-columns: subgrid;
+  column-gap: 14px; align-items: baseline;
+  margin: 0; padding: 7px 0;
+  border: 0; border-top: 1px solid var(--line); border-radius: 0;
+  background: none;
+}
+.spot-row-jp { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 6px; font-family: var(--font-jp); font-size: 16px; font-weight: 500; }
+.spot-row-jp em { font-size: 12px; font-weight: 400; }
+.spot-row-vi { font-size: 13px; line-height: 1.45; color: var(--ink-2); text-align: left; }
+/* So do cau truc: khoi phang, khong vien */
+.dblock { border-color: transparent; background: var(--paper-deep); }
+.dblock.is-key { border-color: transparent; background: rgba(201, 100, 66, .12); }
+.dword { font-family: var(--font-jp); }
+.drole { font-size: 12px; font-weight: 500; }
+.spot-incontext { border: 0; background: var(--paper-deep); }
+.spot-image { border: 0; }
+.spot-question { font-size: 17px; }
+.spot-opt > span { font-family: inherit; font-size: 12px; }
+/* Nut nghe: nen nhat mau nhan — nut dac terracotta chi danh cho hanh dong chinh (giang bai, gui...) */
+.spot-speak {
+  min-height: 40px;
+  background: rgba(201, 100, 66, .12); color: var(--accent-deep);
+  box-shadow: none;
+}
+@media (hover: hover) {
+  .spot-speak:hover { background: rgba(201, 100, 66, .2); color: var(--accent-deep); }
+}
+.sensei-art-lg { border: 0; background: var(--paper-deep); box-shadow: none; }
+@media (pointer: coarse) { .spot-dong { width: 40px; height: 40px; font-size: 14px; } }
+
+@media (max-width: 640px) {
+  .spot-readings { grid-template-columns: 1fr 1fr; }
+}
+@media (max-height: 700px) {
+  .spot-head { font-size: clamp(30px, 1.4rem + 1vw, 40px); }
+  .spot-sentence { font-size: clamp(20px, 1rem + .7vw, 26px); line-height: 1.75; }
+}
+
+/* O viet net trong the: phang, khong hop long trong hop */
+.spot-viet-net .bang-kanji { background: var(--paper-deep); border-color: transparent; }
+.spot-viet-net .bang-kanji-o { background: var(--card); }
+.spot-viet-net .bang-kanji-lai { min-height: 32px; font-size: 12px; border-color: transparent; }
+@media (pointer: coarse) { .spot-viet-net .bang-kanji-lai { min-height: 40px; } }
+/* Cho o viet net truoc khi ve (slide-engine doi o hien ra moi viet): giu dung cho,
+   khong nhay bo cuc luc o hien len, va co dien tich de do "da hien mot nua" */
+.spot-viet-net:empty::before {
+  content: ""; display: block;
+  height: 252px; margin-bottom: 10px;   /* = .bang-kanji: o 190 + nut 32 + dem + vien */
+  border-radius: 14px; background: var(--paper-deep);
+}
+@media (pointer: coarse) { .spot-viet-net:empty::before { height: 260px; } }   /* nut 40 */
+
+/* The chu Han: HTML da theo thu tu doc tren may tinh (truoc day o viet net + hinh goc
+   chu + ghi chu dung truoc chu va nghia -> o 1440x900 nghia nam duoi mep the):
+   viet net -> chu -> Han Viet -> nghia -> On/Kun -> nghe -> tu ghep -> goc chu. */
+.spot-card.spot-type-kanji { display: flex; flex-direction: column; }
+.spot-card.spot-type-kanji > * { flex-shrink: 0; }
+.spot-card.spot-type-kanji > .spot-speak { align-self: center; margin: 14px 0 2px; }
+.spot-type-kanji > .sensei-art-lg  { margin-top: 22px; }
+.spot-type-kanji > .spot-origin    { margin: 0; }
+/* Co o viet net thi chu tinh lon nhac lai lan hai -> thu nho lai */
+.spot-type-kanji > .spot-viet-net ~ .spot-kanji { font-size: clamp(64px, 5vw, 88px); margin: 2px 0 10px; }
+
+/* Man hep: the la tam trai duoi day man hinh -> hinh nho lai, dua chu + nghia +
+   nut nghe len dau, o viet net ngay sau nut nghe (F159: truoc day o viet net 247px +
+   hinh 234px day nghia xuong duoi mep). Chi o day moi dung `order`. */
+@media (max-width: 860px) {
+  .sensei-art-lg {
+    width: min(120px, 32vw); height: min(120px, 32vw);
+    margin: 0 auto 10px; padding: 8px; border-radius: 14px;
+  }
+  .spot-card.spot-type-vocab > .spot-speak { margin-top: 12px; }
+  .spot-card.spot-type-kanji > .spot-speak { margin: 12px 0 2px; }
+  .spot-type-kanji > .spot-kanji,
+  .spot-type-kanji > .spot-viet-net ~ .spot-kanji { order: 1; font-size: clamp(64px, 18vw, 96px); margin: 0 0 10px; }
+  .spot-type-kanji > .spot-sub       { order: 2; }
+  .spot-type-kanji > .spot-meaning   { order: 3; }
+  .spot-type-kanji > .spot-speak     { order: 4; }
+  .spot-type-kanji > .spot-viet-net  { order: 5; margin: 14px 0 0; }
+  .spot-type-kanji > .spot-readings  { order: 6; }
+  .spot-type-kanji > .spot-words     { order: 7; }
+  .spot-type-kanji > .sensei-art-lg  { order: 8; margin-top: 16px; }
+  .spot-type-kanji > .spot-origin    { order: 9; }
+}
+/* Dien thoai doc: tam day chi cao 46vh (~340px o 360x740) -> hinh nho, khoang cach sit lai de the tu vung
+   vua tron tam, khong phai cuon trong (truoc: hinh 115px, noi dung 395px, ghi chu bi cat doi) */
+@media (max-width: 640px) {
+  .spot-dock .spot-card { padding: 16px; }
+  .spot-dock .sensei-art-lg { width: 76px; height: 76px; padding: 6px; margin-bottom: 8px; border-radius: 12px; }
+  .spot-dock .spot-sub { margin-bottom: 8px; }
+  .spot-dock .spot-card.spot-type-vocab > .spot-speak { margin-top: 8px; }
+  .spot-dock .spot-note:not(.spot-origin) { margin-top: 10px; }
+}
+/* Hinh nho (76-80px): chu trong hinh chi con ~9px — tu va nghia da in ngay duoi hinh */
+@media (max-width: 640px), (max-width: 860px) and (max-height: 500px) {
+  .spot-dock .sensei-art-lg svg text { display: none; }
+}
+@media (max-width: 860px) and (max-height: 500px) {
+  .sensei-art-lg { width: 80px; height: 80px; padding: 6px; }
+  .spot-head { font-size: 30px; }
+  .spot-type-kanji > .spot-kanji,
+  .spot-type-kanji > .spot-viet-net ~ .spot-kanji { font-size: 60px; }
+}
+
+/* Giam chuyen dong: mui ten noi hien ngay, the dong khong mo dan */
+@media (prefers-reduced-motion: reduce) {
+  .spot-noi-than { animation: none !important; stroke-dashoffset: 0 !important; }
+  .spotlight.is-closing .spot-dock { transition: none; }
+}
+
+/* ==========================================================================
+   2. NGU PHAP + HOI THOAI + BAI TAP + PHAN XA (R2b)
+   ========================================================================== */
+
+/* --- 2.0 Dung chung: token cau, tieu de co chu Nhat -------------------- */
+
+/* Tieu de tron Viet + Nhat: khong ngat giua mot tu Nhat (極まりな / い) — chi dung cho
+   tieu de ngan; doan dai (cau hoi, dap an) dung line-break: strict, xem 2.3 */
+.jp-keep { word-break: keep-all; overflow-wrap: anywhere; line-break: strict; }
+
+/* Ruby trong cau: cung kieu chu voi ca cau (can giua: xem .deck-content ruby o muc 0) */
+.jp-sentence ruby, .jp-tok ruby { font-family: inherit; ruby-align: center; }
+
+/* Token bam de nghe: lien nhau, khong dau cach giua cac tu */
+.jp-tok {
+  display: inline-block;
+  padding: 0 .08em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+/* Mau nen / mau chu bo qua token dang duoc Sensei boi (.hl-* trong styles.css phai thang) */
+@media (hover: hover) {
+  .jp-tok:not(.hl-grammar, .hl-vocab, .hl-warning, .hl-reading-inline):hover { background: var(--paper-deep); color: var(--ink); }
+}
+/* Tro tu trong tam: chi to nen nhe, khong khung vien */
+.jp-tok.is-key { padding: 0 .14em; font-weight: 700; }
+.jp-tok.is-key:not(.hl-grammar, .hl-vocab, .hl-warning, .hl-reading-inline) {
+  background: rgba(201, 100, 66, .13);
+  color: var(--accent-deep);
+}
+@media (hover: hover) {
+  .jp-tok.is-key:not(.hl-grammar, .hl-vocab, .hl-warning, .hl-reading-inline):hover { background: rgba(201, 100, 66, .22); color: var(--accent-deep); }
+}
+/* Chu + dau cau di lien: khong xuong dong truoc 。、 */
+.jp-tok-nhom { white-space: nowrap; }
+/* Dau cau khong bam duoc — bam trung thi coi nhu bam vao the */
+.jp-sentence .tok-dau { pointer-events: none; }
+.tok-dau.tok-mo { margin-left: 0; margin-right: -.15em; }
+/* Huy hieu "Đang đọc…" duoc gan vao trong cau / dau the: chu Viet, khong keo gian cot */
+.jp-sentence .reading-badge-indicator { font-family: "Inter", system-ui, sans-serif; vertical-align: middle; line-height: 1.5; }
+/* The cau hoi: huy hieu nam canh "Câu 3/19" (.qz-q-top), khong chen hang moi day dap an xuong */
+.qz-q-top > .reading-badge-indicator { margin-left: 0; }
+
+/* --- 2.1 Ngu phap ------------------------------------------------------- */
+.gp-list > * + * { margin-top: 10px; }
+.gp-explain {
+  max-width: 68ch;
+  margin: 0;
+  font-size: 15px; line-height: 1.7;
+  color: var(--ink-2);
+}
+/* Cong thuc: vien thuoc om sat chu, nen tan, khong vien, khong monospace */
+.gp-list > .gp-formula { margin-top: 14px; }
+.gp-formula {
+  display: flex; align-items: baseline; gap: 10px;
+  width: fit-content; max-width: 100%;
+  padding: 8px 14px;
+  border-radius: 12px;
+  background: var(--line);
+}
+.gp-formula-label { flex: 0 0 auto; font-size: 12px; font-weight: 600; color: var(--muted); }
+/* Cong thuc tron Viet + Nhat: chu Viet / ky hieu o Inter (Noto Sans JP thieu dau tieng Viet), cac doan
+   chu Nhat boc <span lang="ja"> (slide-engine) -> Noto Sans JP theo quy tac [lang="ja"] o muc 0 */
+.gp-formula-text {
+  min-width: 0;
+  font-family: "Inter", var(--font-jp);
+  font-size: 16px; font-weight: 600; line-height: 1.5;
+  color: var(--ink);
+  word-break: keep-all; overflow-wrap: anywhere;
+}
+@media (min-width: 768px) { .gp-formula-text { font-size: 17px; } }
+
+.gp-list > .gp-formula + .gp-ex,
+.gp-list > .gp-explain + .gp-ex { margin-top: 16px; }
+.gp-ex {
+  display: flex; align-items: flex-start; gap: 12px;
+  max-width: 760px;
+  padding: 10px 16px 12px;
+}
+.gp-ex-body { flex: 1 1 auto; min-width: 0; }
+/* Loa nam ngay sau cau, khong bi day ra mep phai the */
+.gp-ex-line { display: flex; align-items: center; gap: 6px; }
+.gp-ex-line > .jp-sentence { min-width: 0; }
+.gp-ex-mean { margin-top: 1px; font-size: 14px; line-height: 1.55; color: var(--ink-2); }
+.gp-ex-img {
+  flex: 0 0 auto;
+  width: 56px; height: 56px; margin-top: 6px;
+  border-radius: 10px; overflow: hidden;
+  background: var(--paper-deep);
+  cursor: zoom-in;
+}
+.gp-ex-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (min-width: 768px) { .gp-ex-img { width: 64px; height: 64px; } }
+.gp-list > .gp-ex + .gp-note { margin-top: 18px; }
+.gp-list > .gp-note + .gp-note { margin-top: 12px; }
+@media (max-width: 640px) {
+  /* Dien thoai: ten mau dai xuong 2-3 dong (22px) an ~1/6 san khau -> 18px, bo dong "n ví dụ"
+     (cac vi du nam ngay ben duoi). Nhan "Cấu trúc" len tren cong thuc, cong thuc duoc ca be ngang. */
+  .deck-head:has(+ .gp-list) .deck-h2 { font-size: 18px; }
+  .deck-head:has(+ .gp-list) .deck-meta { display: none; }
+  .gp-formula { flex-direction: column; align-items: flex-start; gap: 2px; }
+}
+
+/* --- 2.2 Hoi thoai ------------------------------------------------------ */
+.kw-list > * + * { margin-top: 12px; }
+/* Hang thoai co gioi han: man rong khong day bong A / B cach nhau ca nghin px */
+.kw-row { display: flex; align-items: flex-start; gap: 10px; max-width: 900px; }
+.kw-row.is-b { flex-direction: row-reverse; }
+.kw-ava {
+  flex: 0 0 auto;
+  display: grid; place-items: center;
+  width: 30px; height: 30px; margin-top: 6px;
+  border-radius: 50%; overflow: hidden;
+  font-family: var(--font-jp); font-size: 13px; font-weight: 700;
+}
+.kw-ava.is-chu { background: rgba(201, 100, 66, .14); color: var(--accent-deep); }
+.kw-row.is-b .kw-ava.is-chu { background: var(--paper-deep); color: var(--ink-2); }
+/* Nguoi thu hai cung mot ben: vong vien, khong nen dac (slide-engine renderDialogue) */
+.kw-ava.is-chu.is-vien { background: transparent; box-shadow: inset 0 0 0 1.5px rgba(201, 100, 66, .5); }
+.kw-row.is-b .kw-ava.is-chu.is-vien { background: transparent; box-shadow: inset 0 0 0 1.5px var(--line-strong); }
+.kw-ava.is-anh { width: 36px; height: 36px; background: var(--paper-deep); cursor: zoom-in; }
+.kw-ava img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Bong thoai: goc vuong quay ve phia nguoi noi */
+.kw-bubble {
+  min-width: 0;
+  max-width: min(78%, 720px);
+  padding: 8px 14px 12px;
+  border-top-left-radius: 4px;
+}
+.kw-row.is-b .kw-bubble {
+  background: var(--surface);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: 4px;
+}
+/* Hang ten gon nhu cu nhung nut loa 32px tran LEN le tren cua bong (margin-top am), khong tran xuong o cau:
+   tran xuong thi furigana dong dau (ve sau nut) de len goc nut va an mat cu bam (doc mot tu thay vi ca cau) */
+.kw-top { display: flex; align-items: center; gap: 8px; margin: 0 -8px 0 0; }
+/* Huy hieu "Đang đọc…" (slide-engine gan vao cuoi hang nay) nam canh ten, loa luon o mep phai */
+.kw-top > .icon-btn { order: 3; margin-left: auto; margin-top: -4px; }
+.kw-top > .reading-badge-indicator { order: 2; margin-left: 0; }
+.kw-name { font-size: 12px; font-weight: 600; color: var(--muted); }
+.kw-mean { margin-top: 1px; font-size: 14px; line-height: 1.55; color: var(--ink-2); }
+@media (max-width: 640px) {
+  /* Dien thoai: vong chu cai nho lai (van giu: hai nguoi cung mot ben — N5-1 佐藤 roi 山田 — khong bi
+     doc thanh mot nguoi), bong rong hon */
+  .kw-row { gap: 6px; }
+  .kw-ava.is-chu { width: 24px; height: 24px; margin-top: 8px; font-size: 12px; }
+  .kw-bubble { max-width: calc(100% - 30px); }
+}
+
+/* --- 2.3 Bai tap: trac nghiem + phat am + viet tay ---------------------- */
+/* Thanh nhay nhanh dinh tren dau vung cuon */
+.qz-jump {
+  position: sticky; top: 0; z-index: 3;
+  padding-bottom: 10px;
+  background: var(--paper);
+}
+.qz-jump > .deck-seg { display: flex; width: fit-content; }
+/* Man thap (dien thoai ngang): thanh dinh an mat 1/5 vung cuon -> de no troi theo */
+@media (max-height: 500px) { .qz-jump { position: static; padding-bottom: 6px; } }
+.qz-sec { scroll-margin-top: 56px; }
+/* Cot doc vua mat (thanh nhay van rong het): cau hoi / dap an khong keo dai 130 ky tu */
+.qz-list > .qz-sec, .qz-list > .qz-trong { max-width: 880px; }
+.qz-sec > * + *, .qz-stack > * + * { margin-top: 12px; }
+.qz-list > .qz-sec + .qz-sec,
+.qz-list > .qz-trong + .qz-sec { margin-top: 28px; }
+.qz-trong { margin: 4px 0 0; font-size: 14px; color: var(--muted); }
+
+.qz-sec-head {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.qz-h3 { margin: 0; font-size: 17px; font-weight: 700; line-height: 1.35; color: var(--ink); }
+.qz-sec-meta { margin: 2px 0 0; font-size: 13px; color: var(--muted); }
+/* Chi co tieu de (khong dong phu): tieu de canh giua voi nut ben phai */
+.qz-sec-head:not(:has(.qz-sec-meta)) { align-items: center; }
+
+/* The cau hoi */
+.qz-card { padding: 14px 16px 16px; }
+.qz-card > * + * { margin-top: 12px; }
+.qz-card.is-target { border-color: var(--accent); }
+.qz-q { display: flex; flex-direction: column; gap: 3px; }
+/* Hang so cau: cao san bang huy hieu "Đang đọc…" -> hien huy hieu khong xo dich cau hoi */
+.qz-q-top { display: flex; align-items: center; gap: 8px; min-height: 22px; }
+.qz-no { font-size: 12px; font-weight: 600; color: var(--muted); }
+.qz-text {
+  margin: 0;
+  font-size: 16px; font-weight: 600; line-height: 1.6;
+  color: var(--ink);
+  white-space: pre-line;
+}
+/* Cau hoi / dap an tron Viet + Nhat: chu Nhat ngat binh thuong (khong keep-all ca cum
+   -> dong le te), chi cam dau cau dung dau dong */
+.qz-text, .qz-opt-text { line-break: strict; overflow-wrap: anywhere; }
+.qz-img {
+  display: flex; justify-content: center;
+  max-height: 192px; overflow: hidden;
+  border-radius: 12px;
+  background: var(--paper-deep);
+  cursor: zoom-in;
+}
+.qz-img img { max-height: 176px; width: auto; object-fit: contain; }
+
+/* Dap an: mat sang, vien mot net, hover vien nhan */
+.qz-opt {
+  display: flex; align-items: center; gap: 10px;
+  width: 100%; min-height: 44px;
+  padding: 9px 14px;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--ink-2);
+  font: inherit; font-size: 15px; line-height: 1.45;
+  cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out), opacity var(--dur-fast) var(--ease-out);
+}
+@media (hover: hover) {
+  .qz-opt:hover:not(:disabled) { border-color: rgba(201, 100, 66, .55); background: var(--surface-hi); color: var(--ink); }
+}
+.qz-key {
+  flex: 0 0 auto;
+  display: grid; place-items: center;
+  width: 24px; height: 24px;
+  border-radius: 7px;
+  background: var(--paper-deep);
+  color: var(--muted);
+  font-size: 12px; font-weight: 700;
+  transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+@media (hover: hover) {
+  .qz-opt:hover:not(:disabled) .qz-key { color: var(--accent-deep); }
+}
+.qz-opt-text { flex: 1 1 auto; min-width: 0; }
+.qz-opt > i { flex: 0 0 auto; }
+/* Trang thai sau khi chon (app.js handleSelectOption) */
+/* Dap an khong chon: mo nhe nhung van doc duoc (~5:1) — hoc vien doc lai de hoc */
+.qz-opt:disabled:not(.is-correct):not(.is-wrong):not(.is-answer) { opacity: .72; }
+.qz-opt.is-correct { border-color: var(--sage); background: rgba(107, 138, 94, .12); color: #33512b; font-weight: 600; opacity: 1; }
+.qz-opt.is-correct .qz-key { background: var(--sage-deep); color: #fff; }
+.qz-opt.is-wrong { border-color: var(--clay); background: rgba(194, 90, 76, .09); color: #8b3628; font-weight: 600; opacity: 1; }
+.qz-opt.is-wrong .qz-key { background: var(--clay-deep); color: #fff; }
+.qz-opt.is-answer { border-color: rgba(107, 138, 94, .75); background: rgba(107, 138, 94, .07); opacity: 1; }
+.qz-opt.is-answer .qz-key { background: rgba(107, 138, 94, .22); color: var(--sage-deep); }
+
+/* Nhan xet cua Sensei: mat phang trong the, khong vien */
+.qz-fb {
+  padding: 10px 14px 12px;
+  border-radius: 12px;
+  font-size: 14px; line-height: 1.6;
+  color: var(--ink-2);
+}
+.qz-fb.is-cho { padding: 10px 14px; background: var(--paper-deep); color: var(--muted); }
+.qz-fb.is-ok  { background: rgba(107, 138, 94, .12); }
+.qz-fb.is-no  { background: rgba(194, 90, 76, .08); }
+.qz-fb.is-gat { background: rgba(194, 90, 76, .14); box-shadow: inset 3px 0 0 var(--clay); }
+.qz-fb-dong { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+.qz-fb-dau { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-right: -8px; }
+.qz-fb-nhan { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 700; }
+.qz-fb.is-ok .qz-fb-nhan { color: var(--sage-deep); }
+.qz-fb.is-no .qz-fb-nhan { color: var(--clay-deep); }
+.qz-fb-loi { margin: 0; font-size: 15px; font-weight: 600; line-height: 1.55; color: var(--ink); }
+.qz-fb-tip { margin: 8px 0 0; padding-top: 8px; border-top: 1px solid rgba(74, 56, 34, .12); font-size: 13px; }
+.qz-fb-tip b { color: var(--ink); font-weight: 700; }
+
+/* Chu phu dung chung: "Ôn bài N", nghia cau */
+.qz-on { display: block; margin-bottom: 2px; font-size: 12px; color: var(--muted); }
+.qz-mean { margin-top: 1px; font-size: 14px; line-height: 1.55; color: var(--ink-2); }
+
+/* Luyen phat am */
+.qz-pa, .qz-vt { cursor: default; }
+.qz-pa:hover, .qz-vt:hover { border-color: transparent; }
+.qz-pa { max-width: 760px; padding: 12px 12px 12px 16px; }
+/* Cot nut nghe / thu am ghim o mep phai the (the <= 760px nen khong xa cau): nut thu am o cung mot
+   cot tren moi the, khong nhay theo do dai tung cau */
+.qz-pa-row { display: flex; align-items: flex-start; gap: 16px; }
+.qz-pa-chu { flex: 0 1 auto; }
+.qz-pa-cau { font-size: clamp(18px, .95rem + .45vw, 22px); line-height: 1.9; }
+/* Cau ghep lien nhu vi du ngu phap (styles.css .stok dat padding 1px 3px -> ho 6px giua cac tu) */
+.qz-pa-cau .stok { padding: 0 .08em; }
+.qz-pa-cau .stok.is-key { padding: 0 .14em; }
+.qz-pa-nut { flex: 0 0 auto; margin-left: auto; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.qz-pa > [id^="kq-"]:not(.hidden) { margin-top: 10px; }
+/* Nut thu am (app.js veNutThuAm doi .is-rec khi dang thu = dat nung dac, chu trang) */
+.qz-rec {
+  display: inline-grid; place-items: center;
+  width: 36px; height: 36px;
+  border: 0; border-radius: 10px;
+  background: rgba(201, 100, 66, .12);
+  color: var(--accent-deep);
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+@media (hover: hover) {
+  .qz-rec:hover { background: rgba(201, 100, 66, .22); }
+}
+.qz-rec:active { transform: scale(.94); }
+.qz-rec.is-rec, .qz-rec.is-rec:hover { background: var(--clay-deep); color: #fff; }
+@media (pointer: coarse) { .qz-rec { width: 40px; height: 40px; } }
+
+/* Luyen viet tay */
+.qz-vt { display: flex; flex-direction: column; gap: 10px; padding: 14px; }
+.qz-vt-top { display: flex; align-items: center; gap: 8px; min-height: 22px; }
+.qz-vt-top .qz-on { margin: 0; }
+.qz-timer { margin-left: auto; color: var(--muted); transition: color var(--dur) var(--ease-out); }
+/* Dang dem (app.js veDem): chu muc; con 3 giay thi dat nung */
+.qz-timer.is-chay { color: var(--ink); font-weight: 600; }
+.qz-timer.is-gap { color: var(--clay-deep); font-weight: 700; }
+.qz-vt-de { font-family: var(--font-jp); font-size: 19px; line-height: 1.7; color: var(--ink); }
+.qz-vt-hoi { font-size: 14px; color: var(--ink-2); }
+.qz-vt-goiy { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; font-size: 13px; color: var(--ink-2); }
+.qz-vt-kana { font-size: 15px; font-weight: 500; color: var(--ink); }
+.qz-khung { border: 1px solid var(--line-strong); border-radius: 12px; }
+/* Hai the canh nhau cao bang nhau: day khung viet + nut xuong day the -> khung va nut thang hang
+   du de bai the ben nay dai hon (cau khuyet + goi y 2 dong) */
+.qz-vt > .qz-khung { margin-top: auto; }
+.qz-vt-nut { display: flex; gap: 8px; }
+
+/* --- 2.4 Phan xa -------------------------------------------------------- */
+/* Vung cuon co chieu cao that -> the gioi thieu dung giua cho trong tren man cao,
+   the cau hoi cao hon man hinh thap thi cuon duoc (F106 / F152) */
+.rx-scroll { display: flex; flex-direction: column; }
+.rx-wrap { flex: 1 0 auto; width: 100%; display: flex; flex-direction: column; }
+.rx-seg { display: flex; width: 100%; margin-bottom: 14px; }
+.rx-seg > button { flex: 1 1 0; }
+.rx-than { flex: 1 0 auto; display: flex; flex-direction: column; }
+.rx-panel { display: flex; flex-direction: column; gap: 12px; padding: 16px 18px 18px; cursor: default; }
+.rx-panel:hover { border-color: transparent; }
+.rx-giua { margin-block: auto; padding: 24px 22px; text-align: center; gap: 14px; }
+/* Man gioi thieu / ket thuc: nut che do dinh ngay tren the, ca cum dung giua cho con lai duoi tieu de
+   (tieu de nam ngoai vung cuon, o dau nhu moi chuong) — F152 */
+.rx-wrap:has(.rx-giua) { justify-content: center; }
+.rx-wrap:has(.rx-giua) > .rx-than { flex: 0 0 auto; }
+.rx-mo-ta { margin: 0; font-size: 15px; line-height: 1.65; color: var(--ink-2); }
+.rx-mo-ta b { color: var(--ink); font-weight: 700; }
+.rx-phu { margin: 0; font-size: 13px; color: var(--muted); }
+.rx-cta { min-height: 44px; font-size: 14px; }
+.rx-diem { font-size: 40px; font-weight: 700; line-height: 1.1; color: var(--ink); }
+/* Tien do chu thuong; dong ho to, mau muc; con 2 giay thi doi mau dat nung */
+.rx-tien { display: flex; align-items: center; gap: 8px; }
+.rx-tien-so { font-size: 13px; color: var(--muted); }
+.rx-dem {
+  margin-left: auto;
+  font-size: 28px; font-weight: 700; line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  transition: color var(--dur) var(--ease-out);
+}
+.rx-dem.is-gap { color: var(--clay-deep); }
+.rx-de {
+  font-family: var(--font-jp);
+  font-size: clamp(20px, 1rem + .55vw, 26px); line-height: 1.8;
+  text-align: center; color: var(--ink);
+}
+.rx-hoi { font-size: 14px; text-align: center; color: var(--ink-2); }
+.rx-goiy { font-size: 14px; text-align: center; color: var(--muted); }
+.rx-goiy [lang="ja"] { color: var(--ink); font-weight: 500; }
+/* Khung ve nho lai tren man thap de nut nop van thay duoc — nhung khong duoi 170px
+   (dien thoai ngang con 109px, khong viet noi trong 10 giay; vung cuon lo phan con lai) */
+.rx-khung { max-width: clamp(170px, 32dvh, 240px); border: 1px solid var(--line-strong); border-radius: 12px; }
+.rx-nop { min-height: 40px; }
+.rx-noi { padding: 6px 0; text-align: center; }
+.rx-nghia { margin-top: 4px; font-size: clamp(22px, 1.1rem + .8vw, 30px); font-weight: 700; line-height: 1.3; color: var(--ink); }
+.rx-song { height: 6px; border-radius: 99px; background: var(--paper-deep); overflow: hidden; }
+.rx-song-trong { height: 100%; background: var(--clay); }
+.rx-kq {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px; line-height: 1.55;
+}
+.rx-kq i { margin-top: .3em; }
+.rx-kq.is-ok  { background: rgba(107, 138, 94, .13); color: #33512b; }
+.rx-kq.is-no  { background: rgba(194, 90, 76, .09); color: #8b3628; }
+.rx-kq.is-cho { background: var(--paper-deep); color: var(--muted); }
+/* Tin cua Sensei / dang cham (the phat am, viet tay): nen giay, chu doc ro */
+.rx-kq.is-tin { background: var(--paper-deep); color: var(--ink-2); }
+@media (max-width: 640px) {
+  .rx-giua { padding: 20px 16px; }
+  .rx-panel { padding: 14px; }
+  .rx-dem { font-size: 24px; }
+}
+/* Man thap (dien thoai co thanh trinh duyet): khung ve + nut nop van vua mot man */
+@media (max-height: 720px) {
+  .deck-head:has(+ .rx-scroll) { margin-bottom: 8px; }
+  .rx-seg { margin-bottom: 10px; }
+  .rx-panel { gap: 8px; }
+  .rx-de { line-height: 1.6; }
+  .rx-khung { max-width: clamp(170px, 28dvh, 240px); }
+}

@@ -11,8 +11,8 @@
  *   ca-hai : meo 2D + meo 3D dung canh nhau      meo   : chi meo 2D
  *   meo3d  : chi meo 3D                          an    : an het
  *   nguoi  : co gai anime 3D (VRM)
- * Nut tron o goc phai chi bat / tat (1 lan bam la an, bam lai hien che do truoc do). Cac che do
- * so sanh khac chi mo bang localStorage / ?sensei=.
+ * Nut tron o goc phai (dien thoai: tren thanh tren) chi bat / tat (1 lan bam la an, bam lai hien che do
+ * truoc do). Cac che do so sanh khac chi mo bang localStorage / ?sensei=.
  * Nhan vat nao nap loi (khong co WebGL, mat mang CDN, hong tep) goi hub.loi(kieu) -> tu doi sang meo 2D.
  *
  * Moi nhan vat tu dang ky bang SenseiAvatarHub.dangKy(api), api co:
@@ -135,17 +135,30 @@
   function taoNut() {
     nut = document.createElement('button');
     nut.type = 'button';
+    // Dang nut bieu tuong chung cua app (.ctl-icon trong css/styles.css); chi vi tri dat o day.
     // Lop 4: ngay tren meo (3) nhung duoi bang sua loi, bang phan, o chat, the ron, chon bai
-    Object.assign(nut.style, { position: 'fixed', right: '10px', zIndex: '4', minWidth: '34px', height: '34px',
-      padding: '0 6px', borderRadius: '17px', border: '1px solid rgba(0,0,0,.12)',
-      background: 'rgba(255,255,255,.88)', fontSize: '16px', cursor: 'pointer',
-      boxShadow: '0 2px 6px rgba(0,0,0,.12)' });
+    nut.className = 'ctl-icon sensei-nut';
+    // Dien thoai (doc <= 640px / nam ngang thap): nut noi o goc phai de len cot loa / anh / mic cua the cuoi
+    // danh sach, hay ngay canh bang phan -> dat han tren thanh tren, canh nut chon bai (thanh duoi da kin cho)
+    const mqTren = matchMedia('(max-width: 640px), (max-height: 500px)');
     const datViTri = () => {
+      const tren = mqTren.matches && document.querySelector('.deck-top-tools');
+      if (tren) {
+        if (nut.parentElement !== tren) tren.insertBefore(nut, document.getElementById('pickerBtn'));
+        nut.classList.add('is-tren');
+        Object.assign(nut.style, { position: '', right: '', bottom: '', zIndex: '' });
+        return;
+      }
+      if (nut.parentElement !== document.body) document.body.appendChild(nut);
+      nut.classList.remove('is-tren');
+      Object.assign(nut.style, { position: 'fixed', zIndex: '4' });
       const day = document.querySelector('.deck-bottom')?.offsetHeight || 64;
       nut.style.bottom = (day + 10) + 'px';
-      // Bang phan mo o cot phai (man rong) thi dung ben trai bang, khong bi bang che
-      const bang = innerWidth > 860 && document.body.classList.contains('co-bang') && document.getElementById('bangPhan');
-      nut.style.right = (bang ? Math.max(10, innerWidth - bang.offsetLeft + 10) : 10) + 'px';
+      // Bang phan mo thanh cot phai (man rong) thi dung ben trai bang, khong bi bang che. Xet theo cho that
+      // cua bang (khong theo moc be ngang): man doc bang la tam o day, rong het man.
+      const bang = document.body.classList.contains('co-bang') && document.getElementById('bangPhan');
+      const cotPhai = bang && bang.offsetWidth > 0 && bang.offsetLeft > innerWidth * .35;
+      nut.style.right = (cotPhai ? Math.max(10, innerWidth - bang.offsetLeft + 10) : 10) + 'px';
     };
     // Mot lan bam: an / hien lai che do truoc do (dang xem thu bang ?sensei= thi khong luu)
     nut.addEventListener('click', () => datCheDo(cheDo === 'an' ? hienTruoc : 'an', !CAN[tuUrl]));
@@ -154,9 +167,8 @@
     const day = document.querySelector('.deck-bottom');
     if (day && window.ResizeObserver) new ResizeObserver(datViTri).observe(day);
     new MutationObserver(datViTri).observe(document.body, { attributes: true, attributeFilter: ['class'] });
-    datViTri();
+    datViTri();                     // gan nut vao trang (thanh tren hoac noi tren body)
     setTimeout(datViTri, 800);
-    document.body.appendChild(nut);
   }
 
   function batDau() {

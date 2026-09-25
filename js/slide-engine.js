@@ -96,11 +96,16 @@ window.closeImageLightbox = function(e) {
   if (modal) modal.classList.add('hidden');
 };
 
-// Đóng modal khi bấm phím ESC
+// Đóng modal khi bấm phím ESC.
+// Moi Esc chi dong MOT lop — lop tren cung. Lop nao da xu ly thi goi preventDefault(), cac bo nghe
+// sau (bang chon bai, o chat trong app.js, the ron) thay e.defaultPrevented thi thoi. Anh phong to
+// (z 96) nam tren het, va bo nghe nay dang ky som nhat nen luon xet truoc.
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    window.closeImageLightbox();
-  }
+  if (e.key !== 'Escape' || e.defaultPrevented) return;
+  const modal = document.getElementById('imageLightboxModal');
+  if (!modal || modal.classList.contains('hidden')) return;
+  e.preventDefault();
+  window.closeImageLightbox();
 });
 
 /**
@@ -108,6 +113,10 @@ document.addEventListener('keydown', (e) => {
  * Dung de biet doan chu nao cho phep boi den va phat am.
  */
 const CO_CHU_NHAT = /[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF\u3005\u30FC]/;
+
+/** Moi class vien sang ma applyFocusStyle co the gan (the va chu trong cau) */
+const LOP_DEN_ROI = ['hl-grammar', 'hl-vocab', 'hl-warning', 'hl-reading-inline',
+                     'hl-card-grammar', 'hl-card-vocab', 'hl-card-warning', 'reading-focus'];
 
 class SlideEngine {
   constructor(loader) {
@@ -174,6 +183,9 @@ class SlideEngine {
       for (const nut of el.childNodes) {
         if (nut.nodeType === 3 && CO_CHU_NHAT.test(nut.nodeValue || '')) {
           el.classList.add('jp-sel');
+          // Mau chua gan lang: chi gan khi ca the toan chu Nhat (the tron Viet + Nhat ma gan ja
+          // thi phan tieng Viet doi sang font Nhat, vo dau)
+          if (!el.closest('[lang="ja"]') && !/[A-Za-zÀ-ɏḀ-ỿ]/.test(el.textContent || '')) el.lang = 'ja';
           return;
         }
       }
@@ -261,7 +273,7 @@ class SlideEngine {
       const preview = text.length > 15 ? text.slice(0, 15) + '…' : text;
       badge.innerHTML = `
         <i class="fa-solid fa-volume-high text-amber-300 text-xs"></i>
-        <span>Phát âm: <strong class="text-amber-200 font-serif font-bold">"${this.escapeHtml(preview)}"</strong></span>
+        <span>Phát âm: <strong class="text-amber-200 font-bold" lang="ja">"${this.escapeHtml(preview)}"</strong></span>
       `;
       badge.classList.remove('hidden');
     };
@@ -333,6 +345,7 @@ class SlideEngine {
     if (tabName === 'exercise') tabName = 'quiz';
 
     this.activeTab = tabName;
+    document.body.dataset.tab = tabName;   // CSS dung: vd chi hien nut truoc/sau o chuong ngu phap
     this.clearReadingFocus();   // sang chuong khac thi tat den roi dang bat
 
     // Cập nhật UI tabs
@@ -471,7 +484,6 @@ class SlideEngine {
   // 1. Phân môn Từ vựng (Vocabulary)
   renderVocab() {
     const vocabs = this.loader.getVocabList(this.currentLevel, this.currentLesson);
-    const lesson = this.loader.getLesson(this.currentLevel, this.currentLesson);
 
     if (this.levelBadge) this.levelBadge.innerText = this.currentLevel;
     if (this.lessonNum) this.lessonNum.innerText = this.currentLesson;
@@ -491,131 +503,80 @@ class SlideEngine {
       return;
     }
 
+    // Loai tu hien bang chu xam tron (thong tin phu, khong can chip mau).
+    // Giao trinh thuc te ghi loai tu bang tieng Anh day du (adjective, adverb...)
+    // — thieu khoa thi hien nguyen chu Anh.
     const typeLabels = {
-      "noun": { text: "Danh từ", color: "bg-blue-500/20 text-blue-300 border-blue-500/30" },
-      "verb": { text: "Động từ", color: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30" },
-      "adj-i": { text: "Tính từ -i", color: "bg-amber-500/20 text-amber-300 border-amber-500/30" },
-      "adj-na": { text: "Tính từ -na", color: "bg-orange-500/20 text-orange-300 border-orange-500/30" },
-      "particle": { text: "Trợ từ", color: "bg-purple-500/20 text-purple-300 border-purple-500/30" },
-      "adnominal": { text: "Đại từ chỉ định", color: "bg-cyan-500/20 text-cyan-300 border-cyan-500/30" },
-      "counter": { text: "Lượng từ đếm", color: "bg-teal-500/20 text-teal-300 border-teal-500/30" },
-      "phrase": { text: "Thành ngữ / Câu", color: "bg-pink-500/20 text-pink-300 border-pink-500/30" },
-      // Giao trinh thuc te ghi loai tu bang tieng Anh day du (adjective, adverb...)
-      // — thieu khoa thi nhan hien nguyen chu Anh mau xam. Chi dung ho mau da
-      // chinh cho nen giay (index.html), lime/sky mac dinh qua nhat tren nen sang.
-      "adjective": { text: "Tính từ", color: "bg-amber-500/20 text-amber-300 border-amber-500/30" },
-      "adverb": { text: "Phó từ", color: "bg-teal-500/20 text-teal-300 border-teal-500/30" },
-      "pronoun": { text: "Đại từ", color: "bg-orange-500/20 text-orange-300 border-orange-500/30" },
-      "expression": { text: "Cụm từ / Mẫu câu", color: "bg-pink-500/20 text-pink-300 border-pink-500/30" },
-      "determiner": { text: "Từ chỉ định", color: "bg-cyan-500/20 text-cyan-300 border-cyan-500/30" }
+      "noun": "Danh từ",
+      "verb": "Động từ",
+      "adj-i": "Tính từ -i",
+      "adj-na": "Tính từ -na",
+      "particle": "Trợ từ",
+      "adnominal": "Đại từ chỉ định",
+      "counter": "Lượng từ đếm",
+      "phrase": "Thành ngữ / Câu",
+      "adjective": "Tính từ",
+      "adverb": "Phó từ",
+      "pronoun": "Đại từ",
+      "expression": "Cụm từ / Mẫu câu",
+      "determiner": "Từ chỉ định"
     };
 
-    const typeIcons = {
-      "noun": "fa-cube",
-      "verb": "fa-person-running",
-      "adj-i": "fa-wand-magic-sparkles",
-      "adj-na": "fa-palette",
-      "particle": "fa-link",
-      "adnominal": "fa-hand-pointer",
-      "counter": "fa-arrow-down-1-9",
-      "phrase": "fa-comment-dots",
-      "adjective": "fa-wand-magic-sparkles",
-      "adverb": "fa-gauge",
-      "pronoun": "fa-user",
-      "expression": "fa-comment-dots",
-      "determiner": "fa-hand-pointer"
-    };
-
-    const vocabCardsHtml = vocabs.map((v, idx) => {
-      const typeInfo = typeLabels[v.wordType] || { text: this.escapeHtml(v.wordType) || "Từ vựng", color: "bg-slate-700/50 text-slate-300 border-slate-600" };
-      const iconClass = typeIcons[v.wordType] || "fa-book";
+    const vocabCardsHtml = vocabs.map((v) => {
+      const typeText = typeLabels[v.wordType] || this.escapeHtml(v.wordType) || "Từ vựng";
       const kanjiOrWord = v.kanji || v.word;
+      // lang="ja" dat thang len ruby/span: quy tac `ruby { serif }` trong styles.css
+      // thang ke thua, dat o the cha thi chu Han lai ra Mincho.
       const displayWord = v.kanji && v.furigana && v.furigana !== v.kanji
-        ? `<ruby class="text-xl md:text-2xl font-bold text-ink">${this.escapeHtml(v.kanji)}<rt class="text-[11px] text-indigo-300 font-normal font-sans">${this.escapeHtml(v.furigana)}</rt></ruby>`
-        : `<span class="text-xl md:text-2xl font-bold text-ink">${this.escapeHtml(v.word)}</span>`;
+        ? `<ruby lang="ja" class="vc-word">${this.escapeHtml(v.kanji)}<rt>${this.escapeHtml(v.furigana)}</rt></ruby>`
+        : `<span lang="ja" class="vc-word">${this.escapeHtml(v.word)}</span>`;
 
-      const romajiHtml = v.romaji ? `<span class="text-xs text-slate-400 font-mono">[${this.escapeHtml(v.romaji)}]</span>` : '';
+      // Mot dong phu: romaji · loai tu (chu tron, khong ngoac, khong monospace)
+      const metaHtml = [v.romaji ? this.escapeHtml(v.romaji) : '', typeText].filter(Boolean).join(' · ');
+      // Ghi chu toi da 2 dong; title giu ban day du de di chuot doc het (F149/F169)
       const accentHtml = v.accentNote ? `
-        <div class="text-[11px] text-slate-400 mt-1 flex items-center gap-1.5">
-          <i class="fa-solid fa-circle-info text-[10px] text-indigo-400 shrink-0"></i>
-          <span class="truncate">${this.escapeHtml(v.accentNote)}</span>
-        </div>
-      ` : '';
+            <div class="vc-note" title="${this.escapeHtml(v.accentNote)}">${this.escapeHtml(v.accentNote)}</div>` : '';
 
-      // Visual Thumbnail or Fallback Themed Badge
+      // Anh nho: anh that -> hinh ve SVG -> khong co gi (khong lap lai chu cua tu).
+      // Giu .shrink-0: choGanHuyHieu() dung no de khong gan "Dang doc…" vao o anh.
+      const artSvg = v.imageUrl ? null : this.artFor(v);
       const visualThumbnailHtml = v.imageUrl ? `
-        <div 
-          class="relative w-14 h-14 md:w-16 md:h-16 rounded-xl overflow-hidden bg-slate-900 border border-slate-700/70 shrink-0 group/img cursor-pointer shadow-sm"
-          onclick="window.openImageLightbox('${this.jsAttr(v.imageUrl)}', '${this.jsAttr(kanjiOrWord)} (${this.jsAttr(v.furigana || v.word)})', '${this.jsAttr(v.meaningVi)}')"
-          title="Bấm để xem ảnh phóng to"
-        >
-          <img 
-            src="${v.imageUrl}" 
-            alt="${this.escapeHtml(v.imageAlt || v.meaningVi)}" 
-            class="w-full h-full object-cover transition-transform duration-300 group-hover/img:scale-110" 
-            loading="lazy" 
-            onerror="this.parentElement.innerHTML = \`<div class='w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-indigo-950 to-slate-900 text-indigo-300 border border-indigo-500/30 text-center p-1'><i class='fa-solid ${iconClass} text-xs mb-0.5 text-indigo-400'></i><span class='text-[10px] font-bold font-serif leading-tight text-slate-200'>${this.escapeHtml(kanjiOrWord.slice(0, 2))}</span></div>\`;"
-          />
-          <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover/img:opacity-100 transition flex items-center justify-center text-ink text-xs">
-            <i class="fa-solid fa-magnifying-glass-plus"></i>
-          </div>
-        </div>
-      ` : (this.artFor(v) ? `
-        <div class="sensei-art sensei-art-sm shrink-0" title="Minh hoạ: ${this.escapeHtml(v.meaningVi || "")}">${this.artFor(v)}</div>
-      ` : `
-        <div class="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-gradient-to-br from-indigo-950/70 via-slate-900 to-slate-950 border border-slate-800 flex flex-col items-center justify-center text-center shrink-0 shadow-inner group-hover:border-indigo-500/40 transition">
-          <i class="fa-solid ${iconClass} text-xs text-indigo-400 mb-0.5"></i>
-          <span class="text-[11px] font-bold font-serif text-slate-300 leading-tight">${this.escapeHtml(kanjiOrWord.slice(0, 2))}</span>
-        </div>
-      `);
+          <div class="vc-thumb shrink-0"
+               onclick="window.openImageLightbox('${this.jsAttr(v.imageUrl)}', '${this.jsAttr(kanjiOrWord)} (${this.jsAttr(v.furigana || v.word)})', '${this.jsAttr(v.meaningVi)}')"
+               title="Bấm để xem ảnh phóng to">
+            <img src="${this.escapeHtml(v.imageUrl)}" alt="${this.escapeHtml(v.imageAlt || v.meaningVi)}" loading="lazy"
+                 onerror="this.parentElement.remove()" />
+          </div>`
+        : (artSvg ? `
+          <div class="sensei-art sensei-art-sm shrink-0" title="Minh hoạ: ${this.escapeHtml(v.meaningVi || "")}">${artSvg}</div>` : '');
 
+      // Chu dung truoc, cot phai (loa tren, anh duoi) dung sau: the co anh hay
+      // khong thi tu van thang mep trai, loa van o goc phai tren.
       return `
-        <div id="${this.escapeHtml(v.id)}" class="p-3 bg-slate-950/70 border border-slate-800/90 hover:border-indigo-500/60 rounded-xl transition duration-200 flex items-start gap-3 group">
-          ${visualThumbnailHtml}
-          <div class="flex-1 min-w-0 flex flex-col justify-between h-full">
-            <div>
-              <div class="flex items-start justify-between gap-1.5 mb-1">
-                <div class="flex items-baseline gap-1.5 flex-wrap min-w-0">
-                  ${displayWord}
-                  ${romajiHtml}
-                </div>
-                <div class="flex items-center gap-1.5 shrink-0">
-                  <span class="text-[10px] px-2 py-0.5 rounded-md border font-medium ${typeInfo.color}">
-                    ${typeInfo.text}
-                  </span>
-                  <button 
-                    type="button"
-                    onclick="window.playSpeech('${this.jsAttr(v.kanji || v.word)}', '${this.jsAttr(v.id)}')"
-                    class="w-7 h-7 rounded-lg bg-indigo-950/60 hover:bg-indigo-700 text-indigo-300 hover:text-white border border-indigo-500/30 flex items-center justify-center transition cursor-pointer active:scale-95 shrink-0"
-                    title="Nghe phát âm chuẩn"
-                  >
-                    <i class="fa-solid fa-volume-high text-xs"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="text-sm md:text-base text-slate-200 font-medium leading-relaxed">
-                ${this.escapeHtml(v.meaningVi)}
-              </div>
-            </div>
-            ${accentHtml}
+        <div id="${this.escapeHtml(v.id)}" class="deck-card vc-card p-3">
+          <div class="vc-body">
+            <div class="vc-word-row">${displayWord}</div>
+            <div class="vc-meta">${metaHtml}</div>
+            <div class="vc-mean">${this.escapeHtml(v.meaningVi)}</div>${accentHtml}
           </div>
-        </div>
-      `;
+          <div class="vc-side">
+            <button type="button" class="icon-btn"
+                    onclick="window.playSpeech('${this.jsAttr(v.kanji || v.word)}', '${this.jsAttr(v.id)}')"
+                    title="Nghe phát âm chuẩn" aria-label="Nghe phát âm">
+              <i class="fa-solid fa-volume-high"></i>
+            </button>${visualThumbnailHtml}
+          </div>
+        </div>`;
     }).join("");
 
     if (this.slideContent) {
       this.slideContent.className = "deck-content slide-fade-enter";
       this.slideContent.innerHTML = `
-        <div class="mb-3 flex items-center justify-between">
-          <div>
-            <h2 class="text-xl md:text-2xl font-bold text-ink flex items-center gap-2.5">
-              <i class="fa-solid fa-book text-indigo-400"></i>
-              <span>Từ vựng trọng tâm: ${this.escapeHtml(lesson?.title || '')}</span>
-            </h2>
-            <p class="text-xs text-slate-400 mt-0.5">Bấm biểu tượng loa để nghe phát âm giọng bản xứ chuẩn. Sensei sẽ giảng dạy và giải thích cách dùng.</p>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 deck-scroll custom-scrollbar">
+        <header class="deck-head" title="Bấm biểu tượng loa để nghe phát âm giọng bản xứ. Bấm vào thẻ để xem hình minh hoạ và ghi chú.">
+          <h2 class="deck-h2">Từ vựng</h2>
+          <span class="deck-meta">${vocabs.length} từ · bấm loa để nghe</span>
+        </header>
+        <div class="vc-list grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 deck-scroll custom-scrollbar">
           ${vocabCardsHtml}
         </div>
       `;
@@ -625,7 +586,6 @@ class SlideEngine {
   // 2. Phân môn Chữ Hán (Kanji)
   renderKanji() {
     const kanjis = this.loader.getKanjiList(this.currentLevel, this.currentLesson);
-    const lesson = this.loader.getLesson(this.currentLevel, this.currentLesson);
 
     if (this.levelBadge) this.levelBadge.innerText = this.currentLevel;
     if (this.lessonNum) this.lessonNum.innerText = this.currentLesson;
@@ -645,81 +605,54 @@ class SlideEngine {
       return;
     }
 
+    let coNetViet = false;   // co chu nao co du lieu net -> the mo ra se viet tung net
     const kanjiCardsHtml = kanjis.map(k => {
+      // Tu ghep: danh sach phang, gach manh giua cac dong; nghia nam ngay canh tu
+      // (luoi auto/1fr), khong day ra tan mep phai the.
       const commonWordsHtml = (k.commonWords || []).map(cw => `
-        <div class="flex items-center justify-between bg-slate-900/90 px-2.5 py-1.5 rounded-lg border border-slate-800 text-xs">
-          <div class="flex items-baseline gap-1.5">
-            <span class="font-bold text-indigo-200">${this.escapeHtml(cw.word)}</span>
-            <span class="text-[11px] text-slate-400 font-sans">(${this.escapeHtml(cw.furigana)})</span>
-          </div>
-          <div class="text-slate-300 text-[11px]">${this.escapeHtml(cw.meaningVi)}</div>
-        </div>
-      `).join("");
+              <li>
+                <span class="kj-wj"><span lang="ja" class="kj-w">${this.escapeHtml(cw.word)}</span>${cw.furigana ? `<span lang="ja" class="kj-r">${this.escapeHtml(cw.furigana)}</span>` : ''}</span>
+                <span class="kj-m">${this.escapeHtml(cw.meaningVi)}</span>
+              </li>`).join("");
+      const doc = (arr) => (arr || []).map(x => this.escapeHtml(x)).join(', ') || '—';
+      if (this._coVietNet(k.character)) coNetViet = true;
 
+      // O chu KHONG mang .font-bold / span: choGanHuyHieu() lay phan tu khop dau tien
+      // lam cho gan "Dang doc…" — o chu 64px ma bi gan vao thi vo dong.
       return `
-        <div id="${this.escapeHtml(k.id)}" class="p-4 bg-slate-950/80 border border-slate-800 hover:border-amber-500/50 rounded-2xl transition space-y-3">
-          <div class="flex items-start justify-between gap-3">
-            <div class="flex items-center gap-3">
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-950 to-slate-900 border border-indigo-500/40 flex items-center justify-center text-4xl font-serif text-amber-300 font-bold shadow-inner">
-                ${this.escapeHtml(k.character)}
-              </div>
-              <div>
-                <div class="flex items-center gap-2">
-                  <span class="text-xs font-bold text-amber-400 tracking-wider font-mono">HÁN VIỆT: ${this.escapeHtml(k.hanViet)}</span>
-                  <span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700 font-mono">${k.strokeCount} nét</span>
-                </div>
-                <div class="text-xs text-slate-300 font-medium mt-0.5">${this.escapeHtml(k.meaningVi)}</div>
-              </div>
+        <div id="${this.escapeHtml(k.id)}" class="deck-card kj-card p-4">
+          <div class="kj-top">
+            <div class="kj-glyph jp-serif shrink-0" lang="ja">${this.escapeHtml(k.character)}</div>
+            <div class="kj-id">
+              <div class="kj-line1"><span class="kj-hv" title="Âm Hán Việt">${this.escapeHtml(k.hanViet)}</span><span class="kj-strokes"> · ${this.escapeHtml(String(k.strokeCount ?? '?'))} nét</span></div>
+              <div class="kj-mean">${this.escapeHtml(k.meaningVi)}</div>
             </div>
-            <button 
-              type="button"
-              onclick="window.playSpeech('${this.jsAttr(k.character)}', '${this.jsAttr(k.id)}')"
-              class="w-8 h-8 rounded-xl bg-slate-900 hover:bg-amber-600 hover:text-white text-amber-400 border border-slate-800 flex items-center justify-center transition cursor-pointer active:scale-95"
-              title="Phát âm chữ Hán"
-            >
-              <i class="fa-solid fa-volume-high text-xs"></i>
+            <button type="button" class="icon-btn"
+                    onclick="window.playSpeech('${this.jsAttr(k.character)}', '${this.jsAttr(k.id)}')"
+                    title="Phát âm chữ Hán" aria-label="Phát âm chữ Hán">
+              <i class="fa-solid fa-volume-high"></i>
             </button>
           </div>
-
-          <!-- On / Kun Readings -->
-          <div class="grid grid-cols-2 gap-2 text-xs bg-slate-900/60 p-2.5 rounded-xl border border-slate-800/80">
-            <div>
-              <span class="text-[10px] font-bold uppercase text-slate-400 block mb-0.5">Âm On (Âm Hán):</span>
-              <span class="text-indigo-300 font-medium">${(k.onyomi || []).map(x => this.escapeHtml(x)).join(', ') || '-'}</span>
-            </div>
-            <div>
-              <span class="text-[10px] font-bold uppercase text-slate-400 block mb-0.5">Âm Kun (Âm Nhật):</span>
-              <span class="text-emerald-300 font-medium">${(k.kunyomi || []).map(x => this.escapeHtml(x)).join(', ') || '-'}</span>
-            </div>
-          </div>
-
-          <!-- Common Words (Jukugo) -->
-          <div>
-            <span class="text-[11px] font-bold text-slate-400 block mb-1.5 flex items-center gap-1">
-              <i class="fa-solid fa-cubes text-[10px] text-amber-400"></i>
-              <span>Từ ghép thực tế (Jukugo):</span>
-            </span>
-            <div class="space-y-1">
-              ${commonWordsHtml}
-            </div>
-          </div>
-        </div>
-      `;
+          <dl class="kj-read">
+            <dt title="Âm On (âm Hán)">Âm On</dt><dd lang="ja">${doc(k.onyomi)}</dd>
+            <dt title="Âm Kun (âm Nhật)">Âm Kun</dt><dd lang="ja">${doc(k.kunyomi)}</dd>
+          </dl>${commonWordsHtml ? `
+          <div class="kj-words-box">
+            <div class="kj-label">Từ ghép</div>
+            <ul class="kj-words">${commonWordsHtml}
+            </ul>
+          </div>` : ''}
+        </div>`;
     }).join("");
 
     if (this.slideContent) {
       this.slideContent.className = "deck-content slide-fade-enter";
       this.slideContent.innerHTML = `
-        <div class="mb-3 flex items-center justify-between">
-          <div>
-            <h2 class="text-xl md:text-2xl font-bold text-ink flex items-center gap-2.5">
-              <i class="fa-solid fa-square-pen text-amber-400"></i>
-              <span>Chữ Hán Kanji trọng tâm: ${this.escapeHtml(lesson?.title || '')}</span>
-            </h2>
-            <p class="text-xs text-slate-400 mt-0.5">Nắm vững âm Hán Việt, cách đọc On/Kun và các từ ghép thường xuất hiện trong đề thi JLPT.</p>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 deck-scroll custom-scrollbar">
+        <header class="deck-head" title="Âm Hán Việt, cách đọc On / Kun và các từ ghép thường gặp trong đề thi JLPT.">
+          <h2 class="deck-h2">Chữ Hán</h2>
+          <span class="deck-meta">${kanjis.length} chữ · ${coNetViet ? 'bấm thẻ để xem cách viết' : 'bấm thẻ để xem chi tiết'}</span>
+        </header>
+        <div class="kj-list grid grid-cols-1 md:grid-cols-2 gap-3 deck-scroll custom-scrollbar">
           ${kanjiCardsHtml}
         </div>
       `;
@@ -756,7 +689,8 @@ class SlideEngine {
 
     if (this.levelBadge) this.levelBadge.innerText = this.currentLevel;
     if (this.lessonNum) this.lessonNum.innerText = this.currentLesson;
-    if (this.slideIndexLabel) this.slideIndexLabel.innerText = `Slide ${slideIndex + 1}/${totalSlides}`;
+    // Chi so: chu "Slide" chiem cho tren thanh duoi dien thoai
+    if (this.slideIndexLabel) this.slideIndexLabel.innerText = `${slideIndex + 1}/${totalSlides}`;
     // Chan hai dau: nut bi disabled thi khong bam duoc, ben app.js cung khong
     // tam dung bai giang / cat tieng vi mot cu bam khong di dau ca.
     if (this.prevSlideBtn) this.prevSlideBtn.disabled = slideIndex <= 0;
@@ -764,111 +698,64 @@ class SlideEngine {
 
     this.clearHighlights();
 
-    // Render Ví dụ & Tokens có ruby annotation
-    const examplesHtml = (slide.examples || []).map((ex, exIdx) => {
-      let fullSentenceText = "";
-      const tokensHtml = (ex.tokens || []).map(tok => {
-        fullSentenceText += (tok.kanji || tok.text || "");
-
-        let innerText = "";
+    // Vi du: token co ruby, tro tu trong tam to nen nhe; dau cau dinh vao chu truoc
+    const examplesHtml = (slide.examples || []).map((ex) => {
+      const fullSentenceText = (ex.tokens || []).map(tok => tok.kanji || tok.text || "").join("");
+      const tokensHtml = this.ghepTokenCau(ex.tokens, (tok, i, ds) => {
         const rt = this.rtCua(tok);
-        if (rt) {
-          innerText = `<ruby>${this.escapeHtml(tok.kanji)}<rt class="text-[10px] text-slate-400 font-sans">${this.escapeHtml(rt)}</rt></ruby>`;
-        } else {
-          innerText = this.escapeHtml(tok.text || "");
-        }
-
-        const baseClass = tok.isKeyGrammar 
-          ? "inline-block px-1.5 py-0.5 rounded transition border border-indigo-500/60 bg-indigo-950/50 text-indigo-200 font-bold cursor-pointer hover:border-indigo-400 hover:text-ink"
-          : "inline-block px-1 py-0.5 rounded transition cursor-pointer text-slate-200 hover:text-ink hover:bg-slate-800/60";
-
-        return `<span id="${this.escapeHtml(tok.id)}" onclick="window.playSpeech('${this.jsAttr(tok.kanji || tok.text)}', '${this.jsAttr(tok.id)}'); event.stopPropagation();" class="${baseClass}" title="Bấm để nghe đọc: ${this.escapeHtml(tok.text)}">${innerText}</span>`;
-      }).join(" ");
+        const inner = rt
+          ? this.rubyCau(tok, rt, i, ds)
+          : this.escapeHtml(tok.text || "");
+        return `<span id="${this.escapeHtml(tok.id)}" onclick="window.playSpeech('${this.jsAttr(tok.kanji || tok.text)}', '${this.jsAttr(tok.id)}'); event.stopPropagation();" class="jp-tok${tok.isKeyGrammar ? ' is-key' : ''}" title="Bấm để nghe đọc: ${this.escapeHtml(tok.text)}">${inner}</span>`;
+      });
 
       const exImageHtml = ex.imageUrl ? `
-        <div 
-          class="w-14 h-14 md:w-16 md:h-16 rounded-xl overflow-hidden bg-slate-900 border border-indigo-500/30 shrink-0 cursor-pointer group/eximg relative shadow-md"
-          onclick="window.openImageLightbox('${this.jsAttr(ex.imageUrl)}', 'Tình huống ví dụ', '${this.jsAttr(ex.meaningVi || "")}')"
-          title="Bấm để xem ảnh tình huống phóng to"
-        >
-          <img 
-            src="${ex.imageUrl}" 
-            alt="${this.escapeHtml(ex.meaningVi || '')}" 
-            class="w-full h-full object-cover transition duration-300 group-hover/eximg:scale-110" 
-            loading="lazy" 
-            onerror="this.parentElement.style.display='none'"
-          />
-          <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover/eximg:opacity-100 transition flex items-center justify-center text-ink text-xs">
-            <i class="fa-solid fa-magnifying-glass-plus"></i>
-          </div>
-        </div>
-      ` : '';
+        <div class="gp-ex-img"
+             onclick="window.openImageLightbox('${this.jsAttr(ex.imageUrl)}', 'Tình huống ví dụ', '${this.jsAttr(ex.meaningVi || "")}')"
+             title="Bấm để xem ảnh tình huống phóng to">
+          <img src="${ex.imageUrl}" alt="${this.escapeHtml(ex.meaningVi || '')}" loading="lazy"
+               onerror="this.parentElement.style.display='none'" />
+        </div>` : '';
 
       return `
-        <div id="${this.escapeHtml(ex.id)}" class="p-3.5 bg-slate-950/70 border border-slate-800/80 rounded-xl space-y-1.5 hover:border-slate-700 transition">
-          <div class="flex items-start gap-3">
-            ${exImageHtml}
-            <div class="flex-1 min-w-0 space-y-1.5">
-              <div class="flex items-start justify-between gap-2">
-                <div class="text-lg md:text-2xl text-ink font-medium flex flex-wrap items-end gap-x-1.5 gap-y-3">
-                  ${tokensHtml}
-                </div>
-                <button 
-                  type="button"
-                  onclick="window.playSpeech('${this.jsAttr(fullSentenceText)}', '${this.jsAttr(ex.id)}')"
-                  class="w-7 h-7 rounded-lg bg-indigo-950/60 hover:bg-indigo-700 text-indigo-300 hover:text-white border border-indigo-500/30 flex items-center justify-center transition cursor-pointer shrink-0 active:scale-95"
-                  title="Nghe câu ví dụ"
-                >
-                  <i class="fa-solid fa-volume-high text-xs"></i>
-                </button>
-              </div>
-              <div class="text-sm text-slate-400 italic flex items-center gap-1.5">
-                <i class="fa-solid fa-language text-slate-500 text-[11px]"></i>
-                <span>${this.escapeHtml(ex.meaningVi || "")}</span>
-              </div>
+        <div id="${this.escapeHtml(ex.id)}" class="deck-card gp-ex">
+          ${exImageHtml}
+          <div class="gp-ex-body">
+            <div class="gp-ex-line">
+              <div class="jp-sentence" lang="ja">${tokensHtml}</div>
+              <button type="button" class="icon-btn"
+                      onclick="window.playSpeech('${this.jsAttr(fullSentenceText)}', '${this.jsAttr(ex.id)}')"
+                      title="Nghe câu ví dụ" aria-label="Nghe câu ví dụ">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
             </div>
+            <div class="gp-ex-mean">${this.escapeHtml(ex.meaningVi || "")}</div>
           </div>
-        </div>
-      `;
+        </div>`;
     }).join("");
 
-    const teacherTipHtml = slide.teacherTips ? `
-      <div class="mt-2.5 p-2.5 bg-indigo-950/20 border border-indigo-500/30 rounded-xl text-xs text-indigo-200/90 flex items-start gap-2">
-        <i class="fa-solid fa-graduation-cap text-indigo-400 text-sm mt-0.5 shrink-0"></i>
-        <div>
-          <span class="font-bold text-indigo-300">Lời khuyên của Sensei:</span>
-          <span class="text-slate-300 ml-1">${this.escapeHtml(slide.teacherTips)}</span>
-        </div>
-      </div>
-    ` : '';
-
-    const culturalNoteHtml = slide.culturalNotes ? `
-      <div class="mt-2 p-2.5 bg-amber-950/20 border border-amber-500/30 rounded-xl text-xs text-amber-200/90 flex items-start gap-2">
-        <i class="fa-solid fa-lightbulb text-amber-400 text-sm mt-0.5 shrink-0"></i>
-        <div>
-          <span class="font-bold text-amber-300">Văn hóa & Ứng xử Nhật Bản:</span>
-          <span class="text-slate-300 ml-1">${this.escapeHtml(slide.culturalNotes)}</span>
-        </div>
-      </div>
-    ` : '';
+    const teacherTipHtml = slide.teacherTips
+      ? `<p class="deck-note gp-note"><b>Lời khuyên:</b> ${this.escapeHtml(slide.teacherTips)}</p>` : '';
+    const culturalNoteHtml = slide.culturalNotes
+      ? `<p class="deck-note is-gold gp-note"><b>Văn hóa Nhật:</b> ${this.escapeHtml(slide.culturalNotes)}</p>` : '';
+    const soViDu = (slide.examples || []).length;
 
     if (this.slideContent) {
       this.slideContent.className = "deck-content slide-fade-enter";
+      // Tieu de o ngoai, con lai nam trong vung cuon — giai thich dai khong
+      // chiem cho co dinh tren man hinh thap (dien thoai ngang)
       this.slideContent.innerHTML = `
-        <div class="mb-3">
-          <h2 class="text-xl md:text-3xl font-bold text-ink mb-2 flex items-center gap-2.5">
-            <i class="fa-solid fa-chalkboard-user text-indigo-400"></i>
-            <span>${this.escapeHtml(slide.title)}</span>
-          </h2>
-          <p class="text-sm md:text-base text-slate-300 leading-relaxed max-w-4xl">${this.escapeHtml(slide.explanation)}</p>
-        </div>
-
-        <div class="inline-flex items-center gap-2 text-xs bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 px-3 py-1.5 rounded-lg mb-3 font-mono font-semibold shadow-inner">
-          <span class="text-indigo-400 uppercase text-[10px] font-sans font-bold tracking-wider">Cấu trúc:</span>
-          <span>${this.escapeHtml(slide.grammarFormula)}</span>
-        </div>
-
-        <div class="space-y-2.5 mt-2 deck-scroll custom-scrollbar">
+        <header class="deck-head">
+          <h2 class="deck-h2 jp-keep">${this.escapeHtml(slide.title)}</h2>
+          ${soViDu ? `<span class="deck-meta" title="Bấm vào từng từ để nghe đọc">${soViDu} ví dụ</span>` : ''}
+        </header>
+        <div class="deck-scroll custom-scrollbar gp-list">
+          ${slide.explanation ? `<p class="gp-explain">${this.escapeHtml(slide.explanation)}</p>` : ''}
+          ${slide.grammarFormula ? `
+          <div class="gp-formula">
+            <span class="gp-formula-label">Cấu trúc</span>
+            <span class="gp-formula-text">${this.escapeHtml(slide.grammarFormula).replace(/[　-ヿ㐀-䶿一-鿿！-｠]+/g, '<span lang="ja">$&</span>')}</span>
+          </div>` : ''}
           ${examplesHtml}
           ${teacherTipHtml}
           ${culturalNoteHtml}
@@ -908,81 +795,78 @@ class SlideEngine {
       return;
     }
 
-    const dialogueHtml = dialogue.map((line, idx) => {
-      let fullText = "";
-      const tokensHtml = (line.tokens || []).map(tok => {
-        fullText += (tok.kanji || tok.text || "");
+    // Ben trai / phai chon THEO NGUOI NOI, khong theo tung cau: mot nguoi luc
+    // personA luc personB (N5-1: 佐藤) thi van giu mot ben. Lay vai chiem da so
+    // cua nguoi do; vai ghi bang chu ("Đồng nghiệp"...) thi theo thu tu xuat hien.
+    const thuTuNguoi = new Map();
+    const diemVai = new Map();   // >0: nghieng ve A (trai), <0: nghieng ve B (phai)
+    dialogue.forEach(l => {
+      if (!thuTuNguoi.has(l.speaker)) thuTuNguoi.set(l.speaker, thuTuNguoi.size);
+      const d = (l.speakerRole === 'personA' || l.speakerRole === 'sensei') ? 1
+        : (l.speakerRole === 'personB' ? -1 : 0);
+      diemVai.set(l.speaker, (diemVai.get(l.speaker) || 0) + d);
+    });
+    const benPhaiCua = (nguoi) => {
+      const d = diemVai.get(nguoi) || 0;
+      return d !== 0 ? d < 0 : (thuTuNguoi.get(nguoi) || 0) % 2 === 1;
+    };
+    // Ba nguoi tro len: nguoi thu hai cung mot ben (N5-1: 佐藤 roi 山田 deu ben phai) dung vong chu vien,
+    // khong nen dac -> hai luot lien nhau cung ben khong doc thanh mot nguoi
+    const nguoiThu2 = new Set();
+    const soBen = [0, 0];
+    thuTuNguoi.forEach((_, nguoi) => { if (soBen[+benPhaiCua(nguoi)]++ > 0) nguoiThu2.add(nguoi); });
 
-        let innerText = "";
+    const dialogueHtml = dialogue.map((line) => {
+      const fullText = (line.tokens || []).map(tok => tok.kanji || tok.text || "").join("");
+      const tokensHtml = this.ghepTokenCau(line.tokens, (tok, i, ds) => {
         const rt = this.rtCua(tok);
-        if (rt) {
-          innerText = `<ruby>${this.escapeHtml(tok.kanji)}<rt class="text-[10px] text-slate-400 font-sans">${this.escapeHtml(rt)}</rt></ruby>`;
-        } else {
-          innerText = this.escapeHtml(tok.text || "");
-        }
-        return `<span id="${this.escapeHtml(tok.id)}" onclick="window.playSpeech('${this.jsAttr(tok.kanji || tok.text)}', '${this.jsAttr(tok.id)}'); event.stopPropagation();" class="inline-block hover:text-indigo-300 hover:bg-slate-800/50 px-1 py-0.5 rounded transition cursor-pointer" title="Bấm để nghe đọc">${innerText}</span>`;
-      }).join(" ");
+        const inner = rt
+          ? this.rubyCau(tok, rt, i, ds)
+          : this.escapeHtml(tok.text || "");
+        return `<span id="${this.escapeHtml(tok.id)}" onclick="window.playSpeech('${this.jsAttr(tok.kanji || tok.text)}', '${this.jsAttr(tok.id)}'); event.stopPropagation();" class="jp-tok" title="Bấm để nghe đọc">${inner}</span>`;
+      });
 
-      const isPersonA = line.speakerRole === 'personA' || line.speakerRole === 'sensei';
-      const bubbleClass = isPersonA
-        ? "bg-slate-900 border border-indigo-500/30 rounded-2xl rounded-tl-none p-3.5"
-        : "bg-slate-950 border border-slate-800 rounded-2xl rounded-tr-none p-3.5";
+      const benPhai = benPhaiCua(line.speaker);
+      const ten = String(line.speaker || '');
+      const chuDau = Array.from(ten.trim())[0] || '';
 
-      const avatarBg = isPersonA ? "bg-indigo-600 text-white" : "bg-emerald-600 text-white";
-
+      // Chi co anh that moi hien anh; khong thi mot vong tron chu cai dau nho
       const avatarHtml = line.avatarUrl ? `
-        <div 
-          class="w-9 h-9 rounded-full overflow-hidden border-2 ${isPersonA ? 'border-indigo-500' : 'border-emerald-500'} shrink-0 shadow-md cursor-pointer"
-          onclick="window.openImageLightbox('${this.jsAttr(line.avatarUrl)}', '${this.jsAttr(line.speaker)}', 'Nhân vật hội thoại')"
-          title="${this.escapeHtml(line.speaker)}"
-        >
-          <img src="${line.avatarUrl}" alt="${this.escapeHtml(line.speaker)}" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML = \`<div class='w-full h-full ${avatarBg} flex items-center justify-center font-bold text-xs'>${this.escapeHtml(line.speaker.slice(0, 2))}</div>\`;" />
-        </div>
-      ` : `
-        <div class="w-9 h-9 rounded-full ${avatarBg} flex items-center justify-center font-bold text-xs shrink-0 shadow-md">
-          ${this.escapeHtml(line.speaker.slice(0, 2))}
-        </div>
-      `;
+        <div class="kw-ava is-anh"
+             onclick="window.openImageLightbox('${this.jsAttr(line.avatarUrl)}', '${this.jsAttr(ten)}', 'Nhân vật hội thoại')"
+             title="${this.escapeHtml(ten)}">
+          <img src="${line.avatarUrl}" alt="${this.escapeHtml(ten)}"
+               onerror="const o=this.parentElement; o.className='kw-ava is-chu${nguoiThu2.has(line.speaker) ? ' is-vien' : ''}'; o.textContent='${this.jsAttr(chuDau)}';" />
+        </div>` : `
+        <div class="kw-ava is-chu${nguoiThu2.has(line.speaker) ? ' is-vien' : ''}" aria-hidden="true">${this.escapeHtml(chuDau)}</div>`;
 
+      // id nam tren bong thoai (khong phai ca hang): vien sang / rọi den bam dung the
       return `
-        <div id="${this.escapeHtml(line.id)}" class="flex items-start gap-3 p-1">
+        <div class="kw-row${benPhai ? ' is-b' : ''}">
           ${avatarHtml}
-          <div class="flex-1 ${bubbleClass}">
-            <div class="flex items-center justify-between mb-1 gap-2">
-              <span class="text-xs font-bold text-indigo-400">${this.escapeHtml(line.speaker)}</span>
-              <button 
-                type="button"
-                onclick="window.playSpeech('${this.jsAttr(fullText)}', '${this.jsAttr(line.id)}')"
-                class="w-6 h-6 rounded-md bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white flex items-center justify-center text-xs transition cursor-pointer active:scale-95"
-                title="Nghe câu thoại"
-              >
-                <i class="fa-solid fa-volume-high text-[10px]"></i>
+          <div id="${this.escapeHtml(line.id)}" class="deck-card kw-bubble">
+            <div class="kw-top">
+              <span class="kw-name">${this.escapeHtml(ten)}</span>
+              <button type="button" class="icon-btn"
+                      onclick="window.playSpeech('${this.jsAttr(fullText)}', '${this.jsAttr(line.id)}')"
+                      title="Nghe câu thoại" aria-label="Nghe câu thoại">
+                <i class="fa-solid fa-volume-high"></i>
               </button>
             </div>
-            <div class="text-lg md:text-2xl text-ink font-medium leading-relaxed mb-1.5">
-              ${tokensHtml}
-            </div>
-            <div class="text-sm text-slate-400 italic">
-              ${this.escapeHtml(line.meaningVi)}
-            </div>
+            <div class="jp-sentence" lang="ja">${tokensHtml}</div>
+            <div class="kw-mean">${this.escapeHtml(line.meaningVi)}</div>
           </div>
-        </div>
-      `;
+        </div>`;
     }).join("");
 
     if (this.slideContent) {
       this.slideContent.className = "deck-content slide-fade-enter";
       this.slideContent.innerHTML = `
-        <div class="mb-3 flex items-center justify-between">
-          <div>
-            <h2 class="text-xl md:text-2xl font-bold text-ink flex items-center gap-2.5">
-              <i class="fa-solid fa-comments text-indigo-400"></i>
-              <span>Hội thoại thực tế (Kaiwa): ${this.escapeHtml(lesson?.title || '')}</span>
-            </h2>
-            <p class="text-xs text-slate-400 mt-0.5">Luyện tập đàm thoại tự nhiên theo ngữ cảnh thực tế. Sensei sẽ đóng vai cùng học sinh.</p>
-          </div>
-        </div>
-        <div class="space-y-3 deck-scroll custom-scrollbar">
+        <header class="deck-head" title="Luyện đàm thoại theo ngữ cảnh thực tế — Sensei đóng vai cùng học viên. Bấm vào câu để xem kỹ.">
+          <h2 class="deck-h2">Hội thoại</h2>
+          <span class="deck-meta">${dialogue.length} lượt · ${thuTuNguoi.size} người nói</span>
+        </header>
+        <div class="deck-scroll custom-scrollbar kw-list">
           ${dialogueHtml}
         </div>
       `;
@@ -1000,113 +884,97 @@ class SlideEngine {
 
     this.clearHighlights();
 
-    if (!exercises || exercises.length === 0) {
-      // Van giu phan luyen phat am: no lay cau tu giao trinh, khong dinh gi
-      // toi bo de trac nghiem.
-      if (this.slideContent) {
-        this.slideContent.innerHTML = `
-          <div class="text-center py-10 text-slate-400">
-            <i class="fa-solid fa-file-circle-question text-3xl mb-2 text-indigo-400"></i>
-            <p class="font-medium">Chưa có câu trắc nghiệm nào cho bài này.</p>
-          </div>
-          ${this.buildPronunciationBlock()}
-          ${this.buildHandwritingBlock()}
-        `;
-      }
-      return;
-    }
-
-    const quizHtml = exercises.map((ex, qIdx) => {
-      const isTarget = targetExerciseIndex === qIdx;
-      const targetBorder = isTarget ? "border-indigo-500 shadow-lg shadow-indigo-500/20" : "border-slate-800";
-
+    const soCau = (exercises || []).length;
+    const quizHtml = (exercises || []).map((ex, qIdx) => {
       const questionImageHtml = ex.imageUrl ? `
-        <div 
-          class="my-2 rounded-xl overflow-hidden bg-slate-900/90 border border-slate-800 max-h-48 flex items-center justify-center relative group/qimg cursor-pointer shadow-md"
-          onclick="window.openImageLightbox('${this.jsAttr(ex.imageUrl)}', 'Tranh tình huống: Câu ${qIdx + 1}', '${this.jsAttr(ex.question)}')"
-          title="Bấm để xem tranh tình huống đầy đủ"
-        >
-          <img 
-            src="${ex.imageUrl}" 
-            alt="Tranh tình huống câu hỏi" 
-            class="max-h-44 w-auto object-contain transition duration-300 group-hover/qimg:scale-105" 
-            loading="lazy" 
-            onerror="this.parentElement.style.display='none'"
-          />
-          <span class="absolute bottom-2 right-2 px-2 py-0.5 rounded-md bg-slate-950/80 text-[10px] text-slate-300 border border-slate-700 flex items-center gap-1 backdrop-blur-sm">
-            <i class="fa-solid fa-magnifying-glass-plus text-indigo-400"></i> Bấm để phóng to
-          </span>
-        </div>
-      ` : '';
+        <div class="qz-img"
+             onclick="window.openImageLightbox('${this.jsAttr(ex.imageUrl)}', 'Tranh tình huống: Câu ${qIdx + 1}', '${this.jsAttr(ex.question)}')"
+             title="Bấm để xem tranh tình huống đầy đủ">
+          <img src="${ex.imageUrl}" alt="Tranh tình huống câu hỏi" loading="lazy"
+               onerror="this.parentElement.style.display='none'" />
+        </div>` : '';
 
-      const optionsHtml = (ex.options || []).map((opt, optIdx) => {
-        return `
-          <button 
-            type="button"
-            onclick="window.handleSelectOption('${this.jsAttr(ex.id)}', ${optIdx}, ${ex.correctIndex})"
-            id="btn-opt-${ex.id}-${optIdx}"
-            class="w-full text-left px-4 py-3 rounded-xl border border-slate-800 bg-slate-900/90 hover:bg-slate-800 hover:border-slate-700 text-sm md:text-base text-slate-200 transition flex items-center justify-between group cursor-pointer"
-          >
-            <span class="flex items-center gap-2">
-              <span class="w-5 h-5 rounded-md bg-slate-800 text-slate-400 group-hover:text-ink flex items-center justify-center font-mono font-bold text-[11px]">
-                ${String.fromCharCode(65 + optIdx)}
-              </span>
-              <span>${this.escapeHtml(opt)}</span>
-            </span>
+      const optionsHtml = (ex.options || []).map((opt, optIdx) => `
+          <button type="button" class="qz-opt"
+                  onclick="window.handleSelectOption('${this.jsAttr(ex.id)}', ${optIdx}, ${ex.correctIndex})"
+                  id="btn-opt-${ex.id}-${optIdx}">
+            <span class="qz-key">${String.fromCharCode(65 + optIdx)}</span>
+            <span class="qz-opt-text">${this.escapeHtml(opt)}</span>
             <i class="fa-solid fa-circle-check opacity-0 text-emerald-400" id="icon-opt-${ex.id}-${optIdx}"></i>
-          </button>
-        `;
-      }).join("");
+          </button>`).join("");
+
+      // De AI gan san muc do "[Vừa] ..." vao dau cau hoi: dua sang dong so cau,
+      // khong de thanh the rieng truoc cau hoi (du lieu goc giu nguyen)
+      const mMuc = /^\[(Dễ|Vừa|Khó)\]\s*/.exec(ex.question || '');
+      const cauHoi = mMuc ? ex.question.slice(mMuc[0].length) : ex.question;
 
       return `
-        <div id="card-${ex.id}" class="p-4 bg-slate-950/80 border ${targetBorder} rounded-2xl space-y-3 transition">
-          <div class="flex items-start justify-between gap-2">
-            <div class="font-bold text-base md:text-lg text-ink flex items-start gap-2.5">
-              <span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-400 font-mono text-xs shrink-0">Câu ${qIdx + 1}</span>
-              ${ex.generated ? '<span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[10px] shrink-0" title="Đề do AI soạn riêng cho lần học này">AI</span>' : ''}
-              <span class="whitespace-pre-line">${this.escapeHtml(ex.question)}</span>
-            </div>
+        <div id="card-${ex.id}" class="deck-card qz-card${targetExerciseIndex === qIdx ? ' is-target' : ''}">
+          <div class="qz-q">
+            <div class="qz-q-top"><span class="qz-no">Câu ${qIdx + 1}/${soCau}${mMuc ? ' · ' + mMuc[1] : ''}</span></div>
+            <p class="qz-text">${this.escapeHtml(cauHoi)}</p>
           </div>
-
           ${questionImageHtml}
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <div class="qz-opts grid grid-cols-1 md:grid-cols-2 gap-2">
             ${optionsHtml}
           </div>
-
-          <div id="explain-${ex.id}" class="hidden p-3 rounded-xl text-xs space-y-1"></div>
-        </div>
-      `;
+          <div id="explain-${ex.id}" class="hidden"></div>
+        </div>`;
     }).join("");
+
+    // Ba phan trong mot vung cuon dai -> thanh nhay nhanh dinh tren dau vung cuon
+    const phatAmHtml = this.buildPronunciationBlock();
+    const vietTayHtml = this.buildHandwritingBlock();
+    const phan = [];
+    if (soCau) phan.push({ id: 'qz-trac-nghiem', ten: 'Trắc nghiệm', so: soCau });
+    if (phatAmHtml) phan.push({ id: 'qz-phat-am', ten: 'Phát âm', so: (this.pronunciationSet || []).length });
+    if (vietTayHtml) phan.push({ id: 'qz-viet-tay', ten: 'Viết tay', so: (this.handwritingSet || []).length });
+    const navHtml = phan.length > 1 ? `
+          <div class="qz-jump">
+            <nav class="deck-seg" aria-label="Các phần bài tập">
+              ${phan.map((p, i) => `<button type="button" data-qz-toi="${p.id}"${i === 0 ? ' class="is-active"' : ''}>${p.ten} · ${p.so}</button>`).join('')}
+            </nav>
+          </div>` : '';
+
+    const coAI = (exercises || []).some(ex => ex.generated);
+    const meta = [];
+    if (!navHtml && soCau) meta.push(`${soCau} câu`);
+    if (soCau) meta.push(coAI ? 'soạn bởi AI' : 'đề theo giáo trình');
+
+    const tracNghiemHtml = soCau
+      ? `<section id="qz-trac-nghiem" class="qz-sec">${quizHtml}</section>`
+      // Van giu phan luyen phat am / viet tay: chung lay tu giao trinh, khong
+      // dinh gi toi bo de trac nghiem.
+      : `<p class="qz-trong">Chưa có câu trắc nghiệm nào cho bài này.</p>`;
 
     if (this.slideContent) {
       this.slideContent.className = "deck-content slide-fade-enter";
       this.slideContent.innerHTML = `
-        <div class="mb-3 flex items-center justify-between">
-          <div>
-            <h2 class="text-xl md:text-2xl font-bold text-ink flex items-center gap-2.5">
-              <i class="fa-solid fa-pen-clip text-indigo-400"></i>
-              <span>Bài tập thực hành: ${this.escapeHtml(lesson?.title || '')}</span>
-            </h2>
-            <p class="text-xs text-slate-400 mt-0.5">Chọn đáp án đúng. Sensei sẽ lắng nghe, nhận xét và giải thích.</p>
-          </div>
+        <header class="deck-head" title="Chọn đáp án đúng — Sensei nhận xét và giải thích.">
+          <h2 class="deck-h2">Bài tập</h2>
+          ${meta.length ? `<span class="deck-meta">${meta.join(' · ')}</span>` : ''}
+          ${soCau ? `
           <button type="button" id="quizRegenBtn"
                   onclick="window.regenerateQuiz && window.regenerateQuiz()"
                   class="ctl ctl-ghost shrink-0" title="Nhờ AI soạn một bộ đề khác">
             <i class="fa-solid fa-rotate"></i><span>Đổi đề khác</span>
-          </button>
-        </div>
-        <div class="space-y-3 deck-scroll custom-scrollbar">
-          ${quizHtml}
-          ${this.buildPronunciationBlock()}
-          ${this.buildHandwritingBlock()}
+          </button>` : ''}
+        </header>
+        <div class="deck-scroll custom-scrollbar qz-list">
+          ${navHtml}
+          ${tracNghiemHtml}
+          ${phatAmHtml}
+          ${vietTayHtml}
         </div>
       `;
+      this.ganNhayPhanBaiTap();
     }
+
+    if (!soCau) return;
 
     if (targetExerciseIndex !== null) {
       const targetCard = document.getElementById(`card-${exercises[targetExerciseIndex]?.id}`);
-      if (targetCard) targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (targetCard) targetCard.scrollIntoView({ behavior: this._itChuyenDong() ? 'auto' : 'smooth', block: 'center' });
     }
   }
 
@@ -1131,39 +999,114 @@ class SlideEngine {
   renderReflex() {
     if (this.levelBadge) this.levelBadge.innerText = this.currentLevel;
     if (this.lessonNum) this.lessonNum.innerText = this.currentLesson;
-    if (this.slideIndexLabel) this.slideIndexLabel.innerText = 'phản xạ';
+    // Nhan o thanh duoi chi dung cho ngu phap; 'phản xạ' chi lap lai ten tab
+    if (this.slideIndexLabel) this.slideIndexLabel.innerText = '';
     this.clearHighlights();
     if (!this.slideContent) return;
 
+    // Boc trong vung cuon: the cau hoi (khung ve + nut nop + loi phan) cao hon
+    // man hinh dien thoai thap -> truoc day bi cat mat, khong cuon toi duoc.
+    this.slideContent.className = "deck-content slide-fade-enter";
+    // Tieu de nam ngoai cot giua (nhu cac chuong khac) -> khong nhay ngang khi doi tab
     this.slideContent.innerHTML = `
-      <div class="max-w-2xl mx-auto">
-        <div class="mb-4">
-          <h2 class="text-xl md:text-2xl font-bold text-ink flex items-center gap-2.5">
-            <i class="fa-solid fa-bolt text-amber-400"></i>
-            <span>Phản xạ nhanh</span>
-          </h2>
-          <p class="text-xs text-slate-400 mt-1">
-            Không có thời gian nghĩ. Đề hiện ra là làm luôn — Sensei nghe/nhìn rồi phán ngay tại chỗ.
-          </p>
-        </div>
+      <header class="deck-head" title="Không có thời gian nghĩ. Đề hiện ra là làm luôn — Sensei nghe/nhìn rồi phán ngay tại chỗ.">
+        <h2 class="deck-h2">Phản xạ nhanh</h2>
+        <span class="deck-meta">đề hiện ra là làm luôn</span>
+      </header>
+      <div class="deck-scroll custom-scrollbar rx-scroll">
+        <div class="rx-wrap max-w-2xl mx-auto">
+          <div class="deck-seg rx-seg" role="group" aria-label="Chế độ luyện">
+            <button type="button" id="pxCheViet"
+                    onclick="window.doiCheDoPhanXa && window.doiCheDoPhanXa('viet')">
+              <i class="fa-solid fa-pen-nib"></i>Viết nhanh
+            </button>
+            <button type="button" id="pxCheNoi"
+                    onclick="window.doiCheDoPhanXa && window.doiCheDoPhanXa('noi')">
+              <i class="fa-solid fa-microphone-lines"></i>Nói nhanh
+            </button>
+          </div>
 
-        <div class="flex gap-2 mb-4">
-          <button type="button" id="pxCheViet"
-                  onclick="window.doiCheDoPhanXa && window.doiCheDoPhanXa('viet')"
-                  class="flex-1 py-2.5 rounded-xl border text-sm font-medium transition cursor-pointer active:scale-95">
-            <i class="fa-solid fa-pen-nib text-xs mr-1.5"></i>Viết nhanh
-          </button>
-          <button type="button" id="pxCheNoi"
-                  onclick="window.doiCheDoPhanXa && window.doiCheDoPhanXa('noi')"
-                  class="flex-1 py-2.5 rounded-xl border text-sm font-medium transition cursor-pointer active:scale-95">
-            <i class="fa-solid fa-microphone-lines text-xs mr-1.5"></i>Nói nhanh
-          </button>
+          <div id="pxThan" class="rx-than"></div>
         </div>
-
-        <div id="pxThan"></div>
       </div>`;
 
     if (typeof window.veManPhanXa === 'function') window.veManPhanXa();
+  }
+
+  /**
+   * Ghep token thanh cau tieng Nhat, KHONG chen dau cach giua cac tu.
+   * Dau cau (、。！？」…) dinh vao tu dung truoc, ngoac mo (「『（) dinh vao tu
+   * dung sau; ca cum boc trong .jp-tok-nhom (nowrap) nen dau cau khong bao
+   * gio bi day xuong dau dong. Dau cau giu id nhung khong bam / khong phat am.
+   * @param veTu (tok, i, tokens) => HTML cua mot token chu (i, tokens: de rubyCau xet token ben canh)
+   */
+  ghepTokenCau(tokens, veTu) {
+    const DAU_DONG = /^[、。，．,.！？!?・…‥」』）)】〉》]+$/;
+    const DAU_MO = /^[「『（(【〈《]+$/;
+    const cum = [];
+    let choMo = [];
+    const dau = (tok, chu, mo) =>
+      `<span${tok.id ? ` id="${this.escapeHtml(tok.id)}"` : ''} class="tok-dau${mo ? ' tok-mo' : ''}">${this.escapeHtml(chu)}</span>`;
+
+    (tokens || []).forEach((tok, i, ds) => {
+      const chu = String(tok.text || tok.kanji || '');
+      if (DAU_MO.test(chu)) { choMo.push(dau(tok, chu, true)); return; }
+      if (DAU_DONG.test(chu)) {
+        const html = dau(tok, chu, false);
+        if (cum.length && !choMo.length) cum[cum.length - 1].push(html);
+        else { cum.push([...choMo, html]); choMo = []; }
+        return;
+      }
+      cum.push([...choMo, veTu(tok, i, ds)]);
+      choMo = [];
+    });
+    if (choMo.length) cum.push(choMo);
+
+    return cum.map(c => c.length > 1 ? `<span class="jp-tok-nhom">${c.join('')}</span>` : c[0]).join('');
+  }
+
+  /**
+   * Thanh nhay nhanh cua chuong Bai tap: bam la cuon DUNG vung cuon toi phan do
+   * (khong dung scrollIntoView — no con xo lech .deck-canvas overflow:hidden),
+   * cuon tay thi danh dau phan dang xem.
+   */
+  ganNhayPhanBaiTap() {
+    const vung = this.slideContent && this.slideContent.querySelector('.qz-list');
+    const thanh = vung && vung.querySelector('.qz-jump');
+    if (!vung || !thanh) return;
+    const nut = [...thanh.querySelectorAll('[data-qz-toi]')];
+    const danhDau = (id) => nut.forEach(b => b.classList.toggle('is-active', b.dataset.qzToi === id));
+    // Man thap (dien thoai ngang) thanh khong dinh (lesson.css) -> khong tru chieu cao thanh
+    const caoThanh = () => (getComputedStyle(thanh).position === 'sticky' ? thanh.offsetHeight : 0);
+
+    nut.forEach(b => b.addEventListener('click', () => {
+      const phan = document.getElementById(b.dataset.qzToi);
+      if (!phan) return;
+      const dinh = phan.getBoundingClientRect().top - vung.getBoundingClientRect().top
+        + vung.scrollTop - caoThanh() - 6;
+      danhDau(b.dataset.qzToi);
+      vung.scrollTo({ top: Math.max(0, dinh), behavior: 'smooth' });
+    }));
+
+    let cho = false;
+    vung.addEventListener('scroll', () => {
+      if (cho) return;
+      cho = true;
+      setTimeout(() => {
+        cho = false;
+        const moc = vung.getBoundingClientRect().top + caoThanh() + 24;
+        let dang = nut[0] && nut[0].dataset.qzToi;
+        nut.forEach(b => {
+          const phan = document.getElementById(b.dataset.qzToi);
+          if (phan && phan.getBoundingClientRect().top <= moc) dang = b.dataset.qzToi;
+        });
+        // Cuon het day ma phan cuoi ngan -> van danh dau phan cuoi
+        if (vung.scrollTop + vung.clientHeight >= vung.scrollHeight - 4 && nut.length) {
+          dang = nut[nut.length - 1].dataset.qzToi;
+        }
+        danhDau(dang);
+      }, 90);
+    }, { passive: true });
   }
 
   buildHandwritingBlock() {
@@ -1174,46 +1117,43 @@ class SlideEngine {
 
     this.handwritingSet = bo;
 
-    const the = bo.map((c, i) => {
+    const the = bo.map((c) => {
       const id = this.escapeHtml(c.id);
       const goiYKana = (c.kana && c.kana !== c.dapAn)
-        ? `<span class="text-ink font-medium">${this.escapeHtml(c.kana)}</span>` : '';
-      const goiYDoc = c.doc ? `<span class="text-slate-400 font-mono text-xs">${this.escapeHtml(c.doc)}</span>` : '';
+        ? `<span class="qz-vt-kana" lang="ja">${this.escapeHtml(c.kana)}</span>` : '';
+      const goiYDoc = c.doc ? `<span class="muted">${this.escapeHtml(c.doc)}</span>` : '';
       const deBai = c.kieu === 'khuyet'
-        ? `<div class="text-lg md:text-xl text-ink leading-relaxed">${this.escapeHtml(c.cauHoi)}</div>`
-        : `<div class="text-sm text-slate-300">Viết lại chữ của từ này:</div>`;
+        ? `<div class="qz-vt-de" lang="ja">${this.escapeHtml(c.cauHoi)}</div>`
+        : `<div class="qz-vt-hoi">Viết lại chữ của từ này</div>`;
+      // "Ôn bài N" chi hien khi chu lay tu bai truoc — chu cua bai nay thi khoi ghi
+      const onBai = c.tuBai !== this.currentLesson ? `<span class="qz-on">Ôn bài ${this.escapeHtml(c.tuBai)}</span>` : '';
 
       return `
-      <div class="p-3.5 bg-slate-950/80 border border-slate-800 rounded-2xl space-y-2.5">
-        <div class="flex items-center gap-2">
-          <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-[11px] shrink-0">Chữ ${i + 1}</span>
-          <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-400 font-mono text-[10px] shrink-0">
-            ${c.tuBai === this.currentLesson ? 'Bài này' : 'Ôn bài ' + c.tuBai}
-          </span>
-          <span id="vtdem-${id}" class="ml-auto px-2 py-0.5 rounded bg-slate-800 text-slate-500 font-mono text-[11px]">10s</span>
+      <div class="deck-card qz-vt">
+        <div class="qz-vt-top">
+          ${onBai}
+          <span id="vtdem-${id}" class="qz-timer font-mono text-sm">10s</span>
         </div>
         ${deBai}
-        <div class="flex items-center gap-2 text-xs flex-wrap">
+        <div class="qz-vt-goiy">
           ${goiYKana}${goiYDoc}
-          <span class="text-slate-400">— ${this.escapeHtml(c.nghia)}</span>
+          <span>${this.escapeHtml(c.nghia)}</span>
         </div>
         <canvas id="vtkhung-${id}" width="320" height="320"
-                class="w-full aspect-square rounded-xl border border-slate-700 cursor-crosshair mx-auto block"
+                class="qz-khung w-full aspect-square cursor-crosshair mx-auto block"
                 style="touch-action:none;background:#fffdf7;max-width:210px"></canvas>
-        <div class="flex gap-2">
+        <div class="qz-vt-nut">
           <button type="button" id="vtbd-${id}" onclick="window.batDauVietTay && window.batDauVietTay('${this.jsAttr(c.id)}')"
-                  class="flex-1 py-2 rounded-lg bg-amber-950/70 hover:bg-amber-900 border border-amber-500/40 text-amber-200 text-xs font-medium transition cursor-pointer active:scale-95">
-            <i class="fa-solid fa-play text-[10px] mr-1"></i>Bắt đầu 10 giây
+                  class="ctl ctl-connect flex-1 justify-center">
+            <i class="fa-solid fa-play"></i>Bắt đầu 10 giây
           </button>
           <button type="button" onclick="window.xoaNetViet && window.xoaNetViet('${this.jsAttr(c.id)}')"
-                  class="px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 text-xs transition cursor-pointer active:scale-95"
-                  title="Xoá nét đã viết">
-            <i class="fa-solid fa-eraser text-[10px]"></i>
+                  class="ctl ctl-ghost" title="Xoá nét đã viết" aria-label="Xoá nét đã viết">
+            <i class="fa-solid fa-eraser"></i>
           </button>
           <button type="button" onclick="window.nopChuViet && window.nopChuViet('${this.jsAttr(c.id)}')"
-                  class="px-3 py-2 rounded-lg bg-cyan-950/70 hover:bg-cyan-900 border border-cyan-500/40 text-cyan-300 text-xs transition cursor-pointer active:scale-95"
-                  title="Nộp cho Sensei chấm">
-            <i class="fa-solid fa-paper-plane text-[10px]"></i>
+                  class="ctl ctl-ghost" title="Nộp cho Sensei chấm" aria-label="Nộp cho Sensei chấm">
+            <i class="fa-solid fa-paper-plane"></i>
           </button>
         </div>
         <div id="vtkq-${id}" class="hidden"></div>
@@ -1221,25 +1161,19 @@ class SlideEngine {
     }).join('');
 
     return `
-      <div class="pt-5 mt-2 border-t border-slate-800">
-        <div class="mb-3 flex items-start justify-between gap-3">
-          <div>
-            <h3 class="text-lg md:text-xl font-bold text-ink flex items-center gap-2.5">
-              <i class="fa-solid fa-pen-nib text-amber-400"></i>
-              <span>Luyện viết tay</span>
-            </h3>
-            <p class="text-xs text-slate-400 mt-0.5">
-              Bấm "Bắt đầu" rồi viết lại chữ bằng tay trong 10 giây — hết giờ tự nộp.
-              Sensei sẽ nhìn nét chữ rồi phán. Có cả chữ của bài này lẫn chữ ôn lại bài trước.
-            </p>
+      <section id="qz-viet-tay" class="qz-sec">
+        <header class="qz-sec-head" title="Bấm &quot;Bắt đầu&quot; rồi viết lại chữ bằng tay trong 10 giây — hết giờ tự nộp. Sensei sẽ nhìn nét chữ rồi phán. Có cả chữ của bài này lẫn chữ ôn lại bài trước.">
+          <div class="min-w-0">
+            <h3 class="qz-h3">Luyện viết tay</h3>
+            <p class="qz-sec-meta">10 giây mỗi chữ</p>
           </div>
           <button type="button" onclick="window.doiChuVietTay && window.doiChuVietTay()"
-                  class="shrink-0 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 text-xs transition cursor-pointer active:scale-95">
-            <i class="fa-solid fa-rotate text-[10px] mr-1"></i>Đổi chữ khác
+                  class="ctl ctl-ghost shrink-0" title="Lấy bộ chữ khác">
+            <i class="fa-solid fa-rotate"></i><span>Đổi chữ khác</span>
           </button>
-        </div>
-        <div class="grid gap-3 md:grid-cols-2">${the}</div>
-      </div>`;
+        </header>
+        <div class="qz-vt-luoi grid gap-3 md:grid-cols-2">${the}</div>
+      </section>`;
   }
 
   buildPronunciationBlock() {
@@ -1250,31 +1184,34 @@ class SlideEngine {
 
     this.pronunciationSet = bo;
 
-    const the = bo.map((c, i) => `
-      <div id="${this.escapeHtml(c.id)}" class="p-3.5 bg-slate-950/80 border border-slate-800 rounded-2xl space-y-2.5 transition">
-        <div class="flex items-start justify-between gap-3">
-          <div class="min-w-0">
-            <div class="flex items-center gap-2 mb-1.5">
-              <span class="px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono text-[11px] shrink-0">Câu ${i + 1}</span>
-              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-400 font-mono text-[10px] shrink-0"
-                    title="${c.tuBai === this.currentLesson ? 'Mẫu câu của bài đang học' : 'Ôn lại mẫu câu đã học'}">
-                ${c.tuBai === this.currentLesson ? 'Bài này' : 'Ôn bài ' + c.tuBai}
-              </span>
-            </div>
-            <div class="text-lg md:text-xl text-ink leading-relaxed">${this.buildSentence(c.tokens)}</div>
-            <div class="text-xs text-slate-400 mt-1">${this.escapeHtml(c.meaningVi)}</div>
+    // Cau ghep lien nhu ngu phap / hoi thoai (dau cau dinh vao chu truoc). Bo id
+    // token: day la chinh token cua vi du / cau thoai, giu id se trung id o chuong khac.
+    const cauLien = (tokens) => this.ghepTokenCau((tokens || []).map(t => ({ ...t, id: '' })), (tk, i, ds) => {
+      const rt = this.rtCua(tk);
+      const inner = rt
+        ? this.rubyCau(tk, rt, i, ds)
+        : this.escapeHtml(tk.text || '');
+      return `<span class="stok${tk.isKeyGrammar ? ' is-key' : ''}">${inner}</span>`;
+    });
+
+    const the = bo.map((c) => `
+      <div id="${this.escapeHtml(c.id)}" class="deck-card qz-pa">
+        <div class="qz-pa-row">
+          <div class="qz-pa-chu min-w-0">
+            ${c.tuBai !== this.currentLesson ? `<span class="qz-on" title="Ôn lại mẫu câu đã học">Ôn bài ${this.escapeHtml(c.tuBai)}</span>` : ''}
+            <div class="jp-sentence qz-pa-cau" lang="ja">${cauLien(c.tokens)}</div>
+            <div class="qz-mean">${this.escapeHtml(c.meaningVi)}</div>
           </div>
-          <div class="flex flex-col gap-1.5 shrink-0">
+          <div class="qz-pa-nut">
             <button type="button" onclick="window.playSpeech('${this.jsAttr(c.jp)}')"
-                    class="w-9 h-9 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 flex items-center justify-center transition cursor-pointer active:scale-95"
-                    title="Nghe mẫu trước khi đọc">
-              <i class="fa-solid fa-volume-high text-xs"></i>
+                    class="icon-btn" title="Nghe mẫu trước khi đọc" aria-label="Nghe mẫu">
+              <i class="fa-solid fa-volume-high"></i>
             </button>
             <button type="button" id="rec-${this.escapeHtml(c.id)}"
                     onclick="window.thuAmPhatAm && window.thuAmPhatAm('${this.jsAttr(c.id)}')"
-                    class="w-9 h-9 rounded-lg bg-cyan-950/70 hover:bg-cyan-900 border border-cyan-500/40 text-cyan-300 flex items-center justify-center transition cursor-pointer active:scale-95"
-                    title="Bấm để thu âm, bấm lại để gửi cho Sensei chấm">
-              <i class="fa-solid fa-microphone text-xs"></i>
+                    class="qz-rec"
+                    title="Bấm để thu âm, bấm lại để gửi cho Sensei chấm" aria-label="Thu âm">
+              <i class="fa-solid fa-microphone" aria-hidden="true"></i>
             </button>
           </div>
         </div>
@@ -1282,25 +1219,18 @@ class SlideEngine {
       </div>`).join('');
 
     return `
-      <div class="pt-5 mt-2 border-t border-slate-800">
-        <div class="mb-3 flex items-start justify-between gap-3">
-          <div>
-            <h3 class="text-lg md:text-xl font-bold text-ink flex items-center gap-2.5">
-              <i class="fa-solid fa-microphone-lines text-cyan-400"></i>
-              <span>Luyện phát âm cả câu</span>
-            </h3>
-            <p class="text-xs text-slate-400 mt-0.5">
-              Bấm loa nghe mẫu, rồi bấm micro đọc to cả câu. Bấm lại lần nữa để Sensei nghe và chấm.
-              Có cả câu của bài này lẫn câu ôn lại từ những bài trước.
-            </p>
+      <section id="qz-phat-am" class="qz-sec">
+        <header class="qz-sec-head" title="Bấm loa nghe mẫu, rồi bấm micro đọc to cả câu. Bấm lại lần nữa để Sensei nghe và chấm. Có cả câu của bài này lẫn câu ôn lại từ những bài trước.">
+          <div class="min-w-0">
+            <h3 class="qz-h3">Luyện phát âm cả câu</h3>
           </div>
           <button type="button" onclick="window.doiCauPhatAm && window.doiCauPhatAm()"
                   class="ctl ctl-ghost shrink-0" title="Lấy bộ câu khác từ các bài đã học">
             <i class="fa-solid fa-rotate"></i><span>Đổi câu khác</span>
           </button>
-        </div>
-        <div class="space-y-3">${the}</div>
-      </div>`;
+        </header>
+        <div class="qz-stack">${the}</div>
+      </section>`;
   }
 
   /** @returns {boolean} false khi cap/bai khong ton tai — giong renderSlide */
@@ -1343,15 +1273,15 @@ class SlideEngine {
       el.classList.add('reading-focus');
       if (!el.querySelector('.reading-badge-indicator')) {
         const badge = document.createElement('span');
-        badge.className = 'reading-badge-indicator inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-indigo-600/90 text-white font-bold text-[10px] shadow-md ml-2';
-        badge.innerHTML = '<i class="fa-solid fa-volume-high text-[9px] animate-pulse"></i> Đang đọc...';
+        badge.className = 'reading-badge-indicator inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-indigo-600/90 text-white font-bold text-[12px] shadow-md ml-2';
+        badge.innerHTML = '<i class="fa-solid fa-volume-high text-[11px] animate-pulse"></i> Đang đọc...';
         const titleArea = this.choGanHuyHieu(el, 'h2, h3, .font-bold, .text-xs, ruby, span');
         if (titleArea && titleArea.parentElement) {
           titleArea.parentElement.appendChild(badge);
         }
       }
     }
-    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    el.scrollIntoView({ behavior: this._itChuyenDong() ? 'auto' : 'smooth', block: 'center' });
   }
 
   /**
@@ -1386,14 +1316,24 @@ class SlideEngine {
     }
   }
 
-  /** Tat han den roi: go class + dong spotlight */
+  /**
+   * Tat han den roi: go class + dong spotlight.
+   * Go ca vien sang kieu khac (hl-card-vocab / -grammar / -warning do focusItem, highlightElement dat),
+   * khong chi 'reading-focus': dong the (X / Esc) ma the nguon van giu vien sang la con treo den.
+   */
   clearReadingFocus(targetId = null) {
     if (targetId && targetId !== this.activeFocusId) {
       this.clearFocusClasses(targetId);
       return;
     }
     this.activeFocusId = null;
-    this.clearFocusClasses(targetId);
+    if (targetId) {
+      this.clearFocusClasses(targetId);
+      const el = this.resolveElement(targetId);
+      if (el) el.classList.remove(...LOP_DEN_ROI);
+    } else {
+      this.clearHighlights();
+    }
     this.closeSpotlight();
   }
 
@@ -1530,12 +1470,12 @@ class SlideEngine {
       // chi giu vien sang cho biet the nao dang chon.
       if (styleType === 'reading_focus' && isBlockCard && !(opts && opts.doBam) && !el.querySelector('.reading-badge-indicator')) {
         const badge = document.createElement('span');
-        badge.className = 'reading-badge-indicator inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-white font-bold text-[10px] shadow-md ml-2';
-        badge.innerHTML = '<i class="fa-solid fa-volume-high text-[9px]"></i> Đang đọc…';
+        badge.className = 'reading-badge-indicator inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-white font-bold text-[12px] shadow-md ml-2';
+        badge.innerHTML = '<i class="fa-solid fa-volume-high text-[11px]"></i> Đang đọc…';
         const anchor = this.choGanHuyHieu(el, 'h2, h3, .font-bold, ruby, span');
         if (anchor && anchor.parentElement) anchor.parentElement.appendChild(badge);
       }
-      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.scrollIntoView({ behavior: this._itChuyenDong() ? 'auto' : 'smooth', block: 'center' });
     } else {
       console.warn(`Element with ID '${targetId}' not found on current view.`);
     }
@@ -1549,17 +1489,21 @@ class SlideEngine {
    * Goi qua veLaiCho() trong app.js chu dung goi thang: trang thai cho thuoc
    * ve tung chuong, goi thang se tat nham lop cho cua chuong khac.
    */
-  setBusy(on, title, note) {
+  setBusy(on, title, note, nhe = false) {
     const canvas = document.querySelector('.deck-canvas');
     if (!canvas) return;
 
     // Nho lai de con dung sau moi lan render: cac ham render gan lai
     // className cua slideContent, quet mat lop mo neu khong dat lai.
-    this.busyState = on ? { title, note } : null;
-    if (this.slideContent) this.slideContent.classList.toggle('is-busy', !!on);
+    // nhe (long tieng Hoi thoai): noi dung van doc / bam duoc (loa tam dung giong trinh duyet),
+    // chi hien mot nhan nho o tieu de chuong — khong mo ca chuong, khong phu the len loi thoai.
+    this.busyState = on ? { title, note, nhe } : null;
+    if (this.slideContent) this.slideContent.classList.toggle('is-busy', !!on && !nhe);
 
     let ov = document.getElementById('deckBusy');
-    if (!on) { if (ov) ov.remove(); return; }
+    // Doi kieu (the phu <-> nhan nho) hoac tat: go cai cu
+    if (ov && (!on || ov.classList.contains('deck-busy-chip') !== !!nhe)) { ov.remove(); ov = null; }
+    if (!on) return;
 
     if (ov) {
       // Da co san: chi thay chu. Gan lai innerHTML se chay lai animation
@@ -1568,6 +1512,21 @@ class SlideEngine {
       const n = ov.querySelector('.deck-busy-note');
       if (t) t.textContent = title || 'Đang xử lý…';
       if (n) n.textContent = note || '';
+      if (nhe) ov.title = note || '';
+      return;
+    }
+
+    if (nhe) {
+      const head = this.slideContent && this.slideContent.querySelector('.deck-head');
+      if (!head) return;
+      ov = document.createElement('span');
+      ov.id = 'deckBusy';
+      ov.className = 'deck-busy-chip deck-head-end';
+      ov.setAttribute('role', 'status');
+      ov.title = note || '';
+      ov.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin" aria-hidden="true"></i>'
+        + `<span class="deck-busy-title">${this.escapeHtml(title || 'Đang xử lý…')}</span>`;
+      head.appendChild(ov);
       return;
     }
 
@@ -1587,7 +1546,11 @@ class SlideEngine {
 
   /** Dat lai lop mo sau khi render — render vua gan de className moi */
   reapplyBusy() {
-    if (this.busyState && this.slideContent) this.slideContent.classList.add('is-busy');
+    const s = this.busyState;
+    if (!s || !this.slideContent) return;
+    // Nhan nho nam trong tieu de chuong -> render vua thay ca noi dung thi gan lai
+    if (s.nhe) { if (!this.slideContent.querySelector('#deckBusy')) this.setBusy(true, s.title, s.note, true); }
+    else this.slideContent.classList.add('is-busy');
   }
 
   setCaption(comment, styleType) {
@@ -1596,7 +1559,7 @@ class SlideEngine {
         const icon = styleType === 'warning' ? 'fa-triangle-exclamation text-rose-400'
                    : styleType === 'vocab_highlight' ? 'fa-star text-amber-400'
                    : styleType === 'reading_focus' ? 'fa-volume-high text-indigo-400 animate-pulse'
-                   : 'fa-sparkles text-cyan-400';
+                   : 'fa-wand-magic-sparkles text-cyan-400';
         const borderBg = styleType === 'warning' ? 'bg-rose-950/80 border-rose-500/60 text-rose-200'
                        : styleType === 'vocab_highlight' ? 'bg-amber-950/80 border-amber-500/60 text-amber-200'
                        : 'bg-indigo-950/80 border-indigo-500/60 text-indigo-200';
@@ -1614,8 +1577,8 @@ class SlideEngine {
   }
 
   clearHighlights() {
-    document.querySelectorAll('.hl-grammar, .hl-vocab, .hl-warning, .hl-reading-inline, .hl-card-grammar, .hl-card-vocab, .hl-card-warning, .reading-focus').forEach(el => {
-      el.classList.remove('hl-grammar', 'hl-vocab', 'hl-warning', 'hl-reading-inline', 'hl-card-grammar', 'hl-card-vocab', 'hl-card-warning', 'reading-focus');
+    document.querySelectorAll(LOP_DEN_ROI.map(c => '.' + c).join(', ')).forEach(el => {
+      el.classList.remove(...LOP_DEN_ROI);
       const badge = el.querySelector('.reading-badge-indicator');
       if (badge) badge.remove();
     });
@@ -1629,8 +1592,11 @@ class SlideEngine {
     if (this.errExplain) this.errExplain.innerText = explanation || '';
 
     this.errorDock.classList.remove('hidden');
-    this.errorDock.classList.add('slide-fade-enter', 'roast-shake');
-    this.errorDock.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    // Rung lai tu dau moi lan sua loi (bo class, ep reflow, gan lai) — khong thi chi lan dau rung
+    this.errorDock.classList.remove('roast-shake');
+    void this.errorDock.offsetWidth;
+    this.errorDock.classList.add('roast-shake');
+    this.errorDock.scrollIntoView({ behavior: this._itChuyenDong() ? 'auto' : 'smooth', block: 'center' });
   }
 
   dismissError() {
@@ -1677,7 +1643,7 @@ class SlideEngine {
     el.innerHTML =
       '<svg class="spot-noi" aria-hidden="true"></svg>'
       + '<aside class="spot-dock">'
-      + '  <button type="button" class="spot-dong" title="Đóng thẻ (Esc)"><i class="fa-solid fa-xmark"></i></button>'
+      + '  <button type="button" class="spot-dong" title="Đóng thẻ (Esc)" aria-label="Đóng thẻ"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>'
       + '  <div class="spot-card"></div>'
       + '</aside>';
     document.body.appendChild(el);
@@ -1686,8 +1652,12 @@ class SlideEngine {
     // nguon, khong de "Dang doc…" treo lai sau khi the da dong.
     el.querySelector('.spot-dong').addEventListener('click', () => this.clearReadingFocus());
     document.addEventListener('keydown', (e) => {
-      // Esc la phim chung (lightbox, o chat...) — chi xu ly khi the dang mo
-      if (e.key === 'Escape' && this.spotOpenId) this.clearReadingFocus();
+      // Esc la phim chung (lightbox, o chat...) — chi xu ly khi the dang mo va chua lop nao
+      // phia tren (anh phong to, bang chon bai, o chat) nhan phim nay (xem bo nghe Esc o dau tep)
+      if (e.key !== 'Escape' || e.defaultPrevented || !this.spotOpenId) return;
+      if (e.isComposing || e.keyCode === 229) return;   // Esc bo chu dang go IME (vd trong o chat)
+      e.preventDefault();
+      this.clearReadingFocus();
     });
 
     // Mui ten noi the voi muc that — phai bam theo khi cuon trang hay doi co
@@ -1729,7 +1699,8 @@ class SlideEngine {
     // Man hinh hep: the nam duoi day, khong con cho ma keo mui ten
     if (window.innerWidth < 860) return an();
 
-    const d = dock.getBoundingClientRect();
+    // Man rong the cao theo noi dung (thap hon lan cua no): mui ten moc vao mep the, khong vao khoang trong duoi the
+    const d = (this.spotCard && this.spotCard.offsetHeight ? this.spotCard : dock).getBoundingClientRect();
     const t = dich.getBoundingClientRect();
     if (t.width < 2 || t.bottom < 8 || t.top > window.innerHeight - 8) return an();
 
@@ -1738,6 +1709,17 @@ class SlideEngine {
     const x2 = t.left - 9;
     const y2 = t.top + t.height / 2;
     const giua = (x1 + x2) / 2;
+
+    // Muc o cot xa (vd cot 2 cua luoi tu vung): duong noi phai cat ngang the o giua, trong nhu
+    // gach ngang chu cua the do -> khong ve, vien sang cua muc da du chi ra muc nao dang mo.
+    const x0 = Math.min(x1, x2), xN = Math.max(x1, x2);
+    const yA = Math.min(y1, y2) - 3, yB = Math.max(y1, y2) + 3;
+    const vuong = this.slideContent && [...this.slideContent.querySelectorAll('.deck-card')].some((c) => {
+      if (c === dich || c.contains(dich) || dich.contains(c)) return false;
+      const r = c.getBoundingClientRect();
+      return r.right > x0 && r.left < xN && r.bottom > yA && r.top < yB;
+    });
+    if (vuong) return an();
 
     const NS = 'http://www.w3.org/2000/svg';
     const duong = `M${x1},${y1} C${giua},${y1} ${giua},${y2} ${x2},${y2}`;
@@ -1806,7 +1788,7 @@ class SlideEngine {
         const word = tk.kanji || tk.text;
         return `
           <div class="dblock${key ? ' is-key' : ''}">
-            <span class="dword">${this.escapeHtml(word)}</span>
+            <span class="dword" lang="ja">${this.escapeHtml(word)}</span>
             ${role ? `<span class="drole">${this.escapeHtml(role)}</span>` : ''}
           </div>`;
       }).join('<span class="dplus">+</span>');
@@ -1828,6 +1810,30 @@ class SlideEngine {
     if (!tk || !tk.kanji || !tk.furigana) return '';
     if (tk.furigana !== tk.kanji) return tk.furigana;
     return (tk.text && tk.text !== tk.kanji) ? tk.text : '';
+  }
+
+  /**
+   * Ruby cua token trong cau (ghepTokenCau). Furigana dai hon chu (上昇 / じょうしょう) thi Chrome gian
+   * o chu bang be ngang furigana -> trong nhu co dau cach hai ben. Cho furigana tran sang token ben canh
+   * (margin am, lesson.css): toi da nua chu moi ben, va khong qua cho trong tren dau token ben canh
+   * neu no cung co furigana (hai tang chu nho khong de len nhau).
+   */
+  rubyCau(tk, rt, i, ds) {
+    const soChu = (s) => Array.from(String(s || '')).length;
+    const m = soChu(tk.kanji), n = soChu(rt);
+    let kieu = '';
+    if (n * .5 > m) {
+      const trong = (j) => {
+        const k = ds && ds[j];
+        const r2 = k && this.rtCua(k);
+        return r2 ? Math.max(0, (soChu(k.kanji) - soChu(r2) * .57) / 2) : .5;
+      };
+      const trai = Math.min(.5, trong(i - 1)), phai = Math.min(.5, trong(i + 1));
+      if (trai > 0 || phai > 0) {
+        kieu = ` style="--rt:${n};--cj:${m};--tl:${trai.toFixed(2)}em;--tp:${phai.toFixed(2)}em"`;
+      }
+    }
+    return `<ruby${kieu}>${this.escapeHtml(tk.kanji)}<rt>${this.escapeHtml(rt)}</rt></ruby>`;
   }
 
   /** Câu đầy đủ có ruby, token trọng tâm được tô sáng */
@@ -1895,6 +1901,7 @@ class SlideEngine {
   }
 
   buildSpotlightHtml(found) {
+    this._huyVietNet();   // noi dung the sap thay -> bo hen viet net cua chu truoc
     const speak = (text, label) => `
       <button type="button" class="spot-speak" onclick="window.playSpeech('${this.jsAttr(text)}')">
         <i class="fa-solid fa-volume-high"></i><span>${this.escapeHtml(label)}</span>
@@ -1912,36 +1919,48 @@ class SlideEngine {
         ? this.buildImage(v.imageUrl, v.imageAlt || v.meaningVi)
         : (artSvg ? `<div class="sensei-art sensei-art-lg">${artSvg}</div>` : '');
 
+      // Nut nghe ngay duoi nghia, ghi chu sau cung: tren dien thoai the thap, nut
+      // nghe khong bi ghi chu dai day xuong duoi mep (khong can `order`).
       return `
         ${visual}
-        <div class="spot-head">${head}</div>
-        <div class="spot-sub">${v.romaji ? `<span class="spot-romaji">[${this.escapeHtml(v.romaji)}]</span>` : ''}</div>
+        <div class="spot-head" lang="ja">${head}</div>
+        ${v.romaji ? `<div class="spot-sub"><span class="spot-romaji">${this.escapeHtml(v.romaji)}</span></div>` : ''}
         <div class="spot-meaning">${this.escapeHtml(v.meaningVi)}</div>
-        ${v.accentNote ? `<div class="spot-note"><i class="fa-solid fa-circle-info"></i><span>${this.escapeHtml(v.accentNote)}</span></div>` : ''}
-        ${speak(word, 'Nghe phát âm')}`;
+        ${speak(word, 'Nghe phát âm')}
+        ${v.accentNote ? `<div class="spot-note"><span>${this.escapeHtml(v.accentNote)}</span></div>` : ''}`;
     }
 
     if (found.type === 'kanji') {
       const k = found.data;
       const words = (k.commonWords || []).map(cw => `
         <div class="spot-row">
-          <span class="spot-row-jp">${this.escapeHtml(cw.word)} <em>(${this.escapeHtml(cw.furigana)})</em></span>
+          <span class="spot-row-jp"><span lang="ja">${this.escapeHtml(cw.word)}</span>${cw.furigana ? `<em lang="ja">${this.escapeHtml(cw.furigana)}</em>` : ''}</span>
           <span class="spot-row-vi">${this.escapeHtml(cw.meaningVi)}</span>
         </div>`).join('');
       // Co du lieu net thi viet ra tung net ngay trong spotlight — day moi la
       // thu giao trinh thieu: no ghi "8 net" ma khong chi duoc 8 net do la gi.
-      const coNet = !!(window.SenseiStrokes && window.SenseiStrokes.get(k.character));
+      const coNet = this._coVietNet(k.character);
       if (coNet) {
-        // Mot hen gio cho ca engine: doi chu nhanh (bam 私 roi 人) thi hen cua chu
-        // cu khong duoc viet 私 vao the cua 人.
-        clearTimeout(this._vietNetTimer);
+        // Mot hen gio cho ca engine (_huyVietNet o dau ham): doi chu nhanh (bam 私
+        // roi 人) thi hen cua chu cu khong duoc viet 私 vao the cua 人.
         this._vietNetTimer = setTimeout(() => {
           if (this.spotOpenId !== k.id) return;
           const o = this.spotCard && this.spotCard.querySelector('[data-viet-net]');
-          if (o && window.SenseiBoard) {
+          if (!o) return;
+          const viet = () => {
+            if (this.spotOpenId !== k.id || !o.isConnected) return;
             o.innerHTML = '';
             window.SenseiBoard.vietChuHan(k.character, { noi: o });
-          }
+          };
+          // Dien thoai: o viet net nam duoi nut nghe, co khi phai cuon moi thay ->
+          // doi o hien ra mot nua roi moi viet, khong thi net da viet xong tu truoc.
+          if (!window.IntersectionObserver) { viet(); return; }
+          this._vietNetIO = new IntersectionObserver((es) => {
+            if (!es.some(e => e.isIntersecting)) return;
+            this._huyVietNet();
+            viet();
+          }, { threshold: 0.5 });
+          this._vietNetIO.observe(o);
         }, 220);   // cho hieu ung mo spotlight bay xong roi moi viet
       }
 
@@ -1949,24 +1968,27 @@ class SlideEngine {
       const originHtml = origin ? `
         <div class="sensei-art sensei-art-lg">${origin.svg}</div>
         <div class="spot-note spot-origin">
-          <i class="fa-solid fa-lightbulb"></i>
           <span><strong>Gốc chữ:</strong> ${this.escapeHtml(origin.note)}</span>
         </div>` : '';
+      // Thu tu HTML = thu tu doc tren may tinh (trinh doc man hinh, phim Tab doc
+      // dung nhu mat thay). Dien thoai: lesson.css muc 1 dua chu + nghia + nut nghe
+      // len truoc bang `order`. Co o viet net thi so net da ghi duoi o
+      // ("私 — 7 nét") -> bo chip so net, khong noi hai lan.
       return `
         ${coNet ? '<div class="spot-viet-net" data-viet-net="1"></div>' : ''}
-        ${originHtml}
-        <div class="spot-kanji">${this.escapeHtml(k.character)}</div>
+        <div class="spot-kanji jp-serif" lang="ja">${this.escapeHtml(k.character)}</div>
         <div class="spot-sub">
-          <span class="spot-chip">HÁN VIỆT: ${this.escapeHtml(k.hanViet)}</span>
-          <span class="spot-chip">${k.strokeCount} nét</span>
+          <span class="spot-chip">Hán Việt <b>${this.escapeHtml(k.hanViet)}</b></span>
+          ${coNet ? '' : `<span class="spot-chip">${this.escapeHtml(String(k.strokeCount ?? '?'))} nét</span>`}
         </div>
         <div class="spot-meaning">${this.escapeHtml(k.meaningVi)}</div>
         <div class="spot-readings">
-          <div><span class="spot-rlabel">Âm On</span>${this.escapeHtml((k.onyomi || []).join(', ') || '—')}</div>
-          <div><span class="spot-rlabel">Âm Kun</span>${this.escapeHtml((k.kunyomi || []).join(', ') || '—')}</div>
+          <div><span class="spot-rlabel">Âm On</span><span lang="ja">${this.escapeHtml((k.onyomi || []).join(', ') || '—')}</span></div>
+          <div><span class="spot-rlabel">Âm Kun</span><span lang="ja">${this.escapeHtml((k.kunyomi || []).join(', ') || '—')}</span></div>
         </div>
-        ${words ? `<div class="spot-words"><div class="spot-diagram-label">Từ ghép thực tế</div>${words}</div>` : ''}
-        ${speak(k.character, 'Nghe đọc chữ Hán')}`;
+        ${speak(k.character, 'Nghe đọc chữ Hán')}
+        ${words ? `<div class="spot-words"><div class="spot-diagram-label">Từ ghép</div>${words}</div>` : ''}
+        ${originHtml}`;
     }
 
     if (found.type === 'example' || found.type === 'kaiwa') {
@@ -1976,7 +1998,7 @@ class SlideEngine {
       return `
         ${this.buildImage(d.imageUrl, d.meaningVi)}
         ${found.type === 'kaiwa' ? `<div class="spot-speaker">${this.escapeHtml(d.speaker || '')}</div>` : ''}
-        <div class="spot-sentence">${this.buildSentence(d.tokens)}</div>
+        <div class="spot-sentence" lang="ja">${this.buildSentence(d.tokens)}</div>
         <div class="spot-meaning">${this.escapeHtml(d.meaningVi || '')}</div>
         ${this.buildDiagram(d.tokens)}
         ${speak(plain, 'Nghe đọc cả câu')}`;
@@ -1990,11 +2012,11 @@ class SlideEngine {
         ? `<ruby>${this.escapeHtml(tk.kanji)}<rt>${this.escapeHtml(rt)}</rt></ruby>`
         : this.escapeHtml(tk.text || '');
       return `
-        <div class="spot-head">${head}</div>
+        <div class="spot-head" lang="ja">${head}</div>
         ${role ? `<div class="spot-sub"><span class="spot-chip is-key">${this.escapeHtml(role)}</span></div>` : ''}
         <div class="spot-incontext">
           <div class="spot-diagram-label">Trong câu</div>
-          <div class="spot-sentence is-small">${this.buildSentence(sen.tokens, tk.id)}</div>
+          <div class="spot-sentence is-small" lang="ja">${this.buildSentence(sen.tokens, tk.id)}</div>
           <div class="spot-meaning is-small">${this.escapeHtml(sen.meaningVi || '')}</div>
         </div>
         ${this.buildDiagram(sen.tokens)}
@@ -2041,6 +2063,36 @@ class SlideEngine {
     }
   }
 
+  /** He dieu hanh dang bat "giam chuyen dong" */
+  _itChuyenDong() {
+    return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  }
+
+  /** Chu nay viet duoc tung net trong the: co du lieu net VA co bang de ve */
+  _coVietNet(ch) {
+    return !!(window.SenseiStrokes && window.SenseiStrokes.get(ch) &&
+      window.SenseiBoard && window.SenseiBoard.vietChuHan);
+  }
+
+  /** Bo hen viet net dang cho (hen gio + doi o hien ra) */
+  _huyVietNet() {
+    clearTimeout(this._vietNetTimer);
+    if (this._vietNetIO) { this._vietNetIO.disconnect(); this._vietNetIO = null; }
+  }
+
+  /**
+   * Mo / dong the trai lam luoi the dan lai (3 cot -> 2 cot) ngay trong mot khung
+   * hinh. Mo nhe noi dung roi hien lai de cu nhay cot thanh mot nhip mo, khong giat.
+   * Chi opacity. Man hep: the nam duoi day, luoi khong doi cot -> bo qua.
+   */
+  _lamDiuDoiCot() {
+    const sc = this.slideContent;
+    if (!sc || !sc.animate || this._itChuyenDong() || window.innerWidth <= 860) return;
+    if (this._diuCot) this._diuCot.cancel();
+    this._diuCot = sc.animate([{ opacity: .35 }, { opacity: 1 }],
+      { duration: 180, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
+  }
+
   openSpotlight(targetId, preFound = null, opts = {}) {
     const found = preFound || this.findItemById(targetId);
     if (!found) return false;
@@ -2064,22 +2116,30 @@ class SlideEngine {
     if (this.spotCard.getAnimations) this.spotCard.getAnimations().forEach(a => a.cancel());
 
     const moiMo = el.classList.contains('hidden');
+    const daMoTheTrai = document.body.classList.contains('co-the-trai');
+    const itDong = this._itChuyenDong();
     this.spotCard.className = 'spot-card spot-type-' + found.type;
     this.spotCard.innerHTML = html;
-    this.spotCard.scrollTop = 0;
     el.classList.remove('hidden');
     el.classList.remove('is-closing');
+    // Dat SAU khi bo .hidden: luc con display:none thi scrollTop = 0 khong an,
+    // mo lai the se dung o vi tri cuon cu cua the truoc (mat chu + nghia o dau).
+    this.spotCard.scrollTop = 0;
     document.body.classList.add('co-the-trai');
+    if (!daMoTheTrai) this._lamDiuDoiCot();
     this.spotOpenId = targetId;
+    // Hoc vien tu bam mo the: dong the thi tra focus ve dung the do (bai giang tu roi den thi khong)
+    this._spotMoTu = opts.doBam ? src : null;
 
     // Lan dau mo thi the truot vao tu trai. Doi muc thi KHONG truot lai —
     // giang lien mach vai chuc muc ma the cu truot ra truot vao thi chong mat.
-    if (moiMo && this.spotCard.animate) {
+    // Giam chuyen dong: hien ngay, khong animate.
+    if (!itDong && moiMo && this.spotCard.animate) {
       this.spotCard.animate(
         [{ transform: 'translateX(-14px)', opacity: 0 }, { transform: 'none', opacity: 1 }],
         { duration: 300, easing: 'cubic-bezier(0.22, 1, 0.36, 1)', fill: 'both' }
       );
-    } else if (this.spotCard.animate) {
+    } else if (!itDong && this.spotCard.animate) {
       // Doi muc: chi nhap nhe mot cai cho biet noi dung vua thay
       this.spotCard.animate(
         [{ opacity: .35 }, { opacity: 1 }],
@@ -2087,8 +2147,9 @@ class SlideEngine {
       );
     }
 
-    // Muc that phai nam trong tam nhin thi mui ten moi co cho ma tro
-    if (src) src.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    // Muc that phai nam trong tam nhin thi mui ten moi co cho ma tro.
+    // Man hep: the trai nam o day man hinh -> dua muc len dau vung cuon cho khoi bi che.
+    if (src) src.scrollIntoView({ behavior: itDong ? 'auto' : 'smooth', block: window.innerWidth <= 860 ? 'start' : 'center' });
     // Cho cuon va layout on dinh roi moi do toa do
     clearTimeout(this._noiTimer);
     this._noiCho = true;
@@ -2099,15 +2160,26 @@ class SlideEngine {
   closeSpotlight() {
     if (!this.spotEl || this.spotEl.classList.contains('hidden')) return;
     this.spotOpenId = null;
+    // Focus dang o trong the (nut dong) hay da roi ve body: dua ve the da mo no, khong de Tab bat dau lai
+    // tu dau trang. The khong nhan focus san -> tabindex=-1 (chi focus bang lenh, khong chen vao vong Tab).
+    const moTu = this._spotMoTu;
+    this._spotMoTu = null;
+    const f = document.activeElement;
+    if (moTu && moTu.isConnected && (!f || f === document.body || this.spotEl.contains(f))) {
+      if (!moTu.hasAttribute('tabindex')) moTu.setAttribute('tabindex', '-1');
+      moTu.focus({ preventScroll: true });
+    }
+    this._huyVietNet();
     if (this.spotNoi) this.spotNoi.innerHTML = '';
     this._noiId = null;
     this._noiCho = false;
     clearTimeout(this._noiTimer);
     document.body.classList.remove('co-the-trai');
+    this._lamDiuDoiCot();
     const card = this.spotCard;
     if (card && card.getAnimations) card.getAnimations().forEach(a => a.cancel());
     this.spotEl.classList.add('is-closing');
-    if (card && card.animate) {
+    if (card && card.animate && !this._itChuyenDong()) {
       const a = card.animate(
         [{ transform: 'none', opacity: 1 }, { transform: 'translateX(-12px)', opacity: 0 }],
         { duration: 200, easing: 'cubic-bezier(0.22, 1, 0.36, 1)', fill: 'both' }
