@@ -12,7 +12,8 @@ import * as THREE from 'three';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { napMeoNangCap } from './meo3d-long.js';
 
-const MO_HINH = 'assets/sensei-meo/3d/meo-xuong.glb';
+// Ban dung tu Tripo (H2.5): muot, can doi hon ban Hunyuan (meo-xuong.glb, van giu de so sanh)
+const MO_HINH = 'assets/sensei-meo/3d/meo-tripo.glb';
 const hub = window.SenseiAvatarHub;
 
 // act_out cua Gemini -> dong tac co san cua meo 3D
@@ -75,7 +76,8 @@ function dungSanKhau() {
     renderer.setSize(rong, khungCao);
     cam.aspect = rong / khungCao; cam.updateProjectionMatrix();
     laser.width = W * devicePixelRatio; laser.height = H * devicePixelRatio;
-    if (S.x === null) S.x = S.dichX = viTriNha();
+    // Doi co cua so: ve lai goc (khong di bo cham rai qua ca man hinh)
+    if (S.x === null || !S.chi) S.x = S.dichX = viTriNha();
   };
   addEventListener('resize', doiCo);
   doiCo();

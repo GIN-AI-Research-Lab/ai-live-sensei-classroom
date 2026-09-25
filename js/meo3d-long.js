@@ -274,6 +274,38 @@ function taoDieuKhien(goc, skeleton, u) {
   };
 }
 
+/**
+ * Sua trong so da vung dau. Gan da tu dong hay chia mat / mom cho xuong co va nguc (meo dau to, co
+ * ngan) -> quay dau la mat bi keo gian thanh vet. Tren duong co: 100% xuong 'dau' (rieng vanh tai
+ * giu mot phan cho xuong tai), dai co chuyen muot dau <-> co. Lam luc nap nen khong can dung lai file.
+ */
+function suaTrongSoDau(luoi) {
+  const sk = luoi.skeleton, g = luoi.geometry;
+  const so = (ten) => sk.bones.findIndex((b) => b.name.replace(/[.]/g, '') === ten);
+  const iDau = so('dau'), iCo = so('co'), iTaiL = so('taiL'), iTaiR = so('taiR');
+  if (iDau < 0 || iCo < 0) return;
+  // Vi tri goc xuong trong khong gian luoi luc buoc da = nghich dao cua boneInverse
+  const dinh = (i) => new THREE.Vector3().setFromMatrixPosition(sk.boneInverses[i].clone().invert());
+  // Dai chuyen tiep sat goc co: ca cam (meo dau to, cam xe xuong gan co) di lien voi dau
+  const zDuoi = dinh(iCo).y - .07, zTren = dinh(iCo).y + .03;
+  const P = g.attributes.position, SI = g.attributes.skinIndex, SW = g.attributes.skinWeight;
+  let sua = 0;
+  for (let i = 0; i < P.count; i++) {
+    const y = P.getY(i), x = P.getX(i);
+    if (y < zDuoi || Math.abs(x) > .62) continue;
+    const iTai = x > 0 ? iTaiL : iTaiR;
+    let tai = 0;
+    for (let k = 0; k < 4; k++) if (SI.getComponent(i, k) === iTai) tai = SW.getComponent(i, k);
+    tai = (y > .68 && Math.abs(x) > .2 && iTai >= 0) ? tai * Math.min(1, (y - .68) / .12) : 0;
+    const k = y >= zTren ? 1 : (y - zDuoi) / (zTren - zDuoi);
+    SI.setXYZW(i, iDau, iCo, Math.max(0, iTai), 0);
+    SW.setXYZW(i, k * (1 - tai), 1 - k, k * tai, 0);
+    sua++;
+  }
+  SI.needsUpdate = SW.needsUpdate = true;
+  return sua;
+}
+
 // Anh 1x1 den: dung khi mo hinh khong co ban do cam moc long
 const KHONG_CAM = new THREE.DataTexture(new Uint8Array([0, 0, 0, 255]), 1, 1);
 KHONG_CAM.needsUpdate = true;
@@ -298,7 +330,9 @@ export function napMeoNangCap(url, scene) {
     goc.traverse((o) => { if (o.isMesh && !luoi) luoi = o; });
     const m0 = luoi.material;
     const vl = new THREE.MeshPhysicalMaterial({
-      map: m0.map, normalMap: m0.normalMap, normalScale: new THREE.Vector2(.7, .7),
+      // ?nm=0 tren dia chi trang: bo ban do go ghe (de kiem tra)
+      map: m0.map, normalMap: new URLSearchParams(location.search).get('nm') === '0' ? null : m0.normalMap,
+      normalScale: new THREE.Vector2(.7, .7),
       roughness: .82, metalness: 0, specularIntensity: .3,
       sheen: .45, sheenRoughness: .6, sheenColor: new THREE.Color(0xffc88a),
       clearcoat: .001,      // bat nhanh clearcoat trong shader; do bong thuc dat theo vung mat
@@ -315,6 +349,7 @@ export function napMeoNangCap(url, scene) {
                                         (bb.min.z + bb.max.z) / 2, .18) },
     };
     const coXuong = !!luoi.isSkinnedMesh;
+    if (coXuong) suaTrongSoDau(luoi);
     if (coXuong) u.uDuoi.value.w = 0;          // co xuong duoi that thi khong can bien dang gia trong shader
     vl.userData.u = u;
     luoi.material = vatLieuLop(vl, 0);
@@ -340,6 +375,8 @@ export function napMeoNangCap(url, scene) {
       xuong: (ten) => (coXuong ? luoi.skeleton.bones.find((b) => b.name.replace(/[.]/g, '') === ten) : null),
       /** Giu lai n lop (rai deu tu goc den ngon) — dung de ha chat luong khi may cham */
       datSoLop(n) {
+        // ?long=0 tren dia chi trang: tat han long (de kiem tra mo hinh tran)
+        if (new URLSearchParams(location.search).get('long') === '0') { cacLop.forEach((l) => { l.visible = false; }); return; }
         n = Math.max(4, Math.min(SO_LOP, Math.round(n)));
         cacLop.forEach((l, i) => { l.visible = (i % Math.ceil(SO_LOP / n)) === 0 || i === SO_LOP - 1; });
       },
@@ -354,7 +391,8 @@ export function napMeoNangCap(url, scene) {
       nhin(x, y) { if (dc) dc.nhin(x, y); },
       capNhat(t, dt) {
         u.uThoiGian.value = t;
-        if (dc) dc.capNhat(t, dt);
+        // ?dong=0 tren dia chi trang: dung yen o tu the nghi (de kiem tra trong so xuong)
+        if (dc && new URLSearchParams(location.search).get('dong') !== '0') dc.capNhat(t, dt);
         // Lac lu nhe de thay long + duoi co quan tinh
         const lacY = Math.sin(t * 1.3) * .22;
         goc.userData.lac = lacY;

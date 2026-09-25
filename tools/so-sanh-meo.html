@@ -35,7 +35,7 @@
 <body>
 <header>
   <h1>Mèo Sensei 3D so với ảnh gốc</h1>
-  <p>Mô hình 3D (Hunyuan3D 2.1) chạy thời gian thực. Kéo chuột để xoay.</p>
+  <p>Mô hình 3D chạy thời gian thực. Kéo chuột để xoay. Thêm <code>?long=0</code>, <code>?nm=0</code>, <code>?dong=0</code> vào địa chỉ để tắt lông / bản đồ gồ ghề / cử động khi cần kiểm tra.</p>
 </header>
 <main>
   <section class="the">
@@ -90,7 +90,7 @@
   }
   function napBan(ten) {
     document.getElementById('ghi3d').textContent = 'Đang nạp mô hình…';
-    const TEP_NANG_CAP = { 'nang-cap': 'meo-1234-chi-tiet', 'nang-cap-2': 'meo-mv-chi-tiet', 'nang-cap-3': 'meo-mv-in', 'nang-cap-4': 'meo-mv-nan-in', 'co-xuong': 'meo-xuong' };
+    const TEP_NANG_CAP = { 'nang-cap': 'meo-1234-chi-tiet', 'nang-cap-2': 'meo-mv-chi-tiet', 'nang-cap-3': 'meo-mv-in', 'nang-cap-4': 'meo-mv-nan-in', 'co-xuong': 'meo-xuong', 'tripo-xuong': 'meo-tripo' };
     if (TEP_NANG_CAP[ten]) {
       napMeoNangCap(`../assets/sensei-meo/3d/${TEP_NANG_CAP[ten]}.glb`, scene).then((m) => {
         if (meo) scene.remove(meo);
@@ -144,7 +144,7 @@
   });
   const hopBan = document.createElement('div'); hopBan.className = 'nut'; hopBan.style.paddingBottom = '0';
   document.getElementById('nut3d').before(hopBan);
-  for (const [ten, nhan] of [['co-xuong', 'Bản cử động'], ['nang-cap-4', 'Bản nắn hình'], ['nang-cap-3', 'Bản in ảnh gốc'], ['nang-cap-2', 'Bản nhiều góc'], ['nang-cap', 'Bản nâng cấp 1'], ['meo-1234-web', 'Bản thô A'], ['meo-42-web', 'Bản thô B']]) {
+  for (const [ten, nhan] of [['tripo-xuong', 'Tripo hoàn chỉnh'], ['tripo-goc', 'Tripo (gốc)'], ['co-xuong', 'Bản cử động'], ['nang-cap-4', 'Bản nắn hình'], ['nang-cap-3', 'Bản in ảnh gốc'], ['nang-cap-2', 'Bản nhiều góc'], ['nang-cap', 'Bản nâng cấp 1'], ['meo-1234-web', 'Bản thô A'], ['meo-42-web', 'Bản thô B']]) {
     const b = document.createElement('button'); b.textContent = nhan; b.dataset.ten = ten;
     b.onclick = () => { napBan(ten); hopBan.querySelectorAll('button').forEach((x) => x.classList.toggle('dang', x === b)); };
     hopBan.appendChild(b);
