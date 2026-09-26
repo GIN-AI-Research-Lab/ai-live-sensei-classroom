@@ -41,8 +41,22 @@ _BO_NEN = {}  # (duong dan, mtime_ns, size) -> bytes da nen
 # Ten mien noi bo duoc lay env.js. Ten mien la (DNS rebinding: evil.com tro ve
 # 127.0.0.1) bi chan. Them ten khac (ngrok, DDNS...) qua ALLOWED_HOSTS trong .env,
 # cach nhau dau phay; '*' = tat kiem tra.
+# KHONG co '.ts.net': Tailscale Funnel dung chinh ten .ts.net de mo ra INTERNET CONG KHAI
+# (proxy vao 127.0.0.1) — tung de lo ca 4 key. Chi dung Tailscale Serve (noi bo) thi tu
+# them ten may vao ALLOWED_HOSTS.
 DUOI_NOI_BO = ('.localhost', '.local', '.lan', '.home', '.home.arpa', '.internal',
-               '.localdomain', '.ts.net')
+               '.localdomain')
+
+# CHI phuc vu nhung gi app can (danh sach cho phep, mac dinh cam). Truoc day phuc vu ca
+# thu muc du an: tai lieu ca nhan, tools/*.py, server.py... deu tai duoc.
+TEP_GOC_CHO_PHEP = {'index.html', 'favicon.ico'}
+THU_MUC_CHO_PHEP = {'css', 'js', 'curriculum', 'vendor', 'assets', 'tools'}
+DUOI_CAM = ('.py', '.pyc', '.pyo', '.bat', '.cmd', '.ps1', '.sh', '.md', '.txt', '.csv',
+            '.doc', '.docx', '.xls', '.xlsx', '.pdf', '.zip', '.log', '.ini', '.cfg')
+
+# Mac dinh chi nghe tren may nay. Can dien thoai trong mang LAN (mic qua HTTPS :3443)
+# thi chay: python server.py --lan   (hoac SERVE_LAN=1 trong .env)
+MO_LAN = '--lan' in sys.argv[1:]
 
 
 def _phan_bi_chan(ten):
@@ -54,10 +68,26 @@ def _phan_bi_chan(ten):
     return n.endswith(DUOI_BI_MAT) or n.split('.')[0] in TEN_THIET_BI
 
 
+def _ngoai_danh_sach(phan):
+    """Duong dan (cac thanh phan, tinh tu goc du an) khong nam trong danh sach cho phep."""
+    phan = [p for p in phan if p not in ('', '.')]
+    if not phan:
+        return False                                   # '/' -> index.html
+    if phan[-1].rstrip(' .').lower().endswith(DUOI_CAM):
+        return True
+    dau = phan[0].lower()
+    if len(phan) == 1:
+        return dau not in TEP_GOC_CHO_PHEP and dau not in THU_MUC_CHO_PHEP
+    if dau not in THU_MUC_CHO_PHEP:
+        return True
+    # tools/ chi cho trang so sanh (.html); cac script sinh giao trinh thi khong
+    return dau == 'tools' and not phan[-1].lower().endswith('.html')
+
+
 def duong_dan_bi_chan(fs):
     """fs: duong dan da giai ma %xx va chuan hoa (ket qua translate_path goc)."""
     phan = os.path.relpath(fs, DIRECTORY).replace('\\', '/').split('/')
-    if any(_phan_bi_chan(p) for p in phan if p not in ('', '.')):
+    if any(_phan_bi_chan(p) for p in phan if p not in ('', '.')) or _ngoai_danh_sach(phan):
         return True
     # Ten that tren dia cung phai qua: ten ngan 8.3 (GIT~1 -> .git), lien ket...
     try:
@@ -67,8 +97,10 @@ def duong_dan_bi_chan(fs):
     if that == GOC_THAT:
         return False
     goc = os.path.join(GOC_THAT, '')
-    phan = that[len(goc):].split(os.sep) if that.startswith(goc) else [os.path.basename(that)]
-    return any(_phan_bi_chan(p) for p in phan if p)
+    if not that.startswith(goc):
+        return True                                    # lien ket tro ra ngoai du an
+    phan = that[len(goc):].split(os.sep)
+    return any(_phan_bi_chan(p) for p in phan if p) or _ngoai_danh_sach(phan)
 
 
 def host_hop_le(host, env):
@@ -79,13 +111,15 @@ def host_hop_le(host, env):
     h = host[1:].split(']', 1)[0] if host.startswith('[') else host.split(':', 1)[0]
     h = h.rstrip('.')
     them = {x.strip().lower() for x in env.get('ALLOWED_HOSTS', '').split(',') if x.strip()}
-    if '*' in them or h in them or h == 'localhost' or '.' not in h or h.endswith(DUOI_NOI_BO):
+    if '*' in them or h in them:
         return True
     try:
-        ipaddress.ip_address(h)
-        return True
+        # Xet IP TRUOC: IPv6 khong co dau cham nen truoc day lot qua nhanh 'ten khong dau cham'.
+        # IP noi bo (127.x, 192.168.x, 10.x, ::1, 100.64/10 cua Tailscale...) thi duoc, IP cong khai thi khong
+        return not ipaddress.ip_address(h).is_global
     except ValueError:
-        return False
+        pass
+    return h == 'localhost' or '.' not in h or h.endswith(DUOI_NOI_BO)
 
 
 class _DoanTep(object):
@@ -137,8 +171,17 @@ class CORSAndMimeHandler(http.server.SimpleHTTPRequestHandler):
     # thi tab dong roi van de lai luong treo. 30 giay la du cho mot lan tai trang.
     timeout = 30
 
+    # Khong khai phien ban Python ra header Server
+    server_version = 'SenseiDev'
+    sys_version = ''
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=DIRECTORY, **kwargs)
+
+    def list_directory(self, path):
+        # Khong liet ke thu muc (truoc day /Image/, /tools/ hien ca danh sach tep)
+        self.send_error(404, 'File not found')
+        return None
 
     def do_GET(self):
         # Sinh env.js tu .env de trinh duyet doc duoc key ma khong phai nhap tay
@@ -342,11 +385,13 @@ class CORSAndMimeHandler(http.server.SimpleHTTPRequestHandler):
             self.send_header('Cross-Origin-Resource-Policy', 'same-origin')
             self.send_header('Cache-Control', 'no-store')
         else:
-            self.send_header('Access-Control-Allow-Origin', '*')
-            self.send_header('Access-Control-Allow-Methods', 'GET, OPTIONS')
-            # no-cache: trinh duyet van giu nhung hoi lai moi lan (ETag -> 304), sua tep
-            # la thay ngay. Truoc day no-store: moi lan tai lai keo lai ~6 MB (glb 4.4 MB).
+            # Khong con 'Access-Control-Allow-Origin: *': app cung nguon, CORS mo chi giup
+            # trang la doc tep cua may nay. no-cache: trinh duyet van giu nhung hoi lai moi lan
+            # (ETag -> 304), sua tep la thay ngay.
             self.send_header('Cache-Control', cc or 'no-cache')
+        self.send_header('X-Content-Type-Options', 'nosniff')
+        self.send_header('Referrer-Policy', 'same-origin')
+        self.send_header('X-Frame-Options', 'SAMEORIGIN')
         super().end_headers()
 
     # Kieu MIME chuan cho tung loai tep. Thieu woff2 thi mot so trinh duyet
@@ -383,6 +428,11 @@ class MayChuHttps(socketserver.ThreadingTCPServer):
         super().handle_error(request, client_address)
 
 
+def dia_chi_nghe():
+    """'' = moi giao dien mang (LAN), '127.0.0.1' = chi may nay (mac dinh)."""
+    return '' if (MO_LAN or read_env().get('SERVE_LAN', '').strip() in ('1', 'true', 'yes')) else '127.0.0.1'
+
+
 def start_https_server():
     cert_path = os.path.join(DIRECTORY, 'cert.pem')
     key_path = os.path.join(DIRECTORY, 'key.pem')
@@ -393,7 +443,7 @@ def start_https_server():
         context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
         context.load_cert_chain(certfile=cert_path, keyfile=key_path)
         socketserver.TCPServer.allow_reuse_address = True
-        httpsd = MayChuHttps(("", HTTPS_PORT), CORSAndMimeHandler)
+        httpsd = MayChuHttps((dia_chi_nghe(), HTTPS_PORT), CORSAndMimeHandler)
         # do_handshake_on_connect=False: accept() khong bat tay nua. Truoc day bat tay
         # chay ngay trong accept() cua luong chinh, khong han — mot ket noi im lang
         # (khong gui ClientHello) la treo ca may chu HTTPS. Gio bat tay dien ra o lan
@@ -417,7 +467,7 @@ def run_server():
     for i in range(max_attempts):
         try:
             handler = CORSAndMimeHandler
-            httpd = socketserver.ThreadingTCPServer(("", port), handler)
+            httpd = socketserver.ThreadingTCPServer((dia_chi_nghe(), port), handler)
             break
         except OSError:
             print(f"[!] Port {port} is busy, trying port {port + 1}...")
@@ -436,6 +486,11 @@ def run_server():
     print("   AI Live Sensei Classroom - Server is Running!")
     print(f"   HTTP URL:   {url}")
     print(f"   Root Dir:   {DIRECTORY}")
+    if dia_chi_nghe() == '':
+        print("   [!] Che do LAN: moi may trong mang doc duoc app VA env.js (key API).")
+        print("       Chi bat tren mang tin cay; tuyet doi khong mo qua Tailscale Funnel / ngrok.")
+    else:
+        print("   Chi nghe tren may nay (127.0.0.1). Dien thoai trong LAN: python server.py --lan")
     print("   Press Ctrl + C to stop the server.")
     print("=" * 60)
 

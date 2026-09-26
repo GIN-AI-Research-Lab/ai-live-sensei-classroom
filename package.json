@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "python server.py",
-    "serve": "npx serve -l 3000 ."
+    "start:lan": "python server.py --lan"
   },
   "keywords": [
     "gemini-live",

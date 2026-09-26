@@ -15,3 +15,7 @@ key.pem
 
 # Video goc do Veo xuat ra (nang), app chi dung ban da nen trong assets/sensei-meo/video/
 assets/sensei-meo/video/goc/
+
+# Tep ca nhan / nhap — khong bao gio de trong thu muc duoc phuc vu hay commit
+Image/
+private/

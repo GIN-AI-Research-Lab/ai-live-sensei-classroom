@@ -84,10 +84,15 @@ python server.py
 ```
 Sau đó truy cập: [http://localhost:3000](http://localhost:3000)
 
-### Cách 3: Chạy bằng Node.js / npx
-```bash
-npx serve -l 3000 .
-```
+Mặc định server **chỉ nghe trên máy này** (127.0.0.1) và chỉ phục vụ các thư mục
+app cần (`css/`, `js/`, `curriculum/`, `vendor/`, `assets/`). Muốn mở cho điện
+thoại trong cùng mạng LAN (mic qua HTTPS cổng 3443) thì chạy `python server.py --lan`
+— khi đó mọi máy trong mạng đều đọc được `env.js` (API key), nên chỉ bật trên mạng
+tin cậy.
+
+> ⚠️ **Không** mở server này ra internet (Tailscale Funnel, ngrok, mở cổng router…)
+> và **không** dùng các server tĩnh khác kiểu `npx serve .`: chúng phục vụ cả thư mục
+> dự án, kể cả `.env`. Đây là server để phát triển, không phải để chạy production.
 
 ---
 
