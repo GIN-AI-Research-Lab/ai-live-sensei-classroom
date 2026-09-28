@@ -287,6 +287,8 @@ class AudioEngine {
       }
 
       source.start(this.scheduledTime);
+      // Mieng meo theo tieng (js/khau-hinh.js): phan tich goi nay truoc khi no phat
+      this._napKhauHinh(float32Array, this.scheduledTime);
       this.scheduledTime += audioBuffer.duration;
 
       this.activeSources.push(source);
@@ -401,6 +403,17 @@ class AudioEngine {
     });
   }
 
+  /**
+   * Dua goi PCM vua xep lich cho bo doc khau hinh (window.SenseiKhauHinh) neu co:
+   * mau Float32 24 kHz + thoi diem AudioContext goi bat dau phat. Loi o do
+   * khong duoc lam hong tieng Sensei.
+   */
+  _napKhauHinh(mau, batDau) {
+    const kh = window.SenseiKhauHinh;
+    if (!kh || !kh.nap) return;
+    try { kh.nap(mau, batDau, 24000, this.outCtx); } catch (e) {}
+  }
+
   isPlaybackActive() {
     if (this.activeSources.length > 0) return true;
     if (this.outCtx && this.scheduledTime > this.outCtx.currentTime + 0.05) return true;
@@ -436,6 +449,8 @@ class AudioEngine {
     this.activeSources = [];
     this.scheduledTime = 0;
     this.leftoverBytes = null;
+    // Tieng da cat -> bo dong thoi gian khau hinh, meo khong mep tiep loi da bo
+    try { if (window.SenseiKhauHinh) window.SenseiKhauHinh.xoa(); } catch (e) {}
     this.onPlayStateChange(false, { manual: isManual });
   }
 

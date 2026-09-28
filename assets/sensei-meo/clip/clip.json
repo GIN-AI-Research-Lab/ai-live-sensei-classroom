@@ -68,6 +68,21 @@
    "khung": 480,
    "kb": 688
   },
+  "noi-kin-tay-phai": {
+   "giay": 6.0,
+   "khung": 360,
+   "kb": 411
+  },
+  "noi-kin-tay-trai": {
+   "giay": 6.0,
+   "khung": 360,
+   "kb": 396
+  },
+  "noi-kin": {
+   "giay": 6.0,
+   "khung": 360,
+   "kb": 415
+  },
   "noi-tay-phai": {
    "giay": 6.0,
    "khung": 360,
