@@ -22,7 +22,8 @@
       "romaji": "yamu wo enai",
       "wordType": "adjective",
       "meaningVi": "Bất đắc dĩ, không thể tránh khỏi",
-      "accentNote": "やむを得ない 事情 = hoàn cảnh bất khả kháng."
+      "accentNote": "やむを得ない 事情 = hoàn cảnh bất khả kháng.",
+      "emotion": "that_vong"
     },
     {
       "id": "voc-n2-2-3",
@@ -52,7 +53,8 @@
       "romaji": "nyuuin shimasu",
       "wordType": "verb",
       "meaningVi": "Nhập viện",
-      "accentNote": "びょういんに 入院します = nhập viện."
+      "accentNote": "びょういんに 入院します = nhập viện.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n2-2-6",
@@ -62,7 +64,8 @@
       "romaji": "akiramemasu",
       "wordType": "verb",
       "meaningVi": "Từ bỏ",
-      "accentNote": "Đã gặp N3 bài 4."
+      "accentNote": "Đã gặp N3 bài 4.",
+      "emotion": "that_vong"
     },
     {
       "id": "voc-n2-2-7",
@@ -72,7 +75,8 @@
       "romaji": "byouki",
       "wordType": "noun",
       "meaningVi": "Bệnh, ốm",
-      "accentNote": "Đã gặp N4 bài 26."
+      "accentNote": "Đã gặp N4 bài 26.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n2-2-8",
@@ -393,7 +397,8 @@
               "furigana": "えません"
             }
           ],
-          "meaningVi": "Vì bị ốm nên bất đắc dĩ phải từ bỏ chuyến du lịch."
+          "meaningVi": "Vì bị ốm nên bất đắc dĩ phải từ bỏ chuyến du lịch.",
+          "emotion": "that_vong"
         },
         {
           "id": "ex-n2-l2-s1-2",
@@ -493,7 +498,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Vì tai nạn, đã bị buộc phải nhập viện."
+          "meaningVi": "Vì tai nạn, đã bị buộc phải nhập viện.",
+          "emotion": "buon"
         },
         {
           "id": "ex-n2-l2-s2-2",
@@ -593,7 +599,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Vì bận nên bất đắc dĩ phải từ bỏ kỳ nghỉ. (cảm xúc cá nhân)"
+          "meaningVi": "Vì bận nên bất đắc dĩ phải từ bỏ kỳ nghỉ. (cảm xúc cá nhân)",
+          "emotion": "that_vong"
         },
         {
           "id": "ex-n2-l2-s3-2",
@@ -759,7 +766,8 @@
               "furigana": "あきらめました"
             }
           ],
-          "meaningVi": "Bất đắc dĩ, tôi đã từ bỏ chuyến du lịch."
+          "meaningVi": "Bất đắc dĩ, tôi đã từ bỏ chuyến du lịch.",
+          "emotion": "that_vong"
         }
       ]
     }
@@ -839,7 +847,8 @@
           "furigana": "えません"
         }
       ],
-      "meaningVi": "Bất đắc dĩ phải thu hẹp quy mô kinh doanh."
+      "meaningVi": "Bất đắc dĩ phải thu hẹp quy mô kinh doanh.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n2-2-3",
@@ -937,7 +946,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vậy thì vất vả thật nhỉ."
+      "meaningVi": "Vậy thì vất vả thật nhỉ.",
+      "emotion": "buon"
     },
     {
       "id": "dia-n2-2-5",
@@ -991,7 +1001,8 @@
           "isKeyGrammar": true
         }
       ],
-      "meaningVi": "Thực ra, vì tai nạn tôi đã bị buộc phải nhập viện."
+      "meaningVi": "Thực ra, vì tai nạn tôi đã bị buộc phải nhập viện.",
+      "emotion": "buon"
     },
     {
       "id": "dia-n2-2-6",
@@ -1018,7 +1029,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Anh ổn không?"
+      "meaningVi": "Anh ổn không?",
+      "emotion": "buon"
     },
     {
       "id": "dia-n2-2-7",
@@ -1094,7 +1106,8 @@
           "furigana": "えません"
         }
       ],
-      "meaningVi": "Vâng. Nhưng vì bệnh, bất đắc dĩ phải nghỉ làm."
+      "meaningVi": "Vâng. Nhưng vì bệnh, bất đắc dĩ phải nghỉ làm.",
+      "emotion": "buon"
     },
     {
       "id": "dia-n2-2-8",
@@ -1174,7 +1187,8 @@
           "furigana": "あきらめました"
         }
       ],
-      "meaningVi": "Chuyến du lịch với gia đình cũng bất đắc dĩ đã phải từ bỏ."
+      "meaningVi": "Chuyến du lịch với gia đình cũng bất đắc dĩ đã phải từ bỏ.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n2-2-10",

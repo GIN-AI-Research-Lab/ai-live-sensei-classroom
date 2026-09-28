@@ -12,7 +12,8 @@
       "romaji": "suki",
       "wordType": "adjective",
       "meaningVi": "Thích",
-      "accentNote": "Tính từ な. Đối tượng thích đánh dấu bằng が, KHÔNG dùng を."
+      "accentNote": "Tính từ な. Đối tượng thích đánh dấu bằng が, KHÔNG dùng を.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n5-9-2",
@@ -22,7 +23,8 @@
       "romaji": "daisuki",
       "wordType": "adjective",
       "meaningVi": "Rất thích, thích lắm",
-      "accentNote": "Tính từ な. Mạnh hơn 好き."
+      "accentNote": "Tính từ な. Mạnh hơn 好き.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n5-9-3",
@@ -32,7 +34,8 @@
       "romaji": "kirai",
       "wordType": "adjective",
       "meaningVi": "Ghét, không thích",
-      "accentNote": "Tính từ な. Trái nghĩa với 好き."
+      "accentNote": "Tính từ な. Trái nghĩa với 好き.",
+      "emotion": "de_biu"
     },
     {
       "id": "voc-n5-9-4",
@@ -42,7 +45,8 @@
       "romaji": "jouzu",
       "wordType": "adjective",
       "meaningVi": "Giỏi, khéo",
-      "accentNote": "Tính từ な. KHÔNG dùng để tự khen bản thân mình."
+      "accentNote": "Tính từ な. KHÔNG dùng để tự khen bản thân mình.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n5-9-5",
@@ -52,7 +56,8 @@
       "romaji": "heta",
       "wordType": "adjective",
       "meaningVi": "Kém, vụng",
-      "accentNote": "Tính từ な. Trái nghĩa với 上手."
+      "accentNote": "Tính từ な. Trái nghĩa với 上手.",
+      "emotion": "de_biu"
     },
     {
       "id": "voc-n5-9-6",
@@ -152,7 +157,8 @@
       "romaji": "doushite",
       "wordType": "phrase",
       "meaningVi": "Tại sao, vì sao",
-      "accentNote": "Câu trả lời thường kết bằng から."
+      "accentNote": "Câu trả lời thường kết bằng から.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "voc-n5-9-16",
@@ -202,7 +208,8 @@
       "romaji": "tanoshii",
       "wordType": "adjective",
       "meaningVi": "Vui vẻ",
-      "accentNote": "Đã gặp bài 8 — nay làm lý do thích một hoạt động."
+      "accentNote": "Đã gặp bài 8 — nay làm lý do thích một hoạt động.",
+      "emotion": "vui"
     }
   ],
   "kanjiList": [
@@ -529,7 +536,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Anh Yamada nấu ăn giỏi."
+          "meaningVi": "Anh Yamada nấu ăn giỏi.",
+          "emotion": "vui"
         },
         {
           "id": "ex-n5-l9-s2-2",
@@ -571,7 +579,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Tôi hát dở."
+          "meaningVi": "Tôi hát dở.",
+          "emotion": "xau_ho"
         }
       ]
     },
@@ -693,7 +702,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Vì công việc bận rộn nên vất vả lắm."
+          "meaningVi": "Vì công việc bận rộn nên vất vả lắm.",
+          "emotion": "that_vong"
         }
       ]
     },
@@ -1035,7 +1045,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Hay đó. Còn nấu ăn thì sao?"
+      "meaningVi": "Hay đó. Còn nấu ăn thì sao?",
+      "emotion": "vui"
     },
     {
       "id": "dia-n5-9-6",
@@ -1082,7 +1093,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Nấu ăn thì tôi dở. Không biết tại sao nữa."
+      "meaningVi": "Nấu ăn thì tôi dở. Không biết tại sao nữa.",
+      "emotion": "xau_ho"
     },
     {
       "id": "dia-n5-9-7",
@@ -1238,7 +1250,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Có chứ, thích lắm luôn!"
+      "meaningVi": "Có chứ, thích lắm luôn!",
+      "emotion": "vui"
     }
   ],
   "exercises": [

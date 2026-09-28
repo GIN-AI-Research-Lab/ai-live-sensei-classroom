@@ -122,7 +122,8 @@
       "romaji": "seikou",
       "wordType": "noun",
       "meaningVi": "Thành công",
-      "accentNote": "Đã gặp N3 bài 4."
+      "accentNote": "Đã gặp N3 bài 4.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n1-10-13",
@@ -172,7 +173,8 @@
       "romaji": "ayamarimasu",
       "wordType": "verb",
       "meaningVi": "Xin lỗi",
-      "accentNote": "Đã gặp N1 bài 9."
+      "accentNote": "Đã gặp N1 bài 9.",
+      "emotion": "cui_chao"
     },
     {
       "id": "voc-n1-10-18",
@@ -1180,7 +1182,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Ông sẽ từ chức giám đốc à?"
+      "meaningVi": "Ông sẽ từ chức giám đốc à?",
+      "emotion": "ngac_nhien"
     },
     {
       "id": "dia-n1-10-10",

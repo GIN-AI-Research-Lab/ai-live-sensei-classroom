@@ -12,7 +12,8 @@
       "romaji": "ayamarimasu",
       "wordType": "verb",
       "meaningVi": "Xin lỗi",
-      "accentNote": "謝らないでは すまない = bắt buộc phải xin lỗi."
+      "accentNote": "謝らないでは すまない = bắt buộc phải xin lỗi.",
+      "emotion": "cui_chao"
     },
     {
       "id": "voc-n1-9-2",
@@ -72,7 +73,8 @@
       "romaji": "kandou shimasu",
       "wordType": "verb",
       "meaningVi": "Cảm động",
-      "accentNote": "Đã gặp N3 bài 11."
+      "accentNote": "Đã gặp N3 bài 11.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n1-9-8",
@@ -393,7 +395,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Bộ phim này chắc chắn sẽ khiến người xem cảm động."
+          "meaningVi": "Bộ phim này chắc chắn sẽ khiến người xem cảm động.",
+          "emotion": "vui"
         },
         {
           "id": "ex-n1-l9-s1-2",
@@ -491,7 +494,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Không xin lỗi thì không xong. (bắt buộc phải xin lỗi)"
+          "meaningVi": "Không xin lỗi thì không xong. (bắt buộc phải xin lỗi)",
+          "emotion": "gian"
         },
         {
           "id": "ex-n1-l9-s2-2",
@@ -526,7 +530,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Không chịu trách nhiệm thì không xong. (bắt buộc phải chịu trách nhiệm)"
+          "meaningVi": "Không chịu trách nhiệm thì không xong. (bắt buộc phải chịu trách nhiệm)",
+          "emotion": "gian"
         }
       ]
     },
@@ -856,7 +861,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vâng. Xin mời đặt câu hỏi."
+      "meaningVi": "Vâng. Xin mời đặt câu hỏi.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n1-9-3",
@@ -893,7 +899,8 @@
           "isKeyGrammar": true
         }
       ],
-      "meaningVi": "Giám đốc bắt buộc phải xin lỗi."
+      "meaningVi": "Giám đốc bắt buộc phải xin lỗi.",
+      "emotion": "gian"
     },
     {
       "id": "dia-n1-9-4",
@@ -916,7 +923,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vâng. Xin lỗi."
+      "meaningVi": "Vâng. Xin lỗi.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n1-9-5",
@@ -953,7 +961,8 @@
           "isKeyGrammar": true
         }
       ],
-      "meaningVi": "Ông bắt buộc phải chịu trách nhiệm."
+      "meaningVi": "Ông bắt buộc phải chịu trách nhiệm.",
+      "emotion": "gian"
     },
     {
       "id": "dia-n1-9-6",

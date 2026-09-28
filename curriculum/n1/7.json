@@ -32,7 +32,8 @@
       "romaji": "suiri",
       "wordType": "noun",
       "meaningVi": "Suy luận, suy lý",
-      "accentNote": "推理の 結果 = kết quả của sự suy luận."
+      "accentNote": "推理の 結果 = kết quả của sự suy luận.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "voc-n1-7-4",
@@ -52,7 +53,8 @@
       "romaji": "utagaimasu",
       "wordType": "verb",
       "meaningVi": "Nghi ngờ",
-      "accentNote": "彼を 疑います = nghi ngờ anh ta."
+      "accentNote": "彼を 疑います = nghi ngờ anh ta.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "voc-n1-7-6",
@@ -92,7 +94,8 @@
       "romaji": "kangaemasu",
       "wordType": "verb",
       "meaningVi": "Suy nghĩ",
-      "accentNote": "Đã gặp N5 bài 21."
+      "accentNote": "Đã gặp N5 bài 21.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "voc-n1-7-10",
@@ -544,7 +547,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Anh ấy thành công chính là kết quả của nỗ lực, không gì khác."
+          "meaningVi": "Anh ấy thành công chính là kết quả của nỗ lực, không gì khác.",
+          "emotion": "vui"
         },
         {
           "id": "ex-n1-l7-s2-2",
@@ -661,7 +665,8 @@
               "furigana": "いえません"
             }
           ],
-          "meaningVi": "Nếu không có chứng cứ, thì không thể nói chắc chắn là thủ phạm. (suy đoán về điều chưa xác nhận)"
+          "meaningVi": "Nếu không có chứng cứ, thì không thể nói chắc chắn là thủ phạm. (suy đoán về điều chưa xác nhận)",
+          "emotion": "suy_nghi"
         },
         {
           "id": "ex-n1-l7-s3-2",
@@ -935,7 +940,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Thủ phạm là ai?"
+      "meaningVi": "Thủ phạm là ai?",
+      "emotion": "suy_nghi"
     },
     {
       "id": "dia-n1-7-4",
@@ -1094,7 +1100,8 @@
           "furigana": "うたがいましたか"
         }
       ],
-      "meaningVi": "Tại sao đã nghi ngờ [anh ta]?"
+      "meaningVi": "Tại sao đã nghi ngờ [anh ta]?",
+      "emotion": "suy_nghi"
     },
     {
       "id": "dia-n1-7-8",

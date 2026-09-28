@@ -1059,7 +1059,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Xin lỗi, bây giờ là mấy giờ vậy ạ?"
+      "meaningVi": "Xin lỗi, bây giờ là mấy giờ vậy ạ?",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n5-4-2",
@@ -1222,7 +1223,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vậy à. Cảm ơn chị nhiều."
+      "meaningVi": "Vậy à. Cảm ơn chị nhiều.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n5-4-6",
@@ -1406,7 +1408,8 @@
           "furigana": "おきました"
         }
       ],
-      "meaningVi": "Không, hôm qua tôi không thức dậy sớm được. Tôi thức dậy lúc 8 giờ."
+      "meaningVi": "Không, hôm qua tôi không thức dậy sớm được. Tôi thức dậy lúc 8 giờ.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n5-4-10",

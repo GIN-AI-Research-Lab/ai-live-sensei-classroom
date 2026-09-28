@@ -72,7 +72,8 @@
       "romaji": "kanpeki",
       "wordType": "adjective",
       "meaningVi": "Hoàn hảo",
-      "accentNote": "完璧な せいひん = sản phẩm hoàn hảo."
+      "accentNote": "完璧な せいひん = sản phẩm hoàn hảo.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n1-3-8",
@@ -102,7 +103,8 @@
       "romaji": "subarashii",
       "wordType": "adjective",
       "meaningVi": "Tuyệt vời",
-      "accentNote": "Đã gặp N4 bài 26."
+      "accentNote": "Đã gặp N4 bài 26.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n1-3-11",
@@ -162,7 +164,8 @@
       "romaji": "byouki",
       "wordType": "noun",
       "meaningVi": "Bệnh",
-      "accentNote": "Đã gặp N4 bài 26."
+      "accentNote": "Đã gặp N4 bài 26.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n1-3-17",
@@ -572,7 +575,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Cả về hương vị lẫn chất lượng, sản phẩm này đều hoàn hảo."
+          "meaningVi": "Cả về hương vị lẫn chất lượng, sản phẩm này đều hoàn hảo.",
+          "emotion": "vui"
         },
         {
           "id": "ex-n1-l3-s2-2",
@@ -653,7 +657,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Cả về lập trường lẫn địa vị, anh ấy đều là người tuyệt vời."
+          "meaningVi": "Cả về lập trường lẫn địa vị, anh ấy đều là người tuyệt vời.",
+          "emotion": "vui"
         }
       ]
     },
@@ -819,7 +824,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Cả về chức năng lẫn niềm vui vị giác, sản phẩm này đều hoàn hảo. (2 khía cạnh của 1 chủ thể)"
+          "meaningVi": "Cả về chức năng lẫn niềm vui vị giác, sản phẩm này đều hoàn hảo. (2 khía cạnh của 1 chủ thể)",
+          "emotion": "vui"
         }
       ]
     },
@@ -1034,7 +1040,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Cả về hương vị lẫn chất lượng đều hoàn hảo."
+      "meaningVi": "Cả về hương vị lẫn chất lượng đều hoàn hảo.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n1-3-3",
@@ -1130,7 +1137,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Cả về vị giác lẫn chức năng, đều là sản phẩm tuyệt vời."
+      "meaningVi": "Cả về vị giác lẫn chức năng, đều là sản phẩm tuyệt vời.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n1-3-5",

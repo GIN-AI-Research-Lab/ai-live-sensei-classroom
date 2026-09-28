@@ -12,7 +12,8 @@
       "romaji": "kansha shimasu",
       "wordType": "verb",
       "meaningVi": "Cảm ơn, biết ơn",
-      "accentNote": "感謝してやまない = biết ơn mãi không thôi."
+      "accentNote": "感謝してやまない = biết ơn mãi không thôi.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n1-8-2",
@@ -32,7 +33,8 @@
       "romaji": "ai shimasu",
       "wordType": "verb",
       "meaningVi": "Yêu, yêu quý",
-      "accentNote": "愛してやまない = yêu mãi không thôi."
+      "accentNote": "愛してやまない = yêu mãi không thôi.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n1-8-4",
@@ -92,7 +94,8 @@
       "romaji": "shiawase",
       "wordType": "noun",
       "meaningVi": "Hạnh phúc",
-      "accentNote": "Đã gặp N4 bài 47."
+      "accentNote": "Đã gặp N4 bài 47.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n1-8-10",
@@ -398,7 +401,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Biết ơn tất cả mọi người mãi không thôi."
+          "meaningVi": "Biết ơn tất cả mọi người mãi không thôi.",
+          "emotion": "vui"
         }
       ]
     },
@@ -534,7 +538,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Yêu quý thầy/cô mãi không thôi."
+          "meaningVi": "Yêu quý thầy/cô mãi không thôi.",
+          "emotion": "xau_ho"
         },
         {
           "id": "ex-n1-l8-s3-2",
@@ -581,7 +586,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Dù đã tốt nghiệp, vẫn biết ơn thầy/cô mãi không thôi."
+          "meaningVi": "Dù đã tốt nghiệp, vẫn biết ơn thầy/cô mãi không thôi.",
+          "emotion": "vui"
         }
       ]
     },
@@ -719,7 +725,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Hôm nay là lễ tốt nghiệp."
+      "meaningVi": "Hôm nay là lễ tốt nghiệp.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n1-8-2",
@@ -732,7 +739,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Chúc mừng em."
+      "meaningVi": "Chúc mừng em.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n1-8-3",
@@ -777,7 +785,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Cảm ơn em."
+      "meaningVi": "Cảm ơn em.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n1-8-5",
@@ -809,7 +818,8 @@
           "isKeyGrammar": true
         }
       ],
-      "meaningVi": "Em biết ơn thầy mãi không thôi."
+      "meaningVi": "Em biết ơn thầy mãi không thôi.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n1-8-6",
@@ -888,7 +898,8 @@
           "isKeyGrammar": true
         }
       ],
-      "meaningVi": "Vâng. Em yêu quý thầy mãi không thôi."
+      "meaningVi": "Vâng. Em yêu quý thầy mãi không thôi.",
+      "emotion": "xau_ho"
     },
     {
       "id": "dia-n1-8-8",
@@ -1001,7 +1012,8 @@
           "furigana": "わすれません"
         }
       ],
-      "meaningVi": "Cảm ơn em. Thầy sẽ không quên."
+      "meaningVi": "Cảm ơn em. Thầy sẽ không quên.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

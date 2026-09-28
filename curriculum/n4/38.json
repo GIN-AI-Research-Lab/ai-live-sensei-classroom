@@ -529,7 +529,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Việc nói tiếng Nhật rất vui."
+          "meaningVi": "Việc nói tiếng Nhật rất vui.",
+          "emotion": "vui"
         }
       ]
     },
@@ -841,7 +842,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Là hát. Tôi rất thích (việc) hát."
+      "meaningVi": "Là hát. Tôi rất thích (việc) hát.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-38-3",
@@ -1043,7 +1045,8 @@
           "furigana": "わすれました"
         }
       ],
-      "meaningVi": "A! Tôi đã quên mất việc liên lạc rồi."
+      "meaningVi": "A! Tôi đã quên mất việc liên lạc rồi.",
+      "emotion": "ngac_nhien"
     },
     {
       "id": "dia-n4-38-7",

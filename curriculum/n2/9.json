@@ -82,7 +82,8 @@
       "romaji": "byouki",
       "wordType": "noun",
       "meaningVi": "Bệnh, ốm",
-      "accentNote": "Đã gặp N4 bài 26."
+      "accentNote": "Đã gặp N4 bài 26.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n2-9-9",
@@ -102,7 +103,8 @@
       "romaji": "shippai shimasu",
       "wordType": "verb",
       "meaningVi": "Thất bại",
-      "accentNote": "Đã gặp N4 bài 43."
+      "accentNote": "Đã gặp N4 bài 43.",
+      "emotion": "that_vong"
     },
     {
       "id": "voc-n2-9-11",
@@ -132,7 +134,8 @@
       "romaji": "seikou shimasu",
       "wordType": "verb",
       "meaningVi": "Thành công",
-      "accentNote": "Đã gặp N3 bài 8."
+      "accentNote": "Đã gặp N3 bài 8.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n2-9-14",
@@ -142,7 +145,8 @@
       "romaji": "shinpai",
       "wordType": "noun",
       "meaningVi": "Sự lo lắng",
-      "accentNote": "Đã gặp N4 bài 26."
+      "accentNote": "Đã gặp N4 bài 26.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n2-9-15",
@@ -192,7 +196,8 @@
       "romaji": "yuushou shimasu",
       "wordType": "verb",
       "meaningVi": "Vô địch",
-      "accentNote": "Đã gặp N3 bài 8."
+      "accentNote": "Đã gặp N3 bài 8.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n2-9-20",
@@ -633,7 +638,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Vận động viên bất chấp chấn thương, đã vô địch tại đại hội. (ca ngợi)"
+          "meaningVi": "Vận động viên bất chấp chấn thương, đã vô địch tại đại hội. (ca ngợi)",
+          "emotion": "vui"
         },
         {
           "id": "ex-n2-l9-s3-2",
@@ -928,7 +934,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Tuyệt vời quá nhỉ. Có vô địch tại đại hội không?"
+      "meaningVi": "Tuyệt vời quá nhỉ. Có vô địch tại đại hội không?",
+      "emotion": "ngac_nhien"
     },
     {
       "id": "dia-n2-9-3",
@@ -970,7 +977,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vâng. Sự nỗ lực đã thành công."
+      "meaningVi": "Vâng. Sự nỗ lực đã thành công.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n2-9-4",

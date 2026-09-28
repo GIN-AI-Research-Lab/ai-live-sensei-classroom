@@ -50,7 +50,7 @@ DUOI_NOI_BO = ('.localhost', '.local', '.lan', '.home', '.home.arpa', '.internal
 # CHI phuc vu nhung gi app can (danh sach cho phep, mac dinh cam). Truoc day phuc vu ca
 # thu muc du an: tai lieu ca nhan, tools/*.py, server.py... deu tai duoc.
 TEP_GOC_CHO_PHEP = {'index.html', 'favicon.ico'}
-THU_MUC_CHO_PHEP = {'css', 'js', 'curriculum', 'vendor', 'assets', 'tools'}
+THU_MUC_CHO_PHEP = {'css', 'js', 'curriculum', 'vendor', 'assets'}
 DUOI_CAM = ('.py', '.pyc', '.pyo', '.bat', '.cmd', '.ps1', '.sh', '.md', '.txt', '.csv',
             '.doc', '.docx', '.xls', '.xlsx', '.pdf', '.zip', '.log', '.ini', '.cfg')
 
@@ -78,10 +78,8 @@ def _ngoai_danh_sach(phan):
     dau = phan[0].lower()
     if len(phan) == 1:
         return dau not in TEP_GOC_CHO_PHEP and dau not in THU_MUC_CHO_PHEP
-    if dau not in THU_MUC_CHO_PHEP:
-        return True
-    # tools/ chi cho trang so sanh (.html); cac script sinh giao trinh thi khong
-    return dau == 'tools' and not phan[-1].lower().endswith('.html')
+    # tools/ (script sinh giao trinh) khong phuc vu: trang so sanh meo 3D da bo
+    return dau not in THU_MUC_CHO_PHEP
 
 
 def duong_dan_bi_chan(fs):
@@ -406,6 +404,9 @@ class CORSAndMimeHandler(http.server.SimpleHTTPRequestHandler):
         '.woff': 'font/woff',
         '.ttf': 'font/ttf',
         '.webmanifest': 'application/manifest+json',
+        # Python/Windows khong biet .webp (tra None -> octet-stream + nosniff); clip meo khong phu thuoc registry
+        '.webp': 'image/webp',
+        '.mp4': 'video/mp4',
     }
 
     def guess_type(self, path):

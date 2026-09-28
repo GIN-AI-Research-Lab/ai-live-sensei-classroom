@@ -12,7 +12,8 @@
       "romaji": "shikararemasu",
       "wordType": "verb",
       "meaningVi": "Bị mắng (thể bị động của 叱る)",
-      "accentNote": "叱る (nhóm 1) → 叱られる: đổi đuôi う→あ, thêm れる."
+      "accentNote": "叱る (nhóm 1) → 叱られる: đổi đuôi う→あ, thêm れる.",
+      "emotion": "gian"
     },
     {
       "id": "voc-n4-37-2",
@@ -22,7 +23,8 @@
       "romaji": "homeraremasu",
       "wordType": "verb",
       "meaningVi": "Được khen (thể bị động của 褒める)",
-      "accentNote": "褒める (nhóm 2) → 褒められる: bỏ る, thêm られる."
+      "accentNote": "褒める (nhóm 2) → 褒められる: bỏ る, thêm られる.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n4-37-3",
@@ -52,7 +54,8 @@
       "romaji": "nakaremasu",
       "wordType": "verb",
       "meaningVi": "Bị (ai đó) khóc (bị động PHIỀN TOÁI)",
-      "accentNote": "泣く → 泣かれる. Câu 'bị làm phiền' kiểu Nhật đặc trưng, không có tương đương trực tiếp trong tiếng Việt."
+      "accentNote": "泣く → 泣かれる. Câu 'bị làm phiền' kiểu Nhật đặc trưng, không có tương đương trực tiếp trong tiếng Việt.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n4-37-6",
@@ -62,7 +65,8 @@
       "romaji": "odorokaremasu",
       "wordType": "verb",
       "meaningVi": "Khiến ai đó ngạc nhiên (bị động)",
-      "accentNote": "驚く → 驚かれる."
+      "accentNote": "驚く → 驚かれる.",
+      "emotion": "ngac_nhien"
     },
     {
       "id": "voc-n4-37-7",
@@ -375,7 +379,8 @@
               "furigana": "しかられました"
             }
           ],
-          "meaningVi": "Tôi đã bị thầy giáo mắng."
+          "meaningVi": "Tôi đã bị thầy giáo mắng.",
+          "emotion": "that_vong"
         },
         {
           "id": "ex-n4-l37-s1-2",
@@ -400,7 +405,8 @@
               "furigana": "ほめられました"
             }
           ],
-          "meaningVi": "Tôi đã được thầy giáo khen."
+          "meaningVi": "Tôi đã được thầy giáo khen.",
+          "emotion": "vui"
         }
       ]
     },
@@ -436,7 +442,8 @@
               "furigana": "ふられました"
             }
           ],
-          "meaningVi": "Tôi bị dính mưa (không mang ô, khó chịu vì trời mưa)."
+          "meaningVi": "Tôi bị dính mưa (không mang ô, khó chịu vì trời mưa).",
+          "emotion": "that_vong"
         },
         {
           "id": "ex-n4-l37-s2-2",
@@ -570,7 +577,8 @@
               "furigana": "ぬすまれました"
             }
           ],
-          "meaningVi": "Tôi bị kẻ trộm lấy mất ví. (giữ を cho 財布, vật cụ thể bị lấy)"
+          "meaningVi": "Tôi bị kẻ trộm lấy mất ví. (giữ を cho 財布, vật cụ thể bị lấy)",
+          "emotion": "buon"
         }
       ]
     },
@@ -723,7 +731,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Anh Yamada, trông không có tinh thần nhỉ."
+      "meaningVi": "Anh Yamada, trông không có tinh thần nhỉ.",
+      "emotion": "buon"
     },
     {
       "id": "dia-n4-37-2",
@@ -828,7 +837,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vất vả thật đấy nhỉ."
+      "meaningVi": "Vất vả thật đấy nhỉ.",
+      "emotion": "buon"
     },
     {
       "id": "dia-n4-37-4",
@@ -963,7 +973,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Không may quá nhỉ. Nhưng chắc kế hoạch được thầy khen phải không?"
+      "meaningVi": "Không may quá nhỉ. Nhưng chắc kế hoạch được thầy khen phải không?",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n4-37-6",
@@ -1000,7 +1011,8 @@
           "furigana": "しかられました"
         }
       ],
-      "meaningVi": "Không, ngược lại tôi còn bị mắng nữa."
+      "meaningVi": "Không, ngược lại tôi còn bị mắng nữa.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n4-37-7",
@@ -1156,7 +1168,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Hay đó. Tiệc của ai vậy?"
+      "meaningVi": "Hay đó. Tiệc của ai vậy?",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-37-10",

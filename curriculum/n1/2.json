@@ -12,7 +12,8 @@
       "romaji": "shougeki",
       "wordType": "noun",
       "meaningVi": "Chấn động, cú sốc",
-      "accentNote": "衝撃を 禁じ得ません = không thể kìm nén được cú sốc."
+      "accentNote": "衝撃を 禁じ得ません = không thể kìm nén được cú sốc.",
+      "emotion": "ngac_nhien"
     },
     {
       "id": "voc-n1-2-2",
@@ -22,7 +23,8 @@
       "romaji": "doujou",
       "wordType": "noun",
       "meaningVi": "Đồng cảm, thương cảm",
-      "accentNote": "同情に たえません = không kìm được sự thương cảm."
+      "accentNote": "同情に たえません = không kìm được sự thương cảm.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n1-2-3",
@@ -52,7 +54,8 @@
       "romaji": "kangeki",
       "wordType": "noun",
       "meaningVi": "Sự xúc động mạnh",
-      "accentNote": "感激に たえません = không kìm được sự xúc động."
+      "accentNote": "感激に たえません = không kìm được sự xúc động.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n1-2-6",
@@ -62,7 +65,8 @@
       "romaji": "odoroki",
       "wordType": "noun",
       "meaningVi": "Sự ngạc nhiên",
-      "accentNote": "驚きを 禁じ得ません = không thể kìm nén được sự ngạc nhiên."
+      "accentNote": "驚きを 禁じ得ません = không thể kìm nén được sự ngạc nhiên.",
+      "emotion": "ngac_nhien"
     },
     {
       "id": "voc-n1-2-7",
@@ -72,7 +76,8 @@
       "romaji": "kanashimi",
       "wordType": "noun",
       "meaningVi": "Nỗi buồn",
-      "accentNote": "悲しみに たえません = không kìm được nỗi buồn."
+      "accentNote": "悲しみに たえません = không kìm được nỗi buồn.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n1-2-8",
@@ -92,7 +97,8 @@
       "romaji": "ikari",
       "wordType": "noun",
       "meaningVi": "Sự giận dữ",
-      "accentNote": "Đã gặp N3 bài 20."
+      "accentNote": "Đã gặp N3 bài 20.",
+      "emotion": "gian"
     },
     {
       "id": "voc-n1-2-10",
@@ -102,7 +108,8 @@
       "romaji": "namida",
       "wordType": "noun",
       "meaningVi": "Nước mắt",
-      "accentNote": "Đã gặp N3 bài 11."
+      "accentNote": "Đã gặp N3 bài 11.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n1-2-11",
@@ -112,7 +119,8 @@
       "romaji": "yorokobi",
       "wordType": "noun",
       "meaningVi": "Niềm vui",
-      "accentNote": "Đã gặp N4 bài 26."
+      "accentNote": "Đã gặp N4 bài 26.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n1-2-12",
@@ -142,7 +150,8 @@
       "romaji": "hisan",
       "wordType": "adjective",
       "meaningVi": "Bi thảm",
-      "accentNote": "Đã gặp N1 bài 1."
+      "accentNote": "Đã gặp N1 bài 1.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n1-2-15",
@@ -392,7 +401,8 @@
               "furigana": "たえません"
             }
           ],
-          "meaningVi": "Nghe tin này, tôi không kìm được sự thương cảm."
+          "meaningVi": "Nghe tin này, tôi không kìm được sự thương cảm.",
+          "emotion": "buon"
         },
         {
           "id": "ex-n1-l2-s1-2",
@@ -429,7 +439,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Trông có vẻ không kìm được sự xúc động."
+          "meaningVi": "Trông có vẻ không kìm được sự xúc động.",
+          "emotion": "vui"
         }
       ]
     },
@@ -489,7 +500,8 @@
               "furigana": "えません"
             }
           ],
-          "meaningVi": "Trước sự tham nhũng đó, tôi không thể kìm nén được sự phẫn nộ."
+          "meaningVi": "Trước sự tham nhũng đó, tôi không thể kìm nén được sự phẫn nộ.",
+          "emotion": "gian"
         },
         {
           "id": "ex-n1-l2-s2-2",
@@ -533,7 +545,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Đó là một vụ việc không thể kìm nén được cú sốc."
+          "meaningVi": "Đó là một vụ việc không thể kìm nén được cú sốc.",
+          "emotion": "ngac_nhien"
         }
       ]
     },
@@ -603,7 +616,8 @@
               "furigana": "たえません"
             }
           ],
-          "meaningVi": "Nhìn tình huống bi thảm này, tôi không kìm được sự thương cảm. (ấm áp)"
+          "meaningVi": "Nhìn tình huống bi thảm này, tôi không kìm được sự thương cảm. (ấm áp)",
+          "emotion": "buon"
         },
         {
           "id": "ex-n1-l2-s3-2",
@@ -652,7 +666,8 @@
               "furigana": "えません"
             }
           ],
-          "meaningVi": "Trước vụ việc đó, tôi không thể kìm nén được sự kinh ngạc. (dữ dội)"
+          "meaningVi": "Trước vụ việc đó, tôi không thể kìm nén được sự kinh ngạc. (dữ dội)",
+          "emotion": "ngac_nhien"
         }
       ]
     },
@@ -717,7 +732,8 @@
               "furigana": "たえない"
             }
           ],
-          "meaningVi": "Tình huống bi thảm này không nỡ nhìn."
+          "meaningVi": "Tình huống bi thảm này không nỡ nhìn.",
+          "emotion": "buon"
         },
         {
           "id": "ex-n1-l2-s4-2",
@@ -766,7 +782,8 @@
               "furigana": "たえなかった"
             }
           ],
-          "meaningVi": "Tiếng thét của anh ta không nỡ nghe."
+          "meaningVi": "Tiếng thét của anh ta không nỡ nghe.",
+          "emotion": "buon"
         }
       ]
     }
@@ -865,7 +882,8 @@
           "furigana": "えません"
         }
       ],
-      "meaningVi": "Vâng. Tôi không thể kìm nén được cú sốc."
+      "meaningVi": "Vâng. Tôi không thể kìm nén được cú sốc.",
+      "emotion": "ngac_nhien"
     },
     {
       "id": "dia-n1-2-3",
@@ -946,7 +964,8 @@
           "furigana": "たえません"
         }
       ],
-      "meaningVi": "Bi thảm lắm, tôi không kìm được sự thương cảm."
+      "meaningVi": "Bi thảm lắm, tôi không kìm được sự thương cảm.",
+      "emotion": "buon"
     },
     {
       "id": "dia-n1-2-5",
@@ -1051,7 +1070,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vâng. Đó là sự việc khiến xã hội không thể kìm nén được sự phẫn nộ."
+      "meaningVi": "Vâng. Đó là sự việc khiến xã hội không thể kìm nén được sự phẫn nộ.",
+      "emotion": "gian"
     },
     {
       "id": "dia-n1-2-7",
@@ -1156,7 +1176,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vâng. Tiếng thét cũng không nỡ nghe."
+      "meaningVi": "Vâng. Tiếng thét cũng không nỡ nghe.",
+      "emotion": "buon"
     },
     {
       "id": "dia-n1-2-9",
@@ -1249,7 +1270,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Trông có vẻ không kìm được nỗi buồn hơn là sự xúc động."
+      "meaningVi": "Trông có vẻ không kìm được nỗi buồn hơn là sự xúc động.",
+      "emotion": "buon"
     }
   ],
   "exercises": [

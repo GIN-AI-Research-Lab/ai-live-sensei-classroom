@@ -182,7 +182,8 @@
       "romaji": "jouzu",
       "wordType": "adjective",
       "meaningVi": "Giỏi",
-      "accentNote": "Đã gặp N4 bài 26."
+      "accentNote": "Đã gặp N4 bài 26.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n2-11-19",
@@ -801,7 +802,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Ngon nhỉ. Đây có phải món ăn truyền thống không?"
+      "meaningVi": "Ngon nhỉ. Đây có phải món ăn truyền thống không?",
+      "emotion": "vui"
     },
     {
       "id": "dia-n2-11-3",

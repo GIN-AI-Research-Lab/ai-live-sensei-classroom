@@ -172,7 +172,8 @@
       "romaji": "shippai shimasu",
       "wordType": "verb",
       "meaningVi": "Thất bại",
-      "accentNote": "Đã gặp N4 bài 43."
+      "accentNote": "Đã gặp N4 bài 43.",
+      "emotion": "that_vong"
     },
     {
       "id": "voc-n2-14-18",
@@ -378,7 +379,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Câu chuyện đó khó mà tin được."
+          "meaningVi": "Câu chuyện đó khó mà tin được.",
+          "emotion": "ngac_nhien"
         },
         {
           "id": "ex-n2-l14-s1-2",
@@ -430,7 +432,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Thái độ của anh ấy khó mà hiểu được."
+          "meaningVi": "Thái độ của anh ấy khó mà hiểu được.",
+          "emotion": "de_biu"
         }
       ]
     },
@@ -476,7 +479,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Chúng tôi khó có thể đáp lại yêu cầu đó."
+          "meaningVi": "Chúng tôi khó có thể đáp lại yêu cầu đó.",
+          "emotion": "cui_chao"
         },
         {
           "id": "ex-n2-l14-s2-2",
@@ -557,7 +561,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Sự thật đó khó mà tin được. (về nhận thức, khách quan)"
+          "meaningVi": "Sự thật đó khó mà tin được. (về nhận thức, khách quan)",
+          "emotion": "ngac_nhien"
         },
         {
           "id": "ex-n2-l14-s3-2",
@@ -650,7 +655,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Thất bại của anh ấy khó mà tha thứ được."
+          "meaningVi": "Thất bại của anh ấy khó mà tha thứ được.",
+          "emotion": "gian"
         },
         {
           "id": "ex-n2-l14-s4-2",
@@ -795,7 +801,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vâng. Kết quả đó khó mà tin được."
+      "meaningVi": "Vâng. Kết quả đó khó mà tin được.",
+      "emotion": "ngac_nhien"
     },
     {
       "id": "dia-n2-14-3",
@@ -869,7 +876,8 @@
           "isKeyGrammar": true
         }
       ],
-      "meaningVi": "Chúng tôi khó có thể đáp lại yêu cầu đó."
+      "meaningVi": "Chúng tôi khó có thể đáp lại yêu cầu đó.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n2-14-5",
@@ -930,7 +938,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Thái độ của anh ấy khó mà hiểu được nhỉ."
+      "meaningVi": "Thái độ của anh ấy khó mà hiểu được nhỉ.",
+      "emotion": "de_biu"
     },
     {
       "id": "dia-n2-14-6",
@@ -989,7 +998,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vâng. Thất bại của anh ấy khó mà tha thứ được."
+      "meaningVi": "Vâng. Thất bại của anh ấy khó mà tha thứ được.",
+      "emotion": "gian"
     },
     {
       "id": "dia-n2-14-7",

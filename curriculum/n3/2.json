@@ -989,7 +989,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Giỏi thật đấy. Là kết quả của nỗ lực đấy nhỉ."
+      "meaningVi": "Giỏi thật đấy. Là kết quả của nỗ lực đấy nhỉ.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n3-2-6",
@@ -1297,7 +1298,8 @@
           "isKeyGrammar": true
         }
       ],
-      "meaningVi": "Cố lên nhé. Chắc chắn anh sẽ làm được thôi."
+      "meaningVi": "Cố lên nhé. Chắc chắn anh sẽ làm được thôi.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

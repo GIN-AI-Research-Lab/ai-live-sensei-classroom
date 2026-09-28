@@ -635,7 +635,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Hôm qua tôi đã muốn đi núi."
+          "meaningVi": "Hôm qua tôi đã muốn đi núi.",
+          "emotion": "that_vong"
         }
       ]
     },
@@ -862,7 +863,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Hay đó. Tớ cũng muốn đi."
+      "meaningVi": "Hay đó. Tớ cũng muốn đi.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n5-13-4",
@@ -1139,7 +1141,8 @@
           "furigana": "ありませんでした"
         }
       ],
-      "meaningVi": "Hôm qua tớ cũng đã muốn đi rồi, nhưng không có thời gian."
+      "meaningVi": "Hôm qua tớ cũng đã muốn đi rồi, nhưng không có thời gian.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n5-13-9",
@@ -1243,7 +1246,8 @@
           "furigana": "いきましょう"
         }
       ],
-      "meaningVi": "Hay đó. Đi ăn ramen nhé."
+      "meaningVi": "Hay đó. Đi ăn ramen nhé.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

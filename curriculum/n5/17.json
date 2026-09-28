@@ -102,7 +102,8 @@
       "romaji": "byouki",
       "wordType": "noun",
       "meaningVi": "Bệnh, ốm",
-      "accentNote": "病気に なります = bị bệnh."
+      "accentNote": "病気に なります = bị bệnh.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n5-17-11",
@@ -202,7 +203,8 @@
       "romaji": "shinpai",
       "wordType": "adjective",
       "meaningVi": "Lo lắng",
-      "accentNote": "Tính từ な. 心配しないで ください = xin đừng lo."
+      "accentNote": "Tính từ な. 心配しないで ください = xin đừng lo.",
+      "emotion": "buon"
     }
   ],
   "kanjiList": [
@@ -735,7 +737,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Thưa bác sĩ, tôi bị bệnh à?"
+      "meaningVi": "Thưa bác sĩ, tôi bị bệnh à?",
+      "emotion": "buon"
     },
     {
       "id": "dia-n5-17-2",
@@ -1207,7 +1210,8 @@
           "furigana": "なります"
         }
       ],
-      "meaningVi": "Không sao đâu. Anh sẽ khỏe lại nhanh thôi."
+      "meaningVi": "Không sao đâu. Anh sẽ khỏe lại nhanh thôi.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

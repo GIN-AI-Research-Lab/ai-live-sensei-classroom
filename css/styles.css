@@ -1847,11 +1847,11 @@ body.co-the-trai .deck-canvas {
   body.co-bang .deck-chatdock { right: calc(320px + 28px + 44px); }
 }
 
-/* Mèo 3D đứng nghỉ ở góc phải: màn rộng cho nó một làn riêng, thẻ không nằm dưới mèo.
-   js/sensei-cat3d-that.js bật body.co-meo và ghi --sensei-rong = khoảng từ mép phải màn hình
+/* Mèo Sensei (clip nửa thân) ở góc phải: màn rộng cho nó một làn riêng, thẻ không nằm dưới mèo.
+   js/sensei-cat-video.js bật body.co-meo và ghi --sensei-rong = khoảng từ mép phải màn hình
    tới điểm trái nhất của mèo. Sân khấu căn giữa (max-width) nên chỉ chừa phần mèo lấn vào.
    Bảng phấn mở: ≥1280px (không mở thẻ trái) mèo đứng nghỉ ngay trái bảng — sân khấu chừa cả
-   làn bảng lẫn làn mèo; hẹp hơn thì mèo nấp sau bảng (sensei-cat3d-that.js ẩn hẳn), chỉ chừa bảng. */
+   làn bảng lẫn làn mèo; hẹp hơn thì mèo nấp sau bảng (sensei-cat-video.js ẩn hẳn), chỉ chừa bảng. */
 @media (min-width: 1000px) {
   body.co-meo .deck-canvas {
     padding-right: max(28px, calc(var(--sensei-rong, 0px) + 8px - max(0px, (100vw - 1180px) / 2)));
@@ -2064,10 +2064,10 @@ body.co-the-trai.co-bang #slideContent .deck-scroll.grid {
   cursor: pointer;
 }
 
-/* SENSEI 3D — cho trong cuoi vung cuon */
-/* Mèo 3D đứng ở góc phải dưới, trên nội dung bài. js/sensei-cat3d-that.js ghi chiều cao mèo vào
+/* MEO SENSEI — cho trong cuoi vung cuon */
+/* Mèo Sensei ở góc phải dưới, trên nội dung bài. js/sensei-cat-video.js ghi chiều cao mèo vào
    --sensei-cao: cuối vùng cuộn có một khoảng trống cao bấy nhiêu, nên hàng thẻ cuối vẫn cuộn lên
-   khỏi mèo. Không có mèo (đang ẩn / nhân vật khác) thì vẫn chừa 40px cho nút bật / tắt Sensei.
+   khỏi mèo. Không có mèo (đang ẩn) thì vẫn chừa 40px cho nút bật / tắt Sensei.
    Dùng phần tử giả ::after chứ không padding-bottom: padding ép vùng cuộn không thể thấp hơn
    nó (màn thấp nằm ngang mất hẳn danh sách); khoảng trống ở cuối thì chỉ thêm chỗ để cuộn.
    Lấy khoảng lớn nhất trong: mèo (--cho-meo), ô chat đang mở (--cho-chat), tấm thẻ ở đáy (--cho-the). */

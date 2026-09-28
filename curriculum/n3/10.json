@@ -22,7 +22,8 @@
       "romaji": "monku",
       "wordType": "noun",
       "meaningVi": "Lời phàn nàn, ca thán",
-      "accentNote": "文句を 言います = phàn nàn."
+      "accentNote": "文句を 言います = phàn nàn.",
+      "emotion": "gian"
     },
     {
       "id": "voc-n3-10-3",
@@ -32,7 +33,8 @@
       "romaji": "fuman",
       "wordType": "noun",
       "meaningVi": "Sự bất mãn, không hài lòng",
-      "accentNote": "不満が あります = có sự bất mãn."
+      "accentNote": "不満が あります = có sự bất mãn.",
+      "emotion": "gian"
     },
     {
       "id": "voc-n3-10-4",
@@ -424,7 +426,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Mặc dù có tài năng, nhưng anh ấy lại không nỗ lực."
+          "meaningVi": "Mặc dù có tài năng, nhưng anh ấy lại không nỗ lực.",
+          "emotion": "that_vong"
         }
       ]
     },
@@ -482,7 +485,8 @@
               "furigana": "いいます"
             }
           ],
-          "meaningVi": "Còn là trẻ con mà cứ phàn nàn suốt."
+          "meaningVi": "Còn là trẻ con mà cứ phàn nàn suốt.",
+          "emotion": "de_biu"
         },
         {
           "id": "ex-n3-l10-s2-2",
@@ -527,7 +531,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Có tài mà lại không chịu nỗ lực."
+          "meaningVi": "Có tài mà lại không chịu nỗ lực.",
+          "emotion": "de_biu"
         }
       ]
     },
@@ -620,7 +625,8 @@
               "furigana": "だしません"
             }
           ],
-          "meaningVi": "Có tiền mà lại không chịu chi ra. (chê trách, khó chịu)"
+          "meaningVi": "Có tiền mà lại không chịu chi ra. (chê trách, khó chịu)",
+          "emotion": "de_biu"
         }
       ]
     },
@@ -735,7 +741,8 @@
               "furigana": "いいます"
             }
           ],
-          "meaningVi": "Còn là trẻ con mà cứ than phiền suốt."
+          "meaningVi": "Còn là trẻ con mà cứ than phiền suốt.",
+          "emotion": "de_biu"
         }
       ]
     }
@@ -906,7 +913,8 @@
           "furigana": "がんばりません"
         }
       ],
-      "meaningVi": "Người đó có tài mà lại không chịu cố gắng."
+      "meaningVi": "Người đó có tài mà lại không chịu cố gắng.",
+      "emotion": "de_biu"
     },
     {
       "id": "dia-n3-10-4",
@@ -967,7 +975,8 @@
           "furigana": "あります"
         }
       ],
-      "meaningVi": "Đúng vậy nhỉ. Tôi thấy bất mãn với thái độ không nỗ lực đó."
+      "meaningVi": "Đúng vậy nhỉ. Tôi thấy bất mãn với thái độ không nỗ lực đó.",
+      "emotion": "gian"
     },
     {
       "id": "dia-n3-10-5",
@@ -1016,7 +1025,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Còn trẻ mà cứ hay phàn nàn nhỉ."
+      "meaningVi": "Còn trẻ mà cứ hay phàn nàn nhỉ.",
+      "emotion": "de_biu"
     },
     {
       "id": "dia-n3-10-6",
@@ -1102,7 +1112,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vậy thì đúng là bất mãn thật nhỉ."
+      "meaningVi": "Vậy thì đúng là bất mãn thật nhỉ.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n3-10-8",
@@ -1212,7 +1223,8 @@
           "furigana": "つかいます"
         }
       ],
-      "meaningVi": "Còn nghèo mà lại tiêu tiền."
+      "meaningVi": "Còn nghèo mà lại tiêu tiền.",
+      "emotion": "de_biu"
     },
     {
       "id": "dia-n3-10-10",

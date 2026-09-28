@@ -887,7 +887,8 @@
           "furigana": "ありますか"
         }
       ],
-      "meaningVi": "Xin lỗi, thư viện ở đâu vậy ạ?"
+      "meaningVi": "Xin lỗi, thư viện ở đâu vậy ạ?",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n5-10-2",
@@ -1025,7 +1026,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Thật à?"
+      "meaningVi": "Thật à?",
+      "emotion": "ngac_nhien"
     },
     {
       "id": "dia-n5-10-5",

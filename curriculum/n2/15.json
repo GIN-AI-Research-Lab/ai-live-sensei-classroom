@@ -32,7 +32,8 @@
       "romaji": "iwaimasu",
       "wordType": "verb",
       "meaningVi": "Chúc mừng",
-      "accentNote": "記念日を 祝います = chúc mừng ngày kỷ niệm."
+      "accentNote": "記念日を 祝います = chúc mừng ngày kỷ niệm.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n2-15-4",
@@ -92,7 +93,8 @@
       "romaji": "yamu wo enai",
       "wordType": "adjective",
       "meaningVi": "Bất đắc dĩ",
-      "accentNote": "Đã gặp N2 bài 2."
+      "accentNote": "Đã gặp N2 bài 2.",
+      "emotion": "that_vong"
     },
     {
       "id": "voc-n2-15-10",
@@ -402,7 +404,8 @@
               "furigana": "もうしあげます"
             }
           ],
-          "meaningVi": "Nhân dịp kỷ niệm 10 năm thành lập, tôi xin có đôi lời phát biểu."
+          "meaningVi": "Nhân dịp kỷ niệm 10 năm thành lập, tôi xin có đôi lời phát biểu.",
+          "emotion": "cui_chao"
         },
         {
           "id": "ex-n2-l15-s1-2",
@@ -1173,7 +1176,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vâng. Có lúc bất đắc dĩ phải thu hẹp sự nghiệp."
+      "meaningVi": "Vâng. Có lúc bất đắc dĩ phải thu hẹp sự nghiệp.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n2-15-5",
@@ -1487,7 +1491,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Đó là năng lực xứng đáng với một giám đốc nhỉ."
+      "meaningVi": "Đó là năng lực xứng đáng với một giám đốc nhỉ.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n2-15-10",
@@ -1550,7 +1555,8 @@
           "furigana": "ありがとうございます"
         }
       ],
-      "meaningVi": "Kính thưa quý vị, hôm nay xin cảm ơn đã đến chúc mừng kỷ niệm."
+      "meaningVi": "Kính thưa quý vị, hôm nay xin cảm ơn đã đến chúc mừng kỷ niệm.",
+      "emotion": "cui_chao"
     }
   ],
   "exercises": [

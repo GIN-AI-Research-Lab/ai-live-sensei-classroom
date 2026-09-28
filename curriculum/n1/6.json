@@ -378,7 +378,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Đây là một tội ác không thể tha thứ."
+          "meaningVi": "Đây là một tội ác không thể tha thứ.",
+          "emotion": "gian"
         },
         {
           "id": "ex-n1-l6-s1-2",
@@ -425,7 +426,8 @@
               "furigana": "いいました"
             }
           ],
-          "meaningVi": "Nghị sĩ đã nói điều không được phép nói."
+          "meaningVi": "Nghị sĩ đã nói điều không được phép nói.",
+          "emotion": "gian"
         }
       ]
     },
@@ -481,7 +483,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Đó là phát ngôn không xứng với [tư cách] một chính trị gia."
+          "meaningVi": "Đó là phát ngôn không xứng với [tư cách] một chính trị gia.",
+          "emotion": "gian"
         },
         {
           "id": "ex-n1-l6-s2-2",
@@ -516,7 +519,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Đó là hành vi không xứng với [tư cách] một giáo viên."
+          "meaningVi": "Đó là hành vi không xứng với [tư cách] một giáo viên.",
+          "emotion": "gian"
         }
       ]
     },
@@ -611,7 +615,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Đó là sự bất chính không xứng với [tư cách] một chính trị gia."
+          "meaningVi": "Đó là sự bất chính không xứng với [tư cách] một chính trị gia.",
+          "emotion": "gian"
         }
       ]
     },
@@ -662,7 +667,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Đây là sự bất chính không thể tha thứ."
+          "meaningVi": "Đây là sự bất chính không thể tha thứ.",
+          "emotion": "gian"
         },
         {
           "id": "ex-n1-l6-s4-2",
@@ -721,7 +727,8 @@
               "furigana": "うしないました"
             }
           ],
-          "meaningVi": "Vì lời nói và hành động không xứng với [tư cách] nghị sĩ, đã đánh mất lòng tin."
+          "meaningVi": "Vì lời nói và hành động không xứng với [tư cách] nghị sĩ, đã đánh mất lòng tin.",
+          "emotion": "that_vong"
         }
       ]
     }
@@ -806,7 +813,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Đây là một tội ác không thể tha thứ."
+      "meaningVi": "Đây là một tội ác không thể tha thứ.",
+      "emotion": "gian"
     },
     {
       "id": "dia-n1-6-3",
@@ -882,7 +890,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Ông ấy đã có phát ngôn không xứng với [tư cách] nghị sĩ."
+      "meaningVi": "Ông ấy đã có phát ngôn không xứng với [tư cách] nghị sĩ.",
+      "emotion": "gian"
     },
     {
       "id": "dia-n1-6-5",
@@ -944,7 +953,8 @@
           "furigana": "いいました"
         }
       ],
-      "meaningVi": "Ông ấy đã nói điều không được phép nói."
+      "meaningVi": "Ông ấy đã nói điều không được phép nói.",
+      "emotion": "gian"
     },
     {
       "id": "dia-n1-6-7",
@@ -1027,7 +1037,8 @@
           "furigana": "うしないました"
         }
       ],
-      "meaningVi": "Vì lời nói và hành động bất chính, đã đánh mất lòng tin."
+      "meaningVi": "Vì lời nói và hành động bất chính, đã đánh mất lòng tin.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n1-6-9",
@@ -1106,7 +1117,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Đó là hành vi không xứng với [tư cách] nghị sĩ."
+      "meaningVi": "Đó là hành vi không xứng với [tư cách] nghị sĩ.",
+      "emotion": "gian"
     }
   ],
   "exercises": [

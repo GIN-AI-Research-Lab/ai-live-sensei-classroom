@@ -847,7 +847,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Giỏi thật đấy. Vừa đi dạo anh vừa làm gì vậy?"
+      "meaningVi": "Giỏi thật đấy. Vừa đi dạo anh vừa làm gì vậy?",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-28-4",
@@ -991,7 +992,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Cố lên nhé. Lúc đầu tôi cũng thấy vất vả lắm."
+      "meaningVi": "Cố lên nhé. Lúc đầu tôi cũng thấy vất vả lắm.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-28-7",
@@ -1150,7 +1152,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Ngay cả ngày mưa anh cũng đi dạo à?"
+      "meaningVi": "Ngay cả ngày mưa anh cũng đi dạo à?",
+      "emotion": "ngac_nhien"
     },
     {
       "id": "dia-n4-28-10",

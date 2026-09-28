@@ -637,7 +637,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Dù cố gắng thế nào cũng không làm được."
+          "meaningVi": "Dù cố gắng thế nào cũng không làm được.",
+          "emotion": "that_vong"
         },
         {
           "id": "ex-n5-l25-s4-2",
@@ -1178,7 +1179,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Cố lên nhé. Giữ sức khỏe nha!"
+      "meaningVi": "Cố lên nhé. Giữ sức khỏe nha!",
+      "emotion": "vui"
     }
   ],
   "exercises": [

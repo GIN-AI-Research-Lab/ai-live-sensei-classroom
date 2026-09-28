@@ -102,7 +102,8 @@
       "romaji": "shinpai",
       "wordType": "noun",
       "meaningVi": "Sự lo lắng",
-      "accentNote": "Đã gặp N4 bài 26."
+      "accentNote": "Đã gặp N4 bài 26.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n2-4-11",
@@ -132,7 +133,8 @@
       "romaji": "byouki",
       "wordType": "noun",
       "meaningVi": "Bệnh, ốm",
-      "accentNote": "Đã gặp N4 bài 26."
+      "accentNote": "Đã gặp N4 bài 26.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n2-4-14",
@@ -1189,7 +1191,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Đáng lo thật nhỉ."
+      "meaningVi": "Đáng lo thật nhỉ.",
+      "emotion": "buon"
     },
     {
       "id": "dia-n2-4-9",

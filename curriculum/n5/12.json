@@ -929,7 +929,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vì sao vậy?"
+      "meaningVi": "Vì sao vậy?",
+      "emotion": "suy_nghi"
     },
     {
       "id": "dia-n5-12-4",

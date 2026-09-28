@@ -1146,7 +1146,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Nghe vui đấy nhỉ. Tiếng Nhật của em cũng đã giỏi hơn rồi đấy."
+      "meaningVi": "Nghe vui đấy nhỉ. Tiếng Nhật của em cũng đã giỏi hơn rồi đấy.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n5-19-10",
@@ -1188,7 +1189,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Cảm ơn thầy ạ. Em đã luyện tập mỗi ngày."
+      "meaningVi": "Cảm ơn thầy ạ. Em đã luyện tập mỗi ngày.",
+      "emotion": "xau_ho"
     }
   ],
   "exercises": [

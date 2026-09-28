@@ -910,7 +910,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Hay quá. Quà sinh nhật à?"
+      "meaningVi": "Hay quá. Quà sinh nhật à?",
+      "emotion": "vui"
     },
     {
       "id": "dia-n5-7-6",
@@ -1101,7 +1102,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Thật vậy à? Cảm ơn anh nhiều lắm."
+      "meaningVi": "Thật vậy à? Cảm ơn anh nhiều lắm.",
+      "emotion": "ngac_nhien"
     }
   ],
   "exercises": [

@@ -52,7 +52,8 @@
       "romaji": "jiko",
       "wordType": "noun",
       "meaningVi": "Tai nạn",
-      "accentNote": "事故が あったんです = đã có tai nạn xảy ra."
+      "accentNote": "事故が あったんです = đã có tai nạn xảy ra.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n4-26-6",
@@ -142,7 +143,8 @@
       "romaji": "kaze",
       "wordType": "noun",
       "meaningVi": "Cảm lạnh, cảm cúm",
-      "accentNote": "風邪を ひきました = tôi bị cảm."
+      "accentNote": "風邪を ひきました = tôi bị cảm.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n4-26-15",
@@ -532,7 +534,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Tôi thấy không khỏe trong người, tôi về sớm được không ạ?"
+          "meaningVi": "Tôi thấy không khỏe trong người, tôi về sớm được không ạ?",
+          "emotion": "buon"
         },
         {
           "id": "ex-n4-l26-s2-2",
@@ -572,7 +575,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Tàu điện bị trễ. Tôi xin lỗi."
+          "meaningVi": "Tàu điện bị trễ. Tôi xin lỗi.",
+          "emotion": "cui_chao"
         }
       ]
     },
@@ -687,7 +691,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Thật ra là từ hôm qua tôi bị sốt."
+          "meaningVi": "Thật ra là từ hôm qua tôi bị sốt.",
+          "emotion": "buon"
         }
       ]
     },
@@ -726,7 +731,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Máy tính bị hỏng rồi."
+          "meaningVi": "Máy tính bị hỏng rồi.",
+          "emotion": "that_vong"
         },
         {
           "id": "ex-n4-l26-s4-2",
@@ -761,7 +767,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Cảm cúm của tôi đã khỏi rồi."
+          "meaningVi": "Cảm cúm của tôi đã khỏi rồi.",
+          "emotion": "vui"
         }
       ]
     }
@@ -878,7 +885,8 @@
           "isKeyGrammar": true
         }
       ],
-      "meaningVi": "Thật ra là từ hôm qua tôi bị sốt."
+      "meaningVi": "Thật ra là từ hôm qua tôi bị sốt.",
+      "emotion": "buon"
     },
     {
       "id": "dia-n4-26-3",
@@ -1215,7 +1223,8 @@
           "isKeyGrammar": true
         }
       ],
-      "meaningVi": "Cảm ơn chị nhiều. Thật ra sáng nay tàu điện cũng bị trễ nữa."
+      "meaningVi": "Cảm ơn chị nhiều. Thật ra sáng nay tàu điện cũng bị trễ nữa.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-26-9",
@@ -1343,7 +1352,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vâng, hình như vậy. Quả nhiên hôm nay không phải là ngày may mắn."
+      "meaningVi": "Vâng, hình như vậy. Quả nhiên hôm nay không phải là ngày may mắn.",
+      "emotion": "that_vong"
     }
   ],
   "exercises": [

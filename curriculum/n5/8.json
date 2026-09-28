@@ -132,7 +132,8 @@
       "romaji": "omoshiroi",
       "wordType": "adjective",
       "meaningVi": "Thú vị, hay",
-      "accentNote": "Tính từ đuôi い."
+      "accentNote": "Tính từ đuôi い.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n5-8-14",
@@ -142,7 +143,8 @@
       "romaji": "tanoshii",
       "wordType": "adjective",
       "meaningVi": "Vui vẻ",
-      "accentNote": "Tính từ đuôi い."
+      "accentNote": "Tính từ đuôi い.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n5-8-15",
@@ -162,7 +164,8 @@
       "romaji": "oishii",
       "wordType": "adjective",
       "meaningVi": "Ngon",
-      "accentNote": "Tính từ đuôi い."
+      "accentNote": "Tính từ đuôi い.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n5-8-17",
@@ -528,7 +531,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Quyển sách này thú vị."
+          "meaningVi": "Quyển sách này thú vị.",
+          "emotion": "vui"
         }
       ]
     },
@@ -1121,7 +1125,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Ừm, không tiện lợi lắm. Siêu thị nhỏ."
+      "meaningVi": "Ừm, không tiện lợi lắm. Siêu thị nhỏ.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "dia-n5-8-5",
@@ -1304,7 +1309,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Có chứ. Cái quán ăn kia vừa rẻ vừa ngon."
+      "meaningVi": "Có chứ. Cái quán ăn kia vừa rẻ vừa ngon.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n5-8-9",

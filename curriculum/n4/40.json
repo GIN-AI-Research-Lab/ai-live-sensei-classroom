@@ -507,7 +507,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Tôi lo không biết có đậu kỳ thi hay không."
+          "meaningVi": "Tôi lo không biết có đậu kỳ thi hay không.",
+          "emotion": "suy_nghi"
         },
         {
           "id": "ex-n4-l40-s2-2",
@@ -824,7 +825,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Tôi lo không biết ngày mai có đậu kỳ thi hay không."
+      "meaningVi": "Tôi lo không biết ngày mai có đậu kỳ thi hay không.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "dia-n4-40-2",
@@ -971,7 +973,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Ý hay đấy."
+      "meaningVi": "Ý hay đấy.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-40-5",
@@ -1169,7 +1172,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Ngon lắm! Wang cũng thử ăn xem đi."
+      "meaningVi": "Ngon lắm! Wang cũng thử ăn xem đi.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-40-9",
@@ -1240,7 +1244,8 @@
           "furigana": "いります"
         }
       ],
-      "meaningVi": "Chắc chắn cậu sẽ thích đấy."
+      "meaningVi": "Chắc chắn cậu sẽ thích đấy.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

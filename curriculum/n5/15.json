@@ -514,7 +514,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Không được hút thuốc trong thư viện."
+          "meaningVi": "Không được hút thuốc trong thư viện.",
+          "emotion": "gian"
         },
         {
           "id": "ex-n5-l15-s2-2",
@@ -564,7 +565,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Lúc kiểm tra không được dùng từ điển."
+          "meaningVi": "Lúc kiểm tra không được dùng từ điển.",
+          "emotion": "gian"
         }
       ]
     },
@@ -879,7 +881,8 @@
           "isKeyGrammar": true
         }
       ],
-      "meaningVi": "Không, không được dùng."
+      "meaningVi": "Không, không được dùng.",
+      "emotion": "gian"
     },
     {
       "id": "dia-n5-15-3",
@@ -1256,7 +1259,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Ơ, sao em lại hỏi thầy vậy nhỉ."
+      "meaningVi": "Ơ, sao em lại hỏi thầy vậy nhỉ.",
+      "emotion": "xau_ho"
     }
   ],
   "exercises": [

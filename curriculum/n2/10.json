@@ -192,7 +192,8 @@
       "romaji": "kangaemasu",
       "wordType": "verb",
       "meaningVi": "Suy nghĩ",
-      "accentNote": "Đã gặp N4 bài 26."
+      "accentNote": "Đã gặp N4 bài 26.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "voc-n2-10-20",
@@ -776,7 +777,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vấn đề này sẽ phán xét như thế nào?"
+      "meaningVi": "Vấn đề này sẽ phán xét như thế nào?",
+      "emotion": "suy_nghi"
     },
     {
       "id": "dia-n2-10-2",
@@ -1200,7 +1202,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Thú vị nhỉ. Tôi sẽ thử suy nghĩ về nó."
+      "meaningVi": "Thú vị nhỉ. Tôi sẽ thử suy nghĩ về nó.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

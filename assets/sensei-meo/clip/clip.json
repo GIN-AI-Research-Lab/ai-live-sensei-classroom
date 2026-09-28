@@ -1,0 +1,107 @@
+{
+ "fps": 60,
+ "w": 540,
+ "h": 494,
+ "mauNen": [
+  0,
+  177,
+  64
+ ],
+ "clip": {
+  "buon": {
+   "giay": 6.0,
+   "khung": 360,
+   "kb": 400
+  },
+  "chao": {
+   "giay": 4.0,
+   "khung": 240,
+   "kb": 256
+  },
+  "cui-chao": {
+   "giay": 4.0,
+   "khung": 240,
+   "kb": 257
+  },
+  "de-biu": {
+   "giay": 6.0,
+   "khung": 360,
+   "kb": 416
+  },
+  "gian": {
+   "giay": 6.0,
+   "khung": 360,
+   "kb": 420
+  },
+  "liem-tay": {
+   "giay": 6.0,
+   "khung": 360,
+   "kb": 390
+  },
+  "ngac-nhien": {
+   "giay": 6.0,
+   "khung": 360,
+   "kb": 415
+  },
+  "nghi": {
+   "giay": 6.0,
+   "khung": 360,
+   "kb": 354
+  },
+  "ngu-day": {
+   "giay": 6.0,
+   "khung": 360,
+   "kb": 709
+  },
+  "ngu-gat": {
+   "giay": 8.0,
+   "khung": 480,
+   "kb": 518
+  },
+  "ngu-vao": {
+   "giay": 6.0,
+   "khung": 360,
+   "kb": 383
+  },
+  "ngu": {
+   "giay": 8.0,
+   "khung": 480,
+   "kb": 688
+  },
+  "noi-tay-phai": {
+   "giay": 6.0,
+   "khung": 360,
+   "kb": 415
+  },
+  "noi-tay-trai": {
+   "giay": 6.0,
+   "khung": 360,
+   "kb": 397
+  },
+  "noi": {
+   "giay": 6.0,
+   "khung": 360,
+   "kb": 425
+  },
+  "suy-nghi": {
+   "giay": 6.0,
+   "khung": 360,
+   "kb": 386
+  },
+  "that-vong": {
+   "giay": 6.0,
+   "khung": 360,
+   "kb": 439
+  },
+  "vui": {
+   "giay": 6.0,
+   "khung": 360,
+   "kb": 444
+  },
+  "xau-ho": {
+   "giay": 6.0,
+   "khung": 360,
+   "kb": 424
+  }
+ }
+}

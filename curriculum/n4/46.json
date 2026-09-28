@@ -782,7 +782,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Xin lỗi, bây giờ tôi sắp ra ngoài."
+      "meaningVi": "Xin lỗi, bây giờ tôi sắp ra ngoài.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n4-46-3",
@@ -948,7 +949,8 @@
           "furigana": "おねがいします"
         }
       ],
-      "meaningVi": "Vâng, phiền chị nhé."
+      "meaningVi": "Vâng, phiền chị nhé.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n4-46-7",
@@ -1082,7 +1084,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vất vả rồi. Kết quả thế nào?"
+      "meaningVi": "Vất vả rồi. Kết quả thế nào?",
+      "emotion": "cui_chao"
     }
   ],
   "exercises": [

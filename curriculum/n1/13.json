@@ -12,7 +12,8 @@
       "romaji": "giwaku",
       "wordType": "noun",
       "meaningVi": "Sự nghi ngờ, mối nghi hoặc",
-      "accentNote": "疑惑が 持たれています = đang bị nghi hoặc."
+      "accentNote": "疑惑が 持たれています = đang bị nghi hoặc.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "voc-n1-13-2",
@@ -32,7 +33,8 @@
       "romaji": "haji",
       "wordType": "noun",
       "meaningVi": "Sự xấu hổ, nỗi nhục",
-      "accentNote": "恥を 知ります = biết xấu hổ."
+      "accentNote": "恥を 知ります = biết xấu hổ.",
+      "emotion": "xau_ho"
     },
     {
       "id": "voc-n1-13-4",
@@ -192,7 +194,8 @@
       "romaji": "ayamarimasu",
       "wordType": "verb",
       "meaningVi": "Xin lỗi",
-      "accentNote": "Đã gặp N1 bài 9."
+      "accentNote": "Đã gặp N1 bài 9.",
+      "emotion": "cui_chao"
     },
     {
       "id": "voc-n1-13-20",
@@ -399,7 +402,8 @@
               "furigana": "ゆるせない"
             }
           ],
-          "meaningVi": "Một người là thanh tra hình sự mà lại phạm tội — thật không thể tha thứ."
+          "meaningVi": "Một người là thanh tra hình sự mà lại phạm tội — thật không thể tha thứ.",
+          "emotion": "gian"
         },
         {
           "id": "ex-n1-l13-s1-2",
@@ -456,7 +460,8 @@
               "furigana": "しんじられない"
             }
           ],
-          "meaningVi": "Một người là giáo viên mà lại làm chuyện như vậy — thật không thể tin được."
+          "meaningVi": "Một người là giáo viên mà lại làm chuyện như vậy — thật không thể tin được.",
+          "emotion": "ngac_nhien"
         }
       ]
     },
@@ -540,7 +545,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Nếu là lính mới thì còn hiểu được, nhưng một thanh tra hình sự lại phản bội kỳ vọng của người dân..."
+          "meaningVi": "Nếu là lính mới thì còn hiểu được, nhưng một thanh tra hình sự lại phản bội kỳ vọng của người dân...",
+          "emotion": "that_vong"
         },
         {
           "id": "ex-n1-l13-s2-2",
@@ -608,7 +614,8 @@
               "furigana": "はずかしい"
             }
           ],
-          "meaningVi": "Nếu là trẻ con thì còn hiểu được, nhưng người lớn mà không giữ lời hứa thì thật đáng xấu hổ."
+          "meaningVi": "Nếu là trẻ con thì còn hiểu được, nhưng người lớn mà không giữ lời hứa thì thật đáng xấu hổ.",
+          "emotion": "de_biu"
         }
       ]
     },
@@ -736,7 +743,8 @@
               "furigana": "ゆるされない"
             }
           ],
-          "meaningVi": "Nếu là lính mới thì còn hiểu được, nhưng một thanh tra hình sự mà lại bỏ qua tội phạm thì không thể tha thứ."
+          "meaningVi": "Nếu là lính mới thì còn hiểu được, nhưng một thanh tra hình sự mà lại bỏ qua tội phạm thì không thể tha thứ.",
+          "emotion": "gian"
         }
       ]
     },
@@ -849,7 +857,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Nếu là lính mới thì còn hiểu được, nhưng một người đã là thanh tra hình sự mà lại phản bội niềm tin của người dân — đó là điều đáng xấu hổ."
+          "meaningVi": "Nếu là lính mới thì còn hiểu được, nhưng một người đã là thanh tra hình sự mà lại phản bội niềm tin của người dân — đó là điều đáng xấu hổ.",
+          "emotion": "gian"
         },
         {
           "id": "ex-n1-l13-s4-2",
@@ -943,7 +952,8 @@
               "furigana": "なさけない"
             }
           ],
-          "meaningVi": "Nếu một lần thì còn hiểu được, nhưng phạm cùng một sai lầm đến hai lần — một người là thanh tra hình sự như vậy thật đáng thất vọng."
+          "meaningVi": "Nếu một lần thì còn hiểu được, nhưng phạm cùng một sai lầm đến hai lần — một người là thanh tra hình sự như vậy thật đáng thất vọng.",
+          "emotion": "that_vong"
         }
       ]
     }
@@ -1076,7 +1086,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Một người là thanh tra hình sự mà lại dính líu đến tội phạm — đó là điều không thể tha thứ."
+      "meaningVi": "Một người là thanh tra hình sự mà lại dính líu đến tội phạm — đó là điều không thể tha thứ.",
+      "emotion": "gian"
     },
     {
       "id": "dia-n1-13-3",
@@ -1303,7 +1314,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vì nếu là lính mới thì còn hiểu được, nhưng đây là một thanh tra hình sự đã phản bội kỳ vọng của người dân."
+      "meaningVi": "Vì nếu là lính mới thì còn hiểu được, nhưng đây là một thanh tra hình sự đã phản bội kỳ vọng của người dân.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n1-13-7",
@@ -1611,7 +1623,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vâng. Hơn nữa, có vẻ đây không phải là lần đầu tiên. Nếu một lần thì còn hiểu được, nhưng phạm cùng sai lầm đến hai lần — một người là thanh tra hình sự như vậy thật đáng thất vọng."
+      "meaningVi": "Vâng. Hơn nữa, có vẻ đây không phải là lần đầu tiên. Nếu một lần thì còn hiểu được, nhưng phạm cùng sai lầm đến hai lần — một người là thanh tra hình sự như vậy thật đáng thất vọng.",
+      "emotion": "that_vong"
     }
   ],
   "exercises": [

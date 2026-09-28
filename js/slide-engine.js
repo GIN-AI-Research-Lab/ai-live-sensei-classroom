@@ -126,6 +126,8 @@ class SlideEngine {
     this.currentSlideIndex = 0;
     this.activeTab = "grammar"; // "vocab" | "kanji" | "grammar" | "kaiwa" | "quiz"
     this.activeFocusId = null;  // moi luc CHI MOT muc duoc roi sang
+    this._gocCamXuc = null;     // muc co sac thai (data-emotion) vua xin doi mat meo, va luc xin
+    this._lucCamXuc = 0;
     this.spotEl = null;
     this.spotCard = null;
     this.spotOpenId = null;
@@ -553,7 +555,7 @@ class SlideEngine {
       // Chu dung truoc, cot phai (loa tren, anh duoi) dung sau: the co anh hay
       // khong thi tu van thang mep trai, loa van o goc phai tren.
       return `
-        <div id="${this.escapeHtml(v.id)}" class="deck-card vc-card p-3">
+        <div id="${this.escapeHtml(v.id)}" class="deck-card vc-card p-3"${this.camXucAttr(v)}>
           <div class="vc-body">
             <div class="vc-word-row">${displayWord}</div>
             <div class="vc-meta">${metaHtml}</div>
@@ -718,7 +720,7 @@ class SlideEngine {
         </div>` : '';
 
       return `
-        <div id="${this.escapeHtml(ex.id)}" class="deck-card gp-ex">
+        <div id="${this.escapeHtml(ex.id)}" class="deck-card gp-ex"${this.camXucAttr(ex)}>
           ${exImageHtml}
           <div class="gp-ex-body">
             <div class="gp-ex-line">
@@ -844,7 +846,7 @@ class SlideEngine {
       return `
         <div class="kw-row${benPhai ? ' is-b' : ''}">
           ${avatarHtml}
-          <div id="${this.escapeHtml(line.id)}" class="deck-card kw-bubble">
+          <div id="${this.escapeHtml(line.id)}" class="deck-card kw-bubble"${this.camXucAttr(line)}>
             <div class="kw-top">
               <span class="kw-name">${this.escapeHtml(ten)}</span>
               <button type="button" class="icon-btn"
@@ -1371,8 +1373,18 @@ class SlideEngine {
     this.setCaption(comment, styleType);
     this.openSpotlight(targetId, found, opts);
     this.tuKhoanhNguPhap(found);
-    // Sensei hoat hinh di toi chi vao (va dien dong tac neu la dong tu)
-    if (window.SenseiAvatar) window.SenseiAvatar.khiRoiMuc(targetId, found, styleType);
+    // Meo Sensei: truyen PHAN TU (khong phai id) — el.closest('[data-emotion]') co khoa thi doi mat theo cau / tu.
+    // Chi chi tay, KHONG doi mat khi: hoc vien tu bam (khong ai dang noi), nguoi goi tu hen mat (opts.khongMat:
+    // nhip giang hen mat luc Sensei cat loi), hay roi lai cung muc co sac thai trong 8 s (mat da doi roi).
+    const elMuc = this.resolveElement(targetId);
+    const av = window.SenseiAvatar;
+    if (av && elMuc) {
+      const goc = elMuc.closest('[data-emotion]');
+      const boMat = !!goc && (opts.doBam || opts.khongMat
+        || (goc === this._gocCamXuc && Date.now() - this._lucCamXuc < 8000));
+      if (goc && (opts.khongMat || !boMat)) { this._gocCamXuc = goc; this._lucCamXuc = Date.now(); }
+      if (boMat) av.chiVao(elMuc); else av.khiRoiMuc(elMuc, styleType, found);
+    }
     return true;
   }
 
@@ -2232,6 +2244,12 @@ class SlideEngine {
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;');
+  }
+
+  /** ` data-emotion="<khoa>"` khi muc giao trinh co "emotion" (vd de_biu) — meo Sensei doc luc roi den */
+  camXucAttr(muc) {
+    const k = String((muc && muc.emotion) || '').trim().toLowerCase().replace(/[-\s]+/g, '_');
+    return /^[a-z_]{2,24}$/.test(k) ? ` data-emotion="${k}"` : '';
   }
 }
 

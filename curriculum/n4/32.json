@@ -82,7 +82,8 @@
       "romaji": "byouki",
       "wordType": "noun",
       "meaningVi": "Bệnh, ốm",
-      "accentNote": "Đã gặp bài 17 (N5)."
+      "accentNote": "Đã gặp bài 17 (N5).",
+      "emotion": "buon"
     },
     {
       "id": "voc-n4-32-9",
@@ -132,7 +133,8 @@
       "romaji": "tabun",
       "wordType": "adverb",
       "meaningVi": "Có lẽ, chắc là",
-      "accentNote": "Đã gặp N5 bài 21."
+      "accentNote": "Đã gặp N5 bài 21.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "voc-n4-32-14",
@@ -142,7 +144,8 @@
       "romaji": "moshikashitara",
       "wordType": "adverb",
       "meaningVi": "Biết đâu, có thể là",
-      "accentNote": "もしかしたら 病気かもしれません = biết đâu là bị bệnh cũng nên."
+      "accentNote": "もしかしたら 病気かもしれません = biết đâu là bị bệnh cũng nên.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "voc-n4-32-15",
@@ -162,7 +165,8 @@
       "romaji": "netsu",
       "wordType": "noun",
       "meaningVi": "Sốt",
-      "accentNote": "Đã gặp bài 26."
+      "accentNote": "Đã gặp bài 26.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n4-32-17",
@@ -521,7 +525,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Biết đâu là bị bệnh cũng nên."
+          "meaningVi": "Biết đâu là bị bệnh cũng nên.",
+          "emotion": "suy_nghi"
         },
         {
           "id": "ex-n4-l32-s3-2",
@@ -745,7 +750,8 @@
           "isKeyGrammar": true
         }
       ],
-      "meaningVi": "Vâng, từ hôm qua tôi bị sốt."
+      "meaningVi": "Vâng, từ hôm qua tôi bị sốt.",
+      "emotion": "buon"
     },
     {
       "id": "dia-n4-32-3",
@@ -1030,7 +1036,8 @@
           "isKeyGrammar": true
         }
       ],
-      "meaningVi": "Đúng vậy nhỉ. Nhưng công việc bận quá, không có thời gian."
+      "meaningVi": "Đúng vậy nhỉ. Nhưng công việc bận quá, không có thời gian.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n4-32-9",

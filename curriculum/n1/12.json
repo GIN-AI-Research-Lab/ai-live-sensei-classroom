@@ -42,7 +42,8 @@
       "romaji": "kansha",
       "wordType": "noun",
       "meaningVi": "Lòng biết ơn, sự cảm tạ",
-      "accentNote": "皆様に 感謝します = bày tỏ lòng biết ơn tới mọi người."
+      "accentNote": "皆様に 感謝します = bày tỏ lòng biết ơn tới mọi người.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n1-12-5",
@@ -82,7 +83,8 @@
       "romaji": "yuushou",
       "wordType": "noun",
       "meaningVi": "Chức vô địch, sự vô địch",
-      "accentNote": "大会で 優勝しました = đã giành chức vô địch tại giải đấu."
+      "accentNote": "大会で 優勝しました = đã giành chức vô địch tại giải đấu.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n1-12-9",
@@ -202,7 +204,8 @@
       "romaji": "kangaemasu",
       "wordType": "verb",
       "meaningVi": "Suy nghĩ, cân nhắc",
-      "accentNote": "Đã gặp N5 bài 21."
+      "accentNote": "Đã gặp N5 bài 21.",
+      "emotion": "suy_nghi"
     }
   ],
   "kanjiList": [
@@ -392,7 +395,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Nếu không có sự nâng đỡ của quý vị, thì đã không có chức vô địch này."
+          "meaningVi": "Nếu không có sự nâng đỡ của quý vị, thì đã không có chức vô địch này.",
+          "emotion": "vui"
         },
         {
           "id": "ex-n1-l12-s1-2",
@@ -771,7 +775,8 @@
               "furigana": "ありえませんでした"
             }
           ],
-          "meaningVi": "Nếu không có sự nâng đỡ của quý vị đã cổ vũ, thì chức vô địch lần này đã không thể có được."
+          "meaningVi": "Nếu không có sự nâng đỡ của quý vị đã cổ vũ, thì chức vô địch lần này đã không thể có được.",
+          "emotion": "vui"
         },
         {
           "id": "ex-n1-l12-s4-2",
@@ -896,7 +901,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Xin chúc mừng chức vô địch. Cảm xúc của bạn lúc này thế nào?"
+      "meaningVi": "Xin chúc mừng chức vô địch. Cảm xúc của bạn lúc này thế nào?",
+      "emotion": "vui"
     },
     {
       "id": "dia-n1-12-2",
@@ -965,7 +971,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Cảm ơn mọi người. Nếu không có sự cổ vũ của quý vị, thì đã không có chức vô địch này."
+      "meaningVi": "Cảm ơn mọi người. Nếu không có sự cổ vũ của quý vị, thì đã không có chức vô địch này.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n1-12-3",
@@ -1425,7 +1432,8 @@
           "furigana": "かんしゃしています"
         }
       ],
-      "meaningVi": "Vâng. Tôi nghĩ nếu không có sự hy sinh đó, thì đã không có thành công. Tôi rất biết ơn mọi người."
+      "meaningVi": "Vâng. Tôi nghĩ nếu không có sự hy sinh đó, thì đã không có thành công. Tôi rất biết ơn mọi người.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

@@ -202,7 +202,8 @@
       "romaji": "zannen",
       "wordType": "adjective",
       "meaningVi": "Tiếc, đáng tiếc",
-      "accentNote": "Tính từ な. 残念ですが、できません = tiếc là tôi không làm được."
+      "accentNote": "Tính từ な. 残念ですが、できません = tiếc là tôi không làm được.",
+      "emotion": "that_vong"
     }
   ],
   "kanjiList": [
@@ -895,7 +896,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Giỏi thật đấy. Ngoại ngữ thì anh nói được tiếng gì?"
+      "meaningVi": "Giỏi thật đấy. Ngoại ngữ thì anh nói được tiếng gì?",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-27-6",
@@ -1016,7 +1018,8 @@
           "isKeyGrammar": true
         }
       ],
-      "meaningVi": "Tiếc là cái đó tôi không làm được."
+      "meaningVi": "Tiếc là cái đó tôi không làm được.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n4-27-9",

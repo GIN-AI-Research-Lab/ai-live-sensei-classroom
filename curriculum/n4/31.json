@@ -52,7 +52,8 @@
       "romaji": "kimemasu",
       "wordType": "verb",
       "meaningVi": "Quyết định",
-      "accentNote": "将来を 決めます = quyết định tương lai."
+      "accentNote": "将来を 決めます = quyết định tương lai.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "voc-n4-31-6",
@@ -62,7 +63,8 @@
       "romaji": "kangaemasu",
       "wordType": "verb",
       "meaningVi": "Suy nghĩ, cân nhắc",
-      "accentNote": "Đã gặp N5 bài 21 — nay mở rộng dùng cùng と思っています."
+      "accentNote": "Đã gặp N5 bài 21 — nay mở rộng dùng cùng と思っています.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "voc-n4-31-7",
@@ -387,7 +389,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Cố lên nào!"
+          "meaningVi": "Cố lên nào!",
+          "emotion": "vui"
         }
       ]
     },
@@ -683,7 +686,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Trong tương lai, anh đang cân nhắc sẽ làm gì?"
+          "meaningVi": "Trong tương lai, anh đang cân nhắc sẽ làm gì?",
+          "emotion": "suy_nghi"
         },
         {
           "id": "ex-n4-l31-s4-2",
@@ -1011,7 +1015,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Hay quá. Ước mơ tương lai của cậu là gì?"
+      "meaningVi": "Hay quá. Ước mơ tương lai của cậu là gì?",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-31-6",
@@ -1197,7 +1202,8 @@
           "furigana": "います"
         }
       ],
-      "meaningVi": "Cố lên nhé. Tớ ủng hộ cậu đấy."
+      "meaningVi": "Cố lên nhé. Tớ ủng hộ cậu đấy.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-31-10",
@@ -1244,7 +1250,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Cảm ơn cậu nhiều. Tớ muốn thực hiện ước mơ của mình."
+      "meaningVi": "Cảm ơn cậu nhiều. Tớ muốn thực hiện ước mơ của mình.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

@@ -996,7 +996,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Giỏi thật đấy. Cái dụng cụ đó dùng để làm gì vậy?"
+      "meaningVi": "Giỏi thật đấy. Cái dụng cụ đó dùng để làm gì vậy?",
+      "emotion": "ngac_nhien"
     },
     {
       "id": "dia-n4-42-4",
@@ -1389,7 +1390,8 @@
           "furigana": "がんばりましょう"
         }
       ],
-      "meaningVi": "Tuyệt vời quá. Cùng cố gắng nhé."
+      "meaningVi": "Tuyệt vời quá. Cùng cố gắng nhé.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

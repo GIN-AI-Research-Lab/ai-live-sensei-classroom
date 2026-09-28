@@ -32,7 +32,8 @@
       "romaji": "shinimasu",
       "wordType": "verb",
       "meaningVi": "Chết, mất",
-      "accentNote": "Đuôi ぬ → んで. Nhóm 1. Động từ DUY NHẤT có đuôi ぬ trong tiếng Nhật hiện đại."
+      "accentNote": "Đuôi ぬ → んで. Nhóm 1. Động từ DUY NHẤT có đuôi ぬ trong tiếng Nhật hiện đại.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n5-14-4",
@@ -703,7 +704,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Xin lỗi, làm ơn mở cửa sổ giúp tôi."
+      "meaningVi": "Xin lỗi, làm ơn mở cửa sổ giúp tôi.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n5-14-2",
@@ -999,7 +1001,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Cảm ơn anh nhiều. Vậy thì, làm ơn cầm giúp cái hộp này."
+      "meaningVi": "Cảm ơn anh nhiều. Vậy thì, làm ơn cầm giúp cái hộp này.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n5-14-9",
@@ -1088,7 +1091,8 @@
           "furigana": "たすかりました"
         }
       ],
-      "meaningVi": "Cảm ơn anh nhiều. Anh giúp tôi nhiều quá."
+      "meaningVi": "Cảm ơn anh nhiều. Anh giúp tôi nhiều quá.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

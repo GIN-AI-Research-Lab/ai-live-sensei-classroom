@@ -52,7 +52,8 @@
       "romaji": "goukaku shimasu",
       "wordType": "verb",
       "meaningVi": "Đậu, đỗ (thi cử)",
-      "accentNote": "試験に 合格します = đậu kỳ thi."
+      "accentNote": "試験に 合格します = đậu kỳ thi.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n3-8-6",
@@ -92,7 +93,8 @@
       "romaji": "yuushou shimasu",
       "wordType": "verb",
       "meaningVi": "Vô địch, giành chức quán quân",
-      "accentNote": "大会で 優勝します = vô địch tại đại hội."
+      "accentNote": "大会で 優勝します = vô địch tại đại hội.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n3-8-10",
@@ -132,7 +134,8 @@
       "romaji": "shippai shimasu",
       "wordType": "verb",
       "meaningVi": "Thất bại",
-      "accentNote": "Đã gặp N4 bài 43."
+      "accentNote": "Đã gặp N4 bài 43.",
+      "emotion": "that_vong"
     },
     {
       "id": "voc-n3-8-14",
@@ -611,7 +614,8 @@
               "furigana": "しますか"
             }
           ],
-          "meaningVi": "Giả sử trúng xổ số thì bạn sẽ làm gì?"
+          "meaningVi": "Giả sử trúng xổ số thì bạn sẽ làm gì?",
+          "emotion": "suy_nghi"
         },
         {
           "id": "ex-n3-l8-s3-2",
@@ -758,7 +762,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Giả sử nếu vô địch thì sẽ vui. (giả định)"
+          "meaningVi": "Giả sử nếu vô địch thì sẽ vui. (giả định)",
+          "emotion": "vui"
         }
       ]
     }
@@ -1023,7 +1028,8 @@
           "furigana": "しますか"
         }
       ],
-      "meaningVi": "Giả sử trúng xổ số thì bạn sẽ làm gì?"
+      "meaningVi": "Giả sử trúng xổ số thì bạn sẽ làm gì?",
+      "emotion": "suy_nghi"
     },
     {
       "id": "dia-n3-8-6",

@@ -583,7 +583,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Hôm nay, xin hãy cho tôi nghỉ."
+          "meaningVi": "Hôm nay, xin hãy cho tôi nghỉ.",
+          "emotion": "cui_chao"
         },
         {
           "id": "ex-n4-l48-s3-2",
@@ -698,7 +699,8 @@
               "furigana": "しかられました"
             }
           ],
-          "meaningVi": "Đứa trẻ bị thầy giáo mắng. (bị động, bài 37 — đứa trẻ là người CHỊU tác động)"
+          "meaningVi": "Đứa trẻ bị thầy giáo mắng. (bị động, bài 37 — đứa trẻ là người CHỊU tác động)",
+          "emotion": "buon"
         }
       ]
     }
@@ -1009,7 +1011,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Cha con tốt đấy nhỉ. À mà, ngày mai chị có thể cho tôi nghỉ được không?"
+      "meaningVi": "Cha con tốt đấy nhỉ. À mà, ngày mai chị có thể cho tôi nghỉ được không?",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n4-48-6",
@@ -1117,7 +1120,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Con tôi bị ốm ạ. Tôi muốn cho cháu đi bệnh viện."
+      "meaningVi": "Con tôi bị ốm ạ. Tôi muốn cho cháu đi bệnh viện.",
+      "emotion": "buon"
     },
     {
       "id": "dia-n4-48-8",

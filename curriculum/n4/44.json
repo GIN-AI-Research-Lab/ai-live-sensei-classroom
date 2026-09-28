@@ -202,7 +202,8 @@
       "romaji": "byouki",
       "wordType": "noun",
       "meaningVi": "Bệnh, ốm",
-      "accentNote": "食べすぎて、病気に なりました = ăn quá nhiều nên bị ốm."
+      "accentNote": "食べすぎて、病気に なりました = ăn quá nhiều nên bị ốm.",
+      "emotion": "buon"
     }
   ],
   "kanjiList": [
@@ -392,7 +393,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Tôi đã ăn quá nhiều. Đau bụng quá."
+          "meaningVi": "Tôi đã ăn quá nhiều. Đau bụng quá.",
+          "emotion": "buon"
         },
         {
           "id": "ex-n4-l44-s1-2",
@@ -635,7 +637,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Việc này khó quá mức nên tôi không làm được."
+          "meaningVi": "Việc này khó quá mức nên tôi không làm được.",
+          "emotion": "that_vong"
         },
         {
           "id": "ex-n4-l44-s4-2",
@@ -772,7 +775,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Hôm qua tôi đã uống quá nhiều. Đầu tôi đau quá."
+      "meaningVi": "Hôm qua tôi đã uống quá nhiều. Đầu tôi đau quá.",
+      "emotion": "buon"
     },
     {
       "id": "dia-n4-44-3",

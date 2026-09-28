@@ -462,7 +462,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Bộ phim tôi xem hôm qua rất thú vị."
+          "meaningVi": "Bộ phim tôi xem hôm qua rất thú vị.",
+          "emotion": "vui"
         }
       ]
     },
@@ -522,7 +523,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Món ăn anh Yamada đã nấu rất ngon."
+          "meaningVi": "Món ăn anh Yamada đã nấu rất ngon.",
+          "emotion": "vui"
         },
         {
           "id": "ex-n5-l22-s2-2",
@@ -1103,7 +1105,8 @@
           "furigana": "よかった"
         }
       ],
-      "meaningVi": "Rất thú vị. Nhà hàng cậu giới thiệu cũng rất tốt nữa."
+      "meaningVi": "Rất thú vị. Nhà hàng cậu giới thiệu cũng rất tốt nữa.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n5-22-6",
@@ -1240,7 +1243,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vâng. Món ăn cửa hàng đó làm đều ngon cả."
+      "meaningVi": "Vâng. Món ăn cửa hàng đó làm đều ngon cả.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n5-22-8",

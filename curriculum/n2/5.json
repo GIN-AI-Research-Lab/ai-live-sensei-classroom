@@ -142,7 +142,8 @@
       "romaji": "jouzu",
       "wordType": "adjective",
       "meaningVi": "Giỏi",
-      "accentNote": "Đã gặp N4 bài 26."
+      "accentNote": "Đã gặp N4 bài 26.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n2-5-15",
@@ -900,7 +901,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Tiếng Nhật của bạn giỏi lên rồi nhỉ."
+      "meaningVi": "Tiếng Nhật của bạn giỏi lên rồi nhỉ.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n2-5-2",
@@ -1130,7 +1132,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Bạn thật đáng tin cậy nhỉ."
+      "meaningVi": "Bạn thật đáng tin cậy nhỉ.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n2-5-6",

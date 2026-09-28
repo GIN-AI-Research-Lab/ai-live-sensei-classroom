@@ -72,7 +72,8 @@
       "romaji": "meiwaku",
       "wordType": "noun",
       "meaningVi": "Sự phiền hà, làm phiền",
-      "accentNote": "迷惑を かけます = gây phiền hà."
+      "accentNote": "迷惑を かけます = gây phiền hà.",
+      "emotion": "gian"
     },
     {
       "id": "voc-n3-19-8",
@@ -112,7 +113,8 @@
       "romaji": "kangaemasu",
       "wordType": "verb",
       "meaningVi": "Suy nghĩ",
-      "accentNote": "Đã gặp N4 bài 26."
+      "accentNote": "Đã gặp N4 bài 26.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "voc-n3-19-12",
@@ -464,7 +466,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Không nên gây phiền hà cho người khác."
+          "meaningVi": "Không nên gây phiền hà cho người khác.",
+          "emotion": "gian"
         },
         {
           "id": "ex-n3-l19-s2-2",
@@ -638,7 +641,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Lẽ ra nên quyết định sớm hơn."
+          "meaningVi": "Lẽ ra nên quyết định sớm hơn.",
+          "emotion": "that_vong"
         },
         {
           "id": "ex-n3-l19-s4-2",
@@ -678,7 +682,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Lẽ ra nên suy nghĩ kỹ hơn về trách nhiệm."
+          "meaningVi": "Lẽ ra nên suy nghĩ kỹ hơn về trách nhiệm.",
+          "emotion": "that_vong"
         }
       ]
     }
@@ -1072,7 +1077,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Lẽ ra nên quyết định sớm hơn."
+      "meaningVi": "Lẽ ra nên quyết định sớm hơn.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n3-19-9",

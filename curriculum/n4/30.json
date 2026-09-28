@@ -974,7 +974,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Ý hay đấy nhỉ. Nếu hôm tiệc mà có hoa bày sẵn thì đẹp lắm nhỉ."
+      "meaningVi": "Ý hay đấy nhỉ. Nếu hôm tiệc mà có hoa bày sẵn thì đẹp lắm nhỉ.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-30-7",
@@ -1110,7 +1111,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Đúng là chu đáo thật đấy. Không cần lo gì nữa nhỉ."
+      "meaningVi": "Đúng là chu đáo thật đấy. Không cần lo gì nữa nhỉ.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-30-10",
@@ -1155,7 +1157,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vâng, chuẩn bị hoàn hảo rồi ạ!"
+      "meaningVi": "Vâng, chuẩn bị hoàn hảo rồi ạ!",
+      "emotion": "vui"
     }
   ],
   "exercises": [

@@ -22,7 +22,8 @@
       "romaji": "shippai shimasu",
       "wordType": "verb",
       "meaningVi": "Thất bại, mắc lỗi",
-      "accentNote": ""
+      "accentNote": "",
+      "emotion": "that_vong"
     },
     {
       "id": "voc-n4-45-3",
@@ -112,7 +113,8 @@
       "romaji": "zannen",
       "wordType": "adjective",
       "meaningVi": "Đáng tiếc, tiếc nuối",
-      "accentNote": "Đã gặp bài 27."
+      "accentNote": "Đã gặp bài 27.",
+      "emotion": "that_vong"
     },
     {
       "id": "voc-n4-45-12",
@@ -526,7 +528,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Dù đã học hành chăm chỉ hết mình nhưng vẫn không đậu kỳ thi."
+          "meaningVi": "Dù đã học hành chăm chỉ hết mình nhưng vẫn không đậu kỳ thi.",
+          "emotion": "that_vong"
         },
         {
           "id": "ex-n4-l45-s2-2",
@@ -585,7 +588,8 @@
               "furigana": "ふりました"
             }
           ],
-          "meaningVi": "Dự báo nắng nhưng lại đổ mưa."
+          "meaningVi": "Dự báo nắng nhưng lại đổ mưa.",
+          "emotion": "that_vong"
         }
       ]
     },
@@ -675,7 +679,8 @@
               "furigana": "しっぱいしました"
             }
           ],
-          "meaningVi": "Dù đã cố gắng nhưng vẫn thất bại. (のに MẶC DÙ — bài 45, mang cảm xúc thất vọng)"
+          "meaningVi": "Dù đã cố gắng nhưng vẫn thất bại. (のに MẶC DÙ — bài 45, mang cảm xúc thất vọng)",
+          "emotion": "that_vong"
         }
       ]
     },
@@ -1007,7 +1012,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Wang đã học hành hết sức chăm chỉ nhưng vẫn không đậu."
+      "meaningVi": "Wang đã học hành hết sức chăm chỉ nhưng vẫn không đậu.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n4-45-6",
@@ -1029,7 +1035,8 @@
           "furigana": "です"
         }
       ],
-      "meaningVi": "Đáng tiếc thật."
+      "meaningVi": "Đáng tiếc thật.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n4-45-7",
@@ -1144,7 +1151,8 @@
           "furigana": "がんばれ"
         }
       ],
-      "meaningVi": "Cố lên!"
+      "meaningVi": "Cố lên!",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-45-10",

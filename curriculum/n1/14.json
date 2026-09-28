@@ -162,7 +162,8 @@
       "romaji": "kangaemasu",
       "wordType": "verb",
       "meaningVi": "Suy nghĩ, cân nhắc",
-      "accentNote": "Đã gặp N5 bài 21."
+      "accentNote": "Đã gặp N5 bài 21.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "voc-n1-14-17",
@@ -924,7 +925,8 @@
           "furigana": "おきかせください"
         }
       ],
-      "meaningVi": "Thưa thầy, xin thầy cho em biết ý kiến về luận văn."
+      "meaningVi": "Thưa thầy, xin thầy cho em biết ý kiến về luận văn.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n1-14-2",
@@ -1456,7 +1458,8 @@
           "furigana": "みとめていますよ"
         }
       ],
-      "meaningVi": "Cố lên nhé. Tuy nhiên, thầy cũng công nhận đầy đủ những điểm mạnh của luận văn này đấy."
+      "meaningVi": "Cố lên nhé. Tuy nhiên, thầy cũng công nhận đầy đủ những điểm mạnh của luận văn này đấy.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

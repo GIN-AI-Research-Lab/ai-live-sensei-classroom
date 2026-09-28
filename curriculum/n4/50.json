@@ -152,7 +152,8 @@
       "romaji": "orei",
       "wordType": "noun",
       "meaningVi": "Lời cảm ơn, lễ vật cảm ơn",
-      "accentNote": "お礼を 申し上げます = tôi xin gửi lời cảm ơn."
+      "accentNote": "お礼を 申し上げます = tôi xin gửi lời cảm ơn.",
+      "emotion": "cui_chao"
     },
     {
       "id": "voc-n4-50-16",
@@ -364,7 +365,8 @@
               "furigana": "もうします"
             }
           ],
-          "meaningVi": "Tôi tên là Tanaka ạ. (tự giới thiệu, khiêm nhường)"
+          "meaningVi": "Tôi tên là Tanaka ạ. (tự giới thiệu, khiêm nhường)",
+          "emotion": "chao"
         },
         {
           "id": "ex-n4-l50-s1-2",
@@ -702,7 +704,8 @@
           "furigana": "おねがいします"
         }
       ],
-      "meaningVi": "Rất hân hạnh. Tôi tên là Tanaka ạ. Mong được giúp đỡ."
+      "meaningVi": "Rất hân hạnh. Tôi tên là Tanaka ạ. Mong được giúp đỡ.",
+      "emotion": "chao"
     },
     {
       "id": "dia-n4-50-2",
@@ -1102,7 +1105,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vâng, tôi hiểu rồi. Được anh chỉ dạy nhiều điều, cảm ơn anh nhiều ạ."
+      "meaningVi": "Vâng, tôi hiểu rồi. Được anh chỉ dạy nhiều điều, cảm ơn anh nhiều ạ.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n4-50-10",
@@ -1134,7 +1138,8 @@
           "furigana": "がんばりましょう"
         }
       ],
-      "meaningVi": "Không có gì. Chúng ta cùng cố gắng nhé."
+      "meaningVi": "Không có gì. Chúng ta cùng cố gắng nhé.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

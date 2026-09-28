@@ -392,7 +392,8 @@
       "romaji": "sumimasen",
       "wordType": "phrase",
       "meaningVi": "Xin lỗi / cho hỏi / cảm ơn",
-      "accentNote": "Câu vạn năng: gọi người, xin lỗi, và cả cảm ơn."
+      "accentNote": "Câu vạn năng: gọi người, xin lỗi, và cả cảm ơn.",
+      "emotion": "cui_chao"
     },
     {
       "id": "voc-n5-3-35",
@@ -1306,7 +1307,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Xin lỗi cho hỏi. Quầy bán rượu vang ở đâu ạ?"
+      "meaningVi": "Xin lỗi cho hỏi. Quầy bán rượu vang ở đâu ạ?",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n5-3-2",
@@ -1611,7 +1613,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Cảm ơn quý khách. Quầy thu ngân ở phía này ạ."
+      "meaningVi": "Cảm ơn quý khách. Quầy thu ngân ở phía này ạ.",
+      "emotion": "cui_chao"
     }
   ],
   "exercises": [

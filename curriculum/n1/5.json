@@ -52,7 +52,8 @@
       "romaji": "tousan",
       "wordType": "noun",
       "meaningVi": "Phá sản",
-      "accentNote": "会社が 倒産します = công ty phá sản."
+      "accentNote": "会社が 倒産します = công ty phá sản.",
+      "emotion": "that_vong"
     },
     {
       "id": "voc-n1-5-6",
@@ -398,7 +399,8 @@
               "furigana": "いたりました"
             }
           ],
-          "meaningVi": "Kinh doanh xấu đi, cuối cùng đã dẫn đến mức phá sản."
+          "meaningVi": "Kinh doanh xấu đi, cuối cùng đã dẫn đến mức phá sản.",
+          "emotion": "that_vong"
         },
         {
           "id": "ex-n1-l5-s1-2",
@@ -550,7 +552,8 @@
               "furigana": "ほうちしました"
             }
           ],
-          "meaningVi": "Nhân viên thì làm việc nghiêm túc, nhưng còn riêng giám đốc thì bỏ mặc vấn đề."
+          "meaningVi": "Nhân viên thì làm việc nghiêm túc, nhưng còn riêng giám đốc thì bỏ mặc vấn đề.",
+          "emotion": "de_biu"
         },
         {
           "id": "ex-n1-l5-s2-2",
@@ -645,7 +648,8 @@
               "furigana": "つきつづけました"
             }
           ],
-          "meaningVi": "Nhân viên thì không nói dối, nhưng còn riêng giám đốc thì cứ tiếp tục nói dối."
+          "meaningVi": "Nhân viên thì không nói dối, nhưng còn riêng giám đốc thì cứ tiếp tục nói dối.",
+          "emotion": "de_biu"
         }
       ]
     },
@@ -724,7 +728,8 @@
               "furigana": "しまつだ"
             }
           ],
-          "meaningVi": "Giám đốc cứ tiếp tục nói dối, rốt cuộc đến mức chẳng ai còn tin nữa."
+          "meaningVi": "Giám đốc cứ tiếp tục nói dối, rốt cuộc đến mức chẳng ai còn tin nữa.",
+          "emotion": "de_biu"
         },
         {
           "id": "ex-n1-l5-s3-2",
@@ -790,7 +795,8 @@
               "furigana": "しまつだ"
             }
           ],
-          "meaningVi": "Công ty cứ bỏ mặc vấn đề, rốt cuộc đến mức phá sản."
+          "meaningVi": "Công ty cứ bỏ mặc vấn đề, rốt cuộc đến mức phá sản.",
+          "emotion": "de_biu"
         }
       ]
     },
@@ -947,7 +953,8 @@
               "furigana": "しまつです"
             }
           ],
-          "meaningVi": "Nhân viên thì đã tha thứ, nhưng còn riêng giám đốc thì rốt cuộc đến mức chẳng ai tha thứ."
+          "meaningVi": "Nhân viên thì đã tha thứ, nhưng còn riêng giám đốc thì rốt cuộc đến mức chẳng ai tha thứ.",
+          "emotion": "de_biu"
         }
       ]
     }
@@ -1058,7 +1065,8 @@
           "furigana": "いたりました"
         }
       ],
-      "meaningVi": "Kinh doanh xấu đi, đã dẫn đến mức phá sản."
+      "meaningVi": "Kinh doanh xấu đi, đã dẫn đến mức phá sản.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n1-5-3",
@@ -1231,7 +1239,8 @@
           "furigana": "つづけました"
         }
       ],
-      "meaningVi": "Ông ấy cứ tiếp tục biện minh."
+      "meaningVi": "Ông ấy cứ tiếp tục biện minh.",
+      "emotion": "de_biu"
     },
     {
       "id": "dia-n1-5-7",
@@ -1338,7 +1347,8 @@
           "furigana": "しまつです"
         }
       ],
-      "meaningVi": "Không. Ông ấy cứ nói dối liên tục, rốt cuộc đến mức chẳng ai tin nữa."
+      "meaningVi": "Không. Ông ấy cứ nói dối liên tục, rốt cuộc đến mức chẳng ai tin nữa.",
+      "emotion": "de_biu"
     },
     {
       "id": "dia-n1-5-9",
@@ -1435,7 +1445,8 @@
           "furigana": "しまつです"
         }
       ],
-      "meaningVi": "Còn riêng giám đốc thì, rốt cuộc đến mức chẳng ai tha thứ."
+      "meaningVi": "Còn riêng giám đốc thì, rốt cuộc đến mức chẳng ai tha thứ.",
+      "emotion": "de_biu"
     }
   ],
   "exercises": [

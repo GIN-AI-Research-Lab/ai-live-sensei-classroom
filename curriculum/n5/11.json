@@ -809,7 +809,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Kính chào quý khách. Quý khách cần gì ạ?"
+      "meaningVi": "Kính chào quý khách. Quý khách cần gì ạ?",
+      "emotion": "chao"
     },
     {
       "id": "dia-n5-11-2",
@@ -935,7 +936,8 @@
           "furigana": "なにか"
         }
       ],
-      "meaningVi": "Vâng, tôi hiểu ạ. Còn cần gì khác không ạ?"
+      "meaningVi": "Vâng, tôi hiểu ạ. Còn cần gì khác không ạ?",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n5-11-6",
@@ -1026,7 +1028,8 @@
           "furigana": "おねがいします"
         }
       ],
-      "meaningVi": "Cho tôi mười tờ."
+      "meaningVi": "Cho tôi mười tờ.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n5-11-9",

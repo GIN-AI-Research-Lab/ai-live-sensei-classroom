@@ -800,7 +800,8 @@
           "furigana": "わかりません"
         }
       ],
-      "meaningVi": "Tôi không hiểu cách dùng cái máy này."
+      "meaningVi": "Tôi không hiểu cách dùng cái máy này.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "dia-n4-34-2",
@@ -1153,7 +1154,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Hay đó. Tớ xem cùng được không?"
+      "meaningVi": "Hay đó. Tớ xem cùng được không?",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-34-10",

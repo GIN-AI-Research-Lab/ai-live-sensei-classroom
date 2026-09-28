@@ -12,7 +12,8 @@
       "romaji": "shikata ga nai",
       "wordType": "expression",
       "meaningVi": "Không có cách nào khác, đành chịu",
-      "accentNote": "仕方がないですね = đành chịu vậy thôi nhỉ."
+      "accentNote": "仕方がないですね = đành chịu vậy thôi nhỉ.",
+      "emotion": "that_vong"
     },
     {
       "id": "voc-n2-3-2",
@@ -52,7 +53,8 @@
       "romaji": "tanomoshii",
       "wordType": "adjective",
       "meaningVi": "Đáng tin cậy, đáng dựa vào",
-      "accentNote": "頼もしい 人 = người đáng tin cậy."
+      "accentNote": "頼もしい 人 = người đáng tin cậy.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n2-3-6",
@@ -448,7 +450,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Chúng tôi khó có thể đáp ứng yêu cầu đó."
+          "meaningVi": "Chúng tôi khó có thể đáp ứng yêu cầu đó.",
+          "emotion": "cui_chao"
         },
         {
           "id": "ex-n2-l3-s2-2",
@@ -631,7 +634,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Chúng tôi khó có thể chỉ ra đáp án. (từ chối lịch sự)"
+          "meaningVi": "Chúng tôi khó có thể chỉ ra đáp án. (từ chối lịch sự)",
+          "emotion": "cui_chao"
         }
       ]
     }
@@ -714,7 +718,8 @@
           "isKeyGrammar": true
         }
       ],
-      "meaningVi": "Chúng tôi khó có thể đáp ứng yêu cầu đó."
+      "meaningVi": "Chúng tôi khó có thể đáp ứng yêu cầu đó.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n2-3-3",
@@ -796,7 +801,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Không, cái này không có cách nào để sửa được."
+      "meaningVi": "Không, cái này không có cách nào để sửa được.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n2-3-5",
@@ -968,7 +974,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Bạn thật đáng tin cậy nhỉ."
+      "meaningVi": "Bạn thật đáng tin cậy nhỉ.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n2-3-10",
@@ -1019,7 +1026,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Đành chịu vậy thôi. Đã hiểu rồi. Tôi sẽ liên lạc."
+      "meaningVi": "Đành chịu vậy thôi. Đã hiểu rồi. Tôi sẽ liên lạc.",
+      "emotion": "that_vong"
     }
   ],
   "exercises": [

@@ -636,7 +636,8 @@
               "furigana": "あいましょうか"
             }
           ],
-          "meaningVi": "Chúng ta gặp nhau ở đâu nhỉ?"
+          "meaningVi": "Chúng ta gặp nhau ở đâu nhỉ?",
+          "emotion": "suy_nghi"
         }
       ]
     },
@@ -770,7 +771,8 @@
               "furigana": "たべましょう"
             }
           ],
-          "meaningVi": "Chúng ta cùng ăn thôi."
+          "meaningVi": "Chúng ta cùng ăn thôi.",
+          "emotion": "vui"
         },
         {
           "id": "ex-n5-l6-s4-2",
@@ -909,7 +911,8 @@
           "furigana": "たべますか"
         }
       ],
-      "meaningVi": "Ừ, được đó. Ăn ở đâu nhỉ?"
+      "meaningVi": "Ừ, được đó. Ăn ở đâu nhỉ?",
+      "emotion": "vui"
     },
     {
       "id": "dia-n5-6-3",
@@ -975,7 +978,8 @@
           "furigana": "たべますか"
         }
       ],
-      "meaningVi": "Ở căng tin ăn gì được nhỉ?"
+      "meaningVi": "Ở căng tin ăn gì được nhỉ?",
+      "emotion": "suy_nghi"
     },
     {
       "id": "dia-n5-6-5",
@@ -1147,7 +1151,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Được đó. Vì hoa đang đẹp mà."
+      "meaningVi": "Được đó. Vì hoa đang đẹp mà.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n5-6-9",
@@ -1217,7 +1222,8 @@
           "isKeyGrammar": true
         }
       ],
-      "meaningVi": "Ừ, làm vậy đi."
+      "meaningVi": "Ừ, làm vậy đi.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

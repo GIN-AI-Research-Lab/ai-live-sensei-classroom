@@ -432,7 +432,8 @@
       "romaji": "hon no kimochi desu",
       "wordType": "phrase",
       "meaningVi": "Chút quà nhỏ gọi là (khi tặng quà)",
-      "accentNote": "Câu khiêm tốn bắt buộc khi biếu quà."
+      "accentNote": "Câu khiêm tốn bắt buộc khi biếu quà.",
+      "emotion": "xau_ho"
     },
     {
       "id": "voc-n5-2-44",
@@ -452,7 +453,8 @@
       "romaji": "doumo",
       "wordType": "phrase",
       "meaningVi": "Cảm ơn (ngắn gọn, thân mật)",
-      "accentNote": "Đầy đủ: どうも ありがとう ございます."
+      "accentNote": "Đầy đủ: どうも ありがとう ございます.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n5-2-46",
@@ -462,7 +464,8 @@
       "romaji": "doumo arigatou gozaimasu",
       "wordType": "phrase",
       "meaningVi": "Xin cảm ơn anh/chị rất nhiều",
-      "accentNote": "Mức cảm ơn trang trọng nhất trong bài."
+      "accentNote": "Mức cảm ơn trang trọng nhất trong bài.",
+      "emotion": "cui_chao"
     },
     {
       "id": "voc-n5-2-47",
@@ -472,7 +475,8 @@
       "romaji": "korekara osewa ni narimasu",
       "wordType": "phrase",
       "meaningVi": "Từ nay mong được anh/chị giúp đỡ",
-      "accentNote": "Nói khi mới chuyển đến, mới vào làm."
+      "accentNote": "Nói khi mới chuyển đến, mới vào làm.",
+      "emotion": "cui_chao"
     },
     {
       "id": "voc-n5-2-48",
@@ -482,7 +486,8 @@
       "romaji": "kochirakoso yoroshiku",
       "wordType": "phrase",
       "meaningVi": "Chính tôi mới mong được giúp đỡ",
-      "accentNote": "Câu đáp lễ lại khi người kia chào trước."
+      "accentNote": "Câu đáp lễ lại khi người kia chào trước.",
+      "emotion": "cui_chao"
     }
   ],
   "kanjiList": [
@@ -1413,7 +1418,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "À, từ nay mong được anh chị giúp đỡ ạ."
+      "meaningVi": "À, từ nay mong được anh chị giúp đỡ ạ.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n5-2-2",
@@ -1448,7 +1454,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Tôi mới là người phải nhờ cậy chứ, rất mong được giúp đỡ."
+      "meaningVi": "Tôi mới là người phải nhờ cậy chứ, rất mong được giúp đỡ.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n5-2-3",
@@ -1483,7 +1490,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Đây, chút quà nhỏ gọi là. Xin mời anh nhận cho."
+      "meaningVi": "Đây, chút quà nhỏ gọi là. Xin mời anh nhận cho.",
+      "emotion": "xau_ho"
     },
     {
       "id": "dia-n5-2-4",
@@ -1533,7 +1541,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Cảm ơn anh nhiều. Đây là cái gì vậy?"
+      "meaningVi": "Cảm ơn anh nhiều. Đây là cái gì vậy?",
+      "emotion": "vui"
     },
     {
       "id": "dia-n5-2-5",
@@ -1604,7 +1613,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Thế à. Cảm ơn anh nhiều lắm."
+      "meaningVi": "Thế à. Cảm ơn anh nhiều lắm.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n5-2-7",

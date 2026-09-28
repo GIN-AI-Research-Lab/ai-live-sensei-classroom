@@ -795,7 +795,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Ừ, muốn xem!"
+      "meaningVi": "Ừ, muốn xem!",
+      "emotion": "vui"
     },
     {
       "id": "dia-n5-20-5",
@@ -881,7 +882,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Ngầu quá! Còn mẹ cậu thì sao?"
+      "meaningVi": "Ngầu quá! Còn mẹ cậu thì sao?",
+      "emotion": "vui"
     },
     {
       "id": "dia-n5-20-7",
@@ -979,7 +981,8 @@
           "isKeyGrammar": true
         }
       ],
-      "meaningVi": "Hay quá vậy. Tớ thì không có anh chị em."
+      "meaningVi": "Hay quá vậy. Tớ thì không có anh chị em.",
+      "emotion": "buon"
     },
     {
       "id": "dia-n5-20-9",
@@ -1069,7 +1072,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Ừ, đúng vậy nhỉ. Cảm ơn cậu."
+      "meaningVi": "Ừ, đúng vậy nhỉ. Cảm ơn cậu.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

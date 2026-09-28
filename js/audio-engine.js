@@ -179,7 +179,7 @@ class AudioEngine {
       // gan nhu khong ai thay, ma khong cham vao no thi ca buoi hoc im tieng.
       // Can giua bang inset-x-0 + mx-auto + w-max, KHONG dung -translate-x-1/2:
       // keyframes cua animate-bounce ghi de transform nen o bi day lech sang nua
-      // phai. z-[88] de nam tren canvas meo 3D (85-87).
+      // phai. z-[88] de nam tren moi lop phu thuong (meo clip chi o z 3).
       el.className = 'fixed inset-x-0 mx-auto w-max max-w-[calc(100vw_-_32px)] bottom-24 z-[88] bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 text-sm cursor-pointer border-2 border-indigo-300 animate-bounce transition text-center';
       el.innerHTML = '<i class="fa-solid fa-volume-high text-lg"></i> <span>Chạm để bật tiếng Sensei 🔊</span>';
       el.onclick = () => {
@@ -643,7 +643,7 @@ class AudioEngine {
     this.stopPlayback();
     this.stopMic();
     // Bo analyser cung luc dong context: no dong bang o mau tieng cuoi cung,
-    // getOutputLevel se tra mai muc "dang noi" (meo 3D ha mieng mai khong ngung)
+    // getOutputLevel se tra mai muc "dang noi" (meo Sensei tuong dang noi mai)
     if (this.outAnalyser) {
       try { this.outAnalyser.disconnect(); } catch (e) {}
       this.outAnalyser = null;

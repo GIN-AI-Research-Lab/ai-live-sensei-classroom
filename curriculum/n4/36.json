@@ -162,7 +162,8 @@
       "romaji": "jouzu",
       "wordType": "adjective",
       "meaningVi": "Giỏi",
-      "accentNote": "Đã gặp N5 bài 9 — nay dùng làm kết quả biến đổi ようになる."
+      "accentNote": "Đã gặp N5 bài 9 — nay dùng làm kết quả biến đổi ようになる.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n4-36-18",
@@ -182,7 +183,8 @@
       "romaji": "byouki",
       "wordType": "noun",
       "meaningVi": "Bệnh, ốm",
-      "accentNote": "Đã gặp bài 17 (N5)."
+      "accentNote": "Đã gặp bài 17 (N5).",
+      "emotion": "buon"
     },
     {
       "id": "voc-n4-36-20",
@@ -900,7 +902,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Giỏi thật đấy. Anh đã học nhiều chữ Hán à?"
+      "meaningVi": "Giỏi thật đấy. Anh đã học nhiều chữ Hán à?",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-36-6",
@@ -1152,7 +1155,8 @@
           "furigana": "はなします"
         }
       ],
-      "meaningVi": "Xin lỗi. Để chị nghe được rõ, tôi sẽ nói to hơn nữa."
+      "meaningVi": "Xin lỗi. Để chị nghe được rõ, tôi sẽ nói to hơn nữa.",
+      "emotion": "cui_chao"
     }
   ],
   "exercises": [

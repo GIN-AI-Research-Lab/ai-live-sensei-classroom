@@ -12,7 +12,8 @@
       "romaji": "hinkon",
       "wordType": "noun",
       "meaningVi": "Nghèo đói, khốn cùng",
-      "accentNote": "貧困を ものともせず = bất chấp nghèo đói."
+      "accentNote": "貧困を ものともせず = bất chấp nghèo đói.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n1-4-2",
@@ -22,7 +23,8 @@
       "romaji": "kodoku",
       "wordType": "noun",
       "meaningVi": "Cô độc, cô đơn",
-      "accentNote": "孤独な じんせい = cuộc đời cô độc."
+      "accentNote": "孤独な じんせい = cuộc đời cô độc.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n1-4-3",
@@ -182,7 +184,8 @@
       "romaji": "shippai shimasu",
       "wordType": "verb",
       "meaningVi": "Thất bại",
-      "accentNote": "Đã gặp N4 bài 43."
+      "accentNote": "Đã gặp N4 bài 43.",
+      "emotion": "that_vong"
     },
     {
       "id": "voc-n1-4-19",
@@ -192,7 +195,8 @@
       "romaji": "seikou shimasu",
       "wordType": "verb",
       "meaningVi": "Thành công",
-      "accentNote": "Đã gặp N3 bài 8."
+      "accentNote": "Đã gặp N3 bài 8.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n1-4-20",
@@ -385,7 +389,8 @@
               "furigana": "かけません"
             }
           ],
-          "meaningVi": "Chưa nói đến chữ Hán, ngay cả hiragana cũng không viết được."
+          "meaningVi": "Chưa nói đến chữ Hán, ngay cả hiragana cũng không viết được.",
+          "emotion": "de_biu"
         },
         {
           "id": "ex-n1-l4-s1-2",
@@ -446,7 +451,8 @@
               "furigana": "ありません"
             }
           ],
-          "meaningVi": "Chưa nói đến chi phí sinh hoạt, ngay cả tiền ăn cũng không có."
+          "meaningVi": "Chưa nói đến chi phí sinh hoạt, ngay cả tiền ăn cũng không có.",
+          "emotion": "buon"
         }
       ]
     },
@@ -595,7 +601,8 @@
               "furigana": "しりません"
             }
           ],
-          "meaningVi": "Chưa nói đến tên, ngay cả tuổi của bản thân cũng không biết. (miêu tả mức độ tệ hại)"
+          "meaningVi": "Chưa nói đến tên, ngay cả tuổi của bản thân cũng không biết. (miêu tả mức độ tệ hại)",
+          "emotion": "de_biu"
         },
         {
           "id": "ex-n1-l4-s3-2",
@@ -640,7 +647,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Bất chấp tình huống như vậy, đã thành công. (ca ngợi sự vượt qua)"
+          "meaningVi": "Bất chấp tình huống như vậy, đã thành công. (ca ngợi sự vượt qua)",
+          "emotion": "vui"
         }
       ]
     },
@@ -786,7 +794,8 @@
               "furigana": "かけます"
             }
           ],
-          "meaningVi": "Chưa nói đến chữ Hán, ngay cả hiragana cũng từng không viết được, nhưng giờ đã có thể viết sách."
+          "meaningVi": "Chưa nói đến chữ Hán, ngay cả hiragana cũng từng không viết được, nhưng giờ đã có thể viết sách.",
+          "emotion": "vui"
         }
       ]
     }
@@ -969,7 +978,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vì nghèo đói, ngay cả tiền ăn cũng không có."
+      "meaningVi": "Vì nghèo đói, ngay cả tiền ăn cũng không có.",
+      "emotion": "buon"
     },
     {
       "id": "dia-n1-4-5",
@@ -1127,7 +1137,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Bất chấp những kinh nghiệm nguy hiểm, tôi đã thành công."
+      "meaningVi": "Bất chấp những kinh nghiệm nguy hiểm, tôi đã thành công.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n1-4-9",

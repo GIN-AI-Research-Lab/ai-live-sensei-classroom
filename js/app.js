@@ -35,7 +35,7 @@ function baoHongKhoiDong(loi, o) {
 }
 
 // Khoi dong xong (cuoi khoi try ben duoi) thi thoi hien bang hong: loi le
-// ve sau (mot cu bam, nhan vat 3D khong co WebGL...) khong phai "lop chua mo".
+// ve sau (mot cu bam, may khong co WebGL...) khong phai "lop chua mo".
 let daKhoiDong = false;
 
 window.addEventListener('error', (e) => {
@@ -132,6 +132,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // State Machine for Lecture: 'IDLE' | 'PLAYING' | 'PAUSED'
   let lectureState = 'IDLE';
+  let giangDaBaoMeo = null;   // lan cuoi bao meo Sensei (SenseiAvatar.trangThai) dang ban hay khong
+  let henBaoMeo = null;       // setInterval(baoMeoBan) — dat o cuoi khoi tao
   let lectureCheckpoint = {
     stepIndex: 0,
     sectionName: 'vocab',
@@ -421,6 +423,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const overlap = senseiTranscript.slice(-60);
       senseiTranscript += chunk;
       const window_ = overlap + chunk;
+      pxMatSom(senseiTranscript);   // cau phan xa dang cho phan: DUNG / SAI -> mat meo ngay
       autoTrackSenseiSpeech(window_);
       detectAndSwitchTabFromIntent(window_, 'sensei');
     },
@@ -431,6 +434,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     onReasoning: () => {},
     onAudioData: (base64PcmChunk) => {
       anChoTraLoi(); // tieng dau tien cua Sensei ve toi -> het "dang cho"
+      if (matChoNoi && !audioEngine.suppressed) apMatChoNoi();   // mat hen cho luot nay (cham bai / muc giang)
       audioEngine.playPCM24k(base64PcmChunk);
     },
     onText: (text) => {
@@ -740,6 +744,79 @@ document.addEventListener('DOMContentLoaded', async () => {
     return res;
   }
 
+  /* Mat / dong tac meo Sensei (clip nua nguoi, qua window.SenseiAvatar).
+     Khoa chuan: mat vui, de_biu, that_vong, ngac_nhien, buon, gian, suy_nghi, xau_ho;
+     dong tac chao, cui_chao, liem_tay, ngu_gat, suy_nghi, noi_tay_trai, noi_tay_phai.
+     Ten cu cua cac ban tool truoc van nhan: doi ve khoa chuan. */
+  const MAT_MEO = ['vui', 'de_biu', 'that_vong', 'ngac_nhien', 'buon', 'gian', 'suy_nghi', 'xau_ho'];
+  const MAT_MEO_CU = { happy: 'vui', proud: 'vui', excited: 'vui', sad: 'buon', angry: 'gian',
+    surprised: 'ngac_nhien', dizzy: 'ngac_nhien', thinking: 'suy_nghi', love: 'xau_ho', shy: 'xau_ho',
+    speechless: 'that_vong', disappointed: 'that_vong', smug: 'de_biu', mocking: 'de_biu' };
+  const DONG_TAC_MEO = ['chao', 'cui_chao', 'liem_tay', 'ngu_gat', 'suy_nghi', 'noi_tay_trai', 'noi_tay_phai'];
+  const DONG_TAC_MEO_CU = { vay: 'chao', cui: 'cui_chao', ngu: 'ngu_gat', nghi: 'suy_nghi' };
+  const khoaMeo = (s) => String(s || '').trim().toLowerCase().replace(/[-\s]+/g, '_');
+  const chuanMatMeo = (s) => { const k = khoaMeo(s); return MAT_MEO.includes(k) ? k : (MAT_MEO_CU[k] || null); };
+
+  let lucMatMeo = 0;     // luc doi mat meo gan nhat (set_emotion / nhan xet)
+  let lucSenseiMat = 0;  // luc Sensei tu goi set_emotion gan nhat
+  function matMeo(ten) {
+    const k = chuanMatMeo(ten);
+    if (!k || !window.SenseiAvatar) return false;
+    lucMatMeo = Date.now();
+    return !!window.SenseiAvatar.camXuc(k);
+  }
+
+  // Mat doi luc im lang thi meo bo sau ~2.5 s -> toi luc Sensei noi da mat. Hen mat cho TIENG DAU TIEN
+  // cua luot sap toi (onAudioData); goi am luot cu con bay toi trong 500 ms dau thi bo qua.
+  // Hen trong luc giang thi gan voi nhip do: tam dung / sang nhip khac truoc khi Sensei noi -> bo.
+  let matChoNoi = null;   // { k, luc, nhip }
+  const khoaSacThai = (s) => { const c = khoaMeo(s); return chuanMatMeo(c) || (c === 'chao' || c === 'cui_chao' ? c : null); };
+  /** Sac thai cua muc mot nhip giang (vocab / vi du / cau thoai co "emotion") */
+  const sacThaiNhip = (beat) => (beat && beat.data && !Array.isArray(beat.data) ? khoaSacThai(beat.data.emotion) : null);
+  function henMatKhiNoi(ten) {
+    const k = khoaSacThai(ten);
+    matChoNoi = k ? { k, luc: Date.now(), nhip: lectureState === 'PLAYING' ? maNhip : null } : null;
+  }
+  function apMatChoNoi() {
+    const m = matChoNoi, bay = Date.now();
+    if (!m || bay - m.luc < 500) return;
+    matChoNoi = null;
+    if (bay - m.luc > 25000 || lucSenseiMat > m.luc) return;   // qua lau / Sensei da tu dat mat
+    if (m.nhip != null && (lectureState !== 'PLAYING' || maNhip !== m.nhip)) return;
+    if (MAT_MEO.includes(m.k)) matMeo(m.k); else dongTacMeo(m.k);
+  }
+
+  /** act_out: dong tac chuan / ten cu; ten cu la mat (vui, gian...) thi doi mat */
+  function dongTacMeo(ten) {
+    const av = window.SenseiAvatar;
+    if (!av) return false;
+    const k = khoaMeo(ten);
+    if (DONG_TAC_MEO.includes(k) || DONG_TAC_MEO_CU[k]) return !!av.dienDongTac(DONG_TAC_MEO_CU[k] || k);
+    if (chuanMatMeo(k)) return matMeo(k);
+    return !!av.dienDongTac(k);   // ten cu khac (an, uong...): hub tu doi sang dong tac gan nhat
+  }
+
+  // Nhan xet bai lam: dung -> vui; sai -> luan phien de_biu / that_vong, sai lien tiep >= 3 -> that_vong.
+  // tuDong: doan tu loi Sensei / mark_error — mat vua doi (< 4s) thi giu mat do; lan doan trong 4s sau
+  // lan dem truoc la CUNG mot loi (phan xa: transcript roi mark_error) -> khong dem lai.
+  // Chuoi sai het han sau 2 phut khong sai (mark_error luc giang / phat am khong co lan dung de xoa).
+  // Tra ve khoa mat da chon (null = giu mat Sensei vua dat).
+  let meoSaiLienTiep = 0, meoLanSai = 0, lucMeoSai = 0;
+  function matMeoNhanXet(dung, saiLienTiep, tuDong = false) {
+    const bay = Date.now();
+    if (dung) meoSaiLienTiep = 0;
+    else if (!(tuDong && bay - lucMeoSai < 4000)) {
+      if (bay - lucMeoSai > 120000) meoSaiLienTiep = 0;
+      meoSaiLienTiep++;
+      lucMeoSai = bay;
+    }
+    if (tuDong && bay - lucMatMeo < 4000) return null;
+    const n = saiLienTiep != null ? saiLienTiep : meoSaiLienTiep;
+    const k = dung ? 'vui' : n >= 3 || meoLanSai++ % 2 ? 'that_vong' : 'de_biu';
+    matMeo(k);
+    return k;
+  }
+
   // 5. Xử lý Function Calling (Tool Calls)
   function handleToolCall(call) {
     const { name, args, id } = call;
@@ -808,17 +885,25 @@ document.addEventListener('DOMContentLoaded', async () => {
       // khong mo them bang sua loi de len chinh the do (dien thoai: che ca nhan xet lan dap an C/D)
       const vuaChamSai = slideEngine.activeTab === 'quiz' && Date.now() - lucChamSai < 60000;
       if (!vuaChamSai) slideEngine.markError(wrong_phrase, corrected_phrase, explanation);
-      if (window.SenseiAvatar) window.SenseiAvatar.dienDongTac('gian', 2.5);
+      // Meo che / that vong (cau trac nghiem thi mat da doi luc cham, khong tinh them mot lan sai)
+      if (!vuaChamSai) matMeoNhanXet(false, undefined, true);
       return { success: true, marked: wrong_phrase };
     }
+    // act_out / set_emotion chi la trang tri: khoa hop le thi luon bao thanh cong (meo dang an / chua nap
+    // thi thoi) — bao loi moi lan lai lam Sensei goi lai hoac xin loi thanh tieng
     else if (name === "act_out") {
-      const ok = !!(window.SenseiAvatar && window.SenseiAvatar.dienDongTac(args.action));
-      return ok ? { success: true, acted: args.action }
-                : { success: false, error: "nhan vat chua san sang hoac khong co dong tac nay" };
+      const k = khoaMeo(args && args.action);
+      const ok = dongTacMeo(k);
+      return ok || DONG_TAC_MEO.includes(k) || DONG_TAC_MEO_CU[k] || chuanMatMeo(k)
+        ? { success: true, acted: k }
+        : { success: false, error: 'action hop le: ' + DONG_TAC_MEO.join(', ') };
     }
     else if (name === "set_emotion") {
-      const ok = !!(window.SenseiAvatar && window.SenseiAvatar.camXuc(args.emotion, 3));
-      return { success: ok, emotion: args.emotion };
+      const k = chuanMatMeo(args && args.emotion);
+      if (!k) return { success: false, error: 'emotion hop le: ' + MAT_MEO.join(', ') };
+      lucSenseiMat = Date.now();
+      matMeo(k);
+      return { success: true, emotion: k };
     }
     else if (name === "draw_on_board") {
       const { target_id, kind, to_id } = args;
@@ -849,6 +934,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // 6. Điều phối Chế độ Giảng bài Theo Kịch bản (Start / Pause / Resume / Raise Hand)
   function updateLectureControlsUI() {
+    // Moi lan doi lectureState deu goi ham nay -> bao meo Sensei ngay (dang giang thi khong ngu gat / liem tay).
+    // henBaoMeo chi co sau khi khoi tao xong het bien trang thai (baoMeoBan doc ca phanXa, pxChoPhan...)
+    if (henBaoMeo) baoMeoBan();
+
     // 1. Cập nhật nút autoLectureBtn (Start / Pause / Resume)
     if (autoLectureBtn) {
       const currentStep = currentLectureSteps[currentLectureStepIndex];
@@ -1012,7 +1101,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       'Nhưng BẢNG thì vẫn là của thầy: cứ dùng write_on_board / write_kanji / draw_on_board ' +
       'khi có thứ đáng cho học viên NHÌN chứ không chỉ nghe. ' +
       'Chỉ giảng DUY NHẤT mục này rồi dừng — hệ thống sẽ tự chuyển sang mục kế tiếp. ' +
-      'Tuyệt đối không giảng lướt sang mục khác, không đọc lại danh sách.';
+      'Tuyệt đối không giảng lướt sang mục khác, không đọc lại danh sách.' +
+      // Muc co "emotion": bao Sensei doc dung giong; mat meo app tu doi luc Sensei cat loi (henMatKhiNoi)
+      (sacThaiNhip(beat) ? `\n\nSẮC THÁI: mục này mang sắc thái ${sacThaiNhip(beat)} — đọc nó đúng giọng đó. ` +
+        'Mặt mèo tự đổi lúc bắt đầu nói, KHÔNG cần gọi set_emotion.' : '');
 
     // Goi y rieng cho tung dang nhip. Viet gi len bang phu thuoc vao dang bai
     // dang day, dan chung chung mot cau thi Sensei hoac khong ghi gi, hoac ghi
@@ -1209,7 +1301,8 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
     lastToolFocusAt = Date.now();
     clearPendingFocus();
     if (beat.targetId) {
-      slideEngine.focusItem(beat.targetId, 'reading_focus');
+      // khongMat: meo chi chi tay; mat theo sac thai muc hen toi luc Sensei cat loi (sendToSensei)
+      slideEngine.focusItem(beat.targetId, 'reading_focus', null, { khongMat: true });
     } else {
       slideEngine.clearReadingFocus();
     }
@@ -1223,6 +1316,7 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
       if (isResume) prompt = '[HỌC TIẾP SAU KHI TẠM DỪNG]\n' + prompt;
       // Thoi gian phat giong nhan vat khong duoc tinh vao "Sensei da noi bao lau"
       currentStepStartTime = Date.now();
+      henMatKhiNoi(sacThaiNhip(beat));   // null = xoa mat hen cua nhip truoc
       geminiClient.sendUserMessage(prompt);
       maNhipDaGui = ma;
     };
@@ -1242,7 +1336,7 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
     } else if (beat.kind === 'kaiwa') {
       // Luot 2: nghe lai chinh giong nhan vat, XONG HAN roi Sensei moi mo xe.
       // Hai giong khong bao gio chong len nhau.
-      slideEngine.focusItem(beat.targetId, 'reading_focus');
+      slideEngine.focusItem(beat.targetId, 'reading_focus', null, { khongMat: true });
       audioEngine.stopPlayback();
       playDialogueLine(beat.data)
         .then(() => new Promise(r => setTimeout(r, 300)))
@@ -2116,6 +2210,8 @@ Trả về JSON duy nhất:
 
       addLog("Học viên", `Đã chọn đáp án ${String.fromCharCode(65 + chosenIdx)} - [Chưa chính xác] (Đã sai ${streakWrongCount} câu liên tiếp)`);
     }
+    // Meo Sensei doi mat ngay luc cham: dung -> vui, sai -> de_biu / that_vong (sai: hen lai luc Sensei noi, duoi)
+    const matCham = matMeoNhanXet(isCorrect, streakWrongCount);
 
     if (explainBox) {
       // Khung nhan xet: mot mat nen phang trong the cau hoi (khong vien hop long hop)
@@ -2180,8 +2276,11 @@ Hãy NÓI, theo đúng thứ tự:
 1. Nhắc lại ý câu cà khịa trên bằng lời của thầy/cô, một câu ngắn thôi${streakWrongCount >= 3 ? ', và lần này gắt hơn vì em sai liên tiếp' : ''}.
 2. Giảng cách làm câu này: vì sao "${correctText}" mới đúng, còn "${chosenText}" sai ở chỗ nào, dựa vào điểm ngữ pháp nào của bài. Nói 2–3 câu, dễ hiểu, có ví dụ ngắn nếu cần.
 
-Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn giọng Nhật. Không nói "chào em", không tóm tắt lại đề.`);
+Nói tiếng Việt tự nhiên; phần tiếng Nhật phải phát âm chuẩn giọng Nhật. Không nói "chào em", không tóm tắt lại đề.${matCham ? `
+Mặt mèo tự đổi sang ${matCham} lúc bắt đầu nói — không cần gọi set_emotion.` : ''}`);
 
+        // Mat luc cham chay trong im lang (REST + do tre Live) -> hen lai dung luc Sensei cat loi
+        if (noi) henMatKhiNoi(matCham);
         if (!noi) {
           // Chua vao lop duoc thi van con giong may cua trinh duyet
           window.playSpeechRoast(`${aiResult.roast || ''}. ${aiResult.tip || ''}`);
@@ -3038,6 +3137,7 @@ Nghe xong tiếng nó đọc thì CHẤM ngay, theo đúng thứ tự:
 1. Phán một câu thật xấc về màn đọc vừa rồi. Đọc tốt thì hạ giọng "tớ/cậu" khen một câu ngắn; đọc sai be bét thì cứ chửi thẳng.
 2. Chỉ ĐÍCH DANH chỗ sai: âm nào sai, trường âm (おばさん/おばあさん), âm ngắt っ, âm mũi ん, hay pitch accent lên xuống sai chỗ. Nói cụ thể, đừng chê chung chung.
 3. Đọc mẫu lại CẢ CÂU thật chậm và chuẩn giọng Tokyo, rồi bảo nó đọc theo.
+Trước khi phán gọi set_emotion: đọc tốt -> vui; sai -> de_biu; sai be bét / sai lại lỗi cũ -> that_vong.
 Nếu nó đọc sai hẳn thì gọi tool mark_error(wrong_phrase, corrected_phrase, explanation).
 Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng Việt.`);
 
@@ -3262,6 +3362,7 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     const anh = cv.toDataURL('image/png').split(',')[1];
     const kq = await chamChuVietBangAI(anh, cau);
     if (kq.ok) {
+      matMeoNhanXet(!!kq.dung);   // meo Sensei: dung -> vui, sai -> de_biu / that_vong
       const dau = kq.dung ? '<i class="fa-solid fa-check"></i> ' : '<i class="fa-solid fa-xmark"></i> ';
       const loi = escapeHtml(kq.phan || (kq.dung ? 'Đúng rồi.' : 'Chưa đúng.'));
       veKetQuaViet(id, kq.dung ? 'sage' : 'amber',
@@ -3656,6 +3757,22 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
   // Vua huy ban thu phat am: activityEnd da dong luot nen Sensei van tra loi
   // ban thu do -> chan tieng den het luot, khong cham to ban hoc vien da bo.
   let boQuaLuotHuy = false;
+  let pxDaDoiMat = false;  // loi phan cua cau dang cho da doi mat meo Sensei chua
+
+  // Bao meo Sensei "dang ban" (khong liem tay / ngu gat / ngu; dang ngu thi day): dang giang, gio tay / thu am,
+  // cho Sensei tra loi (mic 20-90 s), cham phat am, luyen phan xa. Mic khong phai hoat dong chuot / phim nen
+  // meo khong tu biet. Doi moi giay + moi lan doi lectureState (updateLectureControlsUI); chi goi khi doi.
+  function baoMeoBan() {
+    const av = window.SenseiAvatar;
+    if (!av || !av.trangThai) return;   // hub chua nap: lan sau thu lai
+    const ban = lectureState === 'PLAYING' || isRaisingHand || !!dangThuAm || dangMoMicPA || !!dangChoChamPhatAm
+      || dangChoTraLoi || senseiChenNgang || phanXa.dangChay || pxChoPhan || !!(audioEngine && audioEngine.isMicActive);
+    if (ban === giangDaBaoMeo) return;
+    giangDaBaoMeo = ban;
+    av.trangThai({ giang: ban });
+  }
+  henBaoMeo = setInterval(baoMeoBan, 1000);
+  baoMeoBan();
 
   function pxHuyCho() {
     pxChoPhan = false;
@@ -3663,10 +3780,21 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     pxChoTimer = null;
   }
 
+  /** Loi phan dang ve (transcript): tu dau DUNG / SAI da tron thi doi mat meo ngay, khong doi het luot */
+  function pxMatSom(chu) {
+    if (!pxChoPhan || pxDaDoiMat) return;
+    const m = String(chu || '').normalize('NFC').toUpperCase()
+      .match(/^[^\p{L}\p{N}]*([\p{L}\p{M}\p{N}]+)[^\p{L}\p{M}\p{N}]/u);
+    if (!m) return;   // tu dau chua ve tron
+    pxDaDoiMat = true;
+    matMeoNhanXet(m[1] === 'ĐÚNG' || m[1] === 'DUNG', undefined, true);
+  }
+
   /** Bat dau doi loi phan; qua han ma chua co thi tinh la bo qua cau nay. */
   function pxBatDauCho(ms) {
     pxHuyCho();
     pxChoPhan = true;
+    pxDaDoiMat = false;
     const luot = phanXa.luot, vt = phanXa.viTri;
     pxChoTimer = setTimeout(() => {
       if (!pxChoPhan || luot !== phanXa.luot || vt !== phanXa.viTri) return;
@@ -3697,6 +3825,7 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     const m = txt.normalize('NFC').toUpperCase().match(/^[^\p{L}\p{N}]*([\p{L}\p{M}\p{N}]+)/u);
     const tuDau = m ? m[1] : '';
     const dung = tuDau === 'ĐÚNG' || tuDau === 'DUNG';
+    if (!pxDaDoiMat) { pxDaDoiMat = true; matMeoNhanXet(dung, undefined, true); }   // transcript khong ve kip
     pxChotCau(dung, txt || (dung ? 'Đúng.' : 'Sai.'));
     return true;
   }

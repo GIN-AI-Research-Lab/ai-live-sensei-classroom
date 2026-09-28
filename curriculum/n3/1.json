@@ -192,7 +192,8 @@
       "romaji": "zannen",
       "wordType": "adjective",
       "meaningVi": "Đáng tiếc, tiếc nuối",
-      "accentNote": "Đã gặp N4 bài 27."
+      "accentNote": "Đã gặp N4 bài 27.",
+      "emotion": "that_vong"
     },
     {
       "id": "voc-n3-1-20",
@@ -431,7 +432,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Không thể nào tin được chuyện như vậy."
+          "meaningVi": "Không thể nào tin được chuyện như vậy.",
+          "emotion": "ngac_nhien"
         }
       ]
     },
@@ -881,7 +883,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Ơ! Không thể nào. Anh Yamada kém thể thao mà."
+      "meaningVi": "Ơ! Không thể nào. Anh Yamada kém thể thao mà.",
+      "emotion": "ngac_nhien"
     },
     {
       "id": "dia-n3-1-3",
@@ -1162,7 +1165,8 @@
           "furigana": "いました"
         }
       ],
-      "meaningVi": "Ra vậy. Tôi đã hiểu nhầm rồi."
+      "meaningVi": "Ra vậy. Tôi đã hiểu nhầm rồi.",
+      "emotion": "xau_ho"
     },
     {
       "id": "dia-n3-1-7",
@@ -1388,7 +1392,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Khiêm tốn thật nhỉ. Giỏi thật đấy."
+      "meaningVi": "Khiêm tốn thật nhỉ. Giỏi thật đấy.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

@@ -42,7 +42,8 @@
       "romaji": "kinshi shimasu",
       "wordType": "verb",
       "meaningVi": "Cấm chỉ",
-      "accentNote": "この 部屋では 撮影が 禁止されています = phòng này cấm chụp ảnh."
+      "accentNote": "この 部屋では 撮影が 禁止されています = phòng này cấm chụp ảnh.",
+      "emotion": "gian"
     },
     {
       "id": "voc-n3-3-5",
@@ -52,7 +53,8 @@
       "romaji": "kesshin shimasu",
       "wordType": "verb",
       "meaningVi": "Quyết tâm",
-      "accentNote": "留学する ことに 決心しました = tôi đã quyết tâm đi du học."
+      "accentNote": "留学する ことに 決心しました = tôi đã quyết tâm đi du học.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "voc-n3-3-6",
@@ -1182,7 +1184,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Giỏi thật đấy. Nhớ tuân thủ quy định và cố gắng nhé."
+      "meaningVi": "Giỏi thật đấy. Nhớ tuân thủ quy định và cố gắng nhé.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n3-3-10",
@@ -1212,7 +1215,8 @@
           "furigana": "がんばります"
         }
       ],
-      "meaningVi": "Cảm ơn cậu. Tớ sẽ cố gắng."
+      "meaningVi": "Cảm ơn cậu. Tớ sẽ cố gắng.",
+      "emotion": "cui_chao"
     }
   ],
   "exercises": [

@@ -626,7 +626,8 @@
               "furigana": "きます"
             }
           ],
-          "meaningVi": "Đúng lúc bận rộn thì điện thoại lại gọi đến."
+          "meaningVi": "Đúng lúc bận rộn thì điện thoại lại gọi đến.",
+          "emotion": "gian"
         },
         {
           "id": "ex-n3-l7-s3-2",
@@ -687,7 +688,8 @@
               "furigana": "ふりました"
             }
           ],
-          "meaningVi": "Đúng vào ngày diễn ra đại hội thì trời lại mưa."
+          "meaningVi": "Đúng vào ngày diễn ra đại hội thì trời lại mưa.",
+          "emotion": "that_vong"
         }
       ]
     },
@@ -1131,7 +1133,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Đúng lúc bận rộn thì điện thoại lại gọi đến nhỉ."
+      "meaningVi": "Đúng lúc bận rộn thì điện thoại lại gọi đến nhỉ.",
+      "emotion": "gian"
     },
     {
       "id": "dia-n3-7-8",
@@ -1211,7 +1214,8 @@
           "furigana": "ふります"
         }
       ],
-      "meaningVi": "Đúng vậy. Đúng vào ngày đại hội thì trời lại mưa."
+      "meaningVi": "Đúng vậy. Đúng vào ngày đại hội thì trời lại mưa.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n3-7-9",

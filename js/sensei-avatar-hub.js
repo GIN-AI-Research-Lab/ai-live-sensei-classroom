@@ -1,63 +1,50 @@
 /**
  * BO DIEU PHOI NHAN VAT SENSEI.
  *
- * Cho phep chay mot hoac nhieu nhan vat cung luc (de so sanh). app.js,
- * slide-engine.js va tool cua Gemini chi goi window.SenseiAvatar — o day
- * chuyen lenh do toi MOI nhan vat dang hien.
+ * app.js, slide-engine.js va tool cua Gemini chi goi window.SenseiAvatar — o day chuyen lenh toi nhan vat
+ * dang hien: meo Sensei nua than dien bang clip (js/sensei-cat-video.js).
  *
  * Che do (luu o localStorage.senseiAvatarKieu, hoac tam thoi bang ?sensei=<che do> tren dia chi trang):
- *   that   : meo 3D that (dung tu anh, long nhieu lop, 23 xuong) — mac dinh
- *   video  : meo lam tu video AI (Veo), giong het anh goc
- *   ca-hai : meo 2D + meo 3D dung canh nhau      meo   : chi meo 2D
- *   meo3d  : chi meo 3D                          an    : an het
- *   nguoi  : co gai anime 3D (VRM)
- * Nut tron o goc phai (dien thoai: tren thanh tren) chi bat / tat (1 lan bam la an, bam lai hien che do
- * truoc do). Cac che do so sanh khac chi mo bang localStorage / ?sensei=.
- * Nhan vat nao nap loi (khong co WebGL, mat mang CDN, hong tep) goi hub.loi(kieu) -> tu doi sang meo 2D.
+ *   video : meo clip — mac dinh          an : an Sensei
+ * Nut tron o goc phai (dien thoai: tren thanh tren): 1 lan bam la an, bam lai hien.
+ * Tep nhan vat tai loi (mat mang / hong tep) -> hien anh tinh cua meo thay (khong luu lua chon).
  *
- * Moi nhan vat tu dang ky bang SenseiAvatarHub.dangKy(api), api co:
- *   kieu, uuTien (so nho dung ben phai), san, tat, an(bool), rongHienTai(),
- *   chiVao, bamVao, dienDongTac, camXuc, khiRoiMuc, dongTacChoTu
+ * Nhan vat tu dang ky bang SenseiAvatarHub.dangKy(api), api co:
+ *   kieu, san, tat, an(bool), rongHienTai(), chiVao, bamVao, dienDongTac, camXuc, khiRoiMuc, trangThai, dongTacChoTu
  */
 (function () {
   'use strict';
 
-  const TEP = {
-    meo:   { src: 'js/sensei-cat.js' },
-    'meo-video': { src: 'js/sensei-cat-video.js' },
-    'meo3d-that': { src: 'js/sensei-cat3d-that.js', module: true },
-    meo3d: { src: 'js/sensei-cat3d.js', module: true },
-    nguoi: { src: 'js/sensei-avatar.js', module: true },
-  };
-  const CAN = { that: ['meo3d-that'], video: ['meo-video'], 'ca-hai': ['meo', 'meo3d'], meo: ['meo'], meo3d: ['meo3d'], nguoi: ['nguoi'], an: [] };
-  const NHAN = { that: '🐈', video: '🎬', 'ca-hai': '🐱🐯', meo: '🐱', meo3d: '🐯', nguoi: '🧑‍🏫', an: '🙈' };
-  const TEN = { that: 'Mèo 3D', video: 'Mèo video AI', 'ca-hai': 'Cả hai mèo', meo: 'Mèo 2D', meo3d: 'Mèo 3D', nguoi: 'Người anime 3D', an: 'Đang ẩn' };
+  const TEP = { 'meo-video': { src: 'js/sensei-cat-video.js' } };
+  const CAN = { video: ['meo-video'], an: [] };
+  const NHAN = { video: '🐱', an: '🙈' };
+  const TEN = { video: 'Mèo Sensei', an: 'Đang ẩn' };
+  const ANH_TINH = 'assets/sensei-meo/clip/nghi.webp';
 
-  // Moi lan them kieu nhan vat moi thi tang PHIEN_BAN: may nao dang nho che do cu
-  // se duoc dua ve mac dinh moi mot lan, de thay ngay nhan vat vua them.
-  // (4: nut bo vong doi che do, chi con bat / tat -> may dang o che do so sanh cung ve mac dinh)
-  const PHIEN_BAN = '4', MAC_DINH = 'that';
+  // Moi lan doi bo nhan vat thi tang PHIEN_BAN: may dang nho che do cu duoc dua ve mac dinh mot lan.
+  // (5: bo meo 2D / meo 3D / nguoi anime, chi con meo clip -> 'that', 'meo', 'meo3d', 'ca-hai', 'nguoi' ve 'video')
+  const PHIEN_BAN = '5', MAC_DINH = 'video';
   let cheDo = MAC_DINH;
   try {
     if (localStorage.getItem('senseiAvatarPhienBan') !== PHIEN_BAN) {
       localStorage.setItem('senseiAvatarPhienBan', PHIEN_BAN);
-      // Nguoi da chu y an Sensei thi giu nguyen; chi dua cac che do khac (so sanh) ve mac dinh
+      // Nguoi da chu y an Sensei thi giu nguyen
       if (localStorage.getItem('senseiAvatarKieu') !== 'an') localStorage.setItem('senseiAvatarKieu', MAC_DINH);
     }
     cheDo = localStorage.getItem('senseiAvatarKieu') || MAC_DINH;
   } catch (e) {}
   if (!CAN[cheDo]) cheDo = MAC_DINH;
-  // ?sensei=video ... tren dia chi trang: xem thu mot che do, khong luu lai
+  // ?sensei=an / ?sensei=video: xem thu, khong luu lai
   const tuUrl = new URLSearchParams(location.search).get('sensei');
   if (CAN[tuUrl]) cheDo = tuUrl;
-  let hienTruoc = cheDo === 'an' ? MAC_DINH : cheDo;   // che do hien lai khi bam nut lan nua
+  const luuDuoc = !CAN[tuUrl];
 
   const ds = [];            // nhan vat da nap
   const daNap = {};         // kieu -> true khi da chen the script
-  const hong = {};          // kieu -> true khi nap loi (khong co WebGL / CDN / tep mo hinh)
+  const hong = {};          // kieu -> true khi tep tai loi
+  let giang = false;        // bai giang dang PLAYING (app.js bao qua trangThai)
 
-  const dangHien = () => ds.filter((a) => !a.tat && CAN[cheDo].includes(a.kieu))
-                           .sort((a, b) => (a.uuTien || 0) - (b.uuTien || 0));
+  const dangHien = () => ds.filter((a) => !a.tat && CAN[cheDo].includes(a.kieu));
 
   const hub = window.SenseiAvatarHub = {
     dangKy(api) {
@@ -65,22 +52,14 @@
       api.an(!CAN[cheDo].includes(api.kieu));
       return api;
     },
-    /** Thu tu cua nhan vat trong hang dang hien: 0 = sat mep phai */
-    thuTu(api) { return Math.max(0, dangHien().indexOf(api)); },
-    soLuong() { return dangHien().length; },
-    /** Tong be rong cac nhan vat dung ben phai no (de xep hang o goc) */
-    rongTruoc(api) {
-      let t = 0;
-      for (const a of dangHien()) { if (a === api) break; t += a.rongHienTai?.() || 0; }
-      return t;
-    },
     get cheDo() { return cheDo; },
+    get giang() { return giang; },
     datCheDo,
-    /** Nhan vat bao khong chay duoc: danh dau hong, dang hien thi thay bang meo 2D (khong luu lua chon) */
+    /** Nhan vat bao khong chay duoc: danh dau hong, hien anh tinh thay */
     loi(kieu) {
       if (hong[kieu]) return;
       hong[kieu] = true;
-      if (CAN[cheDo].includes(kieu)) datCheDo(cheDo, false);
+      hienAnhTinh();
     },
   };
 
@@ -92,10 +71,17 @@
     dienDongTac: moiCai('dienDongTac'),
     camXuc: moiCai('camXuc'),
     khiRoiMuc: (...a) => { dangHien().forEach((x) => x.khiRoiMuc?.(...a)); },
+    /** trangThai({ giang }) — bai giang dang chay hay khong (meo chi ngu gat / ngu khi khong giang). Tra ve trang thai meo. */
+    trangThai(o) {
+      if (o && 'giang' in o) giang = !!o.giang;
+      let kq = null;
+      ds.forEach((x) => { const r = x.trangThai?.(o); if (!kq && r) kq = r; });
+      return Object.assign({ cheDo, giang }, kq || {});
+    },
     dongTacChoTu: (r) => (ds[0] ? ds[0].dongTacChoTu(r) : null),
     get san() { return dangHien().some((x) => x.san); },
     get DANH_SACH_DONG_TAC() { return ds[0]?.DANH_SACH_DONG_TAC || []; },
-    an(anDi = true) { datCheDo(anDi ? 'an' : hienTruoc, !CAN[tuUrl]); },
+    an(anDi = true) { datCheDo(anDi ? 'an' : MAC_DINH, luuDuoc); },
     _ds: ds,
   };
 
@@ -103,23 +89,36 @@
     if (daNap[kieu] || !TEP[kieu]) return;
     daNap[kieu] = true;
     const sc = document.createElement('script');
-    if (TEP[kieu].module) sc.type = 'module';
     sc.src = TEP[kieu].src;
-    // Tai khong duoc (mat mang, CDN three.js bi chan) -> doi sang nhan vat khac
     sc.onerror = () => hub.loi(kieu);
     document.body.appendChild(sc);
+  }
+
+  // Du phong khi tep nhan vat khong tai duoc: anh tinh o goc phai tren thanh duoi (khong chua lan, khong dien)
+  let anhTinh = null;
+  function hienAnhTinh() {
+    const hien = CAN[cheDo].some((k) => hong[k]);
+    if (hien && !anhTinh) {
+      anhTinh = new Image();
+      anhTinh.alt = '';
+      anhTinh.setAttribute('aria-hidden', 'true');
+      anhTinh.src = ANH_TINH;
+      Object.assign(anhTinh.style, { position: 'fixed', right: '10px', bottom: 'var(--bottom-h, 64px)', zIndex: '3',
+        height: 'clamp(96px, 24vh, 220px)', pointerEvents: 'none' });
+      anhTinh.onerror = () => anhTinh.remove();
+      document.body.appendChild(anhTinh);
+    }
+    if (anhTinh) anhTinh.style.display = hien ? '' : 'none';
   }
 
   let nut;
   function datCheDo(moi, luu = true) {
     if (!CAN[moi]) return;
     if (luu) try { localStorage.setItem('senseiAvatarKieu', moi); } catch (e) {}
-    if (moi !== 'an') hienTruoc = moi;
-    // Nhan vat can dung da hong -> hien meo 2D thay (van nho lua chon goc cho lan sau)
-    if (CAN[moi].some((k) => hong[k])) moi = 'meo';
     cheDo = moi;
     CAN[moi].forEach(napKieu);
     ds.forEach((a) => a.an(!CAN[moi].includes(a.kieu)));
+    hienAnhTinh();
     capNhatNut();
   }
 
@@ -127,7 +126,7 @@
     if (!nut) return;
     const an = cheDo === 'an';
     nut.innerHTML = `<span aria-hidden="true">${NHAN[cheDo]}</span>`;
-    const nhan = an ? `Hiện Sensei hoạt hình (${TEN[hienTruoc]})` : `Ẩn Sensei hoạt hình (${TEN[cheDo]})`;
+    const nhan = an ? `Hiện ${TEN[MAC_DINH]}` : `Ẩn ${TEN[cheDo]}`;
     nut.title = nhan;
     nut.setAttribute('aria-label', nhan);
   }
@@ -160,8 +159,8 @@
       const cotPhai = bang && bang.offsetWidth > 0 && bang.offsetLeft > innerWidth * .35;
       nut.style.right = (cotPhai ? Math.max(10, innerWidth - bang.offsetLeft + 10) : 10) + 'px';
     };
-    // Mot lan bam: an / hien lai che do truoc do (dang xem thu bang ?sensei= thi khong luu)
-    nut.addEventListener('click', () => datCheDo(cheDo === 'an' ? hienTruoc : 'an', !CAN[tuUrl]));
+    // Mot lan bam: an / hien (dang xem thu bang ?sensei= thi khong luu)
+    nut.addEventListener('click', () => datCheDo(cheDo === 'an' ? MAC_DINH : 'an', luuDuoc));
     addEventListener('resize', datViTri);
     // Thanh duoi doi chieu cao (xuong dong khi mo bai, xoay may) va bang phan mo / dong
     const day = document.querySelector('.deck-bottom');
@@ -173,7 +172,7 @@
 
   function batDau() {
     taoNut();
-    datCheDo(cheDo, !CAN[tuUrl]);
+    datCheDo(cheDo, luuDuoc);
   }
   if (document.body) batDau(); else addEventListener('DOMContentLoaded', batDau);
 })();

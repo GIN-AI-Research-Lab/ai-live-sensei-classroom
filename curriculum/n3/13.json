@@ -22,7 +22,8 @@
       "romaji": "souzou shimasu",
       "wordType": "verb",
       "meaningVi": "Tưởng tượng",
-      "accentNote": "未来を 想像します = tưởng tượng về tương lai."
+      "accentNote": "未来を 想像します = tưởng tượng về tương lai.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "voc-n3-13-3",
@@ -32,7 +33,8 @@
       "romaji": "yosou shimasu",
       "wordType": "verb",
       "meaningVi": "Dự đoán",
-      "accentNote": "結果を 予想します = dự đoán kết quả."
+      "accentNote": "結果を 予想します = dự đoán kết quả.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "voc-n3-13-4",
@@ -465,7 +467,8 @@
               "furigana": "ありえない"
             }
           ],
-          "meaningVi": "Chuyện đó không thể xảy ra."
+          "meaningVi": "Chuyện đó không thể xảy ra.",
+          "emotion": "ngac_nhien"
         },
         {
           "id": "ex-n3-l13-s2-2",
@@ -1185,7 +1188,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Việc dự đoán khó thật nhỉ."
+      "meaningVi": "Việc dự đoán khó thật nhỉ.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "dia-n3-13-10",

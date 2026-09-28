@@ -192,7 +192,8 @@
       "romaji": "tasukarimasu",
       "wordType": "verb",
       "meaningVi": "Được giúp đỡ, đỡ vất vả hơn",
-      "accentNote": "助かりました = anh giúp tôi nhiều quá (câu cảm ơn sau khi nhận giúp đỡ)."
+      "accentNote": "助かりました = anh giúp tôi nhiều quá (câu cảm ơn sau khi nhận giúp đỡ).",
+      "emotion": "vui"
     },
     {
       "id": "voc-n5-24-20",
@@ -885,7 +886,8 @@
           "furigana": "たすかります"
         }
       ],
-      "meaningVi": "Cảm ơn cậu. Nếu cậu cầm giúp thì đỡ vất vả hơn nhiều đấy."
+      "meaningVi": "Cảm ơn cậu. Nếu cậu cầm giúp thì đỡ vất vả hơn nhiều đấy.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n5-24-4",
@@ -1092,7 +1094,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Cảm ơn ông/bà đã tốt bụng chỉ giúp."
+      "meaningVi": "Cảm ơn ông/bà đã tốt bụng chỉ giúp.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n5-24-8",
@@ -1211,7 +1214,8 @@
           "furigana": "たすかりました"
         }
       ],
-      "meaningVi": "Vâng, thật sự được giúp đỡ nhiều quá."
+      "meaningVi": "Vâng, thật sự được giúp đỡ nhiều quá.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

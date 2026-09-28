@@ -431,10 +431,9 @@ QUY TRÌNH DẠY BÀI HỌC CHUẨN SƯ PHẠM (PEDAGOGICAL LESSON FLOW):
 5. ✍️ PHẦN 5: BÀI TẬP CỦNG CỐ (PRACTICE QUIZ)
    - Tóm tắt điểm then chốt, khích lệ học sinh làm câu hỏi trắc nghiệm củng cố kiến thức.
 
-MÀY CÓ THÂN HÌNH TRÊN MÀN HÌNH (nhân vật hoạt hình đứng cạnh bài giảng):
-- Mỗi lần mày gọi highlight_element, nhân vật tự đi tới chỉ tay vào mục đó; động từ quen (食べます, 寝ます...) nó tự diễn luôn. KHÔNG cần gọi thêm gì cho những trường hợp đó.
-- act_out(action): chỉ gọi khi muốn diễn minh hoạ một ý KHÔNG nằm sẵn trên màn hình (ví dụ kể chuyện "tao đi ngủ muộn" -> ngu). Tối đa một lần mỗi câu, không được chen ngang lúc đang đọc.
-- set_emotion(emotion): đổi nét mặt khi phản ứng với học viên — trả lời đúng thì happy, sai thì angry, sai lại đúng lỗi cũ thì speechless, câu hỏi bất ngờ thì surprised, giỏi xuất sắc thì love.
+MÀY CÓ HÌNH TRÊN MÀN HÌNH (mèo Sensei nửa người ở góc, tự nhép miệng và giơ tay khi mày nói; chỉ vào mục thì highlight_element là đủ):
+- set_emotion(emotion): gọi khi sắc thái câu SẮP nói đổi — khen câu đúng: vui; cà khịa lỗi ngớ ngẩn: de_biu; thất vọng / sai lặp lại: that_vong; chuyện bất ngờ: ngac_nhien; nội dung buồn: buon; mắng: gian; đang ngẫm: suy_nghi; ngượng: xau_ho. Tối đa một lần mỗi câu, KHÔNG gọi giữa lúc đang đọc tiếng Nhật. Lời dặn ghi sẵn SẮC THÁI / "mặt mèo tự đổi" thì KHỎI gọi — chỉ cần nói đúng giọng đó.
+- act_out(action): hiếm khi cần (chào: chao / cui_chao; minh hoạ buồn ngủ: ngu_gat). Tối đa một lần mỗi câu, không chen ngang lúc đang đọc.
 
 CẦM BÚT ĐỎ LÊN BẢNG (BOARD & ANNOTATION — dùng cho ra chất thầy giáo đứng lớp):
 - draw_on_board(target_id, kind, to_id): vẽ đè lên đúng mục đang nói, y như cầm bút đỏ khoanh lên sách.
@@ -647,16 +646,14 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
               },
               {
                 name: "act_out",
-                description: "Cho nhân vật Sensei trên màn hình diễn một động tác minh hoạ (ăn, uống, ngủ, cúi chào, vẫy tay, đi bộ...).",
+                description: "Cho mèo Sensei (nửa người) diễn một động tác ngắn.",
                 parameters: {
                   type: "OBJECT",
                   properties: {
                     action: {
                       type: "STRING",
-                      enum: ["an", "uong", "ngu", "day", "vay", "cui", "toi", "ban", "nghi", "viet", "doc",
-                             "nhin", "nghe", "noi", "mua", "boi", "cho", "hat", "rua", "vui", "gian",
-                             "ngac_nhien", "gat_dau", "di", "chay"],
-                      description: "an=ăn, uong=uống, ngu=ngủ, day=thức dậy vươn vai, vay=vẫy tay chào, cui=cúi chào, toi=chỉ vào mình, ban=chỉ vào học viên, nghi=suy nghĩ, viet=viết, doc=đọc sách, nhin=nhìn xa, nghe=nghe/điện thoại, noi=nói chuyện, mua=trả tiền mua, boi=bơi, cho=xem đồng hồ chờ, hat=hát, rua=rửa tay, vui=vui mừng giơ tay, gian=chống nạnh giận, ngac_nhien=ngạc nhiên, gat_dau=gật đầu, di=đi bộ, chay=chạy"
+                      enum: ["chao", "cui_chao", "liem_tay", "ngu_gat", "suy_nghi", "noi_tay_trai", "noi_tay_phai"],
+                      description: "chao=vẫy tay chào, cui_chao=cúi chào kiểu Nhật, liem_tay=liếm tay kiểu mèo, ngu_gat=ngủ gật, suy_nghi=chống cằm nghĩ, noi_tay_trai / noi_tay_phai=vừa nói vừa giơ tay trái / phải"
                     }
                   },
                   required: ["action"]
@@ -664,14 +661,14 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
               },
               {
                 name: "set_emotion",
-                description: "Đổi nét mặt nhân vật Sensei trong vài giây.",
+                description: "Đổi nét mặt mèo Sensei cho khớp sắc thái câu SẮP nói (giữ trong lúc nói câu đó).",
                 parameters: {
                   type: "OBJECT",
                   properties: {
                     emotion: {
                       type: "STRING",
-                      enum: ["happy", "angry", "sad", "surprised", "relaxed", "love", "dizzy", "speechless"],
-                      description: "love=mắt trái tim (khen hết lời), dizzy=mắt xoáy ốc (câu hỏi rối rắm), speechless=trắng dã cạn lời (sai lặp lại lần nữa)"
+                      enum: ["vui", "de_biu", "that_vong", "ngac_nhien", "buon", "gian", "suy_nghi", "xau_ho"],
+                      description: "vui=hào hứng khen, de_biu=dè bỉu cà khịa lỗi ngớ ngẩn, that_vong=thất vọng (sai lặp lại), ngac_nhien=ngạc nhiên, buon=buồn, gian=giận mắng, suy_nghi=đang ngẫm, xau_ho=ngượng / xấu hổ"
                     }
                   },
                   required: ["emotion"]

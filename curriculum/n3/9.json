@@ -862,7 +862,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Gần đây, bạn hay đi trễ nhỉ."
+      "meaningVi": "Gần đây, bạn hay đi trễ nhỉ.",
+      "emotion": "gian"
     },
     {
       "id": "dia-n3-9-4",
@@ -909,7 +910,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Xin lỗi. Tôi cũng hay quên ăn nữa."
+      "meaningVi": "Xin lỗi. Tôi cũng hay quên ăn nữa.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n3-9-5",
@@ -1224,7 +1226,8 @@
           "furigana": "きをつけます"
         }
       ],
-      "meaningVi": "Vâng, cảm ơn bạn. Tôi sẽ cẩn thận hơn."
+      "meaningVi": "Vâng, cảm ơn bạn. Tôi sẽ cẩn thận hơn.",
+      "emotion": "cui_chao"
     }
   ],
   "exercises": [

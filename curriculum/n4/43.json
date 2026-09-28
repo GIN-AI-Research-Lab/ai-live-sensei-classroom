@@ -42,7 +42,8 @@
       "romaji": "nakimasu",
       "wordType": "verb",
       "meaningVi": "Khóc",
-      "accentNote": "子供が 泣きそうです = đứa trẻ có vẻ sắp khóc."
+      "accentNote": "子供が 泣きそうです = đứa trẻ có vẻ sắp khóc.",
+      "emotion": "buon"
     },
     {
       "id": "voc-n4-43-5",
@@ -82,7 +83,8 @@
       "romaji": "oishii",
       "wordType": "adjective",
       "meaningVi": "Ngon",
-      "accentNote": "Đã gặp N5 bài 8."
+      "accentNote": "Đã gặp N5 bài 8.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n4-43-9",
@@ -102,7 +104,8 @@
       "romaji": "tanoshii",
       "wordType": "adjective",
       "meaningVi": "Vui vẻ",
-      "accentNote": "Đã gặp N5 bài 8."
+      "accentNote": "Đã gặp N5 bài 8.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n4-43-11",
@@ -448,7 +451,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Món ăn này trông có vẻ ngon. (chưa ăn, chỉ nhìn thấy)"
+          "meaningVi": "Món ăn này trông có vẻ ngon. (chưa ăn, chỉ nhìn thấy)",
+          "emotion": "vui"
         },
         {
           "id": "ex-n4-l43-s2-2",
@@ -995,7 +999,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vâng, ổn thôi. À, món ăn ở cửa hàng kia trông có vẻ ngon nhỉ."
+      "meaningVi": "Vâng, ổn thôi. À, món ăn ở cửa hàng kia trông có vẻ ngon nhỉ.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-43-7",

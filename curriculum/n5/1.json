@@ -282,7 +282,8 @@
       "romaji": "hajimemashite",
       "wordType": "phrase",
       "meaningVi": "Rất hân hạnh được gặp (lần đầu)",
-      "accentNote": "Nói kèm cúi đầu khoảng 15 độ."
+      "accentNote": "Nói kèm cúi đầu khoảng 15 độ.",
+      "emotion": "chao"
     },
     {
       "id": "voc-n5-1-29",
@@ -292,7 +293,8 @@
       "romaji": "douzo yoroshiku onegaishimasu",
       "wordType": "phrase",
       "meaningVi": "Rất mong được giúp đỡ",
-      "accentNote": "Câu chốt bắt buộc khi chào lần đầu."
+      "accentNote": "Câu chốt bắt buộc khi chào lần đầu.",
+      "emotion": "cui_chao"
     },
     {
       "id": "voc-n5-1-30",
@@ -302,7 +304,8 @@
       "romaji": "shitsurei desu ga",
       "wordType": "phrase",
       "meaningVi": "Xin lỗi cho hỏi… (mở lời hỏi thông tin)",
-      "accentNote": "Đệm trước khi hỏi tên, tuổi, nghề."
+      "accentNote": "Đệm trước khi hỏi tên, tuổi, nghề.",
+      "emotion": "cui_chao"
     }
   ],
   "kanjiList": [
@@ -1126,7 +1129,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Xin lỗi cho hỏi, anh/chị bao nhiêu tuổi ạ?"
+          "meaningVi": "Xin lỗi cho hỏi, anh/chị bao nhiêu tuổi ạ?",
+          "emotion": "cui_chao"
         },
         {
           "id": "ex-n5-l1-s6-3",
@@ -1199,7 +1203,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Rất hân hạnh được gặp. Tôi là Satou Keiko."
+      "meaningVi": "Rất hân hạnh được gặp. Tôi là Satou Keiko.",
+      "emotion": "chao"
     },
     {
       "id": "dia-n5-1-2",
@@ -1291,7 +1296,8 @@
           "furigana": "きました"
         }
       ],
-      "meaningVi": "Rất hân hạnh. Tôi là Mike Miller. Tôi đến từ Mỹ."
+      "meaningVi": "Rất hân hạnh. Tôi là Mike Miller. Tôi đến từ Mỹ.",
+      "emotion": "chao"
     },
     {
       "id": "dia-n5-1-4",
@@ -1346,7 +1352,8 @@
           "furigana": "おねがいします"
         }
       ],
-      "meaningVi": "Rất mong nhận được sự giúp đỡ của mọi người."
+      "meaningVi": "Rất mong nhận được sự giúp đỡ của mọi người.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n5-1-6",
@@ -1449,7 +1456,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Xin lỗi cho hỏi, anh bao nhiêu tuổi ạ?"
+      "meaningVi": "Xin lỗi cho hỏi, anh bao nhiêu tuổi ạ?",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n5-1-9",
@@ -1553,7 +1561,8 @@
           "furigana": "おねがいします"
         }
       ],
-      "meaningVi": "Vâng, đúng vậy. Rất mong được hợp tác."
+      "meaningVi": "Vâng, đúng vậy. Rất mong được hợp tác.",
+      "emotion": "cui_chao"
     }
   ],
   "exercises": [

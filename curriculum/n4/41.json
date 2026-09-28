@@ -202,7 +202,8 @@
       "romaji": "arigatai",
       "wordType": "adjective",
       "meaningVi": "Đáng quý, biết ơn",
-      "accentNote": "先生に 教えて いただき、ありがたいです = được thầy dạy cho, thật đáng quý."
+      "accentNote": "先生に 教えて いただき、ありがたいです = được thầy dạy cho, thật đáng quý.",
+      "emotion": "vui"
     }
   ],
   "kanjiList": [
@@ -751,7 +752,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Anh Santos, chúc mừng sinh nhật. Đây, quà tặng anh."
+      "meaningVi": "Anh Santos, chúc mừng sinh nhật. Đây, quà tặng anh.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-41-2",
@@ -791,7 +793,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Cảm ơn nhiều. Vui quá!"
+      "meaningVi": "Cảm ơn nhiều. Vui quá!",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-41-3",
@@ -983,7 +986,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vậy cũng vui đấy nhỉ."
+      "meaningVi": "Vậy cũng vui đấy nhỉ.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-41-7",
@@ -1123,7 +1127,8 @@
           "furigana": "よろこびます"
         }
       ],
-      "meaningVi": "Ý hay đấy. Thầy giáo chắc chắn sẽ vui đấy."
+      "meaningVi": "Ý hay đấy. Thầy giáo chắc chắn sẽ vui đấy.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-41-10",
@@ -1179,7 +1184,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Được thầy dạy cho mãi, thật đáng quý."
+      "meaningVi": "Được thầy dạy cho mãi, thật đáng quý.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

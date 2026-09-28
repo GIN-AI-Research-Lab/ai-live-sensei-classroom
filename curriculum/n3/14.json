@@ -132,7 +132,8 @@
       "romaji": "warui",
       "wordType": "adjective",
       "meaningVi": "Xấu, tệ",
-      "accentNote": "Đã gặp N4 bài 34."
+      "accentNote": "Đã gặp N4 bài 34.",
+      "emotion": "that_vong"
     },
     {
       "id": "voc-n3-14-14",
@@ -481,7 +482,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Tình hình công ty chỉ ngày càng xấu đi thôi."
+          "meaningVi": "Tình hình công ty chỉ ngày càng xấu đi thôi.",
+          "emotion": "that_vong"
         },
         {
           "id": "ex-n3-l14-s2-2",
@@ -609,7 +611,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Môi trường chỉ ngày càng xấu đi thôi. (tiêu cực, cảm xúc → dùng ばかりだ)"
+          "meaningVi": "Môi trường chỉ ngày càng xấu đi thôi. (tiêu cực, cảm xúc → dùng ばかりだ)",
+          "emotion": "that_vong"
         }
       ]
     },
@@ -997,7 +1000,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Chỉ ngày càng xấu đi thôi."
+      "meaningVi": "Chỉ ngày càng xấu đi thôi.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n3-14-7",
@@ -1156,7 +1160,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Đó là tình huống đáng lo ngại nhỉ."
+      "meaningVi": "Đó là tình huống đáng lo ngại nhỉ.",
+      "emotion": "buon"
     },
     {
       "id": "dia-n3-14-10",

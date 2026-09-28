@@ -92,7 +92,8 @@
       "romaji": "giwaku",
       "wordType": "noun",
       "meaningVi": "Sự nghi ngờ, mối nghi hoặc",
-      "accentNote": "Đã gặp N1 bài 13."
+      "accentNote": "Đã gặp N1 bài 13.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "voc-n1-15-10",
@@ -152,7 +153,8 @@
       "romaji": "haji",
       "wordType": "noun",
       "meaningVi": "Sự xấu hổ, nỗi nhục",
-      "accentNote": "Đã gặp N1 bài 13."
+      "accentNote": "Đã gặp N1 bài 13.",
+      "emotion": "xau_ho"
     },
     {
       "id": "voc-n1-15-16",
@@ -527,7 +529,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Có thể đứng trước quý vị để thực hiện bài giảng cuối cùng như thế này, tôi cảm thấy cảm khái vô cùng."
+          "meaningVi": "Có thể đứng trước quý vị để thực hiện bài giảng cuối cùng như thế này, tôi cảm thấy cảm khái vô cùng.",
+          "emotion": "vui"
         }
       ]
     },
@@ -955,7 +958,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Nếu là người mới thì còn hiểu được, nhưng một người đã là nhà nghiên cứu mà lại làm giả dữ liệu thì đó là điều không thể tha thứ."
+          "meaningVi": "Nếu là người mới thì còn hiểu được, nhưng một người đã là nhà nghiên cứu mà lại làm giả dữ liệu thì đó là điều không thể tha thứ.",
+          "emotion": "gian"
         }
       ]
     },
@@ -1233,7 +1237,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Hôm nay, cảm ơn mọi người đã đến dự buổi giảng kỷ niệm nghỉ hưu của giáo sư."
+      "meaningVi": "Hôm nay, cảm ơn mọi người đã đến dự buổi giảng kỷ niệm nghỉ hưu của giáo sư.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n1-15-2",
@@ -1410,7 +1415,8 @@
           "furigana": "おねがいできますか"
         }
       ],
-      "meaningVi": "Về nghiên cứu từ trước đến nay, xin giáo sư có thể nói đôi lời được không ạ?"
+      "meaningVi": "Về nghiên cứu từ trước đến nay, xin giáo sư có thể nói đôi lời được không ạ?",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n1-15-4",
@@ -1910,7 +1916,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Nếu là người mới thì còn hiểu được, nhưng một người đã là nhà nghiên cứu mà lại làm giả dữ liệu thì đó là điều không thể tha thứ."
+      "meaningVi": "Nếu là người mới thì còn hiểu được, nhưng một người đã là nhà nghiên cứu mà lại làm giả dữ liệu thì đó là điều không thể tha thứ.",
+      "emotion": "gian"
     },
     {
       "id": "dia-n1-15-9",
@@ -1961,7 +1968,8 @@
           "furigana": "おねがいします"
         }
       ],
-      "meaningVi": "Cuối cùng, xin giáo sư nói lời cảm ơn."
+      "meaningVi": "Cuối cùng, xin giáo sư nói lời cảm ơn.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n1-15-10",
@@ -2145,7 +2153,8 @@
           "furigana": "ねがってやみません"
         }
       ],
-      "meaningVi": "Nếu không có sự nâng đỡ của ân sư và gia đình, thì đã không có tôi của ngày hôm nay. Kể từ hôm nay tôi sẽ rời khỏi bục giảng này, nhưng tôi tha thiết nguyện cầu quý vị sẽ tiếp tục hoạt động rực rỡ trong tương lai."
+      "meaningVi": "Nếu không có sự nâng đỡ của ân sư và gia đình, thì đã không có tôi của ngày hôm nay. Kể từ hôm nay tôi sẽ rời khỏi bục giảng này, nhưng tôi tha thiết nguyện cầu quý vị sẽ tiếp tục hoạt động rực rỡ trong tương lai.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

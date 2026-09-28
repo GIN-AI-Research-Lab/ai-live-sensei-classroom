@@ -92,7 +92,8 @@
       "romaji": "jouzu",
       "wordType": "adjective",
       "meaningVi": "Giỏi",
-      "accentNote": "Đã gặp N4 bài 26."
+      "accentNote": "Đã gặp N4 bài 26.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n3-15-10",
@@ -506,7 +507,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Cô ấy không những tính cách tốt mà năng lực còn cao."
+          "meaningVi": "Cô ấy không những tính cách tốt mà năng lực còn cao.",
+          "emotion": "vui"
         },
         {
           "id": "ex-n3-l15-s2-2",
@@ -565,7 +567,8 @@
               "furigana": "ありません"
             }
           ],
-          "meaningVi": "Không những không có kinh nghiệm mà kiến thức cũng hoàn toàn không có."
+          "meaningVi": "Không những không có kinh nghiệm mà kiến thức cũng hoàn toàn không có.",
+          "emotion": "de_biu"
         }
       ]
     },
@@ -692,7 +695,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Không những thông minh mà ngoại ngữ còn thật sự giỏi. (nhấn mạnh, ngạc nhiên)"
+          "meaningVi": "Không những thông minh mà ngoại ngữ còn thật sự giỏi. (nhấn mạnh, ngạc nhiên)",
+          "emotion": "vui"
         }
       ]
     },
@@ -769,7 +773,8 @@
               "furigana": "ただしい"
             }
           ],
-          "meaningVi": "Cô ấy không những năng lực cao mà thậm chí lễ nghi cũng đúng mực."
+          "meaningVi": "Cô ấy không những năng lực cao mà thậm chí lễ nghi cũng đúng mực.",
+          "emotion": "vui"
         },
         {
           "id": "ex-n3-l15-s4-2",
@@ -828,7 +833,8 @@
               "furigana": "ありません"
             }
           ],
-          "meaningVi": "Không những không có kiến thức mà thậm chí lễ nghi cũng hoàn toàn không có."
+          "meaningVi": "Không những không có kiến thức mà thậm chí lễ nghi cũng hoàn toàn không có.",
+          "emotion": "de_biu"
         }
       ]
     }
@@ -992,7 +998,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Không những tính cách tốt mà năng lực còn cao."
+      "meaningVi": "Không những tính cách tốt mà năng lực còn cao.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n3-15-5",
@@ -1078,7 +1085,8 @@
           "furigana": "ありません"
         }
       ],
-      "meaningVi": "Không những không có kinh nghiệm mà kiến thức cũng hoàn toàn không có."
+      "meaningVi": "Không những không có kinh nghiệm mà kiến thức cũng hoàn toàn không có.",
+      "emotion": "de_biu"
     },
     {
       "id": "dia-n3-15-7",
@@ -1103,7 +1111,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vậy thì khó xử nhỉ."
+      "meaningVi": "Vậy thì khó xử nhỉ.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n3-15-8",
@@ -1279,7 +1288,8 @@
           "furigana": "です"
         }
       ],
-      "meaningVi": "Vâng. Là một người thật sự tốt."
+      "meaningVi": "Vâng. Là một người thật sự tốt.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

@@ -162,7 +162,8 @@
       "romaji": "akarui",
       "wordType": "adjective",
       "meaningVi": "Vui vẻ, cởi mở, sáng sủa",
-      "accentNote": "Tính từ い. Miêu tả tính cách hoặc ánh sáng."
+      "accentNote": "Tính từ い. Miêu tả tính cách hoặc ánh sáng.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n5-16-17",
@@ -1142,7 +1143,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vậy à. Tôi muốn gặp thầy sớm quá."
+      "meaningVi": "Vậy à. Tôi muốn gặp thầy sớm quá.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n5-16-10",

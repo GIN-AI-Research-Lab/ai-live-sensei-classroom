@@ -72,7 +72,8 @@
       "romaji": "hairu na",
       "wordType": "verb",
       "meaningVi": "Cấm vào! (thể cấm chỉ của 入る)",
-      "accentNote": "Thể từ điển + な = cấm chỉ, giọng mạnh, ra lệnh."
+      "accentNote": "Thể từ điển + な = cấm chỉ, giọng mạnh, ra lệnh.",
+      "emotion": "gian"
     },
     {
       "id": "voc-n4-33-8",
@@ -82,7 +83,8 @@
       "romaji": "tomaru na",
       "wordType": "verb",
       "meaningVi": "Cấm dừng lại! (thể cấm chỉ)",
-      "accentNote": "止まる + な."
+      "accentNote": "止まる + な.",
+      "emotion": "gian"
     },
     {
       "id": "voc-n4-33-9",
@@ -192,7 +194,8 @@
       "romaji": "ganbare",
       "wordType": "phrase",
       "meaningVi": "Cố lên! (thể mệnh lệnh của 頑張る, dùng riêng làm câu cổ vũ)",
-      "accentNote": "Câu hô cổ vũ phổ biến nhất tiếng Nhật."
+      "accentNote": "Câu hô cổ vũ phổ biến nhất tiếng Nhật.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n4-33-20",
@@ -385,7 +388,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Cố lên! (câu cổ vũ dùng thể mệnh lệnh, KHÔNG mang nghĩa ra lệnh gay gắt)"
+          "meaningVi": "Cố lên! (câu cổ vũ dùng thể mệnh lệnh, KHÔNG mang nghĩa ra lệnh gay gắt)",
+          "emotion": "vui"
         }
       ]
     },
@@ -414,7 +418,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Cấm vào!"
+          "meaningVi": "Cấm vào!",
+          "emotion": "gian"
         },
         {
           "id": "ex-n4-l33-s2-2",
@@ -473,7 +478,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Nguy hiểm! Cấm vào! (biển báo)"
+          "meaningVi": "Nguy hiểm! Cấm vào! (biển báo)",
+          "emotion": "gian"
         },
         {
           "id": "ex-n4-l33-s3-2",
@@ -503,7 +509,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Trận đấu, cố lên! (cổ vũ thể thao)"
+          "meaningVi": "Trận đấu, cố lên! (cổ vũ thể thao)",
+          "emotion": "vui"
         }
       ]
     },
@@ -544,7 +551,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Cấm đọc truyện tranh! (rất mạnh, như quát mắng)"
+          "meaningVi": "Cấm đọc truyện tranh! (rất mạnh, như quát mắng)",
+          "emotion": "gian"
         },
         {
           "id": "ex-n4-l33-s4-2",
@@ -785,7 +793,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Trước trận đấu thì đừng lo lắng! Cố lên!"
+      "meaningVi": "Trước trận đấu thì đừng lo lắng! Cố lên!",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-33-6",
@@ -852,7 +861,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Ơ, nguy hiểm! Cẩn thận nhé!"
+      "meaningVi": "Ơ, nguy hiểm! Cẩn thận nhé!",
+      "emotion": "ngac_nhien"
     },
     {
       "id": "dia-n4-33-8",
@@ -923,7 +933,8 @@
           "furigana": "あります"
         }
       ],
-      "meaningVi": "Xin lỗi. Ở kia có biển 'Nguy hiểm! Cấm vào!' kìa."
+      "meaningVi": "Xin lỗi. Ở kia có biển 'Nguy hiểm! Cấm vào!' kìa.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n4-33-9",

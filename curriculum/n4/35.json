@@ -192,7 +192,8 @@
       "romaji": "wakarimasen",
       "wordType": "phrase",
       "meaningVi": "Không hiểu, không biết",
-      "accentNote": "分からなければ = nếu không hiểu."
+      "accentNote": "分からなければ = nếu không hiểu.",
+      "emotion": "suy_nghi"
     },
     {
       "id": "voc-n4-35-20",
@@ -913,7 +914,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Nhưng vùng quê không bất tiện à?"
+      "meaningVi": "Nhưng vùng quê không bất tiện à?",
+      "emotion": "suy_nghi"
     },
     {
       "id": "dia-n4-35-4",

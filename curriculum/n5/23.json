@@ -878,7 +878,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Xin lỗi, ngân hàng ở đâu vậy ạ?"
+      "meaningVi": "Xin lỗi, ngân hàng ở đâu vậy ạ?",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n5-23-2",
@@ -969,7 +970,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Tôi hiểu rồi. Cảm ơn anh."
+      "meaningVi": "Tôi hiểu rồi. Cảm ơn anh.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n5-23-4",

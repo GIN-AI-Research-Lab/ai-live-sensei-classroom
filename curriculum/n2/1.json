@@ -82,7 +82,8 @@
       "romaji": "aisatsu",
       "wordType": "noun",
       "meaningVi": "Lời chào, phát biểu chào hỏi",
-      "accentNote": "ごあいさつ もうしあげます = tôi xin có đôi lời phát biểu."
+      "accentNote": "ごあいさつ もうしあげます = tôi xin có đôi lời phát biểu.",
+      "emotion": "chao"
     },
     {
       "id": "voc-n2-1-9",
@@ -92,7 +93,8 @@
       "romaji": "orei",
       "wordType": "noun",
       "meaningVi": "Lời cảm ơn",
-      "accentNote": "Đã gặp N4 bài 33."
+      "accentNote": "Đã gặp N4 bài 33.",
+      "emotion": "cui_chao"
     },
     {
       "id": "voc-n2-1-10",
@@ -392,7 +394,8 @@
               "furigana": "もうしあげます"
             }
           ],
-          "meaningVi": "Nhân dịp nhậm chức, tôi xin có đôi lời phát biểu."
+          "meaningVi": "Nhân dịp nhậm chức, tôi xin có đôi lời phát biểu.",
+          "emotion": "cui_chao"
         },
         {
           "id": "ex-n2-l1-s1-2",
@@ -453,7 +456,8 @@
               "furigana": "もうしあげます"
             }
           ],
-          "meaningVi": "Nhân dịp khai mạc, tôi xin gửi lời cảm ơn đến quý vị."
+          "meaningVi": "Nhân dịp khai mạc, tôi xin gửi lời cảm ơn đến quý vị.",
+          "emotion": "cui_chao"
         }
       ]
     },
@@ -753,7 +757,8 @@
               "furigana": "もうしあげます"
             }
           ],
-          "meaningVi": "Nhân dịp bế mạc, tôi xin có đôi lời phát biểu."
+          "meaningVi": "Nhân dịp bế mạc, tôi xin có đôi lời phát biểu.",
+          "emotion": "cui_chao"
         },
         {
           "id": "ex-n2-l1-s4-2",
@@ -884,7 +889,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vậy thì, nhân dịp khai mạc, xin mời giám đốc phát biểu đôi lời."
+      "meaningVi": "Vậy thì, nhân dịp khai mạc, xin mời giám đốc phát biểu đôi lời.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n2-1-2",
@@ -935,7 +941,8 @@
           "furigana": "もうします"
         }
       ],
-      "meaningVi": "Tôi tên là Santos, người sẽ nhậm chức giám đốc."
+      "meaningVi": "Tôi tên là Santos, người sẽ nhậm chức giám đốc.",
+      "emotion": "chao"
     },
     {
       "id": "dia-n2-1-3",
@@ -1228,7 +1235,8 @@
           "furigana": "ありがとうございます"
         }
       ],
-      "meaningVi": "Kính thưa quý vị, hôm nay xin cảm ơn."
+      "meaningVi": "Kính thưa quý vị, hôm nay xin cảm ơn.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n2-1-9",
@@ -1279,7 +1287,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Nhân dịp bế mạc, xin ông có thêm đôi lời."
+      "meaningVi": "Nhân dịp bế mạc, xin ông có thêm đôi lời.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n2-1-10",
@@ -1335,7 +1344,8 @@
           "furigana": "ありがとうございました"
         }
       ],
-      "meaningVi": "Kính thưa quý vị, hôm nay xin kết thúc tại đây. Xin cảm ơn."
+      "meaningVi": "Kính thưa quý vị, hôm nay xin kết thúc tại đây. Xin cảm ơn.",
+      "emotion": "cui_chao"
     }
   ],
   "exercises": [

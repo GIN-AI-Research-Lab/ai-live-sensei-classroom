@@ -1143,7 +1143,8 @@
           "isKeyGrammar": true
         }
       ],
-      "meaningVi": "Hay đó. Cậu đọc sách tiếng Nhật được rồi à?"
+      "meaningVi": "Hay đó. Cậu đọc sách tiếng Nhật được rồi à?",
+      "emotion": "vui"
     },
     {
       "id": "dia-n5-18-9",
@@ -1240,7 +1241,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Giỏi quá. Cố lên nhé."
+      "meaningVi": "Giỏi quá. Cố lên nhé.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

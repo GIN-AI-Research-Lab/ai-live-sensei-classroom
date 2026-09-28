@@ -32,7 +32,8 @@
       "romaji": "komarimasu",
       "wordType": "verb",
       "meaningVi": "Khó xử, gặp khó khăn",
-      "accentNote": "電車が 止まったので、困りました = tàu ngừng chạy nên tôi gặp khó khăn."
+      "accentNote": "電車が 止まったので、困りました = tàu ngừng chạy nên tôi gặp khó khăn.",
+      "emotion": "that_vong"
     },
     {
       "id": "voc-n4-39-4",
@@ -112,7 +113,8 @@
       "romaji": "byouki",
       "wordType": "noun",
       "meaningVi": "Bệnh, ốm",
-      "accentNote": "Đã gặp bài 17 (N5)."
+      "accentNote": "Đã gặp bài 17 (N5).",
+      "emotion": "buon"
     },
     {
       "id": "voc-n4-39-12",
@@ -152,7 +154,8 @@
       "romaji": "moushiwake arimasen",
       "wordType": "phrase",
       "meaningVi": "Thành thật xin lỗi (trang trọng)",
-      "accentNote": "Trang trọng hơn すみません nhiều."
+      "accentNote": "Trang trọng hơn すみません nhiều.",
+      "emotion": "cui_chao"
     },
     {
       "id": "voc-n4-39-16",
@@ -162,7 +165,8 @@
       "romaji": "shitsurei shimasu",
       "wordType": "phrase",
       "meaningVi": "Xin phép (khi rời đi/vào phòng)",
-      "accentNote": "Đã gặp N5 bài 3 (失礼ですが)."
+      "accentNote": "Đã gặp N5 bài 3 (失礼ですが).",
+      "emotion": "cui_chao"
     },
     {
       "id": "voc-n4-39-17",
@@ -679,7 +683,8 @@
               "furigana": "おくれました"
             }
           ],
-          "meaningVi": "Thành thật xin lỗi. Vì có tai nạn giao thông nên tôi đến muộn."
+          "meaningVi": "Thành thật xin lỗi. Vì có tai nạn giao thông nên tôi đến muộn.",
+          "emotion": "cui_chao"
         }
       ]
     }
@@ -836,7 +841,8 @@
           "furigana": "しつれいします"
         }
       ],
-      "meaningVi": "Cảm ơn anh nhiều. Xin phép ạ."
+      "meaningVi": "Cảm ơn anh nhiều. Xin phép ạ.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n4-39-4",
@@ -885,7 +891,8 @@
           "furigana": "おくれました"
         }
       ],
-      "meaningVi": "Xin lỗi, vì tàu điện ngừng chạy nên tôi đến muộn."
+      "meaningVi": "Xin lỗi, vì tàu điện ngừng chạy nên tôi đến muộn.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n4-39-5",
@@ -1071,7 +1078,8 @@
           "furigana": "こまりました"
         }
       ],
-      "meaningVi": "Vì đột nhiên ngừng chạy nên tôi cũng gặp khó khăn."
+      "meaningVi": "Vì đột nhiên ngừng chạy nên tôi cũng gặp khó khăn.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n4-39-9",
@@ -1169,7 +1177,8 @@
           "furigana": "いきます"
         }
       ],
-      "meaningVi": "May quá. Tôi đến ngay đây."
+      "meaningVi": "May quá. Tôi đến ngay đây.",
+      "emotion": "vui"
     }
   ],
   "exercises": [

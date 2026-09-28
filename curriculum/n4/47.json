@@ -192,7 +192,8 @@
       "romaji": "shiawase",
       "wordType": "adjective",
       "meaningVi": "Hạnh phúc",
-      "accentNote": "幸せそう(な様子) = trông có vẻ hạnh phúc."
+      "accentNote": "幸せそう(な様子) = trông có vẻ hạnh phúc.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n4-47-20",
@@ -414,7 +415,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Nghe nói anh Yamada bị bệnh. (danh từ GIỮ NGUYÊN だ, khác V-そう bài 43 phải bỏ)"
+          "meaningVi": "Nghe nói anh Yamada bị bệnh. (danh từ GIỮ NGUYÊN だ, khác V-そう bài 43 phải bỏ)",
+          "emotion": "buon"
         }
       ]
     },
@@ -680,7 +682,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Nghe nói anh Yamada hạnh phúc. (ai đó KỂ cho tôi nghe)"
+          "meaningVi": "Nghe nói anh Yamada hạnh phúc. (ai đó KỂ cho tôi nghe)",
+          "emotion": "vui"
         },
         {
           "id": "ex-n4-l47-s4-2",
@@ -710,7 +713,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Anh Yamada có vẻ hạnh phúc. (tôi TỰ NHÌN THẤY nụ cười, thái độ của anh ấy)"
+          "meaningVi": "Anh Yamada có vẻ hạnh phúc. (tôi TỰ NHÌN THẤY nụ cười, thái độ của anh ấy)",
+          "emotion": "vui"
         }
       ]
     }
@@ -803,7 +807,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Ơ! Chị nghe từ ai vậy?"
+      "meaningVi": "Ơ! Chị nghe từ ai vậy?",
+      "emotion": "ngac_nhien"
     },
     {
       "id": "dia-n4-47-3",
@@ -943,7 +948,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Không đúng đâu. Tôi vẫn chưa kết hôn. Nhưng sang năm tôi định kết hôn."
+      "meaningVi": "Không đúng đâu. Tôi vẫn chưa kết hôn. Nhưng sang năm tôi định kết hôn.",
+      "emotion": "xau_ho"
     },
     {
       "id": "dia-n4-47-5",
@@ -985,7 +991,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vậy à. Trông anh có vẻ hạnh phúc lắm nhỉ."
+      "meaningVi": "Vậy à. Trông anh có vẻ hạnh phúc lắm nhỉ.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n4-47-6",

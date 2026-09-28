@@ -22,7 +22,8 @@
       "romaji": "seikou shimasu",
       "wordType": "verb",
       "meaningVi": "Thành công",
-      "accentNote": "努力の おかげで 成功しました = nhờ nỗ lực mà đã thành công."
+      "accentNote": "努力の おかげで 成功しました = nhờ nỗ lực mà đã thành công.",
+      "emotion": "vui"
     },
     {
       "id": "voc-n3-4-3",
@@ -32,7 +33,8 @@
       "romaji": "shippai shimasu",
       "wordType": "verb",
       "meaningVi": "Thất bại, mắc lỗi",
-      "accentNote": "Đã gặp bài 45 (N4)."
+      "accentNote": "Đã gặp bài 45 (N4).",
+      "emotion": "that_vong"
     },
     {
       "id": "voc-n3-4-4",
@@ -102,7 +104,8 @@
       "romaji": "shippai",
       "wordType": "noun",
       "meaningVi": "Sự thất bại, sai lầm",
-      "accentNote": ""
+      "accentNote": "",
+      "emotion": "that_vong"
     },
     {
       "id": "voc-n3-4-11",
@@ -399,7 +402,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Nhờ có thầy giáo mà tôi đã đậu kỳ thi."
+          "meaningVi": "Nhờ có thầy giáo mà tôi đã đậu kỳ thi.",
+          "emotion": "vui"
         },
         {
           "id": "ex-n3-l4-s1-2",
@@ -562,7 +566,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Tại vì thời tiết xấu nên trận đấu đã bị hủy."
+          "meaningVi": "Tại vì thời tiết xấu nên trận đấu đã bị hủy.",
+          "emotion": "that_vong"
         }
       ]
     },
@@ -630,7 +635,8 @@
               "isKeyGrammar": true
             }
           ],
-          "meaningVi": "Chỉ vì lỡ quên (một việc nhỏ) mà đã thành chuyện lớn."
+          "meaningVi": "Chỉ vì lỡ quên (một việc nhỏ) mà đã thành chuyện lớn.",
+          "emotion": "that_vong"
         },
         {
           "id": "ex-n3-l4-s3-2",
@@ -672,7 +678,8 @@
               "isKeyGrammar": false
             }
           ],
-          "meaningVi": "Chỉ vì nói một câu (nhỏ nhặt) mà đã thất bại."
+          "meaningVi": "Chỉ vì nói một câu (nhỏ nhặt) mà đã thất bại.",
+          "emotion": "that_vong"
         }
       ]
     },
@@ -739,7 +746,8 @@
               "furigana": "まにあいませんでした"
             }
           ],
-          "meaningVi": "Tại vì tàu điện ngừng chạy nên tôi đã không kịp giờ thi."
+          "meaningVi": "Tại vì tàu điện ngừng chạy nên tôi đã không kịp giờ thi.",
+          "emotion": "that_vong"
         },
         {
           "id": "ex-n3-l4-s4-2",
@@ -910,7 +918,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Vâng, xin lỗi. Tại vì kẹt xe nên tôi đã đến muộn."
+      "meaningVi": "Vâng, xin lỗi. Tại vì kẹt xe nên tôi đã đến muộn.",
+      "emotion": "cui_chao"
     },
     {
       "id": "dia-n3-4-3",
@@ -996,7 +1005,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Nhờ có thầy giáo mà tôi đã đậu."
+      "meaningVi": "Nhờ có thầy giáo mà tôi đã đậu.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n3-4-5",
@@ -1055,7 +1065,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Hay quá nhỉ. Cũng nhờ có nỗ lực của anh nữa đấy."
+      "meaningVi": "Hay quá nhỉ. Cũng nhờ có nỗ lực của anh nữa đấy.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n3-4-6",
@@ -1188,7 +1199,8 @@
           "isKeyGrammar": false
         }
       ],
-      "meaningVi": "Đáng tiếc thật đấy nhỉ."
+      "meaningVi": "Đáng tiếc thật đấy nhỉ.",
+      "emotion": "that_vong"
     },
     {
       "id": "dia-n3-4-8",
@@ -1339,7 +1351,8 @@
           "furigana": "もと"
         }
       ],
-      "meaningVi": "Hay quá nhỉ. Thất bại là mẹ thành công mà."
+      "meaningVi": "Hay quá nhỉ. Thất bại là mẹ thành công mà.",
+      "emotion": "vui"
     },
     {
       "id": "dia-n3-4-10",
