@@ -3029,11 +3029,10 @@ Mặt mèo tự đổi sang ${matCham} lúc bắt đầu nói — không cần g
     }
 
     veLaiCho();
-    // Chi soan de khi nguoi hoc thuc su mo chuong Bai tap — de khong dot han
-    // muc vao nhung bai ho chi luot qua.
-    if (tab === 'quiz') {
-      prefetchGeneratedQuiz(slideEngine.currentLevel, slideEngine.currentLesson);
-    }
+    // KHONG tu soan de khi mo chuong Bai tap (nguoi hoc: "vua vo da bi load de khac").
+    // Chi nut "Doi de khac" moi goi AI. Bo de chinh ho da bam tao (kho 7 ngay) thi gan
+    // san ngay tu chuong dau tien cua bai, nen luc mo Bai tap de da on dinh, khong ve lai truoc mat.
+    apDungDeDaLuu(slideEngine.currentLevel, slideEngine.currentLesson);
   }
 
   slideEngine.onTabChange = khiDoiTab;
@@ -4155,8 +4154,11 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
      Han muc free tier rat chat (20 luot/phut). Soan xong ma khong luu thi moi
      lan F5 lai ton them mot luot cho DUNG bo de vua co. Giu 7 ngay.
      ---------------------------------------------------------------------- */
-  const KHO_DE = 'sensei_quiz_v1';
+  // v2: tu 2026-09-28 chi luu bo de nguoi hoc tu bam "Doi de khac". Kho v1 con lan bo de app tu soan
+  // luc mo chuong (nguoi hoc khong yeu cau) nen bo han.
+  const KHO_DE = 'sensei_quiz_v2';
   const KHO_DE_HAN = 7 * 24 * 60 * 60 * 1000;
+  try { localStorage.removeItem('sensei_quiz_v1'); } catch (e) {}
 
   function docKhoDe() {
     try {
@@ -4356,6 +4358,14 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
     if (apDungDeDaSoan(lvl, lessonNum, items)) {
       showToast(`Đã soạn thêm ${items.length} câu bài tập cho bài này.`);
     }
+  }
+
+  /** Gan bo de da luu (tu lan bam "Doi de khac" truoc) — khong goi AI. Bai moi co muc luc thi doi lan sau. */
+  function apDungDeDaLuu(lvl, lessonNum) {
+    let items;
+    try { items = quizGenCache[`${lvl}-${lessonNum}`]; } catch (e) { return; }   // luc khoi dong chua khai bao kho
+    const lesson = items && curriculumLoader.getLesson(lvl, lessonNum);
+    if (lesson && Array.isArray(lesson.vocabList)) apDungDeDaSoan(lvl, lessonNum, items);
   }
 
   /**
