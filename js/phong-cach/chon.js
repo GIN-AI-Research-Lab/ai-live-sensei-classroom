@@ -15,7 +15,7 @@
 (function () {
   'use strict';
 
-  const DS = ['pc1', 'pc2', 'pc3', 'pc4', 'pc5'];
+  const DS = ['pc1', 'pc2', 'pc3', 'pc4', 'pc5', 'pc6'];
   const CHO_TOI_DA = 2500;          // startLecture khong doi lau hon muc nay (mang cham): phong cach bat khi nap xong
   const nap = Object.create(null);  // khoa -> Promise<boolean>
   const st = { muon: null, dang: null, san: null, choSan: null };
@@ -32,7 +32,7 @@
   function khoa(cap, bai) {
     if (ghiDe !== undefined) return ghiDe;
     const n = Number(bai);
-    if (String(cap || '').toUpperCase() === 'N5' && Number.isInteger(n) && n >= 1 && n <= 5) return 'pc' + n;
+    if (String(cap || '').toUpperCase() === 'N5' && Number.isInteger(n) && n >= 1 && n <= 6) return 'pc' + n;   // bai 6 -> pc6 (Video bai giang)
     return null;
   }
 
