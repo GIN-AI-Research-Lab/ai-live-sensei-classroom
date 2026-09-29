@@ -1,0 +1,1097 @@
+{
+  "level": "KANA",
+  "lessonNumber": 6,
+  "title": "Bài 6: Âm ngắt っ, trường âm và cao độ",
+  "description": "Học っ nhỏ ngắt một nhịp (きって, ざっし), cách kéo dài nguyên âm あ い う え お (おかあさん, せんせい, とおい). Làm quen cao độ trọng âm qua cặp はし (đũa) và はし (cầu).",
+  "vocabList": [
+    {
+      "id": "voc-kana-6-1",
+      "word": "きって",
+      "kanji": "切手",
+      "furigana": "きって",
+      "romaji": "kitte",
+      "wordType": "noun",
+      "meaningVi": "Con tem",
+      "accentNote": "Đọc bằng; 3 nhịp: き・っ・て, nín một nhịp ở っ.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-6-2",
+      "word": "ざっし",
+      "kanji": "雑誌",
+      "furigana": "ざっし",
+      "romaji": "zasshi",
+      "wordType": "noun",
+      "meaningVi": "Tạp chí",
+      "accentNote": "Đọc bằng; 3 nhịp ざ・っ・し: ở っ kéo dài tiếng xì 's' (za-sss-shi), không nín im.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-6-3",
+      "word": "がっこう",
+      "kanji": "学校",
+      "furigana": "がっこう",
+      "romaji": "gakkou",
+      "wordType": "noun",
+      "meaningVi": "Trường học",
+      "accentNote": "Đọc bằng; 4 nhịp: が・っ・こ・う, âm cuối kéo dài.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-6-4",
+      "word": "きっぷ",
+      "kanji": "切符",
+      "furigana": "きっぷ",
+      "romaji": "kippu",
+      "wordType": "noun",
+      "meaningVi": "Vé (tàu, xe)",
+      "accentNote": "Đọc bằng; 3 nhịp: き・っ・ぷ.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-6-5",
+      "word": "せっけん",
+      "kanji": "石鹸",
+      "furigana": "せっけん",
+      "romaji": "sekken",
+      "wordType": "noun",
+      "meaningVi": "Xà phòng",
+      "accentNote": "Đọc bằng; 4 nhịp せ・っ・け・ん: っ trước け nín im một nhịp.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-6-6",
+      "word": "にっき",
+      "kanji": "日記",
+      "furigana": "にっき",
+      "romaji": "nikki",
+      "wordType": "noun",
+      "meaningVi": "Nhật ký",
+      "accentNote": "Đọc bằng; 3 nhịp: に・っ・き.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-6-7",
+      "word": "おかあさん",
+      "kanji": "お母さん",
+      "furigana": "おかあさん",
+      "romaji": "okaasan",
+      "wordType": "noun",
+      "meaningVi": "Mẹ (mẹ người khác, hoặc khi gọi mẹ mình)",
+      "accentNote": "Trọng âm ở nhịp 2: o thấp, KA cao rồi hạ; 5 nhịp.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-6-8",
+      "word": "おとうさん",
+      "kanji": "お父さん",
+      "furigana": "おとうさん",
+      "romaji": "otousan",
+      "wordType": "noun",
+      "meaningVi": "Bố (bố người khác, hoặc khi gọi bố mình)",
+      "accentNote": "Trọng âm ở nhịp 2: o thấp, TO cao rồi hạ; 5 nhịp.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-6-9",
+      "word": "おにいさん",
+      "kanji": "お兄さん",
+      "furigana": "おにいさん",
+      "romaji": "oniisan",
+      "wordType": "noun",
+      "meaningVi": "Anh trai",
+      "accentNote": "Trọng âm ở nhịp 2: o thấp, NI cao rồi hạ; 5 nhịp.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-6-10",
+      "word": "おねえさん",
+      "kanji": "お姉さん",
+      "furigana": "おねえさん",
+      "romaji": "oneesan",
+      "wordType": "noun",
+      "meaningVi": "Chị gái (ngoại lệ viết ええ)",
+      "accentNote": "Trọng âm ở nhịp 2: o thấp, NE cao rồi hạ; 5 nhịp.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-6-11",
+      "word": "おばあさん",
+      "kanji": "お祖母さん",
+      "furigana": "おばあさん",
+      "romaji": "obaasan",
+      "wordType": "noun",
+      "meaningVi": "Bà; bà cụ",
+      "accentNote": "Trọng âm ở nhịp 2: o thấp, BA cao rồi hạ; 5 nhịp — đừng nhầm với おばさん.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-6-12",
+      "word": "おばさん",
+      "kanji": "叔母さん",
+      "furigana": "おばさん",
+      "romaji": "obasan",
+      "wordType": "noun",
+      "meaningVi": "Cô, dì, bác gái; người phụ nữ trung niên",
+      "accentNote": "Đọc bằng; 4 nhịp — ngắn hơn おばあさん một nhịp.",
+      "emotion": "ngac_nhien"
+    },
+    {
+      "id": "voc-kana-6-13",
+      "word": "おじいさん",
+      "kanji": "お祖父さん",
+      "furigana": "おじいさん",
+      "romaji": "ojiisan",
+      "wordType": "noun",
+      "meaningVi": "Ông; ông cụ",
+      "accentNote": "Trọng âm ở nhịp 2: o thấp, JI cao rồi hạ; 5 nhịp — đừng nhầm với おじさん (chú, bác).",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-6-14",
+      "word": "せんせい",
+      "kanji": "先生",
+      "furigana": "せんせい",
+      "romaji": "sensei",
+      "wordType": "noun",
+      "meaningVi": "Giáo viên; thầy, cô",
+      "accentNote": "Se thấp, N-SE cao, hạ ở い; せい kéo dài như 'sê-ê'.",
+      "emotion": "cui_chao"
+    },
+    {
+      "id": "voc-kana-6-15",
+      "word": "えいが",
+      "kanji": "映画",
+      "furigana": "えいが",
+      "romaji": "eiga",
+      "wordType": "noun",
+      "meaningVi": "Bộ phim, phim điện ảnh",
+      "accentNote": "3 nhịp え・い・が; えい đọc như 'ê' kéo dài: 'ê-ê-ga'.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-6-16",
+      "word": "こおり",
+      "kanji": "氷",
+      "furigana": "こおり",
+      "romaji": "koori",
+      "wordType": "noun",
+      "meaningVi": "Nước đá, băng",
+      "accentNote": "Đọc bằng; ngoại lệ viết おお, không phải こうり.",
+      "emotion": "ngac_nhien"
+    },
+    {
+      "id": "voc-kana-6-17",
+      "word": "とおい",
+      "kanji": "遠い",
+      "furigana": "とおい",
+      "romaji": "tooi",
+      "wordType": "adjective",
+      "meaningVi": "Xa",
+      "accentNote": "Đọc bằng; ngoại lệ viết おお, không phải とうい.",
+      "emotion": "buon"
+    },
+    {
+      "id": "voc-kana-6-18",
+      "word": "おおきい",
+      "kanji": "大きい",
+      "furigana": "おおきい",
+      "romaji": "ookii",
+      "wordType": "adjective",
+      "meaningVi": "To, lớn",
+      "accentNote": "Trọng âm ở nhịp 3: o thấp, O-KI cao, い hạ; ngoại lệ viết おお.",
+      "emotion": "ngac_nhien"
+    },
+    {
+      "id": "voc-kana-6-19",
+      "word": "はし",
+      "kanji": "箸",
+      "furigana": "はし",
+      "romaji": "hashi",
+      "wordType": "noun",
+      "meaningVi": "Đôi đũa",
+      "accentNote": "Trọng âm đầu: HA cao, shi thấp.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-6-20",
+      "word": "はし",
+      "kanji": "橋",
+      "furigana": "はし",
+      "romaji": "hashi",
+      "wordType": "noun",
+      "meaningVi": "Cây cầu",
+      "accentNote": "Trọng âm cuối: ha thấp, SHI cao (trợ từ phía sau hạ xuống).",
+      "emotion": "suy_nghi"
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kana-6-1",
+      "character": "っ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "(ngắt: kk, ss, tt, pp)",
+      "hanViet": "",
+      "strokeCount": 1,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Không có âm riêng, chiếm 1 nhịp: trước か・た・ぱ thì nín im như 'c' cuối trong 'tắc kè' (きって); trước さ・し thì kéo dài tiếng xì 's' (ざっし = za-sss-shi).",
+      "meoNho": "Chữ つ bị thu nhỏ như con mèo cuộn tròn rình mồi — thấy nó là giữ nguyên miệng thêm một nhịp rồi mới 'vồ' âm sau.",
+      "sosanh": "Dễ nhầm với つ (tsu) viết to: きつて (ki-tsu-te) là sai, きって (kitte) mới là con tem.",
+      "commonWords": [
+        {
+          "word": "きって",
+          "furigana": "きって",
+          "meaningVi": "Con tem (切手)"
+        },
+        {
+          "word": "ざっし",
+          "furigana": "ざっし",
+          "meaningVi": "Tạp chí (雑誌)"
+        },
+        {
+          "word": "がっこう",
+          "furigana": "がっこう",
+          "meaningVi": "Trường học (学校)"
+        }
+      ]
+    },
+    {
+      "id": "kana-6-2",
+      "character": "ー",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "(kéo dài)",
+      "hanViet": "",
+      "strokeCount": 1,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Xem trước (học kỹ ở bài 8): kéo dài nguyên âm đứng ngay trước thêm 1 nhịp. Chủ yếu dùng trong katakana (ケーキ = keeki); đôi khi thấy trong lời nói thân mật viết hiragana như すごーい.",
+      "meoNho": "Một vạch thẳng tắp như sợi mì kéo dài — thấy vạch là kéo giọng ra thêm một nhịp.",
+      "sosanh": "Dễ nhầm với chữ Hán 一 (số một) và dấu gạch ngang. Khi viết dọc, ー cũng dựng đứng thành vạch thẳng đứng.",
+      "commonWords": [
+        {
+          "word": "ケーキ",
+          "furigana": "ケーキ",
+          "meaningVi": "Bánh ngọt, bánh kem (cake) — viết katakana, học ở bài 7-8"
+        },
+        {
+          "word": "コーヒー",
+          "furigana": "コーヒー",
+          "meaningVi": "Cà phê (coffee) — viết katakana, học ở bài 7-8"
+        },
+        {
+          "word": "ノート",
+          "furigana": "ノート",
+          "meaningVi": "Quyển vở (note) — viết katakana, học ở bài 7-8"
+        }
+      ]
+    },
+    {
+      "id": "kana-6-3",
+      "character": "ああ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "aa",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Chữ cột あ (か さ た な は ま や ら わ...) + あ: kéo âm 'a' dài 2 nhịp, như 'a-a' đọc liền không ngắt.",
+      "meoNho": "Hai chữ あ đứng nối đuôi như hai chú mèo — âm 'a' dài gấp đôi, giống tiếng gọi 'mẹ ơiii': おかあさん.",
+      "sosanh": "Dễ nhầm おばあさん (bà, 5 nhịp) với おばさん (cô / dì, 4 nhịp): thiếu あ là đổi người!",
+      "commonWords": [
+        {
+          "word": "おかあさん",
+          "furigana": "おかあさん",
+          "meaningVi": "Mẹ (お母さん)"
+        },
+        {
+          "word": "おばあさん",
+          "furigana": "おばあさん",
+          "meaningVi": "Bà (お祖母さん)"
+        },
+        {
+          "word": "まあまあ",
+          "furigana": "まあまあ",
+          "meaningVi": "Tàm tạm, cũng được"
+        }
+      ]
+    },
+    {
+      "id": "kana-6-4",
+      "character": "いい",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "ii",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Chữ cột い (き し ち に ひ み り...) + い: kéo âm 'i' dài 2 nhịp.",
+      "meoNho": "Chữ い như hai sợi mì; nối thêm một chữ い nữa là sợi mì dài gấp đôi — 'iii' kéo dài: おにいさん.",
+      "sosanh": "Dễ nhầm おじいさん (ông, 5 nhịp) với おじさん (chú / bác, 4 nhịp).",
+      "commonWords": [
+        {
+          "word": "おにいさん",
+          "furigana": "おにいさん",
+          "meaningVi": "Anh trai (お兄さん)"
+        },
+        {
+          "word": "おじいさん",
+          "furigana": "おじいさん",
+          "meaningVi": "Ông (お祖父さん)"
+        },
+        {
+          "word": "ちいさい",
+          "furigana": "ちいさい",
+          "meaningVi": "Nhỏ, bé (小さい)"
+        }
+      ]
+    },
+    {
+      "id": "kana-6-5",
+      "character": "うう",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "uu",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Chữ cột う (く す つ ぬ ふ む ゆ る...) + う: kéo âm 'u' dài 2 nhịp, môi không chu tròn quá.",
+      "meoNho": "Chữ う như chiếc tai mèo có chỏm; hai tai う dựng cạnh nhau là mèo dỏng tai nghe tiếng 'uuu' kéo dài.",
+      "sosanh": "Dễ nhầm ゆき (tuyết) với ゆうき (dũng khí): thiếu う là thành từ khác.",
+      "commonWords": [
+        {
+          "word": "くうき",
+          "furigana": "くうき",
+          "meaningVi": "Không khí (空気)"
+        },
+        {
+          "word": "すうがく",
+          "furigana": "すうがく",
+          "meaningVi": "Môn toán (数学)"
+        },
+        {
+          "word": "ゆうき",
+          "furigana": "ゆうき",
+          "meaningVi": "Dũng khí, lòng can đảm (勇気)"
+        }
+      ]
+    },
+    {
+      "id": "kana-6-6",
+      "character": "えい",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "ei",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Chữ cột え + い: thường đọc là 'ê' kéo dài 2 nhịp (せんせい nghe như 'sen-sê-ê'), không bật rõ thành 'ây'.",
+      "meoNho": "Chữ い đứng sau え như cái đuôi mèo nối dài — thấy えい là kéo 'êê', cái đuôi い không cần bật riêng.",
+      "sosanh": "Đa số viết えい (せんせい, えいが). Ngoại lệ viết ええ: おねえさん (chị gái), ええ (vâng).",
+      "commonWords": [
+        {
+          "word": "せんせい",
+          "furigana": "せんせい",
+          "meaningVi": "Giáo viên (先生)"
+        },
+        {
+          "word": "えいが",
+          "furigana": "えいが",
+          "meaningVi": "Bộ phim (映画)"
+        },
+        {
+          "word": "おねえさん",
+          "furigana": "おねえさん",
+          "meaningVi": "Chị gái (お姉さん) — ngoại lệ viết ええ"
+        }
+      ]
+    },
+    {
+      "id": "kana-6-7",
+      "character": "おう",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "ou",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Chữ cột お + う: đọc là 'ô' kéo dài 2 nhịp, không đọc tách thành 'ô-u'.",
+      "meoNho": "Miệng tròn như chữ お lúc mèo ngáp 'ôôô', chữ う phía sau chỉ là cái đuôi kéo dài — không đọc 'u' riêng.",
+      "sosanh": "Đa số viết おう (おとうさん, ありがとう). Ngoại lệ viết おお: とおい (xa), おおきい (to), こおり (đá), とお (mười cái).",
+      "commonWords": [
+        {
+          "word": "おとうさん",
+          "furigana": "おとうさん",
+          "meaningVi": "Bố (お父さん)"
+        },
+        {
+          "word": "ありがとう",
+          "furigana": "ありがとう",
+          "meaningVi": "Cảm ơn"
+        },
+        {
+          "word": "おおきい",
+          "furigana": "おおきい",
+          "meaningVi": "To, lớn (大きい) — ngoại lệ viết おお"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "kana-l6-s1",
+      "slideType": "grammar",
+      "title": "1. っ nhỏ — âm ngắt một nhịp",
+      "grammarFormula": "き + っ + て → きって (kitte)",
+      "explanation": "っ là chữ つ viết nhỏ nhưng KHÔNG đọc 'tsu': nó chiếm trọn một nhịp mà không có nguyên âm riêng. Trước か・た・ぱ: nín im một nhịp rồi mới bật ra (きって, きっぷ); trước さ・し: kéo dài tiếng xì 's/sh' thêm một nhịp (ざっし = za-sss-shi, せっけん). Trong romaji, っ được ghi bằng cách gấp đôi phụ âm sau: kitte, zasshi. Bỏ っ là đổi nghĩa: きて (hãy đến) khác きって (con tem).",
+      "teacherTips": "Trước か・た・ぱ, người Việt có sẵn kỹ năng: nói 'tắc kè' thì âm 'c' tắc lại rồi mới sang 'kè' — きって giống vậy. Trước さ・し thì KHÔNG nín mà xì hơi dài như rắn 'sss': ざっし, せっけん. Tưởng tượng mèo Sensei rình chuột: giữ nguyên tư thế một nhịp rồi vồ!",
+      "culturalNotes": "っ thường đứng trước các hàng か, さ, た, ぱ. Ở cuối tiếng thốt như あっ!, nó thể hiện tiếng kêu bị ngắt đột ngột.",
+      "examples": [
+        {
+          "id": "ex-kana-l6-s1-1",
+          "tokens": [
+            {
+              "id": "t-kana-l6s1-1",
+              "text": "き",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l6s1-2",
+              "text": "っ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l6s1-3",
+              "text": "て",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "きって (切手): con tem — k gấp đôi, 3 nhịp."
+        },
+        {
+          "id": "ex-kana-l6-s1-2",
+          "tokens": [
+            {
+              "id": "t-kana-l6s1-4",
+              "text": "ざ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l6s1-5",
+              "text": "っ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l6s1-6",
+              "text": "し",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "ざっし (雑誌): tạp chí — kéo dài tiếng xì 's' thêm một nhịp, 3 nhịp."
+        },
+        {
+          "id": "ex-kana-l6-s1-3",
+          "tokens": [
+            {
+              "id": "t-kana-l6s1-7",
+              "text": "が",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l6s1-8",
+              "text": "っ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l6s1-9",
+              "text": "こう",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "がっこう (学校): trường học — 4 nhịp: が・っ・こ・う."
+        }
+      ]
+    },
+    {
+      "slideId": "kana-l6-s2",
+      "slideType": "grammar",
+      "title": "2. Trường âm cột あ・い・う",
+      "grammarFormula": "cột a + あ ・ cột i + い ・ cột u + う → kéo dài 2 nhịp",
+      "explanation": "Trường âm là nguyên âm được kéo dài gấp đôi và tính thành 2 nhịp. Trong hiragana, ta viết thêm một nguyên âm cùng cột: か + あ → かあ, に + い → にい, く + う → くう. Ngắn hay dài làm đổi nghĩa: おばさん (cô, dì) khác hẳn おばあさん (bà).",
+      "teacherTips": "Đếm nhịp bằng ngón tay: お・か・あ・さ・ん = 5 ngón. Đừng đọc tách 'ô-ca-a'; chỉ là 'kaa' kéo dài liền mạch như khi gọi 'mẹ ơiii'.",
+      "culturalNotes": "Âm ghép cũng kéo dài được theo cách này: ぎゅうにゅう (sữa bò), きゅう (số 9).",
+      "examples": [
+        {
+          "id": "ex-kana-l6-s2-1",
+          "tokens": [
+            {
+              "id": "t-kana-l6s2-1",
+              "text": "お",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l6s2-2",
+              "text": "かあ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l6s2-3",
+              "text": "さん",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "おかあさん (お母さん): mẹ — かあ kéo dài, 5 nhịp."
+        },
+        {
+          "id": "ex-kana-l6-s2-2",
+          "tokens": [
+            {
+              "id": "t-kana-l6s2-4",
+              "text": "お",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l6s2-5",
+              "text": "にい",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l6s2-6",
+              "text": "さん",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "おにいさん (お兄さん): anh trai — にい kéo dài."
+        },
+        {
+          "id": "ex-kana-l6-s2-3",
+          "tokens": [
+            {
+              "id": "t-kana-l6s2-7",
+              "text": "くう",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l6s2-8",
+              "text": "き",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "くうき (空気): không khí — くう kéo dài, 3 nhịp."
+        }
+      ]
+    },
+    {
+      "slideId": "kana-l6-s3",
+      "slideType": "grammar",
+      "title": "3. Trường âm cột え・お",
+      "grammarFormula": "cột e + い (đôi khi ええ) ・ cột o + う (đôi khi おお)",
+      "explanation": "Âm 'e' dài phần lớn viết bằng い: せんせい, えいが — đọc như 'ê' kéo dài, không bật rõ 'ây'. Âm 'o' dài phần lớn viết bằng う: おとうさん, ありがとう — đọc 'ô' kéo dài, không tách 'ô-u'. Một số từ ngoại lệ viết ええ / おお phải học thuộc: おねえさん, ええ (vâng), とおい (xa), おおきい (to), こおり (đá).",
+      "teacherTips": "Câu thần chú người Nhật dùng để nhớ các từ viết おお: 「とおくの おおきな こおりの うえを おおくの おおかみ とお とおった」 (Mười con sói đi qua tảng băng lớn ở phía xa).",
+      "culturalNotes": "Trong katakana, trường âm viết gọn bằng vạch ー: ケーキ (bánh ngọt), コーヒー (cà phê) — sẽ học ở bài 7-8.",
+      "examples": [
+        {
+          "id": "ex-kana-l6-s3-1",
+          "tokens": [
+            {
+              "id": "t-kana-l6s3-1",
+              "text": "せん",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l6s3-2",
+              "text": "せい",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "せんせい (先生): giáo viên — せい đọc như 'sê' kéo dài."
+        },
+        {
+          "id": "ex-kana-l6-s3-2",
+          "tokens": [
+            {
+              "id": "t-kana-l6s3-3",
+              "text": "お",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l6s3-4",
+              "text": "ねえ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l6s3-5",
+              "text": "さん",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "おねえさん (お姉さん): chị gái — ngoại lệ viết ええ."
+        },
+        {
+          "id": "ex-kana-l6-s3-3",
+          "tokens": [
+            {
+              "id": "t-kana-l6s3-6",
+              "text": "とお",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l6s3-7",
+              "text": "い",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "とおい (遠い): xa — ngoại lệ viết おお, không phải とうい."
+        }
+      ]
+    },
+    {
+      "slideId": "kana-l6-s4",
+      "slideType": "grammar",
+      "title": "4. Cao độ trọng âm: cùng chữ, khác giọng",
+      "grammarFormula": "はし: 箸 (CAO-thấp) ≠ 橋 (thấp-CAO)",
+      "explanation": "Tiếng Nhật không có dấu thanh như tiếng Việt, nhưng mỗi nhịp được đọc cao hoặc thấp. Giọng chuẩn Tokyo có quy tắc: nhịp 1 và nhịp 2 luôn khác độ cao nhau. はし đọc CAO-thấp là 'đôi đũa' (箸), đọc thấp-CAO là 'cây cầu' (橋); tương tự あめ CAO-thấp là 'mưa' (雨), thấp-CAO là 'kẹo' (飴).",
+      "teacherTips": "Người Việt nghe cao độ rất nhạy nhờ 6 thanh điệu. 箸 (đũa): HA cao ngang rồi RƠI xuống shi (như ngang → huyền: 'ha-shì'); 橋 (cầu): ha thấp, SHI cao ngang, và rơi ở trợ từ sau (はしが: ha-SHI-gà). Đừng lên giọng kiểu dấu sắc. Nhưng đừng quá lo: ngữ cảnh thường giúp người nghe hiểu đúng.",
+      "culturalNotes": "Cao độ thay đổi theo vùng: ở Osaka (Kansai), nhiều từ đọc ngược với Tokyo. Giáo trình dùng giọng chuẩn Tokyo.",
+      "examples": [
+        {
+          "id": "ex-kana-l6-s4-1",
+          "tokens": [
+            {
+              "id": "t-kana-l6s4-1",
+              "text": "はし",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "はし (箸): đôi đũa — đọc CAO-thấp."
+        },
+        {
+          "id": "ex-kana-l6-s4-2",
+          "tokens": [
+            {
+              "id": "t-kana-l6s4-2",
+              "text": "はし",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "はし (橋): cây cầu — đọc thấp-CAO."
+        },
+        {
+          "id": "ex-kana-l6-s4-3",
+          "tokens": [
+            {
+              "id": "t-kana-l6s4-3",
+              "text": "あめ",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "あめ (雨): mưa — CAO-thấp; còn あめ (飴) là kẹo, đọc thấp-CAO."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-kana-6-1",
+      "speaker": "ミラー (Miller)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l6-1a",
+          "text": "すみません",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-1b",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-1c",
+          "text": "きって",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l6-1d",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-1e",
+          "text": "あります",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-1f",
+          "text": "か",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-1g",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Xin lỗi, ở đây có tem không ạ?",
+      "emotion": "chao"
+    },
+    {
+      "id": "dia-kana-6-2",
+      "speaker": "てんいん (Nhân viên)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l6-2a",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-2b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-2c",
+          "text": "あります",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-2d",
+          "text": "よ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-2e",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng, có ạ.",
+      "emotion": "vui"
+    },
+    {
+      "id": "dia-kana-6-3",
+      "speaker": "ミラー (Miller)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l6-3a",
+          "text": "じゃあ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-3b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-3c",
+          "text": "きって",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l6-3d",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-3e",
+          "text": "にまい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-3f",
+          "text": "おねがいします",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-3g",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vậy cho tôi hai con tem.",
+      "emotion": "vui"
+    },
+    {
+      "id": "dia-kana-6-4",
+      "speaker": "ミラー (Miller)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l6-4a",
+          "text": "それから",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-4b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-4c",
+          "text": "その",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-4d",
+          "text": "ざっし",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l6-4e",
+          "text": "も",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-4f",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "À, thêm cả cuốn tạp chí đó nữa.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "dia-kana-6-5",
+      "speaker": "てんいん (Nhân viên)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l6-5a",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-5b",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-5c",
+          "text": "ぜんぶ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-5d",
+          "text": "で",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-5e",
+          "text": "ごひゃく",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-5f",
+          "text": "えん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-5g",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-5h",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng. Tất cả là 500 yên ạ.",
+      "emotion": "vui"
+    },
+    {
+      "id": "dia-kana-6-6",
+      "speaker": "ミラー (Miller)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l6-6a",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-6b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-6c",
+          "text": "どうぞ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l6-6d",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng, gửi anh.",
+      "emotion": "vui"
+    },
+    {
+      "id": "dia-kana-6-7",
+      "speaker": "てんいん (Nhân viên)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l6-7a",
+          "text": "ありがとう",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l6-7b",
+          "text": "ございました",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l6-7c",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Xin cảm ơn quý khách.",
+      "emotion": "cui_chao"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-kana-6-1",
+      "question": "Từ 「きって」 (con tem) đọc là gì?",
+      "options": [
+        "kite",
+        "kiite",
+        "kitte",
+        "kitsute"
+      ],
+      "correctIndex": 2,
+      "explanation": "っ nhỏ là âm ngắt: gấp đôi phụ âm sau → kitte. Không đọc 'tsu', cũng không kéo dài.",
+      "hint": "っ nhỏ không đọc là tsu."
+    },
+    {
+      "id": "ex-q-kana-6-2",
+      "question": "Từ nào có nghĩa là 'bà'?",
+      "options": [
+        "おばあさん",
+        "おばさん",
+        "おばあさ",
+        "おはあさん"
+      ],
+      "correctIndex": 0,
+      "explanation": "おばあさん (5 nhịp, có あ kéo dài) = bà. おばさん (4 nhịp) = cô, dì.",
+      "hint": "Bà thì 'dài' hơn cô."
+    },
+    {
+      "id": "ex-q-kana-6-3",
+      "question": "「おばさん」 nghĩa là gì?",
+      "options": [
+        "Bà",
+        "Cô, dì (người phụ nữ trung niên)",
+        "Chị gái",
+        "Mẹ"
+      ],
+      "correctIndex": 1,
+      "explanation": "おばさん không có trường âm = cô, dì. Bà là おばあさん, chị gái là おねえさん, mẹ là おかあさん.",
+      "hint": "Không có あ kéo dài."
+    },
+    {
+      "id": "ex-q-kana-6-4",
+      "question": "Chữ っ nhỏ có tác dụng gì?",
+      "options": [
+        "Đọc là 'tsu' như つ",
+        "Kéo dài nguyên âm đứng trước",
+        "Biến âm sau thành âm đục",
+        "Ngắt lại một nhịp, gấp đôi phụ âm đứng sau"
+      ],
+      "correctIndex": 3,
+      "explanation": "っ chiếm một nhịp trước phụ âm sau và romaji gấp đôi phụ âm đó: きって = kitte (nín im một nhịp), ざっし = zasshi (kéo dài âm s). Kéo dài nguyên âm là việc của trường âm.",
+      "hint": "Nhớ 'tắc kè' (きって)."
+    },
+    {
+      "id": "ex-q-kana-6-5",
+      "question": "Viết đúng từ 'gakkou' (trường học):",
+      "options": [
+        "がこう",
+        "がっこう",
+        "がつこう",
+        "がっこ"
+      ],
+      "correctIndex": 1,
+      "explanation": "がっこう: っ nhỏ tạo 'kk', こう kéo dài 'kou'. がつこう (つ to) đọc ga-tsu-kou là sai.",
+      "hint": "Cần cả っ nhỏ và trường âm."
+    },
+    {
+      "id": "ex-q-kana-6-6",
+      "question": "Viết đúng từ 'tooi' (xa):",
+      "options": [
+        "とうい",
+        "とい",
+        "とおい",
+        "とーい"
+      ],
+      "correctIndex": 2,
+      "explanation": "とおい là từ ngoại lệ viết おお. Dấu ー chủ yếu dùng trong katakana; cách viết chuẩn của とおい không dùng ー.",
+      "hint": "Nhớ câu thần chú おお."
+    },
+    {
+      "id": "ex-q-kana-6-7",
+      "question": "Từ 「がっこう」 có bao nhiêu nhịp?",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ],
+      "correctIndex": 0,
+      "explanation": "が・っ・こ・う = 4 nhịp. っ và う kéo dài đều tính là 1 nhịp riêng.",
+      "hint": "っ cũng là một nhịp."
+    },
+    {
+      "id": "ex-q-kana-6-8",
+      "question": "「せんせい」 thường được đọc gần như thế nào?",
+      "options": [
+        "sen-se (ê ngắn)",
+        "sen-shi",
+        "sen-sa",
+        "sen-sê (ê kéo dài 2 nhịp)"
+      ],
+      "correctIndex": 3,
+      "explanation": "えい thường đọc là 'ê' kéo dài: せんせい nghe như 'sen-sê-ê'. Đọc 'ê' ngắn là thiếu một nhịp.",
+      "hint": "えい = ê kéo dài."
+    },
+    {
+      "id": "ex-q-kana-6-9",
+      "question": "はし (箸 — đũa) và はし (橋 — cầu) khác nhau ở điểm nào?",
+      "options": [
+        "Khác độ dài âm",
+        "Khác cao độ: 箸 CAO-thấp, 橋 thấp-CAO",
+        "Một từ có っ",
+        "Hoàn toàn giống nhau"
+      ],
+      "correctIndex": 1,
+      "explanation": "Hai từ viết giống hệt nhau bằng hiragana, chỉ khác cao độ: đũa đọc CAO-thấp, cầu đọc thấp-CAO.",
+      "hint": "Nghe giọng lên hay xuống."
+    },
+    {
+      "id": "ex-q-kana-6-10",
+      "question": "Trong từ katakana 「ケーキ」 (bánh ngọt), vạch ー có tác dụng gì?",
+      "options": [
+        "Kéo dài âm 'ke' thêm một nhịp (keeki)",
+        "Ngắt một nhịp như っ",
+        "Đọc là 'ichi' (số một)",
+        "Không đọc, chỉ để trang trí"
+      ],
+      "correctIndex": 0,
+      "explanation": "ー là dấu trường âm trong katakana: kéo dài nguyên âm đứng trước. ケーキ = ke-e-ki, 3 nhịp.",
+      "hint": "Vạch kéo dài như sợi mì."
+    }
+  ]
+}

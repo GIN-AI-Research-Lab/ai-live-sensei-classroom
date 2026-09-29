@@ -1,0 +1,1040 @@
+{
+  "level": "KANA",
+  "lessonNumber": 10,
+  "title": "Bài 10: Chào hỏi, câu trong lớp & số 0–10",
+  "description": "Các câu chào theo thời điểm, cảm ơn, xin lỗi, lời chào trước và sau bữa ăn, những câu 'cứu cánh' trong lớp học và số đếm từ 0 đến 10. Khép lại phần Nhập môn bằng buổi gặp mặt đầu tiên với Sensei.",
+  "vocabList": [
+    {
+      "id": "voc-kana-10-1",
+      "word": "おはようございます",
+      "kanji": "おはようございます",
+      "furigana": "おはようございます",
+      "romaji": "ohayou gozaimasu",
+      "wordType": "phrase",
+      "meaningVi": "Chào buổi sáng (lịch sự); với bạn bè nói おはよう",
+      "accentNote": "よう kéo dài 'yoo'; す cuối gần như câm: ohayoo gozaimas.",
+      "emotion": "chao"
+    },
+    {
+      "id": "voc-kana-10-2",
+      "word": "こんにちは",
+      "kanji": "こんにちは",
+      "furigana": "こんにちは",
+      "romaji": "konnichiwa",
+      "wordType": "phrase",
+      "meaningVi": "Xin chào (ban ngày)",
+      "accentNote": "Chữ は cuối viết 'ha' nhưng đọc 'wa'; んに đọc rõ hai nhịp n-ni.",
+      "emotion": "chao"
+    },
+    {
+      "id": "voc-kana-10-3",
+      "word": "こんばんは",
+      "kanji": "こんばんは",
+      "furigana": "こんばんは",
+      "romaji": "konbanwa",
+      "wordType": "phrase",
+      "meaningVi": "Chào buổi tối",
+      "accentNote": "は cuối đọc 'wa'; ん trước ば nghe gần như 'm': komban-wa.",
+      "emotion": "chao"
+    },
+    {
+      "id": "voc-kana-10-4",
+      "word": "さようなら",
+      "kanji": "さようなら",
+      "furigana": "さようなら",
+      "romaji": "sayounara",
+      "wordType": "phrase",
+      "meaningVi": "Tạm biệt (khi chia tay khá lâu)",
+      "accentNote": "よう kéo dài 'yoo': sa-yo-o-na-ra.",
+      "emotion": "buon"
+    },
+    {
+      "id": "voc-kana-10-5",
+      "word": "おやすみなさい",
+      "kanji": "お休みなさい",
+      "furigana": "おやすみなさい",
+      "romaji": "oyasuminasai",
+      "wordType": "phrase",
+      "meaningVi": "Chúc ngủ ngon",
+      "accentNote": "Đọc đều từng nhịp o-ya-su-mi-na-sa-i; す nhẹ.",
+      "emotion": "chao"
+    },
+    {
+      "id": "voc-kana-10-6",
+      "word": "ありがとうございます",
+      "kanji": "ありがとうございます",
+      "furigana": "ありがとうございます",
+      "romaji": "arigatou gozaimasu",
+      "wordType": "phrase",
+      "meaningVi": "Cảm ơn (lịch sự); với bạn bè nói ありがとう",
+      "accentNote": "とう kéo dài 'too'; す cuối gần như câm.",
+      "emotion": "cui_chao"
+    },
+    {
+      "id": "voc-kana-10-7",
+      "word": "すみません",
+      "kanji": "すみません",
+      "furigana": "すみません",
+      "romaji": "sumimasen",
+      "wordType": "phrase",
+      "meaningVi": "Xin lỗi; xin lỗi cho tôi hỏi / cho tôi nhờ",
+      "accentNote": "Kết thúc bằng ん ngậm mũi; đừng đọc thành 'sumimasen-nư'.",
+      "emotion": "xau_ho"
+    },
+    {
+      "id": "voc-kana-10-8",
+      "word": "いただきます",
+      "kanji": "いただきます",
+      "furigana": "いただきます",
+      "romaji": "itadakimasu",
+      "wordType": "phrase",
+      "meaningVi": "Câu nói trước khi ăn (cảm ơn bữa ăn)",
+      "accentNote": "す cuối gần như câm: itadakimas.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-10-9",
+      "word": "ごちそうさまでした",
+      "kanji": "ご馳走様でした",
+      "furigana": "ごちそうさまでした",
+      "romaji": "gochisousama deshita",
+      "wordType": "phrase",
+      "meaningVi": "Câu nói sau khi ăn xong (cảm ơn bữa ăn ngon)",
+      "accentNote": "そう kéo dài 'soo'; し trong でした rất nhẹ: desh'ta.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-10-10",
+      "word": "はじめまして",
+      "kanji": "初めまして",
+      "furigana": "はじめまして",
+      "romaji": "hajimemashite",
+      "wordType": "phrase",
+      "meaningVi": "Rất hân hạnh được gặp (câu mở đầu khi gặp lần đầu)",
+      "accentNote": "し rất nhẹ gần như mất: hajimemash'te.",
+      "emotion": "cui_chao"
+    },
+    {
+      "id": "voc-kana-10-11",
+      "word": "よろしくおねがいします",
+      "kanji": "よろしくお願いします",
+      "furigana": "よろしくおねがいします",
+      "romaji": "yoroshiku onegaishimasu",
+      "wordType": "phrase",
+      "meaningVi": "Rất mong được giúp đỡ (câu kết khi tự giới thiệu, khi nhờ việc)",
+      "accentNote": "し rất nhẹ: yorosh'ku onegaishimas; す cuối gần như câm; cúi chào khi nói.",
+      "emotion": "cui_chao"
+    },
+    {
+      "id": "voc-kana-10-12",
+      "word": "わかりますか",
+      "kanji": "分かりますか",
+      "furigana": "わかりますか",
+      "romaji": "wakarimasu ka",
+      "wordType": "phrase",
+      "meaningVi": "Bạn có hiểu không?",
+      "accentNote": "Lên giọng nhẹ ở か cuối để hỏi.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-10-13",
+      "word": "はい、わかります",
+      "kanji": "はい、分かります",
+      "furigana": "はい、わかります",
+      "romaji": "hai, wakarimasu",
+      "wordType": "phrase",
+      "meaningVi": "Vâng, tôi hiểu",
+      "accentNote": "はい ở đây đọc 'hai' (không phải trợ từ nên không đọc 'wa').",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-10-14",
+      "word": "いいえ、わかりません",
+      "kanji": "いいえ、分かりません",
+      "furigana": "いいえ、わかりません",
+      "romaji": "iie, wakarimasen",
+      "wordType": "phrase",
+      "meaningVi": "Không, tôi không hiểu",
+      "accentNote": "いいえ kéo dài 'ii' ở đầu: i-i-e.",
+      "emotion": "xau_ho"
+    },
+    {
+      "id": "voc-kana-10-15",
+      "word": "もういちどおねがいします",
+      "kanji": "もう一度お願いします",
+      "furigana": "もういちどおねがいします",
+      "romaji": "mou ichido onegaishimasu",
+      "wordType": "phrase",
+      "meaningVi": "Làm ơn nói lại một lần nữa",
+      "accentNote": "もう kéo dài 'moo'; nghỉ nhẹ sau いちど.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-10-16",
+      "word": "ゆっくりおねがいします",
+      "kanji": "ゆっくりお願いします",
+      "furigana": "ゆっくりおねがいします",
+      "romaji": "yukkuri onegaishimasu",
+      "wordType": "phrase",
+      "meaningVi": "Làm ơn nói chậm lại",
+      "accentNote": "っ ngắt một nhịp: yu-k-ku-ri.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-10-17",
+      "word": "ゼロ",
+      "kanji": "ゼロ",
+      "furigana": "ゼロ",
+      "romaji": "zero",
+      "wordType": "noun",
+      "meaningVi": "Số 0 (cũng nói れい — 零)",
+      "accentNote": "Hai nhịp ze-ro; hay dùng khi đọc số điện thoại.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-10-18",
+      "word": "いち",
+      "kanji": "一",
+      "furigana": "いち",
+      "romaji": "ichi",
+      "wordType": "noun",
+      "meaningVi": "Số 1",
+      "accentNote": "い rõ, ち nhẹ: i-chi.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-10-19",
+      "word": "に",
+      "kanji": "二",
+      "furigana": "に",
+      "romaji": "ni",
+      "wordType": "noun",
+      "meaningVi": "Số 2",
+      "accentNote": "Một nhịp; khi đếm nhanh hay kéo thành 'nii'.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-10-20",
+      "word": "さん",
+      "kanji": "三",
+      "furigana": "さん",
+      "romaji": "san",
+      "wordType": "noun",
+      "meaningVi": "Số 3",
+      "accentNote": "Hai nhịp sa-n.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-10-21",
+      "word": "よん",
+      "kanji": "四",
+      "furigana": "よん",
+      "romaji": "yon",
+      "wordType": "noun",
+      "meaningVi": "Số 4 (cũng đọc し)",
+      "accentNote": "Hai nhịp yo-n; tránh し vì trùng âm với 'chết' (死).",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-10-22",
+      "word": "ご",
+      "kanji": "五",
+      "furigana": "ご",
+      "romaji": "go",
+      "wordType": "noun",
+      "meaningVi": "Số 5",
+      "accentNote": "Một nhịp; khi đếm nhanh hay kéo thành 'goo'.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-10-23",
+      "word": "ろく",
+      "kanji": "六",
+      "furigana": "ろく",
+      "romaji": "roku",
+      "wordType": "noun",
+      "meaningVi": "Số 6",
+      "accentNote": "ろ là âm giữa 'r' và 'l'; く nhẹ.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-10-24",
+      "word": "なな",
+      "kanji": "七",
+      "furigana": "なな",
+      "romaji": "nana",
+      "wordType": "noun",
+      "meaningVi": "Số 7 (cũng đọc しち)",
+      "accentNote": "Hai nhịp na-na.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-10-25",
+      "word": "はち",
+      "kanji": "八",
+      "furigana": "はち",
+      "romaji": "hachi",
+      "wordType": "noun",
+      "meaningVi": "Số 8",
+      "accentNote": "Hai nhịp ha-chi.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-10-26",
+      "word": "きゅう",
+      "kanji": "九",
+      "furigana": "きゅう",
+      "romaji": "kyuu",
+      "wordType": "noun",
+      "meaningVi": "Số 9 (cũng đọc く)",
+      "accentNote": "きゅ đọc liền rồi kéo dài: kyu-u (2 nhịp).",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-10-27",
+      "word": "じゅう",
+      "kanji": "十",
+      "furigana": "じゅう",
+      "romaji": "juu",
+      "wordType": "noun",
+      "meaningVi": "Số 10",
+      "accentNote": "じゅ đọc liền rồi kéo dài: ju-u (2 nhịp).",
+      "emotion": "vui"
+    }
+  ],
+  "kanjiList": [],
+  "slides": [
+    {
+      "slideId": "kana-l10-s1",
+      "slideType": "grammar",
+      "title": "1. Chào theo thời điểm trong ngày",
+      "grammarFormula": "sáng: おはようございます ・ ban ngày: こんにちは ・ tối: こんばんは ・ đi ngủ: おやすみなさい",
+      "explanation": "Người Nhật chọn câu chào theo giờ: buổi sáng nói おはようございます, ban ngày nói こんにちは, khi trời tối nói こんばんは, trước khi đi ngủ nói おやすみなさい. Trong こんにちは và こんばんは, chữ cuối viết は nhưng đọc là 'wa'. Với bạn bè, おはようございます rút gọn thành おはよう.",
+      "teacherTips": "Chữ す ở cuối ございます thường đọc lướt gần như câm: 'ohayoo gozaimas'. Cho học viên chào Sensei theo giờ thật lúc học.",
+      "culturalNotes": "さようなら nghe khá trang trọng, như chia tay lâu ngày. Học sinh hay nói さようなら với thầy cô cuối buổi học, còn bạn bè thường nói じゃあね hoặc またね.",
+      "examples": [
+        {
+          "id": "ex-kana-l10-s1-1",
+          "tokens": [
+            {
+              "id": "t-kana-l10s1-1",
+              "text": "おはよう",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l10s1-2",
+              "text": "ございます",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Chào buổi sáng (lịch sự)"
+        },
+        {
+          "id": "ex-kana-l10-s1-2",
+          "tokens": [
+            {
+              "id": "t-kana-l10s1-3",
+              "text": "こんにち",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l10s1-4",
+              "text": "は",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Xin chào (ban ngày) — は đọc 'wa'"
+        },
+        {
+          "id": "ex-kana-l10-s1-3",
+          "tokens": [
+            {
+              "id": "t-kana-l10s1-5",
+              "text": "こんばん",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l10s1-6",
+              "text": "は",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Chào buổi tối — は đọc 'wa'"
+        }
+      ]
+    },
+    {
+      "slideId": "kana-l10-s2",
+      "slideType": "grammar",
+      "title": "2. Cảm ơn, xin lỗi và lời chào quanh bữa ăn",
+      "grammarFormula": "ありがとう(ございます) ・ すみません ・ いただきます → ごちそうさまでした",
+      "explanation": "ありがとうございます là cảm ơn lịch sự, với bạn bè chỉ cần ありがとう. すみません vừa là 'xin lỗi', vừa dùng để gọi người khác ('xin lỗi, cho tôi hỏi'). Trước khi ăn chắp tay nói いただきます, ăn xong nói ごちそうさまでした.",
+      "teacherTips": "Cho học viên diễn cảnh bữa ăn: chắp tay, cúi nhẹ, nói いただきます; ăn xong đặt đũa xuống nói ごちそうさまでした.",
+      "culturalNotes": "いただきます là lời cảm ơn thức ăn và người đã nấu, không giống câu 'mời cả nhà ăn cơm' của người Việt. Người Nhật nói câu này cả khi ăn một mình.",
+      "examples": [
+        {
+          "id": "ex-kana-l10-s2-1",
+          "tokens": [
+            {
+              "id": "t-kana-l10s2-1",
+              "text": "ありがとう",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l10s2-2",
+              "text": "ございます",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Cảm ơn (lịch sự)"
+        },
+        {
+          "id": "ex-kana-l10-s2-2",
+          "tokens": [
+            {
+              "id": "t-kana-l10s2-3",
+              "text": "いただきます",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Câu nói trước khi ăn"
+        },
+        {
+          "id": "ex-kana-l10-s2-3",
+          "tokens": [
+            {
+              "id": "t-kana-l10s2-4",
+              "text": "ごちそうさま",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l10s2-5",
+              "text": "でした",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "Câu nói sau khi ăn xong"
+        }
+      ]
+    },
+    {
+      "slideId": "kana-l10-s3",
+      "slideType": "grammar",
+      "title": "3. Câu 'cứu cánh' trong lớp học",
+      "grammarFormula": "〜 おねがいします = làm ơn ~ ・ わかりますか → はい、わかります / いいえ、わかりません",
+      "explanation": "おねがいします (làm ơn, xin nhờ) là câu thần chú của người mới học: đặt sau một từ để nhờ vả lịch sự. もういちど おねがいします = làm ơn nói lại lần nữa; ゆっくり おねがいします = làm ơn nói chậm lại. Câu kết thúc bằng か là câu hỏi, trả lời bằng はい (vâng) hoặc いいえ (không).",
+      "teacherTips": "Khuyến khích học viên dùng ngay hai câu もういちど / ゆっくり mỗi khi Sensei nói nhanh — nói sai cũng không sao!",
+      "culturalNotes": "Ở lớp học Nhật, học viên thường giơ tay và nói すみません trước khi đặt câu hỏi cho giáo viên.",
+      "examples": [
+        {
+          "id": "ex-kana-l10-s3-1",
+          "tokens": [
+            {
+              "id": "t-kana-l10s3-1",
+              "text": "もういちど",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l10s3-2",
+              "text": "おねがいします",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Làm ơn nói lại một lần nữa"
+        },
+        {
+          "id": "ex-kana-l10-s3-2",
+          "tokens": [
+            {
+              "id": "t-kana-l10s3-3",
+              "text": "ゆっくり",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l10s3-4",
+              "text": "おねがいします",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Làm ơn nói chậm lại"
+        },
+        {
+          "id": "ex-kana-l10-s3-3",
+          "tokens": [
+            {
+              "id": "t-kana-l10s3-5",
+              "text": "わかります",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l10s3-6",
+              "text": "か",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Bạn có hiểu không?"
+        }
+      ]
+    },
+    {
+      "slideId": "kana-l10-s4",
+      "slideType": "grammar",
+      "title": "4. Số đếm từ 0 đến 10",
+      "grammarFormula": "0 ゼロ/れい ・ 1 いち ・ 2 に ・ 3 さん ・ 4 よん/し ・ 5 ご ・ 6 ろく ・ 7 なな/しち ・ 8 はち ・ 9 きゅう/く ・ 10 じゅう",
+      "explanation": "Các số 0, 4, 7, 9 có hai cách đọc. Khi đếm lần lượt từ 1 đến 10, cả し/よん và しち/なな đều dùng (cách truyền thống là し, しち); còn khi nói một con số riêng lẻ (số điện thoại, số phòng) thì dùng よん, なな, きゅう cho rõ ràng. Một lý do nữa: し trùng âm với 'chết' (死), く trùng âm với 'khổ' (苦).",
+      "teacherTips": "Chơi trò giơ ngón tay: Sensei giơ bao nhiêu ngón, học viên hô số bấy nhiêu. Sau đó đọc số điện thoại của chính mình.",
+      "culturalNotes": "Người Nhật đếm trên tay bằng cách gập từng ngón vào lòng bàn tay, bắt đầu từ ngón cái.",
+      "examples": [
+        {
+          "id": "ex-kana-l10-s4-1",
+          "tokens": [
+            {
+              "id": "t-kana-l10s4-1",
+              "text": "いち",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l10s4-2",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l10s4-3",
+              "text": "に",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l10s4-4",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l10s4-5",
+              "text": "さん",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Một, hai, ba"
+        },
+        {
+          "id": "ex-kana-l10-s4-2",
+          "tokens": [
+            {
+              "id": "t-kana-l10s4-6",
+              "text": "ゼロ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l10s4-7",
+              "text": "きゅう",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l10s4-8",
+              "text": "ゼロ",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "090 — đầu số điện thoại di động phổ biến ở Nhật"
+        },
+        {
+          "id": "ex-kana-l10-s4-3",
+          "tokens": [
+            {
+              "id": "t-kana-l10s4-9",
+              "text": "なな",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l10s4-10",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l10s4-11",
+              "text": "はち",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l10s4-12",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l10s4-13",
+              "text": "きゅう",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l10s4-14",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l10s4-15",
+              "text": "じゅう",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "Bảy, tám, chín, mười"
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-kana-10-1",
+      "speaker": "せんせい (Sensei)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l10-1a",
+          "text": "おはようございます",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l10-1b",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Chào buổi sáng!",
+      "emotion": "chao"
+    },
+    {
+      "id": "dia-kana-10-2",
+      "speaker": "グエン (Nguyễn)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l10-2a",
+          "text": "おはようございます",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l10-2b",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Em chào thầy ạ!",
+      "emotion": "chao"
+    },
+    {
+      "id": "dia-kana-10-3",
+      "speaker": "せんせい (Sensei)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l10-3a",
+          "text": "はじめまして",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l10-3b",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-3c",
+          "text": "たなか",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-3d",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-3e",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-3f",
+          "text": "よろしくおねがいします",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l10-3g",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Rất vui được gặp em. Thầy là Tanaka. Mong được làm quen.",
+      "emotion": "cui_chao"
+    },
+    {
+      "id": "dia-kana-10-4",
+      "speaker": "グエン (Nguyễn)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l10-4a",
+          "text": "はじめまして",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l10-4b",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-4c",
+          "text": "グエン",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-4d",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-4e",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-4f",
+          "text": "よろしくおねがいします",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l10-4g",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Em rất hân hạnh. Em là Nguyễn. Mong thầy giúp đỡ ạ.",
+      "emotion": "cui_chao"
+    },
+    {
+      "id": "dia-kana-10-5",
+      "speaker": "せんせい (Sensei)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l10-5a",
+          "text": "いち",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-5b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-5c",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-5d",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-5e",
+          "text": "さん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-5f",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-5g",
+          "text": "し",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-5h",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-5i",
+          "text": "ご",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-5j",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-5k",
+          "text": "わかりますか",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l10-5l",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Một, hai, ba, bốn, năm. Em hiểu không?",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "dia-kana-10-6",
+      "speaker": "グエン (Nguyễn)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l10-6a",
+          "text": "すみません",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-6b",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-6c",
+          "text": "ゆっくりおねがいします",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l10-6d",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Em xin lỗi. Thầy nói chậm lại giúp em ạ.",
+      "emotion": "xau_ho"
+    },
+    {
+      "id": "dia-kana-10-7",
+      "speaker": "せんせい (Sensei)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l10-7a",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-7b",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-7c",
+          "text": "いち",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-7d",
+          "text": "…",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-7e",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-7f",
+          "text": "…",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-7g",
+          "text": "さん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-7h",
+          "text": "…",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-7i",
+          "text": "し",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-7j",
+          "text": "…",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-7k",
+          "text": "ご",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-7l",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Được. Một... hai... ba... bốn... năm.",
+      "emotion": "vui"
+    },
+    {
+      "id": "dia-kana-10-8",
+      "speaker": "グエン (Nguyễn)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l10-8a",
+          "text": "はい、わかります",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l10-8b",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l10-8c",
+          "text": "ありがとうございます",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l10-8d",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng, em hiểu rồi. Em cảm ơn thầy ạ!",
+      "emotion": "vui"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-kana-10-1",
+      "question": "Gặp thầy cô lúc 8 giờ sáng, bạn chào thế nào?",
+      "options": [
+        "こんばんは",
+        "おはようございます",
+        "おやすみなさい",
+        "さようなら"
+      ],
+      "correctIndex": 1,
+      "explanation": "Buổi sáng dùng おはようございます. こんばんは là chào buổi tối, おやすみなさい là chúc ngủ ngon, さようなら là tạm biệt.",
+      "hint": "Câu chào dành cho buổi sáng."
+    },
+    {
+      "id": "ex-q-kana-10-2",
+      "question": "Trong こんにちは, chữ cuối は đọc là gì?",
+      "options": [
+        "ha",
+        "ba",
+        "wa",
+        "pa"
+      ],
+      "correctIndex": 2,
+      "explanation": "こんにちは vốn là cách nói có chứa trợ từ は, nên chữ は đọc là 'wa': konnichiwa. こんばんは cũng vậy.",
+      "hint": "Giống trợ từ は trong câu."
+    },
+    {
+      "id": "ex-q-kana-10-3",
+      "question": "Trước khi bắt đầu ăn, người Nhật nói gì?",
+      "options": [
+        "いただきます",
+        "ごちそうさまでした",
+        "すみません",
+        "はじめまして"
+      ],
+      "correctIndex": 0,
+      "explanation": "いただきます nói trước khi ăn; ごちそうさまでした nói sau khi ăn xong.",
+      "hint": "Câu mở đầu bữa ăn."
+    },
+    {
+      "id": "ex-q-kana-10-4",
+      "question": "Thầy nói nhanh quá, bạn không nghe kịp. Bạn nói:",
+      "options": [
+        "わかります",
+        "ゆっくりおねがいします",
+        "おやすみなさい",
+        "いただきます"
+      ],
+      "correctIndex": 1,
+      "explanation": "ゆっくり = chậm rãi, おねがいします = làm ơn → 'Làm ơn nói chậm lại'.",
+      "hint": "ゆっくり nghĩa là 'chậm rãi'."
+    },
+    {
+      "id": "ex-q-kana-10-5",
+      "question": "Bạn muốn nhờ thầy nói lại một lần nữa:",
+      "options": [
+        "ありがとうございます",
+        "こんばんは",
+        "いいえ、わかりません",
+        "もういちどおねがいします"
+      ],
+      "correctIndex": 3,
+      "explanation": "もういちど = thêm một lần nữa; おねがいします = làm ơn → 'Làm ơn nói lại một lần nữa'.",
+      "hint": "いちど = một lần."
+    },
+    {
+      "id": "ex-q-kana-10-6",
+      "question": "Số 7 thường đọc là gì?",
+      "options": [
+        "ろく",
+        "はち",
+        "なな",
+        "きゅう"
+      ],
+      "correctIndex": 2,
+      "explanation": "Số 7 đọc なな (cũng đọc しち). ろく = 6, はち = 8, きゅう = 9.",
+      "hint": "Số đứng sau ろく."
+    },
+    {
+      "id": "ex-q-kana-10-7",
+      "question": "Vì sao số 4 thường được đọc là よん thay vì し?",
+      "options": [
+        "Vì し trùng âm với chữ 'chết' (死)",
+        "Vì し khó phát âm hơn",
+        "Vì し chỉ dành cho con gái",
+        "Vì し là cách đọc của số 7"
+      ],
+      "correctIndex": 0,
+      "explanation": "し trùng âm với 死 (chết) nên khi nói con số riêng lẻ người Nhật thích dùng よん. Tương tự, số 9 hay đọc きゅう vì く trùng âm với 苦 (khổ).",
+      "hint": "Liên quan đến một chữ không may mắn."
+    },
+    {
+      "id": "ex-q-kana-10-8",
+      "question": "Số 10 viết đúng (có âm ghép và trường âm) là:",
+      "options": [
+        "じゅ",
+        "じう",
+        "しゅう",
+        "じゅう"
+      ],
+      "correctIndex": 3,
+      "explanation": "じゅう = じ + ゅ nhỏ (đọc liền 'ju') + う kéo dài: 'juu', 2 nhịp. じゅ thiếu trường âm; しゅう (shuu) là âm khác, không có dấu ゛.",
+      "hint": "Âm 'j' cần dấu ゛, và nhớ kéo dài."
+    },
+    {
+      "id": "ex-q-kana-10-9",
+      "question": "Lần đầu gặp mặt, câu mở đầu là:",
+      "options": [
+        "おやすみなさい",
+        "はじめまして",
+        "ごちそうさまでした",
+        "さようなら"
+      ],
+      "correctIndex": 1,
+      "explanation": "はじめまして dùng khi gặp ai đó lần đầu, thường nối với tên mình và よろしくおねがいします.",
+      "hint": "はじめ = lần đầu."
+    },
+    {
+      "id": "ex-q-kana-10-10",
+      "question": "Thầy hỏi わかりますか mà bạn KHÔNG hiểu. Bạn trả lời:",
+      "options": [
+        "はい、わかります",
+        "こんにちは",
+        "いいえ、わかりません",
+        "よろしくおねがいします"
+      ],
+      "correctIndex": 2,
+      "explanation": "いいえ = không; わかりません là dạng phủ định của わかります → 'Không, tôi không hiểu'.",
+      "hint": "Đuôi 〜ません là phủ định."
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "lessonNumber": 1,
+    "level": "KANA",
+    "title": "Bài 1: Hiragana hàng あ・か・さ",
+    "description": "Làm quen 15 chữ hiragana đầu tiên: năm nguyên âm あいうえお, hàng か và hàng さ. Đọc được những từ đầu đời như すし, かさ, おいしい và nhớ rằng し đọc là 'shi'.",
+    "vocabCount": 20,
+    "kanjiCount": 15,
+    "slideCount": 3,
+    "dialogueCount": 6,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 2,
+    "level": "KANA",
+    "title": "Bài 2: Hiragana hàng た・な・は",
+    "description": "Học thêm 15 chữ hiragana hàng た, な, は với ba âm đặc biệt ち (chi), つ (tsu), ふ (fu). Đọc được いぬ, ねこ, ちかてつ và làm quen trước cách đọc は (wa), へ (e) khi làm trợ từ.",
+    "vocabCount": 20,
+    "kanjiCount": 15,
+    "slideCount": 3,
+    "dialogueCount": 6,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 3,
+    "level": "KANA",
+    "title": "Bài 3: Hiragana hàng ま・や・ら・わ và ん",
+    "description": "Học 16 chữ cuối của bảng hiragana cơ bản: hàng ま, hàng や (chỉ 3 chữ), hàng ら với âm 'r' Nhật, わ, trợ từ を và âm mũi ん. Học xong bài này bạn đã biết đủ 46 chữ hiragana cơ bản.",
+    "vocabCount": 20,
+    "kanjiCount": 16,
+    "slideCount": 4,
+    "dialogueCount": 8,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 4,
+    "level": "KANA",
+    "title": "Bài 4: Âm đục và âm bán đục (が・ざ・だ・ば・ぱ)",
+    "description": "Thêm dấu ゛ (てんてん) và ゜ (まる) để biến 25 chữ hiragana thành âm đục và âm bán đục. Nắm cặp đọc giống nhau じ・ぢ và ず・づ cùng cách viết đúng.",
+    "vocabCount": 20,
+    "kanjiCount": 25,
+    "slideCount": 4,
+    "dialogueCount": 7,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 5,
+    "level": "KANA",
+    "title": "Bài 5: Âm ghép きゃ・しゃ・ちゃ (ゃ ゅ ょ)",
+    "description": "Ghép chữ cột い với ゃ ゅ ょ viết nhỏ để tạo 33 âm ghép như きゃ, しゃ, りょ. Tập đọc liền một nhịp và phân biệt chữ to với chữ nhỏ: びよういん hay びょういん.",
+    "vocabCount": 20,
+    "kanjiCount": 33,
+    "slideCount": 4,
+    "dialogueCount": 7,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 6,
+    "level": "KANA",
+    "title": "Bài 6: Âm ngắt っ, trường âm và cao độ",
+    "description": "Học っ nhỏ ngắt một nhịp (きって, ざっし), cách kéo dài nguyên âm あ い う え お (おかあさん, せんせい, とおい). Làm quen cao độ trọng âm qua cặp はし (đũa) và はし (cầu).",
+    "vocabCount": 20,
+    "kanjiCount": 7,
+    "slideCount": 4,
+    "dialogueCount": 7,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 7,
+    "level": "KANA",
+    "title": "Bài 7: Katakana hàng ア・カ・サ・タ・ナ",
+    "description": "Làm quen bảng chữ katakana dùng cho từ mượn và tên nước ngoài: 25 chữ đầu từ ア đến ノ. Luyện đọc từ mượn quen thuộc như アイス, テニス, チケット và phân biệt các cặp dễ nhầm シ/ツ, ク/ケ/タ, ス/ヌ.",
+    "vocabCount": 20,
+    "kanjiCount": 25,
+    "slideCount": 4,
+    "dialogueCount": 8,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 8,
+    "level": "KANA",
+    "title": "Bài 8: Katakana hàng ハ・マ・ヤ・ラ・ワ, ン và ー",
+    "description": "Hoàn thành bảng katakana cơ bản với 22 chữ còn lại, kèm dấu trường âm ー. Đọc được các từ mượn quen thuộc như コーヒー, ラーメン, ケーキ và phân biệt các cặp dễ nhầm ソ/ン, ア/マ, ウ/ワ/フ.",
+    "vocabCount": 20,
+    "kanjiCount": 22,
+    "slideCount": 4,
+    "dialogueCount": 8,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 9,
+    "level": "KANA",
+    "title": "Bài 9: Katakana âm đục, âm ghép & âm mở rộng",
+    "description": "Áp dụng luật ゛, ゜ và ャ ュ ョ nhỏ cho katakana, làm quen dấu trường âm ー và các âm mở rộng ファ・ティ・ウェ… dành cho từ mượn. Cuối bài tự phiên tên người, tên địa danh Việt Nam sang katakana.",
+    "vocabCount": 20,
+    "kanjiCount": 42,
+    "slideCount": 4,
+    "dialogueCount": 8,
+    "exerciseCount": 10
+  },
+  {
+    "lessonNumber": 10,
+    "level": "KANA",
+    "title": "Bài 10: Chào hỏi, câu trong lớp & số 0–10",
+    "description": "Các câu chào theo thời điểm, cảm ơn, xin lỗi, lời chào trước và sau bữa ăn, những câu 'cứu cánh' trong lớp học và số đếm từ 0 đến 10. Khép lại phần Nhập môn bằng buổi gặp mặt đầu tiên với Sensei.",
+    "vocabCount": 27,
+    "kanjiCount": 0,
+    "slideCount": 4,
+    "dialogueCount": 8,
+    "exerciseCount": 10
+  }
+]

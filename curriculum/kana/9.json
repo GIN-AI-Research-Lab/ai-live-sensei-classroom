@@ -1,0 +1,2075 @@
+{
+  "level": "KANA",
+  "lessonNumber": 9,
+  "title": "Bài 9: Katakana âm đục, âm ghép & âm mở rộng",
+  "description": "Áp dụng luật ゛, ゜ và ャ ュ ョ nhỏ cho katakana, làm quen dấu trường âm ー và các âm mở rộng ファ・ティ・ウェ… dành cho từ mượn. Cuối bài tự phiên tên người, tên địa danh Việt Nam sang katakana.",
+  "vocabList": [
+    {
+      "id": "voc-kana-9-1",
+      "word": "テレビ",
+      "kanji": "テレビ",
+      "furigana": "テレビ",
+      "romaji": "terebi",
+      "wordType": "noun",
+      "meaningVi": "Ti vi",
+      "accentNote": "Ba nhịp te-re-bi; ビ có dấu ゛ nên là 'b', không phải 'p'.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-9-2",
+      "word": "ギター",
+      "kanji": "ギター",
+      "furigana": "ギター",
+      "romaji": "gitaa",
+      "wordType": "noun",
+      "meaningVi": "Đàn ghi-ta",
+      "accentNote": "ギ đọc 'ghi' (không phải 'zi'); ター kéo dài 'taa'.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-9-3",
+      "word": "ベトナム",
+      "kanji": "ベトナム",
+      "furigana": "ベトナム",
+      "romaji": "betonamu",
+      "wordType": "noun",
+      "meaningVi": "Việt Nam",
+      "accentNote": "Bốn nhịp be-to-na-mu; ム cuối rất nhẹ.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-9-4",
+      "word": "デパート",
+      "kanji": "デパート",
+      "furigana": "デパート",
+      "romaji": "depaato",
+      "wordType": "noun",
+      "meaningVi": "Trung tâm thương mại, cửa hàng bách hóa",
+      "accentNote": "Bốn nhịp de-pa-a-to; nhớ kéo dài パー.",
+      "emotion": "ngac_nhien"
+    },
+    {
+      "id": "voc-kana-9-5",
+      "word": "ドア",
+      "kanji": "ドア",
+      "furigana": "ドア",
+      "romaji": "doa",
+      "wordType": "noun",
+      "meaningVi": "Cánh cửa",
+      "accentNote": "Hai nhịp tách rõ do-a.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-9-6",
+      "word": "バス",
+      "kanji": "バス",
+      "furigana": "バス",
+      "romaji": "basu",
+      "wordType": "noun",
+      "meaningVi": "Xe buýt",
+      "accentNote": "ス cuối gần như câm: nghe như 'bas'.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-9-7",
+      "word": "パン",
+      "kanji": "パン",
+      "furigana": "パン",
+      "romaji": "pan",
+      "wordType": "noun",
+      "meaningVi": "Bánh mì (gốc tiếng Bồ Đào Nha 'pão')",
+      "accentNote": "Hai nhịp pa-n; 'p' bật bằng hai môi.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-9-8",
+      "word": "ペン",
+      "kanji": "ペン",
+      "furigana": "ペン",
+      "romaji": "pen",
+      "wordType": "noun",
+      "meaningVi": "Cây bút",
+      "accentNote": "Hai nhịp pe-n; ン ngậm mũi.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-9-9",
+      "word": "ジュース",
+      "kanji": "ジュース",
+      "furigana": "ジュース",
+      "romaji": "juusu",
+      "wordType": "noun",
+      "meaningVi": "Nước ép hoa quả, nước ngọt",
+      "accentNote": "ジュー kéo dài 'juu'; ス cuối nhẹ.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-9-10",
+      "word": "シャツ",
+      "kanji": "シャツ",
+      "furigana": "シャツ",
+      "romaji": "shatsu",
+      "wordType": "noun",
+      "meaningVi": "Áo sơ mi",
+      "accentNote": "シャ đọc liền một nhịp; ツ là 'tsư' bật đầu lưỡi.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-9-11",
+      "word": "キャベツ",
+      "kanji": "キャベツ",
+      "furigana": "キャベツ",
+      "romaji": "kyabetsu",
+      "wordType": "noun",
+      "meaningVi": "Bắp cải",
+      "accentNote": "Ba nhịp kya-be-tsu; キャ đọc liền.",
+      "emotion": "de_biu"
+    },
+    {
+      "id": "voc-kana-9-12",
+      "word": "ジャム",
+      "kanji": "ジャム",
+      "furigana": "ジャム",
+      "romaji": "jamu",
+      "wordType": "noun",
+      "meaningVi": "Mứt (phết bánh mì)",
+      "accentNote": "2 nhịp ジャ・ム; ジャ đọc liền như 'ja' trong 'jam' (không đọc 'za'), ム cuối nhẹ.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-9-13",
+      "word": "パーティー",
+      "kanji": "パーティー",
+      "furigana": "パーティー",
+      "romaji": "paatii",
+      "wordType": "noun",
+      "meaningVi": "Bữa tiệc",
+      "accentNote": "Bốn nhịp pa-a-ti-i; ティ là 'ti', không phải 'chi'.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-9-14",
+      "word": "フォーク",
+      "kanji": "フォーク",
+      "furigana": "フォーク",
+      "romaji": "fooku",
+      "wordType": "noun",
+      "meaningVi": "Cái nĩa (dĩa)",
+      "accentNote": "Ba nhịp fo-o-ku; thổi hơi qua hai môi ở フォ.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-9-15",
+      "word": "フォー",
+      "kanji": "フォー",
+      "furigana": "フォー",
+      "romaji": "foo",
+      "wordType": "noun",
+      "meaningVi": "Phở (món ăn Việt Nam)",
+      "accentNote": "Hai nhịp fo-o; nghe gần như 'phở' kéo dài, không có dấu hỏi.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-9-16",
+      "word": "カフェ",
+      "kanji": "カフェ",
+      "furigana": "カフェ",
+      "romaji": "kafe",
+      "wordType": "noun",
+      "meaningVi": "Quán cà phê",
+      "accentNote": "Hai nhịp ka-fe; フェ đọc liền một nhịp.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-9-17",
+      "word": "ソファ",
+      "kanji": "ソファ",
+      "furigana": "ソファ",
+      "romaji": "sofa",
+      "wordType": "noun",
+      "meaningVi": "Ghế sofa",
+      "accentNote": "Hai nhịp so-fa; ァ nhỏ nên không đọc 'fu-a'.",
+      "emotion": "de_biu"
+    },
+    {
+      "id": "voc-kana-9-18",
+      "word": "ニュース",
+      "kanji": "ニュース",
+      "furigana": "ニュース",
+      "romaji": "nyuusu",
+      "wordType": "noun",
+      "meaningVi": "Tin tức, thời sự",
+      "accentNote": "Ba nhịp nyu-u-su; ニュ đọc liền.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-9-19",
+      "word": "シェフ",
+      "kanji": "シェフ",
+      "furigana": "シェフ",
+      "romaji": "shefu",
+      "wordType": "noun",
+      "meaningVi": "Đầu bếp (chef)",
+      "accentNote": "Hai nhịp she-fu; フ cuối rất nhẹ.",
+      "emotion": "ngac_nhien"
+    },
+    {
+      "id": "voc-kana-9-20",
+      "word": "チョコレート",
+      "kanji": "チョコレート",
+      "furigana": "チョコレート",
+      "romaji": "chokoreeto",
+      "wordType": "noun",
+      "meaningVi": "Sô-cô-la",
+      "accentNote": "Năm nhịp cho-ko-re-e-to; チョ chỉ tính một nhịp.",
+      "emotion": "vui"
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kana-9-1",
+      "character": "ガ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "ga",
+      "hanViet": "",
+      "strokeCount": 4,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'ga' như 'ga' trong 'nhà ga', âm 'g' bật gọn từ cuống họng.",
+      "meoNho": "カ (ka) là con dao cắt; thêm hai giọt ゛ thành ガ — nhai kẹo ガム (gam) mỏi cả hàm.",
+      "sosanh": "Dễ nhầm với カ (ka) khi quên dấu ゛.",
+      "commonWords": [
+        {
+          "word": "ガム",
+          "furigana": "ガム",
+          "meaningVi": "Kẹo cao su"
+        },
+        {
+          "word": "ガス",
+          "furigana": "ガス",
+          "meaningVi": "Ga, khí đốt"
+        },
+        {
+          "word": "ガラス",
+          "furigana": "ガラス",
+          "meaningVi": "Kính, thủy tinh"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-2",
+      "character": "ギ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "gi",
+      "hanViet": "",
+      "strokeCount": 5,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'ghi' như trong 'ghi chép' — KHÔNG đọc 'zi' như chữ 'gi' tiếng Việt.",
+      "meoNho": "キ (ki) như chiếc chìa khóa hai răng; thêm ゛ thành ギ — chìa khóa lên dây đàn ギター (ghi-ta).",
+      "sosanh": "Dễ nhầm với キ (ki). Nhớ romaji 'gi' đọc là 'ghi'.",
+      "commonWords": [
+        {
+          "word": "ギター",
+          "furigana": "ギター",
+          "meaningVi": "Đàn ghi-ta"
+        },
+        {
+          "word": "ギフト",
+          "furigana": "ギフト",
+          "meaningVi": "Quà tặng (gift)"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-3",
+      "character": "グ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "gu",
+      "hanViet": "",
+      "strokeCount": 4,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc gần 'gư', môi không chu tròn (như う).",
+      "meoNho": "ク (ku) như cái mỏ chim; thêm ゛ thành グ — chim bồ câu kêu 'gư gư'.",
+      "sosanh": "Gốc ク (2 nét) dễ nhầm với タ (ta, có thêm nét chéo ở giữa) và ケ (ke, nét ngang dài chìa sang phải).",
+      "commonWords": [
+        {
+          "word": "グラス",
+          "furigana": "グラス",
+          "meaningVi": "Cái ly thủy tinh (glass)"
+        },
+        {
+          "word": "グループ",
+          "furigana": "グループ",
+          "meaningVi": "Nhóm (group)"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-34",
+      "character": "ゲ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "ge",
+      "hanViet": "",
+      "strokeCount": 5,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'ghê' như trong 'ghê quá', âm 'g' bật gọn.",
+      "meoNho": "ケ (ke) như chữ K nghiêng; thêm hai giọt ゛ thành ゲ — chơi ゲーム (game) lâu đến 'ghê' cả tay.",
+      "sosanh": "Gốc ケ dễ nhầm với ク (ku) và タ (ta): ケ có nét ngang dài chìa hẳn sang phải.",
+      "commonWords": [
+        {
+          "word": "ゲーム",
+          "furigana": "ゲーム",
+          "meaningVi": "Trò chơi điện tử (game)"
+        },
+        {
+          "word": "ゲスト",
+          "furigana": "ゲスト",
+          "meaningVi": "Khách mời (guest)"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-4",
+      "character": "ゴ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "go",
+      "hanViet": "",
+      "strokeCount": 4,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc gần như 'gô' trong tiếng Việt, môi tròn.",
+      "meoNho": "コ (ko) là cái hộp mở một bên; thêm ゛ thành ゴ — hộp đựng gậy ゴルフ (gôn).",
+      "sosanh": "Gốc コ dễ nhầm với ユ (yu): ユ có nét ngang dưới dài chìa ra ngoài.",
+      "commonWords": [
+        {
+          "word": "ゴルフ",
+          "furigana": "ゴルフ",
+          "meaningVi": "Môn đánh gôn"
+        },
+        {
+          "word": "ゴム",
+          "furigana": "ゴム",
+          "meaningVi": "Cao su, dây thun"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-35",
+      "character": "ザ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "za",
+      "hanViet": "",
+      "strokeCount": 5,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'da' kiểu miền Bắc (âm 'z', có rung ở cổ họng), không phải 'đa'.",
+      "meoNho": "サ (sa) như cái cổng có hai cột; thêm ゛ thành ザ — đứng ở cổng ăn món tráng miệng デザート.",
+      "sosanh": "ザ 'za' khác ジャ 'ja': ザ đầu lưỡi sát lợi, ジャ mặt lưỡi chạm vòm. Gốc サ đừng nhầm với セ (se).",
+      "commonWords": [
+        {
+          "word": "デザート",
+          "furigana": "デザート",
+          "meaningVi": "Món tráng miệng (dessert)"
+        },
+        {
+          "word": "ピザ",
+          "furigana": "ピザ",
+          "meaningVi": "Bánh pizza"
+        },
+        {
+          "word": "デザイン",
+          "furigana": "デザイン",
+          "meaningVi": "Thiết kế (design)"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-5",
+      "character": "ジ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "ji",
+      "hanViet": "",
+      "strokeCount": 5,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc như 'j' trong 'jeans/jam': mặt lưỡi chạm vòm rồi bật ra. Người miền Bắc chú ý: KHÔNG đọc như 'gi/d' tiếng Việt (= z), vì như vậy thành 'zi'.",
+      "meoNho": "シ (shi) là khuôn mặt cười híp mắt; thêm ゛ thành ジ — cười 'ji ji' khi mặc quần ジーンズ mới.",
+      "sosanh": "Gốc là シ (shi: nét cuối hất từ dưới lên), không phải ツ (tsu: nét cuối kéo từ trên xuống). Âm 'ji' gần như luôn viết ジ, rất hiếm dùng ヂ.",
+      "commonWords": [
+        {
+          "word": "ジーンズ",
+          "furigana": "ジーンズ",
+          "meaningVi": "Quần jean"
+        },
+        {
+          "word": "ジム",
+          "furigana": "ジム",
+          "meaningVi": "Phòng tập thể hình (gym)"
+        },
+        {
+          "word": "ラジオ",
+          "furigana": "ラジオ",
+          "meaningVi": "Đài radio"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-6",
+      "character": "ズ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "zu",
+      "hanViet": "",
+      "strokeCount": 4,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'dư' kiểu miền Bắc (âm 'z'), môi không chu tròn.",
+      "meoNho": "ス (su) như người dang chân chạy; thêm ゛ thành ズ — chạy nhanh quá tụt cả quần ズボン.",
+      "sosanh": "Gốc ス dễ nhầm với ヌ (nu): ヌ có thêm một nét chéo cắt ngang ở giữa.",
+      "commonWords": [
+        {
+          "word": "チーズ",
+          "furigana": "チーズ",
+          "meaningVi": "Phô mai"
+        },
+        {
+          "word": "ズボン",
+          "furigana": "ズボン",
+          "meaningVi": "Quần dài"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-36",
+      "character": "ゼ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "ze",
+      "hanViet": "",
+      "strokeCount": 4,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'dê' kiểu miền Bắc (âm 'z').",
+      "meoNho": "セ (se) thêm hai giọt ゛ thành ゼ — số ゼロ: trống trơn, không còn gì!",
+      "sosanh": "ゼ 'ze' khác ジェ 'je' (bài này): ジェ đọc với mặt lưỡi chạm vòm như 'j' trong 'jet'.",
+      "commonWords": [
+        {
+          "word": "ゼロ",
+          "furigana": "ゼロ",
+          "meaningVi": "Số không (zero)"
+        },
+        {
+          "word": "プレゼント",
+          "furigana": "プレゼント",
+          "meaningVi": "Món quà (present)"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-37",
+      "character": "ゾ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "zo",
+      "hanViet": "",
+      "strokeCount": 4,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'dô' kiểu miền Bắc (âm 'z'), môi tròn.",
+      "meoNho": "ソ (so) như hai giọt mồ hôi rơi; thêm ゛ thành ゾ — gặp ゾンビ (zombie) sợ toát mồ hôi.",
+      "sosanh": "Gốc ソ dễ nhầm với ン (n): nét dài của ソ kéo từ TRÊN xuống, nét dài của ン hất từ DƯỚI lên.",
+      "commonWords": [
+        {
+          "word": "ゾンビ",
+          "furigana": "ゾンビ",
+          "meaningVi": "Thây ma (zombie)"
+        },
+        {
+          "word": "アマゾン",
+          "furigana": "アマゾン",
+          "meaningVi": "Amazon (sông, trang mua sắm)"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-38",
+      "character": "ダ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "da",
+      "hanViet": "",
+      "strokeCount": 5,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc như 'đa' trong tiếng Việt.",
+      "meoNho": "タ (ta) như cái cặp tài liệu; thêm ゛ thành ダ — bỏ cặp xuống để nhảy ダンス.",
+      "sosanh": "Gốc タ dễ nhầm với ク (ku) và ケ (ke): タ có thêm nét chéo nhỏ ở giữa.",
+      "commonWords": [
+        {
+          "word": "ダンス",
+          "furigana": "ダンス",
+          "meaningVi": "Nhảy, khiêu vũ (dance)"
+        },
+        {
+          "word": "サラダ",
+          "furigana": "サラダ",
+          "meaningVi": "Món salad"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-7",
+      "character": "デ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "de",
+      "hanViet": "",
+      "strokeCount": 5,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc như 'đê' trong tiếng Việt.",
+      "meoNho": "テ (te) như chiếc ăng-ten ti vi; thêm ゛ thành デ — lên デパート (trung tâm thương mại) mua ti vi mới.",
+      "sosanh": "Gốc テ dễ nhầm với チ (chi): テ có hai nét ngang song song ở trên, nét đầu của チ là nét phẩy xiên.",
+      "commonWords": [
+        {
+          "word": "デパート",
+          "furigana": "デパート",
+          "meaningVi": "Trung tâm thương mại"
+        },
+        {
+          "word": "デザート",
+          "furigana": "デザート",
+          "meaningVi": "Món tráng miệng"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-8",
+      "character": "ド",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "do",
+      "hanViet": "",
+      "strokeCount": 4,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc như 'đô' trong 'đô la', môi tròn.",
+      "meoNho": "ト (to) như cái then cài cửa; thêm ゛ thành ド — gõ cửa ドア 'đô đô'.",
+      "commonWords": [
+        {
+          "word": "ドア",
+          "furigana": "ドア",
+          "meaningVi": "Cánh cửa"
+        },
+        {
+          "word": "ドル",
+          "furigana": "ドル",
+          "meaningVi": "Đô la"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-9",
+      "character": "バ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "ba",
+      "hanViet": "",
+      "strokeCount": 4,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc giống hệt 'ba' trong tiếng Việt.",
+      "meoNho": "ハ (ha) như hai bánh xe nhìn nghiêng; thêm ゛ thành バ — xe buýt バス chạy 'ba' bánh.",
+      "sosanh": "バ (dấu ゛ hai gạch = 'b') khác パ (vòng tròn ゜ = 'p').",
+      "commonWords": [
+        {
+          "word": "バス",
+          "furigana": "バス",
+          "meaningVi": "Xe buýt"
+        },
+        {
+          "word": "バナナ",
+          "furigana": "バナナ",
+          "meaningVi": "Quả chuối"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-10",
+      "character": "ビ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "bi",
+      "hanViet": "",
+      "strokeCount": 4,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc như 'bi' trong 'viên bi'.",
+      "meoNho": "ヒ (hi) như cái thìa nằm ngửa; thêm ゛ thành ビ — dùng thìa gõ vào テレビ (ti vi).",
+      "sosanh": "ビ ('bi') khác ピ ('pi'). ビル (tòa nhà) và ビール (bia) chỉ khác nhau dấu ー.",
+      "commonWords": [
+        {
+          "word": "テレビ",
+          "furigana": "テレビ",
+          "meaningVi": "Ti vi"
+        },
+        {
+          "word": "ビル",
+          "furigana": "ビル",
+          "meaningVi": "Tòa nhà cao tầng"
+        },
+        {
+          "word": "ビール",
+          "furigana": "ビール",
+          "meaningVi": "Bia"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-39",
+      "character": "ブ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "bu",
+      "hanViet": "",
+      "strokeCount": 3,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc gần 'bư', môi không chu tròn (như ウ).",
+      "meoNho": "フ (fu) như lá cờ nhỏ; thêm hai giọt ゛ thành ブ — cắm cờ lên trang ウェブ của mình.",
+      "sosanh": "ブ (hai gạch ゛ = 'b') khác プ (vòng tròn ゜ = 'p'). Gốc フ đừng nhầm với ワ (wa): ワ có thêm nét dọc ngắn bên trái.",
+      "commonWords": [
+        {
+          "word": "ウェブ",
+          "furigana": "ウェブ",
+          "meaningVi": "Trang web"
+        },
+        {
+          "word": "ブーツ",
+          "furigana": "ブーツ",
+          "meaningVi": "Giày bốt, ủng (boots)"
+        },
+        {
+          "word": "ブログ",
+          "furigana": "ブログ",
+          "meaningVi": "Blog"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-11",
+      "character": "ベ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "be",
+      "hanViet": "",
+      "strokeCount": 3,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc như 'bê' trong 'con bê'.",
+      "meoNho": "ヘ (he) như ngọn đồi nhỏ; thêm ゛ thành ベ — chú bê đứng trên đồi ngắm ベトナム.",
+      "sosanh": "ベ katakana và べ hiragana gần như giống hệt nhau; nhìn cả từ để biết đang đọc bảng chữ nào.",
+      "commonWords": [
+        {
+          "word": "ベトナム",
+          "furigana": "ベトナム",
+          "meaningVi": "Việt Nam"
+        },
+        {
+          "word": "ベッド",
+          "furigana": "ベッド",
+          "meaningVi": "Cái giường"
+        },
+        {
+          "word": "キャベツ",
+          "furigana": "キャベツ",
+          "meaningVi": "Bắp cải"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-40",
+      "character": "ボ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "bo",
+      "hanViet": "",
+      "strokeCount": 6,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc như 'bô', môi tròn.",
+      "meoNho": "ホ (ho) như cái cây có hai rễ; thêm ゛ thành ボ — quả bóng ボール mắc trên ngọn cây.",
+      "sosanh": "ボ ('bo', hai gạch ゛) khác ポ ('po', vòng tròn ゜).",
+      "commonWords": [
+        {
+          "word": "ボール",
+          "furigana": "ボール",
+          "meaningVi": "Quả bóng (ball)"
+        },
+        {
+          "word": "ズボン",
+          "furigana": "ズボン",
+          "meaningVi": "Quần dài"
+        },
+        {
+          "word": "ボタン",
+          "furigana": "ボタン",
+          "meaningVi": "Cái nút, cúc áo"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-12",
+      "character": "パ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "pa",
+      "hanViet": "",
+      "strokeCount": 3,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'pa' như trong 'pa-pa', âm 'p' bật hơi nhẹ bằng hai môi.",
+      "meoNho": "ハ (ha) đội thêm vòng tròn ゜ như ổ bánh mì tròn — bánh mì là パン.",
+      "sosanh": "パ (vòng tròn ゜ = 'p') khác バ (hai gạch ゛ = 'b').",
+      "commonWords": [
+        {
+          "word": "パン",
+          "furigana": "パン",
+          "meaningVi": "Bánh mì"
+        },
+        {
+          "word": "パスポート",
+          "furigana": "パスポート",
+          "meaningVi": "Hộ chiếu"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-41",
+      "character": "ピ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "pi",
+      "hanViet": "",
+      "strokeCount": 3,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'pi', âm 'p' bật bằng hai môi.",
+      "meoNho": "ヒ (hi) như cái thìa nằm ngửa; đội thêm vòng tròn ゜ như chiếc bánh ピザ tròn.",
+      "sosanh": "ピ ('pi', vòng tròn ゜) khác ビ ('bi', hai gạch ゛).",
+      "commonWords": [
+        {
+          "word": "ピアノ",
+          "furigana": "ピアノ",
+          "meaningVi": "Đàn piano"
+        },
+        {
+          "word": "ピザ",
+          "furigana": "ピザ",
+          "meaningVi": "Bánh pizza"
+        },
+        {
+          "word": "フィリピン",
+          "furigana": "フィリピン",
+          "meaningVi": "Philippines"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-42",
+      "character": "プ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "pu",
+      "hanViet": "",
+      "strokeCount": 2,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc gần 'pư', 'p' bật bằng hai môi, môi không chu tròn.",
+      "meoNho": "フ (fu) đeo thêm chiếc phao tròn ゜ — nhảy xuống bể bơi プール.",
+      "sosanh": "プ ('pu', vòng tròn ゜) khác ブ ('bu', hai gạch ゛).",
+      "commonWords": [
+        {
+          "word": "プール",
+          "furigana": "プール",
+          "meaningVi": "Bể bơi (pool)"
+        },
+        {
+          "word": "プレゼント",
+          "furigana": "プレゼント",
+          "meaningVi": "Món quà (present)"
+        },
+        {
+          "word": "グループ",
+          "furigana": "グループ",
+          "meaningVi": "Nhóm (group)"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-13",
+      "character": "ペ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "pe",
+      "hanViet": "",
+      "strokeCount": 2,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc như 'pê' trong tiếng Việt.",
+      "meoNho": "ヘ như ngòi bút cắm xuống giấy; thêm vòng tròn ゜ như giọt mực — cây bút là ペン.",
+      "sosanh": "ペ ('pe', vòng tròn) khác ベ ('be', hai gạch).",
+      "commonWords": [
+        {
+          "word": "ペン",
+          "furigana": "ペン",
+          "meaningVi": "Cây bút"
+        },
+        {
+          "word": "ページ",
+          "furigana": "ページ",
+          "meaningVi": "Trang sách"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-14",
+      "character": "ポ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "po",
+      "hanViet": "",
+      "strokeCount": 5,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc như 'pô' trong tiếng Việt, môi tròn.",
+      "meoNho": "ホ (ho) như cây thánh giá có hai chân; treo thêm vòng tròn ゜ — cái túi ポケット treo trên cây.",
+      "sosanh": "ポ ('po', vòng tròn) khác ボ ('bo', hai gạch).",
+      "commonWords": [
+        {
+          "word": "ポスト",
+          "furigana": "ポスト",
+          "meaningVi": "Hòm thư"
+        },
+        {
+          "word": "ポケット",
+          "furigana": "ポケット",
+          "meaningVi": "Túi áo, túi quần"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-15",
+      "character": "キャ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "kya",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc liền một nhịp 'kya' — như 'kia' nói thật nhanh thành một tiếng.",
+      "meoNho": "キ + ャ nhỏ: chữ ャ bé xíu như chiếc lá cải non cuộn vào bắp キャベツ.",
+      "sosanh": "キャ (ャ viết nhỏ, 1 nhịp 'kya') khác キヤ (ヤ viết to, 2 nhịp 'ki-ya').",
+      "commonWords": [
+        {
+          "word": "キャベツ",
+          "furigana": "キャベツ",
+          "meaningVi": "Bắp cải"
+        },
+        {
+          "word": "キャンプ",
+          "furigana": "キャンプ",
+          "meaningVi": "Cắm trại"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-16",
+      "character": "シャ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "sha",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc một nhịp 'sha' (シ + ャ). Đầu lưỡi hạ xuống, mặt lưỡi nâng sát vòm miệng, xì hơi như 'sh' trong 'she' nhưng môi KHÔNG chu; gần 's' uốn lưỡi của tiếng Việt nhưng đừng cong lưỡi.",
+      "meoNho": "シ (mặt cười) + ャ nhỏ: mặc áo シャツ mới nên cười tươi.",
+      "sosanh": "Chữ gốc là シ (shi), đừng viết nhầm thành ツ (tsu): ツャ không có nghĩa gì.",
+      "commonWords": [
+        {
+          "word": "シャツ",
+          "furigana": "シャツ",
+          "meaningVi": "Áo sơ mi"
+        },
+        {
+          "word": "シャワー",
+          "furigana": "シャワー",
+          "meaningVi": "Vòi hoa sen, tắm vòi sen"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-17",
+      "character": "ジャ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "ja",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc một nhịp 'ja' như 'j' trong 'jeans/jam': mặt lưỡi chạm vòm rồi bật ra. Người miền Bắc chú ý: KHÔNG đọc như 'gi/d' tiếng Việt (= z), vì như vậy thành ザ.",
+      "meoNho": "ジ + ャ nhỏ: phết mứt ジャム lên bánh mì パン.",
+      "sosanh": "ジャ (1 nhịp) khác ジヤ (2 nhịp 'ji-ya').",
+      "commonWords": [
+        {
+          "word": "ジャム",
+          "furigana": "ジャム",
+          "meaningVi": "Mứt"
+        },
+        {
+          "word": "ジャケット",
+          "furigana": "ジャケット",
+          "meaningVi": "Áo khoác"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-18",
+      "character": "ジュ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "ju",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc một nhịp 'ju', môi tròn; trong ジュース được kéo dài thành 'juu'.",
+      "meoNho": "ジ + ュ nhỏ: ống hút cắm vào ly ジュース.",
+      "sosanh": "ジュ (ュ nhỏ) khác ジユ (ユ to, 2 nhịp).",
+      "commonWords": [
+        {
+          "word": "ジュース",
+          "furigana": "ジュース",
+          "meaningVi": "Nước ép, nước ngọt"
+        },
+        {
+          "word": "ジュニア",
+          "furigana": "ジュニア",
+          "meaningVi": "Thiếu niên, hạng trẻ (junior)"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-19",
+      "character": "チョ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "cho",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc một nhịp 'cho', gần 'cho' trong tiếng Việt nhưng lưỡi mềm hơn.",
+      "meoNho": "チ + ョ nhỏ: thanh チョコレート bẻ ra thành từng miếng nhỏ.",
+      "sosanh": "Gốc チ (chi) dễ nhầm với テ (te): nét đầu của チ là nét phẩy xiên.",
+      "commonWords": [
+        {
+          "word": "チョコレート",
+          "furigana": "チョコレート",
+          "meaningVi": "Sô-cô-la"
+        },
+        {
+          "word": "チョーク",
+          "furigana": "チョーク",
+          "meaningVi": "Phấn viết bảng"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-20",
+      "character": "ニュ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "nyu",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc một nhịp 'nyu' — như 'nhiu' nói nhanh, gần 'nhu' của tiếng Việt.",
+      "meoNho": "ニ (hai gạch) + ュ nhỏ: hai dòng chữ chạy trên màn hình ニュース.",
+      "sosanh": "ニュ (1 nhịp) khác ニユ (2 nhịp 'ni-yu'). Chữ ニ trông giống hệt chữ Hán 二 (số 2).",
+      "commonWords": [
+        {
+          "word": "ニュース",
+          "furigana": "ニュース",
+          "meaningVi": "Tin tức, thời sự"
+        },
+        {
+          "word": "メニュー",
+          "furigana": "メニュー",
+          "meaningVi": "Thực đơn"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-21",
+      "character": "ファ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "fa",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc gần 'pha' tiếng Việt nhưng thổi hơi qua hai môi, KHÔNG cắn môi dưới.",
+      "meoNho": "フ (fu) như cái móc treo; móc thêm ァ nhỏ thành ファ — ngả lưng trên ghế ソファ.",
+      "sosanh": "ファ (ァ nhỏ, 1 nhịp 'fa') khác フア (ア to, 2 nhịp 'fu-a').",
+      "commonWords": [
+        {
+          "word": "ソファ",
+          "furigana": "ソファ",
+          "meaningVi": "Ghế sofa"
+        },
+        {
+          "word": "ファン",
+          "furigana": "ファン",
+          "meaningVi": "Người hâm mộ (fan)"
+        },
+        {
+          "word": "ファイル",
+          "furigana": "ファイル",
+          "meaningVi": "Tập hồ sơ, tệp tin"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-22",
+      "character": "フィ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "fi",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc một nhịp 'phi', thổi hơi qua hai môi.",
+      "meoNho": "フ + ィ nhỏ: cuộn フィルム (phim) quay như cánh quạt thổi 'phi phi'.",
+      "sosanh": "フィ (1 nhịp) khác フイ (2 nhịp 'fu-i').",
+      "commonWords": [
+        {
+          "word": "フィルム",
+          "furigana": "フィルム",
+          "meaningVi": "Cuộn phim"
+        },
+        {
+          "word": "フィリピン",
+          "furigana": "フィリピン",
+          "meaningVi": "Philippines"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-23",
+      "character": "フェ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "fe",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc một nhịp 'phê', thổi hơi qua hai môi.",
+      "meoNho": "フ + ェ nhỏ: ngồi カフェ uống cà phê thấy 'phê' quá!",
+      "sosanh": "フェ (ェ nhỏ) khác フエ (エ to, 2 nhịp).",
+      "commonWords": [
+        {
+          "word": "カフェ",
+          "furigana": "カフェ",
+          "meaningVi": "Quán cà phê"
+        },
+        {
+          "word": "フェリー",
+          "furigana": "フェリー",
+          "meaningVi": "Phà, tàu chở khách"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-24",
+      "character": "フォ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "fo",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc một nhịp 'phô', môi tròn, thổi hơi qua hai môi.",
+      "meoNho": "フ + ォ nhỏ, thêm ー thành フォー — chính là món 'phở' của Việt Nam!",
+      "sosanh": "フォ (ォ nhỏ) khác フオ (オ to, 2 nhịp).",
+      "commonWords": [
+        {
+          "word": "フォーク",
+          "furigana": "フォーク",
+          "meaningVi": "Cái nĩa (dĩa)"
+        },
+        {
+          "word": "フォー",
+          "furigana": "フォー",
+          "meaningVi": "Phở"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-25",
+      "character": "ティ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "ti",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'ti' như trong 'ti vi' — khác チ đọc 'chi'.",
+      "meoNho": "テ + ィ nhỏ: cắm thêm cây nến nhỏ ィ lên bánh cho bữa パーティー.",
+      "sosanh": "Âm 'ti' viết ティ; チ là 'chi'; テイ (イ to) là 2 nhịp 'te-i'.",
+      "commonWords": [
+        {
+          "word": "パーティー",
+          "furigana": "パーティー",
+          "meaningVi": "Bữa tiệc"
+        },
+        {
+          "word": "ティッシュ",
+          "furigana": "ティッシュ",
+          "meaningVi": "Khăn giấy"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-26",
+      "character": "ディ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "di",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'đi' như trong tiếng Việt — khác ジ đọc 'ji'.",
+      "meoNho": "デ + ィ nhỏ: 'đi' ăn bữa tối ディナー.",
+      "sosanh": "Âm 'di' viết ディ; ジ là 'ji'; デイ (イ to) là 2 nhịp 'de-i'.",
+      "commonWords": [
+        {
+          "word": "ディナー",
+          "furigana": "ディナー",
+          "meaningVi": "Bữa tối (thường ở nhà hàng)"
+        },
+        {
+          "word": "キャンディー",
+          "furigana": "キャンディー",
+          "meaningVi": "Kẹo"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-27",
+      "character": "ウィ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "wi",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc một nhịp 'uy' như trong 'uy tín'.",
+      "meoNho": "ウ + ィ nhỏ: bí ngô ハロウィン nháy mắt 'uy'.",
+      "sosanh": "Gốc ウ (u, 3 nét) dễ nhầm với ワ (wa, 2 nét, không có chấm trên đầu).",
+      "commonWords": [
+        {
+          "word": "ハロウィン",
+          "furigana": "ハロウィン",
+          "meaningVi": "Lễ Halloween"
+        },
+        {
+          "word": "ウィンドウ",
+          "furigana": "ウィンドウ",
+          "meaningVi": "Cửa sổ (trên máy tính)"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-28",
+      "character": "ウェ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "we",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc một nhịp 'uê' như trong 'thuê' bỏ 'th'.",
+      "meoNho": "ウ + ェ nhỏ: lướt ウェブ (web) xem ảnh đám cưới ウェディング.",
+      "sosanh": "ウェ (ェ nhỏ, 1 nhịp) khác ウエ (エ to, 2 nhịp 'u-e').",
+      "commonWords": [
+        {
+          "word": "ウェブ",
+          "furigana": "ウェブ",
+          "meaningVi": "Trang web"
+        },
+        {
+          "word": "ウェディング",
+          "furigana": "ウェディング",
+          "meaningVi": "Lễ cưới"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-29",
+      "character": "ウォ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "wo",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc một nhịp 'wô': môi tròn lướt nhanh sang 'ô' (gần 'quô' bỏ 'q'), không kết thúc bằng 'ơ' như 'uô' trong 'muốn'.",
+      "meoNho": "ウ + ォ nhỏ: đi bộ ウォーキング xong uống chai ミネラルウォーター.",
+      "sosanh": "ウォ (dùng cho từ mượn) khác ヲ (chỉ làm trợ từ, hầu như không dùng trong từ mượn).",
+      "commonWords": [
+        {
+          "word": "ウォーキング",
+          "furigana": "ウォーキング",
+          "meaningVi": "Đi bộ thể dục"
+        },
+        {
+          "word": "ミネラルウォーター",
+          "furigana": "ミネラルウォーター",
+          "meaningVi": "Nước khoáng"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-30",
+      "character": "ヴ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "vu",
+      "hanViet": "",
+      "strokeCount": 5,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Dùng cho âm 'v' của tiếng nước ngoài; nhưng người Nhật thường đọc gần như 'bu' (ブ).",
+      "meoNho": "ウ (u) thêm hai gạch ゛ như hai hàm răng cắn môi dưới — cố bật ra âm 'v'.",
+      "sosanh": "Nhiều từ có hai cách viết: ヴァイオリン = バイオリン. Khi đọc, cứ đọc gần như hàng バ.",
+      "commonWords": [
+        {
+          "word": "ヴァイオリン",
+          "furigana": "ヴァイオリン",
+          "meaningVi": "Đàn vi-ô-lông (cũng viết バイオリン)"
+        },
+        {
+          "word": "ヴィーナス",
+          "furigana": "ヴィーナス",
+          "meaningVi": "Thần Vệ Nữ (Venus)"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-31",
+      "character": "シェ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "she",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc một nhịp 'shê' (シ + ェ): mặt lưỡi nâng sát vòm như シ, môi không chu, rồi mở sang 'ê'.",
+      "meoNho": "シ + ェ nhỏ: đầu bếp シェフ cười tươi (シ) khi món ăn ngon.",
+      "sosanh": "シェ (ェ nhỏ, 1 nhịp) khác シエ (2 nhịp 'shi-e').",
+      "commonWords": [
+        {
+          "word": "シェフ",
+          "furigana": "シェフ",
+          "meaningVi": "Đầu bếp (chef)"
+        },
+        {
+          "word": "シェア",
+          "furigana": "シェア",
+          "meaningVi": "Chia sẻ (share)"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-32",
+      "character": "ジェ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "je",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc một nhịp 'jê', đầu lưỡi chạm nhẹ lợi trên.",
+      "meoNho": "ジ + ェ nhỏ: máy bay phản lực ジェット lao vút.",
+      "sosanh": "ジェ (1 nhịp) khác ジエ (2 nhịp 'ji-e').",
+      "commonWords": [
+        {
+          "word": "ジェット",
+          "furigana": "ジェット",
+          "meaningVi": "Máy bay phản lực (jet)"
+        },
+        {
+          "word": "ジェスチャー",
+          "furigana": "ジェスチャー",
+          "meaningVi": "Cử chỉ, điệu bộ"
+        }
+      ]
+    },
+    {
+      "id": "kana-9-33",
+      "character": "チェ",
+      "loai": "kana",
+      "bangChu": "katakana",
+      "romaji": "che",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc một nhịp 'chê'.",
+      "meoNho": "チ + ェ nhỏ: kiểm tra チェック bài tập, không có gì để 'chê'!",
+      "sosanh": "チェ (1 nhịp) khác チエ (2 nhịp 'chi-e').",
+      "commonWords": [
+        {
+          "word": "チェック",
+          "furigana": "チェック",
+          "meaningVi": "Kiểm tra (check)"
+        },
+        {
+          "word": "チェス",
+          "furigana": "チェス",
+          "meaningVi": "Cờ vua"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "kana-l9-s1",
+      "slideType": "grammar",
+      "title": "1. Âm đục, bán đục, âm ghép: y hệt hiragana",
+      "grammarFormula": "カ + ゛ → ガ ・ ハ + ゜ → パ ・ キ + ャ(nhỏ) → キャ",
+      "explanation": "Tin vui: luật của katakana giống hệt hiragana. Thêm dấu ゛ thì âm 'đục' đi (k→g, s→z, t→d, h→b), thêm vòng tròn ゜ vào hàng ハ thì thành 'p' — đủ 25 chữ ガ…ポ theo đúng bảng hiragana ở bài 4 (ヂ, ヅ rất hiếm). Ghép ャ ュ ョ viết nhỏ sau chữ hàng i (キ, シ, チ, ニ...) để đọc liền một nhịp. ッ viết nhỏ cũng là âm ngắt giống っ.",
+      "teacherTips": "Cho học viên đọc cặp バス / パス để nghe rõ 'b' và 'p'. Nhắc kỹ: ギ đọc 'ghi', không đọc 'zi' như chữ 'gi' tiếng Việt.",
+      "culturalNotes": "Phần lớn từ mượn tiếng nước ngoài trong tiếng Nhật được viết bằng katakana: テレビ (television), バス (bus), パン (pão — tiếng Bồ Đào Nha).",
+      "examples": [
+        {
+          "id": "ex-kana-l9-s1-1",
+          "tokens": [
+            {
+              "id": "t-kana-l9s1-1",
+              "text": "テレ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l9s1-2",
+              "text": "ビ",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "テレビ — ti vi (television)"
+        },
+        {
+          "id": "ex-kana-l9-s1-2",
+          "tokens": [
+            {
+              "id": "t-kana-l9s1-3",
+              "text": "パ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l9s1-4",
+              "text": "ン",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "パン — bánh mì"
+        },
+        {
+          "id": "ex-kana-l9-s1-3",
+          "tokens": [
+            {
+              "id": "t-kana-l9s1-5",
+              "text": "キャ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l9s1-6",
+              "text": "ベ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l9s1-7",
+              "text": "ツ",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "キャベツ — bắp cải (cabbage)"
+        }
+      ]
+    },
+    {
+      "slideId": "kana-l9-s2",
+      "slideType": "grammar",
+      "title": "2. Dấu ー: kéo dài thêm một nhịp",
+      "grammarFormula": "コ + ー → コー (ko-o, 2 nhịp)",
+      "explanation": "Trong katakana, trường âm hầu như luôn viết bằng dấu gạch ー thay vì thêm あ い う え お. Dấu ー kéo dài nguyên âm đứng ngay trước nó thêm đúng một nhịp. Viết ngang thì ー nằm ngang, viết dọc thì ー thành gạch dọc. Thiếu ー là đổi nghĩa: ビル (tòa nhà) khác ビール (bia)!",
+      "teacherTips": "Vỗ tay đếm nhịp cùng học viên: デ-パ-ー-ト là 4 nhịp, コ-ー-ヒ-ー cũng 4 nhịp.",
+      "culturalNotes": "Đuôi '-er', '-ar', '-y' của tiếng Anh thường biến thành ー: party → パーティー, computer → コンピューター.",
+      "examples": [
+        {
+          "id": "ex-kana-l9-s2-1",
+          "tokens": [
+            {
+              "id": "t-kana-l9s2-1",
+              "text": "コー",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l9s2-2",
+              "text": "ヒー",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "コーヒー — cà phê (4 nhịp)"
+        },
+        {
+          "id": "ex-kana-l9-s2-2",
+          "tokens": [
+            {
+              "id": "t-kana-l9s2-3",
+              "text": "デ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l9s2-4",
+              "text": "パー",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l9s2-5",
+              "text": "ト",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "デパート — trung tâm thương mại (4 nhịp)"
+        },
+        {
+          "id": "ex-kana-l9-s2-3",
+          "tokens": [
+            {
+              "id": "t-kana-l9s2-6",
+              "text": "ビル",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l9s2-7",
+              "text": "、",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l9s2-8",
+              "text": "ビール",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "ビル (tòa nhà) — ビール (bia): chỉ khác một dấu ー"
+        }
+      ]
+    },
+    {
+      "slideId": "kana-l9-s3",
+      "slideType": "grammar",
+      "title": "3. Âm mở rộng: nguyên âm nhỏ ァ ィ ゥ ェ ォ",
+      "grammarFormula": "フ + ァ(nhỏ) → ファ ・ テ + ィ(nhỏ) → ティ ・ ウ + ェ(nhỏ) → ウェ",
+      "explanation": "Tiếng Nhật gốc không có các âm 'fa', 'ti', 'di', 'we'..., nên khi phiên từ nước ngoài, người Nhật viết thêm một nguyên âm NHỎ ァ ィ ゥ ェ ォ sau chữ katakana. Hai chữ đọc liền thành MỘT nhịp: ファ = 'fa', ティ = 'ti', ディ = 'di', ウェ = 'we'. Nhớ: チ đọc 'chi', muốn ra 'ti' phải viết ティ.",
+      "teacherTips": "So sánh chữ to và chữ nhỏ: フア là 2 nhịp 'fu-a', còn ファ là 1 nhịp 'fa'. Cho học viên đọc to hai cặp テイ / ティ.",
+      "culturalNotes": "Món phở ở Nhật viết là フォー — nhiều quán ăn Việt Nam ở Tokyo treo biển chữ này.",
+      "examples": [
+        {
+          "id": "ex-kana-l9-s3-1",
+          "tokens": [
+            {
+              "id": "t-kana-l9s3-1",
+              "text": "フォ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l9s3-2",
+              "text": "ー",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "フォー — phở"
+        },
+        {
+          "id": "ex-kana-l9-s3-2",
+          "tokens": [
+            {
+              "id": "t-kana-l9s3-3",
+              "text": "カ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l9s3-4",
+              "text": "フェ",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "カフェ — quán cà phê"
+        },
+        {
+          "id": "ex-kana-l9-s3-3",
+          "tokens": [
+            {
+              "id": "t-kana-l9s3-5",
+              "text": "パー",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l9s3-6",
+              "text": "ティ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l9s3-7",
+              "text": "ー",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "パーティー — bữa tiệc"
+        }
+      ]
+    },
+    {
+      "slideId": "kana-l9-s4",
+      "slideType": "grammar",
+      "title": "4. Phiên tên riêng Việt Nam sang katakana",
+      "grammarFormula": "Tên Việt → nghe ÂM ĐỌC → ghép katakana gần nhất (+ ー, ン)",
+      "explanation": "Tên người và địa danh nước ngoài đều viết bằng katakana theo cách ĐỌC chứ không theo chữ viết. Tiếng Nhật không có dấu thanh và không có phụ âm cuối (trừ ン và ッ), nên tên Việt được 'làm tròn': Nguyễn → グエン, Hà Nội → ハノイ, Hồ Chí Minh → ホーチミン. Các phần họ – tên đệm – tên ngăn cách bằng ・ (グエン・ヴァン・アン).",
+      "teacherTips": "Cho từng học viên thử viết tên mình rồi Sensei sửa. Âm cuối '-nh', '-ng' thường thành ン: Linh → リン. Phụ âm cuối -c/-t thường thành ック/ット: Phúc → フック.",
+      "culturalNotes": "Trên giấy tờ ở Nhật, người Việt thường ghi họ tên bằng chữ Latin không dấu kèm katakana, ví dụ NGUYEN VAN AN — グエン・ヴァン・アン (hoặc グエン・バン・アン).",
+      "examples": [
+        {
+          "id": "ex-kana-l9-s4-1",
+          "tokens": [
+            {
+              "id": "t-kana-l9s4-1",
+              "text": "グ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l9s4-2",
+              "text": "エン",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "グエン — họ Nguyễn"
+        },
+        {
+          "id": "ex-kana-l9-s4-2",
+          "tokens": [
+            {
+              "id": "t-kana-l9s4-3",
+              "text": "ハ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l9s4-4",
+              "text": "ノイ",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "ハノイ — Hà Nội"
+        },
+        {
+          "id": "ex-kana-l9-s4-3",
+          "tokens": [
+            {
+              "id": "t-kana-l9s4-5",
+              "text": "ホー",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l9s4-6",
+              "text": "チ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l9s4-7",
+              "text": "ミン",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "ホーチミン — (thành phố) Hồ Chí Minh"
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-kana-9-1",
+      "speaker": "グエン (Nguyễn)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l9-1a",
+          "text": "すみません",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-1b",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-1c",
+          "text": "メニュー",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l9-1d",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-1e",
+          "text": "おねがいします",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-1f",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Xin lỗi. Cho tôi xem thực đơn.",
+      "emotion": "chao"
+    },
+    {
+      "id": "dia-kana-9-2",
+      "speaker": "てんいん (Nhân viên)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l9-2a",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-2b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-2c",
+          "text": "どうぞ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-2d",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng, xin mời.",
+      "emotion": "vui"
+    },
+    {
+      "id": "dia-kana-9-3",
+      "speaker": "グエン (Nguyễn)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l9-3a",
+          "text": "えっと",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-3b",
+          "text": "…",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-3c",
+          "text": "フォー",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l9-3d",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-3e",
+          "text": "ありますか",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-3f",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ừm... quán có phở không ạ?",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "dia-kana-9-4",
+      "speaker": "てんいん (Nhân viên)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l9-4a",
+          "text": "すみません",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-4b",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-4c",
+          "text": "フォー",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l9-4d",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-4e",
+          "text": "ありません",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-4f",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Xin lỗi, quán không có phở ạ.",
+      "emotion": "buon"
+    },
+    {
+      "id": "dia-kana-9-5",
+      "speaker": "グエン (Nguyễn)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l9-5a",
+          "text": "じゃ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-5b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-5c",
+          "text": "コーヒー",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l9-5d",
+          "text": "と",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-5e",
+          "text": "チョコレートケーキ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l9-5f",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-5g",
+          "text": "おねがいします",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-5h",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vậy cho tôi cà phê và bánh sô-cô-la.",
+      "emotion": "vui"
+    },
+    {
+      "id": "dia-kana-9-6",
+      "speaker": "てんいん (Nhân viên)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l9-6a",
+          "text": "ホット",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-6b",
+          "text": "ですか",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-6c",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-6d",
+          "text": "アイス",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-6e",
+          "text": "ですか",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-6f",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Anh muốn uống nóng hay đá ạ?",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "dia-kana-9-7",
+      "speaker": "グエン (Nguyễn)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l9-7a",
+          "text": "アイス",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-7b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-7c",
+          "text": "おねがいします",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-7d",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Cho tôi đá nhé.",
+      "emotion": "vui"
+    },
+    {
+      "id": "dia-kana-9-8",
+      "speaker": "てんいん (Nhân viên)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l9-8a",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-8b",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-8c",
+          "text": "アイスコーヒー",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l9-8d",
+          "text": "と",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-8e",
+          "text": "チョコレートケーキ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l9-8f",
+          "text": "ですね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l9-8g",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng. Một cà phê đá và một bánh sô-cô-la, đúng không ạ?",
+      "emotion": "cui_chao"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-kana-9-1",
+      "question": "Chữ ファ đọc là gì?",
+      "options": [
+        "fu-a",
+        "fa",
+        "ha",
+        "pa"
+      ],
+      "correctIndex": 1,
+      "explanation": "ァ viết nhỏ ghép với フ thành một nhịp 'fa'. Chỉ khi ア viết to (フア) mới đọc hai nhịp 'fu-a'.",
+      "hint": "Chữ nhỏ = đọc liền một nhịp."
+    },
+    {
+      "id": "ex-q-kana-9-2",
+      "question": "Âm 'ti' (như trong 'party') viết bằng katakana là chữ nào?",
+      "options": [
+        "チ",
+        "テイ",
+        "ティ",
+        "ツィ"
+      ],
+      "correctIndex": 2,
+      "explanation": "チ đọc 'chi'. Âm 'ti' không có sẵn nên ghép テ + ィ nhỏ = ティ. テイ (イ viết to) là hai nhịp 'te-i'.",
+      "hint": "Tìm chữ có nguyên âm viết nhỏ."
+    },
+    {
+      "id": "ex-q-kana-9-3",
+      "question": "Từ 'áo sơ mi' (shatsu) viết đúng là?",
+      "options": [
+        "シャツ",
+        "ツャツ",
+        "シヤツ",
+        "シャソ"
+      ],
+      "correctIndex": 0,
+      "explanation": "'sha' = シ (shi, nét cuối hất từ dưới lên) + ャ nhỏ. ツ là 'tsu'; ヤ viết to thì đọc riêng 'ya'; ソ là 'so', không phải 'tsu'.",
+      "hint": "Phân biệt シ/ツ và ツ/ソ."
+    },
+    {
+      "id": "ex-q-kana-9-4",
+      "question": "Từ テレビ đọc là gì?",
+      "options": [
+        "tenebi",
+        "terepi",
+        "tarebi",
+        "terebi"
+      ],
+      "correctIndex": 3,
+      "explanation": "テ = te, レ = re, ビ = bi (ヒ + ゛). Dấu ゛ cho âm 'b'; vòng tròn ゜ mới là 'p' (ピ).",
+      "hint": "Dấu hai gạch hay vòng tròn?"
+    },
+    {
+      "id": "ex-q-kana-9-5",
+      "question": "フォーク nghĩa là gì?",
+      "options": [
+        "Cái thìa",
+        "Cái nĩa (dĩa)",
+        "Đôi đũa",
+        "Con dao"
+      ],
+      "correctIndex": 1,
+      "explanation": "フォーク phiên từ tiếng Anh 'fork' = cái nĩa. Thìa là スプーン, dao là ナイフ.",
+      "hint": "Đọc to lên: fo-o-ku."
+    },
+    {
+      "id": "ex-q-kana-9-6",
+      "question": "ビール và ビル khác nhau thế nào?",
+      "options": [
+        "ビール là 'bia', ビル là 'tòa nhà'",
+        "Hai từ cùng nghĩa, chỉ khác cách viết",
+        "ビール là 'tòa nhà', ビル là 'bia'",
+        "ビール là 'viên bi', ビル là 'bia'"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dấu ー kéo dài thêm một nhịp và làm đổi nghĩa: ビール (bi-i-ru, 3 nhịp) = bia; ビル (bi-ru, 2 nhịp) = tòa nhà (building).",
+      "hint": "Đếm số nhịp của từng từ."
+    },
+    {
+      "id": "ex-q-kana-9-7",
+      "question": "'Cây bút' (pen) viết bằng katakana là?",
+      "options": [
+        "ベン",
+        "ヘン",
+        "ペン",
+        "ペソ"
+      ],
+      "correctIndex": 2,
+      "explanation": "Âm 'p' dùng vòng tròn ゜: ペ. ベ (hai gạch) là 'be', ヘ là 'he'. Chữ cuối là ン (nét cuối hất từ dưới lên), không phải ソ (nét cuối kéo từ trên xuống).",
+      "hint": "Vòng tròn ゜ = 'p'; để ý ン/ソ."
+    },
+    {
+      "id": "ex-q-kana-9-8",
+      "question": "'Hà Nội' viết bằng katakana là?",
+      "options": [
+        "ハヌイ",
+        "ハナイ",
+        "ハノーイ",
+        "ハノイ"
+      ],
+      "correctIndex": 3,
+      "explanation": "Hà → ハ, Nội → ノイ. Tiếng Nhật không có dấu thanh, và tên này không kéo dài âm nào nên viết ハノイ.",
+      "hint": "Phiên theo âm đọc: ha-no-i."
+    },
+    {
+      "id": "ex-q-kana-9-9",
+      "question": "ヴ thường được người Nhật đọc gần giống chữ nào?",
+      "options": [
+        "ブ (bu)",
+        "フ (fu)",
+        "ウ (u)",
+        "ズ (zu)"
+      ],
+      "correctIndex": 0,
+      "explanation": "ヴ = ウ + ゛, dùng cho âm 'v' của tiếng nước ngoài. Tiếng Nhật không có âm 'v' thật nên thường đọc gần 'bu'; nhiều từ có hai cách viết như ヴァイオリン = バイオリン.",
+      "hint": "Nghĩ đến từ バイオリン."
+    },
+    {
+      "id": "ex-q-kana-9-10",
+      "question": "チョコレート có mấy nhịp?",
+      "options": [
+        "4 nhịp",
+        "5 nhịp",
+        "6 nhịp",
+        "3 nhịp"
+      ],
+      "correctIndex": 1,
+      "explanation": "チョ (ョ viết nhỏ) chỉ tính một nhịp, còn ー tính một nhịp: チョ-コ-レ-ー-ト = 5 nhịp.",
+      "hint": "Chữ nhỏ ャュョ không thêm nhịp, dấu ー thì có."
+    }
+  ]
+}

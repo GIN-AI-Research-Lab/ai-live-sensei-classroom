@@ -1,0 +1,1803 @@
+{
+  "level": "KANA",
+  "lessonNumber": 5,
+  "title": "Bài 5: Âm ghép きゃ・しゃ・ちゃ (ゃ ゅ ょ)",
+  "description": "Ghép chữ cột い với ゃ ゅ ょ viết nhỏ để tạo 33 âm ghép như きゃ, しゃ, りょ. Tập đọc liền một nhịp và phân biệt chữ to với chữ nhỏ: びよういん hay びょういん.",
+  "vocabList": [
+    {
+      "id": "voc-kana-5-1",
+      "word": "おちゃ",
+      "kanji": "お茶",
+      "furigana": "おちゃ",
+      "romaji": "ocha",
+      "wordType": "noun",
+      "meaningVi": "Trà",
+      "accentNote": "Đọc bằng: お thấp, ちゃ cao. 2 nhịp: お・ちゃ.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-5-2",
+      "word": "でんしゃ",
+      "kanji": "電車",
+      "furigana": "でんしゃ",
+      "romaji": "densha",
+      "wordType": "noun",
+      "meaningVi": "Tàu điện",
+      "accentNote": "Đọc bằng; 3 nhịp: で・ん・しゃ.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-5-3",
+      "word": "しゃしん",
+      "kanji": "写真",
+      "furigana": "しゃしん",
+      "romaji": "shashin",
+      "wordType": "noun",
+      "meaningVi": "Tấm ảnh",
+      "accentNote": "Đọc bằng; 3 nhịp: しゃ・し・ん.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-5-4",
+      "word": "いしゃ",
+      "kanji": "医者",
+      "furigana": "いしゃ",
+      "romaji": "isha",
+      "wordType": "noun",
+      "meaningVi": "Bác sĩ",
+      "accentNote": "Đọc bằng; 2 nhịp: い・しゃ. Đừng đọc thành いしや.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-5-5",
+      "word": "きんぎょ",
+      "kanji": "金魚",
+      "furigana": "きんぎょ",
+      "romaji": "kingyo",
+      "wordType": "noun",
+      "meaningVi": "Cá vàng",
+      "accentNote": "Trọng âm đầu: KI cao, các nhịp sau thấp.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-5-6",
+      "word": "ぎゅうにゅう",
+      "kanji": "牛乳",
+      "furigana": "ぎゅうにゅう",
+      "romaji": "gyuunyuu",
+      "wordType": "noun",
+      "meaningVi": "Sữa bò",
+      "accentNote": "Đọc bằng; 4 nhịp ぎゅ・う・にゅ・う = 'gyuu-nyuu': mỗi う chỉ kéo dài 'u' đứng trước, không bật riêng.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-5-7",
+      "word": "びょういん",
+      "kanji": "病院",
+      "furigana": "びょういん",
+      "romaji": "byouin",
+      "wordType": "noun",
+      "meaningVi": "Bệnh viện",
+      "accentNote": "Đọc bằng; 4 nhịp びょ・う・い・ん = 'byôô-in': う chỉ kéo dài 'ô'. Đừng lẫn với びよういん (tiệm làm tóc).",
+      "emotion": "buon"
+    },
+    {
+      "id": "voc-kana-5-8",
+      "word": "りょこう",
+      "kanji": "旅行",
+      "furigana": "りょこう",
+      "romaji": "ryokou",
+      "wordType": "noun",
+      "meaningVi": "Du lịch, chuyến đi",
+      "accentNote": "Đọc bằng; 3 nhịp りょ・こ・う = 'ryo-kôô': う sau こ chỉ kéo dài 'ô', không đọc 'kô-u'.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-5-9",
+      "word": "りょうり",
+      "kanji": "料理",
+      "furigana": "りょうり",
+      "romaji": "ryouri",
+      "wordType": "noun",
+      "meaningVi": "Món ăn; việc nấu ăn",
+      "accentNote": "Trọng âm đầu: RYO cao, các nhịp sau thấp. 3 nhịp りょ・う・り = 'ryôô-ri'.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-5-10",
+      "word": "としょかん",
+      "kanji": "図書館",
+      "furigana": "としょかん",
+      "romaji": "toshokan",
+      "wordType": "noun",
+      "meaningVi": "Thư viện",
+      "accentNote": "Trọng âm ở nhịp 2: to thấp, SHO cao, rồi hạ.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-5-11",
+      "word": "じゃがいも",
+      "kanji": "じゃが芋",
+      "furigana": "じゃがいも",
+      "romaji": "jagaimo",
+      "wordType": "noun",
+      "meaningVi": "Khoai tây",
+      "accentNote": "Đọc bằng; 4 nhịp: じゃ・が・い・も.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-5-12",
+      "word": "おもちゃ",
+      "kanji": "おもちゃ",
+      "furigana": "おもちゃ",
+      "romaji": "omocha",
+      "wordType": "noun",
+      "meaningVi": "Đồ chơi",
+      "accentNote": "Trọng âm ở nhịp 2: o thấp, MO cao, cha thấp.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-5-13",
+      "word": "ひゃく",
+      "kanji": "百",
+      "furigana": "ひゃく",
+      "romaji": "hyaku",
+      "wordType": "noun",
+      "meaningVi": "Một trăm (100)",
+      "accentNote": "Cao ở nhịp cuối: hya thấp, KU cao.",
+      "emotion": "ngac_nhien"
+    },
+    {
+      "id": "voc-kana-5-14",
+      "word": "きょう",
+      "kanji": "今日",
+      "furigana": "きょう",
+      "romaji": "kyou",
+      "wordType": "noun",
+      "meaningVi": "Hôm nay",
+      "accentNote": "Trọng âm đầu: KYO cao, う thấp. 2 nhịp きょ・う = 'kyôô' (う chỉ kéo dài, không đọc 'kyô-u').",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-5-15",
+      "word": "しゅくだい",
+      "kanji": "宿題",
+      "furigana": "しゅくだい",
+      "romaji": "shukudai",
+      "wordType": "noun",
+      "meaningVi": "Bài tập về nhà",
+      "accentNote": "Đọc bằng; 4 nhịp: しゅ・く・だ・い.",
+      "emotion": "that_vong"
+    },
+    {
+      "id": "voc-kana-5-16",
+      "word": "ぎょうざ",
+      "kanji": "餃子",
+      "furigana": "ぎょうざ",
+      "romaji": "gyouza",
+      "wordType": "noun",
+      "meaningVi": "Sủi cảo áp chảo (gyoza)",
+      "accentNote": "Đọc bằng; 3 nhịp ぎょ・う・ざ = 'gyôô-za': う chỉ kéo dài 'ô'.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-5-17",
+      "word": "かいしゃ",
+      "kanji": "会社",
+      "furigana": "かいしゃ",
+      "romaji": "kaisha",
+      "wordType": "noun",
+      "meaningVi": "Công ty",
+      "accentNote": "Đọc bằng; 3 nhịp: か・い・しゃ.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-5-18",
+      "word": "じょうず",
+      "kanji": "上手",
+      "furigana": "じょうず",
+      "romaji": "jouzu",
+      "wordType": "adjective",
+      "meaningVi": "Giỏi, khéo (tính từ đuôi な)",
+      "accentNote": "Cao dần rồi hạ sau nhịp cuối: jo thấp, U-ZU cao. 3 nhịp じょ・う・ず = 'jôô-zư'.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-5-19",
+      "word": "ちゃわん",
+      "kanji": "茶碗",
+      "furigana": "ちゃわん",
+      "romaji": "chawan",
+      "wordType": "noun",
+      "meaningVi": "Bát ăn cơm, chén trà",
+      "accentNote": "Đọc bằng; 3 nhịp: ちゃ・わ・ん.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-5-20",
+      "word": "ちょうちょ",
+      "kanji": "蝶々",
+      "furigana": "ちょうちょ",
+      "romaji": "choucho",
+      "wordType": "noun",
+      "meaningVi": "Con bướm",
+      "accentNote": "Trọng âm đầu: CHO cao, các nhịp sau thấp. 3 nhịp ちょ・う・ちょ = 'chôô-cho'.",
+      "emotion": "de_biu"
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kana-5-1",
+      "character": "きゃ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "kya",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc gần như 'kia' nói thật nhanh dính thành một tiếng 'kya', không tách 'ki-a'.",
+      "meoNho": "Chữ き như chiếc chìa khóa cõng em ゃ bé tí trên lưng — hai anh em chạy vụt một hơi: 'kya!'",
+      "sosanh": "Dễ nhầm với きや (ki-ya, 2 nhịp): ゃ nhỏ thì đọc liền, や to thì đọc tách.",
+      "commonWords": [
+        {
+          "word": "きゃく",
+          "furigana": "きゃく",
+          "meaningVi": "Khách (客)"
+        },
+        {
+          "word": "おきゃくさん",
+          "furigana": "おきゃくさん",
+          "meaningVi": "Khách hàng, khách đến nhà"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-2",
+      "character": "きゅ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "kyu",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'kiu' đọc lướt thành một tiếng 'kyu', môi hơi chúm.",
+      "meoNho": "Chìa khóa き móc thêm cái móc nhỏ ゅ — xoay một vòng nghe 'kyu' như tiếng khóa kêu.",
+      "sosanh": "Dễ nhầm với きゆ (ki-yu, 2 nhịp) nếu viết ゆ to.",
+      "commonWords": [
+        {
+          "word": "きゅう",
+          "furigana": "きゅう",
+          "meaningVi": "Số 9 (九)"
+        },
+        {
+          "word": "きゅうり",
+          "furigana": "きゅうり",
+          "meaningVi": "Dưa chuột"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-3",
+      "character": "きょ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "kyo",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'kiô' đọc liền thành 'kyô', môi tròn ở cuối.",
+      "meoNho": "Chìa khóa き kéo theo cái đuôi ょ nhỏ — mở cửa ra là thấy 'kyô' = きょう (hôm nay)!",
+      "sosanh": "Dễ nhầm với きよ (ki-yo, 2 nhịp): きよ là tên người, きょ là một nhịp.",
+      "commonWords": [
+        {
+          "word": "きょう",
+          "furigana": "きょう",
+          "meaningVi": "Hôm nay (今日)"
+        },
+        {
+          "word": "きょねん",
+          "furigana": "きょねん",
+          "meaningVi": "Năm ngoái (去年)"
+        },
+        {
+          "word": "とうきょう",
+          "furigana": "とうきょう",
+          "meaningVi": "Tokyo (東京)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-4",
+      "character": "しゃ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "sha",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc liền một nhịp 'sha' (し + ゃ). Đầu lưỡi hạ xuống, mặt lưỡi nâng sát vòm miệng, xì hơi như 'sh' trong 'she' nhưng môi KHÔNG chu; gần 's' uốn lưỡi của tiếng Việt nhưng đừng cong lưỡi.",
+      "meoNho": "Cần câu し móc được con cá nhỏ ゃ — kéo lên nghe 'sha' như tiếng nước bắn.",
+      "sosanh": "Dễ nhầm với さ (sa): さ lưỡi thẳng, しゃ lưỡi uốn và có hơi gió 'sh'.",
+      "commonWords": [
+        {
+          "word": "しゃしん",
+          "furigana": "しゃしん",
+          "meaningVi": "Tấm ảnh (写真)"
+        },
+        {
+          "word": "かいしゃ",
+          "furigana": "かいしゃ",
+          "meaningVi": "Công ty (会社)"
+        },
+        {
+          "word": "でんしゃ",
+          "furigana": "でんしゃ",
+          "meaningVi": "Tàu điện (電車)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-5",
+      "character": "しゅ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "shu",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc liền một nhịp 'shu' (し + ゅ): mặt lưỡi nâng sát vòm, môi không chu.",
+      "meoNho": "Cần câu し vướng cái móc ゅ — giật mạnh nghe 'shu' như tiếng dây câu vút.",
+      "sosanh": "Dễ nhầm với す (su): す lưỡi thẳng, しゅ có hơi gió 'sh'.",
+      "commonWords": [
+        {
+          "word": "しゅくだい",
+          "furigana": "しゅくだい",
+          "meaningVi": "Bài tập về nhà (宿題)"
+        },
+        {
+          "word": "しゅみ",
+          "furigana": "しゅみ",
+          "meaningVi": "Sở thích (趣味)"
+        },
+        {
+          "word": "かしゅ",
+          "furigana": "かしゅ",
+          "meaningVi": "Ca sĩ (歌手)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-6",
+      "character": "しょ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "sho",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc liền một nhịp 'sho' (し + ょ): mặt lưỡi nâng sát vòm như し, môi tròn vừa cho 'ô'.",
+      "meoNho": "Cần câu し kéo lên một chiếc giày ょ nhỏ — 'sho' nghe như 'shoe' (giày) tiếng Anh.",
+      "sosanh": "Dễ nhầm với そ (so): そ lưỡi thẳng, しょ có hơi gió 'sh'.",
+      "commonWords": [
+        {
+          "word": "としょかん",
+          "furigana": "としょかん",
+          "meaningVi": "Thư viện (図書館)"
+        },
+        {
+          "word": "しょくどう",
+          "furigana": "しょくどう",
+          "meaningVi": "Nhà ăn (食堂)"
+        },
+        {
+          "word": "しょうゆ",
+          "furigana": "しょうゆ",
+          "meaningVi": "Nước tương, xì dầu"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-7",
+      "character": "ちゃ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "cha",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'cha' trong tiếng Việt, đầu lưỡi chạm lợi rồi bật nhẹ.",
+      "meoNho": "Chữ ち như ông bố ngồi ghế, bên cạnh là tách trà nhỏ ゃ — 'cha' mời trà: おちゃ!",
+      "sosanh": "Dễ nhầm với じゃ (ja): ちゃ không rung dây thanh, じゃ có rung.",
+      "commonWords": [
+        {
+          "word": "おちゃ",
+          "furigana": "おちゃ",
+          "meaningVi": "Trà (お茶)"
+        },
+        {
+          "word": "おもちゃ",
+          "furigana": "おもちゃ",
+          "meaningVi": "Đồ chơi"
+        },
+        {
+          "word": "ちゃわん",
+          "furigana": "ちゃわん",
+          "meaningVi": "Bát ăn cơm (茶碗)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-8",
+      "character": "ちゅ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "chu",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'chiu' đọc liền thành một tiếng 'chu', môi chúm.",
+      "meoNho": "Chữ ち chúm môi hôn chụt với chữ nhỏ ゅ — 'chu' đúng tiếng hôn gió!",
+      "sosanh": "Dễ nhầm với ちゆ (chi-yu, 2 nhịp) nếu viết ゆ to.",
+      "commonWords": [
+        {
+          "word": "ちゅうごく",
+          "furigana": "ちゅうごく",
+          "meaningVi": "Trung Quốc (中国)"
+        },
+        {
+          "word": "ちゅうい",
+          "furigana": "ちゅうい",
+          "meaningVi": "Chú ý, cẩn thận (注意)"
+        },
+        {
+          "word": "ちゅうしゃ",
+          "furigana": "ちゅうしゃ",
+          "meaningVi": "Tiêm thuốc (注射)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-9",
+      "character": "ちょ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "cho",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'chô' trong tiếng Việt, môi tròn: 'cho'.",
+      "meoNho": "Chữ ち dắt theo con bướm nhỏ ょ — ちょうちょ (con bướm) bay 'chô chô'.",
+      "sosanh": "Dễ nhầm với ちよ (chi-yo, 2 nhịp): ちよ là tên người con gái.",
+      "commonWords": [
+        {
+          "word": "ちょうちょ",
+          "furigana": "ちょうちょ",
+          "meaningVi": "Con bướm"
+        },
+        {
+          "word": "ちょきん",
+          "furigana": "ちょきん",
+          "meaningVi": "Tiền tiết kiệm (貯金)"
+        },
+        {
+          "word": "ちょうど",
+          "furigana": "ちょうど",
+          "meaningVi": "Vừa đúng, vừa vặn"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-10",
+      "character": "にゃ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "nya",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'nha' trong tiếng Việt — đúng tiếng mèo kêu にゃあ!",
+      "meoNho": "Chữ に như hai chiếc ria mèo, thêm cái miệng nhỏ ゃ là Sensei kêu 'nya!' — にゃあ.",
+      "sosanh": "Dễ nhầm với にや (ni-ya, 2 nhịp) nếu viết や to.",
+      "commonWords": [
+        {
+          "word": "にゃあ",
+          "furigana": "にゃあ",
+          "meaningVi": "Meo (tiếng mèo kêu)"
+        },
+        {
+          "word": "こんにゃく",
+          "furigana": "こんにゃく",
+          "meaningVi": "Khoai nưa (món thạch konnyaku)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-11",
+      "character": "にゅ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "nyu",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'nhiu' đọc liền một tiếng: 'nyu'.",
+      "meoNho": "Ria mèo に nhúng vào cốc sữa nhỏ ゅ — ぎゅうにゅう (sữa bò) đọc 'nyu'.",
+      "sosanh": "Dễ nhầm với ぬ (nu): にゅ có âm 'nh' như tiếng Việt, ぬ thì không.",
+      "commonWords": [
+        {
+          "word": "ぎゅうにゅう",
+          "furigana": "ぎゅうにゅう",
+          "meaningVi": "Sữa bò (牛乳)"
+        },
+        {
+          "word": "にゅういん",
+          "furigana": "にゅういん",
+          "meaningVi": "Nhập viện (入院)"
+        },
+        {
+          "word": "にゅうがく",
+          "furigana": "にゅうがく",
+          "meaningVi": "Nhập học (入学)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-12",
+      "character": "にょ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "nyo",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'nhô' trong tiếng Việt: 'nyo'.",
+      "meoNho": "Ria mèo に rung rinh, cái đuôi nhỏ ょ ngoe nguẩy uốn lượn như にょろにょろ (con rắn trườn).",
+      "sosanh": "Dễ nhầm với の (no): にょ có âm 'nh', の thì không.",
+      "commonWords": [
+        {
+          "word": "にょろにょろ",
+          "furigana": "にょろにょろ",
+          "meaningVi": "Ngoằn ngoèo, trườn uốn éo (như rắn)"
+        },
+        {
+          "word": "にょきにょき",
+          "furigana": "にょきにょき",
+          "meaningVi": "Mọc nhô lên liên tục (như măng)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-13",
+      "character": "ひゃ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "hya",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'hia' đọc liền, hơi gió lướt qua mặt lưỡi: 'hya'.",
+      "meoNho": "Chữ ひ như cái miệng cười toe, thêm ゃ nhỏ là bật cười 'hya hya' — đếm đến ひゃく (100)!",
+      "sosanh": "Dễ nhầm với びゃ (bya) có dấu ゛ và ぴゃ (pya) có vòng ゜.",
+      "commonWords": [
+        {
+          "word": "ひゃく",
+          "furigana": "ひゃく",
+          "meaningVi": "Một trăm (百)"
+        },
+        {
+          "word": "ひゃくえん",
+          "furigana": "ひゃくえん",
+          "meaningVi": "100 yên (百円)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-14",
+      "character": "ひゅ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "hyu",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'hiu' như tiếng gió hiu hiu: 'hyu'.",
+      "meoNho": "Miệng cười ひ thổi ra làn gió nhỏ ゅ — 'hyu hyu' như gió hiu hiu.",
+      "sosanh": "Dễ nhầm với ふ (fu): ひゅ có âm 'i' lướt, ふ thì không.",
+      "commonWords": [
+        {
+          "word": "ひゅうひゅう",
+          "furigana": "ひゅうひゅう",
+          "meaningVi": "Vù vù (tiếng gió rít)"
+        },
+        {
+          "word": "ひゅうが",
+          "furigana": "ひゅうが",
+          "meaningVi": "Hyuuga (tên địa danh, họ người Nhật)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-15",
+      "character": "ひょ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "hyo",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'hiô' đọc liền thành một tiếng 'hyo'.",
+      "meoNho": "Miệng cười ひ ngậm quả bầu nhỏ ょ — ひょうたん (quả bầu hồ lô) đọc 'hyo'.",
+      "sosanh": "Dễ nhầm với ほ (ho): ひょ có âm 'i' lướt ở đầu.",
+      "commonWords": [
+        {
+          "word": "ひょうたん",
+          "furigana": "ひょうたん",
+          "meaningVi": "Quả bầu hồ lô"
+        },
+        {
+          "word": "ひょう",
+          "furigana": "ひょう",
+          "meaningVi": "Con báo; bảng biểu"
+        },
+        {
+          "word": "ひょうじょう",
+          "furigana": "ひょうじょう",
+          "meaningVi": "Nét mặt, biểu cảm (表情)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-16",
+      "character": "みゃ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "mya",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'mia' đọc liền một tiếng: 'mya'.",
+      "meoNho": "Chữ み như sợi mì xoắn, gắn thêm ゃ nhỏ — mèo con đòi ăn mì kêu 'mya'.",
+      "sosanh": "Dễ nhầm với みや (mi-ya, 2 nhịp): みや là tên người, みゃ là một nhịp.",
+      "commonWords": [
+        {
+          "word": "みゃく",
+          "furigana": "みゃく",
+          "meaningVi": "Mạch (nhịp tim) (脈)"
+        },
+        {
+          "word": "さんみゃく",
+          "furigana": "さんみゃく",
+          "meaningVi": "Dãy núi (山脈)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-17",
+      "character": "みゅ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "myu",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'miu' — tiếng mèo con — đọc liền: 'myu'.",
+      "meoNho": "Sợi mì み cuộn quanh cái móc ゅ, mèo con kêu 'miu' đòi ăn.",
+      "sosanh": "Rất hiếm trong từ thuần Nhật; gặp chủ yếu trong từ ngoại lai viết katakana.",
+      "commonWords": [
+        {
+          "word": "ミュージック",
+          "furigana": "ミュージック",
+          "meaningVi": "Âm nhạc (music) — viết katakana, học ở bài 7-9"
+        },
+        {
+          "word": "ミュージカル",
+          "furigana": "ミュージカル",
+          "meaningVi": "Nhạc kịch (musical) — viết katakana, học ở bài 7-9"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-18",
+      "character": "みょ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "myo",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'miô' đọc liền: 'myo'.",
+      "meoNho": "Sợi mì み thắt một cái nơ nhỏ ょ ở đuôi — みょうじ là 'họ' được thắt nơ trên thẻ tên.",
+      "sosanh": "Dễ nhầm với みよ (mi-yo, 2 nhịp) nếu viết よ to.",
+      "commonWords": [
+        {
+          "word": "みょうじ",
+          "furigana": "みょうじ",
+          "meaningVi": "Họ (của tên người) (名字)"
+        },
+        {
+          "word": "みょうにち",
+          "furigana": "みょうにち",
+          "meaningVi": "Ngày mai (cách nói trang trọng) (明日)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-19",
+      "character": "りゃ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "rya",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'ria' đọc liền, chữ r nhẹ như 'l': 'rya'.",
+      "meoNho": "Chữ り như hai sợi ria mèo dài, rụng mất một sợi nhỏ ゃ — 'rya', rút gọn, りゃく (tỉnh lược)!",
+      "sosanh": "Dễ nhầm với りや (ri-ya, 2 nhịp) nếu viết や to.",
+      "commonWords": [
+        {
+          "word": "りゃく",
+          "furigana": "りゃく",
+          "meaningVi": "Viết tắt, tỉnh lược (略)"
+        },
+        {
+          "word": "しょうりゃく",
+          "furigana": "しょうりゃく",
+          "meaningVi": "Lược bỏ (省略)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-20",
+      "character": "りゅ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "ryu",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'liu/riu' đọc liền, r nhẹ: 'ryu'.",
+      "meoNho": "Hai sợi ria り uốn thành râu rồng, móc ゅ là vuốt rồng — りゅう (con rồng)!",
+      "sosanh": "Dễ nhầm với りゆ (ri-yu, 2 nhịp) và る (ru): りゅ có âm i lướt ở đầu.",
+      "commonWords": [
+        {
+          "word": "りゅう",
+          "furigana": "りゅう",
+          "meaningVi": "Con rồng (竜)"
+        },
+        {
+          "word": "りゅうがくせい",
+          "furigana": "りゅうがくせい",
+          "meaningVi": "Du học sinh (留学生)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-21",
+      "character": "りょ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "ryo",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'liô' đọc liền, r nhẹ: 'ryo'.",
+      "meoNho": "Hai sợi ria り xách chiếc vali nhỏ ょ — đi りょこう (du lịch) thôi!",
+      "sosanh": "Dễ nhầm với りよ (ri-yo, 2 nhịp) và ろ (ro).",
+      "commonWords": [
+        {
+          "word": "りょこう",
+          "furigana": "りょこう",
+          "meaningVi": "Du lịch (旅行)"
+        },
+        {
+          "word": "りょうり",
+          "furigana": "りょうり",
+          "meaningVi": "Món ăn; nấu ăn (料理)"
+        },
+        {
+          "word": "りょうしん",
+          "furigana": "りょうしん",
+          "meaningVi": "Bố mẹ (両親)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-22",
+      "character": "ぎゃ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "gya",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'ghia' đọc liền một tiếng: 'gya'.",
+      "meoNho": "Chìa khóa き đeo hai chấm ゛ thành ぎ, cõng em ゃ chạy ngược chiều — ぎゃく (ngược)!",
+      "sosanh": "Dễ nhầm với きゃ (kya): ぎゃ có hai chấm ゛, đọc đục 'g'.",
+      "commonWords": [
+        {
+          "word": "ぎゃく",
+          "furigana": "ぎゃく",
+          "meaningVi": "Ngược lại (逆)"
+        },
+        {
+          "word": "ぎゃくてん",
+          "furigana": "ぎゃくてん",
+          "meaningVi": "Lội ngược dòng, đảo ngược (逆転)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-23",
+      "character": "ぎゅ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "gyu",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'ghiu' đọc liền: 'gyu'.",
+      "meoNho": "ぎ có hai sừng ゛ như con bò, móc thêm ゅ — ぎゅう là bò: ぎゅうにく (thịt bò)!",
+      "sosanh": "Dễ nhầm với きゅ (kyu): ぎゅ có hai chấm ゛.",
+      "commonWords": [
+        {
+          "word": "ぎゅうにく",
+          "furigana": "ぎゅうにく",
+          "meaningVi": "Thịt bò (牛肉)"
+        },
+        {
+          "word": "ぎゅうにゅう",
+          "furigana": "ぎゅうにゅう",
+          "meaningVi": "Sữa bò (牛乳)"
+        },
+        {
+          "word": "ぎゅうどん",
+          "furigana": "ぎゅうどん",
+          "meaningVi": "Cơm thịt bò"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-24",
+      "character": "ぎょ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "gyo",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'ghiô' đọc liền: 'gyo'.",
+      "meoNho": "ぎ bơi cùng chú cá nhỏ ょ — きんぎょ (cá vàng) có 'gyo'.",
+      "sosanh": "Dễ nhầm với きょ (kyo): ぎょ có hai chấm ゛.",
+      "commonWords": [
+        {
+          "word": "きんぎょ",
+          "furigana": "きんぎょ",
+          "meaningVi": "Cá vàng (金魚)"
+        },
+        {
+          "word": "ぎょうざ",
+          "furigana": "ぎょうざ",
+          "meaningVi": "Sủi cảo, há cảo áp chảo (餃子)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-25",
+      "character": "じゃ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "ja",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc như 'j' trong 'jeans/jam': mặt lưỡi chạm vòm rồi bật ra. Người miền Bắc chú ý: KHÔNG đọc như 'gi/d' tiếng Việt (= z), vì như vậy thành ざ.",
+      "meoNho": "Cần câu し đeo hai chấm ゛ thành じ, câu được củ khoai nhỏ ゃ — じゃがいも (khoai tây)!",
+      "sosanh": "Dễ nhầm với ちゃ (cha): じゃ có rung dây thanh. ぢゃ đọc giống じゃ nhưng gần như không dùng.",
+      "commonWords": [
+        {
+          "word": "じゃがいも",
+          "furigana": "じゃがいも",
+          "meaningVi": "Khoai tây"
+        },
+        {
+          "word": "じゃま",
+          "furigana": "じゃま",
+          "meaningVi": "Phiền, cản trở (邪魔)"
+        },
+        {
+          "word": "じゃあね",
+          "furigana": "じゃあね",
+          "meaningVi": "Tạm biệt nhé (thân mật)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-26",
+      "character": "じゅ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "ju",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc liền một nhịp 'ju' như trong 'juice': mặt lưỡi chạm vòm rồi bật ra. Người miền Bắc chú ý: KHÔNG đọc như 'gi/d' tiếng Việt (= z), vì như vậy thành ず.",
+      "meoNho": "じ ghép móc nhỏ ゅ — ép cam thành 'juice' đọc 'ju'.",
+      "sosanh": "Dễ nhầm với じゆ (ji-yu, 2 nhịp): じゆう là tự do, じゅう là số 10.",
+      "commonWords": [
+        {
+          "word": "じゅう",
+          "furigana": "じゅう",
+          "meaningVi": "Số 10 (十)"
+        },
+        {
+          "word": "じゅぎょう",
+          "furigana": "じゅぎょう",
+          "meaningVi": "Giờ học, tiết học (授業)"
+        },
+        {
+          "word": "じゅんび",
+          "furigana": "じゅんび",
+          "meaningVi": "Chuẩn bị (準備)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-27",
+      "character": "じょ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "jo",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc liền một nhịp 'jo' như trong 'joke': mặt lưỡi chạm vòm rồi bật ra. Người miền Bắc chú ý: KHÔNG đọc như 'gi/d' tiếng Việt (= z), vì như vậy thành ぞ.",
+      "meoNho": "じ nắm tay chiếc cúp nhỏ ょ — じょうず (giỏi quá)!",
+      "sosanh": "Dễ nhầm với しょ (sho): じょ có hai chấm ゛, rung dây thanh.",
+      "commonWords": [
+        {
+          "word": "じょうず",
+          "furigana": "じょうず",
+          "meaningVi": "Giỏi (上手)"
+        },
+        {
+          "word": "じょせい",
+          "furigana": "じょせい",
+          "meaningVi": "Nữ giới (女性)"
+        },
+        {
+          "word": "かのじょ",
+          "furigana": "かのじょ",
+          "meaningVi": "Cô ấy; bạn gái (彼女)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-28",
+      "character": "びゃ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "bya",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'bia' đọc liền một tiếng: 'bya'.",
+      "meoNho": "Miệng cười ひ đeo hai chấm ゛ thành び, bật ra ゃ — 'bya', đếm さんびゃく (300)!",
+      "sosanh": "Dễ nhầm với ひゃ (hya) và ぴゃ (pya): nhìn kỹ ゛ hay ゜.",
+      "commonWords": [
+        {
+          "word": "さんびゃく",
+          "furigana": "さんびゃく",
+          "meaningVi": "Ba trăm (三百)"
+        },
+        {
+          "word": "びゃくや",
+          "furigana": "びゃくや",
+          "meaningVi": "Đêm trắng (白夜)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-29",
+      "character": "びゅ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "byu",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'biu' đọc liền: 'byu'.",
+      "meoNho": "び thổi gió mạnh qua móc ゅ — 'byu byu' như gió rít びゅうびゅう.",
+      "sosanh": "Rất hiếm trong từ thuần Nhật; gặp nhiều trong katakana (ビュー).",
+      "commonWords": [
+        {
+          "word": "びゅうびゅう",
+          "furigana": "びゅうびゅう",
+          "meaningVi": "Vù vù (gió thổi mạnh)"
+        },
+        {
+          "word": "ビュー",
+          "furigana": "ビュー",
+          "meaningVi": "Tầm nhìn, cảnh (view) — viết katakana, học ở bài 9"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-30",
+      "character": "びょ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "byo",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'biô' đọc liền: 'byo'.",
+      "meoNho": "び nằm viện với cái gối nhỏ ょ — びょういん (bệnh viện)!",
+      "sosanh": "Dễ nhầm với びよ (bi-yo, 2 nhịp): びよういん là tiệm làm tóc, びょういん là bệnh viện.",
+      "commonWords": [
+        {
+          "word": "びょういん",
+          "furigana": "びょういん",
+          "meaningVi": "Bệnh viện (病院)"
+        },
+        {
+          "word": "びょうき",
+          "furigana": "びょうき",
+          "meaningVi": "Bệnh, ốm (病気)"
+        },
+        {
+          "word": "びょう",
+          "furigana": "びょう",
+          "meaningVi": "Giây (đơn vị thời gian) (秒)"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-31",
+      "character": "ぴゃ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "pya",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'pia' đọc liền, bật môi nhẹ: 'pya'.",
+      "meoNho": "ひ đội vòng tròn ゜ như bong bóng, bóng vỡ 'pya!'",
+      "sosanh": "Dễ nhầm với びゃ (bya): ぴゃ có vòng tròn ゜, không phải hai chấm.",
+      "commonWords": [
+        {
+          "word": "はっぴゃく",
+          "furigana": "はっぴゃく",
+          "meaningVi": "Tám trăm (八百) — có っ, học ở bài 6"
+        },
+        {
+          "word": "ろっぴゃく",
+          "furigana": "ろっぴゃく",
+          "meaningVi": "Sáu trăm (六百) — có っ, học ở bài 6"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-32",
+      "character": "ぴゅ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "pyu",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'piu' đọc liền, bật môi: 'pyu'.",
+      "meoNho": "ぴ đội vòng ゜ như chiếc còi, thổi qua móc ゅ — 'pyu' như tiếng còi vút.",
+      "sosanh": "Dễ nhầm với びゅ (byu): nhìn kỹ vòng ゜ hay hai chấm ゛.",
+      "commonWords": [
+        {
+          "word": "ぴゅうぴゅう",
+          "furigana": "ぴゅうぴゅう",
+          "meaningVi": "Vút vút (tiếng gió, tiếng huýt)"
+        },
+        {
+          "word": "コンピューター",
+          "furigana": "コンピューター",
+          "meaningVi": "Máy tính (computer) — viết katakana, học ở bài 7-9"
+        }
+      ]
+    },
+    {
+      "id": "kana-5-33",
+      "character": "ぴょ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "pyo",
+      "hanViet": "",
+      "strokeCount": 0,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Gần như 'piô' đọc liền, bật môi: 'pyo'.",
+      "meoNho": "ぴ là chú thỏ đội vòng ゜, thêm chân nhỏ ょ — nhảy ぴょんぴょん!",
+      "sosanh": "Dễ nhầm với びょ (byo): びょういん là bệnh viện, không có ぴょ.",
+      "commonWords": [
+        {
+          "word": "ぴょんぴょん",
+          "furigana": "ぴょんぴょん",
+          "meaningVi": "Nhảy tưng tưng (như thỏ)"
+        },
+        {
+          "word": "はっぴょう",
+          "furigana": "はっぴょう",
+          "meaningVi": "Phát biểu, thuyết trình (発表) — có っ, học ở bài 6"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "kana-l5-s1",
+      "slideType": "grammar",
+      "title": "1. ゃ ゅ ょ viết nhỏ — cách tạo âm ghép",
+      "grammarFormula": "き + ゃ(nhỏ) → きゃ (kya)",
+      "explanation": "Lấy một chữ thuộc cột い (き し ち に ひ み り và ぎ じ び ぴ) rồi viết thêm ゃ, ゅ hoặc ょ thật NHỎ, cỡ nửa chữ thường. Khi ghép, âm 'i' của chữ đầu biến mất, chỉ giữ phụ âm rồi nối thẳng vào 'ya / yu / yo'. 11 chữ × 3 = 33 âm ghép.",
+      "teacherTips": "Khi viết ngang, chữ nhỏ nằm sát dòng kẻ dưới, dựa vào chữ đứng trước. Viết to quá là đổi hẳn cách đọc!",
+      "culturalNotes": "Âm ghép xuất hiện dày đặc trong từ gốc Hán như とうきょう (Tokyo), りょこう (du lịch), しゃしん (ảnh). Học chắc bảng này là đọc được rất nhiều từ.",
+      "examples": [
+        {
+          "id": "ex-kana-l5-s1-1",
+          "tokens": [
+            {
+              "id": "t-kana-l5s1-1",
+              "text": "お",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l5s1-2",
+              "text": "ちゃ",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "おちゃ (お茶): trà — ち + ゃ nhỏ → ちゃ (cha)."
+        },
+        {
+          "id": "ex-kana-l5-s1-2",
+          "tokens": [
+            {
+              "id": "t-kana-l5s1-3",
+              "text": "しゃ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l5s1-4",
+              "text": "しん",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "しゃしん (写真): tấm ảnh — し + ゃ nhỏ → しゃ (sha)."
+        },
+        {
+          "id": "ex-kana-l5-s1-3",
+          "tokens": [
+            {
+              "id": "t-kana-l5s1-5",
+              "text": "きん",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l5s1-6",
+              "text": "ぎょ",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "きんぎょ (金魚): cá vàng — ぎ + ょ nhỏ → ぎょ (gyo)."
+        }
+      ]
+    },
+    {
+      "slideId": "kana-l5-s2",
+      "slideType": "grammar",
+      "title": "2. Đọc liền một nhịp",
+      "grammarFormula": "き・ゃ → kya = 1 nhịp (không phải ki-ya)",
+      "explanation": "Tiếng Nhật đếm độ dài bằng nhịp (phách): mỗi chữ thường là 1 nhịp. Một âm ghép như きゃ viết bằng 2 chữ nhưng chỉ chiếm ĐÚNG 1 nhịp. Vì thế びょういん có 4 nhịp: びょ・う・い・ん, còn ぎゅうにゅう cũng chỉ 4 nhịp.",
+      "teacherTips": "Vỗ tay đếm nhịp: びょ-う-い-ん = 4 cái vỗ. Nếu vỗ 5 cái (bi-yo-u-i-n) là đang đọc thành びよういん (tiệm làm tóc) rồi đó! Xem trước bài 6: う đứng sau chữ cột お/う chỉ kéo dài nguyên âm — きょう đọc 'kyô-ô', không phải 'kyô-u'; ぎゅうにゅう đọc 'gyu-u-nyu-u' liền hơi.",
+      "culturalNotes": "Thơ haiku đếm theo nhịp chứ không theo chữ viết, nên âm ghép như きょ luôn chỉ tính là 1.",
+      "examples": [
+        {
+          "id": "ex-kana-l5-s2-1",
+          "tokens": [
+            {
+              "id": "t-kana-l5s2-1",
+              "text": "ぎゅ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l5s2-2",
+              "text": "う",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l5s2-3",
+              "text": "にゅ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l5s2-4",
+              "text": "う",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "ぎゅうにゅう (牛乳): sữa bò — 6 chữ viết nhưng chỉ 4 nhịp."
+        },
+        {
+          "id": "ex-kana-l5-s2-2",
+          "tokens": [
+            {
+              "id": "t-kana-l5s2-5",
+              "text": "びょ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l5s2-6",
+              "text": "う",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l5s2-7",
+              "text": "い",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l5s2-8",
+              "text": "ん",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "びょういん (病院): bệnh viện — 4 nhịp."
+        },
+        {
+          "id": "ex-kana-l5-s2-3",
+          "tokens": [
+            {
+              "id": "t-kana-l5s2-9",
+              "text": "りょ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l5s2-10",
+              "text": "こ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l5s2-11",
+              "text": "う",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "りょこう (旅行): du lịch — 3 nhịp."
+        }
+      ]
+    },
+    {
+      "slideId": "kana-l5-s3",
+      "slideType": "grammar",
+      "title": "3. Nhóm đặc biệt: しゃ・ちゃ・じゃ",
+      "grammarFormula": "し + ゃ → sha ・ ち + ゃ → cha ・ じ + ゃ → ja",
+      "explanation": "し, ち, じ vốn đã đọc đặc biệt (shi, chi, ji), nên âm ghép của chúng cũng không có 'y' ở giữa: しゃ しゅ しょ = sha shu sho, ちゃ ちゅ ちょ = cha chu cho, じゃ じゅ じょ = ja ju jo. ぢゃ ぢゅ ぢょ đọc giống じゃ じゅ じょ nhưng gần như không dùng, cứ viết じゃ じゅ じょ.",
+      "teacherTips": "Người Việt có lợi thế: ちゃ gần như 'cha'. しゃ: mặt lưỡi nâng sát vòm, xì hơi như 'sh' trong 'she', môi không chu — gần 's' uốn lưỡi nhưng đừng cong lưỡi. じゃ đọc như 'j' trong 'jam'; người miền Bắc đừng đọc như 'gia' (= 'za'), vì như vậy thành ざ (じゃがいも thành 'zagaimo').",
+      "culturalNotes": "Trong romaji, bạn có thể gặp kiểu viết 'sya, tya, zya' (kiểu Kunrei). Giáo trình này dùng kiểu Hepburn 'sha, cha, ja' giống hộ chiếu và biển báo.",
+      "examples": [
+        {
+          "id": "ex-kana-l5-s3-1",
+          "tokens": [
+            {
+              "id": "t-kana-l5s3-1",
+              "text": "かい",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l5s3-2",
+              "text": "しゃ",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "かいしゃ (会社): công ty — しゃ = sha."
+        },
+        {
+          "id": "ex-kana-l5-s3-2",
+          "tokens": [
+            {
+              "id": "t-kana-l5s3-3",
+              "text": "おも",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l5s3-4",
+              "text": "ちゃ",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "おもちゃ: đồ chơi — ちゃ = cha."
+        },
+        {
+          "id": "ex-kana-l5-s3-3",
+          "tokens": [
+            {
+              "id": "t-kana-l5s3-5",
+              "text": "じゃ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l5s3-6",
+              "text": "がいも",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "じゃがいも: khoai tây — じゃ = ja."
+        }
+      ]
+    },
+    {
+      "slideId": "kana-l5-s4",
+      "slideType": "grammar",
+      "title": "4. Chữ to hay chữ nhỏ? きや vs きゃ",
+      "grammarFormula": "きや (ki-ya, 2 nhịp) ≠ きゃ (kya, 1 nhịp)",
+      "explanation": "Chỉ khác cỡ chữ mà nghĩa đổi hẳn. びよういん (よ to) là tiệm làm tóc, còn びょういん (ょ nhỏ) là bệnh viện. Tương tự, じゆう (ゆ to) là tự do, còn じゅう (ゅ nhỏ) là số 10. Trước khi đọc, hãy nhìn kỹ cỡ chữ ゃ ゅ ょ.",
+      "teacherTips": "Sensei đọc mẫu từng cặp thật chậm rồi thật nhanh, để học viên nghe rõ một nhịp bị 'nuốt' mất.",
+      "culturalNotes": "Khi viết tay, người Nhật viết chữ nhỏ rất rõ ràng. Viết nhầm びょういん thành びよういん có thể khiến bạn tới tiệm cắt tóc thay vì đi khám bệnh!",
+      "examples": [
+        {
+          "id": "ex-kana-l5-s4-1",
+          "tokens": [
+            {
+              "id": "t-kana-l5s4-1",
+              "text": "び",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l5s4-2",
+              "text": "よ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l5s4-3",
+              "text": "う",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l5s4-4",
+              "text": "い",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l5s4-5",
+              "text": "ん",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "びよういん (美容院): tiệm làm tóc — よ viết to, đọc bi-yo, 5 nhịp."
+        },
+        {
+          "id": "ex-kana-l5-s4-2",
+          "tokens": [
+            {
+              "id": "t-kana-l5s4-6",
+              "text": "びょ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l5s4-7",
+              "text": "う",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l5s4-8",
+              "text": "い",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l5s4-9",
+              "text": "ん",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "びょういん (病院): bệnh viện — ょ viết nhỏ, đọc byo, 4 nhịp."
+        },
+        {
+          "id": "ex-kana-l5-s4-3",
+          "tokens": [
+            {
+              "id": "t-kana-l5s4-10",
+              "text": "じゅ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l5s4-11",
+              "text": "う",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "じゅう (十): số 10 — khác じゆう (自由: tự do)."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-kana-5-1",
+      "speaker": "せんせい (Sensei)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l5-1a",
+          "text": "おはようございます",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-1b",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Chào buổi sáng các em.",
+      "emotion": "chao"
+    },
+    {
+      "id": "dia-kana-5-2",
+      "speaker": "ミラー (Miller)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l5-2a",
+          "text": "おはようございます",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-2b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-2c",
+          "text": "せんせい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-2d",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Em chào buổi sáng thầy ạ.",
+      "emotion": "cui_chao"
+    },
+    {
+      "id": "dia-kana-5-3",
+      "speaker": "せんせい (Sensei)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l5-3a",
+          "text": "きょう",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l5-3b",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-3c",
+          "text": "しゃしん",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l5-3d",
+          "text": "を",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-3e",
+          "text": "みます",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-3f",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Hôm nay chúng ta cùng xem ảnh nhé.",
+      "emotion": "vui"
+    },
+    {
+      "id": "dia-kana-5-4",
+      "speaker": "せんせい (Sensei)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l5-4a",
+          "text": "これ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-4b",
+          "text": "は",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-4c",
+          "text": "なん",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-4d",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-4e",
+          "text": "か",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-4f",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Đây là cái gì nào?",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "dia-kana-5-5",
+      "speaker": "ミラー (Miller)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l5-5a",
+          "text": "きんぎょ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l5-5b",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-5c",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Là cá vàng ạ.",
+      "emotion": "vui"
+    },
+    {
+      "id": "dia-kana-5-6",
+      "speaker": "せんせい (Sensei)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l5-6a",
+          "text": "はい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-6b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-6c",
+          "text": "そうです",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-6d",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-6e",
+          "text": "じょうず",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l5-6f",
+          "text": "です",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-6g",
+          "text": "ね",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-6h",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Đúng rồi. Em giỏi quá!",
+      "emotion": "vui"
+    },
+    {
+      "id": "dia-kana-5-7",
+      "speaker": "ミラー (Miller)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l5-7a",
+          "text": "ありがとうございます",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l5-7b",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Em cảm ơn thầy ạ.",
+      "emotion": "xau_ho"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-kana-5-1",
+      "question": "Chữ ghép 「しゃ」 đọc là gì?",
+      "options": [
+        "shiya",
+        "sha",
+        "sa",
+        "cha"
+      ],
+      "correctIndex": 1,
+      "explanation": "し + ゃ nhỏ → しゃ, đọc liền một nhịp là 'sha'. 'shiya' là cách đọc của しや (や viết to).",
+      "hint": "ゃ viết nhỏ thì đọc liền."
+    },
+    {
+      "id": "ex-q-kana-5-2",
+      "question": "Romaji 'ryo' viết bằng hiragana là chữ nào?",
+      "options": [
+        "りよ",
+        "りゅ",
+        "ろ",
+        "りょ"
+      ],
+      "correctIndex": 3,
+      "explanation": "り + ょ nhỏ → りょ (ryo), như trong りょこう (du lịch). りよ là ri-yo, りゅ là ryu, ろ là ro.",
+      "hint": "Tìm chữ có ょ viết nhỏ."
+    },
+    {
+      "id": "ex-q-kana-5-3",
+      "question": "Từ nào có nghĩa là 'bệnh viện'?",
+      "options": [
+        "びょういん",
+        "びよういん",
+        "びょうき",
+        "ひょういん"
+      ],
+      "correctIndex": 0,
+      "explanation": "びょういん (病院) = bệnh viện. びよういん (よ to) = tiệm làm tóc, びょうき = bệnh, ひょういん không phải từ thông dụng.",
+      "hint": "Để ý cỡ chữ よ / ょ."
+    },
+    {
+      "id": "ex-q-kana-5-4",
+      "question": "「きや」 và 「きゃ」 khác nhau thế nào?",
+      "options": [
+        "Giống hệt nhau, chỉ khác cách viết",
+        "きや đọc 'kya' một nhịp, きゃ đọc 'ki-ya'",
+        "きや đọc 'ki-ya' hai nhịp, きゃ đọc 'kya' một nhịp",
+        "Cả hai đều đọc 'kiya'"
+      ],
+      "correctIndex": 2,
+      "explanation": "や viết to là một chữ riêng (2 nhịp: ki-ya). ゃ viết nhỏ thì ghép với き thành một nhịp 'kya'.",
+      "hint": "Chữ nhỏ = ghép, chữ to = tách."
+    },
+    {
+      "id": "ex-q-kana-5-5",
+      "question": "Chữ ghép 「ちゃ」 đọc là gì?",
+      "options": [
+        "ja",
+        "sha",
+        "chiya",
+        "cha"
+      ],
+      "correctIndex": 3,
+      "explanation": "ち + ゃ nhỏ → ちゃ = 'cha', như trong おちゃ (trà). 'ja' là じゃ, 'sha' là しゃ.",
+      "hint": "Gần như chữ 'cha' tiếng Việt."
+    },
+    {
+      "id": "ex-q-kana-5-6",
+      "question": "Từ 「でんしゃ」 đọc thế nào và nghĩa là gì?",
+      "options": [
+        "dencha — nhà ga",
+        "densha — tàu điện",
+        "denshiya — tàu điện",
+        "densa — xe buýt"
+      ],
+      "correctIndex": 1,
+      "explanation": "でんしゃ (電車) = densha, tàu điện. しゃ đọc liền là 'sha', không tách thành 'shiya'.",
+      "hint": "しゃ = sha."
+    },
+    {
+      "id": "ex-q-kana-5-7",
+      "question": "Từ 「ぎゅうにゅう」 (sữa bò) có bao nhiêu nhịp?",
+      "options": [
+        "6",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctIndex": 2,
+      "explanation": "ぎゅ・う・にゅ・う = 4 nhịp. Âm ghép ぎゅ và にゅ mỗi âm chỉ tính 1 nhịp dù viết 2 chữ.",
+      "hint": "Âm ghép = 1 nhịp."
+    },
+    {
+      "id": "ex-q-kana-5-8",
+      "question": "Số 10 viết bằng hiragana là gì?",
+      "options": [
+        "じゅう",
+        "じゆう",
+        "しゅう",
+        "じよう"
+      ],
+      "correctIndex": 0,
+      "explanation": "じゅう (十) = số 10, ゅ viết nhỏ. じゆう (ゆ to) = tự do; しゅう là 'tuần'.",
+      "hint": "Nhìn kỹ ゅ nhỏ và dấu ゛."
+    },
+    {
+      "id": "ex-q-kana-5-9",
+      "question": "Chữ nào ghi đúng âm 'jo' trong từ じょうず (giỏi)?",
+      "options": [
+        "じよ",
+        "じょ",
+        "ちょ",
+        "しょ"
+      ],
+      "correctIndex": 1,
+      "explanation": "じ + ょ nhỏ → じょ (jo). じよ đọc tách ji-yo, ちょ là cho, しょ là sho.",
+      "hint": "Có dấu ゛ và ょ nhỏ."
+    },
+    {
+      "id": "ex-q-kana-5-10",
+      "question": "Chữ nào KHÔNG ghép được với ゃ ゅ ょ?",
+      "options": [
+        "き",
+        "り",
+        "か",
+        "ひ"
+      ],
+      "correctIndex": 2,
+      "explanation": "Chỉ các chữ thuộc cột い (き し ち に ひ み り, ぎ じ び ぴ) mới ghép với ゃ ゅ ょ. か thuộc cột あ nên không ghép.",
+      "hint": "Âm ghép bắt đầu từ chữ cột 'i'."
+    }
+  ]
+}

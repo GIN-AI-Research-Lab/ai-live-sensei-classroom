@@ -1,0 +1,1262 @@
+{
+  "level": "KANA",
+  "lessonNumber": 2,
+  "title": "Bài 2: Hiragana hàng た・な・は",
+  "description": "Học thêm 15 chữ hiragana hàng た, な, は với ba âm đặc biệt ち (chi), つ (tsu), ふ (fu). Đọc được いぬ, ねこ, ちかてつ và làm quen trước cách đọc は (wa), へ (e) khi làm trợ từ.",
+  "vocabList": [
+    {
+      "id": "voc-kana-2-1",
+      "word": "いぬ",
+      "kanji": "犬",
+      "furigana": "いぬ",
+      "romaji": "inu",
+      "wordType": "noun",
+      "meaningVi": "Con chó",
+      "accentNote": "Hai nhịp i-nư, ぬ môi không chu.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-2-2",
+      "word": "ねこ",
+      "kanji": "猫",
+      "furigana": "ねこ",
+      "romaji": "neko",
+      "wordType": "noun",
+      "meaningVi": "Con mèo",
+      "accentNote": "ね cao, こ thấp xuống: 'NÊ-kô'.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-2-3",
+      "word": "さかな",
+      "kanji": "魚",
+      "furigana": "さかな",
+      "romaji": "sakana",
+      "wordType": "noun",
+      "meaningVi": "Con cá",
+      "accentNote": "Ba nhịp đều xa-ka-na.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-2-4",
+      "word": "はな",
+      "kanji": "花",
+      "furigana": "はな",
+      "romaji": "hana",
+      "wordType": "noun",
+      "meaningVi": "Bông hoa; cùng âm với 鼻 はな (cái mũi)",
+      "accentNote": "花 (hoa) và 鼻 (mũi) chỉ khác nhau ở cao độ khi có trợ từ theo sau: 花が hạ giọng ở が, 鼻が thì đọc bằng.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-2-5",
+      "word": "ひと",
+      "kanji": "人",
+      "furigana": "ひと",
+      "romaji": "hito",
+      "wordType": "noun",
+      "meaningVi": "Người",
+      "accentNote": "ひ rất nhẹ, gần như chỉ còn hơi 'h': 'h-tô'.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-2-6",
+      "word": "くち",
+      "kanji": "口",
+      "furigana": "くち",
+      "romaji": "kuchi",
+      "wordType": "noun",
+      "meaningVi": "Cái miệng",
+      "accentNote": "く rất nhẹ: 'k-chi'.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-2-7",
+      "word": "くつ",
+      "kanji": "靴",
+      "furigana": "くつ",
+      "romaji": "kutsu",
+      "wordType": "noun",
+      "meaningVi": "Đôi giày",
+      "accentNote": "つ là 'tsư', không đọc 'kư-tư'.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-2-8",
+      "word": "つくえ",
+      "kanji": "机",
+      "furigana": "つくえ",
+      "romaji": "tsukue",
+      "wordType": "noun",
+      "meaningVi": "Cái bàn học, bàn làm việc",
+      "accentNote": "Ba nhịp tsư-kư-ê.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-2-9",
+      "word": "なつ",
+      "kanji": "夏",
+      "furigana": "なつ",
+      "romaji": "natsu",
+      "wordType": "noun",
+      "meaningVi": "Mùa hè",
+      "accentNote": "つ cuối từ đọc nhẹ: 'na-ts(ư)'.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-2-10",
+      "word": "ふね",
+      "kanji": "船",
+      "furigana": "ふね",
+      "romaji": "fune",
+      "wordType": "noun",
+      "meaningVi": "Con thuyền, con tàu",
+      "accentNote": "ふ thổi hơi nhẹ qua môi, không cắn môi.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-2-11",
+      "word": "ほし",
+      "kanji": "星",
+      "furigana": "ほし",
+      "romaji": "hoshi",
+      "wordType": "noun",
+      "meaningVi": "Ngôi sao",
+      "accentNote": "Hai nhịp hô-shi.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-2-12",
+      "word": "たこ",
+      "kanji": "蛸",
+      "furigana": "たこ",
+      "romaji": "tako",
+      "wordType": "noun",
+      "meaningVi": "Con bạch tuộc (món たこやき là bánh bạch tuộc nướng)",
+      "accentNote": "Hai nhịp ta-kô. Trên thực đơn thường viết タコ.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-2-13",
+      "word": "ちかてつ",
+      "kanji": "地下鉄",
+      "furigana": "ちかてつ",
+      "romaji": "chikatetsu",
+      "wordType": "noun",
+      "meaningVi": "Tàu điện ngầm",
+      "accentNote": "Bốn nhịp chi-ka-tê-tsư, ち và つ là hai âm dễ sai nhất của bài.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-2-14",
+      "word": "にく",
+      "kanji": "肉",
+      "furigana": "にく",
+      "romaji": "niku",
+      "wordType": "noun",
+      "meaningVi": "Thịt",
+      "accentNote": "Hai nhịp ni-kư.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-2-15",
+      "word": "とけい",
+      "kanji": "時計",
+      "furigana": "とけい",
+      "romaji": "tokei",
+      "wordType": "noun",
+      "meaningVi": "Đồng hồ",
+      "accentNote": "けい thường đọc kéo dài thành 'kê-'.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-2-16",
+      "word": "きのこ",
+      "kanji": "茸",
+      "furigana": "きのこ",
+      "romaji": "kinoko",
+      "wordType": "noun",
+      "meaningVi": "Nấm",
+      "accentNote": "Ba nhịp ki-nô-kô. Hàng ngày hay viết bằng hiragana.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-2-17",
+      "word": "ひこうき",
+      "kanji": "飛行機",
+      "furigana": "ひこうき",
+      "romaji": "hikouki",
+      "wordType": "noun",
+      "meaningVi": "Máy bay",
+      "accentNote": "こう kéo dài thành 'kôô': hi-kôô-ki (4 nhịp).",
+      "emotion": "ngac_nhien"
+    },
+    {
+      "id": "voc-kana-2-18",
+      "word": "さいふ",
+      "kanji": "財布",
+      "furigana": "さいふ",
+      "romaji": "saifu",
+      "wordType": "noun",
+      "meaningVi": "Cái ví",
+      "accentNote": "Ba nhịp xa-i-fư.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-2-19",
+      "word": "へそ",
+      "kanji": "臍",
+      "furigana": "へそ",
+      "romaji": "heso",
+      "wordType": "noun",
+      "meaningVi": "Cái rốn",
+      "accentNote": "Hai nhịp hê-xô. Thường viết bằng hiragana.",
+      "emotion": "de_biu"
+    },
+    {
+      "id": "voc-kana-2-20",
+      "word": "なに",
+      "kanji": "何",
+      "furigana": "なに",
+      "romaji": "nani",
+      "wordType": "noun",
+      "meaningVi": "Cái gì?",
+      "accentNote": "Hai nhịp na-ni; hỏi thân mật thì lên giọng: 'なに？'.",
+      "emotion": "suy_nghi"
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kana-2-1",
+      "character": "た",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "ta",
+      "hanViet": "",
+      "strokeCount": 4,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'ta' như 'ta' trong tiếng Việt, âm t đầu từ hơi bật hơi nhẹ.",
+      "meoNho": "Nhìn kỹ: nét bên trái trông như chữ 't' thường, hai nét bên phải như chữ 'a' viết vội — ghép lại thành 't-a' = 'ta'.",
+      "sosanh": "Dễ nhầm với な (na): bên phải của な có vòng xoắn ở dưới, còn た bên phải chỉ là hai nét như こ. Katakana タ (ta) trông khác hẳn.",
+      "commonWords": [
+        {
+          "word": "たこ",
+          "furigana": "たこ",
+          "meaningVi": "Con bạch tuộc (蛸)"
+        },
+        {
+          "word": "した",
+          "furigana": "した",
+          "meaningVi": "Phía dưới (下)"
+        },
+        {
+          "word": "かた",
+          "furigana": "かた",
+          "meaningVi": "Vai (肩)"
+        }
+      ]
+    },
+    {
+      "id": "kana-2-2",
+      "character": "ち",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "chi",
+      "hanViet": "",
+      "strokeCount": 2,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'chi' gần 'chi' tiếng Việt nhưng lưỡi mềm hơn; KHÔNG đọc 'ti'.",
+      "meoNho": "ち trông như số 5 viết tay — năm ngón tay xòe ra: 'chi chi chành chành'.",
+      "sosanh": "Dễ nhầm với さ (sa): ち như さ soi gương — bụng của ち phình sang PHẢI (như số 5), bụng của さ cong sang TRÁI (như chữ c). ち cũng chỉ có 2 nét, さ có 3.",
+      "commonWords": [
+        {
+          "word": "くち",
+          "furigana": "くち",
+          "meaningVi": "Cái miệng (口)"
+        },
+        {
+          "word": "ちかてつ",
+          "furigana": "ちかてつ",
+          "meaningVi": "Tàu điện ngầm (地下鉄)"
+        },
+        {
+          "word": "ちち",
+          "furigana": "ちち",
+          "meaningVi": "Bố (tôi) (父)"
+        }
+      ]
+    },
+    {
+      "id": "kana-2-3",
+      "character": "つ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "tsu",
+      "hanViet": "",
+      "strokeCount": 1,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'tsư': chạm đầu lưỡi như 't' rồi xì hơi 's' ngay lập tức, môi không chu. Tiếng Việt không có âm này — đừng đọc thành 'tư' hay 'chư'.",
+      "meoNho": "Một con sóng thần (tsunami) cuộn tròn từ trái sang phải: 'tsu…'.",
+      "sosanh": "Dễ nhầm với う (u): う có gạch ngắn trên đầu, つ thì không. Đừng nhầm với katakana ツ (tsu) và シ (shi) ở bài 7.",
+      "commonWords": [
+        {
+          "word": "くつ",
+          "furigana": "くつ",
+          "meaningVi": "Đôi giày (靴)"
+        },
+        {
+          "word": "なつ",
+          "furigana": "なつ",
+          "meaningVi": "Mùa hè (夏)"
+        },
+        {
+          "word": "つくえ",
+          "furigana": "つくえ",
+          "meaningVi": "Cái bàn học (机)"
+        }
+      ]
+    },
+    {
+      "id": "kana-2-4",
+      "character": "て",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "te",
+      "hanViet": "",
+      "strokeCount": 1,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'tê' như trong 'tê tay'.",
+      "meoNho": "Trông như một cánh tay dang ngang rồi buông thõng — giữ lâu thì 'tê tay'. Mà て (手) cũng chính là 'bàn tay'!",
+      "sosanh": "Dễ nhầm với katakana テ (te, bài 7): テ có thêm một nét ngang phía trên, tổng 3 nét.",
+      "commonWords": [
+        {
+          "word": "て",
+          "furigana": "て",
+          "meaningVi": "Bàn tay (手)"
+        },
+        {
+          "word": "ちかてつ",
+          "furigana": "ちかてつ",
+          "meaningVi": "Tàu điện ngầm (地下鉄)"
+        },
+        {
+          "word": "てつ",
+          "furigana": "てつ",
+          "meaningVi": "Sắt (鉄)"
+        }
+      ]
+    },
+    {
+      "id": "kana-2-5",
+      "character": "と",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "to",
+      "hanViet": "",
+      "strokeCount": 2,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'tô' như 'cái tô'.",
+      "meoNho": "Nét cong phía dưới là cái TÔ, nét chéo nhỏ phía trên là chiếc đũa gác lên: 'tô'.",
+      "sosanh": "Dễ nhầm với katakana ト (to, bài 7): ト là một nét dọc thẳng và một chấm, と thì mềm và cong.",
+      "commonWords": [
+        {
+          "word": "ひと",
+          "furigana": "ひと",
+          "meaningVi": "Người (人)"
+        },
+        {
+          "word": "とけい",
+          "furigana": "とけい",
+          "meaningVi": "Đồng hồ (時計)"
+        },
+        {
+          "word": "そと",
+          "furigana": "そと",
+          "meaningVi": "Bên ngoài (外)"
+        }
+      ]
+    },
+    {
+      "id": "kana-2-6",
+      "character": "な",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "na",
+      "hanViet": "",
+      "strokeCount": 4,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'na' như 'quả na'.",
+      "meoNho": "Bên trái là dấu thập như cành cây, bên phải là quả NA lủng lẳng có cái cuống xoắn: 'na'.",
+      "sosanh": "Dễ nhầm với た (ta): な có vòng xoắn nhỏ ở góc dưới bên phải. Katakana ナ (na) chỉ có 2 nét.",
+      "commonWords": [
+        {
+          "word": "なつ",
+          "furigana": "なつ",
+          "meaningVi": "Mùa hè (夏)"
+        },
+        {
+          "word": "さかな",
+          "furigana": "さかな",
+          "meaningVi": "Con cá (魚)"
+        },
+        {
+          "word": "はな",
+          "furigana": "はな",
+          "meaningVi": "Bông hoa (花)"
+        }
+      ]
+    },
+    {
+      "id": "kana-2-7",
+      "character": "に",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "ni",
+      "hanViet": "",
+      "strokeCount": 3,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'ni' như trong 'ni cô'.",
+      "meoNho": "Nét dọc bên trái là ni cô đứng thẳng, hai nét bên phải là hai tấm chiếu trải cạnh: 'ni'.",
+      "sosanh": "Dễ nhầm với こ (ko) và katakana ニ (ni): chúng không có nét dọc bên trái. Cũng đừng nhầm với け (ke) — nét phải của け là một cột dọc dài.",
+      "commonWords": [
+        {
+          "word": "にく",
+          "furigana": "にく",
+          "meaningVi": "Thịt (肉)"
+        },
+        {
+          "word": "なに",
+          "furigana": "なに",
+          "meaningVi": "Cái gì (何)"
+        },
+        {
+          "word": "にし",
+          "furigana": "にし",
+          "meaningVi": "Phía tây (西)"
+        }
+      ]
+    },
+    {
+      "id": "kana-2-8",
+      "character": "ぬ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "nu",
+      "hanViet": "",
+      "strokeCount": 2,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'nư' (u dẹt, môi không chu).",
+      "meoNho": "Một nắm mì (noodle) rối tung, sợi cuối thắt thành vòng xoắn nhỏ: 'nư'.",
+      "sosanh": "Dễ nhầm với め (me, bài 3): ぬ có vòng xoắn nhỏ ở cuối nét, め thì không có.",
+      "commonWords": [
+        {
+          "word": "いぬ",
+          "furigana": "いぬ",
+          "meaningVi": "Con chó (犬)"
+        },
+        {
+          "word": "ぬの",
+          "furigana": "ぬの",
+          "meaningVi": "Vải (布)"
+        },
+        {
+          "word": "きぬ",
+          "furigana": "きぬ",
+          "meaningVi": "Lụa (絹)"
+        }
+      ]
+    },
+    {
+      "id": "kana-2-9",
+      "character": "ね",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "ne",
+      "hanViet": "",
+      "strokeCount": 2,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'nê'.",
+      "meoNho": "Con mèo (ねこ) ngồi dựa vào cột, cuộn đuôi thành một vòng tròn ở cuối: 'nê'.",
+      "sosanh": "Dễ nhầm với れ (re) và わ (wa) ở bài 3: ね kết thúc bằng vòng xoắn, れ kết thúc bằng đuôi hất lên, わ kết thúc bằng đường cong mở.",
+      "commonWords": [
+        {
+          "word": "ねこ",
+          "furigana": "ねこ",
+          "meaningVi": "Con mèo (猫)"
+        },
+        {
+          "word": "ふね",
+          "furigana": "ふね",
+          "meaningVi": "Con thuyền (船)"
+        },
+        {
+          "word": "あね",
+          "furigana": "あね",
+          "meaningVi": "Chị gái (tôi) (姉)"
+        }
+      ]
+    },
+    {
+      "id": "kana-2-10",
+      "character": "の",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "no",
+      "hanViet": "",
+      "strokeCount": 1,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'nô'.",
+      "meoNho": "Một vòng xoáy như biển báo cấm có gạch chéo — 'NO!' (không được!).",
+      "sosanh": "Dễ nhầm với め (me, bài 3): め có thêm một nét chéo cắt ngang. Katakana ノ (no) chỉ là một nét phẩy.",
+      "commonWords": [
+        {
+          "word": "きのこ",
+          "furigana": "きのこ",
+          "meaningVi": "Nấm (茸)"
+        },
+        {
+          "word": "つの",
+          "furigana": "つの",
+          "meaningVi": "Cái sừng (角)"
+        },
+        {
+          "word": "この",
+          "furigana": "この",
+          "meaningVi": "… này (この ねこ: con mèo này)"
+        }
+      ]
+    },
+    {
+      "id": "kana-2-11",
+      "character": "は",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "ha",
+      "hanViet": "",
+      "strokeCount": 3,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'ha' (âm h nhẹ như tiếng Việt). Khi làm trợ từ chủ đề thì đọc là 'wa'.",
+      "meoNho": "Cột bên trái là một người đứng nhìn, bên phải là người cười ngặt nghẽo ôm bụng (vòng xoắn): 'ha ha!'.",
+      "sosanh": "Dễ nhầm với ほ (ho): ほ có HAI nét ngang bên phải, は chỉ có MỘT. Còn け (ke) thì không có vòng xoắn.",
+      "commonWords": [
+        {
+          "word": "はな",
+          "furigana": "はな",
+          "meaningVi": "Bông hoa (花) / cái mũi (鼻)"
+        },
+        {
+          "word": "はし",
+          "furigana": "はし",
+          "meaningVi": "Đôi đũa (箸) / cây cầu (橋)"
+        },
+        {
+          "word": "はこ",
+          "furigana": "はこ",
+          "meaningVi": "Cái hộp (箱)"
+        }
+      ]
+    },
+    {
+      "id": "kana-2-12",
+      "character": "ひ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "hi",
+      "hanViet": "",
+      "strokeCount": 1,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'hi' như tiếng cười 'hi hi'.",
+      "meoNho": "Cái miệng đang cười toe toét: 'hi hi!'.",
+      "sosanh": "Dễ nhầm với katakana ヒ (hi, bài 8): ヒ có 2 nét thẳng góc cạnh, ひ là một nét cong liền.",
+      "commonWords": [
+        {
+          "word": "ひと",
+          "furigana": "ひと",
+          "meaningVi": "Người (人)"
+        },
+        {
+          "word": "ひとつ",
+          "furigana": "ひとつ",
+          "meaningVi": "Một cái (一つ)"
+        },
+        {
+          "word": "ひこうき",
+          "furigana": "ひこうき",
+          "meaningVi": "Máy bay (飛行機)"
+        }
+      ]
+    },
+    {
+      "id": "kana-2-13",
+      "character": "ふ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "fu",
+      "hanViet": "",
+      "strokeCount": 4,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'fư' thật nhẹ: thổi hơi qua hai môi khép hờ như thổi nguội bát canh, KHÔNG cắn môi dưới như 'ph' tiếng Việt, cũng không đọc 'hu'.",
+      "meoNho": "Bốn nét rời như ngọn núi Phú Sĩ (Fuji): chóp núi ở trên, hai sườn và một đám mây bên cạnh — 'fu'.",
+      "sosanh": "Viết đủ 4 nét rời nhau. Katakana フ (fu, bài 8) chỉ có 1 nét.",
+      "commonWords": [
+        {
+          "word": "ふね",
+          "furigana": "ふね",
+          "meaningVi": "Con thuyền (船)"
+        },
+        {
+          "word": "さいふ",
+          "furigana": "さいふ",
+          "meaningVi": "Cái ví (財布)"
+        },
+        {
+          "word": "ふく",
+          "furigana": "ふく",
+          "meaningVi": "Quần áo (服)"
+        }
+      ]
+    },
+    {
+      "id": "kana-2-14",
+      "character": "へ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "he",
+      "hanViet": "",
+      "strokeCount": 1,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'hê'. Khi làm trợ từ chỉ hướng đi thì đọc là 'ê'.",
+      "meoNho": "Một ngọn đồi nhỏ — leo lên tới đỉnh thì reo: 'Hê! Tới rồi!'.",
+      "sosanh": "Hiragana へ và katakana ヘ gần như giống hệt nhau. Đừng nhầm với く (ku) dựng đứng như dấu '<'.",
+      "commonWords": [
+        {
+          "word": "へそ",
+          "furigana": "へそ",
+          "meaningVi": "Cái rốn (臍)"
+        },
+        {
+          "word": "へた",
+          "furigana": "へた",
+          "meaningVi": "Kém, dở (下手)"
+        },
+        {
+          "word": "へいき",
+          "furigana": "へいき",
+          "meaningVi": "Không sao, bình thường (平気)"
+        }
+      ]
+    },
+    {
+      "id": "kana-2-15",
+      "character": "ほ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "ho",
+      "hanViet": "",
+      "strokeCount": 4,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'hô'.",
+      "meoNho": "Giống は nhưng thêm một nét ngang trên đầu như lá cờ trên cột: giương cờ và 'hô' khẩu hiệu!",
+      "sosanh": "Dễ nhầm với は (ha): ほ có HAI nét ngang bên phải, は chỉ có MỘT.",
+      "commonWords": [
+        {
+          "word": "ほし",
+          "furigana": "ほし",
+          "meaningVi": "Ngôi sao (星)"
+        },
+        {
+          "word": "ほね",
+          "furigana": "ほね",
+          "meaningVi": "Xương (骨)"
+        },
+        {
+          "word": "ほか",
+          "furigana": "ほか",
+          "meaningVi": "Cái khác, ngoài ra (他)"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "kana-l2-s1",
+      "slideType": "grammar",
+      "title": "1. Hàng た: ち đọc 'chi', つ đọc 'tsu'",
+      "grammarFormula": "t + a i u e o → た ち(chi) つ(tsu) て と",
+      "explanation": "Hàng た không đều: ta – chi – tsu – te – to. た, て, と đọc với âm t như tiếng Việt, nhưng ち đổi thành 'chi' và つ đổi thành 'tsu'. つ là âm 'ts': chạm lưỡi rồi xì hơi ngay — tiếng Việt không có, đừng đọc thành 'tư' hay 'chư'.",
+      "teacherTips": "Luyện cặp đối lập 'ta – chi – tsu' thật chậm, rồi đọc nhanh ちかてつ. Học viên người Việt hay đọc つ thành 'chư'.",
+      "culturalNotes": "",
+      "examples": [
+        {
+          "id": "ex-kana-l2-s1-1",
+          "tokens": [
+            {
+              "id": "t-kana-l2s1-1",
+              "text": "く",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l2s1-2",
+              "text": "ち",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "くち — cái miệng (口)."
+        },
+        {
+          "id": "ex-kana-l2-s1-2",
+          "tokens": [
+            {
+              "id": "t-kana-l2s1-3",
+              "text": "く",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l2s1-4",
+              "text": "つ",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "くつ — đôi giày (靴)."
+        },
+        {
+          "id": "ex-kana-l2-s1-3",
+          "tokens": [
+            {
+              "id": "t-kana-l2s1-5",
+              "text": "ち",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l2s1-6",
+              "text": "か",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l2s1-7",
+              "text": "て",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l2s1-8",
+              "text": "つ",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "ちかてつ — tàu điện ngầm (地下鉄): chi-ka-tê-tsư."
+        }
+      ]
+    },
+    {
+      "slideId": "kana-l2-s2",
+      "slideType": "grammar",
+      "title": "2. Hàng な và hàng は — ふ đọc 'fu'",
+      "grammarFormula": "n → な に ぬ ね の ／ h → は ひ ふ(fu) へ ほ",
+      "explanation": "Hàng な đọc đều: na – ni – nu – ne – no. Hàng は gồm ha – hi – fu – he – ho; riêng ふ đọc bằng cách thổi hơi nhẹ qua hai môi khép hờ, như thổi nguội bát canh. Không cắn môi dưới như 'ph' tiếng Việt, cũng không đọc thành 'hu'.",
+      "teacherTips": "Cho học viên đặt tờ giấy trước miệng: đọc ふ đúng thì tờ giấy chỉ rung nhẹ. Nhắc lại cặp dễ nhầm ぬ/め, ね/れ/わ trước bài 3.",
+      "culturalNotes": "ふじさん (núi Phú Sĩ) có chữ ふ ở đầu — ngọn núi biểu tượng của Nhật Bản.",
+      "examples": [
+        {
+          "id": "ex-kana-l2-s2-1",
+          "tokens": [
+            {
+              "id": "t-kana-l2s2-1",
+              "text": "ふ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l2s2-2",
+              "text": "ね",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "ふね — con thuyền (船)."
+        },
+        {
+          "id": "ex-kana-l2-s2-2",
+          "tokens": [
+            {
+              "id": "t-kana-l2s2-3",
+              "text": "さ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l2s2-4",
+              "text": "い",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l2s2-5",
+              "text": "ふ",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "さいふ — cái ví (財布)."
+        },
+        {
+          "id": "ex-kana-l2-s2-3",
+          "tokens": [
+            {
+              "id": "t-kana-l2s2-6",
+              "text": "い",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l2s2-7",
+              "text": "ぬ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l2s2-8",
+              "text": "と",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l2s2-9",
+              "text": "ね",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l2s2-10",
+              "text": "こ",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "いぬと ねこ — chó và mèo (犬と猫)."
+        }
+      ]
+    },
+    {
+      "slideId": "kana-l2-s3",
+      "slideType": "grammar",
+      "title": "3. Xem trước: は đọc 'wa', へ đọc 'e' khi làm trợ từ",
+      "grammarFormula": "は (trợ từ) → wa ／ へ (trợ từ) → e",
+      "explanation": "Bình thường は đọc 'ha' và へ đọc 'he'. Nhưng khi đứng sau danh từ để làm trợ từ, は đọc 'wa' (đánh dấu chủ đề) và へ đọc 'e' (chỉ hướng đi tới). Chữ viết giữ nguyên, chỉ cách đọc thay đổi — em sẽ gặp lại ở N5 bài 1 (は) và bài 5 (へ).",
+      "teacherTips": "Đặt hai ví dụ はな (ha-na) và ねこは (nê-kô-wa) cạnh nhau để học viên thấy cùng một chữ mà hai cách đọc.",
+      "culturalNotes": "Đây là dấu vết của tiếng Nhật cổ: ngày xưa は từng được phát âm gần 'wa' ở giữa câu, chính tả giữ lại đến nay.",
+      "examples": [
+        {
+          "id": "ex-kana-l2-s3-1",
+          "tokens": [
+            {
+              "id": "t-kana-l2s3-1",
+              "text": "は",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l2s3-2",
+              "text": "な",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "はな — bông hoa: は ở đây là một phần của từ, đọc 'ha'."
+        },
+        {
+          "id": "ex-kana-l2-s3-2",
+          "tokens": [
+            {
+              "id": "t-kana-l2s3-3",
+              "text": "ねこ",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l2s3-4",
+              "text": "は",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l2s3-5",
+              "text": "ちいさい",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "ねこは ちいさい — con mèo thì nhỏ: は là trợ từ, đọc 'wa'."
+        },
+        {
+          "id": "ex-kana-l2-s3-3",
+          "tokens": [
+            {
+              "id": "t-kana-l2s3-6",
+              "text": "そと",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l2s3-7",
+              "text": "へ",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "そとへ — ra bên ngoài: へ là trợ từ chỉ hướng, đọc 'e'."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-kana-2-1",
+      "speaker": "ミラー (Miller)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l2-1a",
+          "text": "あ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-1b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-1c",
+          "text": "いぬ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l2-1d",
+          "text": "！",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "A, con chó kìa!",
+      "emotion": "ngac_nhien"
+    },
+    {
+      "id": "dia-kana-2-2",
+      "speaker": "さとう (Satou)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l2-2a",
+          "text": "いいえ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-2b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-2c",
+          "text": "ねこ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l2-2d",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Không phải đâu, là con mèo.",
+      "emotion": "vui"
+    },
+    {
+      "id": "dia-kana-2-3",
+      "speaker": "ミラー (Miller)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l2-3a",
+          "text": "ねこ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-3b",
+          "text": "？",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-3c",
+          "text": "ちいさい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-3d",
+          "text": "ねこ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-3e",
+          "text": "！",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Mèo à? Mèo nhỏ xíu!",
+      "emotion": "ngac_nhien"
+    },
+    {
+      "id": "dia-kana-2-4",
+      "speaker": "さとう (Satou)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l2-4a",
+          "text": "はい",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l2-4b",
+          "text": "。",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-4c",
+          "text": "あの",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-4d",
+          "text": "ねこ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-4e",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-4f",
+          "text": "くち",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l2-4g",
+          "text": "に",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-4h",
+          "text": "さかな",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l2-4i",
+          "text": "…",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Vâng. Con mèo đó đang ngậm con cá trong miệng…",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "dia-kana-2-5",
+      "speaker": "ミラー (Miller)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l2-5a",
+          "text": "え",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-5b",
+          "text": "？",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-5c",
+          "text": "さかな",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-5d",
+          "text": "？",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Hả? Cá á?",
+      "emotion": "ngac_nhien"
+    },
+    {
+      "id": "dia-kana-2-6",
+      "speaker": "さとう (Satou)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l2-6a",
+          "text": "ふふ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-6b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-6c",
+          "text": "あの",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-6d",
+          "text": "ねこ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-6e",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-6f",
+          "text": "たのしそう",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l2-6g",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Hì hì, con mèo đó trông vui ghê.",
+      "emotion": "vui"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-kana-2-1",
+      "question": "Chữ つ đọc là gì?",
+      "options": [
+        "chu",
+        "tu",
+        "tsu",
+        "su"
+      ],
+      "correctIndex": 2,
+      "explanation": "つ đọc là 'tsu': chạm lưỡi như 't' rồi xì hơi 's' ngay. Hàng た: ta chi tsu te to.",
+      "hint": "Sóng thần tsunami."
+    },
+    {
+      "id": "ex-q-kana-2-2",
+      "question": "Chữ な đọc là gì?",
+      "options": [
+        "na",
+        "ta",
+        "ha",
+        "ma"
+      ],
+      "correctIndex": 0,
+      "explanation": "な (na) có vòng xoắn nhỏ ở góc dưới bên phải — quả na treo trên cành. た (ta) thì không có vòng xoắn.",
+      "hint": "Nhìn góc dưới bên phải."
+    },
+    {
+      "id": "ex-q-kana-2-3",
+      "question": "Chọn chữ hiragana đọc là 'fu'.",
+      "options": [
+        "ほ",
+        "ひ",
+        "へ",
+        "ふ"
+      ],
+      "correctIndex": 3,
+      "explanation": "ふ (fu) gồm 4 nét rời như núi Phú Sĩ. ほ là 'ho', ひ là 'hi', へ là 'he'.",
+      "hint": "Hàng は: ha hi fu he ho."
+    },
+    {
+      "id": "ex-q-kana-2-4",
+      "question": "Chữ nào đọc là 'nu'?",
+      "options": [
+        "め",
+        "ぬ",
+        "の",
+        "ね"
+      ],
+      "correctIndex": 1,
+      "explanation": "ぬ (nu) có vòng xoắn nhỏ ở cuối nét; め (me, bài 3) giống hệt nhưng KHÔNG có vòng xoắn. の là 'no', ね là 'ne'.",
+      "hint": "Tìm chữ có nét chéo cắt ngang và vòng xoắn ở đuôi."
+    },
+    {
+      "id": "ex-q-kana-2-5",
+      "question": "さ và ち trông như ảnh soi gương. Chữ nào đọc là 'chi'?",
+      "options": [
+        "さ",
+        "き",
+        "ち",
+        "そ"
+      ],
+      "correctIndex": 2,
+      "explanation": "ち (chi) có bụng phình sang PHẢI như số 5. さ (sa) có bụng cong sang TRÁI như chữ c; き (ki) có hai nét ngang.",
+      "hint": "Số 5 — 'chi chi chành chành'."
+    },
+    {
+      "id": "ex-q-kana-2-6",
+      "question": "Từ ねこ có nghĩa là gì?",
+      "options": [
+        "Con chó",
+        "Con mèo",
+        "Con cá",
+        "Con bạch tuộc"
+      ],
+      "correctIndex": 1,
+      "explanation": "ねこ (neko) là con mèo. Con chó là いぬ, con cá là さかな, con bạch tuộc là たこ.",
+      "hint": "Sensei của em cũng là một con…"
+    },
+    {
+      "id": "ex-q-kana-2-7",
+      "question": "Từ ちかてつ (tàu điện ngầm) đọc đúng là gì?",
+      "options": [
+        "tikatetu",
+        "shikatetsu",
+        "chikatesu",
+        "chikatetsu"
+      ],
+      "correctIndex": 3,
+      "explanation": "ち = chi, か = ka, て = te, つ = tsu → chikatetsu.",
+      "hint": "ち và つ không đọc theo kiểu 't' thông thường."
+    },
+    {
+      "id": "ex-q-kana-2-8",
+      "question": "Trong câu ねこは ちいさい (con mèo thì nhỏ), chữ は đọc là gì?",
+      "options": [
+        "wa",
+        "ha",
+        "ba",
+        "e"
+      ],
+      "correctIndex": 0,
+      "explanation": "Khi làm trợ từ chủ đề đứng sau danh từ, は đọc là 'wa'. Trong từ はな (hoa) thì は mới đọc 'ha'.",
+      "hint": "は ở đây đứng ngay sau danh từ ねこ."
+    },
+    {
+      "id": "ex-q-kana-2-9",
+      "question": "Từ 'hito' (người) viết bằng hiragana thế nào?",
+      "options": [
+        "ほと",
+        "はと",
+        "ひと",
+        "ひこ"
+      ],
+      "correctIndex": 2,
+      "explanation": "ひ (hi) + と (to) → ひと. はと (hato) là chim bồ câu, ひこ không phải từ thông dụng.",
+      "hint": "Chữ đầu là cái miệng cười 'hi hi'."
+    },
+    {
+      "id": "ex-q-kana-2-10",
+      "question": "ね, れ, わ trông rất giống nhau. Chữ nào đọc là 'ne'?",
+      "options": [
+        "わ",
+        "ね",
+        "れ",
+        "ぬ"
+      ],
+      "correctIndex": 1,
+      "explanation": "ね (ne) kết thúc bằng một vòng xoắn như đuôi mèo cuộn tròn. れ (re) có đuôi hất lên, わ (wa) có đường cong mở — em sẽ học hai chữ này ở bài 3.",
+      "hint": "Đuôi mèo cuộn tròn."
+    }
+  ]
+}

@@ -1,0 +1,1182 @@
+{
+  "level": "KANA",
+  "lessonNumber": 1,
+  "title": "Bài 1: Hiragana hàng あ・か・さ",
+  "description": "Làm quen 15 chữ hiragana đầu tiên: năm nguyên âm あいうえお, hàng か và hàng さ. Đọc được những từ đầu đời như すし, かさ, おいしい và nhớ rằng し đọc là 'shi'.",
+  "vocabList": [
+    {
+      "id": "voc-kana-1-1",
+      "word": "あお",
+      "kanji": "青",
+      "furigana": "あお",
+      "romaji": "ao",
+      "wordType": "noun",
+      "meaningVi": "Màu xanh (xanh dương, cũng dùng cho đèn xanh giao thông)",
+      "accentNote": "Hai nhịp đều a-o, không nối thành 'ao' một tiếng như tiếng Việt.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-1-2",
+      "word": "あか",
+      "kanji": "赤",
+      "furigana": "あか",
+      "romaji": "aka",
+      "wordType": "noun",
+      "meaningVi": "Màu đỏ",
+      "accentNote": "Hai nhịp a-ka, không nhấn dấu thanh.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-1-3",
+      "word": "いえ",
+      "kanji": "家",
+      "furigana": "いえ",
+      "romaji": "ie",
+      "wordType": "noun",
+      "meaningVi": "Ngôi nhà",
+      "accentNote": "Hai nhịp i-ê, tách rõ, đừng đọc dính thành 'iê'.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-1-4",
+      "word": "うえ",
+      "kanji": "上",
+      "furigana": "うえ",
+      "romaji": "ue",
+      "wordType": "noun",
+      "meaningVi": "Phía trên, bên trên",
+      "accentNote": "う môi không chu: 'ư-ê'.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-1-5",
+      "word": "かお",
+      "kanji": "顔",
+      "furigana": "かお",
+      "romaji": "kao",
+      "wordType": "noun",
+      "meaningVi": "Khuôn mặt",
+      "accentNote": "Hai nhịp ka-ô, không đọc thành 'cao'.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-1-6",
+      "word": "くさ",
+      "kanji": "草",
+      "furigana": "くさ",
+      "romaji": "kusa",
+      "wordType": "noun",
+      "meaningVi": "Cỏ",
+      "accentNote": "く rất nhẹ, nghe gần như 'k-sa'.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-1-7",
+      "word": "えき",
+      "kanji": "駅",
+      "furigana": "えき",
+      "romaji": "eki",
+      "wordType": "noun",
+      "meaningVi": "Nhà ga (tàu điện)",
+      "accentNote": "Hai nhịp ê-ki.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-1-8",
+      "word": "かさ",
+      "kanji": "傘",
+      "furigana": "かさ",
+      "romaji": "kasa",
+      "wordType": "noun",
+      "meaningVi": "Cái ô, cái dù",
+      "accentNote": "か cao, さ thấp xuống.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-1-9",
+      "word": "すし",
+      "kanji": "寿司",
+      "furigana": "すし",
+      "romaji": "sushi",
+      "wordType": "noun",
+      "meaningVi": "Sushi (cơm trộn giấm với cá sống)",
+      "accentNote": "す rất nhẹ gần như câm: nghe như 's-shi'.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-1-10",
+      "word": "しお",
+      "kanji": "塩",
+      "furigana": "しお",
+      "romaji": "shio",
+      "wordType": "noun",
+      "meaningVi": "Muối",
+      "accentNote": "し đọc 'shi', không phải 'si'.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-1-11",
+      "word": "せかい",
+      "kanji": "世界",
+      "furigana": "せかい",
+      "romaji": "sekai",
+      "wordType": "noun",
+      "meaningVi": "Thế giới",
+      "accentNote": "Ba nhịp đều xê-ka-i.",
+      "emotion": "ngac_nhien"
+    },
+    {
+      "id": "voc-kana-1-12",
+      "word": "すいか",
+      "kanji": "西瓜",
+      "furigana": "すいか",
+      "romaji": "suika",
+      "wordType": "noun",
+      "meaningVi": "Quả dưa hấu",
+      "accentNote": "Ba nhịp sư-i-ka; hay viết bằng katakana スイカ trên bao bì.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-1-13",
+      "word": "かき",
+      "kanji": "柿",
+      "furigana": "かき",
+      "romaji": "kaki",
+      "wordType": "noun",
+      "meaningVi": "Quả hồng",
+      "accentNote": "Hai nhịp ka-ki, đọc đều.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-1-14",
+      "word": "こえ",
+      "kanji": "声",
+      "furigana": "こえ",
+      "romaji": "koe",
+      "wordType": "noun",
+      "meaningVi": "Giọng nói, tiếng (người, vật)",
+      "accentNote": "Hai nhịp kô-ê.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-1-15",
+      "word": "さけ",
+      "kanji": "酒",
+      "furigana": "さけ",
+      "romaji": "sake",
+      "wordType": "noun",
+      "meaningVi": "Rượu (rượu sake); cùng âm với 鮭 さけ là cá hồi",
+      "accentNote": "Hai nhịp xa-kê; nghĩa phân biệt nhờ ngữ cảnh.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-1-16",
+      "word": "うそ",
+      "kanji": "嘘",
+      "furigana": "うそ",
+      "romaji": "uso",
+      "wordType": "noun",
+      "meaningVi": "Lời nói dối; 'うそ!' còn là câu cảm thán 'Không thể nào!'",
+      "accentNote": "Khi cảm thán thì lên giọng: 'うそ!?'.",
+      "emotion": "ngac_nhien"
+    },
+    {
+      "id": "voc-kana-1-17",
+      "word": "おかし",
+      "kanji": "お菓子",
+      "furigana": "おかし",
+      "romaji": "okashi",
+      "wordType": "noun",
+      "meaningVi": "Bánh kẹo, đồ ăn vặt",
+      "accentNote": "Ba nhịp ô-ka-shi.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-1-18",
+      "word": "いす",
+      "kanji": "椅子",
+      "furigana": "いす",
+      "romaji": "isu",
+      "wordType": "noun",
+      "meaningVi": "Cái ghế",
+      "accentNote": "す cuối từ rất nhẹ: 'i-s(ư)'.",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "voc-kana-1-19",
+      "word": "あさ",
+      "kanji": "朝",
+      "furigana": "あさ",
+      "romaji": "asa",
+      "wordType": "noun",
+      "meaningVi": "Buổi sáng",
+      "accentNote": "あ cao, さ thấp xuống.",
+      "emotion": "vui"
+    },
+    {
+      "id": "voc-kana-1-20",
+      "word": "おいしい",
+      "kanji": "美味しい",
+      "furigana": "おいしい",
+      "romaji": "oishii",
+      "wordType": "adjective",
+      "meaningVi": "Ngon",
+      "accentNote": "Bốn nhịp ô-i-shi-i: いい cuối phải kéo đủ hai nhịp.",
+      "emotion": "vui"
+    }
+  ],
+  "kanjiList": [
+    {
+      "id": "kana-1-1",
+      "character": "あ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "a",
+      "hanViet": "",
+      "strokeCount": 3,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc như 'a' trong tiếng Việt, miệng mở tự nhiên, ngắn gọn một nhịp.",
+      "meoNho": "Nhìn あ như cô bé đội mũ có dấu thập, ôm quả bóng tròn trước bụng, há miệng reo 'A!'.",
+      "sosanh": "Dễ nhầm với お (o): お có thêm một chấm nhỏ phía trên bên phải, và nét dọc của お không có vòng cắt như あ.",
+      "commonWords": [
+        {
+          "word": "あさ",
+          "furigana": "あさ",
+          "meaningVi": "Buổi sáng (朝)"
+        },
+        {
+          "word": "あか",
+          "furigana": "あか",
+          "meaningVi": "Màu đỏ (赤)"
+        },
+        {
+          "word": "あお",
+          "furigana": "あお",
+          "meaningVi": "Màu xanh (青)"
+        }
+      ]
+    },
+    {
+      "id": "kana-1-2",
+      "character": "い",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "i",
+      "hanViet": "",
+      "strokeCount": 2,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc như 'i' trong tiếng Việt, môi hơi dẹt sang hai bên.",
+      "meoNho": "Hai nét đứng cạnh nhau như hai chữ 'i' viết thường bị mất chấm: 'i… i'.",
+      "sosanh": "Dễ nhầm với り (ri, bài 3): い nét TRÁI dài hơn nét phải; り thì nét PHẢI dài hẳn xuống dưới.",
+      "commonWords": [
+        {
+          "word": "いえ",
+          "furigana": "いえ",
+          "meaningVi": "Ngôi nhà (家)"
+        },
+        {
+          "word": "いす",
+          "furigana": "いす",
+          "meaningVi": "Cái ghế (椅子)"
+        },
+        {
+          "word": "いけ",
+          "furigana": "いけ",
+          "meaningVi": "Cái ao (池)"
+        }
+      ]
+    },
+    {
+      "id": "kana-1-3",
+      "character": "う",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "u",
+      "hanViet": "",
+      "strokeCount": 2,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc gần giữa 'u' và 'ư' tiếng Việt: môi KHÔNG chu tròn, hơi dẹt như khi nói 'ư'.",
+      "meoNho": "Người cúi đầu (gạch ngắn phía trên) ôm cái bụng cong phình ra, rên lên: 'Ư… đau bụng quá!'.",
+      "sosanh": "Dễ nhầm với え (e): cả hai đều có gạch ngắn trên đầu, nhưng え phần dưới gấp khúc kiểu chữ Z và có đuôi quẹt sang phải, còn う chỉ là một đường cong.",
+      "commonWords": [
+        {
+          "word": "うえ",
+          "furigana": "うえ",
+          "meaningVi": "Phía trên (上)"
+        },
+        {
+          "word": "うそ",
+          "furigana": "うそ",
+          "meaningVi": "Lời nói dối (嘘)"
+        },
+        {
+          "word": "うし",
+          "furigana": "うし",
+          "meaningVi": "Con bò (牛)"
+        }
+      ]
+    },
+    {
+      "id": "kana-1-4",
+      "character": "え",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "e",
+      "hanViet": "",
+      "strokeCount": 2,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc gần 'ê' trong tiếng Việt (mở miệng hơi rộng hơn 'ê' một chút), không đọc thành 'e' bẹt.",
+      "meoNho": "Một người có chỏm tóc trên đầu đang chạy, chân đá về phía sau, vừa chạy vừa gọi: 'Ê, chờ với!'.",
+      "sosanh": "Dễ nhầm với う (u): う không có phần gấp khúc và cái đuôi ở dưới.",
+      "commonWords": [
+        {
+          "word": "えき",
+          "furigana": "えき",
+          "meaningVi": "Nhà ga (駅)"
+        },
+        {
+          "word": "いえ",
+          "furigana": "いえ",
+          "meaningVi": "Ngôi nhà (家)"
+        },
+        {
+          "word": "こえ",
+          "furigana": "こえ",
+          "meaningVi": "Giọng nói (声)"
+        }
+      ]
+    },
+    {
+      "id": "kana-1-5",
+      "character": "お",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "o",
+      "hanViet": "",
+      "strokeCount": 3,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc gần 'ô' trong tiếng Việt, môi tròn vừa phải (không mở to như 'o').",
+      "meoNho": "Giống あ nhưng có thêm một giọt mồ hôi văng ra bên phải: 'Ồ, nóng quá!'.",
+      "sosanh": "Dễ nhầm với あ (a): あ không có chấm bên phải; nét dọc của お chỉ vòng một lần ở dưới.",
+      "commonWords": [
+        {
+          "word": "おかし",
+          "furigana": "おかし",
+          "meaningVi": "Bánh kẹo (お菓子)"
+        },
+        {
+          "word": "しお",
+          "furigana": "しお",
+          "meaningVi": "Muối (塩)"
+        },
+        {
+          "word": "かお",
+          "furigana": "かお",
+          "meaningVi": "Khuôn mặt (顔)"
+        }
+      ]
+    },
+    {
+      "id": "kana-1-6",
+      "character": "か",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "ka",
+      "hanViet": "",
+      "strokeCount": 3,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'ka' như 'ca' trong tiếng Việt; đầu từ âm k hơi bật hơi nhẹ.",
+      "meoNho": "Một con quạ há mỏ kêu 'ca! ca!' — nét phẩy nhỏ bên phải chính là tiếng kêu bay ra.",
+      "sosanh": "Dễ nhầm với katakana カ (ka, bài 7): カ không có nét phẩy nhỏ bên phải. Sau này か thêm dấu ゛ thành が (ga).",
+      "commonWords": [
+        {
+          "word": "かさ",
+          "furigana": "かさ",
+          "meaningVi": "Cái ô (傘)"
+        },
+        {
+          "word": "かお",
+          "furigana": "かお",
+          "meaningVi": "Khuôn mặt (顔)"
+        },
+        {
+          "word": "あか",
+          "furigana": "あか",
+          "meaningVi": "Màu đỏ (赤)"
+        }
+      ]
+    },
+    {
+      "id": "kana-1-7",
+      "character": "き",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "ki",
+      "hanViet": "",
+      "strokeCount": 4,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'ki' như 'ki' trong 'ki-lô', âm i dẹt.",
+      "meoNho": "Hai thanh ngang và một nét dọc giống chiếc chìa khóa — tiếng Anh gọi là 'key', đọc 'ki'.",
+      "sosanh": "Dễ nhầm với さ (sa): き có HAI nét ngang, さ chỉ có MỘT. Nhiều phông chữ in nối hai nét cuối của き thành một, nhưng viết tay chuẩn là 4 nét.",
+      "commonWords": [
+        {
+          "word": "えき",
+          "furigana": "えき",
+          "meaningVi": "Nhà ga (駅)"
+        },
+        {
+          "word": "かき",
+          "furigana": "かき",
+          "meaningVi": "Quả hồng (柿)"
+        },
+        {
+          "word": "きく",
+          "furigana": "きく",
+          "meaningVi": "Nghe (聞く)"
+        }
+      ]
+    },
+    {
+      "id": "kana-1-8",
+      "character": "く",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "ku",
+      "hanViet": "",
+      "strokeCount": 1,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'ku' với nguyên âm u dẹt, nghe gần như 'kư', không chu môi.",
+      "meoNho": "Cái mỏ chim cu mở ra như dấu '<': 'cu… cu…'.",
+      "sosanh": "Dễ nhầm với へ (he, bài 2): へ nằm ngang như mái nhà, く dựng đứng như dấu '<'.",
+      "commonWords": [
+        {
+          "word": "くさ",
+          "furigana": "くさ",
+          "meaningVi": "Cỏ (草)"
+        },
+        {
+          "word": "きく",
+          "furigana": "きく",
+          "meaningVi": "Nghe (聞く)"
+        },
+        {
+          "word": "おく",
+          "furigana": "おく",
+          "meaningVi": "Đặt, để (置く)"
+        }
+      ]
+    },
+    {
+      "id": "kana-1-9",
+      "character": "け",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "ke",
+      "hanViet": "",
+      "strokeCount": 3,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'kê' như trong 'kê bàn'.",
+      "meoNho": "Trông như cái KỆ: cột trái đứng một mình, bên phải là thanh ngang gác lên cây cột dài.",
+      "sosanh": "Dễ nhầm với は (ha, bài 2): は có vòng xoắn ở cuối nét dọc bên phải, け thì không. Katakana ケ (ke) trông khác hẳn.",
+      "commonWords": [
+        {
+          "word": "さけ",
+          "furigana": "さけ",
+          "meaningVi": "Rượu sake (酒) / cá hồi (鮭)"
+        },
+        {
+          "word": "いけ",
+          "furigana": "いけ",
+          "meaningVi": "Cái ao (池)"
+        },
+        {
+          "word": "けさ",
+          "furigana": "けさ",
+          "meaningVi": "Sáng nay (今朝)"
+        }
+      ]
+    },
+    {
+      "id": "kana-1-10",
+      "character": "こ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "ko",
+      "hanViet": "",
+      "strokeCount": 2,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'kô', gần 'cô' trong tiếng Việt, môi tròn vừa.",
+      "meoNho": "Hai nét ngang song song như hai cô gái nằm ngủ cạnh nhau: 'cô… cô'.",
+      "sosanh": "Dễ nhầm với い (i): い là hai nét ĐỨNG, こ là hai nét NẰM. Katakana コ (ko) là một khung vuông hở bên trái.",
+      "commonWords": [
+        {
+          "word": "こえ",
+          "furigana": "こえ",
+          "meaningVi": "Giọng nói (声)"
+        },
+        {
+          "word": "ここ",
+          "furigana": "ここ",
+          "meaningVi": "Chỗ này"
+        },
+        {
+          "word": "こい",
+          "furigana": "こい",
+          "meaningVi": "Cá chép (鯉)"
+        }
+      ]
+    },
+    {
+      "id": "kana-1-11",
+      "character": "さ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "sa",
+      "hanViet": "",
+      "strokeCount": 3,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'sa' với âm s nhẹ như 'x' tiếng Việt (lưỡi không cong), nghe như 'xa'.",
+      "meoNho": "Nét ngang là mặt đất, nét xiên là con dốc, nét cong bên dưới là người trượt chân SA xuống: 'sa'.",
+      "sosanh": "Dễ nhầm với ち (chi, bài 2): さ và ち như ảnh soi gương — bụng dưới của さ cong như chữ 'c', bụng của ち phình sang phải như số 5. Cũng đừng nhầm với き (có hai nét ngang).",
+      "commonWords": [
+        {
+          "word": "さけ",
+          "furigana": "さけ",
+          "meaningVi": "Rượu sake (酒)"
+        },
+        {
+          "word": "かさ",
+          "furigana": "かさ",
+          "meaningVi": "Cái ô (傘)"
+        },
+        {
+          "word": "あさ",
+          "furigana": "あさ",
+          "meaningVi": "Buổi sáng (朝)"
+        }
+      ]
+    },
+    {
+      "id": "kana-1-12",
+      "character": "し",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "shi",
+      "hanViet": "",
+      "strokeCount": 1,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'shi', KHÔNG đọc 'si'. Đầu lưỡi hạ xuống, mặt lưỡi nâng sát vòm miệng, xì hơi như 'sh' trong 'she' nhưng môi KHÔNG chu; gần 's' uốn lưỡi của tiếng Việt nhưng đừng cong lưỡi.",
+      "meoNho": "Một nét cong như cái lưỡi câu. Khi câu cá phải giữ im lặng: 'Shhh…i!'.",
+      "sosanh": "Hiragana し chỉ có 1 nét. Đừng nhầm với katakana シ (shi) và ツ (tsu) ở bài 7.",
+      "commonWords": [
+        {
+          "word": "すし",
+          "furigana": "すし",
+          "meaningVi": "Sushi (寿司)"
+        },
+        {
+          "word": "しお",
+          "furigana": "しお",
+          "meaningVi": "Muối (塩)"
+        },
+        {
+          "word": "うし",
+          "furigana": "うし",
+          "meaningVi": "Con bò (牛)"
+        }
+      ]
+    },
+    {
+      "id": "kana-1-13",
+      "character": "す",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "su",
+      "hanViet": "",
+      "strokeCount": 2,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'su' với u dẹt, gần 'xư'; ở cuối câu (như です) âm u thường gần như câm.",
+      "meoNho": "Nét ngang là thanh xà, nét dọc có vòng thắt là sợi dây xích đu: đu lên kêu 'sư~'.",
+      "sosanh": "Dễ nhầm với む (mu, bài 3): む có thêm một chấm bên phải và đuôi quẹt ngang ở dưới.",
+      "commonWords": [
+        {
+          "word": "すし",
+          "furigana": "すし",
+          "meaningVi": "Sushi (寿司)"
+        },
+        {
+          "word": "いす",
+          "furigana": "いす",
+          "meaningVi": "Cái ghế (椅子)"
+        },
+        {
+          "word": "すいか",
+          "furigana": "すいか",
+          "meaningVi": "Dưa hấu (西瓜)"
+        }
+      ]
+    },
+    {
+      "id": "kana-1-14",
+      "character": "せ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "se",
+      "hanViet": "",
+      "strokeCount": 3,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'sê' với âm s nhẹ, nghe như 'xê'.",
+      "meoNho": "Nét ngang dài có hai cột dọc như tấm biển chắn đường, người gác hét lên: 'Xê ra!'.",
+      "sosanh": "Dễ nhầm với katakana セ (se, bài 7): セ chỉ có 2 nét — nét ngang gập xuống thành móc luôn, không có nét dọc riêng bên phải như せ.",
+      "commonWords": [
+        {
+          "word": "せかい",
+          "furigana": "せかい",
+          "meaningVi": "Thế giới (世界)"
+        },
+        {
+          "word": "あせ",
+          "furigana": "あせ",
+          "meaningVi": "Mồ hôi (汗)"
+        },
+        {
+          "word": "せき",
+          "furigana": "せき",
+          "meaningVi": "Chỗ ngồi (席)"
+        }
+      ]
+    },
+    {
+      "id": "kana-1-15",
+      "character": "そ",
+      "loai": "kana",
+      "bangChu": "hiragana",
+      "romaji": "so",
+      "hanViet": "",
+      "strokeCount": 1,
+      "onyomi": [],
+      "kunyomi": [],
+      "meaningVi": "Đọc 'sô' với âm s nhẹ, nghe như 'xô'.",
+      "meoNho": "Nét gấp khúc như dòng nước dội ào ra từ cái XÔ nghiêng: 'xô'.",
+      "sosanh": "Hiragana そ thường viết 1 nét (một số sách tách thành 2 nét). Đừng nhầm với katakana ソ (so) và ン (n) ở bài 7-8.",
+      "commonWords": [
+        {
+          "word": "うそ",
+          "furigana": "うそ",
+          "meaningVi": "Lời nói dối (嘘)"
+        },
+        {
+          "word": "そこ",
+          "furigana": "そこ",
+          "meaningVi": "Chỗ đó"
+        },
+        {
+          "word": "おそい",
+          "furigana": "おそい",
+          "meaningVi": "Chậm, muộn (遅い)"
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "slideId": "kana-l1-s1",
+      "slideType": "grammar",
+      "title": "1. Năm nguyên âm: あ い う え お",
+      "grammarFormula": "a  i  u  e  o → あ い う え お",
+      "explanation": "Tiếng Nhật chỉ có 5 nguyên âm và luôn xếp theo thứ tự a – i – u – e – o. Mỗi chữ hiragana là một nhịp (mora) đọc ngắn, đều nhau và không có dấu thanh như tiếng Việt. う đọc gần 'ư' (môi không chu), え gần 'ê', お gần 'ô'. Khi hai nguyên âm đứng cạnh nhau như あい, いえ thì vẫn đọc tách thành hai nhịp.",
+      "teacherTips": "Cho học viên đọc to 'a – i – u – e – o' theo nhịp vỗ tay, mỗi chữ một tiếng vỗ. Nhắc: う môi dẹt, không chu ra.",
+      "culturalNotes": "Bảng chữ cái Nhật xếp theo 'bảng 50 âm' (五十音, gojūon): cột là nguyên âm, hàng là phụ âm. Từ điển Nhật cũng tra theo thứ tự này, không theo a-b-c.",
+      "examples": [
+        {
+          "id": "ex-kana-l1-s1-1",
+          "tokens": [
+            {
+              "id": "t-kana-l1s1-1",
+              "text": "あ",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l1s1-2",
+              "text": "い",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "あい — tình yêu (愛): hai nhịp a-i."
+        },
+        {
+          "id": "ex-kana-l1-s1-2",
+          "tokens": [
+            {
+              "id": "t-kana-l1s1-3",
+              "text": "い",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l1s1-4",
+              "text": "え",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "いえ — ngôi nhà (家): hai nhịp i-ê."
+        },
+        {
+          "id": "ex-kana-l1-s1-3",
+          "tokens": [
+            {
+              "id": "t-kana-l1s1-5",
+              "text": "あおい",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l1s1-6",
+              "text": "いえ",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "あおい いえ — ngôi nhà màu xanh (青い家): năm nhịp, toàn nguyên âm."
+        }
+      ]
+    },
+    {
+      "slideId": "kana-l1-s2",
+      "slideType": "grammar",
+      "title": "2. Hàng か: か き く け こ",
+      "grammarFormula": "k + a i u e o → か き く け こ",
+      "explanation": "Ghép phụ âm k với 5 nguyên âm ta được hàng か: ka – ki – ku – ke – ko. Âm k giống 'c/k' tiếng Việt, ở đầu từ hơi bật hơi nhẹ. く đọc 'kư' (môi không chu), け đọc 'kê', こ đọc 'kô'.",
+      "teacherTips": "Cho học viên đọc nối cột dọc: あ-か, い-き, う-く, え-け, お-こ để thấy phụ âm k chỉ việc 'gắn' vào nguyên âm.",
+      "culturalNotes": "",
+      "examples": [
+        {
+          "id": "ex-kana-l1-s2-1",
+          "tokens": [
+            {
+              "id": "t-kana-l1s2-1",
+              "text": "か",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l1s2-2",
+              "text": "お",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "かお — khuôn mặt (顔)."
+        },
+        {
+          "id": "ex-kana-l1-s2-2",
+          "tokens": [
+            {
+              "id": "t-kana-l1s2-3",
+              "text": "え",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l1s2-4",
+              "text": "き",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "えき — nhà ga (駅)."
+        },
+        {
+          "id": "ex-kana-l1-s2-3",
+          "tokens": [
+            {
+              "id": "t-kana-l1s2-5",
+              "text": "か",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l1s2-6",
+              "text": "き",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "かき — quả hồng (柿)."
+        }
+      ]
+    },
+    {
+      "slideId": "kana-l1-s3",
+      "slideType": "grammar",
+      "title": "3. Hàng さ: さ し す せ そ — し đọc 'shi'",
+      "grammarFormula": "s + a i u e o → さ し(shi) す せ そ",
+      "explanation": "Hàng さ gồm sa – shi – su – se – so, âm s nhẹ như 'x' tiếng Việt. Riêng し KHÔNG đọc 'si' mà đọc 'shi' (mặt lưỡi nâng sát vòm miệng, xì hơi như 'sh' trong 'she', môi không chu). す ở cuối câu hoặc giữa hai phụ âm thường đọc rất nhẹ, gần như mất nguyên âm.",
+      "teacherTips": "Đọc chậm cặp 'sa – shi – su' để học viên nghe rõ chỗ đổi khẩu hình ở し. Người Việt hay đọc nhầm すし thành 'su-si'.",
+      "culturalNotes": "すし (sushi) và おかし (bánh kẹo) là hai từ mà hầu như người Việt nào cũng muốn đọc ngay — tận dụng để luyện し.",
+      "examples": [
+        {
+          "id": "ex-kana-l1-s3-1",
+          "tokens": [
+            {
+              "id": "t-kana-l1s3-1",
+              "text": "す",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l1s3-2",
+              "text": "し",
+              "isKeyGrammar": true
+            }
+          ],
+          "meaningVi": "すし — sushi (寿司): 's-shi'."
+        },
+        {
+          "id": "ex-kana-l1-s3-2",
+          "tokens": [
+            {
+              "id": "t-kana-l1s3-3",
+              "text": "し",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l1s3-4",
+              "text": "お",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "しお — muối (塩)."
+        },
+        {
+          "id": "ex-kana-l1-s3-3",
+          "tokens": [
+            {
+              "id": "t-kana-l1s3-5",
+              "text": "お",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l1s3-6",
+              "text": "い",
+              "isKeyGrammar": false
+            },
+            {
+              "id": "t-kana-l1s3-7",
+              "text": "し",
+              "isKeyGrammar": true
+            },
+            {
+              "id": "t-kana-l1s3-8",
+              "text": "い",
+              "isKeyGrammar": false
+            }
+          ],
+          "meaningVi": "おいしい — ngon (美味しい): bốn nhịp ô-i-shi-i."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "dia-kana-1-1",
+      "speaker": "さとう (Satou)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l1-1a",
+          "text": "すし",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l1-1b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l1-1c",
+          "text": "すき",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l1-1d",
+          "text": "？",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Anh có thích sushi không?",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "dia-kana-1-2",
+      "speaker": "ミラー (Miller)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l1-2a",
+          "text": "ええ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l1-2b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l1-2c",
+          "text": "すき",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l1-2d",
+          "text": "！",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Có, tôi thích lắm!",
+      "emotion": "vui"
+    },
+    {
+      "id": "dia-kana-1-3",
+      "speaker": "さとう (Satou)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l1-3a",
+          "text": "さけ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l1-3b",
+          "text": "？",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Cá hồi nhé?",
+      "emotion": "suy_nghi"
+    },
+    {
+      "id": "dia-kana-1-4",
+      "speaker": "ミラー (Miller)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l1-4a",
+          "text": "いいえ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l1-4b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l1-4c",
+          "text": "いか",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l1-4d",
+          "text": "！",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Không, cho tôi mực!",
+      "emotion": "vui"
+    },
+    {
+      "id": "dia-kana-1-5",
+      "speaker": "ミラー (Miller)",
+      "speakerRole": "personB",
+      "tokens": [
+        {
+          "id": "d-kana-l1-5a",
+          "text": "あ",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l1-5b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l1-5c",
+          "text": "おいしい",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l1-5d",
+          "text": "！",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ồ, ngon quá!",
+      "emotion": "ngac_nhien"
+    },
+    {
+      "id": "dia-kana-1-6",
+      "speaker": "さとう (Satou)",
+      "speakerRole": "personA",
+      "tokens": [
+        {
+          "id": "d-kana-l1-6a",
+          "text": "ええ",
+          "isKeyGrammar": true
+        },
+        {
+          "id": "d-kana-l1-6b",
+          "text": "、",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l1-6c",
+          "text": "おいしい",
+          "isKeyGrammar": false
+        },
+        {
+          "id": "d-kana-l1-6d",
+          "text": "。",
+          "isKeyGrammar": false
+        }
+      ],
+      "meaningVi": "Ừ, ngon thật.",
+      "emotion": "vui"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-q-kana-1-1",
+      "question": "Chữ し đọc là gì?",
+      "options": [
+        "si",
+        "shi",
+        "chi",
+        "tsu"
+      ],
+      "correctIndex": 1,
+      "explanation": "し đọc là 'shi'. Trong hàng さ (sa shi su se so), riêng し đổi thành 'shi', không đọc 'si'.",
+      "hint": "Nhớ tiếng 'suỵt' khi đi câu cá."
+    },
+    {
+      "id": "ex-q-kana-1-2",
+      "question": "Chọn chữ hiragana đọc là 'ko'.",
+      "options": [
+        "い",
+        "け",
+        "く",
+        "こ"
+      ],
+      "correctIndex": 3,
+      "explanation": "こ (ko) là hai nét NẰM song song. い (i) là hai nét ĐỨNG, け là 'ke', く là 'ku'.",
+      "hint": "Hai cô gái nằm ngủ cạnh nhau."
+    },
+    {
+      "id": "ex-q-kana-1-3",
+      "question": "Chữ nào đọc là 'ki'?",
+      "options": [
+        "き",
+        "さ",
+        "せ",
+        "け"
+      ],
+      "correctIndex": 0,
+      "explanation": "き (ki) có HAI nét ngang; さ (sa) chỉ có MỘT nét ngang. せ là 'se', け là 'ke'.",
+      "hint": "Đếm số nét ngang — chìa khóa có hai răng."
+    },
+    {
+      "id": "ex-q-kana-1-4",
+      "question": "Chữ nào đọc là 'o'?",
+      "options": [
+        "あ",
+        "す",
+        "お",
+        "そ"
+      ],
+      "correctIndex": 2,
+      "explanation": "お (o) giống あ (a) nhưng có thêm một chấm nhỏ phía trên bên phải.",
+      "hint": "Tìm giọt mồ hôi 'Ồ, nóng quá!'."
+    },
+    {
+      "id": "ex-q-kana-1-5",
+      "question": "Từ いえ đọc là gì và có nghĩa là gì?",
+      "options": [
+        "ue — phía trên",
+        "ai — tình yêu",
+        "ie — ngôi nhà",
+        "ao — màu xanh"
+      ],
+      "correctIndex": 2,
+      "explanation": "い (i) + え (e) → 'ie', nghĩa là ngôi nhà (家). うえ là phía trên, あい là tình yêu, あお là màu xanh.",
+      "hint": "Đọc từng chữ một: い rồi え."
+    },
+    {
+      "id": "ex-q-kana-1-6",
+      "question": "Từ 'kasa' (cái ô) viết bằng hiragana thế nào?",
+      "options": [
+        "かさ",
+        "さか",
+        "かそ",
+        "けさ"
+      ],
+      "correctIndex": 0,
+      "explanation": "か (ka) + さ (sa) → かさ. さか (saka) là con dốc, けさ (kesa) là sáng nay.",
+      "hint": "Chữ đầu là 'ka' — con quạ kêu 'ca ca'."
+    },
+    {
+      "id": "ex-q-kana-1-7",
+      "question": "Từ すし đọc đúng là gì?",
+      "options": [
+        "suchi",
+        "susi",
+        "shushi",
+        "sushi"
+      ],
+      "correctIndex": 3,
+      "explanation": "す (su) + し (shi) → sushi. Chữ đầu là す (su), chỉ chữ sau mới là 'shi'.",
+      "hint": "Chỉ có chữ し mới mang âm 'sh'."
+    },
+    {
+      "id": "ex-q-kana-1-8",
+      "question": "Chữ く đọc là gì?",
+      "options": [
+        "ke",
+        "ku",
+        "ko",
+        "ki"
+      ],
+      "correctIndex": 1,
+      "explanation": "く (ku) là một nét gập như dấu '<', đọc 'kư' với môi không chu.",
+      "hint": "Mỏ chim cu mở ra."
+    },
+    {
+      "id": "ex-q-kana-1-9",
+      "question": "Từ nào có nghĩa là 'khuôn mặt'?",
+      "options": [
+        "あか",
+        "こえ",
+        "かお",
+        "あお"
+      ],
+      "correctIndex": 2,
+      "explanation": "かお (kao) là khuôn mặt. あか là màu đỏ, こえ là giọng nói, あお là màu xanh.",
+      "hint": "Mở đầu bằng 'ka'."
+    },
+    {
+      "id": "ex-q-kana-1-10",
+      "question": "Từ おいしい (ngon) có mấy nhịp (mora)?",
+      "options": [
+        "4",
+        "3",
+        "2",
+        "5"
+      ],
+      "correctIndex": 0,
+      "explanation": "お-い-し-い: mỗi chữ hiragana là một nhịp, nên có 4 nhịp. いい ở cuối phải kéo đủ hai nhịp.",
+      "hint": "Đếm số chữ hiragana."
+    }
+  ]
+}
