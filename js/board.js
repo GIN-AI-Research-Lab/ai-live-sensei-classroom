@@ -106,7 +106,9 @@
       // trang giat, va tao them mot cu cuon de net ve chay dua.
       const r0 = el.getBoundingClientRect();
       const khuat = r0.top < 70 || r0.bottom > window.innerHeight - 90;
-      if (khuat) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Muc tren san khau giang (st-<id>, the bai tap dua len): khong cuon — san khau dung yen,
+      // scrollIntoView chi cuon lech .deck-stage (overflow:hidden) ben ngoai
+      if (khuat && !el.closest('#sanKhauGiang')) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
       // Do lai vai lan trong mot giay: cuon muot chay xong luc nao khong biet,
       // ma su kien scroll cua container long nhau khong phai luc nao cung bat duoc.
@@ -356,21 +358,31 @@
         xoaNetVe();   // moi lan xem lai demo la mot luot tap moi, xoa net cu di
         gNet.innerHTML = '';
         gSo.innerHTML = '';
-        net.forEach((d, i) => {
+        // Ghi het cac net truoc, ROI moi do do dai / diem dau mot luot: xen ke ghi-do (append roi
+        // getTotalLength tung net) bat trinh duyet tinh lai bo cuc sau moi net — 7-23 ms mot chu
+        // tren san khau giang (motion-spec T8, msLam <= 8 ms). Ket qua ve y nhu cu.
+        const dsNet = net.map((d) => {
           const p = document.createElementNS(NS, 'path');
           p.setAttribute('d', d);
           p.setAttribute('class', 'bang-kanji-duong');
           gNet.appendChild(p);
-
-          const dai = p.getTotalLength();
+          return p;
+        });
+        const doDai = dsNet.map((p) => p.getTotalLength());
+        const diemDau = dsNet.map((p) => {
+          if (opts.hienSo === false) return null;
+          try { return p.getPointAtLength(0); } catch (e) { return null; }   // trinh duyet cu khong do duoc diem dau net
+        });
+        dsNet.forEach((p, i) => {
+          const dai = doDai[i];
           p.style.strokeDasharray = dai;
           p.style.strokeDashoffset = dai;
           p.style.animation = `bangVeRa ${tocDo}s ease-out ${i * tocDo}s forwards`;
 
           // So thu tu net, hien ngay truoc khi net do duoc viet
-          if (opts.hienSo !== false) {
+          if (opts.hienSo !== false && diemDau[i]) {
             try {
-              const d0 = p.getPointAtLength(0);
+              const d0 = diemDau[i];
               const t = document.createElementNS(NS, 'text');
               t.setAttribute('x', d0.x);
               t.setAttribute('y', d0.y);
@@ -427,8 +439,10 @@
 
       // Doi co man hinh (xoay dien thoai) thi ve lai kich thuoc canvas — mat
       // net dang to do la chap nhan duoc, xoay may von da hiem khi dang to.
-      if (window.ResizeObserver) new ResizeObserver(coKichThuoc).observe(o);
-      coKichThuoc();
+      // ResizeObserver tu bao lan dau ngay sau buoc bo cuc ke tiep -> khong do dong bo o day (do ngay
+      // sau khi chen o vao trang = ep tinh bo cuc ca trang, nhat la tren san khau giang)
+      if (window.ResizeObserver) new ResizeObserver(() => coKichThuoc()).observe(o);
+      else coKichThuoc();
 
       chay();
       hop.querySelector('.bang-kanji-lai').addEventListener('click', chay);
@@ -446,9 +460,26 @@
         document.body.classList.add('co-bang');
         return this.bang;
       }
+      this._taoBang();
+      document.body.classList.add('co-bang');
+      return this.bang;
+    }
+
+    /**
+     * Bang de ghi NGAM (dang giang tren san khau): co san thi tra ve nguyen trang (mo hay cat
+     * van giu), chua co thi dung bang dang cat — khong them body.co-bang, khong day canh mep.
+     */
+    _bangAn() {
+      if (this.bang) return this.bang;
+      return this._taoBang(true);
+    }
+
+    /** Dung khung bang (chung cho moBang / _bangAn). an: dung san o trang thai cat. */
+    _taoBang(an = false) {
       const khung = document.createElement('aside');
       khung.id = 'bangPhan';
       khung.className = 'bang-phan';
+      if (an) khung.classList.add('hidden');
       khung.innerHTML = `
         <header class="bang-phan-dau">
           <span><i class="fa-solid fa-chalkboard"></i> Bảng của Sensei</span>
@@ -467,14 +498,16 @@
       });
 
       this.bang = { khung, than: khung.querySelector('.bang-phan-than') };
-      document.body.classList.add('co-bang');
       return this.bang;
     }
 
-    /** Viet mot dong len bang. kieu: thuong | dam | nhat */
-    vietBang(text, kieu = 'thuong') {
+    /**
+     * Viet mot dong len bang. kieu: thuong | dam | nhat
+     * opts.im: ghi ngam, KHONG mo bang (dang giang tren san khau; hoc vien mo bang sau van thay)
+     */
+    vietBang(text, kieu = 'thuong', opts = {}) {
       if (!text) return false;
-      const b = this.moBang();
+      const b = opts && opts.im ? this._bangAn() : this.moBang();
       const dong = document.createElement('div');
       dong.className = 'bang-dong bang-dong-' + kieu;
       dong.textContent = String(text);

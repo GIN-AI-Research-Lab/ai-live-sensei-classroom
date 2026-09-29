@@ -1,0 +1,793 @@
+/* ==========================================================================
+   San khau giang — canh HOI THOAI + BAI TAP (js/motion-canh-hoi.js, Builder C)
+
+   Bo sung v2: moi nhip la MOT the trinh chieu (.sk-the cua dao dien); file nay chi ve RUOT the
+   (.sk-hoi-noi) — chu co theo the, mot diem nhin (con tro doc cua the; dao dien cu: .sk-ht-con-tro),
+   khong vong lap. Bai tap: ban mau cung khung cong .sk-cong cua dao dien (trao tay khong nhay).
+   Moi luat nam duoi .san-khau-giang (san khau) hoac body.dang-giang (the bai tap that luc cho)
+   — tat giang / tam dung thi giao dien cu khong doi gi.
+   Co chu lon nhan var(--sk-co) (dao dien thu nho khi noi dung cao hon san khau).
+   Chi animate translate / scale / opacity (+ stroke-dashoffset cua dau tick .sk-ve).
+   ========================================================================== */
+
+/* ---------- 0. Nen chung ------------------------------------------------- */
+.san-khau-giang .sk-hoi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: safe center;
+  min-width: 0;
+  min-height: 0;
+  color: var(--ink);
+}
+.san-khau-giang .sk-hoi-noi {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-height: 100%;
+}
+.san-khau-giang .sk-hoi .sk-an { opacity: 0; }
+.san-khau-giang .sk-hoi.is-gon-2 .sk-phu-bo { display: none !important; }
+.san-khau-giang .sk-ht-du { margin: 0; font-size: 18px; font-weight: 600; color: var(--ink-2); }
+
+/* The du phong: dao dien chua boc canh trong .sk-the (ban cu) -> ruot tu ve mat the,
+   giua san khau, cung so do voi .sk-the cua bo sung v2 */
+.san-khau-giang .sk-hoi:not(.sk-the):not(.sk-the *) > .sk-hoi-noi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: safe center;
+  width: min(1080px, 100% - 24px);
+  min-height: 58%;
+  max-height: 96%;
+  margin-inline: auto;
+  padding: clamp(18px, 3.2vw, 56px);
+  overflow: hidden;
+  overflow: clip;
+  border-radius: 20px;
+  background: var(--card);
+  box-shadow: 0 2px 4px rgba(74, 56, 34, .06), 0 18px 40px -22px rgba(74, 56, 34, .28);
+}
+.san-khau-giang .sk-hoi.sk-kho-hep:not(.sk-the):not(.sk-the *) > .sk-hoi-noi { width: 100%; min-height: 70%; padding: 18px 16px; border-radius: 16px; }
+.san-khau-giang .sk-hoi.sk-kho-thap:not(.sk-the):not(.sk-the *) > .sk-hoi-noi { min-height: 0; padding: 12px 18px; }
+
+/* Con tro doc: MOT lop to nhan, truot tu cho dang doc sang cho tiep (JS dat vi tri) */
+.san-khau-giang .sk-ht-con-tro {
+  position: absolute;
+  left: 0; top: 0;
+  z-index: 2;
+  width: 0; height: 0;
+  border-radius: 10px;
+  background: rgba(201, 100, 66, .16);
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  mix-blend-mode: multiply;
+  transform-origin: 0 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.san-khau-giang .sk-ht-con-tro.is-hien { opacity: 1; }
+.san-khau-giang .sk-ht-con-tro.is-mo {
+  background: rgba(201, 100, 66, .09);
+  background: color-mix(in srgb, var(--accent) 9%, transparent);
+}
+/* Con tro tren DAP AN bai tap (JS: den(..., {kieu:'vach'})): gach chan 3 px duoi chu, KHONG to nen —
+   to nen trong vien o la dang "da chon" / "goi y". To nen giu cho dong chu (cau hoi, cau thoai).
+   Con tro cua the (dao dien v2): lop .sk-tro-vach tren goc canh doi dang con tro cua CHINH the do */
+.san-khau-giang .sk-the:has(> .sk-the-than > .sk-canh.sk-tro-vach) > .sk-con-tro {
+  background: transparent;
+  mix-blend-mode: normal;
+  border-radius: 2px;
+}
+.san-khau-giang .sk-the:has(> .sk-the-than > .sk-canh.sk-tro-vach) > .sk-con-tro > .sk-con-tro-vach {
+  translate: 0 0;
+  opacity: 1;
+  border-radius: 2px;
+}
+.san-khau-giang .sk-ht-con-tro.is-vach { background: transparent; mix-blend-mode: normal; border-radius: 2px; }
+.san-khau-giang .sk-ht-con-tro.is-vach::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+/* Vong chu cai dau cua nhan vat: A = to nhan, B = giay dam, nguoi thu hai cung ben = vong vien */
+.san-khau-giang .sk-ht-chan,
+.san-khau-giang .sk-ht-ava,
+.san-khau-giang .sk-ht-o-chu {
+  flex: 0 0 auto;
+  display: grid; place-items: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+  font-family: var(--font-jp);
+  font-weight: 700;
+  line-height: 1;
+  background: rgba(201, 100, 66, .14);
+  color: var(--accent-deep);
+}
+.san-khau-giang :is(.sk-ht-chan, .sk-ht-ava, .sk-ht-o-chu).is-b { background: var(--paper-deep); color: var(--ink-2); }
+.san-khau-giang :is(.sk-ht-chan, .sk-ht-ava, .sk-ht-o-chu).is-vien { background: transparent; box-shadow: inset 0 0 0 2px rgba(201, 100, 66, .5); }
+.san-khau-giang :is(.sk-ht-chan, .sk-ht-ava, .sk-ht-o-chu).is-b.is-vien { box-shadow: inset 0 0 0 2px var(--line-strong); }
+.san-khau-giang .sk-ht-la { font-weight: 500; color: var(--muted); }
+.san-khau-giang .sk-ht-nhan {
+  margin: 0 0 calc(var(--sk-co, 1) * 12px);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: .02em;
+  color: var(--muted);
+}
+
+/* ---------- 1. kaiwa-intro: dan nhan vat (trai 40%) + mach 10 luot (phai 60%) --- */
+/* Goc canh (absolute inset 0 trong than the: cao co dinh, khong theo noi dung) = khung do chieu cao
+   -> the thap thi dan vai / mach truyen gon lai theo bac (@container ben duoi), khong cho vua khung */
+.san-khau-giang :is(.sk-the-than, .sk-san) > .sk-canh.sk-ht-gt { container: sk-ht-gt / size; }
+.san-khau-giang .sk-ht-gt .sk-hoi-noi {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: center;
+  align-content: safe center;   /* tran thi chi tran xuong duoi (vua khung do duoc bang scrollHeight) */
+  gap: calc(var(--sk-co, 1) * 28px);
+}
+@media (min-width: 1000px) {
+  .san-khau-giang .sk-ht-gt.sk-kho-rong .sk-hoi-noi {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
+    column-gap: clamp(28px, 3.4vw, 56px);
+    align-items: center;
+    align-items: safe center;
+  }
+}
+.san-khau-giang .sk-ht-cot-vai,
+.san-khau-giang .sk-ht-cot-truyen { min-width: 0; }
+.san-khau-giang .sk-ht-dan-vai {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex; flex-direction: column;
+  gap: calc(var(--sk-co, 1) * 10px);
+}
+.san-khau-giang .sk-ht-vai {
+  display: flex; align-items: center;
+  gap: calc(var(--sk-co, 1) * 16px);
+  min-width: 0;
+  padding: calc(var(--sk-co, 1) * 8px) 10px;
+}
+.san-khau-giang .sk-ht-chan {
+  width: calc(var(--sk-co, 1) * clamp(56px, 4.6vw, 80px));
+  height: calc(var(--sk-co, 1) * clamp(56px, 4.6vw, 80px));
+  font-size: calc(var(--sk-co, 1) * clamp(24px, 2vw, 34px));
+}
+.san-khau-giang .sk-ht-vai-chu { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.san-khau-giang .sk-ht-vai-ten {
+  font-size: max(15px, calc(var(--sk-co, 1) * clamp(16px, .6vw + 11px, 21px)));
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.san-khau-giang .sk-ht-vai-phu { font-size: 13px; line-height: 1.4; color: var(--muted); }
+.san-khau-giang .sk-ht-truyen {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex; flex-direction: column;
+  gap: calc(var(--sk-co, 1) * 3px);
+}
+.san-khau-giang .sk-ht-o {
+  display: flex; align-items: center;
+  gap: 12px;
+  min-width: 0;
+  min-height: calc(var(--sk-co, 1) * 34px);
+  padding: 2px 8px;
+  font-size: max(13px, calc(var(--sk-co, 1) * clamp(14px, .35vw + 11px, 17px)));
+  line-height: 1.4;
+  color: var(--ink-2);
+}
+/* chua ke toi: mo nhat (van thay mach truyen, khong trong); ke toi thi sang */
+.san-khau-giang .sk-ht-o.is-cho { opacity: .32; }
+.san-khau-giang .sk-ht-o-chu {
+  width: calc(var(--sk-co, 1) * 26px);
+  height: calc(var(--sk-co, 1) * 26px);
+  font-size: max(10px, calc(var(--sk-co, 1) * 12px));
+}
+.san-khau-giang .sk-ht-o-y { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Than the thap (1280x720 ~330 px, 1024x768 ~390 px): hang truyen + the vai gon theo bac, van ro chu.
+   10 hang + tieu de phai vua than the o --sk-co 1 (0 cat tren / duoi) */
+@container sk-ht-gt (max-height: 470px) {
+  .san-khau-giang .sk-kho-rong .sk-ht-nhan { margin-bottom: calc(var(--sk-co, 1) * 8px); }
+  .san-khau-giang .sk-kho-rong .sk-ht-dan-vai { gap: calc(var(--sk-co, 1) * 6px); }
+  .san-khau-giang .sk-kho-rong .sk-ht-vai { padding-block: calc(var(--sk-co, 1) * 5px); }
+  .san-khau-giang .sk-kho-rong .sk-ht-truyen { gap: calc(var(--sk-co, 1) * 2px); }
+  .san-khau-giang .sk-kho-rong .sk-ht-o { gap: 10px; min-height: calc(var(--sk-co, 1) * 28px); padding-block: 1px; }
+  .san-khau-giang .sk-kho-rong .sk-ht-o-chu {
+    width: calc(var(--sk-co, 1) * 22px);
+    height: calc(var(--sk-co, 1) * 22px);
+    font-size: max(10px, calc(var(--sk-co, 1) * 11px));
+  }
+}
+@container sk-ht-gt (max-height: 380px) {
+  .san-khau-giang .sk-kho-rong .sk-ht-chan {
+    width: calc(var(--sk-co, 1) * clamp(44px, 3.6vw, 60px));
+    height: calc(var(--sk-co, 1) * clamp(44px, 3.6vw, 60px));
+    font-size: calc(var(--sk-co, 1) * clamp(20px, 1.6vw, 26px));
+  }
+  .san-khau-giang .sk-kho-rong .sk-ht-vai { gap: calc(var(--sk-co, 1) * 12px); padding-block: calc(var(--sk-co, 1) * 3px); }
+  .san-khau-giang .sk-kho-rong .sk-ht-truyen { gap: 1px; }
+  .san-khau-giang .sk-kho-rong .sk-ht-o {
+    min-height: calc(var(--sk-co, 1) * 25px);
+    font-size: max(13px, calc(var(--sk-co, 1) * clamp(13px, .3vw + 11px, 15px)));
+    line-height: 1.35;
+  }
+  .san-khau-giang .sk-kho-rong .sk-ht-o-chu {
+    width: calc(var(--sk-co, 1) * 20px);
+    height: calc(var(--sk-co, 1) * 20px);
+  }
+}
+
+/* Dien thoai: dan vai MOT hang (chu cai + ten Nhat), mach truyen 10 dong gon ben duoi — vua the */
+.san-khau-giang .sk-ht-gt.sk-kho-hep .sk-hoi-noi { gap: calc(var(--sk-co, 1) * 14px); }
+.san-khau-giang .sk-kho-hep .sk-ht-nhan { margin-bottom: calc(var(--sk-co, 1) * 6px); font-size: 12px; }
+.san-khau-giang .sk-kho-hep .sk-ht-cot-vai > .sk-ht-nhan { display: none; }
+.san-khau-giang .sk-kho-hep .sk-ht-dan-vai { flex-direction: row; flex-wrap: wrap; gap: 6px 16px; }
+.san-khau-giang .sk-kho-hep .sk-ht-vai { gap: 8px; padding: 0; }
+.san-khau-giang .sk-kho-hep .sk-ht-chan { width: 32px; height: 32px; font-size: 14px; }
+.san-khau-giang .sk-kho-hep .sk-ht-vai-ten { font-size: 14px; }
+.san-khau-giang .sk-kho-hep .sk-ht-vai-ten .sk-ht-la,
+.san-khau-giang .sk-kho-hep .sk-ht-vai-phu { display: none; }
+.san-khau-giang .sk-kho-hep .sk-ht-truyen { gap: 0; }
+.san-khau-giang .sk-kho-hep .sk-ht-o { gap: 8px; min-height: calc(var(--sk-co, 1) * 26px); padding: 0 4px; font-size: 13px; line-height: 1.3; }
+.san-khau-giang .sk-kho-hep .sk-ht-o-chu { width: calc(var(--sk-co, 1) * 20px); height: calc(var(--sk-co, 1) * 20px); font-size: max(10px, calc(var(--sk-co, 1) * 11px)); }
+
+/* Man thap: hai cot, mach truyen 2 cot x 5 dong (doc doc tung cot) */
+.san-khau-giang .sk-ht-gt.sk-kho-thap .sk-hoi-noi {
+  grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
+  column-gap: 18px;
+  align-items: center;
+  align-items: safe center;
+}
+.san-khau-giang .sk-kho-thap .sk-ht-nhan { margin-bottom: 4px; font-size: 12px; }
+.san-khau-giang .sk-kho-thap .sk-ht-dan-vai { gap: 2px; }
+.san-khau-giang .sk-kho-thap .sk-ht-vai { gap: 8px; padding: calc(var(--sk-co, 1) * 2px) 4px; }
+.san-khau-giang .sk-kho-thap .sk-ht-chan { width: calc(var(--sk-co, 1) * 34px); height: calc(var(--sk-co, 1) * 34px); font-size: max(12px, calc(var(--sk-co, 1) * 15px)); }
+.san-khau-giang .sk-kho-thap .sk-ht-vai-ten { font-size: 13px; }
+.san-khau-giang .sk-kho-thap .sk-ht-vai-phu { font-size: 12px; }
+.san-khau-giang .sk-kho-thap .sk-ht-truyen {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, auto);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px 10px;
+}
+.san-khau-giang .sk-kho-thap .sk-ht-o { gap: 6px; min-height: calc(var(--sk-co, 1) * 22px); padding: 0 4px; font-size: 12px; }
+.san-khau-giang .sk-kho-thap .sk-ht-o-chu { width: calc(var(--sk-co, 1) * 18px); height: calc(var(--sk-co, 1) * 18px); font-size: 10px; }
+/* Than the rat thap (844x390 ~180 px) + 3-4 nhan vat: the vai gon mot bac, van du ten + vai tro */
+@container sk-ht-gt (max-height: 220px) {
+  .san-khau-giang .sk-kho-thap .sk-ht-vai { padding-block: 1px; }
+  .san-khau-giang .sk-kho-thap .sk-ht-chan { width: calc(var(--sk-co, 1) * 30px); height: calc(var(--sk-co, 1) * 30px); font-size: max(12px, calc(var(--sk-co, 1) * 14px)); }
+  .san-khau-giang .sk-kho-thap .sk-ht-vai-chu { gap: 1px; }
+  .san-khau-giang .sk-kho-thap .sk-ht-vai-ten { line-height: 1.25; }
+  .san-khau-giang .sk-kho-thap .sk-ht-vai-phu { font-size: 11px; line-height: 1.3; }
+}
+
+/* ---------- 2. kaiwa-run / kaiwa: MOT cau lon, cau truoc mo nhat phia tren --- */
+.san-khau-giang :is(.sk-ht-chay, .sk-ht-mot) .sk-hoi-noi {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--sk-co, 1) * 20px);
+}
+.san-khau-giang .sk-ht-truoc {
+  display: flex; align-items: center;
+  gap: 10px;
+  min-width: 0;
+  min-height: 28px;
+  opacity: .5;
+  font-size: max(14px, calc(var(--sk-co, 1) * clamp(15px, .4vw + 11px, 18px)));
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+.san-khau-giang .sk-ht-truoc.is-trong { visibility: hidden; }
+.san-khau-giang .sk-ht-truoc-cau {
+  min-width: 0;
+  font-family: var(--font-jp);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* kaiwa-run: o "cau truoc" mang ca NGHIA cua cau vua nghe (13 px muted, doc duoc — khong mo theo cau Nhat).
+   Cao CO DINH (dong Nhat + dong nghia; dien thoai: nghia toi 2 dong): o trong / co chu khong xo bo cuc */
+.san-khau-giang .sk-ht-chay .sk-ht-truoc {
+  align-items: flex-start;
+  height: calc(1.5em + 13px * 1.45);
+  opacity: 1;
+}
+/* o avatar cao dung mot dong Nhat (1.5em cua o "cau truoc") -> avatar can giua dong Nhat, khong giua ca o */
+.san-khau-giang .sk-ht-truoc-o { flex: 0 0 auto; display: flex; align-items: center; height: 1.5em; }
+.san-khau-giang .sk-ht-chay .sk-ht-truoc-o > .sk-ht-ava { opacity: .5; }
+.san-khau-giang .sk-ht-truoc-chu { display: flex; flex-direction: column; min-width: 0; }
+.san-khau-giang .sk-ht-chay .sk-ht-truoc-cau { opacity: .5; }
+.san-khau-giang .sk-ht-truoc-nghia {
+  min-width: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* Chong moi cau vao mot o: cao = cau dai nhat, doi cau khong xo bo cuc */
+.san-khau-giang .sk-ht-chong { display: grid; min-width: 0; }
+.san-khau-giang .sk-ht-chong > .sk-ht-dong { grid-area: 1 / 1; min-width: 0; }
+.san-khau-giang .sk-ht-dong.is-cho { visibility: hidden; }
+.san-khau-giang .sk-ht-dong { min-width: 0; }
+.san-khau-giang .sk-ht-ai {
+  display: flex; align-items: center;
+  gap: 12px;
+  min-width: 0;
+  margin-bottom: calc(var(--sk-co, 1) * 10px);
+}
+.san-khau-giang .sk-ht-ava { position: relative; width: 40px; height: 40px; font-size: 17px; }
+.san-khau-giang .sk-ht-ava.is-nho { width: 24px; height: 24px; font-size: 11px; }
+/* Dang noi: vong nhan TINH quanh avatar (khong lap — v2 B4) */
+.san-khau-giang .sk-ht-ava.is-noi { box-shadow: 0 0 0 2px var(--card), 0 0 0 4px var(--accent); }
+.san-khau-giang .sk-ht-ten { min-width: 0; font-size: 15px; font-weight: 700; line-height: 1.4; color: var(--ink-2); overflow-wrap: anywhere; }
+.san-khau-giang .sk-ht-bong { min-width: 0; }
+.san-khau-giang .sk-ht-cau {
+  position: relative;
+  font-family: var(--font-jp);
+  font-size: calc(var(--sk-co, 1) * clamp(22px, 1.8vw + 6px, 34px));
+  font-weight: 500;
+  line-height: 2.05;
+  color: var(--ink);
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+.san-khau-giang .sk-ht-nghia {
+  margin: calc(var(--sk-co, 1) * 8px) 0 0;
+  font-size: max(15px, calc(var(--sk-co, 1) * clamp(16px, .55vw + 11px, 21px)));
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+/* Token trong cau: lien nhau, ruby can giua. Dang nghe (clip / giong may): chu chua toi mo .55 */
+.san-khau-giang .sk-ht-tok { position: relative; display: inline-block; padding: 0 .04em; border-radius: 6px; }
+.san-khau-giang .sk-ht-cau.is-cho-doc .sk-ht-tok:not(.is-doc) { opacity: .55; }
+.san-khau-giang .sk-ht-cau ruby { font-family: inherit; ruby-align: center; }
+.san-khau-giang .sk-ht-cau ruby rt {
+  font-size: max(11px, .42em);
+  line-height: 1.1;
+  font-weight: 500;
+  color: var(--muted);
+}
+.san-khau-giang .sk-ht-cau ruby[style*="--rt"] {
+  --tran: calc((max(11px, .42em) * 1.02 * var(--rt) - 1em * var(--cj)) / 2);
+  margin-left: calc(-1 * clamp(0px, var(--tran), var(--tl)));
+  margin-right: calc(-1 * clamp(0px, var(--tran), var(--tp)));
+}
+/* Token trong tam da giang: chu accent-deep + gach chan 2 px (nhu canh vi du) — KHONG to nen: to nen chi
+   danh cho con tro doc dang truot (v2 B3), khong thi nhieu o hong cung luc khong biet dang doc cho nao.
+   Giu nguyen do dam chu: doi font-weight lam ca cau xo lai dung luc cue F3 */
+.san-khau-giang .sk-ht-tok.is-nang {
+  color: var(--accent-deep);
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: rgba(169, 73, 43, .55);
+  text-decoration-color: color-mix(in srgb, var(--accent-deep) 55%, transparent);
+  text-underline-offset: .22em;
+  text-decoration-skip-ink: none;
+}
+.san-khau-giang .sk-ht-tok.is-nang rt { color: var(--muted); text-decoration: none; }
+.san-khau-giang .sk-ht-cau.co-vai { padding-bottom: calc(var(--sk-co, 1) * 20px); }
+.san-khau-giang .sk-ht-vai-tro {
+  position: absolute;
+  left: -5em; right: -5em; top: 100%;
+  margin-top: -2px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  white-space: nowrap;
+  color: var(--accent-deep);
+  pointer-events: none;
+}
+/* kaiwa: cau lon hon mot bac */
+.san-khau-giang .sk-ht-cau.is-lon { font-size: calc(var(--sk-co, 1) * clamp(24px, 2vw + 6px, 38px)); }
+
+/* "Cach noi khac": dat san (an) duoi cau chinh, hien khi Sensei ghi mot cach noi khac. Mot duong ke manh +
+   nhan (khong hop trong hop). Cao CO DINH = nhan + 2 dong chu (chu dien luc hien, dai hon 2 dong thi cat
+   dong 3): hien / doi cau khong lam cau chinh + nguoi noi (can giua) nhay len */
+.san-khau-giang .sk-ht-khac {
+  box-sizing: border-box;
+  padding-top: calc(var(--sk-co, 1) * 12px);
+  border-top: 1px solid var(--line);
+}
+.san-khau-giang .sk-ht-khac-nhan {
+  display: flex; align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: .02em;
+  color: var(--muted);
+}
+.san-khau-giang .sk-ht-khac-cau {
+  height: calc(2 * 1.7em);
+  margin-top: 2px;
+  overflow: hidden;
+  font-family: var(--font-jp);
+  font-size: max(16px, calc(var(--sk-co, 1) * clamp(17px, .6vw + 12px, 22px)));
+  line-height: 1.7;
+  color: var(--ink);
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+
+/* Dien thoai / man thap */
+.san-khau-giang :is(.sk-kho-hep, .sk-kho-thap) :is(.sk-ht-chay, .sk-ht-mot) .sk-hoi-noi,
+.san-khau-giang :is(.sk-ht-chay, .sk-ht-mot):is(.sk-kho-hep, .sk-kho-thap) .sk-hoi-noi { gap: 12px; }
+.san-khau-giang .sk-kho-hep .sk-ht-cau { font-size: calc(var(--sk-co, 1) * 22px); }
+.san-khau-giang .sk-kho-hep .sk-ht-cau.is-lon { font-size: calc(var(--sk-co, 1) * 24px); }
+.san-khau-giang .sk-kho-hep .sk-ht-nghia { font-size: 15px; }
+.san-khau-giang .sk-kho-hep .sk-ht-ava:not(.is-nho) { width: 32px; height: 32px; font-size: 14px; }
+.san-khau-giang .sk-kho-hep .sk-ht-ai { gap: 8px; margin-bottom: 4px; }
+.san-khau-giang .sk-kho-hep .sk-ht-ten { font-size: 14px; }
+.san-khau-giang .sk-kho-hep .sk-ht-truoc { font-size: 14px; }
+.san-khau-giang .sk-ht-chay.sk-kho-hep .sk-ht-truoc { height: calc(1.5em + 2 * 13px * 1.45); }
+.san-khau-giang .sk-ht-chay.sk-kho-hep .sk-ht-truoc-nghia {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  white-space: normal;
+}
+.san-khau-giang .sk-kho-hep .sk-ht-khac { padding-top: 8px; }
+.san-khau-giang .sk-kho-thap .sk-ht-truoc { display: none; }
+.san-khau-giang .sk-kho-thap .sk-ht-cau { font-size: calc(var(--sk-co, 1) * 22px); line-height: 1.9; }
+.san-khau-giang .sk-kho-thap .sk-ht-nghia { margin-top: 2px; font-size: 14px; }
+.san-khau-giang .sk-kho-thap .sk-ht-ava:not(.is-nho) { width: 28px; height: 28px; font-size: 13px; }
+.san-khau-giang .sk-kho-thap .sk-ht-ai { gap: 8px; margin-bottom: 2px; }
+.san-khau-giang .sk-kho-thap .sk-ht-ten { font-size: 13px; }
+
+/* ---------- 3. quiz: khoi cau hoi = khuon cua the that luc trao tay ----------
+   Dao dien v2 tu mo cong (.sk-cong + .qz-card.sk-trong-cong, css/motion.css): khoi cua canh la BAN MAU
+   cung khung .sk-cong + lop .qz-* (.sk-bt-gia) -> the that dung dung cho, chi cheo mo tai cho.
+   Dao dien cu (khong cong): canh tu dua the sang (.qz-card.sk-bt-that) — khoi .sk-bt-khoi cung khuon. */
+
+/* 3a. Ban mau trong cong v2: chi de doc (khong hover, khong bam), trang thai trao tay */
+.san-khau-giang .sk-bt-gia { pointer-events: none; }
+.san-khau-giang .sk-bt-gia .qz-opt { cursor: default; }
+.san-khau-giang .sk-bt-gia .qz-opt,
+.san-khau-giang .sk-bt-gia .qz-key { transition: none; }
+@media (hover: hover) {
+  .san-khau-giang .sk-bt-gia .qz-opt:hover { border-color: var(--line); background: var(--surface); color: var(--ink-2); }
+  .san-khau-giang .sk-bt-gia .qz-opt:hover .qz-key { color: var(--muted); }
+}
+.san-khau-giang :is(.sk-bt-khoi, .sk-bt-khoi-gia).is-trao { opacity: 0; pointer-events: none; }
+.san-khau-giang :is(.sk-bt-khoi, .sk-bt-khoi-gia).is-da-trao { visibility: hidden; }
+/* cong cua dao dien nam noi tiep duoi canh (khong chong): canh nhuong cho han */
+.san-khau-giang .sk-canh-quiz.sk-bt-thu { display: none; }
+
+/* 3b. Khoi rieng (dao dien cu) + the that do CANH dua sang (.sk-bt-that): chung kich thuoc */
+.san-khau-giang .sk-bt .sk-hoi-noi { display: flex; flex-direction: column; gap: calc(var(--sk-co, 1) * 16px); }
+.san-khau-giang .sk-bt-vo { display: grid; min-width: 0; }
+.san-khau-giang .sk-bt-vo > * { grid-area: 1 / 1; min-width: 0; align-self: start; }
+.san-khau-giang :is(.sk-bt-khoi, .qz-card.sk-bt-that) > * + * { margin-top: calc(var(--sk-co, 1) * 24px); }
+.san-khau-giang :is(.sk-bt-q, .qz-card.sk-bt-that .qz-q) { display: flex; flex-direction: column; gap: 3px; }
+.san-khau-giang :is(.sk-bt-dau, .qz-card.sk-bt-that .qz-q-top) { display: flex; align-items: center; gap: 8px; min-height: 22px; }
+.san-khau-giang :is(.sk-bt-so, .qz-card.sk-bt-that .qz-no) { font-size: 13px; font-weight: 600; line-height: 1.4; color: var(--muted); }
+.san-khau-giang :is(.sk-bt-hoi, .qz-card.sk-bt-that .qz-text) {
+  margin: calc(var(--sk-co, 1) * 6px) 0 0;
+  font-size: calc(var(--sk-co, 1) * clamp(20px, 1.6vw + 7px, 32px));
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink);
+  white-space: pre-line;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+.san-khau-giang :is(.sk-bt-ds, .qz-card.sk-bt-that .qz-opts) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: calc(var(--sk-co, 1) * 12px);
+}
+.san-khau-giang :is(.sk-bt-ds.is-hai, .qz-card.sk-bt-that.sk-bt-hai .qz-opts) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.san-khau-giang :is(.sk-bt-dap, .qz-card.sk-bt-that .qz-opt) {
+  position: relative;
+  box-sizing: border-box;
+  display: flex; align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-width: 0;
+  min-height: calc(var(--sk-co, 1) * 64px);
+  margin: 0;
+  padding: calc(var(--sk-co, 1) * 12px) calc(var(--sk-co, 1) * 20px);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  font-size: calc(var(--sk-co, 1) * clamp(16px, 1.1vw + 7px, 22px));
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: left;
+  color: var(--ink-2);
+}
+.san-khau-giang :is(.sk-bt-phim, .qz-card.sk-bt-that .qz-key) {
+  flex: 0 0 auto;
+  display: grid; place-items: center;
+  width: 32px; height: 32px;
+  border-radius: 9px;
+  background: var(--paper-deep);
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 700;
+}
+.san-khau-giang :is(.sk-bt-chu, .qz-card.sk-bt-that .qz-opt-text) { flex: 1 1 auto; min-width: 0; line-break: strict; overflow-wrap: anywhere; }
+.san-khau-giang .sk-bt-goi {
+  margin: 0;
+  font-size: max(14px, calc(var(--sk-co, 1) * clamp(15px, .4vw + 11px, 18px)));
+  line-height: 1.55;
+  color: var(--muted);
+}
+.san-khau-giang .sk-bt-goi b { color: var(--ink-2); font-weight: 700; }
+.san-khau-giang .sk-bt-goi.is-giau { visibility: hidden; }
+/* the that do canh dua sang: bo vo the cua luoi (nen / vien / bong / vong "dang doc"), bam duoc */
+.san-khau-giang .qz-card.sk-bt-that.sk-bt-that {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  visibility: visible;
+  pointer-events: auto;
+}
+.san-khau-giang .qz-card.sk-bt-that :is(.qz-img, .reading-badge-indicator) { display: none !important; }
+.san-khau-giang .qz-card.sk-bt-that .qz-opt:not(:disabled) { cursor: pointer; }
+@media (hover: hover) {
+  .san-khau-giang .qz-card.sk-bt-that .qz-opt:hover:not(:disabled) { border-color: rgba(201, 100, 66, .55); background: var(--surface-hi); color: var(--ink); }
+  .san-khau-giang .qz-card.sk-bt-that .qz-opt:hover:not(:disabled) .qz-key { color: var(--accent-deep); }
+}
+/* luc canh tu dua the sang: luoi van an, vung canh van thay + bam duoc du dao dien cu an / mo luc cho */
+body.dang-giang:has(.san-khau-giang .qz-card.sk-bt-that) #slideContent { visibility: hidden; }
+.san-khau-giang .sk-canh-quiz.sk-bt-dang-cong { visibility: visible; opacity: 1; }
+/* Man hep / thap (khoi rieng + the canh dua sang) */
+.san-khau-giang .sk-bt.sk-kho-hep :is(.sk-bt-khoi, .qz-card.sk-bt-that) > * + * { margin-top: 14px; }
+.san-khau-giang .sk-bt.sk-kho-hep :is(.sk-bt-hoi, .qz-card.sk-bt-that .qz-text) { font-size: calc(var(--sk-co, 1) * 19px); }
+.san-khau-giang .sk-bt.sk-kho-hep :is(.sk-bt-ds, .qz-card.sk-bt-that .qz-opts) { gap: 8px; }
+.san-khau-giang .sk-bt.sk-kho-hep :is(.sk-bt-dap, .qz-card.sk-bt-that .qz-opt) { gap: 10px; min-height: calc(var(--sk-co, 1) * 50px); padding: 8px 12px; font-size: 16px; }
+.san-khau-giang .sk-bt.sk-kho-hep :is(.sk-bt-phim, .qz-card.sk-bt-that .qz-key) { width: 26px; height: 26px; font-size: 12px; }
+/* man thap: cau hoi trai 55%, dap an phai 45% */
+.san-khau-giang .sk-bt.sk-kho-thap :is(.sk-bt-khoi, .qz-card.sk-bt-that) {
+  display: grid;
+  grid-template-columns: minmax(0, 55fr) minmax(0, 45fr);
+  column-gap: 16px;
+  align-items: center;
+}
+.san-khau-giang .sk-bt.sk-kho-thap :is(.sk-bt-khoi, .qz-card.sk-bt-that) > * + * { margin-top: 0; }
+.san-khau-giang .sk-bt.sk-kho-thap :is(.sk-bt-q, .qz-card.sk-bt-that .qz-q) { grid-column: 1; grid-row: 1; }
+.san-khau-giang .sk-bt.sk-kho-thap :is(.sk-bt-ds, .qz-card.sk-bt-that .qz-opts) { grid-column: 2; grid-row: 1 / span 2; grid-template-columns: minmax(0, 1fr); gap: 6px; }
+.san-khau-giang .sk-bt.sk-kho-thap .qz-card.sk-bt-that .qz-fb { grid-column: 1; grid-row: 2; margin-top: 8px; font-size: 13px; }
+.san-khau-giang .sk-bt.sk-kho-thap :is(.sk-bt-hoi, .qz-card.sk-bt-that .qz-text) { font-size: calc(var(--sk-co, 1) * 18px); }
+.san-khau-giang .sk-bt.sk-kho-thap :is(.sk-bt-dap, .qz-card.sk-bt-that .qz-opt) { min-height: calc(var(--sk-co, 1) * 40px); padding: 5px 10px; gap: 8px; font-size: 14px; }
+.san-khau-giang .sk-bt.sk-kho-thap :is(.sk-bt-phim, .qz-card.sk-bt-that .qz-key) { width: 22px; height: 22px; font-size: 12px; }
+.san-khau-giang .sk-bt.sk-kho-thap .sk-bt-goi { font-size: 13px; }
+.san-khau-giang .sk-bt.sk-bt-gon { --sk-co: .82; }
+.san-khau-giang .sk-bt.sk-bt-gon .sk-hoi-noi { overflow-y: auto; overscroll-behavior: contain; }
+
+/* 3c. The that o san khau (cong nao cung vay): khong transition, focus ro, chu nhan xet vua the */
+.san-khau-giang .qz-card:is(.sk-bt-that, .sk-trong-cong),
+.san-khau-giang .qz-card:is(.sk-bt-that, .sk-trong-cong) * { transition: none !important; }
+.san-khau-giang .qz-card:is(.sk-bt-that, .sk-trong-cong) .qz-opt:focus-visible { outline: var(--focus-ring); outline-offset: 2px; }
+.san-khau-giang .qz-card:is(.sk-bt-that, .sk-trong-cong) .qz-opt.opt-locked { cursor: default; }
+.san-khau-giang .qz-card:is(.sk-bt-that, .sk-trong-cong) .qz-fb { font-size: max(14px, calc(var(--sk-co, 1) * clamp(14px, .4vw + 10px, 17px))); }
+.san-khau-giang .qz-card:is(.sk-bt-that, .sk-trong-cong) .qz-fb-loi { font-size: 1.08em; }
+.san-khau-giang .qz-card:is(.sk-bt-that, .sk-trong-cong) .qz-fb-tip { font-size: .92em; }
+/* Ban mau: vien 1px trong suot nhu .deck-card cua the that (cung hop noi dung); goi y nam NGOAI
+   dong chay (ngay duoi the) — the that khong co goi y van cao bang ban mau, trao tay khong nhay */
+.san-khau-giang .qz-card.sk-bt-khoi-gia { position: relative; border: 1px solid transparent; }
+.san-khau-giang .qz-card.sk-bt-khoi-gia > .sk-bt-goi {
+  position: absolute;
+  left: 0; right: 0; top: 100%;
+  margin-top: clamp(12px, 2vh, 20px);
+}
+/* nhan xet dai tran the: thu chu mot bac (JS dat .sk-bt-gon len the that) */
+.san-khau-giang .qz-card.sk-bt-gon > * + * { margin-top: 14px; }
+.san-khau-giang .qz-card.sk-bt-gon .qz-text { font-size: clamp(17px, .8vw + 12px, 24px); }
+.san-khau-giang .qz-card.sk-bt-gon .qz-opts { gap: 8px; }
+.san-khau-giang .qz-card.sk-bt-gon .qz-opt { min-height: 44px; padding: 6px 14px; font-size: clamp(15px, .4vw + 11px, 18px); }
+.san-khau-giang .qz-card.sk-bt-gon .qz-key { width: 26px; height: 26px; font-size: 13px; }
+.san-khau-giang .qz-card.sk-bt-gon .qz-fb { padding: 8px 12px 10px; font-size: 13.5px; }
+.san-khau-giang .qz-card.sk-bt-gon .qz-fb-loi { font-size: 14.5px; }
+.san-khau-giang .qz-card.sk-bt-gon .qz-fb-tip { margin-top: 6px; padding-top: 6px; font-size: 12.5px; }
+/* ban sao tinh cua the (khoang nghi sau khi tra the ve luoi) — ca ::before / ::after */
+.san-khau-giang .qz-card:is(.sk-bt-ban-sao, .sk-ban-sao),
+.san-khau-giang .qz-card:is(.sk-bt-ban-sao, .sk-ban-sao) *,
+.san-khau-giang .qz-card:is(.sk-bt-ban-sao, .sk-ban-sao) *::before,
+.san-khau-giang .qz-card:is(.sk-bt-ban-sao, .sk-ban-sao) *::after { animation: none !important; pointer-events: none !important; }
+/* the that vua ve lai luoi: dua node ve lam CSS animation chay lai — tat (luoi an / tinh) */
+#slideContent .qz-card.sk-bt-da-ve,
+#slideContent .qz-card.sk-bt-da-ve *,
+#slideContent .qz-card.sk-bt-da-ve *::before,
+#slideContent .qz-card.sk-bt-da-ve *::after { animation: none !important; }
+
+/* 3d. Trao tay khong nhay (v2): chan the cua nhip bai tap GIU SAN cho nut "Bỏ qua" / "Tiếp tục ▸" ngay
+   tu luc giang. Chan (border-box, min-height 40 px, dem tren 10 px) chi chua 29 px — nut 36 px (44 px cam
+   ung) lam chan cao len luc cho, than the ngan lai 7 px (17 px o dien thoai) va ban mau / the that (can
+   giua trong than) cung nhay len 3.5 px (8.5 px). Goc o chan the cua dao dien (css/motion.css
+   .sk-the-chan / .sk-btn): so o day = dem tren + vien 1 px + nut; dao dien sua goc thi luat nay vo hai. */
+.san-khau-giang .sk-the[data-kind="quiz"] > .sk-the-chan { min-height: 47px; }              /* 10 + 1 + 36 */
+@media (pointer: coarse) {
+  .san-khau-giang .sk-the[data-kind="quiz"] > .sk-the-chan { min-height: 55px; }            /* nut 44 */
+}
+@media (max-width: 640px) {
+  .san-khau-giang .sk-the[data-kind="quiz"] > .sk-the-chan { min-height: 45px; }            /* 8 + 1 + 36 */
+}
+@media (max-width: 640px) and (pointer: coarse) {
+  .san-khau-giang .sk-the[data-kind="quiz"] > .sk-the-chan { min-height: 53px; }            /* 8 + 1 + 44 */
+}
+@media (min-width: 641px) and (max-height: 500px) {
+  .san-khau-giang .sk-the[data-kind="quiz"] > .sk-the-chan { min-height: 35px; }            /* 4 + 1 + 30 */
+}
+
+/* 3e. Vua khung v2: lop tren GOC CANH (.sk-canh-quiz), ap qua :has() cua than the cho moi .sk-cong > .qz-card
+   trong than — ban mau, the that cua cong dao dien va ban sao tinh cua no cung mot khuon (JS dat lop:
+   .sk-bt-nho do tren ban mau truoc khi ve; sau cham datKetQua nang tung bac, khong lui: .sk-bt-2cot,
+   .sk-bt-fb-gon, .sk-bt-dap-gon, --sk-co rieng cua the, .sk-bt-fb-gon-2, .sk-bt-kq-hoi). KHONG bac nao an
+   dap an: hoc vien van so sanh duoc ca 4. The that ve luoi khong mang lop nao. */
+/* khung ngan hon cau hoi + 4 dap an: gon mot bac (cung bac cho ban mau lan the that); van theo --sk-co
+   de buoc thu co chu sau cham (datKetQua) con tac dung */
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-nho) .sk-cong > .qz-card > * + * { margin-top: calc(var(--sk-co, 1) * 12px); }
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-nho) .sk-cong > .qz-card .qz-text { font-size: max(13px, calc(var(--sk-co, 1) * clamp(17px, .8vw + 12px, 24px))); }
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-nho) .sk-cong > .qz-card .qz-opts { gap: calc(var(--sk-co, 1) * 8px); }
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-nho) .sk-cong > .qz-card .qz-opt {
+  min-height: calc(var(--sk-co, 1) * 44px);
+  padding: calc(var(--sk-co, 1) * 6px) 14px;
+  gap: 10px;
+  font-size: max(13px, calc(var(--sk-co, 1) * clamp(15px, .4vw + 11px, 18px)));
+}
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-nho) .sk-cong > .qz-card .qz-key { width: 26px; height: 26px; font-size: 13px; }
+/* nhan xet tran khung: nhan xet gon (moi hien, chua ve lan nao — khong nhay) */
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-fb-gon) .sk-cong > .qz-card .qz-fb { padding: 8px 12px 10px; font-size: 13.5px; }
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-fb-gon) .sk-cong > .qz-card .qz-fb-loi { font-size: 14.5px; }
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-fb-gon) .sk-cong > .qz-card .qz-fb-tip { margin-top: 6px; padding-top: 6px; font-size: 12.5px; }
+/* nut loa (32 px; 40 px cam ung) khong keo cao dong dau nhan xet — vung bam giu nguyen, tran vao dem */
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-fb-gon) .sk-cong > .qz-card .qz-fb-dau > .icon-btn { margin-block: -8px; }
+/* nhan xet hien: dap an khong chon mo .5 (van doc duoc, so sanh duoc) — diem nhin la dap an dung / da chon */
+.san-khau-giang .sk-cong > .qz-card.sk-da-cham.sk-bt-fb-hien .qz-opt:not(.is-correct):not(.is-wrong):not(.is-answer) { opacity: .5; }
+/* khung rong + dap an xep doc (dap an dai): nhan xet sang COT PHAI canh dap an, cau hoi van tron dong tren.
+   Dap an giu cot trai (le trai, dinh khong doi) — khong dap an nao roi khung */
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-2cot) .sk-cong > .qz-card.sk-bt-fb-hien {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  grid-auto-flow: row dense;
+  column-gap: clamp(20px, 2.2vw, 32px);
+  align-items: start;
+}
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-2cot) .sk-cong > .qz-card.sk-bt-fb-hien > * { grid-column: 1 / -1; min-width: 0; }
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-2cot) .sk-cong > .qz-card.sk-bt-fb-hien > .qz-opts { grid-column: 1; }
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-2cot) .sk-cong > .qz-card.sk-bt-fb-hien > .qz-fb { grid-column: 2; }
+/* van tran: dap an KHONG chon gon lai (vien mong hon, chu nho hon, da mo .5) — van nam dung cho, van doc duoc */
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-dap-gon) .sk-cong > .qz-card.sk-da-cham .qz-opt:not(.is-correct):not(.is-wrong):not(.is-answer) {
+  min-height: calc(var(--sk-co, 1) * 36px);
+  padding-block: calc(var(--sk-co, 1) * 4px);
+  gap: 10px;
+  font-size: max(13px, calc(var(--sk-co, 1) * 15px));
+  line-height: 1.4;
+}
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-dap-gon) .sk-cong > .qz-card.sk-da-cham .qz-opt:not(.is-correct):not(.is-wrong):not(.is-answer) .qz-key {
+  width: 22px; height: 22px;
+  border-radius: 6px;
+  font-size: 11px;
+}
+/* van tran: nhan xet chat them mot bac (chu Viet van >= 12 px) */
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-fb-gon-2) .sk-cong > .qz-card .qz-fb { padding: 6px 10px 8px; font-size: 12.5px; line-height: 1.45; }
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-fb-gon-2) .sk-cong > .qz-card .qz-fb-loi { font-size: 13.5px; line-height: 1.45; }
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-fb-gon-2) .sk-cong > .qz-card .qz-fb-tip { margin-top: 4px; padding-top: 4px; font-size: 12px; line-height: 1.45; }
+/* van tran: cau hoi thu mot dong (JS chi giu khi nho vay the lot khung) */
+.san-khau-giang .sk-the-than:has(> .sk-canh-quiz.sk-bt-kq-hoi) .sk-cong > .qz-card.sk-da-cham .qz-text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* ---------- 4. Phan hoi tren THE THAT (dang giang) ----------------------
+   The o san khau (cong cua dao dien .sk-trong-cong / cua canh .sk-bt-that) hoac con o luoi luc dang
+   giang. Tat giang thi lesson.css to tinh nhu cu. Moi buoc do JS dat lop dung luc (KHONG delay —
+   delay van tinh la dang chay), toi da 2 hieu ung cung chay:
+     dung: lop reu (tinh) + tick ve dan 320 ms; .sk-bt-fb-hien (+360 ms): nhan xet hien 240 ms
+     sai : lac 300 ms + gach 240 ms; .sk-bt-dung-hien (+380 ms): dap an dung vien reu 200 ms + tick;
+           .sk-bt-fb-hien (+740 ms): nhan xet hien */
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card,
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card *,
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card *::before,
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card *::after { transition-property: opacity, translate, scale; }
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card.roast-shake,
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-fb.roast-shake,
+#slideContent .qz-card.sk-da-cham.roast-shake,
+#slideContent .qz-card.sk-da-cham .qz-fb.roast-shake { animation: none; }   /* sk-da-cham: cham trong luc giang (JS) */
+/* Vong quay "Sensei dang cham bai…" la vong lap xoay: an han (dong chu da noi) */
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card .qz-fb .fa-spin { display: none; }
+/* Nhan xet: khong so le tung dong (slide-fade-enter); an toi luc .sk-bt-fb-hien roi hien MOT lan */
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card .qz-fb.slide-fade-enter,
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card .qz-fb > * > * { animation: none; }
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card.sk-da-cham:not(.sk-bt-fb-hien):not(.sk-ban-sao):not(.sk-bt-ban-sao) .qz-fb { display: none; }
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card.sk-bt-fb-hien .qz-fb { animation: skBtLen .24s var(--ease-out) backwards; }
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card.sk-bt-fb-hien .qz-fb:not(.is-cho) { animation-name: skBtLen2; }
+/* the dang truot nhuong cho (JS FLIP): nhan xet di theo the, khong hien dan rieng */
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card.sk-bt-fb-hien.sk-bt-fb-truot .qz-fb { animation: none; }
+@keyframes skBtLen { from { opacity: 0; translate: 0 6px; } }
+@keyframes skBtLen2 { from { opacity: 0; translate: 0 6px; } }
+/* Dau tick FA thay bang tick ve dan; dap an sai: gach ngang + mau dat nung */
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card .qz-opt > i.fa-solid { display: none; }
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card .qz-opt { position: relative; isolation: isolate; }
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card .qz-opt:is(.is-correct, .is-wrong, .is-answer)::before {
+  content: "";
+  position: absolute; inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+}
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card .qz-opt.is-correct { background: var(--surface); }
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card .qz-opt.is-correct::before { background: rgba(107, 138, 94, .14); }
+
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card .qz-opt.is-wrong { background: var(--surface); animation: skBtLac .3s var(--ease-out) 1; }
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card .qz-opt.is-wrong::before { background: rgba(194, 90, 76, .09); }
+@keyframes skBtLac {
+  0%, 100% { translate: 0 0; }
+  16.6%    { translate: -6px 0; }
+  33.3%    { translate: 6px 0; }
+  50%      { translate: -6px 0; }
+  66.6%    { translate: 6px 0; }
+  83.3%    { translate: -6px 0; }
+}
+/* gach ngang chi qua chu (om sat chu), keo tu trai bang translate trong khung cat */
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card .qz-opt.is-wrong .qz-opt-text {
+  position: relative;
+  flex: 0 1 auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+/* gach cho TUNG dong chu (dap an dai xuong 2-3 dong, nhat la khi nhan xet sang cot phai): mot lop phu
+   ca hop chu, van ke lap moi 1lh o 54% dong. Trinh duyet chua co don vi lh: mot gach giua hop nhu cu */
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card .qz-opt.is-wrong .qz-opt-text::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent calc(54% - 1px), var(--clay) calc(54% - 1px), var(--clay) calc(54% + 1px), transparent calc(54% + 1px));
+  background: repeating-linear-gradient(to bottom, transparent 0, transparent calc(.54lh - 1px), var(--clay) calc(.54lh - 1px), var(--clay) calc(.54lh + 1px), transparent calc(.54lh + 1px), transparent 1lh);
+  pointer-events: none;
+  animation: skBtGach .24s var(--ease-out) backwards;
+}
+@keyframes skBtGach { from { translate: -101% 0; } }
+/* dap an dung (khi chon sai): chua toi luc thi nhu dap an thuong; .sk-bt-dung-hien -> vien reu hien dan */
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card:not(.sk-bt-dung-hien):not(.sk-ban-sao):not(.sk-bt-ban-sao) .qz-opt.is-answer { border-color: var(--line); }
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card:not(.sk-bt-dung-hien):not(.sk-ban-sao):not(.sk-bt-ban-sao) .qz-opt.is-answer .qz-key { background: var(--paper-deep); color: var(--muted); }
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card:not(.sk-bt-dung-hien):not(.sk-ban-sao):not(.sk-bt-ban-sao) .qz-opt.is-answer::before { opacity: 0; }
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card .qz-opt.is-answer { background: var(--surface); }
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card .qz-opt.is-answer::before {
+  background: rgba(107, 138, 94, .08);
+  box-shadow: inset 0 0 0 1.5px var(--sage);
+}
+:is(body.dang-giang #slideContent, .san-khau-giang) .qz-card.sk-bt-dung-hien .qz-opt.is-answer::before { animation: skBtHien .2s var(--ease-out) backwards; }
+@keyframes skBtHien { from { opacity: 0; } }
+/* Dau tick ve dan (JS them .sk-ve.sk-bt-tick, net stroke-dashoffset 1 -> 0) */
+.sk-bt-tick {
+  flex: 0 0 auto;
+  width: 1.3em; height: 1.3em;
+  margin-left: auto;
+  fill: none;
+  stroke: var(--sage-deep);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  pointer-events: none;
+}
+/* Tat giang (tam dung): tick khong con (JS go khi tra the) — luoi dung dau tick FA cu */
+body:not(.dang-giang) #slideContent .sk-bt-tick { display: none; }
+
+/* ---------- 5. Giam chuyen dong ----------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  :is(body.dang-giang #slideContent, .san-khau-giang) .qz-card .qz-opt.is-wrong,
+  :is(body.dang-giang #slideContent, .san-khau-giang) .qz-card .qz-opt.is-wrong .qz-opt-text::after,
+  :is(body.dang-giang #slideContent, .san-khau-giang) .qz-card.sk-bt-dung-hien .qz-opt.is-answer::before,
+  :is(body.dang-giang #slideContent, .san-khau-giang) .qz-card.sk-bt-fb-hien .qz-fb,
+  :is(body.dang-giang #slideContent, .san-khau-giang) .qz-card.sk-bt-fb-hien .qz-fb:not(.is-cho) { animation: none; }
+}

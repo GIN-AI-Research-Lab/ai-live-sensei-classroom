@@ -416,13 +416,22 @@ class SlideEngine {
     this._renderTabContentNow(tabName, subIndex);
   }
 
+  /**
+   * Lop cua #slideContent khi ve lai. Vua tat san khau giang (app.js gan body.vua-dung-giang ~1 s o
+   * pauseLecture): luoi hien lai TINH, khong cardIn so le tren the moi ve do chinh cu bam lam dung bai
+   * (motion-spec §1.10.2, T3). Ngoai luc do: hieu ung doi tab 200 ms nhu cu (§0.1.8).
+   */
+  _lopNoiDung() {
+    return document.body.classList.contains('vua-dung-giang') ? 'deck-content' : 'deck-content slide-fade-enter';
+  }
+
   /** The bao loi tai bai. Loi khong bi ghi nho, nen bam thu lai la tai lai tu dau. */
   _veLoiTaiBai(tabName, subIndex) {
     if (this.levelBadge) this.levelBadge.innerText = this.currentLevel;
     if (this.lessonNum) this.lessonNum.innerText = this.currentLesson;
     if (this.slideIndexLabel) this.slideIndexLabel.innerText = '—';
     if (!this.slideContent) return;
-    this.slideContent.className = "deck-content slide-fade-enter";
+    this.slideContent.className = this._lopNoiDung();
     this.slideContent.innerHTML = `
       <div class="text-center py-16 text-slate-400">
         <i class="fa-solid fa-triangle-exclamation text-2xl mb-2 text-rose-400"></i>
@@ -529,9 +538,14 @@ class SlideEngine {
       const kanjiOrWord = v.kanji || v.word;
       // lang="ja" dat thang len ruby/span: quy tac `ruby { serif }` trong styles.css
       // thang ke thua, dat o the cha thi chu Han lai ra Mincho.
-      const displayWord = v.kanji && v.furigana && v.furigana !== v.kanji
-        ? `<ruby lang="ja" class="vc-word">${this.escapeHtml(v.kanji)}<rt>${this.escapeHtml(v.furigana)}</rt></ruby>`
-        : `<span lang="ja" class="vc-word">${this.escapeHtml(v.word)}</span>`;
+      // Tu co okurigana (お願いします) -> furigana chi tren chu Han (rubyTu); ca tu la chu Han -> mot ruby nhu cu
+      const coRuby = v.kanji && v.furigana && v.furigana !== v.kanji;
+      const doanTu = coRuby ? this.tachRuby(v.kanji, v.furigana) : null;
+      const displayWord = !coRuby
+        ? `<span lang="ja" class="vc-word">${this.escapeHtml(v.word)}</span>`
+        : (doanTu.length === 1 && doanTu[0][1])
+          ? `<ruby lang="ja" class="vc-word">${this.escapeHtml(v.kanji)}<rt>${this.escapeHtml(v.furigana)}</rt></ruby>`
+          : `<span lang="ja" class="vc-word">${this.rubyTu(v.kanji, v.furigana, { dauTrai: true })}</span>`;
 
       // Mot dong phu: romaji · loai tu (chu tron, khong ngoac, khong monospace)
       const metaHtml = [v.romaji ? this.escapeHtml(v.romaji) : '', typeText].filter(Boolean).join(' · ');
@@ -572,7 +586,7 @@ class SlideEngine {
     }).join("");
 
     if (this.slideContent) {
-      this.slideContent.className = "deck-content slide-fade-enter";
+      this.slideContent.className = this._lopNoiDung();
       this.slideContent.innerHTML = `
         <header class="deck-head" title="Bấm biểu tượng loa để nghe phát âm giọng bản xứ. Bấm vào thẻ để xem hình minh hoạ và ghi chú.">
           <h2 class="deck-h2">Từ vựng</h2>
@@ -648,7 +662,7 @@ class SlideEngine {
     }).join("");
 
     if (this.slideContent) {
-      this.slideContent.className = "deck-content slide-fade-enter";
+      this.slideContent.className = this._lopNoiDung();
       this.slideContent.innerHTML = `
         <header class="deck-head" title="Âm Hán Việt, cách đọc On / Kun và các từ ghép thường gặp trong đề thi JLPT.">
           <h2 class="deck-h2">Chữ Hán</h2>
@@ -743,7 +757,7 @@ class SlideEngine {
     const soViDu = (slide.examples || []).length;
 
     if (this.slideContent) {
-      this.slideContent.className = "deck-content slide-fade-enter";
+      this.slideContent.className = this._lopNoiDung();
       // Tieu de o ngoai, con lai nam trong vung cuon — giai thich dai khong
       // chiem cho co dinh tren man hinh thap (dien thoai ngang)
       this.slideContent.innerHTML = `
@@ -862,7 +876,7 @@ class SlideEngine {
     }).join("");
 
     if (this.slideContent) {
-      this.slideContent.className = "deck-content slide-fade-enter";
+      this.slideContent.className = this._lopNoiDung();
       this.slideContent.innerHTML = `
         <header class="deck-head" title="Luyện đàm thoại theo ngữ cảnh thực tế — Sensei đóng vai cùng học viên. Bấm vào câu để xem kỹ.">
           <h2 class="deck-h2">Hội thoại</h2>
@@ -950,7 +964,7 @@ class SlideEngine {
       : `<p class="qz-trong">Chưa có câu trắc nghiệm nào cho bài này.</p>`;
 
     if (this.slideContent) {
-      this.slideContent.className = "deck-content slide-fade-enter";
+      this.slideContent.className = this._lopNoiDung();
       this.slideContent.innerHTML = `
         <header class="deck-head" title="Chọn đáp án đúng — Sensei nhận xét và giải thích.">
           <h2 class="deck-h2">Bài tập</h2>
@@ -1008,7 +1022,7 @@ class SlideEngine {
 
     // Boc trong vung cuon: the cau hoi (khung ve + nut nop + loi phan) cao hon
     // man hinh dien thoai thap -> truoc day bi cat mat, khong cuon toi duoc.
-    this.slideContent.className = "deck-content slide-fade-enter";
+    this.slideContent.className = this._lopNoiDung();
     // Tieu de nam ngoai cot giua (nhu cac chuong khac) -> khong nhay ngang khi doi tab
     this.slideContent.innerHTML = `
       <header class="deck-head" title="Không có thời gian nghĩ. Đề hiện ra là làm luôn — Sensei nghe/nhìn rồi phán ngay tại chỗ.">
@@ -1248,6 +1262,12 @@ class SlideEngine {
 
   resolveElement(targetId) {
     if (!targetId) return null;
+    // Dang giang tren san khau (js/motion.js): muc cung id tren san khau (st-<id>) moi la
+    // thu hoc vien dang nhin — bang ve, meo chi tay, den roi deu ve do (luoi dang an duoi san khau)
+    if (document.body.classList.contains('dang-giang')) {
+      const st = document.getElementById('st-' + targetId);
+      if (st) return st;
+    }
     let el = document.getElementById(targetId);
     if (!el) {
       el = document.getElementById(`vocab-${targetId}`) ||
@@ -1283,6 +1303,8 @@ class SlideEngine {
         }
       }
     }
+    // Phan tu tren san khau giang: khong cuon (scrollIntoView se cuon .deck-stage overflow:hidden lech man)
+    if (el.closest('#sanKhauGiang')) return;
     el.scrollIntoView({ behavior: this._itChuyenDong() ? 'auto' : 'smooth', block: 'center' });
   }
 
@@ -1383,7 +1405,13 @@ class SlideEngine {
       const boMat = !!goc && (opts.doBam || opts.khongMat
         || (goc === this._gocCamXuc && Date.now() - this._lucCamXuc < 8000));
       if (goc && (opts.khongMat || !boMat)) { this._gocCamXuc = goc; this._lucCamXuc = Date.now(); }
-      if (boMat) av.chiVao(elMuc); else av.khiRoiMuc(elMuc, styleType, found);
+      if (document.body.classList.contains('dang-giang')) {
+        // San khau giang: KHONG chi tay (duong chi cua meo cat ngang chu tren the, thanh dau thu hai
+        // canh con tro doc — bo sung v2 B.3/B.5). Chi doi mat theo sac thai cua muc, nhu khiRoiMuc.
+        const d = found || {};
+        const k = (goc && goc.dataset.emotion) || (d.data && d.data.emotion) || (d.sentence && d.sentence.emotion);
+        if (k && !boMat && typeof av.camXuc === 'function') av.camXuc(k);
+      } else if (boMat) av.chiVao(elMuc); else av.khiRoiMuc(elMuc, styleType, found);
     }
     return true;
   }
@@ -1397,6 +1425,8 @@ class SlideEngine {
    * phai co moi giang duoc ngu phap, khong the de tuy luc model nho luc quen.
    */
   tuKhoanhNguPhap(found) {
+    // San khau giang tu nhan manh tro tu theo loi Sensei — khong khoanh tu dong de len
+    if (document.body.classList.contains('dang-giang')) return;
     if (!window.SenseiBoard) return;
     if (!found || found.tab !== 'grammar') return;
 
@@ -1411,6 +1441,7 @@ class SlideEngine {
     // Cho layout on dinh (vua doi slide / vua cuon) roi moi do toa do
     clearTimeout(this._khoanhTimer);
     this._khoanhTimer = setTimeout(() => {
+      if (document.body.classList.contains('dang-giang')) return;   // san khau vua bat trong 420 ms cho
       if (this.activeFocusId !== found.data.id && found.type === 'example') return;
       trongTam.slice(0, 3).forEach(t => window.SenseiBoard.veLen(t.id, 'khoanh'));
     }, 420);
@@ -1429,6 +1460,8 @@ class SlideEngine {
    * @param {boolean} doBam  true khi hoc vien tu bam vao the, false khi bai giang tu roi den
    */
   boQuaTheTrai(found, doBam = false) {
+    // San khau giang thay cho the ben trai (tren dien thoai the do con la tam day che san khau)
+    if (document.body.classList.contains('dang-giang')) return true;
     if (!found) return true;
     if (found.tab === 'grammar' || found.tab === 'quiz') return true;
     if (found.tab === 'kaiwa' && !doBam) return true;
@@ -1480,14 +1513,18 @@ class SlideEngine {
       }
       // Hoc vien tu bam (doBam) thi khong co gi dang doc ca -> khong gan "Dang doc…",
       // chi giu vien sang cho biet the nao dang chon.
-      if (styleType === 'reading_focus' && isBlockCard && !(opts && opts.doBam) && !el.querySelector('.reading-badge-indicator')) {
+      // Dang giang tren san khau: luoi an, tam dung thi huy hieu bi go — gan vao chi thanh chu thua
+      // di theo the bai tap len san khau (motion-spec bo sung A2/A4)
+      const dangGiangSk = document.body.classList.contains('dang-giang');
+      if (styleType === 'reading_focus' && isBlockCard && !dangGiangSk && !(opts && opts.doBam) && !el.querySelector('.reading-badge-indicator')) {
         const badge = document.createElement('span');
         badge.className = 'reading-badge-indicator inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-white font-bold text-[12px] shadow-md ml-2';
         badge.innerHTML = '<i class="fa-solid fa-volume-high text-[11px]"></i> Đang đọc…';
         const anchor = this.choGanHuyHieu(el, 'h2, h3, .font-bold, ruby, span');
         if (anchor && anchor.parentElement) anchor.parentElement.appendChild(badge);
       }
-      el.scrollIntoView({ behavior: this._itChuyenDong() ? 'auto' : 'smooth', block: 'center' });
+      // The da dua len san khau (cho hoc vien chon): khong cuon — scrollIntoView cuon lech .deck-stage
+      if (!el.closest('#sanKhauGiang')) el.scrollIntoView({ behavior: this._itChuyenDong() ? 'auto' : 'smooth', block: 'center' });
     } else {
       console.warn(`Element with ID '${targetId}' not found on current view.`);
     }
@@ -1825,27 +1862,113 @@ class SlideEngine {
   }
 
   /**
-   * Ruby cua token trong cau (ghepTokenCau). Furigana dai hon chu (上昇 / じょうしょう) thi Chrome gian
-   * o chu bang be ngang furigana -> trong nhu co dau cach hai ben. Cho furigana tran sang token ben canh
-   * (margin am, lesson.css): toi da nua chu moi ben, va khong qua cho trong tren dau token ben canh
-   * neu no cung co furigana (hai tang chu nho khong de len nhau).
+   * Tach okurigana: chu goc + cach doc -> [[doan, doc], ...]; doc '' = viet thang (kana / dau), khong ruby.
+   *   準備します / じゅんびします -> [準備|じゅんび] します;  取り消す / とりけす -> [取|と] り [消|け] す
+   * Moi cum kana cua chu goc la moc co dinh (so hiragana = katakana), moi cum chu Han / so / chu Latin la
+   * mot nhom doc (.+?), dau cau / ky hieu (〜 ・ [ ] dau cach) co the co hoac khong trong cach doc — khop neo
+   * ca dau lan cuoi. Khong khop (du lieu lech, vd 止めます／辞めます / やめます): bo kana chung dau / cuoi khi
+   * phan giua khong con kana; khong thi ca tu mot ruby nhu cu (khong bao gio doan bua ranh gioi).
+   * Tu khong co chu Han (ニュース / にゅうす) giu nguyen mot ruby. Quet ca 100 bai: 3136 token tach, 3 ca tu.
+   */
+  tachRuby(chu, doc) {
+    chu = String(chu || ''); doc = String(doc || '');
+    const khoa = chu + '\u0000' + doc;
+    const bo = this._boTachRuby || (this._boTachRuby = new Map());
+    if (bo.has(khoa)) return bo.get(khoa);
+    const ra = this._tachRubyMoi(chu, doc);
+    if (bo.size > 4000) bo.clear();
+    bo.set(khoa, ra);
+    return ra;
+  }
+
+  _tachRubyMoi(chu, doc) {
+    const caTu = [[chu, doc]];
+    if (!chu || !doc || chu === doc) return caTu;
+    const KANA = /[ぁ-ゖゝゞァ-ヴヷ-ヺーヽヾ]/;
+    // can doc: chu Han (ca 々〆〇, ヵヶ), so, chu Latin (ca toan goc)
+    const CAN_DOC = /[㐀-䶿一-鿿豈-﫿々-〇ヵヶ\u{20000}-\u{3134f}0-9０-９A-Za-zＡ-Ｚａ-ｚ]/u;
+    const hira = (s) => s.replace(/[ァ-ヶ]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60));
+    const cum = [];
+    for (const ch of chu) {
+      const l = KANA.test(ch) ? 'k' : CAN_DOC.test(ch) ? 'h' : 'd';
+      const cuoi = cum[cum.length - 1];
+      if (cuoi && cuoi.l === l) cuoi.s += ch; else cum.push({ l, s: ch });
+    }
+    if (cum.length === 1 || !cum.some((c) => c.l === 'h')) return caTu;
+    const thoat = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const dh = hira(doc);   // katakana -> hiragana 1:1 (cung do dai UTF-16) -> vi tri trong dh = vi tri trong doc
+    let m = null;
+    try {
+      m = new RegExp('^' + cum.map((c) => (c.l === 'k' ? thoat(hira(c.s)) : c.l === 'h' ? '(.+?)' : `((?:${thoat(c.s)})?)`)).join('') + '$', 'u').exec(dh);
+    } catch (e) { m = null; }
+    const gop = (ds) => ds.filter((x) => x[0]).reduce((a, x) => {
+      const t = a[a.length - 1];
+      if (t && !t[1] && !x[1]) t[0] += x[0]; else a.push([x[0], x[1]]);
+      return a;
+    }, []);
+    if (m) {
+      const ra = [];
+      let p = 0, g = 1;
+      for (const c of cum) {
+        if (c.l === 'k') { ra.push([c.s, '']); p += c.s.length; continue; }
+        const n = m[g++].length, r = doc.slice(p, p + n);
+        p += n;
+        ra.push([c.s, c.l === 'd' || hira(r) === hira(c.s) ? '' : r]);
+      }
+      return gop(ra);
+    }
+    const ch = hira(chu);
+    let d = 0, c = 0;
+    while (d < ch.length && d < dh.length && ch[d] === dh[d] && KANA.test(chu[d])) d++;
+    while (c < ch.length - d && c < dh.length - d && ch[ch.length - 1 - c] === dh[dh.length - 1 - c] && KANA.test(chu[chu.length - 1 - c])) c++;
+    const giua = chu.slice(d, chu.length - c), docGiua = doc.slice(d, doc.length - c);
+    if (!giua || !docGiua || KANA.test(giua) || (!d && !c)) return caTu;
+    return gop([[chu.slice(0, d), ''], [giua, docGiua], [chu.slice(chu.length - c), '']]);
+  }
+
+  /**
+   * Ruby cua mot tu dung rieng (chu dau the tu vung, spotlight, san khau): furigana chi nam tren chu Han
+   * (tachRuby), okurigana viet thang. dauTrai: doan dau la ruby thi can trai (chu thang mep nhu .vc-word).
+   */
+  rubyTu(chu, doc, opts = {}) {
+    if (!chu) return '';
+    if (!doc || doc === chu) return this.escapeHtml(chu);
+    return this.tachRuby(chu, doc).map(([c, r], di) => (r
+      ? `<ruby${opts.dauTrai && di === 0 ? ' style="ruby-align:start"' : ''}>${this.escapeHtml(c)}<rt>${this.escapeHtml(r)}</rt></ruby>`
+      : this.escapeHtml(c))).join('');
+  }
+
+  /**
+   * Ruby cua token trong cau (ghepTokenCau): furigana chi tren chu Han cua token (tachRuby), okurigana
+   * viet thang. Furigana dai hon chu (上昇 / じょうしょう) thi Chrome gian o chu bang be ngang furigana ->
+   * trong nhu co dau cach hai ben. Cho furigana tran sang ben canh (margin am, lesson.css): toi da nua chu
+   * moi ben, va khong qua cho trong tren doan sat mep cua token ben canh neu doan do cung co furigana (hai
+   * tang chu nho khong de len nhau). Ben canh trong cung token la kana -> tran duoc ca nua chu.
    */
   rubyCau(tk, rt, i, ds) {
     const soChu = (s) => Array.from(String(s || '')).length;
-    const m = soChu(tk.kanji), n = soChu(rt);
-    let kieu = '';
-    if (n * .5 > m) {
-      const trong = (j) => {
-        const k = ds && ds[j];
-        const r2 = k && this.rtCua(k);
-        return r2 ? Math.max(0, (soChu(k.kanji) - soChu(r2) * .57) / 2) : .5;
-      };
-      const trai = Math.min(.5, trong(i - 1)), phai = Math.min(.5, trong(i + 1));
-      if (trai > 0 || phai > 0) {
-        kieu = ` style="--rt:${n};--cj:${m};--tl:${trai.toFixed(2)}em;--tp:${phai.toFixed(2)}em"`;
+    const doan = this.tachRuby(tk.kanji, rt);
+    const trong = (j, benTrai) => {
+      const k = ds && ds[j];
+      const r2 = k && this.rtCua(k);
+      if (!r2) return .5;
+      const d2 = this.tachRuby(k.kanji, r2);
+      const [c2, rr] = benTrai ? d2[d2.length - 1] : d2[0];
+      return rr ? Math.max(0, (soChu(c2) - soChu(rr) * .57) / 2) : .5;
+    };
+    return doan.map(([c, r], di) => {
+      if (!r) return this.escapeHtml(c);
+      const m = soChu(c), n = soChu(r);
+      let kieu = '';
+      if (n * .5 > m) {
+        const trai = Math.min(.5, di > 0 ? .5 : trong(i - 1, true));
+        const phai = Math.min(.5, di < doan.length - 1 ? .5 : trong(i + 1, false));
+        if (trai > 0 || phai > 0) {
+          kieu = ` style="--rt:${n};--cj:${m};--tl:${trai.toFixed(2)}em;--tp:${phai.toFixed(2)}em"`;
+        }
       }
-    }
-    return `<ruby${kieu}>${this.escapeHtml(tk.kanji)}<rt>${this.escapeHtml(rt)}</rt></ruby>`;
+      return `<ruby${kieu}>${this.escapeHtml(c)}<rt>${this.escapeHtml(r)}</rt></ruby>`;
+    }).join('');
   }
 
   /** Câu đầy đủ có ruby, token trọng tâm được tô sáng */
@@ -1853,7 +1976,7 @@ class SlideEngine {
     return (tokens || []).map(tk => {
       const rt = this.rtCua(tk);
       const inner = rt
-        ? `<ruby>${this.escapeHtml(tk.kanji)}<rt>${this.escapeHtml(rt)}</rt></ruby>`
+        ? this.rubyTu(tk.kanji, rt)
         : this.escapeHtml(tk.text || '');
       const cls = (focusTokenId && tk.id === focusTokenId) ? 'stok is-focus'
                 : (tk.isKeyGrammar ? 'stok is-key' : 'stok');
@@ -1923,7 +2046,7 @@ class SlideEngine {
       const v = found.data;
       const word = v.kanji || v.word;
       const head = (v.kanji && v.furigana && v.furigana !== v.kanji)
-        ? `<ruby>${this.escapeHtml(v.kanji)}<rt>${this.escapeHtml(v.furigana)}</rt></ruby>`
+        ? this.rubyTu(v.kanji, v.furigana)
         : this.escapeHtml(v.word);
       // Thu tu uu tien: anh co san trong giao trinh -> hinh ve SVG.
       const artSvg = this.artFor(v);
@@ -2021,7 +2144,7 @@ class SlideEngine {
       const role = this.tokenRole(tk.text);
       const rt = this.rtCua(tk);
       const head = rt
-        ? `<ruby>${this.escapeHtml(tk.kanji)}<rt>${this.escapeHtml(rt)}</rt></ruby>`
+        ? this.rubyTu(tk.kanji, rt)
         : this.escapeHtml(tk.text || '');
       return `
         <div class="spot-head" lang="ja">${head}</div>
