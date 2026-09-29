@@ -3,6 +3,8 @@
   "lessonNumber": 15,
   "title": "Bài 15: Tổng kết văn phong hàn lâm & Diễn thuyết N1",
   "description": "Bài tổng kết N1 kết hợp các cấu trúc trọng điểm đã học qua một bài diễn thuyết kỷ niệm nghỉ hưu của một giáo sư: を皮切りにして + 極まりない (mở đầu hồi tưởng sự nghiệp → cảm xúc tột độ, bài 10+1), に即して + に則って + にほかならない (lập luận học thuật bám sát thực tế + tuân theo truyền thống → khẳng định dứt khoát, bài 11+7), きらいがある + ならいざ知らず + ともあろう者が (cảnh tỉnh nhẹ nhàng → phê phán nghiêm khắc, bài 14+13), và なくしては + を限りに + 願ってやまない (tri ân → tuyên bố khép lại → nguyện cầu tha thiết, bài 12+10+8) — nắm vững cách KẾT HỢP các cấu trúc này quan trọng hơn học thuộc riêng lẻ, đúng như cách chúng xuất hiện trong văn phong diễn thuyết/học thuật N1 thực tế. Hoàn thành trọn vẹn 15/15 bài N1!",
+  "sceneImageUrl": "assets/minh-hoa/canh-bai-giang-nghi-huu.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 15: Tổng kết văn phong hàn lâm & Diễn thuyết N1",
   "vocabList": [
     {
       "id": "voc-n1-15-1",
@@ -12,6 +14,8 @@
       "romaji": "taikan",
       "wordType": "noun",
       "meaningVi": "Nghỉ hưu, rời khỏi chức vụ (quan chức/học giả)",
+      "imageUrl": "assets/minh-hoa/nghi-huu-giang-duong.webp",
+      "imageAlt": "Nghỉ hưu, rời khỏi chức vụ (quan chức/học giả)",
       "accentNote": "大学を 退官します = nghỉ hưu khỏi trường đại học."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "kouseki",
       "wordType": "noun",
       "meaningVi": "Công lao, thành tích",
+      "imageUrl": "assets/minh-hoa/cong-lao.webp",
+      "imageAlt": "Công lao, thành tích",
       "accentNote": "功績を 称えます = ca ngợi công lao."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "meiyo",
       "wordType": "noun",
       "meaningVi": "Danh dự, vinh dự",
+      "imageUrl": "assets/minh-hoa/vinh-du.webp",
+      "imageAlt": "Danh dự, vinh dự",
       "accentNote": "名誉を 守ります = bảo vệ danh dự."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "hakken",
       "wordType": "noun",
       "meaningVi": "Phát hiện",
+      "imageUrl": "assets/minh-hoa/phat-hien.webp",
+      "imageAlt": "Phát hiện",
       "accentNote": "新しい 発見を します = có một phát hiện mới."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "onshi",
       "wordType": "noun",
       "meaningVi": "Người thầy đáng kính, ân sư",
+      "imageUrl": "assets/minh-hoa/an-su.webp",
+      "imageAlt": "Người thầy đáng kính, ân sư",
       "accentNote": "恩師に 感謝します = biết ơn ân sư."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "kyoudan",
       "wordType": "noun",
       "meaningVi": "Bục giảng",
+      "imageUrl": "assets/minh-hoa/buc-giang.webp",
+      "imageAlt": "Bục giảng",
       "accentNote": "教壇に 立ちます = đứng trên bục giảng."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "kawakiri",
       "wordType": "noun",
       "meaningVi": "Điểm khởi đầu, mốc mở đầu",
+      "imageUrl": "assets/minh-hoa/khoi-dau-man.webp",
+      "imageAlt": "Điểm khởi đầu, mốc mở đầu",
       "accentNote": "Đã gặp N2 bài 6."
     },
     {
@@ -92,6 +108,8 @@
       "romaji": "giwaku",
       "wordType": "noun",
       "meaningVi": "Sự nghi ngờ, mối nghi hoặc",
+      "imageUrl": "assets/minh-hoa/nghi-ngo.webp",
+      "imageAlt": "Sự nghi ngờ, mối nghi hoặc",
       "accentNote": "Đã gặp N1 bài 13.",
       "emotion": "suy_nghi"
     },
@@ -113,6 +131,8 @@
       "romaji": "keikou",
       "wordType": "noun",
       "meaningVi": "Xu hướng, khuynh hướng",
+      "imageUrl": "assets/minh-hoa/xu-huong.webp",
+      "imageAlt": "Xu hướng, khuynh hướng",
       "accentNote": "Đã gặp N3 bài 9."
     },
     {
@@ -123,6 +143,8 @@
       "romaji": "kouen",
       "wordType": "noun",
       "meaningVi": "Bài diễn thuyết, buổi giảng",
+      "imageUrl": "assets/minh-hoa/dien-thuyet.webp",
+      "imageAlt": "Bài diễn thuyết, buổi giảng",
       "accentNote": "Đã gặp N4 bài 49."
     },
     {
@@ -133,6 +155,8 @@
       "romaji": "riron",
       "wordType": "noun",
       "meaningVi": "Lý thuyết",
+      "imageUrl": "assets/minh-hoa/ly-thuyet.webp",
+      "imageAlt": "Lý thuyết",
       "accentNote": "Đã gặp N1 bài 14."
     },
     {
@@ -143,6 +167,8 @@
       "romaji": "jissen",
       "wordType": "noun",
       "meaningVi": "Thực hành, thực tiễn",
+      "imageUrl": "assets/minh-hoa/thuc-hanh.webp",
+      "imageAlt": "Thực hành, thực tiễn",
       "accentNote": "Đã gặp N1 bài 14."
     },
     {
@@ -153,6 +179,8 @@
       "romaji": "haji",
       "wordType": "noun",
       "meaningVi": "Sự xấu hổ, nỗi nhục",
+      "imageUrl": "assets/minh-hoa/xau-ho.webp",
+      "imageAlt": "Sự xấu hổ, nỗi nhục",
       "accentNote": "Đã gặp N1 bài 13.",
       "emotion": "xau_ho"
     },
@@ -164,6 +192,8 @@
       "romaji": "shinrai",
       "wordType": "noun",
       "meaningVi": "Sự tin cậy",
+      "imageUrl": "assets/minh-hoa/tin-tuong.webp",
+      "imageAlt": "Sự tin cậy",
       "accentNote": "Đã gặp N1 bài 6."
     },
     {
@@ -174,6 +204,8 @@
       "romaji": "doryoku",
       "wordType": "noun",
       "meaningVi": "Nỗ lực",
+      "imageUrl": "assets/minh-hoa/no-luc.webp",
+      "imageAlt": "Nỗ lực",
       "accentNote": "Đã gặp N3 bài 2."
     },
     {
@@ -184,6 +216,8 @@
       "romaji": "kyouju",
       "wordType": "noun",
       "meaningVi": "Giáo sư",
+      "imageUrl": "assets/minh-hoa/giao-su.webp",
+      "imageAlt": "Giáo sư",
       "accentNote": "Đã gặp N1 bài 14."
     },
     {
@@ -194,6 +228,8 @@
       "romaji": "ronbun",
       "wordType": "noun",
       "meaningVi": "Luận văn, luận án",
+      "imageUrl": "assets/minh-hoa/luan-van.webp",
+      "imageAlt": "Luận văn, luận án",
       "accentNote": "Đã gặp N1 bài 14."
     },
     {
@@ -204,6 +240,8 @@
       "romaji": "ganko",
       "wordType": "adjective",
       "meaningVi": "Cố chấp, ngoan cố",
+      "imageUrl": "assets/minh-hoa/co-chap.webp",
+      "imageAlt": "Cố chấp, ngoan cố",
       "accentNote": "Đã gặp N1 bài 14."
     }
   ],
@@ -1244,6 +1282,7 @@
       "id": "dia-n1-15-2",
       "speaker": "教授",
       "speakerRole": "Giáo sư",
+      "avatarUrl": "assets/minh-hoa/nv-kyoju.webp",
       "tokens": [
         {
           "id": "d15-13",
@@ -1422,6 +1461,7 @@
       "id": "dia-n1-15-4",
       "speaker": "教授",
       "speakerRole": "Giáo sư",
+      "avatarUrl": "assets/minh-hoa/nv-kyoju.webp",
       "tokens": [
         {
           "id": "d15-40",
@@ -1678,6 +1718,7 @@
       "id": "dia-n1-15-6",
       "speaker": "教授",
       "speakerRole": "Giáo sư",
+      "avatarUrl": "assets/minh-hoa/nv-kyoju.webp",
       "tokens": [
         {
           "id": "d15-82",
@@ -1837,6 +1878,7 @@
       "id": "dia-n1-15-8",
       "speaker": "教授",
       "speakerRole": "Giáo sư",
+      "avatarUrl": "assets/minh-hoa/nv-kyoju.webp",
       "tokens": [
         {
           "id": "d15-107",
@@ -1975,6 +2017,7 @@
       "id": "dia-n1-15-10",
       "speaker": "教授",
       "speakerRole": "Giáo sư",
+      "avatarUrl": "assets/minh-hoa/nv-kyoju.webp",
       "tokens": [
         {
           "id": "d15-127",

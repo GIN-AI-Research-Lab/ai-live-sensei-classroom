@@ -3,6 +3,8 @@
   "lessonNumber": 10,
   "title": "Bài 10: Căn cứ & Dựa trên (に基づいて & をもとに)",
   "description": "に基づいて diễn tả việc dựa trên một CĂN CỨ CHÍNH THỨC/KHÁCH QUAN (luật pháp, số liệu, quy tắc) và phải TUÂN THỦ CHÍNH XÁC nội dung đó (dạng bổ nghĩa: に基づく); をもとに diễn tả việc lấy một THÔNG TIN/KINH NGHIỆM làm CƠ SỞ để TẠO RA điều mới, CÓ THỂ biến đổi/sáng tạo (dạng bổ nghĩa: をもとにした) — thường dùng cho tiểu thuyết, phim dựa trên chuyện có thật.",
+  "sceneImageUrl": "assets/minh-hoa/canh-dua-tren-luat-va-so-lieu.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 10: Căn cứ & Dựa trên (に基づいて & をもとに)",
   "vocabList": [
     {
       "id": "voc-n2-10-1",
@@ -12,6 +14,8 @@
       "romaji": "toukei",
       "wordType": "noun",
       "meaningVi": "Thống kê",
+      "imageUrl": "assets/minh-hoa/thong-ke.webp",
+      "imageAlt": "Thống kê",
       "accentNote": "統計に 基づいて = dựa trên số liệu thống kê."
     },
     {
@@ -32,6 +36,8 @@
       "romaji": "shiryou",
       "wordType": "noun",
       "meaningVi": "Tài liệu",
+      "imageUrl": "assets/minh-hoa/tai-lieu.webp",
+      "imageAlt": "Tài liệu",
       "accentNote": "資料を 見ます = xem tài liệu."
     },
     {
@@ -42,6 +48,8 @@
       "romaji": "houritsu",
       "wordType": "noun",
       "meaningVi": "Pháp luật",
+      "imageUrl": "assets/minh-hoa/phap-luat.webp",
+      "imageAlt": "Pháp luật",
       "accentNote": "法律に 基づいて = dựa trên pháp luật."
     },
     {
@@ -62,6 +70,8 @@
       "romaji": "handan shimasu",
       "wordType": "verb",
       "meaningVi": "Phán đoán, phán xét",
+      "imageUrl": "assets/minh-hoa/phan-doan.webp",
+      "imageAlt": "Phán đoán, phán xét",
       "accentNote": "法律に 基づいて 判断します = phán xét dựa trên pháp luật."
     },
     {
@@ -72,6 +82,8 @@
       "romaji": "keiken",
       "wordType": "noun",
       "meaningVi": "Kinh nghiệm",
+      "imageUrl": "assets/minh-hoa/kinh-nghiem.webp",
+      "imageAlt": "Kinh nghiệm",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -82,6 +94,8 @@
       "romaji": "shousetsu",
       "wordType": "noun",
       "meaningVi": "Tiểu thuyết",
+      "imageUrl": "assets/minh-hoa/tieu-thuyet.webp",
+      "imageAlt": "Tiểu thuyết",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -92,6 +106,8 @@
       "romaji": "jouhou",
       "wordType": "noun",
       "meaningVi": "Thông tin",
+      "imageUrl": "assets/minh-hoa/thong-tin.webp",
+      "imageAlt": "Thông tin",
       "accentNote": "Đã gặp N3 bài 7."
     },
     {
@@ -102,6 +118,8 @@
       "romaji": "eiga",
       "wordType": "noun",
       "meaningVi": "Phim",
+      "imageUrl": "assets/minh-hoa/phim-n2n1.webp",
+      "imageAlt": "Phim",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -112,6 +130,8 @@
       "romaji": "keikaku",
       "wordType": "noun",
       "meaningVi": "Kế hoạch",
+      "imageUrl": "assets/minh-hoa/ke-hoach.webp",
+      "imageAlt": "Kế hoạch",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -122,6 +142,8 @@
       "romaji": "tatemasu",
       "wordType": "verb",
       "meaningVi": "Lập, dựng",
+      "imageUrl": "assets/minh-hoa/dung-len.webp",
+      "imageAlt": "Lập, dựng",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -132,6 +154,8 @@
       "romaji": "tsukurimasu",
       "wordType": "verb",
       "meaningVi": "Làm, tạo ra",
+      "imageUrl": "assets/minh-hoa/lam-tao-ra.webp",
+      "imageAlt": "Làm, tạo ra",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -142,6 +166,8 @@
       "romaji": "kakimasu",
       "wordType": "verb",
       "meaningVi": "Viết",
+      "imageUrl": "assets/minh-hoa/viet-n2n1.webp",
+      "imageAlt": "Viết",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -152,6 +178,8 @@
       "romaji": "kaisha",
       "wordType": "noun",
       "meaningVi": "Công ty",
+      "imageUrl": "assets/minh-hoa/cong-ty-n2n1.webp",
+      "imageAlt": "Công ty",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -162,6 +190,8 @@
       "romaji": "seiji",
       "wordType": "noun",
       "meaningVi": "Chính trị",
+      "imageUrl": "assets/minh-hoa/chinh-tri.webp",
+      "imageAlt": "Chính trị",
       "accentNote": "Đã gặp N4 bài 40."
     },
     {
@@ -172,6 +202,8 @@
       "romaji": "keizai",
       "wordType": "noun",
       "meaningVi": "Kinh tế",
+      "imageUrl": "assets/minh-hoa/kinh-te.webp",
+      "imageAlt": "Kinh tế",
       "accentNote": "Đã gặp N3 bài 14."
     },
     {
@@ -192,6 +224,8 @@
       "romaji": "kangaemasu",
       "wordType": "verb",
       "meaningVi": "Suy nghĩ",
+      "imageUrl": "assets/minh-hoa/suy-nghi-n2n1.webp",
+      "imageAlt": "Suy nghĩ",
       "accentNote": "Đã gặp N4 bài 26.",
       "emotion": "suy_nghi"
     },
@@ -203,6 +237,8 @@
       "romaji": "sensei",
       "wordType": "noun",
       "meaningVi": "Giáo viên",
+      "imageUrl": "assets/minh-hoa/giao-vien-n2n1.webp",
+      "imageAlt": "Giáo viên",
       "accentNote": "Đã gặp N5 bài 1."
     }
   ],
@@ -741,6 +777,7 @@
       "id": "dia-n2-10-1",
       "speaker": "田中",
       "speakerRole": "Sinh viên luật",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d10-1",
@@ -784,6 +821,7 @@
       "id": "dia-n2-10-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên luật",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d10-7",
@@ -828,6 +866,7 @@
       "id": "dia-n2-10-3",
       "speaker": "田中",
       "speakerRole": "Sinh viên luật",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d10-13",
@@ -872,6 +911,7 @@
       "id": "dia-n2-10-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên luật",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d10-19",
@@ -933,6 +973,7 @@
       "id": "dia-n2-10-5",
       "speaker": "田中",
       "speakerRole": "Sinh viên luật",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d10-28",
@@ -972,6 +1013,7 @@
       "id": "dia-n2-10-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên luật",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d10-33",
@@ -1004,6 +1046,7 @@
       "id": "dia-n2-10-7",
       "speaker": "田中",
       "speakerRole": "Sinh viên luật",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d10-37",
@@ -1065,6 +1108,7 @@
       "id": "dia-n2-10-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên luật",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d10-46",
@@ -1114,6 +1158,7 @@
       "id": "dia-n2-10-9",
       "speaker": "田中",
       "speakerRole": "Sinh viên luật",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d10-53",
@@ -1166,6 +1211,7 @@
       "id": "dia-n2-10-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên luật",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d10-61",

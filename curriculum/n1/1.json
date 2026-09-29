@@ -3,6 +3,8 @@
   "lessonNumber": 1,
   "title": "Bài 1: Cực hạn trạng thái (極まりない & 極まる & の極み)",
   "description": "極まりない gắn sau gốc tính từ đuôi な (bỏ な) diễn tả mức độ VÔ CÙNG/CỰC KỲ một cách chủ quan, cảm thán mạnh (dạng cố định); 極まる cùng nghĩa nhưng là ĐỘNG TỪ thực sự, có thể chia thì (極まった); の極み gắn sau DANH TỪ TRỪU TƯỢNG diễn tả ĐỈNH ĐIỂM/TỘT CÙNG của một trạng thái/cảm xúc — cả ba đều mang văn phong RẤT TRANG TRỌNG, đặc trưng N1.",
+  "sceneImageUrl": "assets/minh-hoa/canh-vdv-cai-trong-tai.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 1: Cực hạn trạng thái (極まりない & 極まる & の極み)",
   "vocabList": [
     {
       "id": "voc-n1-1-1",
@@ -12,6 +14,8 @@
       "romaji": "hirou",
       "wordType": "noun",
       "meaningVi": "Mệt mỏi, mệt nhọc",
+      "imageUrl": "assets/minh-hoa/met-moi-n2n1.webp",
+      "imageAlt": "Mệt mỏi, mệt nhọc",
       "accentNote": "疲労の 極み = tột cùng của sự mệt mỏi."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "burei",
       "wordType": "adjective",
       "meaningVi": "Vô lễ, bất lịch sự",
+      "imageUrl": "assets/minh-hoa/vo-le.webp",
+      "imageAlt": "Vô lễ, bất lịch sự",
       "accentNote": "無礼 極まりない = vô cùng vô lễ.",
       "emotion": "gian"
     },
@@ -33,6 +39,8 @@
       "romaji": "oroka",
       "wordType": "adjective",
       "meaningVi": "Ngu ngốc, khờ dại",
+      "imageUrl": "assets/minh-hoa/ngu-ngoc.webp",
+      "imageAlt": "Ngu ngốc, khờ dại",
       "accentNote": "愚か 極まる = ngu ngốc đến cực điểm.",
       "emotion": "de_biu"
     },
@@ -44,6 +52,8 @@
       "romaji": "daitan",
       "wordType": "adjective",
       "meaningVi": "Táo bạo, cả gan",
+      "imageUrl": "assets/minh-hoa/tao-bao.webp",
+      "imageAlt": "Táo bạo, cả gan",
       "accentNote": "大胆な 行動 = hành động táo bạo."
     },
     {
@@ -54,6 +64,8 @@
       "romaji": "hisan",
       "wordType": "adjective",
       "meaningVi": "Bi thảm, thê thảm",
+      "imageUrl": "assets/minh-hoa/bi-tham.webp",
+      "imageAlt": "Bi thảm, thê thảm",
       "accentNote": "悲惨な 状況 = tình huống bi thảm.",
       "emotion": "buon"
     },
@@ -65,6 +77,8 @@
       "romaji": "kouei",
       "wordType": "noun",
       "meaningVi": "Vinh dự",
+      "imageUrl": "assets/minh-hoa/vinh-du.webp",
+      "imageAlt": "Vinh dự",
       "accentNote": "光栄の 極み = vinh dự tột cùng.",
       "emotion": "vui"
     },
@@ -76,6 +90,8 @@
       "romaji": "koudou shimasu",
       "wordType": "verb",
       "meaningVi": "Hành động",
+      "imageUrl": "assets/minh-hoa/hanh-dong.webp",
+      "imageAlt": "Hành động",
       "accentNote": "大胆に 行動します = hành động táo bạo."
     },
     {
@@ -86,6 +102,8 @@
       "romaji": "kiken",
       "wordType": "adjective",
       "meaningVi": "Nguy hiểm",
+      "imageUrl": "assets/minh-hoa/nguy-hiem.webp",
+      "imageAlt": "Nguy hiểm",
       "accentNote": "Đã gặp N4 bài 34."
     },
     {
@@ -96,6 +114,8 @@
       "romaji": "shitsurei",
       "wordType": "adjective",
       "meaningVi": "Thất lễ",
+      "imageUrl": "assets/minh-hoa/that-le.webp",
+      "imageAlt": "Thất lễ",
       "accentNote": "Đã gặp N4 bài 33.",
       "emotion": "cui_chao"
     },
@@ -107,6 +127,8 @@
       "romaji": "zannen",
       "wordType": "adjective",
       "meaningVi": "Đáng tiếc",
+      "imageUrl": "assets/minh-hoa/dang-tiec.webp",
+      "imageAlt": "Đáng tiếc",
       "accentNote": "Đã gặp N4 bài 26.",
       "emotion": "that_vong"
     },
@@ -118,6 +140,8 @@
       "romaji": "taido",
       "wordType": "noun",
       "meaningVi": "Thái độ",
+      "imageUrl": "assets/minh-hoa/thai-do.webp",
+      "imageAlt": "Thái độ",
       "accentNote": "Đã gặp N3 bài 5."
     },
     {
@@ -138,6 +162,8 @@
       "romaji": "hito",
       "wordType": "noun",
       "meaningVi": "Người",
+      "imageUrl": "assets/minh-hoa/nguoi-n2n1.webp",
+      "imageAlt": "Người",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -158,6 +184,8 @@
       "romaji": "kare",
       "wordType": "noun",
       "meaningVi": "Anh ấy",
+      "imageUrl": "assets/minh-hoa/anh-ay.webp",
+      "imageAlt": "Anh ấy",
       "accentNote": "Đã gặp N3 bài 3."
     },
     {
@@ -168,6 +196,8 @@
       "romaji": "shiai",
       "wordType": "noun",
       "meaningVi": "Trận đấu",
+      "imageUrl": "assets/minh-hoa/tran-dau.webp",
+      "imageAlt": "Trận đấu",
       "accentNote": "Đã gặp N4 bài 33."
     },
     {
@@ -178,6 +208,8 @@
       "romaji": "keshiki",
       "wordType": "noun",
       "meaningVi": "Phong cảnh",
+      "imageUrl": "assets/minh-hoa/phong-canh.webp",
+      "imageAlt": "Phong cảnh",
       "accentNote": "Đã gặp N2 bài 11."
     },
     {
@@ -188,6 +220,8 @@
       "romaji": "utsukushii",
       "wordType": "adjective",
       "meaningVi": "Đẹp",
+      "imageUrl": "assets/minh-hoa/dep.webp",
+      "imageAlt": "Đẹp",
       "accentNote": "Đã gặp N4 bài 34."
     },
     {
@@ -198,6 +232,8 @@
       "romaji": "tasshimasu",
       "wordType": "verb",
       "meaningVi": "Đạt đến",
+      "imageUrl": "assets/minh-hoa/dat-den.webp",
+      "imageAlt": "Đạt đến",
       "accentNote": "Đã gặp N3 bài 8."
     },
     {
@@ -713,6 +749,7 @@
       "id": "dia-n1-1-1",
       "speaker": "田中",
       "speakerRole": "Bình luận viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d1-1",
@@ -777,6 +814,7 @@
       "id": "dia-n1-1-2",
       "speaker": "サントス",
       "speakerRole": "Bình luận viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d1-10",
@@ -834,6 +872,7 @@
       "id": "dia-n1-1-3",
       "speaker": "田中",
       "speakerRole": "Bình luận viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d1-18",
@@ -871,6 +910,7 @@
       "id": "dia-n1-1-4",
       "speaker": "サントス",
       "speakerRole": "Bình luận viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d1-23",
@@ -906,6 +946,7 @@
       "id": "dia-n1-1-5",
       "speaker": "田中",
       "speakerRole": "Bình luận viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d1-27",
@@ -963,6 +1004,7 @@
       "id": "dia-n1-1-6",
       "speaker": "サントス",
       "speakerRole": "Bình luận viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d1-35",
@@ -1012,6 +1054,7 @@
       "id": "dia-n1-1-7",
       "speaker": "田中",
       "speakerRole": "Bình luận viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d1-42",
@@ -1052,6 +1095,7 @@
       "id": "dia-n1-1-8",
       "speaker": "サントス",
       "speakerRole": "Bình luận viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d1-47",
@@ -1113,6 +1157,7 @@
       "id": "dia-n1-1-9",
       "speaker": "田中",
       "speakerRole": "Bình luận viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d1-56",
@@ -1157,6 +1202,7 @@
       "id": "dia-n1-1-10",
       "speaker": "サントス",
       "speakerRole": "Bình luận viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d1-62",

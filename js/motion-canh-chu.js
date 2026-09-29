@@ -1055,8 +1055,13 @@
     const meta = [v.romaji ? esc(v.romaji) : '', loai].filter(Boolean).join(' · ');
 
     let hinh = '';
-    if (v.imageUrl) {
-      hinh = `<div class="sk-tv-hinh" aria-hidden="true"><img src="${esc(v.imageUrl)}" alt="" onerror="this.style.visibility='hidden'" /></div>`;
+    if (v.imageUrl && typeof se.anhMinhHoa === 'function') {
+      // Anh AI (webp vuong nen kem): o .is-anh bo dem, anh phu kin o. Anh loi -> hinh ve SVG cung
+      // co; khong co SVG thi chi an o (bo cuc .co-hinh da chon theo o nay, khong xoa).
+      hinh = se.anhMinhHoa(v, { lop: 'sk-tv-hinh is-anh', lopSvg: 'sk-tv-hinh', co: 300, loi: 'an', alt: '',
+        them: ' aria-hidden="true"' });
+    } else if (v.imageUrl) {
+      hinh = `<div class="sk-tv-hinh is-anh" aria-hidden="true"><img src="${esc(v.imageUrl)}" alt="" width="300" height="300" decoding="async" onerror="this.style.visibility='hidden'" /></div>`;
     } else {
       let svg = null;
       try { svg = typeof se.artFor === 'function' ? se.artFor(v) : null; } catch (e) {}

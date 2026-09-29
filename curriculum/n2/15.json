@@ -3,6 +3,8 @@
   "lessonNumber": 15,
   "title": "Bài 15: Tổng kết chiến lược đọc hiểu & ngữ pháp N2",
   "description": "Bài tổng kết N2 kết hợp các cấu trúc trọng điểm đã học qua một bài phát biểu kỷ niệm thành lập công ty thực tế: に際して + を契機に (mở đầu diễn văn → bước ngoặt khởi đầu), ざるを得ない + をものともせずに (thừa nhận khó khăn → ca ngợi kiên cường), 末に + につれて + にとどまらず (kết quả → xu hướng theo thời gian → phạm vi mở rộng), và に基づいて + ならではの + にふさわしい (căn cứ khách quan → đặc trưng độc đáo → sự xứng đáng) — nắm vững cách KẾT HỢP các cấu trúc này quan trọng hơn học thuộc riêng lẻ, đúng như cách chúng xuất hiện trong đề thi JLPT N2 thực tế. Hoàn thành trọn vẹn 15/15 bài N2, khép lại toàn bộ hành trình N5→N2!",
+  "sceneImageUrl": "assets/minh-hoa/canh-ky-niem-thanh-lap-cong-ty.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 15: Tổng kết chiến lược đọc hiểu & ngữ pháp N2",
   "vocabList": [
     {
       "id": "voc-n2-15-1",
@@ -12,6 +14,8 @@
       "romaji": "kinen",
       "wordType": "noun",
       "meaningVi": "Kỷ niệm",
+      "imageUrl": "assets/minh-hoa/ky-niem.webp",
+      "imageAlt": "Kỷ niệm",
       "accentNote": "10周年 記念 = kỷ niệm 10 năm."
     },
     {
@@ -32,6 +36,8 @@
       "romaji": "iwaimasu",
       "wordType": "verb",
       "meaningVi": "Chúc mừng",
+      "imageUrl": "assets/minh-hoa/chuc-mung.webp",
+      "imageAlt": "Chúc mừng",
       "accentNote": "記念日を 祝います = chúc mừng ngày kỷ niệm.",
       "emotion": "vui"
     },
@@ -43,6 +49,8 @@
       "romaji": "souritsu",
       "wordType": "noun",
       "meaningVi": "Sáng lập, thành lập",
+      "imageUrl": "assets/minh-hoa/sang-lap.webp",
+      "imageAlt": "Sáng lập, thành lập",
       "accentNote": "会社の 創立 = sự thành lập công ty."
     },
     {
@@ -53,6 +61,8 @@
       "romaji": "keiei",
       "wordType": "noun",
       "meaningVi": "Kinh doanh, quản lý",
+      "imageUrl": "assets/minh-hoa/kinh-doanh.webp",
+      "imageAlt": "Kinh doanh, quản lý",
       "accentNote": "会社を 経営します = kinh doanh công ty."
     },
     {
@@ -63,6 +73,8 @@
       "romaji": "shuunin",
       "wordType": "noun",
       "meaningVi": "Nhậm chức",
+      "imageUrl": "assets/minh-hoa/nham-chuc.webp",
+      "imageAlt": "Nhậm chức",
       "accentNote": "Đã gặp N2 bài 1."
     },
     {
@@ -83,6 +95,8 @@
       "romaji": "shukushou",
       "wordType": "noun",
       "meaningVi": "Sự thu hẹp",
+      "imageUrl": "assets/minh-hoa/thu-nho.webp",
+      "imageAlt": "Sự thu hẹp",
       "accentNote": "Đã gặp N2 bài 2."
     },
     {
@@ -93,6 +107,8 @@
       "romaji": "yamu wo enai",
       "wordType": "adjective",
       "meaningVi": "Bất đắc dĩ",
+      "imageUrl": "assets/minh-hoa/danh-chiu.webp",
+      "imageAlt": "Bất đắc dĩ",
       "accentNote": "Đã gặp N2 bài 2.",
       "emotion": "that_vong"
     },
@@ -104,6 +120,8 @@
       "romaji": "doryoku",
       "wordType": "noun",
       "meaningVi": "Nỗ lực",
+      "imageUrl": "assets/minh-hoa/no-luc.webp",
+      "imageAlt": "Nỗ lực",
       "accentNote": "Đã gặp N3 bài 8."
     },
     {
@@ -154,6 +172,8 @@
       "romaji": "kaisha",
       "wordType": "noun",
       "meaningVi": "Công ty",
+      "imageUrl": "assets/minh-hoa/cong-ty-n2n1.webp",
+      "imageAlt": "Công ty",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -164,6 +184,8 @@
       "romaji": "shachou",
       "wordType": "noun",
       "meaningVi": "Giám đốc",
+      "imageUrl": "assets/minh-hoa/giam-doc.webp",
+      "imageAlt": "Giám đốc",
       "accentNote": "Đã gặp N4 bài 41."
     },
     {
@@ -174,6 +196,8 @@
       "romaji": "sekaijuu",
       "wordType": "noun",
       "meaningVi": "Khắp thế giới",
+      "imageUrl": "assets/minh-hoa/khap-the-gioi.webp",
+      "imageAlt": "Khắp thế giới",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -184,6 +208,8 @@
       "romaji": "hatten",
       "wordType": "noun",
       "meaningVi": "Sự phát triển",
+      "imageUrl": "assets/minh-hoa/phat-trien.webp",
+      "imageAlt": "Sự phát triển",
       "accentNote": "Đã gặp N3 bài 14."
     },
     {
@@ -204,6 +230,8 @@
       "romaji": "minasama",
       "wordType": "pronoun",
       "meaningVi": "Quý vị",
+      "imageUrl": "assets/minh-hoa/quy-vi.webp",
+      "imageAlt": "Quý vị",
       "accentNote": "Đã gặp N2 bài 1."
     }
   ],
@@ -928,6 +956,7 @@
       "id": "dia-n2-15-1",
       "speaker": "田中",
       "speakerRole": "MC buổi lễ",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d15-1",
@@ -989,6 +1018,7 @@
       "id": "dia-n2-15-2",
       "speaker": "サントス",
       "speakerRole": "Giám đốc",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d15-10",
@@ -1057,6 +1087,7 @@
       "id": "dia-n2-15-3",
       "speaker": "田中",
       "speakerRole": "MC buổi lễ",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d15-20",
@@ -1123,6 +1154,7 @@
       "id": "dia-n2-15-4",
       "speaker": "サントス",
       "speakerRole": "Giám đốc",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d15-30",
@@ -1183,6 +1215,7 @@
       "id": "dia-n2-15-5",
       "speaker": "田中",
       "speakerRole": "MC buổi lễ",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d15-39",
@@ -1241,6 +1274,7 @@
       "id": "dia-n2-15-6",
       "speaker": "サントス",
       "speakerRole": "Giám đốc",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d15-47",
@@ -1317,6 +1351,7 @@
       "id": "dia-n2-15-7",
       "speaker": "田中",
       "speakerRole": "MC buổi lễ",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d15-59",
@@ -1378,6 +1413,7 @@
       "id": "dia-n2-15-8",
       "speaker": "サントス",
       "speakerRole": "Giám đốc",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d15-68",
@@ -1453,6 +1489,7 @@
       "id": "dia-n2-15-9",
       "speaker": "田中",
       "speakerRole": "MC buổi lễ",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d15-79",
@@ -1498,6 +1535,7 @@
       "id": "dia-n2-15-10",
       "speaker": "サントス",
       "speakerRole": "Giám đốc",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d15-85",

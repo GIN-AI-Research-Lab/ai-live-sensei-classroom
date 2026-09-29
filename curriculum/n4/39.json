@@ -3,6 +3,8 @@
   "lessonNumber": 39,
   "title": "Bài 39: Nguyên nhân lý do khách quan (〜ので / V-て)",
   "description": "Nêu lý do khách quan, lịch sự bằng ので (danh từ/tính từ な dùng な, khác だ; không hợp câu mệnh lệnh mạnh — khác から N5 bài 9), và ngụ ý lý do nhẹ nhàng bằng thể て/で — tổng kết bốn cách nêu lý do trong tiếng Nhật theo mức độ trang trọng tăng dần: て → から → ので.",
+  "sceneImageUrl": "assets/minh-hoa/canh-den-muon-vi-tau-dung.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 39: Nguyên nhân lý do khách quan (〜ので / V-て)",
   "vocabList": [
     {
       "id": "voc-n4-39-1",
@@ -12,6 +14,8 @@
       "romaji": "yasumimasu",
       "wordType": "verb",
       "meaningVi": "Nghỉ (làm/học)",
+      "imageUrl": "assets/minh-hoa/take-day-off.webp",
+      "imageAlt": "Nghỉ (làm/học)",
       "accentNote": "Đã gặp N5 bài 4 — nay dùng làm ví dụ ので."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "okuremasu",
       "wordType": "verb",
       "meaningVi": "Đến muộn, trễ",
+      "imageUrl": "assets/minh-hoa/be-late.webp",
+      "imageAlt": "Đến muộn, trễ",
       "accentNote": "Đã gặp bài 26."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "komarimasu",
       "wordType": "verb",
       "meaningVi": "Khó xử, gặp khó khăn",
+      "imageUrl": "assets/minh-hoa/in-trouble.webp",
+      "imageAlt": "Khó xử, gặp khó khăn",
       "accentNote": "電車が 止まったので、困りました = tàu ngừng chạy nên tôi gặp khó khăn.",
       "emotion": "that_vong"
     },
@@ -43,6 +51,8 @@
       "romaji": "tomarimasu",
       "wordType": "verb",
       "meaningVi": "Ngừng lại, dừng (tự động từ)",
+      "imageUrl": "assets/minh-hoa/come-to-stop.webp",
+      "imageAlt": "Ngừng lại, dừng (tự động từ)",
       "accentNote": "電車が 止まりました = tàu điện ngừng chạy."
     },
     {
@@ -53,6 +63,8 @@
       "romaji": "youi shimasu",
       "wordType": "verb",
       "meaningVi": "Chuẩn bị",
+      "imageUrl": "assets/minh-hoa/prepare.webp",
+      "imageAlt": "Chuẩn bị",
       "accentNote": "Đã có ở N4 bài 30."
     },
     {
@@ -63,6 +75,8 @@
       "romaji": "taifuu",
       "wordType": "noun",
       "meaningVi": "Bão (bão nhiệt đới)",
+      "imageUrl": "assets/minh-hoa/typhoon.webp",
+      "imageAlt": "Bão (bão nhiệt đới)",
       "accentNote": "Đã gặp N5 bài 21."
     },
     {
@@ -83,6 +97,8 @@
       "romaji": "jiko",
       "wordType": "noun",
       "meaningVi": "Tai nạn",
+      "imageUrl": "assets/minh-hoa/accident.webp",
+      "imageAlt": "Tai nạn",
       "accentNote": "Đã gặp bài 26."
     },
     {
@@ -93,6 +109,8 @@
       "romaji": "koutsuu",
       "wordType": "noun",
       "meaningVi": "Giao thông",
+      "imageUrl": "assets/minh-hoa/traffic.webp",
+      "imageAlt": "Giao thông",
       "accentNote": "交通が 込んでいるので = vì giao thông tắc nghẽn."
     },
     {
@@ -103,6 +121,8 @@
       "romaji": "densha",
       "wordType": "noun",
       "meaningVi": "Tàu điện",
+      "imageUrl": "assets/minh-hoa/train.webp",
+      "imageAlt": "Tàu điện",
       "accentNote": "Đã gặp N5 bài 5."
     },
     {
@@ -113,6 +133,8 @@
       "romaji": "byouki",
       "wordType": "noun",
       "meaningVi": "Bệnh, ốm",
+      "imageUrl": "assets/minh-hoa/sick.webp",
+      "imageAlt": "Bệnh, ốm",
       "accentNote": "Đã gặp bài 17 (N5).",
       "emotion": "buon"
     },
@@ -124,6 +146,8 @@
       "romaji": "shigoto",
       "wordType": "noun",
       "meaningVi": "Công việc",
+      "imageUrl": "assets/minh-hoa/work-job.webp",
+      "imageAlt": "Công việc",
       "accentNote": "Đã gặp N5 bài 9."
     },
     {
@@ -134,6 +158,8 @@
       "romaji": "gakkou",
       "wordType": "noun",
       "meaningVi": "Trường học",
+      "imageUrl": "assets/minh-hoa/school.webp",
+      "imageAlt": "Trường học",
       "accentNote": "Đã gặp bài 28."
     },
     {
@@ -144,6 +170,8 @@
       "romaji": "kaigi",
       "wordType": "noun",
       "meaningVi": "Cuộc họp",
+      "imageUrl": "assets/minh-hoa/meeting.webp",
+      "imageAlt": "Cuộc họp",
       "accentNote": "Đã gặp N5 bài 7."
     },
     {
@@ -154,6 +182,8 @@
       "romaji": "moushiwake arimasen",
       "wordType": "phrase",
       "meaningVi": "Thành thật xin lỗi (trang trọng)",
+      "imageUrl": "assets/minh-hoa/deep-apology.webp",
+      "imageAlt": "Thành thật xin lỗi (trang trọng)",
       "accentNote": "Trang trọng hơn すみません nhiều.",
       "emotion": "cui_chao"
     },
@@ -176,6 +206,8 @@
       "romaji": "kyuu ni",
       "wordType": "adverb",
       "meaningVi": "Đột ngột, bỗng nhiên",
+      "imageUrl": "assets/minh-hoa/suddenly.webp",
+      "imageAlt": "Đột ngột, bỗng nhiên",
       "accentNote": "Đã gặp bài 29."
     },
     {
@@ -186,6 +218,8 @@
       "romaji": "taihen",
       "wordType": "adjective",
       "meaningVi": "Vất vả, khó khăn",
+      "imageUrl": "assets/minh-hoa/tough-hard.webp",
+      "imageAlt": "Vất vả, khó khăn",
       "accentNote": "Đã gặp N5 bài 21."
     },
     {
@@ -206,6 +240,8 @@
       "romaji": "daijoubu",
       "wordType": "adjective",
       "meaningVi": "Ổn, không sao",
+      "imageUrl": "assets/minh-hoa/its-okay.webp",
+      "imageAlt": "Ổn, không sao",
       "accentNote": "Đã gặp N5 bài 15."
     }
   ],
@@ -694,6 +730,7 @@
       "id": "dia-n4-39-1",
       "speaker": "田中",
       "speakerRole": "Nhân viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l39-1",
@@ -817,6 +854,7 @@
       "id": "dia-n4-39-3",
       "speaker": "田中",
       "speakerRole": "Nhân viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l39-20",
@@ -848,6 +886,7 @@
       "id": "dia-n4-39-4",
       "speaker": "山田",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l39-24",
@@ -952,6 +991,7 @@
       "id": "dia-n4-39-6",
       "speaker": "山田",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l39-39",
@@ -1045,6 +1085,7 @@
       "id": "dia-n4-39-8",
       "speaker": "山田",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l39-52",
@@ -1146,6 +1187,7 @@
       "id": "dia-n4-39-10",
       "speaker": "山田",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l39-66",

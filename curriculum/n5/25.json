@@ -3,6 +3,8 @@
   "lessonNumber": 25,
   "title": "Bài 25: Thể điều kiện giả định (〜たら / 〜ても)",
   "description": "Bài chốt N5: chia thể たら (giống quy tắc thể た, chỉ thêm ら), dùng cho cả giả định 'nếu' (điều kiện chưa chắc, vế sau được là mệnh lệnh/lời mời — linh hoạt hơn と ở bài 23) và trình tự 'sau khi' (điều kiện chắc chắn xảy ra); và thể nhượng bộ ても/でも diễn tả 'dù...vẫn...', kết quả trái ngược kỳ vọng của điều kiện.",
+  "sceneImageUrl": "assets/minh-hoa/canh-mua-may-anh-moi.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 25: Thể điều kiện giả định (〜たら / 〜ても)",
   "vocabList": [
     {
       "id": "voc-n5-25-1",
@@ -12,6 +14,8 @@
       "romaji": "tsukaremasu",
       "wordType": "verb",
       "meaningVi": "Mệt, mệt mỏi",
+      "imageUrl": "assets/minh-hoa/met-moi.webp",
+      "imageAlt": "Mệt, mệt mỏi",
       "accentNote": "疲れたら、休みます = nếu mệt thì nghỉ ngơi."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "yasumimasu",
       "wordType": "verb",
       "meaningVi": "Nghỉ ngơi, nghỉ (làm/học)",
+      "imageUrl": "assets/minh-hoa/nghi-ngoi.webp",
+      "imageAlt": "Nghỉ ngơi, nghỉ (làm/học)",
       "accentNote": "Đã gặp bài 4."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "kaimonoshimasu",
       "wordType": "verb",
       "meaningVi": "Mua sắm",
+      "imageUrl": "assets/minh-hoa/mua-sam.webp",
+      "imageAlt": "Mua sắm",
       "accentNote": "Đã gặp bài 19."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "ryokoushimasu",
       "wordType": "verb",
       "meaningVi": "Đi du lịch",
+      "imageUrl": "assets/minh-hoa/du-lich.webp",
+      "imageAlt": "Đi du lịch",
       "accentNote": "お金が あったら、旅行します = nếu có tiền thì đi du lịch."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "ganbarimasu",
       "wordType": "verb",
       "meaningVi": "Cố gắng, nỗ lực",
+      "imageUrl": "assets/minh-hoa/co-gang.webp",
+      "imageAlt": "Cố gắng, nỗ lực",
       "accentNote": "頑張っても、できません = dù cố gắng thế nào cũng không làm được."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "okane",
       "wordType": "noun",
       "meaningVi": "Tiền",
+      "imageUrl": "assets/minh-hoa/tien.webp",
+      "imageAlt": "Tiền",
       "accentNote": "お金が あったら = nếu có tiền."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "yasumi",
       "wordType": "noun",
       "meaningVi": "Ngày nghỉ, kỳ nghỉ",
+      "imageUrl": "assets/minh-hoa/nghi-ngoi.webp",
+      "imageAlt": "Ngày nghỉ, kỳ nghỉ",
       "accentNote": "Đã gặp bài 4."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "kaisha",
       "wordType": "noun",
       "meaningVi": "Công ty",
+      "imageUrl": "assets/minh-hoa/cong-ty.webp",
+      "imageAlt": "Công ty",
       "accentNote": "Đã gặp bài 3."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "shigoto",
       "wordType": "noun",
       "meaningVi": "Công việc",
+      "imageUrl": "assets/minh-hoa/lam-viec.webp",
+      "imageAlt": "Công việc",
       "accentNote": "Đã gặp bài 9."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "tenki",
       "wordType": "noun",
       "meaningVi": "Thời tiết",
+      "imageUrl": "assets/minh-hoa/thoi-tiet.webp",
+      "imageAlt": "Thời tiết",
       "accentNote": "Đã gặp bài 21."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "ame",
       "wordType": "noun",
       "meaningVi": "Mưa",
+      "imageUrl": "assets/minh-hoa/mua-roi.webp",
+      "imageAlt": "Mưa",
       "accentNote": "Đã gặp bài 21."
     },
     {
@@ -122,6 +146,8 @@
       "romaji": "isogashii",
       "wordType": "adjective",
       "meaningVi": "Bận rộn",
+      "imageUrl": "assets/minh-hoa/ban-ron.webp",
+      "imageAlt": "Bận rộn",
       "accentNote": "Đã gặp bài 9."
     },
     {
@@ -132,6 +158,8 @@
       "romaji": "takai",
       "wordType": "adjective",
       "meaningVi": "Đắt, cao",
+      "imageUrl": "assets/minh-hoa/dat.webp",
+      "imageAlt": "Đắt, cao",
       "accentNote": "Đã gặp bài 8."
     },
     {
@@ -142,6 +170,8 @@
       "romaji": "yasui",
       "wordType": "adjective",
       "meaningVi": "Rẻ",
+      "imageUrl": "assets/minh-hoa/re.webp",
+      "imageAlt": "Rẻ",
       "accentNote": "Đã gặp bài 8."
     },
     {
@@ -152,6 +182,8 @@
       "romaji": "genki",
       "wordType": "adjective",
       "meaningVi": "Khỏe mạnh",
+      "imageUrl": "assets/minh-hoa/khoe-manh.webp",
+      "imageAlt": "Khỏe mạnh",
       "accentNote": "Đã gặp bài 8."
     },
     {
@@ -162,6 +194,8 @@
       "romaji": "taisetsu",
       "wordType": "adjective",
       "meaningVi": "Quan trọng, quý giá",
+      "imageUrl": "assets/minh-hoa/quan-trong.webp",
+      "imageAlt": "Quan trọng, quý giá",
       "accentNote": "Đã gặp bài 21."
     },
     {
@@ -182,6 +216,8 @@
       "romaji": "sensei",
       "wordType": "noun",
       "meaningVi": "Thầy/cô giáo",
+      "imageUrl": "assets/minh-hoa/giao-vien.webp",
+      "imageAlt": "Thầy/cô giáo",
       "accentNote": "Đã gặp bài 1."
     },
     {
@@ -192,6 +228,8 @@
       "romaji": "shitsumon",
       "wordType": "noun",
       "meaningVi": "Câu hỏi",
+      "imageUrl": "assets/minh-hoa/cau-hoi.webp",
+      "imageAlt": "Câu hỏi",
       "accentNote": "Đã gặp bài 11."
     },
     {
@@ -703,6 +741,7 @@
       "id": "dia-n5-25-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l25-1",
@@ -762,6 +801,7 @@
       "id": "dia-n5-25-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l25-10",
@@ -804,6 +844,7 @@
       "id": "dia-n5-25-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l25-16",
@@ -834,6 +875,7 @@
       "id": "dia-n5-25-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l25-20",
@@ -866,6 +908,7 @@
       "id": "dia-n5-25-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l25-24",
@@ -935,6 +978,7 @@
       "id": "dia-n5-25-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l25-35",
@@ -996,6 +1040,7 @@
       "id": "dia-n5-25-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l25-44",
@@ -1064,6 +1109,7 @@
       "id": "dia-n5-25-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l25-54",
@@ -1084,6 +1130,7 @@
       "id": "dia-n5-25-9",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l25-56",
@@ -1143,6 +1190,7 @@
       "id": "dia-n5-25-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l25-65",

@@ -12,6 +12,8 @@
       "romaji": "yama",
       "wordType": "noun",
       "meaningVi": "Núi",
+      "imageUrl": "assets/minh-hoa/nui.webp",
+      "imageAlt": "Núi",
       "accentNote": "Hai nhịp đều: ya-ma.",
       "emotion": "vui"
     },
@@ -23,6 +25,8 @@
       "romaji": "umi",
       "wordType": "noun",
       "meaningVi": "Biển",
+      "imageUrl": "assets/minh-hoa/bien.webp",
+      "imageAlt": "Biển",
       "accentNote": "う đọc gần 'ư', không chu môi.",
       "emotion": "vui"
     },
@@ -67,6 +71,8 @@
       "romaji": "mimi",
       "wordType": "noun",
       "meaningVi": "Cái tai",
+      "imageUrl": "assets/minh-hoa/tai.webp",
+      "imageAlt": "Cái tai",
       "accentNote": "Hai chữ み, đọc đều hai nhịp.",
       "emotion": "suy_nghi"
     },
@@ -78,6 +84,8 @@
       "romaji": "yuki",
       "wordType": "noun",
       "meaningVi": "Tuyết",
+      "imageUrl": "assets/minh-hoa/tuyet.webp",
+      "imageAlt": "Tuyết",
       "accentNote": "ゆ đọc 'yu' lướt nhanh, không tách thành 'i-u'.",
       "emotion": "ngac_nhien"
     },
@@ -100,6 +108,8 @@
       "romaji": "haru",
       "wordType": "noun",
       "meaningVi": "Mùa xuân",
+      "imageUrl": "assets/minh-hoa/mua-xuan.webp",
+      "imageAlt": "Mùa xuân",
       "accentNote": "は ở đây là chữ trong từ nên đọc 'ha', không phải 'wa'.",
       "emotion": "vui"
     },
@@ -111,6 +121,8 @@
       "romaji": "fuyu",
       "wordType": "noun",
       "meaningVi": "Mùa đông",
+      "imageUrl": "assets/minh-hoa/mua-dong.webp",
+      "imageAlt": "Mùa đông",
       "accentNote": "ふ thổi hơi nhẹ qua hai môi, không cắn môi như 'ph'.",
       "emotion": "buon"
     },
@@ -133,6 +145,8 @@
       "romaji": "kuruma",
       "wordType": "noun",
       "meaningVi": "Xe ô tô",
+      "imageUrl": "assets/minh-hoa/o-to.webp",
+      "imageAlt": "Xe ô tô",
       "accentNote": "Ba nhịp đều: ku-ru-ma.",
       "emotion": "vui"
     },
@@ -155,6 +169,8 @@
       "romaji": "hon",
       "wordType": "noun",
       "meaningVi": "Quyển sách",
+      "imageUrl": "assets/minh-hoa/sach.webp",
+      "imageAlt": "Quyển sách",
       "accentNote": "Hai nhịp: ho-n. Đừng nuốt mất ん.",
       "emotion": "suy_nghi"
     },
@@ -166,6 +182,8 @@
       "romaji": "heya",
       "wordType": "noun",
       "meaningVi": "Căn phòng",
+      "imageUrl": "assets/minh-hoa/can-phong.webp",
+      "imageAlt": "Căn phòng",
       "accentNote": "へ ở đây đọc 'he' (chưa phải trợ từ 'e').",
       "emotion": "suy_nghi"
     },
@@ -177,6 +195,8 @@
       "romaji": "mise",
       "wordType": "noun",
       "meaningVi": "Cửa hàng, quán",
+      "imageUrl": "assets/minh-hoa/cua-hang.webp",
+      "imageAlt": "Cửa hàng, quán",
       "accentNote": "せ đọc như 'xê'.",
       "emotion": "vui"
     },
@@ -199,6 +219,8 @@
       "romaji": "yume",
       "wordType": "noun",
       "meaningVi": "Giấc mơ, ước mơ",
+      "imageUrl": "assets/minh-hoa/dream.webp",
+      "imageAlt": "Giấc mơ, ước mơ",
       "accentNote": "め đọc như 'mê'.",
       "emotion": "xau_ho"
     },
@@ -221,6 +243,8 @@
       "romaji": "watashi",
       "wordType": "noun",
       "meaningVi": "Tôi (cách xưng hô phổ biến nhất)",
+      "imageUrl": "assets/minh-hoa/toi.webp",
+      "imageAlt": "Tôi (cách xưng hô phổ biến nhất)",
       "accentNote": "Ba nhịp: wa-ta-shi.",
       "emotion": "chao"
     }
@@ -1093,6 +1117,7 @@
       "id": "dia-kana-3-2",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l3-2a",
@@ -1146,6 +1171,7 @@
       "id": "dia-kana-3-4",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l3-4a",
@@ -1214,6 +1240,7 @@
       "id": "dia-kana-3-6",
       "speaker": "さとう (Satou)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-sato.webp",
       "tokens": [
         {
           "id": "d-kana-l3-6a",
@@ -1307,6 +1334,7 @@
       "id": "dia-kana-3-8",
       "speaker": "さとう (Satou)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-sato.webp",
       "tokens": [
         {
           "id": "d-kana-l3-8a",

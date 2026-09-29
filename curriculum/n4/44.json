@@ -3,6 +3,8 @@
   "lessonNumber": 44,
   "title": "Bài 44: Quá mức (〜すぎます) & Dễ/Khó làm (〜やすい / 〜にくい)",
   "description": "Ghép すぎます vào gốc ます của động từ hoặc tính từ (bỏ đuôi い/な) để diễn tả mức độ THÁI QUÁ, thường mang hàm ý tiêu cực; ghép やすい/にくい vào gốc ます để tạo TÍNH TỪ MỚI diễn tả đặc điểm khách quan dễ/khó thực hiện (khác できる — năng lực người, bài 27); và cách chồng tầng すぎます lên chính やすい/にくい.",
+  "sceneImageUrl": "assets/minh-hoa/canh-dau-dau-vi-uong-qua-nhieu.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 44: Quá mức (〜すぎます) & Dễ/Khó làm (〜やすい / 〜にくい)",
   "vocabList": [
     {
       "id": "voc-n4-44-1",
@@ -12,6 +14,8 @@
       "romaji": "tabemasu",
       "wordType": "verb",
       "meaningVi": "Ăn",
+      "imageUrl": "assets/minh-hoa/eat.webp",
+      "imageAlt": "Ăn",
       "accentNote": "Đã gặp N5 bài 6 — nay dùng làm ví dụ すぎます."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "nomimasu",
       "wordType": "verb",
       "meaningVi": "Uống",
+      "imageUrl": "assets/minh-hoa/drink.webp",
+      "imageAlt": "Uống",
       "accentNote": "Đã gặp N5 bài 6."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "hatarakimasu",
       "wordType": "verb",
       "meaningVi": "Làm việc, đi làm",
+      "imageUrl": "assets/minh-hoa/work-hard-labor.webp",
+      "imageAlt": "Làm việc, đi làm",
       "accentNote": "Đã gặp N5 bài 4."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "tsukaimasu",
       "wordType": "verb",
       "meaningVi": "Sử dụng, dùng",
+      "imageUrl": "assets/minh-hoa/use.webp",
+      "imageAlt": "Sử dụng, dùng",
       "accentNote": "Đã gặp N5 bài 15."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "arukimasu",
       "wordType": "verb",
       "meaningVi": "Đi bộ",
+      "imageUrl": "assets/minh-hoa/walk.webp",
+      "imageAlt": "Đi bộ",
       "accentNote": "Đã gặp N5 bài 16."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "yomimasu",
       "wordType": "verb",
       "meaningVi": "Đọc",
+      "imageUrl": "assets/minh-hoa/read.webp",
+      "imageAlt": "Đọc",
       "accentNote": "Đã gặp N5 bài 6 — nay dùng làm ví dụ やすい/にくい."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "kakimasu",
       "wordType": "verb",
       "meaningVi": "Viết",
+      "imageUrl": "assets/minh-hoa/write.webp",
+      "imageAlt": "Viết",
       "accentNote": "Đã gặp N5 bài 6."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "unten shimasu",
       "wordType": "verb",
       "meaningVi": "Lái xe",
+      "imageUrl": "assets/minh-hoa/drive.webp",
+      "imageAlt": "Lái xe",
       "accentNote": "Đã gặp bài 27."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "futorimasu",
       "wordType": "verb",
       "meaningVi": "Tăng cân, béo lên",
+      "imageUrl": "assets/minh-hoa/gain-weight.webp",
+      "imageAlt": "Tăng cân, béo lên",
       "accentNote": "Đã gặp bài 32."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "setsumei shimasu",
       "wordType": "verb",
       "meaningVi": "Giải thích",
+      "imageUrl": "assets/minh-hoa/explain.webp",
+      "imageAlt": "Giải thích",
       "accentNote": "Đã gặp bài 34."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "takai",
       "wordType": "adjective",
       "meaningVi": "Cao, đắt",
+      "imageUrl": "assets/minh-hoa/tall.webp",
+      "imageAlt": "Cao, đắt",
       "accentNote": "Đã gặp N5 bài 8. 高すぎます = đắt quá mức."
     },
     {
@@ -122,6 +146,8 @@
       "romaji": "yasui",
       "wordType": "adjective",
       "meaningVi": "Rẻ",
+      "imageUrl": "assets/minh-hoa/cheap.webp",
+      "imageAlt": "Rẻ",
       "accentNote": "Đã gặp N5 bài 8. Chú ý: 安い là TÍNH TỪ, khác やすい hậu tố (dễ làm) tuy đọc giống nhau."
     },
     {
@@ -132,6 +158,8 @@
       "romaji": "ookii",
       "wordType": "adjective",
       "meaningVi": "To, lớn",
+      "imageUrl": "assets/minh-hoa/big.webp",
+      "imageAlt": "To, lớn",
       "accentNote": "Đã gặp N5 bài 8."
     },
     {
@@ -142,6 +170,8 @@
       "romaji": "muzukashii",
       "wordType": "adjective",
       "meaningVi": "Khó",
+      "imageUrl": "assets/minh-hoa/difficult.webp",
+      "imageAlt": "Khó",
       "accentNote": "Đã gặp N5 bài 8."
     },
     {
@@ -152,6 +182,8 @@
       "romaji": "genki",
       "wordType": "adjective",
       "meaningVi": "Khỏe mạnh",
+      "imageUrl": "assets/minh-hoa/energetic.webp",
+      "imageAlt": "Khỏe mạnh",
       "accentNote": "Đã gặp N5 bài 8."
     },
     {
@@ -162,6 +194,8 @@
       "romaji": "shizuka",
       "wordType": "adjective",
       "meaningVi": "Yên tĩnh",
+      "imageUrl": "assets/minh-hoa/quiet.webp",
+      "imageAlt": "Yên tĩnh",
       "accentNote": "Đã gặp N5 bài 8. 静かすぎます = yên tĩnh quá mức (đến mức khó chịu)."
     },
     {
@@ -172,6 +206,8 @@
       "romaji": "kutsu",
       "wordType": "noun",
       "meaningVi": "Giày",
+      "imageUrl": "assets/minh-hoa/shoes.webp",
+      "imageAlt": "Giày",
       "accentNote": "この 靴は 歩きやすいです = đôi giày này đi dễ chịu."
     },
     {
@@ -192,6 +228,8 @@
       "romaji": "setsumeisho",
       "wordType": "noun",
       "meaningVi": "Sách hướng dẫn sử dụng",
+      "imageUrl": "assets/minh-hoa/manual.webp",
+      "imageAlt": "Sách hướng dẫn sử dụng",
       "accentNote": "Đã gặp bài 34. 分かりやすい 説明書 = sách hướng dẫn dễ hiểu."
     },
     {
@@ -202,6 +240,8 @@
       "romaji": "byouki",
       "wordType": "noun",
       "meaningVi": "Bệnh, ốm",
+      "imageUrl": "assets/minh-hoa/sick.webp",
+      "imageAlt": "Bệnh, ốm",
       "accentNote": "食べすぎて、病気に なりました = ăn quá nhiều nên bị ốm.",
       "emotion": "buon"
     }
@@ -695,6 +735,7 @@
       "id": "dia-n4-44-1",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l44-1",
@@ -725,6 +766,7 @@
       "id": "dia-n4-44-2",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l44-5",
@@ -782,6 +824,7 @@
       "id": "dia-n4-44-3",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l44-13",
@@ -843,6 +886,7 @@
       "id": "dia-n4-44-4",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l44-22",
@@ -900,6 +944,7 @@
       "id": "dia-n4-44-5",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l44-31",
@@ -954,6 +999,7 @@
       "id": "dia-n4-44-6",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l44-39",
@@ -1035,6 +1081,7 @@
       "id": "dia-n4-44-7",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l44-52",
@@ -1107,6 +1154,7 @@
       "id": "dia-n4-44-8",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l44-64",
@@ -1132,6 +1180,7 @@
       "id": "dia-n4-44-9",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l44-67",
@@ -1169,6 +1218,7 @@
       "id": "dia-n4-44-10",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l44-72",

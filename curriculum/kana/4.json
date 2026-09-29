@@ -12,6 +12,8 @@
       "romaji": "kagi",
       "wordType": "noun",
       "meaningVi": "Chìa khóa",
+      "imageUrl": "assets/minh-hoa/chia-khoa.webp",
+      "imageAlt": "Chìa khóa",
       "accentNote": "So sánh: かき (kaki) = quả hồng. Chỉ khác hai chấm ゛!",
       "emotion": "ngac_nhien"
     },
@@ -23,6 +25,8 @@
       "romaji": "megane",
       "wordType": "noun",
       "meaningVi": "Kính mắt",
+      "imageUrl": "assets/minh-hoa/kinh-mat.webp",
+      "imageAlt": "Kính mắt",
       "accentNote": "が đọc 'ga' rõ ràng.",
       "emotion": "de_biu"
     },
@@ -45,6 +49,8 @@
       "romaji": "tamago",
       "wordType": "noun",
       "meaningVi": "Quả trứng",
+      "imageUrl": "assets/minh-hoa/qua-trung.webp",
+      "imageAlt": "Quả trứng",
       "accentNote": "Ba nhịp: ta-ma-go.",
       "emotion": "vui"
     },
@@ -67,6 +73,8 @@
       "romaji": "mizu",
       "wordType": "noun",
       "meaningVi": "Nước (lạnh, nước uống)",
+      "imageUrl": "assets/minh-hoa/water.webp",
+      "imageAlt": "Nước (lạnh, nước uống)",
       "accentNote": "Viết ず, không viết づ.",
       "emotion": "vui"
     },
@@ -78,6 +86,8 @@
       "romaji": "kaze",
       "wordType": "noun",
       "meaningVi": "Gió (viết 風邪 thì là bệnh cảm)",
+      "imageUrl": "assets/minh-hoa/gio.webp",
+      "imageAlt": "Gió (viết 風邪 thì là bệnh cảm)",
       "accentNote": "ぜ âm 'z' như 'dê' giọng Bắc.",
       "emotion": "suy_nghi"
     },
@@ -100,6 +110,8 @@
       "romaji": "kazoku",
       "wordType": "noun",
       "meaningVi": "Gia đình",
+      "imageUrl": "assets/minh-hoa/gia-dinh.webp",
+      "imageAlt": "Gia đình",
       "accentNote": "Ba nhịp: ka-zo-ku.",
       "emotion": "vui"
     },
@@ -111,6 +123,8 @@
       "romaji": "mado",
       "wordType": "noun",
       "meaningVi": "Cửa sổ",
+      "imageUrl": "assets/minh-hoa/cua-so.webp",
+      "imageAlt": "Cửa sổ",
       "accentNote": "ど đọc như 'đô'.",
       "emotion": "suy_nghi"
     },
@@ -122,6 +136,8 @@
       "romaji": "tomodachi",
       "wordType": "noun",
       "meaningVi": "Bạn bè",
+      "imageUrl": "assets/minh-hoa/ban-be.webp",
+      "imageAlt": "Bạn bè",
       "accentNote": "Bốn nhịp: to-mo-da-chi.",
       "emotion": "vui"
     },
@@ -133,6 +149,8 @@
       "romaji": "denwa",
       "wordType": "noun",
       "meaningVi": "Điện thoại",
+      "imageUrl": "assets/minh-hoa/dien-thoai.webp",
+      "imageAlt": "Điện thoại",
       "accentNote": "ん trước わ đọc mũi nhẹ: de-n-wa.",
       "emotion": "suy_nghi"
     },
@@ -144,6 +162,8 @@
       "romaji": "kaban",
       "wordType": "noun",
       "meaningVi": "Cặp, túi xách",
+      "imageUrl": "assets/minh-hoa/cap-tui.webp",
+      "imageAlt": "Cặp, túi xách",
       "accentNote": "Ba nhịp: ka-ba-n.",
       "emotion": "vui"
     },
@@ -177,6 +197,8 @@
       "romaji": "tabemono",
       "wordType": "noun",
       "meaningVi": "Đồ ăn, thức ăn",
+      "imageUrl": "assets/minh-hoa/food.webp",
+      "imageAlt": "Đồ ăn, thức ăn",
       "accentNote": "Bốn nhịp: ta-be-mo-no.",
       "emotion": "vui"
     },
@@ -199,6 +221,8 @@
       "romaji": "enpitsu",
       "wordType": "noun",
       "meaningVi": "Bút chì",
+      "imageUrl": "assets/minh-hoa/but-chi.webp",
+      "imageAlt": "Bút chì",
       "accentNote": "ん trước ぴ nghe như 'm': e-m-pi-tsu. Chú ý: ぴ có vòng tròn, không phải び.",
       "emotion": "suy_nghi"
     },
@@ -210,6 +234,8 @@
       "romaji": "sanpo",
       "wordType": "noun",
       "meaningVi": "Việc đi dạo (さんぽする = đi dạo)",
+      "imageUrl": "assets/minh-hoa/di-dao.webp",
+      "imageAlt": "Việc đi dạo (さんぽする = đi dạo)",
       "accentNote": "ん trước ぽ nghe như 'm': sa-m-po.",
       "emotion": "vui"
     },
@@ -221,6 +247,8 @@
       "romaji": "jikan",
       "wordType": "noun",
       "meaningVi": "Thời gian; tiếng đồng hồ",
+      "imageUrl": "assets/minh-hoa/time.webp",
+      "imageAlt": "Thời gian; tiếng đồng hồ",
       "accentNote": "じ đọc như 'j' trong 'jeans'.",
       "emotion": "suy_nghi"
     }
@@ -1319,6 +1347,7 @@
       "id": "dia-kana-4-2",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l4-2a",
@@ -1397,6 +1426,7 @@
       "id": "dia-kana-4-4",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l4-4a",
@@ -1436,6 +1466,7 @@
       "id": "dia-kana-4-5",
       "speaker": "さとう (Satou)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-sato.webp",
       "tokens": [
         {
           "id": "d-kana-l4-5a",
@@ -1539,6 +1570,7 @@
       "id": "dia-kana-4-7",
       "speaker": "さとう (Satou)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-sato.webp",
       "tokens": [
         {
           "id": "d-kana-l4-7a",

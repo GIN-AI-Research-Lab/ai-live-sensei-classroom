@@ -3,6 +3,8 @@
   "lessonNumber": 8,
   "title": "Bài 8: Nguyện cầu tha thiết (てやまない & 願ってやまない)",
   "description": "Vてやまない diễn tả một CẢM XÚC MÃNH LIỆT, KHÔNG BAO GIỜ NGUÔI — chỉ dùng với động từ chỉ CẢM XÚC (愛する、尊敬する、感謝する…); 願ってやまない là trường hợp đặc biệt đã trở thành CỤM CỐ ĐỊNH, thường xuất hiện ở CUỐI các bài diễn văn/lời chúc trang trọng để bày tỏ mong muốn tha thiết, chân thành.",
+  "sceneImageUrl": "assets/minh-hoa/canh-le-tot-nghiep-tri-an-thay.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 8: Nguyện cầu tha thiết (てやまない & 願ってやまない)",
   "vocabList": [
     {
       "id": "voc-n1-8-1",
@@ -12,6 +14,8 @@
       "romaji": "kansha shimasu",
       "wordType": "verb",
       "meaningVi": "Cảm ơn, biết ơn",
+      "imageUrl": "assets/minh-hoa/biet-on.webp",
+      "imageAlt": "Cảm ơn, biết ơn",
       "accentNote": "感謝してやまない = biết ơn mãi không thôi.",
       "emotion": "vui"
     },
@@ -23,6 +27,8 @@
       "romaji": "sonkei shimasu",
       "wordType": "verb",
       "meaningVi": "Kính trọng",
+      "imageUrl": "assets/minh-hoa/kinh-trong.webp",
+      "imageAlt": "Kính trọng",
       "accentNote": "尊敬してやまない = kính trọng mãi không thôi."
     },
     {
@@ -33,6 +39,8 @@
       "romaji": "ai shimasu",
       "wordType": "verb",
       "meaningVi": "Yêu, yêu quý",
+      "imageUrl": "assets/minh-hoa/yeu.webp",
+      "imageAlt": "Yêu, yêu quý",
       "accentNote": "愛してやまない = yêu mãi không thôi.",
       "emotion": "vui"
     },
@@ -44,6 +52,8 @@
       "romaji": "negaimasu",
       "wordType": "verb",
       "meaningVi": "Cầu mong, nguyện cầu",
+      "imageUrl": "assets/minh-hoa/cau-mong.webp",
+      "imageAlt": "Cầu mong, nguyện cầu",
       "accentNote": "願ってやまない = tha thiết cầu mong."
     },
     {
@@ -54,6 +64,8 @@
       "romaji": "sotsugyou",
       "wordType": "noun",
       "meaningVi": "Tốt nghiệp",
+      "imageUrl": "assets/minh-hoa/tot-nghiep.webp",
+      "imageAlt": "Tốt nghiệp",
       "accentNote": "卒業しても = dù đã tốt nghiệp."
     },
     {
@@ -64,6 +76,8 @@
       "romaji": "sensei",
       "wordType": "noun",
       "meaningVi": "Thầy/cô giáo",
+      "imageUrl": "assets/minh-hoa/giao-vien-n2n1.webp",
+      "imageAlt": "Thầy/cô giáo",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -74,6 +88,8 @@
       "romaji": "oshiemasu",
       "wordType": "verb",
       "meaningVi": "Dạy",
+      "imageUrl": "assets/minh-hoa/day-n2n1.webp",
+      "imageAlt": "Dạy",
       "accentNote": "Đã gặp N5 bài 7."
     },
     {
@@ -84,6 +100,8 @@
       "romaji": "kenkou",
       "wordType": "noun",
       "meaningVi": "Sức khỏe",
+      "imageUrl": "assets/minh-hoa/suc-khoe.webp",
+      "imageAlt": "Sức khỏe",
       "accentNote": "Đã gặp N4 bài 32."
     },
     {
@@ -94,6 +112,8 @@
       "romaji": "shiawase",
       "wordType": "noun",
       "meaningVi": "Hạnh phúc",
+      "imageUrl": "assets/minh-hoa/hanh-phuc.webp",
+      "imageAlt": "Hạnh phúc",
       "accentNote": "Đã gặp N4 bài 47.",
       "emotion": "vui"
     },
@@ -105,6 +125,8 @@
       "romaji": "taishoku",
       "wordType": "noun",
       "meaningVi": "Nghỉ hưu, thôi việc",
+      "imageUrl": "assets/minh-hoa/nghi-huu-thoi-viec.webp",
+      "imageAlt": "Nghỉ hưu, thôi việc",
       "accentNote": "Đã gặp N3 bài 3."
     },
     {
@@ -115,6 +137,8 @@
       "romaji": "wasuremasu",
       "wordType": "verb",
       "meaningVi": "Quên",
+      "imageUrl": "assets/minh-hoa/quen-n2n1.webp",
+      "imageAlt": "Quên",
       "accentNote": "Đã gặp N5 bài 17."
     },
     {
@@ -125,6 +149,8 @@
       "romaji": "ganbarimasu",
       "wordType": "verb",
       "meaningVi": "Cố gắng",
+      "imageUrl": "assets/minh-hoa/co-gang-n2n1.webp",
+      "imageAlt": "Cố gắng",
       "accentNote": "Đã gặp N5 bài 25."
     },
     {
@@ -135,6 +161,8 @@
       "romaji": "minasan",
       "wordType": "noun",
       "meaningVi": "Mọi người, các bạn",
+      "imageUrl": "assets/minh-hoa/moi-nguoi-n2n1.webp",
+      "imageAlt": "Mọi người, các bạn",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -145,6 +173,8 @@
       "romaji": "daigaku",
       "wordType": "noun",
       "meaningVi": "Đại học",
+      "imageUrl": "assets/minh-hoa/dai-hoc-n2n1.webp",
+      "imageAlt": "Đại học",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -155,6 +185,8 @@
       "romaji": "gakusei",
       "wordType": "noun",
       "meaningVi": "Học sinh, sinh viên",
+      "imageUrl": "assets/minh-hoa/hoc-sinh-sinh-vien.webp",
+      "imageAlt": "Học sinh, sinh viên",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -165,6 +197,8 @@
       "romaji": "shourai",
       "wordType": "noun",
       "meaningVi": "Tương lai",
+      "imageUrl": "assets/minh-hoa/tuong-lai.webp",
+      "imageAlt": "Tương lai",
       "accentNote": "Đã gặp N4 bài 31."
     },
     {
@@ -175,6 +209,8 @@
       "romaji": "jikan",
       "wordType": "noun",
       "meaningVi": "Thời gian",
+      "imageUrl": "assets/minh-hoa/thoi-gian.webp",
+      "imageAlt": "Thời gian",
       "accentNote": "Đã gặp N4 bài 35."
     },
     {
@@ -185,6 +221,8 @@
       "romaji": "isogashii",
       "wordType": "adjective",
       "meaningVi": "Bận rộn",
+      "imageUrl": "assets/minh-hoa/ban-ron-n2n1.webp",
+      "imageAlt": "Bận rộn",
       "accentNote": "Đã gặp N5 bài 8."
     },
     {
@@ -195,6 +233,8 @@
       "romaji": "yume",
       "wordType": "noun",
       "meaningVi": "Ước mơ, giấc mơ",
+      "imageUrl": "assets/minh-hoa/uoc-mo.webp",
+      "imageAlt": "Ước mơ, giấc mơ",
       "accentNote": "Đã gặp N4 bài 31."
     },
     {
@@ -205,6 +245,8 @@
       "romaji": "tomodachi",
       "wordType": "noun",
       "meaningVi": "Bạn bè",
+      "imageUrl": "assets/minh-hoa/ban-be-n2n1.webp",
+      "imageAlt": "Bạn bè",
       "accentNote": "Đã gặp N5 bài 5."
     }
   ],
@@ -692,6 +734,7 @@
       "id": "dia-n1-8-1",
       "speaker": "田中",
       "speakerRole": "Học sinh đại diện",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d8-1",
@@ -732,6 +775,7 @@
       "id": "dia-n1-8-2",
       "speaker": "鈴木",
       "speakerRole": "Giáo viên sắp nghỉ hưu",
+      "avatarUrl": "assets/minh-hoa/nv-suzuki.webp",
       "tokens": [
         {
           "id": "d8-6",
@@ -746,6 +790,7 @@
       "id": "dia-n1-8-3",
       "speaker": "田中",
       "speakerRole": "Học sinh đại diện",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d8-7",
@@ -778,6 +823,7 @@
       "id": "dia-n1-8-4",
       "speaker": "鈴木",
       "speakerRole": "Giáo viên sắp nghỉ hưu",
+      "avatarUrl": "assets/minh-hoa/nv-suzuki.webp",
       "tokens": [
         {
           "id": "d8-11",
@@ -792,6 +838,7 @@
       "id": "dia-n1-8-5",
       "speaker": "田中",
       "speakerRole": "Học sinh đại diện",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d8-12",
@@ -825,6 +872,7 @@
       "id": "dia-n1-8-6",
       "speaker": "鈴木",
       "speakerRole": "Giáo viên sắp nghỉ hưu",
+      "avatarUrl": "assets/minh-hoa/nv-suzuki.webp",
       "tokens": [
         {
           "id": "d8-16",
@@ -862,6 +910,7 @@
       "id": "dia-n1-8-7",
       "speaker": "田中",
       "speakerRole": "Học sinh đại diện",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d8-21",
@@ -905,6 +954,7 @@
       "id": "dia-n1-8-8",
       "speaker": "鈴木",
       "speakerRole": "Giáo viên sắp nghỉ hưu",
+      "avatarUrl": "assets/minh-hoa/nv-suzuki.webp",
       "tokens": [
         {
           "id": "d8-27",
@@ -949,6 +999,7 @@
       "id": "dia-n1-8-9",
       "speaker": "田中",
       "speakerRole": "Học sinh đại diện",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d8-33",
@@ -993,6 +1044,7 @@
       "id": "dia-n1-8-10",
       "speaker": "鈴木",
       "speakerRole": "Giáo viên sắp nghỉ hưu",
+      "avatarUrl": "assets/minh-hoa/nv-suzuki.webp",
       "tokens": [
         {
           "id": "d8-39",

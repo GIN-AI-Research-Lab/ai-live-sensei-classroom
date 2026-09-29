@@ -3,6 +3,8 @@
   "lessonNumber": 11,
   "title": "Bài 11: Lượng từ & Số đếm (〜つ, 〜枚, 〜台, 〜人 & Tần suất)",
   "description": "Số đếm thuần Nhật ひとつ〜とお dùng cho vật chung chung, lượng từ riêng theo loại vật (個/枚/台/冊/人) kết hợp số Hán, vị trí cụm số lượng đứng sau trợ từ が/を, và cách nói tần suất bằng [khoảng thời gian]に[số]回.",
+  "sceneImageUrl": "assets/minh-hoa/canh-mua-tem-buu-dien.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 11: Lượng từ & Số đếm (〜つ, 〜枚, 〜台, 〜人 & Tần suất)",
   "vocabList": [
     {
       "id": "voc-n5-11-1",
@@ -12,6 +14,8 @@
       "romaji": "hitotsu",
       "wordType": "noun",
       "meaningVi": "Một cái (số đếm thuần Nhật)",
+      "imageUrl": "assets/minh-hoa/mot-cai.webp",
+      "imageAlt": "Một cái (số đếm thuần Nhật)",
       "accentNote": "Dùng đếm vật chung chung, không cần lượng từ riêng."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "futatsu",
       "wordType": "noun",
       "meaningVi": "Hai cái",
+      "imageUrl": "assets/minh-hoa/hai-cai.webp",
+      "imageAlt": "Hai cái",
       "accentNote": ""
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "itsutsu",
       "wordType": "noun",
       "meaningVi": "Năm cái",
+      "imageUrl": "assets/minh-hoa/nam-cai.webp",
+      "imageAlt": "Năm cái",
       "accentNote": ""
     },
     {
@@ -72,6 +80,8 @@
       "romaji": "-ko",
       "wordType": "noun",
       "meaningVi": "~ cái (lượng từ vật nhỏ, tròn)",
+      "imageUrl": "assets/minh-hoa/luong-tu-vat-tron.webp",
+      "imageAlt": "~ cái (lượng từ vật nhỏ, tròn)",
       "accentNote": "りんごが 三個 = ba quả táo."
     },
     {
@@ -82,6 +92,8 @@
       "romaji": "-mai",
       "wordType": "noun",
       "meaningVi": "~ tờ, ~ tấm (lượng từ vật mỏng, phẳng)",
+      "imageUrl": "assets/minh-hoa/luong-tu-vat-mong.webp",
+      "imageAlt": "~ tờ, ~ tấm (lượng từ vật mỏng, phẳng)",
       "accentNote": "紙が 二枚 = hai tờ giấy."
     },
     {
@@ -92,6 +104,8 @@
       "romaji": "-dai",
       "wordType": "noun",
       "meaningVi": "~ chiếc (lượng từ máy móc, xe cộ)",
+      "imageUrl": "assets/minh-hoa/luong-tu-may-moc.webp",
+      "imageAlt": "~ chiếc (lượng từ máy móc, xe cộ)",
       "accentNote": "車が 一台 = một chiếc xe."
     },
     {
@@ -102,6 +116,8 @@
       "romaji": "-satsu",
       "wordType": "noun",
       "meaningVi": "~ quyển (lượng từ sách vở)",
+      "imageUrl": "assets/minh-hoa/luong-tu-sach.webp",
+      "imageAlt": "~ quyển (lượng từ sách vở)",
       "accentNote": "本が 三冊 = ba quyển sách."
     },
     {
@@ -112,6 +128,8 @@
       "romaji": "-jin",
       "wordType": "noun",
       "meaningVi": "~ người (đếm số người)",
+      "imageUrl": "assets/minh-hoa/luong-tu-nguoi.webp",
+      "imageAlt": "~ người (đếm số người)",
       "accentNote": "1人 ひとり, 2人 ふたり là ngoại lệ, từ 3人 trở đi theo quy tắc さんにん."
     },
     {
@@ -132,6 +150,8 @@
       "romaji": "kami",
       "wordType": "noun",
       "meaningVi": "Giấy",
+      "imageUrl": "assets/minh-hoa/to-giay.webp",
+      "imageAlt": "Giấy",
       "accentNote": "紙を 二枚 ください = cho tôi hai tờ giấy."
     },
     {
@@ -142,6 +162,8 @@
       "romaji": "kitte",
       "wordType": "noun",
       "meaningVi": "Tem thư",
+      "imageUrl": "assets/minh-hoa/tem-thu.webp",
+      "imageAlt": "Tem thư",
       "accentNote": "切手を 三枚 買います = mua ba con tem."
     },
     {
@@ -152,6 +174,8 @@
       "romaji": "fuutou",
       "wordType": "noun",
       "meaningVi": "Phong bì",
+      "imageUrl": "assets/minh-hoa/phong-bi.webp",
+      "imageAlt": "Phong bì",
       "accentNote": ""
     },
     {
@@ -162,6 +186,8 @@
       "romaji": "kippu",
       "wordType": "noun",
       "meaningVi": "Vé (tàu, xe)",
+      "imageUrl": "assets/minh-hoa/ve-tau.webp",
+      "imageAlt": "Vé (tàu, xe)",
       "accentNote": "切符を 一枚 買います = mua một vé."
     },
     {
@@ -172,6 +198,8 @@
       "romaji": "osara",
       "wordType": "noun",
       "meaningVi": "Cái đĩa",
+      "imageUrl": "assets/minh-hoa/cai-dia.webp",
+      "imageAlt": "Cái đĩa",
       "accentNote": "お皿が 五枚 あります = có năm cái đĩa."
     },
     {
@@ -182,6 +210,8 @@
       "romaji": "tamago",
       "wordType": "noun",
       "meaningVi": "Quả trứng",
+      "imageUrl": "assets/minh-hoa/qua-trung.webp",
+      "imageAlt": "Quả trứng",
       "accentNote": "卵を 六個 買います = mua sáu quả trứng."
     },
     {
@@ -192,6 +222,8 @@
       "romaji": "enpitsu",
       "wordType": "noun",
       "meaningVi": "Bút chì",
+      "imageUrl": "assets/minh-hoa/but-chi.webp",
+      "imageAlt": "Bút chì",
       "accentNote": "Đã gặp bài 2 — nay dùng làm ví dụ đếm vật dài (thực ra đếm 本 nhưng ở đây dùng つ để đơn giản hoá)."
     },
     {
@@ -202,6 +234,8 @@
       "romaji": "gaikokujin",
       "wordType": "noun",
       "meaningVi": "Người nước ngoài",
+      "imageUrl": "assets/minh-hoa/nguoi-nuoc-ngoai.webp",
+      "imageAlt": "Người nước ngoài",
       "accentNote": "外国人が 三人 います = có ba người nước ngoài."
     },
     {
@@ -212,6 +246,8 @@
       "romaji": "otona",
       "wordType": "noun",
       "meaningVi": "Người lớn",
+      "imageUrl": "assets/minh-hoa/nguoi-lon.webp",
+      "imageAlt": "Người lớn",
       "accentNote": "大人が 二人 = hai người lớn."
     },
     {
@@ -222,6 +258,8 @@
       "romaji": "shitsumon",
       "wordType": "noun",
       "meaningVi": "Câu hỏi",
+      "imageUrl": "assets/minh-hoa/cau-hoi.webp",
+      "imageAlt": "Câu hỏi",
       "accentNote": "質問が 一つ あります = có một câu hỏi."
     },
     {
@@ -773,6 +811,7 @@
       "id": "dia-n5-11-1",
       "speaker": "店員",
       "speakerRole": "Nhân viên cửa hàng",
+      "avatarUrl": "assets/minh-hoa/nv-tenin.webp",
       "tokens": [
         {
           "id": "d-l11-1",
@@ -816,6 +855,7 @@
       "id": "dia-n5-11-2",
       "speaker": "ミラー",
       "speakerRole": "Khách hàng",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l11-7",
@@ -848,6 +888,7 @@
       "id": "dia-n5-11-3",
       "speaker": "店員",
       "speakerRole": "Nhân viên cửa hàng",
+      "avatarUrl": "assets/minh-hoa/nv-tenin.webp",
       "tokens": [
         {
           "id": "d-l11-11",
@@ -871,6 +912,7 @@
       "id": "dia-n5-11-4",
       "speaker": "ミラー",
       "speakerRole": "Khách hàng",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l11-14",
@@ -903,6 +945,7 @@
       "id": "dia-n5-11-5",
       "speaker": "店員",
       "speakerRole": "Nhân viên cửa hàng",
+      "avatarUrl": "assets/minh-hoa/nv-tenin.webp",
       "tokens": [
         {
           "id": "d-l11-18",
@@ -943,6 +986,7 @@
       "id": "dia-n5-11-6",
       "speaker": "ミラー",
       "speakerRole": "Khách hàng",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l11-23",
@@ -970,6 +1014,7 @@
       "id": "dia-n5-11-7",
       "speaker": "店員",
       "speakerRole": "Nhân viên cửa hàng",
+      "avatarUrl": "assets/minh-hoa/nv-tenin.webp",
       "tokens": [
         {
           "id": "d-l11-26",
@@ -1012,6 +1057,7 @@
       "id": "dia-n5-11-8",
       "speaker": "ミラー",
       "speakerRole": "Khách hàng",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l11-32",
@@ -1035,6 +1081,7 @@
       "id": "dia-n5-11-9",
       "speaker": "店員",
       "speakerRole": "Nhân viên cửa hàng",
+      "avatarUrl": "assets/minh-hoa/nv-tenin.webp",
       "tokens": [
         {
           "id": "d-l11-34",
@@ -1079,6 +1126,7 @@
       "id": "dia-n5-11-10",
       "speaker": "ミラー",
       "speakerRole": "Khách hàng",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l11-40",

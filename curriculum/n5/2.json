@@ -3,6 +3,8 @@
   "lessonNumber": 2,
   "title": "Bài 2: Chỉ thị từ đồ vật (これ / それ / あれ) & trợ từ の",
   "description": "Trỏ đồ vật theo khoảng cách これ / それ / あれ, cụm bổ nghĩa この / その / あの + Danh từ, xác nhận そうです / ちがいます, trợ từ の nối và thay thế danh từ, hỏi tên vật bằng 何ですか.",
+  "sceneImageUrl": "assets/minh-hoa/canh-tang-qua-hang-xom.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 2: Chỉ thị từ đồ vật (これ / それ / あれ) & trợ từ の",
   "vocabList": [
     {
       "id": "voc-n5-2-1",
@@ -12,6 +14,8 @@
       "romaji": "kore",
       "wordType": "noun",
       "meaningVi": "Cái này (vật ở gần NGƯỜI NÓI)",
+      "imageUrl": "assets/minh-hoa/cai-nay.webp",
+      "imageAlt": "Cái này (vật ở gần NGƯỜI NÓI)",
       "accentNote": "Trong tầm tay mình."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "sore",
       "wordType": "noun",
       "meaningVi": "Cái đó (vật ở gần NGƯỜI NGHE)",
+      "imageUrl": "assets/minh-hoa/cai-do.webp",
+      "imageAlt": "Cái đó (vật ở gần NGƯỜI NGHE)",
       "accentNote": "Trong tầm tay đối phương."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "are",
       "wordType": "noun",
       "meaningVi": "Cái kia (vật XA cả hai người)",
+      "imageUrl": "assets/minh-hoa/cai-kia.webp",
+      "imageAlt": "Cái kia (vật XA cả hai người)",
       "accentNote": "Cả hai cùng phải chỉ tay."
     },
     {
@@ -52,6 +60,8 @@
       "romaji": "kono",
       "wordType": "particle",
       "meaningVi": "~ này (この + Danh từ)",
+      "imageUrl": "assets/minh-hoa/cai-nay.webp",
+      "imageAlt": "~ này (この + Danh từ)",
       "accentNote": "この KHÔNG đứng một mình được."
     },
     {
@@ -62,6 +72,8 @@
       "romaji": "sono",
       "wordType": "particle",
       "meaningVi": "~ đó (その + Danh từ)",
+      "imageUrl": "assets/minh-hoa/cai-do.webp",
+      "imageAlt": "~ đó (その + Danh từ)",
       "accentNote": "Luôn dính liền danh từ phía sau."
     },
     {
@@ -72,6 +84,8 @@
       "romaji": "ano",
       "wordType": "particle",
       "meaningVi": "~ kia (あの + Danh từ)",
+      "imageUrl": "assets/minh-hoa/cai-kia.webp",
+      "imageAlt": "~ kia (あの + Danh từ)",
       "accentNote": "あの人 = người kia."
     },
     {
@@ -92,6 +106,8 @@
       "romaji": "hon",
       "wordType": "noun",
       "meaningVi": "Quyển sách",
+      "imageUrl": "assets/minh-hoa/sach.webp",
+      "imageAlt": "Quyển sách",
       "accentNote": "Cũng là lượng từ đếm vật dài."
     },
     {
@@ -102,6 +118,8 @@
       "romaji": "jisho",
       "wordType": "noun",
       "meaningVi": "Từ điển",
+      "imageUrl": "assets/minh-hoa/tu-dien.webp",
+      "imageAlt": "Từ điển",
       "accentNote": "電子辞書 = từ điển điện tử."
     },
     {
@@ -112,6 +130,8 @@
       "romaji": "zasshi",
       "wordType": "noun",
       "meaningVi": "Tạp chí",
+      "imageUrl": "assets/minh-hoa/tap-chi.webp",
+      "imageAlt": "Tạp chí",
       "accentNote": "Âm ngắt っ, bật mạnh."
     },
     {
@@ -122,6 +142,8 @@
       "romaji": "shinbun",
       "wordType": "noun",
       "meaningVi": "Báo, tờ báo",
+      "imageUrl": "assets/minh-hoa/to-bao.webp",
+      "imageAlt": "Báo, tờ báo",
       "accentNote": "Đừng lẫn với ニュース (bản tin)."
     },
     {
@@ -132,6 +154,8 @@
       "romaji": "nooto",
       "wordType": "noun",
       "meaningVi": "Quyển vở",
+      "imageUrl": "assets/minh-hoa/quyen-vo.webp",
+      "imageAlt": "Quyển vở",
       "accentNote": "Từ ngoại lai, kéo dài âm ノー."
     },
     {
@@ -142,6 +166,8 @@
       "romaji": "techou",
       "wordType": "noun",
       "meaningVi": "Sổ tay",
+      "imageUrl": "assets/minh-hoa/so-tay.webp",
+      "imageAlt": "Sổ tay",
       "accentNote": "Dân văn phòng Nhật ai cũng có một quyển."
     },
     {
@@ -152,6 +178,8 @@
       "romaji": "meishi",
       "wordType": "noun",
       "meaningVi": "Danh thiếp",
+      "imageUrl": "assets/minh-hoa/danh-thiep.webp",
+      "imageAlt": "Danh thiếp",
       "accentNote": "Trao bằng HAI tay, mặt chữ hướng về người nhận."
     },
     {
@@ -162,6 +190,8 @@
       "romaji": "kaado",
       "wordType": "noun",
       "meaningVi": "Thẻ, card",
+      "imageUrl": "assets/minh-hoa/the.webp",
+      "imageAlt": "Thẻ, card",
       "accentNote": "クレジットカード = thẻ tín dụng."
     },
     {
@@ -172,6 +202,8 @@
       "romaji": "enpitsu",
       "wordType": "noun",
       "meaningVi": "Bút chì",
+      "imageUrl": "assets/minh-hoa/but-chi.webp",
+      "imageAlt": "Bút chì",
       "accentNote": "Đếm: 1本 いっぽん, 3本 さんぼん."
     },
     {
@@ -182,6 +214,8 @@
       "romaji": "boorupen",
       "wordType": "noun",
       "meaningVi": "Bút bi",
+      "imageUrl": "assets/minh-hoa/but-bi.webp",
+      "imageAlt": "Bút bi",
       "accentNote": "Ghép ball + pen."
     },
     {
@@ -192,6 +226,8 @@
       "romaji": "shaapupenshiru",
       "wordType": "noun",
       "meaningVi": "Bút chì kim",
+      "imageUrl": "assets/minh-hoa/but-chi-kim.webp",
+      "imageAlt": "Bút chì kim",
       "accentNote": "Nói tắt hằng ngày: シャーペン."
     },
     {
@@ -202,6 +238,8 @@
       "romaji": "kagi",
       "wordType": "noun",
       "meaningVi": "Chìa khóa, ổ khóa",
+      "imageUrl": "assets/minh-hoa/chia-khoa.webp",
+      "imageAlt": "Chìa khóa, ổ khóa",
       "accentNote": "かぎを かけます = khóa cửa lại."
     },
     {
@@ -212,6 +250,8 @@
       "romaji": "tokei",
       "wordType": "noun",
       "meaningVi": "Đồng hồ",
+      "imageUrl": "assets/minh-hoa/dong-ho.webp",
+      "imageAlt": "Đồng hồ",
       "accentNote": "腕時計 うでどけい = đồng hồ đeo tay."
     },
     {
@@ -222,6 +262,8 @@
       "romaji": "kasa",
       "wordType": "noun",
       "meaningVi": "Cái ô, cái dù",
+      "imageUrl": "assets/minh-hoa/cai-o.webp",
+      "imageAlt": "Cái ô, cái dù",
       "accentNote": "Trọng âm phẳng."
     },
     {
@@ -232,6 +274,8 @@
       "romaji": "kaban",
       "wordType": "noun",
       "meaningVi": "Cặp, túi xách",
+      "imageUrl": "assets/minh-hoa/cap-tui.webp",
+      "imageAlt": "Cặp, túi xách",
       "accentNote": "Thường viết Hiragana."
     },
     {
@@ -242,6 +286,8 @@
       "romaji": "shiidii",
       "wordType": "noun",
       "meaningVi": "Đĩa CD",
+      "imageUrl": "assets/minh-hoa/dia-cd.webp",
+      "imageAlt": "Đĩa CD",
       "accentNote": "Đọc tách hai âm tiết: shii-dii."
     },
     {
@@ -252,6 +298,8 @@
       "romaji": "terebi",
       "wordType": "noun",
       "meaningVi": "Ti vi",
+      "imageUrl": "assets/minh-hoa/tivi.webp",
+      "imageAlt": "Ti vi",
       "accentNote": "Nói tắt của テレビジョン."
     },
     {
@@ -262,6 +310,8 @@
       "romaji": "rajio",
       "wordType": "noun",
       "meaningVi": "Radio",
+      "imageUrl": "assets/minh-hoa/radio.webp",
+      "imageAlt": "Radio",
       "accentNote": "Đọc ra-ji-o, không phải 'rây-đi-ô'."
     },
     {
@@ -272,6 +322,8 @@
       "romaji": "kamera",
       "wordType": "noun",
       "meaningVi": "Máy ảnh",
+      "imageUrl": "assets/minh-hoa/may-anh.webp",
+      "imageAlt": "Máy ảnh",
       "accentNote": "Nhấn ở âm カ."
     },
     {
@@ -282,6 +334,8 @@
       "romaji": "konpyuutaa",
       "wordType": "noun",
       "meaningVi": "Máy vi tính",
+      "imageUrl": "assets/minh-hoa/may-tinh.webp",
+      "imageAlt": "Máy vi tính",
       "accentNote": "Nói tắt: パソコン (máy cá nhân)."
     },
     {
@@ -292,6 +346,8 @@
       "romaji": "kuruma",
       "wordType": "noun",
       "meaningVi": "Xe hơi, ô tô",
+      "imageUrl": "assets/minh-hoa/o-to.webp",
+      "imageAlt": "Xe hơi, ô tô",
       "accentNote": "Trang trọng hơn: 自動車 じどうしゃ."
     },
     {
@@ -302,6 +358,8 @@
       "romaji": "tsukue",
       "wordType": "noun",
       "meaningVi": "Cái bàn (bàn học, bàn làm việc)",
+      "imageUrl": "assets/minh-hoa/ban.webp",
+      "imageAlt": "Cái bàn (bàn học, bàn làm việc)",
       "accentNote": "Bàn ăn thì dùng テーブル."
     },
     {
@@ -312,6 +370,8 @@
       "romaji": "isu",
       "wordType": "noun",
       "meaningVi": "Cái ghế",
+      "imageUrl": "assets/minh-hoa/ghe.webp",
+      "imageAlt": "Cái ghế",
       "accentNote": "Trọng âm phẳng."
     },
     {
@@ -322,6 +382,8 @@
       "romaji": "chokoreeto",
       "wordType": "noun",
       "meaningVi": "Sô-cô-la",
+      "imageUrl": "assets/minh-hoa/socola.webp",
+      "imageAlt": "Sô-cô-la",
       "accentNote": "Nói tắt thân mật: チョコ."
     },
     {
@@ -332,6 +394,8 @@
       "romaji": "koohii",
       "wordType": "noun",
       "meaningVi": "Cà phê",
+      "imageUrl": "assets/minh-hoa/ca-phe.webp",
+      "imageAlt": "Cà phê",
       "accentNote": "Kéo dài cả コー lẫn ヒー."
     },
     {
@@ -342,6 +406,8 @@
       "romaji": "[o]miyage",
       "wordType": "noun",
       "meaningVi": "Quà (mua khi đi xa về)",
+      "imageUrl": "assets/minh-hoa/qua-luu-niem.webp",
+      "imageAlt": "Quà (mua khi đi xa về)",
       "accentNote": "Đi công tác về là phải có おみやげ cho đồng nghiệp."
     },
     {
@@ -1389,6 +1455,7 @@
       "id": "dia-n5-2-1",
       "speaker": "サントス",
       "speakerRole": "Hàng xóm mới chuyển đến",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l2-1",
@@ -1425,6 +1492,7 @@
       "id": "dia-n5-2-2",
       "speaker": "山田一郎",
       "speakerRole": "Hàng xóm",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l2-6",
@@ -1461,6 +1529,7 @@
       "id": "dia-n5-2-3",
       "speaker": "サントス",
       "speakerRole": "Hàng xóm mới chuyển đến",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l2-11",
@@ -1497,6 +1566,7 @@
       "id": "dia-n5-2-4",
       "speaker": "山田一郎",
       "speakerRole": "Hàng xóm",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l2-16",
@@ -1548,6 +1618,7 @@
       "id": "dia-n5-2-5",
       "speaker": "サントス",
       "speakerRole": "Hàng xóm mới chuyển đến",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l2-24",
@@ -1591,6 +1662,7 @@
       "id": "dia-n5-2-6",
       "speaker": "山田一郎",
       "speakerRole": "Hàng xóm",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l2-31",
@@ -1620,6 +1692,7 @@
       "id": "dia-n5-2-7",
       "speaker": "山田一郎",
       "speakerRole": "Hàng xóm",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l2-35",
@@ -1670,6 +1743,7 @@
       "id": "dia-n5-2-8",
       "speaker": "サントス",
       "speakerRole": "Hàng xóm mới chuyển đến",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l2-43",
@@ -1717,6 +1791,7 @@
       "id": "dia-n5-2-9",
       "speaker": "山田一郎",
       "speakerRole": "Hàng xóm",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l2-50",
@@ -1762,6 +1837,7 @@
       "id": "dia-n5-2-10",
       "speaker": "サントス",
       "speakerRole": "Hàng xóm mới chuyển đến",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l2-57",

@@ -3,6 +3,8 @@
   "lessonNumber": 23,
   "title": "Bài 23: Mẫu câu 'Khi... thì...' (Vるとき / Vたとき / Vると)",
   "description": "Diễn tả mốc thời điểm bằng とき (chọn thể từ điển hay た tùy hành động chưa/đã xảy ra tại mốc, tính từ い giữ nguyên, な giữ な, danh từ thêm の), và quan hệ nhân quả tất yếu luôn đúng bằng と (vế sau không được là lời mời/mệnh lệnh) — phân biệt rõ とき (một thời điểm cụ thể) với と (quy luật lặp lại).",
+  "sceneImageUrl": "assets/minh-hoa/canh-chi-duong-den-ngan-hang.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 23: Mẫu câu 'Khi... thì...' (Vるとき / Vたとき / Vると)",
   "vocabList": [
     {
       "id": "voc-n5-23-1",
@@ -12,6 +14,8 @@
       "romaji": "oshimasu",
       "wordType": "verb",
       "meaningVi": "Ấn, nhấn",
+      "imageUrl": "assets/minh-hoa/an-nhan.webp",
+      "imageAlt": "Ấn, nhấn",
       "accentNote": "Thể từ điển: 押す. Nhóm 1. ボタンを 押すと = hễ ấn nút thì."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "watarimasu",
       "wordType": "verb",
       "meaningVi": "Băng qua, đi qua",
+      "imageUrl": "assets/minh-hoa/bang-qua.webp",
+      "imageAlt": "Băng qua, đi qua",
       "accentNote": "Thể từ điển: 渡る. Nhóm 1."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "magarimasu",
       "wordType": "verb",
       "meaningVi": "Rẽ, quẹo",
+      "imageUrl": "assets/minh-hoa/re-queo.webp",
+      "imageAlt": "Rẽ, quẹo",
       "accentNote": "Thể từ điển: 曲がる. Nhóm 1."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "akimasu",
       "wordType": "verb",
       "meaningVi": "Mở ra (tự động)",
+      "imageUrl": "assets/minh-hoa/mo-tu-dong.webp",
+      "imageAlt": "Mở ra (tự động)",
       "accentNote": "Thể từ điển: 開く. Nhóm 1. Khác 開けます (tha động từ, bài 14)."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "dekakemasu",
       "wordType": "verb",
       "meaningVi": "Ra ngoài",
+      "imageUrl": "assets/minh-hoa/ra-ngoai.webp",
+      "imageAlt": "Ra ngoài",
       "accentNote": "Đã gặp bài 16 — nay dùng làm mốc thời điểm."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "kaerimasu",
       "wordType": "verb",
       "meaningVi": "Về nhà",
+      "imageUrl": "assets/minh-hoa/ve-nha.webp",
+      "imageAlt": "Về nhà",
       "accentNote": "Đã gặp bài 5."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "botan",
       "wordType": "noun",
       "meaningVi": "Cái nút (bấm)",
+      "imageUrl": "assets/minh-hoa/cai-nut.webp",
+      "imageAlt": "Cái nút (bấm)",
       "accentNote": "ボタンを 押します = ấn nút."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "migi",
       "wordType": "noun",
       "meaningVi": "Bên phải",
+      "imageUrl": "assets/minh-hoa/ben-phai.webp",
+      "imageAlt": "Bên phải",
       "accentNote": "右に 曲がります = rẽ phải."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "hidari",
       "wordType": "noun",
       "meaningVi": "Bên trái",
+      "imageUrl": "assets/minh-hoa/ben-trai.webp",
+      "imageAlt": "Bên trái",
       "accentNote": "左に 曲がります = rẽ trái."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "shingou",
       "wordType": "noun",
       "meaningVi": "Đèn tín hiệu giao thông",
+      "imageUrl": "assets/minh-hoa/den-giao-thong.webp",
+      "imageAlt": "Đèn tín hiệu giao thông",
       "accentNote": "信号を 渡ります = qua đường ở chỗ đèn tín hiệu."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "mado",
       "wordType": "noun",
       "meaningVi": "Cửa sổ",
+      "imageUrl": "assets/minh-hoa/cua-so.webp",
+      "imageAlt": "Cửa sổ",
       "accentNote": "Đã gặp bài 14."
     },
     {
@@ -122,6 +146,8 @@
       "romaji": "denki",
       "wordType": "noun",
       "meaningVi": "Điện, đèn điện",
+      "imageUrl": "assets/minh-hoa/den-dien.webp",
+      "imageAlt": "Điện, đèn điện",
       "accentNote": "Đã gặp bài 15."
     },
     {
@@ -132,6 +158,8 @@
       "romaji": "haru",
       "wordType": "noun",
       "meaningVi": "Mùa xuân",
+      "imageUrl": "assets/minh-hoa/mua-xuan.webp",
+      "imageAlt": "Mùa xuân",
       "accentNote": "Đã gặp bài 12 — nay dùng làm mốc thời điểm theo mùa."
     },
     {
@@ -142,6 +170,8 @@
       "romaji": "aki",
       "wordType": "noun",
       "meaningVi": "Mùa thu",
+      "imageUrl": "assets/minh-hoa/mua-thu.webp",
+      "imageAlt": "Mùa thu",
       "accentNote": "Đã gặp bài 12."
     },
     {
@@ -152,6 +182,8 @@
       "romaji": "atsui",
       "wordType": "adjective",
       "meaningVi": "Nóng",
+      "imageUrl": "assets/minh-hoa/nong.webp",
+      "imageAlt": "Nóng",
       "accentNote": "Đã gặp bài 8 — nay dùng trong câu とき."
     },
     {
@@ -162,6 +194,8 @@
       "romaji": "samui",
       "wordType": "adjective",
       "meaningVi": "Lạnh",
+      "imageUrl": "assets/minh-hoa/lanh.webp",
+      "imageAlt": "Lạnh",
       "accentNote": "Đã gặp bài 8."
     },
     {
@@ -172,6 +206,8 @@
       "romaji": "kodomo",
       "wordType": "noun",
       "meaningVi": "Trẻ con, con cái",
+      "imageUrl": "assets/minh-hoa/tre-con.webp",
+      "imageAlt": "Trẻ con, con cái",
       "accentNote": "子供の とき = hồi còn nhỏ."
     },
     {
@@ -182,6 +218,8 @@
       "romaji": "gakusei",
       "wordType": "noun",
       "meaningVi": "Học sinh, sinh viên",
+      "imageUrl": "assets/minh-hoa/hoc-sinh.webp",
+      "imageAlt": "Học sinh, sinh viên",
       "accentNote": "学生の とき = hồi còn là học sinh."
     },
     {
@@ -192,6 +230,8 @@
       "romaji": "hima",
       "wordType": "adjective",
       "meaningVi": "Rảnh rỗi",
+      "imageUrl": "assets/minh-hoa/ranh-roi.webp",
+      "imageAlt": "Rảnh rỗi",
       "accentNote": "暇な とき = lúc rảnh (tính từ な giữ な trước とき, giống trước danh từ)."
     },
     {
@@ -202,6 +242,8 @@
       "romaji": "genki",
       "wordType": "adjective",
       "meaningVi": "Khỏe mạnh",
+      "imageUrl": "assets/minh-hoa/khoe-manh.webp",
+      "imageAlt": "Khỏe mạnh",
       "accentNote": "Đã gặp bài 8."
     }
   ],
@@ -844,6 +886,7 @@
       "id": "dia-n5-23-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l23-1",
@@ -885,6 +928,7 @@
       "id": "dia-n5-23-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l23-7",
@@ -946,6 +990,7 @@
       "id": "dia-n5-23-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l23-16",
@@ -977,6 +1022,7 @@
       "id": "dia-n5-23-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l23-20",
@@ -1053,6 +1099,7 @@
       "id": "dia-n5-23-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l23-32",
@@ -1078,6 +1125,7 @@
       "id": "dia-n5-23-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l23-35",
@@ -1135,6 +1183,7 @@
       "id": "dia-n5-23-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l23-44",
@@ -1211,6 +1260,7 @@
       "id": "dia-n5-23-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l23-56",
@@ -1277,6 +1327,7 @@
       "id": "dia-n5-23-9",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l23-66",
@@ -1336,6 +1387,7 @@
       "id": "dia-n5-23-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l23-75",

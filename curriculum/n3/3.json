@@ -3,6 +3,8 @@
   "lessonNumber": 3,
   "title": "Bài 3: Quy định & Dự định (ことになっている & ことにする)",
   "description": "ことになっている diễn tả QUY ĐỊNH/THÔNG LỆ khách quan đã có sẵn từ tổ chức/xã hội (khác hẳn ことにする đã học N4 bài 31 — quyết định CÁ NHÂN của người nói), kiểm tra bằng câu hỏi 'ai là người quyết định', kết hợp với thể bị động 決まっています (N4 bài 37), và mở rộng cảm xúc quyết tâm bằng 決心する.",
+  "sceneImageUrl": "assets/minh-hoa/canh-quy-dinh-truong-dai-hoc.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 3: Quy định & Dự định (ことになっている & ことにする)",
   "vocabList": [
     {
       "id": "voc-n3-3-1",
@@ -12,6 +14,8 @@
       "romaji": "kimarimasu",
       "wordType": "verb",
       "meaningVi": "Được quyết định, được ấn định (tự động từ)",
+      "imageUrl": "assets/minh-hoa/decide-n3.webp",
+      "imageAlt": "Được quyết định, được ấn định (tự động từ)",
       "accentNote": "Đã gặp N4 bài 28. 規則で 決まっています = được quy định bởi nội quy."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "kimemasu",
       "wordType": "verb",
       "meaningVi": "Quyết định (tha động từ)",
+      "imageUrl": "assets/minh-hoa/decide-n3.webp",
+      "imageAlt": "Quyết định (tha động từ)",
       "accentNote": "Đã gặp N4 bài 31."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "mamorimasu",
       "wordType": "verb",
       "meaningVi": "Tuân thủ, giữ gìn",
+      "imageUrl": "assets/minh-hoa/obey-rules.webp",
+      "imageAlt": "Tuân thủ, giữ gìn",
       "accentNote": "規則を 守ります = tuân thủ quy định."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "kinshi shimasu",
       "wordType": "verb",
       "meaningVi": "Cấm chỉ",
+      "imageUrl": "assets/minh-hoa/prohibit.webp",
+      "imageAlt": "Cấm chỉ",
       "accentNote": "この 部屋では 撮影が 禁止されています = phòng này cấm chụp ảnh.",
       "emotion": "gian"
     },
@@ -53,6 +63,8 @@
       "romaji": "kesshin shimasu",
       "wordType": "verb",
       "meaningVi": "Quyết tâm",
+      "imageUrl": "assets/minh-hoa/resolve.webp",
+      "imageAlt": "Quyết tâm",
       "accentNote": "留学する ことに 決心しました = tôi đã quyết tâm đi du học.",
       "emotion": "suy_nghi"
     },
@@ -64,6 +76,8 @@
       "romaji": "sotsugyou shimasu",
       "wordType": "verb",
       "meaningVi": "Tốt nghiệp",
+      "imageUrl": "assets/minh-hoa/graduate-n3.webp",
+      "imageAlt": "Tốt nghiệp",
       "accentNote": "Đã gặp N4 bài 31."
     },
     {
@@ -74,6 +88,8 @@
       "romaji": "kisoku",
       "wordType": "noun",
       "meaningVi": "Quy tắc, nội quy",
+      "imageUrl": "assets/minh-hoa/rules-n3.webp",
+      "imageAlt": "Quy tắc, nội quy",
       "accentNote": "Đã gặp N4 bài 28."
     },
     {
@@ -84,6 +100,8 @@
       "romaji": "kimari",
       "wordType": "noun",
       "meaningVi": "Quy định, lệ thường",
+      "imageUrl": "assets/minh-hoa/rules-n3.webp",
+      "imageAlt": "Quy định, lệ thường",
       "accentNote": "会社の 決まりです = đây là quy định của công ty."
     },
     {
@@ -104,6 +122,8 @@
       "romaji": "kesshin",
       "wordType": "noun",
       "meaningVi": "Quyết tâm",
+      "imageUrl": "assets/minh-hoa/resolve.webp",
+      "imageAlt": "Quyết tâm",
       "accentNote": "決心が つきました = tôi đã có quyết tâm rồi."
     },
     {
@@ -114,6 +134,8 @@
       "romaji": "daigaku",
       "wordType": "noun",
       "meaningVi": "Trường đại học",
+      "imageUrl": "assets/minh-hoa/university-n3.webp",
+      "imageAlt": "Trường đại học",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -124,6 +146,8 @@
       "romaji": "kaisha",
       "wordType": "noun",
       "meaningVi": "Công ty",
+      "imageUrl": "assets/minh-hoa/company-n3.webp",
+      "imageAlt": "Công ty",
       "accentNote": "Đã gặp N5 bài 3."
     },
     {
@@ -134,6 +158,8 @@
       "romaji": "kitei",
       "wordType": "noun",
       "meaningVi": "Quy định (chính thức, văn bản)",
+      "imageUrl": "assets/minh-hoa/regulation.webp",
+      "imageAlt": "Quy định (chính thức, văn bản)",
       "accentNote": "会社の 規定に よると = theo quy định của công ty thì."
     },
     {
@@ -144,6 +170,8 @@
       "romaji": "shain",
       "wordType": "noun",
       "meaningVi": "Nhân viên công ty",
+      "imageUrl": "assets/minh-hoa/employee.webp",
+      "imageAlt": "Nhân viên công ty",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -154,6 +182,8 @@
       "romaji": "gakusei",
       "wordType": "noun",
       "meaningVi": "Học sinh, sinh viên",
+      "imageUrl": "assets/minh-hoa/student-n3.webp",
+      "imageAlt": "Học sinh, sinh viên",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -164,6 +194,8 @@
       "romaji": "seifuku",
       "wordType": "noun",
       "meaningVi": "Đồng phục",
+      "imageUrl": "assets/minh-hoa/school-uniform.webp",
+      "imageAlt": "Đồng phục",
       "accentNote": "学校では 制服を 着る ことに なっています = ở trường quy định phải mặc đồng phục."
     },
     {
@@ -174,6 +206,8 @@
       "romaji": "kaigi",
       "wordType": "noun",
       "meaningVi": "Cuộc họp",
+      "imageUrl": "assets/minh-hoa/meeting-n3.webp",
+      "imageAlt": "Cuộc họp",
       "accentNote": "Đã gặp N5 bài 7."
     },
     {
@@ -194,6 +228,8 @@
       "romaji": "ryuugaku",
       "wordType": "noun",
       "meaningVi": "Du học",
+      "imageUrl": "assets/minh-hoa/study-abroad-n3.webp",
+      "imageAlt": "Du học",
       "accentNote": "Đã gặp N5 bài 21."
     },
     {
@@ -204,6 +240,8 @@
       "romaji": "taishoku",
       "wordType": "noun",
       "meaningVi": "Nghỉ hưu, thôi việc",
+      "imageUrl": "assets/minh-hoa/retire.webp",
+      "imageAlt": "Nghỉ hưu, thôi việc",
       "accentNote": "会社を 退職する ことに しました = tôi đã quyết định thôi việc ở công ty."
     }
   ],
@@ -745,6 +783,7 @@
       "id": "dia-n3-3-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d3-1",
@@ -804,6 +843,7 @@
       "id": "dia-n3-3-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d3-10",
@@ -867,6 +907,7 @@
       "id": "dia-n3-3-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d3-19",
@@ -909,6 +950,7 @@
       "id": "dia-n3-3-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d3-25",
@@ -961,6 +1003,7 @@
       "id": "dia-n3-3-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d3-33",
@@ -993,6 +1036,7 @@
       "id": "dia-n3-3-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d3-37",
@@ -1032,6 +1076,7 @@
       "id": "dia-n3-3-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d3-42",
@@ -1094,6 +1139,7 @@
       "id": "dia-n3-3-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d3-52",
@@ -1131,6 +1177,7 @@
       "id": "dia-n3-3-9",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d3-57",
@@ -1191,6 +1238,7 @@
       "id": "dia-n3-3-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d3-66",

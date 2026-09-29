@@ -3,6 +3,8 @@
   "lessonNumber": 12,
   "title": "Bài 12: So sánh (N1 は N2 より A です / どちら / いちばん)",
   "description": "Cấu trúc so sánh hơn với より và ほう, cách hỏi-đáp chọn giữa hai vật bằng どちら, so sánh nhất trong một tập hợp bằng の中で…いちばん, và hai quy tắc chia quá khứ khác nhau của tính từ い (かった) và tính từ な/danh từ (でした).",
+  "sceneImageUrl": "assets/minh-hoa/canh-mua-xuan-va-mua-thu.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 12: So sánh (N1 は N2 より A です / どちら / いちばん)",
   "vocabList": [
     {
       "id": "voc-n5-12-1",
@@ -32,6 +34,8 @@
       "romaji": "ichiban",
       "wordType": "noun",
       "meaningVi": "Nhất, số một",
+      "imageUrl": "assets/minh-hoa/so-mot.webp",
+      "imageAlt": "Nhất, số một",
       "accentNote": "Đứng trước tính từ để so sánh NHẤT trong một tập hợp."
     },
     {
@@ -62,6 +66,8 @@
       "romaji": "kisetsu",
       "wordType": "noun",
       "meaningVi": "Mùa",
+      "imageUrl": "assets/minh-hoa/mua-trong-nam.webp",
+      "imageAlt": "Mùa",
       "accentNote": "四季 = bốn mùa."
     },
     {
@@ -72,6 +78,8 @@
       "romaji": "haru",
       "wordType": "noun",
       "meaningVi": "Mùa xuân",
+      "imageUrl": "assets/minh-hoa/mua-xuan.webp",
+      "imageAlt": "Mùa xuân",
       "accentNote": ""
     },
     {
@@ -82,6 +90,8 @@
       "romaji": "natsu",
       "wordType": "noun",
       "meaningVi": "Mùa hè",
+      "imageUrl": "assets/minh-hoa/mua-he.webp",
+      "imageAlt": "Mùa hè",
       "accentNote": ""
     },
     {
@@ -92,6 +102,8 @@
       "romaji": "aki",
       "wordType": "noun",
       "meaningVi": "Mùa thu",
+      "imageUrl": "assets/minh-hoa/mua-thu.webp",
+      "imageAlt": "Mùa thu",
       "accentNote": ""
     },
     {
@@ -102,6 +114,8 @@
       "romaji": "fuyu",
       "wordType": "noun",
       "meaningVi": "Mùa đông",
+      "imageUrl": "assets/minh-hoa/mua-dong.webp",
+      "imageAlt": "Mùa đông",
       "accentNote": ""
     },
     {
@@ -112,6 +126,8 @@
       "romaji": "kuni",
       "wordType": "noun",
       "meaningVi": "Đất nước",
+      "imageUrl": "assets/minh-hoa/dat-nuoc.webp",
+      "imageAlt": "Đất nước",
       "accentNote": "Đã gặp bài 3 — nay dùng làm đối tượng so sánh."
     },
     {
@@ -122,6 +138,8 @@
       "romaji": "machi",
       "wordType": "noun",
       "meaningVi": "Thị trấn, phố",
+      "imageUrl": "assets/minh-hoa/thi-tran.webp",
+      "imageAlt": "Thị trấn, phố",
       "accentNote": ""
     },
     {
@@ -132,6 +150,8 @@
       "romaji": "doubutsu",
       "wordType": "noun",
       "meaningVi": "Động vật",
+      "imageUrl": "assets/minh-hoa/dong-vat.webp",
+      "imageAlt": "Động vật",
       "accentNote": "動物の 中で 一番 好きです = thích nhất trong các loài động vật."
     },
     {
@@ -142,6 +162,8 @@
       "romaji": "kudamono",
       "wordType": "noun",
       "meaningVi": "Trái cây",
+      "imageUrl": "assets/minh-hoa/trai-cay.webp",
+      "imageAlt": "Trái cây",
       "accentNote": "Đã gặp bài 6."
     },
     {
@@ -152,6 +174,8 @@
       "romaji": "gaikoku",
       "wordType": "noun",
       "meaningVi": "Nước ngoài",
+      "imageUrl": "assets/minh-hoa/nuoc-ngoai.webp",
+      "imageAlt": "Nước ngoài",
       "accentNote": ""
     },
     {
@@ -162,6 +186,8 @@
       "romaji": "sekai",
       "wordType": "noun",
       "meaningVi": "Thế giới",
+      "imageUrl": "assets/minh-hoa/the-gioi.webp",
+      "imageAlt": "Thế giới",
       "accentNote": "世界で 一番 = nhất thế giới."
     },
     {
@@ -172,6 +198,8 @@
       "romaji": "natsuyasumi",
       "wordType": "noun",
       "meaningVi": "Kỳ nghỉ hè",
+      "imageUrl": "assets/minh-hoa/nghi-he.webp",
+      "imageAlt": "Kỳ nghỉ hè",
       "accentNote": "Đã gặp bài 4 (休み) — nay ghép cụ thể theo mùa."
     },
     {
@@ -182,6 +210,8 @@
       "romaji": "takai",
       "wordType": "adjective",
       "meaningVi": "Cao, đắt",
+      "imageUrl": "assets/minh-hoa/cao.webp",
+      "imageAlt": "Cao, đắt",
       "accentNote": "Đã gặp bài 8 — nay dùng làm ví dụ so sánh và chia quá khứ."
     },
     {
@@ -192,6 +222,8 @@
       "romaji": "yasui",
       "wordType": "adjective",
       "meaningVi": "Rẻ",
+      "imageUrl": "assets/minh-hoa/re.webp",
+      "imageAlt": "Rẻ",
       "accentNote": "Đã gặp bài 8."
     },
     {
@@ -202,6 +234,8 @@
       "romaji": "ookii",
       "wordType": "adjective",
       "meaningVi": "To, lớn",
+      "imageUrl": "assets/minh-hoa/to-lon.webp",
+      "imageAlt": "To, lớn",
       "accentNote": "Đã gặp bài 8."
     }
   ],
@@ -800,6 +834,7 @@
       "id": "dia-n5-12-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l12-1",
@@ -871,6 +906,7 @@
       "id": "dia-n5-12-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l12-12",
@@ -915,6 +951,7 @@
       "id": "dia-n5-12-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l12-18",
@@ -936,6 +973,7 @@
       "id": "dia-n5-12-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l12-20",
@@ -997,6 +1035,7 @@
       "id": "dia-n5-12-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l12-29",
@@ -1060,6 +1099,7 @@
       "id": "dia-n5-12-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l12-38",
@@ -1099,6 +1139,7 @@
       "id": "dia-n5-12-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l12-43",
@@ -1136,6 +1177,7 @@
       "id": "dia-n5-12-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l12-48",
@@ -1161,6 +1203,7 @@
       "id": "dia-n5-12-9",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l12-51",
@@ -1225,6 +1268,7 @@
       "id": "dia-n5-12-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l12-61",

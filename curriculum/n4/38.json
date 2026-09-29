@@ -3,6 +3,8 @@
   "lessonNumber": 38,
   "title": "Bài 38: Danh từ hóa (V-るのは, V-るのが, V-るのを忘れました)",
   "description": "Danh từ hóa động từ bằng の (song song こと, N5 bài 18, nhưng thiên về hành động cụ thể/giác quan): Vのが好き/上手/苦手 để nói sở thích/năng lực, Vのは〜 để đưa hành động thành chủ đề nhận xét, và Vのを忘れました (quên LÀM việc gì) khác hẳn quên/bỏ mất một VẬT.",
+  "sceneImageUrl": "assets/minh-hoa/canh-hat-karaoke.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 38: Danh từ hóa (V-るのは, V-るのが, V-るのを忘れました)",
   "vocabList": [
     {
       "id": "voc-n4-38-1",
@@ -12,6 +14,8 @@
       "romaji": "oyogu",
       "wordType": "verb",
       "meaningVi": "Bơi (thể từ điển)",
+      "imageUrl": "assets/minh-hoa/swimming.webp",
+      "imageAlt": "Bơi (thể từ điển)",
       "accentNote": "泳ぐのが 好きです = tôi thích (việc) bơi."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "odorimasu",
       "wordType": "verb",
       "meaningVi": "Nhảy múa",
+      "imageUrl": "assets/minh-hoa/dance.webp",
+      "imageAlt": "Nhảy múa",
       "accentNote": "踊るのが 上手です = nhảy múa giỏi."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "utaimasu",
       "wordType": "verb",
       "meaningVi": "Hát",
+      "imageUrl": "assets/minh-hoa/sing.webp",
+      "imageAlt": "Hát",
       "accentNote": "Đã gặp N5 bài 18."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "shimemasu",
       "wordType": "verb",
       "meaningVi": "Đóng (tha động từ)",
+      "imageUrl": "assets/minh-hoa/close-door.webp",
+      "imageAlt": "Đóng (tha động từ)",
       "accentNote": "窓を 閉めるのを 忘れました = tôi đã quên đóng cửa sổ."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "keshimasu",
       "wordType": "verb",
       "meaningVi": "Tắt, xóa",
+      "imageUrl": "assets/minh-hoa/turn-off.webp",
+      "imageAlt": "Tắt, xóa",
       "accentNote": "Đã gặp N5 bài 15."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "motte kimasu",
       "wordType": "verb",
       "meaningVi": "Mang theo, đem đến",
+      "imageUrl": "assets/minh-hoa/bring.webp",
+      "imageAlt": "Mang theo, đem đến",
       "accentNote": "傘を 持って来るのを 忘れました = tôi đã quên mang ô."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "renraku shimasu",
       "wordType": "verb",
       "meaningVi": "Liên lạc",
+      "imageUrl": "assets/minh-hoa/contact.webp",
+      "imageAlt": "Liên lạc",
       "accentNote": "連絡するのを 忘れないで ください = xin đừng quên liên lạc."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "shumi",
       "wordType": "noun",
       "meaningVi": "Sở thích",
+      "imageUrl": "assets/minh-hoa/hobby.webp",
+      "imageAlt": "Sở thích",
       "accentNote": "私の趣味は、絵を 描くことです = sở thích của tôi là vẽ tranh (dùng こと, N5 bài 18)."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "suiei",
       "wordType": "noun",
       "meaningVi": "Môn bơi lội",
+      "imageUrl": "assets/minh-hoa/swimming.webp",
+      "imageAlt": "Môn bơi lội",
       "accentNote": "Đã gặp bài 27."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "shuukan",
       "wordType": "noun",
       "meaningVi": "Thói quen",
+      "imageUrl": "assets/minh-hoa/habit.webp",
+      "imageAlt": "Thói quen",
       "accentNote": "Đã gặp bài 28."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "e",
       "wordType": "noun",
       "meaningVi": "Tranh, hình vẽ",
+      "imageUrl": "assets/minh-hoa/picture.webp",
+      "imageAlt": "Tranh, hình vẽ",
       "accentNote": "Đã gặp N5 bài 9."
     },
     {
@@ -122,6 +146,8 @@
       "romaji": "uta",
       "wordType": "noun",
       "meaningVi": "Bài hát",
+      "imageUrl": "assets/minh-hoa/song.webp",
+      "imageAlt": "Bài hát",
       "accentNote": "Đã gặp N5 bài 9."
     },
     {
@@ -132,6 +158,8 @@
       "romaji": "mado",
       "wordType": "noun",
       "meaningVi": "Cửa sổ",
+      "imageUrl": "assets/minh-hoa/window.webp",
+      "imageAlt": "Cửa sổ",
       "accentNote": "Đã gặp N5 bài 14."
     },
     {
@@ -142,6 +170,8 @@
       "romaji": "kasa",
       "wordType": "noun",
       "meaningVi": "Cái ô, cái dù",
+      "imageUrl": "assets/minh-hoa/umbrella.webp",
+      "imageAlt": "Cái ô, cái dù",
       "accentNote": "Đã gặp N5 bài 2."
     },
     {
@@ -152,6 +182,8 @@
       "romaji": "denki",
       "wordType": "noun",
       "meaningVi": "Điện, đèn điện",
+      "imageUrl": "assets/minh-hoa/electric-light.webp",
+      "imageAlt": "Điện, đèn điện",
       "accentNote": "Đã gặp N5 bài 15."
     },
     {
@@ -162,6 +194,8 @@
       "romaji": "yakusoku",
       "wordType": "noun",
       "meaningVi": "Lời hứa, cuộc hẹn",
+      "imageUrl": "assets/minh-hoa/promise.webp",
+      "imageAlt": "Lời hứa, cuộc hẹn",
       "accentNote": "約束するのを 忘れました = tôi đã quên mất lời hứa."
     },
     {
@@ -172,6 +206,8 @@
       "romaji": "shukudai",
       "wordType": "noun",
       "meaningVi": "Bài tập về nhà",
+      "imageUrl": "assets/minh-hoa/homework.webp",
+      "imageAlt": "Bài tập về nhà",
       "accentNote": "Đã gặp N5 bài 7."
     },
     {
@@ -182,6 +218,8 @@
       "romaji": "kiku",
       "wordType": "verb",
       "meaningVi": "Nghe (thể từ điển)",
+      "imageUrl": "assets/minh-hoa/listen.webp",
+      "imageAlt": "Nghe (thể từ điển)",
       "accentNote": "音楽を 聞くのが 好きです = tôi thích nghe nhạc."
     },
     {
@@ -192,6 +230,8 @@
       "romaji": "miru",
       "wordType": "verb",
       "meaningVi": "Xem (thể từ điển)",
+      "imageUrl": "assets/minh-hoa/look-watch.webp",
+      "imageAlt": "Xem (thể từ điển)",
       "accentNote": "映画を 見るのが 好きです = tôi thích xem phim."
     },
     {
@@ -202,6 +242,8 @@
       "romaji": "hanasu",
       "wordType": "verb",
       "meaningVi": "Nói (thể từ điển)",
+      "imageUrl": "assets/minh-hoa/speak.webp",
+      "imageAlt": "Nói (thể từ điển)",
       "accentNote": "人と 話すのが 苦手です = tôi kém khoản nói chuyện với người khác."
     }
   ],
@@ -735,6 +777,7 @@
       "id": "dia-n4-38-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l38-1",
@@ -777,6 +820,7 @@
       "id": "dia-n4-38-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l38-7",
@@ -849,6 +893,7 @@
       "id": "dia-n4-38-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l38-18",
@@ -886,6 +931,7 @@
       "id": "dia-n4-38-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l38-23",
@@ -933,6 +979,7 @@
       "id": "dia-n4-38-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l38-30",
@@ -1004,6 +1051,7 @@
       "id": "dia-n4-38-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l38-41",
@@ -1052,6 +1100,7 @@
       "id": "dia-n4-38-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l38-48",
@@ -1092,6 +1141,7 @@
       "id": "dia-n4-38-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l38-54",
@@ -1132,6 +1182,7 @@
       "id": "dia-n4-38-9",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l38-60",
@@ -1193,6 +1244,7 @@
       "id": "dia-n4-38-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l38-69",

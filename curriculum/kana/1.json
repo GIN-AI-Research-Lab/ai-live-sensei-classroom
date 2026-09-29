@@ -34,6 +34,8 @@
       "romaji": "ie",
       "wordType": "noun",
       "meaningVi": "Ngôi nhà",
+      "imageUrl": "assets/minh-hoa/nha.webp",
+      "imageAlt": "Ngôi nhà",
       "accentNote": "Hai nhịp i-ê, tách rõ, đừng đọc dính thành 'iê'.",
       "emotion": "vui"
     },
@@ -45,6 +47,8 @@
       "romaji": "ue",
       "wordType": "noun",
       "meaningVi": "Phía trên, bên trên",
+      "imageUrl": "assets/minh-hoa/tren.webp",
+      "imageAlt": "Phía trên, bên trên",
       "accentNote": "う môi không chu: 'ư-ê'.",
       "emotion": "suy_nghi"
     },
@@ -56,6 +60,8 @@
       "romaji": "kao",
       "wordType": "noun",
       "meaningVi": "Khuôn mặt",
+      "imageUrl": "assets/minh-hoa/khuon-mat.webp",
+      "imageAlt": "Khuôn mặt",
       "accentNote": "Hai nhịp ka-ô, không đọc thành 'cao'.",
       "emotion": "vui"
     },
@@ -78,6 +84,8 @@
       "romaji": "eki",
       "wordType": "noun",
       "meaningVi": "Nhà ga (tàu điện)",
+      "imageUrl": "assets/minh-hoa/nha-ga.webp",
+      "imageAlt": "Nhà ga (tàu điện)",
       "accentNote": "Hai nhịp ê-ki.",
       "emotion": "suy_nghi"
     },
@@ -89,6 +97,8 @@
       "romaji": "kasa",
       "wordType": "noun",
       "meaningVi": "Cái ô, cái dù",
+      "imageUrl": "assets/minh-hoa/cai-o.webp",
+      "imageAlt": "Cái ô, cái dù",
       "accentNote": "か cao, さ thấp xuống.",
       "emotion": "vui"
     },
@@ -122,6 +132,8 @@
       "romaji": "sekai",
       "wordType": "noun",
       "meaningVi": "Thế giới",
+      "imageUrl": "assets/minh-hoa/the-gioi.webp",
+      "imageAlt": "Thế giới",
       "accentNote": "Ba nhịp đều xê-ka-i.",
       "emotion": "ngac_nhien"
     },
@@ -155,6 +167,8 @@
       "romaji": "koe",
       "wordType": "noun",
       "meaningVi": "Giọng nói, tiếng (người, vật)",
+      "imageUrl": "assets/minh-hoa/voice.webp",
+      "imageAlt": "Giọng nói, tiếng (người, vật)",
       "accentNote": "Hai nhịp kô-ê.",
       "emotion": "vui"
     },
@@ -177,6 +191,8 @@
       "romaji": "uso",
       "wordType": "noun",
       "meaningVi": "Lời nói dối; 'うそ!' còn là câu cảm thán 'Không thể nào!'",
+      "imageUrl": "assets/minh-hoa/noi-doi.webp",
+      "imageAlt": "Lời nói dối; 'うそ!' còn là câu cảm thán 'Không thể nào!'",
       "accentNote": "Khi cảm thán thì lên giọng: 'うそ!?'.",
       "emotion": "ngac_nhien"
     },
@@ -199,6 +215,8 @@
       "romaji": "isu",
       "wordType": "noun",
       "meaningVi": "Cái ghế",
+      "imageUrl": "assets/minh-hoa/ghe.webp",
+      "imageAlt": "Cái ghế",
       "accentNote": "す cuối từ rất nhẹ: 'i-s(ư)'.",
       "emotion": "suy_nghi"
     },
@@ -210,6 +228,8 @@
       "romaji": "asa",
       "wordType": "noun",
       "meaningVi": "Buổi sáng",
+      "imageUrl": "assets/minh-hoa/buoi-sang.webp",
+      "imageAlt": "Buổi sáng",
       "accentNote": "あ cao, さ thấp xuống.",
       "emotion": "vui"
     },
@@ -221,6 +241,8 @@
       "romaji": "oishii",
       "wordType": "adjective",
       "meaningVi": "Ngon",
+      "imageUrl": "assets/minh-hoa/ngon.webp",
+      "imageAlt": "Ngon",
       "accentNote": "Bốn nhịp ô-i-shi-i: いい cuối phải kéo đủ hai nhịp.",
       "emotion": "vui"
     }
@@ -886,6 +908,7 @@
       "id": "dia-kana-1-1",
       "speaker": "さとう (Satou)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-sato.webp",
       "tokens": [
         {
           "id": "d-kana-l1-1a",
@@ -915,6 +938,7 @@
       "id": "dia-kana-1-2",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l1-2a",
@@ -944,6 +968,7 @@
       "id": "dia-kana-1-3",
       "speaker": "さとう (Satou)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-sato.webp",
       "tokens": [
         {
           "id": "d-kana-l1-3a",
@@ -963,6 +988,7 @@
       "id": "dia-kana-1-4",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l1-4a",
@@ -992,6 +1018,7 @@
       "id": "dia-kana-1-5",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l1-5a",
@@ -1021,6 +1048,7 @@
       "id": "dia-kana-1-6",
       "speaker": "さとう (Satou)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-sato.webp",
       "tokens": [
         {
           "id": "d-kana-l1-6a",

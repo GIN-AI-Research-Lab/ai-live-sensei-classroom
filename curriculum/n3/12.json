@@ -3,6 +3,8 @@
   "lessonNumber": 12,
   "title": "Bài 12: Đánh giá chắc chắn (に違いない & はずだ & はずがない)",
   "description": "に違いない diễn tả suy luận CHẮC CHẮN dựa trên BẰNG CHỨNG cụ thể (chủ quan, mức tin tưởng rất cao); はずだ diễn tả suy luận dựa trên LOGIC/thông tin đã biết (khách quan hơn); はずがない là PHỦ ĐỊNH MẠNH của はずだ, khẳng định điều gì đó KHÔNG THỂ xảy ra dựa trên logic vững chắc.",
+  "sceneImageUrl": "assets/minh-hoa/canh-dieu-tra-vu-mat-vi.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 12: Đánh giá chắc chắn (に違いない & はずだ & はずがない)",
   "vocabList": [
     {
       "id": "voc-n3-12-1",
@@ -12,6 +14,8 @@
       "romaji": "shoumei shimasu",
       "wordType": "verb",
       "meaningVi": "Chứng minh",
+      "imageUrl": "assets/minh-hoa/prove.webp",
+      "imageAlt": "Chứng minh",
       "accentNote": "うそを 証明します = chứng minh lời nói dối."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "tashikamemasu",
       "wordType": "verb",
       "meaningVi": "Xác nhận, kiểm chứng",
+      "imageUrl": "assets/minh-hoa/confirm-check.webp",
+      "imageAlt": "Xác nhận, kiểm chứng",
       "accentNote": "じじつを 確かめます = xác nhận sự thật."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "hannin",
       "wordType": "noun",
       "meaningVi": "Thủ phạm, tội phạm",
+      "imageUrl": "assets/minh-hoa/culprit.webp",
+      "imageAlt": "Thủ phạm, tội phạm",
       "accentNote": "犯人は あの 人です = thủ phạm là người đó."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "machigai",
       "wordType": "noun",
       "meaningVi": "Sai lầm, lỗi",
+      "imageUrl": "assets/minh-hoa/mistake.webp",
+      "imageAlt": "Sai lầm, lỗi",
       "accentNote": "間違いが あります = có sai sót."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "genba",
       "wordType": "noun",
       "meaningVi": "Hiện trường",
+      "imageUrl": "assets/minh-hoa/crime-scene.webp",
+      "imageAlt": "Hiện trường",
       "accentNote": "現場を 調べます = điều tra hiện trường."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "sousa shimasu",
       "wordType": "verb",
       "meaningVi": "Điều tra (hình sự)",
+      "imageUrl": "assets/minh-hoa/investigate.webp",
+      "imageAlt": "Điều tra (hình sự)",
       "accentNote": "けいさつが 捜査します = cảnh sát điều tra."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "saifu",
       "wordType": "noun",
       "meaningVi": "Ví tiền",
+      "imageUrl": "assets/minh-hoa/wallet-n3.webp",
+      "imageAlt": "Ví tiền",
       "accentNote": "Đã gặp N4 bài 44."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "kagi",
       "wordType": "noun",
       "meaningVi": "Chìa khóa",
+      "imageUrl": "assets/minh-hoa/key.webp",
+      "imageAlt": "Chìa khóa",
       "accentNote": "Đã gặp N5 bài 15."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "wasuremono",
       "wordType": "noun",
       "meaningVi": "Đồ bỏ quên",
+      "imageUrl": "assets/minh-hoa/lost-item.webp",
+      "imageAlt": "Đồ bỏ quên",
       "accentNote": "Đã gặp N5 bài 19."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "inu",
       "wordType": "noun",
       "meaningVi": "Chó",
+      "imageUrl": "assets/minh-hoa/dog-n3.webp",
+      "imageAlt": "Chó",
       "accentNote": "Đã gặp N4 bài 29."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "tsukimasu",
       "wordType": "verb",
       "meaningVi": "Đến nơi",
+      "imageUrl": "assets/minh-hoa/arrive-n3.webp",
+      "imageAlt": "Đến nơi",
       "accentNote": "Đã gặp N4 bài 34."
     },
     {
@@ -122,6 +146,8 @@
       "romaji": "kekka",
       "wordType": "noun",
       "meaningVi": "Kết quả",
+      "imageUrl": "assets/minh-hoa/result.webp",
+      "imageAlt": "Kết quả",
       "accentNote": "Đã gặp N4 bài 39."
     },
     {
@@ -132,6 +158,8 @@
       "romaji": "ki wo tsukemasu",
       "wordType": "expression",
       "meaningVi": "Cẩn thận, chú ý",
+      "imageUrl": "assets/minh-hoa/be-careful-n3.webp",
+      "imageAlt": "Cẩn thận, chú ý",
       "accentNote": "Đã gặp N4 bài 33."
     },
     {
@@ -142,6 +170,8 @@
       "romaji": "hito",
       "wordType": "noun",
       "meaningVi": "Người",
+      "imageUrl": "assets/minh-hoa/person.webp",
+      "imageAlt": "Người",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -152,6 +182,8 @@
       "romaji": "kare",
       "wordType": "noun",
       "meaningVi": "Anh ấy",
+      "imageUrl": "assets/minh-hoa/he.webp",
+      "imageAlt": "Anh ấy",
       "accentNote": "Đã gặp N5 bài 6."
     },
     {
@@ -172,6 +204,8 @@
       "romaji": "mono",
       "wordType": "noun",
       "meaningVi": "Vật, đồ vật",
+      "imageUrl": "assets/minh-hoa/thing.webp",
+      "imageAlt": "Vật, đồ vật",
       "accentNote": "Đã gặp N4 bài 38."
     },
     {
@@ -202,6 +236,8 @@
       "romaji": "wakarimasu",
       "wordType": "verb",
       "meaningVi": "Hiểu, biết",
+      "imageUrl": "assets/minh-hoa/understand.webp",
+      "imageAlt": "Hiểu, biết",
       "accentNote": "Đã gặp N4 bài 38."
     }
   ],
@@ -823,6 +859,7 @@
       "id": "dia-n3-12-1",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp (điều tra vụ mất đồ)",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d12-1",
@@ -867,6 +904,7 @@
       "id": "dia-n3-12-2",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp (điều tra vụ mất đồ)",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d12-7",
@@ -947,6 +985,7 @@
       "id": "dia-n3-12-3",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp (điều tra vụ mất đồ)",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d12-19",
@@ -967,6 +1006,7 @@
       "id": "dia-n3-12-4",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp (điều tra vụ mất đồ)",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d12-21",
@@ -1022,6 +1062,7 @@
       "id": "dia-n3-12-5",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp (điều tra vụ mất đồ)",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d12-30",
@@ -1100,6 +1141,7 @@
       "id": "dia-n3-12-6",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp (điều tra vụ mất đồ)",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d12-42",
@@ -1139,6 +1181,7 @@
       "id": "dia-n3-12-7",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp (điều tra vụ mất đồ)",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d12-47",
@@ -1188,6 +1231,7 @@
       "id": "dia-n3-12-8",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp (điều tra vụ mất đồ)",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d12-54",
@@ -1225,6 +1269,7 @@
       "id": "dia-n3-12-9",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp (điều tra vụ mất đồ)",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d12-59",
@@ -1277,6 +1322,7 @@
       "id": "dia-n3-12-10",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp (điều tra vụ mất đồ)",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d12-67",

@@ -12,6 +12,8 @@
       "romaji": "ocha",
       "wordType": "noun",
       "meaningVi": "Trà",
+      "imageUrl": "assets/minh-hoa/tra-xanh.webp",
+      "imageAlt": "Trà",
       "accentNote": "Đọc bằng: お thấp, ちゃ cao. 2 nhịp: お・ちゃ.",
       "emotion": "vui"
     },
@@ -23,6 +25,8 @@
       "romaji": "densha",
       "wordType": "noun",
       "meaningVi": "Tàu điện",
+      "imageUrl": "assets/minh-hoa/tau-dien.webp",
+      "imageAlt": "Tàu điện",
       "accentNote": "Đọc bằng; 3 nhịp: で・ん・しゃ.",
       "emotion": "vui"
     },
@@ -34,6 +38,8 @@
       "romaji": "shashin",
       "wordType": "noun",
       "meaningVi": "Tấm ảnh",
+      "imageUrl": "assets/minh-hoa/buc-anh.webp",
+      "imageAlt": "Tấm ảnh",
       "accentNote": "Đọc bằng; 3 nhịp: しゃ・し・ん.",
       "emotion": "vui"
     },
@@ -45,6 +51,8 @@
       "romaji": "isha",
       "wordType": "noun",
       "meaningVi": "Bác sĩ",
+      "imageUrl": "assets/minh-hoa/bac-si.webp",
+      "imageAlt": "Bác sĩ",
       "accentNote": "Đọc bằng; 2 nhịp: い・しゃ. Đừng đọc thành いしや.",
       "emotion": "suy_nghi"
     },
@@ -78,6 +86,8 @@
       "romaji": "byouin",
       "wordType": "noun",
       "meaningVi": "Bệnh viện",
+      "imageUrl": "assets/minh-hoa/benh-vien.webp",
+      "imageAlt": "Bệnh viện",
       "accentNote": "Đọc bằng; 4 nhịp びょ・う・い・ん = 'byôô-in': う chỉ kéo dài 'ô'. Đừng lẫn với びよういん (tiệm làm tóc).",
       "emotion": "buon"
     },
@@ -89,6 +99,8 @@
       "romaji": "ryokou",
       "wordType": "noun",
       "meaningVi": "Du lịch, chuyến đi",
+      "imageUrl": "assets/minh-hoa/du-lich.webp",
+      "imageAlt": "Du lịch, chuyến đi",
       "accentNote": "Đọc bằng; 3 nhịp りょ・こ・う = 'ryo-kôô': う sau こ chỉ kéo dài 'ô', không đọc 'kô-u'.",
       "emotion": "vui"
     },
@@ -100,6 +112,8 @@
       "romaji": "ryouri",
       "wordType": "noun",
       "meaningVi": "Món ăn; việc nấu ăn",
+      "imageUrl": "assets/minh-hoa/mon-an.webp",
+      "imageAlt": "Món ăn; việc nấu ăn",
       "accentNote": "Trọng âm đầu: RYO cao, các nhịp sau thấp. 3 nhịp りょ・う・り = 'ryôô-ri'.",
       "emotion": "vui"
     },
@@ -111,6 +125,8 @@
       "romaji": "toshokan",
       "wordType": "noun",
       "meaningVi": "Thư viện",
+      "imageUrl": "assets/minh-hoa/thu-vien.webp",
+      "imageAlt": "Thư viện",
       "accentNote": "Trọng âm ở nhịp 2: to thấp, SHO cao, rồi hạ.",
       "emotion": "suy_nghi"
     },
@@ -166,6 +182,8 @@
       "romaji": "shukudai",
       "wordType": "noun",
       "meaningVi": "Bài tập về nhà",
+      "imageUrl": "assets/minh-hoa/bai-tap-ve-nha.webp",
+      "imageAlt": "Bài tập về nhà",
       "accentNote": "Đọc bằng; 4 nhịp: しゅ・く・だ・い.",
       "emotion": "that_vong"
     },
@@ -188,6 +206,8 @@
       "romaji": "kaisha",
       "wordType": "noun",
       "meaningVi": "Công ty",
+      "imageUrl": "assets/minh-hoa/cong-ty.webp",
+      "imageAlt": "Công ty",
       "accentNote": "Đọc bằng; 3 nhịp: か・い・しゃ.",
       "emotion": "suy_nghi"
     },
@@ -199,6 +219,8 @@
       "romaji": "jouzu",
       "wordType": "adjective",
       "meaningVi": "Giỏi, khéo (tính từ đuôi な)",
+      "imageUrl": "assets/minh-hoa/gioi.webp",
+      "imageAlt": "Giỏi, khéo (tính từ đuôi な)",
       "accentNote": "Cao dần rồi hạ sau nhịp cuối: jo thấp, U-ZU cao. 3 nhịp じょ・う・ず = 'jôô-zư'.",
       "emotion": "vui"
     },
@@ -1472,6 +1494,7 @@
       "id": "dia-kana-5-2",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l5-2a",
@@ -1579,6 +1602,7 @@
       "id": "dia-kana-5-5",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l5-5a",
@@ -1652,6 +1676,7 @@
       "id": "dia-kana-5-7",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l5-7a",

@@ -3,6 +3,8 @@
   "lessonNumber": 43,
   "title": "Bài 43: Dự đoán sắp xảy ra (V-そう) & Trông có vẻ (A-そう)",
   "description": "Ghép そう vào gốc ます của động từ để dự đoán điều SẮP xảy ra dựa trên dấu hiệu quan sát trực tiếp, ghép vào tính từ い (bỏ い, ngoại lệ いい→よさそう) hoặc tính từ な (bỏ な/だ) để diễn tả ấn tượng bề ngoài CHƯA kiểm chứng — phân biệt với でしょう (N4 bài 32, suy luận logic qua lý do, không cần dấu hiệu trực quan).",
+  "sceneImageUrl": "assets/minh-hoa/canh-troi-sap-mua.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 43: Dự đoán sắp xảy ra (V-そう) & Trông có vẻ (A-そう)",
   "vocabList": [
     {
       "id": "voc-n4-43-1",
@@ -12,6 +14,8 @@
       "romaji": "furimasu",
       "wordType": "verb",
       "meaningVi": "Rơi, đổ xuống (mưa, tuyết)",
+      "imageUrl": "assets/minh-hoa/fall-rain-snow.webp",
+      "imageAlt": "Rơi, đổ xuống (mưa, tuyết)",
       "accentNote": "雨が 降りそうです = trời có vẻ sắp mưa."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "taoremasu",
       "wordType": "verb",
       "meaningVi": "Ngã, sụp đổ",
+      "imageUrl": "assets/minh-hoa/fall-over.webp",
+      "imageAlt": "Ngã, sụp đổ",
       "accentNote": "木が 倒れそうです = cái cây có vẻ sắp đổ."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "kowaremasu",
       "wordType": "verb",
       "meaningVi": "Bị hỏng, bị vỡ",
+      "imageUrl": "assets/minh-hoa/broken.webp",
+      "imageAlt": "Bị hỏng, bị vỡ",
       "accentNote": "Đã gặp bài 26. 椅子が 壊れそうです = cái ghế có vẻ sắp hỏng."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "nakimasu",
       "wordType": "verb",
       "meaningVi": "Khóc",
+      "imageUrl": "assets/minh-hoa/cry.webp",
+      "imageAlt": "Khóc",
       "accentNote": "子供が 泣きそうです = đứa trẻ có vẻ sắp khóc.",
       "emotion": "buon"
     },
@@ -53,6 +63,8 @@
       "romaji": "ochimasu",
       "wordType": "verb",
       "meaningVi": "Rơi, rớt xuống",
+      "imageUrl": "assets/minh-hoa/drop-fall.webp",
+      "imageAlt": "Rơi, rớt xuống",
       "accentNote": "本が 落ちそうです = quyển sách có vẻ sắp rơi."
     },
     {
@@ -63,6 +75,8 @@
       "romaji": "tsukaremasu",
       "wordType": "verb",
       "meaningVi": "Mệt, mệt mỏi",
+      "imageUrl": "assets/minh-hoa/tired.webp",
+      "imageAlt": "Mệt, mệt mỏi",
       "accentNote": "Đã gặp bài 32."
     },
     {
@@ -73,6 +87,8 @@
       "romaji": "nemui",
       "wordType": "adjective",
       "meaningVi": "Buồn ngủ",
+      "imageUrl": "assets/minh-hoa/sleepy.webp",
+      "imageAlt": "Buồn ngủ",
       "accentNote": "Tính từ い. 眠そうです = trông có vẻ buồn ngủ (bỏ い, thêm そう)."
     },
     {
@@ -83,6 +99,8 @@
       "romaji": "oishii",
       "wordType": "adjective",
       "meaningVi": "Ngon",
+      "imageUrl": "assets/minh-hoa/delicious.webp",
+      "imageAlt": "Ngon",
       "accentNote": "Đã gặp N5 bài 8.",
       "emotion": "vui"
     },
@@ -94,6 +112,8 @@
       "romaji": "nigai",
       "wordType": "adjective",
       "meaningVi": "Đắng",
+      "imageUrl": "assets/minh-hoa/bitter.webp",
+      "imageAlt": "Đắng",
       "accentNote": "この 薬は 苦そうです = thuốc này trông có vẻ đắng."
     },
     {
@@ -104,6 +124,8 @@
       "romaji": "tanoshii",
       "wordType": "adjective",
       "meaningVi": "Vui vẻ",
+      "imageUrl": "assets/minh-hoa/fun.webp",
+      "imageAlt": "Vui vẻ",
       "accentNote": "Đã gặp N5 bài 8.",
       "emotion": "vui"
     },
@@ -115,6 +137,8 @@
       "romaji": "isogashii",
       "wordType": "adjective",
       "meaningVi": "Bận rộn",
+      "imageUrl": "assets/minh-hoa/busy.webp",
+      "imageAlt": "Bận rộn",
       "accentNote": "Đã gặp N5 bài 9."
     },
     {
@@ -125,6 +149,8 @@
       "romaji": "genki",
       "wordType": "adjective",
       "meaningVi": "Khỏe mạnh",
+      "imageUrl": "assets/minh-hoa/energetic.webp",
+      "imageAlt": "Khỏe mạnh",
       "accentNote": "Đã gặp N5 bài 8. 元気そうです = trông có vẻ khỏe."
     },
     {
@@ -135,6 +161,8 @@
       "romaji": "shinsetsu",
       "wordType": "adjective",
       "meaningVi": "Tốt bụng, ân cần",
+      "imageUrl": "assets/minh-hoa/kind.webp",
+      "imageAlt": "Tốt bụng, ân cần",
       "accentNote": "Đã gặp N5 bài 16."
     },
     {
@@ -145,6 +173,8 @@
       "romaji": "ame",
       "wordType": "noun",
       "meaningVi": "Mưa",
+      "imageUrl": "assets/minh-hoa/rain.webp",
+      "imageAlt": "Mưa",
       "accentNote": "Đã gặp N5 bài 21."
     },
     {
@@ -155,6 +185,8 @@
       "romaji": "kumo",
       "wordType": "noun",
       "meaningVi": "Mây",
+      "imageUrl": "assets/minh-hoa/cloud.webp",
+      "imageAlt": "Mây",
       "accentNote": "黒い雲が あります = có đám mây đen."
     },
     {
@@ -165,6 +197,8 @@
       "romaji": "ki",
       "wordType": "noun",
       "meaningVi": "Cây",
+      "imageUrl": "assets/minh-hoa/tree.webp",
+      "imageAlt": "Cây",
       "accentNote": "Đã gặp N5 bài 10."
     },
     {
@@ -175,6 +209,8 @@
       "romaji": "isu",
       "wordType": "noun",
       "meaningVi": "Cái ghế",
+      "imageUrl": "assets/minh-hoa/chair.webp",
+      "imageAlt": "Cái ghế",
       "accentNote": "Đã gặp N5 bài 2."
     },
     {
@@ -185,6 +221,8 @@
       "romaji": "kodomo",
       "wordType": "noun",
       "meaningVi": "Trẻ con",
+      "imageUrl": "assets/minh-hoa/child.webp",
+      "imageAlt": "Trẻ con",
       "accentNote": "Đã gặp N5 bài 23."
     },
     {
@@ -195,6 +233,8 @@
       "romaji": "kusuri",
       "wordType": "noun",
       "meaningVi": "Thuốc",
+      "imageUrl": "assets/minh-hoa/medicine.webp",
+      "imageAlt": "Thuốc",
       "accentNote": "Đã gặp bài 17 (N5)."
     },
     {
@@ -205,6 +245,8 @@
       "romaji": "tenki",
       "wordType": "noun",
       "meaningVi": "Thời tiết",
+      "imageUrl": "assets/minh-hoa/weather.webp",
+      "imageAlt": "Thời tiết",
       "accentNote": "Đã gặp N5 bài 21."
     }
   ],
@@ -688,6 +730,7 @@
       "id": "dia-n4-43-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l43-1",
@@ -749,6 +792,7 @@
       "id": "dia-n4-43-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l43-10",
@@ -800,6 +844,7 @@
       "id": "dia-n4-43-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l43-17",
@@ -845,6 +890,7 @@
       "id": "dia-n4-43-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l43-24",
@@ -894,6 +940,7 @@
       "id": "dia-n4-43-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l43-31",
@@ -914,6 +961,7 @@
       "id": "dia-n4-43-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l43-33",
@@ -1006,6 +1054,7 @@
       "id": "dia-n4-43-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l43-48",
@@ -1043,6 +1092,7 @@
       "id": "dia-n4-43-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l43-53",
@@ -1095,6 +1145,7 @@
       "id": "dia-n4-43-9",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l43-61",
@@ -1139,6 +1190,7 @@
       "id": "dia-n4-43-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l43-67",

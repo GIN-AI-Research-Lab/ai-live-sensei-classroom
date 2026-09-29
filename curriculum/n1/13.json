@@ -3,6 +3,8 @@
   "lessonNumber": 13,
   "title": "Bài 13: Cương vị đáng kính (ともあろう者が & ならいざ知らず)",
   "description": "ともあろう者が chỉ trích MẠNH một người/tổ chức ở ĐỊA VỊ/TƯ CÁCH CAO QUÝ, ĐÁNG KÍNH mà lại có hành vi KHÔNG XỨNG ĐÁNG — thể hiện sự NGẠC NHIÊN kết hợp THẤT VỌNG sâu sắc. ならいざ知らず dùng để SO SÁNH hai trường hợp: nếu là A thì còn chấp nhận được, nhưng B (trường hợp đang bàn) thì không thể chấp nhận — ngụ ý B nghiêm trọng hơn A rất nhiều. Hội thoại: phóng viên phỏng vấn một nhà bình luận về vụ một thanh tra hình sự bị bắt giữ do nghi vấn phản bội niềm tin của người dân, kết hợp cả hai cấu trúc để phê phán nhiều tầng lớp.",
+  "sceneImageUrl": "assets/minh-hoa/canh-binh-luan-thanh-tra-bi-bat.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 13: Cương vị đáng kính (ともあろう者が & ならいざ知らず)",
   "vocabList": [
     {
       "id": "voc-n1-13-1",
@@ -12,6 +14,8 @@
       "romaji": "giwaku",
       "wordType": "noun",
       "meaningVi": "Sự nghi ngờ, mối nghi hoặc",
+      "imageUrl": "assets/minh-hoa/nghi-ngo.webp",
+      "imageAlt": "Sự nghi ngờ, mối nghi hoặc",
       "accentNote": "疑惑が 持たれています = đang bị nghi hoặc.",
       "emotion": "suy_nghi"
     },
@@ -33,6 +37,8 @@
       "romaji": "haji",
       "wordType": "noun",
       "meaningVi": "Sự xấu hổ, nỗi nhục",
+      "imageUrl": "assets/minh-hoa/xau-ho.webp",
+      "imageAlt": "Sự xấu hổ, nỗi nhục",
       "accentNote": "恥を 知ります = biết xấu hổ.",
       "emotion": "xau_ho"
     },
@@ -44,6 +50,8 @@
       "romaji": "shinyou",
       "wordType": "noun",
       "meaningVi": "Sự tín nhiệm, uy tín",
+      "imageUrl": "assets/minh-hoa/tin-nhiem.webp",
+      "imageAlt": "Sự tín nhiệm, uy tín",
       "accentNote": "信用を 失います = đánh mất sự tín nhiệm."
     },
     {
@@ -54,6 +62,8 @@
       "romaji": "uragirimasu",
       "wordType": "verb",
       "meaningVi": "Phản bội",
+      "imageUrl": "assets/minh-hoa/phan-boi.webp",
+      "imageAlt": "Phản bội",
       "accentNote": "期待を 裏切ります = phản bội kỳ vọng."
     },
     {
@@ -64,6 +74,8 @@
       "romaji": "kitai",
       "wordType": "noun",
       "meaningVi": "Sự kỳ vọng, mong đợi",
+      "imageUrl": "assets/minh-hoa/ky-vong.webp",
+      "imageAlt": "Sự kỳ vọng, mong đợi",
       "accentNote": "皆の 期待に 応えます = đáp lại kỳ vọng của mọi người."
     },
     {
@@ -74,6 +86,8 @@
       "romaji": "keiji",
       "wordType": "noun",
       "meaningVi": "Thanh tra hình sự, cảnh sát điều tra",
+      "imageUrl": "assets/minh-hoa/thanh-tra.webp",
+      "imageAlt": "Thanh tra hình sự, cảnh sát điều tra",
       "accentNote": "刑事が 事件を 調べます = thanh tra hình sự điều tra vụ việc."
     },
     {
@@ -84,6 +98,8 @@
       "romaji": "taiho",
       "wordType": "noun",
       "meaningVi": "Sự bắt giữ",
+      "imageUrl": "assets/minh-hoa/bat-giu.webp",
+      "imageAlt": "Sự bắt giữ",
       "accentNote": "犯人が 逮捕されました = phạm nhân đã bị bắt giữ."
     },
     {
@@ -94,6 +110,8 @@
       "romaji": "hanzai",
       "wordType": "noun",
       "meaningVi": "Tội ác, tội phạm",
+      "imageUrl": "assets/minh-hoa/toi-ac.webp",
+      "imageAlt": "Tội ác, tội phạm",
       "accentNote": "Đã gặp N1 bài 6."
     },
     {
@@ -114,6 +132,8 @@
       "romaji": "shikaku",
       "wordType": "noun",
       "meaningVi": "Tư cách, chứng chỉ",
+      "imageUrl": "assets/minh-hoa/chung-chi.webp",
+      "imageAlt": "Tư cách, chứng chỉ",
       "accentNote": "Đã gặp N3 bài 8."
     },
     {
@@ -124,6 +144,8 @@
       "romaji": "kisha",
       "wordType": "noun",
       "meaningVi": "Phóng viên",
+      "imageUrl": "assets/minh-hoa/phong-vien.webp",
+      "imageAlt": "Phóng viên",
       "accentNote": "Đã gặp N1 bài 9."
     },
     {
@@ -154,6 +176,8 @@
       "romaji": "shachou",
       "wordType": "noun",
       "meaningVi": "Giám đốc",
+      "imageUrl": "assets/minh-hoa/giam-doc.webp",
+      "imageAlt": "Giám đốc",
       "accentNote": "Đã gặp N4 bài 41."
     },
     {
@@ -164,6 +188,8 @@
       "romaji": "giin",
       "wordType": "noun",
       "meaningVi": "Nghị sĩ",
+      "imageUrl": "assets/minh-hoa/nghi-si.webp",
+      "imageAlt": "Nghị sĩ",
       "accentNote": "Đã gặp N1 bài 6."
     },
     {
@@ -174,6 +200,8 @@
       "romaji": "fusei",
       "wordType": "noun",
       "meaningVi": "Sự bất chính, gian lận",
+      "imageUrl": "assets/minh-hoa/gian-lan.webp",
+      "imageAlt": "Sự bất chính, gian lận",
       "accentNote": "Đã gặp N1 bài 6."
     },
     {
@@ -184,6 +212,8 @@
       "romaji": "shinrai",
       "wordType": "noun",
       "meaningVi": "Sự tin cậy",
+      "imageUrl": "assets/minh-hoa/tin-tuong.webp",
+      "imageAlt": "Sự tin cậy",
       "accentNote": "Đã gặp N1 bài 6."
     },
     {
@@ -194,6 +224,8 @@
       "romaji": "ayamarimasu",
       "wordType": "verb",
       "meaningVi": "Xin lỗi",
+      "imageUrl": "assets/minh-hoa/xin-loi.webp",
+      "imageAlt": "Xin lỗi",
       "accentNote": "Đã gặp N1 bài 9.",
       "emotion": "cui_chao"
     },
@@ -205,6 +237,8 @@
       "romaji": "jiken",
       "wordType": "noun",
       "meaningVi": "Vụ việc, sự kiện",
+      "imageUrl": "assets/minh-hoa/vu-viec.webp",
+      "imageAlt": "Vụ việc, sự kiện",
       "accentNote": "Đã gặp N1 bài 2."
     }
   ],
@@ -963,6 +997,7 @@
       "id": "dia-n1-13-1",
       "speaker": "田中",
       "speakerRole": "Phóng viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d13-1",
@@ -1093,6 +1128,7 @@
       "id": "dia-n1-13-3",
       "speaker": "田中",
       "speakerRole": "Phóng viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d13-20",
@@ -1198,6 +1234,7 @@
       "id": "dia-n1-13-5",
       "speaker": "田中",
       "speakerRole": "Phóng viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d13-35",
@@ -1321,6 +1358,7 @@
       "id": "dia-n1-13-7",
       "speaker": "田中",
       "speakerRole": "Phóng viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d13-53",
@@ -1417,6 +1455,7 @@
       "id": "dia-n1-13-9",
       "speaker": "田中",
       "speakerRole": "Phóng viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d13-67",

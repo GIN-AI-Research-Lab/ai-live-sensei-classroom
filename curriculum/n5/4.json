@@ -3,6 +3,8 @@
   "lessonNumber": 4,
   "title": "Bài 4: Thời gian, giờ giấc & động từ ます",
   "description": "Nói giờ chính xác (kèm 4 số biến âm đặc biệt), chia động từ thể ます ở cả bốn thì (khẳng định/phủ định × hiện tại/quá khứ), đánh dấu thời điểm bằng に, và khoảng thời gian bằng から〜まで.",
+  "sceneImageUrl": "assets/minh-hoa/canh-hoi-gio-o-ngan-hang.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 4: Thời gian, giờ giấc & động từ ます",
   "vocabList": [
     {
       "id": "voc-n5-4-1",
@@ -42,6 +44,8 @@
       "romaji": "han",
       "wordType": "noun",
       "meaningVi": "Rưỡi, một nửa",
+      "imageUrl": "assets/minh-hoa/mot-nua.webp",
+      "imageAlt": "Rưỡi, một nửa",
       "accentNote": "2 giờ rưỡi = にじはん."
     },
     {
@@ -72,6 +76,8 @@
       "romaji": "gozen",
       "wordType": "noun",
       "meaningVi": "Buổi sáng, giờ AM",
+      "imageUrl": "assets/minh-hoa/buoi-sang.webp",
+      "imageAlt": "Buổi sáng, giờ AM",
       "accentNote": "Đứng trước giờ: 午前9時."
     },
     {
@@ -82,6 +88,8 @@
       "romaji": "gogo",
       "wordType": "noun",
       "meaningVi": "Buổi chiều, giờ PM",
+      "imageUrl": "assets/minh-hoa/buoi-chieu.webp",
+      "imageAlt": "Buổi chiều, giờ PM",
       "accentNote": "午後3時 = 3 giờ chiều."
     },
     {
@@ -92,6 +100,8 @@
       "romaji": "asa",
       "wordType": "noun",
       "meaningVi": "Buổi sáng",
+      "imageUrl": "assets/minh-hoa/buoi-sang.webp",
+      "imageAlt": "Buổi sáng",
       "accentNote": "毎朝 = mỗi sáng."
     },
     {
@@ -242,6 +252,8 @@
       "romaji": "ginkou",
       "wordType": "noun",
       "meaningVi": "Ngân hàng",
+      "imageUrl": "assets/minh-hoa/ngan-hang.webp",
+      "imageAlt": "Ngân hàng",
       "accentNote": "銀行員 = nhân viên ngân hàng (đã học bài 1)."
     },
     {
@@ -252,6 +264,8 @@
       "romaji": "toshokan",
       "wordType": "noun",
       "meaningVi": "Thư viện",
+      "imageUrl": "assets/minh-hoa/thu-vien.webp",
+      "imageAlt": "Thư viện",
       "accentNote": ""
     },
     {
@@ -262,6 +276,8 @@
       "romaji": "eiga",
       "wordType": "noun",
       "meaningVi": "Phim, điện ảnh",
+      "imageUrl": "assets/minh-hoa/phim.webp",
+      "imageAlt": "Phim, điện ảnh",
       "accentNote": "映画館 = rạp chiếu phim."
     },
     {
@@ -272,6 +288,8 @@
       "romaji": "yasumi",
       "wordType": "noun",
       "meaningVi": "Ngày nghỉ, kỳ nghỉ",
+      "imageUrl": "assets/minh-hoa/nghi-ngoi.webp",
+      "imageAlt": "Ngày nghỉ, kỳ nghỉ",
       "accentNote": "休みます = nghỉ, vắng mặt."
     },
     {
@@ -292,6 +310,8 @@
       "romaji": "okimasu",
       "wordType": "verb",
       "meaningVi": "Thức dậy",
+      "imageUrl": "assets/minh-hoa/thuc-day.webp",
+      "imageAlt": "Thức dậy",
       "accentNote": "Nhóm 2 (Vて = 起きて)."
     },
     {
@@ -302,6 +322,8 @@
       "romaji": "nemasu",
       "wordType": "verb",
       "meaningVi": "Đi ngủ",
+      "imageUrl": "assets/minh-hoa/di-ngu.webp",
+      "imageAlt": "Đi ngủ",
       "accentNote": "Nhóm 2."
     },
     {
@@ -312,6 +334,8 @@
       "romaji": "hatarakimasu",
       "wordType": "verb",
       "meaningVi": "Làm việc",
+      "imageUrl": "assets/minh-hoa/lam-viec.webp",
+      "imageAlt": "Làm việc",
       "accentNote": "Nhóm 1."
     },
     {
@@ -322,6 +346,8 @@
       "romaji": "yasumimasu",
       "wordType": "verb",
       "meaningVi": "Nghỉ ngơi, nghỉ (làm/học)",
+      "imageUrl": "assets/minh-hoa/nghi-ngoi.webp",
+      "imageAlt": "Nghỉ ngơi, nghỉ (làm/học)",
       "accentNote": "Nhóm 1."
     },
     {
@@ -332,6 +358,8 @@
       "romaji": "benkyoushimasu",
       "wordType": "verb",
       "meaningVi": "Học, học tập",
+      "imageUrl": "assets/minh-hoa/hoc.webp",
+      "imageAlt": "Học, học tập",
       "accentNote": "Nhóm 3 (します)."
     },
     {
@@ -342,6 +370,8 @@
       "romaji": "owarimasu",
       "wordType": "verb",
       "meaningVi": "Kết thúc, xong",
+      "imageUrl": "assets/minh-hoa/ket-thuc.webp",
+      "imageAlt": "Kết thúc, xong",
       "accentNote": "Nhóm 1. Trái nghĩa với 始まります."
     }
   ],
@@ -1030,6 +1060,7 @@
       "id": "dia-n5-4-1",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l4-1",
@@ -1066,6 +1097,7 @@
       "id": "dia-n5-4-2",
       "speaker": "受付",
       "speakerRole": "Lễ tân",
+      "avatarUrl": "assets/minh-hoa/nv-uketsuke.webp",
       "tokens": [
         {
           "id": "d-l4-6",
@@ -1093,6 +1125,7 @@
       "id": "dia-n5-4-3",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l4-9",
@@ -1142,6 +1175,7 @@
       "id": "dia-n5-4-4",
       "speaker": "受付",
       "speakerRole": "Lễ tân",
+      "avatarUrl": "assets/minh-hoa/nv-uketsuke.webp",
       "tokens": [
         {
           "id": "d-l4-16",
@@ -1201,6 +1235,7 @@
       "id": "dia-n5-4-5",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l4-25",
@@ -1230,6 +1265,7 @@
       "id": "dia-n5-4-6",
       "speaker": "グプタ",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-gupta.webp",
       "tokens": [
         {
           "id": "d-l4-29",
@@ -1279,6 +1315,7 @@
       "id": "dia-n5-4-7",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l4-36",
@@ -1313,6 +1350,7 @@
       "id": "dia-n5-4-8",
       "speaker": "グプタ",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-gupta.webp",
       "tokens": [
         {
           "id": "d-l4-40",
@@ -1355,6 +1393,7 @@
       "id": "dia-n5-4-9",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l4-46",
@@ -1415,6 +1454,7 @@
       "id": "dia-n5-4-10",
       "speaker": "グプタ",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-gupta.webp",
       "tokens": [
         {
           "id": "d-l4-55",

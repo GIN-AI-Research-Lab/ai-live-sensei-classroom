@@ -3,6 +3,8 @@
   "lessonNumber": 7,
   "title": "Bài 7: Phạm vi & Giới hạn (を通して & にわたって & に限って)",
   "description": "を通して diễn tả SUỐT một khoảng thời gian hoặc THÔNG QUA một phương tiện/kênh trung gian; にわたって nhấn PHẠM VI RỘNG LỚN mà sự việc trải dài qua (thường kèm số từ cụ thể); に限って diễn tả CHỈ RIÊNG một trường hợp, thường mang sắc thái trớ trêu khi điều không may xảy ra đúng lúc.",
+  "sceneImageUrl": "assets/minh-hoa/canh-dai-hoi-ngay-mua.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 7: Phạm vi & Giới hạn (を通して & にわたって & に限って)",
   "vocabList": [
     {
       "id": "voc-n3-7-1",
@@ -62,6 +64,8 @@
       "romaji": "kikan",
       "wordType": "noun",
       "meaningVi": "Thời hạn, giai đoạn",
+      "imageUrl": "assets/minh-hoa/period.webp",
+      "imageAlt": "Thời hạn, giai đoạn",
       "accentNote": "セールの 期間 = thời hạn giảm giá."
     },
     {
@@ -72,6 +76,8 @@
       "romaji": "zenkoku",
       "wordType": "noun",
       "meaningVi": "Toàn quốc",
+      "imageUrl": "assets/minh-hoa/nationwide.webp",
+      "imageAlt": "Toàn quốc",
       "accentNote": "全国に わたって = trải dài khắp cả nước."
     },
     {
@@ -92,6 +98,8 @@
       "romaji": "han-i",
       "wordType": "noun",
       "meaningVi": "Phạm vi",
+      "imageUrl": "assets/minh-hoa/range-scope.webp",
+      "imageAlt": "Phạm vi",
       "accentNote": "テストの 範囲 = phạm vi bài kiểm tra."
     },
     {
@@ -112,6 +120,8 @@
       "romaji": "chiiki",
       "wordType": "noun",
       "meaningVi": "Khu vực, vùng",
+      "imageUrl": "assets/minh-hoa/region-area.webp",
+      "imageAlt": "Khu vực, vùng",
       "accentNote": "この 地域は = khu vực này."
     },
     {
@@ -122,6 +132,8 @@
       "romaji": "heikin",
       "wordType": "noun",
       "meaningVi": "Trung bình",
+      "imageUrl": "assets/minh-hoa/average.webp",
+      "imageAlt": "Trung bình",
       "accentNote": "平均 気温 = nhiệt độ trung bình."
     },
     {
@@ -142,6 +154,8 @@
       "romaji": "ame",
       "wordType": "noun",
       "meaningVi": "Mưa",
+      "imageUrl": "assets/minh-hoa/rain-n3.webp",
+      "imageAlt": "Mưa",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -152,6 +166,8 @@
       "romaji": "tomodachi",
       "wordType": "noun",
       "meaningVi": "Bạn bè",
+      "imageUrl": "assets/minh-hoa/friend.webp",
+      "imageAlt": "Bạn bè",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -162,6 +178,8 @@
       "romaji": "isogashii",
       "wordType": "adjective",
       "meaningVi": "Bận rộn",
+      "imageUrl": "assets/minh-hoa/busy-n3.webp",
+      "imageAlt": "Bận rộn",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -172,6 +190,8 @@
       "romaji": "denwa",
       "wordType": "noun",
       "meaningVi": "Điện thoại",
+      "imageUrl": "assets/minh-hoa/telephone-n3.webp",
+      "imageAlt": "Điện thoại",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -182,6 +202,8 @@
       "romaji": "jouhou",
       "wordType": "noun",
       "meaningVi": "Thông tin",
+      "imageUrl": "assets/minh-hoa/information.webp",
+      "imageAlt": "Thông tin",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -202,6 +224,8 @@
       "romaji": "okonawaremasu",
       "wordType": "verb",
       "meaningVi": "Được tổ chức, được tiến hành",
+      "imageUrl": "assets/minh-hoa/held-event.webp",
+      "imageAlt": "Được tổ chức, được tiến hành",
       "accentNote": "大会が 行われます = đại hội được tổ chức."
     }
   ],
@@ -827,6 +851,7 @@
       "id": "dia-n3-7-1",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d7-1",
@@ -876,6 +901,7 @@
       "id": "dia-n3-7-2",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d7-8",
@@ -922,6 +948,7 @@
       "id": "dia-n3-7-3",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d7-14",
@@ -959,6 +986,7 @@
       "id": "dia-n3-7-4",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d7-19",
@@ -993,6 +1021,7 @@
       "id": "dia-n3-7-5",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d7-23",
@@ -1035,6 +1064,7 @@
       "id": "dia-n3-7-6",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d7-29",
@@ -1069,6 +1099,7 @@
       "id": "dia-n3-7-7",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d7-33",
@@ -1140,6 +1171,7 @@
       "id": "dia-n3-7-8",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d7-43",
@@ -1221,6 +1253,7 @@
       "id": "dia-n3-7-9",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d7-55",
@@ -1267,6 +1300,7 @@
       "id": "dia-n3-7-10",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d7-61",

@@ -3,6 +3,8 @@
   "lessonNumber": 3,
   "title": "Bài 3: Nơi chốn & Vị trí (ここ / そこ / あそこ / どこ / こちら / いくら)",
   "description": "Trỏ nơi chốn theo bộ ここ / そこ / あそこ / どこ và bản lịch sự こちら / そちら / あちら / どちら, hỏi vị trí trong tòa nhà bằng 〜階, hỏi quê quán công ty bằng お〜は どちらですか, và hỏi giá hàng hóa bằng いくらですか kèm cách đọc số đếm theo đơn vị vạn.",
+  "sceneImageUrl": "assets/minh-hoa/canh-mua-ruou-vang-bach-hoa.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 3: Nơi chốn & Vị trí (ここ / そこ / あそこ / どこ / こちら / いくら)",
   "vocabList": [
     {
       "id": "voc-n5-3-1",
@@ -12,6 +14,8 @@
       "romaji": "koko",
       "wordType": "noun",
       "meaningVi": "Chỗ này, ở đây (nơi người nói đang đứng)",
+      "imageUrl": "assets/minh-hoa/cho-nay.webp",
+      "imageAlt": "Chỗ này, ở đây (nơi người nói đang đứng)",
       "accentNote": "Bộ ba こ - そ - あ lặp lại như bài 2."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "soko",
       "wordType": "noun",
       "meaningVi": "Chỗ đó (nơi người nghe đang đứng)",
+      "imageUrl": "assets/minh-hoa/cho-do.webp",
+      "imageAlt": "Chỗ đó (nơi người nghe đang đứng)",
       "accentNote": "Gần đối phương."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "asoko",
       "wordType": "noun",
       "meaningVi": "Chỗ kia (xa cả hai người)",
+      "imageUrl": "assets/minh-hoa/cho-kia.webp",
+      "imageAlt": "Chỗ kia (xa cả hai người)",
       "accentNote": "Chú ý: あそこ chứ KHÔNG phải あこ."
     },
     {
@@ -52,6 +60,8 @@
       "romaji": "kochira",
       "wordType": "noun",
       "meaningVi": "Phía này, đằng này (lịch sự)",
+      "imageUrl": "assets/minh-hoa/phia-nay.webp",
+      "imageAlt": "Phía này, đằng này (lịch sự)",
       "accentNote": "Vừa chỉ hướng vừa thay cho ここ khi cần lịch sự."
     },
     {
@@ -62,6 +72,8 @@
       "romaji": "sochira",
       "wordType": "noun",
       "meaningVi": "Phía đó, đằng đó (lịch sự)",
+      "imageUrl": "assets/minh-hoa/phia-do.webp",
+      "imageAlt": "Phía đó, đằng đó (lịch sự)",
       "accentNote": "Dùng với khách, người trên."
     },
     {
@@ -72,6 +84,8 @@
       "romaji": "achira",
       "wordType": "noun",
       "meaningVi": "Phía kia, đằng kia (lịch sự)",
+      "imageUrl": "assets/minh-hoa/phia-kia.webp",
+      "imageAlt": "Phía kia, đằng kia (lịch sự)",
       "accentNote": "Nhân viên cửa hàng dùng suốt."
     },
     {
@@ -92,6 +106,8 @@
       "romaji": "kyoushitsu",
       "wordType": "noun",
       "meaningVi": "Phòng học, lớp học",
+      "imageUrl": "assets/minh-hoa/phong-hoc.webp",
+      "imageAlt": "Phòng học, lớp học",
       "accentNote": "教 (dạy) + 室 (phòng)."
     },
     {
@@ -102,6 +118,8 @@
       "romaji": "shokudou",
       "wordType": "noun",
       "meaningVi": "Nhà ăn, căng tin",
+      "imageUrl": "assets/minh-hoa/nha-an.webp",
+      "imageAlt": "Nhà ăn, căng tin",
       "accentNote": "食 (ăn) + 堂 (sảnh)."
     },
     {
@@ -112,6 +130,8 @@
       "romaji": "jimusho",
       "wordType": "noun",
       "meaningVi": "Văn phòng",
+      "imageUrl": "assets/minh-hoa/van-phong.webp",
+      "imageAlt": "Văn phòng",
       "accentNote": "Nơi làm giấy tờ, hành chính."
     },
     {
@@ -122,6 +142,8 @@
       "romaji": "kaigishitsu",
       "wordType": "noun",
       "meaningVi": "Phòng họp",
+      "imageUrl": "assets/minh-hoa/phong-hop.webp",
+      "imageAlt": "Phòng họp",
       "accentNote": "会議 = cuộc họp."
     },
     {
@@ -132,6 +154,8 @@
       "romaji": "uketsuke",
       "wordType": "noun",
       "meaningVi": "Quầy lễ tân, quầy tiếp đón",
+      "imageUrl": "assets/minh-hoa/quay-le-tan.webp",
+      "imageAlt": "Quầy lễ tân, quầy tiếp đón",
       "accentNote": "Vào tòa nhà Nhật là ghé 受付 trước."
     },
     {
@@ -142,6 +166,8 @@
       "romaji": "heya",
       "wordType": "noun",
       "meaningVi": "Căn phòng",
+      "imageUrl": "assets/minh-hoa/can-phong.webp",
+      "imageAlt": "Căn phòng",
       "accentNote": "Trọng âm rơi vào や."
     },
     {
@@ -152,6 +178,8 @@
       "romaji": "toire",
       "wordType": "noun",
       "meaningVi": "Nhà vệ sinh",
+      "imageUrl": "assets/minh-hoa/nha-ve-sinh.webp",
+      "imageAlt": "Nhà vệ sinh",
       "accentNote": "Lịch sự hơn: お手洗い (おてあらい)."
     },
     {
@@ -162,6 +190,8 @@
       "romaji": "kaidan",
       "wordType": "noun",
       "meaningVi": "Cầu thang bộ",
+      "imageUrl": "assets/minh-hoa/cau-thang.webp",
+      "imageAlt": "Cầu thang bộ",
       "accentNote": "階 (tầng) + 段 (bậc)."
     },
     {
@@ -172,6 +202,8 @@
       "romaji": "erebeetaa",
       "wordType": "noun",
       "meaningVi": "Thang máy",
+      "imageUrl": "assets/minh-hoa/thang-may.webp",
+      "imageAlt": "Thang máy",
       "accentNote": "Kéo dài cả ベー lẫn ター."
     },
     {
@@ -182,6 +214,8 @@
       "romaji": "esukareetaa",
       "wordType": "noun",
       "meaningVi": "Thang cuốn",
+      "imageUrl": "assets/minh-hoa/thang-cuon.webp",
+      "imageAlt": "Thang cuốn",
       "accentNote": "Osaka đứng bên phải, Tokyo đứng bên trái."
     },
     {
@@ -192,6 +226,8 @@
       "romaji": "kuni",
       "wordType": "noun",
       "meaningVi": "Đất nước, quê hương",
+      "imageUrl": "assets/minh-hoa/dat-nuoc.webp",
+      "imageAlt": "Đất nước, quê hương",
       "accentNote": "Hỏi lịch sự thì thêm お: お国."
     },
     {
@@ -202,6 +238,8 @@
       "romaji": "kaisha",
       "wordType": "noun",
       "meaningVi": "Công ty",
+      "imageUrl": "assets/minh-hoa/cong-ty.webp",
+      "imageAlt": "Công ty",
       "accentNote": "会 (hội) + 社 (xã)."
     },
     {
@@ -212,6 +250,8 @@
       "romaji": "uchi",
       "wordType": "noun",
       "meaningVi": "Nhà mình, nhà (của ai đó)",
+      "imageUrl": "assets/minh-hoa/nha.webp",
+      "imageAlt": "Nhà mình, nhà (của ai đó)",
       "accentNote": "うち còn nghĩa là 'phe mình, công ty mình'."
     },
     {
@@ -222,6 +262,8 @@
       "romaji": "denwa",
       "wordType": "noun",
       "meaningVi": "Điện thoại, cuộc gọi",
+      "imageUrl": "assets/minh-hoa/dien-thoai.webp",
+      "imageAlt": "Điện thoại, cuộc gọi",
       "accentNote": "電 (điện) + 話 (thoại)."
     },
     {
@@ -232,6 +274,8 @@
       "romaji": "kutsu",
       "wordType": "noun",
       "meaningVi": "Giày",
+      "imageUrl": "assets/minh-hoa/doi-giay.webp",
+      "imageAlt": "Giày",
       "accentNote": "Vào nhà Nhật là cởi giày ngay ở 玄関."
     },
     {
@@ -242,6 +286,8 @@
       "romaji": "nekutai",
       "wordType": "noun",
       "meaningVi": "Cà vạt",
+      "imageUrl": "assets/minh-hoa/ca-vat.webp",
+      "imageAlt": "Cà vạt",
       "accentNote": "Từ tiếng Anh necktie."
     },
     {
@@ -252,6 +298,8 @@
       "romaji": "wain",
       "wordType": "noun",
       "meaningVi": "Rượu vang",
+      "imageUrl": "assets/minh-hoa/ruou-vang.webp",
+      "imageAlt": "Rượu vang",
       "accentNote": "Đọc wa-in, hai nhịp."
     },
     {
@@ -262,6 +310,8 @@
       "romaji": "uriba",
       "wordType": "noun",
       "meaningVi": "Quầy bán hàng, khu bán ~",
+      "imageUrl": "assets/minh-hoa/quay-ban-hang.webp",
+      "imageAlt": "Quầy bán hàng, khu bán ~",
       "accentNote": "売る (bán) + 場 (chỗ)."
     },
     {
@@ -272,6 +322,8 @@
       "romaji": "chika",
       "wordType": "noun",
       "meaningVi": "Tầng hầm, dưới lòng đất",
+      "imageUrl": "assets/minh-hoa/tang-ham.webp",
+      "imageAlt": "Tầng hầm, dưới lòng đất",
       "accentNote": "地下一階 = tầng hầm 1."
     },
     {
@@ -282,6 +334,8 @@
       "romaji": "-kai",
       "wordType": "noun",
       "meaningVi": "Tầng thứ ~",
+      "imageUrl": "assets/minh-hoa/tang-lau.webp",
+      "imageAlt": "Tầng thứ ~",
       "accentNote": "1階 いっかい, 3階 さんがい, 6階 ろっかい."
     },
     {
@@ -302,6 +356,8 @@
       "romaji": "robii",
       "wordType": "noun",
       "meaningVi": "Sảnh lớn, hành lang tiếp khách",
+      "imageUrl": "assets/minh-hoa/sanh.webp",
+      "imageAlt": "Sảnh lớn, hành lang tiếp khách",
       "accentNote": "Sảnh khách sạn, tòa nhà văn phòng."
     },
     {
@@ -312,6 +368,8 @@
       "romaji": "Itaria",
       "wordType": "noun",
       "meaningVi": "Nước Ý",
+      "imageUrl": "assets/minh-hoa/nuoc-y.webp",
+      "imageAlt": "Nước Ý",
       "accentNote": "Danh từ riêng, viết Katakana."
     },
     {
@@ -322,6 +380,8 @@
       "romaji": "Suisu",
       "wordType": "noun",
       "meaningVi": "Thụy Sĩ",
+      "imageUrl": "assets/minh-hoa/thuy-si.webp",
+      "imageAlt": "Thụy Sĩ",
       "accentNote": "Nổi tiếng về đồng hồ — hay gặp trong bài này."
     },
     {
@@ -342,6 +402,8 @@
       "romaji": "-en",
       "wordType": "noun",
       "meaningVi": "~ yên (tiền Nhật)",
+      "imageUrl": "assets/minh-hoa/dong-yen.webp",
+      "imageAlt": "~ yên (tiền Nhật)",
       "accentNote": "Viết ký hiệu ¥ hoặc 円."
     },
     {
@@ -443,6 +505,8 @@
       "romaji": "otearai",
       "wordType": "noun",
       "meaningVi": "Nhà vệ sinh (cách nói lịch sự)",
+      "imageUrl": "assets/minh-hoa/nha-ve-sinh.webp",
+      "imageAlt": "Nhà vệ sinh (cách nói lịch sự)",
       "accentNote": "Nghĩa đen: chỗ rửa tay."
     },
     {
@@ -453,6 +517,8 @@
       "romaji": "tabako",
       "wordType": "noun",
       "meaningVi": "Thuốc lá",
+      "imageUrl": "assets/minh-hoa/thuoc-la.webp",
+      "imageAlt": "Thuốc lá",
       "accentNote": "たばこを 吸います = hút thuốc."
     }
   ],
@@ -1268,6 +1334,7 @@
       "id": "dia-n5-3-1",
       "speaker": "マリア",
       "speakerRole": "Khách mua hàng",
+      "avatarUrl": "assets/minh-hoa/nv-maria.webp",
       "tokens": [
         {
           "id": "d-l3-1",
@@ -1314,6 +1381,7 @@
       "id": "dia-n5-3-2",
       "speaker": "店員",
       "speakerRole": "Nhân viên cửa hàng",
+      "avatarUrl": "assets/minh-hoa/nv-tenin.webp",
       "tokens": [
         {
           "id": "d-l3-8",
@@ -1341,6 +1409,7 @@
       "id": "dia-n5-3-3",
       "speaker": "マリア",
       "speakerRole": "Khách mua hàng",
+      "avatarUrl": "assets/minh-hoa/nv-maria.webp",
       "tokens": [
         {
           "id": "d-l3-11",
@@ -1369,6 +1438,7 @@
       "id": "dia-n5-3-4",
       "speaker": "店員",
       "speakerRole": "Nhân viên cửa hàng",
+      "avatarUrl": "assets/minh-hoa/nv-tenin.webp",
       "tokens": [
         {
           "id": "d-l3-15",
@@ -1397,6 +1467,7 @@
       "id": "dia-n5-3-5",
       "speaker": "マリア",
       "speakerRole": "Khách mua hàng",
+      "avatarUrl": "assets/minh-hoa/nv-maria.webp",
       "tokens": [
         {
           "id": "d-l3-19",
@@ -1447,6 +1518,7 @@
       "id": "dia-n5-3-6",
       "speaker": "店員",
       "speakerRole": "Nhân viên cửa hàng",
+      "avatarUrl": "assets/minh-hoa/nv-tenin.webp",
       "tokens": [
         {
           "id": "d-l3-27",
@@ -1495,6 +1567,7 @@
       "id": "dia-n5-3-7",
       "speaker": "マリア",
       "speakerRole": "Khách mua hàng",
+      "avatarUrl": "assets/minh-hoa/nv-maria.webp",
       "tokens": [
         {
           "id": "d-l3-35",
@@ -1523,6 +1596,7 @@
       "id": "dia-n5-3-8",
       "speaker": "店員",
       "speakerRole": "Nhân viên cửa hàng",
+      "avatarUrl": "assets/minh-hoa/nv-tenin.webp",
       "tokens": [
         {
           "id": "d-l3-39",
@@ -1543,6 +1617,7 @@
       "id": "dia-n5-3-9",
       "speaker": "マリア",
       "speakerRole": "Khách mua hàng",
+      "avatarUrl": "assets/minh-hoa/nv-maria.webp",
       "tokens": [
         {
           "id": "d-l3-41",
@@ -1576,6 +1651,7 @@
       "id": "dia-n5-3-10",
       "speaker": "店員",
       "speakerRole": "Nhân viên cửa hàng",
+      "avatarUrl": "assets/minh-hoa/nv-tenin.webp",
       "tokens": [
         {
           "id": "d-l3-46",

@@ -3,6 +3,8 @@
   "lessonNumber": 6,
   "title": "Bài 6: Mục đích & Đối tượng (向けに & ために)",
   "description": "向けに/向けの nêu ĐỐI TƯỢNG cụ thể mà sản phẩm/dịch vụ/hành động nhắm tới (thường dùng trong marketing, sản xuất), có thể kết hợp với ため(に) (đã ôn từ N4 bài 42) để vừa nêu đối tượng vừa nêu mục đích; を対象に(して) là cách nói trang trọng hơn của 向け, dùng trong khảo sát/báo cáo.",
+  "sceneImageUrl": "assets/minh-hoa/canh-san-pham-cho-noi-tro.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 6: Mục đích & Đối tượng (向けに & ために)",
   "vocabList": [
     {
       "id": "voc-n3-6-1",
@@ -42,6 +44,8 @@
       "romaji": "shouhin",
       "wordType": "noun",
       "meaningVi": "Hàng hóa, sản phẩm thương mại",
+      "imageUrl": "assets/minh-hoa/product.webp",
+      "imageAlt": "Hàng hóa, sản phẩm thương mại",
       "accentNote": "新しい 商品 = sản phẩm mới."
     },
     {
@@ -52,6 +56,8 @@
       "romaji": "seihin",
       "wordType": "noun",
       "meaningVi": "Sản phẩm, hàng chế tạo",
+      "imageUrl": "assets/minh-hoa/manufactured-goods.webp",
+      "imageAlt": "Sản phẩm, hàng chế tạo",
       "accentNote": "日本の 製品 = sản phẩm của Nhật Bản."
     },
     {
@@ -62,6 +68,8 @@
       "romaji": "hanbai shimasu",
       "wordType": "verb",
       "meaningVi": "Bán hàng, kinh doanh bán",
+      "imageUrl": "assets/minh-hoa/sell.webp",
+      "imageAlt": "Bán hàng, kinh doanh bán",
       "accentNote": "海外で 販売します = bán ở nước ngoài."
     },
     {
@@ -72,6 +80,8 @@
       "romaji": "kigyou",
       "wordType": "noun",
       "meaningVi": "Doanh nghiệp, xí nghiệp",
+      "imageUrl": "assets/minh-hoa/enterprise.webp",
+      "imageAlt": "Doanh nghiệp, xí nghiệp",
       "accentNote": "大きい 企業 = doanh nghiệp lớn."
     },
     {
@@ -82,6 +92,8 @@
       "romaji": "koujou",
       "wordType": "noun",
       "meaningVi": "Nhà máy, xí nghiệp sản xuất",
+      "imageUrl": "assets/minh-hoa/factory-n3.webp",
+      "imageAlt": "Nhà máy, xí nghiệp sản xuất",
       "accentNote": "工場で 作ります = làm ở nhà máy."
     },
     {
@@ -92,6 +104,8 @@
       "romaji": "mokuteki",
       "wordType": "noun",
       "meaningVi": "Mục đích",
+      "imageUrl": "assets/minh-hoa/purpose.webp",
+      "imageAlt": "Mục đích",
       "accentNote": "販売の 目的 = mục đích bán hàng."
     },
     {
@@ -102,6 +116,8 @@
       "romaji": "saabisu",
       "wordType": "noun",
       "meaningVi": "Dịch vụ",
+      "imageUrl": "assets/minh-hoa/service.webp",
+      "imageAlt": "Dịch vụ",
       "accentNote": "子供向けの サービス = dịch vụ dành cho trẻ em."
     },
     {
@@ -112,6 +128,8 @@
       "romaji": "shufu",
       "wordType": "noun",
       "meaningVi": "Người nội trợ",
+      "imageUrl": "assets/minh-hoa/housewife.webp",
+      "imageAlt": "Người nội trợ",
       "accentNote": "主婦向けの 商品 = sản phẩm dành cho các bà nội trợ."
     },
     {
@@ -122,6 +140,8 @@
       "romaji": "kaigai",
       "wordType": "noun",
       "meaningVi": "Nước ngoài, hải ngoại",
+      "imageUrl": "assets/minh-hoa/overseas.webp",
+      "imageAlt": "Nước ngoài, hải ngoại",
       "accentNote": "海外向けに 販売します = bán hàng nhắm tới thị trường nước ngoài."
     },
     {
@@ -132,6 +152,8 @@
       "romaji": "kodomo",
       "wordType": "noun",
       "meaningVi": "Trẻ em",
+      "imageUrl": "assets/minh-hoa/child-n3.webp",
+      "imageAlt": "Trẻ em",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -142,6 +164,8 @@
       "romaji": "kaisha",
       "wordType": "noun",
       "meaningVi": "Công ty",
+      "imageUrl": "assets/minh-hoa/company-n3.webp",
+      "imageAlt": "Công ty",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -152,6 +176,8 @@
       "romaji": "wakai",
       "wordType": "adjective",
       "meaningVi": "Trẻ, còn trẻ tuổi",
+      "imageUrl": "assets/minh-hoa/young.webp",
+      "imageAlt": "Trẻ, còn trẻ tuổi",
       "accentNote": "Đã gặp N4 bài 33."
     },
     {
@@ -162,6 +188,8 @@
       "romaji": "hito",
       "wordType": "noun",
       "meaningVi": "Người",
+      "imageUrl": "assets/minh-hoa/person.webp",
+      "imageAlt": "Người",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -172,6 +200,8 @@
       "romaji": "tsukaimasu",
       "wordType": "verb",
       "meaningVi": "Sử dụng, dùng",
+      "imageUrl": "assets/minh-hoa/use-n3.webp",
+      "imageAlt": "Sử dụng, dùng",
       "accentNote": "Đã gặp N5 bài 6."
     },
     {
@@ -182,6 +212,8 @@
       "romaji": "tsukurimasu",
       "wordType": "verb",
       "meaningVi": "Làm, chế tạo",
+      "imageUrl": "assets/minh-hoa/make-n3.webp",
+      "imageAlt": "Làm, chế tạo",
       "accentNote": "Đã gặp N5 bài 6."
     },
     {
@@ -192,6 +224,8 @@
       "romaji": "atarashii",
       "wordType": "adjective",
       "meaningVi": "Mới",
+      "imageUrl": "assets/minh-hoa/new.webp",
+      "imageAlt": "Mới",
       "accentNote": "Đã gặp N5 bài 8."
     },
     {
@@ -202,6 +236,8 @@
       "romaji": "yasui",
       "wordType": "adjective",
       "meaningVi": "Rẻ",
+      "imageUrl": "assets/minh-hoa/cheap-n3.webp",
+      "imageAlt": "Rẻ",
       "accentNote": "Đã gặp N5 bài 8."
     }
   ],
@@ -795,6 +831,7 @@
       "id": "dia-n3-6-1",
       "speaker": "田中",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d6-1",
@@ -846,6 +883,7 @@
       "id": "dia-n3-6-2",
       "speaker": "サントス",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d6-8",
@@ -875,6 +913,7 @@
       "id": "dia-n3-6-3",
       "speaker": "田中",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d6-11",
@@ -907,6 +946,7 @@
       "id": "dia-n3-6-4",
       "speaker": "サントス",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d6-15",
@@ -968,6 +1008,7 @@
       "id": "dia-n3-6-5",
       "speaker": "田中",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d6-24",
@@ -1022,6 +1063,7 @@
       "id": "dia-n3-6-6",
       "speaker": "サントス",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d6-32",
@@ -1061,6 +1103,7 @@
       "id": "dia-n3-6-7",
       "speaker": "田中",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d6-37",
@@ -1127,6 +1170,7 @@
       "id": "dia-n3-6-8",
       "speaker": "サントス",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d6-47",
@@ -1181,6 +1225,7 @@
       "id": "dia-n3-6-9",
       "speaker": "田中",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d6-55",
@@ -1232,6 +1277,7 @@
       "id": "dia-n3-6-10",
       "speaker": "サントス",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d6-62",

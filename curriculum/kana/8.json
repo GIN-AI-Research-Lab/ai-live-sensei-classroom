@@ -56,6 +56,8 @@
       "romaji": "koohii",
       "wordType": "noun",
       "meaningVi": "Cà phê",
+      "imageUrl": "assets/minh-hoa/ca-phe.webp",
+      "imageAlt": "Cà phê",
       "accentNote": "4 nhịp コ-ー-ヒ-ー: hai dấu ー, mỗi dấu ngân thêm 1 nhịp.",
       "emotion": "vui"
     },
@@ -111,6 +113,8 @@
       "romaji": "kamera",
       "wordType": "noun",
       "meaningVi": "Máy ảnh (camera)",
+      "imageUrl": "assets/minh-hoa/may-anh.webp",
+      "imageAlt": "Máy ảnh (camera)",
       "accentNote": "3 nhịp カ-メ-ラ.",
       "emotion": "vui"
     },
@@ -122,6 +126,8 @@
       "romaji": "nooto",
       "wordType": "noun",
       "meaningVi": "Quyển vở (notebook)",
+      "imageUrl": "assets/minh-hoa/quyen-vo.webp",
+      "imageAlt": "Quyển vở (notebook)",
       "accentNote": "3 nhịp ノ-ー-ト; không đọc ngắn thành 'nốt'.",
       "emotion": "suy_nghi"
     },
@@ -177,6 +183,8 @@
       "romaji": "resutoran",
       "wordType": "noun",
       "meaningVi": "Nhà hàng (restaurant)",
+      "imageUrl": "assets/minh-hoa/nha-hang.webp",
+      "imageAlt": "Nhà hàng (restaurant)",
       "accentNote": "5 nhịp レ-ス-ト-ラ-ン.",
       "emotion": "vui"
     },
@@ -188,6 +196,8 @@
       "romaji": "toire",
       "wordType": "noun",
       "meaningVi": "Nhà vệ sinh (toilet)",
+      "imageUrl": "assets/minh-hoa/nha-ve-sinh.webp",
+      "imageAlt": "Nhà vệ sinh (toilet)",
       "accentNote": "3 nhịp ト-イ-レ.",
       "emotion": "xau_ho"
     },
@@ -199,6 +209,8 @@
       "romaji": "takushii",
       "wordType": "noun",
       "meaningVi": "Xe taxi",
+      "imageUrl": "assets/minh-hoa/taxi.webp",
+      "imageAlt": "Xe taxi",
       "accentNote": "4 nhịp タ-ク-シ-ー; ク đọc lướt nhẹ.",
       "emotion": "vui"
     },
@@ -1181,6 +1193,7 @@
       "id": "dia-kana-8-2",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l8-2a",
@@ -1244,6 +1257,7 @@
       "id": "dia-kana-8-4",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l8-4a",
@@ -1312,6 +1326,7 @@
       "id": "dia-kana-8-6",
       "speaker": "さとう (Satou)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-sato.webp",
       "tokens": [
         {
           "id": "d-kana-l8-6a",
@@ -1430,6 +1445,7 @@
       "id": "dia-kana-8-8",
       "speaker": "さとう (Satou)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-sato.webp",
       "tokens": [
         {
           "id": "d-kana-l8-8a",

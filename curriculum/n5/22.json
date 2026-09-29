@@ -3,6 +3,8 @@
   "lessonNumber": 22,
   "title": "Bài 22: Mệnh đề định ngữ bổ nghĩa cho Danh từ (連体修飾)",
   "description": "Ghép cả một câu ở thể thông thường làm định ngữ đứng trước danh từ chính (không cần trợ từ nối), chọn thì trong mệnh đề định ngữ độc lập với thì câu chính, quy tắc chủ ngữ が bên trong mệnh đề, và tính từ な vẫn giữ な khi bổ nghĩa trực tiếp cho danh từ dù trong mệnh đề phức.",
+  "sceneImageUrl": "assets/minh-hoa/canh-thay-giao-doi-mu.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 22: Mệnh đề định ngữ bổ nghĩa cho Danh từ (連体修飾)",
   "vocabList": [
     {
       "id": "voc-n5-22-1",
@@ -12,6 +14,8 @@
       "romaji": "kimasu",
       "wordType": "verb",
       "meaningVi": "Mặc (áo, đồ phía trên eo)",
+      "imageUrl": "assets/minh-hoa/mac-ao.webp",
+      "imageAlt": "Mặc (áo, đồ phía trên eo)",
       "accentNote": "Thể từ điển: 着る. Nhóm 2. 眼鏡をかける (đeo kính) dùng động từ khác."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "kakemasu",
       "wordType": "verb",
       "meaningVi": "Đeo (kính), treo",
+      "imageUrl": "assets/minh-hoa/deo-kinh.webp",
+      "imageAlt": "Đeo (kính), treo",
       "accentNote": "眼鏡を かけます = đeo kính. Nhóm 2."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "kaburimasu",
       "wordType": "verb",
       "meaningVi": "Đội (mũ, nón)",
+      "imageUrl": "assets/minh-hoa/doi-mu.webp",
+      "imageAlt": "Đội (mũ, nón)",
       "accentNote": "帽子を かぶります = đội mũ. Nhóm 1."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "tatemasu",
       "wordType": "verb",
       "meaningVi": "Xây dựng",
+      "imageUrl": "assets/minh-hoa/xay-dung.webp",
+      "imageAlt": "Xây dựng",
       "accentNote": "Nhóm 2. あの 建物を 建てました = đã xây tòa nhà đó."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "kakimasu",
       "wordType": "verb",
       "meaningVi": "Viết",
+      "imageUrl": "assets/minh-hoa/viet.webp",
+      "imageAlt": "Viết",
       "accentNote": "Đã gặp bài 6 — nay dùng làm mệnh đề định ngữ (sách do ai viết)."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "tsukurimasu",
       "wordType": "verb",
       "meaningVi": "Làm, chế tạo, nấu",
+      "imageUrl": "assets/minh-hoa/lam-che-tao.webp",
+      "imageAlt": "Làm, chế tạo, nấu",
       "accentNote": "Đã gặp bài 6 — nay dùng làm mệnh đề định ngữ (món ăn do ai nấu)."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "megane",
       "wordType": "noun",
       "meaningVi": "Kính mắt",
+      "imageUrl": "assets/minh-hoa/kinh-mat.webp",
+      "imageAlt": "Kính mắt",
       "accentNote": "眼鏡を かけている人 = người đang đeo kính."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "boushi",
       "wordType": "noun",
       "meaningVi": "Mũ, nón",
+      "imageUrl": "assets/minh-hoa/mu.webp",
+      "imageAlt": "Mũ, nón",
       "accentNote": "帽子を かぶっている人 = người đang đội mũ."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "fuku",
       "wordType": "noun",
       "meaningVi": "Quần áo",
+      "imageUrl": "assets/minh-hoa/quan-ao.webp",
+      "imageAlt": "Quần áo",
       "accentNote": "赤い 服を 着ている人 = người đang mặc đồ đỏ."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "youfuku",
       "wordType": "noun",
       "meaningVi": "Trang phục kiểu Tây",
+      "imageUrl": "assets/minh-hoa/do-tay.webp",
+      "imageAlt": "Trang phục kiểu Tây",
       "accentNote": "Phân biệt với 着物 (kimono, trang phục truyền thống)."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "tatemono",
       "wordType": "noun",
       "meaningVi": "Tòa nhà, công trình",
+      "imageUrl": "assets/minh-hoa/toa-nha.webp",
+      "imageAlt": "Tòa nhà, công trình",
       "accentNote": "あそこに ある 建物 = tòa nhà ở đằng kia."
     },
     {
@@ -122,6 +146,8 @@
       "romaji": "mise",
       "wordType": "noun",
       "meaningVi": "Cửa hàng",
+      "imageUrl": "assets/minh-hoa/cua-hang.webp",
+      "imageAlt": "Cửa hàng",
       "accentNote": "駅の 近くに ある 店 = cửa hàng gần ga."
     },
     {
@@ -132,6 +158,8 @@
       "romaji": "resutoran",
       "wordType": "noun",
       "meaningVi": "Nhà hàng",
+      "imageUrl": "assets/minh-hoa/nha-hang.webp",
+      "imageAlt": "Nhà hàng",
       "accentNote": "先週 行った レストラン = nhà hàng tuần trước đã đi."
     },
     {
@@ -142,6 +170,8 @@
       "romaji": "kissaten",
       "wordType": "noun",
       "meaningVi": "Quán cà phê kiểu cổ điển",
+      "imageUrl": "assets/minh-hoa/quan-ca-phe.webp",
+      "imageAlt": "Quán cà phê kiểu cổ điển",
       "accentNote": "Đã gặp bài 6."
     },
     {
@@ -152,6 +182,8 @@
       "romaji": "eiga",
       "wordType": "noun",
       "meaningVi": "Phim, điện ảnh",
+      "imageUrl": "assets/minh-hoa/phim.webp",
+      "imageAlt": "Phim, điện ảnh",
       "accentNote": "去年 見た 映画 = bộ phim đã xem năm ngoái."
     },
     {
@@ -162,6 +194,8 @@
       "romaji": "hito",
       "wordType": "noun",
       "meaningVi": "Người",
+      "imageUrl": "assets/minh-hoa/nguoi.webp",
+      "imageAlt": "Người",
       "accentNote": "あそこに いる 人 = người đang ở đằng kia."
     },
     {
@@ -172,6 +206,8 @@
       "romaji": "tsukue",
       "wordType": "noun",
       "meaningVi": "Cái bàn",
+      "imageUrl": "assets/minh-hoa/ban.webp",
+      "imageAlt": "Cái bàn",
       "accentNote": "Đã gặp bài 2 — nay dùng làm ví dụ mệnh đề định ngữ nơi chốn."
     },
     {
@@ -182,6 +218,8 @@
       "romaji": "isu",
       "wordType": "noun",
       "meaningVi": "Cái ghế",
+      "imageUrl": "assets/minh-hoa/ghe.webp",
+      "imageAlt": "Cái ghế",
       "accentNote": "Đã gặp bài 2."
     },
     {
@@ -192,6 +230,8 @@
       "romaji": "ongaku",
       "wordType": "noun",
       "meaningVi": "Âm nhạc",
+      "imageUrl": "assets/minh-hoa/am-nhac.webp",
+      "imageAlt": "Âm nhạc",
       "accentNote": "Đã gặp bài 6 — nay dùng làm nội dung sở thích trong định ngữ."
     },
     {
@@ -202,6 +242,8 @@
       "romaji": "shinsetsu",
       "wordType": "adjective",
       "meaningVi": "Tốt bụng, ân cần",
+      "imageUrl": "assets/minh-hoa/tot-bung.webp",
+      "imageAlt": "Tốt bụng, ân cần",
       "accentNote": "Đã gặp bài 16."
     }
   ],
@@ -814,6 +856,7 @@
       "id": "dia-n5-22-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l22-1",
@@ -875,6 +918,7 @@
       "id": "dia-n5-22-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l22-10",
@@ -919,6 +963,7 @@
       "id": "dia-n5-22-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l22-16",
@@ -961,6 +1006,7 @@
       "id": "dia-n5-22-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l22-22",
@@ -1042,6 +1088,7 @@
       "id": "dia-n5-22-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l22-35",
@@ -1112,6 +1159,7 @@
       "id": "dia-n5-22-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l22-46",
@@ -1173,6 +1221,7 @@
       "id": "dia-n5-22-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l22-55",
@@ -1250,6 +1299,7 @@
       "id": "dia-n5-22-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l22-67",
@@ -1282,6 +1332,7 @@
       "id": "dia-n5-22-9",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l22-71",
@@ -1348,6 +1399,7 @@
       "id": "dia-n5-22-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l22-81",

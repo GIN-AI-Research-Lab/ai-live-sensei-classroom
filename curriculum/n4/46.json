@@ -3,6 +3,8 @@
   "lessonNumber": 46,
   "title": "Bài 46: Thời điểm chính xác (V-ところ) & Vừa mới (〜たばかり)",
   "description": "Định vị chính xác GIAI ĐOẠN của một hành động: Vるところです (sắp làm), Vているところです (đang giữa chừng, nhấn mạnh hơn ています), V-たところです/たばかりです (vừa xong, たところ hẹp hơn về thời gian so với たばかり) — kết hợp với V-そう (bài 43) tạo thành trục thời gian đầy đủ quanh một hành động.",
+  "sceneImageUrl": "assets/minh-hoa/canh-goi-dien-luc-sap-ra-ngoai.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 46: Thời điểm chính xác (V-ところ) & Vừa mới (〜たばかり)",
   "vocabList": [
     {
       "id": "voc-n4-46-1",
@@ -12,6 +14,8 @@
       "romaji": "tabemasu",
       "wordType": "verb",
       "meaningVi": "Ăn",
+      "imageUrl": "assets/minh-hoa/eat.webp",
+      "imageAlt": "Ăn",
       "accentNote": "食べる ところです = sắp/đang ăn. Đã gặp N5 bài 6."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "dekakemasu",
       "wordType": "verb",
       "meaningVi": "Ra ngoài, đi ra",
+      "imageUrl": "assets/minh-hoa/go-out.webp",
+      "imageAlt": "Ra ngoài, đi ra",
       "accentNote": "出かける ところです = sắp ra ngoài. Đã gặp N5 bài 16."
     },
     {
@@ -42,6 +48,8 @@
       "romaji": "owarimasu",
       "wordType": "verb",
       "meaningVi": "Kết thúc, xong",
+      "imageUrl": "assets/minh-hoa/finish.webp",
+      "imageAlt": "Kết thúc, xong",
       "accentNote": "終わった ばかりです = vừa mới xong. Đã gặp N5 bài 4."
     },
     {
@@ -52,6 +60,8 @@
       "romaji": "kimasu",
       "wordType": "verb",
       "meaningVi": "Đến",
+      "imageUrl": "assets/minh-hoa/come.webp",
+      "imageAlt": "Đến",
       "accentNote": "来た ばかりです = vừa mới đến. Đã gặp N5 bài 5."
     },
     {
@@ -62,6 +72,8 @@
       "romaji": "kaerimasu",
       "wordType": "verb",
       "meaningVi": "Về nhà",
+      "imageUrl": "assets/minh-hoa/go-home.webp",
+      "imageAlt": "Về nhà",
       "accentNote": "帰った ばかりです = vừa mới về. Đã gặp N5 bài 5."
     },
     {
@@ -72,6 +84,8 @@
       "romaji": "tsukimasu",
       "wordType": "verb",
       "meaningVi": "Đến nơi, tới nơi",
+      "imageUrl": "assets/minh-hoa/arrive.webp",
+      "imageAlt": "Đến nơi, tới nơi",
       "accentNote": "駅に 着いた ところです = vừa mới tới ga."
     },
     {
@@ -82,6 +96,8 @@
       "romaji": "okimasu",
       "wordType": "verb",
       "meaningVi": "Thức dậy",
+      "imageUrl": "assets/minh-hoa/wake-up.webp",
+      "imageAlt": "Thức dậy",
       "accentNote": "起きた ばかりです = vừa mới thức dậy. Đã gặp N5 bài 4."
     },
     {
@@ -92,6 +108,8 @@
       "romaji": "benkyou shimasu",
       "wordType": "verb",
       "meaningVi": "Học, học tập",
+      "imageUrl": "assets/minh-hoa/study.webp",
+      "imageAlt": "Học, học tập",
       "accentNote": "勉強している ところです = đang trong lúc học bài."
     },
     {
@@ -102,6 +120,8 @@
       "romaji": "denwa shimasu",
       "wordType": "verb",
       "meaningVi": "Gọi điện thoại",
+      "imageUrl": "assets/minh-hoa/phone-call.webp",
+      "imageAlt": "Gọi điện thoại",
       "accentNote": "電話している ところです = đang trong lúc gọi điện."
     },
     {
@@ -132,6 +152,8 @@
       "romaji": "eki",
       "wordType": "noun",
       "meaningVi": "Nhà ga",
+      "imageUrl": "assets/minh-hoa/station.webp",
+      "imageAlt": "Nhà ga",
       "accentNote": "Đã gặp N5 bài 5."
     },
     {
@@ -142,6 +164,8 @@
       "romaji": "kaigi",
       "wordType": "noun",
       "meaningVi": "Cuộc họp",
+      "imageUrl": "assets/minh-hoa/meeting.webp",
+      "imageAlt": "Cuộc họp",
       "accentNote": "Đã gặp N5 bài 7."
     },
     {
@@ -152,6 +176,8 @@
       "romaji": "jugyou",
       "wordType": "noun",
       "meaningVi": "Buổi học, tiết học",
+      "imageUrl": "assets/minh-hoa/class-lesson.webp",
+      "imageAlt": "Buổi học, tiết học",
       "accentNote": "Đã gặp bài 34."
     },
     {
@@ -162,6 +188,8 @@
       "romaji": "shigoto",
       "wordType": "noun",
       "meaningVi": "Công việc",
+      "imageUrl": "assets/minh-hoa/work-job.webp",
+      "imageAlt": "Công việc",
       "accentNote": "Đã gặp N5 bài 9."
     },
     {
@@ -172,6 +200,8 @@
       "romaji": "eiga",
       "wordType": "noun",
       "meaningVi": "Phim, điện ảnh",
+      "imageUrl": "assets/minh-hoa/movie.webp",
+      "imageAlt": "Phim, điện ảnh",
       "accentNote": "Đã gặp N5 bài 6."
     },
     {
@@ -182,6 +212,8 @@
       "romaji": "shashin",
       "wordType": "noun",
       "meaningVi": "Bức ảnh",
+      "imageUrl": "assets/minh-hoa/photo.webp",
+      "imageAlt": "Bức ảnh",
       "accentNote": "Đã gặp N5 bài 6."
     },
     {
@@ -192,6 +224,8 @@
       "romaji": "densha",
       "wordType": "noun",
       "meaningVi": "Tàu điện",
+      "imageUrl": "assets/minh-hoa/train.webp",
+      "imageAlt": "Tàu điện",
       "accentNote": "Đã gặp N5 bài 5."
     },
     {
@@ -202,6 +236,8 @@
       "romaji": "tanjoubi",
       "wordType": "noun",
       "meaningVi": "Sinh nhật",
+      "imageUrl": "assets/minh-hoa/birthday.webp",
+      "imageAlt": "Sinh nhật",
       "accentNote": "Đã gặp N5 bài 5."
     }
   ],
@@ -699,6 +735,7 @@
       "id": "dia-n4-46-1",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l46-1",
@@ -741,6 +778,7 @@
       "id": "dia-n4-46-2",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l46-7",
@@ -789,6 +827,7 @@
       "id": "dia-n4-46-3",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l46-14",
@@ -836,6 +875,7 @@
       "id": "dia-n4-46-4",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l46-21",
@@ -898,6 +938,7 @@
       "id": "dia-n4-46-5",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l46-31",
@@ -930,6 +971,7 @@
       "id": "dia-n4-46-6",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l46-35",
@@ -956,6 +998,7 @@
       "id": "dia-n4-46-7",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l46-38",
@@ -969,6 +1012,7 @@
       "id": "dia-n4-46-8",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l46-39",
@@ -1004,6 +1048,7 @@
       "id": "dia-n4-46-9",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l46-44",
@@ -1048,6 +1093,7 @@
       "id": "dia-n4-46-10",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l46-50",

@@ -3,6 +3,8 @@
   "lessonNumber": 5,
   "title": "Bài 5: Tỉ lệ thuận & Càng ngày càng (にしたがって & につれて & 一方だ)",
   "description": "にしたがって diễn tả sự thay đổi tỉ lệ thuận CÓ TÍNH QUY LUẬT, và còn mang thêm nghĩa 'TUÂN THEO' quy tắc/mệnh lệnh; につれて hẹp nghĩa hơn, CHỈ mô tả sự thay đổi SONG SONG TỰ NHIÊN (không có nghĩa tuân theo); kết hợp với 一方だ (ôn N3 bài 14) để nhấn mạnh xu hướng thay đổi dài hạn, liên tục.",
+  "sceneImageUrl": "assets/minh-hoa/canh-gio-manh-dan-khi-bao-den.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 5: Tỉ lệ thuận & Càng ngày càng (にしたがって & につれて & 一方だ)",
   "vocabList": [
     {
       "id": "voc-n2-5-1",
@@ -12,6 +14,8 @@
       "romaji": "kyouka shimasu",
       "wordType": "verb",
       "meaningVi": "Tăng cường",
+      "imageUrl": "assets/minh-hoa/tang-cuong.webp",
+      "imageAlt": "Tăng cường",
       "accentNote": "きそくを 強化します = tăng cường quy tắc."
     },
     {
@@ -32,6 +36,8 @@
       "romaji": "jishin",
       "wordType": "noun",
       "meaningVi": "Sự tự tin",
+      "imageUrl": "assets/minh-hoa/tu-tin.webp",
+      "imageAlt": "Sự tự tin",
       "accentNote": "自信が つきます = có được sự tự tin."
     },
     {
@@ -42,6 +48,8 @@
       "romaji": "nenrei",
       "wordType": "noun",
       "meaningVi": "Độ tuổi",
+      "imageUrl": "assets/minh-hoa/do-tuoi.webp",
+      "imageAlt": "Độ tuổi",
       "accentNote": "年齢が あがるに したがって = theo độ tuổi tăng lên."
     },
     {
@@ -52,6 +60,8 @@
       "romaji": "kawarimasu",
       "wordType": "verb",
       "meaningVi": "Thay đổi",
+      "imageUrl": "assets/minh-hoa/thay-doi.webp",
+      "imageAlt": "Thay đổi",
       "accentNote": "きせつが かわります = mùa thay đổi."
     },
     {
@@ -62,6 +72,8 @@
       "romaji": "tachimasu",
       "wordType": "verb",
       "meaningVi": "Trôi qua (thời gian)",
+      "imageUrl": "assets/minh-hoa/thoi-gian-troi-qua.webp",
+      "imageAlt": "Trôi qua (thời gian)",
       "accentNote": "じかんが たちます = thời gian trôi qua."
     },
     {
@@ -72,6 +84,8 @@
       "romaji": "tsuyoi",
       "wordType": "adjective",
       "meaningVi": "Mạnh",
+      "imageUrl": "assets/minh-hoa/manh.webp",
+      "imageAlt": "Mạnh",
       "accentNote": "かぜが つよく なります = gió trở nên mạnh."
     },
     {
@@ -82,6 +96,8 @@
       "romaji": "chikazukimasu",
       "wordType": "verb",
       "meaningVi": "Đến gần",
+      "imageUrl": "assets/minh-hoa/den-gan.webp",
+      "imageAlt": "Đến gần",
       "accentNote": "たいふうが ちかづきます = bão đến gần."
     },
     {
@@ -102,6 +118,8 @@
       "romaji": "kisetsu",
       "wordType": "noun",
       "meaningVi": "Mùa",
+      "imageUrl": "assets/minh-hoa/mua.webp",
+      "imageAlt": "Mùa",
       "accentNote": "Đã gặp N5 bài 25."
     },
     {
@@ -112,6 +130,8 @@
       "romaji": "kion",
       "wordType": "noun",
       "meaningVi": "Nhiệt độ",
+      "imageUrl": "assets/minh-hoa/nhiet-do.webp",
+      "imageAlt": "Nhiệt độ",
       "accentNote": "Đã gặp N3 bài 5."
     },
     {
@@ -122,6 +142,8 @@
       "romaji": "toshi",
       "wordType": "noun",
       "meaningVi": "Năm, tuổi",
+      "imageUrl": "assets/minh-hoa/nam-tuoi.webp",
+      "imageAlt": "Năm, tuổi",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -142,6 +164,8 @@
       "romaji": "jouzu",
       "wordType": "adjective",
       "meaningVi": "Giỏi",
+      "imageUrl": "assets/minh-hoa/gioi-n2n1.webp",
+      "imageAlt": "Giỏi",
       "accentNote": "Đã gặp N4 bài 26.",
       "emotion": "vui"
     },
@@ -153,6 +177,8 @@
       "romaji": "jikan",
       "wordType": "noun",
       "meaningVi": "Thời gian",
+      "imageUrl": "assets/minh-hoa/thoi-gian.webp",
+      "imageAlt": "Thời gian",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -163,6 +189,8 @@
       "romaji": "kaze",
       "wordType": "noun",
       "meaningVi": "Gió",
+      "imageUrl": "assets/minh-hoa/gio.webp",
+      "imageAlt": "Gió",
       "accentNote": "Đã gặp N4 bài 34."
     },
     {
@@ -173,6 +201,8 @@
       "romaji": "taifuu",
       "wordType": "noun",
       "meaningVi": "Bão",
+      "imageUrl": "assets/minh-hoa/bao.webp",
+      "imageAlt": "Bão",
       "accentNote": "Đã gặp N4 bài 34."
     },
     {
@@ -183,6 +213,8 @@
       "romaji": "kisoku",
       "wordType": "noun",
       "meaningVi": "Quy tắc",
+      "imageUrl": "assets/minh-hoa/quy-tac.webp",
+      "imageAlt": "Quy tắc",
       "accentNote": "Đã gặp N4 bài 33."
     },
     {
@@ -193,6 +225,8 @@
       "romaji": "shitagaimasu",
       "wordType": "verb",
       "meaningVi": "Tuân theo",
+      "imageUrl": "assets/minh-hoa/tuan-theo.webp",
+      "imageAlt": "Tuân theo",
       "accentNote": "Đã gặp N3 bài 19."
     },
     {
@@ -203,6 +237,8 @@
       "romaji": "wasuremasu",
       "wordType": "verb",
       "meaningVi": "Quên",
+      "imageUrl": "assets/minh-hoa/quen-n2n1.webp",
+      "imageAlt": "Quên",
       "accentNote": "Đã gặp N4 bài 38."
     }
   ],
@@ -863,6 +899,7 @@
       "id": "dia-n2-5-1",
       "speaker": "田中",
       "speakerRole": "Bạn học tiếng Nhật",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d5-1",
@@ -908,6 +945,7 @@
       "id": "dia-n2-5-2",
       "speaker": "サントス",
       "speakerRole": "Bạn học tiếng Nhật",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d5-7",
@@ -979,6 +1017,7 @@
       "id": "dia-n2-5-3",
       "speaker": "田中",
       "speakerRole": "Bạn học tiếng Nhật",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d5-18",
@@ -1050,6 +1089,7 @@
       "id": "dia-n2-5-4",
       "speaker": "サントス",
       "speakerRole": "Bạn học tiếng Nhật",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d5-29",
@@ -1111,6 +1151,7 @@
       "id": "dia-n2-5-5",
       "speaker": "田中",
       "speakerRole": "Bạn học tiếng Nhật",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d5-38",
@@ -1139,6 +1180,7 @@
       "id": "dia-n2-5-6",
       "speaker": "サントス",
       "speakerRole": "Bạn học tiếng Nhật",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d5-41",
@@ -1209,6 +1251,7 @@
       "id": "dia-n2-5-7",
       "speaker": "田中",
       "speakerRole": "Bạn học tiếng Nhật",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d5-51",
@@ -1277,6 +1320,7 @@
       "id": "dia-n2-5-8",
       "speaker": "サントス",
       "speakerRole": "Bạn học tiếng Nhật",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d5-61",
@@ -1316,6 +1360,7 @@
       "id": "dia-n2-5-9",
       "speaker": "田中",
       "speakerRole": "Bạn học tiếng Nhật",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d5-66",
@@ -1362,6 +1407,7 @@
       "id": "dia-n2-5-10",
       "speaker": "サントス",
       "speakerRole": "Bạn học tiếng Nhật",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d5-72",

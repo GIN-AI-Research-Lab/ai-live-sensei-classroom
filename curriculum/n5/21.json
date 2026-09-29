@@ -3,6 +3,8 @@
   "lessonNumber": 21,
   "title": "Bài 21: Ý kiến, Phán đoán & Trích dẫn (〜と思います / 〜と言いました / でしょう)",
   "description": "Nêu ý kiến cá nhân bằng [thể thông thường]と思います, trích dẫn lời người khác bằng [thể thông thường]と言いました, phán đoán không chắc chắn bằng でしょう (kèm たぶん/きっと), và so sánh sắc thái giữa 思います (ý kiến tức thời), 考えます (cân nhắc kỹ) và でしょう (phán đoán khách quan hơn).",
+  "sceneImageUrl": "assets/minh-hoa/canh-bao-sap-toi.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 21: Ý kiến, Phán đoán & Trích dẫn (〜と思います / 〜と言いました / でしょう)",
   "vocabList": [
     {
       "id": "voc-n5-21-1",
@@ -12,6 +14,8 @@
       "romaji": "omoimasu",
       "wordType": "verb",
       "meaningVi": "Nghĩ rằng, cho rằng",
+      "imageUrl": "assets/minh-hoa/nghi-rang.webp",
+      "imageAlt": "Nghĩ rằng, cho rằng",
       "accentNote": "と思います đứng sau cả câu (thể thông thường) để nêu ý kiến.",
       "emotion": "suy_nghi"
     },
@@ -23,6 +27,8 @@
       "romaji": "iimasu",
       "wordType": "verb",
       "meaningVi": "Nói",
+      "imageUrl": "assets/minh-hoa/noi.webp",
+      "imageAlt": "Nói",
       "accentNote": "と言いました để trích dẫn lời ai đó."
     },
     {
@@ -33,6 +39,8 @@
       "romaji": "kangaemasu",
       "wordType": "verb",
       "meaningVi": "Suy nghĩ, cân nhắc",
+      "imageUrl": "assets/minh-hoa/suy-nghi.webp",
+      "imageAlt": "Suy nghĩ, cân nhắc",
       "accentNote": "Khác 思います (ý kiến tức thời) — 考えます nhấn mạnh QUÁ TRÌNH suy nghĩ kỹ.",
       "emotion": "suy_nghi"
     },
@@ -44,6 +52,8 @@
       "romaji": "tenki",
       "wordType": "noun",
       "meaningVi": "Thời tiết",
+      "imageUrl": "assets/minh-hoa/thoi-tiet.webp",
+      "imageAlt": "Thời tiết",
       "accentNote": "天気予報 = dự báo thời tiết."
     },
     {
@@ -54,6 +64,8 @@
       "romaji": "ame",
       "wordType": "noun",
       "meaningVi": "Mưa",
+      "imageUrl": "assets/minh-hoa/mua-roi.webp",
+      "imageAlt": "Mưa",
       "accentNote": "雨が 降ります = trời mưa."
     },
     {
@@ -64,6 +76,8 @@
       "romaji": "yuki",
       "wordType": "noun",
       "meaningVi": "Tuyết",
+      "imageUrl": "assets/minh-hoa/tuyet.webp",
+      "imageAlt": "Tuyết",
       "accentNote": "雪が 降ります = trời có tuyết rơi."
     },
     {
@@ -74,6 +88,8 @@
       "romaji": "taifuu",
       "wordType": "noun",
       "meaningVi": "Bão (bão nhiệt đới)",
+      "imageUrl": "assets/minh-hoa/bao-to.webp",
+      "imageAlt": "Bão (bão nhiệt đới)",
       "accentNote": "台風が 来ます = bão sắp tới."
     },
     {
@@ -84,6 +100,8 @@
       "romaji": "nyuusu",
       "wordType": "noun",
       "meaningVi": "Tin tức",
+      "imageUrl": "assets/minh-hoa/tin-tuc.webp",
+      "imageAlt": "Tin tức",
       "accentNote": "ニュースで 聞きました = tôi đã nghe được từ tin tức."
     },
     {
@@ -94,6 +112,8 @@
       "romaji": "shinbun",
       "wordType": "noun",
       "meaningVi": "Báo, tờ báo",
+      "imageUrl": "assets/minh-hoa/to-bao.webp",
+      "imageAlt": "Báo, tờ báo",
       "accentNote": "Đã gặp bài 2 — nay dùng làm nguồn trích dẫn."
     },
     {
@@ -104,6 +124,8 @@
       "romaji": "taisetsu",
       "wordType": "adjective",
       "meaningVi": "Quan trọng, quý giá",
+      "imageUrl": "assets/minh-hoa/quan-trong.webp",
+      "imageAlt": "Quan trọng, quý giá",
       "accentNote": "Tính từ な."
     },
     {
@@ -114,6 +136,8 @@
       "romaji": "taihen",
       "wordType": "adjective",
       "meaningVi": "Vất vả, ghê gớm (cả nghĩa xấu và mức độ mạnh)",
+      "imageUrl": "assets/minh-hoa/vat-va.webp",
+      "imageAlt": "Vất vả, ghê gớm (cả nghĩa xấu và mức độ mạnh)",
       "accentNote": "Tính từ な. Cũng dùng làm cảm thán: 大変だ = gay rồi!"
     },
     {
@@ -124,6 +148,8 @@
       "romaji": "benri",
       "wordType": "adjective",
       "meaningVi": "Tiện lợi",
+      "imageUrl": "assets/minh-hoa/tien-loi.webp",
+      "imageAlt": "Tiện lợi",
       "accentNote": "Đã gặp bài 8."
     },
     {
@@ -185,6 +211,8 @@
       "romaji": "sensei",
       "wordType": "noun",
       "meaningVi": "Thầy/cô giáo",
+      "imageUrl": "assets/minh-hoa/giao-vien.webp",
+      "imageAlt": "Thầy/cô giáo",
       "accentNote": "Đã gặp bài 1 — nay dùng làm chủ thể của lời trích dẫn."
     },
     {
@@ -195,6 +223,8 @@
       "romaji": "gaikokujin",
       "wordType": "noun",
       "meaningVi": "Người nước ngoài",
+      "imageUrl": "assets/minh-hoa/nguoi-nuoc-ngoai.webp",
+      "imageAlt": "Người nước ngoài",
       "accentNote": "Đã gặp bài 1 — nay dùng làm chủ đề ý kiến."
     },
     {
@@ -205,6 +235,8 @@
       "romaji": "muzukashii",
       "wordType": "adjective",
       "meaningVi": "Khó",
+      "imageUrl": "assets/minh-hoa/kho.webp",
+      "imageAlt": "Khó",
       "accentNote": "Đã gặp bài 8 — nay dùng làm nội dung ý kiến/trích dẫn."
     }
   ],
@@ -778,6 +810,7 @@
       "id": "dia-n5-21-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l21-1",
@@ -821,6 +854,7 @@
       "id": "dia-n5-21-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l21-7",
@@ -894,6 +928,7 @@
       "id": "dia-n5-21-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l21-18",
@@ -937,6 +972,7 @@
       "id": "dia-n5-21-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l21-24",
@@ -1008,6 +1044,7 @@
       "id": "dia-n5-21-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l21-35",
@@ -1060,6 +1097,7 @@
       "id": "dia-n5-21-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l21-43",
@@ -1124,6 +1162,7 @@
       "id": "dia-n5-21-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l21-53",
@@ -1198,6 +1237,7 @@
       "id": "dia-n5-21-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l21-65",
@@ -1240,6 +1280,7 @@
       "id": "dia-n5-21-9",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l21-71",
@@ -1320,6 +1361,7 @@
       "id": "dia-n5-21-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l21-83",

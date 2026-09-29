@@ -3,6 +3,8 @@
   "lessonNumber": 48,
   "title": "Bài 48: Thể sai khiến (使役形: V-させる)",
   "description": "Chia thể sai khiến (nhóm 1: う→あ+せる giống thể bị động bài 37 về âm, nhóm 2: bỏ る+させる, する→させる, 来る→来させる), hai sắc thái BẮT BUỘC/CHO PHÉP tùy ngữ cảnh, cách xin phép khiêm nhường bằng Vさせてください (lịch sự hơn Vたいです), và so sánh vai trò chủ ngữ đối lập giữa sai khiến (chủ động điều khiển) và bị động (chịu tác động, bài 37).",
+  "sceneImageUrl": "assets/minh-hoa/canh-bat-con-an-rau.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 48: Thể sai khiến (使役形: V-させる)",
   "vocabList": [
     {
       "id": "voc-n4-48-1",
@@ -12,6 +14,8 @@
       "romaji": "ikasemasu",
       "wordType": "verb",
       "meaningVi": "Bắt/cho đi (thể sai khiến của 行きます)",
+      "imageUrl": "assets/minh-hoa/make-go.webp",
+      "imageAlt": "Bắt/cho đi (thể sai khiến của 行きます)",
       "accentNote": "行く (nhóm 1) → 行かせる: đổi đuôi う→あ, thêm せる."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "tabesasemasu",
       "wordType": "verb",
       "meaningVi": "Bắt/cho ăn (thể sai khiến của 食べます)",
+      "imageUrl": "assets/minh-hoa/make-eat.webp",
+      "imageAlt": "Bắt/cho ăn (thể sai khiến của 食べます)",
       "accentNote": "食べる (nhóm 2) → 食べさせる: bỏ る, thêm させる."
     },
     {
@@ -42,6 +48,8 @@
       "romaji": "kosasemasu",
       "wordType": "verb",
       "meaningVi": "Bắt/cho đến (thể sai khiến của 来ます)",
+      "imageUrl": "assets/minh-hoa/make-come.webp",
+      "imageAlt": "Bắt/cho đến (thể sai khiến của 来ます)",
       "accentNote": "来る → 来させる (bất quy tắc, đọc こさせる)."
     },
     {
@@ -52,6 +60,8 @@
       "romaji": "tetsudawasemasu",
       "wordType": "verb",
       "meaningVi": "Bắt/cho giúp đỡ",
+      "imageUrl": "assets/minh-hoa/make-help.webp",
+      "imageAlt": "Bắt/cho giúp đỡ",
       "accentNote": "手伝う → 手伝わせる."
     },
     {
@@ -62,6 +72,8 @@
       "romaji": "katazukesasemasu",
       "wordType": "verb",
       "meaningVi": "Bắt/cho dọn dẹp",
+      "imageUrl": "assets/minh-hoa/make-tidy.webp",
+      "imageAlt": "Bắt/cho dọn dẹp",
       "accentNote": "片付ける → 片付けさせる."
     },
     {
@@ -72,6 +84,8 @@
       "romaji": "yasumasemasu",
       "wordType": "verb",
       "meaningVi": "Cho phép nghỉ (thể sai khiến của 休みます)",
+      "imageUrl": "assets/minh-hoa/let-rest.webp",
+      "imageAlt": "Cho phép nghỉ (thể sai khiến của 休みます)",
       "accentNote": "休む → 休ませる. Đã gặp N5 bài 4 (休みます)."
     },
     {
@@ -82,6 +96,8 @@
       "romaji": "benkyou sasemasu",
       "wordType": "verb",
       "meaningVi": "Bắt/cho học",
+      "imageUrl": "assets/minh-hoa/make-study.webp",
+      "imageAlt": "Bắt/cho học",
       "accentNote": "勉強する → 勉強させる."
     },
     {
@@ -92,6 +108,8 @@
       "romaji": "undou sasemasu",
       "wordType": "verb",
       "meaningVi": "Bắt/cho tập thể dục",
+      "imageUrl": "assets/minh-hoa/make-exercise.webp",
+      "imageAlt": "Bắt/cho tập thể dục",
       "accentNote": "運動する → 運動させる. Đã gặp bài 27."
     },
     {
@@ -102,6 +120,8 @@
       "romaji": "kodomo",
       "wordType": "noun",
       "meaningVi": "Trẻ con, con cái",
+      "imageUrl": "assets/minh-hoa/child.webp",
+      "imageAlt": "Trẻ con, con cái",
       "accentNote": "子供に 野菜を 食べさせます = cho/bắt con ăn rau."
     },
     {
@@ -112,6 +132,8 @@
       "romaji": "oya",
       "wordType": "noun",
       "meaningVi": "Cha mẹ, bố mẹ",
+      "imageUrl": "assets/minh-hoa/parents.webp",
+      "imageAlt": "Cha mẹ, bố mẹ",
       "accentNote": "親は 子供に 勉強させます = cha mẹ bắt con học."
     },
     {
@@ -122,6 +144,8 @@
       "romaji": "sensei",
       "wordType": "noun",
       "meaningVi": "Thầy/cô giáo",
+      "imageUrl": "assets/minh-hoa/teacher.webp",
+      "imageAlt": "Thầy/cô giáo",
       "accentNote": "先生は 学生に 本を 読ませます = thầy giáo cho học sinh đọc sách."
     },
     {
@@ -132,6 +156,8 @@
       "romaji": "gakusei",
       "wordType": "noun",
       "meaningVi": "Học sinh, sinh viên",
+      "imageUrl": "assets/minh-hoa/student.webp",
+      "imageAlt": "Học sinh, sinh viên",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -142,6 +168,8 @@
       "romaji": "yasai",
       "wordType": "noun",
       "meaningVi": "Rau",
+      "imageUrl": "assets/minh-hoa/vegetables.webp",
+      "imageAlt": "Rau",
       "accentNote": "Đã gặp N5 bài 6."
     },
     {
@@ -152,6 +180,8 @@
       "romaji": "shachou",
       "wordType": "noun",
       "meaningVi": "Giám đốc công ty",
+      "imageUrl": "assets/minh-hoa/company-president.webp",
+      "imageAlt": "Giám đốc công ty",
       "accentNote": "Đã gặp bài 41. 社長は 社員を 休ませました = giám đốc cho nhân viên nghỉ."
     },
     {
@@ -162,6 +192,8 @@
       "romaji": "shain",
       "wordType": "noun",
       "meaningVi": "Nhân viên công ty",
+      "imageUrl": "assets/minh-hoa/company-employee.webp",
+      "imageAlt": "Nhân viên công ty",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -172,6 +204,8 @@
       "romaji": "byouki",
       "wordType": "noun",
       "meaningVi": "Bệnh, ốm",
+      "imageUrl": "assets/minh-hoa/sick.webp",
+      "imageAlt": "Bệnh, ốm",
       "accentNote": "Đã gặp bài 17 (N5)."
     },
     {
@@ -182,6 +216,8 @@
       "romaji": "shukudai",
       "wordType": "noun",
       "meaningVi": "Bài tập về nhà",
+      "imageUrl": "assets/minh-hoa/homework.webp",
+      "imageAlt": "Bài tập về nhà",
       "accentNote": "Đã gặp N5 bài 7."
     },
     {
@@ -192,6 +228,8 @@
       "romaji": "heya",
       "wordType": "noun",
       "meaningVi": "Căn phòng",
+      "imageUrl": "assets/minh-hoa/room.webp",
+      "imageAlt": "Căn phòng",
       "accentNote": "Đã gặp N5 bài 3."
     },
     {
@@ -710,6 +748,7 @@
       "id": "dia-n4-48-1",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l48-1",
@@ -764,6 +803,7 @@
       "id": "dia-n4-48-2",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l48-9",
@@ -857,6 +897,7 @@
       "id": "dia-n4-48-3",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l48-24",
@@ -906,6 +947,7 @@
       "id": "dia-n4-48-4",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l48-31",
@@ -950,6 +992,7 @@
       "id": "dia-n4-48-5",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l48-37",
@@ -1018,6 +1061,7 @@
       "id": "dia-n4-48-6",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l48-48",
@@ -1065,6 +1109,7 @@
       "id": "dia-n4-48-7",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l48-55",
@@ -1127,6 +1172,7 @@
       "id": "dia-n4-48-8",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l48-64",
@@ -1174,6 +1220,7 @@
       "id": "dia-n4-48-9",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l48-71",
@@ -1233,6 +1280,7 @@
       "id": "dia-n4-48-10",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l48-80",

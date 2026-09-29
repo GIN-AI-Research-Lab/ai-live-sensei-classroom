@@ -3,6 +3,8 @@
   "lessonNumber": 20,
   "title": "Bài 20: Thể thông thường / Thể ngắn (Plain Form)",
   "description": "Tổng kết thể thông thường (普通形) dùng trong giao tiếp thân mật: bốn dạng chia của động từ (đã học ở bài 17-19), tính từ い giữ nguyên còn tính từ な/danh từ đổi です thành だ, và cặp từ xưng hô gia đình khiêm tốn (父/母/兄/姉, nói về nhà mình) đối lập tôn kính (お父さん/お母さん/お兄さん/お姉さん, nói về nhà người khác).",
+  "sceneImageUrl": "assets/minh-hoa/canh-xem-anh-gia-dinh.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 20: Thể thông thường / Thể ngắn (Plain Form)",
   "vocabList": [
     {
       "id": "voc-n5-20-1",
@@ -12,6 +14,8 @@
       "romaji": "taberu",
       "wordType": "verb",
       "meaningVi": "Ăn (thể thông thường của 食べます)",
+      "imageUrl": "assets/minh-hoa/an.webp",
+      "imageAlt": "Ăn (thể thông thường của 食べます)",
       "accentNote": "Chính là thể từ điển đã học ở bài 18."
     },
     {
@@ -52,6 +56,8 @@
       "romaji": "kazoku",
       "wordType": "noun",
       "meaningVi": "Gia đình",
+      "imageUrl": "assets/minh-hoa/gia-dinh.webp",
+      "imageAlt": "Gia đình",
       "accentNote": "家族は 何人ですか = gia đình anh có mấy người."
     },
     {
@@ -62,6 +68,8 @@
       "romaji": "ryoushin",
       "wordType": "noun",
       "meaningVi": "Cha mẹ",
+      "imageUrl": "assets/minh-hoa/cha-me.webp",
+      "imageAlt": "Cha mẹ",
       "accentNote": "Từ khiêm tốn, dùng khi nói về cha mẹ MÌNH."
     },
     {
@@ -72,6 +80,8 @@
       "romaji": "chichi",
       "wordType": "noun",
       "meaningVi": "Cha (khiêm tốn)",
+      "imageUrl": "assets/minh-hoa/bo.webp",
+      "imageAlt": "Cha (khiêm tốn)",
       "accentNote": "Nói với người ngoài về cha MÌNH."
     },
     {
@@ -82,6 +92,8 @@
       "romaji": "haha",
       "wordType": "noun",
       "meaningVi": "Mẹ (khiêm tốn)",
+      "imageUrl": "assets/minh-hoa/me.webp",
+      "imageAlt": "Mẹ (khiêm tốn)",
       "accentNote": "Nói với người ngoài về mẹ MÌNH."
     },
     {
@@ -92,6 +104,8 @@
       "romaji": "otousan",
       "wordType": "noun",
       "meaningVi": "Cha (tôn kính)",
+      "imageUrl": "assets/minh-hoa/bo.webp",
+      "imageAlt": "Cha (tôn kính)",
       "accentNote": "Dùng để GỌI cha mình hoặc nói về cha NGƯỜI KHÁC."
     },
     {
@@ -102,6 +116,8 @@
       "romaji": "okaasan",
       "wordType": "noun",
       "meaningVi": "Mẹ (tôn kính)",
+      "imageUrl": "assets/minh-hoa/me.webp",
+      "imageAlt": "Mẹ (tôn kính)",
       "accentNote": "Dùng để GỌI mẹ mình hoặc nói về mẹ NGƯỜI KHÁC."
     },
     {
@@ -112,6 +128,8 @@
       "romaji": "kyoudai",
       "wordType": "noun",
       "meaningVi": "Anh chị em",
+      "imageUrl": "assets/minh-hoa/anh-chi-em.webp",
+      "imageAlt": "Anh chị em",
       "accentNote": "Từ chung, không phân biệt trai/gái, khiêm tốn."
     },
     {
@@ -122,6 +140,8 @@
       "romaji": "ani",
       "wordType": "noun",
       "meaningVi": "Anh trai (khiêm tốn)",
+      "imageUrl": "assets/minh-hoa/anh-trai.webp",
+      "imageAlt": "Anh trai (khiêm tốn)",
       "accentNote": "Nói về anh trai MÌNH."
     },
     {
@@ -132,6 +152,8 @@
       "romaji": "ane",
       "wordType": "noun",
       "meaningVi": "Chị gái (khiêm tốn)",
+      "imageUrl": "assets/minh-hoa/chi-gai.webp",
+      "imageAlt": "Chị gái (khiêm tốn)",
       "accentNote": "Nói về chị gái MÌNH."
     },
     {
@@ -142,6 +164,8 @@
       "romaji": "otouto",
       "wordType": "noun",
       "meaningVi": "Em trai",
+      "imageUrl": "assets/minh-hoa/em-trai.webp",
+      "imageAlt": "Em trai",
       "accentNote": "Không có dạng khiêm tốn/tôn kính riêng biệt như anh/chị."
     },
     {
@@ -152,6 +176,8 @@
       "romaji": "imouto",
       "wordType": "noun",
       "meaningVi": "Em gái",
+      "imageUrl": "assets/minh-hoa/em-gai.webp",
+      "imageAlt": "Em gái",
       "accentNote": "Không có dạng khiêm tốn/tôn kính riêng biệt."
     },
     {
@@ -162,6 +188,8 @@
       "romaji": "oniisan",
       "wordType": "noun",
       "meaningVi": "Anh trai (tôn kính)",
+      "imageUrl": "assets/minh-hoa/anh-trai.webp",
+      "imageAlt": "Anh trai (tôn kính)",
       "accentNote": "Dùng để GỌI anh mình hoặc nói về anh NGƯỜI KHÁC."
     },
     {
@@ -172,6 +200,8 @@
       "romaji": "oneesan",
       "wordType": "noun",
       "meaningVi": "Chị gái (tôn kính)",
+      "imageUrl": "assets/minh-hoa/chi-gai.webp",
+      "imageAlt": "Chị gái (tôn kính)",
       "accentNote": "Dùng để GỌI chị mình hoặc nói về chị NGƯỜI KHÁC."
     },
     {
@@ -182,6 +212,8 @@
       "romaji": "tomodachi",
       "wordType": "noun",
       "meaningVi": "Bạn bè",
+      "imageUrl": "assets/minh-hoa/ban-be.webp",
+      "imageAlt": "Bạn bè",
       "accentNote": "Đã gặp bài 5 — nay dùng làm đối tượng nói chuyện thân mật."
     },
     {
@@ -192,6 +224,8 @@
       "romaji": "genki",
       "wordType": "adjective",
       "meaningVi": "Khỏe mạnh",
+      "imageUrl": "assets/minh-hoa/khoe-manh.webp",
+      "imageAlt": "Khỏe mạnh",
       "accentNote": "Đã gặp bài 8 — nay dùng minh họa chia thể thông thường của tính từ な."
     },
     {
@@ -202,6 +236,8 @@
       "romaji": "isogashii",
       "wordType": "adjective",
       "meaningVi": "Bận rộn",
+      "imageUrl": "assets/minh-hoa/ban-ron.webp",
+      "imageAlt": "Bận rộn",
       "accentNote": "Đã gặp bài 9 — nay minh họa chia thể thông thường của tính từ い."
     }
   ],
@@ -655,6 +691,7 @@
       "id": "dia-n5-20-1",
       "speaker": "山田",
       "speakerRole": "Bạn thân",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l20-1",
@@ -692,6 +729,7 @@
       "id": "dia-n5-20-2",
       "speaker": "サントス",
       "speakerRole": "Bạn thân",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l20-6",
@@ -727,6 +765,7 @@
       "id": "dia-n5-20-3",
       "speaker": "山田",
       "speakerRole": "Bạn thân",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l20-11",
@@ -771,6 +810,7 @@
       "id": "dia-n5-20-4",
       "speaker": "サントス",
       "speakerRole": "Bạn thân",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l20-17",
@@ -802,6 +842,7 @@
       "id": "dia-n5-20-5",
       "speaker": "山田",
       "speakerRole": "Bạn thân",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l20-21",
@@ -856,6 +897,7 @@
       "id": "dia-n5-20-6",
       "speaker": "サントス",
       "speakerRole": "Bạn thân",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l20-29",
@@ -889,6 +931,7 @@
       "id": "dia-n5-20-7",
       "speaker": "山田",
       "speakerRole": "Bạn thân",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l20-33",
@@ -940,6 +983,7 @@
       "id": "dia-n5-20-8",
       "speaker": "サントス",
       "speakerRole": "Bạn thân",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l20-40",
@@ -988,6 +1032,7 @@
       "id": "dia-n5-20-9",
       "speaker": "山田",
       "speakerRole": "Bạn thân",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l20-47",
@@ -1040,6 +1085,7 @@
       "id": "dia-n5-20-10",
       "speaker": "サントス",
       "speakerRole": "Bạn thân",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l20-55",

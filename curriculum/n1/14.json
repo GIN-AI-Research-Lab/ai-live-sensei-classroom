@@ -3,6 +3,8 @@
   "lessonNumber": 14,
   "title": "Bài 14: Xu hướng tiêu cực thường thấy (きらいがある)",
   "description": "きらいがある diễn tả một XU HƯỚNG TIÊU CỰC/không tốt hay LẶP LẠI vốn có trong TÍNH CÁCH/THÓI QUEN của một người, hoặc trong BẢN CHẤT của sự vật/hiện tượng — mang tính NHẬN XÉT KHÁCH QUAN, ĐIỀM TĨNH, khác hẳn các cấu trúc phê phán gay gắt đã học (まじき, ともあろう者が). Có thể làm dịu bằng やや/少し, và thường đi kèm もっとも để bổ sung ý cân bằng; so với がち (đã học ở cấp thấp) vốn chỉ nhấn TẦN SUẤT, きらいがある trang trọng và sâu sắc hơn hẳn, thường dùng trong nhận xét học thuật. Hội thoại: một giáo sư nhận xét luận văn của học trò, thể hiện đúng phong cách phản biện học thuật vừa thẳng thắn vừa tôn trọng.",
+  "sceneImageUrl": "assets/minh-hoa/canh-gop-y-luan-van.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 14: Xu hướng tiêu cực thường thấy (きらいがある)",
   "vocabList": [
     {
       "id": "voc-n1-14-1",
@@ -12,6 +14,8 @@
       "romaji": "riron",
       "wordType": "noun",
       "meaningVi": "Lý thuyết",
+      "imageUrl": "assets/minh-hoa/ly-thuyet.webp",
+      "imageAlt": "Lý thuyết",
       "accentNote": "理論より 実践が 大切です = thực tiễn quan trọng hơn lý thuyết."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "jissen",
       "wordType": "noun",
       "meaningVi": "Thực hành, thực tiễn",
+      "imageUrl": "assets/minh-hoa/thuc-hanh.webp",
+      "imageAlt": "Thực hành, thực tiễn",
       "accentNote": "理論を 実践します = đưa lý thuyết vào thực hành."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "ganko",
       "wordType": "adjective",
       "meaningVi": "Cố chấp, ngoan cố, cứng đầu",
+      "imageUrl": "assets/minh-hoa/co-chap.webp",
+      "imageAlt": "Cố chấp, ngoan cố, cứng đầu",
       "accentNote": "頑固な 性格です = tính cách cố chấp."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "kichoumen",
       "wordType": "adjective",
       "meaningVi": "Tỉ mỉ, cẩn thận (đến mức cứng nhắc)",
+      "imageUrl": "assets/minh-hoa/ti-mi.webp",
+      "imageAlt": "Tỉ mỉ, cẩn thận (đến mức cứng nhắc)",
       "accentNote": "几帳面すぎる 性格です = tính cách tỉ mỉ quá mức."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "shinchou",
       "wordType": "adjective",
       "meaningVi": "Thận trọng, cẩn thận",
+      "imageUrl": "assets/minh-hoa/than-trong.webp",
+      "imageAlt": "Thận trọng, cẩn thận",
       "accentNote": "慎重に 考えます = suy nghĩ một cách thận trọng."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "ketten",
       "wordType": "noun",
       "meaningVi": "Khuyết điểm, nhược điểm",
+      "imageUrl": "assets/minh-hoa/khuyet-diem.webp",
+      "imageAlt": "Khuyết điểm, nhược điểm",
       "accentNote": "欠点を 直します = sửa khuyết điểm."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "ronbun",
       "wordType": "noun",
       "meaningVi": "Luận văn, luận án",
+      "imageUrl": "assets/minh-hoa/luan-van.webp",
+      "imageAlt": "Luận văn, luận án",
       "accentNote": "論文を 書きます = viết luận văn."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "kyouju",
       "wordType": "noun",
       "meaningVi": "Giáo sư",
+      "imageUrl": "assets/minh-hoa/giao-su.webp",
+      "imageAlt": "Giáo sư",
       "accentNote": "教授に 相談します = tham khảo ý kiến giáo sư."
     },
     {
@@ -102,6 +120,8 @@
       "romaji": "keikou",
       "wordType": "noun",
       "meaningVi": "Xu hướng, khuynh hướng",
+      "imageUrl": "assets/minh-hoa/xu-huong.webp",
+      "imageAlt": "Xu hướng, khuynh hướng",
       "accentNote": "Đã gặp N3 bài 9."
     },
     {
@@ -122,6 +142,8 @@
       "romaji": "kanpeki",
       "wordType": "adjective",
       "meaningVi": "Hoàn hảo",
+      "imageUrl": "assets/minh-hoa/hoan-hao.webp",
+      "imageAlt": "Hoàn hảo",
       "accentNote": "Đã gặp N1 bài 3."
     },
     {
@@ -132,6 +154,8 @@
       "romaji": "doryoku",
       "wordType": "noun",
       "meaningVi": "Nỗ lực",
+      "imageUrl": "assets/minh-hoa/no-luc.webp",
+      "imageAlt": "Nỗ lực",
       "accentNote": "Đã gặp N3 bài 2."
     },
     {
@@ -152,6 +176,8 @@
       "romaji": "shinrai",
       "wordType": "noun",
       "meaningVi": "Sự tin cậy",
+      "imageUrl": "assets/minh-hoa/tin-tuong.webp",
+      "imageAlt": "Sự tin cậy",
       "accentNote": "Đã gặp N1 bài 6."
     },
     {
@@ -162,6 +188,8 @@
       "romaji": "kangaemasu",
       "wordType": "verb",
       "meaningVi": "Suy nghĩ, cân nhắc",
+      "imageUrl": "assets/minh-hoa/suy-nghi-n2n1.webp",
+      "imageAlt": "Suy nghĩ, cân nhắc",
       "accentNote": "Đã gặp N5 bài 21.",
       "emotion": "suy_nghi"
     },
@@ -173,6 +201,8 @@
       "romaji": "setsumei shimasu",
       "wordType": "verb",
       "meaningVi": "Giải thích",
+      "imageUrl": "assets/minh-hoa/giai-thich.webp",
+      "imageAlt": "Giải thích",
       "accentNote": "Đã gặp N4 bài 34."
     },
     {
@@ -183,6 +213,8 @@
       "romaji": "mitomemasu",
       "wordType": "verb",
       "meaningVi": "Công nhận",
+      "imageUrl": "assets/minh-hoa/cong-nhan.webp",
+      "imageAlt": "Công nhận",
       "accentNote": "Đã gặp N2 bài 14."
     },
     {
@@ -932,6 +964,7 @@
       "id": "dia-n1-14-2",
       "speaker": "教授",
       "speakerRole": "Giáo sư",
+      "avatarUrl": "assets/minh-hoa/nv-kyoju.webp",
       "tokens": [
         {
           "id": "d14-9",
@@ -1043,6 +1076,7 @@
       "id": "dia-n1-14-4",
       "speaker": "教授",
       "speakerRole": "Giáo sư",
+      "avatarUrl": "assets/minh-hoa/nv-kyoju.webp",
       "tokens": [
         {
           "id": "d14-26",
@@ -1163,6 +1197,7 @@
       "id": "dia-n1-14-6",
       "speaker": "教授",
       "speakerRole": "Giáo sư",
+      "avatarUrl": "assets/minh-hoa/nv-kyoju.webp",
       "tokens": [
         {
           "id": "d14-44",
@@ -1289,6 +1324,7 @@
       "id": "dia-n1-14-8",
       "speaker": "教授",
       "speakerRole": "Giáo sư",
+      "avatarUrl": "assets/minh-hoa/nv-kyoju.webp",
       "tokens": [
         {
           "id": "d14-64",
@@ -1391,6 +1427,7 @@
       "id": "dia-n1-14-10",
       "speaker": "教授",
       "speakerRole": "Giáo sư",
+      "avatarUrl": "assets/minh-hoa/nv-kyoju.webp",
       "tokens": [
         {
           "id": "d14-78",

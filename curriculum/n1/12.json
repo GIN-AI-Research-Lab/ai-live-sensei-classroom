@@ -3,6 +3,8 @@
   "lessonNumber": 12,
   "title": "Bài 12: Điều kiện tiên quyết sinh tử (なくしては & なしには)",
   "description": "Nなくしては、〜ない và Nなしには〜ない đều diễn tả rằng N là một ĐIỀU KIỆN TIÊN QUYẾT TUYỆT ĐỐI/SỐNG CÒN — nếu thiếu N thì vế sau (luôn phủ định) không thể xảy ra; hai cấu trúc gần như đồng nghĩa, khác biệt nhỏ ở sắc thái: なくしては thiên về văn phong phát biểu/cảm động (hay tách dấu phẩy), なしには mang tính tường thuật/khách quan hơn (gắn sát vế sau). Hội thoại: một vận động viên vừa vô địch trả lời phỏng vấn, đan xen cả hai cấu trúc để bày tỏ lòng biết ơn nhiều tầng — đối với khán giả, thầy cô, gia đình và đồng đội.",
+  "sceneImageUrl": "assets/minh-hoa/canh-phong-van-nha-vo-dich.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 12: Điều kiện tiên quyết sinh tử (なくしては & なしには)",
   "vocabList": [
     {
       "id": "voc-n1-12-1",
@@ -12,6 +14,8 @@
       "romaji": "gisei",
       "wordType": "noun",
       "meaningVi": "Sự hy sinh",
+      "imageUrl": "assets/minh-hoa/hy-sinh.webp",
+      "imageAlt": "Sự hy sinh",
       "accentNote": "多くの 犠牲を 払います = trả giá bằng nhiều sự hy sinh."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "tasuke",
       "wordType": "noun",
       "meaningVi": "Sự giúp đỡ",
+      "imageUrl": "assets/minh-hoa/giup-do-n2n1.webp",
+      "imageAlt": "Sự giúp đỡ",
       "accentNote": "先生の 助けを 借ります = nhờ đến sự giúp đỡ của thầy cô."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "onkei",
       "wordType": "noun",
       "meaningVi": "Ân huệ, hồng ân, lợi ích được ban cho",
+      "imageUrl": "assets/minh-hoa/an-hue.webp",
+      "imageAlt": "Ân huệ, hồng ân, lợi ích được ban cho",
       "accentNote": "自然の 恩恵を 受けます = nhận được ân huệ của thiên nhiên."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "kansha",
       "wordType": "noun",
       "meaningVi": "Lòng biết ơn, sự cảm tạ",
+      "imageUrl": "assets/minh-hoa/biet-on.webp",
+      "imageAlt": "Lòng biết ơn, sự cảm tạ",
       "accentNote": "皆様に 感謝します = bày tỏ lòng biết ơn tới mọi người.",
       "emotion": "vui"
     },
@@ -53,6 +63,8 @@
       "romaji": "sasaemasu",
       "wordType": "verb",
       "meaningVi": "Nâng đỡ, hỗ trợ, chống đỡ",
+      "imageUrl": "assets/minh-hoa/nang-do.webp",
+      "imageAlt": "Nâng đỡ, hỗ trợ, chống đỡ",
       "accentNote": "家族が 私を 支えます = gia đình nâng đỡ tôi."
     },
     {
@@ -73,6 +85,8 @@
       "romaji": "nakama",
       "wordType": "noun",
       "meaningVi": "Đồng đội, bạn bè cùng chí hướng",
+      "imageUrl": "assets/minh-hoa/dong-doi.webp",
+      "imageAlt": "Đồng đội, bạn bè cùng chí hướng",
       "accentNote": "仲間と 頑張ります = cố gắng cùng đồng đội."
     },
     {
@@ -83,6 +97,8 @@
       "romaji": "yuushou",
       "wordType": "noun",
       "meaningVi": "Chức vô địch, sự vô địch",
+      "imageUrl": "assets/minh-hoa/vo-dich.webp",
+      "imageAlt": "Chức vô địch, sự vô địch",
       "accentNote": "大会で 優勝しました = đã giành chức vô địch tại giải đấu.",
       "emotion": "vui"
     },
@@ -94,6 +110,8 @@
       "romaji": "ouen",
       "wordType": "noun",
       "meaningVi": "Sự cổ vũ, ủng hộ",
+      "imageUrl": "assets/minh-hoa/co-vu.webp",
+      "imageAlt": "Sự cổ vũ, ủng hộ",
       "accentNote": "みんなが 応援します = mọi người cổ vũ."
     },
     {
@@ -104,6 +122,8 @@
       "romaji": "doryoku",
       "wordType": "noun",
       "meaningVi": "Nỗ lực",
+      "imageUrl": "assets/minh-hoa/no-luc.webp",
+      "imageAlt": "Nỗ lực",
       "accentNote": "Đã gặp N3 bài 2."
     },
     {
@@ -114,6 +134,8 @@
       "romaji": "seikou",
       "wordType": "noun",
       "meaningVi": "Thành công",
+      "imageUrl": "assets/minh-hoa/thanh-cong.webp",
+      "imageAlt": "Thành công",
       "accentNote": "Đã gặp N3 bài 4."
     },
     {
@@ -124,6 +146,8 @@
       "romaji": "shinrai",
       "wordType": "noun",
       "meaningVi": "Sự tin cậy, niềm tin",
+      "imageUrl": "assets/minh-hoa/tin-tuong.webp",
+      "imageAlt": "Sự tin cậy, niềm tin",
       "accentNote": "Đã gặp N1 bài 6."
     },
     {
@@ -134,6 +158,8 @@
       "romaji": "kazoku",
       "wordType": "noun",
       "meaningVi": "Gia đình",
+      "imageUrl": "assets/minh-hoa/gia-dinh-n2n1.webp",
+      "imageAlt": "Gia đình",
       "accentNote": "Đã gặp N5 bài 20."
     },
     {
@@ -144,6 +170,8 @@
       "romaji": "senshu",
       "wordType": "noun",
       "meaningVi": "Vận động viên, tuyển thủ",
+      "imageUrl": "assets/minh-hoa/van-dong-vien.webp",
+      "imageAlt": "Vận động viên, tuyển thủ",
       "accentNote": "Đã gặp N2 bài 9."
     },
     {
@@ -154,6 +182,8 @@
       "romaji": "taikai",
       "wordType": "noun",
       "meaningVi": "Đại hội, giải đấu lớn",
+      "imageUrl": "assets/minh-hoa/dai-hoi.webp",
+      "imageAlt": "Đại hội, giải đấu lớn",
       "accentNote": "Đã gặp N3 bài 7."
     },
     {
@@ -164,6 +194,8 @@
       "romaji": "shiai",
       "wordType": "noun",
       "meaningVi": "Trận đấu",
+      "imageUrl": "assets/minh-hoa/tran-dau.webp",
+      "imageAlt": "Trận đấu",
       "accentNote": "Đã gặp N4 bài 33."
     },
     {
@@ -174,6 +206,8 @@
       "romaji": "kisha",
       "wordType": "noun",
       "meaningVi": "Phóng viên",
+      "imageUrl": "assets/minh-hoa/phong-vien.webp",
+      "imageAlt": "Phóng viên",
       "accentNote": "Đã gặp N1 bài 9."
     },
     {
@@ -204,6 +238,8 @@
       "romaji": "kangaemasu",
       "wordType": "verb",
       "meaningVi": "Suy nghĩ, cân nhắc",
+      "imageUrl": "assets/minh-hoa/suy-nghi-n2n1.webp",
+      "imageAlt": "Suy nghĩ, cân nhắc",
       "accentNote": "Đã gặp N5 bài 21.",
       "emotion": "suy_nghi"
     }
@@ -843,6 +879,7 @@
       "id": "dia-n1-12-1",
       "speaker": "田中",
       "speakerRole": "Phóng viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d12-1",
@@ -908,6 +945,7 @@
       "id": "dia-n1-12-2",
       "speaker": "選手",
       "speakerRole": "Vận động viên",
+      "avatarUrl": "assets/minh-hoa/nv-senshu.webp",
       "tokens": [
         {
           "id": "d12-11",
@@ -978,6 +1016,7 @@
       "id": "dia-n1-12-3",
       "speaker": "田中",
       "speakerRole": "Phóng viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d12-22",
@@ -1020,6 +1059,7 @@
       "id": "dia-n1-12-4",
       "speaker": "選手",
       "speakerRole": "Vận động viên",
+      "avatarUrl": "assets/minh-hoa/nv-senshu.webp",
       "tokens": [
         {
           "id": "d12-28",
@@ -1110,6 +1150,7 @@
       "id": "dia-n1-12-5",
       "speaker": "田中",
       "speakerRole": "Phóng viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d12-42",
@@ -1154,6 +1195,7 @@
       "id": "dia-n1-12-6",
       "speaker": "選手",
       "speakerRole": "Vận động viên",
+      "avatarUrl": "assets/minh-hoa/nv-senshu.webp",
       "tokens": [
         {
           "id": "d12-48",
@@ -1213,6 +1255,7 @@
       "id": "dia-n1-12-7",
       "speaker": "田中",
       "speakerRole": "Phóng viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d12-57",
@@ -1245,6 +1288,7 @@
       "id": "dia-n1-12-8",
       "speaker": "選手",
       "speakerRole": "Vận động viên",
+      "avatarUrl": "assets/minh-hoa/nv-senshu.webp",
       "tokens": [
         {
           "id": "d12-61",
@@ -1301,6 +1345,7 @@
       "id": "dia-n1-12-9",
       "speaker": "田中",
       "speakerRole": "Phóng viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d12-69",
@@ -1345,6 +1390,7 @@
       "id": "dia-n1-12-10",
       "speaker": "選手",
       "speakerRole": "Vận động viên",
+      "avatarUrl": "assets/minh-hoa/nv-senshu.webp",
       "tokens": [
         {
           "id": "d12-75",

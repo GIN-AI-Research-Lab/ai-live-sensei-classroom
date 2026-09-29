@@ -3,6 +3,8 @@
   "lessonNumber": 40,
   "title": "Bài 40: Nghi vấn lồng (〜か, 〜かどうか) & Thử làm (〜てみます)",
   "description": "Lồng câu hỏi vào câu lớn hơn: dùng か khi có từ để hỏi (何/いつ/どこ), かどうか khi là câu hỏi đúng-sai; diễn tả hành động thử nghiệm bằng V(て)みます; và kết hợp cả hai để mô tả hành động XÁC MINH một điều chưa chắc chắn (かどうか + てみます).",
+  "sceneImageUrl": "assets/minh-hoa/canh-thu-mon-an-moi.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 40: Nghi vấn lồng (〜か, 〜かどうか) & Thử làm (〜てみます)",
   "vocabList": [
     {
       "id": "voc-n4-40-1",
@@ -12,6 +14,8 @@
       "romaji": "shirabemasu",
       "wordType": "verb",
       "meaningVi": "Tra cứu, kiểm tra",
+      "imageUrl": "assets/minh-hoa/look-up.webp",
+      "imageAlt": "Tra cứu, kiểm tra",
       "accentNote": "Đã gặp N4 bài 30 — nay dùng làm động từ chính chứa câu hỏi lồng."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "tabete mimasu",
       "wordType": "verb",
       "meaningVi": "Thử ăn xem sao",
+      "imageUrl": "assets/minh-hoa/try-eating.webp",
+      "imageAlt": "Thử ăn xem sao",
       "accentNote": "食べる + てみます: bỏ bớt phần cuối, thêm てみます."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "kite mimasu",
       "wordType": "verb",
       "meaningVi": "Thử mặc xem sao",
+      "imageUrl": "assets/minh-hoa/try-on.webp",
+      "imageAlt": "Thử mặc xem sao",
       "accentNote": "着る + てみます."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "yatte mimasu",
       "wordType": "verb",
       "meaningVi": "Thử làm xem sao",
+      "imageUrl": "assets/minh-hoa/give-it-a-try.webp",
+      "imageAlt": "Thử làm xem sao",
       "accentNote": "やる + てみます. Đã gặp bài 34."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "kikimasu",
       "wordType": "verb",
       "meaningVi": "Hỏi, nghe",
+      "imageUrl": "assets/minh-hoa/ask.webp",
+      "imageAlt": "Hỏi, nghe",
       "accentNote": "Đã gặp N5 bài 6 — nay dùng làm động từ chính chứa câu hỏi lồng."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "wakarimasen",
       "wordType": "phrase",
       "meaningVi": "Không biết, không hiểu",
+      "imageUrl": "assets/minh-hoa/dont-understand.webp",
+      "imageAlt": "Không biết, không hiểu",
       "accentNote": "いつ 来るか わかりません = không biết khi nào sẽ đến."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "aji",
       "wordType": "noun",
       "meaningVi": "Hương vị, mùi vị",
+      "imageUrl": "assets/minh-hoa/taste.webp",
+      "imageAlt": "Hương vị, mùi vị",
       "accentNote": "味が どうか、食べてみます = thử ăn xem vị thế nào."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "kyoumi",
       "wordType": "noun",
       "meaningVi": "Sự hứng thú, quan tâm",
+      "imageUrl": "assets/minh-hoa/interest.webp",
+      "imageAlt": "Sự hứng thú, quan tâm",
       "accentNote": "興味が あるかどうか、聞いてみます = thử hỏi xem có hứng thú không."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "shumi",
       "wordType": "noun",
       "meaningVi": "Sở thích",
+      "imageUrl": "assets/minh-hoa/hobby.webp",
+      "imageAlt": "Sở thích",
       "accentNote": "Đã gặp N5 bài 18."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "tenki",
       "wordType": "noun",
       "meaningVi": "Thời tiết",
+      "imageUrl": "assets/minh-hoa/weather.webp",
+      "imageAlt": "Thời tiết",
       "accentNote": "Đã gặp N5 bài 21."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "shiken",
       "wordType": "noun",
       "meaningVi": "Kỳ thi",
+      "imageUrl": "assets/minh-hoa/exam.webp",
+      "imageAlt": "Kỳ thi",
       "accentNote": "試験に 合格するかどうか、心配です = lo không biết có đậu kỳ thi không."
     },
     {
@@ -122,6 +146,8 @@
       "romaji": "goukaku shimasu",
       "wordType": "verb",
       "meaningVi": "Đậu, đỗ (kỳ thi)",
+      "imageUrl": "assets/minh-hoa/pass-exam.webp",
+      "imageAlt": "Đậu, đỗ (kỳ thi)",
       "accentNote": ""
     },
     {
@@ -132,6 +158,8 @@
       "romaji": "ryouri",
       "wordType": "noun",
       "meaningVi": "Món ăn, nấu ăn",
+      "imageUrl": "assets/minh-hoa/cooking-dish.webp",
+      "imageAlt": "Món ăn, nấu ăn",
       "accentNote": "Đã gặp N5 bài 9."
     },
     {
@@ -142,6 +170,8 @@
       "romaji": "fuku",
       "wordType": "noun",
       "meaningVi": "Quần áo",
+      "imageUrl": "assets/minh-hoa/clothes.webp",
+      "imageAlt": "Quần áo",
       "accentNote": "Đã gặp N5 bài 22."
     },
     {
@@ -152,6 +182,8 @@
       "romaji": "saizu",
       "wordType": "noun",
       "meaningVi": "Kích cỡ",
+      "imageUrl": "assets/minh-hoa/size.webp",
+      "imageAlt": "Kích cỡ",
       "accentNote": "サイズが 合うか どうか、着てみます = thử mặc xem có vừa cỡ không."
     },
     {
@@ -162,6 +194,8 @@
       "romaji": "aimasu",
       "wordType": "verb",
       "meaningVi": "Vừa vặn, phù hợp",
+      "imageUrl": "assets/minh-hoa/fit.webp",
+      "imageAlt": "Vừa vặn, phù hợp",
       "accentNote": "サイズが 合いません = không vừa cỡ."
     },
     {
@@ -172,6 +206,8 @@
       "romaji": "denwa shimasu",
       "wordType": "verb",
       "meaningVi": "Gọi điện thoại",
+      "imageUrl": "assets/minh-hoa/phone-call.webp",
+      "imageAlt": "Gọi điện thoại",
       "accentNote": "本当かどうか、電話して 聞いてみます = gọi điện hỏi xem có đúng không."
     },
     {
@@ -192,6 +228,8 @@
       "romaji": "sensei",
       "wordType": "noun",
       "meaningVi": "Thầy/cô giáo",
+      "imageUrl": "assets/minh-hoa/teacher.webp",
+      "imageAlt": "Thầy/cô giáo",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -202,6 +240,8 @@
       "romaji": "daijoubu",
       "wordType": "adjective",
       "meaningVi": "Ổn, không sao",
+      "imageUrl": "assets/minh-hoa/its-okay.webp",
+      "imageAlt": "Ổn, không sao",
       "accentNote": "Đã gặp N5 bài 15."
     }
   ],
@@ -762,6 +802,7 @@
       "id": "dia-n4-40-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l40-1",
@@ -832,6 +873,7 @@
       "id": "dia-n4-40-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l40-12",
@@ -883,6 +925,7 @@
       "id": "dia-n4-40-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l40-19",
@@ -949,6 +992,7 @@
       "id": "dia-n4-40-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l40-29",
@@ -980,6 +1024,7 @@
       "id": "dia-n4-40-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l40-33",
@@ -1039,6 +1084,7 @@
       "id": "dia-n4-40-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l40-42",
@@ -1111,6 +1157,7 @@
       "id": "dia-n4-40-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l40-54",
@@ -1124,6 +1171,7 @@
       "id": "dia-n4-40-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l40-55",
@@ -1179,6 +1227,7 @@
       "id": "dia-n4-40-9",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l40-63",
@@ -1223,6 +1272,7 @@
       "id": "dia-n4-40-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l40-69",

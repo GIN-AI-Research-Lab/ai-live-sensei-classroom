@@ -3,6 +3,8 @@
   "lessonNumber": 20,
   "title": "Bài 20: Tổng kết ngữ pháp đàm thoại thực chiến",
   "description": "Bài tổng kết N3 kết hợp các cấu trúc trọng điểm đã học qua một cuộc họp rút kinh nghiệm dự án thực tế: おかげで/せいで + 一方だ/ばかりだ (nguyên nhân → xu hướng), に違いない/はずだ + べきだ (suy đoán → khuyến nghị), にもかかわらず + だけでなく/ばかりか (nhượng bộ → mở rộng thành tích), và に関して/について + ということ (chủ đề → truyền đạt kết luận) — nắm vững cách KẾT HỢP các cấu trúc này quan trọng hơn học thuộc riêng lẻ, đúng như cách chúng xuất hiện trong đề thi JLPT N3 thực tế. Hoàn thành trọn vẹn 20/20 bài N3!",
+  "sceneImageUrl": "assets/minh-hoa/canh-hop-tong-ket-du-an.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 20: Tổng kết ngữ pháp đàm thoại thực chiến",
   "vocabList": [
     {
       "id": "voc-n3-20-1",
@@ -12,6 +14,8 @@
       "romaji": "kaizen shimasu",
       "wordType": "verb",
       "meaningVi": "Cải thiện",
+      "imageUrl": "assets/minh-hoa/improve.webp",
+      "imageAlt": "Cải thiện",
       "accentNote": "じょうきょうを 改善します = cải thiện tình huống."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "hansei shimasu",
       "wordType": "verb",
       "meaningVi": "Rút kinh nghiệm, phản tỉnh",
+      "imageUrl": "assets/minh-hoa/reflect.webp",
+      "imageAlt": "Rút kinh nghiệm, phản tỉnh",
       "accentNote": "しっぱいを 反省します = rút kinh nghiệm từ thất bại.",
       "emotion": "that_vong"
     },
@@ -33,6 +39,8 @@
       "romaji": "hyouka shimasu",
       "wordType": "verb",
       "meaningVi": "Đánh giá",
+      "imageUrl": "assets/minh-hoa/evaluate.webp",
+      "imageAlt": "Đánh giá",
       "accentNote": "けっかを 評価します = đánh giá kết quả."
     },
     {
@@ -43,6 +51,8 @@
       "romaji": "mokuhyou",
       "wordType": "noun",
       "meaningVi": "Mục tiêu",
+      "imageUrl": "assets/minh-hoa/goal.webp",
+      "imageAlt": "Mục tiêu",
       "accentNote": "目標を たてます = lập mục tiêu."
     },
     {
@@ -53,6 +63,8 @@
       "romaji": "chiimu",
       "wordType": "noun",
       "meaningVi": "Đội nhóm",
+      "imageUrl": "assets/minh-hoa/team.webp",
+      "imageAlt": "Đội nhóm",
       "accentNote": "チームの 努力 = nỗ lực của đội nhóm."
     },
     {
@@ -63,6 +75,8 @@
       "romaji": "doryoku",
       "wordType": "noun",
       "meaningVi": "Nỗ lực",
+      "imageUrl": "assets/minh-hoa/effort.webp",
+      "imageAlt": "Nỗ lực",
       "accentNote": "Đã gặp N3 bài 8."
     },
     {
@@ -73,6 +87,8 @@
       "romaji": "junbi",
       "wordType": "noun",
       "meaningVi": "Sự chuẩn bị",
+      "imageUrl": "assets/minh-hoa/prepare-n3.webp",
+      "imageAlt": "Sự chuẩn bị",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -83,6 +99,8 @@
       "romaji": "kekka",
       "wordType": "noun",
       "meaningVi": "Kết quả",
+      "imageUrl": "assets/minh-hoa/result.webp",
+      "imageAlt": "Kết quả",
       "accentNote": "Đã gặp N4 bài 39."
     },
     {
@@ -93,6 +111,8 @@
       "romaji": "kaigi",
       "wordType": "noun",
       "meaningVi": "Cuộc họp",
+      "imageUrl": "assets/minh-hoa/meeting-n3.webp",
+      "imageAlt": "Cuộc họp",
       "accentNote": "Đã gặp N4 bài 30."
     },
     {
@@ -103,6 +123,8 @@
       "romaji": "sekinin",
       "wordType": "noun",
       "meaningVi": "Trách nhiệm",
+      "imageUrl": "assets/minh-hoa/responsibility.webp",
+      "imageAlt": "Trách nhiệm",
       "accentNote": "Đã gặp N3 bài 19."
     },
     {
@@ -113,6 +135,8 @@
       "romaji": "kisoku",
       "wordType": "noun",
       "meaningVi": "Quy tắc",
+      "imageUrl": "assets/minh-hoa/rules-n3.webp",
+      "imageAlt": "Quy tắc",
       "accentNote": "Đã gặp N4 bài 33."
     },
     {
@@ -133,6 +157,8 @@
       "romaji": "mondai",
       "wordType": "noun",
       "meaningVi": "Vấn đề",
+      "imageUrl": "assets/minh-hoa/problem.webp",
+      "imageAlt": "Vấn đề",
       "accentNote": "Đã gặp N5 bài 22."
     },
     {
@@ -143,6 +169,8 @@
       "romaji": "seikou shimasu",
       "wordType": "verb",
       "meaningVi": "Thành công",
+      "imageUrl": "assets/minh-hoa/success.webp",
+      "imageAlt": "Thành công",
       "accentNote": "Đã gặp N3 bài 8.",
       "emotion": "vui"
     },
@@ -154,6 +182,8 @@
       "romaji": "shippai shimasu",
       "wordType": "verb",
       "meaningVi": "Thất bại",
+      "imageUrl": "assets/minh-hoa/failure.webp",
+      "imageAlt": "Thất bại",
       "accentNote": "Đã gặp N4 bài 43.",
       "emotion": "that_vong"
     },
@@ -165,6 +195,8 @@
       "romaji": "keikaku",
       "wordType": "noun",
       "meaningVi": "Kế hoạch",
+      "imageUrl": "assets/minh-hoa/plan-n3.webp",
+      "imageAlt": "Kế hoạch",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -185,6 +217,8 @@
       "romaji": "kaisha",
       "wordType": "noun",
       "meaningVi": "Công ty",
+      "imageUrl": "assets/minh-hoa/company-n3.webp",
+      "imageAlt": "Công ty",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -195,6 +229,8 @@
       "romaji": "minna",
       "wordType": "pronoun",
       "meaningVi": "Mọi người",
+      "imageUrl": "assets/minh-hoa/everyone.webp",
+      "imageAlt": "Mọi người",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -205,6 +241,8 @@
       "romaji": "hanashimasu",
       "wordType": "verb",
       "meaningVi": "Nói chuyện",
+      "imageUrl": "assets/minh-hoa/talk.webp",
+      "imageAlt": "Nói chuyện",
       "accentNote": "Đã gặp N4 bài 26."
     }
   ],
@@ -1014,6 +1052,7 @@
       "id": "dia-n3-20-1",
       "speaker": "田中",
       "speakerRole": "Trưởng nhóm dự án",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d20-1",
@@ -1070,6 +1109,7 @@
       "id": "dia-n3-20-2",
       "speaker": "サントス",
       "speakerRole": "Thành viên nhóm",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d20-9",
@@ -1149,6 +1189,7 @@
       "id": "dia-n3-20-3",
       "speaker": "田中",
       "speakerRole": "Trưởng nhóm dự án",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d20-21",
@@ -1226,6 +1267,7 @@
       "id": "dia-n3-20-4",
       "speaker": "サントス",
       "speakerRole": "Thành viên nhóm",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d20-33",
@@ -1272,6 +1314,7 @@
       "id": "dia-n3-20-5",
       "speaker": "田中",
       "speakerRole": "Trưởng nhóm dự án",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d20-39",
@@ -1331,6 +1374,7 @@
       "id": "dia-n3-20-6",
       "speaker": "サントス",
       "speakerRole": "Thành viên nhóm",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d20-48",
@@ -1422,6 +1466,7 @@
       "id": "dia-n3-20-7",
       "speaker": "田中",
       "speakerRole": "Trưởng nhóm dự án",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d20-62",
@@ -1481,6 +1526,7 @@
       "id": "dia-n3-20-8",
       "speaker": "サントス",
       "speakerRole": "Thành viên nhóm",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d20-73",
@@ -1559,6 +1605,7 @@
       "id": "dia-n3-20-9",
       "speaker": "田中",
       "speakerRole": "Trưởng nhóm dự án",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d20-85",
@@ -1630,6 +1677,7 @@
       "id": "dia-n3-20-10",
       "speaker": "サントス",
       "speakerRole": "Thành viên nhóm",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d20-96",

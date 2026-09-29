@@ -3,6 +3,8 @@
   "lessonNumber": 36,
   "title": "Bài 36: Mục đích (〜ように) & Biến đổi (〜ようになる)",
   "description": "Diễn tả mục đích với động từ VÔ Ý CHÍ (聞こえる, 見える, 分かる, 忘れない) bằng ように, sự hình thành NĂNG LỰC/THÓI QUEN dần dần theo thời gian bằng ようになります (cả chiều thuận và chiều mất dần khả năng), và so sánh với なります (N5 bài 19, biến đổi trạng thái tức thời).",
+  "sceneImageUrl": "assets/minh-hoa/canh-doc-bao-noi-to.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 36: Mục đích (〜ように) & Biến đổi (〜ようになる)",
   "vocabList": [
     {
       "id": "voc-n4-36-1",
@@ -12,6 +14,8 @@
       "romaji": "kikoemasu",
       "wordType": "verb",
       "meaningVi": "Nghe được, nghe thấy (tự nhiên, không chủ ý)",
+      "imageUrl": "assets/minh-hoa/can-hear.webp",
+      "imageAlt": "Nghe được, nghe thấy (tự nhiên, không chủ ý)",
       "accentNote": "自動詞: âm thanh TỰ lọt vào tai, khác 聞きます (chủ động lắng nghe)."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "miemasu",
       "wordType": "verb",
       "meaningVi": "Nhìn thấy được, trông thấy (tự nhiên)",
+      "imageUrl": "assets/minh-hoa/can-be-seen.webp",
+      "imageAlt": "Nhìn thấy được, trông thấy (tự nhiên)",
       "accentNote": "自動詞: hình ảnh TỰ lọt vào mắt, khác 見ます (chủ động nhìn) và 見られます (khả năng, bài 27)."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "wasuremasu",
       "wordType": "verb",
       "meaningVi": "Quên",
+      "imageUrl": "assets/minh-hoa/forget.webp",
+      "imageAlt": "Quên",
       "accentNote": "Đã gặp bài 26. 忘れないように = để không quên."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "tsuzukemasu",
       "wordType": "verb",
       "meaningVi": "Tiếp tục, duy trì",
+      "imageUrl": "assets/minh-hoa/continue.webp",
+      "imageAlt": "Tiếp tục, duy trì",
       "accentNote": "Đã gặp bài 28."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "hanashimasu",
       "wordType": "verb",
       "meaningVi": "Nói, trò chuyện",
+      "imageUrl": "assets/minh-hoa/speak.webp",
+      "imageAlt": "Nói, trò chuyện",
       "accentNote": "Đã gặp N5 bài 7 — nay dùng làm ví dụ mục đích."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "undou shimasu",
       "wordType": "verb",
       "meaningVi": "Vận động, tập thể dục",
+      "imageUrl": "assets/minh-hoa/exercise.webp",
+      "imageAlt": "Vận động, tập thể dục",
       "accentNote": "Đã gặp bài 27."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "setsumei shimasu",
       "wordType": "verb",
       "meaningVi": "Giải thích",
+      "imageUrl": "assets/minh-hoa/explain.webp",
+      "imageAlt": "Giải thích",
       "accentNote": "Đã gặp bài 34."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "renshuu shimasu",
       "wordType": "verb",
       "meaningVi": "Luyện tập",
+      "imageUrl": "assets/minh-hoa/practice.webp",
+      "imageAlt": "Luyện tập",
       "accentNote": "Đã gặp N5 bài 7 (danh từ) — nay dùng đầy đủ động từ."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "megane",
       "wordType": "noun",
       "meaningVi": "Kính mắt",
+      "imageUrl": "assets/minh-hoa/glasses.webp",
+      "imageAlt": "Kính mắt",
       "accentNote": "眼鏡を かければ、見えます = nếu đeo kính thì sẽ nhìn thấy được."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "mimi",
       "wordType": "noun",
       "meaningVi": "Tai",
+      "imageUrl": "assets/minh-hoa/ear.webp",
+      "imageAlt": "Tai",
       "accentNote": "Đã gặp N5 bài 16."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "me",
       "wordType": "noun",
       "meaningVi": "Mắt",
+      "imageUrl": "assets/minh-hoa/eye.webp",
+      "imageAlt": "Mắt",
       "accentNote": "Đã gặp N5 bài 16."
     },
     {
@@ -122,6 +146,8 @@
       "romaji": "koe",
       "wordType": "noun",
       "meaningVi": "Giọng nói, âm thanh",
+      "imageUrl": "assets/minh-hoa/voice.webp",
+      "imageAlt": "Giọng nói, âm thanh",
       "accentNote": "大きい声で 話して ください = xin hãy nói to lên."
     },
     {
@@ -152,6 +178,8 @@
       "romaji": "majime",
       "wordType": "adjective",
       "meaningVi": "Chăm chỉ, nghiêm túc",
+      "imageUrl": "assets/minh-hoa/serious-diligent.webp",
+      "imageAlt": "Chăm chỉ, nghiêm túc",
       "accentNote": "Tính từ な. 真面目に 練習すれば、上手に なります = chăm chỉ luyện tập thì sẽ giỏi."
     },
     {
@@ -162,6 +190,8 @@
       "romaji": "jouzu",
       "wordType": "adjective",
       "meaningVi": "Giỏi",
+      "imageUrl": "assets/minh-hoa/skillful.webp",
+      "imageAlt": "Giỏi",
       "accentNote": "Đã gặp N5 bài 9 — nay dùng làm kết quả biến đổi ようになる.",
       "emotion": "vui"
     },
@@ -173,6 +203,8 @@
       "romaji": "shinbun",
       "wordType": "noun",
       "meaningVi": "Báo, tờ báo",
+      "imageUrl": "assets/minh-hoa/newspaper.webp",
+      "imageAlt": "Báo, tờ báo",
       "accentNote": "Đã gặp N5 bài 2."
     },
     {
@@ -183,6 +215,8 @@
       "romaji": "byouki",
       "wordType": "noun",
       "meaningVi": "Bệnh, ốm",
+      "imageUrl": "assets/minh-hoa/sick.webp",
+      "imageAlt": "Bệnh, ốm",
       "accentNote": "Đã gặp bài 17 (N5).",
       "emotion": "buon"
     },
@@ -194,6 +228,8 @@
       "romaji": "kenkou",
       "wordType": "adjective",
       "meaningVi": "Sức khỏe, khỏe mạnh",
+      "imageUrl": "assets/minh-hoa/health.webp",
+      "imageAlt": "Sức khỏe, khỏe mạnh",
       "accentNote": "Đã gặp bài 32."
     },
     {
@@ -204,6 +240,8 @@
       "romaji": "shuukan",
       "wordType": "noun",
       "meaningVi": "Thói quen",
+      "imageUrl": "assets/minh-hoa/habit.webp",
+      "imageAlt": "Thói quen",
       "accentNote": "Đã gặp bài 28. 運動する ように なりました = đã hình thành thói quen tập thể dục."
     }
   ],
@@ -652,6 +690,7 @@
       "id": "dia-n4-36-1",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l36-1",
@@ -716,6 +755,7 @@
       "id": "dia-n4-36-2",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l36-11",
@@ -758,6 +798,7 @@
       "id": "dia-n4-36-3",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l36-17",
@@ -795,6 +836,7 @@
       "id": "dia-n4-36-4",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l36-22",
@@ -849,6 +891,7 @@
       "id": "dia-n4-36-5",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l36-30",
@@ -909,6 +952,7 @@
       "id": "dia-n4-36-6",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l36-39",
@@ -963,6 +1007,7 @@
       "id": "dia-n4-36-7",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l36-47",
@@ -1012,6 +1057,7 @@
       "id": "dia-n4-36-8",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l36-54",
@@ -1034,6 +1080,7 @@
       "id": "dia-n4-36-9",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l36-56",
@@ -1095,6 +1142,7 @@
       "id": "dia-n4-36-10",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l36-65",

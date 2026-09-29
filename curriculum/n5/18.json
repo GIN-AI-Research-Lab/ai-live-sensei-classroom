@@ -3,6 +3,8 @@
   "lessonNumber": 18,
   "title": "Bài 18: Thể từ điển & Khả năng (辞書形 + ことができる / 趣味は Vこと / Vるまえに)",
   "description": "Chuyển động từ sang thể từ điển (dạng nguyên mẫu), dùng こと để danh từ hóa hành động cho cấu trúc khả năng ことができます và giới thiệu sở thích 趣味は…ことです, và cấu trúc cố định Vるまえに (luôn giữ thể từ điển bất kể thì của câu).",
+  "sceneImageUrl": "assets/minh-hoa/canh-choi-dan-va-doc-sach.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 18: Thể từ điển & Khả năng (辞書形 + ことができる / 趣味は Vこと / Vるまえに)",
   "vocabList": [
     {
       "id": "voc-n5-18-1",
@@ -12,6 +14,8 @@
       "romaji": "utaimasu",
       "wordType": "verb",
       "meaningVi": "Hát",
+      "imageUrl": "assets/minh-hoa/bai-hat.webp",
+      "imageAlt": "Hát",
       "accentNote": "Thể từ điển: 歌う. Nhóm 1."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "oyogimasu",
       "wordType": "verb",
       "meaningVi": "Bơi",
+      "imageUrl": "assets/minh-hoa/boi.webp",
+      "imageAlt": "Bơi",
       "accentNote": "Thể từ điển: 泳ぐ. Đã gặp bài 13."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "hikimasu",
       "wordType": "verb",
       "meaningVi": "Chơi (đàn dây, piano)",
+      "imageUrl": "assets/minh-hoa/choi-dan.webp",
+      "imageAlt": "Chơi (đàn dây, piano)",
       "accentNote": "Thể từ điển: 弾く. Nhóm 1. ピアノを 弾きます = chơi piano."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "yomimasu",
       "wordType": "verb",
       "meaningVi": "Đọc",
+      "imageUrl": "assets/minh-hoa/doc.webp",
+      "imageAlt": "Đọc",
       "accentNote": "Thể từ điển: 読む. Đã gặp bài 6."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "kakimasu",
       "wordType": "verb",
       "meaningVi": "Viết",
+      "imageUrl": "assets/minh-hoa/viet.webp",
+      "imageAlt": "Viết",
       "accentNote": "Thể từ điển: 書く. Đã gặp bài 6."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "untenshimasu",
       "wordType": "verb",
       "meaningVi": "Lái xe",
+      "imageUrl": "assets/minh-hoa/lai-xe.webp",
+      "imageAlt": "Lái xe",
       "accentNote": "Thể từ điển: 運転する. Nhóm 3."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "sanposhimasu",
       "wordType": "verb",
       "meaningVi": "Đi dạo",
+      "imageUrl": "assets/minh-hoa/di-dao.webp",
+      "imageAlt": "Đi dạo",
       "accentNote": "Thể từ điển: 散歩する. Nhóm 3."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "nemasu",
       "wordType": "verb",
       "meaningVi": "Đi ngủ",
+      "imageUrl": "assets/minh-hoa/di-ngu.webp",
+      "imageAlt": "Đi ngủ",
       "accentNote": "Thể từ điển: 寝る. Đã gặp bài 4."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "hairimasu",
       "wordType": "verb",
       "meaningVi": "Vào, tắm (bồn)",
+      "imageUrl": "assets/minh-hoa/vao-bon-tam.webp",
+      "imageAlt": "Vào, tắm (bồn)",
       "accentNote": "Thể từ điển: 入る. お風呂に 入ります = tắm bồn."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "shumi",
       "wordType": "noun",
       "meaningVi": "Sở thích",
+      "imageUrl": "assets/minh-hoa/so-thich.webp",
+      "imageAlt": "Sở thích",
       "accentNote": "趣味は 〜ことです = sở thích của tôi là ~."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "piano",
       "wordType": "noun",
       "meaningVi": "Đàn piano",
+      "imageUrl": "assets/minh-hoa/piano.webp",
+      "imageAlt": "Đàn piano",
       "accentNote": ""
     },
     {
@@ -122,6 +146,8 @@
       "romaji": "gitaa",
       "wordType": "noun",
       "meaningVi": "Đàn guitar",
+      "imageUrl": "assets/minh-hoa/dan-guitar.webp",
+      "imageAlt": "Đàn guitar",
       "accentNote": "Đã gặp bài 9."
     },
     {
@@ -132,6 +158,8 @@
       "romaji": "uta",
       "wordType": "noun",
       "meaningVi": "Bài hát",
+      "imageUrl": "assets/minh-hoa/bai-hat.webp",
+      "imageAlt": "Bài hát",
       "accentNote": "Đã gặp bài 9."
     },
     {
@@ -142,6 +170,8 @@
       "romaji": "e",
       "wordType": "noun",
       "meaningVi": "Tranh, hình vẽ",
+      "imageUrl": "assets/minh-hoa/buc-tranh.webp",
+      "imageAlt": "Tranh, hình vẽ",
       "accentNote": "Đã gặp bài 9."
     },
     {
@@ -152,6 +182,8 @@
       "romaji": "ofuro",
       "wordType": "noun",
       "meaningVi": "Bồn tắm",
+      "imageUrl": "assets/minh-hoa/bon-tam.webp",
+      "imageAlt": "Bồn tắm",
       "accentNote": "お風呂に 入ります = tắm bồn."
     },
     {
@@ -162,6 +194,8 @@
       "romaji": "sanpo",
       "wordType": "noun",
       "meaningVi": "Việc đi dạo",
+      "imageUrl": "assets/minh-hoa/di-dao.webp",
+      "imageAlt": "Việc đi dạo",
       "accentNote": "散歩を します = đi dạo."
     },
     {
@@ -172,6 +206,8 @@
       "romaji": "unten",
       "wordType": "noun",
       "meaningVi": "Việc lái xe",
+      "imageUrl": "assets/minh-hoa/lai-xe.webp",
+      "imageAlt": "Việc lái xe",
       "accentNote": "Đã gặp bài 17."
     },
     {
@@ -182,6 +218,8 @@
       "romaji": "menkyo",
       "wordType": "noun",
       "meaningVi": "Bằng lái, giấy phép",
+      "imageUrl": "assets/minh-hoa/bang-lai.webp",
+      "imageAlt": "Bằng lái, giấy phép",
       "accentNote": "Đã gặp bài 17. 運転免許 = bằng lái xe."
     },
     {
@@ -202,6 +240,8 @@
       "romaji": "sukoshi",
       "wordType": "adverb",
       "meaningVi": "Một chút, một ít",
+      "imageUrl": "assets/minh-hoa/mot-chut.webp",
+      "imageAlt": "Một chút, một ít",
       "accentNote": "少し できます = làm được một chút."
     }
   ],
@@ -723,6 +763,7 @@
       "id": "dia-n5-18-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l18-1",
@@ -765,6 +806,7 @@
       "id": "dia-n5-18-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l18-7",
@@ -824,6 +866,7 @@
       "id": "dia-n5-18-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l18-16",
@@ -864,6 +907,7 @@
       "id": "dia-n5-18-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l18-22",
@@ -926,6 +970,7 @@
       "id": "dia-n5-18-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l18-32",
@@ -958,6 +1003,7 @@
       "id": "dia-n5-18-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l18-36",
@@ -1022,6 +1068,7 @@
       "id": "dia-n5-18-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l18-46",
@@ -1085,6 +1132,7 @@
       "id": "dia-n5-18-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l18-55",
@@ -1150,6 +1198,7 @@
       "id": "dia-n5-18-9",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l18-65",
@@ -1214,6 +1263,7 @@
       "id": "dia-n5-18-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l18-75",

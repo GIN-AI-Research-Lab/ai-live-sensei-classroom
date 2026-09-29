@@ -845,3 +845,8 @@
 @media (max-width: 640px) {
   .san-khau-giang .sk-khung > .sk-san > .sk-canh.sk-chu { width: calc(100% - 8px); min-height: 86%; }
 }
+
+/* Anh minh hoa AI (webp vuong nen kem #f0ebe1): bo dem, anh phu kin o, nen o = nen anh -> khong vien
+   kep. Phong cach nao muon khung rieng thi dat tren .sk-tv-hinh (pc1..pc7 da tinh san cho <img>). */
+.san-khau-giang .sk-tv-hinh.is-anh { padding: 0; background: var(--anh-kem); }
+.san-khau-giang .sk-tv-hinh.is-anh > img { object-fit: cover; border-radius: inherit; }

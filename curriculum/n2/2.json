@@ -3,6 +3,8 @@
   "lessonNumber": 2,
   "title": "Bài 2: Bất đắc dĩ & Đành lòng (ざるを得ない & を余儀なくされる)",
   "description": "ざるを得ない diễn tả 'bất đắc dĩ phải làm' dù không muốn — mang cảm xúc CHỦ QUAN, miễn cưỡng của người nói (する→せざるを得ない, ngoại lệ); を余儀なくされる diễn tả 'bị buộc phải' do hoàn cảnh KHÁCH QUAN/ngoại lực ép buộc — trang trọng hơn, luôn ở dạng bị động; cả hai đều bắt nguồn từ やむを得ない (không thể tránh khỏi).",
+  "sceneImageUrl": "assets/minh-hoa/canh-bat-dac-di-nhap-vien.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 2: Bất đắc dĩ & Đành lòng (ざるを得ない & を余儀なくされる)",
   "vocabList": [
     {
       "id": "voc-n2-2-1",
@@ -12,6 +14,8 @@
       "romaji": "shukushou shimasu",
       "wordType": "verb",
       "meaningVi": "Thu hẹp, thu nhỏ",
+      "imageUrl": "assets/minh-hoa/thu-nho.webp",
+      "imageAlt": "Thu hẹp, thu nhỏ",
       "accentNote": "じぎょうを 縮小します = thu hẹp kinh doanh."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "yamu wo enai",
       "wordType": "adjective",
       "meaningVi": "Bất đắc dĩ, không thể tránh khỏi",
+      "imageUrl": "assets/minh-hoa/danh-chiu.webp",
+      "imageAlt": "Bất đắc dĩ, không thể tránh khỏi",
       "accentNote": "やむを得ない 事情 = hoàn cảnh bất khả kháng.",
       "emotion": "that_vong"
     },
@@ -53,6 +59,8 @@
       "romaji": "nyuuin shimasu",
       "wordType": "verb",
       "meaningVi": "Nhập viện",
+      "imageUrl": "assets/minh-hoa/nhap-vien.webp",
+      "imageAlt": "Nhập viện",
       "accentNote": "びょういんに 入院します = nhập viện.",
       "emotion": "buon"
     },
@@ -64,6 +72,8 @@
       "romaji": "akiramemasu",
       "wordType": "verb",
       "meaningVi": "Từ bỏ",
+      "imageUrl": "assets/minh-hoa/tu-bo.webp",
+      "imageAlt": "Từ bỏ",
       "accentNote": "Đã gặp N3 bài 4.",
       "emotion": "that_vong"
     },
@@ -75,6 +85,8 @@
       "romaji": "byouki",
       "wordType": "noun",
       "meaningVi": "Bệnh, ốm",
+      "imageUrl": "assets/minh-hoa/bi-benh.webp",
+      "imageAlt": "Bệnh, ốm",
       "accentNote": "Đã gặp N4 bài 26.",
       "emotion": "buon"
     },
@@ -86,6 +98,8 @@
       "romaji": "jiko",
       "wordType": "noun",
       "meaningVi": "Tai nạn",
+      "imageUrl": "assets/minh-hoa/tai-nan.webp",
+      "imageAlt": "Tai nạn",
       "accentNote": "Đã gặp N4 bài 34."
     },
     {
@@ -96,6 +110,8 @@
       "romaji": "ryokou",
       "wordType": "noun",
       "meaningVi": "Du lịch",
+      "imageUrl": "assets/minh-hoa/du-lich-n2n1.webp",
+      "imageAlt": "Du lịch",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -106,6 +122,8 @@
       "romaji": "taifuu",
       "wordType": "noun",
       "meaningVi": "Bão",
+      "imageUrl": "assets/minh-hoa/bao.webp",
+      "imageAlt": "Bão",
       "accentNote": "Đã gặp N4 bài 34."
     },
     {
@@ -116,6 +134,8 @@
       "romaji": "kaisha",
       "wordType": "noun",
       "meaningVi": "Công ty",
+      "imageUrl": "assets/minh-hoa/cong-ty-n2n1.webp",
+      "imageAlt": "Công ty",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -126,6 +146,8 @@
       "romaji": "chuushi shimasu",
       "wordType": "verb",
       "meaningVi": "Hủy bỏ",
+      "imageUrl": "assets/minh-hoa/huy-bo.webp",
+      "imageAlt": "Hủy bỏ",
       "accentNote": "Đã gặp N3 bài 10."
     },
     {
@@ -136,6 +158,8 @@
       "romaji": "yasumi",
       "wordType": "noun",
       "meaningVi": "Kỳ nghỉ",
+      "imageUrl": "assets/minh-hoa/ky-nghi.webp",
+      "imageAlt": "Kỳ nghỉ",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -146,6 +170,8 @@
       "romaji": "isogashii",
       "wordType": "adjective",
       "meaningVi": "Bận rộn",
+      "imageUrl": "assets/minh-hoa/ban-ron-n2n1.webp",
+      "imageAlt": "Bận rộn",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -156,6 +182,8 @@
       "romaji": "kaigi",
       "wordType": "noun",
       "meaningVi": "Cuộc họp",
+      "imageUrl": "assets/minh-hoa/cuoc-hop-n2n1.webp",
+      "imageAlt": "Cuộc họp",
       "accentNote": "Đã gặp N4 bài 30."
     },
     {
@@ -166,6 +194,8 @@
       "romaji": "narimasu",
       "wordType": "verb",
       "meaningVi": "Trở thành",
+      "imageUrl": "assets/minh-hoa/tro-thanh-n2n1.webp",
+      "imageAlt": "Trở thành",
       "accentNote": "Đã gặp N5 bài 8."
     },
     {
@@ -176,6 +206,8 @@
       "romaji": "keizai",
       "wordType": "noun",
       "meaningVi": "Kinh tế",
+      "imageUrl": "assets/minh-hoa/kinh-te.webp",
+      "imageAlt": "Kinh tế",
       "accentNote": "Đã gặp N3 bài 14."
     },
     {
@@ -196,6 +228,8 @@
       "romaji": "shigoto",
       "wordType": "noun",
       "meaningVi": "Công việc",
+      "imageUrl": "assets/minh-hoa/cong-viec.webp",
+      "imageAlt": "Công việc",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -206,6 +240,8 @@
       "romaji": "kazoku",
       "wordType": "noun",
       "meaningVi": "Gia đình",
+      "imageUrl": "assets/minh-hoa/gia-dinh-n2n1.webp",
+      "imageAlt": "Gia đình",
       "accentNote": "Đã gặp N5 bài 1."
     }
   ],
@@ -777,6 +813,7 @@
       "id": "dia-n2-2-1",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d2-1",
@@ -814,6 +851,7 @@
       "id": "dia-n2-2-2",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d2-6",
@@ -854,6 +892,7 @@
       "id": "dia-n2-2-3",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d2-11",
@@ -920,6 +959,7 @@
       "id": "dia-n2-2-4",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d2-21",
@@ -953,6 +993,7 @@
       "id": "dia-n2-2-5",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d2-25",
@@ -1008,6 +1049,7 @@
       "id": "dia-n2-2-6",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d2-33",
@@ -1036,6 +1078,7 @@
       "id": "dia-n2-2-7",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d2-36",
@@ -1113,6 +1156,7 @@
       "id": "dia-n2-2-8",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d2-48",
@@ -1147,6 +1191,7 @@
       "id": "dia-n2-2-9",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d2-52",
@@ -1194,6 +1239,7 @@
       "id": "dia-n2-2-10",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d2-58",

@@ -3,6 +3,8 @@
   "lessonNumber": 4,
   "title": "Bài 4: Nguyên nhân lý do (おかげで & せいで & ばかりに)",
   "description": "Ba cấu trúc nguyên nhân-kết quả mang SẮC THÁI CẢM XÚC (khác から/ので trung tính, N4 bài 39): おかげで cho kết quả TỐT (biết ơn), せいで cho kết quả XẤU (đổ lỗi), và ばかりに cho kết quả XẤU NẶNG NỀ so với một nguyên nhân nhỏ nhặt (tiếc nuối sâu sắc) — cùng câu おかげさまで dùng trong chào hỏi xã giao.",
+  "sceneImageUrl": "assets/minh-hoa/canh-den-muon-vi-ket-xe.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 4: Nguyên nhân lý do (おかげで & せいで & ばかりに)",
   "vocabList": [
     {
       "id": "voc-n3-4-1",
@@ -12,6 +14,8 @@
       "romaji": "tasukarimasu",
       "wordType": "verb",
       "meaningVi": "Được giúp đỡ, đỡ vất vả hơn",
+      "imageUrl": "assets/minh-hoa/grateful-relief.webp",
+      "imageAlt": "Được giúp đỡ, đỡ vất vả hơn",
       "accentNote": "Đã gặp N5 bài 24. 先生の おかげで 助かりました = nhờ có thầy giáo mà tôi đỡ vất vả hơn."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "seikou shimasu",
       "wordType": "verb",
       "meaningVi": "Thành công",
+      "imageUrl": "assets/minh-hoa/success.webp",
+      "imageAlt": "Thành công",
       "accentNote": "努力の おかげで 成功しました = nhờ nỗ lực mà đã thành công.",
       "emotion": "vui"
     },
@@ -33,6 +39,8 @@
       "romaji": "shippai shimasu",
       "wordType": "verb",
       "meaningVi": "Thất bại, mắc lỗi",
+      "imageUrl": "assets/minh-hoa/failure.webp",
+      "imageAlt": "Thất bại, mắc lỗi",
       "accentNote": "Đã gặp bài 45 (N4).",
       "emotion": "that_vong"
     },
@@ -44,6 +52,8 @@
       "romaji": "chikoku shimasu",
       "wordType": "verb",
       "meaningVi": "Đến muộn, trễ giờ",
+      "imageUrl": "assets/minh-hoa/late.webp",
+      "imageAlt": "Đến muộn, trễ giờ",
       "accentNote": "渋滞の せいで 遅刻しました = tại vì kẹt xe nên tôi đến muộn."
     },
     {
@@ -54,6 +64,8 @@
       "romaji": "wasuremasu",
       "wordType": "verb",
       "meaningVi": "Quên",
+      "imageUrl": "assets/minh-hoa/forget-n3.webp",
+      "imageAlt": "Quên",
       "accentNote": "Đã gặp bài 26 (N4). うっかり 忘れた ばかりに、大変な ことに なりました = chỉ vì lỡ quên mà thành chuyện lớn."
     },
     {
@@ -64,6 +76,8 @@
       "romaji": "tasukemasu",
       "wordType": "verb",
       "meaningVi": "Giúp đỡ, cứu giúp",
+      "imageUrl": "assets/minh-hoa/help-rescue.webp",
+      "imageAlt": "Giúp đỡ, cứu giúp",
       "accentNote": "先生が 助けて くださった おかげで = nhờ thầy giáo giúp đỡ mà."
     },
     {
@@ -84,6 +98,8 @@
       "romaji": "sei",
       "wordType": "noun",
       "meaningVi": "Tại vì, lỗi tại (nguyên nhân TIÊU CỰC, đổ lỗi)",
+      "imageUrl": "assets/minh-hoa/blame.webp",
+      "imageAlt": "Tại vì, lỗi tại (nguyên nhân TIÊU CỰC, đổ lỗi)",
       "accentNote": "天気の せいで = tại vì thời tiết."
     },
     {
@@ -94,6 +110,8 @@
       "romaji": "seikou",
       "wordType": "noun",
       "meaningVi": "Sự thành công",
+      "imageUrl": "assets/minh-hoa/success.webp",
+      "imageAlt": "Sự thành công",
       "accentNote": "Đã có ở động từ phía trên."
     },
     {
@@ -104,6 +122,8 @@
       "romaji": "shippai",
       "wordType": "noun",
       "meaningVi": "Sự thất bại, sai lầm",
+      "imageUrl": "assets/minh-hoa/failure.webp",
+      "imageAlt": "Sự thất bại, sai lầm",
       "accentNote": "",
       "emotion": "that_vong"
     },
@@ -115,6 +135,8 @@
       "romaji": "juutai",
       "wordType": "noun",
       "meaningVi": "Kẹt xe, ùn tắc giao thông",
+      "imageUrl": "assets/minh-hoa/traffic-jam.webp",
+      "imageAlt": "Kẹt xe, ùn tắc giao thông",
       "accentNote": "道が 渋滞して いました = đường bị kẹt xe."
     },
     {
@@ -125,6 +147,8 @@
       "romaji": "chikoku",
       "wordType": "noun",
       "meaningVi": "Sự đến muộn, sự trễ giờ",
+      "imageUrl": "assets/minh-hoa/late.webp",
+      "imageAlt": "Sự đến muộn, sự trễ giờ",
       "accentNote": ""
     },
     {
@@ -135,6 +159,8 @@
       "romaji": "ukkari",
       "wordType": "adverb",
       "meaningVi": "Lỡ, vô ý, bất cẩn",
+      "imageUrl": "assets/minh-hoa/carelessly.webp",
+      "imageAlt": "Lỡ, vô ý, bất cẩn",
       "accentNote": "うっかり 忘れました = tôi đã lỡ quên mất."
     },
     {
@@ -145,6 +171,8 @@
       "romaji": "doryoku",
       "wordType": "noun",
       "meaningVi": "Sự nỗ lực, sự cố gắng",
+      "imageUrl": "assets/minh-hoa/effort.webp",
+      "imageAlt": "Sự nỗ lực, sự cố gắng",
       "accentNote": "Đã gặp bài 2."
     },
     {
@@ -155,6 +183,8 @@
       "romaji": "sensei",
       "wordType": "noun",
       "meaningVi": "Thầy/cô giáo",
+      "imageUrl": "assets/minh-hoa/teacher-n3.webp",
+      "imageAlt": "Thầy/cô giáo",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -165,6 +195,8 @@
       "romaji": "tenki",
       "wordType": "noun",
       "meaningVi": "Thời tiết",
+      "imageUrl": "assets/minh-hoa/weather-n3.webp",
+      "imageAlt": "Thời tiết",
       "accentNote": "Đã gặp N5 bài 21."
     },
     {
@@ -175,6 +207,8 @@
       "romaji": "shiken",
       "wordType": "noun",
       "meaningVi": "Kỳ thi",
+      "imageUrl": "assets/minh-hoa/exam-n3.webp",
+      "imageAlt": "Kỳ thi",
       "accentNote": "Đã gặp bài 40 (N4)."
     },
     {
@@ -185,6 +219,8 @@
       "romaji": "jiko",
       "wordType": "noun",
       "meaningVi": "Tai nạn",
+      "imageUrl": "assets/minh-hoa/accident-n3.webp",
+      "imageAlt": "Tai nạn",
       "accentNote": "Đã gặp bài 26 (N4)."
     },
     {
@@ -195,6 +231,8 @@
       "romaji": "densha",
       "wordType": "noun",
       "meaningVi": "Tàu điện",
+      "imageUrl": "assets/minh-hoa/train-n3.webp",
+      "imageAlt": "Tàu điện",
       "accentNote": "Đã gặp N5 bài 5."
     },
     {
@@ -205,6 +243,8 @@
       "romaji": "taihen",
       "wordType": "adjective",
       "meaningVi": "Vất vả, nghiêm trọng",
+      "imageUrl": "assets/minh-hoa/hard-tough.webp",
+      "imageAlt": "Vất vả, nghiêm trọng",
       "accentNote": "Đã gặp N5 bài 21."
     }
   ],
@@ -806,6 +846,7 @@
       "id": "dia-n3-4-1",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d4-1",
@@ -855,6 +896,7 @@
       "id": "dia-n3-4-2",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d4-8",
@@ -925,6 +967,7 @@
       "id": "dia-n3-4-3",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d4-19",
@@ -967,6 +1010,7 @@
       "id": "dia-n3-4-4",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d4-25",
@@ -1012,6 +1056,7 @@
       "id": "dia-n3-4-5",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d4-31",
@@ -1072,6 +1117,7 @@
       "id": "dia-n3-4-6",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d4-40",
@@ -1170,6 +1216,7 @@
       "id": "dia-n3-4-7",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d4-56",
@@ -1206,6 +1253,7 @@
       "id": "dia-n3-4-8",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d4-61",
@@ -1301,6 +1349,7 @@
       "id": "dia-n3-4-9",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d4-76",
@@ -1358,6 +1407,7 @@
       "id": "dia-n3-4-10",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d4-84",

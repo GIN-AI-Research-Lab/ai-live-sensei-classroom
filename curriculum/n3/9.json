@@ -3,6 +3,8 @@
   "lessonNumber": 9,
   "title": "Bài 9: Xu hướng & Khởi đầu (〜かける & 〜がち & 〜気味)",
   "description": "がち diễn tả XU HƯỚNG thường xuyên xảy ra, mang sắc thái tiêu cực (hay đi trễ, hay quên); 気味 diễn tả CẢM GIÁC nhẹ, chủ quan về một trạng thái hiện tại (hơi mệt, hơi thiếu ngủ); かける gắn sau V-stem diễn tả một hành động ĐÃ BẮT ĐẦU nhưng CHƯA HOÀN THÀNH, bị gián đoạn giữa chừng.",
+  "sceneImageUrl": "assets/minh-hoa/canh-thieu-ngu-met-moi.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 9: Xu hướng & Khởi đầu (〜かける & 〜がち & 〜気味)",
   "vocabList": [
     {
       "id": "voc-n3-9-1",
@@ -32,6 +34,8 @@
       "romaji": "kakemasu",
       "wordType": "verb",
       "meaningVi": "Bắt đầu làm dở, chưa hoàn thành (gắn sau V-stem)",
+      "imageUrl": "assets/minh-hoa/half-done.webp",
+      "imageAlt": "Bắt đầu làm dở, chưa hoàn thành (gắn sau V-stem)",
       "accentNote": "食べかけの パン = bánh mì ăn dở."
     },
     {
@@ -42,6 +46,8 @@
       "romaji": "kesseki shimasu",
       "wordType": "verb",
       "meaningVi": "Vắng mặt, nghỉ (học/họp)",
+      "imageUrl": "assets/minh-hoa/absent.webp",
+      "imageAlt": "Vắng mặt, nghỉ (học/họp)",
       "accentNote": "学校を 欠席します = nghỉ học."
     },
     {
@@ -52,6 +58,8 @@
       "romaji": "kenkou",
       "wordType": "noun",
       "meaningVi": "Sức khỏe",
+      "imageUrl": "assets/minh-hoa/health-n3.webp",
+      "imageAlt": "Sức khỏe",
       "accentNote": "健康の ために = vì mục đích sức khỏe."
     },
     {
@@ -62,6 +70,8 @@
       "romaji": "chikoku shimasu",
       "wordType": "verb",
       "meaningVi": "Đi trễ, đến muộn",
+      "imageUrl": "assets/minh-hoa/late.webp",
+      "imageAlt": "Đi trễ, đến muộn",
       "accentNote": "会社に 遅刻します = đi trễ đến công ty."
     },
     {
@@ -72,6 +82,8 @@
       "romaji": "tsukare",
       "wordType": "noun",
       "meaningVi": "Sự mệt mỏi",
+      "imageUrl": "assets/minh-hoa/fatigue.webp",
+      "imageAlt": "Sự mệt mỏi",
       "accentNote": "疲れが たまります = tích tụ mệt mỏi."
     },
     {
@@ -92,6 +104,8 @@
       "romaji": "fusoku",
       "wordType": "noun",
       "meaningVi": "Sự thiếu hụt, thiếu",
+      "imageUrl": "assets/minh-hoa/shortage.webp",
+      "imageAlt": "Sự thiếu hụt, thiếu",
       "accentNote": "睡眠 不足 = thiếu ngủ."
     },
     {
@@ -102,6 +116,8 @@
       "romaji": "suimin",
       "wordType": "noun",
       "meaningVi": "Giấc ngủ",
+      "imageUrl": "assets/minh-hoa/sleep.webp",
+      "imageAlt": "Giấc ngủ",
       "accentNote": "睡眠 時間 = thời gian ngủ."
     },
     {
@@ -112,6 +128,8 @@
       "romaji": "akimasu",
       "wordType": "verb",
       "meaningVi": "Chán, mất hứng thú",
+      "imageUrl": "assets/minh-hoa/bored.webp",
+      "imageAlt": "Chán, mất hứng thú",
       "accentNote": "仕事に 飽きます = chán công việc."
     },
     {
@@ -122,6 +140,8 @@
       "romaji": "eiyou",
       "wordType": "noun",
       "meaningVi": "Dinh dưỡng",
+      "imageUrl": "assets/minh-hoa/nutrition.webp",
+      "imageAlt": "Dinh dưỡng",
       "accentNote": "栄養が 足りません = thiếu dinh dưỡng."
     },
     {
@@ -132,6 +152,8 @@
       "romaji": "yasumimasu",
       "wordType": "verb",
       "meaningVi": "Nghỉ",
+      "imageUrl": "assets/minh-hoa/rest.webp",
+      "imageAlt": "Nghỉ",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -142,6 +164,8 @@
       "romaji": "wasuremasu",
       "wordType": "verb",
       "meaningVi": "Quên",
+      "imageUrl": "assets/minh-hoa/forget-n3.webp",
+      "imageAlt": "Quên",
       "accentNote": "Đã gặp N4 bài 38."
     },
     {
@@ -152,6 +176,8 @@
       "romaji": "isogashii",
       "wordType": "adjective",
       "meaningVi": "Bận rộn",
+      "imageUrl": "assets/minh-hoa/busy-n3.webp",
+      "imageAlt": "Bận rộn",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -162,6 +188,8 @@
       "romaji": "tabemasu",
       "wordType": "verb",
       "meaningVi": "Ăn",
+      "imageUrl": "assets/minh-hoa/eat-n3.webp",
+      "imageAlt": "Ăn",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -172,6 +200,8 @@
       "romaji": "iimasu",
       "wordType": "verb",
       "meaningVi": "Nói",
+      "imageUrl": "assets/minh-hoa/say.webp",
+      "imageAlt": "Nói",
       "accentNote": "Đã gặp N5 bài 6."
     },
     {
@@ -182,6 +212,8 @@
       "romaji": "yamemasu",
       "wordType": "verb",
       "meaningVi": "Dừng lại, từ bỏ",
+      "imageUrl": "assets/minh-hoa/quit.webp",
+      "imageAlt": "Dừng lại, từ bỏ",
       "accentNote": "Đã gặp N4 bài 33."
     },
     {
@@ -202,6 +234,8 @@
       "romaji": "byouki",
       "wordType": "noun",
       "meaningVi": "Bệnh, ốm",
+      "imageUrl": "assets/minh-hoa/sick-n3.webp",
+      "imageAlt": "Bệnh, ốm",
       "accentNote": "Đã gặp N4 bài 26."
     }
   ],
@@ -734,6 +768,7 @@
       "id": "dia-n3-9-1",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d9-1",
@@ -780,6 +815,7 @@
       "id": "dia-n3-9-2",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d9-7",
@@ -824,6 +860,7 @@
       "id": "dia-n3-9-3",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d9-13",
@@ -869,6 +906,7 @@
       "id": "dia-n3-9-4",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d9-19",
@@ -917,6 +955,7 @@
       "id": "dia-n3-9-5",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d9-26",
@@ -971,6 +1010,7 @@
       "id": "dia-n3-9-6",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d9-34",
@@ -1029,6 +1069,7 @@
       "id": "dia-n3-9-7",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d9-42",
@@ -1068,6 +1109,7 @@
       "id": "dia-n3-9-8",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d9-47",
@@ -1151,6 +1193,7 @@
       "id": "dia-n3-9-9",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d9-60",
@@ -1195,6 +1238,7 @@
       "id": "dia-n3-9-10",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d9-66",

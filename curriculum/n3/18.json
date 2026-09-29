@@ -3,6 +3,8 @@
   "lessonNumber": 18,
   "title": "Bài 18: Truyền đạt thông tin chính thức (ということ)",
   "description": "ということだ dùng để TRUYỀN ĐẠT một thông tin đã nghe/đọc được một cách TRANG TRỌNG (mạnh mẽ hơn そうだ); ということは〜ということだ dùng để GIẢI THÍCH Ý NGHĨA ('A tức là B'); ということになる diễn tả KẾT LUẬN LOGIC từ hoàn cảnh khách quan (khác ことにする là quyết định chủ quan).",
+  "sceneImageUrl": "assets/minh-hoa/canh-cuoc-hop-bi-hoan.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 18: Truyền đạt thông tin chính thức (ということ)",
   "vocabList": [
     {
       "id": "voc-n3-18-1",
@@ -12,6 +14,8 @@
       "romaji": "shirase",
       "wordType": "noun",
       "meaningVi": "Tin báo, thông báo",
+      "imageUrl": "assets/minh-hoa/notice.webp",
+      "imageAlt": "Tin báo, thông báo",
       "accentNote": "会社から 知らせが あります = có thông báo từ công ty."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "enki shimasu",
       "wordType": "verb",
       "meaningVi": "Hoãn lại",
+      "imageUrl": "assets/minh-hoa/postpone.webp",
+      "imageAlt": "Hoãn lại",
       "accentNote": "会議を 延期します = hoãn cuộc họp."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "kettei shimasu",
       "wordType": "verb",
       "meaningVi": "Quyết định",
+      "imageUrl": "assets/minh-hoa/decide-n3.webp",
+      "imageAlt": "Quyết định",
       "accentNote": "計画を 決定します = quyết định kế hoạch."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "henkou shimasu",
       "wordType": "verb",
       "meaningVi": "Thay đổi",
+      "imageUrl": "assets/minh-hoa/reschedule.webp",
+      "imageAlt": "Thay đổi",
       "accentNote": "予定を 変更します = thay đổi lịch trình."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "shounin shimasu",
       "wordType": "verb",
       "meaningVi": "Phê duyệt, chấp thuận",
+      "imageUrl": "assets/minh-hoa/approve.webp",
+      "imageAlt": "Phê duyệt, chấp thuận",
       "accentNote": "計画を 承認します = phê duyệt kế hoạch."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "meirei shimasu",
       "wordType": "verb",
       "meaningVi": "Ra lệnh",
+      "imageUrl": "assets/minh-hoa/command.webp",
+      "imageAlt": "Ra lệnh",
       "accentNote": "社長が 命令します = giám đốc ra lệnh."
     },
     {
@@ -82,6 +96,8 @@
       "romaji": "kaigi",
       "wordType": "noun",
       "meaningVi": "Cuộc họp",
+      "imageUrl": "assets/minh-hoa/meeting-n3.webp",
+      "imageAlt": "Cuộc họp",
       "accentNote": "Đã gặp N4 bài 30."
     },
     {
@@ -92,6 +108,8 @@
       "romaji": "keikaku",
       "wordType": "noun",
       "meaningVi": "Kế hoạch",
+      "imageUrl": "assets/minh-hoa/plan-n3.webp",
+      "imageAlt": "Kế hoạch",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -102,6 +120,8 @@
       "romaji": "junbi",
       "wordType": "noun",
       "meaningVi": "Sự chuẩn bị",
+      "imageUrl": "assets/minh-hoa/prepare-n3.webp",
+      "imageAlt": "Sự chuẩn bị",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -162,6 +182,8 @@
       "romaji": "denwa",
       "wordType": "noun",
       "meaningVi": "Điện thoại",
+      "imageUrl": "assets/minh-hoa/telephone-n3.webp",
+      "imageAlt": "Điện thoại",
       "accentNote": "Đã gặp N4 bài 34."
     },
     {
@@ -172,6 +194,8 @@
       "romaji": "renraku shimasu",
       "wordType": "verb",
       "meaningVi": "Liên lạc",
+      "imageUrl": "assets/minh-hoa/contact-n3.webp",
+      "imageAlt": "Liên lạc",
       "accentNote": "Đã gặp N4 bài 41."
     },
     {
@@ -182,6 +206,8 @@
       "romaji": "kimarimasu",
       "wordType": "verb",
       "meaningVi": "Được quyết định",
+      "imageUrl": "assets/minh-hoa/decide-n3.webp",
+      "imageAlt": "Được quyết định",
       "accentNote": "Đã gặp N4 bài 33."
     },
     {
@@ -202,6 +228,8 @@
       "romaji": "mondai",
       "wordType": "noun",
       "meaningVi": "Vấn đề",
+      "imageUrl": "assets/minh-hoa/problem.webp",
+      "imageAlt": "Vấn đề",
       "accentNote": "Đã gặp N5 bài 22."
     }
   ],
@@ -901,6 +929,7 @@
       "id": "dia-n3-18-1",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d18-1",
@@ -967,6 +996,7 @@
       "id": "dia-n3-18-2",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d18-11",
@@ -1043,6 +1073,7 @@
       "id": "dia-n3-18-3",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d18-23",
@@ -1102,6 +1133,7 @@
       "id": "dia-n3-18-4",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d18-32",
@@ -1141,6 +1173,7 @@
       "id": "dia-n3-18-5",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d18-37",
@@ -1197,6 +1230,7 @@
       "id": "dia-n3-18-6",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d18-45",
@@ -1265,6 +1299,7 @@
       "id": "dia-n3-18-7",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d18-55",
@@ -1307,6 +1342,7 @@
       "id": "dia-n3-18-8",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d18-61",
@@ -1363,6 +1399,7 @@
       "id": "dia-n3-18-9",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d18-69",
@@ -1447,6 +1484,7 @@
       "id": "dia-n3-18-10",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d18-83",

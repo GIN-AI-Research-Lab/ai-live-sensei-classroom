@@ -3,6 +3,8 @@
   "lessonNumber": 1,
   "title": "Bài 1: Giới thiệu bản thân — です / じゃありません / ですか / も / の",
   "description": "Chào hỏi lần đầu, xưng hô, nghề nghiệp, quốc tịch và tuổi tác. Nắm trọn bộ khung câu danh từ: khẳng định です, phủ định じゃ ありません, nghi vấn か, trợ từ も (cũng) và の (nối danh từ).",
+  "sceneImageUrl": "assets/minh-hoa/canh-gioi-thieu-dong-nghiep-moi.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 1: Giới thiệu bản thân — です / じゃありません / ですか / も / の",
   "vocabList": [
     {
       "id": "voc-n5-1-1",
@@ -12,6 +14,8 @@
       "romaji": "watashi",
       "wordType": "noun",
       "meaningVi": "Tôi (ngôi thứ nhất, trung tính, dùng được mọi lúc)",
+      "imageUrl": "assets/minh-hoa/toi.webp",
+      "imageAlt": "Tôi (ngôi thứ nhất, trung tính, dùng được mọi lúc)",
       "accentNote": "Đọc bằng, hạ nhẹ âm cuối."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "watashitachi",
       "wordType": "noun",
       "meaningVi": "Chúng tôi, chúng ta",
+      "imageUrl": "assets/minh-hoa/chung-toi.webp",
+      "imageAlt": "Chúng tôi, chúng ta",
       "accentNote": "たち là hậu tố số nhiều cho người."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "anata",
       "wordType": "noun",
       "meaningVi": "Bạn / anh / chị (ngôi thứ 2)",
+      "imageUrl": "assets/minh-hoa/ban-anh-chi.webp",
+      "imageAlt": "Bạn / anh / chị (ngôi thứ 2)",
       "accentNote": "Biết tên rồi thì gọi tên + さん, đừng dùng あなた."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "ano hito",
       "wordType": "noun",
       "meaningVi": "Người kia, người đó",
+      "imageUrl": "assets/minh-hoa/nguoi-kia.webp",
+      "imageAlt": "Người kia, người đó",
       "accentNote": "Lịch sự hơn: あの方 (あのかた)."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "minasan",
       "wordType": "noun",
       "meaningVi": "Các bạn, mọi người, quý vị",
+      "imageUrl": "assets/minh-hoa/moi-nguoi.webp",
+      "imageAlt": "Các bạn, mọi người, quý vị",
       "accentNote": "Câu mở đầu khi nói trước đám đông."
     },
     {
@@ -102,6 +114,8 @@
       "romaji": "sensei",
       "wordType": "noun",
       "meaningVi": "Thầy / cô giáo, bác sĩ (dùng để GỌI người khác)",
+      "imageUrl": "assets/minh-hoa/giao-vien.webp",
+      "imageAlt": "Thầy / cô giáo, bác sĩ (dùng để GỌI người khác)",
       "accentNote": "Kéo dài âm せい. Không tự xưng là 先生."
     },
     {
@@ -112,6 +126,8 @@
       "romaji": "kyoushi",
       "wordType": "noun",
       "meaningVi": "Giáo viên (tên NGHỀ, dùng khi nói nghề của mình)",
+      "imageUrl": "assets/minh-hoa/giao-vien.webp",
+      "imageAlt": "Giáo viên (tên NGHỀ, dùng khi nói nghề của mình)",
       "accentNote": "Tôi là giáo viên → 私は教師です."
     },
     {
@@ -122,6 +138,8 @@
       "romaji": "gakusei",
       "wordType": "noun",
       "meaningVi": "Học sinh, sinh viên",
+      "imageUrl": "assets/minh-hoa/hoc-sinh.webp",
+      "imageAlt": "Học sinh, sinh viên",
       "accentNote": "Trọng âm phẳng."
     },
     {
@@ -132,6 +150,8 @@
       "romaji": "kaishain",
       "wordType": "noun",
       "meaningVi": "Nhân viên công ty (nói chung)",
+      "imageUrl": "assets/minh-hoa/nhan-vien-cong-ty.webp",
+      "imageAlt": "Nhân viên công ty (nói chung)",
       "accentNote": "Phân biệt với 社員: nhân viên của một công ty cụ thể."
     },
     {
@@ -142,6 +162,8 @@
       "romaji": "shain",
       "wordType": "noun",
       "meaningVi": "Nhân viên của công ty ~ (IMCの社員)",
+      "imageUrl": "assets/minh-hoa/nhan-vien-cong-ty.webp",
+      "imageAlt": "Nhân viên của công ty ~ (IMCの社員)",
       "accentNote": "Luôn đi kèm tên công ty phía trước."
     },
     {
@@ -152,6 +174,8 @@
       "romaji": "ginkouin",
       "wordType": "noun",
       "meaningVi": "Nhân viên ngân hàng",
+      "imageUrl": "assets/minh-hoa/nhan-vien-ngan-hang.webp",
+      "imageAlt": "Nhân viên ngân hàng",
       "accentNote": "Hậu tố 員 (いん) = thành viên, nhân viên."
     },
     {
@@ -162,6 +186,8 @@
       "romaji": "isha",
       "wordType": "noun",
       "meaningVi": "Bác sĩ (tên nghề)",
+      "imageUrl": "assets/minh-hoa/bac-si.webp",
+      "imageAlt": "Bác sĩ (tên nghề)",
       "accentNote": "Gọi bác sĩ trước mặt thì dùng 先生."
     },
     {
@@ -172,6 +198,8 @@
       "romaji": "kenkyuusha",
       "wordType": "noun",
       "meaningVi": "Nhà nghiên cứu",
+      "imageUrl": "assets/minh-hoa/nha-nghien-cuu.webp",
+      "imageAlt": "Nhà nghiên cứu",
       "accentNote": "Hậu tố 者 (しゃ) = người làm nghề ~."
     },
     {
@@ -182,6 +210,8 @@
       "romaji": "enjinia",
       "wordType": "noun",
       "meaningVi": "Kỹ sư",
+      "imageUrl": "assets/minh-hoa/ky-su.webp",
+      "imageAlt": "Kỹ sư",
       "accentNote": "Từ ngoại lai, viết Katakana."
     },
     {
@@ -192,6 +222,8 @@
       "romaji": "daigaku",
       "wordType": "noun",
       "meaningVi": "Trường đại học",
+      "imageUrl": "assets/minh-hoa/dai-hoc.webp",
+      "imageAlt": "Trường đại học",
       "accentNote": "Nhấn ở âm い."
     },
     {
@@ -202,6 +234,8 @@
       "romaji": "byouin",
       "wordType": "noun",
       "meaningVi": "Bệnh viện",
+      "imageUrl": "assets/minh-hoa/benh-vien.webp",
+      "imageAlt": "Bệnh viện",
       "accentNote": "Đừng lẫn với 美容院 (びよういん) = tiệm làm tóc!"
     },
     {
@@ -212,6 +246,8 @@
       "romaji": "denki",
       "wordType": "noun",
       "meaningVi": "Điện, đèn điện",
+      "imageUrl": "assets/minh-hoa/den-dien.webp",
+      "imageAlt": "Điện, đèn điện",
       "accentNote": "電気屋 = cửa hàng đồ điện."
     },
     {
@@ -262,6 +298,8 @@
       "romaji": "hai",
       "wordType": "phrase",
       "meaningVi": "Vâng, đúng vậy",
+      "imageUrl": "assets/minh-hoa/vang-dong-y.webp",
+      "imageAlt": "Vâng, đúng vậy",
       "accentNote": "Cũng dùng để báo “tôi đang nghe”."
     },
     {
@@ -272,6 +310,8 @@
       "romaji": "iie",
       "wordType": "phrase",
       "meaningVi": "Không, không phải",
+      "imageUrl": "assets/minh-hoa/khong-phu-dinh.webp",
+      "imageAlt": "Không, không phải",
       "accentNote": "Khi được khen thì đáp いいえ cho khiêm tốn."
     },
     {
@@ -1170,6 +1210,7 @@
       "id": "dia-n5-1-1",
       "speaker": "佐藤 (Satou)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-sato.webp",
       "tokens": [
         {
           "id": "d-l1-1a",
@@ -1210,6 +1251,7 @@
       "id": "dia-n5-1-2",
       "speaker": "山田 (Yamada)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l1-2a",
@@ -1250,6 +1292,7 @@
       "id": "dia-n5-1-3",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l1-3a",
@@ -1303,6 +1346,7 @@
       "id": "dia-n5-1-4",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l1-4a",
@@ -1333,6 +1377,7 @@
       "id": "dia-n5-1-5",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l1-5a",
@@ -1359,6 +1404,7 @@
       "id": "dia-n5-1-6",
       "speaker": "佐藤 (Satou)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-sato.webp",
       "tokens": [
         {
           "id": "d-l1-6a",
@@ -1387,6 +1433,7 @@
       "id": "dia-n5-1-7",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l1-7a",
@@ -1432,6 +1479,7 @@
       "id": "dia-n5-1-8",
       "speaker": "佐藤 (Satou)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-sato.webp",
       "tokens": [
         {
           "id": "d-l1-8a",
@@ -1463,6 +1511,7 @@
       "id": "dia-n5-1-9",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l1-9a",
@@ -1522,6 +1571,7 @@
       "id": "dia-n5-1-10",
       "speaker": "佐藤 (Satou)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-sato.webp",
       "tokens": [
         {
           "id": "d-l1-10a",

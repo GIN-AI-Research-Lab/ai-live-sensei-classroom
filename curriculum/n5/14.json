@@ -3,6 +3,8 @@
   "lessonNumber": 14,
   "title": "Bài 14: Nhóm động từ & Thể て (Vてください / Vています / Vましょうか)",
   "description": "Nhận diện ba nhóm động từ (I: 5 kiểu biến âm う/つ/る→って, ぬ/ぶ/む→んで, く→いて, ぐ→いで, す→して; II: bỏ ます thêm て; III bất quy tắc), và ba cách dùng thể て: yêu cầu Vてください, hành động/trạng thái đang diễn ra Vています, đề nghị giúp đỡ Vましょうか.",
+  "sceneImageUrl": "assets/minh-hoa/canh-giup-be-thung-do.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 14: Nhóm động từ & Thể て (Vてください / Vています / Vましょうか)",
   "vocabList": [
     {
       "id": "voc-n5-14-1",
@@ -12,6 +14,8 @@
       "romaji": "kaimasu",
       "wordType": "verb",
       "meaningVi": "Mua",
+      "imageUrl": "assets/minh-hoa/mua-hang.webp",
+      "imageAlt": "Mua",
       "accentNote": "Đuôi う → って. Nhóm 1. Đã gặp bài 6."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "machimasu",
       "wordType": "verb",
       "meaningVi": "Chờ, đợi",
+      "imageUrl": "assets/minh-hoa/cho-doi.webp",
+      "imageAlt": "Chờ, đợi",
       "accentNote": "Đuôi つ → って. Nhóm 1."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "shinimasu",
       "wordType": "verb",
       "meaningVi": "Chết, mất",
+      "imageUrl": "assets/minh-hoa/chet.webp",
+      "imageAlt": "Chết, mất",
       "accentNote": "Đuôi ぬ → んで. Nhóm 1. Động từ DUY NHẤT có đuôi ぬ trong tiếng Nhật hiện đại.",
       "emotion": "buon"
     },
@@ -43,6 +51,8 @@
       "romaji": "asobimasu",
       "wordType": "verb",
       "meaningVi": "Chơi, đi chơi",
+      "imageUrl": "assets/minh-hoa/choi.webp",
+      "imageAlt": "Chơi, đi chơi",
       "accentNote": "Đuôi ぶ → んで. Nhóm 1. Đã gặp bài 13."
     },
     {
@@ -53,6 +63,8 @@
       "romaji": "sumimasu",
       "wordType": "verb",
       "meaningVi": "Sống, cư trú",
+      "imageUrl": "assets/minh-hoa/song-cu-tru.webp",
+      "imageAlt": "Sống, cư trú",
       "accentNote": "Đuôi む → んで. Nhóm 1."
     },
     {
@@ -63,6 +75,8 @@
       "romaji": "hanashimasu",
       "wordType": "verb",
       "meaningVi": "Nói, trò chuyện",
+      "imageUrl": "assets/minh-hoa/noi-chuyen.webp",
+      "imageAlt": "Nói, trò chuyện",
       "accentNote": "Đuôi す → して (KHÔNG âm tiện, ngoại lệ trong nhóm 1). Đã gặp bài 7."
     },
     {
@@ -73,6 +87,8 @@
       "romaji": "isogimasu",
       "wordType": "verb",
       "meaningVi": "Vội, gấp",
+      "imageUrl": "assets/minh-hoa/voi.webp",
+      "imageAlt": "Vội, gấp",
       "accentNote": "Đuôi ぐ → いで. Nhóm 1."
     },
     {
@@ -83,6 +99,8 @@
       "romaji": "tsukurimasu",
       "wordType": "verb",
       "meaningVi": "Làm, chế tạo, nấu",
+      "imageUrl": "assets/minh-hoa/lam-che-tao.webp",
+      "imageAlt": "Làm, chế tạo, nấu",
       "accentNote": "Đuôi る (nhóm 1) → って. Đã gặp bài 6."
     },
     {
@@ -93,6 +111,8 @@
       "romaji": "tachimasu",
       "wordType": "verb",
       "meaningVi": "Đứng dậy",
+      "imageUrl": "assets/minh-hoa/dung-day.webp",
+      "imageAlt": "Đứng dậy",
       "accentNote": "Đuôi つ → って. Nhóm 1."
     },
     {
@@ -103,6 +123,8 @@
       "romaji": "suwarimasu",
       "wordType": "verb",
       "meaningVi": "Ngồi xuống",
+      "imageUrl": "assets/minh-hoa/ngoi-xuong.webp",
+      "imageAlt": "Ngồi xuống",
       "accentNote": "Đuôi る (nhóm 1) → って."
     },
     {
@@ -113,6 +135,8 @@
       "romaji": "mochimasu",
       "wordType": "verb",
       "meaningVi": "Cầm, mang, sở hữu",
+      "imageUrl": "assets/minh-hoa/cam-mang.webp",
+      "imageAlt": "Cầm, mang, sở hữu",
       "accentNote": "Đuôi つ → って."
     },
     {
@@ -123,6 +147,8 @@
       "romaji": "shirimasu",
       "wordType": "verb",
       "meaningVi": "Biết (bắt đầu biết)",
+      "imageUrl": "assets/minh-hoa/biet.webp",
+      "imageAlt": "Biết (bắt đầu biết)",
       "accentNote": "Đuôi る (nhóm 1) → って. 知っています = đã biết (trạng thái)."
     },
     {
@@ -133,6 +159,8 @@
       "romaji": "akemasu",
       "wordType": "verb",
       "meaningVi": "Mở (tha động từ)",
+      "imageUrl": "assets/minh-hoa/mo.webp",
+      "imageAlt": "Mở (tha động từ)",
       "accentNote": "Nhóm 2: bỏ ます thêm て → 開けて."
     },
     {
@@ -143,6 +171,8 @@
       "romaji": "shimemasu",
       "wordType": "verb",
       "meaningVi": "Đóng (tha động từ)",
+      "imageUrl": "assets/minh-hoa/dong.webp",
+      "imageAlt": "Đóng (tha động từ)",
       "accentNote": "Nhóm 2."
     },
     {
@@ -153,6 +183,8 @@
       "romaji": "keshimasu",
       "wordType": "verb",
       "meaningVi": "Tắt, xóa",
+      "imageUrl": "assets/minh-hoa/tat.webp",
+      "imageAlt": "Tắt, xóa",
       "accentNote": "Đuôi す → して. Nhóm 1."
     },
     {
@@ -163,6 +195,8 @@
       "romaji": "tetsudaimasu",
       "wordType": "verb",
       "meaningVi": "Giúp đỡ, phụ giúp",
+      "imageUrl": "assets/minh-hoa/giup-do.webp",
+      "imageAlt": "Giúp đỡ, phụ giúp",
       "accentNote": "Đuôi う → って. Nhóm 1."
     },
     {
@@ -173,6 +207,8 @@
       "romaji": "kekkonshimasu",
       "wordType": "verb",
       "meaningVi": "Kết hôn",
+      "imageUrl": "assets/minh-hoa/ket-hon.webp",
+      "imageAlt": "Kết hôn",
       "accentNote": "Nhóm 3 (します). 結婚しています = đã kết hôn (trạng thái, không phải đang cưới)."
     },
     {
@@ -183,6 +219,8 @@
       "romaji": "kimasu",
       "wordType": "verb",
       "meaningVi": "Đến",
+      "imageUrl": "assets/minh-hoa/den.webp",
+      "imageAlt": "Đến",
       "accentNote": "Nhóm 2 bất quy tắc: 来て. Đã gặp bài 5."
     },
     {
@@ -203,6 +241,8 @@
       "romaji": "shigoto",
       "wordType": "noun",
       "meaningVi": "Công việc",
+      "imageUrl": "assets/minh-hoa/lam-viec.webp",
+      "imageAlt": "Công việc",
       "accentNote": "Đã gặp bài 9 — nay dùng làm chủ đề của Vています (đang làm việc)."
     }
   ],
@@ -668,6 +708,7 @@
       "id": "dia-n5-14-1",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l14-1",
@@ -711,6 +752,7 @@
       "id": "dia-n5-14-2",
       "speaker": "グプタ",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-gupta.webp",
       "tokens": [
         {
           "id": "d-l14-7",
@@ -736,6 +778,7 @@
       "id": "dia-n5-14-3",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l14-10",
@@ -778,6 +821,7 @@
       "id": "dia-n5-14-4",
       "speaker": "グプタ",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-gupta.webp",
       "tokens": [
         {
           "id": "d-l14-16",
@@ -812,6 +856,7 @@
       "id": "dia-n5-14-5",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l14-20",
@@ -839,6 +884,7 @@
       "id": "dia-n5-14-6",
       "speaker": "グプタ",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-gupta.webp",
       "tokens": [
         {
           "id": "d-l14-23",
@@ -876,6 +922,7 @@
       "id": "dia-n5-14-7",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l14-28",
@@ -945,6 +992,7 @@
       "id": "dia-n5-14-8",
       "speaker": "グプタ",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-gupta.webp",
       "tokens": [
         {
           "id": "d-l14-39",
@@ -1008,6 +1056,7 @@
       "id": "dia-n5-14-9",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l14-49",
@@ -1067,6 +1116,7 @@
       "id": "dia-n5-14-10",
       "speaker": "グプタ",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-gupta.webp",
       "tokens": [
         {
           "id": "d-l14-58",

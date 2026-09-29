@@ -3,6 +3,8 @@
   "lessonNumber": 8,
   "title": "Bài 8: Tính từ đuôi な và Tính từ đuôi い",
   "description": "Phân biệt hai loại tính từ theo cách chia (い → くない, な → じゃ ありません), quy tắc な bắt buộc khi bổ nghĩa trực tiếp cho danh từ, các ngoại lệ いい/きれい, và cách dùng phó từ mức độ とても/あまり.",
+  "sceneImageUrl": "assets/minh-hoa/canh-dao-pho-nho-yen-tinh.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 8: Tính từ đuôi な và Tính từ đuôi い",
   "vocabList": [
     {
       "id": "voc-n5-8-1",
@@ -12,6 +14,8 @@
       "romaji": "ookii",
       "wordType": "adjective",
       "meaningVi": "To, lớn",
+      "imageUrl": "assets/minh-hoa/to-lon.webp",
+      "imageAlt": "To, lớn",
       "accentNote": "Tính từ đuôi い. Trái nghĩa: 小さい."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "chiisai",
       "wordType": "adjective",
       "meaningVi": "Nhỏ, bé",
+      "imageUrl": "assets/minh-hoa/nho-be.webp",
+      "imageAlt": "Nhỏ, bé",
       "accentNote": "Tính từ đuôi い."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "atarashii",
       "wordType": "adjective",
       "meaningVi": "Mới",
+      "imageUrl": "assets/minh-hoa/moi.webp",
+      "imageAlt": "Mới",
       "accentNote": "Tính từ đuôi い. Chỉ dùng cho ĐỒ VẬT, không dùng cho người mới quen."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "furui",
       "wordType": "adjective",
       "meaningVi": "Cũ, cổ",
+      "imageUrl": "assets/minh-hoa/cu.webp",
+      "imageAlt": "Cũ, cổ",
       "accentNote": "Tính từ đuôi い. Không dùng để chê tuổi người."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "ii/yoi",
       "wordType": "adjective",
       "meaningVi": "Tốt, hay, được",
+      "imageUrl": "assets/minh-hoa/tot.webp",
+      "imageAlt": "Tốt, hay, được",
       "accentNote": "Tính từ đuôi い BẤT QUY TẮC: phủ định phải chia từ よい (よくない), không chia từ いい."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "warui",
       "wordType": "adjective",
       "meaningVi": "Xấu, tệ, có lỗi",
+      "imageUrl": "assets/minh-hoa/xau-te.webp",
+      "imageAlt": "Xấu, tệ, có lỗi",
       "accentNote": "Tính từ đuôi い. すみません có gốc liên quan đến 悪い."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "atsui",
       "wordType": "adjective",
       "meaningVi": "Nóng (thời tiết)",
+      "imageUrl": "assets/minh-hoa/nong.webp",
+      "imageAlt": "Nóng (thời tiết)",
       "accentNote": "Tính từ đuôi い. Nóng của VẬT dùng chữ 熱い khác."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "samui",
       "wordType": "adjective",
       "meaningVi": "Lạnh (thời tiết)",
+      "imageUrl": "assets/minh-hoa/lanh.webp",
+      "imageAlt": "Lạnh (thời tiết)",
       "accentNote": "Tính từ đuôi い. Lạnh của VẬT dùng chữ 冷たい khác."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "muzukashii",
       "wordType": "adjective",
       "meaningVi": "Khó",
+      "imageUrl": "assets/minh-hoa/kho.webp",
+      "imageAlt": "Khó",
       "accentNote": "Tính từ đuôi い."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "yasashii",
       "wordType": "adjective",
       "meaningVi": "Dễ, đơn giản",
+      "imageUrl": "assets/minh-hoa/de.webp",
+      "imageAlt": "Dễ, đơn giản",
       "accentNote": "Tính từ đuôi い. Đồng âm với 優しい (dịu dàng) nhưng nghĩa khác."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "takai",
       "wordType": "adjective",
       "meaningVi": "Cao; đắt",
+      "imageUrl": "assets/minh-hoa/cao.webp",
+      "imageAlt": "Cao; đắt",
       "accentNote": "Tính từ đuôi い. Vừa nghĩa chiều cao vừa nghĩa giá tiền."
     },
     {
@@ -122,6 +146,8 @@
       "romaji": "yasui",
       "wordType": "adjective",
       "meaningVi": "Rẻ",
+      "imageUrl": "assets/minh-hoa/re.webp",
+      "imageAlt": "Rẻ",
       "accentNote": "Tính từ đuôi い. Trái nghĩa với 高い (nghĩa giá tiền)."
     },
     {
@@ -132,6 +158,8 @@
       "romaji": "omoshiroi",
       "wordType": "adjective",
       "meaningVi": "Thú vị, hay",
+      "imageUrl": "assets/minh-hoa/thu-vi.webp",
+      "imageAlt": "Thú vị, hay",
       "accentNote": "Tính từ đuôi い.",
       "emotion": "vui"
     },
@@ -143,6 +171,8 @@
       "romaji": "tanoshii",
       "wordType": "adjective",
       "meaningVi": "Vui vẻ",
+      "imageUrl": "assets/minh-hoa/vui-ve.webp",
+      "imageAlt": "Vui vẻ",
       "accentNote": "Tính từ đuôi い.",
       "emotion": "vui"
     },
@@ -154,6 +184,8 @@
       "romaji": "isogashii",
       "wordType": "adjective",
       "meaningVi": "Bận rộn",
+      "imageUrl": "assets/minh-hoa/ban-ron.webp",
+      "imageAlt": "Bận rộn",
       "accentNote": "Tính từ đuôi い."
     },
     {
@@ -164,6 +196,8 @@
       "romaji": "oishii",
       "wordType": "adjective",
       "meaningVi": "Ngon",
+      "imageUrl": "assets/minh-hoa/ngon.webp",
+      "imageAlt": "Ngon",
       "accentNote": "Tính từ đuôi い.",
       "emotion": "vui"
     },
@@ -175,6 +209,8 @@
       "romaji": "kirei",
       "wordType": "adjective",
       "meaningVi": "Đẹp, sạch sẽ",
+      "imageUrl": "assets/minh-hoa/dep-sach.webp",
+      "imageAlt": "Đẹp, sạch sẽ",
       "accentNote": "Tính từ đuôi な dù kết thúc bằng い — NGOẠI LỆ phải nhớ riêng."
     },
     {
@@ -185,6 +221,8 @@
       "romaji": "genki",
       "wordType": "adjective",
       "meaningVi": "Khỏe mạnh, năng động",
+      "imageUrl": "assets/minh-hoa/khoe-manh.webp",
+      "imageAlt": "Khỏe mạnh, năng động",
       "accentNote": "Tính từ đuôi な. お元気ですか = anh/chị khỏe không."
     },
     {
@@ -195,6 +233,8 @@
       "romaji": "shizuka",
       "wordType": "adjective",
       "meaningVi": "Yên tĩnh",
+      "imageUrl": "assets/minh-hoa/yen-tinh.webp",
+      "imageAlt": "Yên tĩnh",
       "accentNote": "Tính từ đuôi な."
     },
     {
@@ -205,6 +245,8 @@
       "romaji": "yuumei",
       "wordType": "adjective",
       "meaningVi": "Nổi tiếng",
+      "imageUrl": "assets/minh-hoa/noi-tieng.webp",
+      "imageAlt": "Nổi tiếng",
       "accentNote": "Tính từ đuôi な."
     },
     {
@@ -215,6 +257,8 @@
       "romaji": "benri",
       "wordType": "adjective",
       "meaningVi": "Tiện lợi",
+      "imageUrl": "assets/minh-hoa/tien-loi.webp",
+      "imageAlt": "Tiện lợi",
       "accentNote": "Tính từ đuôi な. Trái nghĩa: 不便 (ふべん)."
     },
     {
@@ -972,6 +1016,7 @@
       "id": "dia-n5-8-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l8-1",
@@ -1002,6 +1047,7 @@
       "id": "dia-n5-8-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l8-5",
@@ -1049,6 +1095,7 @@
       "id": "dia-n5-8-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l8-12",
@@ -1069,6 +1116,7 @@
       "id": "dia-n5-8-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l8-14",
@@ -1132,6 +1180,7 @@
       "id": "dia-n5-8-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l8-24",
@@ -1170,6 +1219,7 @@
       "id": "dia-n5-8-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l8-30",
@@ -1222,6 +1272,7 @@
       "id": "dia-n5-8-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l8-38",
@@ -1254,6 +1305,7 @@
       "id": "dia-n5-8-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l8-42",
@@ -1316,6 +1368,7 @@
       "id": "dia-n5-8-9",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l8-51",
@@ -1348,6 +1401,7 @@
       "id": "dia-n5-8-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l8-55",

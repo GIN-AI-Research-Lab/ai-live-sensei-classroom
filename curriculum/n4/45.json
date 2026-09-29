@@ -3,6 +3,8 @@
   "lessonNumber": 45,
   "title": "Bài 45: Trường hợp (〜場合は) & Mặc dù (〜のに)",
   "description": "Giới thiệu tình huống giả định rồi đưa hướng dẫn/kết quả bằng 場合は (trang trọng, phổ biến trong thông báo an toàn), và diễn tả kết quả TRÁI VỚI KỲ VỌNG bằng のに (mặc dù — LƯU Ý: hoàn toàn khác のに mục đích ở bài 42, dù viết giống hệt) — so sánh のに với ても (N5 bài 25) để thấy rõ のに luôn kể một sự việc thực tế đã xảy ra, mang cảm xúc thất vọng/bất ngờ.",
+  "sceneImageUrl": "assets/minh-hoa/canh-dien-tap-dong-dat.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 45: Trường hợp (〜場合は) & Mặc dù (〜のに)",
   "vocabList": [
     {
       "id": "voc-n4-45-1",
@@ -12,6 +14,8 @@
       "romaji": "ganbarimasu",
       "wordType": "verb",
       "meaningVi": "Cố gắng, nỗ lực",
+      "imageUrl": "assets/minh-hoa/do-ones-best.webp",
+      "imageAlt": "Cố gắng, nỗ lực",
       "accentNote": "頑張ったのに、失敗しました = dù đã cố gắng nhưng vẫn thất bại."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "shippai shimasu",
       "wordType": "verb",
       "meaningVi": "Thất bại, mắc lỗi",
+      "imageUrl": "assets/minh-hoa/fail.webp",
+      "imageAlt": "Thất bại, mắc lỗi",
       "accentNote": "",
       "emotion": "that_vong"
     },
@@ -33,6 +39,8 @@
       "romaji": "goukaku shimasu",
       "wordType": "verb",
       "meaningVi": "Đậu, đỗ (kỳ thi)",
+      "imageUrl": "assets/minh-hoa/pass-exam.webp",
+      "imageAlt": "Đậu, đỗ (kỳ thi)",
       "accentNote": "Đã gặp bài 40."
     },
     {
@@ -43,6 +51,8 @@
       "romaji": "dekakemasu",
       "wordType": "verb",
       "meaningVi": "Ra ngoài, đi ra",
+      "imageUrl": "assets/minh-hoa/go-out.webp",
+      "imageAlt": "Ra ngoài, đi ra",
       "accentNote": "地震の 場合は、外に 出かけないで ください = trong trường hợp động đất, xin đừng ra ngoài."
     },
     {
@@ -53,6 +63,8 @@
       "romaji": "renraku shimasu",
       "wordType": "verb",
       "meaningVi": "Liên lạc",
+      "imageUrl": "assets/minh-hoa/contact.webp",
+      "imageAlt": "Liên lạc",
       "accentNote": "Đã gặp bài 38."
     },
     {
@@ -73,6 +85,8 @@
       "romaji": "jishin",
       "wordType": "noun",
       "meaningVi": "Động đất",
+      "imageUrl": "assets/minh-hoa/earthquake.webp",
+      "imageAlt": "Động đất",
       "accentNote": "地震の 場合は = trong trường hợp có động đất."
     },
     {
@@ -83,6 +97,8 @@
       "romaji": "kaji",
       "wordType": "noun",
       "meaningVi": "Vụ hỏa hoạn, cháy nhà",
+      "imageUrl": "assets/minh-hoa/fire.webp",
+      "imageAlt": "Vụ hỏa hoạn, cháy nhà",
       "accentNote": "火事の 場合は、エレベーターを 使わないで ください = trong trường hợp cháy, xin đừng dùng thang máy."
     },
     {
@@ -93,6 +109,8 @@
       "romaji": "taifuu",
       "wordType": "noun",
       "meaningVi": "Bão (bão nhiệt đới)",
+      "imageUrl": "assets/minh-hoa/typhoon.webp",
+      "imageAlt": "Bão (bão nhiệt đới)",
       "accentNote": "Đã gặp N5 bài 21."
     },
     {
@@ -103,6 +121,8 @@
       "romaji": "isshoukenmei",
       "wordType": "adverb",
       "meaningVi": "Hết mình, hết sức",
+      "imageUrl": "assets/minh-hoa/all-out.webp",
+      "imageAlt": "Hết mình, hết sức",
       "accentNote": "一生懸命 勉強したのに、合格しませんでした = học hành chăm chỉ hết mình nhưng vẫn không đậu."
     },
     {
@@ -113,6 +133,8 @@
       "romaji": "zannen",
       "wordType": "adjective",
       "meaningVi": "Đáng tiếc, tiếc nuối",
+      "imageUrl": "assets/minh-hoa/disappointing.webp",
+      "imageAlt": "Đáng tiếc, tiếc nuối",
       "accentNote": "Đã gặp bài 27.",
       "emotion": "that_vong"
     },
@@ -124,6 +146,8 @@
       "romaji": "shiken",
       "wordType": "noun",
       "meaningVi": "Kỳ thi",
+      "imageUrl": "assets/minh-hoa/exam.webp",
+      "imageAlt": "Kỳ thi",
       "accentNote": "Đã gặp bài 40."
     },
     {
@@ -134,6 +158,8 @@
       "romaji": "tenki",
       "wordType": "noun",
       "meaningVi": "Thời tiết",
+      "imageUrl": "assets/minh-hoa/weather.webp",
+      "imageAlt": "Thời tiết",
       "accentNote": "Đã gặp N5 bài 21."
     },
     {
@@ -144,6 +170,8 @@
       "romaji": "ame",
       "wordType": "noun",
       "meaningVi": "Mưa",
+      "imageUrl": "assets/minh-hoa/rain.webp",
+      "imageAlt": "Mưa",
       "accentNote": "晴れの 予報だったのに、雨が 降りました = dự báo nắng nhưng lại mưa."
     },
     {
@@ -154,6 +182,8 @@
       "romaji": "byouin",
       "wordType": "noun",
       "meaningVi": "Bệnh viện",
+      "imageUrl": "assets/minh-hoa/hospital.webp",
+      "imageAlt": "Bệnh viện",
       "accentNote": "Đã gặp N5 bài 3."
     },
     {
@@ -164,6 +194,8 @@
       "romaji": "erebeetaa",
       "wordType": "noun",
       "meaningVi": "Thang máy",
+      "imageUrl": "assets/minh-hoa/elevator.webp",
+      "imageAlt": "Thang máy",
       "accentNote": "Đã gặp N5 bài 3."
     },
     {
@@ -174,6 +206,8 @@
       "romaji": "kaidan",
       "wordType": "noun",
       "meaningVi": "Cầu thang bộ",
+      "imageUrl": "assets/minh-hoa/stairs.webp",
+      "imageAlt": "Cầu thang bộ",
       "accentNote": "Đã gặp N5 bài 3."
     },
     {
@@ -184,6 +218,8 @@
       "romaji": "denwa",
       "wordType": "noun",
       "meaningVi": "Điện thoại, cuộc gọi",
+      "imageUrl": "assets/minh-hoa/telephone.webp",
+      "imageAlt": "Điện thoại, cuộc gọi",
       "accentNote": "Đã gặp N5 bài 2."
     },
     {
@@ -194,6 +230,8 @@
       "romaji": "yakusoku",
       "wordType": "noun",
       "meaningVi": "Lời hứa, cuộc hẹn",
+      "imageUrl": "assets/minh-hoa/promise.webp",
+      "imageAlt": "Lời hứa, cuộc hẹn",
       "accentNote": "Đã gặp bài 38."
     },
     {
@@ -204,6 +242,8 @@
       "romaji": "shukudai",
       "wordType": "noun",
       "meaningVi": "Bài tập về nhà",
+      "imageUrl": "assets/minh-hoa/homework.webp",
+      "imageAlt": "Bài tập về nhà",
       "accentNote": "Đã gặp N5 bài 7."
     }
   ],
@@ -756,6 +796,7 @@
       "id": "dia-n4-45-1",
       "speaker": "先生",
       "speakerRole": "Giáo viên",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-l45-1",
@@ -829,6 +870,7 @@
       "id": "dia-n4-45-2",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l45-12",
@@ -866,6 +908,7 @@
       "id": "dia-n4-45-3",
       "speaker": "先生",
       "speakerRole": "Giáo viên",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-l45-17",
@@ -920,6 +963,7 @@
       "id": "dia-n4-45-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l45-25",
@@ -957,6 +1001,7 @@
       "id": "dia-n4-45-5",
       "speaker": "先生",
       "speakerRole": "Giáo viên",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-l45-30",
@@ -1019,6 +1064,7 @@
       "id": "dia-n4-45-6",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l45-39",
@@ -1042,6 +1088,7 @@
       "id": "dia-n4-45-7",
       "speaker": "先生",
       "speakerRole": "Giáo viên",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-l45-41",
@@ -1093,6 +1140,7 @@
       "id": "dia-n4-45-8",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l45-48",
@@ -1142,6 +1190,7 @@
       "id": "dia-n4-45-9",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l45-55",
@@ -1158,6 +1207,7 @@
       "id": "dia-n4-45-10",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l45-56",

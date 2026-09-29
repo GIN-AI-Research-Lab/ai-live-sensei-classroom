@@ -3,6 +3,8 @@
   "lessonNumber": 10,
   "title": "Bài 10: Khởi đầu & Cột mốc lịch sử (を皮切りにして & を限りに)",
   "description": "を皮切りにして đánh dấu một sự kiện là ĐIỂM KHỞI ĐẦU cho một chuỗi sự kiện tương tự LAN RỘNG sau đó (mở rộng kinh doanh, chuỗi sự kiện lan tỏa); を限りに dùng để TUYÊN BỐ CHẤM DỨT dứt khoát một việc gì đó kể từ một mốc thời gian cụ thể — hai cấu trúc mang ý nghĩa trái ngược, thường kết hợp trong một bài tường thuật lịch sử công ty: kể về sự khởi đầu/mở rộng rồi khép lại bằng một tuyên bố rút lui trang trọng.",
+  "sceneImageUrl": "assets/minh-hoa/canh-giam-doc-nghi-huu.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 10: Khởi đầu & Cột mốc lịch sử (を皮切りにして & を限りに)",
   "vocabList": [
     {
       "id": "voc-n1-10-1",
@@ -12,6 +14,8 @@
       "romaji": "kawakiri",
       "wordType": "noun",
       "meaningVi": "Điểm khởi đầu, mốc mở đầu",
+      "imageUrl": "assets/minh-hoa/khoi-dau-man.webp",
+      "imageAlt": "Điểm khởi đầu, mốc mở đầu",
       "accentNote": "東京を 皮切りにして = bắt đầu từ Tokyo."
     },
     {
@@ -32,6 +36,8 @@
       "romaji": "hirogarimasu",
       "wordType": "verb",
       "meaningVi": "Lan rộng, mở rộng",
+      "imageUrl": "assets/minh-hoa/lan-rong.webp",
+      "imageAlt": "Lan rộng, mở rộng",
       "accentNote": "支店が 広がりました = chi nhánh đã lan rộng."
     },
     {
@@ -42,6 +48,8 @@
       "romaji": "yamemasu",
       "wordType": "verb",
       "meaningVi": "Từ chức, thôi việc",
+      "imageUrl": "assets/minh-hoa/tu-chuc.webp",
+      "imageAlt": "Từ chức, thôi việc",
       "accentNote": "社長を 辞めます = từ chức giám đốc."
     },
     {
@@ -52,6 +60,8 @@
       "romaji": "shiten",
       "wordType": "noun",
       "meaningVi": "Chi nhánh",
+      "imageUrl": "assets/minh-hoa/chi-nhanh.webp",
+      "imageAlt": "Chi nhánh",
       "accentNote": "Đã gặp N2 bài 6."
     },
     {
@@ -62,6 +72,8 @@
       "romaji": "zenkoku",
       "wordType": "noun",
       "meaningVi": "Toàn quốc, cả nước",
+      "imageUrl": "assets/minh-hoa/toan-quoc.webp",
+      "imageAlt": "Toàn quốc, cả nước",
       "accentNote": "Đã gặp N3 bài 7."
     },
     {
@@ -72,6 +84,8 @@
       "romaji": "kakudai shimasu",
       "wordType": "verb",
       "meaningVi": "Mở rộng, phóng to",
+      "imageUrl": "assets/minh-hoa/mo-rong-phong-to.webp",
+      "imageAlt": "Mở rộng, phóng to",
       "accentNote": "Đã gặp N2 bài 7."
     },
     {
@@ -82,6 +96,8 @@
       "romaji": "mise",
       "wordType": "noun",
       "meaningVi": "Cửa hàng",
+      "imageUrl": "assets/minh-hoa/cua-hang-n2n1.webp",
+      "imageAlt": "Cửa hàng",
       "accentNote": "Đã gặp N5 bài 22."
     },
     {
@@ -92,6 +108,8 @@
       "romaji": "taishoku",
       "wordType": "noun",
       "meaningVi": "Nghỉ hưu, thôi việc",
+      "imageUrl": "assets/minh-hoa/nghi-huu-thoi-viec.webp",
+      "imageAlt": "Nghỉ hưu, thôi việc",
       "accentNote": "Đã gặp N3 bài 3."
     },
     {
@@ -102,6 +120,8 @@
       "romaji": "shachou",
       "wordType": "noun",
       "meaningVi": "Giám đốc",
+      "imageUrl": "assets/minh-hoa/giam-doc.webp",
+      "imageAlt": "Giám đốc",
       "accentNote": "Đã gặp N4 bài 41."
     },
     {
@@ -112,6 +132,8 @@
       "romaji": "kaisha",
       "wordType": "noun",
       "meaningVi": "Công ty",
+      "imageUrl": "assets/minh-hoa/cong-ty-n2n1.webp",
+      "imageAlt": "Công ty",
       "accentNote": "Đã gặp N5 bài 3."
     },
     {
@@ -122,6 +144,8 @@
       "romaji": "seikou",
       "wordType": "noun",
       "meaningVi": "Thành công",
+      "imageUrl": "assets/minh-hoa/thanh-cong.webp",
+      "imageAlt": "Thành công",
       "accentNote": "Đã gặp N3 bài 4.",
       "emotion": "vui"
     },
@@ -133,6 +157,8 @@
       "romaji": "kisha",
       "wordType": "noun",
       "meaningVi": "Phóng viên",
+      "imageUrl": "assets/minh-hoa/phong-vien.webp",
+      "imageAlt": "Phóng viên",
       "accentNote": "Đã gặp N1 bài 9."
     },
     {
@@ -143,6 +169,8 @@
       "romaji": "kaiken",
       "wordType": "noun",
       "meaningVi": "Cuộc họp báo, phỏng vấn chính thức",
+      "imageUrl": "assets/minh-hoa/hop-bao.webp",
+      "imageAlt": "Cuộc họp báo, phỏng vấn chính thức",
       "accentNote": "Đã gặp N1 bài 9."
     },
     {
@@ -163,6 +191,8 @@
       "romaji": "torimasu",
       "wordType": "verb",
       "meaningVi": "Lấy, chịu (trách nhiệm)",
+      "imageUrl": "assets/minh-hoa/lay.webp",
+      "imageAlt": "Lấy, chịu (trách nhiệm)",
       "accentNote": "Đã gặp N1 bài 9."
     },
     {
@@ -173,6 +203,8 @@
       "romaji": "ayamarimasu",
       "wordType": "verb",
       "meaningVi": "Xin lỗi",
+      "imageUrl": "assets/minh-hoa/xin-loi.webp",
+      "imageAlt": "Xin lỗi",
       "accentNote": "Đã gặp N1 bài 9.",
       "emotion": "cui_chao"
     },
@@ -204,6 +236,8 @@
       "romaji": "shinrai",
       "wordType": "noun",
       "meaningVi": "Sự tin cậy",
+      "imageUrl": "assets/minh-hoa/tin-tuong.webp",
+      "imageAlt": "Sự tin cậy",
       "accentNote": "Đã gặp N1 bài 6."
     }
   ],
@@ -819,6 +853,7 @@
       "id": "dia-n1-10-1",
       "speaker": "田中",
       "speakerRole": "Phóng viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d10-1",
@@ -861,6 +896,7 @@
       "id": "dia-n1-10-2",
       "speaker": "社長",
       "speakerRole": "Giám đốc sáng lập",
+      "avatarUrl": "assets/minh-hoa/nv-shacho.webp",
       "tokens": [
         {
           "id": "d10-7",
@@ -881,6 +917,7 @@
       "id": "dia-n1-10-3",
       "speaker": "田中",
       "speakerRole": "Phóng viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d10-9",
@@ -904,6 +941,7 @@
       "id": "dia-n1-10-4",
       "speaker": "社長",
       "speakerRole": "Giám đốc sáng lập",
+      "avatarUrl": "assets/minh-hoa/nv-shacho.webp",
       "tokens": [
         {
           "id": "d10-12",
@@ -967,6 +1005,7 @@
       "id": "dia-n1-10-5",
       "speaker": "田中",
       "speakerRole": "Phóng viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d10-21",
@@ -999,6 +1038,7 @@
       "id": "dia-n1-10-6",
       "speaker": "社長",
       "speakerRole": "Giám đốc sáng lập",
+      "avatarUrl": "assets/minh-hoa/nv-shacho.webp",
       "tokens": [
         {
           "id": "d10-25",
@@ -1065,6 +1105,7 @@
       "id": "dia-n1-10-7",
       "speaker": "田中",
       "speakerRole": "Phóng viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d10-35",
@@ -1102,6 +1143,7 @@
       "id": "dia-n1-10-8",
       "speaker": "社長",
       "speakerRole": "Giám đốc sáng lập",
+      "avatarUrl": "assets/minh-hoa/nv-shacho.webp",
       "tokens": [
         {
           "id": "d10-40",
@@ -1146,6 +1188,7 @@
       "id": "dia-n1-10-9",
       "speaker": "田中",
       "speakerRole": "Phóng viên",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d10-46",
@@ -1189,6 +1232,7 @@
       "id": "dia-n1-10-10",
       "speaker": "社長",
       "speakerRole": "Giám đốc sáng lập",
+      "avatarUrl": "assets/minh-hoa/nv-shacho.webp",
       "tokens": [
         {
           "id": "d10-52",

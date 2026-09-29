@@ -3,6 +3,8 @@
   "lessonNumber": 29,
   "title": "Bài 29: Tự động từ & Tha động từ, Trạng thái (V-ています)",
   "description": "Phân biệt cặp tự động từ (自動詞: 開く/閉まる/消える/始まる, chủ ngữ tự trải qua thay đổi, đi với が) và tha động từ (他動詞: 開ける/閉める/消す/始める, có chủ thể tác động, đi với を), mở rộng Vています sang trạng thái với tự động từ, và phân biệt 止める (dừng tạm) với やめる (từ bỏ hẳn).",
+  "sceneImageUrl": "assets/minh-hoa/canh-den-tat-cua-so-mo.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 29: Tự động từ & Tha động từ, Trạng thái (V-ています)",
   "vocabList": [
     {
       "id": "voc-n4-29-1",
@@ -12,6 +14,8 @@
       "romaji": "akimasu",
       "wordType": "verb",
       "meaningVi": "Mở ra (tự động từ)",
+      "imageUrl": "assets/minh-hoa/open-by-itself.webp",
+      "imageAlt": "Mở ra (tự động từ)",
       "accentNote": "Đã gặp N5 bài 23. 自動詞: cửa TỰ mở, không cần ai tác động."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "akemasu",
       "wordType": "verb",
       "meaningVi": "Mở (tha động từ)",
+      "imageUrl": "assets/minh-hoa/open-window.webp",
+      "imageAlt": "Mở (tha động từ)",
       "accentNote": "Đã gặp N5 bài 14. 他動詞: CÓ NGƯỜI mở cửa."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "shimarimasu",
       "wordType": "verb",
       "meaningVi": "Đóng lại (tự động từ)",
+      "imageUrl": "assets/minh-hoa/close-by-itself.webp",
+      "imageAlt": "Đóng lại (tự động từ)",
       "accentNote": "ドアが 閉まりました = cửa tự đóng lại."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "shimemasu",
       "wordType": "verb",
       "meaningVi": "Đóng (tha động từ)",
+      "imageUrl": "assets/minh-hoa/close-door.webp",
+      "imageAlt": "Đóng (tha động từ)",
       "accentNote": "Đã gặp N5 bài 14. だれかが 閉めました = ai đó đã đóng cửa."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "kiemasu",
       "wordType": "verb",
       "meaningVi": "Tắt đi, biến mất (tự động từ)",
+      "imageUrl": "assets/minh-hoa/go-out-light.webp",
+      "imageAlt": "Tắt đi, biến mất (tự động từ)",
       "accentNote": "電気が 消えました = đèn tự tắt (mất điện...)."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "keshimasu",
       "wordType": "verb",
       "meaningVi": "Tắt, xóa (tha động từ)",
+      "imageUrl": "assets/minh-hoa/turn-off.webp",
+      "imageAlt": "Tắt, xóa (tha động từ)",
       "accentNote": "Đã gặp N5 bài 15. だれかが 消しました = ai đó đã tắt đèn."
     },
     {
@@ -82,6 +96,8 @@
       "romaji": "hajimemasu",
       "wordType": "verb",
       "meaningVi": "Bắt đầu (tha động từ)",
+      "imageUrl": "assets/minh-hoa/start-something.webp",
+      "imageAlt": "Bắt đầu (tha động từ)",
       "accentNote": "だれかが 始めました = ai đó bắt đầu việc gì."
     },
     {
@@ -92,6 +108,8 @@
       "romaji": "tsukimasu",
       "wordType": "verb",
       "meaningVi": "Được bật lên, sáng lên (tự động từ)",
+      "imageUrl": "assets/minh-hoa/light-comes-on.webp",
+      "imageAlt": "Được bật lên, sáng lên (tự động từ)",
       "accentNote": "電気が 点きました = đèn tự sáng lên (đến giờ hẹn...)."
     },
     {
@@ -102,6 +120,8 @@
       "romaji": "kowaremasu",
       "wordType": "verb",
       "meaningVi": "Bị hỏng (tự động từ)",
+      "imageUrl": "assets/minh-hoa/broken.webp",
+      "imageAlt": "Bị hỏng (tự động từ)",
       "accentNote": "Đã gặp bài 26."
     },
     {
@@ -112,6 +132,8 @@
       "romaji": "kowashimasu",
       "wordType": "verb",
       "meaningVi": "Làm hỏng (tha động từ)",
+      "imageUrl": "assets/minh-hoa/break-something.webp",
+      "imageAlt": "Làm hỏng (tha động từ)",
       "accentNote": "だれかが 壊しました = ai đó làm hỏng."
     },
     {
@@ -122,6 +144,8 @@
       "romaji": "tomemasu",
       "wordType": "verb",
       "meaningVi": "Dừng lại, đỗ (tha động từ)",
+      "imageUrl": "assets/minh-hoa/stop-park.webp",
+      "imageAlt": "Dừng lại, đỗ (tha động từ)",
       "accentNote": "Đã gặp N5 bài 15. 車を 止めます = đỗ xe (có người điều khiển)."
     },
     {
@@ -132,6 +156,8 @@
       "romaji": "yamemasu",
       "wordType": "verb",
       "meaningVi": "Dừng hẳn, từ bỏ (thói quen/công việc)",
+      "imageUrl": "assets/minh-hoa/quit-habit.webp",
+      "imageAlt": "Dừng hẳn, từ bỏ (thói quen/công việc)",
       "accentNote": "たばこを やめます = bỏ thuốc lá. 仕事を やめます = nghỉ việc."
     },
     {
@@ -142,6 +168,8 @@
       "romaji": "denki",
       "wordType": "noun",
       "meaningVi": "Điện, đèn điện",
+      "imageUrl": "assets/minh-hoa/electric-light.webp",
+      "imageAlt": "Điện, đèn điện",
       "accentNote": "Đã gặp N5 bài 15."
     },
     {
@@ -152,6 +180,8 @@
       "romaji": "mado",
       "wordType": "noun",
       "meaningVi": "Cửa sổ",
+      "imageUrl": "assets/minh-hoa/window.webp",
+      "imageAlt": "Cửa sổ",
       "accentNote": "Đã gặp N5 bài 14."
     },
     {
@@ -162,6 +192,8 @@
       "romaji": "doa",
       "wordType": "noun",
       "meaningVi": "Cửa (kiểu phương Tây)",
+      "imageUrl": "assets/minh-hoa/door.webp",
+      "imageAlt": "Cửa (kiểu phương Tây)",
       "accentNote": ""
     },
     {
@@ -172,6 +204,8 @@
       "romaji": "eiga",
       "wordType": "noun",
       "meaningVi": "Phim, điện ảnh",
+      "imageUrl": "assets/minh-hoa/movie.webp",
+      "imageAlt": "Phim, điện ảnh",
       "accentNote": "Đã gặp N5 bài 6."
     },
     {
@@ -182,6 +216,8 @@
       "romaji": "utsukushii",
       "wordType": "adjective",
       "meaningVi": "Đẹp, tráng lệ",
+      "imageUrl": "assets/minh-hoa/beautiful.webp",
+      "imageAlt": "Đẹp, tráng lệ",
       "accentNote": "Tính từ い, trang trọng hơn きれい."
     },
     {
@@ -192,6 +228,8 @@
       "romaji": "omoidashimasu",
       "wordType": "verb",
       "meaningVi": "Nhớ lại, hồi tưởng",
+      "imageUrl": "assets/minh-hoa/recall.webp",
+      "imageAlt": "Nhớ lại, hồi tưởng",
       "accentNote": "急に 思い出しました = bỗng nhớ lại.",
       "emotion": "suy_nghi"
     },
@@ -203,6 +241,8 @@
       "romaji": "kyuu ni",
       "wordType": "adverb",
       "meaningVi": "Đột ngột, bỗng nhiên",
+      "imageUrl": "assets/minh-hoa/suddenly.webp",
+      "imageAlt": "Đột ngột, bỗng nhiên",
       "accentNote": "急に 電気が 消えました = đèn bỗng nhiên tắt."
     }
   ],
@@ -635,6 +675,7 @@
       "id": "dia-n4-29-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm 3",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l29-1",
@@ -679,6 +720,7 @@
       "id": "dia-n4-29-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên năm 3",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l29-7",
@@ -730,6 +772,7 @@
       "id": "dia-n4-29-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm 3",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l29-14",
@@ -764,6 +807,7 @@
       "id": "dia-n4-29-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên năm 3",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l29-18",
@@ -796,6 +840,7 @@
       "id": "dia-n4-29-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm 3",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l29-22",
@@ -850,6 +895,7 @@
       "id": "dia-n4-29-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên năm 3",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l29-30",
@@ -887,6 +933,7 @@
       "id": "dia-n4-29-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm 3",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l29-35",
@@ -924,6 +971,7 @@
       "id": "dia-n4-29-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên năm 3",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l29-40",
@@ -980,6 +1028,7 @@
       "id": "dia-n4-29-9",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm 3",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l29-48",
@@ -1012,6 +1061,7 @@
       "id": "dia-n4-29-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên năm 3",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l29-52",

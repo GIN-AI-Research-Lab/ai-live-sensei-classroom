@@ -12,6 +12,8 @@
       "romaji": "kitte",
       "wordType": "noun",
       "meaningVi": "Con tem",
+      "imageUrl": "assets/minh-hoa/tem-thu.webp",
+      "imageAlt": "Con tem",
       "accentNote": "Đọc bằng; 3 nhịp: き・っ・て, nín một nhịp ở っ.",
       "emotion": "vui"
     },
@@ -23,6 +25,8 @@
       "romaji": "zasshi",
       "wordType": "noun",
       "meaningVi": "Tạp chí",
+      "imageUrl": "assets/minh-hoa/tap-chi.webp",
+      "imageAlt": "Tạp chí",
       "accentNote": "Đọc bằng; 3 nhịp ざ・っ・し: ở っ kéo dài tiếng xì 's' (za-sss-shi), không nín im.",
       "emotion": "vui"
     },
@@ -34,6 +38,8 @@
       "romaji": "gakkou",
       "wordType": "noun",
       "meaningVi": "Trường học",
+      "imageUrl": "assets/minh-hoa/school.webp",
+      "imageAlt": "Trường học",
       "accentNote": "Đọc bằng; 4 nhịp: が・っ・こ・う, âm cuối kéo dài.",
       "emotion": "vui"
     },
@@ -45,6 +51,8 @@
       "romaji": "kippu",
       "wordType": "noun",
       "meaningVi": "Vé (tàu, xe)",
+      "imageUrl": "assets/minh-hoa/ve-tau.webp",
+      "imageAlt": "Vé (tàu, xe)",
       "accentNote": "Đọc bằng; 3 nhịp: き・っ・ぷ.",
       "emotion": "suy_nghi"
     },
@@ -78,6 +86,8 @@
       "romaji": "okaasan",
       "wordType": "noun",
       "meaningVi": "Mẹ (mẹ người khác, hoặc khi gọi mẹ mình)",
+      "imageUrl": "assets/minh-hoa/me.webp",
+      "imageAlt": "Mẹ (mẹ người khác, hoặc khi gọi mẹ mình)",
       "accentNote": "Trọng âm ở nhịp 2: o thấp, KA cao rồi hạ; 5 nhịp.",
       "emotion": "vui"
     },
@@ -89,6 +99,8 @@
       "romaji": "otousan",
       "wordType": "noun",
       "meaningVi": "Bố (bố người khác, hoặc khi gọi bố mình)",
+      "imageUrl": "assets/minh-hoa/bo.webp",
+      "imageAlt": "Bố (bố người khác, hoặc khi gọi bố mình)",
       "accentNote": "Trọng âm ở nhịp 2: o thấp, TO cao rồi hạ; 5 nhịp.",
       "emotion": "vui"
     },
@@ -100,6 +112,8 @@
       "romaji": "oniisan",
       "wordType": "noun",
       "meaningVi": "Anh trai",
+      "imageUrl": "assets/minh-hoa/anh-trai.webp",
+      "imageAlt": "Anh trai",
       "accentNote": "Trọng âm ở nhịp 2: o thấp, NI cao rồi hạ; 5 nhịp.",
       "emotion": "vui"
     },
@@ -111,6 +125,8 @@
       "romaji": "oneesan",
       "wordType": "noun",
       "meaningVi": "Chị gái (ngoại lệ viết ええ)",
+      "imageUrl": "assets/minh-hoa/chi-gai.webp",
+      "imageAlt": "Chị gái (ngoại lệ viết ええ)",
       "accentNote": "Trọng âm ở nhịp 2: o thấp, NE cao rồi hạ; 5 nhịp.",
       "emotion": "vui"
     },
@@ -155,6 +171,8 @@
       "romaji": "sensei",
       "wordType": "noun",
       "meaningVi": "Giáo viên; thầy, cô",
+      "imageUrl": "assets/minh-hoa/giao-vien.webp",
+      "imageAlt": "Giáo viên; thầy, cô",
       "accentNote": "Se thấp, N-SE cao, hạ ở い; せい kéo dài như 'sê-ê'.",
       "emotion": "cui_chao"
     },
@@ -166,6 +184,8 @@
       "romaji": "eiga",
       "wordType": "noun",
       "meaningVi": "Bộ phim, phim điện ảnh",
+      "imageUrl": "assets/minh-hoa/phim.webp",
+      "imageAlt": "Bộ phim, phim điện ảnh",
       "accentNote": "3 nhịp え・い・が; えい đọc như 'ê' kéo dài: 'ê-ê-ga'.",
       "emotion": "vui"
     },
@@ -199,6 +219,8 @@
       "romaji": "ookii",
       "wordType": "adjective",
       "meaningVi": "To, lớn",
+      "imageUrl": "assets/minh-hoa/to-lon.webp",
+      "imageAlt": "To, lớn",
       "accentNote": "Trọng âm ở nhịp 3: o thấp, O-KI cao, い hạ; ngoại lệ viết おお.",
       "emotion": "ngac_nhien"
     },
@@ -702,6 +724,7 @@
       "id": "dia-kana-6-1",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l6-1a",
@@ -780,6 +803,7 @@
       "id": "dia-kana-6-3",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l6-3a",
@@ -824,6 +848,7 @@
       "id": "dia-kana-6-4",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l6-4a",
@@ -912,6 +937,7 @@
       "id": "dia-kana-6-6",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l6-6a",

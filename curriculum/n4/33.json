@@ -3,6 +3,8 @@
   "lessonNumber": 33,
   "title": "Bài 33: Thể mệnh lệnh (命令形) & Cấm chỉ (禁止形)",
   "description": "Chia thể mệnh lệnh (nhóm 1: う→え, nhóm 2: bỏ る+ろ, bất quy tắc する→しろ/来る→来い) và cấm chỉ (thể từ điển+な, đơn giản hơn), giới hạn ngữ cảnh sử dụng (biển báo, huấn luyện viên, truyện/phim, khẩn cấp — KHÔNG dùng trong giao tiếp lịch sự thường ngày), và thang mức độ mạnh-nhẹ khi nói 'đừng làm': な > ないでください (N5 b17) > ないほうがいい (N4 b32).",
+  "sceneImageUrl": "assets/minh-hoa/canh-huan-luyen-vien-ra-lenh.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 33: Thể mệnh lệnh (命令形) & Cấm chỉ (禁止形)",
   "vocabList": [
     {
       "id": "voc-n4-33-1",
@@ -12,6 +14,8 @@
       "romaji": "hashire",
       "wordType": "verb",
       "meaningVi": "Chạy đi! (thể mệnh lệnh của 走る)",
+      "imageUrl": "assets/minh-hoa/run-command.webp",
+      "imageAlt": "Chạy đi! (thể mệnh lệnh của 走る)",
       "accentNote": "Nhóm 1: đổi đuôi う→え. 走る → 走れ."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "mate",
       "wordType": "verb",
       "meaningVi": "Đợi đã! (thể mệnh lệnh của 待つ)",
+      "imageUrl": "assets/minh-hoa/wait-command.webp",
+      "imageAlt": "Đợi đã! (thể mệnh lệnh của 待つ)",
       "accentNote": "待つ → 待て."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "isoge",
       "wordType": "verb",
       "meaningVi": "Nhanh lên! (thể mệnh lệnh của 急ぐ)",
+      "imageUrl": "assets/minh-hoa/hurry-command.webp",
+      "imageAlt": "Nhanh lên! (thể mệnh lệnh của 急ぐ)",
       "accentNote": "急ぐ → 急げ."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "tabero",
       "wordType": "verb",
       "meaningVi": "Ăn đi! (thể mệnh lệnh của 食べる)",
+      "imageUrl": "assets/minh-hoa/eat-command.webp",
+      "imageAlt": "Ăn đi! (thể mệnh lệnh của 食べる)",
       "accentNote": "Nhóm 2: bỏ る, thêm ろ. 食べる → 食べろ."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "koi",
       "wordType": "verb",
       "meaningVi": "Đến đây! (thể mệnh lệnh của 来る)",
+      "imageUrl": "assets/minh-hoa/come-here.webp",
+      "imageAlt": "Đến đây! (thể mệnh lệnh của 来る)",
       "accentNote": "来る → 来い (bất quy tắc hoàn toàn)."
     },
     {
@@ -72,6 +84,8 @@
       "romaji": "hairu na",
       "wordType": "verb",
       "meaningVi": "Cấm vào! (thể cấm chỉ của 入る)",
+      "imageUrl": "assets/minh-hoa/no-entry.webp",
+      "imageAlt": "Cấm vào! (thể cấm chỉ của 入る)",
       "accentNote": "Thể từ điển + な = cấm chỉ, giọng mạnh, ra lệnh.",
       "emotion": "gian"
     },
@@ -94,6 +108,8 @@
       "romaji": "kiken",
       "wordType": "adjective",
       "meaningVi": "Nguy hiểm",
+      "imageUrl": "assets/minh-hoa/dangerous.webp",
+      "imageAlt": "Nguy hiểm",
       "accentNote": "危険！入るな！ = Nguy hiểm! Cấm vào!"
     },
     {
@@ -104,6 +120,8 @@
       "romaji": "chuui",
       "wordType": "noun",
       "meaningVi": "Sự chú ý, cảnh báo",
+      "imageUrl": "assets/minh-hoa/caution-sign.webp",
+      "imageAlt": "Sự chú ý, cảnh báo",
       "accentNote": "注意して ください = xin hãy cẩn thận."
     },
     {
@@ -114,6 +132,8 @@
       "romaji": "shiai",
       "wordType": "noun",
       "meaningVi": "Trận đấu, cuộc thi đấu",
+      "imageUrl": "assets/minh-hoa/match-game.webp",
+      "imageAlt": "Trận đấu, cuộc thi đấu",
       "accentNote": "試合に 勝て！ = thắng trận đi!"
     },
     {
@@ -124,6 +144,8 @@
       "romaji": "isogimasu",
       "wordType": "verb",
       "meaningVi": "Vội, gấp",
+      "imageUrl": "assets/minh-hoa/hurry.webp",
+      "imageAlt": "Vội, gấp",
       "accentNote": "Đã có ở thể mệnh lệnh 急げ phía trên."
     },
     {
@@ -134,6 +156,8 @@
       "romaji": "hashirimasu",
       "wordType": "verb",
       "meaningVi": "Chạy",
+      "imageUrl": "assets/minh-hoa/run.webp",
+      "imageAlt": "Chạy",
       "accentNote": "Đã có ở thể mệnh lệnh 走れ phía trên."
     },
     {
@@ -144,6 +168,8 @@
       "romaji": "manga",
       "wordType": "noun",
       "meaningVi": "Truyện tranh",
+      "imageUrl": "assets/minh-hoa/manga.webp",
+      "imageAlt": "Truyện tranh",
       "accentNote": "漫画を 読むな = cấm đọc truyện tranh (trong giờ học)."
     },
     {
@@ -154,6 +180,8 @@
       "romaji": "benkyou",
       "wordType": "noun",
       "meaningVi": "Việc học",
+      "imageUrl": "assets/minh-hoa/study.webp",
+      "imageAlt": "Việc học",
       "accentNote": "Đã gặp N5 bài 4."
     },
     {
@@ -164,6 +192,8 @@
       "romaji": "sensei",
       "wordType": "noun",
       "meaningVi": "Thầy/cô giáo",
+      "imageUrl": "assets/minh-hoa/teacher.webp",
+      "imageAlt": "Thầy/cô giáo",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -174,6 +204,8 @@
       "romaji": "kodomo",
       "wordType": "noun",
       "meaningVi": "Trẻ con",
+      "imageUrl": "assets/minh-hoa/child.webp",
+      "imageAlt": "Trẻ con",
       "accentNote": "Đã gặp N5 bài 23."
     },
     {
@@ -205,6 +237,8 @@
       "romaji": "abunai",
       "wordType": "adjective",
       "meaningVi": "Nguy hiểm, coi chừng!",
+      "imageUrl": "assets/minh-hoa/watch-out.webp",
+      "imageAlt": "Nguy hiểm, coi chừng!",
       "accentNote": "Tính từ い, cũng dùng độc lập như câu cảm thán 'Coi chừng!'."
     }
   ],
@@ -661,6 +695,7 @@
       "id": "dia-n4-33-2",
       "speaker": "選手",
       "speakerRole": "Vận động viên",
+      "avatarUrl": "assets/minh-hoa/nv-senshu.webp",
       "tokens": [
         {
           "id": "d-l33-7",
@@ -723,6 +758,7 @@
       "id": "dia-n4-33-4",
       "speaker": "選手",
       "speakerRole": "Vận động viên",
+      "avatarUrl": "assets/minh-hoa/nv-senshu.webp",
       "tokens": [
         {
           "id": "d-l33-15",
@@ -800,6 +836,7 @@
       "id": "dia-n4-33-6",
       "speaker": "選手",
       "speakerRole": "Vận động viên",
+      "avatarUrl": "assets/minh-hoa/nv-senshu.webp",
       "tokens": [
         {
           "id": "d-l33-25",
@@ -825,6 +862,7 @@
       "id": "dia-n4-33-7",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l33-28",
@@ -868,6 +906,7 @@
       "id": "dia-n4-33-8",
       "speaker": "山田",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l33-34",
@@ -940,6 +979,7 @@
       "id": "dia-n4-33-9",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l33-45",
@@ -992,6 +1032,7 @@
       "id": "dia-n4-33-10",
       "speaker": "山田",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l33-53",

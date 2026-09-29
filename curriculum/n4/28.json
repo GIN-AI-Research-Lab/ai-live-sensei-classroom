@@ -3,6 +3,8 @@
   "lessonNumber": 28,
   "title": "Bài 28: Hành động đồng thời (〜ながら) & Thói quen (〜ています)",
   "description": "Nối hai hành động cùng chủ thể xảy ra ĐỒNG THỜI bằng V(gốc ます)ながら (khác V1てV2て tuần tự, N5 bài 16), mở rộng ています sang nghĩa thứ ba là THÓI QUEN lặp lại, và giới thiệu cặp tự động từ/tha động từ 続く/続ける làm nền cho bài 29.",
+  "sceneImageUrl": "assets/minh-hoa/canh-di-dao-ngay-mua.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 28: Hành động đồng thời (〜ながら) & Thói quen (〜ています)",
   "vocabList": [
     {
       "id": "voc-n4-28-1",
@@ -12,6 +14,8 @@
       "romaji": "tsuzukemasu",
       "wordType": "verb",
       "meaningVi": "Tiếp tục, duy trì",
+      "imageUrl": "assets/minh-hoa/continue.webp",
+      "imageAlt": "Tiếp tục, duy trì",
       "accentNote": "運動を 続けています = tôi vẫn đang duy trì tập thể dục."
     },
     {
@@ -32,6 +36,8 @@
       "romaji": "kayoimasu",
       "wordType": "verb",
       "meaningVi": "Đi lại thường xuyên (đi làm, đi học)",
+      "imageUrl": "assets/minh-hoa/commute.webp",
+      "imageAlt": "Đi lại thường xuyên (đi làm, đi học)",
       "accentNote": "学校に 通っています = tôi đang đi học (đều đặn)."
     },
     {
@@ -42,6 +48,8 @@
       "romaji": "katazukemasu",
       "wordType": "verb",
       "meaningVi": "Dọn dẹp, sắp xếp",
+      "imageUrl": "assets/minh-hoa/tidy-up.webp",
+      "imageAlt": "Dọn dẹp, sắp xếp",
       "accentNote": "部屋を 片付けながら = vừa dọn phòng vừa..."
     },
     {
@@ -62,6 +70,8 @@
       "romaji": "seikatsu shimasu",
       "wordType": "verb",
       "meaningVi": "Sinh sống, sinh hoạt",
+      "imageUrl": "assets/minh-hoa/daily-life.webp",
+      "imageAlt": "Sinh sống, sinh hoạt",
       "accentNote": "一人で 生活しています = tôi sống một mình."
     },
     {
@@ -72,6 +82,8 @@
       "romaji": "shumi",
       "wordType": "noun",
       "meaningVi": "Sở thích",
+      "imageUrl": "assets/minh-hoa/hobby.webp",
+      "imageAlt": "Sở thích",
       "accentNote": "Đã gặp N5 bài 18 (bổ sung thêm ở N4 pool) — nay dùng làm bối cảnh thói quen."
     },
     {
@@ -82,6 +94,8 @@
       "romaji": "shuukan",
       "wordType": "noun",
       "meaningVi": "Thói quen, tập quán",
+      "imageUrl": "assets/minh-hoa/habit.webp",
+      "imageAlt": "Thói quen, tập quán",
       "accentNote": "毎朝 走る 習慣が あります = tôi có thói quen chạy bộ mỗi sáng."
     },
     {
@@ -92,6 +106,8 @@
       "romaji": "kisoku",
       "wordType": "noun",
       "meaningVi": "Quy tắc, nội quy",
+      "imageUrl": "assets/minh-hoa/rules.webp",
+      "imageAlt": "Quy tắc, nội quy",
       "accentNote": "会社の 規則です = đây là nội quy công ty."
     },
     {
@@ -102,6 +118,8 @@
       "romaji": "seikatsu",
       "wordType": "noun",
       "meaningVi": "Cuộc sống, sinh hoạt",
+      "imageUrl": "assets/minh-hoa/daily-life.webp",
+      "imageAlt": "Cuộc sống, sinh hoạt",
       "accentNote": "毎日の 生活 = cuộc sống hằng ngày."
     },
     {
@@ -112,6 +130,8 @@
       "romaji": "undou",
       "wordType": "noun",
       "meaningVi": "Vận động, thể dục",
+      "imageUrl": "assets/minh-hoa/exercise.webp",
+      "imageAlt": "Vận động, thể dục",
       "accentNote": "Đã gặp bài 27."
     },
     {
@@ -132,6 +152,8 @@
       "romaji": "ongaku",
       "wordType": "noun",
       "meaningVi": "Âm nhạc",
+      "imageUrl": "assets/minh-hoa/music.webp",
+      "imageAlt": "Âm nhạc",
       "accentNote": "音楽を 聞きながら = vừa nghe nhạc vừa..."
     },
     {
@@ -142,6 +164,8 @@
       "romaji": "shinbun",
       "wordType": "noun",
       "meaningVi": "Báo, tờ báo",
+      "imageUrl": "assets/minh-hoa/newspaper.webp",
+      "imageAlt": "Báo, tờ báo",
       "accentNote": "新聞を 読みながら = vừa đọc báo vừa..."
     },
     {
@@ -152,6 +176,8 @@
       "romaji": "koohii",
       "wordType": "noun",
       "meaningVi": "Cà phê",
+      "imageUrl": "assets/minh-hoa/coffee.webp",
+      "imageAlt": "Cà phê",
       "accentNote": "コーヒーを 飲みながら = vừa uống cà phê vừa..."
     },
     {
@@ -162,6 +188,8 @@
       "romaji": "gakkou",
       "wordType": "noun",
       "meaningVi": "Trường học",
+      "imageUrl": "assets/minh-hoa/school.webp",
+      "imageAlt": "Trường học",
       "accentNote": "学校に 通っています = tôi đang đi học đều đặn."
     },
     {
@@ -172,6 +200,8 @@
       "romaji": "kaisha",
       "wordType": "noun",
       "meaningVi": "Công ty",
+      "imageUrl": "assets/minh-hoa/company.webp",
+      "imageAlt": "Công ty",
       "accentNote": "会社に 通っています = tôi đang đi làm đều đặn."
     },
     {
@@ -182,6 +212,8 @@
       "romaji": "heya",
       "wordType": "noun",
       "meaningVi": "Căn phòng",
+      "imageUrl": "assets/minh-hoa/room.webp",
+      "imageAlt": "Căn phòng",
       "accentNote": "部屋を 片付けます = dọn phòng."
     },
     {
@@ -202,6 +234,8 @@
       "romaji": "hitori de",
       "wordType": "adverb",
       "meaningVi": "Một mình",
+      "imageUrl": "assets/minh-hoa/alone.webp",
+      "imageAlt": "Một mình",
       "accentNote": "一人で 生活しています = tôi sống một mình."
     }
   ],
@@ -689,6 +723,7 @@
       "id": "dia-n4-28-1",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l28-1",
@@ -726,6 +761,7 @@
       "id": "dia-n4-28-2",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l28-6",
@@ -796,6 +832,7 @@
       "id": "dia-n4-28-3",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l28-16",
@@ -854,6 +891,7 @@
       "id": "dia-n4-28-4",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l28-25",
@@ -893,6 +931,7 @@
       "id": "dia-n4-28-5",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l28-30",
@@ -949,6 +988,7 @@
       "id": "dia-n4-28-6",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l28-38",
@@ -999,6 +1039,7 @@
       "id": "dia-n4-28-7",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l28-45",
@@ -1060,6 +1101,7 @@
       "id": "dia-n4-28-8",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l28-54",
@@ -1114,6 +1156,7 @@
       "id": "dia-n4-28-9",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l28-62",
@@ -1159,6 +1202,7 @@
       "id": "dia-n4-28-10",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l28-68",

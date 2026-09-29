@@ -3,6 +3,8 @@
   "lessonNumber": 26,
   "title": "Bài 26: Giải thích lý do & Nhấn mạnh (〜んです)",
   "description": "Bài mở đầu N4: dùng んです để giải thích bối cảnh/nguyên nhân của một tình huống đã được quan sát/hỏi tới (khác です/ます đơn thuần thông báo), xin phép có lý do bằng んですが, và giới thiệu khái niệm tự động từ (壊れる, 治る) sẽ học kỹ ở bài 29.",
+  "sceneImageUrl": "assets/minh-hoa/canh-dong-nghiep-bi-sot.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 26: Giải thích lý do & Nhấn mạnh (〜んです)",
   "vocabList": [
     {
       "id": "voc-n4-26-1",
@@ -12,6 +14,8 @@
       "romaji": "nebou shimasu",
       "wordType": "verb",
       "meaningVi": "Ngủ quên, dậy muộn",
+      "imageUrl": "assets/minh-hoa/oversleep.webp",
+      "imageAlt": "Ngủ quên, dậy muộn",
       "accentNote": "寝坊したんです = tại vì tôi ngủ quên."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "okuremasu",
       "wordType": "verb",
       "meaningVi": "Đến muộn, trễ",
+      "imageUrl": "assets/minh-hoa/be-late.webp",
+      "imageAlt": "Đến muộn, trễ",
       "accentNote": "電車が 遅れたんです = tại vì tàu điện bị trễ."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "kowaremasu",
       "wordType": "verb",
       "meaningVi": "Bị hỏng, bị vỡ",
+      "imageUrl": "assets/minh-hoa/broken.webp",
+      "imageAlt": "Bị hỏng, bị vỡ",
       "accentNote": "自動詞 (tự động từ) — vật TỰ hỏng, không cần ai tác động."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "naorimasu",
       "wordType": "verb",
       "meaningVi": "Khỏi bệnh, lành lại",
+      "imageUrl": "assets/minh-hoa/get-well.webp",
+      "imageAlt": "Khỏi bệnh, lành lại",
       "accentNote": "風邪が 治ったんです = tôi đã khỏi cảm rồi."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "jiko",
       "wordType": "noun",
       "meaningVi": "Tai nạn",
+      "imageUrl": "assets/minh-hoa/accident.webp",
+      "imageAlt": "Tai nạn",
       "accentNote": "事故が あったんです = đã có tai nạn xảy ra.",
       "emotion": "buon"
     },
@@ -83,6 +95,8 @@
       "romaji": "netsu",
       "wordType": "noun",
       "meaningVi": "Sốt, nhiệt độ",
+      "imageUrl": "assets/minh-hoa/fever.webp",
+      "imageAlt": "Sốt, nhiệt độ",
       "accentNote": "熱が あるんです = tôi đang bị sốt."
     },
     {
@@ -93,6 +107,8 @@
       "romaji": "kaigi",
       "wordType": "noun",
       "meaningVi": "Cuộc họp",
+      "imageUrl": "assets/minh-hoa/meeting.webp",
+      "imageAlt": "Cuộc họp",
       "accentNote": "Đã gặp N5 bài 7 — nay dùng làm bối cảnh giải thích lý do."
     },
     {
@@ -103,6 +119,8 @@
       "romaji": "kaigishitsu",
       "wordType": "noun",
       "meaningVi": "Phòng họp",
+      "imageUrl": "assets/minh-hoa/meeting-room.webp",
+      "imageAlt": "Phòng họp",
       "accentNote": "Đã gặp N5 bài 3."
     },
     {
@@ -113,6 +131,8 @@
       "romaji": "densha",
       "wordType": "noun",
       "meaningVi": "Tàu điện",
+      "imageUrl": "assets/minh-hoa/train.webp",
+      "imageAlt": "Tàu điện",
       "accentNote": "Đã gặp N5 bài 5 — nay dùng làm nguyên nhân trễ giờ."
     },
     {
@@ -123,6 +143,8 @@
       "romaji": "shigoto",
       "wordType": "noun",
       "meaningVi": "Công việc",
+      "imageUrl": "assets/minh-hoa/work-job.webp",
+      "imageAlt": "Công việc",
       "accentNote": "Đã gặp N5 bài 9."
     },
     {
@@ -133,6 +155,8 @@
       "romaji": "byouin",
       "wordType": "noun",
       "meaningVi": "Bệnh viện",
+      "imageUrl": "assets/minh-hoa/hospital.webp",
+      "imageAlt": "Bệnh viện",
       "accentNote": "Đã gặp N5 bài 3."
     },
     {
@@ -143,6 +167,8 @@
       "romaji": "kaze",
       "wordType": "noun",
       "meaningVi": "Cảm lạnh, cảm cúm",
+      "imageUrl": "assets/minh-hoa/cold-flu.webp",
+      "imageAlt": "Cảm lạnh, cảm cúm",
       "accentNote": "風邪を ひきました = tôi bị cảm.",
       "emotion": "buon"
     },
@@ -184,6 +210,8 @@
       "romaji": "iken",
       "wordType": "noun",
       "meaningVi": "Ý kiến, quan điểm",
+      "imageUrl": "assets/minh-hoa/opinion.webp",
+      "imageAlt": "Ý kiến, quan điểm",
       "accentNote": "Đã có nền tảng từ 〜と思います (N5 bài 21) — nay mở rộng cách hỏi ý kiến."
     },
     {
@@ -204,6 +232,8 @@
       "romaji": "daijoubu",
       "wordType": "adjective",
       "meaningVi": "Ổn, không sao",
+      "imageUrl": "assets/minh-hoa/its-okay.webp",
+      "imageAlt": "Ổn, không sao",
       "accentNote": "Đã gặp N5 bài 15."
     }
   ],
@@ -778,6 +808,7 @@
       "id": "dia-n4-26-1",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l26-1",
@@ -842,6 +873,7 @@
       "id": "dia-n4-26-2",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l26-11",
@@ -892,6 +924,7 @@
       "id": "dia-n4-26-3",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l26-18",
@@ -929,6 +962,7 @@
       "id": "dia-n4-26-4",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l26-23",
@@ -1008,6 +1042,7 @@
       "id": "dia-n4-26-5",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l26-36",
@@ -1050,6 +1085,7 @@
       "id": "dia-n4-26-6",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l26-42",
@@ -1112,6 +1148,7 @@
       "id": "dia-n4-26-7",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l26-52",
@@ -1161,6 +1198,7 @@
       "id": "dia-n4-26-8",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l26-59",
@@ -1230,6 +1268,7 @@
       "id": "dia-n4-26-9",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l26-69",
@@ -1277,6 +1316,7 @@
       "id": "dia-n4-26-10",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l26-76",

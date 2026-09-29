@@ -25,6 +25,9 @@
   --muted:        #6b6355;
   --faint:        #70675a;          /* dat AA tren nen giay (4.7:1) */
   --card:         #fffdf9;          /* mat the noi dung: sang hon giay mot bac */
+  /* Nen kem cua anh minh hoa AI (assets/minh-hoa/*.webp): o dung anh to dung mau nay -> anh
+     lien o, khong lo vien sang toi. Co dinh, KHONG doi theo phong cach (anh da in san nen do). */
+  --anh-kem:      #f0ebe1;
 
   --accent:       #c96442;
   --accent-strong:#b4543a;          /* nen nut co chu trang: 4.9:1 (--accent chi 3.9:1) */

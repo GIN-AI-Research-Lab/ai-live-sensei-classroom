@@ -3,6 +3,8 @@
   "lessonNumber": 42,
   "title": "Bài 42: Mục đích vì ai/cái gì (〜ために) & Dùng vào việc gì (〜のに)",
   "description": "Diễn tả mục đích với động từ Ý CHÍ (đối lập ように bài 36) bằng N/Vの/từ điển+ために (mục đích → hành động, chủ ngữ là người), và công dụng của một vật bằng V(từ điển)のに+使います/役に立ちます (の danh từ hóa + に mục đích, khác hẳn のに nhượng bộ ở bài 45) — tổng kết ba cấu trúc mục đích ように/ために/のに theo loại động từ và chủ ngữ.",
+  "sceneImageUrl": "assets/minh-hoa/canh-hoc-tu-va-tiet-kiem.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 42: Mục đích vì ai/cái gì (〜ために) & Dùng vào việc gì (〜のに)",
   "vocabList": [
     {
       "id": "voc-n4-42-1",
@@ -12,6 +14,8 @@
       "romaji": "tsukaimasu",
       "wordType": "verb",
       "meaningVi": "Sử dụng, dùng",
+      "imageUrl": "assets/minh-hoa/use.webp",
+      "imageAlt": "Sử dụng, dùng",
       "accentNote": "Đã gặp N5 bài 15 — nay dùng làm động từ chính cho のに."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "tamemasu",
       "wordType": "verb",
       "meaningVi": "Tích lũy, để dành (tiền)",
+      "imageUrl": "assets/minh-hoa/save-money.webp",
+      "imageAlt": "Tích lũy, để dành (tiền)",
       "accentNote": "留学の ために、お金を 貯めています = để đi du học, tôi đang để dành tiền."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "hatarakimasu",
       "wordType": "verb",
       "meaningVi": "Làm việc, đi làm",
+      "imageUrl": "assets/minh-hoa/work-hard-labor.webp",
+      "imageAlt": "Làm việc, đi làm",
       "accentNote": "Đã gặp N5 bài 4."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "benkyou shimasu",
       "wordType": "verb",
       "meaningVi": "Học, học tập",
+      "imageUrl": "assets/minh-hoa/study.webp",
+      "imageAlt": "Học, học tập",
       "accentNote": "Đã gặp N5 bài 4."
     },
     {
@@ -62,6 +72,8 @@
       "romaji": "ryuugaku shimasu",
       "wordType": "verb",
       "meaningVi": "Đi du học",
+      "imageUrl": "assets/minh-hoa/study-abroad.webp",
+      "imageAlt": "Đi du học",
       "accentNote": "Đã gặp N5 bài 21."
     },
     {
@@ -72,6 +84,8 @@
       "romaji": "shourai",
       "wordType": "noun",
       "meaningVi": "Tương lai",
+      "imageUrl": "assets/minh-hoa/future.webp",
+      "imageAlt": "Tương lai",
       "accentNote": "Đã gặp bài 31."
     },
     {
@@ -82,6 +96,8 @@
       "romaji": "dougu",
       "wordType": "noun",
       "meaningVi": "Dụng cụ, công cụ",
+      "imageUrl": "assets/minh-hoa/tools.webp",
+      "imageAlt": "Dụng cụ, công cụ",
       "accentNote": "この道具は 何に 使いますか = dụng cụ này dùng để làm gì vậy?"
     },
     {
@@ -92,6 +108,8 @@
       "romaji": "okane",
       "wordType": "noun",
       "meaningVi": "Tiền",
+      "imageUrl": "assets/minh-hoa/money.webp",
+      "imageAlt": "Tiền",
       "accentNote": "Đã gặp N5 bài 25."
     },
     {
@@ -102,6 +120,8 @@
       "romaji": "okanemochi",
       "wordType": "noun",
       "meaningVi": "Người giàu có",
+      "imageUrl": "assets/minh-hoa/rich-person.webp",
+      "imageAlt": "Người giàu có",
       "accentNote": "お金持ちに なるために = để trở thành người giàu có."
     },
     {
@@ -112,6 +132,8 @@
       "romaji": "ryouri",
       "wordType": "noun",
       "meaningVi": "Món ăn, nấu ăn",
+      "imageUrl": "assets/minh-hoa/cooking-dish.webp",
+      "imageAlt": "Món ăn, nấu ăn",
       "accentNote": "Đã gặp N5 bài 9."
     },
     {
@@ -122,6 +144,8 @@
       "romaji": "jikan",
       "wordType": "noun",
       "meaningVi": "Thời gian",
+      "imageUrl": "assets/minh-hoa/time.webp",
+      "imageAlt": "Thời gian",
       "accentNote": "Đã gặp N5 bài 4."
     },
     {
@@ -132,6 +156,8 @@
       "romaji": "kenkou",
       "wordType": "adjective",
       "meaningVi": "Sức khỏe, khỏe mạnh",
+      "imageUrl": "assets/minh-hoa/health.webp",
+      "imageAlt": "Sức khỏe, khỏe mạnh",
       "accentNote": "健康の ために、運動します = để (giữ) sức khỏe, tôi tập thể dục."
     },
     {
@@ -142,6 +168,8 @@
       "romaji": "shiken",
       "wordType": "noun",
       "meaningVi": "Kỳ thi",
+      "imageUrl": "assets/minh-hoa/exam.webp",
+      "imageAlt": "Kỳ thi",
       "accentNote": "Đã gặp bài 40."
     },
     {
@@ -152,6 +180,8 @@
       "romaji": "goukaku shimasu",
       "wordType": "verb",
       "meaningVi": "Đậu, đỗ (kỳ thi)",
+      "imageUrl": "assets/minh-hoa/pass-exam.webp",
+      "imageAlt": "Đậu, đỗ (kỳ thi)",
       "accentNote": "Đã gặp bài 40."
     },
     {
@@ -162,6 +192,8 @@
       "romaji": "daigaku",
       "wordType": "noun",
       "meaningVi": "Trường đại học",
+      "imageUrl": "assets/minh-hoa/university.webp",
+      "imageAlt": "Trường đại học",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -172,6 +204,8 @@
       "romaji": "hasami",
       "wordType": "noun",
       "meaningVi": "Cái kéo",
+      "imageUrl": "assets/minh-hoa/scissors.webp",
+      "imageAlt": "Cái kéo",
       "accentNote": "はさみは 紙を 切るのに 使います = kéo dùng để cắt giấy."
     },
     {
@@ -182,6 +216,8 @@
       "romaji": "kami",
       "wordType": "noun",
       "meaningVi": "Giấy",
+      "imageUrl": "assets/minh-hoa/paper.webp",
+      "imageAlt": "Giấy",
       "accentNote": "Đã gặp N5 bài 11."
     },
     {
@@ -192,6 +228,8 @@
       "romaji": "kirimasu",
       "wordType": "verb",
       "meaningVi": "Cắt",
+      "imageUrl": "assets/minh-hoa/cut.webp",
+      "imageAlt": "Cắt",
       "accentNote": "紙を 切ります = cắt giấy."
     },
     {
@@ -202,6 +240,8 @@
       "romaji": "benri",
       "wordType": "adjective",
       "meaningVi": "Tiện lợi",
+      "imageUrl": "assets/minh-hoa/convenient.webp",
+      "imageAlt": "Tiện lợi",
       "accentNote": "Đã gặp N5 bài 8."
     }
   ],
@@ -815,6 +855,7 @@
       "id": "dia-n4-42-1",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l42-1",
@@ -877,6 +918,7 @@
       "id": "dia-n4-42-2",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l42-11",
@@ -938,6 +980,7 @@
       "id": "dia-n4-42-3",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l42-20",
@@ -1003,6 +1046,7 @@
       "id": "dia-n4-42-4",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l42-30",
@@ -1057,6 +1101,7 @@
       "id": "dia-n4-42-5",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l42-38",
@@ -1079,6 +1124,7 @@
       "id": "dia-n4-42-6",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l42-40",
@@ -1162,6 +1208,7 @@
       "id": "dia-n4-42-7",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l42-53",
@@ -1232,6 +1279,7 @@
       "id": "dia-n4-42-8",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l42-63",
@@ -1298,6 +1346,7 @@
       "id": "dia-n4-42-9",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l42-73",
@@ -1359,6 +1408,7 @@
       "id": "dia-n4-42-10",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l42-82",

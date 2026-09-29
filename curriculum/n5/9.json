@@ -3,6 +3,8 @@
   "lessonNumber": 9,
   "title": "Bài 9: Sở thích, Năng lực & Lý do (好き / 嫌い / 上手 / 下手 / から)",
   "description": "Nhóm tính từ đặc biệt dùng trợ từ が (好き, 嫌い, 上手, 下手) để nói sở thích và năng lực, cách nêu lý do bằng から (lý do trước, kết quả sau), và cách hỏi-đáp lý do bằng どうして…からです。",
+  "sceneImageUrl": "assets/minh-hoa/canh-so-thich-choi-guitar.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 9: Sở thích, Năng lực & Lý do (好き / 嫌い / 上手 / 下手 / から)",
   "vocabList": [
     {
       "id": "voc-n5-9-1",
@@ -12,6 +14,8 @@
       "romaji": "suki",
       "wordType": "adjective",
       "meaningVi": "Thích",
+      "imageUrl": "assets/minh-hoa/thich.webp",
+      "imageAlt": "Thích",
       "accentNote": "Tính từ な. Đối tượng thích đánh dấu bằng が, KHÔNG dùng を.",
       "emotion": "vui"
     },
@@ -23,6 +27,8 @@
       "romaji": "daisuki",
       "wordType": "adjective",
       "meaningVi": "Rất thích, thích lắm",
+      "imageUrl": "assets/minh-hoa/rat-thich.webp",
+      "imageAlt": "Rất thích, thích lắm",
       "accentNote": "Tính từ な. Mạnh hơn 好き.",
       "emotion": "vui"
     },
@@ -34,6 +40,8 @@
       "romaji": "kirai",
       "wordType": "adjective",
       "meaningVi": "Ghét, không thích",
+      "imageUrl": "assets/minh-hoa/ghet.webp",
+      "imageAlt": "Ghét, không thích",
       "accentNote": "Tính từ な. Trái nghĩa với 好き.",
       "emotion": "de_biu"
     },
@@ -45,6 +53,8 @@
       "romaji": "jouzu",
       "wordType": "adjective",
       "meaningVi": "Giỏi, khéo",
+      "imageUrl": "assets/minh-hoa/gioi.webp",
+      "imageAlt": "Giỏi, khéo",
       "accentNote": "Tính từ な. KHÔNG dùng để tự khen bản thân mình.",
       "emotion": "vui"
     },
@@ -56,6 +66,8 @@
       "romaji": "heta",
       "wordType": "adjective",
       "meaningVi": "Kém, vụng",
+      "imageUrl": "assets/minh-hoa/kem.webp",
+      "imageAlt": "Kém, vụng",
       "accentNote": "Tính từ な. Trái nghĩa với 上手.",
       "emotion": "de_biu"
     },
@@ -67,6 +79,8 @@
       "romaji": "supootsu",
       "wordType": "noun",
       "meaningVi": "Thể thao",
+      "imageUrl": "assets/minh-hoa/the-thao.webp",
+      "imageAlt": "Thể thao",
       "accentNote": "スポーツが 好きです = thích thể thao."
     },
     {
@@ -77,6 +91,8 @@
       "romaji": "ongaku",
       "wordType": "noun",
       "meaningVi": "Âm nhạc",
+      "imageUrl": "assets/minh-hoa/am-nhac.webp",
+      "imageAlt": "Âm nhạc",
       "accentNote": "Đã gặp bài 6 — nay dùng làm đối tượng của 好き/上手."
     },
     {
@@ -87,6 +103,8 @@
       "romaji": "uta",
       "wordType": "noun",
       "meaningVi": "Bài hát",
+      "imageUrl": "assets/minh-hoa/bai-hat.webp",
+      "imageAlt": "Bài hát",
       "accentNote": "歌います = hát."
     },
     {
@@ -97,6 +115,8 @@
       "romaji": "e",
       "wordType": "noun",
       "meaningVi": "Tranh, hình vẽ",
+      "imageUrl": "assets/minh-hoa/buc-tranh.webp",
+      "imageAlt": "Tranh, hình vẽ",
       "accentNote": "絵を 描きます = vẽ tranh."
     },
     {
@@ -107,6 +127,8 @@
       "romaji": "ryouri",
       "wordType": "noun",
       "meaningVi": "Món ăn, nấu ăn",
+      "imageUrl": "assets/minh-hoa/mon-an.webp",
+      "imageAlt": "Món ăn, nấu ăn",
       "accentNote": "料理が 上手です = giỏi nấu ăn."
     },
     {
@@ -117,6 +139,8 @@
       "romaji": "gitaa",
       "wordType": "noun",
       "meaningVi": "Đàn guitar",
+      "imageUrl": "assets/minh-hoa/dan-guitar.webp",
+      "imageAlt": "Đàn guitar",
       "accentNote": ""
     },
     {
@@ -127,6 +151,8 @@
       "romaji": "osake",
       "wordType": "noun",
       "meaningVi": "Rượu, rượu sake",
+      "imageUrl": "assets/minh-hoa/ruou-sake.webp",
+      "imageAlt": "Rượu, rượu sake",
       "accentNote": "お酒が 好きです = thích uống rượu."
     },
     {
@@ -137,6 +163,8 @@
       "romaji": "ocha",
       "wordType": "noun",
       "meaningVi": "Trà (xanh)",
+      "imageUrl": "assets/minh-hoa/tra-xanh.webp",
+      "imageAlt": "Trà (xanh)",
       "accentNote": "お茶を 飲みます = uống trà."
     },
     {
@@ -178,6 +206,8 @@
       "romaji": "benkyou",
       "wordType": "noun",
       "meaningVi": "Việc học",
+      "imageUrl": "assets/minh-hoa/hoc.webp",
+      "imageAlt": "Việc học",
       "accentNote": "勉強します = học tập."
     },
     {
@@ -188,6 +218,8 @@
       "romaji": "shigoto",
       "wordType": "noun",
       "meaningVi": "Công việc",
+      "imageUrl": "assets/minh-hoa/lam-viec.webp",
+      "imageAlt": "Công việc",
       "accentNote": "仕事が 忙しいです = công việc bận rộn."
     },
     {
@@ -198,6 +230,8 @@
       "romaji": "genki",
       "wordType": "adjective",
       "meaningVi": "Khỏe mạnh",
+      "imageUrl": "assets/minh-hoa/khoe-manh.webp",
+      "imageAlt": "Khỏe mạnh",
       "accentNote": "Đã gặp bài 8 — nay dùng làm lý do trong câu から."
     },
     {
@@ -208,6 +242,8 @@
       "romaji": "tanoshii",
       "wordType": "adjective",
       "meaningVi": "Vui vẻ",
+      "imageUrl": "assets/minh-hoa/vui-ve.webp",
+      "imageAlt": "Vui vẻ",
       "accentNote": "Đã gặp bài 8 — nay làm lý do thích một hoạt động.",
       "emotion": "vui"
     }
@@ -799,6 +835,7 @@
       "id": "dia-n5-9-1",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l9-1",
@@ -841,6 +878,7 @@
       "id": "dia-n5-9-2",
       "speaker": "グプタ",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-gupta.webp",
       "tokens": [
         {
           "id": "d-l9-7",
@@ -900,6 +938,7 @@
       "id": "dia-n5-9-3",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l9-16",
@@ -930,6 +969,7 @@
       "id": "dia-n5-9-4",
       "speaker": "グプタ",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-gupta.webp",
       "tokens": [
         {
           "id": "d-l9-20",
@@ -1016,6 +1056,7 @@
       "id": "dia-n5-9-5",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l9-34",
@@ -1052,6 +1093,7 @@
       "id": "dia-n5-9-6",
       "speaker": "グプタ",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-gupta.webp",
       "tokens": [
         {
           "id": "d-l9-39",
@@ -1100,6 +1142,7 @@
       "id": "dia-n5-9-7",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l9-46",
@@ -1137,6 +1180,7 @@
       "id": "dia-n5-9-8",
       "speaker": "グプタ",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-gupta.webp",
       "tokens": [
         {
           "id": "d-l9-51",
@@ -1179,6 +1223,7 @@
       "id": "dia-n5-9-9",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l9-57",
@@ -1221,6 +1266,7 @@
       "id": "dia-n5-9-10",
       "speaker": "グプタ",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-gupta.webp",
       "tokens": [
         {
           "id": "d-l9-63",

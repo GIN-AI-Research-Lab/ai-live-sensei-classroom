@@ -3,6 +3,8 @@
   "lessonNumber": 10,
   "title": "Bài 10: Tồn tại Người & Vật (あります / います & Từ chỉ vị trí)",
   "description": "Phân biệt あります (vật vô tri, không tự di chuyển — kể cả cây) với います (người, động vật có thể tự di chuyển), cấu trúc [nơi]に[vật]が có/tồn tại, các từ chỉ vị trí 上/下/前/後ろ/中/隣/近く/間 nối bằng の, và cách đảo trật tự khi vật là chủ đề đã biết.",
+  "sceneImageUrl": "assets/minh-hoa/canh-con-cho-trong-cong-vien.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 10: Tồn tại Người & Vật (あります / います & Từ chỉ vị trí)",
   "vocabList": [
     {
       "id": "voc-n5-10-1",
@@ -32,6 +34,8 @@
       "romaji": "ue",
       "wordType": "noun",
       "meaningVi": "Trên, phía trên",
+      "imageUrl": "assets/minh-hoa/tren.webp",
+      "imageAlt": "Trên, phía trên",
       "accentNote": "Đã gặp kanji ở bài 3, nay dùng làm từ chỉ vị trí độc lập."
     },
     {
@@ -42,6 +46,8 @@
       "romaji": "shita",
       "wordType": "noun",
       "meaningVi": "Dưới, phía dưới",
+      "imageUrl": "assets/minh-hoa/duoi.webp",
+      "imageAlt": "Dưới, phía dưới",
       "accentNote": "Trái nghĩa với 上."
     },
     {
@@ -52,6 +58,8 @@
       "romaji": "mae",
       "wordType": "noun",
       "meaningVi": "Trước, phía trước",
+      "imageUrl": "assets/minh-hoa/truoc.webp",
+      "imageAlt": "Trước, phía trước",
       "accentNote": "駅の前 = trước ga."
     },
     {
@@ -62,6 +70,8 @@
       "romaji": "ushiro",
       "wordType": "noun",
       "meaningVi": "Sau, phía sau",
+      "imageUrl": "assets/minh-hoa/sau.webp",
+      "imageAlt": "Sau, phía sau",
       "accentNote": "Trái nghĩa với 前."
     },
     {
@@ -72,6 +82,8 @@
       "romaji": "naka",
       "wordType": "noun",
       "meaningVi": "Trong, giữa",
+      "imageUrl": "assets/minh-hoa/trong.webp",
+      "imageAlt": "Trong, giữa",
       "accentNote": "箱の中 = trong hộp."
     },
     {
@@ -82,6 +94,8 @@
       "romaji": "soto",
       "wordType": "noun",
       "meaningVi": "Ngoài",
+      "imageUrl": "assets/minh-hoa/ngoai.webp",
+      "imageAlt": "Ngoài",
       "accentNote": "Đã gặp kanji bài 3."
     },
     {
@@ -92,6 +106,8 @@
       "romaji": "tonari",
       "wordType": "noun",
       "meaningVi": "Bên cạnh, liền kề",
+      "imageUrl": "assets/minh-hoa/ben-canh.webp",
+      "imageAlt": "Bên cạnh, liền kề",
       "accentNote": "銀行の隣 = bên cạnh ngân hàng."
     },
     {
@@ -102,6 +118,8 @@
       "romaji": "chikaku",
       "wordType": "noun",
       "meaningVi": "Gần, khu vực gần đây",
+      "imageUrl": "assets/minh-hoa/gan.webp",
+      "imageAlt": "Gần, khu vực gần đây",
       "accentNote": "駅の近く = gần ga."
     },
     {
@@ -112,6 +130,8 @@
       "romaji": "aida",
       "wordType": "noun",
       "meaningVi": "Giữa (hai vật)",
+      "imageUrl": "assets/minh-hoa/giua.webp",
+      "imageAlt": "Giữa (hai vật)",
       "accentNote": "AとBの間 = giữa A và B."
     },
     {
@@ -122,6 +142,8 @@
       "romaji": "tsukue",
       "wordType": "noun",
       "meaningVi": "Cái bàn",
+      "imageUrl": "assets/minh-hoa/ban.webp",
+      "imageAlt": "Cái bàn",
       "accentNote": "Đã gặp bài 2 (đồ vật) — nay dùng làm mốc chỉ vị trí."
     },
     {
@@ -132,6 +154,8 @@
       "romaji": "isu",
       "wordType": "noun",
       "meaningVi": "Cái ghế",
+      "imageUrl": "assets/minh-hoa/ghe.webp",
+      "imageAlt": "Cái ghế",
       "accentNote": "Đã gặp bài 2."
     },
     {
@@ -142,6 +166,8 @@
       "romaji": "hako",
       "wordType": "noun",
       "meaningVi": "Cái hộp",
+      "imageUrl": "assets/minh-hoa/hop.webp",
+      "imageAlt": "Cái hộp",
       "accentNote": ""
     },
     {
@@ -152,6 +178,8 @@
       "romaji": "kabin",
       "wordType": "noun",
       "meaningVi": "Bình hoa",
+      "imageUrl": "assets/minh-hoa/binh-hoa.webp",
+      "imageAlt": "Bình hoa",
       "accentNote": ""
     },
     {
@@ -162,6 +190,8 @@
       "romaji": "ki",
       "wordType": "noun",
       "meaningVi": "Cây",
+      "imageUrl": "assets/minh-hoa/cay.webp",
+      "imageAlt": "Cây",
       "accentNote": "Vật vô tri về mặt ngữ pháp — dùng あります dù là sinh vật sống về mặt sinh học."
     },
     {
@@ -172,6 +202,8 @@
       "romaji": "inu",
       "wordType": "noun",
       "meaningVi": "Con chó",
+      "imageUrl": "assets/minh-hoa/con-cho.webp",
+      "imageAlt": "Con chó",
       "accentNote": "Dùng います."
     },
     {
@@ -182,6 +214,8 @@
       "romaji": "neko",
       "wordType": "noun",
       "meaningVi": "Con mèo",
+      "imageUrl": "assets/minh-hoa/con-meo.webp",
+      "imageAlt": "Con mèo",
       "accentNote": "Dùng います."
     },
     {
@@ -192,6 +226,8 @@
       "romaji": "tori",
       "wordType": "noun",
       "meaningVi": "Con chim",
+      "imageUrl": "assets/minh-hoa/con-chim.webp",
+      "imageAlt": "Con chim",
       "accentNote": "Dùng います."
     },
     {
@@ -202,6 +238,8 @@
       "romaji": "ginkou",
       "wordType": "noun",
       "meaningVi": "Ngân hàng",
+      "imageUrl": "assets/minh-hoa/ngan-hang.webp",
+      "imageAlt": "Ngân hàng",
       "accentNote": "Đã gặp bài 4 — nay dùng làm mốc vị trí."
     },
     {
@@ -846,6 +884,7 @@
       "id": "dia-n5-10-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l10-1",
@@ -894,6 +933,7 @@
       "id": "dia-n5-10-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l10-8",
@@ -933,6 +973,7 @@
       "id": "dia-n5-10-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l10-13",
@@ -1012,6 +1053,7 @@
       "id": "dia-n5-10-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l10-26",
@@ -1033,6 +1075,7 @@
       "id": "dia-n5-10-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l10-28",
@@ -1082,6 +1125,7 @@
       "id": "dia-n5-10-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l10-35",
@@ -1109,6 +1153,7 @@
       "id": "dia-n5-10-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l10-38",
@@ -1173,6 +1218,7 @@
       "id": "dia-n5-10-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l10-48",
@@ -1244,6 +1290,7 @@
       "id": "dia-n5-10-9",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l10-59",
@@ -1281,6 +1328,7 @@
       "id": "dia-n5-10-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l10-64",

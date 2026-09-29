@@ -3,6 +3,8 @@
   "lessonNumber": 7,
   "title": "Bài 7: Công cụ, Phương tiện で & Cho nhận (あげます / もらいます / もう Vました)",
   "description": "Dùng で để chỉ công cụ hoặc ngôn ngữ thực hiện hành động, cấu trúc tặng あげます và nhận もらいます (luôn lấy người nói làm gốc), cặp 貸します/借ります, và cách nói việc đã xong bằng もう Vました / まだ Vていません.",
+  "sceneImageUrl": "assets/minh-hoa/canh-muon-tu-dien.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 7: Công cụ, Phương tiện で & Cho nhận (あげます / もらいます / もう Vました)",
   "vocabList": [
     {
       "id": "voc-n5-7-1",
@@ -12,6 +14,8 @@
       "romaji": "agemasu",
       "wordType": "verb",
       "meaningVi": "Tặng, cho (người khác)",
+      "imageUrl": "assets/minh-hoa/tang-qua.webp",
+      "imageAlt": "Tặng, cho (người khác)",
       "accentNote": "Người nói/phe người nói TẶNG cho người khác."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "moraimasu",
       "wordType": "verb",
       "meaningVi": "Nhận, được (từ ai đó)",
+      "imageUrl": "assets/minh-hoa/nhan-qua.webp",
+      "imageAlt": "Nhận, được (từ ai đó)",
       "accentNote": "Người nói NHẬN từ người khác — người cho đánh dấu bằng に hoặc から."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "kashimasu",
       "wordType": "verb",
       "meaningVi": "Cho mượn",
+      "imageUrl": "assets/minh-hoa/cho-muon.webp",
+      "imageAlt": "Cho mượn",
       "accentNote": "Thể từ điển: 貸す. Khác 借ります (mượn) — hai chiều ngược nhau."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "karimasu",
       "wordType": "verb",
       "meaningVi": "Mượn, vay",
+      "imageUrl": "assets/minh-hoa/muon.webp",
+      "imageAlt": "Mượn, vay",
       "accentNote": "Thể từ điển: 借りる. Người MƯỢN dùng động từ này."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "oshiemasu",
       "wordType": "verb",
       "meaningVi": "Dạy, chỉ bảo, cho biết",
+      "imageUrl": "assets/minh-hoa/day.webp",
+      "imageAlt": "Dạy, chỉ bảo, cho biết",
       "accentNote": "教えて ください = xin hãy chỉ giúp tôi."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "naraimasu",
       "wordType": "verb",
       "meaningVi": "Học (một kỹ năng, từ ai đó)",
+      "imageUrl": "assets/minh-hoa/hoc-ky-nang.webp",
+      "imageAlt": "Học (một kỹ năng, từ ai đó)",
       "accentNote": "Khác 勉強します (học nói chung) — 習います nhấn mạnh HỌC TỪ AI."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "hanashimasu",
       "wordType": "verb",
       "meaningVi": "Nói, trò chuyện",
+      "imageUrl": "assets/minh-hoa/noi-chuyen.webp",
+      "imageAlt": "Nói, trò chuyện",
       "accentNote": "日本語で 話します = nói bằng tiếng Nhật."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "misemasu",
       "wordType": "verb",
       "meaningVi": "Cho xem, trình bày",
+      "imageUrl": "assets/minh-hoa/cho-xem.webp",
+      "imageAlt": "Cho xem, trình bày",
       "accentNote": "Đã gặp dạng lịch sự 見せて ください ở bài 3."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "pen",
       "wordType": "noun",
       "meaningVi": "Cây bút (nói chung)",
+      "imageUrl": "assets/minh-hoa/but.webp",
+      "imageAlt": "Cây bút (nói chung)",
       "accentNote": "ボールペン (bút bi) đã học ở bài 2 là một loại ペン."
     },
     {
@@ -112,6 +132,8 @@
       "romaji": "denwa",
       "wordType": "noun",
       "meaningVi": "Điện thoại, cuộc gọi",
+      "imageUrl": "assets/minh-hoa/dien-thoai.webp",
+      "imageAlt": "Điện thoại, cuộc gọi",
       "accentNote": "電話を 貸します = cho mượn điện thoại."
     },
     {
@@ -122,6 +144,8 @@
       "romaji": "tanjoubi",
       "wordType": "noun",
       "meaningVi": "Sinh nhật",
+      "imageUrl": "assets/minh-hoa/sinh-nhat.webp",
+      "imageAlt": "Sinh nhật",
       "accentNote": "Đã gặp bài 5 — nay dùng làm dịp tặng quà."
     },
     {
@@ -172,6 +196,8 @@
       "romaji": "jisho",
       "wordType": "noun",
       "meaningVi": "Từ điển",
+      "imageUrl": "assets/minh-hoa/tu-dien.webp",
+      "imageAlt": "Từ điển",
       "accentNote": "Đã gặp bài 2 — nay dùng làm vật cho mượn."
     },
     {
@@ -182,6 +208,8 @@
       "romaji": "kasa",
       "wordType": "noun",
       "meaningVi": "Cái ô, cái dù",
+      "imageUrl": "assets/minh-hoa/cai-o.webp",
+      "imageAlt": "Cái ô, cái dù",
       "accentNote": "Đã gặp bài 2 — nay dùng làm vật cho mượn khi trời mưa."
     },
     {
@@ -192,6 +220,8 @@
       "romaji": "chizu",
       "wordType": "noun",
       "meaningVi": "Bản đồ",
+      "imageUrl": "assets/minh-hoa/ban-do.webp",
+      "imageAlt": "Bản đồ",
       "accentNote": "地図を 見せて ください = cho tôi xem bản đồ."
     },
     {
@@ -202,6 +232,8 @@
       "romaji": "shukudai",
       "wordType": "noun",
       "meaningVi": "Bài tập về nhà",
+      "imageUrl": "assets/minh-hoa/bai-tap-ve-nha.webp",
+      "imageAlt": "Bài tập về nhà",
       "accentNote": "宿題を します = làm bài tập."
     }
   ],
@@ -735,6 +767,7 @@
       "id": "dia-n5-7-1",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l7-1",
@@ -782,6 +815,7 @@
       "id": "dia-n5-7-2",
       "speaker": "グプタ",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-gupta.webp",
       "tokens": [
         {
           "id": "d-l7-8",
@@ -805,6 +839,7 @@
       "id": "dia-n5-7-3",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l7-11",
@@ -849,6 +884,7 @@
       "id": "dia-n5-7-4",
       "speaker": "グプタ",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-gupta.webp",
       "tokens": [
         {
           "id": "d-l7-17",
@@ -876,6 +912,7 @@
       "id": "dia-n5-7-5",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l7-20",
@@ -917,6 +954,7 @@
       "id": "dia-n5-7-6",
       "speaker": "グプタ",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-gupta.webp",
       "tokens": [
         {
           "id": "d-l7-26",
@@ -966,6 +1004,7 @@
       "id": "dia-n5-7-7",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l7-33",
@@ -1008,6 +1047,7 @@
       "id": "dia-n5-7-8",
       "speaker": "グプタ",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-gupta.webp",
       "tokens": [
         {
           "id": "d-l7-39",
@@ -1036,6 +1076,7 @@
       "id": "dia-n5-7-9",
       "speaker": "ミラー",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l7-43",
@@ -1078,6 +1119,7 @@
       "id": "dia-n5-7-10",
       "speaker": "グプタ",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-gupta.webp",
       "tokens": [
         {
           "id": "d-l7-49",

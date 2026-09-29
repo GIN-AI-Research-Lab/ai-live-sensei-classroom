@@ -3,6 +3,8 @@
   "lessonNumber": 15,
   "title": "Bài 15: Xin phép & Cấm đoán (Vてもいいです / Vてはいけません / Vています)",
   "description": "Xin phép bằng Vてもいいですか, cấm đoán bằng Vてはいけません, thứ tự hành động bằng Vてから (khác から chỉ lý do ở bài 9), và mở rộng Vています sang trạng thái kết quả/nghề nghiệp/hôn nhân, cùng ngoại lệ phủ định của 知る.",
+  "sceneImageUrl": "assets/minh-hoa/canh-xin-phep-trong-gio-kiem-tra.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 15: Xin phép & Cấm đoán (Vてもいいです / Vてはいけません / Vています)",
   "vocabList": [
     {
       "id": "voc-n5-15-1",
@@ -12,6 +14,8 @@
       "romaji": "tsukaimasu",
       "wordType": "verb",
       "meaningVi": "Sử dụng, dùng",
+      "imageUrl": "assets/minh-hoa/su-dung.webp",
+      "imageAlt": "Sử dụng, dùng",
       "accentNote": "Thể từ điển: 使う. Nhóm 1."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "hairimasu",
       "wordType": "verb",
       "meaningVi": "Vào, gia nhập",
+      "imageUrl": "assets/minh-hoa/vao.webp",
+      "imageAlt": "Vào, gia nhập",
       "accentNote": "Thể từ điển: 入る. Nhóm 1 (dù trông giống nhóm 2)."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "demasu",
       "wordType": "verb",
       "meaningVi": "Ra, rời khỏi, xuất hiện",
+      "imageUrl": "assets/minh-hoa/ra.webp",
+      "imageAlt": "Ra, rời khỏi, xuất hiện",
       "accentNote": "Thể từ điển: 出る. Nhóm 2."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "nugimasu",
       "wordType": "verb",
       "meaningVi": "Cởi (giày, áo)",
+      "imageUrl": "assets/minh-hoa/coi.webp",
+      "imageAlt": "Cởi (giày, áo)",
       "accentNote": "Thể từ điển: 脱ぐ. Nhóm 1. Đuôi ぐ → いで."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "suimasu",
       "wordType": "verb",
       "meaningVi": "Hút (thuốc), hít vào",
+      "imageUrl": "assets/minh-hoa/hut-thuoc.webp",
+      "imageAlt": "Hút (thuốc), hít vào",
       "accentNote": "Đã gặp bài 6 — nay dùng làm ví dụ điều cấm."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "tomemasu",
       "wordType": "verb",
       "meaningVi": "Dừng, đỗ (xe)",
+      "imageUrl": "assets/minh-hoa/dung-do-xe.webp",
+      "imageAlt": "Dừng, đỗ (xe)",
       "accentNote": "Nhóm 2. 駐車禁止 = cấm đỗ xe."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "shashin",
       "wordType": "noun",
       "meaningVi": "Bức ảnh",
+      "imageUrl": "assets/minh-hoa/buc-anh.webp",
+      "imageAlt": "Bức ảnh",
       "accentNote": "Đã gặp bài 6 — nay dùng làm đối tượng của điều cấm chụp ảnh."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "denki",
       "wordType": "noun",
       "meaningVi": "Điện, đèn điện",
+      "imageUrl": "assets/minh-hoa/den-dien.webp",
+      "imageAlt": "Điện, đèn điện",
       "accentNote": "電気を 消します/つけます = tắt/bật đèn."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "mado",
       "wordType": "noun",
       "meaningVi": "Cửa sổ",
+      "imageUrl": "assets/minh-hoa/cua-so.webp",
+      "imageAlt": "Cửa sổ",
       "accentNote": "Đã gặp bài 14."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "kutsu",
       "wordType": "noun",
       "meaningVi": "Giày",
+      "imageUrl": "assets/minh-hoa/doi-giay.webp",
+      "imageAlt": "Giày",
       "accentNote": "靴を 脱いで ください = xin hãy cởi giày."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "toshokan",
       "wordType": "noun",
       "meaningVi": "Thư viện",
+      "imageUrl": "assets/minh-hoa/thu-vien.webp",
+      "imageAlt": "Thư viện",
       "accentNote": "Đã gặp bài 4 — nay dùng làm nơi có nội quy."
     },
     {
@@ -122,6 +146,8 @@
       "romaji": "kyoushitsu",
       "wordType": "noun",
       "meaningVi": "Phòng học",
+      "imageUrl": "assets/minh-hoa/phong-hoc.webp",
+      "imageAlt": "Phòng học",
       "accentNote": "Đã gặp bài 3."
     },
     {
@@ -132,6 +158,8 @@
       "romaji": "jisho",
       "wordType": "noun",
       "meaningVi": "Từ điển",
+      "imageUrl": "assets/minh-hoa/tu-dien.webp",
+      "imageAlt": "Từ điển",
       "accentNote": "Đã gặp bài 2 — nay dùng làm đối tượng xin phép sử dụng."
     },
     {
@@ -142,6 +170,8 @@
       "romaji": "tesuto",
       "wordType": "noun",
       "meaningVi": "Bài kiểm tra",
+      "imageUrl": "assets/minh-hoa/bai-kiem-tra.webp",
+      "imageAlt": "Bài kiểm tra",
       "accentNote": "テストの ときは… = trong lúc kiểm tra thì..."
     },
     {
@@ -152,6 +182,8 @@
       "romaji": "ongaku",
       "wordType": "noun",
       "meaningVi": "Âm nhạc",
+      "imageUrl": "assets/minh-hoa/am-nhac.webp",
+      "imageAlt": "Âm nhạc",
       "accentNote": "Đã gặp bài 6 — nay dùng làm ví dụ điều cấm gây ồn."
     },
     {
@@ -172,6 +204,8 @@
       "romaji": "daijoubu",
       "wordType": "adjective",
       "meaningVi": "Ổn, không sao",
+      "imageUrl": "assets/minh-hoa/on-khong-sao.webp",
+      "imageAlt": "Ổn, không sao",
       "accentNote": "Tính từ な. Đáp lại lời xin lỗi/đề nghị giúp đỡ."
     },
     {
@@ -192,6 +226,8 @@
       "romaji": "kekkonshimasu",
       "wordType": "verb",
       "meaningVi": "Kết hôn",
+      "imageUrl": "assets/minh-hoa/ket-hon.webp",
+      "imageAlt": "Kết hôn",
       "accentNote": "Đã gặp bài 14 — nay ôn lại Vています trạng thái."
     },
     {
@@ -202,6 +238,8 @@
       "romaji": "shitte",
       "wordType": "verb",
       "meaningVi": "Biết (dạng て của 知ります)",
+      "imageUrl": "assets/minh-hoa/biet.webp",
+      "imageAlt": "Biết (dạng て của 知ります)",
       "accentNote": "知っています = đã biết. Phủ định đặc biệt: 知りません (KHÔNG nói 知っていません)."
     }
   ],
@@ -793,6 +831,7 @@
       "id": "dia-n5-15-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l15-1",
@@ -857,6 +896,7 @@
       "id": "dia-n5-15-2",
       "speaker": "先生",
       "speakerRole": "Giáo viên",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-l15-11",
@@ -888,6 +928,7 @@
       "id": "dia-n5-15-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l15-15",
@@ -942,6 +983,7 @@
       "id": "dia-n5-15-4",
       "speaker": "先生",
       "speakerRole": "Giáo viên",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-l15-23",
@@ -970,6 +1012,7 @@
       "id": "dia-n5-15-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l15-27",
@@ -1043,6 +1086,7 @@
       "id": "dia-n5-15-6",
       "speaker": "先生",
       "speakerRole": "Giáo viên",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-l15-38",
@@ -1105,6 +1149,7 @@
       "id": "dia-n5-15-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l15-48",
@@ -1159,6 +1204,7 @@
       "id": "dia-n5-15-8",
       "speaker": "先生",
       "speakerRole": "Giáo viên",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-l15-56",
@@ -1196,6 +1242,7 @@
       "id": "dia-n5-15-9",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l15-61",
@@ -1235,6 +1282,7 @@
       "id": "dia-n5-15-10",
       "speaker": "先生",
       "speakerRole": "Giáo viên",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-l15-66",

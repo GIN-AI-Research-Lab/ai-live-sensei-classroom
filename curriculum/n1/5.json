@@ -3,6 +3,8 @@
   "lessonNumber": 5,
   "title": "Bài 5: Diễn biến tiêu cực & Kết cục (に至る & に至っては & 始末だ)",
   "description": "に至る diễn tả một QUÁ TRÌNH (thường tiêu cực) cuối cùng đã DẪN ĐẾN một kết quả nghiêm trọng; に至っては dùng để SO SÁNH nhiều đối tượng rồi NÊU BẬT trường hợp CỰC ĐOAN NHẤT; という始末だ đặt cuối câu để KẾT LUẬN một KẾT CỤC XẤU sau chuỗi sự việc tiêu cực, mang giọng CHÊ TRÁCH — ba cấu trúc thường kết hợp trong một bài tường thuật hoàn chỉnh về một vụ khủng hoảng.",
+  "sceneImageUrl": "assets/minh-hoa/canh-cong-ty-pha-san.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 5: Diễn biến tiêu cực & Kết cục (に至る & に至っては & 始末だ)",
   "vocabList": [
     {
       "id": "voc-n1-5-1",
@@ -22,6 +24,8 @@
       "romaji": "akka shimasu",
       "wordType": "verb",
       "meaningVi": "Xấu đi, ác hóa",
+      "imageUrl": "assets/minh-hoa/xau-di.webp",
+      "imageAlt": "Xấu đi, ác hóa",
       "accentNote": "けいえいが 悪化します = kinh doanh xấu đi."
     },
     {
@@ -42,6 +46,8 @@
       "romaji": "shinkoku",
       "wordType": "adjective",
       "meaningVi": "Nghiêm trọng",
+      "imageUrl": "assets/minh-hoa/nghiem-trong.webp",
+      "imageAlt": "Nghiêm trọng",
       "accentNote": "事態が 深刻だ = tình huống nghiêm trọng."
     },
     {
@@ -52,6 +58,8 @@
       "romaji": "tousan",
       "wordType": "noun",
       "meaningVi": "Phá sản",
+      "imageUrl": "assets/minh-hoa/pha-san.webp",
+      "imageAlt": "Phá sản",
       "accentNote": "会社が 倒産します = công ty phá sản.",
       "emotion": "that_vong"
     },
@@ -63,6 +71,8 @@
       "romaji": "houchi shimasu",
       "wordType": "verb",
       "meaningVi": "Bỏ mặc, để yên không xử lý",
+      "imageUrl": "assets/minh-hoa/bo-mac.webp",
+      "imageAlt": "Bỏ mặc, để yên không xử lý",
       "accentNote": "もんだいを 放置します = bỏ mặc vấn đề không giải quyết."
     },
     {
@@ -73,6 +83,8 @@
       "romaji": "iiwake",
       "wordType": "noun",
       "meaningVi": "Lời biện minh, bào chữa",
+      "imageUrl": "assets/minh-hoa/bien-minh.webp",
+      "imageAlt": "Lời biện minh, bào chữa",
       "accentNote": "言い訳を 続けます = cứ tiếp tục biện minh."
     },
     {
@@ -83,6 +95,8 @@
       "romaji": "uso",
       "wordType": "noun",
       "meaningVi": "Lời nói dối",
+      "imageUrl": "assets/minh-hoa/noi-doi.webp",
+      "imageAlt": "Lời nói dối",
       "accentNote": "嘘を つきます = nói dối."
     },
     {
@@ -103,6 +117,8 @@
       "romaji": "shain",
       "wordType": "noun",
       "meaningVi": "Nhân viên",
+      "imageUrl": "assets/minh-hoa/nhan-vien-cong-ty-n2n1.webp",
+      "imageAlt": "Nhân viên",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -113,6 +129,8 @@
       "romaji": "shachou",
       "wordType": "noun",
       "meaningVi": "Giám đốc",
+      "imageUrl": "assets/minh-hoa/giam-doc.webp",
+      "imageAlt": "Giám đốc",
       "accentNote": "Đã gặp N4 bài 41."
     },
     {
@@ -123,6 +141,8 @@
       "romaji": "majime",
       "wordType": "adjective",
       "meaningVi": "Nghiêm túc, chăm chỉ",
+      "imageUrl": "assets/minh-hoa/nghiem-tuc.webp",
+      "imageAlt": "Nghiêm túc, chăm chỉ",
       "accentNote": "Đã gặp N4 bài 36."
     },
     {
@@ -143,6 +163,8 @@
       "romaji": "tsuzukemasu",
       "wordType": "verb",
       "meaningVi": "Tiếp tục làm gì",
+      "imageUrl": "assets/minh-hoa/tiep-tuc.webp",
+      "imageAlt": "Tiếp tục làm gì",
       "accentNote": "Đã gặp N4 bài 28."
     },
     {
@@ -153,6 +175,8 @@
       "romaji": "shinjimasu",
       "wordType": "verb",
       "meaningVi": "Tin tưởng",
+      "imageUrl": "assets/minh-hoa/tin-tuong.webp",
+      "imageAlt": "Tin tưởng",
       "accentNote": "Đã gặp N3 bài 1."
     },
     {
@@ -163,6 +187,8 @@
       "romaji": "keiei",
       "wordType": "noun",
       "meaningVi": "Kinh doanh, quản lý (doanh nghiệp)",
+      "imageUrl": "assets/minh-hoa/kinh-doanh.webp",
+      "imageAlt": "Kinh doanh, quản lý (doanh nghiệp)",
       "accentNote": "Đã gặp N2 bài 15."
     },
     {
@@ -173,6 +199,8 @@
       "romaji": "kaisha",
       "wordType": "noun",
       "meaningVi": "Công ty",
+      "imageUrl": "assets/minh-hoa/cong-ty-n2n1.webp",
+      "imageAlt": "Công ty",
       "accentNote": "Đã gặp N5 bài 3."
     },
     {
@@ -193,6 +221,8 @@
       "romaji": "warui",
       "wordType": "adjective",
       "meaningVi": "Xấu",
+      "imageUrl": "assets/minh-hoa/xau.webp",
+      "imageAlt": "Xấu",
       "accentNote": "Đã gặp N5 bài 8."
     },
     {
@@ -203,6 +233,8 @@
       "romaji": "yurushimasu",
       "wordType": "verb",
       "meaningVi": "Tha thứ, cho phép",
+      "imageUrl": "assets/minh-hoa/tha-thu.webp",
+      "imageAlt": "Tha thứ, cho phép",
       "accentNote": "Đã gặp N2 bài 14."
     }
   ],
@@ -964,6 +996,7 @@
       "id": "dia-n1-5-1",
       "speaker": "田中",
       "speakerRole": "Người dẫn chương trình",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d5-1",
@@ -1015,6 +1048,7 @@
       "id": "dia-n1-5-2",
       "speaker": "山本",
       "speakerRole": "Chuyên gia kinh tế",
+      "avatarUrl": "assets/minh-hoa/nv-yamamoto.webp",
       "tokens": [
         {
           "id": "d5-8",
@@ -1072,6 +1106,7 @@
       "id": "dia-n1-5-3",
       "speaker": "田中",
       "speakerRole": "Người dẫn chương trình",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d5-16",
@@ -1097,6 +1132,7 @@
       "id": "dia-n1-5-4",
       "speaker": "山本",
       "speakerRole": "Chuyên gia kinh tế",
+      "avatarUrl": "assets/minh-hoa/nv-yamamoto.webp",
       "tokens": [
         {
           "id": "d5-19",
@@ -1184,6 +1220,7 @@
       "id": "dia-n1-5-5",
       "speaker": "田中",
       "speakerRole": "Người dẫn chương trình",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d5-32",
@@ -1218,6 +1255,7 @@
       "id": "dia-n1-5-6",
       "speaker": "山本",
       "speakerRole": "Chuyên gia kinh tế",
+      "avatarUrl": "assets/minh-hoa/nv-yamamoto.webp",
       "tokens": [
         {
           "id": "d5-36",
@@ -1246,6 +1284,7 @@
       "id": "dia-n1-5-7",
       "speaker": "田中",
       "speakerRole": "Người dẫn chương trình",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d5-39",
@@ -1285,6 +1324,7 @@
       "id": "dia-n1-5-8",
       "speaker": "山本",
       "speakerRole": "Chuyên gia kinh tế",
+      "avatarUrl": "assets/minh-hoa/nv-yamamoto.webp",
       "tokens": [
         {
           "id": "d5-44",
@@ -1354,6 +1394,7 @@
       "id": "dia-n1-5-9",
       "speaker": "田中",
       "speakerRole": "Người dẫn chương trình",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d5-54",
@@ -1393,6 +1434,7 @@
       "id": "dia-n1-5-10",
       "speaker": "山本",
       "speakerRole": "Chuyên gia kinh tế",
+      "avatarUrl": "assets/minh-hoa/nv-yamamoto.webp",
       "tokens": [
         {
           "id": "d5-59",

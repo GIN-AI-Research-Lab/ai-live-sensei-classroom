@@ -3,6 +3,8 @@
   "lessonNumber": 50,
   "title": "Bài 50: Khiêm nhường ngữ (謙譲語 - Kenjougo)",
   "description": "Bài chốt N4: 謙譲語 hạ thấp hành động của CHÍNH NGƯỜI NÓI (đối lập 尊敬語 bài 49) qua các động từ đặc biệt 参る/申す・申し上げる/いたす/頂く (bài 41)/拝見する/存じる/おる, và công thức tổng quát お/ご+gốc+します／いたします (お cho từ thuần Nhật, ご cho từ Hán Việt) — tổng kết cách phối hợp 尊敬語 (nói về người khác) và 謙譲語 (nói về mình) hoàn chỉnh hệ thống kính ngữ N4, sẵn sàng bước vào N3.",
+  "sceneImageUrl": "assets/minh-hoa/canh-tham-quan-cong-ty-ngay-dau.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 50: Khiêm nhường ngữ (謙譲語 - Kenjougo)",
   "vocabList": [
     {
       "id": "voc-n4-50-1",
@@ -22,6 +24,8 @@
       "romaji": "moushimasu",
       "wordType": "verb",
       "meaningVi": "Tên là, nói (khiêm nhường của 言います, dùng khi tự giới thiệu)",
+      "imageUrl": "assets/minh-hoa/self-introduce-humbly.webp",
+      "imageAlt": "Tên là, nói (khiêm nhường của 言います, dùng khi tự giới thiệu)",
       "accentNote": "田中と 申します = tôi tên là Tanaka ạ."
     },
     {
@@ -52,6 +56,8 @@
       "romaji": "itadakimasu",
       "wordType": "verb",
       "meaningVi": "Nhận/ăn/uống (khiêm nhường của もらいます/食べます/飲みます)",
+      "imageUrl": "assets/minh-hoa/receive-humbly.webp",
+      "imageAlt": "Nhận/ăn/uống (khiêm nhường của もらいます/食べます/飲みます)",
       "accentNote": "Đã gặp bài 41 (nghĩa nhận). Nay mở rộng thêm nghĩa ăn/uống."
     },
     {
@@ -62,6 +68,8 @@
       "romaji": "haiken shimasu",
       "wordType": "verb",
       "meaningVi": "Xem (khiêm nhường của 見ます)",
+      "imageUrl": "assets/minh-hoa/humble-see.webp",
+      "imageAlt": "Xem (khiêm nhường của 見ます)",
       "accentNote": "お手紙を 拝見しました = tôi đã xem thư của ngài ạ."
     },
     {
@@ -92,6 +100,8 @@
       "romaji": "go-annai itashimasu",
       "wordType": "phrase",
       "meaningVi": "Để tôi hướng dẫn (お/ご+gốc+いたします)",
+      "imageUrl": "assets/minh-hoa/guide.webp",
+      "imageAlt": "Để tôi hướng dẫn (お/ご+gốc+いたします)",
       "accentNote": "お/ご + gốc danh từ hành động + いたします: mẫu khiêm nhường tổng quát."
     },
     {
@@ -102,6 +112,8 @@
       "romaji": "annai",
       "wordType": "noun",
       "meaningVi": "Sự hướng dẫn, chỉ dẫn",
+      "imageUrl": "assets/minh-hoa/guide.webp",
+      "imageAlt": "Sự hướng dẫn, chỉ dẫn",
       "accentNote": "ご案内します = để tôi hướng dẫn ạ."
     },
     {
@@ -112,6 +124,8 @@
       "romaji": "kaigishitsu",
       "wordType": "noun",
       "meaningVi": "Phòng họp",
+      "imageUrl": "assets/minh-hoa/meeting-room.webp",
+      "imageAlt": "Phòng họp",
       "accentNote": "Đã gặp N5 bài 3."
     },
     {
@@ -122,6 +136,8 @@
       "romaji": "shachou",
       "wordType": "noun",
       "meaningVi": "Giám đốc công ty",
+      "imageUrl": "assets/minh-hoa/company-president.webp",
+      "imageAlt": "Giám đốc công ty",
       "accentNote": "Đã gặp bài 41."
     },
     {
@@ -132,6 +148,8 @@
       "romaji": "okyakusama",
       "wordType": "noun",
       "meaningVi": "Quý khách (trang trọng hơn お客さん)",
+      "imageUrl": "assets/minh-hoa/customer.webp",
+      "imageAlt": "Quý khách (trang trọng hơn お客さん)",
       "accentNote": "お客様、こちらへ どうぞ = quý khách, xin mời lối này."
     },
     {
@@ -142,6 +160,8 @@
       "romaji": "tegami",
       "wordType": "noun",
       "meaningVi": "Lá thư",
+      "imageUrl": "assets/minh-hoa/letter.webp",
+      "imageAlt": "Lá thư",
       "accentNote": "Đã gặp N5 bài 24."
     },
     {
@@ -152,6 +172,8 @@
       "romaji": "orei",
       "wordType": "noun",
       "meaningVi": "Lời cảm ơn, lễ vật cảm ơn",
+      "imageUrl": "assets/minh-hoa/thank-you-gift.webp",
+      "imageAlt": "Lời cảm ơn, lễ vật cảm ơn",
       "accentNote": "お礼を 申し上げます = tôi xin gửi lời cảm ơn.",
       "emotion": "cui_chao"
     },
@@ -163,6 +185,8 @@
       "romaji": "shitsumon",
       "wordType": "noun",
       "meaningVi": "Câu hỏi",
+      "imageUrl": "assets/minh-hoa/question.webp",
+      "imageAlt": "Câu hỏi",
       "accentNote": "Đã gặp N5 bài 11."
     },
     {
@@ -173,6 +197,8 @@
       "romaji": "setsumei",
       "wordType": "noun",
       "meaningVi": "Lời giải thích",
+      "imageUrl": "assets/minh-hoa/explain.webp",
+      "imageAlt": "Lời giải thích",
       "accentNote": "Đã gặp bài 34."
     },
     {
@@ -183,6 +209,8 @@
       "romaji": "denwa",
       "wordType": "noun",
       "meaningVi": "Điện thoại, cuộc gọi",
+      "imageUrl": "assets/minh-hoa/telephone.webp",
+      "imageAlt": "Điện thoại, cuộc gọi",
       "accentNote": "Đã gặp N5 bài 2."
     },
     {
@@ -193,6 +221,8 @@
       "romaji": "shiryou",
       "wordType": "noun",
       "meaningVi": "Tài liệu",
+      "imageUrl": "assets/minh-hoa/documents.webp",
+      "imageAlt": "Tài liệu",
       "accentNote": "資料を 拝見しました = tôi đã xem tài liệu ạ."
     },
     {
@@ -649,6 +679,7 @@
       "id": "dia-n4-50-1",
       "speaker": "田中",
       "speakerRole": "Nhân viên mới",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l50-1",
@@ -711,6 +742,7 @@
       "id": "dia-n4-50-2",
       "speaker": "山田",
       "speakerRole": "Trưởng phòng",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l50-10",
@@ -765,6 +797,7 @@
       "id": "dia-n4-50-3",
       "speaker": "田中",
       "speakerRole": "Nhân viên mới",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l50-18",
@@ -810,6 +843,7 @@
       "id": "dia-n4-50-4",
       "speaker": "山田",
       "speakerRole": "Trưởng phòng",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l50-25",
@@ -845,6 +879,7 @@
       "id": "dia-n4-50-5",
       "speaker": "田中",
       "speakerRole": "Nhân viên mới",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l50-30",
@@ -887,6 +922,7 @@
       "id": "dia-n4-50-6",
       "speaker": "山田",
       "speakerRole": "Trưởng phòng",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l50-36",
@@ -951,6 +987,7 @@
       "id": "dia-n4-50-7",
       "speaker": "田中",
       "speakerRole": "Nhân viên mới",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l50-46",
@@ -988,6 +1025,7 @@
       "id": "dia-n4-50-8",
       "speaker": "山田",
       "speakerRole": "Trưởng phòng",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l50-51",
@@ -1047,6 +1085,7 @@
       "id": "dia-n4-50-9",
       "speaker": "田中",
       "speakerRole": "Nhân viên mới",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l50-60",
@@ -1112,6 +1151,7 @@
       "id": "dia-n4-50-10",
       "speaker": "山田",
       "speakerRole": "Trưởng phòng",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l50-70",

@@ -3,6 +3,8 @@
   "lessonNumber": 30,
   "title": "Bài 30: Trạng thái có chủ đích (てあります) & Chuẩn bị (ておきます)",
   "description": "Nối tiếp cặp tự/tha động từ (bài 29): てあります dùng THA động từ để diễn tả trạng thái có CHỦ ĐÍCH (khác ています tự động từ chỉ nói sự thật khách quan), và ておきます diễn tả hành động CHUẨN BỊ TRƯỚC cho tương lai — hai cấu trúc thường xuất hiện nối tiếp trong một câu chuyện (chuẩn bị trước → kết quả còn lưu lại).",
+  "sceneImageUrl": "assets/minh-hoa/canh-chuan-bi-bua-tiec.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 30: Trạng thái có chủ đích (てあります) & Chuẩn bị (ておきます)",
   "vocabList": [
     {
       "id": "voc-n4-30-1",
@@ -12,6 +14,8 @@
       "romaji": "junbi shimasu",
       "wordType": "verb",
       "meaningVi": "Chuẩn bị",
+      "imageUrl": "assets/minh-hoa/prepare.webp",
+      "imageAlt": "Chuẩn bị",
       "accentNote": "準備しておきます = chuẩn bị sẵn từ trước."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "youi",
       "wordType": "noun",
       "meaningVi": "Sự chuẩn bị",
+      "imageUrl": "assets/minh-hoa/prepare.webp",
+      "imageAlt": "Sự chuẩn bị",
       "accentNote": "用意が できています = đã chuẩn bị xong sẵn sàng."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "kazarimasu",
       "wordType": "verb",
       "meaningVi": "Trang trí, bày biện",
+      "imageUrl": "assets/minh-hoa/decorate.webp",
+      "imageAlt": "Trang trí, bày biện",
       "accentNote": "花が 飾ってあります = hoa đã được bày sẵn (có chủ đích)."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "katazukemasu",
       "wordType": "verb",
       "meaningVi": "Dọn dẹp, sắp xếp",
+      "imageUrl": "assets/minh-hoa/tidy-up.webp",
+      "imageAlt": "Dọn dẹp, sắp xếp",
       "accentNote": "Đã gặp bài 28."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "akemasu",
       "wordType": "verb",
       "meaningVi": "Mở (tha động từ)",
+      "imageUrl": "assets/minh-hoa/open-window.webp",
+      "imageAlt": "Mở (tha động từ)",
       "accentNote": "Đã gặp N5 bài 14 — nay dùng làm ví dụ てあります."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "shimemasu",
       "wordType": "verb",
       "meaningVi": "Đóng (tha động từ)",
+      "imageUrl": "assets/minh-hoa/close-door.webp",
+      "imageAlt": "Đóng (tha động từ)",
       "accentNote": "Đã gặp N5 bài 14."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "kakimasu",
       "wordType": "verb",
       "meaningVi": "Viết",
+      "imageUrl": "assets/minh-hoa/write.webp",
+      "imageAlt": "Viết",
       "accentNote": "Đã gặp N5 bài 6 — nay dùng làm ví dụ てあります."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "kaimasu",
       "wordType": "verb",
       "meaningVi": "Mua",
+      "imageUrl": "assets/minh-hoa/buy.webp",
+      "imageAlt": "Mua",
       "accentNote": "Đã gặp N5 bài 6 — nay dùng làm ví dụ chuẩn bị ておきます."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "shirabemasu",
       "wordType": "verb",
       "meaningVi": "Tra cứu, kiểm tra",
+      "imageUrl": "assets/minh-hoa/look-up.webp",
+      "imageAlt": "Tra cứu, kiểm tra",
       "accentNote": "地図で 調べておきます = tra sẵn bản đồ trước."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "yoyaku shimasu",
       "wordType": "verb",
       "meaningVi": "Đặt trước, đặt chỗ",
+      "imageUrl": "assets/minh-hoa/reserve.webp",
+      "imageAlt": "Đặt trước, đặt chỗ",
       "accentNote": "レストランを 予約しておきます = đặt bàn nhà hàng trước."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "paatii",
       "wordType": "noun",
       "meaningVi": "Bữa tiệc",
+      "imageUrl": "assets/minh-hoa/party.webp",
+      "imageAlt": "Bữa tiệc",
       "accentNote": "パーティーの 準備を します = chuẩn bị cho bữa tiệc."
     },
     {
@@ -122,6 +146,8 @@
       "romaji": "nomimono",
       "wordType": "noun",
       "meaningVi": "Đồ uống",
+      "imageUrl": "assets/minh-hoa/drinks.webp",
+      "imageAlt": "Đồ uống",
       "accentNote": "飲み物が 買ってあります = đồ uống đã được mua sẵn."
     },
     {
@@ -132,6 +158,8 @@
       "romaji": "tabemono",
       "wordType": "noun",
       "meaningVi": "Đồ ăn",
+      "imageUrl": "assets/minh-hoa/food.webp",
+      "imageAlt": "Đồ ăn",
       "accentNote": ""
     },
     {
@@ -142,6 +170,8 @@
       "romaji": "hana",
       "wordType": "noun",
       "meaningVi": "Hoa",
+      "imageUrl": "assets/minh-hoa/flower.webp",
+      "imageAlt": "Hoa",
       "accentNote": "Đã gặp N5 bài 16 — nay dùng làm ví dụ trang trí có chủ đích."
     },
     {
@@ -152,6 +182,8 @@
       "romaji": "shashin",
       "wordType": "noun",
       "meaningVi": "Bức ảnh",
+      "imageUrl": "assets/minh-hoa/photo.webp",
+      "imageAlt": "Bức ảnh",
       "accentNote": "Đã gặp N5 bài 6."
     },
     {
@@ -162,6 +194,8 @@
       "romaji": "kabe",
       "wordType": "noun",
       "meaningVi": "Bức tường",
+      "imageUrl": "assets/minh-hoa/wall.webp",
+      "imageAlt": "Bức tường",
       "accentNote": "壁に 写真が 貼ってあります = ảnh đã được dán sẵn trên tường."
     },
     {
@@ -172,6 +206,8 @@
       "romaji": "chizu",
       "wordType": "noun",
       "meaningVi": "Bản đồ",
+      "imageUrl": "assets/minh-hoa/map.webp",
+      "imageAlt": "Bản đồ",
       "accentNote": "Đã gặp N5 bài 7."
     },
     {
@@ -182,6 +218,8 @@
       "romaji": "resutoran",
       "wordType": "noun",
       "meaningVi": "Nhà hàng",
+      "imageUrl": "assets/minh-hoa/restaurant.webp",
+      "imageAlt": "Nhà hàng",
       "accentNote": "Đã gặp N5 bài 22."
     },
     {
@@ -715,6 +753,7 @@
       "id": "dia-n4-30-1",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l30-1",
@@ -762,6 +801,7 @@
       "id": "dia-n4-30-2",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l30-8",
@@ -802,6 +842,7 @@
       "id": "dia-n4-30-3",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l30-14",
@@ -827,6 +868,7 @@
       "id": "dia-n4-30-4",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l30-17",
@@ -857,6 +899,7 @@
       "id": "dia-n4-30-5",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l30-21",
@@ -884,6 +927,7 @@
       "id": "dia-n4-30-6",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l30-24",
@@ -981,6 +1025,7 @@
       "id": "dia-n4-30-7",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l30-40",
@@ -1018,6 +1063,7 @@
       "id": "dia-n4-30-8",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l30-45",
@@ -1060,6 +1106,7 @@
       "id": "dia-n4-30-9",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l30-51",
@@ -1118,6 +1165,7 @@
       "id": "dia-n4-30-10",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l30-60",

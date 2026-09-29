@@ -3,6 +3,8 @@
   "lessonNumber": 6,
   "title": "Bài 6: Tha động từ (N を V / N [địa điểm] で V / ませんか)",
   "description": "Đánh dấu tân ngữ bằng を, nơi hành động diễn ra bằng で (phân biệt với で phương tiện ở bài 5), cách mời lịch sự bằng Vませんか, và cách rủ chủ động bằng Vましょう.",
+  "sceneImageUrl": "assets/minh-hoa/canh-an-trua-o-can-tin.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 6: Tha động từ (N を V / N [địa điểm] で V / ませんか)",
   "vocabList": [
     {
       "id": "voc-n5-6-1",
@@ -12,6 +14,8 @@
       "romaji": "tabemasu",
       "wordType": "verb",
       "meaningVi": "Ăn",
+      "imageUrl": "assets/minh-hoa/an.webp",
+      "imageAlt": "Ăn",
       "accentNote": "Thể từ điển: 食べる. Nhóm 2."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "nomimasu",
       "wordType": "verb",
       "meaningVi": "Uống",
+      "imageUrl": "assets/minh-hoa/uong.webp",
+      "imageAlt": "Uống",
       "accentNote": "Thể từ điển: 飲む. Nhóm 1."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "mimasu",
       "wordType": "verb",
       "meaningVi": "Xem, nhìn",
+      "imageUrl": "assets/minh-hoa/nhin.webp",
+      "imageAlt": "Xem, nhìn",
       "accentNote": "Thể từ điển: 見る. Nhóm 2."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "kikimasu",
       "wordType": "verb",
       "meaningVi": "Nghe, hỏi",
+      "imageUrl": "assets/minh-hoa/nghe.webp",
+      "imageAlt": "Nghe, hỏi",
       "accentNote": "Thể từ điển: 聞く. Nhóm 1. Vừa nghĩa nghe vừa nghĩa hỏi."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "yomimasu",
       "wordType": "verb",
       "meaningVi": "Đọc",
+      "imageUrl": "assets/minh-hoa/doc.webp",
+      "imageAlt": "Đọc",
       "accentNote": "Thể từ điển: 読む. Nhóm 1."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "kakimasu",
       "wordType": "verb",
       "meaningVi": "Viết, vẽ",
+      "imageUrl": "assets/minh-hoa/viet.webp",
+      "imageAlt": "Viết, vẽ",
       "accentNote": "Thể từ điển: 書く. Nhóm 1."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "kaimasu",
       "wordType": "verb",
       "meaningVi": "Mua",
+      "imageUrl": "assets/minh-hoa/mua-hang.webp",
+      "imageAlt": "Mua",
       "accentNote": "Thể từ điển: 買う. Nhóm 1."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "torimasu",
       "wordType": "verb",
       "meaningVi": "Chụp (ảnh)",
+      "imageUrl": "assets/minh-hoa/chup-anh.webp",
+      "imageAlt": "Chụp (ảnh)",
       "accentNote": "Thể từ điển: 撮る. Nhóm 1. Khác 取ります (lấy)."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "tsukurimasu",
       "wordType": "verb",
       "meaningVi": "Làm, chế tạo, nấu",
+      "imageUrl": "assets/minh-hoa/lam-che-tao.webp",
+      "imageAlt": "Làm, chế tạo, nấu",
       "accentNote": "Thể từ điển: 作る. Nhóm 1."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "aimasu",
       "wordType": "verb",
       "meaningVi": "Gặp",
+      "imageUrl": "assets/minh-hoa/gap.webp",
+      "imageAlt": "Gặp",
       "accentNote": "Thể từ điển: 会う. Đi với person + に, không phải を."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "suimasu",
       "wordType": "verb",
       "meaningVi": "Hút (thuốc), hít vào",
+      "imageUrl": "assets/minh-hoa/hut-thuoc.webp",
+      "imageAlt": "Hút (thuốc), hít vào",
       "accentNote": "たばこを 吸います = hút thuốc."
     },
     {
@@ -132,6 +156,8 @@
       "romaji": "pan",
       "wordType": "noun",
       "meaningVi": "Bánh mì",
+      "imageUrl": "assets/minh-hoa/banh-mi.webp",
+      "imageAlt": "Bánh mì",
       "accentNote": "Từ mượn tiếng Bồ Đào Nha, du nhập từ lâu."
     },
     {
@@ -142,6 +168,8 @@
       "romaji": "niku",
       "wordType": "noun",
       "meaningVi": "Thịt",
+      "imageUrl": "assets/minh-hoa/thit.webp",
+      "imageAlt": "Thịt",
       "accentNote": "豚肉 = thịt heo, 鶏肉 = thịt gà, 牛肉 = thịt bò."
     },
     {
@@ -152,6 +180,8 @@
       "romaji": "sakana",
       "wordType": "noun",
       "meaningVi": "Cá",
+      "imageUrl": "assets/minh-hoa/ca.webp",
+      "imageAlt": "Cá",
       "accentNote": ""
     },
     {
@@ -162,6 +192,8 @@
       "romaji": "yasai",
       "wordType": "noun",
       "meaningVi": "Rau",
+      "imageUrl": "assets/minh-hoa/rau.webp",
+      "imageAlt": "Rau",
       "accentNote": ""
     },
     {
@@ -172,6 +204,8 @@
       "romaji": "kudamono",
       "wordType": "noun",
       "meaningVi": "Trái cây",
+      "imageUrl": "assets/minh-hoa/trai-cay.webp",
+      "imageAlt": "Trái cây",
       "accentNote": ""
     },
     {
@@ -182,6 +216,8 @@
       "romaji": "shinbun",
       "wordType": "noun",
       "meaningVi": "Báo, tờ báo",
+      "imageUrl": "assets/minh-hoa/to-bao.webp",
+      "imageAlt": "Báo, tờ báo",
       "accentNote": "Đã gặp ở bài 2 (đồ vật); nay dùng làm tân ngữ của 読みます."
     },
     {
@@ -192,6 +228,8 @@
       "romaji": "tegami",
       "wordType": "noun",
       "meaningVi": "Lá thư",
+      "imageUrl": "assets/minh-hoa/la-thu.webp",
+      "imageAlt": "Lá thư",
       "accentNote": "手紙を 書きます = viết thư."
     },
     {
@@ -202,6 +240,8 @@
       "romaji": "shashin",
       "wordType": "noun",
       "meaningVi": "Bức ảnh",
+      "imageUrl": "assets/minh-hoa/buc-anh.webp",
+      "imageAlt": "Bức ảnh",
       "accentNote": "写真を 撮ります = chụp ảnh."
     },
     {
@@ -212,6 +252,8 @@
       "romaji": "ongaku",
       "wordType": "noun",
       "meaningVi": "Âm nhạc",
+      "imageUrl": "assets/minh-hoa/am-nhac.webp",
+      "imageAlt": "Âm nhạc",
       "accentNote": "音楽を 聞きます = nghe nhạc."
     },
     {
@@ -222,6 +264,8 @@
       "romaji": "hana",
       "wordType": "noun",
       "meaningVi": "Hoa",
+      "imageUrl": "assets/minh-hoa/hoa.webp",
+      "imageAlt": "Hoa",
       "accentNote": ""
     },
     {
@@ -232,6 +276,8 @@
       "romaji": "kouen",
       "wordType": "noun",
       "meaningVi": "Công viên",
+      "imageUrl": "assets/minh-hoa/cong-vien.webp",
+      "imageAlt": "Công viên",
       "accentNote": "Đã gặp ở exercises N5 trước — nơi chốn hành động."
     },
     {
@@ -242,6 +288,8 @@
       "romaji": "kissaten",
       "wordType": "noun",
       "meaningVi": "Quán cà phê kiểu cổ điển",
+      "imageUrl": "assets/minh-hoa/quan-ca-phe.webp",
+      "imageAlt": "Quán cà phê kiểu cổ điển",
       "accentNote": "Khác カフェ (quán cà phê hiện đại kiểu Tây)."
     },
     {
@@ -252,6 +300,8 @@
       "romaji": "shokudou",
       "wordType": "noun",
       "meaningVi": "Nhà ăn, căng tin",
+      "imageUrl": "assets/minh-hoa/nha-an.webp",
+      "imageAlt": "Nhà ăn, căng tin",
       "accentNote": "Đã gặp ở bài 3 (nơi chốn); nay dùng làm nơi hành động で."
     },
     {
@@ -262,6 +312,8 @@
       "romaji": "daidokoro",
       "wordType": "noun",
       "meaningVi": "Nhà bếp",
+      "imageUrl": "assets/minh-hoa/nha-bep.webp",
+      "imageAlt": "Nhà bếp",
       "accentNote": "料理を 作ります + 台所で."
     }
   ],
@@ -828,6 +880,7 @@
       "id": "dia-n5-6-1",
       "speaker": "カリナ",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-karina.webp",
       "tokens": [
         {
           "id": "d-l6-1",
@@ -872,6 +925,7 @@
       "id": "dia-n5-6-2",
       "speaker": "山田",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l6-7",
@@ -918,6 +972,7 @@
       "id": "dia-n5-6-3",
       "speaker": "カリナ",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-karina.webp",
       "tokens": [
         {
           "id": "d-l6-14",
@@ -945,6 +1000,7 @@
       "id": "dia-n5-6-4",
       "speaker": "山田",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l6-17",
@@ -985,6 +1041,7 @@
       "id": "dia-n5-6-5",
       "speaker": "カリナ",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-karina.webp",
       "tokens": [
         {
           "id": "d-l6-22",
@@ -1022,6 +1079,7 @@
       "id": "dia-n5-6-6",
       "speaker": "山田",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l6-27",
@@ -1059,6 +1117,7 @@
       "id": "dia-n5-6-7",
       "speaker": "カリナ",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-karina.webp",
       "tokens": [
         {
           "id": "d-l6-32",
@@ -1115,6 +1174,7 @@
       "id": "dia-n5-6-8",
       "speaker": "山田",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l6-40",
@@ -1158,6 +1218,7 @@
       "id": "dia-n5-6-9",
       "speaker": "カリナ",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-karina.webp",
       "tokens": [
         {
           "id": "d-l6-46",
@@ -1205,6 +1266,7 @@
       "id": "dia-n5-6-10",
       "speaker": "山田",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l6-53",

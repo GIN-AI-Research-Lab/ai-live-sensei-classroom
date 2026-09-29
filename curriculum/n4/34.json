@@ -3,6 +3,8 @@
   "lessonNumber": 34,
   "title": "Bài 34: Làm theo mẫu (〜とおりに) & Sau khi (〜あとで)",
   "description": "Diễn tả làm ĐÚNG THEO một mẫu/hướng dẫn bằng とおりに (N+の hoặc V+た), danh từ ghép cách làm やり方/作り方, và cấu trúc あとで (sau khi, N+の hoặc V+た) — so sánh với まえに (N5 b18, thể từ điển) và てから (N5 b15, nhấn thứ tự bắt buộc) để nắm trọn bộ ba cấu trúc trình tự thời gian.",
+  "sceneImageUrl": "assets/minh-hoa/canh-doc-sach-huong-dan.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 34: Làm theo mẫu (〜とおりに) & Sau khi (〜あとで)",
   "vocabList": [
     {
       "id": "voc-n4-34-1",
@@ -12,6 +14,8 @@
       "romaji": "setsumei shimasu",
       "wordType": "verb",
       "meaningVi": "Giải thích",
+      "imageUrl": "assets/minh-hoa/explain.webp",
+      "imageAlt": "Giải thích",
       "accentNote": "説明した とおりに = đúng như đã giải thích."
     },
     {
@@ -32,6 +36,8 @@
       "romaji": "tsukurimasu",
       "wordType": "verb",
       "meaningVi": "Làm, nấu",
+      "imageUrl": "assets/minh-hoa/make.webp",
+      "imageAlt": "Làm, nấu",
       "accentNote": "Đã gặp N5 bài 6 — nay dùng làm ví dụ とおりに."
     },
     {
@@ -42,6 +48,8 @@
       "romaji": "oshiemasu",
       "wordType": "verb",
       "meaningVi": "Dạy, chỉ bảo",
+      "imageUrl": "assets/minh-hoa/teach.webp",
+      "imageAlt": "Dạy, chỉ bảo",
       "accentNote": "Đã gặp N5 bài 7."
     },
     {
@@ -52,6 +60,8 @@
       "romaji": "kakimasu",
       "wordType": "verb",
       "meaningVi": "Viết",
+      "imageUrl": "assets/minh-hoa/write.webp",
+      "imageAlt": "Viết",
       "accentNote": "Đã gặp N5 bài 6."
     },
     {
@@ -62,6 +72,8 @@
       "romaji": "mimasu",
       "wordType": "verb",
       "meaningVi": "Xem, nhìn",
+      "imageUrl": "assets/minh-hoa/look-watch.webp",
+      "imageAlt": "Xem, nhìn",
       "accentNote": "Đã gặp N5 bài 6 — nay dùng làm mốc thời gian あとで."
     },
     {
@@ -72,6 +84,8 @@
       "romaji": "setsumei",
       "wordType": "noun",
       "meaningVi": "Lời giải thích",
+      "imageUrl": "assets/minh-hoa/explain.webp",
+      "imageAlt": "Lời giải thích",
       "accentNote": "説明書 = sách hướng dẫn."
     },
     {
@@ -82,6 +96,8 @@
       "romaji": "setsumeisho",
       "wordType": "noun",
       "meaningVi": "Sách hướng dẫn sử dụng",
+      "imageUrl": "assets/minh-hoa/manual.webp",
+      "imageAlt": "Sách hướng dẫn sử dụng",
       "accentNote": "説明書の とおりに 使って ください = xin hãy dùng đúng như sách hướng dẫn."
     },
     {
@@ -92,6 +108,8 @@
       "romaji": "yarikata",
       "wordType": "noun",
       "meaningVi": "Cách làm",
+      "imageUrl": "assets/minh-hoa/way-of-doing.webp",
+      "imageAlt": "Cách làm",
       "accentNote": "やり方が 分かりません = tôi không hiểu cách làm."
     },
     {
@@ -102,6 +120,8 @@
       "romaji": "tsukurikata",
       "wordType": "noun",
       "meaningVi": "Cách làm/nấu",
+      "imageUrl": "assets/minh-hoa/recipe.webp",
+      "imageAlt": "Cách làm/nấu",
       "accentNote": "料理の 作り方 = cách nấu món ăn."
     },
     {
@@ -112,6 +132,8 @@
       "romaji": "ryouri",
       "wordType": "noun",
       "meaningVi": "Món ăn, nấu ăn",
+      "imageUrl": "assets/minh-hoa/cooking-dish.webp",
+      "imageAlt": "Món ăn, nấu ăn",
       "accentNote": "Đã gặp N5 bài 9."
     },
     {
@@ -122,6 +144,8 @@
       "romaji": "sensei",
       "wordType": "noun",
       "meaningVi": "Thầy/cô giáo",
+      "imageUrl": "assets/minh-hoa/teacher.webp",
+      "imageAlt": "Thầy/cô giáo",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -132,6 +156,8 @@
       "romaji": "shiai",
       "wordType": "noun",
       "meaningVi": "Trận đấu",
+      "imageUrl": "assets/minh-hoa/match-game.webp",
+      "imageAlt": "Trận đấu",
       "accentNote": "Đã gặp bài 33."
     },
     {
@@ -142,6 +168,8 @@
       "romaji": "kaigi",
       "wordType": "noun",
       "meaningVi": "Cuộc họp",
+      "imageUrl": "assets/minh-hoa/meeting.webp",
+      "imageAlt": "Cuộc họp",
       "accentNote": "Đã gặp N5 bài 7."
     },
     {
@@ -152,6 +180,8 @@
       "romaji": "jugyou",
       "wordType": "noun",
       "meaningVi": "Buổi học, tiết học",
+      "imageUrl": "assets/minh-hoa/class-lesson.webp",
+      "imageAlt": "Buổi học, tiết học",
       "accentNote": "授業の あとで = sau tiết học."
     },
     {
@@ -162,6 +192,8 @@
       "romaji": "shokuji",
       "wordType": "noun",
       "meaningVi": "Bữa ăn",
+      "imageUrl": "assets/minh-hoa/meal.webp",
+      "imageAlt": "Bữa ăn",
       "accentNote": "食事の あとで = sau bữa ăn."
     },
     {
@@ -172,6 +204,8 @@
       "romaji": "benkyou",
       "wordType": "noun",
       "meaningVi": "Việc học",
+      "imageUrl": "assets/minh-hoa/study.webp",
+      "imageAlt": "Việc học",
       "accentNote": "Đã gặp N5 bài 4."
     },
     {
@@ -182,6 +216,8 @@
       "romaji": "terebi",
       "wordType": "noun",
       "meaningVi": "Ti vi",
+      "imageUrl": "assets/minh-hoa/tv.webp",
+      "imageAlt": "Ti vi",
       "accentNote": "テレビを 見た あとで = sau khi xem ti vi."
     },
     {
@@ -192,6 +228,8 @@
       "romaji": "shukudai",
       "wordType": "noun",
       "meaningVi": "Bài tập về nhà",
+      "imageUrl": "assets/minh-hoa/homework.webp",
+      "imageAlt": "Bài tập về nhà",
       "accentNote": "Đã gặp N5 bài 7."
     },
     {
@@ -762,6 +800,7 @@
       "id": "dia-n4-34-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l34-1",
@@ -807,6 +846,7 @@
       "id": "dia-n4-34-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l34-7",
@@ -839,6 +879,7 @@
       "id": "dia-n4-34-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l34-11",
@@ -884,6 +925,7 @@
       "id": "dia-n4-34-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l34-18",
@@ -936,6 +978,7 @@
       "id": "dia-n4-34-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l34-26",
@@ -993,6 +1036,7 @@
       "id": "dia-n4-34-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l34-35",
@@ -1054,6 +1098,7 @@
       "id": "dia-n4-34-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l34-44",
@@ -1086,6 +1131,7 @@
       "id": "dia-n4-34-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l34-48",
@@ -1118,6 +1164,7 @@
       "id": "dia-n4-34-9",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l34-52",
@@ -1161,6 +1208,7 @@
       "id": "dia-n4-34-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l34-58",

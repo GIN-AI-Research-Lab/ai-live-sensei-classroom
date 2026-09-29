@@ -3,6 +3,8 @@
   "lessonNumber": 27,
   "title": "Bài 27: Động từ thể khả năng (可能形)",
   "description": "Chia thể khả năng trực tiếp từ gốc động từ: nhóm 1 đổi đuôi う→え+る, nhóm 2 bỏ る thêm られる, する bất quy tắc thành できる — gọn hơn ことができます (N5 bài 18) dù tương đương về nghĩa, kèm điều kiện tuổi tác 〜歳以上／以下.",
+  "sceneImageUrl": "assets/minh-hoa/canh-boi-gioi-o-ho-boi.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 27: Động từ thể khả năng (可能形)",
   "vocabList": [
     {
       "id": "voc-n4-27-1",
@@ -12,6 +14,8 @@
       "romaji": "hanasemasu",
       "wordType": "verb",
       "meaningVi": "Nói được (thể khả năng của 話します)",
+      "imageUrl": "assets/minh-hoa/can-speak.webp",
+      "imageAlt": "Nói được (thể khả năng của 話します)",
       "accentNote": "話す (nhóm 1) → 話せる: đổi đuôi う→え, thêm る."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "kakemasu",
       "wordType": "verb",
       "meaningVi": "Viết được (thể khả năng của 書きます)",
+      "imageUrl": "assets/minh-hoa/can-write.webp",
+      "imageAlt": "Viết được (thể khả năng của 書きます)",
       "accentNote": "書く → 書ける."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "oyogemasu",
       "wordType": "verb",
       "meaningVi": "Bơi được",
+      "imageUrl": "assets/minh-hoa/can-swim.webp",
+      "imageAlt": "Bơi được",
       "accentNote": "泳ぐ → 泳げる."
     },
     {
@@ -62,6 +70,8 @@
       "romaji": "miraremasu",
       "wordType": "verb",
       "meaningVi": "Xem được, nhìn thấy được",
+      "imageUrl": "assets/minh-hoa/can-see-view.webp",
+      "imageAlt": "Xem được, nhìn thấy được",
       "accentNote": "見る (nhóm 2) → 見られる."
     },
     {
@@ -82,6 +92,8 @@
       "romaji": "dekimasu",
       "wordType": "verb",
       "meaningVi": "Làm được",
+      "imageUrl": "assets/minh-hoa/can-do.webp",
+      "imageAlt": "Làm được",
       "accentNote": "する → できる (bất quy tắc hoàn toàn, khác âm gốc)."
     },
     {
@@ -92,6 +104,8 @@
       "romaji": "unten shimasu",
       "wordType": "verb",
       "meaningVi": "Lái xe",
+      "imageUrl": "assets/minh-hoa/drive.webp",
+      "imageAlt": "Lái xe",
       "accentNote": "運転できます = lái xe được. Đã gặp N5 bài 17."
     },
     {
@@ -102,6 +116,8 @@
       "romaji": "kaiwa",
       "wordType": "noun",
       "meaningVi": "Hội thoại, đàm thoại",
+      "imageUrl": "assets/minh-hoa/conversation.webp",
+      "imageAlt": "Hội thoại, đàm thoại",
       "accentNote": "英語で 会話できます = có thể đàm thoại bằng tiếng Anh."
     },
     {
@@ -112,6 +128,8 @@
       "romaji": "suiei",
       "wordType": "noun",
       "meaningVi": "Môn bơi lội",
+      "imageUrl": "assets/minh-hoa/swimming.webp",
+      "imageAlt": "Môn bơi lội",
       "accentNote": "水泳が できます = biết bơi (danh từ hành động + できます)."
     },
     {
@@ -122,6 +140,8 @@
       "romaji": "undou",
       "wordType": "noun",
       "meaningVi": "Vận động, thể dục",
+      "imageUrl": "assets/minh-hoa/exercise.webp",
+      "imageAlt": "Vận động, thể dục",
       "accentNote": "運動が できません = tôi không tập thể dục được."
     },
     {
@@ -132,6 +152,8 @@
       "romaji": "piano",
       "wordType": "noun",
       "meaningVi": "Đàn piano",
+      "imageUrl": "assets/minh-hoa/piano-n4.webp",
+      "imageAlt": "Đàn piano",
       "accentNote": "Đã gặp N5 bài 18."
     },
     {
@@ -142,6 +164,8 @@
       "romaji": "untenshu",
       "wordType": "noun",
       "meaningVi": "Tài xế (nghề)",
+      "imageUrl": "assets/minh-hoa/driver-job.webp",
+      "imageAlt": "Tài xế (nghề)",
       "accentNote": "運転手に なりたいです = tôi muốn làm tài xế."
     },
     {
@@ -162,6 +186,8 @@
       "romaji": "nyuugaku shimasu",
       "wordType": "verb",
       "meaningVi": "Nhập học",
+      "imageUrl": "assets/minh-hoa/enter-school.webp",
+      "imageAlt": "Nhập học",
       "accentNote": "大学に 入学できました = tôi đã đậu vào đại học (được nhập học)."
     },
     {
@@ -192,6 +218,8 @@
       "romaji": "menkyo",
       "wordType": "noun",
       "meaningVi": "Bằng lái, giấy phép",
+      "imageUrl": "assets/minh-hoa/license.webp",
+      "imageAlt": "Bằng lái, giấy phép",
       "accentNote": "Đã gặp N5 bài 17. 免許が あれば 運転できます = có bằng thì lái được."
     },
     {
@@ -202,6 +230,8 @@
       "romaji": "zannen",
       "wordType": "adjective",
       "meaningVi": "Tiếc, đáng tiếc",
+      "imageUrl": "assets/minh-hoa/disappointing.webp",
+      "imageAlt": "Tiếc, đáng tiếc",
       "accentNote": "Tính từ な. 残念ですが、できません = tiếc là tôi không làm được.",
       "emotion": "that_vong"
     }
@@ -645,6 +675,7 @@
       "id": "dia-n4-27-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm 2",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l27-1",
@@ -685,6 +716,7 @@
       "id": "dia-n4-27-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên năm 2",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l27-7",
@@ -732,6 +764,7 @@
       "id": "dia-n4-27-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm 2",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l27-14",
@@ -777,6 +810,7 @@
       "id": "dia-n4-27-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên năm 2",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l27-21",
@@ -843,6 +877,7 @@
       "id": "dia-n4-27-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm 2",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l27-31",
@@ -903,6 +938,7 @@
       "id": "dia-n4-27-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên năm 2",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l27-40",
@@ -949,6 +985,7 @@
       "id": "dia-n4-27-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm 2",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l27-46",
@@ -979,6 +1016,7 @@
       "id": "dia-n4-27-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên năm 2",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l27-50",
@@ -1025,6 +1063,7 @@
       "id": "dia-n4-27-9",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm 2",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l27-57",
@@ -1099,6 +1138,7 @@
       "id": "dia-n4-27-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên năm 2",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l27-69",

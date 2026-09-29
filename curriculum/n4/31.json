@@ -3,6 +3,8 @@
   "lessonNumber": 31,
   "title": "Bài 31: Thể ý chí (意向形) & Dự định (〜と思っています)",
   "description": "Chia thể ý chí (nhóm 1: う→おう, nhóm 2: bỏ る+よう, bất quy tắc する→しよう/来る→来よう), phân biệt と思います (ý kiến tức thời, N5 bài 21) với と思っています (dự định đã ấp ủ), và so sánh bốn mức độ chắc chắn: Vましょう → Vよう → と思っています → ことにします (quyết định dứt khoát).",
+  "sceneImageUrl": "assets/minh-hoa/canh-uoc-mo-du-hoc.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 31: Thể ý chí (意向形) & Dự định (〜と思っています)",
   "vocabList": [
     {
       "id": "voc-n4-31-1",
@@ -12,6 +14,8 @@
       "romaji": "ikou",
       "wordType": "verb",
       "meaningVi": "Sẽ đi, thôi đi thôi (thể ý chí của 行きます)",
+      "imageUrl": "assets/minh-hoa/lets-go.webp",
+      "imageAlt": "Sẽ đi, thôi đi thôi (thể ý chí của 行きます)",
       "accentNote": "行く (nhóm 1, đuôi く) → 行こう: đổi đuôi く→こう."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "tabeyou",
       "wordType": "verb",
       "meaningVi": "Sẽ ăn (thể ý chí của 食べます)",
+      "imageUrl": "assets/minh-hoa/lets-eat.webp",
+      "imageAlt": "Sẽ ăn (thể ý chí của 食べます)",
       "accentNote": "食べる (nhóm 2) → 食べよう: bỏ る, thêm よう."
     },
     {
@@ -52,6 +58,8 @@
       "romaji": "kimemasu",
       "wordType": "verb",
       "meaningVi": "Quyết định",
+      "imageUrl": "assets/minh-hoa/decide.webp",
+      "imageAlt": "Quyết định",
       "accentNote": "将来を 決めます = quyết định tương lai.",
       "emotion": "suy_nghi"
     },
@@ -63,6 +71,8 @@
       "romaji": "kangaemasu",
       "wordType": "verb",
       "meaningVi": "Suy nghĩ, cân nhắc",
+      "imageUrl": "assets/minh-hoa/think.webp",
+      "imageAlt": "Suy nghĩ, cân nhắc",
       "accentNote": "Đã gặp N5 bài 21 — nay mở rộng dùng cùng と思っています.",
       "emotion": "suy_nghi"
     },
@@ -74,6 +84,8 @@
       "romaji": "keikaku shimasu",
       "wordType": "verb",
       "meaningVi": "Lập kế hoạch",
+      "imageUrl": "assets/minh-hoa/plan.webp",
+      "imageAlt": "Lập kế hoạch",
       "accentNote": "旅行を 計画しています = đang lên kế hoạch du lịch."
     },
     {
@@ -84,6 +96,8 @@
       "romaji": "shourai",
       "wordType": "noun",
       "meaningVi": "Tương lai",
+      "imageUrl": "assets/minh-hoa/future.webp",
+      "imageAlt": "Tương lai",
       "accentNote": "将来、〜と思っています = trong tương lai, tôi định..."
     },
     {
@@ -94,6 +108,8 @@
       "romaji": "yume",
       "wordType": "noun",
       "meaningVi": "Giấc mơ, ước mơ",
+      "imageUrl": "assets/minh-hoa/dream.webp",
+      "imageAlt": "Giấc mơ, ước mơ",
       "accentNote": "夢を かなえたいです = tôi muốn thực hiện ước mơ."
     },
     {
@@ -104,6 +120,8 @@
       "romaji": "keikaku",
       "wordType": "noun",
       "meaningVi": "Kế hoạch",
+      "imageUrl": "assets/minh-hoa/plan.webp",
+      "imageAlt": "Kế hoạch",
       "accentNote": "計画を 立てます = lập kế hoạch."
     },
     {
@@ -114,6 +132,8 @@
       "romaji": "daigaku",
       "wordType": "noun",
       "meaningVi": "Trường đại học",
+      "imageUrl": "assets/minh-hoa/university.webp",
+      "imageAlt": "Trường đại học",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -134,6 +154,8 @@
       "romaji": "kaisha",
       "wordType": "noun",
       "meaningVi": "Công ty",
+      "imageUrl": "assets/minh-hoa/company.webp",
+      "imageAlt": "Công ty",
       "accentNote": "Đã gặp N5 bài 3."
     },
     {
@@ -144,6 +166,8 @@
       "romaji": "shigoto",
       "wordType": "noun",
       "meaningVi": "Công việc",
+      "imageUrl": "assets/minh-hoa/work-job.webp",
+      "imageAlt": "Công việc",
       "accentNote": "Đã gặp N5 bài 9."
     },
     {
@@ -154,6 +178,8 @@
       "romaji": "sensei",
       "wordType": "noun",
       "meaningVi": "Thầy/cô giáo",
+      "imageUrl": "assets/minh-hoa/teacher.webp",
+      "imageAlt": "Thầy/cô giáo",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -164,6 +190,8 @@
       "romaji": "ryokou",
       "wordType": "noun",
       "meaningVi": "Du lịch",
+      "imageUrl": "assets/minh-hoa/travel.webp",
+      "imageAlt": "Du lịch",
       "accentNote": "Đã gặp N5 bài 5."
     },
     {
@@ -174,6 +202,8 @@
       "romaji": "ryuugaku",
       "wordType": "noun",
       "meaningVi": "Du học",
+      "imageUrl": "assets/minh-hoa/study-abroad.webp",
+      "imageAlt": "Du học",
       "accentNote": "留学しようと 思っています = tôi định đi du học."
     },
     {
@@ -184,6 +214,8 @@
       "romaji": "sotsugyou shimasu",
       "wordType": "verb",
       "meaningVi": "Tốt nghiệp",
+      "imageUrl": "assets/minh-hoa/graduate.webp",
+      "imageAlt": "Tốt nghiệp",
       "accentNote": "大学を 卒業したら = sau khi tốt nghiệp đại học."
     },
     {
@@ -194,6 +226,8 @@
       "romaji": "hatarakimasu",
       "wordType": "verb",
       "meaningVi": "Làm việc, đi làm",
+      "imageUrl": "assets/minh-hoa/work-hard-labor.webp",
+      "imageAlt": "Làm việc, đi làm",
       "accentNote": "Đã gặp N5 bài 4."
     },
     {
@@ -204,6 +238,8 @@
       "romaji": "ganbarimasu",
       "wordType": "verb",
       "meaningVi": "Cố gắng, nỗ lực",
+      "imageUrl": "assets/minh-hoa/do-ones-best.webp",
+      "imageAlt": "Cố gắng, nỗ lực",
       "accentNote": "Đã gặp N5 bài 19."
     }
   ],
@@ -732,6 +768,7 @@
       "id": "dia-n4-31-1",
       "speaker": "田中",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l31-1",
@@ -820,6 +857,7 @@
       "id": "dia-n4-31-2",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l31-15",
@@ -871,6 +909,7 @@
       "id": "dia-n4-31-3",
       "speaker": "田中",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l31-22",
@@ -908,6 +947,7 @@
       "id": "dia-n4-31-4",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l31-27",
@@ -967,6 +1007,7 @@
       "id": "dia-n4-31-5",
       "speaker": "田中",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l31-36",
@@ -1022,6 +1063,7 @@
       "id": "dia-n4-31-6",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l31-44",
@@ -1068,6 +1110,7 @@
       "id": "dia-n4-31-7",
       "speaker": "田中",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l31-50",
@@ -1105,6 +1148,7 @@
       "id": "dia-n4-31-8",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l31-55",
@@ -1164,6 +1208,7 @@
       "id": "dia-n4-31-9",
       "speaker": "田中",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d-l31-64",
@@ -1209,6 +1254,7 @@
       "id": "dia-n4-31-10",
       "speaker": "ワン",
       "speakerRole": "Sinh viên năm cuối",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l31-70",

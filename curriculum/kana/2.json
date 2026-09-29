@@ -12,6 +12,8 @@
       "romaji": "inu",
       "wordType": "noun",
       "meaningVi": "Con chó",
+      "imageUrl": "assets/minh-hoa/con-cho.webp",
+      "imageAlt": "Con chó",
       "accentNote": "Hai nhịp i-nư, ぬ môi không chu.",
       "emotion": "vui"
     },
@@ -23,6 +25,8 @@
       "romaji": "neko",
       "wordType": "noun",
       "meaningVi": "Con mèo",
+      "imageUrl": "assets/minh-hoa/con-meo.webp",
+      "imageAlt": "Con mèo",
       "accentNote": "ね cao, こ thấp xuống: 'NÊ-kô'.",
       "emotion": "vui"
     },
@@ -34,6 +38,8 @@
       "romaji": "sakana",
       "wordType": "noun",
       "meaningVi": "Con cá",
+      "imageUrl": "assets/minh-hoa/ca.webp",
+      "imageAlt": "Con cá",
       "accentNote": "Ba nhịp đều xa-ka-na.",
       "emotion": "vui"
     },
@@ -45,6 +51,8 @@
       "romaji": "hana",
       "wordType": "noun",
       "meaningVi": "Bông hoa; cùng âm với 鼻 はな (cái mũi)",
+      "imageUrl": "assets/minh-hoa/hoa.webp",
+      "imageAlt": "Bông hoa; cùng âm với 鼻 はな (cái mũi)",
       "accentNote": "花 (hoa) và 鼻 (mũi) chỉ khác nhau ở cao độ khi có trợ từ theo sau: 花が hạ giọng ở が, 鼻が thì đọc bằng.",
       "emotion": "vui"
     },
@@ -56,6 +64,8 @@
       "romaji": "hito",
       "wordType": "noun",
       "meaningVi": "Người",
+      "imageUrl": "assets/minh-hoa/nguoi.webp",
+      "imageAlt": "Người",
       "accentNote": "ひ rất nhẹ, gần như chỉ còn hơi 'h': 'h-tô'.",
       "emotion": "suy_nghi"
     },
@@ -67,6 +77,8 @@
       "romaji": "kuchi",
       "wordType": "noun",
       "meaningVi": "Cái miệng",
+      "imageUrl": "assets/minh-hoa/mieng.webp",
+      "imageAlt": "Cái miệng",
       "accentNote": "く rất nhẹ: 'k-chi'.",
       "emotion": "vui"
     },
@@ -78,6 +90,8 @@
       "romaji": "kutsu",
       "wordType": "noun",
       "meaningVi": "Đôi giày",
+      "imageUrl": "assets/minh-hoa/doi-giay.webp",
+      "imageAlt": "Đôi giày",
       "accentNote": "つ là 'tsư', không đọc 'kư-tư'.",
       "emotion": "suy_nghi"
     },
@@ -89,6 +103,8 @@
       "romaji": "tsukue",
       "wordType": "noun",
       "meaningVi": "Cái bàn học, bàn làm việc",
+      "imageUrl": "assets/minh-hoa/ban.webp",
+      "imageAlt": "Cái bàn học, bàn làm việc",
       "accentNote": "Ba nhịp tsư-kư-ê.",
       "emotion": "suy_nghi"
     },
@@ -100,6 +116,8 @@
       "romaji": "natsu",
       "wordType": "noun",
       "meaningVi": "Mùa hè",
+      "imageUrl": "assets/minh-hoa/mua-he.webp",
+      "imageAlt": "Mùa hè",
       "accentNote": "つ cuối từ đọc nhẹ: 'na-ts(ư)'.",
       "emotion": "vui"
     },
@@ -155,6 +173,8 @@
       "romaji": "niku",
       "wordType": "noun",
       "meaningVi": "Thịt",
+      "imageUrl": "assets/minh-hoa/thit.webp",
+      "imageAlt": "Thịt",
       "accentNote": "Hai nhịp ni-kư.",
       "emotion": "vui"
     },
@@ -166,6 +186,8 @@
       "romaji": "tokei",
       "wordType": "noun",
       "meaningVi": "Đồng hồ",
+      "imageUrl": "assets/minh-hoa/dong-ho.webp",
+      "imageAlt": "Đồng hồ",
       "accentNote": "けい thường đọc kéo dài thành 'kê-'.",
       "emotion": "suy_nghi"
     },
@@ -188,6 +210,8 @@
       "romaji": "hikouki",
       "wordType": "noun",
       "meaningVi": "Máy bay",
+      "imageUrl": "assets/minh-hoa/may-bay.webp",
+      "imageAlt": "Máy bay",
       "accentNote": "こう kéo dài thành 'kôô': hi-kôô-ki (4 nhịp).",
       "emotion": "ngac_nhien"
     },
@@ -199,6 +223,8 @@
       "romaji": "saifu",
       "wordType": "noun",
       "meaningVi": "Cái ví",
+      "imageUrl": "assets/minh-hoa/vi-tien.webp",
+      "imageAlt": "Cái ví",
       "accentNote": "Ba nhịp xa-i-fư.",
       "emotion": "suy_nghi"
     },
@@ -911,6 +937,7 @@
       "id": "dia-kana-2-1",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l2-1a",
@@ -940,6 +967,7 @@
       "id": "dia-kana-2-2",
       "speaker": "さとう (Satou)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-sato.webp",
       "tokens": [
         {
           "id": "d-kana-l2-2a",
@@ -969,6 +997,7 @@
       "id": "dia-kana-2-3",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l2-3a",
@@ -1003,6 +1032,7 @@
       "id": "dia-kana-2-4",
       "speaker": "さとう (Satou)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-sato.webp",
       "tokens": [
         {
           "id": "d-kana-l2-4a",
@@ -1057,6 +1087,7 @@
       "id": "dia-kana-2-5",
       "speaker": "ミラー (Miller)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-kana-l2-5a",
@@ -1086,6 +1117,7 @@
       "id": "dia-kana-2-6",
       "speaker": "さとう (Satou)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-sato.webp",
       "tokens": [
         {
           "id": "d-kana-l2-6a",

@@ -3,6 +3,8 @@
   "lessonNumber": 17,
   "title": "Bài 17: Về vấn đề (に関して & について)",
   "description": "について diễn tả 'về, liên quan đến' một chủ đề — dùng PHỔ BIẾN, trung tính, tự nhiên trong cả hội thoại đời thường lẫn văn viết; に関して cũng nghĩa tương tự nhưng TRANG TRỌNG HƠN, phù hợp văn phong học thuật/báo cáo; dạng bổ nghĩa danh từ: についての vs に関する (không phải に関しての).",
+  "sceneImageUrl": "assets/minh-hoa/canh-thuyet-trinh-van-hoa-nhat.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 17: Về vấn đề (に関して & について)",
   "vocabList": [
     {
       "id": "voc-n3-17-1",
@@ -12,6 +14,8 @@
       "romaji": "giron shimasu",
       "wordType": "verb",
       "meaningVi": "Tranh luận, thảo luận",
+      "imageUrl": "assets/minh-hoa/debate.webp",
+      "imageAlt": "Tranh luận, thảo luận",
       "accentNote": "せいじを 議論します = tranh luận về chính trị."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "happyou shimasu",
       "wordType": "verb",
       "meaningVi": "Phát biểu, công bố",
+      "imageUrl": "assets/minh-hoa/present-announce.webp",
+      "imageAlt": "Phát biểu, công bố",
       "accentNote": "けんきゅうを 発表します = công bố nghiên cứu."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "houkoku shimasu",
       "wordType": "verb",
       "meaningVi": "Báo cáo",
+      "imageUrl": "assets/minh-hoa/report.webp",
+      "imageAlt": "Báo cáo",
       "accentNote": "けっかを 報告します = báo cáo kết quả."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "bunka",
       "wordType": "noun",
       "meaningVi": "Văn hóa",
+      "imageUrl": "assets/minh-hoa/culture.webp",
+      "imageAlt": "Văn hóa",
       "accentNote": "日本の 文化 = văn hóa Nhật Bản."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "rekishi",
       "wordType": "noun",
       "meaningVi": "Lịch sử",
+      "imageUrl": "assets/minh-hoa/history.webp",
+      "imageAlt": "Lịch sử",
       "accentNote": "日本の 歴史 = lịch sử Nhật Bản."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "chousa",
       "wordType": "noun",
       "meaningVi": "Khảo sát, điều tra",
+      "imageUrl": "assets/minh-hoa/survey.webp",
+      "imageAlt": "Khảo sát, điều tra",
       "accentNote": "Đã gặp N3 bài 7."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "iken",
       "wordType": "noun",
       "meaningVi": "Ý kiến",
+      "imageUrl": "assets/minh-hoa/opinion-n3.webp",
+      "imageAlt": "Ý kiến",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "seiji",
       "wordType": "noun",
       "meaningVi": "Chính trị",
+      "imageUrl": "assets/minh-hoa/politics.webp",
+      "imageAlt": "Chính trị",
       "accentNote": "Đã gặp N4 bài 40."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "keizai",
       "wordType": "noun",
       "meaningVi": "Kinh tế",
+      "imageUrl": "assets/minh-hoa/economy.webp",
+      "imageAlt": "Kinh tế",
       "accentNote": "Đã gặp N3 bài 14."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "kankyou",
       "wordType": "noun",
       "meaningVi": "Môi trường",
+      "imageUrl": "assets/minh-hoa/environment.webp",
+      "imageAlt": "Môi trường",
       "accentNote": "Đã gặp N3 bài 5."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "kaigi",
       "wordType": "noun",
       "meaningVi": "Cuộc họp",
+      "imageUrl": "assets/minh-hoa/meeting-n3.webp",
+      "imageAlt": "Cuộc họp",
       "accentNote": "Đã gặp N4 bài 30."
     },
     {
@@ -122,6 +146,8 @@
       "romaji": "shitsumon",
       "wordType": "noun",
       "meaningVi": "Câu hỏi",
+      "imageUrl": "assets/minh-hoa/question-n3.webp",
+      "imageAlt": "Câu hỏi",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -132,6 +158,8 @@
       "romaji": "nihon",
       "wordType": "noun",
       "meaningVi": "Nhật Bản",
+      "imageUrl": "assets/minh-hoa/japan.webp",
+      "imageAlt": "Nhật Bản",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -152,6 +180,8 @@
       "romaji": "daigaku",
       "wordType": "noun",
       "meaningVi": "Đại học",
+      "imageUrl": "assets/minh-hoa/university-n3.webp",
+      "imageAlt": "Đại học",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -162,6 +192,8 @@
       "romaji": "gakusei",
       "wordType": "noun",
       "meaningVi": "Học sinh, sinh viên",
+      "imageUrl": "assets/minh-hoa/student-n3.webp",
+      "imageAlt": "Học sinh, sinh viên",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -172,6 +204,8 @@
       "romaji": "sensei",
       "wordType": "noun",
       "meaningVi": "Giáo viên",
+      "imageUrl": "assets/minh-hoa/teacher-n3.webp",
+      "imageAlt": "Giáo viên",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -182,6 +216,8 @@
       "romaji": "hanashimasu",
       "wordType": "verb",
       "meaningVi": "Nói chuyện",
+      "imageUrl": "assets/minh-hoa/talk.webp",
+      "imageAlt": "Nói chuyện",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -192,6 +228,8 @@
       "romaji": "kikimasu",
       "wordType": "verb",
       "meaningVi": "Nghe, hỏi",
+      "imageUrl": "assets/minh-hoa/listen-n3.webp",
+      "imageAlt": "Nghe, hỏi",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -202,6 +240,8 @@
       "romaji": "kakimasu",
       "wordType": "verb",
       "meaningVi": "Viết",
+      "imageUrl": "assets/minh-hoa/write-n3.webp",
+      "imageAlt": "Viết",
       "accentNote": "Đã gặp N4 bài 26."
     }
   ],
@@ -717,6 +757,7 @@
       "id": "dia-n3-17-1",
       "speaker": "田中",
       "speakerRole": "Giáo viên hướng dẫn",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d17-1",
@@ -778,6 +819,7 @@
       "id": "dia-n3-17-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d17-10",
@@ -820,6 +862,7 @@
       "id": "dia-n3-17-3",
       "speaker": "田中",
       "speakerRole": "Giáo viên hướng dẫn",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d17-16",
@@ -864,6 +907,7 @@
       "id": "dia-n3-17-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d17-22",
@@ -913,6 +957,7 @@
       "id": "dia-n3-17-5",
       "speaker": "田中",
       "speakerRole": "Giáo viên hướng dẫn",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d17-29",
@@ -943,6 +988,7 @@
       "id": "dia-n3-17-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d17-33",
@@ -983,6 +1029,7 @@
       "id": "dia-n3-17-7",
       "speaker": "田中",
       "speakerRole": "Giáo viên hướng dẫn",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d17-39",
@@ -1034,6 +1081,7 @@
       "id": "dia-n3-17-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d17-46",
@@ -1112,6 +1160,7 @@
       "id": "dia-n3-17-9",
       "speaker": "田中",
       "speakerRole": "Giáo viên hướng dẫn",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d17-58",
@@ -1156,6 +1205,7 @@
       "id": "dia-n3-17-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d17-64",

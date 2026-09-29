@@ -3,6 +3,8 @@
   "lessonNumber": 14,
   "title": "Bài 14: Biến đổi liên tục (一方だ & ばかりだ)",
   "description": "一方だ diễn tả xu hướng thay đổi theo MỘT CHIỀU liên tục, không dừng lại — trang trọng, khách quan, dùng được cho cả xu hướng tích cực lẫn tiêu cực; ばかりだ cũng diễn tả xu hướng một chiều nhưng thân mật hơn, hầu như CHỈ dùng cho xu hướng XẤU ĐI và mang cảm xúc thất vọng/lo lắng của người nói.",
+  "sceneImageUrl": "assets/minh-hoa/canh-xu-huong-xa-hoi.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 14: Biến đổi liên tục (一方だ & ばかりだ)",
   "vocabList": [
     {
       "id": "voc-n3-14-1",
@@ -12,6 +14,8 @@
       "romaji": "zouka shimasu",
       "wordType": "verb",
       "meaningVi": "Tăng lên, gia tăng",
+      "imageUrl": "assets/minh-hoa/increase.webp",
+      "imageAlt": "Tăng lên, gia tăng",
       "accentNote": "人口が 増加します = dân số gia tăng."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "shitsugyou",
       "wordType": "noun",
       "meaningVi": "Sự thất nghiệp",
+      "imageUrl": "assets/minh-hoa/unemployment.webp",
+      "imageAlt": "Sự thất nghiệp",
       "accentNote": "失業が 増えます = thất nghiệp tăng lên."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "shinpo shimasu",
       "wordType": "verb",
       "meaningVi": "Tiến bộ",
+      "imageUrl": "assets/minh-hoa/technological-progress.webp",
+      "imageAlt": "Tiến bộ",
       "accentNote": "技術が 進歩します = kỹ thuật tiến bộ."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "kakudai shimasu",
       "wordType": "verb",
       "meaningVi": "Mở rộng",
+      "imageUrl": "assets/minh-hoa/expand.webp",
+      "imageAlt": "Mở rộng",
       "accentNote": "事業を 拡大します = mở rộng sự nghiệp."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "hatten shimasu",
       "wordType": "verb",
       "meaningVi": "Phát triển",
+      "imageUrl": "assets/minh-hoa/develop.webp",
+      "imageAlt": "Phát triển",
       "accentNote": "経済が 発展します = kinh tế phát triển."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "herimasu",
       "wordType": "verb",
       "meaningVi": "Giảm xuống, giảm đi",
+      "imageUrl": "assets/minh-hoa/decrease.webp",
+      "imageAlt": "Giảm xuống, giảm đi",
       "accentNote": "人口が 減ります = dân số giảm xuống."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "fuemasu",
       "wordType": "verb",
       "meaningVi": "Tăng lên",
+      "imageUrl": "assets/minh-hoa/increase.webp",
+      "imageAlt": "Tăng lên",
       "accentNote": "物価が 増えます = vật giá tăng lên."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "genshou",
       "wordType": "noun",
       "meaningVi": "Sự giảm sút",
+      "imageUrl": "assets/minh-hoa/decrease.webp",
+      "imageAlt": "Sự giảm sút",
       "accentNote": "Đã gặp N3 bài 5."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "jinkou",
       "wordType": "noun",
       "meaningVi": "Dân số",
+      "imageUrl": "assets/minh-hoa/population-n3.webp",
+      "imageAlt": "Dân số",
       "accentNote": "Đã gặp N3 bài 5."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "bukka",
       "wordType": "noun",
       "meaningVi": "Vật giá",
+      "imageUrl": "assets/minh-hoa/cost-of-living.webp",
+      "imageAlt": "Vật giá",
       "accentNote": "Đã gặp N3 bài 5."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "kankyou",
       "wordType": "noun",
       "meaningVi": "Môi trường",
+      "imageUrl": "assets/minh-hoa/environment.webp",
+      "imageAlt": "Môi trường",
       "accentNote": "Đã gặp N3 bài 5."
     },
     {
@@ -122,6 +146,8 @@
       "romaji": "keizai",
       "wordType": "noun",
       "meaningVi": "Kinh tế",
+      "imageUrl": "assets/minh-hoa/economy.webp",
+      "imageAlt": "Kinh tế",
       "accentNote": "Đã gặp N5 bài 25."
     },
     {
@@ -132,6 +158,8 @@
       "romaji": "warui",
       "wordType": "adjective",
       "meaningVi": "Xấu, tệ",
+      "imageUrl": "assets/minh-hoa/bad.webp",
+      "imageAlt": "Xấu, tệ",
       "accentNote": "Đã gặp N4 bài 34.",
       "emotion": "that_vong"
     },
@@ -143,6 +171,8 @@
       "romaji": "futorimasu",
       "wordType": "verb",
       "meaningVi": "Béo lên",
+      "imageUrl": "assets/minh-hoa/gain-weight-n3.webp",
+      "imageAlt": "Béo lên",
       "accentNote": "Đã gặp N4 bài 44."
     },
     {
@@ -153,6 +183,8 @@
       "romaji": "tsuzukemasu",
       "wordType": "verb",
       "meaningVi": "Tiếp tục",
+      "imageUrl": "assets/minh-hoa/keep-going.webp",
+      "imageAlt": "Tiếp tục",
       "accentNote": "Đã gặp N4 bài 28."
     },
     {
@@ -163,6 +195,8 @@
       "romaji": "agarimasu",
       "wordType": "verb",
       "meaningVi": "Tăng lên, đi lên",
+      "imageUrl": "assets/minh-hoa/rise.webp",
+      "imageAlt": "Tăng lên, đi lên",
       "accentNote": "Đã gặp N4 bài 34."
     },
     {
@@ -173,6 +207,8 @@
       "romaji": "kaisha",
       "wordType": "noun",
       "meaningVi": "Công ty",
+      "imageUrl": "assets/minh-hoa/company-n3.webp",
+      "imageAlt": "Công ty",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -193,6 +229,8 @@
       "romaji": "mondai",
       "wordType": "noun",
       "meaningVi": "Vấn đề",
+      "imageUrl": "assets/minh-hoa/problem.webp",
+      "imageAlt": "Vấn đề",
       "accentNote": "Đã gặp N5 bài 22."
     },
     {
@@ -739,6 +777,7 @@
       "id": "dia-n3-14-1",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d14-1",
@@ -797,6 +836,7 @@
       "id": "dia-n3-14-2",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d14-9",
@@ -856,6 +896,7 @@
       "id": "dia-n3-14-3",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d14-18",
@@ -902,6 +943,7 @@
       "id": "dia-n3-14-4",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d14-24",
@@ -939,6 +981,7 @@
       "id": "dia-n3-14-5",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d14-29",
@@ -976,6 +1019,7 @@
       "id": "dia-n3-14-6",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d14-34",
@@ -1007,6 +1051,7 @@
       "id": "dia-n3-14-7",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d14-38",
@@ -1073,6 +1118,7 @@
       "id": "dia-n3-14-8",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d14-48",
@@ -1127,6 +1173,7 @@
       "id": "dia-n3-14-9",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d14-56",
@@ -1167,6 +1214,7 @@
       "id": "dia-n3-14-10",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d14-61",

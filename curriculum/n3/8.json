@@ -3,6 +3,8 @@
   "lessonNumber": 8,
   "title": "Bài 8: Điều kiện & Giả định (さえ〜ば & としたら)",
   "description": "さえ〜ば diễn tả CHỈ CẦN có N (hoặc thực hiện hành động, dạng V-stem+さえすれば) là ĐỦ để đạt kết quả mong muốn — điều kiện THỰC TẾ có thể xảy ra; としたら dùng để GIẢ ĐỊNH một tình huống (có thể viển vông/chưa xảy ra) rồi suy luận kết quả nếu tình huống đó là thật.",
+  "sceneImageUrl": "assets/minh-hoa/canh-gia-su-trung-xo-so.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 8: Điều kiện & Giả định (さえ〜ば & としたら)",
   "vocabList": [
     {
       "id": "voc-n3-8-1",
@@ -22,6 +24,8 @@
       "romaji": "seikou shimasu",
       "wordType": "verb",
       "meaningVi": "Thành công",
+      "imageUrl": "assets/minh-hoa/success.webp",
+      "imageAlt": "Thành công",
       "accentNote": "努力すれば 成功します = nỗ lực thì sẽ thành công."
     },
     {
@@ -32,6 +36,8 @@
       "romaji": "atarimasu",
       "wordType": "verb",
       "meaningVi": "Trúng, đúng (trúng số, trúng thưởng)",
+      "imageUrl": "assets/minh-hoa/win-lottery.webp",
+      "imageAlt": "Trúng, đúng (trúng số, trúng thưởng)",
       "accentNote": "宝くじが 当たります = trúng xổ số."
     },
     {
@@ -52,6 +58,8 @@
       "romaji": "goukaku shimasu",
       "wordType": "verb",
       "meaningVi": "Đậu, đỗ (thi cử)",
+      "imageUrl": "assets/minh-hoa/pass-exam-n3.webp",
+      "imageAlt": "Đậu, đỗ (thi cử)",
       "accentNote": "試験に 合格します = đậu kỳ thi.",
       "emotion": "vui"
     },
@@ -63,6 +71,8 @@
       "romaji": "doryoku shimasu",
       "wordType": "verb",
       "meaningVi": "Nỗ lực, cố gắng",
+      "imageUrl": "assets/minh-hoa/effort.webp",
+      "imageAlt": "Nỗ lực, cố gắng",
       "accentNote": "毎日 努力します = mỗi ngày nỗ lực."
     },
     {
@@ -83,6 +93,8 @@
       "romaji": "ryuugaku shimasu",
       "wordType": "verb",
       "meaningVi": "Du học",
+      "imageUrl": "assets/minh-hoa/study-abroad-n3.webp",
+      "imageAlt": "Du học",
       "accentNote": "日本に 留学します = du học ở Nhật Bản."
     },
     {
@@ -93,6 +105,8 @@
       "romaji": "yuushou shimasu",
       "wordType": "verb",
       "meaningVi": "Vô địch, giành chức quán quân",
+      "imageUrl": "assets/minh-hoa/win-championship.webp",
+      "imageAlt": "Vô địch, giành chức quán quân",
       "accentNote": "大会で 優勝します = vô địch tại đại hội.",
       "emotion": "vui"
     },
@@ -114,6 +128,8 @@
       "romaji": "shikaku",
       "wordType": "noun",
       "meaningVi": "Tư cách, chứng chỉ",
+      "imageUrl": "assets/minh-hoa/qualification.webp",
+      "imageAlt": "Tư cách, chứng chỉ",
       "accentNote": "資格を 取ります = lấy chứng chỉ."
     },
     {
@@ -124,6 +140,8 @@
       "romaji": "takarakuji",
       "wordType": "noun",
       "meaningVi": "Xổ số",
+      "imageUrl": "assets/minh-hoa/lottery.webp",
+      "imageAlt": "Xổ số",
       "accentNote": "宝くじが 当たったら = nếu trúng xổ số thì."
     },
     {
@@ -134,6 +152,8 @@
       "romaji": "shippai shimasu",
       "wordType": "verb",
       "meaningVi": "Thất bại",
+      "imageUrl": "assets/minh-hoa/failure.webp",
+      "imageAlt": "Thất bại",
       "accentNote": "Đã gặp N4 bài 43.",
       "emotion": "that_vong"
     },
@@ -145,6 +165,8 @@
       "romaji": "shiken",
       "wordType": "noun",
       "meaningVi": "Kỳ thi",
+      "imageUrl": "assets/minh-hoa/exam-n3.webp",
+      "imageAlt": "Kỳ thi",
       "accentNote": "Đã gặp N4 bài 39."
     },
     {
@@ -155,6 +177,8 @@
       "romaji": "okane",
       "wordType": "noun",
       "meaningVi": "Tiền",
+      "imageUrl": "assets/minh-hoa/money-n3.webp",
+      "imageAlt": "Tiền",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -165,6 +189,8 @@
       "romaji": "jikan",
       "wordType": "noun",
       "meaningVi": "Thời gian",
+      "imageUrl": "assets/minh-hoa/time-n3.webp",
+      "imageAlt": "Thời gian",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -175,6 +201,8 @@
       "romaji": "ganbarimasu",
       "wordType": "verb",
       "meaningVi": "Cố gắng, nỗ lực",
+      "imageUrl": "assets/minh-hoa/effort.webp",
+      "imageAlt": "Cố gắng, nỗ lực",
       "accentNote": "Đã gặp N4 bài 32."
     },
     {
@@ -185,6 +213,8 @@
       "romaji": "kimemasu",
       "wordType": "verb",
       "meaningVi": "Quyết định",
+      "imageUrl": "assets/minh-hoa/decide-n3.webp",
+      "imageAlt": "Quyết định",
       "accentNote": "Đã gặp N4 bài 33."
     },
     {
@@ -195,6 +225,8 @@
       "romaji": "shourai",
       "wordType": "noun",
       "meaningVi": "Tương lai",
+      "imageUrl": "assets/minh-hoa/future-personal.webp",
+      "imageAlt": "Tương lai",
       "accentNote": "Đã gặp N4 bài 31."
     },
     {
@@ -773,6 +805,7 @@
       "id": "dia-n3-8-1",
       "speaker": "田中",
       "speakerRole": "Bạn cùng lớp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d8-1",
@@ -824,6 +857,7 @@
       "id": "dia-n3-8-2",
       "speaker": "サントス",
       "speakerRole": "Bạn cùng lớp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d8-8",
@@ -880,6 +914,7 @@
       "id": "dia-n3-8-3",
       "speaker": "田中",
       "speakerRole": "Bạn cùng lớp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d8-16",
@@ -917,6 +952,7 @@
       "id": "dia-n3-8-4",
       "speaker": "サントス",
       "speakerRole": "Bạn cùng lớp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d8-21",
@@ -978,6 +1014,7 @@
       "id": "dia-n3-8-5",
       "speaker": "田中",
       "speakerRole": "Bạn cùng lớp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d8-30",
@@ -1035,6 +1072,7 @@
       "id": "dia-n3-8-6",
       "speaker": "サントス",
       "speakerRole": "Bạn cùng lớp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d8-38",
@@ -1074,6 +1112,7 @@
       "id": "dia-n3-8-7",
       "speaker": "田中",
       "speakerRole": "Bạn cùng lớp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d8-43",
@@ -1123,6 +1162,7 @@
       "id": "dia-n3-8-8",
       "speaker": "サントス",
       "speakerRole": "Bạn cùng lớp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d8-50",
@@ -1148,6 +1188,7 @@
       "id": "dia-n3-8-9",
       "speaker": "田中",
       "speakerRole": "Bạn cùng lớp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d8-53",
@@ -1192,6 +1233,7 @@
       "id": "dia-n3-8-10",
       "speaker": "サントス",
       "speakerRole": "Bạn cùng lớp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d8-59",

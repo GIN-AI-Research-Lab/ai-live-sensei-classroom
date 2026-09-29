@@ -3,6 +3,8 @@
   "lessonNumber": 24,
   "title": "Bài 24: Cho và nhận hành động (Vてくれます / Vてもらいます / Vてあげます)",
   "description": "Mở rộng cấu trúc cho-nhận đồ vật (bài 7) sang cho-nhận HÀNH ĐỘNG giúp đỡ: người khác chủ động giúp mình bằng Vてくれます, mình nhờ/được giúp bằng Vてもらいます (cùng sự việc, khác chủ ngữ so với くれます), và mình chủ động giúp người khác bằng Vてあげます (cẩn trọng khi dùng với người trên).",
+  "sceneImageUrl": "assets/minh-hoa/canh-hoi-duong-nguoi-qua-duong.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 24: Cho và nhận hành động (Vてくれます / Vてもらいます / Vてあげます)",
   "vocabList": [
     {
       "id": "voc-n5-24-1",
@@ -12,6 +14,8 @@
       "romaji": "kuremasu",
       "wordType": "verb",
       "meaningVi": "Cho (người khác làm gì đó CHO MÌNH)",
+      "imageUrl": "assets/minh-hoa/cho-toi.webp",
+      "imageAlt": "Cho (người khác làm gì đó CHO MÌNH)",
       "accentNote": "Chủ ngữ luôn là NGƯỜI KHÁC, người nhận ơn luôn là người nói/phe người nói."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "moraimasu",
       "wordType": "verb",
       "meaningVi": "Nhận, được (nhờ ai làm gì đó)",
+      "imageUrl": "assets/minh-hoa/nhan-qua.webp",
+      "imageAlt": "Nhận, được (nhờ ai làm gì đó)",
       "accentNote": "Đã gặp bài 7 (nhận đồ vật) — nay mở rộng sang nhận HÀNH ĐỘNG giúp đỡ."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "agemasu",
       "wordType": "verb",
       "meaningVi": "Cho, làm gì đó CHO người khác",
+      "imageUrl": "assets/minh-hoa/tang-qua.webp",
+      "imageAlt": "Cho, làm gì đó CHO người khác",
       "accentNote": "Đã gặp bài 7 — nay mở rộng sang làm HÀNH ĐỘNG giúp đỡ cho người khác."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "oshiemasu",
       "wordType": "verb",
       "meaningVi": "Dạy, chỉ bảo",
+      "imageUrl": "assets/minh-hoa/day.webp",
+      "imageAlt": "Dạy, chỉ bảo",
       "accentNote": "Đã gặp bài 7. 道を 教えて くれました = đã chỉ đường giúp tôi."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "kashimasu",
       "wordType": "verb",
       "meaningVi": "Cho mượn",
+      "imageUrl": "assets/minh-hoa/cho-muon.webp",
+      "imageAlt": "Cho mượn",
       "accentNote": "Đã gặp bài 7."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "mochimasu",
       "wordType": "verb",
       "meaningVi": "Cầm, mang, xách",
+      "imageUrl": "assets/minh-hoa/cam-mang.webp",
+      "imageAlt": "Cầm, mang, xách",
       "accentNote": "Đã gặp bài 14. 荷物を 持って くれました = đã cầm hành lý giúp tôi."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "araimasu",
       "wordType": "verb",
       "meaningVi": "Rửa, giặt",
+      "imageUrl": "assets/minh-hoa/rua.webp",
+      "imageAlt": "Rửa, giặt",
       "accentNote": "Thể từ điển: 洗う. Nhóm 1."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "tsukurimasu",
       "wordType": "verb",
       "meaningVi": "Làm, nấu",
+      "imageUrl": "assets/minh-hoa/lam-che-tao.webp",
+      "imageAlt": "Làm, nấu",
       "accentNote": "Đã gặp bài 6. 料理を 作って あげました = đã nấu ăn giúp."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "kaimasu",
       "wordType": "verb",
       "meaningVi": "Mua",
+      "imageUrl": "assets/minh-hoa/mua-hang.webp",
+      "imageAlt": "Mua",
       "accentNote": "Đã gặp bài 6. 買って きて くれました = đã mua giúp mang tới."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "nimotsu",
       "wordType": "noun",
       "meaningVi": "Hành lý, đồ đạc",
+      "imageUrl": "assets/minh-hoa/hanh-ly.webp",
+      "imageAlt": "Hành lý, đồ đạc",
       "accentNote": "重い 荷物 = hành lý nặng."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "omoi",
       "wordType": "adjective",
       "meaningVi": "Nặng",
+      "imageUrl": "assets/minh-hoa/nang.webp",
+      "imageAlt": "Nặng",
       "accentNote": "Tính từ い. Trái nghĩa: 軽い (nhẹ, chưa học)."
     },
     {
@@ -122,6 +146,8 @@
       "romaji": "chizu",
       "wordType": "noun",
       "meaningVi": "Bản đồ",
+      "imageUrl": "assets/minh-hoa/ban-do.webp",
+      "imageAlt": "Bản đồ",
       "accentNote": "Đã gặp bài 7."
     },
     {
@@ -132,6 +158,8 @@
       "romaji": "eki",
       "wordType": "noun",
       "meaningVi": "Nhà ga",
+      "imageUrl": "assets/minh-hoa/nha-ga.webp",
+      "imageAlt": "Nhà ga",
       "accentNote": "Đã gặp bài 5."
     },
     {
@@ -142,6 +170,8 @@
       "romaji": "michi",
       "wordType": "noun",
       "meaningVi": "Đường, con đường",
+      "imageUrl": "assets/minh-hoa/con-duong.webp",
+      "imageAlt": "Đường, con đường",
       "accentNote": "道を 教えます = chỉ đường."
     },
     {
@@ -152,6 +182,8 @@
       "romaji": "jisho",
       "wordType": "noun",
       "meaningVi": "Từ điển",
+      "imageUrl": "assets/minh-hoa/tu-dien.webp",
+      "imageAlt": "Từ điển",
       "accentNote": "Đã gặp bài 2."
     },
     {
@@ -162,6 +194,8 @@
       "romaji": "shashin",
       "wordType": "noun",
       "meaningVi": "Bức ảnh",
+      "imageUrl": "assets/minh-hoa/buc-anh.webp",
+      "imageAlt": "Bức ảnh",
       "accentNote": "Đã gặp bài 6."
     },
     {
@@ -172,6 +206,8 @@
       "romaji": "tanjoubi",
       "wordType": "noun",
       "meaningVi": "Sinh nhật",
+      "imageUrl": "assets/minh-hoa/sinh-nhat.webp",
+      "imageAlt": "Sinh nhật",
       "accentNote": "Đã gặp bài 5."
     },
     {
@@ -182,6 +218,8 @@
       "romaji": "shinsetsu",
       "wordType": "adjective",
       "meaningVi": "Tốt bụng, ân cần",
+      "imageUrl": "assets/minh-hoa/tot-bung.webp",
+      "imageAlt": "Tốt bụng, ân cần",
       "accentNote": "Đã gặp bài 16 — nay dùng để khen người giúp đỡ."
     },
     {
@@ -192,6 +230,8 @@
       "romaji": "tasukarimasu",
       "wordType": "verb",
       "meaningVi": "Được giúp đỡ, đỡ vất vả hơn",
+      "imageUrl": "assets/minh-hoa/do-vat-va.webp",
+      "imageAlt": "Được giúp đỡ, đỡ vất vả hơn",
       "accentNote": "助かりました = anh giúp tôi nhiều quá (câu cảm ơn sau khi nhận giúp đỡ).",
       "emotion": "vui"
     },
@@ -778,6 +818,7 @@
       "id": "dia-n5-24-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l24-1",
@@ -815,6 +856,7 @@
       "id": "dia-n5-24-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l24-6",
@@ -830,6 +872,7 @@
       "id": "dia-n5-24-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l24-7",
@@ -893,6 +936,7 @@
       "id": "dia-n5-24-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l24-17",
@@ -933,6 +977,7 @@
       "id": "dia-n5-24-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l24-23",
@@ -1053,6 +1098,7 @@
       "id": "dia-n5-24-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l24-41",
@@ -1124,6 +1170,7 @@
       "id": "dia-n5-24-9",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l24-51",
@@ -1188,6 +1235,7 @@
       "id": "dia-n5-24-10",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l24-61",

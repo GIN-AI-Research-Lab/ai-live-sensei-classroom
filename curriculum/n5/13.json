@@ -3,6 +3,8 @@
   "lessonNumber": 13,
   "title": "Bài 13: Mong muốn & Mục đích (欲しい / Vたい / N へ Vに行きます)",
   "description": "Diễn đạt mong muốn sở hữu đồ vật bằng 欲しい (đi với が), mong muốn thực hiện hành động bằng Vたい (chia như tính từ い: たくない, たかった), và cách nói mục đích di chuyển bằng [gốc Vます]に + 行く/来る/帰る.",
+  "sceneImageUrl": "assets/minh-hoa/canh-len-ke-hoach-nghi-he.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 13: Mong muốn & Mục đích (欲しい / Vたい / N へ Vに行きます)",
   "vocabList": [
     {
       "id": "voc-n5-13-1",
@@ -12,6 +14,8 @@
       "romaji": "hoshii",
       "wordType": "adjective",
       "meaningVi": "Muốn có (đồ vật)",
+      "imageUrl": "assets/minh-hoa/muon-co.webp",
+      "imageAlt": "Muốn có (đồ vật)",
       "accentNote": "Tính từ い. Đối tượng đánh dấu bằng が, KHÔNG dùng を."
     },
     {
@@ -32,6 +36,8 @@
       "romaji": "kaimono",
       "wordType": "noun",
       "meaningVi": "Việc mua sắm",
+      "imageUrl": "assets/minh-hoa/mua-sam.webp",
+      "imageAlt": "Việc mua sắm",
       "accentNote": "買い物します = đi mua sắm. 買い物に 行きます = đi mua sắm (mục đích)."
     },
     {
@@ -42,6 +48,8 @@
       "romaji": "ryokou",
       "wordType": "noun",
       "meaningVi": "Du lịch, chuyến đi",
+      "imageUrl": "assets/minh-hoa/du-lich.webp",
+      "imageAlt": "Du lịch, chuyến đi",
       "accentNote": "Đã gặp bài 5 — nay dùng làm mục đích di chuyển."
     },
     {
@@ -52,6 +60,8 @@
       "romaji": "asobimasu",
       "wordType": "verb",
       "meaningVi": "Chơi, đi chơi",
+      "imageUrl": "assets/minh-hoa/choi.webp",
+      "imageAlt": "Chơi, đi chơi",
       "accentNote": "Thể từ điển: 遊ぶ. Nhóm 1."
     },
     {
@@ -62,6 +72,8 @@
       "romaji": "oyogimasu",
       "wordType": "verb",
       "meaningVi": "Bơi",
+      "imageUrl": "assets/minh-hoa/boi.webp",
+      "imageAlt": "Bơi",
       "accentNote": "Thể từ điển: 泳ぐ. Nhóm 1."
     },
     {
@@ -72,6 +84,8 @@
       "romaji": "umi",
       "wordType": "noun",
       "meaningVi": "Biển",
+      "imageUrl": "assets/minh-hoa/bien.webp",
+      "imageAlt": "Biển",
       "accentNote": "海へ 泳ぎに 行きます = đi biển bơi."
     },
     {
@@ -82,6 +96,8 @@
       "romaji": "yama",
       "wordType": "noun",
       "meaningVi": "Núi",
+      "imageUrl": "assets/minh-hoa/nui.webp",
+      "imageAlt": "Núi",
       "accentNote": ""
     },
     {
@@ -92,6 +108,8 @@
       "romaji": "puuru",
       "wordType": "noun",
       "meaningVi": "Hồ bơi",
+      "imageUrl": "assets/minh-hoa/ho-boi.webp",
+      "imageAlt": "Hồ bơi",
       "accentNote": ""
     },
     {
@@ -102,6 +120,8 @@
       "romaji": "eigakan",
       "wordType": "noun",
       "meaningVi": "Rạp chiếu phim",
+      "imageUrl": "assets/minh-hoa/rap-chieu-phim.webp",
+      "imageAlt": "Rạp chiếu phim",
       "accentNote": "Đã gặp bài 4 (映画) — nay dùng nơi chốn cụ thể."
     },
     {
@@ -112,6 +132,8 @@
       "romaji": "tokei",
       "wordType": "noun",
       "meaningVi": "Đồng hồ",
+      "imageUrl": "assets/minh-hoa/dong-ho.webp",
+      "imageAlt": "Đồng hồ",
       "accentNote": "Đã gặp bài 2 — nay dùng làm vật muốn sở hữu."
     },
     {
@@ -122,6 +144,8 @@
       "romaji": "saifu",
       "wordType": "noun",
       "meaningVi": "Ví tiền",
+      "imageUrl": "assets/minh-hoa/vi-tien.webp",
+      "imageAlt": "Ví tiền",
       "accentNote": ""
     },
     {
@@ -132,6 +156,8 @@
       "romaji": "kaban",
       "wordType": "noun",
       "meaningVi": "Cặp, túi xách",
+      "imageUrl": "assets/minh-hoa/cap-tui.webp",
+      "imageAlt": "Cặp, túi xách",
       "accentNote": "Đã gặp bài 2."
     },
     {
@@ -142,6 +168,8 @@
       "romaji": "takusan",
       "wordType": "adverb",
       "meaningVi": "Nhiều",
+      "imageUrl": "assets/minh-hoa/nhieu.webp",
+      "imageAlt": "Nhiều",
       "accentNote": "友達が たくさん います = có nhiều bạn bè."
     },
     {
@@ -172,6 +200,8 @@
       "romaji": "shinkansen",
       "wordType": "noun",
       "meaningVi": "Tàu Shinkansen",
+      "imageUrl": "assets/minh-hoa/shinkansen.webp",
+      "imageAlt": "Tàu Shinkansen",
       "accentNote": "新幹線に 乗りたいです = muốn đi tàu Shinkansen."
     },
     {
@@ -182,6 +212,8 @@
       "romaji": "onsen",
       "wordType": "noun",
       "meaningVi": "Suối nước nóng, onsen",
+      "imageUrl": "assets/minh-hoa/suoi-nuoc-nong.webp",
+      "imageAlt": "Suối nước nóng, onsen",
       "accentNote": "温泉に 入りたいです = muốn ngâm onsen."
     },
     {
@@ -727,6 +759,7 @@
       "id": "dia-n5-13-1",
       "speaker": "カリナ",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-karina.webp",
       "tokens": [
         {
           "id": "d-l13-1",
@@ -783,6 +816,7 @@
       "id": "dia-n5-13-2",
       "speaker": "山田",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l13-9",
@@ -827,6 +861,7 @@
       "id": "dia-n5-13-3",
       "speaker": "カリナ",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-karina.webp",
       "tokens": [
         {
           "id": "d-l13-15",
@@ -870,6 +905,7 @@
       "id": "dia-n5-13-4",
       "speaker": "山田",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l13-21",
@@ -902,6 +938,7 @@
       "id": "dia-n5-13-5",
       "speaker": "カリナ",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-karina.webp",
       "tokens": [
         {
           "id": "d-l13-25",
@@ -956,6 +993,7 @@
       "id": "dia-n5-13-6",
       "speaker": "山田",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l13-33",
@@ -1003,6 +1041,7 @@
       "id": "dia-n5-13-7",
       "speaker": "カリナ",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-karina.webp",
       "tokens": [
         {
           "id": "d-l13-40",
@@ -1064,6 +1103,7 @@
       "id": "dia-n5-13-8",
       "speaker": "山田",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l13-49",
@@ -1148,6 +1188,7 @@
       "id": "dia-n5-13-9",
       "speaker": "カリナ",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-karina.webp",
       "tokens": [
         {
           "id": "d-l13-62",
@@ -1205,6 +1246,7 @@
       "id": "dia-n5-13-10",
       "speaker": "山田",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d-l13-71",

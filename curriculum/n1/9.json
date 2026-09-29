@@ -3,6 +3,8 @@
   "lessonNumber": 9,
   "title": "Bài 9: Bắt buộc từ lương tâm (ずにはおかない & ないではすまない)",
   "description": "Vずにはおかない (せずにはおかない cho する) diễn tả một sự việc/tác phẩm CHẮC CHẮN sẽ khiến người khác phản ứng theo cách tự nhiên, không thể kiềm chế; Vないではすまない nhấn mạnh NGHĨA VỤ đạo đức/xã hội — nếu không làm thì sẽ không ổn. Cả hai đều là văn phong trang trọng, thường kết hợp trong bối cảnh họp báo hoặc lời tự kiểm điểm để mô tả cả nghĩa vụ phải hành động lẫn tác động tất yếu của hành động đó.",
+  "sceneImageUrl": "assets/minh-hoa/canh-hop-bao-xin-loi.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 9: Bắt buộc từ lương tâm (ずにはおかない & ないではすまない)",
   "vocabList": [
     {
       "id": "voc-n1-9-1",
@@ -12,6 +14,8 @@
       "romaji": "ayamarimasu",
       "wordType": "verb",
       "meaningVi": "Xin lỗi",
+      "imageUrl": "assets/minh-hoa/xin-loi.webp",
+      "imageAlt": "Xin lỗi",
       "accentNote": "謝らないでは すまない = bắt buộc phải xin lỗi.",
       "emotion": "cui_chao"
     },
@@ -23,6 +27,8 @@
       "romaji": "nattoku shimasu",
       "wordType": "verb",
       "meaningVi": "Đồng tình, chấp nhận, hiểu ra",
+      "imageUrl": "assets/minh-hoa/dong-tinh-hieu-ra.webp",
+      "imageAlt": "Đồng tình, chấp nhận, hiểu ra",
       "accentNote": "納得させずには おかない = chắc chắn sẽ khiến đồng tình."
     },
     {
@@ -33,6 +39,8 @@
       "romaji": "kisha",
       "wordType": "noun",
       "meaningVi": "Phóng viên, nhà báo",
+      "imageUrl": "assets/minh-hoa/phong-vien.webp",
+      "imageAlt": "Phóng viên, nhà báo",
       "accentNote": "記者が 質問します = phóng viên đặt câu hỏi."
     },
     {
@@ -43,6 +51,8 @@
       "romaji": "torimasu",
       "wordType": "verb",
       "meaningVi": "Lấy, chịu (trách nhiệm)",
+      "imageUrl": "assets/minh-hoa/lay.webp",
+      "imageAlt": "Lấy, chịu (trách nhiệm)",
       "accentNote": "責任を 取ります = chịu trách nhiệm."
     },
     {
@@ -53,6 +63,8 @@
       "romaji": "kaiken",
       "wordType": "noun",
       "meaningVi": "Cuộc họp báo, buổi phỏng vấn chính thức",
+      "imageUrl": "assets/minh-hoa/hop-bao.webp",
+      "imageAlt": "Cuộc họp báo, buổi phỏng vấn chính thức",
       "accentNote": "記者会見 = buổi họp báo."
     },
     {
@@ -63,6 +75,8 @@
       "romaji": "kotaemasu",
       "wordType": "verb",
       "meaningVi": "Trả lời",
+      "imageUrl": "assets/minh-hoa/tra-loi.webp",
+      "imageAlt": "Trả lời",
       "accentNote": "質問に 答えます = trả lời câu hỏi."
     },
     {
@@ -73,6 +87,8 @@
       "romaji": "kandou shimasu",
       "wordType": "verb",
       "meaningVi": "Cảm động",
+      "imageUrl": "assets/minh-hoa/cam-dong.webp",
+      "imageAlt": "Cảm động",
       "accentNote": "Đã gặp N3 bài 11.",
       "emotion": "vui"
     },
@@ -84,6 +100,8 @@
       "romaji": "setsumei shimasu",
       "wordType": "verb",
       "meaningVi": "Giải thích",
+      "imageUrl": "assets/minh-hoa/giai-thich.webp",
+      "imageAlt": "Giải thích",
       "accentNote": "Đã gặp N4 bài 34."
     },
     {
@@ -104,6 +122,8 @@
       "romaji": "eiga",
       "wordType": "noun",
       "meaningVi": "Phim, điện ảnh",
+      "imageUrl": "assets/minh-hoa/phim-n2n1.webp",
+      "imageAlt": "Phim, điện ảnh",
       "accentNote": "Đã gặp N5 bài 4."
     },
     {
@@ -114,6 +134,8 @@
       "romaji": "shitsumon",
       "wordType": "noun",
       "meaningVi": "Câu hỏi",
+      "imageUrl": "assets/minh-hoa/cau-hoi-n2n1.webp",
+      "imageAlt": "Câu hỏi",
       "accentNote": "Đã gặp N5 bài 11."
     },
     {
@@ -124,6 +146,8 @@
       "romaji": "shachou",
       "wordType": "noun",
       "meaningVi": "Giám đốc",
+      "imageUrl": "assets/minh-hoa/giam-doc.webp",
+      "imageAlt": "Giám đốc",
       "accentNote": "Đã gặp N4 bài 41."
     },
     {
@@ -134,6 +158,8 @@
       "romaji": "kaisha",
       "wordType": "noun",
       "meaningVi": "Công ty",
+      "imageUrl": "assets/minh-hoa/cong-ty-n2n1.webp",
+      "imageAlt": "Công ty",
       "accentNote": "Đã gặp N5 bài 3."
     },
     {
@@ -164,6 +190,8 @@
       "romaji": "tousan",
       "wordType": "noun",
       "meaningVi": "Phá sản",
+      "imageUrl": "assets/minh-hoa/pha-san.webp",
+      "imageAlt": "Phá sản",
       "accentNote": "Đã gặp N1 bài 5."
     },
     {
@@ -174,6 +202,8 @@
       "romaji": "fusei",
       "wordType": "noun",
       "meaningVi": "Sự bất chính, gian lận",
+      "imageUrl": "assets/minh-hoa/gian-lan.webp",
+      "imageAlt": "Sự bất chính, gian lận",
       "accentNote": "Đã gặp N1 bài 6."
     },
     {
@@ -184,6 +214,8 @@
       "romaji": "giin",
       "wordType": "noun",
       "meaningVi": "Nghị sĩ",
+      "imageUrl": "assets/minh-hoa/nghi-si.webp",
+      "imageAlt": "Nghị sĩ",
       "accentNote": "Đã gặp N1 bài 6."
     },
     {
@@ -194,6 +226,8 @@
       "romaji": "shinjimasu",
       "wordType": "verb",
       "meaningVi": "Tin tưởng",
+      "imageUrl": "assets/minh-hoa/tin-tuong.webp",
+      "imageAlt": "Tin tưởng",
       "accentNote": "Đã gặp N3 bài 1."
     },
     {
@@ -204,6 +238,8 @@
       "romaji": "shinrai",
       "wordType": "noun",
       "meaningVi": "Sự tin cậy",
+      "imageUrl": "assets/minh-hoa/tin-tuong.webp",
+      "imageAlt": "Sự tin cậy",
       "accentNote": "Đã gặp N1 bài 6."
     }
   ],
@@ -832,6 +868,7 @@
       "id": "dia-n1-9-2",
       "speaker": "社長",
       "speakerRole": "Giám đốc",
+      "avatarUrl": "assets/minh-hoa/nv-shacho.webp",
       "tokens": [
         {
           "id": "d9-6",
@@ -906,6 +943,7 @@
       "id": "dia-n1-9-4",
       "speaker": "社長",
       "speakerRole": "Giám đốc",
+      "avatarUrl": "assets/minh-hoa/nv-shacho.webp",
       "tokens": [
         {
           "id": "d9-16",
@@ -968,6 +1006,7 @@
       "id": "dia-n1-9-6",
       "speaker": "社長",
       "speakerRole": "Giám đốc",
+      "avatarUrl": "assets/minh-hoa/nv-shacho.webp",
       "tokens": [
         {
           "id": "d9-24",
@@ -1052,6 +1091,7 @@
       "id": "dia-n1-9-8",
       "speaker": "社長",
       "speakerRole": "Giám đốc",
+      "avatarUrl": "assets/minh-hoa/nv-shacho.webp",
       "tokens": [
         {
           "id": "d9-36",
@@ -1150,6 +1190,7 @@
       "id": "dia-n1-9-10",
       "speaker": "社長",
       "speakerRole": "Giám đốc",
+      "avatarUrl": "assets/minh-hoa/nv-shacho.webp",
       "tokens": [
         {
           "id": "d9-50",

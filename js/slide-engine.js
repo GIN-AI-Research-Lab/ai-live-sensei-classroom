@@ -96,6 +96,31 @@ window.closeImageLightbox = function(e) {
   if (modal) modal.classList.add('hidden');
 };
 
+/**
+ * Anh minh hoa AI (assets/minh-hoa/*.webp, SlideEngine.anhMinhHoa) tai loi: doi o anh sang hinh
+ * ve SVG cu (SenseiArt, class data-lop-svg) neu tu do co hinh ve; khong co thi bo o anh, hoac chi
+ * an di (data-loi="an") o noi bo cuc dua vao o anh (san khau giang).
+ */
+window.senseiAnhLoi = function(img) {
+  const o = img && img.closest('[data-anh-o]');
+  if (!o) { if (img) img.remove(); return; }
+  const d = o.dataset;
+  let svg = null;
+  try { svg = window.SenseiArt ? window.SenseiArt.get(d.k, d.w, d.f) : null; } catch (e) {}
+  if (svg && d.lopSvg != null) {
+    const alt = img.getAttribute('alt') || '';
+    o.className = d.lopSvg;
+    o.removeAttribute('onclick');
+    o.removeAttribute('data-anh-o');
+    if (o.hasAttribute('title')) o.title = alt ? 'Minh hoạ: ' + alt : '';
+    o.innerHTML = svg;
+  } else if (d.loi === 'an') {
+    o.style.visibility = 'hidden';
+  } else {
+    o.remove();
+  }
+};
+
 // Đóng modal khi bấm phím ESC.
 // Moi Esc chi dong MOT lop — lop tren cung. Lop nao da xu ly thi goi preventDefault(), cac bo nghe
 // sau (bang chon bai, o chat trong app.js, the ron) thay e.defaultPrevented thi thoi. Anh phong to
@@ -558,14 +583,13 @@ class SlideEngine {
 
       // Anh nho: anh that -> hinh ve SVG -> khong co gi (khong lap lai chu cua tu).
       // Giu .shrink-0: choGanHuyHieu() dung no de khong gan "Dang doc…" vao o anh.
+      // Anh loi -> senseiAnhLoi doi sang hinh ve SVG cung co (hoac bo o).
       const artSvg = v.imageUrl ? null : this.artFor(v);
       const visualThumbnailHtml = v.imageUrl ? `
-          <div class="vc-thumb shrink-0"
-               onclick="window.openImageLightbox('${this.jsAttr(v.imageUrl)}', '${this.jsAttr(kanjiOrWord)} (${this.jsAttr(v.furigana || v.word)})', '${this.jsAttr(v.meaningVi)}')"
-               title="Bấm để xem ảnh phóng to">
-            <img src="${this.escapeHtml(v.imageUrl)}" alt="${this.escapeHtml(v.imageAlt || v.meaningVi)}" loading="lazy"
-                 onerror="this.parentElement.remove()" />
-          </div>`
+          ${this.anhMinhHoa(v, {
+            lop: 'vc-thumb shrink-0', lopSvg: 'sensei-art sensei-art-sm shrink-0', co: 64, luoi: true,
+            them: ` onclick="window.openImageLightbox('${this.jsAttr(v.imageUrl)}', '${this.jsAttr(kanjiOrWord)} (${this.jsAttr(v.furigana || v.word)})', '${this.jsAttr(v.meaningVi)}')" title="Bấm để xem ảnh phóng to"`,
+          })}`
         : (artSvg ? `
           <div class="sensei-art sensei-art-sm shrink-0" title="Minh hoạ: ${this.escapeHtml(v.meaningVi || "")}">${artSvg}</div>` : '');
 
@@ -948,7 +972,7 @@ class SlideEngine {
         <div class="kw-ava is-anh"
              onclick="window.openImageLightbox('${this.jsAttr(line.avatarUrl)}', '${this.jsAttr(ten)}', 'Nhân vật hội thoại')"
              title="${this.escapeHtml(ten)}">
-          <img src="${line.avatarUrl}" alt="${this.escapeHtml(ten)}"
+          <img src="${this.escapeHtml(line.avatarUrl)}" alt="${this.escapeHtml(ten)}" width="36" height="36" loading="lazy" decoding="async"
                onerror="const o=this.parentElement; o.className='kw-ava is-chu${nguoiThu2.has(line.speaker) ? ' is-vien' : ''}'; o.textContent='${this.jsAttr(chuDau)}';" />
         </div>` : `
         <div class="kw-ava is-chu${nguoiThu2.has(line.speaker) ? ' is-vien' : ''}" aria-hidden="true">${this.escapeHtml(chuDau)}</div>`;
@@ -972,6 +996,16 @@ class SlideEngine {
         </div>`;
     }).join("");
 
+    // Tranh tinh huong cua bai (lesson.sceneImageUrl, tools/gan_anh.py): o vuong nho dau danh sach;
+    // man rong thi nep ben phai cac hang thoai (hang thoai la flex -> tu nhuong cho). Bam = phong to.
+    const canhHtml = lesson && lesson.sceneImageUrl ? `
+          <figure class="kw-canh"
+                  onclick="window.openImageLightbox('${this.jsAttr(lesson.sceneImageUrl)}', 'Tình huống hội thoại', '${this.jsAttr(lesson.title || '')}')"
+                  title="Bấm để xem tranh phóng to">
+            <img src="${this.escapeHtml(lesson.sceneImageUrl)}" alt="${this.escapeHtml(lesson.sceneImageAlt || 'Tranh tình huống hội thoại')}"
+                 width="240" height="240" loading="lazy" decoding="async" onerror="this.closest('.kw-canh').remove()" />
+          </figure>` : '';
+
     if (this.slideContent) {
       this.slideContent.className = this._lopNoiDung();
       this.slideContent.innerHTML = `
@@ -980,7 +1014,7 @@ class SlideEngine {
           <span class="deck-meta">${dialogue.length} lượt · ${thuTuNguoi.size} người nói</span>
         </header>
         <div class="deck-scroll custom-scrollbar kw-list">
-          ${dialogueHtml}
+          ${canhHtml}${dialogueHtml}
         </div>
       `;
     }
@@ -2087,6 +2121,26 @@ class SlideEngine {
     return window.SenseiArt.get(v.kanji, v.word, v.furigana);
   }
 
+  /**
+   * O anh minh hoa AI cua mot tu (v.imageUrl: webp vuong 512 nen kem #f0ebe1, gan boi
+   * tools/gan_anh.py). Moi noi ve tranh tu vung (the tu, spotlight, san khau) goi ham nay truoc,
+   * khong co imageUrl moi dung artFor() (SVG). Anh loi -> window.senseiAnhLoi.
+   * opts: lop (class o), lopSvg (class o khi doi sang SVG; bo trong = khong doi), co (px cho
+   * width/height cua <img>: giu cho, khong nhay bo cuc), luoi (loading="lazy"), loi ('an' = chi an
+   * o khi khong co SVG), alt ('' = anh trang tri), them (thuoc tinh them cho o: onclick, title...).
+   */
+  anhMinhHoa(v, opts = {}) {
+    if (!v || !v.imageUrl) return '';
+    const e = (s) => this.escapeHtml(s == null ? '' : String(s));
+    const co = opts.co || 512;
+    const alt = opts.alt === '' ? '' : (v.imageAlt || v.meaningVi || '');
+    return `<div class="${e(opts.lop)}" data-anh-o="1" data-k="${e(v.kanji)}" data-w="${e(v.word)}" data-f="${e(v.furigana)}"`
+      + (opts.lopSvg != null ? ` data-lop-svg="${e(opts.lopSvg)}"` : '')
+      + (opts.loi ? ` data-loi="${e(opts.loi)}"` : '')
+      + `${opts.them || ''}><img src="${e(v.imageUrl)}" alt="${e(alt)}" width="${co}" height="${co}"`
+      + `${opts.luoi ? ' loading="lazy"' : ''} decoding="async" onerror="window.senseiAnhLoi(this)" /></div>`;
+  }
+
   /** Ảnh minh hoạ cỡ lớn */
   buildImage(url, alt) {
     if (!url) return '';
@@ -2145,10 +2199,14 @@ class SlideEngine {
       const head = (v.kanji && v.furigana && v.furigana !== v.kanji)
         ? this.rubyTu(v.kanji, v.furigana)
         : this.escapeHtml(v.word);
-      // Thu tu uu tien: anh co san trong giao trinh -> hinh ve SVG.
-      const artSvg = this.artFor(v);
+      // Thu tu uu tien: anh co san trong giao trinh -> hinh ve SVG. Anh tu vung la o vuong
+      // (cung co voi hinh ve), khong phai dai ngang .spot-image (object-fit cover cat mat tranh).
+      const artSvg = v.imageUrl ? null : this.artFor(v);
       const visual = v.imageUrl
-        ? this.buildImage(v.imageUrl, v.imageAlt || v.meaningVi)
+        ? this.anhMinhHoa(v, {
+            lop: 'sensei-art sensei-art-lg is-anh', lopSvg: 'sensei-art sensei-art-lg', co: 240,
+            them: ` onclick="window.openImageLightbox('${this.jsAttr(v.imageUrl)}', '${this.jsAttr(word)}', '${this.jsAttr(v.meaningVi)}')" title="Bấm để xem ảnh phóng to"`,
+          })
         : (artSvg ? `<div class="sensei-art sensei-art-lg">${artSvg}</div>` : '');
 
       // Nut nghe ngay duoi nghia, ghi chu sau cung: tren dien thoai the thap, nut

@@ -3,6 +3,8 @@
   "lessonNumber": 2,
   "title": "Bài 2: Thói quen & Biến đổi (ようにする & ようになる)",
   "description": "ようにする diễn tả NỖ LỰC CHỦ ĐỘNG để đạt một mục tiêu/thói quen (chưa chắc đã thành công), đối lập với ようになる (N4 bài 36, KẾT QUẢ đã đạt được) — hai cấu trúc thường xuất hiện nối tiếp trong mạch kể chuyện thành công (nỗ lực → kết quả), cả hai đều ghép được với thể ない để diễn tả chiều ngược lại (tránh làm/mất khả năng).",
+  "sceneImageUrl": "assets/minh-hoa/canh-thoi-quen-song-khoe.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 2: Thói quen & Biến đổi (ようにする & ようになる)",
   "vocabList": [
     {
       "id": "voc-n3-2-1",
@@ -12,6 +14,8 @@
       "romaji": "doryoku shimasu",
       "wordType": "verb",
       "meaningVi": "Nỗ lực, cố gắng",
+      "imageUrl": "assets/minh-hoa/effort.webp",
+      "imageAlt": "Nỗ lực, cố gắng",
       "accentNote": "早く 寝る ように 努力しています = tôi đang nỗ lực để ngủ sớm."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "ishiki shimasu",
       "wordType": "verb",
       "meaningVi": "Ý thức, chú tâm tới",
+      "imageUrl": "assets/minh-hoa/mindful.webp",
+      "imageAlt": "Ý thức, chú tâm tới",
       "accentNote": "健康を 意識する ように なりました = tôi đã trở nên ý thức về sức khỏe."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "ki o tsukemasu",
       "wordType": "verb",
       "meaningVi": "Cẩn thận, lưu ý",
+      "imageUrl": "assets/minh-hoa/be-careful-n3.webp",
+      "imageAlt": "Cẩn thận, lưu ý",
       "accentNote": "Đã gặp N5 bài 15. 忘れない ように 気を付けます = tôi chú ý để không quên."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "kokorogakemasu",
       "wordType": "verb",
       "meaningVi": "Luôn để tâm, chú tâm thực hiện",
+      "imageUrl": "assets/minh-hoa/make-a-point-of.webp",
+      "imageAlt": "Luôn để tâm, chú tâm thực hiện",
       "accentNote": "毎日 運動する ように 心掛けています = tôi luôn để tâm tập thể dục mỗi ngày."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "undou shimasu",
       "wordType": "verb",
       "meaningVi": "Vận động, tập thể dục",
+      "imageUrl": "assets/minh-hoa/exercise-n3.webp",
+      "imageAlt": "Vận động, tập thể dục",
       "accentNote": "Đã gặp N4 bài 27."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "tabemasu",
       "wordType": "verb",
       "meaningVi": "Ăn",
+      "imageUrl": "assets/minh-hoa/eat-n3.webp",
+      "imageAlt": "Ăn",
       "accentNote": "Đã gặp N5 bài 6 — nay dùng làm ví dụ ようにする."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "nemasu",
       "wordType": "verb",
       "meaningVi": "Đi ngủ",
+      "imageUrl": "assets/minh-hoa/sleep.webp",
+      "imageAlt": "Đi ngủ",
       "accentNote": "Đã gặp N5 bài 4."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "okimasu",
       "wordType": "verb",
       "meaningVi": "Thức dậy",
+      "imageUrl": "assets/minh-hoa/wake-up-n3.webp",
+      "imageAlt": "Thức dậy",
       "accentNote": "Đã gặp N5 bài 4."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "kenkou",
       "wordType": "adjective",
       "meaningVi": "Sức khỏe, khỏe mạnh",
+      "imageUrl": "assets/minh-hoa/health-n3.webp",
+      "imageAlt": "Sức khỏe, khỏe mạnh",
       "accentNote": "Đã gặp N4 bài 32."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "seikatsu",
       "wordType": "noun",
       "meaningVi": "Cuộc sống, sinh hoạt",
+      "imageUrl": "assets/minh-hoa/daily-life-n3.webp",
+      "imageAlt": "Cuộc sống, sinh hoạt",
       "accentNote": "Đã gặp N4 bài 28."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "shuukan",
       "wordType": "noun",
       "meaningVi": "Thói quen",
+      "imageUrl": "assets/minh-hoa/habit-n3.webp",
+      "imageAlt": "Thói quen",
       "accentNote": "Đã gặp N4 bài 28."
     },
     {
@@ -122,6 +146,8 @@
       "romaji": "yasai",
       "wordType": "noun",
       "meaningVi": "Rau",
+      "imageUrl": "assets/minh-hoa/vegetables-n3.webp",
+      "imageAlt": "Rau",
       "accentNote": "Đã gặp N5 bài 6."
     },
     {
@@ -132,6 +158,8 @@
       "romaji": "taijuu",
       "wordType": "noun",
       "meaningVi": "Cân nặng",
+      "imageUrl": "assets/minh-hoa/body-weight-n3.webp",
+      "imageAlt": "Cân nặng",
       "accentNote": "Đã gặp N4 bài 32."
     },
     {
@@ -142,6 +170,8 @@
       "romaji": "ishiki",
       "wordType": "noun",
       "meaningVi": "Ý thức",
+      "imageUrl": "assets/minh-hoa/mindful.webp",
+      "imageAlt": "Ý thức",
       "accentNote": "健康を 意識して います = tôi đang có ý thức về sức khỏe."
     },
     {
@@ -152,6 +182,8 @@
       "romaji": "doryoku",
       "wordType": "noun",
       "meaningVi": "Sự nỗ lực, sự cố gắng",
+      "imageUrl": "assets/minh-hoa/effort.webp",
+      "imageAlt": "Sự nỗ lực, sự cố gắng",
       "accentNote": "努力すれば、できます = nếu nỗ lực thì làm được."
     },
     {
@@ -162,6 +194,8 @@
       "romaji": "byouki",
       "wordType": "noun",
       "meaningVi": "Bệnh, ốm",
+      "imageUrl": "assets/minh-hoa/sick-n3.webp",
+      "imageAlt": "Bệnh, ốm",
       "accentNote": "Đã gặp N5 bài 17."
     },
     {
@@ -172,6 +206,8 @@
       "romaji": "shigoto",
       "wordType": "noun",
       "meaningVi": "Công việc",
+      "imageUrl": "assets/minh-hoa/work.webp",
+      "imageAlt": "Công việc",
       "accentNote": "Đã gặp N5 bài 9."
     },
     {
@@ -182,6 +218,8 @@
       "romaji": "jikan",
       "wordType": "noun",
       "meaningVi": "Thời gian",
+      "imageUrl": "assets/minh-hoa/time-n3.webp",
+      "imageAlt": "Thời gian",
       "accentNote": "Đã gặp N5 bài 4."
     },
     {
@@ -192,6 +230,8 @@
       "romaji": "karada",
       "wordType": "noun",
       "meaningVi": "Cơ thể, sức khỏe",
+      "imageUrl": "assets/minh-hoa/body.webp",
+      "imageAlt": "Cơ thể, sức khỏe",
       "accentNote": "Đã gặp N5 bài 16."
     },
     {
@@ -742,6 +782,7 @@
       "id": "dia-n3-2-1",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d2-1",
@@ -798,6 +839,7 @@
       "id": "dia-n3-2-2",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d2-9",
@@ -852,6 +894,7 @@
       "id": "dia-n3-2-3",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d2-17",
@@ -877,6 +920,7 @@
       "id": "dia-n3-2-4",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d2-20",
@@ -943,6 +987,7 @@
       "id": "dia-n3-2-5",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d2-30",
@@ -996,6 +1041,7 @@
       "id": "dia-n3-2-6",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d2-38",
@@ -1064,6 +1110,7 @@
       "id": "dia-n3-2-7",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d2-48",
@@ -1132,6 +1179,7 @@
       "id": "dia-n3-2-8",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d2-58",
@@ -1201,6 +1249,7 @@
       "id": "dia-n3-2-9",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d2-69",
@@ -1257,6 +1306,7 @@
       "id": "dia-n3-2-10",
       "speaker": "山田",
       "speakerRole": "Nhân viên công ty",
+      "avatarUrl": "assets/minh-hoa/nv-yamada.webp",
       "tokens": [
         {
           "id": "d2-77",

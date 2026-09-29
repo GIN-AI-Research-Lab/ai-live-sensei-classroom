@@ -3,6 +3,8 @@
   "lessonNumber": 17,
   "title": "Bài 17: Thể ない (Vないでください / Vなければなりません / Vなくてもいいです)",
   "description": "Chia động từ sang thể ない (phủ định thân mật, nền tảng cho nhiều cấu trúc), yêu cầu không làm bằng Vないでください, nghĩa vụ bắt buộc bằng Vなければなりません, và việc không bắt buộc bằng Vなくてもいいです — bốn cấu trúc てもいい/てはいけません/なければならない/なくてもいい tạo thành hai cặp đối lập cần nhớ cùng nhau.",
+  "sceneImageUrl": "assets/minh-hoa/canh-kham-benh-uong-thuoc.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 17: Thể ない (Vないでください / Vなければなりません / Vなくてもいいです)",
   "vocabList": [
     {
       "id": "voc-n5-17-1",
@@ -12,6 +14,8 @@
       "romaji": "nomimasu",
       "wordType": "verb",
       "meaningVi": "Uống (thuốc, nước)",
+      "imageUrl": "assets/minh-hoa/uong.webp",
+      "imageAlt": "Uống (thuốc, nước)",
       "accentNote": "Thể ない: 飲まない. Nhóm 1 đuôi む→まない."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "kakimasu",
       "wordType": "verb",
       "meaningVi": "Viết",
+      "imageUrl": "assets/minh-hoa/viet.webp",
+      "imageAlt": "Viết",
       "accentNote": "Thể ない: 書かない. Nhóm 1 đuôi く→かない."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "tabemasu",
       "wordType": "verb",
       "meaningVi": "Ăn",
+      "imageUrl": "assets/minh-hoa/an.webp",
+      "imageAlt": "Ăn",
       "accentNote": "Thể ない: 食べない. Nhóm 2: bỏ ます thêm ない."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "kimasu",
       "wordType": "verb",
       "meaningVi": "Đến",
+      "imageUrl": "assets/minh-hoa/den.webp",
+      "imageAlt": "Đến",
       "accentNote": "Thể ない: 来ない (こない — đọc khác hẳn 来る). Nhóm 3 bất quy tắc."
     },
     {
@@ -62,6 +72,8 @@
       "romaji": "wasuremasu",
       "wordType": "verb",
       "meaningVi": "Quên",
+      "imageUrl": "assets/minh-hoa/quen.webp",
+      "imageAlt": "Quên",
       "accentNote": "Thể ない: 忘れない. Nhóm 2."
     },
     {
@@ -72,6 +84,8 @@
       "romaji": "hairimasu",
       "wordType": "verb",
       "meaningVi": "Vào",
+      "imageUrl": "assets/minh-hoa/vao.webp",
+      "imageAlt": "Vào",
       "accentNote": "Đã gặp bài 15. Thể ない: 入らない (nhóm 1 dù trông giống nhóm 2)."
     },
     {
@@ -82,6 +96,8 @@
       "romaji": "suimasu",
       "wordType": "verb",
       "meaningVi": "Hút thuốc",
+      "imageUrl": "assets/minh-hoa/hut-thuoc.webp",
+      "imageAlt": "Hút thuốc",
       "accentNote": "Đã gặp bài 6. Thể ない: 吸わない (đuôi う→わない, KHÔNG phải あない)."
     },
     {
@@ -92,6 +108,8 @@
       "romaji": "kusuri",
       "wordType": "noun",
       "meaningVi": "Thuốc",
+      "imageUrl": "assets/minh-hoa/thuoc.webp",
+      "imageAlt": "Thuốc",
       "accentNote": "薬を 飲みます (uống thuốc, KHÔNG nói 食べます thuốc)."
     },
     {
@@ -102,6 +120,8 @@
       "romaji": "byouki",
       "wordType": "noun",
       "meaningVi": "Bệnh, ốm",
+      "imageUrl": "assets/minh-hoa/benh-om.webp",
+      "imageAlt": "Bệnh, ốm",
       "accentNote": "病気に なります = bị bệnh.",
       "emotion": "buon"
     },
@@ -113,6 +133,8 @@
       "romaji": "byouin",
       "wordType": "noun",
       "meaningVi": "Bệnh viện",
+      "imageUrl": "assets/minh-hoa/benh-vien.webp",
+      "imageAlt": "Bệnh viện",
       "accentNote": "Đã gặp bài 3."
     },
     {
@@ -123,6 +145,8 @@
       "romaji": "isha",
       "wordType": "noun",
       "meaningVi": "Bác sĩ",
+      "imageUrl": "assets/minh-hoa/bac-si.webp",
+      "imageAlt": "Bác sĩ",
       "accentNote": "Đã gặp bài 1."
     },
     {
@@ -133,6 +157,8 @@
       "romaji": "shukudai",
       "wordType": "noun",
       "meaningVi": "Bài tập về nhà",
+      "imageUrl": "assets/minh-hoa/bai-tap-ve-nha.webp",
+      "imageAlt": "Bài tập về nhà",
       "accentNote": "Đã gặp bài 7 — nay dùng làm nghĩa vụ."
     },
     {
@@ -143,6 +169,8 @@
       "romaji": "kaigi",
       "wordType": "noun",
       "meaningVi": "Cuộc họp",
+      "imageUrl": "assets/minh-hoa/cuoc-hop.webp",
+      "imageAlt": "Cuộc họp",
       "accentNote": "会議に 出ます = tham dự họp."
     },
     {
@@ -153,6 +181,8 @@
       "romaji": "pasupooto",
       "wordType": "noun",
       "meaningVi": "Hộ chiếu",
+      "imageUrl": "assets/minh-hoa/ho-chieu.webp",
+      "imageAlt": "Hộ chiếu",
       "accentNote": "パスポートを 忘れないで ください = xin đừng quên hộ chiếu."
     },
     {
@@ -163,6 +193,8 @@
       "romaji": "unten",
       "wordType": "noun",
       "meaningVi": "Việc lái xe",
+      "imageUrl": "assets/minh-hoa/lai-xe.webp",
+      "imageAlt": "Việc lái xe",
       "accentNote": "運転します = lái xe."
     },
     {
@@ -173,6 +205,8 @@
       "romaji": "menkyo",
       "wordType": "noun",
       "meaningVi": "Giấy phép, bằng lái",
+      "imageUrl": "assets/minh-hoa/bang-lai.webp",
+      "imageAlt": "Giấy phép, bằng lái",
       "accentNote": "運転免許 = bằng lái xe."
     },
     {
@@ -183,6 +217,8 @@
       "romaji": "tesuto",
       "wordType": "noun",
       "meaningVi": "Bài kiểm tra",
+      "imageUrl": "assets/minh-hoa/bai-kiem-tra.webp",
+      "imageAlt": "Bài kiểm tra",
       "accentNote": "Đã gặp bài 15."
     },
     {
@@ -193,6 +229,8 @@
       "romaji": "daijoubu",
       "wordType": "adjective",
       "meaningVi": "Ổn, không sao",
+      "imageUrl": "assets/minh-hoa/on-khong-sao.webp",
+      "imageAlt": "Ổn, không sao",
       "accentNote": "Đã gặp bài 15."
     },
     {
@@ -203,6 +241,8 @@
       "romaji": "shinpai",
       "wordType": "adjective",
       "meaningVi": "Lo lắng",
+      "imageUrl": "assets/minh-hoa/lo-lang.webp",
+      "imageAlt": "Lo lắng",
       "accentNote": "Tính từ な. 心配しないで ください = xin đừng lo.",
       "emotion": "buon"
     }
@@ -706,6 +746,7 @@
       "id": "dia-n5-17-1",
       "speaker": "ミラー",
       "speakerRole": "Bệnh nhân",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l17-1",
@@ -810,6 +851,7 @@
       "id": "dia-n5-17-3",
       "speaker": "ミラー",
       "speakerRole": "Bệnh nhân",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l17-16",
@@ -918,6 +960,7 @@
       "id": "dia-n5-17-5",
       "speaker": "ミラー",
       "speakerRole": "Bệnh nhân",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l17-32",
@@ -1029,6 +1072,7 @@
       "id": "dia-n5-17-7",
       "speaker": "ミラー",
       "speakerRole": "Bệnh nhân",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l17-49",
@@ -1144,6 +1188,7 @@
       "id": "dia-n5-17-9",
       "speaker": "ミラー",
       "speakerRole": "Bệnh nhân",
+      "avatarUrl": "assets/minh-hoa/nv-miller.webp",
       "tokens": [
         {
           "id": "d-l17-66",

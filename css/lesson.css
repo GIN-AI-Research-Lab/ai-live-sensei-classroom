@@ -833,3 +833,26 @@
   .rx-de { line-height: 1.6; }
   .rx-khung { max-width: clamp(170px, 28dvh, 240px); }
 }
+
+/* --- Anh minh hoa AI (assets/minh-hoa/*.webp, SlideEngine.anhMinhHoa) ------------------
+   Anh vuong 512 nen kem #f0ebe1 (--anh-kem): o anh to dung mau do, anh phu kin o (cover tren
+   o vuong = khong cat) -> khong vien kep, khong lo o toi quanh anh. Anh loi -> hinh ve SVG. */
+.vc-thumb { background: var(--anh-kem); }
+.sensei-art.sensei-art-lg.is-anh { padding: 0; background: var(--anh-kem); cursor: zoom-in; }
+.sensei-art.is-anh img { display: block; width: 100%; height: 100%; object-fit: cover; }
+/* Chan dung nguoi noi (dialogue[].avatarUrl): anh ban than -> phong len quanh mat cho vong 36 px */
+.kw-ava.is-anh { background: var(--anh-kem); }
+.kw-ava.is-anh img { transform: scale(1.5); transform-origin: 50% 36%; }
+/* Tranh tinh huong (lesson.sceneImageUrl): o vuong dau danh sach thoai; man rong nep ben phai */
+.kw-canh {
+  width: min(150px, 40vw); aspect-ratio: 1;
+  margin: 0 auto 4px;
+  border-radius: 16px; overflow: hidden;
+  background: var(--anh-kem);
+  cursor: zoom-in;
+}
+.kw-canh img { display: block; width: 100%; height: 100%; object-fit: cover; }
+@media (min-width: 1100px) {
+  .kw-canh { float: right; width: clamp(200px, 20vw, 280px); margin: 0 0 12px 20px; }
+  .kw-canh + .kw-row { margin-top: 0; }
+}

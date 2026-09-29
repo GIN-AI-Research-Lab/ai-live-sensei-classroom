@@ -12,6 +12,8 @@
       "romaji": "terebi",
       "wordType": "noun",
       "meaningVi": "Ti vi",
+      "imageUrl": "assets/minh-hoa/tivi.webp",
+      "imageAlt": "Ti vi",
       "accentNote": "Ba nhịp te-re-bi; ビ có dấu ゛ nên là 'b', không phải 'p'.",
       "emotion": "vui"
     },
@@ -23,6 +25,8 @@
       "romaji": "gitaa",
       "wordType": "noun",
       "meaningVi": "Đàn ghi-ta",
+      "imageUrl": "assets/minh-hoa/dan-guitar.webp",
+      "imageAlt": "Đàn ghi-ta",
       "accentNote": "ギ đọc 'ghi' (không phải 'zi'); ター kéo dài 'taa'.",
       "emotion": "vui"
     },
@@ -56,6 +60,8 @@
       "romaji": "doa",
       "wordType": "noun",
       "meaningVi": "Cánh cửa",
+      "imageUrl": "assets/minh-hoa/door.webp",
+      "imageAlt": "Cánh cửa",
       "accentNote": "Hai nhịp tách rõ do-a.",
       "emotion": "suy_nghi"
     },
@@ -67,6 +73,8 @@
       "romaji": "basu",
       "wordType": "noun",
       "meaningVi": "Xe buýt",
+      "imageUrl": "assets/minh-hoa/xe-buyt.webp",
+      "imageAlt": "Xe buýt",
       "accentNote": "ス cuối gần như câm: nghe như 'bas'.",
       "emotion": "vui"
     },
@@ -78,6 +86,8 @@
       "romaji": "pan",
       "wordType": "noun",
       "meaningVi": "Bánh mì (gốc tiếng Bồ Đào Nha 'pão')",
+      "imageUrl": "assets/minh-hoa/banh-mi.webp",
+      "imageAlt": "Bánh mì (gốc tiếng Bồ Đào Nha 'pão')",
       "accentNote": "Hai nhịp pa-n; 'p' bật bằng hai môi.",
       "emotion": "vui"
     },
@@ -89,6 +99,8 @@
       "romaji": "pen",
       "wordType": "noun",
       "meaningVi": "Cây bút",
+      "imageUrl": "assets/minh-hoa/but.webp",
+      "imageAlt": "Cây bút",
       "accentNote": "Hai nhịp pe-n; ン ngậm mũi.",
       "emotion": "suy_nghi"
     },
@@ -144,6 +156,8 @@
       "romaji": "paatii",
       "wordType": "noun",
       "meaningVi": "Bữa tiệc",
+      "imageUrl": "assets/minh-hoa/party.webp",
+      "imageAlt": "Bữa tiệc",
       "accentNote": "Bốn nhịp pa-a-ti-i; ティ là 'ti', không phải 'chi'.",
       "emotion": "vui"
     },
@@ -199,6 +213,8 @@
       "romaji": "nyuusu",
       "wordType": "noun",
       "meaningVi": "Tin tức, thời sự",
+      "imageUrl": "assets/minh-hoa/tin-tuc.webp",
+      "imageAlt": "Tin tức, thời sự",
       "accentNote": "Ba nhịp nyu-u-su; ニュ đọc liền.",
       "emotion": "suy_nghi"
     },
@@ -221,6 +237,8 @@
       "romaji": "chokoreeto",
       "wordType": "noun",
       "meaningVi": "Sô-cô-la",
+      "imageUrl": "assets/minh-hoa/socola.webp",
+      "imageAlt": "Sô-cô-la",
       "accentNote": "Năm nhịp cho-ko-re-e-to; チョ chỉ tính một nhịp.",
       "emotion": "vui"
     }

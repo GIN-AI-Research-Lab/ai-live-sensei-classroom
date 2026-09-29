@@ -3,6 +3,8 @@
   "lessonNumber": 1,
   "title": "Bài 1: Phán đoán chắc chắn (わけがない & わけではない)",
   "description": "Bài mở đầu N3: わけがない diễn tả phủ định MẠNH MẼ, chủ quan ('không đời nào', dựa trên niềm tin/kinh nghiệm cá nhân — khác はずがない khách quan hơn ở N2), và わけではない diễn tả phủ định MỘT PHẦN, nhẹ nhàng ('không hẳn là', thường dùng đính chính hiểu lầm, đi kèm でも/しかし).",
+  "sceneImageUrl": "assets/minh-hoa/canh-pha-ky-luc-bat-ngo.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 1: Phán đoán chắc chắn (わけがない & わけではない)",
   "vocabList": [
     {
       "id": "voc-n3-1-1",
@@ -12,6 +14,8 @@
       "romaji": "shinjimasu",
       "wordType": "verb",
       "meaningVi": "Tin tưởng",
+      "imageUrl": "assets/minh-hoa/trust.webp",
+      "imageAlt": "Tin tưởng",
       "accentNote": "そんな こと 信じられません = tôi không thể tin chuyện đó."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "gokai shimasu",
       "wordType": "verb",
       "meaningVi": "Hiểu lầm",
+      "imageUrl": "assets/minh-hoa/misunderstand.webp",
+      "imageAlt": "Hiểu lầm",
       "accentNote": "誤解しないで ください = xin đừng hiểu lầm."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "kanchigai shimasu",
       "wordType": "verb",
       "meaningVi": "Nhầm lẫn, hiểu sai",
+      "imageUrl": "assets/minh-hoa/mistaken-identity.webp",
+      "imageAlt": "Nhầm lẫn, hiểu sai",
       "accentNote": "何か 勘違いして いるようです = có vẻ (bạn) đang nhầm lẫn điều gì đó."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "joutatsu shimasu",
       "wordType": "verb",
       "meaningVi": "Tiến bộ, tiến triển",
+      "imageUrl": "assets/minh-hoa/improve-skill.webp",
+      "imageAlt": "Tiến bộ, tiến triển",
       "accentNote": "日本語が 上達しました = tiếng Nhật đã tiến bộ."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "senmon desu",
       "wordType": "phrase",
       "meaningVi": "Là chuyên môn (thể thông thường: 専門だ)",
+      "imageUrl": "assets/minh-hoa/specialty.webp",
+      "imageAlt": "Là chuyên môn (thể thông thường: 専門だ)",
       "accentNote": "彼の 専門だ から = vì đó là chuyên môn của anh ấy."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "senmon",
       "wordType": "noun",
       "meaningVi": "Chuyên môn, ngành học",
+      "imageUrl": "assets/minh-hoa/specialty.webp",
+      "imageAlt": "Chuyên môn, ngành học",
       "accentNote": "医学が 専門です = chuyên môn là y học."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "kuwashii",
       "wordType": "adjective",
       "meaningVi": "Rành, tường tận, chi tiết",
+      "imageUrl": "assets/minh-hoa/knowledgeable.webp",
+      "imageAlt": "Rành, tường tận, chi tiết",
       "accentNote": "この分野に 詳しい 人 = người rành lĩnh vực này."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "nigate",
       "wordType": "adjective",
       "meaningVi": "Kém, không giỏi (tính từ な)",
+      "imageUrl": "assets/minh-hoa/bad-at.webp",
+      "imageAlt": "Kém, không giỏi (tính từ な)",
       "accentNote": "Đã gặp N4 bài 38."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "jishin",
       "wordType": "noun",
       "meaningVi": "Sự tự tin",
+      "imageUrl": "assets/minh-hoa/confidence.webp",
+      "imageAlt": "Sự tự tin",
       "accentNote": "自信が ある わけではありません = không phải là (tôi) có tự tin."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "keiken",
       "wordType": "noun",
       "meaningVi": "Kinh nghiệm, trải nghiệm",
+      "imageUrl": "assets/minh-hoa/experience.webp",
+      "imageAlt": "Kinh nghiệm, trải nghiệm",
       "accentNote": "Đã gặp N5 bài 19."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "seikaku",
       "wordType": "noun",
       "meaningVi": "Tính cách",
+      "imageUrl": "assets/minh-hoa/personality.webp",
+      "imageAlt": "Tính cách",
       "accentNote": "彼は そういう 性格じゃない = anh ấy không phải kiểu tính cách đó."
     },
     {
@@ -132,6 +156,8 @@
       "romaji": "kekka",
       "wordType": "noun",
       "meaningVi": "Kết quả",
+      "imageUrl": "assets/minh-hoa/result.webp",
+      "imageAlt": "Kết quả",
       "accentNote": "この 結果は 偶然の わけがない = kết quả này không thể nào là ngẫu nhiên được."
     },
     {
@@ -142,6 +168,8 @@
       "romaji": "guuzen",
       "wordType": "adjective",
       "meaningVi": "Ngẫu nhiên, tình cờ (danh từ/tính từ な)",
+      "imageUrl": "assets/minh-hoa/coincidence.webp",
+      "imageAlt": "Ngẫu nhiên, tình cờ (danh từ/tính từ な)",
       "accentNote": "偶然じゃない = không phải ngẫu nhiên."
     },
     {
@@ -152,6 +180,8 @@
       "romaji": "tokui",
       "wordType": "adjective",
       "meaningVi": "Giỏi, sở trường",
+      "imageUrl": "assets/minh-hoa/good-at.webp",
+      "imageAlt": "Giỏi, sở trường",
       "accentNote": "彼は 数学が 得意な わけではありません = không phải anh ấy giỏi toán."
     },
     {
@@ -162,6 +192,8 @@
       "romaji": "sanka",
       "wordType": "noun",
       "meaningVi": "Sự tham gia",
+      "imageUrl": "assets/minh-hoa/join.webp",
+      "imageAlt": "Sự tham gia",
       "accentNote": "パーティーに 参加する わけには いきません = không thể nào tham gia bữa tiệc được (chưa học đủ, chỉ minh họa từ vựng)."
     },
     {
@@ -172,6 +204,8 @@
       "romaji": "sansei",
       "wordType": "noun",
       "meaningVi": "Sự tán thành, đồng ý",
+      "imageUrl": "assets/minh-hoa/agree.webp",
+      "imageAlt": "Sự tán thành, đồng ý",
       "accentNote": "みんなが 賛成した わけではありません = không phải mọi người đều tán thành."
     },
     {
@@ -182,6 +216,8 @@
       "romaji": "kiroku",
       "wordType": "noun",
       "meaningVi": "Kỷ lục, ghi chép",
+      "imageUrl": "assets/minh-hoa/record.webp",
+      "imageAlt": "Kỷ lục, ghi chép",
       "accentNote": "彼が この 記録を 破った わけがない = không thể nào anh ấy phá được kỷ lục này."
     },
     {
@@ -203,6 +239,8 @@
       "romaji": "setsumei",
       "wordType": "noun",
       "meaningVi": "Lời giải thích",
+      "imageUrl": "assets/minh-hoa/explain-n3.webp",
+      "imageAlt": "Lời giải thích",
       "accentNote": "Đã gặp N4 bài 34."
     }
   ],
@@ -761,6 +799,7 @@
       "id": "dia-n3-1-1",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d1-1",
@@ -817,6 +856,7 @@
       "id": "dia-n3-1-2",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d1-9",
@@ -890,6 +930,7 @@
       "id": "dia-n3-1-3",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d1-21",
@@ -944,6 +985,7 @@
       "id": "dia-n3-1-4",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d1-29",
@@ -1025,6 +1067,7 @@
       "id": "dia-n3-1-5",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d1-42",
@@ -1122,6 +1165,7 @@
       "id": "dia-n3-1-6",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d1-57",
@@ -1172,6 +1216,7 @@
       "id": "dia-n3-1-7",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d1-64",
@@ -1228,6 +1273,7 @@
       "id": "dia-n3-1-8",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d1-72",
@@ -1286,6 +1332,7 @@
       "id": "dia-n3-1-9",
       "speaker": "田中",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d1-80",
@@ -1353,6 +1400,7 @@
       "id": "dia-n3-1-10",
       "speaker": "サントス",
       "speakerRole": "Đồng nghiệp",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d1-91",

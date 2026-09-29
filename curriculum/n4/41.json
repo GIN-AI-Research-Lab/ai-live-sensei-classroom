@@ -3,6 +3,8 @@
   "lessonNumber": 41,
   "title": "Bài 41: Kính ngữ cho nhận (やる / あげる / さしあげる, いただく, くださる)",
   "description": "Mở rộng bộ ba cho-nhận (N5 bài 7, 24) sang kính ngữ: ba bậc của あげる (やる<あげる<差し上げる tùy địa vị người nhận), いただきます (khiêm nhường ngữ của もらいます, hạ mình khi nhận), và くださいます (tôn kính ngữ của くれます, nâng người trên khi họ cho mình) — nền tảng cho 尊敬語/謙譲語 sẽ học đầy đủ ở bài 49-50.",
+  "sceneImageUrl": "assets/minh-hoa/canh-qua-sinh-nhat-duoi-hoa-anh-dao.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 41: Kính ngữ cho nhận (やる / あげる / さしあげる, いただく, くださる)",
   "vocabList": [
     {
       "id": "voc-n4-41-1",
@@ -12,6 +14,8 @@
       "romaji": "yarimasu",
       "wordType": "verb",
       "meaningVi": "Cho, tặng (cho vật/động thực vật, dưới mình)",
+      "imageUrl": "assets/minh-hoa/feed-animal.webp",
+      "imageAlt": "Cho, tặng (cho vật/động thực vật, dưới mình)",
       "accentNote": "Bậc THẤP NHẤT của あげる — cho hoa/thú cưng ăn, hoặc nói với em nhỏ thân mật."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "agemasu",
       "wordType": "verb",
       "meaningVi": "Cho, tặng (ngang hàng)",
+      "imageUrl": "assets/minh-hoa/give.webp",
+      "imageAlt": "Cho, tặng (ngang hàng)",
       "accentNote": "Đã gặp N5 bài 7, 24. Bậc TRUNG TÍNH."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "sashiagemasu",
       "wordType": "verb",
       "meaningVi": "Kính biếu, kính tặng (cho người trên)",
+      "imageUrl": "assets/minh-hoa/present-humbly.webp",
+      "imageAlt": "Kính biếu, kính tặng (cho người trên)",
       "accentNote": "Bậc CAO NHẤT của あげる — dùng khi tặng thầy cô, cấp trên, khách hàng."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "itadakimasu",
       "wordType": "verb",
       "meaningVi": "Được nhận (khiêm nhường, từ người trên)",
+      "imageUrl": "assets/minh-hoa/receive-humbly.webp",
+      "imageAlt": "Được nhận (khiêm nhường, từ người trên)",
       "accentNote": "Khiêm nhường ngữ của もらいます — hạ mình khi nhận từ người trên."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "kudasaimasu",
       "wordType": "verb",
       "meaningVi": "Được ban cho (tôn kính, từ người trên)",
+      "imageUrl": "assets/minh-hoa/kindly-give.webp",
+      "imageAlt": "Được ban cho (tôn kính, từ người trên)",
       "accentNote": "Tôn kính ngữ của くれます — NÂNG người trên khi họ cho mình."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "moraimasu",
       "wordType": "verb",
       "meaningVi": "Nhận, được (trung tính)",
+      "imageUrl": "assets/minh-hoa/receive.webp",
+      "imageAlt": "Nhận, được (trung tính)",
       "accentNote": "Đã gặp N5 bài 7, 24."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "kuremasu",
       "wordType": "verb",
       "meaningVi": "Cho (người khác làm cho mình, trung tính)",
+      "imageUrl": "assets/minh-hoa/give-to-me.webp",
+      "imageAlt": "Cho (người khác làm cho mình, trung tính)",
       "accentNote": "Đã gặp N5 bài 24."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "purezento",
       "wordType": "noun",
       "meaningVi": "Món quà",
+      "imageUrl": "assets/minh-hoa/present-gift.webp",
+      "imageAlt": "Món quà",
       "accentNote": "プレゼントを 頂きました = tôi đã được nhận quà (khiêm nhường)."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "hanami",
       "wordType": "noun",
       "meaningVi": "Ngắm hoa anh đào",
+      "imageUrl": "assets/minh-hoa/hanami.webp",
+      "imageAlt": "Ngắm hoa anh đào",
       "accentNote": "花見の チケットを 差し上げます = kính biếu vé xem hoa anh đào."
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "sensei",
       "wordType": "noun",
       "meaningVi": "Thầy/cô giáo",
+      "imageUrl": "assets/minh-hoa/teacher.webp",
+      "imageAlt": "Thầy/cô giáo",
       "accentNote": "先生に 花を 差し上げました = tôi đã kính biếu hoa cho thầy giáo."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "shachou",
       "wordType": "noun",
       "meaningVi": "Giám đốc công ty",
+      "imageUrl": "assets/minh-hoa/company-president.webp",
+      "imageAlt": "Giám đốc công ty",
       "accentNote": "社長が 本を くださいました = giám đốc đã ban tặng cho tôi quyển sách."
     },
     {
@@ -122,6 +146,8 @@
       "romaji": "ryoushin",
       "wordType": "noun",
       "meaningVi": "Cha mẹ",
+      "imageUrl": "assets/minh-hoa/parents.webp",
+      "imageAlt": "Cha mẹ",
       "accentNote": "Đã gặp N5 bài 20."
     },
     {
@@ -132,6 +158,8 @@
       "romaji": "tanjoubi",
       "wordType": "noun",
       "meaningVi": "Sinh nhật",
+      "imageUrl": "assets/minh-hoa/birthday.webp",
+      "imageAlt": "Sinh nhật",
       "accentNote": "Đã gặp N5 bài 5."
     },
     {
@@ -142,6 +170,8 @@
       "romaji": "hana",
       "wordType": "noun",
       "meaningVi": "Hoa",
+      "imageUrl": "assets/minh-hoa/flower.webp",
+      "imageAlt": "Hoa",
       "accentNote": "Đã gặp N5 bài 16."
     },
     {
@@ -152,6 +182,8 @@
       "romaji": "hon",
       "wordType": "noun",
       "meaningVi": "Quyển sách",
+      "imageUrl": "assets/minh-hoa/book.webp",
+      "imageAlt": "Quyển sách",
       "accentNote": "Đã gặp N5 bài 2."
     },
     {
@@ -162,6 +194,8 @@
       "romaji": "inu",
       "wordType": "noun",
       "meaningVi": "Con chó",
+      "imageUrl": "assets/minh-hoa/dog.webp",
+      "imageAlt": "Con chó",
       "accentNote": "Đã gặp N5 bài 10 — nay dùng làm ví dụ やります."
     },
     {
@@ -172,6 +206,8 @@
       "romaji": "mizu",
       "wordType": "noun",
       "meaningVi": "Nước",
+      "imageUrl": "assets/minh-hoa/water.webp",
+      "imageAlt": "Nước",
       "accentNote": "犬に 水を やります = cho chó uống nước."
     },
     {
@@ -182,6 +218,8 @@
       "romaji": "shain",
       "wordType": "noun",
       "meaningVi": "Nhân viên công ty",
+      "imageUrl": "assets/minh-hoa/company-employee.webp",
+      "imageAlt": "Nhân viên công ty",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -192,6 +230,8 @@
       "romaji": "okyakusan",
       "wordType": "noun",
       "meaningVi": "Vị khách",
+      "imageUrl": "assets/minh-hoa/customer.webp",
+      "imageAlt": "Vị khách",
       "accentNote": "お客さんに お茶を 差し上げます = kính mời khách dùng trà."
     },
     {
@@ -202,6 +242,8 @@
       "romaji": "arigatai",
       "wordType": "adjective",
       "meaningVi": "Đáng quý, biết ơn",
+      "imageUrl": "assets/minh-hoa/grateful.webp",
+      "imageAlt": "Đáng quý, biết ơn",
       "accentNote": "先生に 教えて いただき、ありがたいです = được thầy dạy cho, thật đáng quý.",
       "emotion": "vui"
     }
@@ -696,6 +738,7 @@
       "id": "dia-n4-41-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l41-1",
@@ -759,6 +802,7 @@
       "id": "dia-n4-41-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l41-11",
@@ -800,6 +844,7 @@
       "id": "dia-n4-41-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l41-17",
@@ -849,6 +894,7 @@
       "id": "dia-n4-41-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l41-24",
@@ -898,6 +944,7 @@
       "id": "dia-n4-41-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l41-31",
@@ -957,6 +1004,7 @@
       "id": "dia-n4-41-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l41-40",
@@ -993,6 +1041,7 @@
       "id": "dia-n4-41-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l41-45",
@@ -1032,6 +1081,7 @@
       "id": "dia-n4-41-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l41-50",
@@ -1079,6 +1129,7 @@
       "id": "dia-n4-41-9",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l41-57",
@@ -1134,6 +1185,7 @@
       "id": "dia-n4-41-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l41-65",

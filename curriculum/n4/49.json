@@ -3,6 +3,8 @@
   "lessonNumber": 49,
   "title": "Bài 49: Kính ngữ tôn kính (尊敬語 - Sonkeigo)",
   "description": "尊敬語 nâng cao hành động của NGƯỜI TRÊN/người nghe (không bao giờ dùng cho chính mình): năm động từ đặc biệt いらっしゃる/おっしゃる/なさる/召し上がる/ご覧になる (cùng nhóm với くださる đã học bài 41), và công thức tổng quát お+gốc ます+になります áp dụng cho các động từ còn lại — chuẩn bị nền tảng đối lập với 謙譲語 (khiêm nhường ngữ) sẽ học ở bài 50.",
+  "sceneImageUrl": "assets/minh-hoa/canh-le-tan-va-thu-ky.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 49: Kính ngữ tôn kính (尊敬語 - Sonkeigo)",
   "vocabList": [
     {
       "id": "voc-n4-49-1",
@@ -42,6 +44,8 @@
       "romaji": "meshiagarimasu",
       "wordType": "verb",
       "meaningVi": "Ăn/uống (tôn kính của 食べます/飲みます)",
+      "imageUrl": "assets/minh-hoa/honorific-eat.webp",
+      "imageAlt": "Ăn/uống (tôn kính của 食べます/飲みます)",
       "accentNote": "どうぞ 召し上がって ください = xin mời quý vị dùng."
     },
     {
@@ -52,6 +56,8 @@
       "romaji": "goran ni narimasu",
       "wordType": "verb",
       "meaningVi": "Xem (tôn kính của 見ます)",
+      "imageUrl": "assets/minh-hoa/honorific-see.webp",
+      "imageAlt": "Xem (tôn kính của 見ます)",
       "accentNote": "この 写真を ご覧に なりましたか = ngài đã xem bức ảnh này chưa ạ?"
     },
     {
@@ -62,6 +68,8 @@
       "romaji": "kudasaimasu",
       "wordType": "verb",
       "meaningVi": "Ban cho (tôn kính của くれます)",
+      "imageUrl": "assets/minh-hoa/kindly-give.webp",
+      "imageAlt": "Ban cho (tôn kính của くれます)",
       "accentNote": "Đã gặp bài 41."
     },
     {
@@ -92,6 +100,8 @@
       "romaji": "shachou",
       "wordType": "noun",
       "meaningVi": "Giám đốc công ty",
+      "imageUrl": "assets/minh-hoa/company-president.webp",
+      "imageAlt": "Giám đốc công ty",
       "accentNote": "Đã gặp bài 41."
     },
     {
@@ -102,6 +112,8 @@
       "romaji": "buchou",
       "wordType": "noun",
       "meaningVi": "Trưởng phòng",
+      "imageUrl": "assets/minh-hoa/dept-manager.webp",
+      "imageAlt": "Trưởng phòng",
       "accentNote": "部長は もう いらっしゃいました = trưởng phòng đã đến rồi ạ."
     },
     {
@@ -112,6 +124,8 @@
       "romaji": "kachou",
       "wordType": "noun",
       "meaningVi": "Trưởng ban, tổ trưởng",
+      "imageUrl": "assets/minh-hoa/section-chief.webp",
+      "imageAlt": "Trưởng ban, tổ trưởng",
       "accentNote": "課長が おっしゃいました = tổ trưởng đã nói."
     },
     {
@@ -122,6 +136,8 @@
       "romaji": "kouchou",
       "wordType": "noun",
       "meaningVi": "Hiệu trưởng",
+      "imageUrl": "assets/minh-hoa/principal.webp",
+      "imageAlt": "Hiệu trưởng",
       "accentNote": "校長先生は お元気です = thầy hiệu trưởng khỏe mạnh."
     },
     {
@@ -132,6 +148,8 @@
       "romaji": "okyakusan",
       "wordType": "noun",
       "meaningVi": "Vị khách",
+      "imageUrl": "assets/minh-hoa/customer.webp",
+      "imageAlt": "Vị khách",
       "accentNote": "Đã gặp bài 41."
     },
     {
@@ -142,6 +160,8 @@
       "romaji": "otaku",
       "wordType": "noun",
       "meaningVi": "Nhà (của người khác, tôn kính)",
+      "imageUrl": "assets/minh-hoa/your-home.webp",
+      "imageAlt": "Nhà (của người khác, tôn kính)",
       "accentNote": "お宅は どちらですか = nhà ngài ở đâu ạ?"
     },
     {
@@ -152,6 +172,8 @@
       "romaji": "sensei",
       "wordType": "noun",
       "meaningVi": "Thầy/cô giáo",
+      "imageUrl": "assets/minh-hoa/teacher.webp",
+      "imageAlt": "Thầy/cô giáo",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -162,6 +184,8 @@
       "romaji": "shinbun",
       "wordType": "noun",
       "meaningVi": "Báo, tờ báo",
+      "imageUrl": "assets/minh-hoa/newspaper.webp",
+      "imageAlt": "Báo, tờ báo",
       "accentNote": "新聞を お読みに なりますか = ngài có đọc báo không ạ?"
     },
     {
@@ -172,6 +196,8 @@
       "romaji": "shashin",
       "wordType": "noun",
       "meaningVi": "Bức ảnh",
+      "imageUrl": "assets/minh-hoa/photo.webp",
+      "imageAlt": "Bức ảnh",
       "accentNote": "Đã gặp N5 bài 6."
     },
     {
@@ -182,6 +208,8 @@
       "romaji": "kouen",
       "wordType": "noun",
       "meaningVi": "Bài diễn thuyết",
+      "imageUrl": "assets/minh-hoa/lecture.webp",
+      "imageAlt": "Bài diễn thuyết",
       "accentNote": "校長先生が 講演を なさいます = thầy hiệu trưởng sẽ diễn thuyết."
     },
     {
@@ -192,6 +220,8 @@
       "romaji": "shokuji",
       "wordType": "noun",
       "meaningVi": "Bữa ăn",
+      "imageUrl": "assets/minh-hoa/meal.webp",
+      "imageAlt": "Bữa ăn",
       "accentNote": "Đã gặp bài 39."
     },
     {
@@ -202,6 +232,8 @@
       "romaji": "ocha",
       "wordType": "noun",
       "meaningVi": "Trà (xanh)",
+      "imageUrl": "assets/minh-hoa/green-tea.webp",
+      "imageAlt": "Trà (xanh)",
       "accentNote": "お茶を 召し上がって ください = xin mời quý vị dùng trà."
     }
   ],
@@ -648,6 +680,7 @@
       "id": "dia-n4-49-1",
       "speaker": "受付",
       "speakerRole": "Lễ tân",
+      "avatarUrl": "assets/minh-hoa/nv-uketsuke.webp",
       "tokens": [
         {
           "id": "d-l49-1",
@@ -711,6 +744,7 @@
       "id": "dia-n4-49-3",
       "speaker": "受付",
       "speakerRole": "Lễ tân",
+      "avatarUrl": "assets/minh-hoa/nv-uketsuke.webp",
       "tokens": [
         {
           "id": "d-l49-10",
@@ -783,6 +817,7 @@
       "id": "dia-n4-49-5",
       "speaker": "受付",
       "speakerRole": "Lễ tân",
+      "avatarUrl": "assets/minh-hoa/nv-uketsuke.webp",
       "tokens": [
         {
           "id": "d-l49-20",
@@ -855,6 +890,7 @@
       "id": "dia-n4-49-7",
       "speaker": "受付",
       "speakerRole": "Lễ tân",
+      "avatarUrl": "assets/minh-hoa/nv-uketsuke.webp",
       "tokens": [
         {
           "id": "d-l49-29",
@@ -957,6 +993,7 @@
       "id": "dia-n4-49-9",
       "speaker": "受付",
       "speakerRole": "Lễ tân",
+      "avatarUrl": "assets/minh-hoa/nv-uketsuke.webp",
       "tokens": [
         {
           "id": "d-l49-44",

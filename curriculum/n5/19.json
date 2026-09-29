@@ -3,6 +3,8 @@
   "lessonNumber": 19,
   "title": "Bài 19: Thể た & Kinh nghiệm (Vたことがあります / Vたりたりします / なります)",
   "description": "Chia thể た (giống quy tắc thể て, chỉ đổi て→た), diễn tả trải nghiệm quá khứ bằng Vたことがあります, liệt kê một vài hành động tiêu biểu bằng V1たりV2たりします, và sự biến đổi trạng thái theo thời gian bằng A/Nに／くなります.",
+  "sceneImageUrl": "assets/minh-hoa/canh-ke-chuyen-leo-nui-phu-si.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 19: Thể た & Kinh nghiệm (Vたことがあります / Vたりたりします / なります)",
   "vocabList": [
     {
       "id": "voc-n5-19-1",
@@ -12,6 +14,8 @@
       "romaji": "norimasu",
       "wordType": "verb",
       "meaningVi": "Lên, đi (phương tiện)",
+      "imageUrl": "assets/minh-hoa/len-xe.webp",
+      "imageAlt": "Lên, đi (phương tiện)",
       "accentNote": "Thể た: 乗った. Đã gặp bài 5."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "noborimasu",
       "wordType": "verb",
       "meaningVi": "Leo, trèo (núi)",
+      "imageUrl": "assets/minh-hoa/leo-nui.webp",
+      "imageAlt": "Leo, trèo (núi)",
       "accentNote": "Thể た: 登った. 富士山に 登ります = leo núi Phú Sĩ."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "narimasu",
       "wordType": "verb",
       "meaningVi": "Trở nên, trở thành",
+      "imageUrl": "assets/minh-hoa/tro-thanh.webp",
+      "imageAlt": "Trở nên, trở thành",
       "accentNote": "N/な-adj + に なります; い-adj bỏ い + く なります."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "hanashimasu",
       "wordType": "verb",
       "meaningVi": "Nói, trò chuyện",
+      "imageUrl": "assets/minh-hoa/noi-chuyen.webp",
+      "imageAlt": "Nói, trò chuyện",
       "accentNote": "Đã gặp bài 7 — nay dùng ví dụ liệt kê たり."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "oyogimasu",
       "wordType": "verb",
       "meaningVi": "Bơi",
+      "imageUrl": "assets/minh-hoa/boi.webp",
+      "imageAlt": "Bơi",
       "accentNote": "Đã gặp bài 13."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "kaimonoshimasu",
       "wordType": "verb",
       "meaningVi": "Mua sắm",
+      "imageUrl": "assets/minh-hoa/mua-sam.webp",
+      "imageAlt": "Mua sắm",
       "accentNote": "Đã gặp bài 13 (danh từ 買い物) — nay chia động từ đầy đủ."
     },
     {
@@ -72,6 +86,8 @@
       "romaji": "gaikoku",
       "wordType": "noun",
       "meaningVi": "Nước ngoài",
+      "imageUrl": "assets/minh-hoa/nuoc-ngoai.webp",
+      "imageAlt": "Nước ngoài",
       "accentNote": "外国へ 行った ことが あります = đã từng đi nước ngoài."
     },
     {
@@ -82,6 +98,8 @@
       "romaji": "gaikokujin",
       "wordType": "noun",
       "meaningVi": "Người nước ngoài",
+      "imageUrl": "assets/minh-hoa/nguoi-nuoc-ngoai.webp",
+      "imageAlt": "Người nước ngoài",
       "accentNote": "Đã gặp bài 1."
     },
     {
@@ -92,6 +110,8 @@
       "romaji": "ryuugakusei",
       "wordType": "noun",
       "meaningVi": "Du học sinh",
+      "imageUrl": "assets/minh-hoa/du-hoc-sinh.webp",
+      "imageAlt": "Du học sinh",
       "accentNote": ""
     },
     {
@@ -102,6 +122,8 @@
       "romaji": "fujisan",
       "wordType": "noun",
       "meaningVi": "Núi Phú Sĩ",
+      "imageUrl": "assets/minh-hoa/nui-phu-si.webp",
+      "imageAlt": "Núi Phú Sĩ",
       "accentNote": "Ngọn núi cao nhất Nhật Bản, biểu tượng quốc gia."
     },
     {
@@ -112,6 +134,8 @@
       "romaji": "kyouto",
       "wordType": "noun",
       "meaningVi": "Kyoto (cố đô Nhật Bản)",
+      "imageUrl": "assets/minh-hoa/kyoto.webp",
+      "imageAlt": "Kyoto (cố đô Nhật Bản)",
       "accentNote": "Nổi tiếng với nhiều đền chùa cổ."
     },
     {
@@ -122,6 +146,8 @@
       "romaji": "otera",
       "wordType": "noun",
       "meaningVi": "Ngôi chùa",
+      "imageUrl": "assets/minh-hoa/ngoi-chua.webp",
+      "imageAlt": "Ngôi chùa",
       "accentNote": "京都には お寺が たくさん あります."
     },
     {
@@ -142,6 +168,8 @@
       "romaji": "yuumei",
       "wordType": "adjective",
       "meaningVi": "Nổi tiếng",
+      "imageUrl": "assets/minh-hoa/noi-tieng.webp",
+      "imageAlt": "Nổi tiếng",
       "accentNote": "Đã gặp bài 8 — nay dùng làm ví dụ なります."
     },
     {
@@ -152,6 +180,8 @@
       "romaji": "genki",
       "wordType": "adjective",
       "meaningVi": "Khỏe mạnh",
+      "imageUrl": "assets/minh-hoa/khoe-manh.webp",
+      "imageAlt": "Khỏe mạnh",
       "accentNote": "Đã gặp bài 8."
     },
     {
@@ -162,6 +192,8 @@
       "romaji": "atsui",
       "wordType": "adjective",
       "meaningVi": "Nóng",
+      "imageUrl": "assets/minh-hoa/nong.webp",
+      "imageAlt": "Nóng",
       "accentNote": "暑く なります = trở nên nóng. Đã gặp bài 8."
     },
     {
@@ -172,6 +204,8 @@
       "romaji": "samui",
       "wordType": "adjective",
       "meaningVi": "Lạnh",
+      "imageUrl": "assets/minh-hoa/lanh.webp",
+      "imageAlt": "Lạnh",
       "accentNote": "寒く なります = trở nên lạnh. Đã gặp bài 8."
     },
     {
@@ -182,6 +216,8 @@
       "romaji": "jouzu",
       "wordType": "adjective",
       "meaningVi": "Giỏi",
+      "imageUrl": "assets/minh-hoa/gioi.webp",
+      "imageAlt": "Giỏi",
       "accentNote": "上手に なります = trở nên giỏi. Đã gặp bài 9."
     },
     {
@@ -192,6 +228,8 @@
       "romaji": "isogashii",
       "wordType": "adjective",
       "meaningVi": "Bận rộn",
+      "imageUrl": "assets/minh-hoa/ban-ron.webp",
+      "imageAlt": "Bận rộn",
       "accentNote": "Đã gặp bài 9."
     },
     {
@@ -719,6 +757,7 @@
       "id": "dia-n5-19-1",
       "speaker": "先生",
       "speakerRole": "Giáo viên",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-l19-1",
@@ -775,6 +814,7 @@
       "id": "dia-n5-19-2",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l19-9",
@@ -807,6 +847,7 @@
       "id": "dia-n5-19-3",
       "speaker": "先生",
       "speakerRole": "Giáo viên",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-l19-13",
@@ -820,6 +861,7 @@
       "id": "dia-n5-19-4",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l19-14",
@@ -877,6 +919,7 @@
       "id": "dia-n5-19-5",
       "speaker": "先生",
       "speakerRole": "Giáo viên",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-l19-23",
@@ -900,6 +943,7 @@
       "id": "dia-n5-19-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l19-26",
@@ -998,6 +1042,7 @@
       "id": "dia-n5-19-7",
       "speaker": "先生",
       "speakerRole": "Giáo viên",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-l19-42",
@@ -1035,6 +1080,7 @@
       "id": "dia-n5-19-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l19-47",
@@ -1093,6 +1139,7 @@
       "id": "dia-n5-19-9",
       "speaker": "先生",
       "speakerRole": "Giáo viên",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-l19-55",
@@ -1153,6 +1200,7 @@
       "id": "dia-n5-19-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l19-64",

@@ -3,6 +3,8 @@
   "lessonNumber": 16,
   "title": "Bài 16: Chuỗi hành động liên tiếp (V1て V2て / Vてから / N1はN2がA)",
   "description": "Nối nhiều hành động theo thứ tự bằng thể て (chỉ động từ cuối chia ます), nhấn mạnh thứ tự bắt buộc bằng Vてから, và cấu trúc hai chủ ngữ N1はN2がA để miêu tả bộ phận cơ thể, ngoại hình và tính cách.",
+  "sceneImageUrl": "assets/minh-hoa/canh-buoi-sang-danh-rang.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 16: Chuỗi hành động liên tiếp (V1て V2て / Vてから / N1はN2がA)",
   "vocabList": [
     {
       "id": "voc-n5-16-1",
@@ -12,6 +14,8 @@
       "romaji": "okimasu",
       "wordType": "verb",
       "meaningVi": "Thức dậy",
+      "imageUrl": "assets/minh-hoa/thuc-day.webp",
+      "imageAlt": "Thức dậy",
       "accentNote": "Đã gặp bài 4 — nay dùng làm hành động đầu chuỗi."
     },
     {
@@ -22,6 +26,8 @@
       "romaji": "ha o migakimasu",
       "wordType": "verb",
       "meaningVi": "Đánh răng",
+      "imageUrl": "assets/minh-hoa/danh-rang.webp",
+      "imageAlt": "Đánh răng",
       "accentNote": "磨きます: nhóm 1."
     },
     {
@@ -32,6 +38,8 @@
       "romaji": "shawaa o abimasu",
       "wordType": "verb",
       "meaningVi": "Tắm vòi sen",
+      "imageUrl": "assets/minh-hoa/tam-voi-sen.webp",
+      "imageAlt": "Tắm vòi sen",
       "accentNote": "浴びます: nhóm 2."
     },
     {
@@ -42,6 +50,8 @@
       "romaji": "dekakemasu",
       "wordType": "verb",
       "meaningVi": "Ra ngoài, đi ra",
+      "imageUrl": "assets/minh-hoa/ra-ngoai.webp",
+      "imageAlt": "Ra ngoài, đi ra",
       "accentNote": "Nhóm 2. Khác 出ます (ra khỏi một nơi cụ thể)."
     },
     {
@@ -52,6 +62,8 @@
       "romaji": "kaerimasu",
       "wordType": "verb",
       "meaningVi": "Về nhà",
+      "imageUrl": "assets/minh-hoa/ve-nha.webp",
+      "imageAlt": "Về nhà",
       "accentNote": "Đã gặp bài 5 — nay dùng làm hành động cuối chuỗi."
     },
     {
@@ -62,6 +74,8 @@
       "romaji": "kao",
       "wordType": "noun",
       "meaningVi": "Khuôn mặt",
+      "imageUrl": "assets/minh-hoa/khuon-mat.webp",
+      "imageAlt": "Khuôn mặt",
       "accentNote": "顔を 洗います = rửa mặt."
     },
     {
@@ -82,6 +96,8 @@
       "romaji": "mimi",
       "wordType": "noun",
       "meaningVi": "Tai",
+      "imageUrl": "assets/minh-hoa/tai.webp",
+      "imageAlt": "Tai",
       "accentNote": ""
     },
     {
@@ -92,6 +108,8 @@
       "romaji": "kuchi",
       "wordType": "noun",
       "meaningVi": "Miệng",
+      "imageUrl": "assets/minh-hoa/mieng.webp",
+      "imageAlt": "Miệng",
       "accentNote": ""
     },
     {
@@ -102,6 +120,8 @@
       "romaji": "te",
       "wordType": "noun",
       "meaningVi": "Bàn tay",
+      "imageUrl": "assets/minh-hoa/ban-tay.webp",
+      "imageAlt": "Bàn tay",
       "accentNote": "手が 大きいです = bàn tay to."
     },
     {
@@ -112,6 +132,8 @@
       "romaji": "ashi",
       "wordType": "noun",
       "meaningVi": "Chân, bàn chân",
+      "imageUrl": "assets/minh-hoa/chan.webp",
+      "imageAlt": "Chân, bàn chân",
       "accentNote": ""
     },
     {
@@ -122,6 +144,8 @@
       "romaji": "atama",
       "wordType": "noun",
       "meaningVi": "Đầu",
+      "imageUrl": "assets/minh-hoa/dau.webp",
+      "imageAlt": "Đầu",
       "accentNote": "頭が いいです = đầu óc thông minh (thành ngữ khen trí tuệ)."
     },
     {
@@ -132,6 +156,8 @@
       "romaji": "karada",
       "wordType": "noun",
       "meaningVi": "Cơ thể, sức khỏe",
+      "imageUrl": "assets/minh-hoa/co-the.webp",
+      "imageAlt": "Cơ thể, sức khỏe",
       "accentNote": "体が 丈夫です = cơ thể khỏe mạnh."
     },
     {
@@ -142,6 +168,8 @@
       "romaji": "sei",
       "wordType": "noun",
       "meaningVi": "Chiều cao (dáng người)",
+      "imageUrl": "assets/minh-hoa/chieu-cao.webp",
+      "imageAlt": "Chiều cao (dáng người)",
       "accentNote": "背が 高いです = dáng người cao."
     },
     {
@@ -152,6 +180,8 @@
       "romaji": "kami",
       "wordType": "noun",
       "meaningVi": "Tóc",
+      "imageUrl": "assets/minh-hoa/toc.webp",
+      "imageAlt": "Tóc",
       "accentNote": "髪が 長いです = tóc dài."
     },
     {
@@ -162,6 +192,8 @@
       "romaji": "akarui",
       "wordType": "adjective",
       "meaningVi": "Vui vẻ, cởi mở, sáng sủa",
+      "imageUrl": "assets/minh-hoa/vui-ve-coi-mo.webp",
+      "imageAlt": "Vui vẻ, cởi mở, sáng sủa",
       "accentNote": "Tính từ い. Miêu tả tính cách hoặc ánh sáng.",
       "emotion": "vui"
     },
@@ -173,6 +205,8 @@
       "romaji": "shinsetsu",
       "wordType": "adjective",
       "meaningVi": "Tốt bụng, ân cần",
+      "imageUrl": "assets/minh-hoa/tot-bung.webp",
+      "imageAlt": "Tốt bụng, ân cần",
       "accentNote": "Tính từ な."
     },
     {
@@ -183,6 +217,8 @@
       "romaji": "yasashii",
       "wordType": "adjective",
       "meaningVi": "Dịu dàng, hiền hậu",
+      "imageUrl": "assets/minh-hoa/diu-dang.webp",
+      "imageAlt": "Dịu dàng, hiền hậu",
       "accentNote": "Tính từ い. Đồng âm với 易しい (dễ, bài 2) nhưng chữ Hán khác."
     },
     {
@@ -193,6 +229,8 @@
       "romaji": "sebiro",
       "wordType": "noun",
       "meaningVi": "Bộ vest nam",
+      "imageUrl": "assets/minh-hoa/bo-vest.webp",
+      "imageAlt": "Bộ vest nam",
       "accentNote": ""
     },
     {
@@ -203,6 +241,8 @@
       "romaji": "いりぐち",
       "wordType": "noun",
       "meaningVi": "Lối vào",
+      "imageUrl": "assets/minh-hoa/loi-vao.webp",
+      "imageAlt": "Lối vào",
       "accentNote": "Trái nghĩa: 出口 (lối ra)."
     }
   ],
@@ -741,6 +781,7 @@
       "id": "dia-n5-16-1",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l16-1",
@@ -783,6 +824,7 @@
       "id": "dia-n5-16-2",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l16-7",
@@ -834,6 +876,7 @@
       "id": "dia-n5-16-3",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l16-14",
@@ -869,6 +912,7 @@
       "id": "dia-n5-16-4",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l16-19",
@@ -913,6 +957,7 @@
       "id": "dia-n5-16-5",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l16-25",
@@ -967,6 +1012,7 @@
       "id": "dia-n5-16-6",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l16-33",
@@ -1035,6 +1081,7 @@
       "id": "dia-n5-16-7",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l16-43",
@@ -1060,6 +1107,7 @@
       "id": "dia-n5-16-8",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l16-46",
@@ -1114,6 +1162,7 @@
       "id": "dia-n5-16-9",
       "speaker": "ワン",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-wang.webp",
       "tokens": [
         {
           "id": "d-l16-54",
@@ -1150,6 +1199,7 @@
       "id": "dia-n5-16-10",
       "speaker": "サントス",
       "speakerRole": "Sinh viên",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d-l16-59",

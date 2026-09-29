@@ -3,6 +3,8 @@
   "lessonNumber": 11,
   "title": "Bài 11: Đặc trưng riêng biệt (ならではの & にふさわしい)",
   "description": "ならではの diễn tả một điều ĐẶC TRƯNG, ĐỘC ĐÁO CHỈ CÓ Ở một địa phương/người/tổ chức cụ thể, không thể tìm thấy ở nơi khác — luôn mang tính CA NGỢI; にふさわしい diễn tả sự PHÙ HỢP/XỨNG ĐÁNG về mặt PHẨM CHẤT, TIÊU CHUẨN giữa một vai trò/địa vị và điều được đánh giá — mang tính ĐÁNH GIÁ KHÁCH QUAN, thường dùng trong quảng bá du lịch (ならではの) và đánh giá nhân sự (にふさわしい).",
+  "sceneImageUrl": "assets/minh-hoa/canh-dac-san-dia-phuong.webp",
+  "sceneImageAlt": "Tranh tình huống hội thoại — Bài 11: Đặc trưng riêng biệt (ならではの & にふさわしい)",
   "vocabList": [
     {
       "id": "voc-n2-11-1",
@@ -12,6 +14,8 @@
       "romaji": "meibutsu",
       "wordType": "noun",
       "meaningVi": "Đặc sản nổi tiếng",
+      "imageUrl": "assets/minh-hoa/dac-san.webp",
+      "imageAlt": "Đặc sản nổi tiếng",
       "accentNote": "この町の 名物 = đặc sản của thị trấn này."
     },
     {
@@ -32,6 +36,8 @@
       "romaji": "dentou",
       "wordType": "noun",
       "meaningVi": "Truyền thống",
+      "imageUrl": "assets/minh-hoa/truyen-thong.webp",
+      "imageAlt": "Truyền thống",
       "accentNote": "伝統的な 料理 = món ăn truyền thống."
     },
     {
@@ -42,6 +48,8 @@
       "romaji": "jimoto",
       "wordType": "noun",
       "meaningVi": "Địa phương, quê nhà",
+      "imageUrl": "assets/minh-hoa/que-nha.webp",
+      "imageAlt": "Địa phương, quê nhà",
       "accentNote": "地元の 人 = người địa phương."
     },
     {
@@ -52,6 +60,8 @@
       "romaji": "kankou",
       "wordType": "noun",
       "meaningVi": "Du lịch, tham quan",
+      "imageUrl": "assets/minh-hoa/tham-quan.webp",
+      "imageAlt": "Du lịch, tham quan",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -62,6 +72,8 @@
       "romaji": "shikaku",
       "wordType": "noun",
       "meaningVi": "Chứng chỉ, tư cách",
+      "imageUrl": "assets/minh-hoa/chung-chi.webp",
+      "imageAlt": "Chứng chỉ, tư cách",
       "accentNote": "Đã gặp N3 bài 8."
     },
     {
@@ -82,6 +94,8 @@
       "romaji": "bunka",
       "wordType": "noun",
       "meaningVi": "Văn hóa",
+      "imageUrl": "assets/minh-hoa/van-hoa.webp",
+      "imageAlt": "Văn hóa",
       "accentNote": "Đã gặp N3 bài 17."
     },
     {
@@ -92,6 +106,8 @@
       "romaji": "machi",
       "wordType": "noun",
       "meaningVi": "Thị trấn",
+      "imageUrl": "assets/minh-hoa/thi-tran-n2n1.webp",
+      "imageAlt": "Thị trấn",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -102,6 +118,8 @@
       "romaji": "shigoto",
       "wordType": "noun",
       "meaningVi": "Công việc",
+      "imageUrl": "assets/minh-hoa/cong-viec.webp",
+      "imageAlt": "Công việc",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -112,6 +130,8 @@
       "romaji": "taido",
       "wordType": "noun",
       "meaningVi": "Thái độ",
+      "imageUrl": "assets/minh-hoa/thai-do.webp",
+      "imageAlt": "Thái độ",
       "accentNote": "Đã gặp N3 bài 5."
     },
     {
@@ -122,6 +142,8 @@
       "romaji": "sensei",
       "wordType": "noun",
       "meaningVi": "Giáo viên",
+      "imageUrl": "assets/minh-hoa/giao-vien-n2n1.webp",
+      "imageAlt": "Giáo viên",
       "accentNote": "Đã gặp N5 bài 1."
     },
     {
@@ -132,6 +154,8 @@
       "romaji": "nihon",
       "wordType": "noun",
       "meaningVi": "Nhật Bản",
+      "imageUrl": "assets/minh-hoa/nhat-ban.webp",
+      "imageAlt": "Nhật Bản",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -142,6 +166,8 @@
       "romaji": "ryouri",
       "wordType": "noun",
       "meaningVi": "Món ăn",
+      "imageUrl": "assets/minh-hoa/mon-an-n2n1.webp",
+      "imageAlt": "Món ăn",
       "accentNote": "Đã gặp N3 bài 15."
     },
     {
@@ -152,6 +178,8 @@
       "romaji": "kaisha",
       "wordType": "noun",
       "meaningVi": "Công ty",
+      "imageUrl": "assets/minh-hoa/cong-ty-n2n1.webp",
+      "imageAlt": "Công ty",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -162,6 +190,8 @@
       "romaji": "shachou",
       "wordType": "noun",
       "meaningVi": "Giám đốc",
+      "imageUrl": "assets/minh-hoa/giam-doc.webp",
+      "imageAlt": "Giám đốc",
       "accentNote": "Đã gặp N4 bài 41."
     },
     {
@@ -172,6 +202,8 @@
       "romaji": "keiken",
       "wordType": "noun",
       "meaningVi": "Kinh nghiệm",
+      "imageUrl": "assets/minh-hoa/kinh-nghiem.webp",
+      "imageAlt": "Kinh nghiệm",
       "accentNote": "Đã gặp N4 bài 26."
     },
     {
@@ -182,6 +214,8 @@
       "romaji": "jouzu",
       "wordType": "adjective",
       "meaningVi": "Giỏi",
+      "imageUrl": "assets/minh-hoa/gioi-n2n1.webp",
+      "imageAlt": "Giỏi",
       "accentNote": "Đã gặp N4 bài 26.",
       "emotion": "vui"
     },
@@ -203,6 +237,8 @@
       "romaji": "takai",
       "wordType": "adjective",
       "meaningVi": "Cao",
+      "imageUrl": "assets/minh-hoa/cao-n2n1.webp",
+      "imageAlt": "Cao",
       "accentNote": "Đã gặp N4 bài 34."
     }
   ],
@@ -700,6 +736,7 @@
       "id": "dia-n2-11-1",
       "speaker": "田中",
       "speakerRole": "Hướng dẫn viên du lịch",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d11-1",
@@ -747,6 +784,7 @@
       "id": "dia-n2-11-2",
       "speaker": "サントス",
       "speakerRole": "Du khách",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d11-8",
@@ -809,6 +847,7 @@
       "id": "dia-n2-11-3",
       "speaker": "田中",
       "speakerRole": "Hướng dẫn viên du lịch",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d11-17",
@@ -851,6 +890,7 @@
       "id": "dia-n2-11-4",
       "speaker": "サントス",
       "speakerRole": "Du khách",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d11-23",
@@ -890,6 +930,7 @@
       "id": "dia-n2-11-5",
       "speaker": "田中",
       "speakerRole": "Hướng dẫn viên du lịch",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d11-28",
@@ -941,6 +982,7 @@
       "id": "dia-n2-11-6",
       "speaker": "サントス",
       "speakerRole": "Du khách",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d11-35",
@@ -997,6 +1039,7 @@
       "id": "dia-n2-11-7",
       "speaker": "田中",
       "speakerRole": "Hướng dẫn viên du lịch",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d11-43",
@@ -1039,6 +1082,7 @@
       "id": "dia-n2-11-8",
       "speaker": "サントス",
       "speakerRole": "Du khách",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d11-49",
@@ -1095,6 +1139,7 @@
       "id": "dia-n2-11-9",
       "speaker": "田中",
       "speakerRole": "Hướng dẫn viên du lịch",
+      "avatarUrl": "assets/minh-hoa/nv-tanaka.webp",
       "tokens": [
         {
           "id": "d11-57",
@@ -1144,6 +1189,7 @@
       "id": "dia-n2-11-10",
       "speaker": "サントス",
       "speakerRole": "Du khách",
+      "avatarUrl": "assets/minh-hoa/nv-santos.webp",
       "tokens": [
         {
           "id": "d11-64",
