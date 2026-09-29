@@ -1,6 +1,6 @@
 /* ==========================================================================
    Chon phong cach san khau giang (5 ban de chu du an so sanh) — bo nap nho
-   N5 bai 1..5 -> pc1..pc5; moi bai khac: giao dien mac dinh (khong co data-phong-cach).
+   N5 bai 1..7 -> pc1..pc7; moi bai khac: giao dien mac dinh (khong co data-phong-cach).
    Ghi de: ?phongCach=pc1..pc5 ep mot phong cach cho moi bai; ?phongCach=mac-dinh ep mac dinh.
 
    Chi nap tep khi can (css/phong-cach/pcN.css + js/phong-cach/pcN.js, moi tep mot lan) — trang
@@ -15,7 +15,7 @@
 (function () {
   'use strict';
 
-  const DS = ['pc1', 'pc2', 'pc3', 'pc4', 'pc5', 'pc6'];
+  const DS = ['pc1', 'pc2', 'pc3', 'pc4', 'pc5', 'pc6', 'pc7'];
   const CHO_TOI_DA = 2500;          // startLecture khong doi lau hon muc nay (mang cham): phong cach bat khi nap xong
   const nap = Object.create(null);  // khoa -> Promise<boolean>
   const st = { muon: null, dang: null, san: null, choSan: null };
@@ -32,7 +32,7 @@
   function khoa(cap, bai) {
     if (ghiDe !== undefined) return ghiDe;
     const n = Number(bai);
-    if (String(cap || '').toUpperCase() === 'N5' && Number.isInteger(n) && n >= 1 && n <= 6) return 'pc' + n;   // bai 6 -> pc6 (Video bai giang)
+    if (String(cap || '').toUpperCase() === 'N5' && Number.isInteger(n) && n >= 1 && n <= 7) return 'pc' + n;   // bai 6 -> pc6 (Video bai giang), bai 7 -> pc7 (Reel dong lenh)
     return null;
   }
 
