@@ -1716,7 +1716,11 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
 
     // Bai co the vua duoc chon qua dropdown/lenh thoai va chua kip tai xong
     // chi tiet (chi la muc luc nhe) — cho tai xong roi moi dung buildLecturePlan.
-    await curriculumLoader.ensureLessonLoaded(lvl, lessonNum);
+    // Phong cach san khau cua bai (js/phong-cach/chon.js): bat truoc nhip dau, toi da ~2,5 s
+    await Promise.all([
+      curriculumLoader.ensureLessonLoaded(lvl, lessonNum),
+      window.SenseiPhongCachChon ? window.SenseiPhongCachChon.apDung(lvl, lessonNum) : null,
+    ]);
     if (slideEngine.currentLevel !== lvl || slideEngine.currentLesson !== lessonNum) return;
 
     currentLectureSteps = buildLecturePlan(lvl, lessonNum);
@@ -4907,6 +4911,7 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
     slideEngine.currentLevel = lvl;
     slideEngine.currentLesson = Number(lessonNum);
     slideEngine.currentSlideIndex = 0;
+    window.SenseiPhongCachChon?.apDung(lvl, Number(lessonNum));   // nap truoc phong cach san khau cua bai (san khau da tat)
     // setTab tu lo viec hien "dang tai bai hoc..." neu chi tiet chua co san
     slideEngine.setTab('vocab');
 
