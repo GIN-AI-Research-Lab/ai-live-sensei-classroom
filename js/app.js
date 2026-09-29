@@ -63,6 +63,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   await curriculumLoader.init();
 
   const slideEngine = new SlideEngine(curriculumLoader);
+  // Ten cap do hien cho nguoi hoc (KANA -> "Nhập môn"), ten chuong chu, nhan dien muc kana:
+  // mot cho duy nhat (curriculum-loader.js, nap cung tep voi CurriculumLoader nen luon co).
+  const CAP_DO = window.SenseiCapDo;
 
 
   // 2. DOM Elements
@@ -569,14 +572,15 @@ document.addEventListener('DOMContentLoaded', async () => {
       return;
     }
 
-    // 3. Phân môn Chữ Hán (Kanji)
-    if (/(?:chữ hán|kanji|hán tự|bảng chữ hán)/i.test(lower)) {
+    // 3. Phân môn Chữ Hán (Kanji) — bai Nhap mon: "chữ cái", "hiragana", "katakana" cung mo chuong nay
+    if (/(?:chữ hán|kanji|hán tự|bảng chữ hán)/i.test(lower)
+        || (CAP_DO.laKana(slideEngine.currentLevel) && /(?:chữ cái|bảng chữ|hiragana|katakana)/i.test(lower))) {
       if (dangMo('kanji')) return;
       lastTabSwitchTime = now;
       slideEngine.setTab('kanji');
       lectureCheckpoint.sectionName = 'kanji';
       lectureCheckpoint.subIndex = null;
-      addLog("System", "🔄 [Tự động chuyển tab]: Đã chuyển sang tab Chữ Hán theo ngữ cảnh.");
+      addLog("System", `🔄 [Tự động chuyển tab]: Đã chuyển sang tab ${tenChuong('kanji')} theo ngữ cảnh.`);
       return;
     }
 
@@ -718,7 +722,8 @@ document.addEventListener('DOMContentLoaded', async () => {
           id: k.id,
           // Chi khop MAT CHU. Am Han Viet la mot tieng Viet thuong ("học", "tiên",
           // "nhật") — khop tran thi "học viên", "đầu tiên", "tiếng Nhật" roi nham chu.
-          keys: [k.character || ""].filter(Boolean)
+          // Chu kana (bai Nhap mon): bo han — あ, し, きゃ nam trong gan nhu moi cau tieng Nhat.
+          keys: CAP_DO.laChuKana(k) ? [] : [k.character || ""].filter(Boolean)
         }));
       const hit = pickLatestMatch(lower, cands);
       if (hit) {
@@ -864,7 +869,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // san khau mat cho ve, id trung. Giu nguyen man hinh; doi bai khac thi de nhanh duoi tu choi nhu cu.
     if (SK()?.dangCho()) {
       const a = args || {};
-      const doiBaiKhac = name === 'change_slide' && ((a.level || 'N5').toUpperCase() !== slideEngine.currentLevel
+      const doiBaiKhac = name === 'change_slide' && (CAP_DO.ma(a.level, 'N5') !== slideEngine.currentLevel
         || (Number(a.lesson_id) || 1) !== Number(slideEngine.currentLesson));
       if (['change_section', 'open_exercise', 'highlight_element'].includes(name) || (name === 'change_slide' && !doiBaiKhac)) {
         return { success: true, ghiChu: 'học viên đang chọn đáp án — màn hình giữ nguyên' };
@@ -886,7 +891,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     else if (name === "change_slide") {
       const { level, lesson_id, slide_index } = args;
-      const lvl = (level || "N5").toUpperCase();
+      const lvl = CAP_DO.ma(level, 'N5');   // "Nhập môn" / "kana" -> KANA
       const no = Number(lesson_id) || 1;
       // Dang giang theo giao an: sang bai khac giua chung thi cac nhip sau van
       // la cua bai cu (roi sai id, prompt lech bai) -> khong cho doi bai.
@@ -912,7 +917,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     else if (name === "open_exercise") {
       const { level, lesson_id, exercise_index } = args;
-      const lvl = (level || slideEngine.currentLevel).toUpperCase();
+      const lvl = CAP_DO.ma(level, slideEngine.currentLevel);
       const no = Number(lesson_id) || Number(slideEngine.currentLesson);
       // Bai khong co that: bao lai, KHONG dung vao o chon cap / bai
       if (!coBai(lvl, no)) return loiKhongCoBai(lvl, no);
@@ -991,7 +996,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 1. Cập nhật nút autoLectureBtn (Start / Pause / Resume)
     if (autoLectureBtn) {
       const currentStep = currentLectureSteps[currentLectureStepIndex];
-      const chapter = currentStep ? CHAPTER_LABEL[currentStep.chapter] : null;
+      const chapter = currentStep ? tenChuong(currentStep.chapter) : null;
 
       if (isConnecting) {
         autoLectureBtn.className = "ctl ctl-go";
@@ -1067,6 +1072,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     kaiwa: 'Hội thoại',
     quiz: 'Bài tập',
   };
+  /** Ten chuong hien cho nguoi hoc: bai Nhap mon goi chuong chu la "Chữ cái" */
+  const tenChuong = (chapter, lvl = slideEngine.currentLevel) =>
+    (chapter === 'kanji' ? CAP_DO.tenChuongChu(lvl) : CHAPTER_LABEL[chapter]);
 
   function buildLecturePlan(lvl, lessonNum) {
     const lesson = curriculumLoader.getLesson(lvl, lessonNum);
@@ -1084,12 +1092,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       isChapterStart: i === 0,
     }));
 
-    // --- Chương 2: Chữ Hán ---
+    // --- Chương 2: Chữ Hán (bai Nhap mon: chu cai kana, nhan "Hiragana 3/15" / "Katakana ..." / "Chữ cái ...") ---
     const kanjis = lesson.kanjiList || [];
     kanjis.forEach((k, i) => add({
       chapter: 'kanji', tab: 'kanji', kind: 'kanji',
       targetId: k.id, data: k,
-      label: `Chữ Hán ${i + 1}/${kanjis.length}`,
+      label: `${CAP_DO.laChuKana(k) ? (CAP_DO.bangChu(k) || 'Chữ cái') : 'Chữ Hán'} ${i + 1}/${kanjis.length}`,
       isChapterStart: i === 0,
     }));
 
@@ -1146,7 +1154,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   /** Soạn lời dặn cho Sensei ứng với đúng MỘT mục */
   function buildBeatPrompt(beat, lesson, lvl) {
-    const head = `[LỚP ${lvl} — ${lesson.title}] [${beat.label}]`;
+    const head = `[LỚP ${CAP_DO.ten(lvl)} — ${lesson.title}] [${beat.label}]`;
     const common =
       '\n\nDẶN SENSEI: Màn hình đã tự phóng to đúng mục này rồi nên KHÔNG cần gọi highlight_element. ' +
       'Nhưng BẢNG thì vẫn là của thầy: cứ dùng write_on_board / write_kanji / draw_on_board ' +
@@ -1195,6 +1203,26 @@ ${v.wordType ? `Từ loại: ${v.wordType}. ` : ''}${v.accentNote ? `Trọng âm
 
 Hãy: (1) đọc to CHUẨN giọng Tokyo 2 lần thật chậm cho học viên nhại theo;
 (2) giải nghĩa tiếng Việt; (3) cho một mẹo nhớ dí dỏm; (4) đặt MỘT câu ví dụ ngắn dùng từ này rồi dịch.${common}${BANG.vocab}`;
+    }
+
+    if (beat.kind === 'kanji' && CAP_DO.laChuKana(beat.data)) {
+      // Chu cai kana (bai Nhap mon): KHONG Han Viet / On / Kun / chiet tu — chi mat chu, cach doc,
+      // meo hinh dang, chu de nham, 2 tu vi du va thu tu net.
+      const k = beat.data;
+      const ch = String(k.character || '');
+      const bang = CAP_DO.bangChu(k);
+      const ghep = Array.from(ch).length > 1;
+      const dsTu = (k.commonWords || []).filter(cw => cw && cw.word).slice(0, 2);
+      const tu = dsTu.map(cw => `${cw.word}${cw.meaningVi ? ` = ${cw.meaningVi}` : ''}`).join('; ');
+      return `${head}
+Dạy chữ cái ${bang ? bang + ' ' : ''}${ghep ? '(âm ghép) ' : ''}${ch}${k.romaji ? ` — đọc "${k.romaji}"` : ''}
+${k.meaningVi ? `Cách phát âm (so với tiếng Việt): ${k.meaningVi}\n` : ''}${k.meoNho ? `Mẹo nhớ mặt chữ: ${k.meoNho}\n` : ''}${k.sosanh ? `Dễ nhầm: ${k.sosanh}\n` : ''}${tu ? `Từ ví dụ: ${tu}\n` : ''}
+Hãy: (1) gọi tên chữ ${ch}${k.romaji ? ` và đọc to "${k.romaji}"` : ''} 2 lần thật rõ cho học viên nhại theo, so với âm tiếng Việt gần nhất;
+(2) kể mẹo nhớ mặt chữ; (3) cảnh báo chữ dễ nhầm và chỉ ra chỗ khác nhau;
+(4) đọc ${tu ? `${dsTu.length} từ ví dụ` : 'một từ ví dụ ngắn có chữ này'} và giải nghĩa.
+Đây là bảng chữ cái: KHÔNG nói âm Hán Việt, âm On/Kun hay chiết tự.${common}
+
+BẢNG (BẮT BUỘC): gọi write_kanji("${ch}") NGAY TRƯỚC khi kể mẹo nhớ để học viên thấy thứ tự nét${ghep ? ' (chữ lớn trước, chữ nhỏ sau)' : ''}.`;
     }
 
     if (beat.kind === 'kanji') {
@@ -1357,7 +1385,7 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
       sk.batDauNhip(beat, {
         i: stepIndex,
         n: currentLectureSteps.length,
-        chuong: { ten: CHAPTER_LABEL[beat.chapter], i: cungChuong.indexOf(beat) + 1, n: cungChuong.length },
+        chuong: { ten: tenChuong(beat.chapter, lvl), i: cungChuong.indexOf(beat) + 1, n: cungChuong.length },
         bai: lesson,
         capDo: lvl,
         isResume,
@@ -1739,7 +1767,7 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
 
     const b = currentLectureSteps[startIdx];
     // Co san khau: dong dau ngay tren the da ghi "chuong · dem" — toast nua chi che dong do, noi lai lan hai
-    if (!SK()) showToast(`Bắt đầu giảng từ: ${CHAPTER_LABEL[b.chapter]} — ${b.label}`);
+    if (!SK()) showToast(`Bắt đầu giảng từ: ${tenChuong(b.chapter)} — ${b.label}`);
     else donToast();   // "Đã tạm dừng tại…" con 4,2 s thi de len dong dau san khau
     batDauMoi = true;   // san khau: nhip dau -> the muc bay tu luoi len san khau
     executeLectureStep(startIdx);
@@ -2030,9 +2058,17 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
       const vocabs = curriculumLoader.getVocabList(lvl, lessonNum);
       screenContent = vocabs.slice(0, 15).map((v, i) => `${i + 1}. ${v.kanji || v.word} (${v.furigana || v.word}): ${v.meaningVi}`).join('\n');
     } else if (tab === 'kanji') {
-      tabDisplayName = "Chữ Hán Kanji";
       const kanjis = curriculumLoader.getKanjiList(lvl, lessonNum);
-      screenContent = kanjis.map((k, i) => `${i + 1}. [${k.character}] (${k.hanViet}): ${k.meaningVi} (On: ${(k.onyomi || []).join(', ')} | Kun: ${(k.kunyomi || []).join(', ')})`).join('\n');
+      if (CAP_DO.laKana(lvl)) {
+        // Chu cai kana: khong co Han Viet / On / Kun
+        tabDisplayName = "Chữ cái (bảng chữ kana)";
+        screenContent = kanjis.length
+          ? kanjis.map((k, i) => `${i + 1}. [${k.character}] đọc "${k.romaji || ''}": ${k.meaningVi || ''}${k.sosanh ? ` (Dễ nhầm: ${k.sosanh})` : ''}`).join('\n')
+          : 'Bài này không học chữ mới.';
+      } else {
+        tabDisplayName = "Chữ Hán Kanji";
+        screenContent = kanjis.map((k, i) => `${i + 1}. [${k.character}] (${k.hanViet}): ${k.meaningVi} (On: ${(k.onyomi || []).join(', ')} | Kun: ${(k.kunyomi || []).join(', ')})`).join('\n');
+      }
     } else if (tab === 'grammar') {
       const slideIdx = slideEngine.currentSlideIndex || 0;
       const slideData = curriculumLoader.getSlide(lvl, lessonNum, slideIdx);
@@ -2069,7 +2105,7 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
 Sensei ơi! Em vừa bấm nút 'Giơ tay có ý kiến' ✋ để hỏi thầy/cô về bài học.
 Toàn bộ bài giảng đã được tạm dừng.
 DƯỚI ĐÂY LÀ NỘI DUNG MÀN HÌNH BÀI HỌC EM ĐANG NHÌN THẤY:
-- Cấp độ & Bài: ${lvl} - Bài ${lessonNum}: ${lesson.title || ''}
+- Cấp độ & Bài: ${CAP_DO.ten(lvl)} - Bài ${lessonNum}: ${lesson.title || ''}
 - Phân môn đang mở: ${tabDisplayName}
 - Dữ liệu chi tiết đang hiển thị trên màn hình:
 ${screenContent}
@@ -2789,7 +2825,7 @@ Mặt mèo tự đổi sang ${matCham} lúc bắt đầu nói — không cần g
       const lessonNum = slideEngine.currentLesson;
       const lesson = curriculumLoader.getLesson(lvl, lessonNum) || {};
       const tabName = slideEngine.activeTab;
-      const enrichedMsg = `[CÂU HỎI TỪ HỌC VIÊN KHI ĐANG HỌC BÀI ${lvl} - BÀI ${lessonNum} (${tabName})]:
+      const enrichedMsg = `[CÂU HỎI TỪ HỌC VIÊN KHI ĐANG HỌC BÀI ${CAP_DO.ten(lvl)} - BÀI ${lessonNum} (${tabName})]:
 "${text}"
 (Sensei hãy giải đáp cặn kẽ câu hỏi này cho học viên nhé!)`;
 
@@ -4368,7 +4404,69 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     return typeof v;
   }
 
+  // Goc ra de rieng cho bai Nhap mon (bang chu kana): khong co mau ngu phap de xoay quanh
+  const QUIZ_ANGLES_KANA = [
+    'Nhấn vào các cặp chữ trông giống nhau (さ/ち, ぬ/め, シ/ツ, ソ/ン...) mà người mới học hay nhầm.',
+    'Nhấn vào âm đục ゛, bán đục ゜ và âm ghép ゃゅょ viết nhỏ: đổi một dấu là đổi cả cách đọc.',
+    'Nhấn vào âm ngắt っ và trường âm (ああ, おう, ー): đếm nhịp, nghe dài hay ngắn.',
+    'Nhấn vào đọc hiểu: cho một từ viết bằng kana, hỏi đọc là gì hoặc nghĩa là gì.',
+    'Nhấn vào chiều ngược lại: cho romaji hoặc cách đọc, hỏi viết bằng chữ nào.',
+  ];
+
+  /** Tap chu kana da hoc toi bai nay (bai truoc chua nap chi tiet thi lay tieu de bai lam pham vi) */
+  function kanaDaHoc(lesson, lvl) {
+    const ds = (curriculumLoader.getLessonsForLevel(lvl) || [])
+      .filter(l => l.lessonNumber <= lesson.lessonNumber)
+      .sort((a, b) => a.lessonNumber - b.lessonNumber);
+    const chu = [], bai = [];
+    ds.forEach(l => {
+      if (Array.isArray(l.kanjiList)) l.kanjiList.forEach(k => { if (k && k.character) chu.push(k.character); });
+      else bai.push(l.title);
+    });
+    return { chu: [...new Set(chu)], bai };
+  }
+
+  function buildQuizPromptKana(lesson, lvl) {
+    const angle = QUIZ_ANGLES_KANA[Math.floor(Math.random() * QUIZ_ANGLES_KANA.length)];
+    const vocab = (lesson.vocabList || [])
+      .map(v => `${v.word}[${v.romaji || ''}]=${v.meaningVi}`).join('; ');
+    const chuMoi = (lesson.kanjiList || [])
+      .map(k => `${k.character}=${k.romaji || ''}${k.sosanh ? ` (${k.sosanh})` : ''}`).join('; ');
+    const quyTac = (lesson.slides || [])
+      .map(s => `${s.title} → ${s.grammarFormula || ''}`).join('\n');
+    const hoc = kanaDaHoc(lesson, lvl);
+
+    return `Bạn là giáo viên tiếng Nhật dạy người Việt MỚI BẮT ĐẦU học bảng chữ cái (hiragana, katakana).
+Soạn 10 câu trắc nghiệm cho bài Nhập môn sau. Trả lời bằng JSON đúng schema.
+
+BÀI: ${lesson.title}
+CHỮ MỚI CỦA BÀI: ${chuMoi || '(bài này không học chữ mới — ôn chữ đã học)'}
+TỪ VỰNG: ${vocab}
+QUY TẮC / MẪU:
+${quyTac}
+
+CHỈ ĐƯỢC DÙNG các chữ kana đã học tới bài này: ${hoc.chu.join(' ') || '(xem tên các bài)'}
+${hoc.bai.length ? `Các bài trước (chưa có danh sách chữ — dùng đúng phạm vi tên bài): ${hoc.bai.join(' | ')}\n` : ''}KHÔNG dùng chữ Hán trong câu hỏi, lựa chọn hay đáp án. Chữ kana ngoài phạm vi trên thì KHÔNG được xuất hiện.
+
+YÊU CẦU RA ĐỀ (trộn các dạng, mỗi dạng ít nhất 1 câu nếu bài có chất liệu):
+- "Chữ này đọc là gì?": cho một chữ / âm ghép kana, 4 lựa chọn romaji.
+- "Romaji → chữ": cho romaji, chọn đúng chữ kana (các lựa chọn sai là chữ trông giống).
+- Phân biệt chữ giống nhau (ví dụ さ/ち, シ/ツ, ソ/ン, ね/れ/わ).
+- Âm đục ゛/ bán đục ゜, âm ghép ゃゅょ nhỏ, âm ngắt っ, trường âm — chỉ khi bài đã học tới.
+- Bài có katakana: đọc một từ mượn viết bằng katakana rồi chọn nghĩa tiếng Việt.
+- 3 câu "de", 4 câu "vua", 3 câu "kho" (khó = bẫy chữ giống nhau, chữ nhỏ/to, dài/ngắn, đếm nhịp).
+- Mỗi câu đúng 4 lựa chọn KHÁC NHAU, correctIndex là chỉ số 0-3.
+- Câu hỏi viết bằng tiếng Việt, chữ Nhật chỉ là kana.
+- explanation: TỐI ĐA 2 câu, nói rõ vì sao đáp án kia sai. hint: MỘT câu ngắn, không lộ đáp án.
+- KHÔNG hỏi âm Hán Việt, âm On/Kun hay ngữ pháp.
+- JSON là MỘT MẢNG 10 phần tử dạng {"level": "de"|"vua"|"kho", "question": "...", "options": ["...", "...", "...", "..."], "correctIndex": 0, "explanation": "...", "hint": "..."}.
+
+GÓC RA ĐỀ LẦN NÀY: ${angle}
+Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random().toString(36).slice(2, 10)}`;
+  }
+
   function buildQuizPrompt(lesson, lvl) {
+    if (CAP_DO.laKana(lvl)) return buildQuizPromptKana(lesson, lvl);
     const angle = QUIZ_ANGLES[Math.floor(Math.random() * QUIZ_ANGLES.length)];
     const vocab = (lesson.vocabList || [])
       .map(v => `${v.kanji || v.word}(${v.furigana || ''})=${v.meaningVi}`).join('; ');
@@ -4597,6 +4695,10 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
       'Sensei nghĩ 10 câu mới cho bài này — thường mất 10–30 giây.');
     const regenBtn = document.getElementById('quizRegenBtn');
     if (regenBtn) regenBtn.disabled = true;
+    // Nhap mon: de chi duoc dung chu da hoc -> nap chi tiet cac bai truoc de biet du danh sach chu
+    if (CAP_DO.laKana(lvl)) {
+      try { await curriculumLoader.ensureReviewLoaded(lvl, lessonNum, 9); } catch (e) { /* thieu thi lay ten bai */ }
+    }
     const prompt = buildQuizPrompt(lesson, lvl);
 
     // Model Live la AUDIO-ONLY (ma 1007 neu doi TEXT), nen viec sinh chu
@@ -4703,6 +4805,8 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
      ====================================================================== */
 
   const LEVEL_INFO = {
+    KANA: { title: 'Nhập môn — Bảng chữ cái',
+          desc: 'Hiragana, katakana, âm đục, âm ghép, âm ngắt っ, trường âm và câu chào đầu tiên — nền móng trước N5.' },
     N5: { title: 'Sơ cấp 1 — Khởi đầu',
           desc: 'Minna no Nihongo I. Câu danh từ です, chỉ thị từ, động từ ます, tính từ, trợ từ nền tảng.' },
     N4: { title: 'Sơ cấp 2 — Giao tiếp hằng ngày',
@@ -4748,7 +4852,8 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
     const q = boDau(filter.trim());
     let shown = 0;
 
-    const html = ['N5', 'N4', 'N3', 'N2', 'N1'].map(lvl => {
+    // Nhap mon (KANA) dung dau, roi N5 -> N1
+    const html = CAP_DO.THU_TU.map(lvl => {
       const lessons = curriculumLoader.getLessonsForLevel(lvl) || [];
       const hits = q
         ? lessons.filter(l => boDau(`${l.lessonNumber} ${l.title} ${l.description || ''}`).includes(q))
@@ -4759,8 +4864,10 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
       const info = LEVEL_INFO[lvl] || { title: '', desc: '' };
       const cards = hits.map(l => {
         const st = lessonStats(l);
-        // Bài chỉ có một từ vựng / một slide là bài mới dựng khung, chưa soạn đủ
+        // Bài chỉ có một từ vựng / một slide là bài mới dựng khung, chưa soạn đủ.
+        // Khong xet so chu: bai Nhap mon 10 (chao hoi, so dem) co y de trong kanjiList.
         const thin = st.vocab <= 2 || st.slides <= 1;
+        const laKana = CAP_DO.laKana(lvl);
         const isCurrent = daMoBai && slideEngine.currentLevel === lvl && slideEngine.currentLesson === l.lessonNumber;
         const title = l.title.includes(':') ? l.title.split(':').slice(1).join(':').trim() : l.title;
         // So lieu la mot dong chu mo, CSS noi bang " · " -> ghep lien, khong de khoang trang giua cac the.
@@ -4768,7 +4875,9 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
         const stats = [
           isCurrent ? '<span class="lesson-stat lesson-now">Đang học</span>' : '',
           `<span class="lesson-stat">${st.vocab} từ</span>`,
-          `<span class="lesson-stat">${st.kanji} kanji</span>`,
+          // Nhap mon: dem chu cai (bai 10 khong day chu moi thi bo han, khong ghi "0 chữ")
+          laKana ? (st.kanji ? `<span class="lesson-stat">${st.kanji} chữ</span>` : '')
+                 : `<span class="lesson-stat">${st.kanji} kanji</span>`,
           isCurrent ? '' : `<span class="lesson-stat">${st.slides} slide</span>`,
           `<span class="lesson-stat">${st.quiz} bài tập</span>`,
           thin ? '<span class="lesson-stat is-thin">chưa soạn đủ</span>' : '',
@@ -4787,7 +4896,7 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
       return `
         <section class="picker-level lv-${lvl.toLowerCase()}" id="pk-${lvl}" data-level="${lvl}">
           <div class="picker-level-head" title="${slideEngine.escapeHtml(info.desc)}">
-            <div class="picker-level-mark lv-${lvl.toLowerCase()}">${lvl}</div>
+            <div class="picker-level-mark lv-${lvl.toLowerCase()}"${CAP_DO.laKana(lvl) ? ' lang="ja"' : ''}>${slideEngine.escapeHtml(CAP_DO.dau(lvl))}</div>
             <div>
               <h2 class="picker-level-title">
                 ${info.title}
@@ -4806,7 +4915,7 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
     const bangThieu = thieu.length ? `
       <div class="picker-thieu">
         <i class="fa-solid fa-triangle-exclamation"></i>
-        <span>Chưa nạp được giáo trình ${thieu.join(', ')} — có thể do mạng chập chờn.</span>
+        <span>Chưa nạp được giáo trình ${thieu.map(CAP_DO.ten).join(', ')} — có thể do mạng chập chờn.</span>
         <button type="button" id="napLaiGiaoTrinh">Nạp lại</button>
       </div>` : '';
 

@@ -324,7 +324,8 @@ class SlideEngine {
       if (!card) return;
 
       const id = card.id;
-      if (!/^(voc-|kan-|ex-|dia-|card-|t-)/.test(id)) return;
+      // kana-: the chu cai cua bai Nhap mon (id "kana-1-1")
+      if (!/^(voc-|kan-|kana-|ex-|dia-|card-|t-)/.test(id)) return;
 
       // doBam: hoc vien TU bam. Rieng chuong Hoi thoai chi mo the trong truong hop nay.
       this.focusItem(id, 'reading_focus', null, { doBam: true });
@@ -427,7 +428,8 @@ class SlideEngine {
 
   /** The bao loi tai bai. Loi khong bi ghi nho, nen bam thu lai la tai lai tu dau. */
   _veLoiTaiBai(tabName, subIndex) {
-    if (this.levelBadge) this.levelBadge.innerText = this.currentLevel;
+    this._capNhatNutChuongChu();
+    if (this.levelBadge) this.levelBadge.innerText = this._tenCap();
     if (this.lessonNum) this.lessonNum.innerText = this.currentLesson;
     if (this.slideIndexLabel) this.slideIndexLabel.innerText = '—';
     if (!this.slideContent) return;
@@ -452,6 +454,7 @@ class SlideEngine {
   }
 
   _renderTabContentNow(tabName, subIndex) {
+    this._capNhatNutChuongChu();
     if (tabName === 'vocab') {
       this.renderVocab();
     } else if (tabName === 'kanji') {
@@ -496,7 +499,7 @@ class SlideEngine {
   renderVocab() {
     const vocabs = this.loader.getVocabList(this.currentLevel, this.currentLesson);
 
-    if (this.levelBadge) this.levelBadge.innerText = this.currentLevel;
+    if (this.levelBadge) this.levelBadge.innerText = this._tenCap();
     if (this.lessonNum) this.lessonNum.innerText = this.currentLesson;
     if (this.slideIndexLabel) this.slideIndexLabel.innerText = `${vocabs.length} từ vựng`;
 
@@ -599,15 +602,99 @@ class SlideEngine {
     }
   }
 
-  // 2. Phân môn Chữ Hán (Kanji)
+  /** Ten cap do hien cho nguoi hoc: KANA -> "Nhập môn" (window.SenseiCapDo, curriculum-loader.js) */
+  _tenCap(lvl = this.currentLevel) {
+    const C = window.SenseiCapDo;
+    return C ? C.ten(lvl) : String(lvl || '');
+  }
+
+  /** Bai dang mo thuoc cap Nhap mon (chuong chu la bang chu cai kana, khong phai chu Han) */
+  _laBaiKana() {
+    const C = window.SenseiCapDo;
+    return !!(C && C.laKana(this.currentLevel));
+  }
+
+  /**
+   * Nhan nut chuong chu o thanh duoi: "Chữ Hán" / "Chữ cái" (bai Nhap mon). Goi moi lan ve
+   * chuong (doi bai la doi chuong) -> nut luon khop bai dang mo, khong can moc rieng o app.js.
+   */
+  _capNhatNutChuongChu() {
+    const nut = this.tabKanjiBtn;
+    if (!nut) return;
+    const kana = this._laBaiKana();
+    const nhan = nut.querySelector('span');
+    const ten = kana ? 'Chữ cái' : 'Chữ Hán';
+    if (nhan && nhan.textContent !== ten) nhan.textContent = ten;
+    nut.title = kana ? 'Bảng chữ cái Hiragana / Katakana — mặt chữ, cách đọc, thứ tự nét' : 'Chữ Hán Kanji & Từ ghép';
+  }
+
+  /** The mot chu cai kana (bai Nhap mon): romaji, cach doc, meo nho, chu de nham, tu vi du */
+  _theChuKana(k) {
+    const e = (s) => this.escapeHtml(s == null ? '' : String(s));
+    const ch = String(k.character || '');
+    const ghep = Array.from(ch).length > 1;
+    const bang = (window.SenseiCapDo && window.SenseiCapDo.bangChu(k)) || '';
+    const tu = (k.commonWords || []).slice(0, 3).map(cw => `
+              <li>
+                <span class="kj-wj"><span lang="ja" class="kj-w">${e(cw.word)}</span></span>
+                <span class="kj-m">${e(cw.meaningVi)}</span>
+              </li>`).join('');
+    const phu = [bang, ghep ? 'âm ghép' : '', k.strokeCount ? `${k.strokeCount} nét` : ''].filter(Boolean).join(' · ');
+    return `
+        <div id="${e(k.id)}" class="deck-card kj-card is-kana p-4">
+          <div class="kj-top">
+            <div class="kj-glyph jp-serif shrink-0${ghep ? ' is-ghep' : ''}" lang="ja">${e(ch)}</div>
+            <div class="kj-id">
+              <div class="kj-line1"><span class="kj-hv" title="Cách đọc (romaji)">${e(k.romaji || '')}</span>${phu ? `<span class="kj-strokes"> · ${e(phu)}</span>` : ''}</div>
+              <div class="kj-mean">${e(k.meaningVi)}</div>
+            </div>
+            <button type="button" class="icon-btn"
+                    onclick="window.playSpeech('${this.jsAttr(ch)}', '${this.jsAttr(k.id)}')"
+                    title="Nghe đọc chữ" aria-label="Nghe đọc chữ ${e(ch)}">
+              <i class="fa-solid fa-volume-high"></i>
+            </button>
+          </div>${k.meoNho || k.sosanh ? `
+          <dl class="kj-read">
+            ${k.meoNho ? `<dt>Mẹo nhớ</dt><dd>${e(k.meoNho)}</dd>` : ''}
+            ${k.sosanh ? `<dt>Dễ nhầm</dt><dd>${e(k.sosanh)}</dd>` : ''}
+          </dl>` : ''}${tu ? `
+          <div class="kj-words-box">
+            <div class="kj-label">Từ ví dụ</div>
+            <ul class="kj-words">${tu}
+            </ul>
+          </div>` : ''}
+        </div>`;
+  }
+
+  // 2. Phân môn Chữ Hán (Kanji) — bai Nhap mon: "Chữ cái" (bang chu kana)
   renderKanji() {
     const kanjis = this.loader.getKanjiList(this.currentLevel, this.currentLesson);
+    const kana = this._laBaiKana();
 
-    if (this.levelBadge) this.levelBadge.innerText = this.currentLevel;
+    if (this.levelBadge) this.levelBadge.innerText = this._tenCap();
     if (this.lessonNum) this.lessonNum.innerText = this.currentLesson;
-    if (this.slideIndexLabel) this.slideIndexLabel.innerText = `${kanjis.length} chữ Hán`;
+    if (this.slideIndexLabel) this.slideIndexLabel.innerText = `${kanjis.length} ${kana ? 'chữ cái' : 'chữ Hán'}`;
 
     this.clearHighlights();
+
+    if (kana && (!kanjis || kanjis.length === 0)) {
+      // Bai Nhap mon khong day chu moi (bai 10: chao hoi, so dem) — khong phai "chua soan"
+      if (this.slideContent) {
+        this.slideContent.className = this._lopNoiDung();
+        this.slideContent.innerHTML = `
+          <header class="deck-head">
+            <h2 class="deck-h2">Chữ cái</h2>
+            <span class="deck-meta">bài này không học chữ mới</span>
+          </header>
+          <div class="text-center py-12 text-slate-400">
+            <i class="fa-solid fa-square-pen text-3xl mb-2 text-indigo-400"></i>
+            <p class="font-medium">Bài này không có chữ cái mới.</p>
+            <p class="text-sm mt-1">Bạn đã học đủ hiragana và katakana — giờ ôn lại chữ qua Từ vựng và Hội thoại.</p>
+          </div>
+        `;
+      }
+      return;
+    }
 
     if (!kanjis || kanjis.length === 0) {
       if (this.slideContent) {
@@ -623,6 +710,10 @@ class SlideEngine {
 
     let coNetViet = false;   // co chu nao co du lieu net -> the mo ra se viet tung net
     const kanjiCardsHtml = kanjis.map(k => {
+      if (window.SenseiCapDo && window.SenseiCapDo.laChuKana(k)) {
+        if (this._coVietNet(k.character)) coNetViet = true;
+        return this._theChuKana(k);
+      }
       // Tu ghep: danh sach phang, gach manh giua cac dong; nghia nam ngay canh tu
       // (luoi auto/1fr), khong day ra tan mep phai the.
       const commonWordsHtml = (k.commonWords || []).map(cw => `
@@ -663,11 +754,17 @@ class SlideEngine {
 
     if (this.slideContent) {
       this.slideContent.className = this._lopNoiDung();
-      this.slideContent.innerHTML = `
+      // Bai Nhap mon: bang chu cua bai (Hiragana / Katakana / ca hai) ghi ngay tren dau chuong
+      const cacBang = kana ? [...new Set(kanjis.map(k => window.SenseiCapDo.bangChu(k)).filter(Boolean))] : [];
+      this.slideContent.innerHTML = (kana ? `
+        <header class="deck-head" title="Mặt chữ, cách đọc romaji, mẹo nhớ, chữ dễ nhầm và thứ tự nét.">
+          <h2 class="deck-h2">Chữ cái</h2>
+          <span class="deck-meta">${kanjis.length} chữ${cacBang.length ? ' ' + this.escapeHtml(cacBang.join(' + ')) : ''} · ${coNetViet ? 'bấm thẻ để xem cách viết' : 'bấm thẻ để xem chi tiết'}</span>
+        </header>` : `
         <header class="deck-head" title="Âm Hán Việt, cách đọc On / Kun và các từ ghép thường gặp trong đề thi JLPT.">
           <h2 class="deck-h2">Chữ Hán</h2>
           <span class="deck-meta">${kanjis.length} chữ · ${coNetViet ? 'bấm thẻ để xem cách viết' : 'bấm thẻ để xem chi tiết'}</span>
-        </header>
+        </header>`) + `
         <div class="kj-list grid grid-cols-1 md:grid-cols-2 gap-3 deck-scroll custom-scrollbar">
           ${kanjiCardsHtml}
         </div>
@@ -683,7 +780,7 @@ class SlideEngine {
     if (!data || !data.slide) {
       console.warn("Slide not found:", { level: this.currentLevel, lesson: this.currentLesson, slideIdx });
       // Khong de nguyen DOM cu (spinner / chuong truoc) duoi tab Ngu phap
-      if (this.levelBadge) this.levelBadge.innerText = this.currentLevel;
+      if (this.levelBadge) this.levelBadge.innerText = this._tenCap();
       if (this.lessonNum) this.lessonNum.innerText = this.currentLesson;
       if (this.slideIndexLabel) this.slideIndexLabel.innerText = '0 slide';
       if (this.prevSlideBtn) this.prevSlideBtn.disabled = true;
@@ -703,7 +800,7 @@ class SlideEngine {
     const { slide, slideIndex, totalSlides, lesson } = data;
     this.currentSlideIndex = slideIndex;
 
-    if (this.levelBadge) this.levelBadge.innerText = this.currentLevel;
+    if (this.levelBadge) this.levelBadge.innerText = this._tenCap();
     if (this.lessonNum) this.lessonNum.innerText = this.currentLesson;
     // Chi so: chu "Slide" chiem cho tren thanh duoi dien thoai
     if (this.slideIndexLabel) this.slideIndexLabel.innerText = `${slideIndex + 1}/${totalSlides}`;
@@ -793,7 +890,7 @@ class SlideEngine {
     const dialogue = this.loader.getDialogue(this.currentLevel, this.currentLesson);
     const lesson = this.loader.getLesson(this.currentLevel, this.currentLesson);
 
-    if (this.levelBadge) this.levelBadge.innerText = this.currentLevel;
+    if (this.levelBadge) this.levelBadge.innerText = this._tenCap();
     if (this.lessonNum) this.lessonNum.innerText = this.currentLesson;
     if (this.slideIndexLabel) this.slideIndexLabel.innerText = `${dialogue.length} lượt thoại`;
 
@@ -894,7 +991,7 @@ class SlideEngine {
     const exercises = this.loader.getExercises(this.currentLevel, this.currentLesson);
     const lesson = this.loader.getLesson(this.currentLevel, this.currentLesson);
 
-    if (this.levelBadge) this.levelBadge.innerText = this.currentLevel;
+    if (this.levelBadge) this.levelBadge.innerText = this._tenCap();
     if (this.lessonNum) this.lessonNum.innerText = this.currentLesson;
     if (this.slideIndexLabel) this.slideIndexLabel.innerText = `${exercises.length} câu hỏi`;
 
@@ -1013,7 +1110,7 @@ class SlideEngine {
    * tung nhip cua vong luyen (xem phanXa trong app.js).
    */
   renderReflex() {
-    if (this.levelBadge) this.levelBadge.innerText = this.currentLevel;
+    if (this.levelBadge) this.levelBadge.innerText = this._tenCap();
     if (this.lessonNum) this.lessonNum.innerText = this.currentLesson;
     // Nhan o thanh duoi chi dung cho ngu phap; 'phản xạ' chi lap lai ten tab
     if (this.slideIndexLabel) this.slideIndexLabel.innerText = '';
@@ -2063,6 +2160,53 @@ class SlideEngine {
         <div class="spot-meaning">${this.escapeHtml(v.meaningVi)}</div>
         ${speak(word, 'Nghe phát âm')}
         ${v.accentNote ? `<div class="spot-note"><span>${this.escapeHtml(v.accentNote)}</span></div>` : ''}`;
+    }
+
+    if (found.type === 'kanji' && window.SenseiCapDo && window.SenseiCapDo.laChuKana(found.data)) {
+      // Chu cai kana: khong Han Viet / On / Kun, khong tranh goc chu (SenseiArt chi co chu Han)
+      const k = found.data;
+      const e = (s) => this.escapeHtml(s == null ? '' : String(s));
+      const ch = String(k.character || '');
+      const bang = window.SenseiCapDo.bangChu(k);
+      const words = (k.commonWords || []).slice(0, 3).map(cw => `
+        <div class="spot-row">
+          <span class="spot-row-jp"><span lang="ja">${e(cw.word)}</span></span>
+          <span class="spot-row-vi">${e(cw.meaningVi)}</span>
+        </div>`).join('');
+      const coNet = this._coVietNet(ch);
+      if (coNet) {
+        this._vietNetTimer = setTimeout(() => {
+          if (this.spotOpenId !== k.id) return;
+          const o = this.spotCard && this.spotCard.querySelector('[data-viet-net]');
+          if (!o) return;
+          const viet = () => {
+            if (this.spotOpenId !== k.id || !o.isConnected) return;
+            o.innerHTML = '';
+            window.SenseiBoard.vietChuHan(ch, { noi: o });
+          };
+          if (!window.IntersectionObserver) { viet(); return; }
+          this._vietNetIO = new IntersectionObserver((es) => {
+            if (!es.some(x => x.isIntersecting)) return;
+            this._huyVietNet();
+            viet();
+          }, { threshold: 0.5 });
+          this._vietNetIO.observe(o);
+        }, 220);
+      }
+      return `
+        ${coNet ? '<div class="spot-viet-net" data-viet-net="1"></div>' : ''}
+        <div class="spot-kanji jp-serif${Array.from(ch).length > 1 ? ' is-ghep' : ''}" lang="ja">${e(ch)}</div>
+        <div class="spot-sub">
+          ${k.romaji ? `<span class="spot-chip">Đọc <b>${e(k.romaji)}</b></span>` : ''}
+          ${bang ? `<span class="spot-chip">${e(bang)}</span>` : ''}
+        </div>
+        <div class="spot-meaning">${e(k.meaningVi)}</div>
+        ${k.meoNho || k.sosanh ? `<div class="spot-readings is-vi">
+          ${k.meoNho ? `<div><span class="spot-rlabel">Mẹo nhớ</span><span>${e(k.meoNho)}</span></div>` : ''}
+          ${k.sosanh ? `<div><span class="spot-rlabel">Dễ nhầm</span><span>${e(k.sosanh)}</span></div>` : ''}
+        </div>` : ''}
+        ${speak(ch, 'Nghe đọc chữ')}
+        ${words ? `<div class="spot-words"><div class="spot-diagram-label">Từ ví dụ</div>${words}</div>` : ''}`;
     }
 
     if (found.type === 'kanji') {

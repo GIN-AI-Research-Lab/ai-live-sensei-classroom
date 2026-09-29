@@ -409,6 +409,17 @@
 .san-khau-giang .sk-kj-tu-r { font-size: max(12px, calc(var(--sk-co, 1) * 15px)); color: var(--muted); }
 .san-khau-giang .sk-kj-tu-m { font-size: max(12px, calc(var(--sk-co, 1) * 16px)); color: var(--ink-2); }
 
+/* Chu cai kana (bai Nhap mon, dungChuKana): romaji o cho Han Viet, meo nho / de nham la cau tieng Viet
+   -> co chu van thuong (khong co 26px cua dong On / Kun); am ghep きゃ: hai chu trong o vuong */
+.san-khau-giang .sk-kj-o.is-ghep .sk-kj-chu { font-size: 46cqh; letter-spacing: -.03em; }
+.san-khau-giang .sk-kj-romaji { letter-spacing: .03em; }
+.san-khau-giang .sk-kj-doc dd.sk-kj-vi {
+  font-size: max(12px, calc(var(--sk-co, 1) * clamp(15px, 2.2cqi, 19px)));
+  line-height: 1.5;
+  color: var(--ink-2);
+  max-width: 52ch;
+}
+
 @container sk-the (min-width: 620px) {
   .san-khau-giang .sk-kj-luoi {
     grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);

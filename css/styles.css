@@ -1349,6 +1349,7 @@ button:not(:disabled):not(.ctl):not(.ctl-icon):not(.chapter):active { transform:
 .picker-level:nth-child(n+4) { animation-delay: .09s; }
 
 /* Mau rieng tung cap chi con la mot vach mong tren o ky hieu */
+.lv-kana { --lv: #4a6fa5; }   /* Nhap mon (bang chu kana): xanh muc, tach han 5 mau N5-N1 */
 .lv-n5 { --lv: #6b8a5e; }
 .lv-n4 { --lv: #2f8a87; }
 .lv-n3 { --lv: #c0952f; }

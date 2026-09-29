@@ -107,6 +107,8 @@
 }
 .san-khau-giang[data-phong-cach="pc1"] .sk-o-the:has(> .sk-the[data-kind="vocab"]:not(.sk-ra):not(.sk-the-truoc):not([data-lat])) > .sk-mat::after { content: "語彙"; }
 .san-khau-giang[data-phong-cach="pc1"] .sk-o-the:has(> .sk-the[data-kind="kanji"]:not(.sk-ra):not(.sk-the-truoc):not([data-lat])) > .sk-mat::after { content: "漢字"; }
+/* Chu cai kana (bai Nhap mon, canh .la-kana): khong phai chu Han */
+.san-khau-giang[data-phong-cach="pc1"] .sk-o-the:has(> .sk-the[data-kind="kanji"]:not(.sk-ra):not(.sk-the-truoc):not([data-lat]) .la-kana) > .sk-mat::after { content: "かな"; }
 .san-khau-giang[data-phong-cach="pc1"] .sk-o-the:has(> .sk-the:is([data-kind="grammar-intro"], [data-kind="example"]):not(.sk-ra):not(.sk-the-truoc):not([data-lat])) > .sk-mat::after { content: "文型"; }
 .san-khau-giang[data-phong-cach="pc1"] .sk-o-the:has(> .sk-the:is([data-kind="kaiwa-intro"], [data-kind="kaiwa-run"], [data-kind="kaiwa"]):not(.sk-ra):not(.sk-the-truoc):not([data-lat])) > .sk-mat::after { content: "会話"; }
 .san-khau-giang[data-phong-cach="pc1"] .sk-o-the:has(> .sk-the[data-kind="quiz"]:not(.sk-ra):not(.sk-the-truoc):not([data-lat])) > .sk-mat::after { content: "練習"; }

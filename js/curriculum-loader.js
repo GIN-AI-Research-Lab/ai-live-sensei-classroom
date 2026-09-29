@@ -1,11 +1,48 @@
 /**
  * Curriculum Loader - AI Live Sensei Classroom
- * Quản lý và nạp dữ liệu giáo án N5 - N1
+ * Quản lý và nạp dữ liệu giáo án Nhập môn (bảng chữ kana) + N5 - N1
  */
+
+/**
+ * Cap do hien cho nguoi hoc: moi noi HIEN ten cap do deu di qua day.
+ * Ma cap trong du lieu la "KANA" (curriculum/kana/), nhung nguoi hoc thay "Nhập môn".
+ * Nap truoc slide-engine / app / motion (cung dung duoc tu cac tep do).
+ */
+window.SenseiCapDo = (function () {
+  const THU_TU = ['KANA', 'N5', 'N4', 'N3', 'N2', 'N1'];
+  const chuan = (lvl) => String(lvl || '').trim().toUpperCase();
+  const laKana = (lvl) => chuan(lvl) === 'KANA';
+  /** Ma cap tu chuoi bat ky (tool Gemini co the goi "Nhập môn" / "kana"): "KANA" | "N5"... */
+  const ma = (lvl, macDinh = 'N5') => {
+    const s = chuan(lvl);
+    if (!s) return macDinh;
+    const khongDau = s.normalize('NFD').replace(/\p{M}/gu, '').replace(/\u0110/g, 'D').replace(/[\s_-]+/g, ' ');
+    return (khongDau === 'KANA' || khongDau === 'NHAP MON') ? 'KANA' : s;
+  };
+  return {
+    THU_TU,
+    laKana: (lvl) => laKana(ma(lvl, '')),
+    ma,
+    /** Ten day du: "Nhập môn" | "N5" ... */
+    ten: (lvl) => (laKana(ma(lvl, '')) ? 'Nhập môn' : chuan(lvl)),
+    /** Dau ngan trong o ky hieu cap (2-3 ky tu): "かな" | "N5" ... */
+    dau: (lvl) => (laKana(ma(lvl, '')) ? 'かな' : chuan(lvl)),
+    /** Muc trong kanjiList la chu kana (bai Nhap mon), khong phai chu Han */
+    laChuKana: (k) => !!(k && k.loai === 'kana'),
+    /** Ten chuong chu cua cap: "Chữ cái" (Nhap mon) | "Chữ Hán" */
+    tenChuongChu: (lvl) => (laKana(ma(lvl, '')) ? 'Chữ cái' : 'Chữ Hán'),
+    /** Bang chu cua mot muc kana: "Hiragana" | "Katakana" | "" */
+    bangChu: (k) => {
+      const b = String((k && k.bangChu) || '').toLowerCase();
+      return b === 'hiragana' ? 'Hiragana' : b === 'katakana' ? 'Katakana' : '';
+    },
+  };
+})();
 
 class CurriculumLoader {
   constructor() {
     this.database = {
+      "KANA": [],
       "N5": [],
       "N4": [],
       "N3": [],
@@ -16,7 +53,7 @@ class CurriculumLoader {
   }
 
   /**
-   * Nap MUC LUC 5 cap do — moi bai chi co lessonNumber/title/description va
+   * Nap MUC LUC 6 cap do (Nhap mon + N5..N1) — moi bai chi co lessonNumber/title/description va
    * cac dem so (vocabCount, kanjiCount...), KHONG co vocabList/slides/dialogue/
    * exercises. Nhe (vai chuc KB moi cap) nen trang chon bai hien ra ngay.
    * Chi tiet tung bai duoc tai RIENG, khi hoc vien thuc su bam vao — xem
@@ -32,7 +69,8 @@ class CurriculumLoader {
    * bo du phong — bon cap do kia da tai xong thi giu nguyen.
    */
   async init() {
-    const levels = ["n5", "n4", "n3", "n2", "n1"];
+    // Nhap mon (kana) dung dau: thu tu khoa trong this.database = thu tu hien tren man chon bai
+    const levels = ["kana", "n5", "n4", "n3", "n2", "n1"];
 
     const napMot = async (lvl) => {
       const L = lvl.toUpperCase();

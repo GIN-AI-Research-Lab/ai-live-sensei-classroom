@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Live Sensei Classroom - Lộ trình JLPT N5–N1</title>
+  <title>AI Live Sensei Classroom - Lộ trình Nhập môn → N1</title>
 
   <!-- Tailwind CSS & FontAwesome -->
   <!-- Tailwind ban LOCAL.
@@ -136,8 +136,9 @@
         <!-- 2 nhan duoi trung voi 2 o chon nen CSS an di; JS van ghi vao -->
         <span id="levelBadge" class="deck-level">N5</span>
         <span class="deck-lesson-no">Bài <span id="lessonNum">1</span></span>
-        <!-- Cap do + bai dung canh nhau: "N5 · Bài 1: …" doc thanh mot danh tinh -->
+        <!-- Cap do + bai dung canh nhau: "N5 · Bài 1: …" doc thanh mot danh tinh (Nhap mon: "Nhập môn · Bài 1") -->
         <select id="levelSelect" class="deck-level-select" title="Chọn trình độ" aria-label="Chọn trình độ">
+          <option value="KANA">Nhập môn</option>
           <option value="N5" selected>N5</option>
           <option value="N4">N4</option>
           <option value="N3">N3</option>
@@ -287,7 +288,7 @@
        Lộ trình 100 bài học
        ==================================================================== -->
   <!-- ====================================================================
-       MÀN CHỌN BÀI HỌC — 5 cấp độ, mỗi cấp một dải bài
+       MÀN CHỌN BÀI HỌC — Nhập môn + N5 → N1, mỗi cấp một dải bài
        ==================================================================== -->
   <!-- Hop thoai phu kin: app.js dat inert cho phan phia sau khi mo, focus khong lot ra sau -->
   <div id="lessonPicker" class="picker" role="dialog" aria-modal="true" aria-labelledby="pickerTitle">
@@ -296,13 +297,14 @@
         <div class="deck-mark" aria-hidden="true"><i class="fa-solid fa-chalkboard-user"></i></div>
         <div>
           <h1 id="pickerTitle" tabindex="-1">Chọn bài học</h1>
-          <p>Lộ trình JLPT N5 → N1 — Minna no Nihongo &amp; Shin Kanzen Master</p>
+          <p>Lộ trình Nhập môn → N1 — bảng chữ kana, Minna no Nihongo &amp; Shin Kanzen Master</p>
         </div>
       </div>
 
       <div class="picker-tools">
         <!-- Nhay nhanh toi tung cap do (app.js gan su kien + danh dau cap dang xem) -->
         <nav id="pickerJump" class="deck-seg picker-jump" aria-label="Chuyển nhanh tới cấp độ">
+          <button type="button" data-jump="KANA" title="Nhập môn — bảng chữ kana" lang="ja">かな</button>
           <button type="button" data-jump="N5">N5</button>
           <button type="button" data-jump="N4">N4</button>
           <button type="button" data-jump="N3">N3</button>
@@ -364,6 +366,8 @@
   <script src="js/illustrations-n3-batch6.js"></script>
   <!-- Duong net chu Han (KanjiVG, CC BY-SA 3.0) + lop bang phan -->
   <script src="js/kanji-strokes.js"></script>
+  <!-- Net chu kana (hiragana, katakana, ー) cho cap Nhap mon: SenseiStrokes.get() tu tra sang day -->
+  <script src="js/kana-strokes.js"></script>
   <script src="js/board.js"></script>
   <script src="js/voices.js"></script>
   <script src="js/voice-actors.js"></script>
@@ -406,7 +410,7 @@
     (function () {
       var CAN = [
         ['__coTailwind',     'vendor/tailwind.js',      'bang mau & class giao dien'],
-        ['CurriculumLoader', 'js/curriculum-loader.js', 'giao trinh N5-N1'],
+        ['CurriculumLoader', 'js/curriculum-loader.js', 'giao trinh Nhap mon, N5-N1'],
         ['SlideEngine',      'js/slide-engine.js',      'bo dung man hinh bai hoc'],
         ['AudioEngine',      'js/audio-engine.js',      'am thanh'],
         ['GeminiLiveClient', 'js/gemini-live.js',       'phien hoc truc tuyen'],

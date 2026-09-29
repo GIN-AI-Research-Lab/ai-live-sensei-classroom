@@ -30,6 +30,16 @@
   // Thoi luong uoc cua moi dang nhip (giay) — chi de dat han chot du phong (§1.6.4)
   const PRIOR = { vocab: 14, kanji: 24, 'grammar-intro': 30, example: 20, 'kaiwa-intro': 20, 'kaiwa-run': 40, kaiwa: 18, quiz: 16 };
   const TEN_CHUONG = { vocab: 'Từ vựng', kanji: 'Chữ Hán', grammar: 'Ngữ pháp', kaiwa: 'Hội thoại', quiz: 'Bài tập' };
+  /** Ten chuong theo cap: bai Nhap mon (KANA) goi chuong chu la "Chữ cái" (window.SenseiCapDo) */
+  function tenChuong(ch, capDo) {
+    const C = window.SenseiCapDo;
+    if (ch === 'kanji' && C) {
+      let lvl = capDo;
+      if (!lvl) { try { lvl = se() && se().currentLevel; } catch (e) { lvl = ''; } }
+      return C.tenChuongChu(lvl);
+    }
+    return TEN_CHUONG[ch] || '';
+  }
   // Cum dan (§1.6.1) — da chuan hoa
   const DAN = {
     NGHIA: ['nghia la', 'co nghia', 'dich la', 'y la', 'tuc la'],
@@ -928,7 +938,7 @@
   }
   /** "Từ vựng · 3/30", "Ngữ pháp · 2/6 · ví dụ 1/3", "Hội thoại · câu 4/10" */
   function nhanDau(beat, ctx) {
-    const ten = (ctx && ctx.chuong && ctx.chuong.ten) || TEN_CHUONG[beat.chapter] || '';
+    const ten = (ctx && ctx.chuong && ctx.chuong.ten) || tenChuong(beat.chapter, ctx && ctx.capDo) || '';
     const ds = cacNhipChuong(ctx, beat.chapter);
     if (!ds.length) return beat.label || ten;
     const vt = (k) => { const a = ds.filter((b) => b.kind === k); return [a.findIndex((b) => cungNhip(b, beat)) + 1, a.length]; };
@@ -2111,6 +2121,15 @@
         + (d.accentNote ? `<p class="sk-c-meo deck-note">${e(d.accentNote)}</p>` : '');
       thuoc = cx(d);
       sr = `${beat.label || 'Từ vựng'}: ${chu} — ${d.meaningVi || ''}`;
+    } else if (kind === 'kanji' && window.SenseiCapDo && window.SenseiCapDo.laChuKana(d)) {
+      // Canh chung cho chu cai kana (builder chu loi): romaji + cach doc + meo nho, khong Han Viet / On / Kun
+      trai = `<div class="sk-c-o jp-serif" lang="ja">${e(d.character || '')}</div>`;
+      const tu = (Array.isArray(d.commonWords) ? d.commonWords : []).slice(0, 3);
+      phai = `<p class="sk-c-hv">${e(d.romaji || '')}${d.strokeCount ? `<span class="sk-c-phu-nho"> · ${e(d.strokeCount)} nét</span>` : ''}</p>`
+        + (d.meaningVi ? `<p class="sk-c-nghia">${e(d.meaningVi)}</p>` : '')
+        + (d.meoNho ? `<p class="sk-c-meo deck-note">${e(d.meoNho)}</p>` : '')
+        + (tu.length ? `<ul class="sk-c-ghep">${tu.map((w) => `<li>${j(w.word || '')}${w.meaningVi ? `<span>${e(w.meaningVi)}</span>` : ''}</li>`).join('')}</ul>` : '');
+      sr = `${beat.label || 'Chữ cái'}: ${d.character || ''} — ${d.romaji || ''}`;
     } else if (kind === 'kanji') {
       trai = `<div class="sk-c-o jp-serif" lang="ja">${e(d.character || '')}</div>`;
       const doc = (x) => (Array.isArray(x) ? x : x ? [x] : []).filter(Boolean).join('、');
@@ -2449,8 +2468,9 @@
     return `<ul class="sk-tc-muc ${lop}" aria-hidden="true">${li.join('')}</ul>`;
   }
   function hienTheChuong(o, w) {
-    const tenCu = (w.ctx && w.ctx.chuong && w.ctx.chuong.ten) || TEN_CHUONG[w.beat.chapter] || '';
-    const tenMoi = TEN_CHUONG[o.tiep.chapter] || o.tiep.chapter || '';
+    const capDo = w.ctx && w.ctx.capDo;
+    const tenCu = (w.ctx && w.ctx.chuong && w.ctx.chuong.ten) || tenChuong(w.beat.chapter, capDo) || '';
+    const tenMoi = tenChuong(o.tiep.chapter, capDo) || o.tiep.chapter || '';
     const ds = Array.isArray(o.cacNhipChuongTiep) && o.cacNhipChuongTiep.length ? o.cacNhipChuongTiep : cacNhipChuong(w.ctx, o.tiep.chapter);
     const meta = demChuong(ds, o.tiep.chapter);
     // Dong dau + day phim sang chuong moi CUNG luc noi dung the chuong hien (chua co muc hien tai)
@@ -2480,7 +2500,7 @@
     const tu = theo('vocab');
     if (tk.tu || tu.length) hang.push(['Từ vựng', so(tk.tu || tu.length, 'từ'), mau(tu.map((b) => b.data && (b.data.kanji || b.data.word)), 6, ' · '), true]);
     const chu = theo('kanji');
-    if (tk.chu || chu.length) hang.push(['Chữ Hán', so(tk.chu || chu.length, 'chữ'), mau(chu.map((b) => b.data && b.data.character), 10, ' '), true]);
+    if (tk.chu || chu.length) hang.push([tenChuong('kanji', w.ctx && w.ctx.capDo), so(tk.chu || chu.length, 'chữ'), mau(chu.map((b) => b.data && b.data.character), 10, ' '), true]);
     const gi = theo('grammar-intro');
     if (tk.mau || gi.length) hang.push(['Ngữ pháp', so(tk.mau || gi.length, 'mẫu câu'), gi.map((b) => tenMau(b.data)).filter(Boolean).join(' · '), true]);
     const th = theo('kaiwa');
@@ -2694,7 +2714,7 @@
     const i = ds.indexOf(tiep);
     if (i < 0) return null;
     const cung = ds.filter((b) => b && b.chapter === tiep.chapter);
-    const ten = tiep.chapter === w.beat.chapter && c0.chuong ? c0.chuong.ten : (TEN_CHUONG[tiep.chapter] || '');
+    const ten = tiep.chapter === w.beat.chapter && c0.chuong ? c0.chuong.ten : (tenChuong(tiep.chapter, c0.capDo) || '');
     return { i, n: c0.n != null ? c0.n : ds.length, chuong: { ten, i: cung.indexOf(tiep) + 1, n: cung.length },
       bai: c0.bai, capDo: c0.capDo, isResume: false, laBatDau: false, truoc: w.beat, cacNhip: ds };
   }
@@ -3357,7 +3377,7 @@
         if (cho) return null;
         // Cung mac dinh voi app.js (level N5, bai 1) de "cung bai" khop dung cach app hieu tool nay
         const s = se();
-        const lvl = String(args.level || 'N5').toUpperCase();
+        const lvl = window.SenseiCapDo ? window.SenseiCapDo.ma(args.level, 'N5') : String(args.level || 'N5').toUpperCase();
         const no = Number(args.lesson_id) || 1;
         const cung = !s || (lvl === String(s.currentLevel || '').toUpperCase() && no === Number(s.currentLesson));
         return cung ? { success: true } : null;

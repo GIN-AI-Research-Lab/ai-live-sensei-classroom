@@ -94,16 +94,95 @@
   "足": ["M29.75,18.99c0.82,0.82,1.43,1.68,1.66,2.33c1.15,3.39,3.44,13.48,4.61,18.68c0.34,1.51,0.59,2.61,0.68,3","M31.56,19.63c12.09-1.87,34.1-5.01,40.27-5.14c2.89-0.06,3.98,2.41,3.7,3.88c-0.73,3.84-3.94,15.23-4.51,17.27","M37.25,40.74c7.07-0.43,20.75-2.48,31.53-3.73c1.71-0.2,3.34-0.14,4.86-0.32","M52.75,41c0.81,0.81,1.4,1.75,1.4,3.62c0,5.11,0.37,32.49,0.35,33.88","M55.75,59.25C56.94,59.25,66.25,57.75,73.54,56.53C75.08,56.27,76.53,56.25,77.75,56.25","M36.49,55c0.13,1.5,0.14,3.05-0.2,4.35c-2.04,7.78-10.16,24.15-17.79,30.9","M33.25,70.75C41.75,72.12,67,87.38,82,92.5c2.94,1,6.85,1.68,9.75,2"],
   };
 
+  // ---- Chu kana (js/kana-strokes.js -> window.SenseiKanaNet), nap sau tep nay ----
+  // Bang chu Han giu nguyen; kana chi la nguon du phong khi tra chu. Am ghep (きゃ, ファ)
+  // va chuoi nhieu chu kana (ああ) duoc GHEP thanh mot bo net trong CUNG khung 109x109:
+  // tung chu dat canh nhau, co lai cho vua khung. Moi noi ve (bang phan, san khau, spotlight)
+  // dung duoc ngay ma khong phai biet chuoi co mot hay nhieu chu.
+  const KHUNG = 109;
+  const KANA_NHO = 'ぁぃぅぇぉっゃゅょゎァィゥェォッャュョヮヵヶ';
+  const kana = () => window.SenseiKanaNet || null;
+  const ghepDaCo = Object.create(null);
+
+  /** Doi toa do mot duong net: x' = x*s + dx, y' = y*s + dy (lenh hoa: doi ca vi tri; lenh thuong: chi co gian) */
+  function doiNet(d, s, dx, dy) {
+    const SO = { M: 2, L: 2, T: 2, C: 6, S: 4, Q: 4, H: 1, V: 1, Z: 0 };
+    const out = [];
+    const re = /([MLTCSQHVZmltcsqhvz])([^MLTCSQHVZmltcsqhvz]*)/g;
+    let m;
+    while ((m = re.exec(d))) {
+      const lenh = m[1], hoa = lenh === lenh.toUpperCase();
+      const L = lenh.toUpperCase();
+      const so = (m[2].match(/-?\d*\.?\d+(?:e-?\d+)?/gi) || []).map(Number);
+      if (!(L in SO)) return null;               // lenh la (A...): khong doi duoc, bo ghep
+      const doi = so.map((v, i) => {
+        if (!hoa) return v * s;
+        if (L === 'H') return v * s + dx;
+        if (L === 'V') return v * s + dy;
+        return v * s + (i % 2 === 0 ? dx : dy);
+      });
+      out.push(lenh + doi.map((v) => Math.round(v * 100) / 100).join(','));
+    }
+    return out.join('');
+  }
+
+  /** Bo net ghep cho chuoi 2+ chu kana (きゃ, ファ, ああ); thieu chu nao / loi gi -> null, khong nem */
+  function ghepKana(ch) {
+    if (ch in ghepDaCo) return ghepDaCo[ch];
+    let kq = null;
+    try {
+      const K = kana();
+      const cac = Array.from(ch);
+      if (K && cac.length > 1 && cac.length <= 4 && cac.every((c) => K[c])) {
+        // O rieng moi chu: chu thuong lay doan x 8..101; chu nho (ゃ, ァ...) lay 18..92 roi thu them
+        // NHO (x0.72, bam day o y 96) — chu nho cua KanjiVG cao gan bang chu thuong, dung canh nhau
+        // se ra "き や" chu khong phai "きゃ"
+        const NHO = 0.72, DAY = 96;
+        const o = cac.map((c) => (KANA_NHO.includes(c) ? { c, x0: 18, w: 74, k: NHO } : { c, x0: 8, w: 93, k: 1 }));
+        const rong = o.reduce((n, x) => n + x.w * x.k, 0);
+        const s = Math.min(1, (KHUNG - 12) / rong);   // chua le 6 moi ben: net day khong cham mep o
+        const dy = (KHUNG - KHUNG * s) / 2;
+        let x = (KHUNG - rong * s) / 2;
+        const net = [];
+        for (const it of o) {
+          const sc = s * it.k;
+          const dx = x - it.x0 * sc;
+          const dyC = it.k === 1 ? dy : (DAY * s + dy) - DAY * sc;   // chu nho: giu day chu
+          for (const d of K[it.c]) {
+            const d2 = doiNet(d, sc, dx, dyC);
+            if (!d2) throw new Error('lenh net la');
+            net.push(d2);
+          }
+          x += it.w * sc;
+        }
+        kq = net.length ? net : null;
+        if (kq) kq.cacChu = cac;   // de ben ve ghi "き + ゃ" thay cho mot chu
+      }
+    } catch (e) { kq = null; }
+    ghepDaCo[ch] = kq;
+    return kq;
+  }
+
+  function tim(ch) {
+    const k = String(ch || '').trim();
+    if (!k) return null;
+    if (NET[k]) return NET[k];
+    const K = kana();
+    if (K && K[k]) return K[k];
+    return ghepKana(k);
+  }
+
   window.SenseiStrokes = {
-    /** Mảng đường nét theo thứ tự viết, hoặc null nếu chưa có chữ này */
+    /** Mảng đường nét theo thứ tự viết (chữ Hán, rồi kana, rồi âm ghép kana), hoặc null */
     get(ch) {
-      return NET[String(ch || '').trim()] || null;
+      return tim(ch);
     },
-    /** Số nét thật theo KanjiVG (có thể dùng để đối chiếu với giáo trình) */
+    /** Số nét thật theo KanjiVG (âm ghép: tổng số nét các chữ) */
     count(ch) {
-      const n = NET[String(ch || '').trim()];
+      const n = tim(ch);
       return n ? n.length : 0;
     },
+    /** Chi dem chu Han (kana nam o SenseiKanaNet) */
     size() { return Object.keys(NET).length; },
     KHUNG: 109,
     NGUON: 'KanjiVG · CC BY-SA 3.0',

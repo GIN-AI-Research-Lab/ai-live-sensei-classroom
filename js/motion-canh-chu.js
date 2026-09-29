@@ -1180,8 +1180,153 @@
      4. CHU HAN (§3.2)
      ====================================================================== */
 
+  /* ----------------------------------------------------------------------
+     4b. CHU CAI KANA (bai Nhap mon) — cung khung the / cung lop sk-kj-* voi chu Han (5 phong cach
+     pcN nham dung cac lop nay), nhung noi dung khac: o chu + net viet | romaji lon, cach doc,
+     meo nho, chu de nham, 2-3 tu vi du. Khong Han Viet / On / Kun / chiet tu; am ghep (きゃ) so net = 0
+     thi khong ghi "· N nét".
+     ---------------------------------------------------------------------- */
+  function dungChuKana(beat, c) {
+    const k = (beat && beat.data) || {};
+    const se = c.se || {};
+    const esc = taoEsc(se);
+    const b = taoBo(c);
+    const ch = String(k.character || '').trim();
+    let net = null;
+    try { net = W.SenseiStrokes && W.SenseiStrokes.get(ch); } catch (e) {}
+    const romaji = String(k.romaji || '').trim();
+    const rN = vnNorm(romaji);
+    let bang = '';
+    try { bang = (W.SenseiCapDo && W.SenseiCapDo.bangChu(k)) || ''; } catch (e) {}
+    const ghep = doDai(ch) > 1;
+    const soNet = Number(k.strokeCount) > 0 ? Number(k.strokeCount) : 0;
+    const phu = [bang, ghep ? 'âm ghép' : '', soNet ? soNet + ' nét' : ''].filter(Boolean).join(' · ');
+    const cw = (k.commonWords || []).filter((w) => w && w.word).slice(0, 3);
+
+    const ke = '<svg class="sk-kj-ke" viewBox="0 0 100 100" aria-hidden="true" preserveAspectRatio="none">' +
+      '<line x1="50" y1="0" x2="50" y2="100"/><line x1="0" y1="50" x2="100" y2="50"/>' +
+      '<line x1="0" y1="0" x2="100" y2="100"/><line x1="100" y1="0" x2="0" y2="100"/></svg>';
+    const toChu = (w) => (ch ? esc(w).split(esc(ch)).join(`<span class="sk-kj-cho">${esc(ch)}</span>`) : esc(w));
+
+    const than = `
+      <div class="sk-kj-luoi is-kana">
+        <div class="sk-kj-trai" data-sk-cot="trai">
+          <div class="sk-kj-o${ghep ? ' is-ghep' : ''}" id="${esc(idSt(c, k.id))}">
+            ${ke}
+            <span class="sk-kj-chu jp-serif${net ? ' is-bong' : ''}" lang="ja" aria-hidden="true">${esc(ch)}</span>
+          </div>
+        </div>
+        <div class="sk-kj-phai" data-sk-cot="phai">
+          <div class="sk-kj-dinh">
+            <div class="sk-kj-dau sk-chu-noi"><span class="sk-kj-hv sk-kj-romaji">${esc(romaji)}</span>${phu ? `<span class="sk-kj-sonet"> · ${esc(phu)}</span>` : ''}</div>
+            ${k.meaningVi ? `<div class="sk-kj-nghia sk-chu-noi">${esc(k.meaningVi)}</div>` : ''}
+          </div>
+          ${k.meoNho || k.sosanh ? `<dl class="sk-kj-doc is-kana">
+            ${k.meoNho ? `<div class="sk-kj-dong sk-kj-meo sk-an"><dt>Mẹo nhớ</dt><dd class="sk-chu-noi sk-kj-vi">${esc(k.meoNho)}</dd></div>` : ''}
+            ${k.sosanh ? `<div class="sk-kj-dong sk-kj-nham sk-an"><dt>Dễ nhầm</dt><dd class="sk-chu-noi sk-kj-vi">${esc(k.sosanh)}</dd></div>` : ''}
+          </dl>` : ''}
+          ${cw.length ? `<ul class="sk-kj-tu">${cw.map((w, i) => `
+            <li class="sk-kj-tu-dong sk-an sk-chu-noi${i === 2 ? ' sk-kj-tu-3' : ''}">
+              <span class="sk-kj-tu-w" lang="ja">${toChu(w.word || '')}</span>
+              ${w.furigana && w.furigana !== w.word ? `<span class="sk-kj-tu-r" lang="ja">${esc(w.furigana)}</span>` : '<span></span>'}
+              <span class="sk-kj-tu-m${i === 2 ? ' sk-phu-bo' : ''}">${esc(w.meaningVi || '')}</span>
+            </li>`).join('')}
+          </ul>` : ''}
+        </div>
+      </div>`;
+
+    const el = taoThe('kanji', (net ? 'co-net' : 'khong-net') + ' la-kana', than, camXuc(se, k));
+    b.ganThe(el);
+    const q = (s) => el.querySelector(s);
+    const oEl = q('.sk-kj-o');
+    const chuEl = q('.sk-kj-chu');
+    const hvEl = q('.sk-kj-dau');
+    const nghiaEl = q('.sk-kj-nghia');
+    const meoEl = q('.sk-kj-meo');
+    const nhamEl = q('.sk-kj-nham');
+    const tuDongs = [...el.querySelectorAll('.sk-kj-tu-dong')];
+
+    let daChi = false;
+    const chi = (x) => { if (daChi || !x) return; daChi = true; try { c.chiVao(x); } catch (e) {} };
+
+    let daVe = false;
+    function veNet() {
+      if (daVe) return;
+      daVe = true;
+      const B = W.SenseiBoard;
+      if (!oEl || !B || typeof B.vietChuHan !== 'function') return;
+      oEl.querySelectorAll('.bang-kanji').forEach((x) => x.remove());
+      const n = (net && net.length) || 1;
+      // Kana it net (1-4) -> moi net cham hon chu Han mot chut cho de nhin; tong luot van ngan
+      const tocDo = b.giam ? 0.01 : kep(3.2 / n, 0.3, 0.7);
+      let ok = false;
+      try { ok = B.vietChuHan(ch, { noi: oEl, tocDo }); } catch (e) { warn('vietChuHan', e); }
+      if (!ok) return;
+      oEl.classList.add('is-ve');
+      if (chuEl) chuEl.classList.add('is-tat');
+      chi(oEl);
+    }
+
+    // Khoa goi ten chu: "đọc là kya", "âm kya", "romaji kya" (romaji tran 1-2 chu cai trung chu Viet)
+    const khoaDoc = rN ? uniq(['doc la ' + rN, 'doc ' + rN, 'am ' + rN, 'romaji ' + rN, 'romaji la ' + rN]) : [];
+    const cues = [{ id: 'K0', loai: 'nhan', khi: { dauTien: true }, lam: b.mot('K0', () => b.troToi(hvEl)) }];
+    const MOC = net ? 'K1b' : 'K1m';
+    const rieng = doDai(ch) === 1;
+    if (net) {
+      cues.push({ id: 'K1', loai: 'lam', docLap: true, khi: { congCu: 'write_kanji' }, tiLe: 0.12,
+        lam: b.mot('K1c', () => veNet(), true) });
+      cues.push({ id: 'K1b', loai: 'lam', docLap: true,
+        khi: { khop: { jp: ch ? [ch] : [], vn: khoaDoc }, rieng }, tiLe: 0.12,
+        lam: (tt) => { if (tt && tt.via === 'khop') b.hen(veNet, 400); else veNet(); } });
+    } else {
+      cues.push({ id: 'K1m', loai: 'lam', docLap: true, khi: { khop: { jp: ch ? [ch] : [], vn: khoaDoc }, rieng }, tiLe: 0.1, lam: () => {} });
+    }
+    if (khoaDoc.length) {
+      cues.push({ id: 'K2', loai: 'nhan', khi: { khop: { vn: khoaDoc } }, lam: b.mot('K2', () => b.troToi(hvEl)) });
+    }
+    if (nghiaEl) {
+      const khoaAm = uniq([...vn3(k.meaningVi), 'phat am', 'doc gan', 'doc giong', 'giong am', 'tieng viet']);
+      cues.push({ id: 'K3', loai: 'nhan', khi: { khop: { vn: khoaAm } }, sau: MOC, lam: b.mot('K3', () => b.troToi(nghiaEl)) });
+    }
+    let truoc = MOC;
+    if (meoEl) {
+      cues.push({ id: 'K4', loai: 'hien', khi: { khop: { vn: uniq([...MEO, 'hinh dang', 'nhin chu', 'mat chu', ...vn3(k.meoNho)]) } },
+        sau: truoc, tiLe: 0.4,
+        lam: b.mot('K4', (tt) => b.xep(() => { b.hien(meoEl); b.troToi(meoEl.querySelector('dd'), { ngay: true }); }, tt), true) });
+      truoc = 'K4';
+    }
+    if (nhamEl) {
+      // Chu de nham nhac ten trong cau so sanh (お, り...): khoa Nhat 1 chu -> rieng
+      const giong = uniq(kyTu(k.sosanh).filter((x) => /[ぁ-ヿ]/.test(x) && x !== 'ー' && !ch.includes(x))).slice(0, 3);
+      cues.push({ id: 'K5', loai: 'hien', khi: { khop: { jp: giong, vn: ['de nham', 'nham voi', 'phan biet', 'giong chu', 'giong het'] }, rieng: true },
+        sau: truoc, tiLe: 0.55,
+        lam: b.mot('K5', (tt) => b.xep(() => { b.hien(nhamEl); b.troToi(nhamEl.querySelector('dd'), { ngay: true }); }, tt), true) });
+      truoc = 'K5';
+    }
+    tuDongs.forEach((li, i) => {
+      const w = cw[i] || {};
+      const jp = uniq([w.word, w.furigana]).filter((x) => x !== ch && doDai(x) >= 2);
+      cues.push({ id: 'K7.' + i, loai: 'hien', khi: { khop: { jp, vn: i === 0 ? ['vi du', 'tu vi du'] : [] } }, sau: truoc, tiLe: 0.68 + 0.08 * i,
+        lam: b.mot('K7.' + i, (tt) => b.xep(() => { b.hien(li); b.troToi(li, { ngay: true, px: 10, py: 2 }); }, tt), true) });
+      truoc = 'K7.' + i;
+    });
+
+    const canh = {
+      el, cues, heroEl: oEl,
+      sr: `${beat.label || 'Chữ cái'}: ${ch}${romaji ? ' — đọc ' + romaji : ''}`,
+      xong() { b.buDu(); b.xaHang(false); },
+      giu() { b.xaHang(true); return null; },
+      huy() { b.huy(); },
+      _chu: { kind: 'kanji' },
+    };
+    canh.congCu = taoCongCu(c, b, el, { chuHan: ch });
+    return canh;
+  }
+
   function dungChuHan(beat, c) {
     const k = (beat && beat.data) || {};
+    // Chu cai kana (bai Nhap mon): the rieng, khong Han Viet / On / Kun / tranh goc chu (SenseiArt)
+    if (k.loai === 'kana') return dungChuKana(beat, c);
     const se = c.se || {};
     const esc = taoEsc(se);
     const b = taoBo(c);

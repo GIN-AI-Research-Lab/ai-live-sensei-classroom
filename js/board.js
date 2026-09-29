@@ -11,7 +11,7 @@
  *
  * Ba việc:
  *   1. veLen()      — khoanh tròn / gạch chân / gạch xoá / đóng khung / mũi tên
- *   2. vietChuHan() — viết chữ Hán theo đúng thứ tự nét (dữ liệu KanjiVG)
+ *   2. vietChuHan() — viết chữ Hán / chữ kana theo đúng thứ tự nét (dữ liệu KanjiVG)
  *   3. vietBang()   — bảng phấn tự do, Sensei viết gì lên cũng được
  */
 (function () {
@@ -308,8 +308,21 @@
      * @param {object} opts    { noi: phan tu chua, tocDo: giay moi net, hienSo }
      */
     vietChuHan(ch, opts = {}) {
-      const net = window.SenseiStrokes ? window.SenseiStrokes.get(ch) : null;
-      if (!net) return false;
+      // Chu kana va am ghep (きゃ, ファ) cung di qua day: SenseiStrokes.get da ghep san cac chu
+      // canh nhau trong cung khung. Loi bat ky -> false (ben goi tu lui ve chu tinh), khong nem.
+      let net = null;
+      try { net = window.SenseiStrokes ? window.SenseiStrokes.get(ch) : null; } catch (e) { net = null; }
+      if (!net || !net.length) return false;
+      try { return this._vietNet(ch, net, opts); } catch (e) {
+        console.warn('[bang] khong viet duoc net', ch, e);
+        return false;
+      }
+    }
+
+    _vietNet(ch, net, opts) {
+      // Am ghep: ghi "きゃ — き + ゃ" (dem tong so net cua hai chu de gay hieu nham)
+      const tenChu = Array.isArray(net.cacChu) && net.cacChu.length > 1
+        ? `${ch} — ${net.cacChu.join(' + ')}` : `${ch} — ${net.length} nét`;
 
       // Co cho ve san (vi du trong spotlight) thi ve vao do va KHONG mo bang phan.
       // Khong thi mo bang spotlight chu Han la bang bat len theo, che man hinh
@@ -336,7 +349,7 @@
           <canvas class="bang-kanji-tap" title="Vẽ tay theo nét mờ"></canvas>
         </div>
         <div class="bang-kanji-chan">
-          <span class="bang-kanji-ten">${ch} — ${net.length} nét</span>
+          <span class="bang-kanji-ten">${tenChu}</span>
           <button type="button" class="bang-kanji-lai" title="Xem lại thứ tự nét, xoá bản vừa tập viết">
             <i class="fa-solid fa-rotate-left"></i><span>Viết lại</span>
           </button>

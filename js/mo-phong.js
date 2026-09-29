@@ -169,6 +169,22 @@
     kanji(b, rng) {
       const k = b.data || {};
       const ch = k.character || '';
+      if (k.loai === 'kana') {
+        // Chu cai (bai Nhap mon): ten chu + romaji, cach doc, meo nho, chu de nham, 2 tu vi du — khong Han Viet / On / Kun
+        const som = rng.co(0.6);
+        const out = [
+          som ? CC('write_kanji', { character: ch }) : null,
+          V('Chữ '), J(ch, ch), V(', đọc là ' + (k.romaji || '') + '. '), J(ch, ch), V('. '),
+          som ? null : CC('write_kanji', { character: ch }),
+          k.meaningVi ? V('Phát âm: ' + nhoHoa(k.meaningVi) + ' ') : null,
+          k.meoNho ? V('Mẹo nhớ: ' + k.meoNho + ' ') : null,
+          k.sosanh ? V('Dễ nhầm: ' + k.sosanh + ' ') : null,
+        ];
+        (k.commonWords || []).slice(0, 2).forEach(cw => {
+          out.push(V('Ví dụ: '), J(cw.word, cw.furigana || cw.word), V(' nghĩa là ' + nhoHoa(cw.meaningVi) + '. '));
+        });
+        return out;
+      }
       const kun = (k.kunyomi || []).map(docTen).filter(Boolean);
       const on = (k.onyomi || []).map(bocNgoac).filter(Boolean);
       const doc = kun[0] || kataHira(on[0] || '') || '';
