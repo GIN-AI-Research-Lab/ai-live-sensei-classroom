@@ -1,0 +1,282 @@
+{
+ "miller": {
+  "binh_thuong": "assets/minh-hoa/nv/miller/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/miller/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/miller/vui.webp",
+  "hoi": "assets/minh-hoa/nv/miller/hoi.webp",
+  "gian": "assets/minh-hoa/nv/miller/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/miller/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/miller/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/miller/buon.webp"
+ },
+ "sato": {
+  "binh_thuong": "assets/minh-hoa/nv/sato/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/sato/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/sato/vui.webp",
+  "hoi": "assets/minh-hoa/nv/sato/hoi.webp",
+  "gian": "assets/minh-hoa/nv/sato/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/sato/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/sato/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/sato/buon.webp"
+ },
+ "yamada": {
+  "binh_thuong": "assets/minh-hoa/nv/yamada/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/yamada/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/yamada/vui.webp",
+  "hoi": "assets/minh-hoa/nv/yamada/hoi.webp",
+  "gian": "assets/minh-hoa/nv/yamada/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/yamada/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/yamada/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/yamada/buon.webp"
+ },
+ "wang": {
+  "binh_thuong": "assets/minh-hoa/nv/wang/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/wang/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/wang/vui.webp",
+  "hoi": "assets/minh-hoa/nv/wang/hoi.webp",
+  "gian": "assets/minh-hoa/nv/wang/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/wang/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/wang/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/wang/buon.webp"
+ },
+ "santos": {
+  "binh_thuong": "assets/minh-hoa/nv/santos/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/santos/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/santos/vui.webp",
+  "hoi": "assets/minh-hoa/nv/santos/hoi.webp",
+  "gian": "assets/minh-hoa/nv/santos/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/santos/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/santos/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/santos/buon.webp"
+ },
+ "tanaka": {
+  "binh_thuong": "assets/minh-hoa/nv/tanaka/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/tanaka/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/tanaka/vui.webp",
+  "hoi": "assets/minh-hoa/nv/tanaka/hoi.webp",
+  "gian": "assets/minh-hoa/nv/tanaka/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/tanaka/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/tanaka/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/tanaka/buon.webp"
+ },
+ "gupta": {
+  "binh_thuong": "assets/minh-hoa/nv/gupta/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/gupta/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/gupta/vui.webp",
+  "hoi": "assets/minh-hoa/nv/gupta/hoi.webp",
+  "gian": "assets/minh-hoa/nv/gupta/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/gupta/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/gupta/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/gupta/buon.webp"
+ },
+ "karina": {
+  "binh_thuong": "assets/minh-hoa/nv/karina/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/karina/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/karina/vui.webp",
+  "hoi": "assets/minh-hoa/nv/karina/hoi.webp",
+  "gian": "assets/minh-hoa/nv/karina/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/karina/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/karina/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/karina/buon.webp"
+ },
+ "maria": {
+  "binh_thuong": "assets/minh-hoa/nv/maria/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/maria/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/maria/vui.webp",
+  "hoi": "assets/minh-hoa/nv/maria/hoi.webp",
+  "gian": "assets/minh-hoa/nv/maria/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/maria/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/maria/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/maria/buon.webp"
+ },
+ "yamamoto": {
+  "binh_thuong": "assets/minh-hoa/nv/yamamoto/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/yamamoto/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/yamamoto/vui.webp",
+  "hoi": "assets/minh-hoa/nv/yamamoto/hoi.webp",
+  "gian": "assets/minh-hoa/nv/yamamoto/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/yamamoto/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/yamamoto/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/yamamoto/buon.webp"
+ },
+ "suzuki": {
+  "binh_thuong": "assets/minh-hoa/nv/suzuki/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/suzuki/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/suzuki/vui.webp",
+  "hoi": "assets/minh-hoa/nv/suzuki/hoi.webp",
+  "gian": "assets/minh-hoa/nv/suzuki/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/suzuki/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/suzuki/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/suzuki/buon.webp"
+ },
+ "giao-vien": {
+  "binh_thuong": "assets/minh-hoa/nv/giao-vien/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/giao-vien/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/giao-vien/vui.webp",
+  "hoi": "assets/minh-hoa/nv/giao-vien/hoi.webp",
+  "gian": "assets/minh-hoa/nv/giao-vien/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/giao-vien/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/giao-vien/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/giao-vien/buon.webp"
+ },
+ "shacho": {
+  "binh_thuong": "assets/minh-hoa/nv/shacho/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/shacho/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/shacho/vui.webp",
+  "hoi": "assets/minh-hoa/nv/shacho/hoi.webp",
+  "gian": "assets/minh-hoa/nv/shacho/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/shacho/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/shacho/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/shacho/buon.webp"
+ },
+ "kyoju": {
+  "binh_thuong": "assets/minh-hoa/nv/kyoju/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/kyoju/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/kyoju/vui.webp",
+  "hoi": "assets/minh-hoa/nv/kyoju/hoi.webp",
+  "gian": "assets/minh-hoa/nv/kyoju/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/kyoju/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/kyoju/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/kyoju/buon.webp"
+ },
+ "senshu": {
+  "binh_thuong": "assets/minh-hoa/nv/senshu/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/senshu/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/senshu/vui.webp",
+  "hoi": "assets/minh-hoa/nv/senshu/hoi.webp",
+  "gian": "assets/minh-hoa/nv/senshu/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/senshu/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/senshu/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/senshu/buon.webp"
+ },
+ "coach": {
+  "binh_thuong": "assets/minh-hoa/nv/coach/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/coach/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/coach/vui.webp",
+  "hoi": "assets/minh-hoa/nv/coach/hoi.webp",
+  "gian": "assets/minh-hoa/nv/coach/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/coach/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/coach/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/coach/buon.webp"
+ },
+ "bengoshi": {
+  "binh_thuong": "assets/minh-hoa/nv/bengoshi/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/bengoshi/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/bengoshi/vui.webp",
+  "hoi": "assets/minh-hoa/nv/bengoshi/hoi.webp",
+  "gian": "assets/minh-hoa/nv/bengoshi/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/bengoshi/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/bengoshi/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/bengoshi/buon.webp"
+ },
+ "hisho": {
+  "binh_thuong": "assets/minh-hoa/nv/hisho/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/hisho/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/hisho/vui.webp",
+  "hoi": "assets/minh-hoa/nv/hisho/hoi.webp",
+  "gian": "assets/minh-hoa/nv/hisho/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/hisho/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/hisho/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/hisho/buon.webp"
+ },
+ "nguyen": {
+  "binh_thuong": "assets/minh-hoa/nv/nguyen/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/nguyen/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/nguyen/vui.webp",
+  "hoi": "assets/minh-hoa/nv/nguyen/hoi.webp",
+  "gian": "assets/minh-hoa/nv/nguyen/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/nguyen/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/nguyen/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/nguyen/buon.webp"
+ },
+ "tenin": {
+  "binh_thuong": "assets/minh-hoa/nv/tenin/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/tenin/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/tenin/vui.webp",
+  "hoi": "assets/minh-hoa/nv/tenin/hoi.webp",
+  "gian": "assets/minh-hoa/nv/tenin/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/tenin/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/tenin/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/tenin/buon.webp"
+ },
+ "uketsuke": {
+  "binh_thuong": "assets/minh-hoa/nv/uketsuke/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/uketsuke/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/uketsuke/vui.webp",
+  "hoi": "assets/minh-hoa/nv/uketsuke/hoi.webp",
+  "gian": "assets/minh-hoa/nv/uketsuke/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/uketsuke/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/uketsuke/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/uketsuke/buon.webp"
+ },
+ "joshi": {
+  "binh_thuong": "assets/minh-hoa/nv/joshi/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/joshi/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/joshi/vui.webp",
+  "hoi": "assets/minh-hoa/nv/joshi/hoi.webp",
+  "gian": "assets/minh-hoa/nv/joshi/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/joshi/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/joshi/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/joshi/buon.webp"
+ },
+ "hyoronka": {
+  "binh_thuong": "assets/minh-hoa/nv/hyoronka/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/hyoronka/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/hyoronka/vui.webp",
+  "hoi": "assets/minh-hoa/nv/hyoronka/hoi.webp",
+  "gian": "assets/minh-hoa/nv/hyoronka/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/hyoronka/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/hyoronka/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/hyoronka/buon.webp"
+ },
+ "isha": {
+  "binh_thuong": "assets/minh-hoa/nv/isha/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/isha/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/isha/vui.webp",
+  "hoi": "assets/minh-hoa/nv/isha/hoi.webp",
+  "gian": "assets/minh-hoa/nv/isha/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/isha/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/isha/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/isha/buon.webp"
+ },
+ "tsukonin": {
+  "binh_thuong": "assets/minh-hoa/nv/tsukonin/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/tsukonin/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/tsukonin/vui.webp",
+  "hoi": "assets/minh-hoa/nv/tsukonin/hoi.webp",
+  "gian": "assets/minh-hoa/nv/tsukonin/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/tsukonin/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/tsukonin/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/tsukonin/buon.webp"
+ },
+ "gakusei": {
+  "binh_thuong": "assets/minh-hoa/nv/gakusei/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/gakusei/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/gakusei/vui.webp",
+  "hoi": "assets/minh-hoa/nv/gakusei/hoi.webp",
+  "gian": "assets/minh-hoa/nv/gakusei/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/gakusei/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/gakusei/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/gakusei/buon.webp"
+ },
+ "shikai": {
+  "binh_thuong": "assets/minh-hoa/nv/shikai/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/shikai/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/shikai/vui.webp",
+  "hoi": "assets/minh-hoa/nv/shikai/hoi.webp",
+  "gian": "assets/minh-hoa/nv/shikai/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/shikai/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/shikai/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/shikai/buon.webp"
+ },
+ "kisha": {
+  "binh_thuong": "assets/minh-hoa/nv/kisha/binh_thuong.webp",
+  "binh_thuong_kin": "assets/minh-hoa/nv/kisha/binh_thuong_kin.webp",
+  "vui": "assets/minh-hoa/nv/kisha/vui.webp",
+  "hoi": "assets/minh-hoa/nv/kisha/hoi.webp",
+  "gian": "assets/minh-hoa/nv/kisha/gian.webp",
+  "ngac_nhien": "assets/minh-hoa/nv/kisha/ngac_nhien.webp",
+  "hao_hung": "assets/minh-hoa/nv/kisha/hao_hung.webp",
+  "buon": "assets/minh-hoa/nv/kisha/buon.webp"
+ }
+}

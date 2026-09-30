@@ -309,7 +309,7 @@
    ],
    "gioiTinh": "m",
    "giong": "Alnilam",
-   "anh": null,
+   "anh": "assets/minh-hoa/nv-coach.webp",
    "vaiTro": "Huấn luyện viên (N4)",
    "soLuot": 3,
    "xuatHien": [
@@ -326,7 +326,7 @@
    ],
    "gioiTinh": "m",
    "giong": "Iapetus",
-   "anh": null,
+   "anh": "assets/minh-hoa/nv-bengoshi.webp",
    "vaiTro": "Luật sư (N1)",
    "soLuot": 5,
    "xuatHien": [
@@ -343,7 +343,7 @@
    ],
    "gioiTinh": "m",
    "giong": "Enceladus",
-   "anh": null,
+   "anh": "assets/minh-hoa/nv-hisho.webp",
    "vaiTro": "Thư ký (N4); nam để tách khỏi Lễ tân (nữ) trong cùng bài",
    "soLuot": 5,
    "xuatHien": [
@@ -363,7 +363,7 @@
    ],
    "gioiTinh": "f",
    "giong": "Laomedeia",
-   "anh": null,
+   "anh": "assets/minh-hoa/nv-nguyen.webp",
    "vaiTro": "Học viên Việt Nam trong bài kana",
    "soLuot": 8,
    "xuatHien": [
@@ -418,7 +418,7 @@
    ],
    "gioiTinh": "f",
    "giong": "Gacrux",
-   "anh": null,
+   "anh": "assets/minh-hoa/nv-joshi.webp",
    "vaiTro": "Cấp trên (N4); giọng chín chắn",
    "soLuot": 4,
    "xuatHien": [
@@ -435,7 +435,7 @@
    ],
    "gioiTinh": "f",
    "giong": "Erinome",
-   "anh": null,
+   "anh": "assets/minh-hoa/nv-hyoronka.webp",
    "vaiTro": "Nhà bình luận (N1)",
    "soLuot": 5,
    "xuatHien": [
@@ -452,7 +452,7 @@
    ],
    "gioiTinh": "f",
    "giong": "Vindemiatrix",
-   "anh": null,
+   "anh": "assets/minh-hoa/nv-isha.webp",
    "vaiTro": "Bác sĩ (N5)",
    "soLuot": 5,
    "xuatHien": [
@@ -469,7 +469,7 @@
    ],
    "gioiTinh": "f",
    "giong": "Callirrhoe",
-   "anh": null,
+   "anh": "assets/minh-hoa/nv-tsukonin.webp",
    "vaiTro": "Người qua đường (N5)",
    "soLuot": 2,
    "xuatHien": [
@@ -486,7 +486,7 @@
    ],
    "gioiTinh": "f",
    "giong": "Achernar",
-   "anh": null,
+   "anh": "assets/minh-hoa/nv-gakusei.webp",
    "vaiTro": "Nghiên cứu sinh trước giáo sư (N1)",
    "soLuot": 5,
    "xuatHien": [
@@ -503,7 +503,7 @@
    ],
    "gioiTinh": "f",
    "giong": "Sulafat",
-   "anh": null,
+   "anh": "assets/minh-hoa/nv-shikai.webp",
    "vaiTro": "Người dẫn chương trình (N1)",
    "soLuot": 5,
    "xuatHien": [
@@ -520,7 +520,7 @@
    ],
    "gioiTinh": "f",
    "giong": "Pulcherrima",
-   "anh": null,
+   "anh": "assets/minh-hoa/nv-kisha.webp",
    "vaiTro": "Phóng viên họp báo (N1)",
    "soLuot": 5,
    "xuatHien": [
