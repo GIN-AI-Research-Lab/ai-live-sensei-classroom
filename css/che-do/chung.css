@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Che do san khau — phan CHUNG (moi che do a..j dung): lop .cd-lop tren san khau + nut / menu "Chế độ".
+   - #sanKhauGiang[data-che-do="<id>"]: che do dang bat. [data-cd-phu="1"]: nhip nay do che do ve ->
+     san khau tran het be ngang vung giua hai thanh, khung dao dien (.sk-khung) an (van dung, van do dac).
+   - Che do chi viet CSS duoi .cd-lop[data-che-do="<id>"] (css/che-do/<id>.css), khong dung :root.
+   ========================================================================== */
+
+/* ---------------------------------------------------------------- lop che do */
+.san-khau-giang[data-cd-phu="1"] {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+.san-khau-giang[data-cd-phu="1"] > .sk-khung { visibility: hidden; }
+.san-khau-giang > .cd-lop {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  overflow: clip;
+  contain: layout paint;
+  pointer-events: none;
+  isolation: isolate;
+}
+/* Nhip do the mac dinh ve (che do khong co builder): lop an, the mac dinh hien nhu thuong */
+.san-khau-giang:not([data-cd-phu="1"]) > .cd-lop { visibility: hidden; }
+/* Cho hoc vien: the bai tap that (cong) + chan the (trang thai luot, nut) trong o bai tap cua che do */
+.san-khau-giang[data-che="cho"] .cd-lop .sk-cong,
+.san-khau-giang[data-che="cho"] .cd-lop .cd-chan { pointer-events: auto; }
+.cd-lop .sk-cong.cd-cong {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cd-lop .sk-the-chan.cd-chan { flex: none; margin-top: 10px; }
+/* Net chu (CDH.vietNet): mau lay tu bien cua che do, mac dinh muc den */
+.cd-lop .cd-net { display: block; width: 100%; height: 100%; overflow: visible; }
+.cd-lop .cd-net-ke line { stroke: var(--cd-net-ke, rgba(120, 90, 60, .22)); stroke-width: .6; stroke-dasharray: 2 2; }
+.cd-lop .cd-net path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.cd-lop .cd-net-mo path { stroke: var(--cd-net-mo, rgba(31, 29, 25, .10)); stroke-width: 3.2; }
+.cd-lop .cd-net-ve path { stroke: var(--cd-net, #1f1d19); stroke-width: 3.6; }
+
+/* ---------------------------------------------------------------- nut "Chế độ" tren thanh tren */
+.cd-nut { position: relative; }
+.cd-nut .cd-nut-cham {
+  position: absolute; right: 4px; top: 4px;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--cd-b, var(--accent));
+  box-shadow: 0 0 0 2px var(--surface-hi, #fff);
+  opacity: 0;
+}
+.cd-nut.is-co .cd-nut-cham { opacity: 1; }
+.cd-nut[aria-expanded="true"] { color: var(--accent-deep); border-color: var(--accent); }
+
+.cd-menu {
+  position: fixed;
+  z-index: 95;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: 14px;
+  background: var(--surface-hi, #fff);
+  box-shadow: var(--shadow-pop);
+  color: var(--ink);
+  font-size: 13.5px;
+}
+.cd-menu[hidden] { display: none; }
+.cd-menu .cd-dau-menu { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 4px 8px 8px; font-weight: 700; }
+.cd-menu .cd-phu { font-size: 12px; font-weight: 500; color: var(--faint); }
+.cd-menu .cd-cuon { overflow-y: auto; min-height: 0; overscroll-behavior: contain; }
+.cd-menu .cd-nhom { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--line); }
+.cd-menu .cd-nhom-ten { margin: 2px 8px 4px; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); }
+.cd-menu .cd-muc {
+  display: flex; align-items: center; gap: 10px;
+  width: 100%; min-height: 36px;
+  padding: 6px 8px;
+  border: 0; border-radius: 9px;
+  background: transparent; color: inherit;
+  font: inherit; text-align: left; cursor: pointer;
+}
+.cd-menu .cd-muc:hover { background: var(--paper); }
+.cd-menu .cd-muc:focus-visible { outline: var(--focus-ring); outline-offset: -2px; }
+.cd-menu .cd-muc[aria-checked="true"] { background: rgba(201, 100, 66, .10); font-weight: 700; }
+.cd-menu .cd-mau {
+  flex: none; width: 22px; height: 22px; border-radius: 7px;
+  background: linear-gradient(135deg, var(--cd-a) 0 55%, var(--cd-b) 55% 100%);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .12);
+}
+.cd-menu .cd-ten { flex: 1 1 auto; min-width: 0; }
+.cd-menu .cd-ma { flex: none; font-size: 12px; font-weight: 700; color: var(--faint); }
+.cd-menu .cd-dau { flex: none; width: 14px; color: var(--accent-deep); opacity: 0; }
+.cd-menu .cd-muc[aria-checked="true"] .cd-dau { opacity: 1; }
+.cd-menu .cd-muc.is-dang .cd-ten::after { content: " · đang chạy"; font-weight: 500; }
+.cd-menu .cd-tb { margin: 6px 8px 2px; font-size: 12px; color: var(--accent-deep); }
+.cd-menu .cd-tb:empty { display: none; }
+@media (max-width: 640px) {
+  .cd-menu .cd-muc { min-height: 40px; }
+}

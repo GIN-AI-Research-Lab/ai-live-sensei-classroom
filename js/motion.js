@@ -434,6 +434,7 @@
       el.classList.add('sk-nhan');
       S.nhanEl = el;
       S.nhanLuc = dongHo();
+      if (CD.canh && el.id) cdBao('tro', el.id.replace(/^st-/, ''), { T: S.nhanLuc });
       return datConTro(el, {}) || CON_TRO_MS;
     },
     /** Doc luot: con tro dung tren el, vach 3px trong con tro keo tu trai sang trong ms (350–3500); mo = lan 2 */
@@ -463,6 +464,11 @@
       const khoang = (k) => (k + 1 < T.length ? Math.max(0.06, T[k + 1] - T[k])
         : clamp(ket != null && ket > T[k] ? ket - T[k] : (o.cuoi != null ? o.cuoi : tb), 0.12, 1.5));
       const nhan = o.nhan || '';
+      if (CD.canh) {
+        const so = (t, k) => { const d = t.dataset || {}; return d.i != null ? +d.i : d.k != null ? +d.k : k; };
+        cdBao('karaoke', toks.map((t, k) => ({ i: so(t, k), k, id: t.id ? t.id.replace(/^st-/, '') : '', T: T[k], chu: (t.textContent || '').trim() })),
+          { ket: ket != null ? ket : T[T.length - 1] + khoang(T.length - 1), nhan, lan: o.mo ? 2 : 1 });
+      }
       toks.forEach((t) => t.classList.remove('is-doc', 'sk-doc-cho'));
       toks.forEach((t, k) => henLuc(T[k], () => {
         t.classList.add('is-doc');
@@ -836,6 +842,7 @@
     const chu = text ? `<span class="sk-tt-chu">${esc(text)}</span>` : '';
     el.innerHTML = kieu === 'chuan-bi' ? chu + '<span class="sk-ba-cham" aria-hidden="true"><i></i><i></i><i></i></span>' : chu;
     el.title = text || '';
+    if (CD.def && typeof CD.def.trangThai === 'function') { try { CD.def.trangThai(text || '', kieu || ''); } catch (e) { canhBao('che-do trangThai', e); } }
   }
   /**
    * Dong chan the: "Sensei ghi · …" (write_on_board, thay ghi chu truoc) hoac trang thai luot hoc vien
@@ -844,7 +851,7 @@
   function datChan(w, text, kieu, dayDu) {
     if (!w || !w.chanChu) return;
     const el = w.chanChu;
-    w.chan.className = 'sk-the-chan' + (text ? ' co-noi' : '') + (kieu ? ' is-' + kieu : '');
+    w.chan.className = 'sk-the-chan' + (text ? ' co-noi' : '') + (kieu ? ' is-' + kieu : '') + (w.chan.classList.contains('cd-chan') ? ' cd-chan' : '');
     w.chan.dataset.kieu = kieu || '';
     let h = '';
     if (text && kieu === 'ghi') {
@@ -1076,6 +1083,7 @@
     if (!w || !w.chan || text == null) return false;
     const s = String(text).trim();
     if (!s) return false;
+    if (CD.canh) cdBao('ghi', s, kieu || '');
     if (S.che === 'cho') { themChanPhu(s); return true; }
     if (daCoTrongThe(w, s)) return true;
     const cu = w.chanChu.querySelector('.sk-ghi-chu');
@@ -1721,6 +1729,7 @@
     if (via === 'nen') tt.nen = true;
     const m0 = performance.now();
     try { if (typeof st.cue.lam === 'function') st.cue.lam(tt); } catch (e) { canhBao('lam ' + st.id, e); }
+    if (CD.canh) cdBao('cue', st.id, { T, via, dur, nen: via === 'nen', con: T - firedCtx });
     const msLam = performance.now() - m0;
     Object.assign(st, { via, firedCtx, firedPerf, T, dur: dur == null ? null : dur, mocT: via === 'khop' ? null : firedCtx + S.LEAD });
     ghiNhatKy({
@@ -2481,6 +2490,7 @@
       veDoan();
       datPhim(false);
     };
+    cdThe('theChuong', { tenCu, tenMoi, chuong: o.tiep.chapter, meta, ds, tiep: o.tiep, capDo: capDo || '' }, w);
     S.theChuong = latThe(w, 'sk-the-chuong', `<div class="sk-tc-khoi">
         ${tenCu ? `<p class="sk-tc-xong">Xong ${esc(tenCu)} ✓</p>` : ''}
         <h2 class="sk-tc-ten">${esc(tenMoi)}</h2>
@@ -2528,6 +2538,11 @@
       veDoan();
       datPhim(false);
     };
+    cdThe('theXong', {
+      bai, oBaiTap, tongKet: tk,
+      hang: hang.map(([nhan, soH, m, jp, cham]) => ({ nhan, so: String(soH).replace(/<[^>]+>/g, ''), mau: m || '', jp: !!jp, cham: cham || null })),
+      quiz: quiz.map((b) => ({ id: b.data.id, ketQua: trangThaiThe(b.data.id) })),
+    }, w);
     S.theXong = latThe(w, 'sk-the-xong', `<div class="sk-tx-khoi">
         <h2 class="sk-tx-ten">Xong bài ${esc(bai)}</h2>
         ${hang.length ? `<ul class="sk-tx-ds">${hang.map(htmlHang).join('')}</ul>` : ''}
@@ -2632,6 +2647,244 @@
     if (o.sanMoi) cheoVao();
     henDon(veLaiBang, tre + 400);
     return tre;
+  }
+
+  // ------------------------------------------------------------------ che do san khau (js/che-do, HUONG-DAN.md)
+  // Mot che do (window.SenseiCheDo) CHIEM CA SAN KHAU: lop .cd-lop phu tren .sk-khung (khung dao dien van
+  // dung + chay duoi lop, visibility hidden) -> khop chu, cue, khoa, may trang thai, cong bai tap GIU NGUYEN.
+  // Moi su kien cua nhip (cue, karaoke, loi Sensei, cong cu, het nhip, cho hoc vien) duoc chuyen tiep sang
+  // doi tuong nhip cua che do (dungNhip tra ve). Che do khong dung nhip nao (tra null) -> the mac dinh hien.
+  // Doi che do: chi o ranh gioi nhip (batDauNhip) hoac khi san khau tat. Tam dung / dung: go han lop.
+  const CD = { def: null, lop: null, canh: null, tls: new Set(), henGo: null };
+  const LEAD_CD = 0.08;   // tieu diem cua che do toi truoc tieng 80 ms: mat thay chuyen dong den CUNG luc nghe
+  function cdBao(ten, a, b, c) {
+    const m = CD.canh;
+    if (!m || typeof m[ten] !== 'function') return undefined;
+    try { return m[ten](a, b, c); } catch (e) { canhBao('che-do ' + ten, e); return undefined; }
+  }
+  /** Goc ma meo that dung (toa do trong lop): che do chua goc nay ra, khong dat noi dung quan trong duoi meo */
+  function cdMeo() {
+    const lop = CD.lop;
+    if (!lop || !document.body.classList.contains('co-meo')) return null;
+    let sr = 0, sc = 0;
+    try {
+      const cs = getComputedStyle(document.documentElement);
+      sr = parseFloat(cs.getPropertyValue('--sensei-rong')) || 0;
+      sc = parseFloat(cs.getPropertyValue('--sensei-cao')) || 0;
+    } catch (e) {}
+    if (!sr || !sc) return null;
+    const r = lop.getBoundingClientRect();
+    const bot = document.querySelector('.deck-bottom');
+    const bt = bot ? bot.getBoundingClientRect().top : innerHeight;
+    const x = Math.max(0, innerWidth - sr - r.left), y = Math.max(0, bt - sc - 36 - r.top);
+    return { x, y, w: Math.max(0, r.width - x), h: Math.max(0, r.height - y), W: r.width, H: r.height };
+  }
+  const RE_JP_CUM = /[぀-ヿ一-鿿々〆〜ー]+/g;
+  /** Tien ich chung cho che do (batDau ctx va api moi nhip) */
+  const CDH = {
+    get giam() { return S.giam; },
+    get kho() { return S.kho; },
+    get gsap() { return window.gsap || null; },
+    LEAD: LEAD_CD,
+    bayGio: () => dongHo(),
+    meo: () => cdMeo(),
+    khung: () => { const l = CD.lop; return l ? { w: l.clientWidth, h: l.clientHeight } : { w: 0, h: 0 }; },
+    esc,
+    /** Doan chu co tieng Nhat: boc moi cum Nhat trong <span lang="ja"> (da escape) */
+    jp: (s) => esc(s).replace(RE_JP_CUM, (m) => `<span lang="ja">${m}</span>`),
+    /** Ruby cho mot tu (furigana chi tren chu Han, okurigana viet thang — giong the mac dinh) */
+    ruby: (chu, doc) => {
+      const s = se();
+      if (!doc || doc === chu) return esc(chu);
+      try { if (s && typeof s.rubyTu === 'function') return s.rubyTu(chu, doc); } catch (e) {}
+      return `<ruby>${esc(chu)}<rt>${esc(doc)}</rt></ruby>`;
+    },
+    /** Mot token cau (tokens cua example / kaiwa) -> html co ruby dung luat */
+    tok: (t, i, ds) => {
+      const s = se();
+      if (!t) return '';
+      try {
+        const rt = s && typeof s.rtCua === 'function' ? s.rtCua(t) : '';
+        if (rt && typeof s.rubyCau === 'function') return s.rubyCau(t, rt, i, ds);
+      } catch (e) {}
+      return esc(t.text || t.kanji || '');
+    },
+    loaiTu: (k) => LOAI_TU[k] || k || '',
+    /** Vai tro ngan cua tro tu / duoi cau ('は' -> 'chủ đề', 'です' -> 'lịch sự (là)'), khong co thi '' */
+    vaiTro: (chu) => { const s = se(); try { return s && typeof s.tokenRole === 'function' ? s.tokenRole(chu) || '' : ''; } catch (e) { return ''; } },
+    /** Nghia ngan cua mot tu trong bai (tu vung trung kanji / word), khong co thi '' */
+    nghiaTu: (t, bai) => {
+      const vl = (bai && Array.isArray(bai.vocabList)) ? bai.vocabList : [];
+      const a = String((t && t.kanji) || '').trim(), b = String((t && t.text) || '').trim();
+      const v = vl.find((x) => x && ((a && (x.kanji === a || x.word === a)) || (b && (x.word === b || x.kanji === b))));
+      return v ? String(v.meaningVi || '').split(/[;,(（]/)[0].trim() : '';
+    },
+    tenChuong: (ch, capDo) => tenChuong(ch, capDo),
+    congThuc: (fm) => { const M = window.__motionChu; try { return M && M.tachCongThuc ? M.tachCongThuc(fm) : null; } catch (e) { return null; } },
+    ghepCau: (ch, toks) => { const M = window.__motionChu; try { return M && M.canhCau ? M.canhCau(ch, toks) : null; } catch (e) { return null; } },
+    /** Anh minh hoa cho cau: tu vung cua bai trung token (danh tu co imageUrl), khong co thi null */
+    anhCau: (toks, bai) => {
+      const vl = (bai && Array.isArray(bai.vocabList)) ? bai.vocabList : [];
+      for (const t of toks || []) {
+        if (!t || t.isKeyGrammar) continue;
+        const a = String(t.kanji || '').trim(), b = String(t.text || '').trim();
+        const v = vl.find((x) => x && x.imageUrl && ((a && (x.kanji === a || x.word === a)) || (b && (x.word === b || x.kanji === b))));
+        if (v) return v.imageUrl;
+      }
+      return null;
+    },
+    /** Nap truoc + giai ma anh (Promise, khong bao gio reject) */
+    taiAnh: (url) => new Promise((ok) => {
+      if (!url) { ok(false); return; }
+      const im = new Image();
+      im.decoding = 'async';
+      im.onload = () => { (im.decode ? im.decode() : Promise.resolve()).then(() => ok(true), () => ok(true)); };
+      im.onerror = () => ok(false);
+      im.src = url;
+    }),
+    /**
+     * Ve chu theo net (SenseiStrokes / KanjiVG) vao el: SVG o luoi + net ve dan. o.tocDo giay/net, o.tre giay.
+     * Tra { dur (giay), svg } hoac null (khong co du lieu net). Net ve bang GSAP (co) hoac WAAPI.
+     */
+    vietNet: (el, ch, o) => {
+      o = o || {};
+      let net = null;
+      try { net = window.SenseiStrokes && SenseiStrokes.get ? SenseiStrokes.get(ch) : null; } catch (e) { net = null; }
+      if (!el || !net || !net.length) return null;
+      const K = (window.SenseiStrokes && SenseiStrokes.KHUNG) || 109;
+      const NS = 'http://www.w3.org/2000/svg';
+      const svg = document.createElementNS(NS, 'svg');
+      svg.setAttribute('viewBox', `0 0 ${K} ${K}`);
+      svg.setAttribute('class', 'cd-net');
+      svg.setAttribute('aria-hidden', 'true');
+      svg.innerHTML = `<g class="cd-net-ke"><line x1="${K / 2}" y1="0" x2="${K / 2}" y2="${K}"/><line x1="0" y1="${K / 2}" x2="${K}" y2="${K / 2}"/></g>`
+        + `<g class="cd-net-mo">${net.map((d) => `<path d="${esc(d)}"/>`).join('')}</g><g class="cd-net-ve"></g>`;
+      el.appendChild(svg);
+      const g = svg.querySelector('.cd-net-ve');
+      const ds = net.map((d) => { const p = document.createElementNS(NS, 'path'); p.setAttribute('d', d); g.appendChild(p); return p; });
+      const dai = ds.map((p) => { try { return p.getTotalLength() || 60; } catch (e) { return 60; } });
+      const toc = S.giam ? 0 : clamp(Number(o.tocDo) || 0.45, 0.12, 1.2);
+      const tre = Math.max(0, Number(o.tre) || 0);
+      ds.forEach((p, i) => { p.style.strokeDasharray = dai[i] + ' ' + (dai[i] + 2); p.style.strokeDashoffset = toc ? dai[i] : 0; });
+      if (!toc) return { dur: 0, svg };
+      const G = window.gsap;
+      if (G) {
+        const tl = CDH.tl();
+        ds.forEach((p, i) => tl.to(p, { strokeDashoffset: 0, duration: toc, ease: 'power1.inOut' }, tre + i * toc * 0.92));
+      } else {
+        ds.forEach((p, i) => chay(p, [{ strokeDashoffset: dai[i] }, { strokeDashoffset: 0 }], { duration: toc * 1000, delay: (tre + i * toc * 0.92) * 1000, easing: 'ease-in-out', fill: 'both' }, 'cd'));
+      }
+      return { dur: tre + ds.length * toc * 0.92, svg };
+    },
+    /** Timeline GSAP cua che do (bi kill khi che do tat / tam dung). Khong co GSAP -> null */
+    tl: (o) => {
+      const G = window.gsap;
+      if (!G) return null;
+      const t = G.timeline(o || {});
+      CD.tls.add(t);
+      t.eventCallback('onComplete', () => CD.tls.delete(t));
+      return t;
+    },
+    /** Giay tu bay gio toi luc T - lead (>= 0): delay cho tween ban trung luc nghe */
+    treT: (T, lead) => Math.max(0, (Number(T) || 0) - (lead == null ? LEAD_CD : lead) - dongHo()),
+    tre: (tt, lead) => (tt && tt.T != null ? CDH.treT(tt.T, lead) : 0),
+  };
+  /** Thong tin nhip cho che do */
+  function cdNhipInfo(beat, ctx, w) {
+    const d = beat.data;
+    const kind = beat.kind || 'khac';
+    const C = window.SenseiCapDo;
+    const laKana = kind === 'kanji' && !!(C && C.laChuKana && C.laChuKana(d));
+    let fm = null;
+    if (kind === 'grammar-intro') fm = d && d.grammarFormula;
+    else if (kind === 'example') fm = beat.slide && beat.slide.grammarFormula;
+    const congThuc = fm ? CDH.congThuc(fm) : null;
+    return {
+      kind, beat, data: d, laKana, congThuc,
+      ghep: kind === 'example' && congThuc && d ? CDH.ghepCau(congThuc, d.tokens || []) : null,
+      ctx, i: ctx.i, n: ctx.n, chuong: ctx.chuong || null, bai: ctx.bai || null, capDo: ctx.capDo || '',
+      laBatDau: !!ctx.laBatDau || !!w.cdTuTat, isResume: !!ctx.isResume, truoc: ctx.truoc || null,
+      cues: w.cues.map((st) => ({ id: st.id, loai: st.loai, batBuoc: st.batBuoc })),
+    };
+  }
+  function cdApi(w) {
+    const api = Object.create(CDH);
+    api.w = w.so;
+    api.hen = (fn, ms) => henThe(fn, ms);
+    api.huyHen = (id) => huyHen(id);
+    api.henLuc = (T, fn, lead) => henLuc(T, fn, lead == null ? LEAD_CD : lead);
+    api.song = () => S.canh === w && S.che !== 'tat';
+    return api;
+  }
+  function cdGoLop(lop, ms) {
+    if (!lop) return;
+    if (!ms || S.giam) { lop.remove(); return; }
+    lop.style.pointerEvents = 'none';
+    chay(lop, [{ opacity: 1 }, { opacity: 0 }], { duration: ms, easing: E.in, fill: 'forwards' }, 'cd');
+    henDon(() => lop.remove(), ms + 20);
+  }
+  function cdTat(ms) {
+    const def = CD.def, lop = CD.lop;
+    if (CD.canh) { cdBao('roi'); CD.canh = null; }
+    CD.def = null; CD.lop = null;
+    if (dom.san) { delete dom.san.dataset.cheDo; dom.san.dataset.cdPhu = ''; }
+    if (!def) return;
+    try { if (typeof def.ketThuc === 'function') def.ketThuc(lop); } catch (e) { canhBao('che-do ketThuc', e); }
+    CD.tls.forEach((t) => { try { t.kill(); } catch (e) {} });
+    CD.tls.clear();
+    try { if (window.gsap && lop) gsap.killTweensOf(lop.querySelectorAll('*')); } catch (e) {}
+    cdGoLop(lop, ms);
+  }
+  function cdBat(def) {
+    const lop = document.createElement('div');
+    lop.className = 'cd-lop';
+    lop.dataset.cheDo = def.id;
+    dom.san.appendChild(lop);
+    dom.san.dataset.cheDo = def.id;
+    CD.def = def; CD.lop = lop;
+    const ctx = Object.create(CDH);
+    ctx.san = dom.san;
+    ctx.lop = lop;
+    try { if (typeof def.batDau === 'function') def.batDau(lop, ctx); } catch (e) { canhBao('che-do batDau', e); }
+  }
+  /** Ranh gioi nhip (dau batDauNhip): ap lua chon dang cho (SenseiCheDo.nhipMoi) — doi phong cach cu / che do */
+  function cdChuanBi(tuTat) {
+    const SC = window.SenseiCheDo;
+    let def = null;
+    try { def = SC && typeof SC.nhipMoi === 'function' ? SC.nhipMoi(dom.san) : null; } catch (e) { canhBao('che-do nhipMoi', e); def = null; }
+    if (def && typeof def.dungNhip !== 'function') def = null;
+    if (def !== CD.def || (def && (!CD.lop || !CD.lop.isConnected))) {
+      if (CD.def) cdTat(tuTat ? 0 : 200);
+      if (def) cdBat(def);
+    } else if (CD.canh) { cdBao('roi'); CD.canh = null; }
+  }
+  /** Sau khi canh mac dinh cua nhip da dung: che do dung nhip cua no */
+  function cdDung(w, beat, ctx) {
+    if (!CD.def) { if (dom.san.dataset.cdPhu) dom.san.dataset.cdPhu = ''; return; }
+    let m = null;
+    // dat truoc [data-cd-phu]: san khau tran het be ngang -> che do do khung dung kich thuoc that
+    datThuocTinh(dom.san, 'cdPhu', '1');
+    try { m = CD.def.dungNhip(cdNhipInfo(beat, ctx, w), cdApi(w)); } catch (e) { canhBao('che-do dungNhip ' + (beat && beat.kind), e); m = null; }
+    CD.canh = m && typeof m === 'object' ? m : null;
+    datThuocTinh(dom.san, 'cdPhu', CD.canh ? '1' : '');
+  }
+  /** The chuong / ket bai: che do tu ve (true) hoac de the mac dinh hien (false) */
+  function cdThe(ten, info, w) {
+    if (!CD.def) return false;
+    let ok = false;
+    const f = CD.def[ten];
+    if (typeof f === 'function') {
+      datThuocTinh(dom.san, 'cdPhu', '1');
+      try { ok = f.call(CD.def, info, cdApi(w)) !== false; } catch (e) { canhBao('che-do ' + ten, e); ok = false; }
+    }
+    datThuocTinh(dom.san, 'cdPhu', ok ? '1' : '');
+    return ok;
+  }
+  /** O bai tap cua che do (cong the that): phan tu hoac null */
+  function cdOBaiTap(card) {
+    if (!CD.canh || dom.san.dataset.cdPhu !== '1') return null;
+    const o = cdBao('oBaiTap', card);
+    return o && o.nodeType === 1 && CD.lop && CD.lop.contains(o) ? o : null;
   }
 
   // ------------------------------------------------------------------ vong doi bai giang
@@ -2789,6 +3042,7 @@
     if (tuTat) goHetCanh();
     const cu = tuTat ? null : cu0;
     const sanMoi = hienSan();
+    cdChuanBi(tuTat);                      // che do san khau: doi (neu dang cho) chi o ranh gioi nhip
     if (document.body.classList.contains('sk-cho')) document.body.classList.remove('sk-cho');
     datThuocTinh(dom.san, 'che', 'giang');
     datThuocTinh(dom.san, 'kho', S.kho);
@@ -2817,6 +3071,8 @@
     w.the.style.opacity = '0';
     if (hoan && sanMoi) dom.san.style.opacity = '0';
     const HOAN_MS = hoan ? 40 : 30;
+    w.cdTuTat = tuTat;
+    cdDung(w, beat, ctx);                  // che do san khau dung nhip (truoc S.canh: chua cue nao ban duoc)
     S.canh = w;
     S.canhLog.push({ so: w.so, nhip: beat.index, kind: w.kind, vaoPerf: performance.now(), raPerf: null, soCue: w.cues.length, batBuoc: w.cues.filter((x) => x.batBuoc).length });
     if (S.canhLog.length > 800) S.canhLog.splice(0, 100);
@@ -2861,6 +3117,7 @@
     HQ.nen = true;
     const nenMs = nenCanh(w, false);
     datChe('chuyen');
+    if (CD.canh) cdBao('het', { tiep: o.tiep || null, gapMs: Number(o.gapMs) || 0, tongKet: o.tongKet || null });
     if (dom.tt && dom.tt.dataset.kieu === 'chuan-bi') datTrangThai('', '');
     const tiep = o.tiep == null ? null : o.tiep;
     let lat = 0;
@@ -2881,6 +3138,8 @@
 
   function tatSan(huyHet) {
     const dangHien = !!(dom.san && !dom.san.hidden);
+    // Che do san khau: go han (lop mo cung san khau) — tiep tuc = dung lai tu dau o nhip sau (nhu canh mac dinh)
+    if (CD.def) cdTat(dangHien && !S.giam ? 160 : 0);
     boTruoc();
     xaHangHien();
     S.the++;
@@ -2944,10 +3203,17 @@
     const dai = [...card.querySelectorAll('.qz-opt-text')].reduce((m, x) => Math.max(m, Array.from((x.textContent || '').trim()).length), 0);
     if (dai > 28 || S.kho === 'hep') vo.classList.add('is-mot-cot');
     vo.appendChild(card);
-    w.than.appendChild(vo);
+    // Che do san khau: the that vao O BAI TAP cua che do (kem chan the: trang thai luot + nut) — xu ly dap an y cu
+    const oCd = cdOBaiTap(card);
+    let chanGoc = null;
+    if (oCd) {
+      vo.classList.add('cd-cong');
+      oCd.appendChild(vo);
+      if (w.chan && w.chan.parentNode) { chanGoc = { cha: w.chan.parentNode, sau: w.chan.nextSibling }; oCd.appendChild(w.chan); w.chan.classList.add('cd-chan'); }
+    } else w.than.appendChild(vo);
     card.classList.add('sk-trong-cong');
     card.querySelectorAll('.reading-badge-indicator').forEach((b) => b.remove());
-    S.cong = { card, giu, vo };
+    S.cong = { card, giu, vo, chanGoc, chan: chanGoc ? w.chan : null };
     dongBoCong(w);   // cung --sk-co + cung vi tri neo voi ban mau cua canh (vuaKhung) — khong nhay
     cuonMuot(vo, card);
     return vo;
@@ -2958,6 +3224,11 @@
     if (!cg) return null;
     S.cong = null;
     const { card, giu, vo } = cg;
+    // chan the ve lai the mac dinh (an duoi lop che do)
+    if (cg.chanGoc && cg.chan) {
+      cg.chan.classList.remove('cd-chan');
+      try { if (cg.chanGoc.cha.isConnected) cg.chanGoc.cha.insertBefore(cg.chan, cg.chanGoc.sau && cg.chanGoc.sau.parentNode === cg.chanGoc.cha ? cg.chanGoc.sau : null); else cg.chan.remove(); } catch (e) {}
+    }
     let cl = null;
     if (banSao && vo.isConnected && card.parentNode === vo) {
       cl = card.cloneNode(true);
@@ -3030,6 +3301,7 @@
     }
     if (cho.xong || !song()) return;
     // 2) Canh khong dua the len san khau -> dao dien mo cong: the that thay cho khoi cau hoi cua canh
+    if (CD.canh) cdBao('vaoCho', card, beat);
     if (!trongSan() && card.isConnected) {
       const vo = moCong(w, card);
       const r = hu.ra(w.canh.el);
@@ -3048,6 +3320,7 @@
     const w = S.canh;
     try { if (w && typeof w.canh.raCho === 'function') w.canh.raCho(); } catch (e) { canhBao('raCho', e); }
     traCong(true);
+    if (CD.canh) cdBao('raCho');
     document.body.classList.remove('sk-cho');
     const sc = slideContent();
     if (sc) sc.inert = true;
@@ -3067,6 +3340,7 @@
       datNut(w, [{ nhan: 'Tiếp tục ▸', lop: 'sk-btn-chinh sk-nut-tiep', title: 'Sang phần tiếp theo', bam: () => { if (typeof S.khiTiepTuc === 'function') S.khiTiepTuc(); } }]);
     }
     try { if (S.canh && typeof S.canh.canh.khiTraLoi === 'function') S.canh.canh.khiTraLoi(exId, dung); } catch (e) { canhBao('khiTraLoi', e); }
+    if (CD.canh) cdBao('traLoi', exId, !!dung);
   }
   /** Dem nguoc tu tiep tuc: vach duoi "Tiếp tục ▸" day dan (translate) trong ms; null = "…" cho loi cham */
   function datDemTiep(ms) {
@@ -3182,6 +3456,7 @@
     const { w, t } = x;
     themChuoi(w, t, String(doan));
     t.frags.push({ u1: t.uP[t.uP.length - 1], A: t.A, qEnd: Number(qEnd) || 0, perf: performance.now(), off: t.raw.length });
+    if (CD.canh) cdBao('loi', String(doan), t.raw, { luot: t.id });
     if (t.giu) return;
     timKhopCanh(w, false);
   }
@@ -3424,7 +3699,11 @@
       if (mq && mq.addEventListener) mq.addEventListener('change', () => { S.giam = mq.matches; });
     } catch (e) {}
     document.addEventListener('keydown', (e) => { try { khiPhim(e); } catch (x) { canhBao('phim', x); } });
-    window.addEventListener('resize', () => { S.kho = tinhKho(); if (dom.san) dom.san.dataset.kho = S.kho; });
+    window.addEventListener('resize', () => {
+      S.kho = tinhKho();
+      if (dom.san) dom.san.dataset.kho = S.kho;
+      if (CD.def && typeof CD.def.doiCo === 'function') { try { CD.def.doiCo(CD.lop, CDH); } catch (e) { canhBao('che-do doiCo', e); } }
+    });
     taoSan();
   }
 
@@ -3457,7 +3736,11 @@
     khiTuNgat: boc('khiTuNgat', khiTuNgat),
     khiXaHang: boc('khiXaHang', khiXaHang),
     khiLuotXong: boc('khiLuotXong', khiLuotXong),
-    khiCongCu: boc('khiCongCu', khiCongCu, null),
+    khiCongCu: boc('khiCongCu', (name, args) => {
+      const r = khiCongCu(name, args);
+      if (CD.canh && S.che !== 'tat') cdBao('congCu', name, args || {}, { T: thoiDiemCongCu() });
+      return r;
+    }, null),
     khiDongThoai: boc('khiDongThoai', (line, i) => {
       // Nghe tron doan: day phim + thanh chia doan theo cau dang phat
       const w = S.canh;
@@ -3468,8 +3751,12 @@
         datPhim(true);
       }
       goiCanh('khiDongThoai', [line, i]);
+      if (CD.canh && (S.che === 'giang' || S.che === 'chuyen')) cdBao('dongThoai', line, i);
     }),
-    khiClip: boc('khiClip', (id, info) => goiCanh('khiClip', [id, info || {}])),
+    khiClip: boc('khiClip', (id, info) => {
+      goiCanh('khiClip', [id, info || {}]);
+      if (CD.canh && (S.che === 'giang' || S.che === 'chuyen')) cdBao('clip', id, info || {});
+    }),
     khiGiongMay: boc('khiGiongMay', (id, su, ci) => goiCanh('khiGiongMay', [id, su, ci])),
     khiXongDong: boc('khiXongDong', (id) => goiCanh('khiXongDong', [id])),
     vaoCho: boc('vaoCho', vaoCho),
@@ -3534,6 +3821,8 @@
       };
     },
     truoc: () => (S.truoc ? { nhip: S.truoc.beat && S.truoc.beat.index, kind: S.truoc.w && S.truoc.w.kind } : null),
+    // che do san khau dang bat (js/che-do): id, lop co trong DOM, nhip hien tai co do che do dung, meo
+    cheDo: () => ({ id: CD.def ? CD.def.id : null, lop: !!(CD.lop && CD.lop.isConnected), phu: !!(dom.san && dom.san.dataset.cdPhu === '1'), coCanh: !!CD.canh, meo: cdMeo(), tl: CD.tls.size }),
     dongHo: () => dongHo(),
     soHieuUng: () => { donHieuUng(); return soDangChay(); },
     // bo sung v2

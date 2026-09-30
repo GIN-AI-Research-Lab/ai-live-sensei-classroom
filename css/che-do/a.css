@@ -1,0 +1,306 @@
+/* ==========================================================================
+   Che do A — "Bento động": luoi o bo tron tu sap xep lai theo loi Sensei (js/che-do/a.js).
+   Moi quy tac nam duoi .cd-lop[data-che-do="a"]. Co chu: --a-u (px / 1 px ban thiet ke, JS dat) cho
+   nhan / chip; noi dung trong o dung don vi cq (o la container) nen co gian muot khi o doi kich thuoc.
+   Chi transform / opacity (+ left/top/width/height cua o luc FLIP, giong video). Khong blur lon.
+   ========================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800&display=swap");
+
+.cd-lop[data-che-do="a"] {
+  --a-nen: #e6dfd2;
+  --a-o1: #fdfbf7;
+  --a-o2: #f5f0e7;
+  --a-muc: #1f1d19;
+  --a-phu: #5f574c;
+  --a-nhat: #8f7d68;
+  --a-cam: #c96442;
+  --a-cam2: #ad4f30;
+  --a-la: #4f8a4a;
+  --a-do: #c4402f;
+  --a-kem: #f0ebe1;
+  --a-r: calc(var(--a-u, .75px) * 34);
+  --cd-net: #1f1d19;
+  --cd-net-mo: rgba(31, 29, 25, .09);
+  --cd-net-ke: rgba(160, 120, 90, .28);
+  background: var(--a-nen);
+  color: var(--a-muc);
+  font-family: "Be Vietnam Pro", Inter, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.cd-lop[data-che-do="a"] [lang="ja"] { font-family: var(--font-jp, "Noto Sans JP", sans-serif); }
+/* nen: luoi cham nho + vignette nhe (tinh) */
+.cd-lop[data-che-do="a"] > .a-cham {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image: radial-gradient(rgba(110, 85, 60, .20) 1.3px, transparent 1.6px), radial-gradient(120% 90% at 50% 45%, transparent 60%, rgba(90, 60, 30, .10) 100%);
+  background-size: calc(var(--a-u, .75px) * 24) calc(var(--a-u, .75px) * 24), 100% 100%;
+}
+
+/* ---------------------------------------------------------------- o */
+.cd-lop[data-che-do="a"] .a-o { position: absolute; left: 0; top: 0; width: 10px; height: 10px; z-index: 10; transform-origin: 50% 50%; visibility: hidden; opacity: 0; will-change: transform; }
+.cd-lop[data-che-do="a"] .a-bong {
+  position: absolute; inset: 0; border-radius: var(--a-r);
+  box-shadow: 0 calc(var(--a-u) * 34) calc(var(--a-u) * 60) calc(var(--a-u) * -34) rgba(80, 50, 20, .40), 0 calc(var(--a-u) * 10) calc(var(--a-u) * 22) calc(var(--a-u) * -12) rgba(80, 50, 20, .20), 0 1px 2px rgba(80, 50, 20, .10);
+}
+.cd-lop[data-che-do="a"] .a-than {
+  position: absolute; inset: 0; border-radius: var(--a-r); overflow: hidden; isolation: isolate;
+  background: linear-gradient(160deg, var(--a-o1) 0%, var(--a-o2) 100%);
+  container-type: size;
+}
+.cd-lop[data-che-do="a"] .a-than::after {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 60;
+  box-shadow: inset 0 1.5px 0 rgba(255, 255, 255, .95), inset 0 0 0 1px rgba(120, 90, 60, .07);
+}
+.cd-lop[data-che-do="a"] .a-tone { position: absolute; inset: 0; z-index: 0; opacity: 0; }
+.cd-lop[data-che-do="a"] .a-tone-cam { background: radial-gradient(120% 120% at 15% 0%, #de8a63 0%, #c96442 48%, #aa4a2c 100%); }
+.cd-lop[data-che-do="a"] .a-tone-ray { background: linear-gradient(180deg, #ddd4c4 0%, #e5ddcf 100%); box-shadow: inset 0 6px 18px rgba(80, 50, 20, .16), inset 0 -2px 0 rgba(255, 255, 255, .55); }
+.cd-lop[data-che-do="a"] .a-tone-kem { background: var(--a-kem); }
+.cd-lop[data-che-do="a"] .a-tone-dao { background: radial-gradient(130% 140% at 0% 100%, #f6d9c2 0%, #f8e9dc 45%, #fbf4ec 100%); }
+.cd-lop[data-che-do="a"] .a-tone-la { background: linear-gradient(150deg, #edf5e7 0%, #dcebd3 100%); }
+.cd-lop[data-che-do="a"] .a-tone-do { background: linear-gradient(150deg, #fcece7 0%, #f6d7ce 100%); }
+.cd-lop[data-che-do="a"] .a-vien { position: absolute; inset: 0; border-radius: inherit; opacity: 0; z-index: 55; pointer-events: none; box-shadow: inset 0 0 0 calc(var(--a-u) * 5 + 1px) var(--a-vien, var(--a-cam)); }
+
+/* ---------------------------------------------------------------- lop noi dung */
+.cd-lop[data-che-do="a"] .a-lop { position: absolute; inset: 0; z-index: 5; visibility: hidden; opacity: 0; }
+.cd-lop[data-che-do="a"] [data-fx], .cd-lop[data-che-do="a"] .a-cho { visibility: hidden; opacity: 0; }
+.cd-lop[data-che-do="a"] .a-mk { display: inline-block; overflow: hidden; vertical-align: bottom; line-height: 1.14; padding: .2em .08em .16em; margin: -.2em -.08em -.16em; }
+.cd-lop[data-che-do="a"] .a-mk-i { display: inline-block; }
+.cd-lop[data-che-do="a"] .a-pad { position: absolute; inset: 0; padding: max(10px, 7cqh) max(12px, 4.5cqw); display: flex; flex-direction: column; min-width: 0; }
+.cd-lop[data-che-do="a"] .a-giua { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0; min-width: 0; }
+.cd-lop[data-che-do="a"] .a-tuyet { position: absolute; inset: 0; }
+.cd-lop[data-che-do="a"] .a-cot { flex-direction: column; }
+.cd-lop[data-che-do="a"] .a-trai { align-items: flex-end; justify-content: flex-start; }
+.cd-lop[data-che-do="a"] .a-trai-tren { align-items: flex-start; justify-content: safe center; }
+.cd-lop[data-che-do="a"] .a-trai-giua { align-items: flex-start; justify-content: safe center; gap: 5cqh; overflow: hidden; }
+.cd-lop[data-che-do="a"] .a-giua:not(.a-trai):not(.a-cot-cuoi) { justify-content: safe center; }
+.cd-lop[data-che-do="a"] .a-rom { max-height: 2.6em; overflow: hidden; }
+.cd-lop[data-che-do="a"] .a-cot-cuoi { flex-direction: column; align-items: flex-start; justify-content: flex-end; }
+.cd-lop[data-che-do="a"] .a-mt { margin-top: 2.6cqh; }
+.cd-lop[data-che-do="a"] .a-hang { flex-direction: row; align-items: center; gap: max(10px, 3cqw); }
+.cd-lop[data-che-do="a"] .a-hang > .a-nhan { flex: none; align-self: center; }
+.cd-lop[data-che-do="a"] .a-nhan {
+  font: 700 max(10.5px, calc(var(--a-u) * 19))/1 "Be Vietnam Pro", sans-serif; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--a-nhat); display: flex; align-items: center; gap: .55em; white-space: nowrap;
+}
+.cd-lop[data-che-do="a"] .a-nhan::before { content: ''; width: .48em; height: .48em; border-radius: 50%; background: var(--a-cam); flex: none; }
+.cd-lop[data-che-do="a"] .a-tren-cam .a-nhan { color: #fbd8c6; }
+.cd-lop[data-che-do="a"] .a-tren-cam .a-nhan::before { background: #fff; }
+.cd-lop[data-che-do="a"] .a-tren-ray .a-nhan { color: #8a7a66; }
+
+/* ---------------------------------------------------------------- anh */
+.cd-lop[data-che-do="a"] .a-anh-lop { position: absolute; inset: 0; background: var(--a-kem); }
+.cd-lop[data-che-do="a"] .a-anh-lop img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.cd-lop[data-che-do="a"] .a-anh-lop.is-hong img { visibility: hidden; }
+.cd-lop[data-che-do="a"] .a-anh-lop.is-trong { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2cqh; overflow: hidden; background: radial-gradient(120% 120% at 15% 0%, #de8a63 0%, #c96442 48%, #aa4a2c 100%); }
+.cd-lop[data-che-do="a"] .a-anh-chu { position: relative; font-weight: 800; line-height: 1; color: #fff; text-align: center; white-space: nowrap; }
+.cd-lop[data-che-do="a"] .a-anh-phu { position: relative; font: 700 max(12px, min(7cqh, 6cqw))/1.2 "Be Vietnam Pro"; color: #fde3d6; letter-spacing: .06em; text-align: center; padding: 0 6cqw; }
+.cd-lop[data-che-do="a"] .a-chip-anh {
+  position: absolute; left: max(12px, 3.2cqw); bottom: max(12px, 3.2cqw); max-width: calc(100% - 2 * max(12px, 3.2cqw));
+  padding: .5em .9em .5em .7em; border-radius: 999px;
+  background: rgba(255, 255, 255, .94); box-shadow: 0 10px 24px -10px rgba(80, 50, 20, .35);
+  font: 700 max(12px, calc(var(--a-u) * 28))/1.15 "Be Vietnam Pro"; color: var(--a-muc); display: flex; align-items: center; gap: .45em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.cd-lop[data-che-do="a"] .a-chip-anh::before { content: ''; width: .42em; height: .42em; border-radius: 50%; background: var(--a-cam); flex: none; }
+
+/* ---------------------------------------------------------------- mo dau / the chuong */
+.cd-lop[data-che-do="a"] .a-bai-so { font-weight: 800; font-size: min(34cqh, 21cqw); line-height: .98; color: #fff; letter-spacing: -.02em; }
+.cd-lop[data-che-do="a"] .a-chuong-ten { font-size: min(26cqh, 11cqw); }
+.cd-lop[data-che-do="a"] .a-bai-ten { font-weight: 700; font-size: min(12cqh, 6.4cqw); color: #fff; margin-top: .3em; }
+.cd-lop[data-che-do="a"] .a-phu-cam { font-weight: 600; font-size: max(12px, min(7cqh, 3.8cqw)); color: #fde3d6; margin-top: 2.2cqh; }
+.cd-lop[data-che-do="a"] .a-so-hang { display: flex; align-items: baseline; gap: .4em; margin-top: 3cqh; white-space: nowrap; }
+.cd-lop[data-che-do="a"] .a-so { font: 800 min(34cqh, 24cqw)/.95 "Be Vietnam Pro"; color: var(--a-cam); letter-spacing: -.03em; }
+.cd-lop[data-che-do="a"] .a-so-phu { font: 700 max(12px, min(11cqh, 8cqw))/1 "Be Vietnam Pro"; color: var(--a-muc); }
+.cd-lop[data-che-do="a"] .a-chips { display: flex; flex-wrap: wrap; gap: max(4px, 1.6cqh); margin-top: auto; overflow: hidden; max-height: 48%; }
+.cd-lop[data-che-do="a"] .a-chips-to { margin-top: 5cqh; max-height: none; align-content: flex-start; }
+.cd-lop[data-che-do="a"] .a-chip { font-weight: 700; font-size: max(11px, calc(var(--a-u) * 23)); line-height: 1; padding: .4em .56em; border-radius: .5em; background: #f3e4da; color: var(--a-cam2); white-space: nowrap; }
+.cd-lop[data-che-do="a"] .a-chips-to .a-chip { font-size: max(12px, calc(var(--a-u) * 28)); }
+.cd-lop[data-che-do="a"] .a-chip.is-them { background: #efe7dc; color: var(--a-phu); visibility: visible; opacity: 1; }
+.cd-lop[data-che-do="a"] .a-thumbs { display: flex; gap: max(6px, 2.4cqw); margin-top: auto; }
+.cd-lop[data-che-do="a"] .a-thumbs img { width: min(29cqh, 21cqw); height: min(29cqh, 21cqw); border-radius: 50%; object-fit: cover; background: var(--a-kem); box-shadow: 0 0 0 3px #fff, 0 6px 14px -6px rgba(80, 50, 20, .4); }
+.cd-lop[data-che-do="a"] .a-vong { position: absolute; border-radius: 50%; border: 2px solid rgba(255, 255, 255, .16); pointer-events: none; }
+.cd-lop[data-che-do="a"] .a-vong.v1 { width: 120cqh; height: 120cqh; right: -36cqh; top: -50cqh; }
+.cd-lop[data-che-do="a"] .a-vong.v2 { width: 82cqh; height: 82cqh; right: -17cqh; top: -30cqh; border-color: rgba(255, 255, 255, .22); }
+.cd-lop[data-che-do="a"] .a-vong.v3 { width: 43cqh; height: 43cqh; right: 2cqh; top: -11cqh; background: rgba(255, 255, 255, .08); border: 0; }
+
+/* ---------------------------------------------------------------- tu vung */
+.cd-lop[data-che-do="a"] .a-kanji { font-weight: 700; line-height: 1; color: var(--a-muc); letter-spacing: -.02em; white-space: nowrap; }
+.cd-lop[data-che-do="a"] .a-doc { font-weight: 700; color: var(--a-muc); white-space: nowrap; font-size: min(28cqh, 15cqw); font-family: var(--font-jp); }
+.cd-lop[data-che-do="a"] .a-romaji { font: 700 max(12px, min(11cqh, 8.5cqw))/1 "Be Vietnam Pro"; color: var(--a-cam); letter-spacing: .05em; white-space: nowrap; }
+.cd-lop[data-che-do="a"] .a-nghia-o { max-width: 100%; }
+.cd-lop[data-che-do="a"] .a-nghia { font-weight: 800; line-height: 1.12; color: var(--a-muc); font-size: 1em; white-space: normal; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+.cd-lop[data-che-do="a"] .a-mk.a-nghia { display: inline-block; }
+.cd-lop[data-che-do="a"] .a-nghia-nho { font: 600 max(11px, min(8cqh, 5.4cqw))/1.2 "Be Vietnam Pro"; color: var(--a-phu); margin-top: 1.6cqh; }
+.cd-lop[data-che-do="a"] .a-loai { display: inline-block; font: 700 max(11px, min(8cqh, 5.4cqw))/1 "Be Vietnam Pro"; color: var(--a-phu); background: #efe7dc; padding: .45em .7em; border-radius: 999px; margin-bottom: 2cqh; }
+.cd-lop[data-che-do="a"] .a-chip-cam { align-self: flex-start; margin-top: 2.4cqh; font: 700 max(11px, min(8cqh, 4.6cqw))/1.2 "Be Vietnam Pro"; color: #fff; background: var(--a-cam); padding: .45em .8em; border-radius: 999px; max-width: 100%; }
+.cd-lop[data-che-do="a"] .a-dai { display: flex; gap: max(8px, 1.2cqw); min-width: 0; overflow: hidden; }
+.cd-lop[data-che-do="a"] .a-dai-o { display: flex; align-items: center; gap: .5em; background: #f4ece2; border-radius: 26cqh; padding: 4cqh 1.6cqw 4cqh 4cqh; white-space: nowrap; min-width: 0; }
+.cd-lop[data-che-do="a"] .a-dai-o img { width: 34cqh; height: 34cqh; border-radius: 50%; object-fit: cover; background: var(--a-kem); box-shadow: 0 0 0 3px #fff; flex: none; }
+.cd-lop[data-che-do="a"] .a-dai-o span { font-weight: 700; font-size: 20cqh; line-height: 1; color: var(--a-muc); }
+.cd-lop[data-che-do="a"] .a-dai-o em { font: 600 10cqh/1 "Be Vietnam Pro"; font-style: normal; color: var(--a-phu); }
+.cd-lop[data-che-do="a"] .a-meo-chu { flex: 1; min-width: 0; }
+.cd-lop[data-che-do="a"] .a-meo { font: 700 max(12px, min(15cqh, 3.2cqw))/1.3 "Be Vietnam Pro"; color: var(--a-muc); }
+.cd-lop[data-che-do="a"] .a-mk.a-meo { white-space: normal; }
+.cd-lop[data-che-do="a"] .a-meo [lang="ja"], .cd-lop[data-che-do="a"] .a-giai-chu [lang="ja"] { color: var(--a-cam2); }
+.cd-lop[data-che-do="a"] .a-luu-y { font: 800 max(13px, min(19cqh, 3.3cqw))/1.2 "Be Vietnam Pro"; color: #fff; white-space: normal; }
+.cd-lop[data-che-do="a"] .a-luu-y [lang="ja"] { color: #ffe3d4; }
+.cd-lop[data-che-do="a"] .a-meo-trong { font: 600 max(12px, min(14cqh, 3cqw))/1.3 "Be Vietnam Pro"; color: var(--a-phu); }
+
+/* ---------------------------------------------------------------- chu Han / chu cai */
+.cd-lop[data-che-do="a"] .a-net-o { position: absolute; left: 12%; right: 12%; top: 16%; bottom: 8%; display: grid; place-items: center; }
+.cd-lop[data-che-do="a"] .a-net-khung { position: absolute; inset: 0; border-radius: 6cqh; background: rgba(255, 255, 255, .55); box-shadow: inset 0 0 0 1px rgba(120, 90, 60, .12); }
+.cd-lop[data-che-do="a"] .a-net-bong { position: relative; font-size: min(56cqh, 56cqw); line-height: 1; color: var(--a-muc); font-weight: 700; }
+.cd-lop[data-che-do="a"] .a-net-khung .cd-net { position: absolute; inset: 6%; width: 88%; height: 88%; }
+.cd-lop[data-che-do="a"] .a-hv { font-weight: 800; font-size: min(30cqh, 13cqw); line-height: 1; color: var(--a-muc); letter-spacing: -.01em; white-space: nowrap; }
+.cd-lop[data-che-do="a"] .a-hv-nghia { margin-top: 3cqh; max-width: 100%; }
+.cd-lop[data-che-do="a"] .a-nghia-hv { font: 700 min(10cqh, 5.2cqw)/1.22 "Be Vietnam Pro"; color: var(--a-phu); white-space: normal; }
+.cd-lop[data-che-do="a"] .a-so-net { margin-top: 3cqh; font: 700 max(11px, min(7cqh, 4cqw))/1 "Be Vietnam Pro"; color: var(--a-cam2); background: #f5e5db; padding: .45em .8em; border-radius: 999px; }
+.cd-lop[data-che-do="a"] .a-am { margin: 3cqh 0 0; display: flex; flex-direction: column; gap: 4cqh; min-width: 0; }
+.cd-lop[data-che-do="a"] .a-am > div { display: flex; align-items: baseline; gap: 1em; min-width: 0; }
+.cd-lop[data-che-do="a"] .a-am dt { flex: none; font: 800 max(11px, min(9cqh, 4.4cqw))/1 "Be Vietnam Pro"; color: #fff; background: var(--a-cam); padding: .35em .6em; border-radius: .5em; }
+.cd-lop[data-che-do="a"] .a-am dd { margin: 0; font-weight: 700; font-size: min(17cqh, 7.2cqw); line-height: 1.1; color: var(--a-muc); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.cd-lop[data-che-do="a"] .a-ghep { list-style: none; margin: 3cqh 0 0; padding: 0; display: flex; flex-direction: column; gap: 2.8cqh; min-width: 0; }
+.cd-lop[data-che-do="a"] .a-ghep li { display: flex; align-items: center; gap: .6em; min-width: 0; white-space: nowrap; }
+.cd-lop[data-che-do="a"] .a-ghep img { width: 14cqh; height: 14cqh; border-radius: 50%; object-fit: cover; flex: none; box-shadow: 0 0 0 2px #fff; }
+.cd-lop[data-che-do="a"] .a-ghep-cham { width: 3cqh; height: 3cqh; border-radius: 50%; background: var(--a-cam); flex: none; }
+.cd-lop[data-che-do="a"] .a-ghep-tu { font-weight: 700; font-size: min(12cqh, 5.8cqw); line-height: 1.1; color: var(--a-muc); }
+.cd-lop[data-che-do="a"] .a-ghep em { font: 600 max(11px, min(7.4cqh, 3.4cqw))/1.1 "Be Vietnam Pro"; font-style: normal; color: var(--a-phu); overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+
+/* ---------------------------------------------------------------- ngu phap / vi du: khoi cong thuc */
+.cd-lop[data-che-do="a"] .a-tieu-ngang { display: flex; flex-direction: column; gap: .6em; min-width: 0; flex: 1; }
+.cd-lop[data-che-do="a"] .a-ten { font: 800 max(14px, calc(var(--a-u) * 46))/1.05 "Be Vietnam Pro"; color: var(--a-muc); white-space: nowrap; }
+.cd-lop[data-che-do="a"] .a-ten [lang="ja"] { color: var(--a-cam2); }
+.cd-lop[data-che-do="a"] .a-tag { margin-left: auto; flex: none; font: 700 max(11px, calc(var(--a-u) * 24))/1 "Be Vietnam Pro"; color: var(--a-cam2); background: #f5e5db; padding: .58em .9em; border-radius: 999px; white-space: nowrap; }
+.cd-lop[data-che-do="a"] .a-o-k .a-than { container-type: normal; }
+.cd-lop[data-che-do="a"] .a-giua-k { position: absolute; left: 0; right: 0; top: 0; bottom: 18%; display: flex; align-items: center; justify-content: center; }
+.cd-lop[data-che-do="a"] .a-noi { display: flex; align-items: center; justify-content: center; white-space: nowrap; font-size: var(--a-fs, 60px); line-height: 1; }
+.cd-lop[data-che-do="a"] .a-k-chu { font: 800 1.05em/1 "Be Vietnam Pro"; letter-spacing: -.03em; color: var(--a-muc); }
+.cd-lop[data-che-do="a"] .a-k-jp { font-weight: 700; line-height: 1; color: #fff; }
+.cd-lop[data-che-do="a"] .a-k-muc { color: var(--a-muc); }
+.cd-lop[data-che-do="a"] .a-o-k rt { font-size: .34em; font-weight: 600; color: var(--a-cam); letter-spacing: .04em; }
+.cd-lop[data-che-do="a"] .a-o-k[data-tone="cam"] rt { color: #fde3d6; }
+.cd-lop[data-che-do="a"] .a-day-k { position: absolute; left: 0; right: 0; bottom: 7%; display: flex; justify-content: center; }
+.cd-lop[data-che-do="a"] .a-pill-k { font: 700 max(10px, calc(var(--a-fs, 60px) * .19))/1 "Be Vietnam Pro"; padding: .4em .7em; border-radius: 999px; background: #f5e5db; color: var(--a-cam2); white-space: nowrap; }
+.cd-lop[data-che-do="a"] .a-pill-k.is-trang { background: #fff; }
+.cd-lop[data-che-do="a"] .a-giai { flex: 1; min-width: 0; }
+.cd-lop[data-che-do="a"] .a-giai-chu { font: 700 max(12px, min(17cqh, 2.4cqw))/1.3 "Be Vietnam Pro"; color: var(--a-muc); white-space: normal; }
+.cd-lop[data-che-do="a"] .a-mk.a-giai-chu { display: inline; }
+.cd-lop[data-che-do="a"] .a-giai-chu.is-trang { color: #fff; }
+.cd-lop[data-che-do="a"] .a-giai-chu.is-trang [lang="ja"] { color: #ffe3d4; }
+.cd-lop[data-che-do="a"] .a-rom { display: flex; gap: .6em; align-items: baseline; flex-wrap: wrap; font: 600 max(12px, min(13cqh, 3.2cqw))/1.2 var(--font-jp); color: var(--a-phu); }
+.cd-lop[data-che-do="a"] .a-rom .k { color: var(--a-cam); font-weight: 800; }
+.cd-lop[data-che-do="a"] .a-nghia-cau-o { max-width: 100%; }
+.cd-lop[data-che-do="a"] .a-nghia-cau { font: 800 max(14px, min(21cqh, 4.6cqw))/1.12 "Be Vietnam Pro"; color: var(--a-muc); white-space: normal; }
+
+/* ---------------------------------------------------------------- hoi thoai */
+.cd-lop[data-che-do="a"] .a-vai { gap: 1em; }
+.cd-lop[data-che-do="a"] .a-vai-anh { width: min(64cqh, 30cqw); height: min(64cqh, 30cqw); border-radius: 50%; object-fit: cover; flex: none; box-shadow: 0 0 0 3px #fff, 0 8px 18px -8px rgba(80, 50, 20, .45); background: var(--a-kem); }
+.cd-lop[data-che-do="a"] .a-vai-chu { width: min(64cqh, 30cqw); height: min(64cqh, 30cqw); border-radius: 50%; flex: none; display: grid; place-items: center; background: #f3e4da; color: var(--a-cam2); font-weight: 800; font-size: min(30cqh, 14cqw); }
+.cd-lop[data-che-do="a"] .a-vai-ten { display: flex; flex-direction: column; gap: .3em; min-width: 0; }
+.cd-lop[data-che-do="a"] .a-vai-ten span { font-weight: 800; font-size: min(22cqh, 10cqw); line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cd-lop[data-che-do="a"] .a-vai-ten em { font: 600 max(11px, min(11cqh, 5cqw))/1 "Be Vietnam Pro"; font-style: normal; color: var(--a-phu); }
+.cd-lop[data-che-do="a"] .a-dong-thoai { font-weight: 700; font-size: min(16cqh, 6.2cqw); line-height: 1.5; color: #fff; }
+.cd-lop[data-che-do="a"] .a-dong-thoai rt { font-size: .45em; color: #ffe3d4; }
+
+/* ---------------------------------------------------------------- bai tap */
+.cd-lop[data-che-do="a"] .a-cau { font-weight: 700; line-height: 1.15; color: var(--a-muc); display: flex; align-items: flex-end; flex-wrap: wrap; justify-content: center; text-align: center; }
+.cd-lop[data-che-do="a"] .a-cau.is-vn { font-family: "Be Vietnam Pro", sans-serif; font-weight: 800; }
+.cd-lop[data-che-do="a"] .a-o-trong { position: relative; display: inline-block; width: 2.1em; height: 1.1em; margin: 0 .12em; border-bottom: .09em solid var(--a-cam); }
+.cd-lop[data-che-do="a"] .a-yc { font: 600 max(12px, min(9cqh, 3cqw))/1.2 "Be Vietnam Pro"; color: var(--a-phu); margin-top: 5cqh; text-align: center; }
+.cd-lop[data-che-do="a"] .a-hang-o { flex-direction: row; align-items: center; gap: max(8px, 4.6cqw); }
+.cd-lop[data-che-do="a"] .a-o-chu { width: min(34cqh, 12cqw); height: min(34cqh, 12cqw); border-radius: 28%; background: #efe6da; color: var(--a-phu); font: 800 min(16cqh, 5.6cqw)/1 "Be Vietnam Pro"; display: grid; place-items: center; flex: none; }
+.cd-lop[data-che-do="a"] .a-o-p { font-weight: 800; line-height: 1; color: var(--a-muc); white-space: nowrap; }
+.cd-lop[data-che-do="a"] .a-o-r { font: 700 max(11px, min(18cqh, 6.4cqw))/1 "Be Vietnam Pro"; color: var(--a-nhat); white-space: nowrap; }
+.cd-lop[data-che-do="a"] .a-dau-kq {
+  position: absolute; right: max(12px, 4cqw); bottom: max(12px, 4cqw); display: flex; align-items: center; gap: .5em;
+  padding: .5em 1em .5em .5em; border-radius: 999px; background: #fff; box-shadow: 0 14px 28px -12px rgba(80, 50, 20, .5);
+  font: 800 max(13px, calc(var(--a-u) * 30))/1 "Be Vietnam Pro";
+}
+.cd-lop[data-che-do="a"] .a-dau-kq b { width: 1.8em; height: 1.8em; border-radius: 50%; display: grid; place-items: center; color: #fff; }
+.cd-lop[data-che-do="a"] .a-dau-kq.is-dung { color: var(--a-la); }
+.cd-lop[data-che-do="a"] .a-dau-kq.is-dung b { background: var(--a-la); }
+.cd-lop[data-che-do="a"] .a-dau-kq.is-sai { color: var(--a-do); }
+.cd-lop[data-che-do="a"] .a-dau-kq.is-sai b { background: var(--a-do); }
+.cd-lop[data-che-do="a"] .a-song { position: absolute; width: 120px; height: 120px; border-radius: 50%; border: 5px solid var(--a-la); opacity: 0; z-index: 700; pointer-events: none; }
+/* o bai tap: the that #card-<id> doi kieu thanh bento (xu ly dap an / nhan xet cua the giu nguyen) */
+.cd-lop[data-che-do="a"] .a-lop-bt .a-pad { padding-bottom: max(10px, 3cqh); }
+.cd-lop[data-che-do="a"] .a-bt-o { flex: 1; min-height: 0; display: flex; flex-direction: column; margin-top: max(8px, 2cqh); }
+.cd-lop[data-che-do="a"] .sk-cong.cd-cong { justify-content: flex-start; padding: 0; overflow: auto; }
+.cd-lop[data-che-do="a"] .sk-cong .qz-card { background: transparent; border: 0; box-shadow: none; padding: 0; margin: 0; font-family: "Be Vietnam Pro", Inter, sans-serif; }
+.cd-lop[data-che-do="a"] .sk-cong .qz-card .qz-text { font-size: max(17px, calc(var(--a-u) * 62)); font-weight: 700; line-height: 1.25; color: var(--a-muc); margin: 0 0 calc(var(--a-u) * 30 + 6px); font-family: var(--font-jp); }
+.cd-lop[data-che-do="a"] .sk-cong .qz-card .qz-q-top { display: none; }
+.cd-lop[data-che-do="a"] .sk-cong .qz-card .qz-img { display: none; }
+.cd-lop[data-che-do="a"] .sk-cong .qz-key { width: 1.35em; height: 1.35em; border-radius: 28%; background: #efe6da; color: var(--a-phu); font: 800 .5em/1 "Be Vietnam Pro"; display: grid; place-items: center; flex: none; border: 0; }
+.cd-lop[data-che-do="a"] .sk-cong .qz-opt-text { font-family: var(--font-jp); }
+.cd-lop[data-che-do="a"] .sk-cong .qz-opts, .cd-lop[data-che-do="a"] .sk-cong .qz-options { display: grid; grid-template-columns: 1fr 1fr; gap: max(8px, calc(var(--a-u) * 20)); }
+.cd-lop[data-che-do="a"] .sk-cong.is-mot-cot .qz-opts, .cd-lop[data-che-do="a"] .sk-cong.is-mot-cot .qz-options { grid-template-columns: 1fr; }
+.cd-lop[data-che-do="a"] .sk-cong .qz-opt {
+  min-height: max(52px, calc(var(--a-u) * 170)); border-radius: calc(var(--a-u) * 26 + 6px); border: 0;
+  background: linear-gradient(160deg, #fffdf9, #f3ede3); box-shadow: 0 16px 30px -22px rgba(80, 50, 20, .5), inset 0 0 0 1px rgba(120, 90, 60, .10);
+  font-size: max(16px, calc(var(--a-u) * 56)); font-weight: 800; color: var(--a-muc); padding: 0 calc(var(--a-u) * 30 + 6px); gap: calc(var(--a-u) * 26 + 4px);
+  transition: transform .16s cubic-bezier(.34, 1.4, .5, 1), box-shadow .18s ease, background-color .18s ease;
+}
+.cd-lop[data-che-do="a"] .sk-cong .qz-opt:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 20px 34px -20px rgba(80, 50, 20, .55), inset 0 0 0 2px var(--a-cam); }
+.cd-lop[data-che-do="a"] .sk-cong .qz-opt.is-correct { background: linear-gradient(150deg, #edf5e7, #dcebd3); box-shadow: inset 0 0 0 3px var(--a-la); }
+.cd-lop[data-che-do="a"] .sk-cong .qz-opt.is-wrong { background: linear-gradient(150deg, #fcece7, #f6d7ce); box-shadow: inset 0 0 0 3px var(--a-do); }
+.cd-lop[data-che-do="a"] .sk-the-chan.cd-chan { border-top: 1px dashed rgba(120, 90, 60, .22); padding-top: 8px; }
+
+/* ---------------------------------------------------------------- the ket bai */
+.cd-lop[data-che-do="a"] .a-the { position: absolute; inset: 0; display: flex; flex-direction: column; }
+.cd-lop[data-che-do="a"] .a-the-anh { flex: 1; min-height: 0; position: relative; background: var(--a-kem); overflow: hidden; }
+.cd-lop[data-che-do="a"] .a-the-anh img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cd-lop[data-che-do="a"] .a-the-chu { height: 25cqh; flex: none; display: flex; align-items: center; gap: 3cqw; padding: 0 6cqw; white-space: nowrap; min-width: 0; }
+.cd-lop[data-che-do="a"] .a-the-so { font: 800 max(10px, 3.6cqh)/1 "Be Vietnam Pro"; color: #fff; background: var(--a-cam); border-radius: 999px; padding: .5em .8em; }
+.cd-lop[data-che-do="a"] .a-the-kj { font-weight: 700; font-size: min(12cqh, 16cqw); line-height: 1; color: var(--a-muc); }
+.cd-lop[data-che-do="a"] .a-the-ng { font: 700 max(11px, 5cqh)/1 "Be Vietnam Pro"; color: var(--a-phu); overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.cd-lop[data-che-do="a"] .a-tk { list-style: none; margin: 4cqh 0 0; padding: 0; display: flex; flex-direction: column; gap: 3cqh; min-width: 0; }
+.cd-lop[data-che-do="a"] .a-tk li { display: flex; align-items: baseline; gap: .8em; min-width: 0; white-space: nowrap; font-size: max(12px, min(8cqh, 3.2cqw)); }
+.cd-lop[data-che-do="a"] .a-tk-nhan { flex: none; width: 7.5em; font-weight: 700; color: var(--a-phu); }
+.cd-lop[data-che-do="a"] .a-tk b { flex: none; font-weight: 800; color: var(--a-cam); }
+.cd-lop[data-che-do="a"] .a-tk-mau { color: var(--a-muc); font-weight: 700; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.cd-lop[data-che-do="a"] .a-tk-cham { display: flex; gap: 5px; flex-wrap: wrap; align-self: center; }
+.cd-lop[data-che-do="a"] .a-tk-cham i { width: 10px; height: 10px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px #cdbfa9; }
+.cd-lop[data-che-do="a"] .a-tk-cham i.is-dung { background: var(--a-la); box-shadow: none; }
+.cd-lop[data-che-do="a"] .a-tk-cham i.is-sai { background: var(--a-do); box-shadow: none; }
+
+/* ---------------------------------------------------------------- o Sensei: loi song + tien do (meo that dung goc phai) */
+.cd-lop[data-che-do="a"] .a-o-s .a-than { --a-meo: 18px; }
+.cd-lop[data-che-do="a"] .a-s-ten { position: absolute; top: max(10px, 9cqh); left: max(14px, 3.4cqw); z-index: 6; font: 700 max(10px, calc(var(--a-u) * 18))/1 "Be Vietnam Pro"; letter-spacing: .14em; text-transform: uppercase; color: #b08a70; white-space: nowrap; display: flex; align-items: center; gap: .55em; }
+.cd-lop[data-che-do="a"] .a-s-ten::before { content: ''; width: .5em; height: .5em; border-radius: 50%; background: var(--a-cam); }
+.cd-lop[data-che-do="a"] .a-s-chip { position: absolute; top: max(8px, 8cqh); right: var(--a-meo); z-index: 6; font: 700 max(10px, calc(var(--a-u) * 17))/1 "Be Vietnam Pro"; letter-spacing: .12em; text-transform: uppercase; color: var(--a-cam2); background: rgba(255, 255, 255, .8); padding: .5em .8em; border-radius: 999px; white-space: nowrap; max-width: calc(100% - var(--a-meo) - 10em); overflow: hidden; text-overflow: ellipsis; }
+.cd-lop[data-che-do="a"] .a-s-chu { position: absolute; left: max(14px, 3.4cqw); right: var(--a-meo); top: max(28px, 26cqh); bottom: max(16px, 16cqh); display: flex; align-items: center; z-index: 5; min-width: 0; }
+.cd-lop[data-che-do="a"] .a-s-dong { font: 600 max(13px, min(15cqh, calc(var(--a-u) * 38)))/1.36 "Be Vietnam Pro"; color: var(--a-muc); text-wrap: balance; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+.cd-lop[data-che-do="a"] .a-s-dong [lang="ja"] { color: var(--a-cam2); font-weight: 700; word-break: keep-all; }
+.cd-lop[data-che-do="a"] .a-s-tien { position: absolute; left: max(14px, 3.4cqw); bottom: max(8px, 8cqh); display: flex; gap: 5px; z-index: 6; }
+.cd-lop[data-che-do="a"] .a-s-tien i { width: max(12px, calc(var(--a-u) * 28)); height: 5px; border-radius: 3px; background: rgba(160, 120, 90, .22); overflow: hidden; display: block; }
+.cd-lop[data-che-do="a"] .a-s-tien i b { display: block; height: 100%; width: 100%; background: var(--a-cam); transform-origin: 0 50%; transform: scaleX(0); }
+.cd-lop[data-che-do="a"] .a-s-matane { position: absolute; left: max(14px, 3.4cqw); bottom: 28cqh; z-index: 5; font-weight: 800; font-size: min(22cqh, 9cqw); line-height: 1; color: var(--a-cam); white-space: nowrap; }
+.cd-lop[data-che-do="a"] .a-ba-cham { display: inline-flex; gap: .3em; }
+.cd-lop[data-che-do="a"] .a-ba-cham i { width: .42em; height: .42em; border-radius: 50%; background: var(--a-cam); opacity: .35; animation: aBaCham 1.2s ease-in-out infinite; }
+.cd-lop[data-che-do="a"] .a-ba-cham i:nth-child(2) { animation-delay: .2s; }
+.cd-lop[data-che-do="a"] .a-ba-cham i:nth-child(3) { animation-delay: .4s; }
+@keyframes aBaCham { 0%, 100% { opacity: .3; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-3px); } }
+
+/* ---------------------------------------------------------------- dien thoai */
+.cd-lop[data-che-do="a"][data-hep] .a-hang { gap: 10px; }
+.cd-lop[data-che-do="a"][data-hep] .a-hang > .a-nhan { display: none; }
+.cd-lop[data-che-do="a"][data-hep] .a-s-ten { display: none; }
+.cd-lop[data-che-do="a"][data-hep] .a-s-chu { top: max(24px, 24cqh); bottom: 16cqh; }
+.cd-lop[data-che-do="a"][data-hep] .a-s-chip { top: 7px; }
+.cd-lop[data-che-do="a"][data-hep] .a-pad { padding: 10px 12px; }
+.cd-lop[data-che-do="a"][data-hep] .a-giai-chu { font-size: max(13px, min(10cqh, 5cqw)); }
+.cd-lop[data-che-do="a"][data-hep] .a-meo { font-size: max(12px, min(14cqh, 4.6cqw)); }
+.cd-lop[data-che-do="a"][data-hep] .sk-cong .qz-card .qz-text { font-size: 18px; }
+.cd-lop[data-che-do="a"][data-hep] .sk-cong .qz-opt { min-height: 54px; font-size: 18px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cd-lop[data-che-do="a"] .a-ba-cham i { animation: none; opacity: .7; }
+  .cd-lop[data-che-do="a"] .sk-cong .qz-opt { transition: none; }
+}
+
+/* ---------------------------------------------------------------- o Sensei o the ket bai */
+.cd-lop[data-che-do="a"] .a-s-xong .a-s-chu { bottom: 48cqh; }
+.cd-lop[data-che-do="a"] .a-s-xong .a-s-matane { bottom: 16cqh; }
+.cd-lop[data-che-do="a"] .a-s-xong .a-s-tien { display: none; }
+
+/* bai tap da cham: dap an gon lai de cau hoi + nhan xet cung vua o (khong cuon mat cau hoi) */
+.cd-lop[data-che-do="a"] .sk-cong .qz-card:has(.qz-opt.is-correct, .qz-opt.is-wrong) .qz-opt { min-height: max(44px, calc(var(--a-u) * 104)); font-size: max(15px, calc(var(--a-u) * 44)); }
+.cd-lop[data-che-do="a"] .sk-cong .qz-card:has(.qz-opt.is-correct, .qz-opt.is-wrong) .qz-text { font-size: max(15px, calc(var(--a-u) * 46)); margin-bottom: calc(var(--a-u) * 18 + 4px); }
