@@ -74,6 +74,7 @@
   const TAY_NGHI = { trai: [.2, .84], phai: [.82, .8] };      // anh tinh: tay dat nghi
 
   const NGUONG_NOI = .02, TRE_NOI = .4;           // muc loa coi la dang noi; giu them 0.4 s giua cac tu
+  const TUA_VE = 2;                               // het tieng giua clip kin: chay nhanh 2 lan toi tu the nghi (xetTuDo)
   const LIEM = [25, 40], GAT = 45, NGU = 90;      // giay: liem tay (ngau nhien), ngu gat, ngu say
   const HAN_CHO = 6;                              // yeu cau cho qua 6 s thi bo (da troi qua cau do)
 
@@ -869,6 +870,7 @@
     return napClip(ten).then((url) => new Promise((xong) => {
       if (the !== o.the || !url) return xong(false);
       const v = o.v;
+      if (v.playbackRate !== 1) v.playbackRate = 1;   // clip moi luon chay dung toc (xem TUA_VE)
       o.an = null;                           // lop mom cua luot moi: do hien lay lai theo khung dau
       o.dungHet = false; o.lech = 0;         // lech rVFC do lai cho nguon / lan tua moi (o.the vua tang)
       if (o.ten === ten && v.readyState >= 2) {
@@ -1051,6 +1053,13 @@
     if (!cur || S.sau || S.muc) return;
     if (daHet(cur)) return cuoiClip();                     // clip het ma chua co clip tiep (vd clip tiep dang tai)
     const k = LOAI[cur.ten] || 'cx';
+    // Tieng dut giua clip kin: chay nhanh TUA_VE lan phan con lai toi khi dau ve gan tu the nghi (mieng van khep) thay vi
+    // gat gu toi ~4.5 s. Do tren tracking 3 clip kin (tu mau cuoi cung ra loa toi luc tron sang nghi): cu tb 2.1-2.3 s,
+    // p90 3.9-4.4 s, xau nhat 4.5-5.0 s; TUA_VE = 2: tb 1.4-1.5 s, p90 2.2-2.4 s, xau nhat 2.5-2.7 s. Tieng lai toi
+    // (S.noi) hoac dang chi / clip do act_out xin: toc 1 ngay.
+    const tua = !S.noi && (k === 'noi' || k === 'tay') && LA_KIN.has(cur.ten) && !S.chi && !cur.yeu && !gioTuThe(cur);
+    const toc = tua ? TUA_VE : 1;
+    if (cur.v.playbackRate !== toc) cur.v.playbackRate = toc;
     if (cur.ten === 'ngu' && canDay(now)) return batDau(sanSang('ngu-day') ? 'ngu-day' : 'nghi', 250);
     if (S.cho) return xetCho();
     // nghi -> clip noi: tron 150 ms (hai tu the nghi gan trung nhau) cho kip am tiet dau; ranh / day: 200 ms
@@ -1060,7 +1069,7 @@
     // Im han ~1.2 s: clip noi -> nghi; gio tay thi doi tay ha; cam xuc noi da hien du 2.5 s. Clip kin: doi them toi khi
     // dau ve gan tu the nghi (gioTuThe; mieng van khep nho lop 'kin') — dau lech toi 30-40 px giua clip, tron 200 ms
     // luc do ra hai cai dau chong nhau. Chu y thiet ke: tieng dut giua clip kin thi meo "gat gu nghe" khep mieng toi khi
-    // clip ve tu the nghi (do: 0.9-1.7 s sau tieng, xau nhat ~4.5 s neu dut ngay dau clip). Khong co cho tron som: giua
+    // clip ve tu the nghi (luc cu: 0.9-1.7 s sau tieng, xau nhat ~4.5 s; nay chay nhanh TUA_VE, xem tren). Khong tron som: giua
     // clip noi-kin dau chi xuong <= 12 px o vai khung le roi lech lai 20-40 px (tron dai 450 ms cung ra hai cai dau); tay
     // clip thi con dang gio tay. cuoiClip bo truong hop te nhat: da im han luc het clip thi khong mo clip noi moi.
     if (!S.noi && now - S.hetNoi > .8 && ((k === 'noi' && gioTuThe(cur))

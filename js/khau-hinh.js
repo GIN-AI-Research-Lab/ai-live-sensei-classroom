@@ -52,6 +52,15 @@
  *   hoac phu am vo thanh: mieng mo som hon tieng 10 ms (p10 -14, p90 -6).
  *   CPU (nap + chot, chia cho so buoc CO TIENG, dao dong giua cac lan do): Chrome 0.044-0.049 ms / 10 ms,
  *   Node (vm) 0.11-0.14; xau nhat (nguyen am tong hop lien tuc, Node) 0.14-0.16 ms / 10 ms — ngan sach 0.5.
+ *
+ * Hien som (layLuc): bien mo mieng / doi nguyen am hien som somMo (20 ms), bien khep som somKhep (0), doan khep
+ * giu toi thieu khepToiThieu (50 ms) — hinh mieng di truoc tieng mot chut nhu chuan khop mieng phim (hinh som
+ * <= 30 ms kho thay, tre thi thay ngay). Bo ve (sensei-cat-video.js) con tu doc truoc ~1.5 khung man cho do tre len man.
+ * Do lai 2026-09-30 voi dap an doc lap (scratchpad lipsync/do: SAPI Haruka co moc viseme cua may doc cho tieng Nhat;
+ * can chinh cuong buc chu -> am hoc, formant Burg rieng, cho Charon Viet / Nhat; khung 10 ms, goi 40-400 ms toi truoc
+ * 80 ms): mo mieng p50 / p90 so voi tieng: Charon Viet -9 / +43 ms (truoc +6 / +70), Charon Nhat -13 / +21 (truoc +3 / +41);
+ * doi nguyen am p90 Charon Nhat +21 ms (truoc +81); khep m b p (su kien) Viet 98.6%, Nhat 87.5% (khong doi).
+ * Trong Chrome (app that, tre len man gia dinh 1 khung): mo mieng p50 -9 ms, khep -4, doi nguyen am 0.
  * Tep tu du, khong phu thuoc gi; chay duoc ca trong Node (vm) de do dac / dung demo:
  *   var bo = SenseiKhauHinh.taoMoi(); bo.nap(mau, 0, 24000); bo.ketThuc(); bo.layLuc(t)
  */
@@ -83,7 +92,7 @@
     // tieng Nhat
     [A, 587, 1073],   // あ
     [I, 265, 2104],   // い
-    [U, 284, 987],    // う
+    [U, 300, 1080],   // う (lien cau: F2 ~1100-1250; tam cu 284/987 do tren う keo dai qua lui)
     [E, 460, 1823],   // え
     [O, 416, 783],    // お
   ];
@@ -114,7 +123,7 @@
     muiF1: 275,          // Hz — F1 duoi muc nay + khong co cong huong hep toi muiF2 -> am mui
     muiF2: 2450,         // Hz
     muiHep: 350,         // Hz — khong co cong huong nao duoi 2 kHz hep hon muc nay -> am mui
-    toiThieu: [3, 4, 4, 4, 4, 4, 4, 3, 1], // so buoc toi thieu moi nhan (kin, a, e, i, o, u, o2, xat, chua)
+    toiThieu: [3, 4, 5, 4, 5, 5, 4, 3, 1], // so buoc toi thieu moi nhan (kin, a, e, i, o, u, o2, xat, chua); e / o / u 50 ms: bot nhay hinh
     lag: 30,             // so buoc cuoi con de ngo (chua chot) — du dai de thay diem nha moi sau doan giu moi ~300 ms
     // Giu moi co tieng (m n ng, b hu hoa, d g, ん): Viterbi 2 trang thai V (nguyen am) / M (khep) tren moi chuoi co tieng.
     // Bang chung M moi buoc = gmGoc + gmNghieng*(nguong - do nghieng) + gmDinh*(tan so dinh thap - ...) + gmTuongDoi*(nghieng
@@ -145,6 +154,9 @@
     hoF1: 330,           // Hz — ... va F1 thap hon muc nay -> khep moi (kin)
     tronNA: 0.050,       // s — thoi gian tron giua hai nguyen am
     tronKin: 0.045,      // s — thoi gian tron khi khep / mo moi (bo ve coi la doc do mo kin -> o2 -> X): 2-3 khung 60 Hz
+    somMo: 0.020,        // s — bien mo mieng / doi nguyen am hien som hon tieng (layLuc doc truoc)
+    somKhep: 0.000,      // s — bien khep hien som (bo tach da khep som ~10 ms: khong doi them)
+    khepToiThieu: 0.05,  // s — mo som khong duoc lam doan khep hien ngan hon muc nay
     moDuoi: -30,         // dB so voi tham chieu: do mo = 0
     moTren: -8,          // dB so voi tham chieu: do mo = 1
     moXat: 0.35,         // do mo khi xat
@@ -829,27 +841,44 @@
       if (k >= d.K && !d.dong && d.K && t <= d.t0 + d.n / d.sr) { k = d.K - 1; kf = k + 0.5; }
       if (k >= d.K || k < 0) return rong();
       var nh = d.nhan, K = d.K;
-      var c = nh[k];
-      // do mo: noi suy tuyen tinh giua tam cac buoc
-      var u = kf - 0.5, k0 = Math.floor(u), w = u - k0;
-      var m0 = d.mo[Math.max(0, Math.min(K - 1, k0))], m1 = d.mo[Math.max(0, Math.min(K - 1, k0 + 1))];
-      var mo = m0 + (m1 - m0) * w;
-      // bien gan nhat trong +- nua thoi gian tron
-      var tron = P.tronNA, a = c, b = c, tb = 0;
-      var tim = Math.ceil(P.tronNA / 2 / buoc) + 1;
-      var tot = -1, kcTot = 1e9;
-      for (var j = Math.max(1, k - tim + 1); j <= Math.min(K - 1, k + tim); j++) {
-        if (nh[j] !== nh[j - 1]) {
-          var tbj = d.t0 + j * buoc, kcj = Math.abs(t - tbj);
-          if (kcj < kcTot) { kcTot = kcj; tot = j; }
+      // Mieng di truoc tieng mot chut (nhu chuan khop mieng phim: hinh som <= 30 ms de nhin tu nhien hon tre):
+      // bien mo mieng / doi nguyen am hien som P.somMo, bien khep som P.somKhep; mo sau doan khep thi som it hon de doan
+      // khep hien con >= P.khepToiThieu (m b p). Doc them duoc vi nhan da tinh truoc luc phat.
+      var sM = P.somMo, sK = P.somKhep;
+      var W = Math.ceil(Math.max(P.tronNA, P.tronKin) / 2 / buoc) + Math.ceil(Math.max(sM, sK, 0) / buoc) + 2;
+      var j0 = Math.max(1, k - W), j1 = Math.min(K - 1, k + W);
+      var c = nh[j0 - 1], tot = -1, kcTot = 1e9, teTot = 0;
+      for (var j = j0; j <= j1; j++) {
+        if (nh[j] === nh[j - 1]) continue;
+        var lech = sM;
+        if (nh[j] === KIN) lech = sK;
+        else if (nh[j - 1] === KIN) {
+          // mo sau doan khep: som sM nhung giu doan khep hien toi thieu P.khepToiThieu (m b p phai thay ro)
+          var ja = j - 1, han = Math.ceil((sM + P.khepToiThieu) / buoc) + 1;
+          while (ja > 0 && nh[ja - 1] === KIN && j - ja < han) ja--;
+          var dK = (j - ja) * buoc + (ja > 0 && nh[ja - 1] !== KIN ? sK : 0);
+          lech = Math.min(sM, Math.max(sK, dK - P.khepToiThieu));
         }
+        var te = d.t0 + j * buoc - lech;
+        if (te <= t) c = nh[j];
+        var kcj = Math.abs(t - te);
+        if (kcj < kcTot) { kcTot = kcj; tot = j; teTot = te; }
       }
+      // do mo: noi suy tuyen tinh giua tam cac buoc; lay lon hon cua hai moc doc truoc (mo som, khep khong som hon sK)
+      var moTai = function (tq) {
+        var u = (tq - d.t0) / buoc - 0.5, k0 = Math.floor(u), w = u - k0;
+        var m0 = d.mo[Math.max(0, Math.min(K - 1, k0))], m1 = d.mo[Math.max(0, Math.min(K - 1, k0 + 1))];
+        return m0 + (m1 - m0) * w;
+      };
+      var mo = Math.max(moTai(t + sK), moTai(t + sM));
+      // bien (da doi som) gan nhat trong +- nua thoi gian tron
+      var tron = P.tronNA, a = c, b = c, tb = 0;
       if (tot > 0) {
         var la = nh[tot - 1], lb = nh[tot];
         tron = (la === KIN || lb === KIN) ? P.tronKin : P.tronNA;
         if (kcTot < tron / 2) {
           a = la; b = lb;
-          tb = smoothstep(0, 1, (t - (d.t0 + tot * buoc - tron / 2)) / tron);
+          tb = smoothstep(0, 1, (t - (teTot - tron / 2)) / tron);
         }
       }
       return { a: KHOA_RA[a], b: KHOA_RA[b], t: tb, mo: mo, co: true };
