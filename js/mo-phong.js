@@ -716,13 +716,14 @@
     const ae = window.__audioEngine;
     if (!ae || ae.__moPhongBoc || typeof ae.playPcmClip !== 'function') return;
     const goc = ae.playPcmClip.bind(ae);
-    ae.playPcmClip = (clip) => {
-      const p = goc(clip);
+    ae.playPcmClip = (clip, meta) => {
+      const p = goc(clip, meta);
       const id = clip && typeof clip === 'object' ? clipCua.get(clip) : null;
       if (id && thoai[id] && ae.clipPlaying && ae.outCtx) {
         const nhip = window.__lecture && window.__lecture.index ? window.__lecture.index() : null;
-        thoai[id].t0 = ae.outCtx.currentTime;
-        thoai[id].lanPhat.push({ t0: ae.outCtx.currentTime, nhip });
+        const tBd = ae.clipT0 || ae.outCtx.currentTime;
+        thoai[id].t0 = tBd;
+        thoai[id].lanPhat.push({ t0: tBd, nhip });
       }
       return p;
     };

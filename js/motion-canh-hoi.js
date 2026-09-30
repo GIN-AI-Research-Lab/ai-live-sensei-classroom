@@ -519,6 +519,19 @@
     return m ? { jp: m[1].trim(), la: m[2].trim() } : { jp: s, la: '' };
   }
   const chuDau = (sp) => Array.from(tachTen(sp).jp || String(sp || '').trim())[0] || '?';
+  // Chan dung nguoi noi trong vong tron avatar (js/avatar-noi.js nhep mieng khi cau duoc doc). Khong co anh / anh loi -> chu cai dau nhu cu.
+  const avaAnh = (se, l) => (l && l.avatarUrl
+    ? `<img class="sk-ht-anh" src="${se.escapeHtml(l.avatarUrl)}" alt="" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.5);transform-origin:50% 36%" onerror="const o=this.parentElement; if(o){o.style.overflow=''; o.textContent='${chuDau(l.speaker).replace(/['\<>&"]/g, '')}';}">`
+    : null);
+  const avaNoiDung = (se, l) => avaAnh(se, l) || se.escapeHtml(chuDau(l.speaker));
+  const avaStyle = (l) => (l && l.avatarUrl ? ' style="overflow:hidden;background:var(--anh-kem,#f0ebe1)"' : '');
+  function ganNguoiNoi(goc) {
+    if (!window.SenseiAvatarNoi || !window.SenseiAvatarNoi.gan) return;
+    goc.querySelectorAll('.sk-ht-dong[data-dong]').forEach((h) => {
+      const img = h.querySelector('.sk-ht-ava img.sk-ht-anh');
+      if (img && !img.dataset.avn) { img.dataset.avn = '1'; try { window.SenseiAvatarNoi.gan(img, { lineId: h.dataset.dong }); } catch (e) {} }
+    });
+  }
 
   /** Ben trai / phai theo NGUOI NOI — cung luat voi renderKaiwa (slide-engine 800–819) */
   function phanBen(doan) {
@@ -911,7 +924,7 @@
     const esc = (s) => se.escapeHtml(s);
     return `<article class="sk-ht-dong ${nay ? 'is-nay' : 'is-cho'}" data-i="${i}" data-dong="${esc(l.id)}">
         <div class="sk-ht-ai">
-          <span class="sk-ht-ava${lopBen(ben, l.speaker)}" aria-hidden="true" lang="ja">${esc(chuDau(l.speaker))}</span>
+          <span class="sk-ht-ava${lopBen(ben, l.speaker)}"${avaStyle(l)} aria-hidden="true" lang="ja">${avaNoiDung(se, l)}</span>
           <span class="sk-ht-ten">${htmlTen(se, l.speaker)}</span>
         </div>
         <div id="st-${esc(l.id)}" class="sk-ht-bong"${se.camXucAttr(l)}>
@@ -942,6 +955,7 @@
         <div class="sk-ht-chong">${doan.map((l, i) => htmlDong(se, ben, l, i, i === 0)).join('')}</div>
       </div>`;
     khuTrungId(el, c.canhTruoc);
+    ganNguoiNoi(el);
 
     const noi = el.querySelector('.sk-hoi-noi');
     const conTro = taoConTro(canh, noi, c);
@@ -1114,7 +1128,7 @@
           </div>` : ''}
         <article class="sk-ht-dong is-nay" data-dong="${esc(l.id)}">
           <div class="sk-ht-ai">
-            <span class="sk-ht-ava${lopBen(ben, l.speaker)}" aria-hidden="true" lang="ja">${esc(chuDau(l.speaker))}</span>
+            <span class="sk-ht-ava${lopBen(ben, l.speaker)}"${avaStyle(l)} aria-hidden="true" lang="ja">${avaNoiDung(se, l)}</span>
             <span class="sk-ht-ten">${htmlTen(se, l.speaker)}</span>
           </div>
           <div id="st-${esc(l.id)}" class="sk-ht-bong"${se.camXucAttr(l)}>
@@ -1128,6 +1142,7 @@
         </div>
       </div>`;
     khuTrungId(el, c.canhTruoc);
+    ganNguoiNoi(el);
 
     const noi = el.querySelector('.sk-hoi-noi');
     const conTro = taoConTro(canh, noi, c);

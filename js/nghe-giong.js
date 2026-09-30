@@ -123,8 +123,8 @@
 
   const boNho = new Map();   // "giong|cau" -> Uint8Array PCM 24kHz (chi trong phien trang nay)
 
-  async function tongHop(giong, cau) {
-    const k = giong + '|' + cau;
+  async function tongHop(giong, cau, chiDan) {
+    const k = giong + '|' + cau + '|' + (chiDan || '');
     if (boNho.has(k)) return boNho.get(k);
     const keys = layKhoa();
     if (!keys.length) throw new Error('Không thấy khóa API trong env.js (hoặc trang chưa nạp env.js).');
@@ -136,7 +136,7 @@
       const pool = new VoiceActorPool({ apiKey: keys[0], model });
       try {
         for (let lan = 1; lan <= 2; lan++) {
-          const r = await pool.speak(giong, cau);
+          const r = await pool.speak(giong, cau, chiDan || '');
           if (r && r.ok) { boNho.set(k, r.pcm); return r.pcm; }
           loi = (r && r.reason) || loi;
           pool.close(giong);
@@ -251,6 +251,8 @@
         h('h3', {}, 'Nhân vật hội thoại (giọng đã chốt trong curriculum/nhan-vat.json)'),
         h('table', {}, h('thead', {}, h('tr', {}, ...['Nhân vật', 'Giới tính', 'Giọng', 'Câu thoại thật', 'F0 (Hz)', 'Kết quả', ''].map(x => h('th', {}, x)))), tbNv)));
     document.body.append(panel);
+    xayCamXuc(panel.querySelector('.cuon'));
+    xayNutLoa(panel.querySelector('.cuon'));
 
     let dangChay = false, huy = false;
     const khoaNut = (b) => { [btnTatCa].forEach(x => { x.disabled = b; }); btnDung.disabled = !b; };
@@ -352,6 +354,93 @@
 
     // Hien san cau thoai that (khong goi API) de nguoi dung biet se nghe gi
     ds.forEach((n) => { timCau(n.id).then(c => { dongNv[n.id].tdCau.textContent = c; dongNv[n.id].tdCau.title = c; }); });
+  }
+
+
+  // ---------------------------------------------------------------- Nghe thu cam xuc (giong theo cam xuc)
+  const CAU_CAM_XUC = 'これ、あなたが作ったんです';   // cau trung tinh (khong dau hoi / cham than) de kieu doc quyet dinh ngu dieu
+  const KIEU_NGHE = [
+    ['', 'Trung tính (như trước)'], ['hoi', 'Hỏi (lên giọng)'], ['gian', 'Tức giận'], ['ngac_nhien', 'Ngạc nhiên'],
+    ['hao_hung', 'Hào hứng'], ['buon', 'Buồn / xin lỗi'], ['vui', 'Vui'],
+  ];
+  function xayCamXuc(cuon) {
+    const V = window.SenseiVoices, A = window.SenseiAvatarNoi;
+    const chon = h('select', {});
+    (V ? V.MALE.concat(V.FEMALE) : ['Fenrir', 'Kore']).forEach(g => chon.append(h('option', { value: g }, g)));
+    chon.value = V && V.MALE.includes('Fenrir') ? 'Fenrir' : chon.value;
+    const tbody = h('tbody');
+    const ketQua = {};
+    KIEU_NGHE.forEach(([khoa, ten]) => {
+      const tdF = h('td', {}, '—'), tdK = h('td', {}, '—');
+      const btn = h('button', {}, 'Nghe');
+      tbody.append(h('tr', {}, h('td', {}, ten), tdF, tdK, h('td', {}, btn)));
+      btn.addEventListener('click', async () => {
+        btn.disabled = true; tdK.className = 'mo'; tdK.textContent = 'đang tổng hợp…';
+        try {
+          const chiDan = khoa && V ? V.CHI_DAN_KIEU[khoa] : '';
+          const pcm = await xepHang(() => tongHop(chon.value, CAU_CAM_XUC, chiDan));
+          let mo = '—';
+          if (A && A._t) {
+            const pro = A._t.dacTrungNguDieu(A._t.f0Yin(pcmSangFloat(pcm), 24000), 24000);
+            if (pro.ok) {
+              mo = `F0 ${pro.f0TrungVi.toFixed(0)} Hz · biên độ ${pro.bienDo.toFixed(1)} st · dốc cuối ${pro.leoCuoi >= 0 ? '+' : ''}${pro.leoCuoi.toFixed(1)} st · nhịp ${pro.nhip.toFixed(1)}/s · đỉnh ${pro.dinhHon.toFixed(0)} dB`;
+              ketQua[khoa || 'trung_tinh'] = pro;
+            }
+          }
+          tdF.textContent = mo;
+          tdK.className = 'ok'; tdK.textContent = 'xong';
+          await phat(pcm);
+        } catch (e) { tdK.className = 'lech'; tdK.textContent = che(e && e.message || e); } finally { btn.disabled = false; }
+      });
+    });
+    cuon.append(
+      h('h3', {}, 'Nghe thử cảm xúc (giọng theo biểu cảm)'),
+      h('p', { class: 'mo' }, `Cùng một câu 「${CAU_CAM_XUC}」 đọc ở từng kiểu: bỏ chỉ dẫn (như trước) rồi mỗi kiểu một chỉ dẫn diễn xuất (được đặt trong khung [STAGE DIRECTION] mà ACTOR_BRIEF cấm đọc ra). `
+        + 'So sánh bằng tai: hỏi phải lên giọng cuối câu, tức giận gắt và nặng hơn, ngạc nhiên vọt cao lúc đầu, hào hứng nhanh và biên độ rộng, buồn chậm và nhỏ. Cột F0 cho số đo để đối chiếu. '
+        + 'Nếu nghe thấy chỉ dẫn bị đọc ra thành tiếng, hãy tắt: localStorage.sensei_giong_cam_xuc = "0". Công tắc hiện tại: ' + (V && V.camXucBat() ? 'BẬT' : 'TẮT') + '.'),
+      h('div', { class: 'thanh' }, 'Giọng: ', chon),
+      h('table', {}, h('thead', {}, h('tr', {}, ...['Kiểu đọc', 'Đo được', 'Kết quả', ''].map(x => h('th', {}, x)))), tbody));
+  }
+
+
+  // ---------------------------------------------------------------- Nghe thu nut loa (duong doc THAT cua app: SenseiDoc)
+  function xayNutLoa(cuon) {
+    const V = window.SenseiVoices, D = window.SenseiDoc;
+    if (!D) { cuon.append(h('h3', {}, 'Nghe thử nút loa'), h('p', { class: 'lech' }, 'Thiếu js/sensei-doc.js.')); return; }
+    D.datKhoaPhu(layKhoa);   // trang mo voi ?noLive thi app.js khong co khoa — dung khoa cua cong cu nay
+    const ca = (ten, id) => { try { return V.voiceFor(ten); } catch (e) { return id; } };
+    const MAU = [
+      { ten: 'Hội thoại — 「ミラー」 (bấm loa một câu thoại)', kind: 'nhan-vat', voice: ca('ミラー'), nhanVat: 'miller', tenGiong: 'Miller', text: 'はじめまして。マイク・ミラーです。アメリカから来ました。', mong: 'giọng nhân vật (Fenrir)' },
+      { ten: 'Hội thoại — 「田中」 câu hỏi (kiểu đọc: hỏi)', kind: 'nhan-vat', voice: ca('田中'), nhanVat: 'tanaka', tenGiong: 'Tanaka', text: 'これ、あなたが作ったんですか。', styleKey: 'hoi', mong: 'giọng nhân vật (Kore), lên giọng cuối câu' },
+      { ten: 'Hội thoại — 「サントス」 (kiểu đọc: ngạc nhiên)', kind: 'nhan-vat', voice: ca('サントス'), nhanVat: 'santos', tenGiong: 'Santos', text: 'えっ、もう終わったんですか。', styleKey: 'ngac_nhien', mong: 'giọng nhân vật (Orus)' },
+      { ten: 'Từ vựng — bấm loa thẻ từ', kind: 'sensei', text: 'わたし', mong: 'giọng Sensei (Charon), đọc kana, mèo nhép miệng' },
+      { ten: 'Ngữ pháp — bấm loa câu ví dụ', kind: 'sensei', text: 'わたしは マイク・ミラーです', mong: 'giọng Sensei (Charon)' },
+      { ten: 'Bôi đen chữ Nhật ngoài hội thoại', kind: 'sensei', text: '～ことができます', mong: 'giọng Sensei (Charon)' },
+      { ten: 'Bôi đen tiếng Việt', kind: 'sensei', text: 'Chào các em, hôm nay chúng ta học bài số một.', ngonNgu: 'vi', mong: 'giọng Sensei đọc tiếng Việt' },
+    ];
+    const tbody = h('tbody');
+    MAU.forEach((m) => {
+      const tdKq = h('td', {}, '—'), btn = h('button', {}, 'Nghe');
+      tbody.append(h('tr', {}, h('td', {}, m.ten), h('td', { class: 'cau', title: m.text }, m.text), h('td', {}, (m.voice || 'Charon')), h('td', { class: 'mo' }, m.mong), tdKq, h('td', {}, btn)));
+      btn.addEventListener('click', async () => {
+        btn.disabled = true; tdKq.className = 'mo'; tdKq.textContent = 'đang tổng hợp / lấy từ bộ nhớ…';
+        try {
+          const chiDan = m.styleKey && V ? V.CHI_DAN_KIEU[m.styleKey] : '';
+          const truoc = D.nhatKy.length;
+          const ok = await D.docKe({ kind: m.kind, voice: m.voice, nhanVat: m.nhanVat, text: m.text, styleKey: m.styleKey || '', chiDan, tenGiong: m.tenGiong || 'Sensei', ngonNgu: m.ngonNgu });
+          const ky = D.nhatKy.slice(truoc).filter(x => x.loai === 'doc').pop() || {};
+          const tu = ky.fallback ? 'DỰ PHÒNG giọng trình duyệt (tổng hợp lỗi)' : (ky.nguon || '');
+          tdKq.className = ky.fallback ? 'lech' : 'ok';
+          tdKq.textContent = (ok ? 'đã phát · ' : 'không phát được · ') + 'giọng ' + ky.voice + ' · ' + tu + (ky.loi ? ' · ' + che(ky.loi) : '');
+        } catch (e) { tdKq.className = 'lech'; tdKq.textContent = che(e && e.message || e); } finally { btn.disabled = false; }
+      });
+    });
+    cuon.append(
+      h('h3', {}, 'Nghe thử nút loa (đường đọc thật của ứng dụng)'),
+      h('p', { class: 'mo' }, 'Mỗi dòng đi qua đúng SenseiDoc.docKe: hàng đợi tổng hợp → bộ nhớ (RAM + IndexedDB sensei_tts) → audio-engine.playPcmClip. Bấm lần hai cùng dòng: phải ghi "bo-nho" (không gọi API). '
+        + 'Câu thoại phải ra giọng nhân vật theo bảng, mọi thứ còn lại ra giọng Sensei. Nếu cột kết quả báo DỰ PHÒNG nghĩa là tổng hợp thật đã lỗi và ứng dụng lùi về giọng trình duyệt.'),
+      h('table', {}, h('thead', {}, h('tr', {}, ...['Tình huống', 'Văn bản', 'Giọng', 'Mong đợi', 'Kết quả', ''].map(x => h('th', {}, x)))), tbody),
+      h('p', {}, h('button', { class: 'phu', onclick: () => D.xoaBoNho().then(() => alert('Đã xóa bộ nhớ giọng (sensei_tts).')) }, 'Xóa bộ nhớ giọng')));
   }
 
   function khoiDong() {

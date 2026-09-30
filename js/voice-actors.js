@@ -23,10 +23,21 @@
 
   const ACTOR_BRIEF =
     'Bạn là diễn viên lồng tiếng cho giáo trình tiếng Nhật. '
-    + 'Nhiệm vụ duy nhất: ĐỌC LẠI ĐÚNG NGUYÊN VĂN câu tiếng Nhật được giao, '
-    + 'bằng giọng người bản xứ, đúng ngữ điệu hội thoại đời thường của nhân vật. '
+    + 'Nhiệm vụ duy nhất: ĐỌC LẠI ĐÚNG NGUYÊN VĂN văn bản được giao, đúng ngôn ngữ của chính văn bản đó '
+    + '(câu tiếng Nhật thì đọc bằng giọng người Nhật bản xứ, đúng ngữ điệu hội thoại đời thường của nhân vật; '
+    + 'câu tiếng Việt thì đọc bằng giọng người Việt bản xứ). '
     + 'TUYỆT ĐỐI KHÔNG dịch, KHÔNG giải thích, KHÔNG chào hỏi, KHÔNG thêm bớt một chữ nào. '
-    + 'Đọc xong là dừng.';
+    + 'Đọc xong là dừng. '
+    + 'QUY ƯỚC CHỈ DẪN DIỄN XUẤT: nếu lượt nói có dòng mở đầu bằng "[STAGE DIRECTION" thì đó là chỉ dẫn cách diễn '
+    + '(giọng hỏi, tức giận, ngạc nhiên, phấn khích, buồn...) chỉ để bạn DIỄN theo — TUYỆT ĐỐI KHÔNG đọc ra thành tiếng '
+    + 'dòng chỉ dẫn đó, không đọc dấu ngoặc, không nhắc tới nó. Khi có chỉ dẫn, CHỈ đọc phần văn bản nằm trong dấu 「 」.';
+
+  /** Lượt nói gửi cho diễn viên: không có kiểu diễn thì giữ đúng dạng cũ (đã kiểm chứng), có kiểu thì đóng khung chỉ dẫn. */
+  function dungLuotNoi(text, chiDan) {
+    if (!chiDan) return 'Đọc nguyên văn câu này:\n' + text;
+    return '[STAGE DIRECTION — silent performance note, NEVER read aloud: ' + chiDan + '.]\n'
+      + 'Đọc nguyên văn, chỉ phần trong 「」:\n「' + text + '」';
+  }
 
   function b64ToBytes(b64) {
     const bin = atob(b64);
@@ -149,7 +160,7 @@
     }
 
     /** Giao một câu cho diễn viên đọc; trả về PCM 24kHz thô */
-    async speak(jpText) {
+    async speak(jpText, chiDan) {
       const conn = await this.connect();
       if (!conn.ok) return { ok: false, reason: conn.reason };
       if (this.pending) return { ok: false, reason: 'diễn viên đang đọc câu khác' };
@@ -163,7 +174,7 @@
         try {
           this.ws.send(JSON.stringify({
             clientContent: {
-              turns: [{ role: 'user', parts: [{ text: `Đọc nguyên văn câu này:\n${jpText}` }] }],
+              turns: [{ role: 'user', parts: [{ text: dungLuotNoi(jpText, chiDan) }] }],
               turnComplete: true,
             },
           }));
@@ -198,8 +209,8 @@
       return this.actors.get(voiceName);
     }
 
-    speak(voiceName, jpText) {
-      return this.actorFor(voiceName).speak(jpText);
+    speak(voiceName, jpText, chiDan) {
+      return this.actorFor(voiceName).speak(jpText, chiDan);
     }
 
     /** Dong rieng mot dien vien — dung xong giong nao dong giong do */
@@ -217,5 +228,6 @@
   }
 
   window.VoiceActor = VoiceActor;
+  window.VoiceActorLuotNoi = dungLuotNoi;   // de kiem thu: dung luot noi gui di
   window.VoiceActorPool = VoiceActorPool;
 })();

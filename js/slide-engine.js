@@ -26,7 +26,12 @@ if (window.speechSynthesis) {
 let cauDangDoc = null;
 let mucDangDoc = null;
 
-window.playSpeech = function(text, targetId = null) {
+window.playSpeech = function(text, targetId = null, extra = null) {
+  // Duong doc CHINH: SenseiDoc (js/sensei-doc.js) — cau thoai => giong nhan vat, con lai => giong Sensei that (Charon),
+  // co khop mieng (meo / avatar). Giong trinh duyet duoi day chi la du phong khi SenseiDoc chua nap.
+  if (window.SenseiDoc && window.SenseiDoc.san && window.SenseiDoc.san()) {
+    return window.SenseiDoc.doc(text, Object.assign({ targetId: targetId }, extra || {}));
+  }
   if (!window.speechSynthesis || !text) return;
   // Dừng bất kỳ âm thanh nào đang phát từ Gemini Live để tránh 2 giọng nói chèn nhau
   if (window.__audioEngine) {
@@ -242,7 +247,8 @@ class SlideEngine {
       e.preventDefault();
       e.stopPropagation();
       if (activeSelectedText) {
-        window.playSpeech(activeSelectedText);
+        // selection: true -> SenseiDoc doc vung boi den hien tai (neu nam trong cau thoai thi dung giong nhan vat do)
+        window.playSpeech(activeSelectedText, null, { selection: true, nut: badge });
       }
     };
 
@@ -263,7 +269,8 @@ class SlideEngine {
 
       // Lop chan thu hai sau CSS: co lot ra duoc mot manh tieng Viet thi cung
       // khong doc. Khong co chu Nhat nao -> khong co gi de phat am.
-      if (!CO_CHU_NHAT.test(text)) {
+      // (SenseiDoc doc duoc ca tieng Viet neu co chon duoc; CSS van chi mo khoa boi den cho chu Nhat)
+      if (!CO_CHU_NHAT.test(text) && !/[A-Za-zÀ-ỹ]{2}/.test(text)) {
         badge.classList.add('hidden');
         activeSelectedText = "";
         return;
@@ -1017,6 +1024,8 @@ class SlideEngine {
           ${canhHtml}${dialogueHtml}
         </div>
       `;
+      // Chan dung nguoi noi nhep mieng khop tieng (js/avatar-noi.js): gan theo tung hang thoai (lineId = id bong thoai)
+      try { if (window.SenseiAvatarNoi && window.SenseiAvatarNoi.ganKaiwa) window.SenseiAvatarNoi.ganKaiwa(this.slideContent); } catch (e) {}
     }
   }
 
@@ -2189,7 +2198,7 @@ class SlideEngine {
   buildSpotlightHtml(found) {
     this._huyVietNet();   // noi dung the sap thay -> bo hen viet net cua chu truoc
     const speak = (text, label) => `
-      <button type="button" class="spot-speak" onclick="window.playSpeech('${this.jsAttr(text)}')">
+      <button type="button" class="spot-speak" onclick="window.playSpeech('${this.jsAttr(text)}', null, { muc: '${this.jsAttr((found.data && found.data.id) || '')}' })">
         <i class="fa-solid fa-volume-high"></i><span>${this.escapeHtml(label)}</span>
       </button>`;
 

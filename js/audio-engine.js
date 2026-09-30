@@ -327,7 +327,12 @@ class AudioEngine {
    * Khac playPCM24k o cho day la mot khoi hoan chinh, khong phai luong stream,
    * nen tra ve Promise ket thuc dung luc phat xong de bo dieu phoi cho duoc.
    */
-  playPcmClip(clip) {
+  playPcmClip(clip, meta) {
+    // meta (tuy chon): { kind: 'nhan-vat' (mac dinh) | 'sensei', lineId, nhanVat, text, style }
+    //  - 'nhan-vat': loi thoai cua nhan vat. Khong di qua analyser (meo khong nham la Sensei dang noi) va bat cong chan
+    //    cua SenseiKhauHinh (meo im mieng); avatar-noi.js nhep mieng chan dung cua nguoi noi.
+    //  - 'sensei'  : Sensei doc (bam loa tu vung / ngu phap...). Di qua analyser + nap khau-hinh nhu giong Live -> meo nhep mieng.
+    const kind = (meta && meta.kind) || 'nhan-vat';
     return new Promise((resolve, reject) => {
       if (this.suppressed) return resolve();
       // Moi clip mot ham ket thuc rieng, goi duoc tu onended LAN stopPlayback():
@@ -338,7 +343,10 @@ class AudioEngine {
       const xongClip = (fn, val) => {
         if (daXong) return;
         daXong = true;
-        if (this._dungClip === dungClip) { this._dungClip = null; this.clipPlaying = false; }
+        if (this._dungClip === dungClip) {
+          this._dungClip = null; this.clipPlaying = false;
+          this._ketThucLoiThoai();
+        }
         fn(val);
       };
       const dungClip = () => xongClip(resolve);
@@ -379,7 +387,8 @@ class AudioEngine {
 
         const src = this.outCtx.createBufferSource();
         src.buffer = buf;
-        src.connect(this.outBus());
+        if (kind === 'sensei') src.connect(this.outBus());
+        else src.connect(this.outCtx.destination);   // loi thoai nhan vat: bo qua analyser -> meo khong "noi" theo
 
         this.activeSources.push(src);
         if (!this.isPlaying) { this.isPlaying = true; this.onPlayStateChange(true); }
@@ -396,11 +405,42 @@ class AudioEngine {
           }
         };
         this.clipSource = src;
-        src.start();
+        // Hen gio bat dau RO RANG (10 ms sau) de khop mieng avatar / meo dung tuyet doi theo dong ho AudioContext
+        const t0 = this.outCtx.currentTime + 0.01;
+        this.clipT0 = t0;
+        this.clipKind = kind;
+        this.clipMeta = meta || null;
+        src.start(t0);
+        this._batDauLoiThoai(kind, pcm, t0, meta);
       } catch (err) {
         xongClip(reject, err);
       }
     });
+  }
+
+  /** Clip bat dau: Sensei -> nap khau-hinh cho meo; nhan vat -> bat cong chan meo + bao avatar-noi.js */
+  _batDauLoiThoai(kind, pcm, t0, meta) {
+    const kh = window.SenseiKhauHinh;
+    try {
+      if (kind === 'sensei') {
+        if (kh && kh.datThoai) kh.datThoai(false);
+        this.scheduledTime = t0 + pcm.length / 24000;
+        this._napKhauHinh(pcm, t0);
+      } else if (kh && kh.datThoai) kh.datThoai(true);
+    } catch (e) {}
+    try {
+      if (window.SenseiAvatarNoi && window.SenseiAvatarNoi.khiClip) {
+        window.SenseiAvatarNoi.khiClip({ kind, pcm, t0, ctx: this.outCtx, dur: pcm.length / 24000, meta: meta || {} });
+      }
+    } catch (e) { console.warn('[avatar-noi]', e); }
+  }
+
+  /** Clip xong / bi cat: ha cong chan meo, avatar ve nghi */
+  _ketThucLoiThoai() {
+    try { if (window.SenseiKhauHinh && window.SenseiKhauHinh.datThoai) window.SenseiKhauHinh.datThoai(false); } catch (e) {}
+    try { if (this.clipKind === 'sensei' && this.scheduledTime > 0) this.scheduledTime = 0; } catch (e) {}
+    this.clipKind = null;
+    try { if (window.SenseiAvatarNoi && window.SenseiAvatarNoi.khiDung) window.SenseiAvatarNoi.khiDung(); } catch (e) {}
   }
 
   /**
@@ -451,6 +491,7 @@ class AudioEngine {
     this.leftoverBytes = null;
     // Tieng da cat -> bo dong thoi gian khau hinh, meo khong mep tiep loi da bo
     try { if (window.SenseiKhauHinh) window.SenseiKhauHinh.xoa(); } catch (e) {}
+    this._ketThucLoiThoai();
     this.onPlayStateChange(false, { manual: isManual });
   }
 

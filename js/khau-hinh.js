@@ -61,6 +61,8 @@
  * 80 ms): mo mieng p50 / p90 so voi tieng: Charon Viet -9 / +43 ms (truoc +6 / +70), Charon Nhat -13 / +21 (truoc +3 / +41);
  * doi nguyen am p90 Charon Nhat +21 ms (truoc +81); khep m b p (su kien) Viet 98.6%, Nhat 87.5% (khong doi).
  * Trong Chrome (app that, tre len man gia dinh 1 khung): mo mieng p50 -9 ms, khep -4, doi nguyen am 0.
+ * Avatar nhan vat (js/avatar-noi.js) dung phanTichTron(mau, sr) tren bo RIENG (taoMoi() moi nhan vat) — khong dong vao
+ * dong thoi gian cua meo. Khi audio-engine phat loi thoai nhan vat: datThoai(true) -> layLuc tra 'kin' co:true (meo im).
  * Tep tu du, khong phu thuoc gi; chay duoc ca trong Node (vm) de do dac / dung demo:
  *   var bo = SenseiKhauHinh.taoMoi(); bo.nap(mau, 0, 24000); bo.ketThuc(); bo.layLuc(t)
  */
@@ -824,8 +826,44 @@
 
     function ketThuc() { if (doanMo) dongDoan(doanMo); }
 
+    // Cong chan loi thoai nhan vat: bat khi audio-engine phat clip nhan vat, tat khi clip xong / bi cat.
+    var thoai = false;
+    function datThoai(bat) { thoai = !!bat; }
+    function dangThoai() { return thoai; }
+
+    // --------------------------------------------------------------
+    // Phan tich TRON mot cau (offline): nap ca dem PCM mot lan, lay mau layLuc o 120 Hz (2 x 60 Hz).
+    // layLuc da "di truoc" mo mieng somMo (20 ms) va giu khep >= khepToiThieu (50 ms), nen chuoi nay dung
+    // nguyen cai con meo dang dung (khong doi tham so); vi phan tich xong TRUOC khi phat nen khong can doan truoc.
+    // Bo phan tich (heSo giong, muc tham chieu) duoc GIU giua cac cau cua cung mot nhan vat -> cau sau khop hon.
+    //   chuoi = { fps, n, dur, a, b (Uint8 chi so KHOA), t (Uint8 0..255), mo (Uint8 0..255) }
+    // --------------------------------------------------------------
+    function phanTichTron(mau, sr) {
+      sr = sr || 24000;
+      var FPS = 120;
+      xoa();
+      nap(mau, 0, sr);
+      ketThuc();
+      var dur = mau.length / sr;
+      var n = Math.ceil((dur + 0.25) * FPS);
+      var A = new Uint8Array(n), B = new Uint8Array(n), T = new Uint8Array(n), M = new Uint8Array(n);
+      var tam = thoai; thoai = false;
+      for (var i = 0; i < n; i++) {
+        var l = layLuc(i / FPS);
+        var ia = KHOA.indexOf(l.a), ib = KHOA.indexOf(l.b);
+        A[i] = ia < 0 ? 0 : ia; B[i] = ib < 0 ? 0 : ib;
+        T[i] = Math.round(255 * (l.t || 0)); M[i] = Math.round(255 * Math.max(0, Math.min(1, l.mo || 0)));
+      }
+      thoai = tam;
+      xoa();
+      return { fps: FPS, n: n, dur: dur, a: A, b: B, t: T, mo: M };
+    }
+
     function rong() { return { a: 'kin', b: 'kin', t: 0, mo: 0, co: false }; }
     function layLuc(t) {
+      // Dang phat LOI THOAI NHAN VAT (audio-engine.playPcmClip): meo im mieng, khong doc theo tieng cua nguoi khac.
+      // co:true de bo ve KHONG roi ve che do tu dung theo do to (loa dang keu nhung khong phai tieng Sensei).
+      if (thoai) return { a: 'kin', b: 'kin', t: 0, mo: 0, co: true };
       var d = null;
       for (var i = doanDs.length - 1; i >= 0; i--) {
         var di = doanDs[i];
@@ -921,6 +959,7 @@
 
     return {
       nap: nap, xoa: xoa, ketThuc: ketThuc, layLuc: layLuc, bayGio: bayGio, khung: khung,
+      phanTichTron: phanTichTron, datThoai: datThoai, dangThoai: dangThoai,
       thongKe: function () { return { buoc: thongKe.buoc, ms: thongKe.ms, heSoGiong: heSo }; },
       thamSo: P,
       datTam: function (t) { TAM = t; dungTam(); },
@@ -936,6 +975,9 @@
     layLuc: chung.layLuc,
     bayGio: chung.bayGio,
     khung: chung.khung,
+    phanTichTron: chung.phanTichTron,   // (mau Float32, sr) -> chuoi 120 Hz cho avatar-noi.js (dung bo rieng: taoMoi())
+    datThoai: chung.datThoai,           // cong chan loi thoai nhan vat (meo im)
+    dangThoai: chung.dangThoai,
     thongKe: chung.thongKe,
     taoMoi: taoBo,          // bo doc lap (demo / do dac)
   };

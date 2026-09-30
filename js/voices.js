@@ -385,6 +385,42 @@
       };
     },
 
+        // ------------------------------------------------------------ KIEU DOC (giong theo cam xuc)
+    // Chi dan dien xuat cho dien vien long tieng: dua tren the `emotion` cua giao trinh + dau cau / tro tu trong cau
+    // (khong co ngu dieu vi chua tong hop). Cung bo giai cam xuc voi avatar (SenseiAvatarNoi._t.giaiCamXuc).
+    // Chuoi chi dan bang tieng Anh, dong khung [STAGE DIRECTION ...] — ACTOR_BRIEF cam doc ra.
+    CHI_DAN_KIEU: {
+      hoi: 'a genuine question, curious and inquiring; let the pitch rise clearly at the end of the sentence',
+      gian: 'angry and irritated; firm, clipped, a little louder, lower and harder pitch',
+      ngac_nhien: 'startled and surprised; high energy, the pitch jumps up at the start',
+      hao_hung: 'bright, excited and delighted; fast and lively, wide pitch range, a smile in the voice',
+      buon: 'sad or apologetic; soft, slower, lower pitch, the ending falls gently',
+      vui: 'warm and cheerful, a gentle smile in the voice',
+    },
+    /** Bat / tat giong theo cam xuc (localStorage sensei_giong_cam_xuc, mac dinh BAT; '0' = tat) */
+    camXucBat() {
+      try { return localStorage.getItem('sensei_giong_cam_xuc') !== '0'; } catch (e) { return true; }
+    },
+    datCamXuc(bat) {
+      try { localStorage.setItem('sensei_giong_cam_xuc', bat ? '1' : '0'); } catch (e) {}
+    },
+    /** Khoa kieu doc (vd 'hoi') cua mot cau — '' neu trung tinh hoac dang tat. KHONG dung ngu dieu. */
+    khoaKieu(text, the) {
+      if (!SenseiVoices.camXucBat()) return '';
+      let e = 'binh_thuong';
+      try {
+        const A = window.SenseiAvatarNoi;
+        if (A && A._t && A._t.giaiCamXuc) e = A._t.giaiCamXuc({ the, text, pro: null, nen: null }).emotion;
+        else e = ({ vui: 'vui', chao: 'vui', ngac_nhien: 'ngac_nhien', gian: 'gian', buon: 'buon', that_vong: 'buon' })[String(the || '').toLowerCase()] || 'binh_thuong';
+      } catch (err) {}
+      return SenseiVoices.CHI_DAN_KIEU[e] ? e : '';
+    },
+    /** { key, chiDan } cho VoiceActor.speak: key '' = khong chi dan (giong trung tinh nhu truoc) */
+    kieuDoc(text, the) {
+      const key = SenseiVoices.khoaKieu(text, the);
+      return { key, chiDan: key ? SenseiVoices.CHI_DAN_KIEU[key] : '' };
+    },
+
     MALE, FEMALE,
     /** Ban nhung san (de kiem thu khop voi tep JSON) */
     EMBEDDED,
