@@ -397,6 +397,16 @@
        Nap sau cung va chay rieng: loi o day khong lam chet bai hoc. -->
   <script src="js/sensei-avatar-hub.js"></script>
 
+  <!-- Nghe thu giong (tu kiem cua chu bai): CHI nap khi co ?ngheGiong=1 tren dia chi trang.
+       Do cao do F0 cua 30 giong Gemini + nghe thu cau thoai that cua tung nhan vat (js/nghe-giong.js). -->
+  <script>
+    if (/[?&]ngheGiong\b/i.test(location.search)) {
+      var sNgheGiong = document.createElement('script');
+      sNgheGiong.src = 'js/nghe-giong.js';
+      document.body.appendChild(sNgheGiong);
+    }
+  </script>
+
   <!-- ====================================================================
        CANH GAC TRANG TRANG
 

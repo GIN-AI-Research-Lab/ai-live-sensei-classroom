@@ -1277,7 +1277,7 @@ Hãy: (1) đọc to diễn cảm cả câu 2 lần; (2) tách từng thành ph�
 
     if (beat.kind === 'kaiwa-intro') {
       const cast = (window.SenseiVoices ? window.SenseiVoices.castOf(beat.data) : [])
-        .map(c => `${c.speaker} (${c.genderVi})`).join(', ');
+        .map(c => `${c.speaker}${c.ten && c.ten !== c.speaker ? ' – ' + c.ten : ''} (${c.genderVi})`).join(', ');
       const flow = beat.data.map(d => `${d.speaker}: ${d.meaningVi}`).join(' → ');
       return `${head}
 Sắp vào đoạn hội thoại. Dàn nhân vật: ${cast || 'chưa rõ'}
@@ -1290,13 +1290,14 @@ CHƯA đọc câu tiếng Nhật nào — ngay sau đây học viên sẽ nghe t
 
     if (beat.kind === 'kaiwa-run') {
       // Chi dung khi chua dung duoc giong nhan vat; con lai client tu phat, khong goi Sensei
-      const lines = beat.data.map(d => `${d.speaker}: 「${(d.tokens || []).map(t => t.kanji || t.text).join('')}」`).join('\n');
+      const gv = (d) => (window.SenseiVoices && SenseiVoices.genderOf(d.speaker, d.speakerGender) === 'f' ? 'nữ' : 'nam');
+      const lines = beat.data.map(d => `${d.speaker} (${gv(d)}): 「${(d.tokens || []).map(t => t.kanji || t.text).join('')}」`).join('\n');
       return `${head}
 Đọc TRỌN đoạn hội thoại sau một mạch, đóng đủ các vai, không dừng giữa chừng,
 không dịch, không giải thích — để học viên nghe cảm giác hội thoại thật:
 ${lines}
 
-Đổi chất giọng giữa các vai cho phân biệt được nam/nữ.${common}`;
+Đổi chất giọng giữa các vai theo đúng giới tính ghi trong ngoặc, mỗi nhân vật một chất giọng riêng.${common}`;
     }
 
     if (beat.kind === 'kaiwa') {
@@ -1461,7 +1462,7 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
       return {
         bai: `${slideEngine.currentLevel} bài ${slideEngine.currentLesson}`,
         tongLuotThoai: dia.length,
-        daDungGiong: dia.filter(d => dialogueAudio[d.id]).length,
+        daDungGiong: dia.filter(d => audioDongConDung(d)).length,
         modelDangDung: actorModel(),
         daTatLongTieng: ttsDisabled,
         loiGanNhat: lastActorError,
@@ -1472,7 +1473,7 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
     /** Dung lai giong tu dau cho bai dang mo (dung de thu tay) */
     rebuild: async () => {
       const lvl = slideEngine.currentLevel, no = slideEngine.currentLesson;
-      (curriculumLoader.getDialogue(lvl, no) || []).forEach(d => delete dialogueAudio[d.id]);
+      (curriculumLoader.getDialogue(lvl, no) || []).forEach(d => { delete dialogueAudio[d.id]; delete dialogueAudioVoice[d.id]; });
       ttsDisabled = false;
       actorModelIdx = 0;
       soloRetryDone = false;
@@ -1515,7 +1516,7 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
     index: () => currentLectureStepIndex,
     // Che do mo phong (?moPhong, js/mo-phong.js): nap giong thoai tong hop thay long tieng that
     ...(/[?&]moPhong\b/i.test(location.search) ? {
-      datGiongThoai: (id, pcm) => { dialogueAudio[id] = pcm; },
+      datGiongThoai: (id, pcm) => { dialogueAudio[id] = pcm; delete dialogueAudioVoice[id]; },
     } : {}),
   };
   // San khau giang: khiTiepTuc / khiBoQua = nut "Tiếp tục ▸" / "Bỏ qua" o thanh ray khi cho hoc vien.
@@ -2967,7 +2968,39 @@ Mặt mèo tự đổi sang ${matCham} lúc bắt đầu nói — không cần g
   let lastActorError = null;      // loi gan nhat khi dung giong
   let soloRetryDone = false;      // da thu "dong Sensei roi dung giong" chua
   const dialogueAudio = {};        // 'dia-n5-1-3' -> base64 PCM 24kHz
+  // Giong da dung de dung tung cau ('dia-n5-1-3' -> 'Orus'): ban audio chi duoc phat khi
+  // van dung giong hien hanh cua nhan vat trong bang curriculum/nhan-vat.json. Doi giong
+  // (bang cap nhat) thi ban cu bi bo, khong bao gio phat nham giong.
+  const dialogueAudioVoice = {};
   const dialogueAudioInFlight = {};
+  const giongCuaDong = (line) => (window.SenseiVoices
+    ? window.SenseiVoices.voiceFor(line.speaker, line.speakerGender) : null);
+  /** Ban audio cua cau con dung giong hien hanh khong (khong ghi nhan giong = ban mo phong, chap nhan) */
+  function audioDongConDung(line) {
+    if (!dialogueAudio[line.id]) return false;
+    const da = dialogueAudioVoice[line.id];
+    return !da || !giongCuaDong(line) || da === giongCuaDong(line);
+  }
+  function xoaAudioSaiGiong() {
+    let bo = 0;
+    const dia = curriculumLoader.getDialogue(slideEngine.currentLevel, slideEngine.currentLesson) || [];
+    dia.forEach((l) => {
+      if (dialogueAudio[l.id] && !audioDongConDung(l)) {
+        delete dialogueAudio[l.id]; delete dialogueAudioVoice[l.id]; bo++;
+      }
+    });
+    return bo;   // cau cua bai khac (neu con) da duoc audioDongConDung chan luc phat
+  }
+  // Bang nhan vat tai tu tep khac ban nhung san (chu bai vua sua giong): bo audio sai giong, dung lai bai dang mo
+  if (window.SenseiVoices && SenseiVoices.onRosterChange) {
+    SenseiVoices.onRosterChange(() => {
+      const bo = xoaAudioSaiGiong();
+      if (bo && slideEngine.currentLevel) {
+        console.log(`[giong] bang nhan vat doi giong: bo ${bo} cau da dung sai giong, dung lai`);
+        prefetchDialogueAudio(slideEngine.currentLevel, slideEngine.currentLesson).catch(() => {});
+      }
+    });
+  }
   let ttsDisabled = false;         // key khong co quyen TTS -> thoi, khong thu lai
 
   async function synthLine(apiKey, model, text, voiceName) {
@@ -3039,6 +3072,9 @@ Mặt mèo tự đổi sang ${matCham} lúc bắt đầu nói — không cần g
     if (!window.SenseiVoices || !window.VoiceActorPool) return;
     const keys = allKeys();
     if (!keys.length) return;
+    // Cho bang nhan vat (curriculum/nhan-vat.json) nap xong, toi da ~2,5 giay, de khong dung
+    // bang ban nhung roi phai dung lai neu tep co doi giong.
+    try { await window.SenseiVoices.ready; } catch (e) {}
 
     const dialogue = curriculumLoader.getDialogue(lvl, lessonNum) || [];
     if (!dialogue.length) return;
@@ -3046,11 +3082,12 @@ Mặt mèo tự đổi sang ${matCham} lúc bắt đầu nói — không cần g
     // Gom cac luot thoai theo giong.
     const byVoice = new Map();
     for (const line of dialogue) {
-      if (dialogueAudio[line.id]) continue;
+      if (audioDongConDung(line)) continue;
+      delete dialogueAudio[line.id]; delete dialogueAudioVoice[line.id];   // ban cu sai giong thi dung lai
       const jp = (line.tokens || []).map(t => t.kanji || t.text).join('');
       if (!jp.trim()) continue;
-      // Kem ca doan thoai: lay dung giong castOf da tranh trung giua hai vai
-      const voice = window.SenseiVoices.voiceFor(line.speaker, line.speakerGender, dialogue);
+      // Giong co dinh cua nhan vat theo bang curriculum/nhan-vat.json (khong xao tron theo bai)
+      const voice = window.SenseiVoices.voiceFor(line.speaker, line.speakerGender);
       if (!byVoice.has(voice)) byVoice.set(voice, []);
       byVoice.get(voice).push({ line, jp });
     }
@@ -3134,7 +3171,7 @@ Mặt mèo tự đổi sang ${matCham} lúc bắt đầu nói — không cần g
           // Xet tung cau chu khong chi tung manh: moi key thuong chi co mot
           // manh, xet o ngoai thi bai cu van doc het tren cung key voi bai moi.
           if (!vanOBaiNay()) break;
-          if (dialogueAudio[line.id]) { made++; continue; }
+          if (audioDongConDung(line)) { made++; continue; }
           // Nhan ngan (vong quay da noi "dang"): vua hang tieu de ca o 360px, chi tiet nam o title
           datCho('kaiwa', `Lồng tiếng ${made + 1}/${todo} lượt thoại…`,
             `${line.speaker || 'Nhân vật'} — giọng ${voice}.`
@@ -3181,6 +3218,7 @@ Mặt mèo tự đổi sang ${matCham} lúc bắt đầu nói — không cần g
 
           if (res && res.ok) {
             dialogueAudio[line.id] = res.pcm;
+            dialogueAudioVoice[line.id] = voice;   // ghi nhan de audio khong song sot khi doi giong
             made++;
             continue;
           }
@@ -3211,7 +3249,7 @@ Mặt mèo tự đổi sang ${matCham} lúc bắt đầu nói — không cần g
       // no bi bo trong khi key khac da xong ngoi khong. Dua cac cau con thieu
       // cho cac key con han muc doc lai MOT lan (tuan tu, xoay key khi can).
       const conSong = keys.filter(k => !ketQua.keyHetHan.has(k));
-      const conThieu = ketQua.hong.filter(h => !dialogueAudio[h.line.id]);
+      const conThieu = ketQua.hong.filter(h => !audioDongConDung(h.line));
       if (conThieu.length && conSong.length && vanOBaiNay()) {
         const theoGiong = new Map();
         conThieu.forEach(h => {
@@ -4223,7 +4261,8 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
   async function playDialogueLine(line) {
     dangPhatGiongNhanVat = true;
     try {
-      const clip = dialogueAudio[line.id];
+      // Chi phat ban audio da dung DUNG giong hien hanh cua nhan vat nay
+      const clip = audioDongConDung(line) ? dialogueAudio[line.id] : null;
       if (clip && audioEngine.playPcmClip) {
         try {
           const p = audioEngine.playPcmClip(clip);   // bat dau dong bo (src.start()) ngay trong lenh nay
@@ -4248,9 +4287,11 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     }
   }
 
-  function playLineWithBrowserVoice(line) {
+  function playLineWithBrowserVoice(line, opts = {}) {
     return new Promise((resolve) => {
-      const jp = (line.tokens || []).map(t => t.kanji || t.text).join('');
+      // opts.text: chi doc mot tu trong cau (bam tu o tab Hoi thoai); opts.khongSanKhau: khong bao san khau giang
+      const jp = opts.text != null ? String(opts.text) : (line.tokens || []).map(t => t.kanji || t.text).join('');
+      const sk = () => (opts.khongSanKhau ? null : SK());
       if (!jp.trim() || !window.speechSynthesis || !window.SenseiVoices) return resolve(false);
 
       try {
@@ -4258,9 +4299,8 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
         speechSynthesis.cancel();
         if (speechSynthesis.paused) speechSynthesis.resume();
 
-        // Kem doan thoai cua bai: cao do theo giong castOf da phan (tranh trung vai)
-        const doan = curriculumLoader.getDialogue(slideEngine.currentLevel, slideEngine.currentLesson);
-        const pick = SenseiVoices.browserVoice(line.speaker, line.speakerGender, doan);
+        // Cao do theo vi tri nhan vat trong bang curriculum/nhan-vat.json: moi nhan vat mot cao do rieng
+        const pick = SenseiVoices.browserVoice(line.speaker, line.speakerGender);
         const u = new SpeechSynthesisUtterance(jp);
         u.lang = 'ja-JP';
         u.rate = pick.rate;
@@ -4271,12 +4311,12 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
         const finish = (ok) => {
           if (done) return;
           done = true;
-          SK()?.khiGiongMay(line.id, 'xong');
+          sk()?.khiGiongMay(line.id, 'xong');
           resolve(ok);
         };
         // San khau: karaoke theo giong may (bat dau / ranh gioi tu; khong co ranh gioi thi uoc theo do dai)
-        u.onstart = () => SK()?.khiGiongMay(line.id, 'bat-dau');
-        u.onboundary = (e) => SK()?.khiGiongMay(line.id, 'ranh-gioi', e.charIndex);
+        u.onstart = () => sk()?.khiGiongMay(line.id, 'bat-dau');
+        u.onboundary = (e) => sk()?.khiGiongMay(line.id, 'ranh-gioi', e.charIndex);
         u.onend = () => finish(true);
         u.onerror = () => finish(false);
         // Luoi an toan: speechSynthesis thinh thoang khong ban onend
@@ -4287,6 +4327,65 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
         resolve(false);
       }
     });
+  }
+
+  /**
+   * Tab Hoi thoai: bam nut loa cua mot cau (hoac mot tu trong cau) thi phai nghe DUNG giong
+   * cua nhan vat noi cau do — cung giong da dat trong curriculum/nhan-vat.json. Truoc day
+   * playSpeech (slide-engine.js) doc moi cau bang mot giong may duy nhat cho ca hai nguoi.
+   * Cac cho khac (tu vung, kanji, vi du) van dung playSpeech goc.
+   */
+  function timDongThoaiTheoId(id) {
+    if (!id) return null;
+    const dia = curriculumLoader.getDialogue(slideEngine.currentLevel, slideEngine.currentLesson) || [];
+    for (const l of dia) {
+      if (l.id === id) return { line: l, caCau: true };
+      if ((l.tokens || []).some(tk => tk.id === id)) return { line: l, caCau: false };
+    }
+    return null;
+  }
+  let lanBamTay = 0;
+  async function phatDongBamTay(line, text, targetId, caCau) {
+    if (!text) return;
+    const lan = ++lanBamTay;
+    try { audioEngine.stopPlayback(); } catch (e) {}
+    try {
+      if (window.speechSynthesis) {
+        speechSynthesis.cancel();
+        if (speechSynthesis.paused) speechSynthesis.resume();
+      }
+    } catch (e) {}
+    if (targetId) { try { slideEngine.prepareReadingTarget(targetId); } catch (e) {} }
+    const truoc = dangPhatGiongNhanVat;
+    dangPhatGiongNhanVat = true;
+    try {
+      // Ca cau: uu tien ban da dung bang giong API cua nhan vat (chi khi dung giong hien hanh)
+      const clip = caCau && audioDongConDung(line) ? dialogueAudio[line.id] : null;
+      if (clip && audioEngine.playPcmClip) {
+        try { await audioEngine.playPcmClip(clip); return; } catch (e) {}
+      }
+      if (lan !== lanBamTay) return;   // co lan bam moi hon -> khong doc them
+      await playLineWithBrowserVoice(line, { text, khongSanKhau: true });
+    } finally {
+      if (!truoc) dangPhatGiongNhanVat = false;
+      if (targetId && lan === lanBamTay) {
+        try {
+          if (slideEngine.activeFocusId === targetId) {
+            const el = slideEngine.resolveElement(targetId);
+            const b = el && el.querySelector('.reading-badge-indicator');
+            if (b) b.remove();
+          } else slideEngine.clearFocusClasses(targetId);
+        } catch (e) {}
+      }
+    }
+  }
+  const playSpeechGoc = window.playSpeech;
+  if (typeof playSpeechGoc === 'function') {
+    window.playSpeech = function (text, targetId) {
+      const tim = window.SenseiVoices ? timDongThoaiTheoId(targetId) : null;
+      if (!tim) return playSpeechGoc.apply(this, arguments);
+      phatDongBamTay(tim.line, text, targetId, tim.caCau);
+    };
   }
 
   /* ======================================================================
