@@ -1654,6 +1654,7 @@
       "id": "dia-kana-9-1",
       "speaker": "グエン (Nguyễn)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-nguyen.webp",
       "tokens": [
         {
           "id": "d-kana-l9-1a",
@@ -1693,6 +1694,7 @@
       "id": "dia-kana-9-2",
       "speaker": "てんいん (Nhân viên)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-tenin.webp",
       "tokens": [
         {
           "id": "d-kana-l9-2a",
@@ -1722,6 +1724,7 @@
       "id": "dia-kana-9-3",
       "speaker": "グエン (Nguyễn)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-nguyen.webp",
       "tokens": [
         {
           "id": "d-kana-l9-3a",
@@ -1761,6 +1764,7 @@
       "id": "dia-kana-9-4",
       "speaker": "てんいん (Nhân viên)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-tenin.webp",
       "tokens": [
         {
           "id": "d-kana-l9-4a",
@@ -1800,6 +1804,7 @@
       "id": "dia-kana-9-5",
       "speaker": "グエン (Nguyễn)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-nguyen.webp",
       "tokens": [
         {
           "id": "d-kana-l9-5a",
@@ -1849,6 +1854,7 @@
       "id": "dia-kana-9-6",
       "speaker": "てんいん (Nhân viên)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-tenin.webp",
       "tokens": [
         {
           "id": "d-kana-l9-6a",
@@ -1888,6 +1894,7 @@
       "id": "dia-kana-9-7",
       "speaker": "グエン (Nguyễn)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-nguyen.webp",
       "tokens": [
         {
           "id": "d-kana-l9-7a",
@@ -1917,6 +1924,7 @@
       "id": "dia-kana-9-8",
       "speaker": "てんいん (Nhân viên)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-tenin.webp",
       "tokens": [
         {
           "id": "d-kana-l9-8a",

@@ -255,17 +255,20 @@
   // B. BIEU CAM
   // ====================================================================================================================
   // The `emotion` cua giao trinh (khoa cat con meo) -> bieu cam avatar + trong so + su kien kem theo
+  //   bang ANH XA sang 7 tep anh bieu cam cua nhan vat: vui/chao/de_biu->vui, suy_nghi->hoi, gian->gian, ngac_nhien->ngac_nhien,
+  //   buon/that_vong/xau_ho/cui_chao->buon (xau_ho co them giot mo hoi), khong co the -> binh_thuong. (hao_hung do ngu dieu/dau cau quyet dinh)
+  //   w phai > 0.3 thi the moi tu quyet dinh bieu cam (nguong chon trong giaiCamXuc)
   var THE_DU_LIEU = {
     vui: { e: 'vui', w: 0.55 },
-    de_biu: { e: 'binh_thuong', w: 0 },
+    de_biu: { e: 'vui', w: 0.35 },
     that_vong: { e: 'buon', w: 0.6 },
     ngac_nhien: { e: 'ngac_nhien', w: 0.7 },
     buon: { e: 'buon', w: 0.6 },
     gian: { e: 'gian', w: 0.7 },
-    suy_nghi: { e: 'hoi', w: 0.3, su: 'nghi' },
-    xau_ho: { e: 'binh_thuong', w: 0, su: 'mo_hoi' },
-    chao: { e: 'vui', w: 0.3 },
-    cui_chao: { e: 'binh_thuong', w: 0 },
+    suy_nghi: { e: 'hoi', w: 0.4, su: 'nghi' },
+    xau_ho: { e: 'buon', w: 0.4, su: 'mo_hoi' },
+    chao: { e: 'vui', w: 0.35 },
+    cui_chao: { e: 'buon', w: 0.35 },
   };
   function chuanKhoaThe(t) { return String(t || '').trim().toLowerCase().replace(/[-\s]+/g, '_'); }
 
@@ -356,7 +359,7 @@
   function suKienBieuCam(kq, pro, dur) {
     var ev = [], e = kq.emotion, vb = kq.vanBan || {}, the = kq.the, dau = pro && pro.ok ? pro.tDau : 0, cuoi = pro && pro.ok ? pro.tCuoi : dur, ci = kq.cuongDo;
     var tHoi = pro && pro.ok && (pro.leoCuoi >= 1.5 || e === 'hoi') ? Math.max(dau, pro.tBatDauLen - 0.05) : null;
-    if (e === 'hoi' || vb.hoi) {
+    if (vb.hoi || (e === 'hoi' && !(the && the.su === 'nghi'))) {   // suy_nghi (ba cham) khong phai cau hoi: khong to '?'
       if (tHoi == null) tHoi = Math.max(dau, cuoi - 0.3);
       ev.push({ t: tHoi, kind: '?' });
     }
@@ -469,8 +472,8 @@
   // ---- ve mieng tren canvas (goc toa do = tam mieng, truc x theo duong mieng)
   function veDuongNu(c, w, lift, hw) {   // net cuoi cong: tam thap hon hai khoe khi lift > 0
     c.beginPath();
-    c.moveTo(-hw, -lift * 0.25);
-    c.quadraticCurveTo(0, lift * 0.75, hw, -lift * 0.25);
+    c.moveTo(-hw, -lift / 3);                       // parabol y = lift * (1/6 - u^2/2): ends -lift/3, giua +lift/6 (trung binh 0 = tam net)
+    c.quadraticCurveTo(0, lift * 2 / 3, hw, -lift / 3);
   }
   function diemMieng(w, P) {
     // duong bao mo: mang diem tren (trai->phai) va duoi (trai->phai)
@@ -478,7 +481,7 @@
     var qU = 1.1 + (0.55 - 1.1) * P.rd, qL = 0.75 + (0.5 - 0.75) * P.rd;
     var tren = [], duoi = [];
     for (var i = 0; i <= N; i++) {
-      var u = -1 + 2 * i / N, f = Math.max(0, 1 - u * u), ys = lift * (0.25 - 0.5 * u * u);
+      var u = -1 + 2 * i / N, f = Math.max(0, 1 - u * u), ys = lift * (1 / 6 - 0.5 * u * u);
       tren.push([u * hw, ys - up * Math.pow(f, qU)]);
       duoi.push([u * hw, ys + lo * Math.pow(f, qL)]);
     }
@@ -506,7 +509,7 @@
     duongMo(c, d);
     c.fillStyle = C.toi; c.fill();
     c.save(); c.clip();
-    var hw = w * P.sw / 2, lo = H * (1 - P.up), upH = H * P.up, y0 = P.cur * w * 0.25;
+    var hw = w * P.sw / 2, lo = H * (1 - P.up), upH = H * P.up, y0 = P.cur * w / 6;
     if (P.rang > 0.05) {                              // hang rang tren
       c.fillStyle = rgbCss(C.rang, 0.96);
       c.fillRect(-hw, y0 - upH - lw, hw * 2, Math.min(upH * 0.9 * P.rang + lw * 0.8, H * 0.5 + lw));
@@ -527,13 +530,104 @@
     c.save();
     c.translate(m.cx, m.cy); c.rotate(m.rot);
     c.lineCap = 'round';
-    var w0 = m.w0 * 1.12, pw = lw0 * 3.0 + 1.5;
+    var f = 1.2 + 0.5 * Math.min(1, Math.abs(m.lift0) / m.w0), w0 = m.w0 * f, lift = m.lift0 * f * f, pw = lw0 * 3.0 + 1.5;   // mo rong net (duoi cuon them) thi giu nguyen do cong tai dau net goc
     var passes = [[pw * 1.45, 0.3], [pw, 1]];
     for (var i = 0; i < passes.length; i++) {
-      veDuongNu(c, w0, m.lift0, w0 / 2);
+      veDuongNu(c, w0, lift, w0 / 2);
       c.strokeStyle = rgbCss(skin, passes[i][1]); c.lineWidth = passes[i][0]; c.stroke();
     }
     c.restore();
+  }
+  // ---- Xoa net mieng goc CHINH XAC tung diem anh (uu tien hon xoaMiengGoc): trong dai quanh duong cong cua mieng, diem toi hon da >= 22%
+  // tuong phan cua net -> thay bang mau noi suy doc (giua diem da tren / duoi), giu nguyen moi, bong, rang cua ... Ket qua la mot "mieng va" RGBA nho.
+  var boVa = {};
+  function luma(r, g, b) { return 0.299 * r + 0.587 * g + 0.114 * b; }
+  function taoVa(im, rg) {
+    var W = im.naturalWidth, H = im.naturalHeight, m = rg.mouth;
+    if (!W || !H || !m) return null;
+    var cx = m.x * W, cy = m.y * H, w0 = m.w * W, lift = (m.curve || 0) * W, rot = m.rot || 0, cr = Math.cos(rot), sr = Math.sin(rot);
+    var R = w0 * 0.85 + 8 + Math.abs(lift);
+    var x0 = Math.max(0, Math.floor(cx - R)), x1 = Math.min(W, Math.ceil(cx + R)), y0 = Math.max(0, Math.floor(cy - R * 0.75)), y1 = Math.min(H, Math.ceil(cy + R * 0.75));
+    if (m.clipTop != null) y0 = Math.max(y0, Math.floor(m.clipTop * H));   // ria mep / khan che net tren: khong xoa
+    var bw = x1 - x0, bh = y1 - y0;
+    if (bw < 8 || bh < 8) return null;
+    var src = document.createElement('canvas'); src.width = W; src.height = H;
+    var sc = src.getContext('2d', { willReadFrequently: true });
+    sc.drawImage(im, 0, 0);
+    var id = sc.getImageData(x0, y0, bw, bh), d = id.data, n = bw * bh;
+    var skin = hexRgb(rg.skin || rg.daMat), line = hexRgb(rg.line || '#3a2a20');
+    var Ls = luma(skin[0], skin[1], skin[2]), C = Math.max(30, Ls - luma(line[0], line[1], line[2]));
+    var t0 = 0.22 * C, t1 = 0.55 * C, band = 0.014 * W + 0.3 * Math.abs(lift);
+    var a = new Float32Array(n), i, x, y;
+    for (y = 0; y < bh; y++) for (x = 0; x < bw; x++) {
+      var dx = x + x0 - cx, dy = y + y0 - cy, xr = dx * cr + dy * sr, yr = -dx * sr + dy * cr, u = xr / (w0 / 2);
+      if (Math.abs(u) > 1.5) continue;
+      var yc = lift * (1 / 6 - 0.5 * u * u);
+      if (Math.abs(yr - yc) > band * (1 + 0.6 * Math.max(0, Math.abs(u) - 1))) continue;
+      i = (y * bw + x) * 4;
+      var drop = Ls - luma(d[i], d[i + 1], d[i + 2]);
+      if (drop > t0) a[y * bw + x] = Math.min(1, (drop - t0) / (t1 - t0));
+    }
+    // nong 1 diem anh (vien khu rang cua)
+    var b2 = new Float32Array(n);
+    for (y = 0; y < bh; y++) for (x = 0; x < bw; x++) {
+      var mx = a[y * bw + x];
+      if (mx < 1) for (var yy = Math.max(0, y - 1); yy <= Math.min(bh - 1, y + 1); yy++) for (var xx = Math.max(0, x - 1); xx <= Math.min(bw - 1, x + 1); xx++) mx = Math.max(mx, a[yy * bw + xx] * 0.85);
+      b2[y * bw + x] = mx;
+    }
+    var out = document.createElement('canvas'); out.width = bw; out.height = bh;
+    var oc = out.getContext('2d'), od = oc.createImageData(bw, bh), o = od.data;
+    var darkLim = Ls - t0, F = new Float32Array(n * 3), ok = new Uint8Array(n);
+    for (x = 0; x < bw; x++) {
+      for (y = 0; y < bh; y++) {
+        var k = y * bw + x;
+        if (b2[k] < 0.12) continue;
+        var ya = y, yb = y;
+        while (ya > 0 && b2[(ya - 1) * bw + x] >= 0.12) ya--;
+        while (yb < bh - 1 && b2[(yb + 1) * bw + x] >= 0.12) yb++;
+        var ca = skin, cb = skin, t;
+        if (ya > 0) { i = ((ya - 1) * bw + x) * 4; if (luma(d[i], d[i + 1], d[i + 2]) > darkLim) ca = [d[i], d[i + 1], d[i + 2]]; }
+        if (yb < bh - 1) { i = ((yb + 1) * bw + x) * 4; if (luma(d[i], d[i + 1], d[i + 2]) > darkLim) cb = [d[i], d[i + 1], d[i + 2]]; }
+        t = (y - ya + 0.5) / (yb - ya + 1);
+        F[k * 3] = ca[0] + (cb[0] - ca[0]) * t; F[k * 3 + 1] = ca[1] + (cb[1] - ca[1]) * t; F[k * 3 + 2] = ca[2] + (cb[2] - ca[2]) * t;
+        ok[k] = 1;
+      }
+    }
+    // lam mem ngang 5 diem (tranh soc doc do noi suy doc tung cot)
+    for (y = 0; y < bh; y++) for (x = 0; x < bw; x++) {
+      var k2 = y * bw + x;
+      if (!ok[k2]) continue;
+      var sr = 0, sg = 0, sb = 0, cn = 0;
+      for (var xx2 = Math.max(0, x - 2); xx2 <= Math.min(bw - 1, x + 2); xx2++) {
+        var kk = y * bw + xx2;
+        if (ok[kk]) { sr += F[kk * 3]; sg += F[kk * 3 + 1]; sb += F[kk * 3 + 2]; cn++; }
+      }
+      i = k2 * 4;
+      o[i] = sr / cn; o[i + 1] = sg / cn; o[i + 2] = sb / cn;
+      o[i + 3] = Math.round(255 * Math.min(1, b2[k2] * 1.15));
+    }
+    oc.putImageData(od, 0, 0);
+    return { cv: out, x0: x0, y0: y0, W: W, H: H };
+  }
+  function vaMieng(path, im, rg) {
+    if (!rg || !rg.mouth) return null;
+    var v = boVa[path];
+    if (v !== undefined) return v;
+    if (!im || !im.naturalWidth) return null;   // chua tai xong: lan sau thu lai (khong luu)
+    try { v = taoVa(im, rg); } catch (e) { v = null; }
+    boVa[path] = v;
+    return v;
+  }
+  /** Xoa net mieng goc cua MOT lop anh da ve: mieng va chinh xac (neu tao duoc), khong thi ve net mau da theo duong cong. */
+  function xoaMieng(c, path, im, rg, fr, cw, ch) {
+    if (!rg || !rg.mouth) return;
+    var v = vaMieng(path, im, rg);
+    if (v) {
+      var s = fr.dw / v.W;
+      c.drawImage(v.cv, fr.dx + v.x0 * s, fr.dy + v.y0 * (fr.dh / v.H), v.cv.width * s, v.cv.height * (fr.dh / v.H));
+      return;
+    }
+    xoaMiengLop(c, rg, fr, cw, ch);
   }
   // Chop mat: phu mat bang mau da, ve net mi nham
   function veChopMat(c, mat, b, skin, eyeCol, lw) {
@@ -633,6 +727,23 @@
     tgt.sw *= 1 + (cam.sw - 1) * A; tgt.h *= 1 + (cam.h - 1) * A; tgt.rd = kep(tgt.rd + cam.rd * A, 0, 1);
     return tgt;
   }
+  /** Anh bieu cam (nv/<id>/<cam xuc>.webp) da co net mieng mang dung cam xuc (cuoi, mếu...) va rig da do lai net do: khong cong them do cong / do rong
+   *  cua bang MIENG_CAM (se thanh cuoi hai lan); chi giu do mo (h), do tron (rd) va nghieng dau. */
+  function camTheoAnh(cam) { return { cur: 0, sw: 1, h: cam.h, rd: cam.rd, nghieng: cam.nghieng }; }
+  function laAnhBieuCam(path) { return /\/nv\/[^/]+\/[^/]+\.webp$/.test(path || ''); }
+  /** Dung hinh hoc mieng tu rig: w0 = be rong net goc (dung de xoa), w = be rong mieng ve (trong khoang 0.8 - 1.4 x be rong trung tinh: net 'ngac nhien' rat ngan, net 'hao hung' cuoi rat rong). */
+  function hinhHocMieng(m, fr) {
+    var w0 = m.w * fr.dw, wg = (m.wGoc || m.w) * fr.dw, wv = Math.min(Math.max(w0, 0.8 * wg), 1.4 * wg);
+    return { cx: fr.dx + m.x * fr.dw, cy: fr.dy + m.y * fr.dh, rot: m.rot || 0, w: wv, w0: w0, lift0: (m.curve || 0) * fr.dw };
+  }
+  /** Xoa net mieng goc cua MOT lop anh (mau da + toa do cua chinh anh do). */
+  function xoaMiengLop(c, rg, fr, cw, ch) {
+    if (!rg || !rg.mouth) return;
+    var m = rg.mouth, skin = hexRgb(rg.skin || rg.daMat), lw = Math.max(1.0, 0.0062 * fr.dw);
+    if (m.clipTop != null) { c.save(); c.beginPath(); c.rect(0, fr.dy + m.clipTop * fr.dh, cw, ch); c.clip(); }
+    xoaMiengGoc(c, hinhHocMieng(m, fr), skin, lw);
+    if (m.clipTop != null) c.restore();
+  }
   function mauMieng(rg, skin) {
     var line = hexRgb(rg.line || '#8a4a3a');
     return { line: rgbCss(line), toi: rgbCss(tronMau(line, [38, 14, 18], 0.62)), rang: [252, 244, 236], luoi: tronMau([216, 112, 102], skin, 0.12) };
@@ -648,15 +759,17 @@
       c.setTransform(1, 0, 0, 1, 0, 0); c.fillStyle = (rg && rg.bg) || '#f0ebe1'; c.fillRect(0, 0, W, H);
       if (opt.zoom) { c.translate(W / 2, H / 2); c.scale(opt.zoom, opt.zoom); c.translate(-(fr.dx + 0.5 * fr.dw), -(fr.dy + 0.43 * fr.dh)); }
       c.drawImage(o.im, fr.dx, fr.dy, fr.dw, fr.dh);
-      if (!rg || !rg.mouth) return;
+      if (!rg || !rg.mouth || opt.khongPhu) return;   // khongPhu: anh goc, de so sanh
       var m = rg.mouth, skin = hexRgb(rg.skin || rg.daMat), lw = Math.max(1.0, 0.0062 * fr.dw);
-      var geo = { cx: fr.dx + m.x * fr.dw, cy: fr.dy + m.y * fr.dh, rot: m.rot || 0, w: m.w * fr.dw, w0: m.w * fr.dw, lift0: (m.curve || 0) * fr.dw };
+      var geo = hinhHocMieng(m, fr);
+      xoaMieng(c, path, o.im, rg, fr, W, H);
+      var cam = MIENG_CAM[opt.emo || 'binh_thuong'];
+      if (laAnhBieuCam(path)) cam = camTheoAnh(cam);
+      var tgt = mucTieu({ a: KHOA_H.indexOf(opt.a || 'kin'), b: KHOA_H.indexOf(opt.b || opt.a || 'kin'), t: opt.t || 0, mo: opt.mo == null ? 1 : opt.mo }, cam, opt.cuongDo == null ? 1 : opt.cuongDo, fr.dw, (m.curve || 0) / Math.max(1e-6, m.w));
       if (m.clipTop != null) { c.save(); c.beginPath(); c.rect(0, fr.dy + m.clipTop * fr.dh, W, H); c.clip(); }
-      xoaMiengGoc(c, geo, skin, lw);
-      var cam = MIENG_CAM[opt.emo || 'binh_thuong'], tgt = mucTieu({ a: KHOA_H.indexOf(opt.a || 'kin'), b: KHOA_H.indexOf(opt.b || opt.a || 'kin'), t: opt.t || 0, mo: opt.mo == null ? 1 : opt.mo }, cam, opt.cuongDo == null ? 1 : opt.cuongDo, fr.dw, (m.curve || 0) / Math.max(1e-6, m.w));
       veMieng(c, geo, tgt, mauMieng(rg, skin), lw);
       if (m.clipTop != null) c.restore();
-      if (opt.chop) veChopMat(c, (rg.eyes || []).map(function (e) { return { x: fr.dx + e.x * fr.dw, y: fr.dy + e.y * fr.dh, r: e.r * fr.dw }; }), opt.chop, hexRgb(rg.daMat || rg.skin), rg.eye || '#2a2a2a', lw);
+      if (opt.chop && rg.blink) veChopMat(c, (rg.eyes || []).map(function (e) { return { x: fr.dx + e.x * fr.dw, y: fr.dy + e.y * fr.dh, r: e.r * fr.dw }; }), opt.chop, hexRgb(rg.daMat || rg.skin), rg.eye || '#2a2a2a', lw);
     });
   };
 
@@ -772,6 +885,7 @@
     if (this.fade < 1) this.fade = Math.min(1, this.fade + dt / 0.11);
     this.amt += (amt - this.amt) * (1 - Math.exp(-dt / 0.06));
     var cam = MIENG_CAM[emo] || MIENG_CAM.binh_thuong, A = this.amt * p.cuongDo;
+    if (laAnhBieuCam(this.cur && this.cur.path)) cam = camTheoAnh(cam);   // anh bieu cam da co khoe mieng / do rong rieng
     // ---- nen + anh
     var im = this.anhGoc(this.cur);
     var iw = im.naturalWidth || 512, ih = im.naturalHeight || 512;
@@ -791,12 +905,16 @@
     c.save();
     var px = W / 2, py = H * 0.9;
     c.translate(px, py); c.rotate(this.tilt); c.scale(1 + Math.abs(this.tilt) * 0.9, 1 + Math.abs(this.tilt) * 0.9); c.translate(-px + rung, -py + tho);
+    // Moi lop anh duoc xoa net mieng goc CUA CHINH NO (toa do + mau da cua anh do) roi moi tron: khong con net mieng cu trong luc cross-fade
     if (this.prev && this.fade < 1) {
       var ip = this.anhGoc(this.prev), fp = khungAnh(W, H, ip.naturalWidth || iw, ip.naturalHeight || ih, this.fit);
       try { c.drawImage(ip, fp.dx, fp.dy, fp.dw, fp.dh); } catch (e) {}
+      var kp = rig && rig[this.prev.path] ? this.prev.path : this.basePath;
+      xoaMieng(c, kp, ip, rig && rig[kp], fp, W, H);
       c.globalAlpha = this.fade;
     }
     try { c.drawImage(im, fr.dx, fr.dy, fr.dw, fr.dh); } catch (e) {}
+    if (rg && rg.mouth) xoaMieng(c, rig[this.cur.path] ? this.cur.path : this.basePath, im, rg, fr, W, H);
     c.globalAlpha = 1;
     if (rg && rg.mouth) this.veKhuonMat(c, rg, fr, T, p, cam, A, dt, now);
     c.restore();
@@ -809,14 +927,10 @@
     });
   };
   Avatar.prototype.veKhuonMat = function (c, rg, fr, T, p, cam, A, dt, now) {
-    var m = rg.mouth, skin = hexRgb(rg.skin || rg.daMat), line = hexRgb(rg.line || '#8a4a3a'), eyeCol = rg.eye || '#2a2a2a';
-    var w0 = m.w * fr.dw, lw = Math.max(1.0, 0.0062 * fr.dw);
-    var cx = fr.dx + m.x * fr.dw, cy = fr.dy + m.y * fr.dh;
-    var geo = { cx: cx, cy: cy, rot: m.rot || 0, w: w0, w0: w0, lift0: (m.curve || 0) * fr.dw };
-    if (m.clipTop != null) { c.save(); c.beginPath(); c.rect(0, fr.dy + m.clipTop * fr.dh, this.canvas.width, this.canvas.height); c.clip(); }
-    // 1. xoa net goc
-    xoaMiengGoc(c, geo, skin, lw);
-    // 2. tham so muc tieu tu nguyen am
+    var m = rg.mouth, skin = hexRgb(rg.skin || rg.daMat), eyeCol = rg.eye || '#2a2a2a';
+    var lw = Math.max(1.0, 0.0062 * fr.dw);
+    var geo = hinhHocMieng(m, fr);
+    // 1. tham so muc tieu tu nguyen am
     var f = p.mieng(T);
     var tgt = mucTieu(f, cam, A, fr.dw, (m.curve || 0) / Math.max(1e-6, m.w));
     if (!this.P) this.P = { sw: 1, h: 0, up: 0.3, rd: 0, luoi: 0, rang: 0, cur: tgt.cur };
@@ -825,8 +939,8 @@
     var al = 1 - Math.exp(-dt / (dong ? 0.010 : 0.016)), am = 1 - Math.exp(-dt / 0.022);
     for (var k in tgt) P[k] += (tgt[k] - P[k]) * (k === 'h' || k === 'up' ? al : am);
     var C = mauMieng(rg, skin);
-    // 3. chop mat
-    if (rg.eyes && !GIAM_CHUYEN || rg.eyes) {
+    // 2. chop mat: chi khi rig bao mat la cham don gian (anh 'ngac nhien' / 'hao hung' co mat co diem sang, anh 'vui' mat nham: bo qua)
+    if (rg.eyes && rg.blink) {
       var ch = this.chop, bl = 0;
       if (ch.t0 && now - ch.t0 < 0.15) bl = Math.sin(Math.PI * (now - ch.t0) / 0.15);
       else if (ch.t0 && now - ch.t0 >= 0.15) { ch.t0 = 0; ch.tiep = now + 3 + Math.random() * 2; }
@@ -836,7 +950,8 @@
         veChopMat(c, mats, bl, hexRgb(rg.daMat || rg.skin), eyeCol, lw);
       }
     }
-    // 4. mieng
+    // 3. mieng (chi ve ben duoi clipTop: ria mep / khan che net tren)
+    if (m.clipTop != null) { c.save(); c.beginPath(); c.rect(0, fr.dy + m.clipTop * fr.dh, this.canvas.width, this.canvas.height); c.clip(); }
     veMieng(c, geo, P, C, lw);
     if (m.clipTop != null) c.restore();
     this.dxNhin = fr;

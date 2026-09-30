@@ -1154,6 +1154,7 @@
       "id": "dia-kana-8-1",
       "speaker": "せんせい (Sensei)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-kana-l8-1a",
@@ -1213,6 +1214,7 @@
       "id": "dia-kana-8-3",
       "speaker": "せんせい (Sensei)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-kana-l8-3a",
@@ -1282,6 +1284,7 @@
       "id": "dia-kana-8-5",
       "speaker": "せんせい (Sensei)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-kana-l8-5a",
@@ -1396,6 +1399,7 @@
       "id": "dia-kana-8-7",
       "speaker": "せんせい (Sensei)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-kana-l8-7a",

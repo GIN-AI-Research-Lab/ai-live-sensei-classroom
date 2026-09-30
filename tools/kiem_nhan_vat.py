@@ -12,7 +12,7 @@ Kiem:
   4. giong cua tung nhan vat thuoc kho cua gioi tinh do (nam 16 / nu 14 giong Gemini)
   5. cung mot bi danh (sau chuan hoa) luon ra cung mot nhan vat, khong nhan vat nao trung bi danh
   6. so nhan vat nam / nu lech nhau khong qua 2
-  7. avatarUrl dong thoai dung == truong 'anh' cua nhan vat; tep anh co that
+  7. MOI dong thoai co avatarUrl == truong 'anh' cua nhan vat (thieu cung la loi); tep anh co that
   8. soLuot trong bang khop so lan thuc te
 Chuan hoa ten PHAI giong js/voices.js (chuanHoa + HAU_TO).
 """
@@ -139,7 +139,7 @@ def main():
                 dem[i] += 1
                 theo_cap[i][lvl] += 1
                 av = l.get('avatarUrl')
-                if av and av != (theo_id[i].get('anh') or None):
+                if av != (theo_id[i].get('anh') or None):   # thieu avatarUrl cung la loi: moi dong thoai phai mang chan dung cua nhan vat
                     anh_lech[(sp, av, theo_id[i].get('anh'))] += 1
 
     for sp, tap in cung_chuoi.items():

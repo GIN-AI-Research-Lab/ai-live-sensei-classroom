@@ -30,8 +30,10 @@ import glob
 import io
 import json
 import os
+import re
 import shutil
 import sys
+import unicodedata
 from collections import Counter, OrderedDict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -42,38 +44,50 @@ CHI_MUC = os.path.join(ROOT, "tools", "minh_hoa_chi_muc.json")
 CAP = ["kana", "n5", "n4", "n3", "n2", "n1"]
 UU_TIEN_CAP = {"n5": 0, "n4": 1, "n3": 2, "n2": 3, "n1": 4}
 
-# ---- Nguoi noi -> chan dung. Nhan vat co ten: moi bai co ten do. Vai chung (thay giao, nhan
-# vien, le tan...) chi o dung nhung bai ma chan dung duoc ve cho (moi bai mot nguoi khac nhau).
-NHAN_VAT = {
-    u"田中": "nv-tanaka",
-    u"サントス": "nv-santos",
-    u"ワン": "nv-wang",
-    u"山田": "nv-yamada", u"山田一郎": "nv-yamada", u"山田 (Yamada)": "nv-yamada",
-    u"ミラー": "nv-miller", u"ミラー (Miller)": "nv-miller",
-    u"佐藤 (Satou)": "nv-sato", u"さとう (Satou)": "nv-sato",
-    u"グプタ": "nv-gupta",
-    u"カリナ": "nv-karina",
-    u"マリア": "nv-maria",
-    u"山本": "nv-yamamoto",
-    u"鈴木": "nv-suzuki",
-}
-VAI_CHUNG = {
-    u"先生": "nv-sensei", u"せんせい (Sensei)": "nv-sensei",
-    u"店員": "nv-tenin", u"てんいん (Nhân viên)": "nv-tenin",
-    u"受付": "nv-uketsuke",
-    u"社長": "nv-shacho",
-    u"教授": "nv-kyoju",
-    u"選手": "nv-senshu",
-}
-# Bai co ve vai chung (lay tu prompt canh: nhanVat cua tranh tinh huong tung bai)
-BAI_VAI_CHUNG = {
-    "nv-sensei": {"n5-15", "n5-19", "n4-45"},
-    "nv-tenin": {"n5-3", "n5-11"},
-    "nv-uketsuke": {"n5-4", "n4-49"},
-    "nv-shacho": {"n1-9", "n1-10"},
-    "nv-kyoju": {"n1-14", "n1-15"},
-    "nv-senshu": {"n4-33", "n1-12"},
-}
+# ---- Nguoi noi -> chan dung: lay tu bang nhan vat curriculum/nhan-vat.json (28 nhan vat), khop ten nguoi noi bang
+# bi danh da chuan hoa DUNG NHU js/voices.js (chuanHoa + HAU_TO; tenJa, ten, biDanh; bi danh dau tien thang). Moi cau thoai
+# cua MOI cap (ke ca kana) mang avatarUrl = truong `anh` cua nhan vat do.
+BANG_NHAN_VAT = os.path.join(ROOT, "curriculum", "nhan-vat.json")
+HAU_TO = re.compile(u"(さん|くん|ちゃん|君|様|さま|氏|先生)$")
+
+
+def chuan_hoa(s):
+    t = unicodedata.normalize("NFKC", str(s if s is not None else ""))
+    trong = (re.search(r"\(([^)]*)\)", t) or [None, ""])[1]
+    t = re.sub(r"\([^)]*\)", "", t)
+    t = re.sub(r"[\s　]+", "", t).lower()
+    if not t and trong:
+        t = re.sub(r"[\s　]+", "", trong).lower()
+    return t
+
+
+def doc_bang_nhan_vat():
+    """-> (tra(speaker) -> nhan vat | None, danh sach nhan vat)"""
+    ds = json.load(io.open(BANG_NHAN_VAT, encoding="utf-8")).get("nhanVat") or []
+    alias = {}
+    for n in ds:
+        for a in [n.get("ten_ja", ""), n.get("ten", "")] + list(n.get("biDanh") or []):
+            k = chuan_hoa(a)
+            if k and k not in alias:
+                alias[k] = n
+
+    def tra(sp):
+        k = chuan_hoa(sp)
+        if not k:
+            return None
+        if k in alias:
+            return alias[k]
+        t = k
+        for _ in range(2):
+            m = HAU_TO.search(t)
+            if not m or len(t) <= len(m.group(0)):
+                break
+            t = t[:-len(m.group(0))]
+            if t in alias:
+                return alias[t]
+        return None
+    return tra, ds
+
 
 # ---- KANA: ngoai le khi dung lai anh N5..N1
 KANA_BO_QUA = {
@@ -207,6 +221,7 @@ def main():
                 return u
         return None
 
+    tra_nv, _ = doc_bang_nhan_vat()
     dem = {c: Counter() for c in CAP}
     tep_doi = []
     for (cap, so), rec in sorted(bai_cua.items(), key=lambda x: (CAP.index(x[0][0]), x[0][1])):
@@ -226,20 +241,20 @@ def main():
             dem[cap]["co-anh" if u else "khong-anh"] += 1
             if not u and muc.get(v.get("id"), {}).get("trangThai") == "giu-svg":
                 dem[cap]["giu-svg"] += 1
-        # chan dung nguoi noi: ngay sau speakerRole
-        khoa_bai = "%s-%s" % (cap, so)
+        # chan dung nguoi noi: ngay sau speakerRole. avatarUrl = `anh` cua nhan vat trong bang (moi cau thoai)
         ds = bai.get("dialogue") or []
         for i, l in enumerate(ds):
-            ten = (l.get("speaker") or "").strip()
-            nv = NHAN_VAT.get(ten)
-            if not nv and ten in VAI_CHUNG and khoa_bai in BAI_VAI_CHUNG.get(VAI_CHUNG[ten], ()):
-                nv = VAI_CHUNG[ten]
-            u = anh(nv) if nv else None
+            nv = tra_nv(l.get("speaker"))
+            u = nv.get("anh") if nv else None
+            if u and not os.path.isfile(os.path.join(ROOT, u)):
+                u = None
             ds[i], d = dat_sau(l, "speakerRole", [("avatarUrl", u)])
             doi |= d
             dem[cap]["cau-thoai"] += 1
             if u:
                 dem[cap]["co-chan-dung"] += 1
+            if d and (l.get("avatarUrl") or None) != u:
+                dem[cap]["doi-avatar"] += 1
         # tranh tinh huong: ngay sau description
         u = anh("canh-%s-%s" % (cap, so))
         alt = None
@@ -261,6 +276,7 @@ def main():
         d = dem[c]
         print("%-5s %6d %7d %9d %8d %10d %12d %10d" % (c, d["tu"], d["co-anh"], d["khong-anh"],
               d["giu-svg"], d["cau-thoai"], d["co-chan-dung"], d["co-tranh-canh"]))
+    print("avatarUrl doi theo cap (so cau thoai): " + ", ".join("%s %d" % (c, dem[c]["doi-avatar"]) for c in CAP))
     print("%s %d tep bai" % ("Can cap nhat:" if a.kiem else "Da ghi:", len(tep_doi)))
     if a.kiem and tep_doi:
         sys.exit(1)

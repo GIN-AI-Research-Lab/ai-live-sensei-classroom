@@ -30,13 +30,13 @@ window.__vowel = function (text, f0b) {
   return u8;
 };
 window.__s = null;
-window.__batDau = () => { window.__s = { act: 0, maxAct: 0, anCuaKhac: 0, tilt: 0, sym: 0, kh: 0, khoa: {}, emo: {}, tim: [] }; };
+window.__batDau = () => { window.__s = { act: 0, maxAct: 0, anCuaKhac: 0, tilt: 0, sym: 0, kh: 0, khoa: {}, emo: {}, anh: {}, tim: [] }; };
 setInterval(() => {
   const S = window.__s, ae = window.__audioEngine; if (!S || !ae || !ae.outCtx) return;
   const ds = SenseiAvatarNoi._ds(), hoat = ds.filter(a => a.hoat);
   S.act = hoat.length; S.maxAct = Math.max(S.maxAct, hoat.length);
   if (hoat.length) S.anCuaKhac = Math.max(S.anCuaKhac, ds.filter(a => !a.hoat && a.img && a.img.style.visibility === 'hidden').length);
-  hoat.forEach(a => { S.tilt = Math.max(S.tilt, Math.abs(a.tilt || 0)); });
+  hoat.forEach(a => { S.tilt = Math.max(S.tilt, Math.abs(a.tilt || 0)); if (a.cur && a.cur.path) S.anh[a.cur.path] = 1; });
   S.sym = Math.max(S.sym, document.querySelectorAll('#avn-tang svg').length);
   const p = SenseiAvatarNoi.dangPhat(); if (p) S.emo[p.emotion] = 1;
   if (ae.clipPlaying) { try { const KH = SenseiKhauHinh, l = KH.layLuc(KH.bayGio(ae.outCtx)); if (l && l.co && l.mo > 0.12) S.kh++; } catch (e) {}
@@ -48,7 +48,7 @@ async function phat(t, lineId, nv, text, the, kind = 'nhan-vat', f0 = 130) {
   await t.ev(`window.__batDau()`);
   await t.ev(`(() => { const u = window.__vowel(${JSON.stringify(text)}, ${f0}); window.__pr = __audioEngine.playPcmClip(u, { kind: ${JSON.stringify(kind)}, lineId: ${JSON.stringify(lineId)}, nhanVat: ${JSON.stringify(nv)}, text: ${JSON.stringify(text)}, the: ${JSON.stringify(the)} }); return 1; })()`);
   await t.ev(`window.__pr.then(() => new Promise(r => setTimeout(r, 900)))`);
-  return JSON.parse(await t.ev(`JSON.stringify(Object.assign({}, window.__s, { khoa: Object.keys(window.__s.khoa).length, emo: Object.keys(window.__s.emo) }))`));
+  return JSON.parse(await t.ev(`JSON.stringify(Object.assign({}, window.__s, { khoa: Object.keys(window.__s.khoa).length, emo: Object.keys(window.__s.emo), anh: Object.keys(window.__s.anh) }))`));
 }
 
 const t = await moTrinhDuyet({ duong: '/index.html?noLive&sensei=video', w: 1280, h: 800, dpr: 2 });
@@ -81,6 +81,8 @@ try {
   // -------- bieu cam + ky hieu + nghieng
   const k1 = await phat(t, dong[0], 'sato', 'これ あなたが つくったんですか？', 'suy_nghi');
   kt('bieu-cam', "cau hoi: avatar doi sang 'hoi' + hien ky hieu '?'", k1.emo.includes('hoi') && k1.sym >= 1, JSON.stringify(k1));
+  kt('anh-bieu-cam', "cau hoi (sato): dung anh nv/sato/hoi.webp theo id nhan vat", k1.anh.some(p => /\/nv\/sato\/hoi\.webp$/.test(p)), JSON.stringify(k1.anh));
+  kt('anh-bieu-cam', 'mo dau luot: anh yen la nv/sato/binh_thuong.webp (khong phai nv-sato.webp)', k1.anh.some(p => /\/nv\/sato\/binh_thuong\.webp$/.test(p)), JSON.stringify(k1.anh));
   kt('bieu-cam', 'cau hoi: dau nghieng ~3 do (0.02-0.08 rad)', k1.tilt > 0.02 && k1.tilt < 0.08, k1.tilt);
   const k2 = await phat(t, dong[1], 'yamada', 'ばか！ いいかげんに しろ！', 'gian', 'nhan-vat', 95);
   kt('bieu-cam', "the gian + '!': bieu cam gian + hien gan giun/ky hieu", k2.emo.includes('gian') && k2.sym >= 1, JSON.stringify(k2));
@@ -88,6 +90,10 @@ try {
   kt('bieu-cam', "ngac nhien: bieu cam ngac_nhien + ky hieu '!'", k3.emo.includes('ngac_nhien') && k3.sym >= 1, JSON.stringify(k3));
   const k4 = await phat(t, dong[1], 'yamada', 'ごめんなさい', 'buon');
   kt('bieu-cam', 'buon / xin loi: bieu cam buon + giot mo hoi', k4.emo.includes('buon') && k4.sym >= 1, JSON.stringify(k4));
+  kt('anh-bieu-cam', 'gian -> nv/yamada/gian.webp; ngac_nhien -> nv/miller/ngac_nhien.webp; buon -> nv/yamada/buon.webp',
+    k2.anh.some(p => /\/nv\/yamada\/gian\.webp$/.test(p)) && k3.anh.some(p => /\/nv\/miller\/ngac_nhien\.webp$/.test(p)) && k4.anh.some(p => /\/nv\/yamada\/buon\.webp$/.test(p)), JSON.stringify([k2.anh, k3.anh, k4.anh]));
+  const k5 = await phat(t, dong[1], 'yamada', 'すみません', 'xau_ho');
+  kt('anh-bieu-cam', 'the xau_ho -> anh buon + giot mo hoi', k5.anh.some(p => /\/nv\/yamada\/buon\.webp$/.test(p)) && k5.sym >= 1, JSON.stringify(k5));
   await t.ev(`SenseiAvatarNoi.datGiamChuyen(true)`);
   const g1 = await phat(t, dong[0], 'sato', 'これ あなたが つくったんですか？', 'suy_nghi');
   const g2 = await phat(t, dong[1], 'yamada', 'ばか！ いいかげんに しろ！', 'gian', 'nhan-vat', 95);

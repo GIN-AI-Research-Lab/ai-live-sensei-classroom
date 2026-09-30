@@ -141,8 +141,11 @@ kt('the', 'the gian -> gian', cam('あ', 'gian').emotion === 'gian', cam('あ', 
 kt('the', 'the ngac_nhien -> ngac_nhien', cam('あ', 'ngac_nhien').emotion === 'ngac_nhien', cam('あ', 'ngac_nhien').emotion);
 kt('the', 'the that_vong -> buon', cam('あ', 'that_vong').emotion === 'buon', cam('あ', 'that_vong').emotion);
 kt('the', 'the vui -> vui', cam('あ', 'vui').emotion === 'vui', cam('あ', 'vui').emotion);
-kt('the', 'the de_biu, cui_chao -> binh_thuong', cam('あ', 'de_biu').emotion === 'binh_thuong' && cam('あ', 'cui_chao').emotion === 'binh_thuong', '');
-kt('the', 'the xau_ho -> binh_thuong + giot mo hoi', T.suKienBieuCam(cam('すみません', 'xau_ho'), null, 2).some(e => e.kind === 'mo_hoi'), JSON.stringify(T.suKienBieuCam(cam('すみません', 'xau_ho'), null, 2)));
+kt('the', 'the de_biu, chao -> vui', cam('あ', 'de_biu').emotion === 'vui' && cam('あ', 'chao').emotion === 'vui', cam('あ', 'de_biu').emotion + ',' + cam('あ', 'chao').emotion);
+kt('the', 'the cui_chao, buon -> buon', cam('あ', 'cui_chao').emotion === 'buon' && cam('あ', 'buon').emotion === 'buon', cam('あ', 'cui_chao').emotion);
+kt('the', 'the xau_ho -> buon + giot mo hoi', cam('すみません', 'xau_ho').emotion === 'buon' && T.suKienBieuCam(cam('すみません', 'xau_ho'), null, 2).some(e => e.kind === 'mo_hoi'), cam('すみません', 'xau_ho').emotion + JSON.stringify(T.suKienBieuCam(cam('すみません', 'xau_ho'), null, 2)));
+kt('the', 'khong the, cau trung tinh -> binh_thuong', cam('これはペンです。', '').emotion === 'binh_thuong' && cam('これはペンです。', 'khong_co_the_nay').emotion === 'binh_thuong', '');
+kt('the', 'suy_nghi -> hoi + ba cham, KHONG to ? (khong phai cau hoi)', cam('うーん', 'suy_nghi').emotion === 'hoi' && !T.suKienBieuCam(cam('うーん', 'suy_nghi'), null, 2).some(e => e.kind === '?'), JSON.stringify(T.suKienBieuCam(cam('うーん', 'suy_nghi'), null, 2)));
 kt('the', "the suy_nghi -> hoi nhe + 'nghi'", T.suKienBieuCam(cam('うーん', 'suy_nghi'), null, 2).some(e => e.kind === 'nghi'), '');
 { // the + ngu dieu cung chieu: vui + hao hung -> cuong do tang
   const dur = 1.6, x = sinh(dur, (t) => 150 * Math.pow(2, 8 / 12 * Math.sin(2 * Math.PI * 2.2 * t) * Math.min(1, (dur - 0.25 - t) / 0.3)), (t) => am(7, 0.9)(dur)(t) * (Math.sin(t * 9) > 0.6 ? 1.8 : 1));

@@ -586,6 +586,7 @@
       "id": "dia-kana-10-1",
       "speaker": "せんせい (Sensei)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-kana-l10-1a",
@@ -605,6 +606,7 @@
       "id": "dia-kana-10-2",
       "speaker": "グエン (Nguyễn)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-nguyen.webp",
       "tokens": [
         {
           "id": "d-kana-l10-2a",
@@ -624,6 +626,7 @@
       "id": "dia-kana-10-3",
       "speaker": "せんせい (Sensei)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-kana-l10-3a",
@@ -668,6 +671,7 @@
       "id": "dia-kana-10-4",
       "speaker": "グエン (Nguyễn)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-nguyen.webp",
       "tokens": [
         {
           "id": "d-kana-l10-4a",
@@ -712,6 +716,7 @@
       "id": "dia-kana-10-5",
       "speaker": "せんせい (Sensei)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-kana-l10-5a",
@@ -781,6 +786,7 @@
       "id": "dia-kana-10-6",
       "speaker": "グエン (Nguyễn)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-nguyen.webp",
       "tokens": [
         {
           "id": "d-kana-l10-6a",
@@ -810,6 +816,7 @@
       "id": "dia-kana-10-7",
       "speaker": "せんせい (Sensei)",
       "speakerRole": "personA",
+      "avatarUrl": "assets/minh-hoa/nv-sensei.webp",
       "tokens": [
         {
           "id": "d-kana-l10-7a",
@@ -879,6 +886,7 @@
       "id": "dia-kana-10-8",
       "speaker": "グエン (Nguyễn)",
       "speakerRole": "personB",
+      "avatarUrl": "assets/minh-hoa/nv-nguyen.webp",
       "tokens": [
         {
           "id": "d-kana-l10-8a",
