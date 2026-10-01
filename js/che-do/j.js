@@ -1,13 +1,13 @@
 /* ==========================================================================
-   Che do san khau J — "Truyện tranh manga" (port tu ban mau E:/sensei-tam/demo2/j sang san khau SONG).
-   Moi nhip la MOT TRANG MANGA: it khoi lon, mot tieu diem: cac o (panel) da giac voi ranh gioi xeo, vien muc, anh minh hoa
-   GIU MAU + luoi cham (halftone CSS), net toc do / vu no cho nhan manh, may quay day / phong trang ve o dang noi (<= 350 ms).
-   Ngan sach mat do: <= 5 khoi chu / trang (khong tinh nhan HOA nho va hang chu thich). Chu vao bang quet clip-path (day du do dam,
-   khong mo nua chung); trang cu truot ra <= 200 ms, cac o moi vao theo thu tu anh -> tu -> nghia (moi o <= 250 ms).
-   Hang Sensei (co dinh o duoi, CAO CO DINH 2 dong): loi Sensei song duoc gom thanh CAU tron ven (capNhan), moi cau hien mot lan,
-   doi cau bang quet chu, khong lap lai chu da co tren trang (capTrung), xem truoc som o luot moi. O goc phai duoi danh cho meo THAT.
-   Mau cau: cong thuc THAT LON (>= 110 px) + 3-4 o vai tro (minh hoa + nhan ngan); giai thich / luu y / van hoa chi do Sensei noi.
-   Du lieu that cua MOI bai; bai tap: the that #card-<id> vao o cua che do (oBaiTap), cham bai y nguyen.
+   Che do san khau J — "Truyện tranh manga" (port TRUNG THANH tu ban mau E:/sensei-tam/demo2/j: index.html + manga.js + manga.css).
+   Moi nhip la MOT TRANG MANGA: cac o (panel) da giac xeo, vien muc, anh minh hoa GIU MAU + luoi cham (halftone),
+   may quay day nhe (<= 350 ms), net toc do / vu no cho nhan manh. Bang mau: muc den, giay trang, MOT mau nhan do (ngu phap chinh).
+   Bang co chu: 6 bac theo be ngang khung (t1 headword, t2 cong thuc, t3 cau, t4 nghia, t5 phu de, t6 nhan) — cung bac o moi dang nhip;
+   noi dung dai tu ha trong khoang tu-bac-gan-nhat toi san (khong bao gio duoi san).
+   Chuyen canh theo ban mau: vet muc quet phai -> trai 0.75 s (cubic in-out), trang moi truot 120 px 1.0 s expo.out; trong trang:
+   dap (scale 1.5-1.9 -> 1, expo.out .45), truot (.6 expo.out), nay (back.out 2.2, .55), quet clip-path (.5 power3.inOut), ve net, nhan lon -> goc (.65 power3.inOut).
+   Hang Sensei (co dinh o duoi, 2 dong): loi Sensei song gom thanh CAU tron ven, moi cau hien mot lan (capNhan), khong lap chu da co tren trang.
+   O goc phai duoi danh cho meo THAT. Du lieu that cua MOI bai; bai tap: the that #card-<id> vao o cua che do (oBaiTap).
    Hop dong: scratchpad che-do/HUONG-DAN.md. Mau tham khao: js/che-do/a.js.
    ========================================================================== */
 (function () {
@@ -21,18 +21,31 @@
   const RE_DAU = /^[、。，．,.！？!?・…‥」』）)】〉》「『（(【〈《\s]+$/;
   const RE_JP = /[぀-ヿ一-鿿々〆〜ー]/;
   const BL = 90;                 // bleed: o tran ra ngoai mep khung hinh
+  const MUC = '#141414', DO = '#e3261b';   // phai trung --j-muc / --j-do trong css (chi dung cho SVG sinh bang JS)
+  // ban mau: bang 1920 x 756 (trang) — toa do thiet ke, nhan voi st.sx / st.sy khi dung
+  const DW = 1920, DH = 756;
+  // chuyen canh (ban mau): quet 0.75 s, trang moi truot 120 px / 1.0 s
+  const WIPE = 0.75, SLIDE = 1.0, SLIDE_PX = 120;
+  // bac co chu (px khi U = 1): [t1 headword, t2 cong thuc, t3 cau, t4 nghia, t5 phu de, t6 nhan]
+  const BAC_MAY = [204, 128, 90, 56, 38, 21];
+  const BAC_DT = [104, 56, 40, 30, 19, 15];
+  const SAN_MAY = { hw: 120, ct: 110, cau: 84, nghia: 44, phu: 24, nhan: 20, bong: 60 };
+  const SAN_DT = { hw: 52, ct: 28, cau: 28, nghia: 28, phu: 15, nhan: 15, bong: 28 };
 
   // ------------------------------------------------------------------ trang thai che do
   let L = null;                  // lop .cd-lop
   let C = null;                  // ctx / tien ich dao dien
   let G = null;                  // gsap
   const st = {
-    W: 0, H: 0, dt: false, U: 1, meo: null,
-    g: 12, bw: 6, mx: 0, my: 0, camS: 1.05,
-    Yb: 0, Yc: 0, Xc: 0, catL: 0, catT: 0, bTop: 0,
-    vung: null, tang: null, pages: [], T: null, probe: null,
+    W: 0, H: 0, dt: false, U: 1, meo: null, sx: 1, sy: 1,
+    g: 12, bw: 6, mx: 0, my: 0, camS: 1.035,
+    Yb: 0, Yc: 0, Xc: 0, catL: 0, catT: 0, bTop: 0, t: BAC_MAY, san: SAN_MAY,
+    vung: null, tang: null, pages: [], T: null, probe: null, vet: null,
     nh: null, api: null, m: null, dem: 0, cap: null,
   };
+  const px = (x) => x * st.sx;               // toa do thiet ke -> px (ngang)
+  const py = (y) => y * st.sy;               // toa do thiet ke -> px (doc)
+  const tk = (n) => st.t[n - 1];             // bac co chu t1..t6
 
   // ------------------------------------------------------------------ tien ich
   const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
@@ -116,6 +129,7 @@
     return kanaRoma(t.furigana || t.text || '');
   };
 
+
   // ------------------------------------------------------------------ do khung + toa do
   function doKhung() {
     let k = C.khung();
@@ -133,10 +147,14 @@
     const { W, H, dt } = st;
     st.U = dt ? W / 390 : clamp(Math.min(W / 1440, H / 776), 0.55, 1.75);
     const U = st.U;
-    st.g = Math.round((dt ? 8 : 12) * U);
-    st.bw = Math.max(3, Math.round((dt ? 3.6 : 6) * U));
-    st.camS = dt ? 1.045 : 1.06;
-    st.mx = Math.round(W * (st.camS - 1) / st.camS) + Math.round((dt ? 8 : 14) * U);
+    st.t = (dt ? BAC_DT : BAC_MAY).map((v) => Math.round(v * U * 10) / 10);
+    const sn = dt ? SAN_DT : SAN_MAY;
+    st.san = {};
+    Object.keys(sn).forEach((q) => { st.san[q] = Math.round(sn[q] * (dt ? 1 : Math.min(1, U)) * 10) / 10; });   // man nho hon 1440: san ti le theo U (khong lon hon muc toi thieu da dat o 1440)
+    st.g = Math.round((dt ? 8 : 22 * W / DW * 1.1) * (dt ? U : 1));
+    st.bw = Math.max(3, Math.round(dt ? 3.6 * U : 7.4 * W / DW));
+    st.camS = dt ? 1.03 : 1.035;
+    st.mx = Math.round(W * (1 - 1 / st.camS)) + Math.round((dt ? 8 : 12) * U);
     // hinh chu nhat cua meo that (toa do lop); khong co meo -> gia dinh goc phai duoi
     const m = st.meo || (dt ? { x: W - 132, y: H - 105 } : { x: W - Math.round(275 * U), y: H - Math.round(278 * U) });
     if (dt) {
@@ -145,17 +163,18 @@
       st.catL = Math.round(m.x - 6);
     } else {
       st.catT = Math.round(m.y + 8);
-      st.bTop = H - clamp(Math.round(H * 0.19), 112, 152);   // hang Sensei co dinh (dai loi 2 dong)
+      st.bTop = H - clamp(Math.round(H * 0.215), 116, 200);   // hang Sensei co dinh (loi 2 dong) ~ 21% (ban mau 19% + le)
       st.catL = Math.round(m.x - 26 * U);
     }
-    st.Yc = st.catT - Math.round(st.g / 2);
     st.Yb = st.bTop - Math.round(st.g / 2);
-    if (dt) st.Yc = st.Yb;
+    st.Yc = dt ? st.Yb : Math.min(st.Yb, st.catT - Math.round(st.g / 2));
     st.Xc = st.catL - Math.round(st.g / 2);
-    st.my = Math.round(st.Yb * (st.camS - 1) / st.camS) + 12;
+    st.sx = W / DW;
+    st.sy = st.Yb / DH;
+    st.my = Math.round(st.Yb * (1 - 1 / st.camS)) + Math.round(10 * U);
     L.style.setProperty('--j-u', U.toFixed(4) + 'px');
     L.style.setProperty('--j-bw', st.bw + 'px');
-    L.style.setProperty('--j-tag', sz(40, 26) + 'px');
+    st.t.forEach((v, i) => L.style.setProperty('--t' + (i + 1), v + 'px'));
     if (dt) L.dataset.hep = '1'; else delete L.dataset.hep;
   }
 
@@ -199,11 +218,21 @@
     }
     return [a, b];
   }
+  /** Cat hop r de khong de len o goc meo (x >= Xc, y >= Yc): uu tien giu chieu rong, ha day; khong duoc thi thu hep phai */
+  function traoGocMeo(r) {
+    if (st.dt || st.Yc >= st.Yb) return r;
+    const mg = Math.round(6 * st.U);
+    if (r.x + r.w <= st.Xc - mg || r.y + r.h <= st.Yc - mg) return r;
+    const h2 = st.Yc - mg - r.y, w2 = st.Xc - mg - r.x;
+    if (h2 >= r.h * 0.62) return { x: r.x, y: r.y, w: r.w, h: h2 };
+    if (w2 >= r.w * 0.55) return { x: r.x, y: r.y, w: w2, h: r.h };
+    return h2 * r.w >= w2 * r.h ? { x: r.x, y: r.y, w: r.w, h: Math.max(20, h2) } : { x: r.x, y: r.y, w: Math.max(20, w2), h: r.h };
+  }
   /**
    * Hop noi dung lon nhat trong o (toa do trang): pad = le (t,b,l,r) hoac so. Da giac loi -> hop chu nhat noi tiep
    * duoc tinh tai hai duong ngang y0, y1; thu nhieu cap (y0, y1) (co canh xeo ngang) va lay dien tich lon nhat.
    */
-  function crOf(poly, pad) {
+  function crOf(poly, pad, sinMeo) {
     const p = typeof pad === 'number' ? { t: pad, b: pad, l: pad, r: pad } : Object.assign({ t: 0, b: 0, l: 0, r: 0 }, pad);
     const bb = bbox(poly);
     const bot = Math.min(bb.y1, st.Yb);
@@ -218,8 +247,7 @@
         if (y1 - y0 < hh * 0.45) continue;
         const e0 = xExt(poly, clamp(y0, bb.y0, bb.y1)), e1 = xExt(poly, clamp(y1, bb.y0, bb.y1));
         const x0 = Math.max(Math.max(e0[0], e1[0]) + p.l, st.mx);
-        let rb = Math.min(e0[1], e1[1]);
-        if (!st.dt && Math.abs(rb - st.Xc) < st.W * 0.03) rb -= Math.round((st.camS - 1) * st.Xc);   // may quay phong 6%: chu sat cot meo khong duoc chui xuong o meo
+        const rb = Math.min(e0[1], e1[1]);
         const x1 = Math.min(rb - p.r, st.W - st.mx);
         const w = x1 - x0, h2 = y1 - y0;
         if (w < 20) continue;
@@ -227,8 +255,8 @@
         if (!best || sc > best.sc) best = { sc, x: x0, y: y0, w, h: h2 };
       }
     }
-    if (!best) return { x: st.mx, y: top0, w: Math.max(20, st.W - 2 * st.mx), h: hh };
-    return { x: best.x, y: best.y, w: best.w, h: best.h };
+    const r = best ? { x: best.x, y: best.y, w: best.w, h: best.h } : { x: st.mx, y: top0, w: Math.max(20, st.W - 2 * st.mx), h: hh };
+    return sinMeo ? r : traoGocMeo(r);
   }
 
   // ------------------------------------------------------------------ net toc do / vu no (SVG tinh)
@@ -241,16 +269,6 @@
       const k = 1 + r() * 0.42;
       const tx = cx + Math.cos(a) * rx * k, ty = cy + Math.sin(a) * ry * k;
       d += `M${f1(tx)},${f1(ty)}L${f1(cx + Math.cos(a - wd) * R)},${f1(cy + Math.sin(a - wd) * R)}L${f1(cx + Math.cos(a + wd) * R)},${f1(cy + Math.sin(a + wd) * R)}Z`;
-    }
-    return `<svg class="j-sl" width="${w}" height="${hh}" viewBox="0 0 ${w} ${hh}" aria-hidden="true" focusable="false"><path d="${d}"/></svg>`;
-  }
-  /** Net ngang song song (toc do chay) */
-  function speedH(w, hh, seed, n) {
-    const r = rng(seed);
-    let d = '';
-    for (let i = 0; i < n; i++) {
-      const y = r() * hh, l = w * (0.25 + r() * 0.6), x = r() * (w - l), t = 1 + r() * 3.2 * st.U;
-      d += `M${f1(x)},${f1(y)}L${f1(x + l)},${f1(y - t / 2)}L${f1(x + l)},${f1(y + t / 2)}Z`;
     }
     return `<svg class="j-sl" width="${w}" height="${hh}" viewBox="0 0 ${w} ${hh}" aria-hidden="true" focusable="false"><path d="${d}"/></svg>`;
   }
@@ -270,49 +288,64 @@
     o = o || {};
     const pad = (o.vien || 6 * st.U) * 1.2;
     const pts = burstPts(w / 2, hh / 2, w / 2 - pad, hh / 2 - pad, o.n || 22, seed, o.jit, o.trong);
-    return `<svg class="j-bst" width="${w}" height="${hh}" viewBox="0 0 ${w} ${hh}" aria-hidden="true" focusable="false"><polygon points="${pts}" fill="${o.nen || '#fff'}" stroke="${o.mau || '#141414'}" stroke-width="${o.vien || Math.max(3, 6 * st.U)}" stroke-linejoin="miter"/></svg>`;
+    return `<svg class="j-bst" width="${w}" height="${hh}" viewBox="0 0 ${w} ${hh}" aria-hidden="true" focusable="false"><polygon points="${pts}" fill="${o.nen || '#fff'}" stroke="${o.mau || MUC}" stroke-width="${o.vien || Math.max(3, st.bw)}" stroke-linejoin="miter"/></svg>`;
   }
 
-  // ------------------------------------------------------------------ do co chu (do that trong DOM)
+  // ------------------------------------------------------------------ do co chu (do that trong DOM) — bac co chu t1..t6
   function probeEl() {
     if (!st.probe || !st.probe.isConnected) { st.probe = h('div', 'j-probe', L); st.probe.setAttribute('aria-hidden', 'true'); }
     return st.probe;
   }
-  /** Nhu fitBox nhung neu o co toi thieu fmin van tran thi ha tiep xuong fmin2 (noi dung cuc dai) - khong bao gio cat chu */
-  function fitMin(box, w, hh, fmax, fmin, fmin2) {
-    const f = fitBox(box, w, hh, fmax, fmin);
-    if (box.scrollWidth <= w + 0.6 && box.scrollHeight <= hh + 0.6) return f;
-    return fitBox(box, w, hh, fmin, Math.min(fmin, fmin2));
-  }
+  const vuaHop = (box, w, hh) => box.scrollWidth <= w + 0.6 && box.scrollHeight <= hh + 0.6;
   /**
-   * Co chu lon nhat trong [fmin, fmax] de `box` (da o trong DOM, co chieu rong w) khong tran w x hh.
-   * Tim nhi phan (chu bao boc chi ngat giua cac token vi token la inline-block nowrap).
+   * Co chu cho `box` (da trong DOM, co chieu rong w): thu lan luot cac BAC (giam dan) roi ha lien tuc toi fmin.
+   * Chu bao boc chi ngat giua cac token (token la inline-block nowrap). Tra co chu da dat.
    */
-  function fitBox(box, w, hh, fmax, fmin) {
+  function fitBac(box, w, hh, bac, fmin) {
     box.style.width = Math.floor(w) + 'px';
-    const ok = (f) => {
-      box.style.fontSize = f + 'px';
-      return box.scrollWidth <= w + 0.6 && box.scrollHeight <= hh + 0.6;
-    };
-    if (ok(fmax)) return fmax;
-    if (!ok(fmin)) { box.style.fontSize = fmin + 'px'; return fmin; }
-    let lo = fmin, hi = fmax;
-    for (let i = 0; i < 9 && hi - lo > 0.6; i++) {
-      const mid = (lo + hi) / 2;
-      if (ok(mid)) lo = mid; else hi = mid;
+    for (let i = 0; i < bac.length; i++) {
+      box.style.fontSize = bac[i] + 'px';
+      if (vuaHop(box, w, hh)) return bac[i];
+    }
+    const hi = bac[bac.length - 1];
+    box.style.fontSize = fmin + 'px';
+    if (!vuaHop(box, w, hh)) return fmin;
+    let lo = fmin, up = hi;
+    for (let i = 0; i < 9 && up - lo > 0.6; i++) {
+      const mid = (lo + up) / 2;
+      box.style.fontSize = mid + 'px';
+      if (vuaHop(box, w, hh)) lo = mid; else up = mid;
     }
     box.style.fontSize = f1(lo) + 'px';
     return lo;
   }
+  /** Cac bac t[a]..t[b] (so 1..6, a nho = to hon) */
+  const bacTu = (a, b) => st.t.slice(a - 1, b);
+  /** Mot dong khong xuong hang vua be ngang w: bac to nhat <= fmax vua, roi ha lien tuc toi fmin */
+  function fitDong(el, w, bac, fmin) {
+    el.style.whiteSpace = 'nowrap';
+    const ds = [].concat(bac);
+    for (let i = 0; i < ds.length; i++) {
+      el.style.fontSize = ds[i] + 'px';
+      if (Math.max(el.scrollWidth, el.offsetWidth) <= w + 0.6) return ds[i];
+    }
+    const f0 = ds[ds.length - 1];
+    el.style.fontSize = f0 + 'px';
+    const sw = Math.max(el.scrollWidth, el.offsetWidth);
+    let f = clamp(f0 * w / sw * 0.995, fmin, f0);
+    el.style.fontSize = f1(f) + 'px';
+    if (Math.max(el.scrollWidth, el.offsetWidth) > w + 0.6 && f > fmin) { f = Math.max(fmin, f * w / Math.max(el.scrollWidth, el.offsetWidth) * 0.99); el.style.fontSize = f1(f) + 'px'; }
+    return f;
+  }
   /**
    * Kiem tra THAT bang hop hien thi (gom ca furigana tran ra ngoai dong): neu chu nhu token / rt nho ra ngoai `khung`
-   * thi ha co chu 6% moi vong toi fmin. Dung cho khoi chu rat dai (cau xau nhat) — khong bao gio de chu bi cat.
+   * thi ha co chu 6% moi vong toi fmin. Dung cho khoi chu rat dai — khong bao gio de chu bi cat.
    */
   function vuaKhung(box, khung, fmin) {
     for (let i = 0; i < 30; i++) {
       const cr = khung.getBoundingClientRect();
       let top = 1e9, bot = -1e9, l = 1e9, r = -1e9;
-      box.querySelectorAll('rt, .j-tok, .j-tile, .j-qcau, span').forEach((e) => { const q = e.getBoundingClientRect(); if (q.height > 0 && q.width > 0) { top = Math.min(top, q.top); bot = Math.max(bot, q.bottom); l = Math.min(l, q.left); r = Math.max(r, q.right); } });
+      box.querySelectorAll('rt, .j-tok, .j-tile, span').forEach((e) => { const q = e.getBoundingClientRect(); if (q.height > 0 && q.width > 0) { top = Math.min(top, q.top); bot = Math.max(bot, q.bottom); l = Math.min(l, q.left); r = Math.max(r, q.right); } });
       if (top >= cr.top - 1 && bot <= cr.bottom + 1 && l >= cr.left - 1 && r <= cr.right + 1) return true;
       const f = parseFloat(box.style.fontSize) || 40;
       if (f * 0.94 < fmin) return false;
@@ -320,32 +353,18 @@
     }
     return false;
   }
-  /** Hang the (chip): co chu >= 20 (13 dien thoai); the nao khong vua thi bo (khong ha nho chu) */
-  function fitChips(ew, w, hh, fmax) {
-    fitBox(ew, w, hh, fmax, sz(20, 13));
-    while (ew.children.length > 2 && (ew.scrollHeight > hh + 1 || ew.scrollWidth > w + 1)) ew.lastElementChild.remove();
-  }
-  /** Co chu lon nhat de mot dong khong xuong hang vua be ngang w (dung scrollWidth) */
-  function fitDong(el, w, fmax, fmin) {
-    el.style.whiteSpace = 'nowrap';
-    el.style.fontSize = fmax + 'px';
-    const sw = Math.max(el.scrollWidth, el.offsetWidth);
-    let f = sw > w ? fmax * w / sw * 0.995 : fmax;
-    f = clamp(f, fmin, fmax);
-    el.style.fontSize = f1(f) + 'px';
-    if (Math.max(el.scrollWidth, el.offsetWidth) > w + 0.6 && f > fmin) { f = Math.max(fmin, f * w / Math.max(el.scrollWidth, el.offsetWidth) * 0.99); el.style.fontSize = f1(f) + 'px'; }
-    return f;
-  }
+
 
   // ------------------------------------------------------------------ trang (page) + o
   function taoTrang() {
     const el = h('div', 'j-trang', st.vung);
-    const cam = h('div', 'j-cam', el);
+    const truot = h('div', 'j-truot', el);
+    const cam = h('div', 'j-cam', truot);
     const capO = h('div', 'j-cells', cam);
     const vsvg = sv('svg', { class: 'j-vien', width: st.W, height: st.Yb, viewBox: `0 0 ${st.W} ${st.Yb}` }, cam);
     vsvg.style.overflow = 'visible';
     const fx = h('div', 'j-fx', cam);
-    const T = { el, cam, capO, vsvg, fx, cells: {}, z: ++st.dem, s: 1, cx: st.W / 2, cy: st.Yb / 2 };
+    const T = { el, truot, cam, capO, vsvg, fx, cells: {}, z: ++st.dem, s: 1, cx: st.W / 2, cy: st.Yb / 2 };
     el.style.zIndex = String(T.z);
     st.pages.push(T);
     return T;
@@ -379,11 +398,10 @@
     const cxp = tam ? tam[0] : cr.x + cr.w / 2, cyp = tam ? tam[1] : cr.y + cr.h / 2;
     const rx = cr.w / 2 * 0.9 + 8 * st.U, ry = cr.h / 2 * 0.98 + 6 * st.U;
     const w = c.bw, hh = c.bh;
-    const e = h('div', 'j-slwrap', c.noi, speedLines(w, hh, cxp - c.bx, cyp - c.by, rx, ry, seed, n || (st.dt ? 70 : 120), wid));
-    return e;
+    return h('div', 'j-slwrap', c.noi, speedLines(w, hh, cxp - c.bx, cyp - c.by, rx, ry, seed, n || (st.dt ? 70 : 120), wid));
   }
 
-  // ------------------------------------------------------------------ may quay (camera) + tieu diem
+  // ------------------------------------------------------------------ may quay (camera) + tieu diem — day <= 350 ms
   function camTuc(T, cx, cy, s) {
     const W = st.W, Hv = st.Yb;
     const sc = giam() ? 1 : (s || st.camS);
@@ -391,64 +409,65 @@
     G.set(T.cam, { x, y, scale: sc, transformOrigin: '0 0' });
     T.s = sc; T.cx = cx; T.cy = cy;
   }
-  /** May quay day toi o (<= 350 ms). tre: giay; dur mac dinh .32 */
   function camDen(T, id, tre, s, dur) {
     const c = T && T.cells[id];
     if (!c || giam()) return;
     const W = st.W, Hv = st.Yb;
     const sc = s || st.camS;
-    const cx = c.cx, cy = c.cy;
-    const x = clamp(W / 2 - sc * cx, W * (1 - sc), 0), y = Hv * (1 - sc);
-    T.s = sc; T.cx = cx; T.cy = cy;
+    const x = clamp(W / 2 - sc * c.cx, W * (1 - sc), 0), y = Hv * (1 - sc);
+    T.s = sc; T.cx = c.cx; T.cy = c.cy;
     G.to(T.cam, {
-      x, y, scale: sc, duration: dur || 0.32, ease: 'power2.inOut', delay: tre || 0, overwrite: 'auto',
+      x, y, scale: sc, duration: Math.min(0.34, dur || 0.32), ease: 'power2.inOut', delay: tre || 0, overwrite: 'auto',
       onStart: () => { T.cam.style.willChange = 'transform'; },
       onComplete: () => { T.cam.style.willChange = ''; },
     });
   }
-  /** Nhan manh cua o: noi dung phong nhe roi dan hoi (vao <= 200 ms) + vien day len */
-  function nhan(T, id, tre, s) {
+  /** Nhan manh cua o: vien day len roi tro lai (khong phong noi dung: chu giu nguyen co) */
+  function nhan(T, id, tre) {
     const c = T && T.cells[id];
-    if (!c) return;
-    if (!giam()) {
-      const k = s || 1.03;
-      G.timeline({ delay: tre || 0 })
-        .to(c.noi, { scale: k, duration: 0.14, ease: 'power2.out', overwrite: 'auto' })
-        .to(c.noi, { scale: 1, duration: 0.5, ease: 'elastic.out(1, .6)' });
-    }
-    if (c.pg) {
-      G.fromTo(c.pg, { strokeWidth: st.bw }, { strokeWidth: st.bw * 1.9, duration: giam() ? 0.001 : 0.16, ease: 'none', delay: tre || 0, overwrite: 'auto' });
-      G.to(c.pg, { strokeWidth: st.bw, duration: giam() ? 0.001 : 0.5, ease: 'power2.out', delay: (tre || 0) + 0.7 });
-    }
+    if (!c || !c.pg) return;
+    G.fromTo(c.pg, { strokeWidth: st.bw }, { strokeWidth: st.bw * 1.9, duration: giam() ? 0.001 : 0.16, ease: 'none', delay: tre || 0, overwrite: 'auto' });
+    G.to(c.pg, { strokeWidth: st.bw, duration: giam() ? 0.001 : 0.5, ease: 'power2.out', delay: (tre || 0) + 0.7 });
   }
   /** Tieu diem = may quay + nhan manh */
-  function tieuDiem(T, id, tre, s) { camDen(T, id, tre); nhan(T, id, tre, s); }
+  function tieuDiem(T, id, tre) { camDen(T, id, tre); nhan(T, id, tre); }
   function rung(el, tre, bien) {
     if (!el || giam()) return;
     const b = bien || 10;
-    G.fromTo(el, { x: 0 }, { keyframes: { x: [0, -b, b, -b * 0.7, b * 0.6, -b * 0.3, 0] }, duration: 0.36, ease: 'none', delay: tre || 0 });
+    G.fromTo(el, { x: 0 }, { keyframes: { x: [0, -b, b, -b * 0.7, b * 0.6, -b * 0.3, 0] }, duration: 0.42, ease: 'none', delay: tre || 0 });
   }
 
-  // ------------------------------------------------------------------ lop noi dung "cho" (hien theo cue) + hieu ung vao
+  // ------------------------------------------------------------------ hieu ung vao theo ban mau (dap / truot / nay / quet) + khoa cho cue
   /** Thuoc tinh danh dau phan tu cho cue `khoa`: an san bang CSS, hien khi cue toi (hoac da hien roi -> khong an) */
-  function ck(m, khoa, fx) {
-    return ` data-cho="${khoa}" data-fx="${fx || 'no'}"${m && m.rev.has(khoa) ? '' : ' class="j-cho"'}`;
+  function ck(m, khoa, fx, o) {
+    const d = o ? Object.keys(o).map((k) => ` data-${k}="${o[k]}"`).join('') : '';
+    return ` data-cho="${khoa}" data-fx="${fx || 'truot'}"${d}${m && m.rev.has(khoa) ? '' : ' class="j-cho"'}`;
   }
+  const dd = (e, k, v0) => (e.dataset[k] != null ? +e.dataset[k] : v0);
+  /** Hieu ung vao (ban mau): moi cai hien DAY DU do dam sau <= 0.12 s, chuyen dong co easing */
   function hieu(e, tre, fx) {
     e.classList.remove('j-cho');
-    if (giam()) { G.fromTo(e, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.12, delay: tre || 0, onStart: capKiemLai }); return; }
-    // hien day du do dam (khong mo nua chung): quet chu bang clip-path; 'nay' chi dung cho dau nhan ("wa!")
-    if (fx === 'nay') {
-      G.fromTo(e, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.06, ease: 'none', delay: tre || 0 });
-      G.fromTo(e, { scale: 0.6 }, { scale: 1, duration: 0.3, ease: 'back.out(2.2)', delay: tre || 0 });
-      return;
+    const t0 = tre || 0;
+    if (giam()) { G.fromTo(e, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.12, delay: t0, onStart: capKiemLai }); return; }
+    fx = fx || e.dataset.fx || 'truot';
+    if (fx === 'dap') {
+      G.fromTo(e, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05, ease: 'none', delay: t0, onStart: capKiemLai });
+      G.fromTo(e, { scale: dd(e, 's', 1.5) }, { scale: 1, duration: dd(e, 'd', 0.45), ease: 'expo.out', delay: t0, clearProps: 'transform' });
+    } else if (fx === 'nay') {
+      G.fromTo(e, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.08, ease: 'none', delay: t0, onStart: capKiemLai });
+      G.fromTo(e, { scale: dd(e, 's', 0.7) }, { scale: 1, duration: dd(e, 'd', 0.55), ease: 'back.out(2.2)', delay: t0, clearProps: 'transform' });
+    } else if (fx === 'quet' || fx === 'len') {
+      const dau = fx === 'len' ? 'inset(100% -2% -2% -2%)' : 'inset(-2% 100% -2% -2%)';
+      G.set(e, { autoAlpha: 1 });
+      G.fromTo(e, { clipPath: dau }, { clipPath: 'inset(-2% -2% -2% -2%)', duration: dd(e, 'd', 0.5), ease: 'power3.inOut', delay: t0, clearProps: 'clipPath', onStart: capKiemLai });
+    } else {   // truot
+      G.fromTo(e, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.12, ease: 'none', delay: t0, onStart: capKiemLai });
+      G.fromTo(e, { x: dd(e, 'dx', 0) * st.sx, y: dd(e, 'dy', 0) * st.sx }, { x: 0, y: 0, duration: dd(e, 'd', 0.6), ease: 'expo.out', delay: t0, clearProps: 'transform' });
     }
-    const dau = fx === 'len' ? 'inset(100% -2% -2% -2%)' : 'inset(-2% 100% -2% -2%)';
-    G.set(e, { autoAlpha: 1 });
-    G.fromTo(e, { clipPath: dau }, { clipPath: 'inset(-2% -2% -2% -2%)', duration: 0.24, ease: 'power3.out', delay: tre || 0, clearProps: 'clipPath', onStart: capKiemLai });
   }
   function hienKhoa(m, khoa, tre) {
     if (!m || !m.T) return false;
+    if (/^(HW|RD|B\d)$/.test(khoa)) tre = sauChuoi(m, tre);
     let co = false;
     m.rev.add(khoa);
     m.T.el.querySelectorAll(`[data-cho="${khoa}"]`).forEach((e) => {
@@ -463,148 +482,106 @@
     if (!m || !m.T) return;
     m.T.el.querySelectorAll('[data-cho]:not([data-da])').forEach((e) => { e.dataset.da = '1'; m.rev.add(e.dataset.cho); hieu(e, 0, e.dataset.fx); });
   }
+  /** Dat phan tu da hien ngay (dung lai trang khi doi co: khong hieu ung) */
+  function hienNgay(e) { e.classList.remove('j-cho'); e.dataset.da = '1'; }
 
   // ------------------------------------------------------------------ anh (giu mau) + luoi cham
   function anhHtml(url, o) {
     o = o || {};
-    if (!url) return `<div class="j-anh is-trong"><span class="j-anh-chu"${RE_JP.test(o.thay || '') ? ' lang="ja"' : ''}>${esc(o.thay || '')}</span></div>`;
+    if (!url) return `<div class="j-anh is-trong"><span class="j-anh-chu"${RE_JP.test(o.thay || '') ? ' lang="ja"' : ''}>${esc(o.thay || '')}</span><i class="j-ht ${o.ht || 'ht-duoi'}"></i></div>`;
     return `<div class="j-anh"><img src="${esc(url)}" alt="" decoding="async" draggable="false" style="object-position:${esc(o.pos || '50% 45%')}" onerror="this.parentNode.classList.add('is-hong')"/><i class="j-ht ${o.ht || 'ht-duoi'}"></i></div>`;
   }
-  /** Cell chua anh: cover neu vung nhin thay gan vuong (khong cat mat / toc), nguoc lai contain tren nen be */
-  function datAnh(c, cr, url, o) {
+  /** Cell chua anh: cover neu vung nhin thay gan vuong (khong cat mat / toc), nguoc lai contain tren nen trang. o.zoom: can canh (phong to quanh diem) */
+  function datAnh(c, url, o) {
+    o = o || {};
     const e = nhet(c, { x: c.bb.x0, y: c.bb.y0, w: c.bw, h: c.bh }, 'j-anh-cr', anhHtml(url, o));
     e.style.left = '0px'; e.style.top = '0px'; e.style.width = c.bw + 'px'; e.style.height = c.bh + 'px';
     const bb = c.bb;
-    const rc = o && o.rect;
+    const rc = o.rect;
     const x0 = rc ? rc.x : Math.max(0, bb.x0), y0 = rc ? rc.y : Math.max(0, bb.y0);
     const vw = rc ? rc.w : Math.min(st.W, bb.x1) - Math.max(0, bb.x0), vh = rc ? rc.h : Math.min(st.Yb, bb.y1) - Math.max(0, bb.y0);
     const asp = vw / Math.max(1, vh);
     const a = e.firstElementChild;
-    a.classList.toggle('la-cover', asp > 0.72 && asp < 1.42 && !(o && o.chua));
+    a.classList.toggle('la-cover', (asp > 0.66 && asp < 1.7 && !o.chua) || !!o.zoom || !!o.cover);
     a.style.setProperty('--vx', f1(x0 - c.bx) + 'px'); a.style.setProperty('--vy', f1(y0 - c.by) + 'px');
     const gl = a.querySelector('.j-anh-chu');
     if (gl) {
       const gx = Math.max(x0, st.mx + 4), gy = Math.max(y0, st.my + 4), gw = Math.max(40, x0 + vw - gx - 4), gh = Math.max(40, y0 + vh - gy - 4);
       gl.style.inset = 'auto'; gl.style.left = f1(gx - c.bx) + 'px'; gl.style.top = f1(gy - c.by) + 'px'; gl.style.width = f1(gw) + 'px'; gl.style.height = f1(gh) + 'px';
       const nch = Math.max(1, kyTu(gl.textContent).length);
-      gl.style.fontSize = f1(Math.min(sz(180, 90), gh * 0.62, gw / (nch * 1.15))) + 'px';
+      gl.style.fontSize = f1(Math.min(tk(1), gh * 0.62, gw / (nch * 1.15))) + 'px';
     }
     a.style.setProperty('--vw', f1(vw) + 'px'); a.style.setProperty('--vh', f1(vh) + 'px');
+    const im = a.querySelector('img');
+    if (im && o.zoom) { im.style.transformOrigin = o.zoom.o || '50% 30%'; im.style.transform = `scale(${o.zoom.s || 2.2})`; }
     // Ken Burns rat nhe de trang khong dung im (chi scale, nhe)
-    if (o && o.kb && url && !giam()) { const im = a.querySelector('img'); if (im) G.fromTo(im, { scale: 1 }, { scale: 1.07, duration: 16, ease: 'none' }); }
+    else if (o.kb && im && !giam()) G.fromTo(im, { scale: 1 }, { scale: 1.06, duration: 16, ease: 'none' });
     return e;
   }
 
   /** Chay het moi tween da dat tren trang T (dung lai trang khi doi co / phong chu: khong hieu ung, dung khung cuoi) */
   function xongAnim(T) {
     try {
-      const ts = G.getTweensOf(Array.from(T.el.querySelectorAll('*')).concat([T.el, T.cam]));
+      const ts = G.getTweensOf(Array.from(T.el.querySelectorAll('*')).concat([T.el, T.cam, T.truot]));
       ts.forEach((t) => { try { t.progress(1); } catch (e) {} });
     } catch (e) {}
   }
 
-  // ------------------------------------------------------------------ vao / ra trang
+  // ------------------------------------------------------------------ chuyen trang (ban mau): vet muc quet phai -> trai
   function xoaTrang(T) {
     if (!T) return;
     const i = st.pages.indexOf(T);
     if (i >= 0) st.pages.splice(i, 1);
-    try { G.killTweensOf(T.el.querySelectorAll('*')); G.killTweensOf(T.el); G.killTweensOf(T.cam); } catch (e) {}
+    try { G.killTweensOf(T.el.querySelectorAll('*')); G.killTweensOf(T.el); G.killTweensOf(T.cam); G.killTweensOf(T.truot); } catch (e) {}
     T.el.remove();
     if (st.T === T) st.T = null;
   }
-  /**
-   * Chuyen trang: trang cu (nam tren, nen dac) truot ra trai <= 200 ms kem vet muc; trang moi nam DUOI, cac o cua no vao
-   * lan luot sau do (oVao). Trang cu che kin trang moi cho toi khi ra khoi khung => khong bao gio chu de len chu.
-   */
+  function vetMuc() {
+    if (st.vet && st.vet.isConnected) return st.vet;
+    st.vet = sv('svg', { class: 'j-vet', width: st.W, height: st.Yb, viewBox: `0 0 ${st.W} ${st.Yb}` }, st.vung);
+    sv('polygon', { fill: MUC }, st.vet);
+    sv('polygon', { fill: MUC }, st.vet);
+    st.vet.style.display = 'none';
+    return st.vet;
+  }
+  function datVet(X) {
+    const v = vetMuc();
+    const s = st.sx, Hh = st.Yb, k = 180 * s;
+    if (X == null) { v.style.display = 'none'; return; }
+    v.style.display = 'block';
+    v.setAttribute('width', st.W); v.setAttribute('height', Hh);
+    v.children[0].setAttribute('points', `${f1(X)},0 ${f1(X + 34 * s)},0 ${f1(X + 34 * s - k)},${Hh} ${f1(X - k)},${Hh}`);
+    v.children[1].setAttribute('points', `${f1(X + 52 * s)},0 ${f1(X + 61 * s)},0 ${f1(X + 61 * s - k)},${Hh} ${f1(X + 52 * s - k)},${Hh}`);
+  }
+  /** Trang moi quet vao tu mep phai (X: 2320 -> -240 thiet ke, cubic in-out, 0.75 s); trang cu nam duoi cho toi khi xong */
   function trangVao(T, ngay) {
     const cu = st.pages.filter((p) => p !== T);
     st.T = T;
-    capKiemLai();   // trang moi da co chu (ke ca khoi chua hien): cau dang o hang chu thich co lap voi no khong?
+    capKiemLai();
     G.delayedCall(0.5, capKiemLai);
     if (ngay || giam() || !cu.length) {
       cu.forEach(xoaTrang);
+      datVet(null);
       return;
     }
-    const W = st.W;
-    T.el.style.zIndex = '5';
-    cu.forEach((p) => {
-      p.el.style.zIndex = String(40 + p.z);
-      h('div', 'j-ink', p.el);   // vet muc theo sau mep trai trang cu
-      G.to(p.el, { x: W * 1.06, duration: 0.2, ease: 'power2.in', onComplete: () => xoaTrang(p) });
+    const s = st.sx, Hh = st.Yb, Wr = st.W + 180 * s + 60;
+    const proxy = { p: 0 };
+    T.el.style.zIndex = String(60 + T.z);
+    cu.forEach((p) => { p.el.style.zIndex = String(10 + p.z); });
+    const dat = () => {
+      const X = (2320 - proxy.p * 2560) * s;
+      T.el.style.clipPath = `polygon(${f1(X)}px 0px,${f1(Wr)}px 0px,${f1(Wr)}px ${Hh}px,${f1(X - 180 * s)}px ${Hh}px)`;
+      datVet(X);
+    };
+    dat();
+    G.to(proxy, {
+      p: 1, duration: WIPE, ease: 'power2.inOut', onUpdate: dat,
+      onComplete: () => { T.el.style.clipPath = 'none'; datVet(null); cu.forEach(xoaTrang); },
     });
+    G.fromTo(T.truot, { x: SLIDE_PX * s }, { x: 0, duration: SLIDE, ease: 'expo.out', clearProps: 'transform' });
     // an toan: trang cu di het du hieu ung bi kill
-    if (st.api) st.api.hen(() => cu.forEach(xoaTrang), 700);
+    G.delayedCall(WIPE + 0.35, () => { cu.forEach(xoaTrang); if (T.el.isConnected) T.el.style.clipPath = 'none'; datVet(null); });
   }
-  /** Cac o moi bat dau quet NGAY (nam duoi trang cu dang truot ra) => khong co khoang trang trong giua hai nhip */
-  const tre0Vao = () => 0;
-  /** Cac o vao lan luot theo thu tu ids: vien ve dan + noi dung quet tu trai (moi o <= 250 ms, so le 70 ms) */
-  function oVao(T, ids, tre0, buoc) {
-    const b0 = (tre0 || 0) + tre0Vao();
-    ids.forEach((id, i) => {
-      const c = T.cells[id];
-      if (!c || giam()) return;
-      const t = b0 + i * (buoc == null ? 0.07 : buoc);
-      G.fromTo(c.pg, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.24, ease: 'power2.out', delay: t, onComplete: () => { c.pg.style.strokeDasharray = 'none'; } });
-      G.fromTo(c.noi, { clipPath: 'inset(0% 100% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.24, ease: 'power3.out', delay: t, clearProps: 'clipPath' });
-    });
-  }
-
-  // ------------------------------------------------------------------ tang Sensei (co dinh): hang loi 2 dong + o goc meo
-  function tangHtmlBuild() {
-    if (st.tang) { try { st.tang.el.remove(); } catch (e) {} st.tang = null; }
-    const { W, H, g, U, dt } = st;
-    const el = h('div', 'j-tang', L);
-    const sl = Math.round((dt ? 8 : 16) * U);
-    const bT = st.bTop + Math.round(g / 2);           // mep tren o bong thoai
-    const cT = st.catT + Math.round(g / 2);           // mep tren o meo
-    const cLx = st.catL + Math.round(g / 2);
-    const svg = sv('svg', { class: 'j-tang-svg', width: W, height: H, viewBox: `0 0 ${W} ${H}` }, el);
-    // o bong thoai: canh phai xeo song song voi canh trai o meo
-    const bp = [[-BL, bT], [cLx + sl - g, bT], [cLx - sl - g, H + BL], [-BL, H + BL]];
-    const cp = [[cLx + sl, cT], [W + BL, cT], [W + BL, H + BL], [cLx - sl, H + BL]];
-    if (dt) { bp[0][1] = bT; bp[1][1] = cT; cp[0][1] = cT; }
-    sv('polygon', { points: bp.map((p) => p.join(',')).join(' '), fill: '#fff', stroke: '#141414', 'stroke-width': st.bw, 'stroke-linejoin': 'miter' }, svg);
-    sv('polygon', { points: cp.map((p) => p.join(',')).join(' '), fill: '#fff', stroke: '#141414', 'stroke-width': st.bw, 'stroke-linejoin': 'miter' }, svg);
-    // luoi cham + net toc do quanh dau meo
-    const bb0 = bbox(cp);
-    const cpan = h('div', 'j-tang-meo', el);
-    const bbx = Math.floor(bb0.x0), bby = Math.floor(bb0.y0);
-    cpan.style.left = bbx + 'px'; cpan.style.top = bby + 'px'; cpan.style.width = (W - bbx) + 'px'; cpan.style.height = (H - bby) + 'px';
-    cpan.style.clipPath = 'polygon(' + cp.map((p) => f1(p[0] - bbx) + 'px ' + f1(p[1] - bby) + 'px').join(',') + ')';
-    cpan.innerHTML = speedLines(W - bbx, H - bby, (W - bbx) * 0.5, (H - bby) * 0.62, 36 * U, 30 * U, 77, dt ? 50 : 90, 0.014) + '<i class="j-ht ht-goc"></i>';
-    const bpan = h('div', 'j-tang-bp', el);
-    const bx = 0, by = Math.floor(bT);
-    bpan.style.left = bx + 'px'; bpan.style.top = by + 'px'; bpan.style.width = Math.ceil(cLx) + 'px'; bpan.style.height = (H - by) + 'px';
-    bpan.style.clipPath = 'polygon(' + bp.map((p) => f1(p[0] - bx) + 'px ' + f1(p[1] - by) + 'px').join(',') + ')';
-    bpan.innerHTML = '<i class="j-ht ht-nen"></i>';
-    // ten Sensei (the den) nam TREN bong thoai, khong de len chu
-    const ten = h('div', 'j-tang-ten', el, 'SENSEI MÈO');
-    ten.style.left = Math.round(12 * U) + 'px'; ten.style.top = (by + Math.round(g / 2 + 3 * U)) + 'px';
-    // bong thoai co dinh (chu nhat bo tron + duoi chi ve phia meo): KHONG doi kich thuoc theo chu
-    const pad = Math.round((dt ? 10 : 24) * U);
-    const bxl = Math.round((dt ? 8 : 24) * U), bxr = Math.round(cLx - sl - g - (dt ? 14 : 34) * U);
-    const byt = by + Math.round((dt ? 26 : 40) * U), byb = H - Math.round((dt ? 7 : 12) * U);
-    const bwid = bxr - bxl, bhei = byb - byt;
-    const r = Math.min(bhei / 2, (dt ? 22 : 40) * U);
-    const bong = h('div', 'j-bong', el);
-    bong.style.left = bxl + 'px'; bong.style.top = byt + 'px'; bong.style.width = (bwid + Math.round(46 * U)) + 'px'; bong.style.height = bhei + 'px';
-    const ty = bhei * 0.62, tw2 = Math.min(bhei * 0.32, 22 * U);
-    const dNoi = `M${r},0H${bwid - r}A${r},${r} 0 0 1 ${bwid},${r}V${ty - tw2}L${bwid + 40 * U},${ty + 4 * U}L${bwid},${ty + tw2}V${bhei - r}A${r},${r} 0 0 1 ${bwid - r},${bhei}H${r}A${r},${r} 0 0 1 0,${bhei - r}V${r}A${r},${r} 0 0 1 ${r},0Z`;
-    bong.innerHTML = `<svg width="${bwid + Math.round(46 * U)}" height="${bhei}" viewBox="0 0 ${bwid + Math.round(46 * U)} ${bhei}" style="overflow:visible"><path d="${dNoi}" fill="#fff" stroke="#141414" stroke-width="${Math.max(3, Math.round((dt ? 3 : 5) * U))}" stroke-linejoin="round"/></svg>`;
-    const chu = h('div', 'j-bong-chu', bong);
-    const cw = Math.max(60, bwid - pad * 2 - Math.round(6 * U)), ch = Math.round(bhei * 0.9);
-    chu.style.left = pad + 'px'; chu.style.top = Math.round(bhei * 0.05) + 'px'; chu.style.width = (bwid - pad * 2) + 'px'; chu.style.height = ch + 'px';
-    const dong = h('div', 'j-bong-dong', chu);
-    st.tang = { el, ten, bong, chu, dong, w: cw, h: ch };
-    if (st.cap) capVe(st.cap.cur == null ? '' : st.cap.cur, true);
-  }
-  /** Dung lai tang Sensei khi khung / vi tri meo doi (batDau chay truoc khi san khau tran be ngang) */
-  function khoiTang() {
-    const m = st.meo;
-    const k = [st.W, st.H, m ? m.x : -1, m ? m.y : -1].join(',');
-    if (st.tangKhoa !== k || !st.tang || !st.tang.el.isConnected) { st.tangKhoa = k; tangHtmlBuild(); }
-  }
-
   // ------------------------------------------------------------------ loi Sensei -> hang chu thich (cap)
   // Luong: m.loi(doan, raw) nhan CA luot dang noi (tang dan tung manh). Cat thanh CAU tron ven (dau . ! ? 。 hoac xuong dong),
   // dua vao hang doi; moi cau hien dung mot lan, dung lai toi thieu theo do dai, doi cau bang quet chu (khong chong chu).
@@ -638,13 +615,46 @@
     if (!T) return out;
     const them = (e) => { if (e.closest('.j-tang')) return;   // ke ca khoi CHUA hien (j-cho): sap hien thi cung khong lap lai o hang chu thich
       const tx = chuKhongRt(e).replace(/\s+/g, ' ').trim(); const n = chuanHoa(tx); if (n.length >= 8) out.push(n); };
-    T.el.querySelectorAll('.j-toks, .j-tiles, .j-qcau, .j-nghia, .j-hw, .j-giai, [data-vis]').forEach(them);
+    T.el.querySelectorAll('.j-tx').forEach(them);
+    // bien the cach doc: furigana thay chu goc (Sensei hay doc cau bang kana, trang ghi bang kanji)
+    T.el.querySelectorAll('.j-tx').forEach((e) => {
+      if (e.closest('.j-tang') || !e.querySelector('ruby')) return;
+      const c = e.cloneNode(true);
+      c.querySelectorAll('ruby').forEach((r) => { const rt = r.querySelector('rt'); r.replaceWith(document.createTextNode(rt ? rt.textContent : '')); });
+      c.querySelectorAll('rp').forEach((x) => x.remove());
+      const n = chuanHoa(c.textContent); if (n.length >= 8) out.push(n);
+    });
+    // ghep moi khoi chu thanh mot mach (cau vi du tach thanh 2 bong thoai van la MOT cau Sensei doc)
+    {
+      const dsx = [...T.el.querySelectorAll('.j-tx')].filter((e) => !e.closest('.j-tang') && !(e.parentElement && e.parentElement.closest('.j-tx')));
+      const nghia = (e) => chuanHoa(chuKhongRt(e));
+      const doc = (e) => { const c = e.cloneNode(true); c.querySelectorAll('ruby').forEach((r) => { const rt = r.querySelector('rt'); r.replaceWith(document.createTextNode(rt ? rt.textContent : '')); }); c.querySelectorAll('rp').forEach((x) => x.remove()); return chuanHoa(c.textContent); };
+      const j1 = dsx.map(nghia).join(''), j2 = dsx.map(doc).join('');
+      if (j1.length >= 8) out.push(j1);
+      if (j2.length >= 8 && j2 !== j1) out.push(j2);
+    }
     // ten nhan vat: ghep ca hang (Sensei doc mot mach "A (a), B (b), C (c)")
     { const nm = [...T.el.querySelectorAll('.j-p-ten')].map((e) => chuKhongRt(e)).join(''); const n = chuanHoa(nm); if (n.length >= 8) out.push(n); }
     const tw = document.createTreeWalker(T.el, NodeFilter.SHOW_TEXT);
     let nd;
     while ((nd = tw.nextNode())) { const e = nd.parentElement; if (!e || e.closest('rt') || e.closest('.j-probe')) continue; const n = chuanHoa(nd.textContent); if (n.length >= 8) out.push(n); }
     return out;
+  }
+  /** Khu lap trong mot cau: cum tu (>= 6 ky tu chuan hoa) lap lien tiep chi giu lan sau ("X. X." -> "X.") */
+  function capKhuLap(s) {
+    let w = String(s || '').trim().split(/\s+/);
+    if (w.length < 2) return String(s || '');
+    let doi = true;
+    while (doi) {
+      doi = false;
+      for (let n = 1; n <= Math.floor(w.length / 2) && !doi; n++) {
+        for (let i = 0; i + 2 * n <= w.length && !doi; i++) {
+          const a = chuanHoa(w.slice(i, i + n).join(' ')), b = chuanHoa(w.slice(i + n, i + 2 * n).join(' '));
+          if (a.length >= 6 && a === b) { w = w.slice(0, i).concat(w.slice(i + n)); doi = true; }
+        }
+      }
+    }
+    return w.join(' ');
   }
   /** Cau cua Sensei co doan >= 10 ky tu trung chu dang hien tren trang khong? Tra null (khong), '' (bo het) hoac phan con lai */
   function capTrung(s) {
@@ -687,7 +697,15 @@
     return chuanHoa(r).length >= 8 && con.length >= 2 ? r : '';
   }
   /** Trang vua hien them chu: cau dang o hang chu thich co bi lap khong? */
+  /** Font tai xong / bo cuc doi sau khi xep: neu cau dang hien tran 2 dong thi xep lai (xep tu cau day du) */
+  function capRefit() {
+    const t = st.tang, c = st.cap;
+    if (!t || !c || t.txt == null || !t.dong.isConnected) return;
+    const d = t.dong, f = parseFloat(d.style.fontSize) || tk(5);
+    if (d.scrollHeight > Math.min(t.h, 2 * f * 1.45) + 2 || d.scrollWidth > t.w + 1) capXep(t.txt);
+  }
   function capKiemLai() {
+    capRefit();
     const c = st.cap;
     if (!c || !c.cur || !st.tang) return;
     const tr = capTrung(c.cur);
@@ -698,36 +716,37 @@
   function capVe(txt, ngay) {
     const t = st.tang;
     if (!t) return;
-    if (txt == null || txt === '') {
-      t.dong.style.width = Math.floor(t.w) + 'px';
-      t.dong.style.whiteSpace = 'normal';
-      t.dong.style.fontSize = sz(30, 16) + 'px';
-      t.dong.innerHTML = '<span class="j-cham"><i></i><i></i><i></i></span>';
-    } else capXep(txt);
+    if (txt == null || txt === '') txt = capMacDinh();   // khong bao gio de ba cham: hien cau ngan cua chinh trang cho toi khi co cau dau cua Sensei
+    capXep(txt);
     if (!ngay && !giam()) G.fromTo(t.dong, { clipPath: 'inset(-20% 100% -20% -2%)' }, { clipPath: 'inset(-20% -2% -20% -2%)', duration: 0.16, ease: 'power2.out', clearProps: 'clipPath', overwrite: 'auto' });
   }
   /** Xep chu vua hang 2 dong: 1 dong 34->20 px, roi 2 dong 30->20 px, roi giu HAI DONG CUOI (bo nguyen tu tu dau) */
   function capXep(txt) {
     const t = st.tang;
+    t.txt = txt;   // nguon day du (de xep lai khi font tai xong)
     const d = t.dong, w = Math.floor(t.w), LH = 1.2;
-    const fmin = sz(20, 13), f1max = sz(34, 18), f2max = sz(30, 17);
+    const fmin = st.san.phu, f5 = tk(5);
     const dat = (s) => { d.innerHTML = jp(s); };
     d.style.width = w + 'px';
     d.style.lineHeight = String(LH);
     dat(txt);
     d.style.whiteSpace = 'nowrap';
-    for (let f = f1max; f >= fmin - 0.01; f -= 1) { d.style.fontSize = f + 'px'; if (d.scrollWidth <= w + 0.5) return; }
+    d.style.fontSize = f5 + 'px';
+    if (d.scrollWidth <= w + 0.5) return;
     d.style.whiteSpace = 'normal';
     const vua = (f) => { d.style.fontSize = f + 'px'; return d.scrollWidth <= w + 0.5 && d.scrollHeight <= Math.min(t.h, 2 * f * 1.45) + 1.5; };   // dong co chu Nhat cao hon 1.2 em: dung nguong 1.45 (3 dong >= 3.4 em)
-    for (let f = f2max; f >= fmin - 0.01; f -= 1) if (vua(f)) return;
-    const tu = String(txt).trim().split(/\s+/);
-    if (tu.length > 3) {
-      for (let k = 1; k < tu.length - 2; k++) { dat('… ' + tu.slice(k).join(' ')); if (vua(fmin)) return; }
-      dat('… ' + tu.slice(-3).join(' '));
-    } else {
-      const cs = kyTu(txt);
-      for (let k = 2; k < cs.length - 6; k += 2) { dat('…' + cs.slice(k).join('')); if (vua(fmin)) return; }
+    if (vua(f5)) return;
+    if (vua(fmin)) {   // tim nhi phan co chu lon nhat vua hai dong (don gian hon thu tung px)
+      let lo = fmin, hi = f5;
+      for (let i = 0; i < 6 && hi - lo > 0.8; i++) { const mid = (lo + hi) / 2; if (vua(mid)) lo = mid; else hi = mid; }
+      vua(lo);
+      return;
     }
+    const tu = String(txt).trim().split(/\s+/);
+    // khong vua o co san: bo dan TU o dau (giu cac tu cuoi), roi bo dan KY TU o dau cua tu cuoi cung
+    for (let k = 1; k < tu.length; k++) { dat('… ' + tu.slice(k).join(' ')); if (vua(fmin)) return; }
+    const cs = kyTu(tu[tu.length - 1]);
+    for (let k = 2; k < cs.length - 1; k += 2) { dat('…' + cs.slice(k).join('')); if (vua(fmin)) return; }
   }
   function capHien(s, ngan0) {
     const c = st.cap;
@@ -748,7 +767,7 @@
     const cho = c.tShow ? c.dwell - (performance.now() - c.tShow) : 0;
     if (cho > 40) { c.tm = G.delayedCall(cho / 1000, capChay); return; }
     if (c.q.length > 3) c.q.splice(0, c.q.length - 3);
-    const s = c.q.shift();
+    const s = capKhuLap(c.q.shift());
     const tr = capTrung(s);
     if (tr === '') { c.cur = ''; c.tShow = performance.now(); c.dwell = 1200; capVe('', false); }
     else if ((tr || s) === c.cur) { /* giong het cau dang hien: bo */ }
@@ -800,7 +819,7 @@
     if (c.luotHien !== c.luot && !c.q.length && tail) {
       const tuT = tail.split(/\s+/);
       if (!/[.!?。！？…]["'”’)」』]*$/.test(tail) && !/\s$/.test(conLai)) tuT.pop();
-      if (tuT.length >= 4) { const pv = tuT.join(' ').slice(0, 110); const tr = capTrung(pv); capHien(tr === null ? pv : tr, true); }
+      if (tuT.length >= 4) { const pv = capKhuLap(tuT.join(' ')).slice(0, 110); const tr = capTrung(pv); capHien(tr === null ? pv : tr, true); }
     }
     capChay();
   }
@@ -814,334 +833,77 @@
     capChay();   // ton trong thoi gian dung toi thieu cua cau dang hien
   }
 
-  // ------------------------------------------------------------------ thanh phan chu
-  /** The den (nhan o goc o) */
-  const the = (text, cls) => `<span class="j-the${cls ? ' ' + cls : ''}">${esc(text)}</span>`;
-
-  /** So hang (theo offsetTop) cua cac con cua el */
-  function soHang(el) {
-    const ks = [...el.children];
-    if (!ks.length) return 0;
-    const ys = new Set(ks.map((k) => Math.round(k.offsetTop / Math.max(6, k.offsetHeight * 0.5))));
-    return ys.size;
+  // ------------------------------------------------------------------ tang Sensei (co dinh): hang loi 2 dong + o goc meo (ban mau: bong thoai + o meo)
+  function tangHtmlBuild() {
+    if (st.tang) { try { st.tang.el.remove(); } catch (e) {} st.tang = null; }
+    const { W, H, g, U, dt } = st;
+    const el = h('div', 'j-tang', L);
+    const sl = Math.round((dt ? 8 : 16) * U);
+    const bT = st.bTop + Math.round(g / 2);           // mep tren o bong thoai
+    const cT = st.catT + Math.round(g / 2);           // mep tren o meo
+    const cLx = st.catL + Math.round(g / 2);
+    const svg = sv('svg', { class: 'j-tang-svg', width: W, height: H, viewBox: `0 0 ${W} ${H}` }, el);
+    // o bong thoai: canh phai xeo song song voi canh trai o meo
+    const bp = [[-BL, bT], [cLx + sl - g, bT], [cLx - sl - g, H + BL], [-BL, H + BL]];
+    const cp = [[cLx + sl, cT], [W + BL, cT], [W + BL, H + BL], [cLx - sl, H + BL]];
+    if (dt) { bp[0][1] = bT; bp[1][1] = cT; cp[0][1] = cT; }
+    sv('polygon', { points: bp.map((p) => p.join(',')).join(' '), fill: '#fff', stroke: MUC, 'stroke-width': st.bw, 'stroke-linejoin': 'miter' }, svg);
+    sv('polygon', { points: cp.map((p) => p.join(',')).join(' '), fill: '#fff', stroke: MUC, 'stroke-width': st.bw, 'stroke-linejoin': 'miter' }, svg);
+    // luoi cham + net toc do quanh dau meo
+    const bb0 = bbox(cp);
+    const cpan = h('div', 'j-tang-meo', el);
+    const bbx = Math.floor(bb0.x0), bby = Math.floor(bb0.y0);
+    cpan.style.left = bbx + 'px'; cpan.style.top = bby + 'px'; cpan.style.width = (W - bbx) + 'px'; cpan.style.height = (H - bby) + 'px';
+    cpan.style.clipPath = 'polygon(' + cp.map((p) => f1(p[0] - bbx) + 'px ' + f1(p[1] - bby) + 'px').join(',') + ')';
+    cpan.innerHTML = speedLines(W - bbx, H - bby, (W - bbx) * 0.5, (H - bby) * 0.62, 36 * U, 30 * U, 77, dt ? 50 : 90, 0.014) + '<i class="j-ht ht-goc"></i>';
+    const bpan = h('div', 'j-tang-bp', el);
+    const by = Math.floor(bT);
+    bpan.style.left = '0px'; bpan.style.top = by + 'px'; bpan.style.width = Math.ceil(cLx) + 'px'; bpan.style.height = (H - by) + 'px';
+    bpan.style.clipPath = 'polygon(' + bp.map((p) => f1(p[0]) + 'px ' + f1(p[1] - by) + 'px').join(',') + ')';
+    bpan.innerHTML = '<i class="j-ht ht-nen"></i>';
+    // ten Sensei (the den) nam TREN bong thoai, khong de len chu
+    const ten = h('div', 'j-tang-ten', el, 'SENSEI MÈO');
+    ten.style.left = Math.round(14 * U) + 'px'; ten.style.top = (by + Math.round(g / 2 + 2 * U)) + 'px';
+    // bong thoai co dinh (chu nhat bo tron + duoi chi ve phia meo): KHONG doi kich thuoc theo chu
+    const pad = Math.round((dt ? 10 : 22) * U);
+    const bxl = Math.round((dt ? 8 : 26) * U), bxr = Math.round(cLx - sl - g - (dt ? 14 : 34) * U);
+    const byt = by + Math.round((dt ? 24 : 36) * U), byb = H - Math.round((dt ? 7 : 12) * U);
+    const bwid = bxr - bxl, bhei = byb - byt;
+    const r = Math.min(bhei / 2, (dt ? 22 : 40) * U);
+    const bong = h('div', 'j-bong', el);
+    bong.style.left = bxl + 'px'; bong.style.top = byt + 'px'; bong.style.width = (bwid + Math.round(46 * U)) + 'px'; bong.style.height = bhei + 'px';
+    const ty = bhei * 0.62, tw2 = Math.min(bhei * 0.32, 22 * U);
+    const dNoi = `M${r},0H${bwid - r}A${r},${r} 0 0 1 ${bwid},${r}V${ty - tw2}L${bwid + 40 * U},${ty + 4 * U}L${bwid},${ty + tw2}V${bhei - r}A${r},${r} 0 0 1 ${bwid - r},${bhei}H${r}A${r},${r} 0 0 1 0,${bhei - r}V${r}A${r},${r} 0 0 1 ${r},0Z`;
+    bong.innerHTML = `<svg width="${bwid + Math.round(46 * U)}" height="${bhei}" viewBox="0 0 ${bwid + Math.round(46 * U)} ${bhei}" style="overflow:visible"><path d="${dNoi}" fill="#fff" stroke="${MUC}" stroke-width="${Math.max(3, Math.round((dt ? 3 : 5) * U))}" stroke-linejoin="round"/></svg>`;
+    const chu = h('div', 'j-bong-chu', bong);
+    const cw = Math.max(60, bwid - pad * 2 - Math.round(6 * U)), ch = Math.round(bhei * 0.9);
+    chu.style.left = pad + 'px'; chu.style.top = Math.round(bhei * 0.05) + 'px'; chu.style.width = (bwid - pad * 2) + 'px'; chu.style.height = ch + 'px';
+    const dong = h('div', 'j-bong-dong', chu);
+    st.tang = { el, ten, bong, chu, dong, w: cw, h: ch };
+    try { if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { if (st.tang && st.tang.dong === dong) capRefit(); }); } catch (e) {}
+    if (st.cap) capVe(st.cap.cur == null ? '' : st.cap.cur, true);
   }
-  /** Thu hep be ngang cho toi khi so hang sap tang: cac hang cau can bang (khong con token mo coi) */
-  function canBang(el, w) {
-    const r0 = soHang(el);
-    if (r0 < 2) return;
-    let lo = w * 0.4, hi = w;
-    for (let i = 0; i < 7; i++) {
-      const mid = (lo + hi) / 2;
-      el.style.width = mid + 'px';
-      if (soHang(el) <= r0 && el.scrollWidth <= mid + 0.5) hi = mid; else lo = mid;
-    }
-    el.style.width = Math.ceil(hi) + 'px';
+  /** Dung lai tang Sensei khi khung / vi tri meo doi (batDau chay truoc khi san khau tran be ngang) */
+  function khoiTang() {
+    const m = st.meo;
+    const k = [st.W, st.H, m ? m.x : -1, m ? m.y : -1].join(',');
+    if (st.tangKhoa !== k || !st.tang || !st.tang.el.isConnected) { st.tangKhoa = k; tangHtmlBuild(); }
   }
-
-  // ------------------------------------------------------------------ xep chong: co chu de cac khoi cung vua mot hop
-  /** items: [{el, fmax, fmin}] (el la khoi, se dat chieu rong w); gap px giua khoi. Ha dan cho vua hh, roi doi len neu du cho. */
-  function fitStack(items, w, hh, gap) {
-    const its = items.filter((x) => x && x.el);
-    if (!its.length) return;
-    const tong = () => its.reduce((a, x) => a + x.el.offsetHeight, 0) + gap * Math.max(0, its.length - 1);
-    const tran = () => its.some((x) => x.el.scrollWidth > w + 0.6);
-    its.forEach((x) => { x.el.style.width = Math.floor(w) + 'px'; x.f = x.fmax; x.el.style.fontSize = x.f + 'px'; });
-    for (let it = 0; it < 12; it++) {
-      const t = tong();
-      const tr = tran();
-      if (t <= hh + 0.5 && !tr) break;
-      const gia = Math.max(1, t - gap * (its.length - 1));
-      let r = Math.min(1, (hh - gap * (its.length - 1)) / gia);
-      if (tr) r = Math.min(r, Math.min(...its.map((x) => (x.el.scrollWidth > w ? w / x.el.scrollWidth : 1))));
-      let doi = false;
-      its.forEach((x) => { const nf = Math.max(x.fmin, x.f * r * 0.985); if (Math.abs(nf - x.f) > 0.2) doi = true; x.f = nf; x.el.style.fontSize = f1(x.f) + 'px'; });
-      if (!doi) break;
-    }
-    // doi len: cho con du thi phong dan (uu tien khoi con nho hon fmax)
-    for (let it = 0; it < 6; it++) {
-      const con = its.filter((x) => x.f < x.fmax - 0.5);
-      if (!con.length) break;
-      const luu = con.map((x) => x.f);
-      con.forEach((x) => { x.f = Math.min(x.fmax, x.f * 1.05); x.el.style.fontSize = f1(x.f) + 'px'; });
-      if (tong() > hh + 0.5 || tran()) { con.forEach((x, i) => { x.f = luu[i]; x.el.style.fontSize = f1(x.f) + 'px'; }); break; }
-    }
-  }
-
-  // ------------------------------------------------------------------ duong cat (dung cho moi bo cuc)
-  const dV = (xt, xb) => [xt, 0, xb, st.Yb];                 // gan doc: xt tai y = 0, xb tai y = Yb
-  const dN = (yl, yr) => [0, yl, st.W, yr];                   // gan ngang: yl o mep trai, yr o mep phai
-  const gapY = () => Math.round(st.g / 2);
-  const pad0 = () => Math.round((st.dt ? 12 : 26) * st.U);
-  /** duong xeo ngan cach cot meo (x > Xc) voi phan con lai */
-  const dCot = () => [st.Xc + st.W * 0.012, 0, st.Xc - st.W * 0.012, st.Yb];
-
-  // ================================================================== DUNG TUNG DANG NHIP
-  // ---- bia (mo dau buoi giang)
-  function tachTieuDe(bai) {
-    const title = String((bai && bai.title) || '');
-    const so = (bai && bai.lessonNumber) || '';
-    const ten = title.replace(/^Bài\s*\d+\s*:\s*/, '').split(/\s+—\s+/)[0] || title;
-    const phu = title.split(/\s+—\s+/)[1] || '';
-    return { so, ten, phu };
-  }
-  function layBia() {
-    const { W, Yb, Yc } = st;
-    if (st.dt) {
-      const yA = Math.round(Yb * 0.44), yB = Math.round(Yb * 0.86), s = Math.round(W * 0.03);
-      const l1 = dN(yA + s, yA - s), l2 = dN(yB - s * 0.6, yB + s * 0.6);
-      return {
-        A: cell([l1], [W / 2, 10], Yb), B: cell([l1, l2], [W / 2, (yA + yB) / 2], Yb), E: cell([l2], [W / 2, Yb - 10], Yb),
-      };
-    }
-    const xa = W * 0.53, s = W * 0.03;
-    const l1 = dV(xa + s, xa - s), l4 = dN(Yc, Yc);
-    const yb = Yc - gapY();
-    return {
-      A: cell([l1], [10, 10], Yb),
-      B: cell([l1], [W - 10, 10], yb),
-      E: cell([l1, l4, dCot()], [xa + 60, Yb - 10], Yb),
-    };
-  }
-  function dungBia(nh, api, m, T) {
+  /** Cau ngan cua chinh trang, hien o hang chu thich cho toi khi Sensei noi cau dau (thay ba cham) */
+  function capMacDinh() {
+    const nh = st.nh;
+    if (!nh) return 'Sensei Mèo đang chuẩn bị bài giảng…';
+    const d = nh.data || {};
     const bai = nh.bai || {};
-    const tt = tachTieuDe(bai);
-    const lay = layBia();
-    const pd = pad0();
-    const A = addCell(T, 'A', lay.A, { bg: '#eee9e0' });
-    const B = addCell(T, 'B', lay.B);
-    const E = addCell(T, 'E', lay.E);
-    // A: tranh canh bai (giu mau), chu SFX "第N話" o goc
-    datAnh(A, null, bai.sceneImageUrl || null, { pos: '50% 40%', thay: bai.lessonNumber ? '第' + bai.lessonNumber + '話' : 'マンガ', ht: 'ht-duoi' });
-    const coCanh = !!bai.sceneImageUrl;
-    const sfx = h('div', 'j-sfx j-sfx-a', A.noi, `<span data-t="第${esc(tt.so)}話">第${esc(tt.so)}話</span>`);
-    sfx.lang = 'ja';
-    if (!coCanh) sfx.style.display = 'none';
-    sfx.style.fontSize = sz(74, 46) + 'px';
-    {
-      const cr = crOf(A.poly, pd);
-      sfx.style.right = f1(A.bx + A.bw - (cr.x + cr.w)) + 'px'; sfx.style.bottom = f1(A.by + A.bh - (cr.y + cr.h)) + 'px';
-    }
-    // B: logo (pha 1) -> BAI N + tieu de (pha 2)
-    const crB = crOf(B.poly, pd);
-    veLopNet(B, crB, 11, st.dt ? 60 : 130);
-    const wrap = nhet(B, crB, 'j-bia-b');
-    const logo = h('div', 'j-logo', wrap, `<b>SENSEI MÈO</b><span lang="ja">マンガで学ぶ日本語</span><i>第${esc(tt.so)}話 · TIẾNG NHẬT ${esc(nh.capDo === 'KANA' ? 'NHẬP MÔN' : nh.capDo || '')}</i>`);
-    const bW = Math.min(crB.w, sz(500, 250)), bH = Math.round(bW * 0.36);
-    logo.querySelector('b').style.fontSize = f1(Math.min(sz(104, 46), crB.w / 6.4)) + 'px';
-    logo.querySelector('span').style.fontSize = f1(Math.min(sz(38, 18), crB.w / 11)) + 'px';
-    logo.querySelector('i').style.fontSize = f1(Math.min(sz(28, 13), crB.w / 17)) + 'px';
-    const p2 = h('div', 'j-bia-2', wrap);
-    const bst = h('div', 'j-bia-bai', p2, burstSvg(bW, bH, 5, { n: 24, jit: 0.3 }) + `<b>BÀI ${esc(tt.so)}</b>`);
-    bst.style.width = bW + 'px'; bst.style.height = bH + 'px';
-    bst.lastChild.style.fontSize = f1(bH * 0.5) + 'px';
-    const td = h('div', 'j-bia-td', p2, jp(tt.ten));
-    p2.style.gap = Math.round(pd * 0.5) + 'px';
-    const hAvail = crB.h - bH - pd * 0.5;
-    fitBox(td, crB.w, Math.max(40, hAvail), sz(96, 52), sz(44, 28));
-    G.set(p2, { autoAlpha: 0 });
-    // E: mau cau chinh dang chip
-    const cum = (tt.phu || '').split(/[\/／]/).map((x) => x.trim()).filter(Boolean).slice(0, 6);
-    const crE = crOf(E.poly, Math.round(pd * 0.7));
-    const ew = nhet(E, crE, 'j-chips');
-    const chips = cum.length ? cum : ['マンガ'];
-    ew.innerHTML = chips.map((x) => `<span class="j-chip" lang="ja">${esc(x)}</span>`).join('');
-    fitChips(ew, crE.w, crE.h, sz(38, 20));
-    oVao(T, ['A', 'B', 'E'], 0, 0.07);
-    m.bia = { logo, p2, bst, td, B };
-    camTuc(T, B.cx, B.cy);
-    m.fase = 'bia';
-  }
-  function biaSangBai(m, tre) {
-    const b = m.bia;
-    if (!b || m.baiDaHien) return;
-    m.baiDaHien = true;
-    if (giam()) { G.set(b.logo, { autoAlpha: 0 }); G.set(b.p2, { autoAlpha: 1 }); return; }
-    // logo bien mat ngay, "BAI N" + tieu de quet vao ngay sau do: khong bao gio hai khoi chu cung hien
-    G.to(b.logo, { autoAlpha: 0, duration: 0.001, delay: tre || 0 });
-    G.to(b.p2, { autoAlpha: 1, duration: 0.001, delay: (tre || 0) + 0.02 });
-    G.fromTo(b.p2, { clipPath: 'inset(0% 100% 0% 0%)' }, { clipPath: 'inset(-4% -4% -4% -4%)', duration: 0.26, ease: 'power3.out', delay: (tre || 0) + 0.02, clearProps: 'clipPath', onStart: capKiemLai });
-    camDen(m.T, 'B', tre || 0, st.camS + 0.005);
-  }
-
-  // ---- tu vung
-  function tachKanjiYomi(v) {
-    const tu = String(v.kanji || v.word || '');
-    const coRuby = !!(v.kanji && v.furigana && v.furigana !== v.kanji);
-    return { tu, coRuby, yomi: String(v.furigana || v.word || '') };
-  }
-  function layTuVung(bien, n2, coGhi) {
-    const { W, Yb, Yc } = st;
-    const pd = pad0();
-    if (st.dt) {
-      const yA = Math.round(Yb * 0.25), yB = Math.round(Yb * (coGhi ? 0.63 : 0.7)), s = Math.round(W * 0.028);
-      const l1 = dN(yA - s, yA + s), l2 = dN(yB + s * 0.6, yB - s * 0.6);
-      return {
-        A: cell([l1], [W / 2, 10], Yb), B: cell([l1, l2], [W / 2, (yA + yB) / 2], Yb), C: cell([l2], [W / 2, Yb - 10], Yb), D: null,
-      };
-    }
-    const s = W * 0.02;
-    const need = n2 * 208 * st.U + 2 * pd + s + st.mx + 40 * st.U;
-    if (bien === 0) {
-      // anh trai; phai: headword cao (tren), nghia (duoi-trai), dem (cot meo)
-      const xa = clamp(W - need, W * 0.09, n2 <= 2 ? W * 0.56 : W * 0.46);
-      const yBc = Math.round(Yc * (n2 >= 5 ? 0.83 : 0.88));
-      const l1 = dV(xa + s, xa - s), l2 = [xa - s, yBc + W * 0.008, W, yBc - W * 0.008];
-      return {
-        A: cell([l1], [10, 10], Yb),
-        B: cell([l1, l2], [W - 10, 10], Yb),
-        C: cell([l1, l2, dCot()], [xa + 40, Yb - 10], Yb),
-        D: cell([l1, l2, dCot()], [W - 10, Yc - 10], Yc),
-      };
-    }
-    // bien 1: anh phai (den mep tren o meo); trai: headword cao tren, nghia duoi; dai nho duoi anh
-    const xb = clamp(need, W * 0.54, W * 0.9);
-    const yBc = Math.round(Yb * (n2 > 5 ? 0.74 : 0.69));
-    const l1 = dV(xb - s, xb + s), l2 = [0, yBc + W * 0.008, xb + s, yBc - W * 0.008], l5 = [0, Yc, W, Yc];
-    return {
-      A: cell([l1], [W - 10, 10], Yc - gapY()),
-      B: cell([l1, l2], [10, 10], Yb),
-      C: cell([l1, l2], [10, Yb - 10], Yb),
-      D: cell([l1, l5, dCot()], [xb + 60, Yb - 10], Yb),
-    };
-  }
-  /** Co chu headword (do that): 1 dong (co ruby) hoac 2 dong cho tu dai; tra { f, dong2 } */
-  function fitHeadword(hw, tu, coRuby, yomi, w, hh, fmax) {
-    const cs = kyTu(tu), n = cs.length;
-    const html1 = `<span class="j-hw-i">${coRuby ? C.ruby(tu, yomi) : esc(tu)}</span>`;
-    const dat = (html, dong) => {
-      hw.innerHTML = html;
-      hw.firstElementChild.style.whiteSpace = 'nowrap';
-      hw.style.width = Math.floor(w) + 'px';
-      hw.style.fontSize = fmax + 'px';
-      hw.style.lineHeight = dong > 1 ? '1.02' : '';
-      const k = Math.min(1, w / Math.max(1, hw.scrollWidth), hh / Math.max(1, hw.offsetHeight));
-      let f = fmax * k * 0.995;
-      hw.style.fontSize = f1(f) + 'px';
-      if (hw.scrollWidth > w + 0.6 || hw.offsetHeight > hh + 0.6) { f *= Math.min(w / hw.scrollWidth, hh / hw.offsetHeight) * 0.99; hw.style.fontSize = f1(f) + 'px'; }
-      return f;
-    };
-    let f = dat(html1, 1), dong2 = false;
-    if (n >= 6) {
-      const half = Math.ceil(n / 2);
-      const f2 = dat(`<span class="j-hw-i">${esc(cs.slice(0, half).join(''))}<br>${esc(cs.slice(half).join(''))}</span>`, 2);
-      if (f2 > f * 1.2) { f = f2; dong2 = true; } else f = dat(html1, 1);
-    }
-    return { f, dong2 };
-  }
-  function dungTuVung(nh, api, m, T, opt) {
-    opt = opt || {};
-    const v = nh.data || {};
-    const c = nh.chuong || {};
-    const { tu, coRuby, yomi } = tachKanjiYomi(v);
-    const n = kyTu(tu).length;
-    const bien = st.dt ? 0 : (((c.i || nh.i || 0) + (m.lech || 0)) % 2);
-    const lay = layTuVung(bien, n, false);
-    const pd = pad0();
-    const A = addCell(T, 'A', lay.A, { bg: '#eee9e0' });
-    const B = addCell(T, 'B', lay.B);
-    const Cc = addCell(T, 'C', lay.C);
-    const Dd = lay.D ? addCell(T, 'D', lay.D) : null;
-    // ---- A: minh hoa (giu mau), khong chu de len anh
-    const urlAnh = v.imageUrl || (nh.bai && nh.bai.sceneImageUrl) || null;
-    datAnh(A, null, urlAnh, { pos: '50% 38%', thay: '', ht: bien ? 'ht-trai' : 'ht-duoi', kb: true });
-    const nghiaChinh = tachNghia(v.meaningVi)[0];
-    if (!urlAnh) {
-      const cs0 = kyTu(tu);
-      const dau = cs0.find((x) => /[一-鿿぀-ヿ]/.test(x)) || cs0[0] || '?';
-      const crN = crOf(A.poly, Math.round(pd * 0.8));
-      taoHopNet(A, crN, [dau], m, 0);
-      m.hVe = api.hen(() => veNetM(m, 0), 1600);
-    }
-    // ---- B: nhan + tu vung (RAT to) + cach doc
-    const crB = crOf(B.poly, pd);
-    veLopNet(B, crB, 21 + (bien ? 3 : 0), st.dt ? 56 : 120);
-    const tagH = sz(40, 26);
-    const wB = nhet(B, crB, 'j-vb');
-    const soTu = `${String(c.i || nh.i + 1).padStart(2, '0')}/${String(c.n || nh.n).padStart(2, '0')}`;
-    h('div', 'j-tagrow', wB, the('TỪ MỚI  ' + soTu));
-    const hwBox = h('div', 'j-hw', wB);
-    hwBox.lang = 'ja';
-    const romaji = h('div', 'j-romaji', wB, esc(v.romaji || ''));
-    const romH = v.romaji ? sz(50, 26) : 0;
-    if (!v.romaji) romaji.style.display = 'none';
-    else romaji.style.fontSize = sz(50, 25) + 'px';
-    const hw = fitHeadword(hwBox, tu, coRuby, yomi, crB.w, crB.h - tagH - romH - pd * 0.2, n <= 2 ? sz(520, 210) : sz(340, 150));
-    if (hw.dong2 && coRuby) {
-      romaji.textContent = yomi + (v.romaji ? '  ·  ' + v.romaji : '');
-      romaji.style.display = '';
-      romaji.style.fontSize = sz(46, 22) + 'px';
-      romaji.lang = 'ja';
-    }
-    if (romaji.style.display !== 'none') fitDong(romaji, crB.w * 0.96, parseFloat(romaji.style.fontSize) || sz(50, 25), sz(22, 13));   // dong doc khong bao gio tran be ngang
-    // ---- C: nghia (to) trong o rieng
-    const crC = crOf(Cc.poly, Math.round(pd * 0.8));
-    const wC = nhet(Cc, crC, 'j-vc');
-    Cc.noi.insertAdjacentHTML('afterbegin', '<i class="j-ht ht-cc"></i>');
-    const loaiC = C.loaiTu(v.wordType);
-    const crD0 = Dd ? crOf(Dd.poly, Math.round(pd * 0.6)) : null;
-    const dOk = !!(n <= 6 && crD0 && crD0.w >= sz(170, 80) && crD0.h >= sz(46, 30));   // o loai tu qua nho (tu rat dai) -> dua nhan vao hang nhan cua o nghia
-    h('div', 'j-tagrow', wC, the('NGHĨA') + (!dOk && loaiC ? the(loaiC, 'j-the-do') : ''));
-    const dau = h('div', 'j-c-nghia', wC);
-    const ng = h('div', 'j-nghia', dau, jp(nghiaChinh || v.meaningVi || ''));
-    const chuaHien = !m.rev.has('V3');
-    ng.setAttribute('data-cho', 'V3'); ng.dataset.fx = 'quet';
-    if (chuaHien) ng.classList.add('j-cho');
-    fitMin(ng, crC.w, crC.h - sz(44, 30), sz(150, 80), sz(44, 28), sz(24, 16));
-    // ---- D: loai tu (o tren cot meo)
-    if (Dd) {
-      const crD = crD0;
-      veLopNet(Dd, crD, 5, st.dt ? 40 : 60);
-      const loai = dOk ? C.loaiTu(v.wordType) : '';
-      if (!loai) Dd.noi.insertAdjacentHTML('afterbegin', '<i class="j-ht ht-cc"></i>');
-      if (loai) {
-        const wD = nhet(Dd, crD, 'j-vd');
-        const bs = h('div', 'j-loai-lon', wD, `<b>${esc(loai)}</b>`);
-        bs.style.maxWidth = Math.floor(crD.w) + 'px';
-        fitDong(bs.firstChild, (crD.w - sz(40, 22)) * 0.92, Math.min(sz(58, 26), crD.h * 0.58), sz(20, 14));
-      }
-    }
-    oVao(T, ['A', 'B', 'C'].concat(Dd ? ['D'] : []), opt.tre || 0, 0.07);
-    if (m.net && (opt.ngay || m.daVe)) { const dv = m.daVe; m.daVe = false; veNetM(m, 0, true); m.daVe = dv || true; }
-    m.vc = { hw: hwBox, ng };
-    m.fase = 'tu';
-    camTuc(T, B.cx, B.cy);
-    if (!opt.ngay && chuaHien) m.hNghia = api.hen(() => cueVocab(m, 'V3', null), 3200);
-  }
-  function cueVocab(m, id, tt) {
-    const T = m.T;
-    if (!T || !m.vc || m.fase !== 'tu') return;
-    const tre = tt ? m.api.tre(tt) : 0;
-    if (id === 'V1' || id === 'V2' || id === 'V2b') {
-      if (m.net && id === 'V1') { if (m.hVe != null) m.api.huyHen(m.hVe); veNetM(m, tre + 0.1); }
-      camDen(T, 'B', tre);
-      nhan(T, 'B', tre, id === 'V1' ? 1.03 : 1.015);
-      if (!giam()) {
-        const sl = T.cells.B.noi.querySelector('.j-slwrap');
-        if (sl) G.fromTo(sl, { scale: 1.12 }, { scale: 1, duration: 0.3, ease: 'expo.out', delay: tre, overwrite: 'auto' });
-      }
-      if (id === 'V1' && !m.rev.has('V3')) { if (m.hNghia != null) m.api.huyHen(m.hNghia); m.hNghia = m.api.hen(() => cueVocab(m, 'V3', null), 1800 + Math.round(tre * 1000)); }
-    } else if (id === 'V3') {
-      if (m.hNghia != null) { m.api.huyHen(m.hNghia); m.hNghia = null; }
-      const co = hienKhoa(m, 'V3', tre);
-      if (co || tt) tieuDiem(T, 'C', tre);
-      // sau khi nghia hien: may quay chuyen nhe giua anh / tu / nghia moi ~3.6 s de trang khong dung im suot phan Sensei giai thich
-      if (!m.vong) {
-        m.vong = 0;
-        const buoc = () => {
-          if (!m.vivo || !m.T || m.fase !== 'tu') return;
-          const ids = ['A', 'B', 'C'].filter((k) => m.T.cells[k]);
-          const id = ids[m.vong++ % ids.length];
-          camDen(m.T, id, 0);
-          nhan(m.T, id, 0, 1.012);
-          m.api.hen(buoc, 3600);
-        };
-        m.api.hen(buoc, 3200 + Math.round(tre * 1000));
-      }
-    } else if (id === 'V4' || id === 'V5') {
-      tieuDiem(T, T.cells.D ? 'D' : 'C', tre, 1.03);
-    } else if (id === 'V0') {
-      nhan(T, 'B', tre, 1.015);
-    }
+    if (nh.kind === 'vocab' && nh.laBatDau && !nh.isResume && nh.i === 0 && bai.title && performance.now() - (st.nhT || 0) < 4500) return 'Chào bạn! Sensei Mèo bắt đầu bài học nhé.';   // khong lap tieu de bai dang hien tren trang bia
+    if (nh.kind === 'vocab') return 'Từ mới ' + (((nh.chuong && nh.chuong.i) || (nh.i + 1)) + '/' + ((nh.chuong && nh.chuong.n) || nh.n || ''));
+    if (nh.kind === 'kanji') return (nh.laKana ? 'Chữ cái ' : 'Chữ Hán ') + (((nh.chuong && nh.chuong.i) || 1) + '/' + ((nh.chuong && nh.chuong.n) || nh.n || ''));
+    if (nh.kind === 'grammar-intro') return 'Mẫu câu mới';   // khong lap tieu de da hien tren trang
+    if (nh.kind === 'example') return 'Ví dụ ' + (/(\d+\s*\/\s*\d+)\s*$/.exec(String((nh.beat && nh.beat.label) || '')) || ['', ''])[1].replace(/\s+/g, '');
+    if (nh.kind === 'kaiwa') return 'Giảng kỹ câu ' + ((nh.chuong && nh.chuong.i) || '') + '/' + ((nh.chuong && nh.chuong.n) || '');
+    if (nh.kind === 'kaiwa-intro' || nh.kind === 'kaiwa-run') return 'Hội thoại: ' + (bai.title ? tachTieuDe(bai).ten : '');
+    if (nh.kind === 'quiz') return 'Bài tập: đến lượt bạn';
+    return 'Sensei Mèo đang chuẩn bị…';
   }
 
   // ------------------------------------------------------------------ bong thoai + nhom token cau
@@ -1207,29 +969,6 @@
     });
     return hang;
   }
-
-  // ---- chu Han / chu cai (kana)
-  function layChuHan(kana) {
-    const { W, Yb, Yc } = st;
-    const s = W * 0.02;
-    if (st.dt) {
-      const yA = Math.round(Yb * (kana ? 0.39 : 0.43)), yB = Math.round(Yb * (kana ? 0.62 : 0.61)), yC = Math.round(Yb * (kana ? 0.78 : 0.74)), t = Math.round(W * 0.026);
-      const l1 = dN(yA + t, yA - t), l2 = dN(yB - t * 0.7, yB + t * 0.7), l3 = dN(yC + t * 0.6, yC - t * 0.6);
-      return {
-        A: cell([l1], [W / 2, 10], Yb), B: cell([l1, l2], [W / 2, (yA + yB) / 2], Yb), C: cell([l2, l3], [W / 2, (yB + yC) / 2], Yb), D: cell([l3], [W / 2, Yb - 10], Yb), E: null,
-      };
-    }
-    const xa = W * 0.36;
-    const y1 = Math.round(Yb * (kana ? 0.27 : 0.30)), y2 = Math.round(Yb * (kana ? 0.55 : 0.47));
-    const l1 = dV(xa + s, xa - s), l2 = [xa - s, y1 + W * 0.008, W, y1 - W * 0.008], l3 = [xa - s, y2 - W * 0.006, W, y2 + W * 0.006];
-    return {
-      A: cell([l1], [10, 10], Yb),
-      B: cell([l1, l2], [W - 10, 10], Yb),
-      C: cell([l1, l2, l3], [W - 10, (y1 + y2) / 2], Yb),
-      D: cell([l1, l3, dCot()], [xa + 40, Yb - 10], Yb),
-      E: cell([l1, l3, dCot()], [W - 10, Yc - 10], Yc),
-    };
-  }
   const dsMang = (x) => (Array.isArray(x) ? x : x ? [x] : []).filter(Boolean);
   /** Ve net cac chu (kana ghep: ve lan luot). ngay: ve xong ngay khong hieu ung */
   function veNetM(m, tre, ngay) {
@@ -1254,6 +993,405 @@
       }
     });
   }
+
+  // ------------------------------------------------------------------ thanh phan chu dung chung
+  /** The den (nhan nho) */
+  const the = (text, cls) => `<span class="j-the${cls ? ' ' + cls : ''}">${esc(text)}</span>`;
+  /** So hang (theo offsetTop) cua cac con cua el */
+  function soHang(el) {
+    const ks = [...el.children];
+    if (!ks.length) return 0;
+    const ys = new Set(ks.map((k) => Math.round(k.offsetTop / Math.max(6, k.offsetHeight * 0.5))));
+    return ys.size;
+  }
+  /** Thu hep be ngang cho toi khi so hang sap tang: cac hang cau can bang (khong con token mo coi) */
+  function canBang(el, w) {
+    const r0 = soHang(el);
+    if (r0 < 2) return;
+    let lo = w * 0.4, hi = w;
+    for (let i = 0; i < 7; i++) {
+      const mid = (lo + hi) / 2;
+      el.style.width = mid + 'px';
+      if (soHang(el) <= r0 && el.scrollWidth <= mid + 0.5) hi = mid; else lo = mid;
+    }
+    el.style.width = Math.ceil(hi) + 'px';
+  }
+  function tachTieuDe(bai) {
+    const title = String((bai && bai.title) || '');
+    const so = (bai && bai.lessonNumber) || '';
+    const ten = title.replace(/^Bài\s*\d+\s*:\s*/, '').split(/\s+—\s+/)[0] || title;
+    const phu = title.split(/\s+—\s+/)[1] || '';
+    return { so, ten, phu };
+  }
+  const tachTen = (sp) => {
+    const s = String(sp || '').trim();
+    const mm = /^(.*?)\s*[(（]([^)）]+)[)）]\s*$/.exec(s);
+    return mm ? { jp: mm[1].trim(), la: mm[2].trim() } : { jp: s, la: '' };
+  };
+  /** Nhan ngan: giu nguyen tu, toi da n ky tu, them … neu bi cat */
+  function capTu(t, n) {
+    const tu = String(t || '').trim().split(/\s+/);
+    let r = '';
+    for (const w of tu) { if (kyTu((r + ' ' + w).trim()).length > n) return (r || ngan(w, n)) + (r ? '…' : ''); r = (r + ' ' + w).trim(); }
+    return r;
+  }
+
+  /**
+   * NHAN LON (ban mau: nhan-lon): chu to giua o -> thu ve goc tren-trai (veGoc .65 s power3.inOut, scale .42).
+   * cr = hop goc (toa do trang), ctr = tam luc to (toa do trang). chinh -> <b> (bac t3, thu con ~ t5), phu -> <i> den (bac t4).
+   */
+  function nhanLonTao(c, cr, ctr, chinh, phu) {
+    const e = h('div', 'j-nhanlon j-tx', c.noi, `<b>${esc(chinh)}</b>${phu ? `<i>${esc(phu)}</i>` : ''}`);
+    e.style.left = f1(cr.x - c.bx) + 'px'; e.style.top = f1(cr.y - c.by) + 'px';
+    return { el: e, ctr: ctr || [cr.x + cr.w / 2, cr.y + cr.h / 2], x: cr.x, y: cr.y, cw: cr.w, xong: false };
+  }
+  /** Dat nhan lon o vi tri to (giua o): transform dich tu goc ve tam */
+  function nhanLonTo(nl) {
+    const e = nl.el;
+    const w0 = e.offsetWidth, h0 = e.offsetHeight;
+    const s0 = Math.min(1, (nl.cw || 1e9) * 0.94 / Math.max(1, w0));   // nhan to qua be ngang o -> bat dau nho hon
+    G.set(e, { transformOrigin: '0 0', x: nl.ctr[0] - w0 * s0 / 2 - nl.x, y: nl.ctr[1] - h0 * s0 / 2 - nl.y, scale: s0 });
+  }
+  /** Thu nhan lon ve goc (tre giay) */
+  function nhanLonThu(nl, tre) {
+    if (!nl || nl.xong) return;
+    nl.xong = true;
+    if (giam()) { G.set(nl.el, { x: 0, y: 0, scale: 0.42 }); return; }
+    G.to(nl.el, { x: 0, y: 0, scale: 0.42, duration: 0.65, ease: 'power3.inOut', delay: tre || 0 });
+  }
+  /**
+   * CHUOI vao cua nhip (ban mau: veGoc cue-.35 roi dap cue): nhan lon thu ve goc (S), noi dung nhan dien hien sau do (fn).
+   * Chay MOT lan: cue dau tien cua nhip (S = tre cue - .35) hoac du phong 0.5 s sau khi vao nhip — khong bao gio de trong.
+   */
+  function nhanLonLich(m, nl, fn) {
+    if (!nl) return;
+    (m.nhanLons = m.nhanLons || []).push(nl);
+    nhanLonTo(nl);
+    if (m.ngay) { m.chuoiXong = true; nl.xong = true; G.set(nl.el, { x: 0, y: 0, scale: 0.42 }); return; }
+    if (giam()) { m.chuoiXong = true; nhanLonThu(nl, 0); if (fn) fn(0); return; }
+    m.chuoiFn = (S) => { nhanLonThu(nl, S); if (fn) fn(S); };
+    m.chuoiXong = false;
+    m.hChuoi = m.hen(() => chuoi(m, 0), st.pages.length > 1 ? 500 : 150);   // trang dau (khong co vet muc quet) khong can cho
+  }
+  function chuoi(m, S) {
+    if (!m || m.chuoiXong || !m.chuoiFn) return;
+    m.chuoiXong = true;
+    if (m.hChuoi) { m.huy(m.hChuoi); m.hChuoi = null; }
+    m.chuoiMo = G.globalTimeline.time() + (S || 0) + 0.4;   // truoc moc nay nhan lon chua roi di: noi dung nhan dien khong duoc hien
+    m.chuoiFn(S || 0);
+  }
+  /** Tre (giay) cua mot noi dung hien theo cue: khong som hon luc nhan lon da roi di */
+  function sauChuoi(m, tre) {
+    const k = m && m.chuoiMo ? m.chuoiMo - G.globalTimeline.time() : 0;
+    return Math.max(tre || 0, k);
+  }
+
+  // ---- headword: 1 dong (co ruby) hoac 2 dong cho tu dai; bac t1..t2 roi ha lien tuc toi san
+  function tachKanjiYomi(v) {
+    const tu = String(v.kanji || v.word || '');
+    const coRuby = !!(v.kanji && v.furigana && v.furigana !== v.kanji);
+    return { tu, coRuby, yomi: String(v.furigana || v.word || '') };
+  }
+  function fitHeadword(hw, tu, coRuby, yomi, w, hh) {
+    const cs = kyTu(tu), n = cs.length;
+    const html1 = `<span class="j-hw-i">${coRuby ? C.ruby(tu, yomi) : esc(tu)}</span>`;
+    const dat = (html, dong) => {
+      hw.innerHTML = html;
+      hw.firstElementChild.style.whiteSpace = 'nowrap';
+      hw.style.width = Math.floor(w) + 'px';
+      hw.style.lineHeight = dong > 1 ? '1.02' : '';
+      const fm = st.san.hw * (coRuby ? 0.8 : 0.6);
+      let f = tk(1);
+      hw.style.fontSize = f + 'px';
+      const ok = () => hw.scrollWidth <= w + 0.6 && hw.offsetHeight <= hh + 0.6;
+      if (ok()) return f;
+      const k = Math.min(w / Math.max(1, hw.scrollWidth), hh / Math.max(1, hw.offsetHeight));
+      f = Math.max(fm * 0.4, f * k * 0.99);
+      hw.style.fontSize = f1(f) + 'px';
+      if (!ok()) { f *= Math.min(w / hw.scrollWidth, hh / hw.offsetHeight) * 0.98; hw.style.fontSize = f1(f) + 'px'; }
+      return f;
+    };
+    let f = dat(html1, 1), dong2 = false;
+    if (n >= 5) {
+      const half = Math.ceil(n / 2);
+      const f2 = dat(`<span class="j-hw-i">${esc(cs.slice(0, half).join(''))}<br>${esc(cs.slice(half).join(''))}</span>`, 2);
+      if (f2 > f * 1.15) { f = f2; dong2 = true; } else f = dat(html1, 1);
+    }
+    return { f, dong2 };
+  }
+
+
+  // ------------------------------------------------------------------ duong cat (dung cho moi bo cuc; toa do that)
+  const dV = (xt, xb) => [xt, 0, xb, st.Yb];                 // gan doc: xt tai y = 0, xb tai y = Yb
+  const dN = (yl, yr) => [0, yl, st.W, yr];                   // gan ngang: yl o mep trai, yr o mep phai
+  const pad0 = () => Math.round((st.dt ? 12 : 22) * st.U);
+  /** Co chu cho khoi shrink-wrap (max-width): bac giam dan roi ha lien tuc toi san; kiem ca chieu cao */
+  function fitBacMax(box, maxW, maxH, bac, fmin) {
+    box.style.maxWidth = Math.floor(maxW) + 'px';
+    const ok = () => box.scrollWidth <= maxW + 0.6 && box.offsetHeight <= maxH + 0.6;
+    for (let i = 0; i < bac.length; i++) { box.style.fontSize = bac[i] + 'px'; if (ok()) return bac[i]; }
+    let lo = fmin, up = bac[bac.length - 1];
+    box.style.fontSize = lo + 'px';
+    if (!ok()) { box.style.overflowWrap = 'anywhere'; return lo; }   // cuc chot: tu qua dai so voi san -> cho phep ngat tu
+    for (let i = 0; i < 9 && up - lo > 0.6; i++) { const mid = (lo + up) / 2; box.style.fontSize = mid + 'px'; if (ok()) lo = mid; else up = mid; }
+    box.style.fontSize = f1(lo) + 'px';
+    return lo;
+  }
+
+  // ================================================================== DUNG TUNG DANG NHIP
+  // ---- bia (mo dau buoi giang): ban mau trang 0
+  function layBia() {
+    const { W, Yb } = st;
+    if (st.dt) {
+      const yA = Math.round(Yb * 0.44), yB = Math.round(Yb * 0.86), s = Math.round(W * 0.03);
+      const l1 = dN(yA + s, yA - s), l2 = dN(yB - s * 0.6, yB + s * 0.6);
+      return { A: cell([l1], [W / 2, 10], Yb), B: cell([l1, l2], [W / 2, (yA + yB) / 2], Yb), E: cell([l2], [W / 2, Yb - 10], Yb) };
+    }
+    const ln = [px(1150), -80, px(1040), Yb];
+    return { A: cell([ln], [px(400), py(300)]), B: cell([ln], [px(1600), py(300)]), E: null };
+  }
+  function dungBia(nh, api, m, T) {
+    const bai = nh.bai || {};
+    const tt = tachTieuDe(bai);
+    const lay = layBia();
+    const pd = pad0();
+    const A = addCell(T, 'A', lay.A);
+    const B = addCell(T, 'B', lay.B);
+    const E = lay.E ? addCell(T, 'E', lay.E) : null;
+    // A: tranh canh bai (giu mau), SFX "第N話" o canh phai (ban mau: ペコリ)
+    datAnh(A, bai.sceneImageUrl || null, { pos: '50% 40%', thay: bai.lessonNumber ? '第' + bai.lessonNumber + '話' : 'マンガ', ht: 'ht-duoi' });
+    const coCanh = !!bai.sceneImageUrl;
+    const sfx = h('div', 'j-sfx j-sfx-a j-cho', A.noi, `<span data-t="第${esc(tt.so)}話">第${esc(tt.so)}話</span>`);
+    sfx.lang = 'ja';
+    sfx.dataset.cho = 'SFX'; sfx.dataset.fx = 'nay'; sfx.dataset.s = '0.5';
+    if (!coCanh) sfx.style.display = 'none';
+    sfx.style.fontSize = tk(3) + 'px';
+    {
+      const cr = crOf(A.poly, pd);
+      sfx.style.right = f1(A.bx + A.bw - (cr.x + cr.w)) + 'px'; sfx.style.top = f1(cr.y - A.by + cr.h * 0.18) + 'px';
+    }
+    // B: logo (pha 1) -> BAI N + tieu de + chips (pha 2) — ban mau: logo thu 0.5 len tren, no BAI N, quet tieu de, chips truot len
+    const crB = crOf(B.poly, pd);
+    veLopNet(B, crB, 11, st.dt ? 60 : 130);
+    const wrap = nhet(B, crB, 'j-bia-b');
+    const logo = h('div', 'j-logo j-tx', wrap, `<b>SENSEI MÈO</b><span lang="ja">マンガで学ぶ日本語</span><i>第${esc(tt.so)}話 · TIẾNG NHẬT ${esc(nh.capDo === 'KANA' ? 'NHẬP MÔN' : nh.capDo || '')}</i>`);
+    logo.querySelector('b').style.fontSize = f1(Math.min(tk(3), crB.w / 6.6)) + 'px';
+    logo.querySelector('span').style.fontSize = tk(5) + 'px';
+    logo.querySelector('i').style.fontSize = tk(6) + 'px';
+    const p2 = h('div', 'j-bia-2', wrap);
+    const wmH = Math.round(tk(3) * 0.5);
+    p2.style.paddingTop = wmH + 'px';
+    const cum = (tt.phu || '').split(/[\/／]/).map((x) => x.trim()).filter(Boolean).slice(0, 5);
+    const chipsH = cum.length ? Math.round(tk(6) * 2.1) : 0;
+    const bW = Math.min(crB.w, Math.round(tk(1) * 3.1)), bH = Math.round(Math.min(bW * 0.32, crB.h * 0.3));
+    const bst = h('div', 'j-bia-bai j-tx', p2, burstSvg(bW, bH, 5, { n: 24, jit: 0.3 }) + `<b class="j-bia-bai-t">BÀI ${esc(tt.so)}</b>`);
+    bst.style.width = bW + 'px'; bst.style.height = bH + 'px';
+    fitDong(bst.lastChild, bW * 0.72, bacTu(1, 2), tk(3));
+    const td = h('div', 'j-bia-td j-tx', p2, jp(tt.ten));
+    p2.style.gap = Math.round(pd * 0.5) + 'px';
+    const hAvail = crB.h - wmH - bH - chipsH - pd * 1.1;
+    fitBac(td, crB.w, Math.max(40, hAvail), bacTu(3, 4), st.san.nghia);
+    let chips = null;
+    if (cum.length) {
+      chips = h('div', 'j-chips j-tx', p2, cum.map((x) => `<span class="j-chip" lang="ja">${esc(x)}</span>`).join(''));
+      chips.style.fontSize = tk(6) + 'px';
+      chips.style.maxWidth = Math.floor(crB.w) + 'px';
+      while (chips.children.length > 2 && chips.scrollHeight > chipsH * 1.35) chips.lastElementChild.remove();
+    }
+    G.set(p2, { autoAlpha: 0 });
+    // E (dien thoai): hang chip phu
+    if (E) { const crE = crOf(E.poly, Math.round(pd * 0.6)); const ec = nhet(E, crE, 'j-bia-e'); if (cum.length) { ec.innerHTML = '<div class="j-chips j-tx">' + cum.map((x) => `<span class="j-chip" lang="ja">${esc(x)}</span>`).join('') + '</div>'; ec.firstChild.style.fontSize = tk(6) + 'px'; if (chips) chips.style.display = 'none'; } }
+    m.bia = { logo, p2, bst, td, chips, B, sfx };
+    camTuc(T, B.cx, B.cy);
+    m.fase = 'bia';
+    if (!m.ngay) m.hen(() => { if (m.vivo && m.bia) hieu(sfx, 0, 'nay'); }, 700);
+    else hienNgay(sfx);
+  }
+  function biaSangBai(m, tre) {
+    const b = m.bia;
+    if (!b || m.baiDaHien) return;
+    m.baiDaHien = true;
+    if (giam()) { G.set(b.logo.querySelectorAll('span, i'), { autoAlpha: 0 }); G.set(b.logo, { scale: 0.6, y: -b.logo.offsetHeight * 0.4 }); G.set(b.p2, { autoAlpha: 1 }); return; }
+    const t0 = tre || 0;
+    // logo thu nho len dau o (ban mau: veGoc .65 s) chi con chu thuong hieu, BAI N no ra (back.out), tieu de quet, chips truot len
+    {
+      const wm = b.logo.querySelector('b'), rb = wm.getBoundingClientRect(), rw = b.logo.parentNode.getBoundingClientRect();
+      const dy = (rw.top + Math.round(tk(3) * 0.31)) - (rb.top + rb.height / 2);
+      G.to(b.logo.querySelectorAll('span, i'), { autoAlpha: 0, duration: 0.2, delay: t0 });
+      G.to(b.logo, { scale: 0.6, y: dy, transformOrigin: '50% ' + Math.round(rb.height / 2 + (rb.top - b.logo.getBoundingClientRect().top)) + 'px', duration: 0.65, ease: 'power3.inOut', delay: t0 });
+    }
+    G.set(b.p2, { autoAlpha: 1 });
+    G.fromTo(b.bst, { autoAlpha: 0, scale: 0.3 }, { autoAlpha: 1, scale: 1, duration: 0.55, ease: 'back.out(2.2)', delay: t0 + 0.2 });
+    G.fromTo(b.td, { clipPath: 'inset(0% 100% 0% 0%)' }, { clipPath: 'inset(-4% -4% -4% -4%)', duration: 0.5, ease: 'power3.inOut', delay: t0 + 0.55, clearProps: 'clipPath', onStart: capKiemLai });
+    G.set(b.td, { autoAlpha: 1 });
+    if (b.chips) G.fromTo(b.chips, { y: 20 * st.sx, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.6, ease: 'expo.out', delay: t0 + 1.0 });
+    camDen(m.T, 'B', t0 + 0.2, st.camS + 0.005);
+  }
+
+  // ---- tu vung: ban mau trang tu vung (watashi / gakusei): A anh + hop nghia, B tu vung lon, C can canh
+  function layTuVung(bien, n) {
+    const { W, Yb } = st;
+    const pd = pad0();
+    if (st.dt) {
+      const yA = Math.round(Yb * 0.26), yB = Math.round(Yb * 0.66), s = Math.round(W * 0.028);
+      const l1 = dN(yA - s, yA + s), l2 = dN(yB + s * 0.6, yB - s * 0.6);
+      return { A: cell([l1], [W / 2, 10], Yb), B: cell([l1, l2], [W / 2, (yA + yB) / 2], Yb), C: cell([l2], [W / 2, Yb - 10], Yb), bien: 0 };
+    }
+    const s = W * 0.019;
+    const need = Math.max(1, n) * tk(1) * 0.9 + 2 * (st.mx + pd) + 24 * st.U;
+    const yBc = Math.round(Yb * 0.72), wob = W * 0.008;
+    if (bien === 0) {
+      const xa = clamp(W - need, W * 0.3, W * 0.6);
+      const l1 = dV(xa - s, xa + s), l2 = [xa - s, yBc + wob, W, yBc - wob];
+      return { A: cell([l1], [10, 10]), B: cell([l1, l2], [W - 10, 10]), C: cell([l1, l2], [W - 10, Yb - 10]), bien };
+    }
+    const xb = clamp(need, W * 0.4, W * 0.7);
+    const l1 = dV(xb + s, xb - s), l2 = [0, yBc - wob, xb + s, yBc + wob];
+    return { A: cell([l1], [W - 10, 10]), B: cell([l1, l2], [10, 10]), C: cell([l1, l2], [10, Yb - 10]), bien };
+  }
+  function dungTuVung(nh, api, m, T, opt) {
+    opt = opt || {};
+    const v = nh.data || {};
+    const c = nh.chuong || {};
+    const { tu, coRuby, yomi } = tachKanjiYomi(v);
+    const n = kyTu(tu).length;
+    const bien0 = st.dt ? 0 : ((((c.i ? c.i - 1 : nh.i || 0)) + (m.lech || 0)) % 2);
+    const lay = layTuVung(bien0, n);
+    const bien = lay.bien;
+    const pd = pad0();
+    const A = addCell(T, 'A', lay.A);
+    const B = addCell(T, 'B', lay.B);
+    const Cc = addCell(T, 'C', lay.C);
+    const urlAnh = v.imageUrl || (nh.bai && nh.bai.sceneImageUrl) || null;
+    const nghiaChinh = tachNghia(v.meaningVi)[0] || String(v.meaningVi || '');
+    const ghi = v.accentNote ? ngan(boNgoacCuoi(v.accentNote), 64) : '';
+    const loaiC = C.loaiTu(v.wordType);
+    // ---- A: minh hoa (giu mau); hop nghia + ghi chu nam tren anh (ban mau)
+    datAnh(A, urlAnh, { pos: '50% 38%', thay: '', ht: bien ? 'ht-trai' : 'ht-duoi', kb: true });
+    const crA = crOf(A.poly, Math.round(pd * 0.9));
+    if (!urlAnh) {
+      const cs0 = kyTu(tu);
+      const dau = cs0.find((x) => /[一-鿿぀-ヿ]/.test(x)) || cs0[0] || '?';
+      taoHopNet(A, crOf(A.poly, Math.round(pd * 0.8)), [dau], m, 0);
+      m.hVe = m.hen(() => veNetM(m, 0), 1600);
+    }
+    // nghia: hop chu nhat trang vien muc; nhan "NGHĨA" + chu to (bac t2 -> t4, san 44)
+    const ng = nhet(A, crA, 'j-stack');
+    ng.style.alignItems = bien ? 'flex-end' : 'flex-start'; ng.style.justifyContent = 'flex-start';
+    const hop = h('div', 'j-hop', ng);
+    h('span', 'j-the', hop, 'NGHĨA' + (loaiC && loaiC.length <= 8 ? ' · ' + chuHoa(loaiC) : ''));
+    const nghiaEl = h('div', 'j-nghia j-tx', hop, jp(nghiaChinh));
+    const chuaHien = !m.rev.has('V3') && !opt.ngay;
+    hop.setAttribute('data-cho', 'V3'); hop.dataset.fx = 'truot'; hop.dataset.dx = String(bien ? 50 : -50);
+    if (chuaHien) hop.classList.add('j-cho');
+    const padHop = Math.round(18 * st.U) * 2;
+    const maxW = Math.min(crA.w * (st.dt ? 0.9 : 0.9), st.W * (st.dt ? 0.9 : 0.30));
+    const tagHop = Math.round(tk(6) * 2.5);
+    fitBacMax(nghiaEl, maxW - padHop, Math.max(tk(4) * 1.2, crA.h * (st.dt ? 0.62 : 0.5) - tagHop - Math.round(24 * st.U)), bacTu(2, 4), st.san.nghia);
+    if (ghi) {
+      const gh = h('div', 'j-hop-den j-tx', ng, jp(ghi));
+      gh.setAttribute('data-cho', 'V4'); gh.dataset.fx = 'quet';
+      if (!m.rev.has('V4') && !opt.ngay) gh.classList.add('j-cho');
+      gh.style.fontSize = tk(6) + 'px';
+      gh.style.maxWidth = Math.floor(maxW) + 'px';
+      if (hop.offsetHeight + gh.offsetHeight + Math.round(14 * st.U) > crA.h) gh.style.display = 'none';   // khong con cho (cot anh thap): bo ghi chu, giu nghia
+    }
+    // ---- B: nhan lon -> goc + tu vung (RAT to) + cach doc
+    const crB = crOf(B.poly, pd);
+    veLopNet(B, crB, 21 + (bien ? 3 : 0), st.dt ? 56 : 120);
+    const soTu = `${String(c.i || nh.i + 1).padStart(2, '0')}/${String(c.n || nh.n).padStart(2, '0')}`;
+    const nl = nhanLonTao(B, { x: crB.x, y: crB.y, w: crB.w, h: crB.h }, null, 'TỪ MỚI', soTu);
+    const tagH = Math.round(tk(5) * 1.45);
+    const romH = v.romaji ? Math.round(tk(5) * 1.3) : 0;
+    const wB = nhet(B, { x: crB.x, y: crB.y + tagH, w: crB.w, h: crB.h - tagH }, 'j-vb');
+    const hwBox = h('div', 'j-hw j-tx', wB);
+    hwBox.lang = 'ja';
+    const romaji = h('div', 'j-romaji j-tx', wB, esc(v.romaji || ''));
+    if (!v.romaji) romaji.style.display = 'none';
+    else fitDong(romaji, crB.w * 0.96, [tk(5)], st.san.phu);
+    const hw = fitHeadword(hwBox, tu, coRuby, yomi, crB.w, crB.h - tagH - romH - pd * 0.3);
+    if (hw.dong2 && coRuby) {
+      romaji.textContent = v.romaji || yomi;
+      romaji.style.display = '';
+      romaji.lang = v.romaji ? 'en' : 'ja';
+      fitDong(romaji, crB.w * 0.96, [tk(5)], st.san.phu);
+      if (romaji.scrollWidth > crB.w * 0.96 + 0.6) { romaji.style.whiteSpace = 'normal'; romaji.style.textAlign = 'center'; romaji.style.fontSize = f1(Math.max(st.san.phu, tk(5) * 0.7)) + 'px'; }
+    }
+    vuaKhung(hwBox, wB, st.san.hw * 0.3);
+    hwBox.setAttribute('data-cho', 'HW'); hwBox.dataset.fx = 'dap'; hwBox.dataset.s = '1.7'; hwBox.dataset.d = '0.55';
+    romaji.setAttribute('data-cho', 'RD'); romaji.dataset.fx = 'truot'; romaji.dataset.dy = '-12';
+    if (!m.rev.has('HW') && !opt.ngay) hwBox.classList.add('j-cho');
+    if (!m.rev.has('RD') && !opt.ngay) romaji.classList.add('j-cho');
+    // loai tu: nhan nho canh nhan lon (the den phu)
+    // ---- C: can canh cung minh hoa (ban mau: anh phong to) — khong chu
+    datAnh(Cc, urlAnh, { pos: '50% 30%', thay: urlAnh ? '' : (kyTu(tu)[1] || kyTu(tu)[0] || ''), ht: bien ? 'ht-trai' : 'ht-duoi', zoom: urlAnh ? { s: 2.3, o: '50% 24%' } : null });
+    m.vc = { hw: hwBox, ng: hop };
+    m.fase = 'tu';
+    camTuc(T, B.cx, B.cy);
+    // nhan lon -> goc, roi tu vung no ra (ban mau: veGoc cue - .35, dap cue)
+    nhanLonLich(m, nl, (S) => { hienKhoa(m, 'HW', S + 0.4); hienKhoa(m, 'RD', S + 0.65); });
+    if (opt.ngay) { hienNgay(hwBox); hienNgay(romaji); }
+    if (m.net && (opt.ngay || m.daVe)) { const dv = m.daVe; m.daVe = false; veNetM(m, 0, true); m.daVe = dv || true; }
+    if (!opt.ngay && chuaHien) m.hNghia = m.hen(() => cueVocab(m, 'V3', null), 3200);
+  }
+  function cueVocab(m, id, tt) {
+    const T = m.T;
+    if (!T || !m.vc || m.fase !== 'tu') return;
+    const tre = tt ? m.api.tre(tt) : 0;
+    chuoi(m, id === 'V0' ? tre : Math.max(0, tre - 0.35));
+    if (id === 'V1' || id === 'V2' || id === 'V2b') {
+      if (m.net && id === 'V1') { if (m.hVe != null) m.huy(m.hVe); veNetM(m, tre + 0.1); }
+      hienKhoa(m, 'HW', tre); hienKhoa(m, 'RD', tre);
+      camDen(T, 'B', tre);
+      nhan(T, 'B', tre);
+      if (id === 'V1' && !m.rev.has('V3')) { if (m.hNghia != null) m.huy(m.hNghia); m.hNghia = m.hen(() => cueVocab(m, 'V3', null), 1800 + Math.round(tre * 1000)); }
+    } else if (id === 'V3') {
+      if (m.hNghia != null) { m.huy(m.hNghia); m.hNghia = null; }
+      const co = hienKhoa(m, 'V3', tre);
+      if (co || tt) tieuDiem(T, 'A', tre);
+    } else if (id === 'V4' || id === 'V5') {
+      hienKhoa(m, 'V4', tre);
+      tieuDiem(T, 'A', tre);
+    } else if (id === 'V0') {
+      nhan(T, 'B', tre);
+    }
+  }
+
+
+  // ---- chu Han / chu cai (kana): A khung viet net, B Han Viet + nghia, C am doc / meo nho, D tu ghep (mot tu mot lan)
+  /** Cat bot tu o cuoi (them …) cho toi khi khoi chu vua hop o co chu `f` (khong bao gio ha duoi san) */
+  function catDeVua(el, txt, maxW, maxH, f, htmlFn) {
+    const html = htmlFn || ((s) => jp(s));
+    el.style.fontSize = f + 'px';
+    const ok = () => el.scrollWidth <= maxW + 0.6 && el.offsetHeight <= maxH + 0.6;
+    el.innerHTML = html(txt);
+    if (ok()) return txt;
+    const tu = String(txt).trim().split(/\s+/);
+    if (tu.length > 1) {
+      for (let k = tu.length - 1; k >= 1; k--) { const s0 = tu.slice(0, k).join(' '); const s = /[.!?。！？]$/.test(s0) ? s0 : s0.replace(/[,;:、]+$/, '') + '…'; el.innerHTML = html(s); if (ok()) return s; }
+    }
+    const cs = kyTu(txt);
+    for (let k = cs.length - 1; k >= 2; k--) { const s = cs.slice(0, k).join('') + '…'; el.innerHTML = html(s); if (ok()) return s; }
+    return txt;
+  }
+  function layChuHan(kana) {
+    const { W, Yb } = st;
+    const s = W * 0.02, wob = W * 0.008;
+    if (st.dt) {
+      const yA = Math.round(Yb * (kana ? 0.39 : 0.43)), yB = Math.round(Yb * (kana ? 0.62 : 0.61)), yC = Math.round(Yb * (kana ? 0.78 : 0.76)), t = Math.round(W * 0.026);
+      const l1 = dN(yA + t, yA - t), l2 = dN(yB - t * 0.7, yB + t * 0.7), l3 = dN(yC + t * 0.6, yC - t * 0.6);
+      return { A: cell([l1], [W / 2, 10], Yb), B: cell([l1, l2], [W / 2, (yA + yB) / 2], Yb), C: cell([l2, l3], [W / 2, (yB + yC) / 2], Yb), D: cell([l3], [W / 2, Yb - 10], Yb) };
+    }
+    const xa = W * 0.34;
+    const y1 = Math.round(Yb * (kana ? 0.42 : 0.4)), y2 = Math.round(Yb * (kana ? 0.7 : 0.68));
+    const l1 = dV(xa + s, xa - s), l2 = [xa - s, y1 + wob, W, y1 - wob], l3 = [xa - s, y2 - wob, W, y2 + wob];
+    return {
+      A: cell([l1], [10, 10]),
+      B: cell([l1, l2], [W - 10, 10]),
+      C: cell([l1, l2, l3], [W - 10, (y1 + y2) / 2]),
+      D: cell([l1, l3], [W - 10, Yb - 10]),
+    };
+  }
   function dungChuHan(nh, api, m, T, opt) {
     opt = opt || {};
     const d = nh.data || {};
@@ -1266,84 +1404,85 @@
     const B = addCell(T, 'B', lay.B);
     const Cc = addCell(T, 'C', lay.C);
     const Dd = addCell(T, 'D', lay.D);
-    const Ee = lay.E ? addCell(T, 'E', lay.E) : null;
-    // ---- A: khung viet net (luoi + net mo + net ve dan)
+    // ---- A: khung viet net (luoi + net mo + net ve dan) — chi khung, khong chu
     const crA = crOf(A.poly, pd);
-    const tagH = sz(40, 26);
-    const wA = nhet(A, crA, 'j-ka');
-    h('div', 'j-tagrow', wA, `${the(kana ? 'CHỮ CÁI' : 'CHỮ HÁN')}<b class="j-dem-nho">${String(c.i || 1).padStart(2, '0')}<i>/${String(c.n || nh.n).padStart(2, '0')}</i></b>`);
-    taoHopNet(A, crA, kyTu(ch), m, tagH);
-    // ---- B: Han Viet / romaji + nghia
+    taoHopNet(A, crA, kyTu(ch), m, 0);
+    // ---- B: nhan lon -> goc; Han Viet / cach doc (RAT to, in nghieng) + nghia
     const crB = crOf(B.poly, pd);
     veLopNet(B, crB, 31, st.dt ? 50 : 100);
-    const wB = nhet(B, crB, 'j-kb');
-    h('div', 'j-tagrow', wB, the(kana ? 'CÁCH ĐỌC' : 'HÁN VIỆT'));
+    const soTu = `${String(c.i || 1).padStart(2, '0')}/${String(c.n || nh.n).padStart(2, '0')}`;
+    const nl = nhanLonTao(B, { x: crB.x, y: crB.y, w: crB.w, h: crB.h }, null, kana ? 'CHỮ CÁI' : 'CHỮ HÁN', soTu + (!kana && d.strokeCount ? ' · ' + d.strokeCount + ' NÉT' : ''));
+    const tagH = Math.round(tk(5) * 1.45);
+    const wB = nhet(B, { x: crB.x, y: crB.y + tagH, w: crB.w, h: crB.h - tagH }, 'j-kb');
     const ten = String((kana ? d.romaji : d.hanViet) || '');
     const hang2 = h('div', 'j-kb-hang', wB);
-    const hv = h('div', 'j-hv', hang2, esc(ten));
-    const nghia = h('div', 'j-kb-nghia', hang2);
-    nghia.innerHTML = `<span${ck(m, 'K3', 'len')}>${jp(ngan(d.meaningVi || '', kana ? 90 : 70))}</span>`;
+    const hv = h('div', 'j-hv j-tx', hang2, esc(ten));
+    hv.dataset.cho = 'HW'; hv.dataset.fx = 'dap'; hv.dataset.s = '1.7'; hv.dataset.d = '0.55';
+    if (!m.rev.has('HW') && !opt.ngay) hv.classList.add('j-cho');
+    const nghia = h('div', 'j-kb-nghia j-tx', hang2);
+    nghia.innerHTML = `<span${ck(m, 'K3', 'quet')}>${jp(ngan(d.meaningVi || '', kana ? 80 : 70))}</span>`;
     {
       const wRow = crB.w, hRow = crB.h - tagH;
-      fitDong(hv, wRow * (st.dt ? 0.36 : 0.42), Math.min(sz(160, 70), hRow / 1.05), sz(60, 30));
-      const wNg = wRow - hv.offsetWidth - pd * 0.8;
-      fitMin(nghia, wNg, hRow, sz(46, 22), sz(22, 16), sz(18, 13));
+      hv.style.fontStyle = 'italic';
+      fitDong(hv, wRow * (kana ? 0.5 : 0.44), kana ? bacTu(1, 2) : bacTu(2, 2), st.san.hw * 0.6);
+      const gap = pd * 0.9;
+      const wNg = Math.max(40, wRow - hv.offsetWidth - gap);
+      const sp = nghia.firstElementChild;
+      sp.style.display = 'block';
+      const txt0 = ngan(d.meaningVi || '', kana ? 80 : 70);
+      const f0 = fitBac(nghia, wNg, hRow, bacTu(4, 4), st.san.nghia);
+      if (nghia.scrollHeight > hRow + 0.6 || nghia.scrollWidth > wNg + 0.6) catDeVua(sp, txt0, wNg, hRow, f0);
     }
     // ---- C: doc On / Kun (kanji) hoac meo nho (kana)
     const crC = crOf(Cc.poly, Math.round(pd * 0.8));
     const wC = nhet(Cc, crC, 'j-kc');
     if (kana) {
-      h('div', 'j-tagrow', wC, the('MẸO NHỚ'));
-      const meo = h('div', 'j-kc-meo', wC, jp(d.meoNho || d.meaningVi || ''));
-      fitBox(meo, crC.w, crC.h - sz(48, 34), sz(38, 18), sz(20, 14));
-      wC.style.paddingTop = sz(44, 30) + 'px';
+      const meo = h('div', 'j-kc-meo j-tx', wC);
+      const txt0 = String(d.meoNho || d.meaningVi || '');
+      meo.innerHTML = '<b class="j-mo">MẸO NHỚ</b> ' + jp(txt0);
+      const f0 = fitBac(meo, crC.w, crC.h, bacTu(4, 5), Math.max(st.san.phu, st.dt ? 15 : 28));
+      if (meo.scrollHeight > crC.h + 0.6) catDeVua(meo, txt0, crC.w, crC.h, f0, (s) => '<b class="j-mo">MẸO NHỚ</b> ' + jp(s));
     } else {
       const on = dsMang(d.onyomi).slice(0, 2).join('、'), kun = dsMang(d.kunyomi).slice(0, 2).join('、');
-      const cols = h('div', 'j-am', wC);
+      const cols = h('div', 'j-am j-tx', wC);
       const mk1 = (nhanT, txt) => `<div class="j-am-c"><b class="j-am-n">${nhanT}</b><span lang="ja" class="j-am-t">${esc(txt)}</span></div>`;
       cols.innerHTML = (on ? mk1('ON', on) : '') + (kun ? mk1('KUN', kun) : '') + (!on && !kun ? mk1('ÂM', '—') : '');
-      fitBox(cols, crC.w, crC.h, sz(54, 26), sz(26, 15));
+      const fitCols = () => fitBac(cols, crC.w * 0.94, crC.h, bacTu(3, 4), st.san.nghia);
+      fitCols();
+      if (cols.scrollHeight > crC.h + 0.6 || cols.scrollWidth > crC.w * 0.94 + 0.6) {   // van tran o san: bo cach doc romaji trong ngoac, roi chi giu am dau cua moi loai
+        const gon = (x) => String(x).split('、').map((z) => z.replace(/\s*[(（][^)）]*[)）]/g, '').trim()).filter(Boolean);
+        const on2 = gon(on), kun2 = gon(kun);
+        cols.innerHTML = (on2.length ? mk1('ON', on2.join('、')) : '') + (kun2.length ? mk1('KUN', kun2.join('、')) : '') + (!on2.length && !kun2.length ? mk1('ÂM', '—') : '');
+        fitCols();
+        if (cols.scrollHeight > crC.h + 0.6 || cols.scrollWidth > crC.w * 0.94 + 0.6) { cols.innerHTML = (on2.length ? mk1('ON', on2[0]) : '') + (kun2.length ? mk1('KUN', kun2[0]) : '') + (!on2.length && !kun2.length ? mk1('ÂM', '—') : ''); fitCols(); }
+      }
     }
-    // ---- D: tu ghep / tu vi du — MOT tu tai mot thoi diem (doi theo cue K7.i), khong liet ke ca danh sach
+    // ---- D: tu ghep / tu vi du — MOT tu tai mot thoi diem (doi theo cue K7.i); co chu chung de doi tu khong nhay co
     const crD = crOf(Dd.poly, Math.round(pd * 0.8));
     const wD = nhet(Dd, crD, 'j-kd');
-    h('div', 'j-tagrow', wD, the(kana ? 'TỪ VÍ DỤ' : 'TỪ GHÉP'));
     const tu = dsMang(d.commonWords).slice(0, 3);
     m.tuL = tu;
-    const ds = h('div', 'j-tu-ds', wD);
+    const ds = h('div', 'j-tu-ds j-tx', wD);
     const mkTu = (w) => `<div class="j-tu"><span class="j-tu-w" lang="ja">${C.ruby(w.word || '', w.furigana || '')}</span><span class="j-tu-n">${esc(ngan(boNgoacCuoi(w.meaningVi || ''), 40))}</span></div>`;
     m.tuMk = (k) => (tu[k] ? mkTu(tu[k]) : '');
-    wD.style.paddingTop = sz(48, 34) + 'px';
-    const hD = crD.h - sz(48, 34);
-    // co chu chung cho moi tu (lay co nho nhat vua o) de doi tu khong nhay co
-    const hTu = kana && d.sosanh ? hD * 0.55 : hD;
-    m.tuFit = (k) => { ds.innerHTML = mkTu(tu[k]); return fitBox(ds, crD.w, hTu, sz(110, 40), sz(30, 15)); };
-    let fTu = sz(90, 36);
-    if (tu.length) fTu = m.tuFit(0);
-    const its = tu.length ? [{ el: ds, fmax: fTu, fmin: fTu }] : [];
-    if (!tu.length) ds.style.display = 'none';
-    if (kana && d.sosanh) {
-      const ss = h('div', 'j-meo j-sosanh', wD, `<p><b class="j-mo">DỄ NHẦM</b> ${jp(d.sosanh)}</p>`);
-      its.push({ el: ss, fmax: sz(28, 15), fmin: sz(20, 13) });
-    }
-    if (its.length) fitStack(its, crD.w, hD, sz(10, 6));
+    let fTu = tk(3);
+    if (tu.length) {
+      fTu = 1e9;
+      tu.forEach((w, k) => { ds.innerHTML = mkTu(tu[k]); fTu = Math.min(fTu, fitBac(ds, crD.w, crD.h, bacTu(3, 4), st.san.nghia)); });
+      ds.innerHTML = mkTu(tu[0]);
+      ds.style.fontSize = f1(fTu) + 'px';
+      m.tuFit = (k) => { ds.innerHTML = mkTu(tu[k]); ds.style.fontSize = f1(fTu) + 'px'; };
+    } else ds.style.display = 'none';
     m.tuDs = ds;
-    // ---- E: so net / bang chu (cot meo)
-    if (Ee) {
-      const crE = crOf(Ee.poly, Math.round(pd * 0.7));
-      veLopNet(Ee, crE, 8, 60);
-      const wE = nhet(Ee, crE, 'j-ke');
-      if (kana) h('div', 'j-ke-c', wE, `<b lang="ja">${esc(d.bangChu === 'katakana' ? 'カタカナ' : 'ひらがな')}</b>`);
-      else h('div', 'j-ke-c', wE, `<b>${esc(d.strokeCount || '?')}</b><i>NÉT</i>`);
-      wE.firstElementChild.style.fontSize = f1(Math.min(crE.h * 0.62, crE.w * (kana ? 0.2 : 0.5), sz(110, 40))) + 'px';
-    }
-    oVao(T, ['A', 'B', 'C', 'D'].concat(Ee ? ['E'] : []), opt.tre || 0, 0.06);
+    m.tuK = 0;
     m.fase = 'kj';
     camTuc(T, A.cx, A.cy);
+    nhanLonLich(m, nl, (S) => hienKhoa(m, 'HW', S + 0.4));
+    if (opt.ngay) hienNgay(hv);
     if (opt.ngay || m.daVe) { m.daVe = false; veNetM(m, 0, true); m.daVe = true; }
     else {
-      m.hVe = api.hen(() => veNetM(m, 0), 2600);
-      if (!m.rev.has('K3')) m.hNghia = api.hen(() => cueChuHan(m, 'K3', null), 3000);
+      m.hVe = m.hen(() => veNetM(m, 0), 1400);
+      if (!m.rev.has('K3')) m.hNghia = m.hen(() => cueChuHan(m, 'K3', null), 3000);
     }
   }
   function cueChuHan(m, id, tt) {
@@ -1351,31 +1490,26 @@
     if (!T || m.fase !== 'kj') return;
     const tre = tt ? m.api.tre(tt) : 0;
     const kana = !!m.nh.laKana;
-    if (id === 'K0') nhan(T, 'A', tre, 1.015);
-    else if (id === 'K1' || id === 'K1b') { camDen(T, 'A', tre); if (m.hVe != null) m.api.huyHen(m.hVe); veNetM(m, tre); nhan(T, 'A', tre, 1.02); }
-    else if (id === 'K2') {
-      camDen(T, 'B', tre); nhan(T, 'B', tre, 1.03);
-      const hv = T.cells.B.noi.querySelector('.j-hv');
-      if (hv && !giam()) G.fromTo(hv, { scale: 1.4 }, { scale: 1, duration: 0.2, ease: 'expo.out', delay: tre, overwrite: 'auto' });
-    } else if (id === 'K3') {
-      if (m.hNghia != null) m.api.huyHen(m.hNghia);
-      hienKhoa(m, 'K3', tre); tieuDiem(T, 'B', tre, 1.02);
-    } else if (id === 'K4') tieuDiem(T, kana ? 'C' : 'A', tre, 1.02);
-    else if (id === 'K5') { tieuDiem(T, kana ? 'D' : 'C', tre, 1.025); if (!kana) danhDau(T.cells.C.noi.querySelector('.j-am-c:first-child .j-am-t'), tre); }
-    else if (id === 'K6') { tieuDiem(T, 'C', tre, 1.02); danhDau(T.cells.C.noi.querySelector('.j-am-c:last-child .j-am-t'), tre); }
+    chuoi(m, id === 'K0' ? tre : Math.max(0, tre - 0.35));
+    if (id === 'K0') nhan(T, 'A', tre);
+    else if (id === 'K1' || id === 'K1b') { camDen(T, 'A', tre); if (m.hVe != null) m.huy(m.hVe); veNetM(m, tre); nhan(T, 'A', tre); }
+    else if (id === 'K2') { hienKhoa(m, 'HW', tre); camDen(T, 'B', tre); nhan(T, 'B', tre); }
+    else if (id === 'K3') { if (m.hNghia != null) m.huy(m.hNghia); hienKhoa(m, 'K3', tre); tieuDiem(T, 'B', tre); }
+    else if (id === 'K4') tieuDiem(T, kana ? 'C' : 'A', tre);
+    else if (id === 'K5') { tieuDiem(T, 'C', tre); if (!kana) danhDau(T.cells.C.noi.querySelector('.j-am-c:first-child .j-am-t'), tre); }
+    else if (id === 'K6') { tieuDiem(T, 'C', tre); danhDau(T.cells.C.noi.querySelector('.j-am-c:last-child .j-am-t'), tre); }
     else if (/^K7\.\d+$/.test(id)) {
       const k = +id.split('.')[1];
       camDen(T, 'D', tre);
-      nhan(T, 'D', tre, 1.015);
-      if (m.tuDs && m.tuMk && m.tuL && m.tuL[k] && m.tuK !== k) {
+      nhan(T, 'D', tre);
+      if (m.tuDs && m.tuFit && m.tuL && m.tuL[k] && m.tuK !== k) {
         m.tuK = k;
         const ds = m.tuDs;
-        const dat = () => { if (m.tuFit) m.tuFit(k); else ds.innerHTML = m.tuMk(k); capKiemLai(); const e = ds.firstChild; if (e && !giam()) G.fromTo(e, { clipPath: 'inset(-4% 100% -4% -4%)' }, { clipPath: 'inset(-40% -40% -40% -40%)', duration: 0.22, ease: 'power3.out', clearProps: 'clipPath' }); };
-        if (tre > 0.02) m.api.hen(dat, Math.round(tre * 1000)); else dat();
+        const dat = () => { m.tuFit(k); capKiemLai(); const e = ds.firstChild; if (e && !giam()) G.fromTo(e, { clipPath: 'inset(-4% 100% -4% -4%)' }, { clipPath: 'inset(-40% -40% -40% -40%)', duration: 0.3, ease: 'power3.inOut', clearProps: 'clipPath' }); };
+        if (tre > 0.02) m.hen(dat, Math.round(tre * 1000)); else dat();
       }
     }
   }
-  // ---- mau cau (cong thuc + giai thich)
   /** Cong thuc -> danh sach o: { loai:'chu'|'o'|'mui', t, cap, key, j, doc } */
   function oCongThuc(nh) {
     const d = nh.data || {};
@@ -1386,7 +1520,7 @@
       let jc = 0, jo = 0;
       ct.phan.forEach((e) => {
         if (e.loai === 'chu') {
-          out.push({ loai: 'chu', j: jc++, t: e.chu, cap: ngan(C.vaiTro(e.chu) || '', 20), key: true, doc: DOC_TRO[e.chu] || '', jp: true });
+          out.push({ loai: 'chu', j: jc++, t: ngan(e.chu, 8), cap: ngan(C.vaiTro(e.chu) || '', 20), key: true, doc: DOC_TRO[e.chu] || '', jp: true });
         } else {
           let t = String(e.nhan || '').replace(/[\-(（]+$/, '').trim();
           let cap = String(e.chu || '');
@@ -1439,7 +1573,8 @@
         if (!t2) t2 = ngan(ws[0], 12);
         capX = ngan(main.slice(t2.length).replace(/^[\s/]+/, '') + (note ? ' · ' + note : ''), 40);
         main = t2;
-      } else if (kyTu(main).length > 24) main = ngan(main, 24);
+      } else if (kyTu(main).length > 8 && laJp) main = ngan(main, 8);
+      else if (kyTu(main).length > 12) main = ngan(main, 12);
       if (i > 0 && mui) out.push({ loai: 'mui', t: '→' });
       out.push({ loai: laJp ? 'chu' : 'o', j: laJp ? jj++ : i, t: main, cap: ngan(capX, 40), key: laJp, doc: DOC_TRO[main] || '', jp: laJp, p: true });
     });
@@ -1456,28 +1591,6 @@
     });
     return rows;
   }
-  /**
-   * Bo cuc mau cau: F (cong thuc, rong het) tren; hang o vai tro P0..P(np-1) duoi (minh hoa + nhan ngan);
-   * E = o nho tren cot meo (chi minh hoa). Dien thoai: hang o vai tro chiem het chieu ngang duoi F.
-   */
-  function layNguPhap(hF, np) {
-    const { W, Yb, Yc } = st;
-    const t = Math.round(W * (st.dt ? 0.022 : 0.008));
-    const lF = dN(hF + t, hF - t);
-    const sl = W * (st.dt ? 0.03 : 0.014);
-    const xEnd = st.dt ? W : st.Xc;
-    const out = { F: cell([lF], [W / 2, 10], Yb), E: null };
-    const seps = [];
-    for (let k = 1; k < np; k++) { const x = xEnd * k / np; seps.push([x + sl, 0, x - sl, Yb]); }
-    for (let k = 0; k < np; k++) {
-      const cuts = [lF];
-      if (k > 0) cuts.push(seps[k - 1]);
-      if (k < np - 1) cuts.push(seps[k]); else if (!st.dt) cuts.push(dCot());
-      out['P' + k] = cell(cuts, [xEnd * (k + 0.5) / np, Yb - 20], Yb);
-    }
-    if (!st.dt && hF < Yc - 70) out.E = cell([lF, dCot()], [W - 10, Yc - 10], Yc);
-    return out;
-  }
   const soMauCau = (nh) => {
     const ds = ((nh.ctx && nh.ctx.cacNhip) || []).filter((b) => b && b.kind === 'grammar-intro');
     const k = ds.indexOf(nh.beat);
@@ -1488,132 +1601,145 @@
     const k = tieu.indexOf(':');
     return k > 0 ? [tieu.slice(0, k).trim(), tieu.slice(k + 1).trim()] : [tieu, ''];
   };
+
+  /**
+   * Bo cuc mau cau (ban mau trang 4): F (cong thuc, rong het) tren; hang o vai tro P0..P(np-1) duoi (minh hoa + nhan ngan).
+   * Dien thoai: hang o vai tro chiem het chieu ngang duoi F.
+   */
+  function layNguPhap(hF, np) {
+    const { W, Yb } = st;
+    const t = Math.round(W * (st.dt ? 0.022 : 0.008));
+    const lF = dN(hF + t, hF - t);
+    const sl = W * (st.dt ? 0.03 : 0.0135);
+    const out = { F: cell([lF], [W / 2, 10], Yb) };
+    const seps = [];
+    for (let k = 1; k < np; k++) { const x = W * k / np; seps.push([x + sl, 0, x - sl, Yb]); }
+    for (let k = 0; k < np; k++) {
+      const cuts = [lF];
+      if (k > 0) cuts.push(seps[k - 1]);
+      if (k < np - 1) cuts.push(seps[k]);
+      out['P' + k] = cell(cuts, [W * (k + 0.5) / np, Yb - 20], Yb);
+    }
+    return out;
+  }
+  /** Xoa trang (de dung lai khi do lai bo cuc) */
+  function xoaNoiTrang(T) { T.capO.textContent = ''; T.vsvg.textContent = ''; T.cells = {}; }
   function dungNguPhap(nh, api, m, T, opt) {
     opt = opt || {};
     const d = nh.data || {};
     const tiles = oCongThuc(nh);
     const so = soMauCau(nh);
     const pd = pad0();
-    const U = st.U;
-    // vai tro -> o minh hoa (moi vai tro MOT o); tro tu doc khac (は へ を) co dau "wa!" rieng nen khong them o
+    // vai tro -> o minh hoa (moi vai tro MOT o, toi da 3); tro tu doc khac (は へ を) co dau "wa!" rieng nen khong them o
     const vt = [];
-    tiles.forEach((t, i) => { if (t.loai !== 'mui' && t.cap && !t.doc && vt.length < (st.dt ? 3 : 4)) vt.push({ ti: i, cap: t.cap }); });
-    const np = vt.length || (st.dt ? 2 : 3);
+    tiles.forEach((t, i) => { if (t.loai !== 'mui' && t.cap && !t.doc && vt.length < 3) vt.push({ ti: i, cap: t.cap }); });
+    const np = vt.length >= 3 ? 3 : Math.max(vt.length, st.dt ? 2 : 3);
     m.vt = vt;
-    // chon co chu o + so hang -> chieu cao o cong thuc
     const wF = st.W - 2 * st.mx;
     const nTile = tiles.filter((t) => t.loai !== 'mui').length;
-    let fs0 = st.dt ? (nTile <= 2 ? 84 : nTile <= 3 ? 56 : nTile <= 5 ? 46 : 40) : (nTile <= 3 ? 190 : nTile <= 4 ? 170 : nTile <= 6 ? 130 : 110);
-    fs0 *= st.dt ? 1 : U;
-    const tagH = sz(46, 30);
-    const hMax = st.Yb * (st.dt ? 0.42 : 0.58);
-    const dinh = tagH + st.my + Math.round(pd * 0.5);
-    let rows = uocRong(tiles, fs0, wF, U);
-    while ((rows * 1.34 * fs0 + dinh > hMax) && fs0 > sz(110, 28)) { fs0 -= sz(8, 3); rows = uocRong(tiles, fs0, wF, U); }
-    let hF = Math.round(clamp(rows * 1.34 * fs0 + dinh, st.Yb * (st.dt ? 0.3 : 0.36), st.Yb * (st.dt ? 0.52 : 0.68)));
-    if (!opt.hF) hF = Math.round(st.Yb * (st.dt ? 0.52 : 0.68));   // luot 1: F hao phong de do co chu that
-    else hF = opt.hF;
-    const lay = layNguPhap(hF, np);
-    const F = addCell(T, 'F', lay.F);
-    // ---- F: nhan mau cau + ten + cac o cong thuc
-    const crF = crOf(F.poly, pd);
-    veLopNet(F, crF, 41, st.dt ? 56 : 130, null, 0.008);
-    const wFc = nhet(F, crF, 'j-nf');
-    const [ten] = tenMau(d);
-    const tg = h('div', 'j-tagrow', wFc, `${the('MẪU CÂU ' + so.i + '/' + so.n)}<b class="j-tenmau">${jp(ngan(ten, st.dt ? 20 : 34))}</b>`);
-    { const tt = tg.querySelector('.j-tenmau'); let nn = st.dt ? 20 : 34; while (tg.scrollWidth > crF.w + 1 && nn > 6) { nn -= 2; tt.innerHTML = jp(ngan(ten, nn)); } }   // hang nhan + ten khong tran be ngang
-    const box = h('div', 'j-tiles', wFc);
-    m.tiles = tiles;
-    m.tChu = []; m.tO = []; m.tJp = []; m.tAll = [];
-    box.innerHTML = tiles.map((t, i) => {
-      if (t.loai === 'mui') return `<div class="j-mui" lang="ja">${esc(t.t)}</div>`;
-      if (t.loai === 'chu') m.tChu[t.j] = i; else m.tO[t.j] = i;
-      if (t.jp) m.tJp.push(i);
-      m.tAll.push(i);
-      const dax = m.rev.has('t' + i);
-      return `<div class="j-tw" data-t="${i}"><div class="j-tile${t.key ? ' k' : ''}${t.loai === 'o' && !t.jp && kyTu(t.t).length > 3 ? ' lb' : ''}${dax ? '' : ' pend'}"${t.jp ? ' lang="ja"' : ''}>${t.key && !st.dt && kyTu(t.t).length <= 3 ? `<span class="j-tile-bst"></span>` : ''}<span class="j-tile-t">${esc(t.t)}</span></div>${t.doc ? `<div class="j-sfx wa${m.rev.has('c' + i) ? '' : ' j-cho'}" data-doc="${i}"><span data-t="${esc(t.doc)}!">${esc(t.doc)}!</span></div>` : ''}</div>`;
-    }).join('');
-    box.style.marginTop = tagH + 'px';
-    if (opt.fs) box.style.fontSize = opt.fs + 'px';
-    else {
-      // luot 1: co chu lon nhat (<= fs0, >= 110) sao cho hang cong thuc vua nua trang tren
-      const hBox = hMax - dinh;
-      const fmin = sz(110, 28);
+    const tagH = Math.round(tk(5) * 1.55);
+    const dinh = tagH + st.my + Math.round(pd * 0.6);
+    const hMax = st.Yb * (st.dt ? 0.5 : 0.7);
+    // co chu cong thuc: bac t2 (hoac t3 khi dien thoai nhieu o) -> ha lien tuc toi san; cao F theo so hang uoc luong
+    let fs0 = st.dt ? (nTile <= 2 ? tk(2) : nTile <= 3 ? tk(3) : tk(3) * 0.85) : tk(2);
+    const fmin = st.san.ct;
+    let rows = uocRong(tiles, fs0, wF, st.U);
+    while ((rows * 1.34 * fs0 + dinh > hMax) && fs0 > fmin) { fs0 = Math.max(fmin, fs0 - Math.max(2, st.U * 4)); rows = uocRong(tiles, fs0, wF, st.U); }
+    let hF = Math.round(clamp(rows * 1.34 * fs0 + dinh, st.Yb * (st.dt ? 0.3 : 0.58), st.Yb * (st.dt ? 0.54 : 0.72)));
+    if (opt.hF) hF = opt.hF;
+    let fsFinal = fs0;
+    const xay = (hFx, fsx, lan) => {
+      xoaNoiTrang(T);
+      const lay = layNguPhap(hFx, np);
+      const F = addCell(T, 'F', lay.F);
+      const crF = crOf(F.poly, pd);
+      veLopNet(F, crF, 41, st.dt ? 56 : 130, null, 0.008);
+      const [ten] = tenMau(d);
+      const nl = nhanLonTao(F, { x: crF.x, y: crF.y, w: crF.w, h: crF.h }, null, 'MẪU CÂU ' + so.i, ten ? chuHoa(ngan(ten, st.dt ? 14 : 26)) : so.i + '/' + so.n);
+      const box = h('div', 'j-tiles j-tx', nhet(F, crF, 'j-nf'));
+      box.parentNode.style.paddingTop = tagH + 'px';
+      m.tiles = tiles;
+      m.tChu = []; m.tO = []; m.tJp = []; m.tAll = [];
+      box.innerHTML = tiles.map((t, i) => {
+        if (t.loai === 'mui') return `<div class="j-mui" lang="ja">${esc(t.t)}</div>`;
+        if (t.loai === 'chu') m.tChu[t.j] = i; else m.tO[t.j] = i;
+        if (t.jp) m.tJp.push(i);
+        m.tAll.push(i);
+        const lb = t.loai === 'o' && !t.jp && kyTu(t.t).length > 3;
+        return `<div class="j-tw" data-t="${i}"><div class="j-tile${t.key ? ' k' : ''}${lb ? ' lb' : ''}${opt.ngay || m.rev.has('t' + i) ? '' : ' pend'}"${t.jp ? ' lang="ja"' : ''}><span class="j-tile-t">${esc(t.t)}</span></div>${t.doc ? `<div class="j-sfx wa${m.rev.has('c' + i) ? '' : ' j-cho'}" data-doc="${i}"><span data-t="${esc(t.doc)}!">${esc(t.doc)}!</span></div>` : ''}</div>`;
+      }).join('');
+      const hBox = crF.h - tagH;
       box.style.width = Math.floor(crF.w) + 'px';
-      let f = fs0, xong = false;
+      let f = fsx, xong = false;
       for (let i = 0; i < 30 && !xong; i++) {
         box.style.fontSize = f + 'px';
-        if (box.scrollWidth <= crF.w + 0.6 && box.scrollHeight <= hBox + 0.6) xong = true; else if (f <= fmin) break; else f = Math.max(fmin, f * 0.93);
+        if (box.scrollWidth <= crF.w + 0.6 && box.scrollHeight <= hBox + 0.6) xong = true; else if (f <= fmin) break; else f = Math.max(fmin, f - Math.max(2, st.U * 3));
       }
-      if (!xong) { box.style.fontSize = fmin + 'px'; if (box.scrollWidth > crF.w + 0.6) fitBox(box, crF.w, 9999, fmin, sz(36, 20)); }
-      const can = Math.round(box.scrollHeight + dinh);
-      T.capO.textContent = ''; T.vsvg.textContent = ''; T.cells = {};
-      return dungNguPhap(nh, api, m, T, Object.assign({}, opt, { hF: Math.min(Math.round(st.Yb * (st.dt ? 0.52 : 0.68)), Math.max(can, Math.round(st.Yb * (st.dt ? 0.3 : 0.36)))), fs: parseFloat(box.style.fontSize) }));
+      return { lay, F, crF, box, nl, xong, f, need: Math.round(box.scrollHeight + dinh) };
+    };
+    let r = xay(hF, fs0, 0);
+    for (let it = 0; it < 3 && !r.xong && hF < st.Yb * (st.dt ? 0.54 : 0.74); it++) {
+      hF = Math.min(Math.round(st.Yb * (st.dt ? 0.54 : 0.74)), Math.max(r.need, hF + Math.round(st.Yb * 0.05)));
+      r = xay(hF, fs0, it + 1);
     }
+    if (!r.xong) {   // van tran o san: ha tiep tung buoc (cong thuc cuc dai) — khong bao gio cat chu
+      let f = r.f;
+      while ((r.box.scrollWidth > r.crF.w + 0.6 || r.box.scrollHeight > r.crF.h - tagH + 0.6) && f > st.san.ct * 0.45) { f -= Math.max(2, st.U * 2); r.box.style.fontSize = f + 'px'; }
+    }
+    fsFinal = parseFloat(r.box.style.fontSize);
     // ---- P: o vai tro (minh hoa giu mau + nhan ngan)
+    const lay = r.lay, F = r.F;
     const imgs = ((nh.bai && nh.bai.vocabList) || []).filter((x) => x && x.imageUrl);
     const off = imgs.length ? ((so.i - 1) * 3) % imgs.length : 0;
-    const ids = ['F'];
     for (let p = 0; p < np; p++) {
-      const c = addCell(T, 'P' + p, lay['P' + p], { bg: '#eee9e0' });
+      const c = addCell(T, 'P' + p, lay['P' + p]);
       const v = imgs.length ? imgs[(off + p) % imgs.length] : null;
-      const goc = vt[p] ? kyTu(tiles[vt[p].ti].t)[0] : '';
-      datAnh(c, null, v && v.imageUrl, { pos: '50% 30%', thay: goc || '', ht: 'ht-duoi' });
+      const urlP = (v && v.imageUrl) || (nh.bai && nh.bai.sceneImageUrl) || null;
+      const tl0 = tiles.filter((t0) => t0.loai !== 'mui')[p] || tiles[0] || {};
+      const goc = vt[p] ? kyTu(tiles[vt[p].ti].t).slice(0, 2).join('') : kyTu(tl0.t || '').slice(0, 2).join('');
+      datAnh(c, urlP, { pos: '50% 26%', thay: goc || '', ht: 'ht-duoi', cover: true, zoom: !(v && v.imageUrl) && urlP ? { s: 1.6 + 0.3 * p, o: (30 + 25 * p) + '% 40%' } : null });
       if (vt[p]) {
-        const cr = crOf(c.poly, Math.round(pd * 0.45));
+        const cr = crOf(c.poly, Math.round(pd * 0.5));
         const bx = nhet(c, cr, 'j-ghi-anh');
-        bx.style.justifyContent = 'flex-end'; bx.style.alignItems = 'flex-start';
-        const lab = h('div', 'j-lab', bx, jp(capTu(vt[p].cap, 22)));
-        lab.dataset.cho = 'p' + vt[p].ti; lab.dataset.fx = 'quet';
-        if (!m.rev.has('p' + vt[p].ti)) lab.classList.add('j-cho');
-        fitBox(lab, Math.min(cr.w, sz(380, 200)), Math.round(cr.h * 0.5), sz(40, 17), sz(24, 13));
+        bx.style.justifyContent = 'flex-start'; bx.style.alignItems = 'flex-start';
+        const lab = h('div', 'j-lab j-tx', bx, jp(capTu(vt[p].cap, 22)));
+        lab.dataset.cho = 'p' + vt[p].ti; lab.dataset.fx = 'truot'; lab.dataset.dx = '-50';
+        if (!m.rev.has('p' + vt[p].ti) && !opt.ngay) lab.classList.add('j-cho');
+        const maxW = Math.min(cr.w, st.W * (st.dt ? 0.9 : 0.31));
+        fitBacMax(lab, maxW - Math.round(24 * st.U), Math.round(cr.h * 0.9) - Math.round(18 * st.U), st.dt ? [tk(5), tk(6)] : bacTu(4, 4), st.dt ? st.san.nhan : st.san.nghia);
       }
-      ids.push('P' + p);
     }
-    if (lay.E) {
-      const E = addCell(T, 'E', lay.E, { bg: '#eee9e0' });
-      const v = imgs.length ? imgs[(off + np) % imgs.length] : null;
-      datAnh(E, null, v && v.imageUrl, { pos: '50% 30%', thay: '', ht: 'ht-goc' });
-      ids.push('E');
-    }
-    oVao(T, ids, opt.tre || 0, 0.07);
     m.fase = 'np';
     m.kk = m.kk || 0;
     camTuc(T, F.cx, F.cy);
-    if (!opt.ngay) {
-      m.hDuPhong = api.hen(() => tilesDuPhong(m), 1400);
-    }
+    nhanLonLich(m, r.nl, (S) => tilesDuPhong(m, S + 0.4));
+    if (opt.ngay) { m.tAll.forEach((i) => tileVao(m, i, 0, true)); }
+    m.hFs = fsFinal;
   }
-  /** Hien o cong thuc thu i (quet chu <= 250 ms) va nhan vai tro cua no tren o minh hoa */
-  function tileVao(m, i, tre) {
+  /** Hien o cong thuc thu i (dap) va nhan vai tro cua no tren o minh hoa */
+  function tileVao(m, i, tre, ngay) {
     const T = m.T;
-    if (!T || m.rev.has('t' + i)) return false;
+    if (!ngay) tre = sauChuoi(m, tre);
+    if (!T || (m.rev.has('t' + i) && !ngay)) return false;
     m.rev.add('t' + i);
     const tw = T.el.querySelector(`.j-tw[data-t="${i}"]`);
     if (!tw) return false;
     const tile = tw.querySelector('.j-tile');
     tile.classList.remove('pend');
-    hienKhoa(m, 'p' + i, tre);
+    hienKhoa(m, 'p' + i, ngay ? 0 : tre);
+    if (ngay) return true;
     if (giam()) { G.fromTo(tile, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.12, delay: tre || 0 }); return true; }
-    G.fromTo(tile, { clipPath: 'inset(-4% 100% -4% -4%)' }, { clipPath: 'inset(-40% -40% -40% -40%)', duration: 0.22, ease: 'power3.out', delay: tre || 0, clearProps: 'clipPath' });
-    G.fromTo(tile, { scale: 1.1 }, { scale: 1, duration: 0.22, ease: 'expo.out', delay: tre || 0 });
-    const b = tile.querySelector('.j-tile-bst');
-    if (b) {
-      if (!b.firstChild) {
-        const w = Math.round(tile.offsetWidth * 1.2), hh = Math.round(tile.offsetHeight * 1.1);
-        b.innerHTML = burstSvg(w, hh, 100 + i, { n: 14, jit: 0.34, trong: 0.66, nen: '#141414', vien: 1 });
-        b.style.width = w + 'px'; b.style.height = hh + 'px';
-        b.style.left = f1((tile.offsetWidth - w) / 2) + 'px'; b.style.top = f1((tile.offsetHeight - hh) / 2) + 'px';
-      }
-      G.fromTo(b, { scale: 0.3 }, { scale: 1, autoAlpha: 1, duration: 0.24, ease: 'back.out(2)', delay: tre || 0 });
-    }
+    const key = tile.classList.contains('k');
+    G.fromTo(tile, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05, ease: 'none', delay: tre || 0 });
+    G.fromTo(tile, { scale: key ? 1.9 : 1.5 }, { scale: 1, duration: 0.5, ease: 'expo.out', delay: tre || 0, clearProps: 'transform' });
     return true;
   }
-  function tilesDuPhong(m) {
+  /** Cac o con lai hien lan luot (so le 0.14 s) — noi dung nhan dien khong cho cue */
+  function tilesDuPhong(m, base) {
     let k = 0;
-    (m.tAll || []).forEach((i) => { if (tileVao(m, i, k * 0.22)) k++; });
+    (m.tAll || []).forEach((i) => { if (tileVao(m, i, (base || 0) + k * 0.14)) k++; });
   }
-  /** Chon vai tro thu k: to den o cong thuc + day may quay toi o minh hoa cua no (ca phan giai thich dai) */
+  /** Chon vai tro thu k: to den o cong thuc + day may quay toi o minh hoa cua no */
   function chonVaiTro(m, k, tre) {
     const T = m.T;
     if (!T || !m.vt || !m.vt.length) return;
@@ -1622,7 +1748,7 @@
     const tl = T.el.querySelector(`.j-tw[data-t="${m.vt[p].ti}"] .j-tile`);
     if (tl) tl.classList.add('on');
     camDen(T, 'P' + p, tre);
-    nhan(T, 'P' + p, tre, 1.02);
+    nhan(T, 'P' + p, tre);
   }
   function cueNguPhap(m, id, tt) {
     const T = m.T;
@@ -1630,11 +1756,8 @@
     const tre = tt ? m.api.tre(tt) : 0;
     let x;
     const tim = (arr, j) => (arr ? arr[j] : undefined);
-    if (id === 'G0') {
-      nhan(T, 'F', tre, 1.015);
-      m.api.hen(() => tilesDuPhong(m), 700);   // khong huy hen 2.3 s cua luc vao nhip: cai nao toi truoc thi hien
-      return;
-    }
+    chuoi(m, id === 'G0' ? tre : Math.max(0, tre - 0.35));
+    if (id === 'G0') { nhan(T, 'F', tre); return; }
     let i;
     if ((x = /^G2\.(\d+)$/.exec(id))) i = tim(m.tChu, +x[1]);
     else if ((x = /^G3\.(\d+)$/.exec(id))) i = tim(m.tO, +x[1]);
@@ -1643,9 +1766,12 @@
       // cac o dung truoc chua hien (Sensei noi nhay coc) -> hien theo thu tu
       (m.tAll || []).filter((k) => k < i).forEach((k) => tileVao(m, k, tre));
       tileVao(m, i, tre);
+      T.el.querySelectorAll('.j-tile.on').forEach((z) => z.classList.remove('on'));
+      const tl = T.el.querySelector(`.j-tw[data-t="${i}"] .j-tile`);
+      if (tl) tl.classList.add('on');
       const p = (m.vt || []).findIndex((v) => v.ti === i);
-      if (p >= 0) { camDen(T, 'P' + p, tre); nhan(T, 'P' + p, tre, 1.02); } else camDen(T, 'F', tre);
-      nhan(T, 'F', tre, 1.012);
+      if (p >= 0) { camDen(T, 'P' + p, tre); nhan(T, 'P' + p, tre); } else camDen(T, 'F', tre);
+      nhan(T, 'F', tre);
       return;
     }
     if ((x = /^G2c\.(\d+)$/.exec(id))) {
@@ -1653,79 +1779,96 @@
       if (k != null) {
         m.rev.add('c' + k);
         const e = T.el.querySelector(`.j-sfx.wa[data-doc="${k}"]`);
-        if (e) { e.classList.remove('j-cho'); hieu(e, tre, 'nay'); }
+        if (e) { e.dataset.s = '0.5'; hieu(e, tre, 'nay'); }
         tileVao(m, k, tre);
         camDen(T, 'F', tre);
       }
       return;
     }
-    if (/^GM\.\d+$/.test(id)) { tieuDiem(T, 'F', tre, 1.015); return; }
+    if (/^GM\.\d+$/.test(id)) { tieuDiem(T, 'F', tre); return; }
     if ((x = /^G4\.(\d+)$/.exec(id))) { tilesDuPhong(m); chonVaiTro(m, +x[1], tre); return; }
     if (id === 'G5' || id === 'G6') { tilesDuPhong(m); chonVaiTro(m, (m.kk = (m.kk || 0) + 1) + (id === 'G6' ? 1 : 0), tre); }
   }
-  // ---- cau (vi du / giang ky mot cau hoi thoai): bong thoai lon + nghia + anh
-  /** Nhan ngan: giu nguyen tu, toi da n ky tu, them … neu bi cat */
-  function capTu(t, n) {
-    const tu = String(t || '').trim().split(/\s+/);
-    let r = '';
-    for (const w of tu) { if (kyTu((r + ' ' + w).trim()).length > n) return (r || ngan(w, n)) + (r ? '…' : ''); r = (r + ' ' + w).trim(); }
-    return r;
-  }
-  const tachTen = (sp) => {
-    const s = String(sp || '').trim();
-    const mm = /^(.*?)\s*[(（]([^)）]+)[)）]\s*$/.exec(s);
-    return mm ? { jp: mm[1].trim(), la: mm[2].trim() } : { jp: s, la: '' };
-  };
-  function uocDongTok(gs, fs, w) {
-    const gap = 0.16 * fs;
-    let rows = 1, x = 0;
-    gs.forEach((g) => {
-      const wi = em(g.chu) * fs * 1.02 + 0.08 * fs;
-      if (x > 0 && x + wi > w) { rows++; x = 0; }
-      x += wi + gap;
-    });
-    return rows;
-  }
-  function layCau(xaF, hSF, coAnh) {
-    const { W, Yb, Yc } = st;
+
+
+  // ---- cau (vi du / giang ky mot cau hoi thoai): ban mau trang 6 — A hinh nhan vat + the ten, B bong thoai lon + nghia
+  function layCau(xaF, yAF) {
+    const { W, Yb } = st;
     const s = W * 0.02;
     if (st.dt) {
-      const yA = Math.round(Yb * (coAnh ? 0.24 : 0.02)), yS = Math.round(Yb * (hSF || 0.71)), t = Math.round(W * 0.026);
-      const o = {};
-      const l2 = dN(yS + t * 0.6, yS - t * 0.6);
-      if (coAnh) {
-        const l1 = dN(yA - t, yA + t);
-        o.A = cell([l1], [W / 2, 10], Yb);
-        o.S = cell([l1, l2], [W / 2, (yA + yS) / 2], Yb);
-      } else o.S = cell([l2], [W / 2, 10], Yb);
-      o.M = cell([l2], [W / 2, Yb - 10], Yb);
-      o.K = null;
-      return o;
+      const yA = Math.round(Yb * yAF), t = Math.round(W * 0.026);
+      const l1 = dN(yA - t, yA + t);
+      return { A: cell([l1], [W / 2, 10], Yb), B: cell([l1], [W / 2, Yb - 10], Yb) };
     }
-    const xa = W * xaF, hS = Math.round(Yb * hSF);
-    const l1 = dV(xa + s, xa - s), lM = [xa - s, hS + W * 0.008, W, hS - W * 0.008];
-    const cuts1 = xaF > 0 ? [l1] : [];
-    return {
-      A: xaF > 0 ? cell([l1], [10, 10], Yb) : null,
-      S: cell(cuts1.concat([lM]), [W - 10, 10], Yb),
-      M: cell(cuts1.concat([lM, dCot()]), [xa + 40, Yb - 10], Yb),
-      K: cell(cuts1.concat([lM, dCot()]), [W - 10, Yc - 10], Yc),
-    };
+    if (xaF <= 0) return { A: null, B: cell([], [W / 2, 10]) };
+    const xa = W * xaF;
+    const l1 = [xa + s, 0, xa - s, Yb];
+    return { A: cell([l1], [10, 10]), B: cell([l1], [W - 10, 10]) };
   }
-  /** Chon ti le anh / chieu cao o cau de cau dai van vua >= 84 px */
-  function chonLayCau(gs, coAnhMuon, kw) {
-    const { W, Yb } = st;
-    if (st.dt) return { xaF: coAnhMuon ? 1 : 0, hSF: clamp(0.71 - (String((st.nh && st.nh.data && st.nh.data.meaningVi) || '').length - 40) * 0.0022, 0.64, 0.71) };
-    const U = st.U, fs = 84 * U, pd = pad0();
-    const cands = kw ? [[0.28, 0.66], [0.24, 0.68], [0.22, 0.7]] : (coAnhMuon ? [[0.28, 0.64], [0.2, 0.66], [0.12, 0.69], [0, 0.71]] : [[0.12, 0.66], [0, 0.7]]);
-    let pick = cands[cands.length - 1];
-    for (const cd of cands) {
-      const wTok = (W - st.mx) - (W * cd[0] + W * 0.02 + pd) - 2 * 30 * U;
-      const rows = uocDongTok(gs, fs, wTok);
-      const hNeed = rows * 1.3 * fs + 30 * U + 20 * U + 22 * U;
-      if (hNeed <= Yb * cd[1] - st.my - pd) { pick = cd; break; }
+  /** Do be ngang tung nhom token o co 100 px (MOT lan do DOM); sau do chia hang bang tinh toan (khong dung lai DOM) */
+  function doTok(gs) {
+    const pr = probeEl();
+    pr.innerHTML = '';
+    const box = h('div', 'j-toks j-toks-do', pr, gs.map((g, k) => tokSpan(g, k)).join(''));
+    box.style.fontSize = '100px';
+    box.style.flexWrap = 'nowrap';
+    box.style.width = 'max-content';
+    const ws = [...box.children].map((e) => e.getBoundingClientRect().width);
+    const cs = getComputedStyle(box);
+    const padT = (parseFloat(cs.paddingTop) || 0) / 100;
+    const M = { ws, gap: (parseFloat(cs.columnGap) || 0) / 100, padT, rh: box.offsetHeight / 100 - padT };
+    pr.innerHTML = '';
+    return M;
+  }
+  /** Chia hang o co f, be ngang w: hang can bang (thu hep toi khi so hang sap tang). Tra { rows, hLines, wMax, ok } */
+  function chiaHang(M, f, w) {
+    const ws = M.ws.map((x) => x * f / 100), g = M.gap * f;
+    const wMax = ws.length ? Math.max(...ws) : 0;
+    const chia = (W) => {
+      const rows = [[]];
+      let x = 0;
+      ws.forEach((wi, k) => {
+        if (x > 0 && x + wi > W + 0.01) { rows.push([]); x = 0; }
+        rows[rows.length - 1].push(k);
+        x += wi + g;
+      });
+      return rows;
+    };
+    let rows = chia(w);
+    if (rows.length > 1) {
+      let lo = wMax, hi = w;
+      for (let i = 0; i < 8; i++) { const mid = (lo + hi) / 2; if (chia(mid).length <= rows.length) hi = mid; else lo = mid; }
+      rows = chia(hi);
+      const r2 = chia(Math.min(w, hi * 1.04 + 2));   // bien an toan: do that co the rong hon do tuyen tinh vai px
+      if (r2.length === rows.length) rows = r2;
     }
-    return { xaF: pick[0], hSF: pick[1] };
+    const n = rows.length;
+    return { rows, hLines: (M.padT + n * M.rh + (n - 1) * 0.44) * f, hRow: (M.padT + M.rh) * f, wMax, ok: wMax <= w + 0.6 };
+  }
+  /** Chieu cao that cua khoi chu (do trong probe an) o co f, be ngang w */
+  function doChu(html, f, w, cls) {
+    const pr = probeEl();
+    const e = h('div', cls || 'j-nghia', pr, html);
+    e.style.fontSize = f + 'px';
+    e.style.maxWidth = Math.floor(w) + 'px';
+    const r = { h: e.offsetHeight, w: e.scrollWidth };
+    e.remove();
+    return r;
+  }
+  /** Hop noi dung o B cua trang cau: goc meo cat chieu cao (h, nhu crOf) hoac chieu rong (w) */
+  function crCau(poly, pd, cut) {
+    const r = crOf(poly, pd, true);
+    if (st.dt || st.Yc >= st.Yb || cut === 'm') return r;   // 'm': giu nguyen chieu cao, chi nghia (o duoi cung) lui khoi goc meo
+    const mg = Math.round(6 * st.U);
+    if (r.x + r.w <= st.Xc - mg || r.y + r.h <= st.Yc - mg) return r;
+    if (cut === 'w') return { x: r.x, y: r.y, w: Math.max(20, st.Xc - mg - r.x), h: r.h };
+    return traoGocMeo(r);
+  }
+  /** Be ngang con dung duoc o phan duoi o B (duoi dinh goc meo) cho che do 'm' */
+  function rongDuoiMeo(r) {
+    if (st.dt || st.Yc >= st.Yb) return r.w;
+    const mg = Math.round(6 * st.U);
+    return r.x + r.w > st.Xc - mg && r.y + r.h > st.Yc - mg ? Math.max(20, st.Xc - mg - r.x) : r.w;
   }
   function dungCau(nh, api, m, T, opt, kw) {
     opt = opt || {};
@@ -1735,95 +1878,198 @@
     m.gs = gs;
     m.gOf = {};
     gs.forEach((g, k) => g.idx.forEach((i) => { m.gOf[i] = k; }));
+    const M = doTok(gs);
     const pd = pad0();
     const tt = kw ? tachTen(d.speaker) : null;
-    // anh
     let url = null;
     if (kw) url = d.avatarUrl || (nh.bai && nh.bai.sceneImageUrl) || null;
     else url = C.anhCau(toks, nh.bai) || (nh.bai && nh.bai.sceneImageUrl) || null;
-    const cl = chonLayCau(gs, true, kw);
-    const lay = layCau(cl.xaF, cl.hSF, true);
-    const A = lay.A ? addCell(T, 'A', lay.A, { bg: '#eee9e0' }) : null;
-    const S = addCell(T, 'S', lay.S);
-    const M = addCell(T, 'M', lay.M);
-    const kCao = lay.K ? (bbox(lay.K).y1 - Math.max(0, bbox(lay.K).y0)) : 0;
-    const K = lay.K && kCao >= sz(64, 40) ? addCell(T, 'K', lay.K) : null;
-    // ---- A: anh (avatar) + ten nhan vat
-    if (A) {
-      const key = toks.find((t) => t.isKeyGrammar) || toks[0] || {};
-      const vxA = Math.max(0, A.bb.x0), vyA = Math.max(0, A.bb.y0) + (st.dt ? st.my - 12 : 0), tSl = Math.round(st.W * 0.026);
-      const vhA = Math.min(st.Yb, A.bb.y1) - vyA - (st.dt ? tSl + 4 : 0);
-      const sqA = Math.round(Math.min(vhA, st.dt ? 118 * st.U : 9999));
-      datAnh(A, null, url, kw && st.dt ? { pos: '50% 30%', thay: '', ht: 'ht-duoi', chua: true, rect: { x: vxA + st.mx * 0.5, y: vyA + (vhA - sqA) / 2, w: sqA, h: sqA } } : { pos: kw ? '50% 30%' : '50% 38%', thay: kw ? '' : chuTok(key).slice(0, 2), ht: 'ht-duoi' });
-      if (kw && st.dt) {
-        const crA = crOf(A.poly, Math.round(pd * 0.6));
-        const x0 = Math.max(crA.x, vxA + st.mx * 0.5 + sqA + sz(10, 10));
-        const bx = nhet(A, { x: x0, y: crA.y, w: Math.max(80, crA.x + crA.w - x0), h: crA.h }, 'j-ghi-anh');
-        bx.style.justifyContent = 'center'; bx.style.alignItems = 'flex-start';
-        const ten = h('div', 'j-plate', bx, `<b lang="ja">${esc(tt.jp)}</b>${tt.la ? `<i>${esc(tt.la)}</i>` : ''}${d.speakerRole && !/^person/i.test(d.speakerRole) ? `<u>${esc(ngan(d.speakerRole, 20))}</u>` : ''}`);
-        fitBox(ten, bx.offsetWidth, crA.h, sz(44, 24), sz(20, 14));
-      } else if (kw) {
-        const crA = crOf(A.poly, Math.round(pd * 0.7));
-        const wPl = Math.max(crA.w, Math.min(sz(420, 240), (A.bb.x1 - crA.x) - sz(60, 30)));
-        const bx = nhet(A, { x: crA.x, y: crA.y, w: wPl, h: crA.h }, 'j-ghi-anh');
-        bx.style.justifyContent = 'flex-end'; bx.style.alignItems = 'flex-start';
-        const ten = h('div', 'j-plate', bx, `<b lang="ja">${esc(tt.jp)}</b>${tt.la ? `<i>${esc(tt.la)}</i>` : ''}${d.speakerRole && !/^person/i.test(d.speakerRole) ? `<u>${esc(ngan(d.speakerRole, 20))}</u>` : ''}`);
-        fitBox(ten, wPl, Math.round(crA.h * 0.34), sz(44, 22), sz(20, 13));
+    // ---- chon be rong cot anh + co chu + kieu bong: bac lon nhat (t2 .. san) vua o B; cau dai -> cot anh hep roi bo han cot anh
+    const cands = st.dt ? [0.24, 0.2, 0.16] : (kw ? [0.34, 0.28, 0.22, 0.17, 0.13, 0] : [0.36, 0.3, 0.24, 0.19, 0.15, 0]);
+    const ladder = [tk(2), tk(3), st.san.cau, Math.round(st.san.bong * 1.25 * 10) / 10, st.san.bong, Math.round(st.san.bong * 0.8 * 10) / 10, Math.round(st.san.bong * 0.62 * 10) / 10].filter((v, i, a) => i === 0 || v < a[i - 1] - 0.4);   // 2 bac cuoi chi cho cau cuc dai (khong bao gio chong chu)
+    const tagH = Math.round(tk(5) * 1.55);
+    const meaning = String(d.meaningVi || '');
+    const fN = tk(4);
+    const tail = Math.round(tk(5) * 1.1), gap = Math.round(pd * 0.5);
+    let pick = null;
+    const cuts = st.dt || st.Yc >= st.Yb ? ['h'] : ['m', 'w', 'h'];   // goc meo: cat bot chieu cao (h) hoac chieu rong (w) cua o B
+    const fNs = [fN, st.san.nghia].filter((v, i, a) => i === 0 || v < a[i - 1] - 0.4);
+    const cacheM = {};
+    const kTach = gs.findIndex((g, i) => g.key && i >= 1 && i < gs.length - 1);
+    const coTach = gs.length >= 3 && kTach >= 0 && kTach < gs.length - 1;
+    // pha 1: giu cot anh/chan dung (ban mau co anh) chung nao co chu van >= san cau; cot anh rong nhat vua truoc.
+    // pha 2: co chu cau lon nhat truoc (khong anh), roi ha dan (ca duoi san) toi khi vua
+    const thu = (fs, xs) => {
+      for (const f of fs) {
+        for (const xaF of xs) {
+          const lay0 = layCau(xaF, 0.22);
+          for (const cut of cuts) {
+            const crB0 = crCau(lay0.B, pd, cut);
+            const bpx0 = Math.round(0.42 * f);
+            const wB = crB0.w - 2 * bpx0 - (st.dt ? 0 : Math.round(pd * 1.2));
+            const r = chiaHang(M, f, wB);
+            if (!r.ok || r.wMax > wB + 0.6) continue;
+            const n = r.rows.length, padY = Math.round(0.24 * f);
+            const nEf = n === 1 && coTach ? 2 : n;   // mot hang nhung se tach 2 bong (sau tro tu chu de): tinh chieu cao 2 bong
+            const hSep = nEf * (r.hRow + 2 * padY) + (nEf - 1) * gap + tail;
+            const hOne = r.hLines + 2 * padY + tail;
+            for (const fq of fNs) {
+              const key = xaF + '|' + cut + '|' + fq;
+              const wLim = cut === 'm' ? rongDuoiMeo(crB0) : crB0.w;
+              const hMt = cacheM[key] != null ? cacheM[key] : (cacheM[key] = doChu(jp(meaning), fq, wLim * 0.92 - Math.round(36 * st.U), 'j-nghia j-nghia-cau').h);
+              if (hMt > (crB0.h - tagH) * 0.4 - Math.round(34 * st.U) + 0.6 && fq !== fNs[fNs.length - 1]) continue;
+              const free = crB0.h - tagH - (hMt + Math.round(36 * st.U)) - Math.round(pd * 0.8);
+              const okSep = nEf <= 2 && hSep <= free + 0.5, okOne = hOne <= free + 0.5;
+              if (!okSep && !okOne) continue;
+              // che do 'm': bong thoai (khong tinh duoi) phai nam tren dinh goc meo khi o B cham goc meo
+              if (cut === 'm' && wLim < crB0.w && (okSep ? hSep : hOne) - tail > st.Yc - Math.round(6 * st.U) - crB0.y - tagH + 0.5) continue;
+              if (okSep) return { xaF, f, rows: r.rows, modo: 'sep', cut, fN: fq };
+              return { xaF, f, rows: r.rows, modo: n === 1 && !coTach ? 'sep' : 'mot', cut, fN: fq };
+            }
+          }
+        }
       }
+      return null;
+    };
+    const fSan = ladder.filter((v) => v >= st.san.cau * (kw ? 0.5 : 1) - 0.5);   // giang ky hoi thoai: chan dung la bat buoc -> chu co the ha toi ~0.5 san cau (chi cau rat dai)
+    for (const xaF of cands) {   // moi be rong cot anh: co lon nhat vua; chon theo diem co chu x (1 + 1.2 x be rong cot anh)
+      if (xaF <= 0) continue;
+      const pk = thu(fSan, [xaF]);
+      if (pk && (!pick || pk.f * (1 + 1.2 * pk.xaF) > pick.f * (1 + 1.2 * pick.xaF) + 0.01)) pick = pk;
     }
-    // ---- S: bong thoai chua token (+ romaji)
-    const crS = crOf(S.poly, pd);
-    veLopNet(S, crS, 51, st.dt ? 50 : 130, null, 0.008);
-    const wS = nhet(S, crS, 'j-cs');
-    const duoi = sz(22, 14);
-    const bh = Math.floor(crS.h - duoi);
-    const bong = h('div', 'j-bong-x', wS);
-    bong.style.width = Math.floor(crS.w) + 'px'; bong.style.height = bh + 'px';
-    bong.innerHTML = bongSvg(crS.w, bh, sz(60, 26), { bx: Math.min(crS.w * 0.16, sz(140, 60)), bw: sz(70, 32), tx: Math.max(0, Math.min(crS.w * 0.16, sz(140, 60)) - sz(90, 34)), ty: bh + duoi }, Math.max(3, Math.round(st.bw * 0.85)));
-    const bpad = sz(22, 12);
-    const inn = h('div', 'j-bong-in', bong);
-    inn.style.left = bpad + 'px'; inn.style.top = bpad * 0.4 + 'px'; inn.style.width = f1(crS.w - bpad * 2) + 'px'; inn.style.height = f1(bh - bpad * 0.8) + 'px';
-    const toksBox = h('div', 'j-toks', inn, gs.map((g, k) => tokSpan(g, k)).join(''));
-    const rom = h('div', 'j-roma', inn, esc(romajiCau(toks)));
-    rom.lang = 'en';
-    const fminC = kw ? sz(84, 28) : sz(84, 28);
-    const wIn = inn.clientWidth || (crS.w - bpad * 2);
-    const hIn = inn.clientHeight || (bh - bpad * 0.8);
-    fitStack([{ el: toksBox, fmax: sz(160, 60), fmin: fminC }, { el: rom, fmax: sz(30, 15), fmin: sz(20, 14) }], wIn, hIn, sz(10, 5));
-    if (toksBox.scrollHeight + rom.offsetHeight + sz(10, 5) > hIn + 1 || toksBox.scrollWidth > wIn + 1) {
-      // cau qua dai: bo dong romaji de giu chu cau >= 84 px (neu van tran thi ha xuong)
-      rom.style.display = 'none';
-      fitMin(toksBox, wIn, hIn, sz(160, 60), fminC, sz(60, 24));
+    if (!pick) pick = thu(ladder, cands);
+    if (!pick) pick = { xaF: cands[cands.length - 1], f: ladder[ladder.length - 1], rows: null, modo: 'mot', cut: 'h', fN: fNs[fNs.length - 1] };
+    const lay = layCau(pick.xaF, 0.22);
+    const A = lay.A ? addCell(T, 'A', lay.A) : null;
+    const B = addCell(T, 'B', lay.B);
+    // ---- A: anh (avatar) + the ten nhan vat
+    if (A) {
+      datAnh(A, url, { pos: kw ? '50% 28%' : '50% 38%', thay: kw ? '' : chuTok(toks.find((t) => t.isKeyGrammar) || toks[0] || {}).slice(0, 2), ht: 'ht-duoi', kb: !kw });
+      if (kw && url) { const im = A.noi.querySelector('.j-anh img'); if (im) ganAvatar(m, im, { lineId: d.id, nhanVat: nhanVatId(url) }); }
+      m.anhImg = A.noi.querySelector('.j-anh img');
     }
-    canBang(toksBox, wIn);
-    vuaKhung(toksBox, inn, sz(40, 20));
-    // ---- M: nghia
-    const crM = crOf(M.poly, Math.round(pd * 0.8));
-    const wM = nhet(M, crM, 'j-cm');
-    h('div', 'j-tagrow', wM, the('NGHĨA'));
-    const chua = !m.rev.has(kw ? 'F4' : 'E5');
+    // ---- B: nhan lon -> goc; bong thoai (hang token); nghia
+    const crB = crCau(B.poly, pd, pick.cut);
+    veLopNet(B, crB, 51, st.dt ? 50 : 130, null, 0.008);
+    let so1 = '1', so2 = '1';
+    if (kw) { const c = nh.chuong || {}; so1 = String(c.i || 1); so2 = String(c.n || 1); } else { const mm = /(\d+)\s*\/\s*(\d+)\s*$/.exec(String((nh.beat && nh.beat.label) || '')); if (mm) { so1 = mm[1]; so2 = mm[2]; } }
+    const nl = nhanLonTao(B, { x: crB.x, y: crB.y, w: crB.w, h: crB.h }, null, kw ? 'GIẢNG KỸ' : 'VÍ DỤ', so1 + '/' + so2);
+    const f = pick.f;
+    const bpx = Math.round(0.42 * f);
+    const wB = crB.w - 2 * bpx - (st.dt ? 0 : Math.round(pd * 1.2));
+    const rr = pick.rows ? { rows: pick.rows } : chiaHang(M, f, wB);
+    let rows = rr.rows;
+    if (rows.length === 1 && pick.modo === 'sep' && gs.length >= 3) {   // mot hang: tach hai bong sau tro tu chu de (ban mau: 私は / マイク・ミラーです)
+      const k = gs.findIndex((g, i) => g.key && i >= 1 && i < gs.length - 1);
+      if (k >= 0 && k < gs.length - 1) rows = [rows[0].filter((x) => x <= k), rows[0].filter((x) => x > k)];
+    }
+    const nR = rows.length;
+    const padY = Math.round(0.24 * f);
+    const wrap = nhet(B, { x: crB.x, y: crB.y + tagH, w: crB.w, h: crB.h - tagH }, 'j-cs');
+    // nghia: dat truoc de biet con bao nhieu cho cho bong
+    const wLimM = pick.cut === 'm' ? rongDuoiMeo(crB) : crB.w;
+    const maxMW = Math.floor(Math.min(crB.w, wLimM) * 0.92), padHop = Math.round(18 * st.U) * 2;
+    const mhop = h('div', 'j-hop j-hop-dich', wrap);
     const khoaN = kw ? 'F4' : 'E5';
-    const ng = h('div', 'j-nghia j-nghia-cau', wM, jp(d.meaningVi || ''));
-    ng.setAttribute('data-cho', khoaN); ng.dataset.fx = 'len';
-    if (chua) ng.classList.add('j-cho');
-    wM.style.paddingTop = sz(40, 28) + 'px';
-    fitMin(ng, crM.w, crM.h - sz(40, 28), sz(64, 34), sz(44, 28), sz(24, 16));
-    // ---- K: dem vi du / nhan vat
-    if (K) {
-      const crK = crOf(K.poly, Math.round(pd * 0.3));
-      veLopNet(K, crK, 13, 60);
-      const wK = nhet(K, crK, 'j-vd');
-      let so1 = '1', so2 = '1';
-      if (kw) { const c = nh.chuong || {}; so1 = String(c.i || 1); so2 = String(c.n || 1); } else { const mm = /(\d+)\s*\/\s*(\d+)\s*$/.exec(String((nh.beat && nh.beat.label) || '')); if (mm) { so1 = mm[1]; so2 = mm[2]; } }
-      const hang = h('div', 'j-k-hang', wK, `${the(kw ? 'GIẢNG KỸ' : 'VÍ DỤ')}<b class="j-dem-nho">${so1}<i>/${so2}</i></b>`);
-      hang.style.fontSize = sz(22, 13) + 'px';
+    const ng = h('div', 'j-nghia j-nghia-cau j-tx', mhop, jp(meaning));
+    mhop.dataset.cho = khoaN; mhop.dataset.fx = 'truot'; mhop.dataset.dy = '30';
+    const chua = !m.rev.has(khoaN) && !opt.ngay;
+    if (chua) mhop.classList.add('j-cho');
+    const grupHang = pick.modo === 'sep' && nR <= 2 ? rows.map((r) => [r]) : [rows];
+    const hNghiaMax = Math.round((crB.h - tagH) * 0.4) - Math.round(34 * st.U);
+    fitBacMax(ng, maxMW - padHop, hNghiaMax, [pick.fN], Math.min(pick.fN, st.san.nghia));
+    if (ng.offsetHeight > hNghiaMax + 0.6) catDeVua(ng, meaning, maxMW - padHop, hNghiaMax, parseFloat(ng.style.fontSize) || st.san.nghia);
+    mhop.style.position = 'absolute';
+    if (wLimM < crB.w) mhop.style.left = f1(Math.max(0, wLimM - mhop.offsetWidth)) + 'px'; else mhop.style.right = '0px';
+    const hMean = mhop.offsetHeight;
+    const hAvail = crB.h - tagH - hMean - Math.round(pd * 0.5);
+    const bubs = [];
+    const area = h('div', 'j-bubs', wrap);
+    area.style.height = Math.max(40, crB.h - tagH) + 'px';
+    grupHang.forEach((hs, bi) => {
+      const bub = h('div', 'j-bub', area);
+      const inn = h('div', 'j-bub-in', bub);
+      const toksBox = h('div', 'j-toks j-tx', inn);
+      toksBox.style.fontSize = f + 'px';
+      toksBox.innerHTML = hs.map((r) => `<div class="j-hang">${r.map((k) => tokSpan(gs[k], k)).join('')}</div>`).join('');
+      bub.style.padding = `${Math.round(padY * 0.6)}px ${bpx}px ${padY}px`;
+      const last = bi === grupHang.length - 1;
+      bub.classList.add('j-cho');
+      bub.dataset.cho = 'B' + bi; bub.dataset.fx = 'nay'; bub.dataset.s = '0.8';
+      if (last) bub.classList.add('co-duoi');
+      bubs.push({ bub, inn, toksBox, last });
+    });
+    // vi tri: bong i lech trai / phai so le (nhin nhu ban mau); duoi bong chi ve phia nhan vat (A) hoac meo
+    const hBub = bubs.map((b) => b.bub.offsetHeight);
+    const tot = hBub.reduce((a, b) => a + b, 0) + (bubs.length - 1) * gap + tail;
+    const gapM = Math.round(pd * 0.7);
+    let y = Math.max(0, (crB.h - tagH - (tot + gapM + hMean)) / 2);
+    if (wLimM < crB.w) y = Math.max(0, Math.min(y, st.Yc - Math.round(6 * st.U) - crB.y - tagH - (tot - tail)));   // bong thoai nam tren dinh goc meo
+    mhop.style.top = f1(y + tot + gapM) + 'px';
+    {   // nghia khong duoc tran xuong duoi o B (cau cuc dai): cat bot cho vua phan con lai
+      const con = crB.h - tagH - (y + tot + gapM) - 2;
+      if (mhop.offsetHeight > con) {
+        const hTxt = Math.max(parseFloat(ng.style.fontSize) * 1.2, con - Math.round(34 * st.U));
+        catDeVua(ng, meaning, maxMW - padHop, hTxt, parseFloat(ng.style.fontSize) || st.san.nghia);
+      }
+      if (mhop.offsetHeight > con) mhop.style.top = f1(Math.max(0, crB.h - tagH - mhop.offsetHeight - 2)) + 'px';
     }
-    oVao(T, ['A', 'S', 'M', 'K'].filter((k) => T.cells[k]), opt.tre || 0, 0.06);
+    bubs.forEach((b, i) => {
+      const bw = b.bub.offsetWidth, bh = b.bub.offsetHeight;
+      const free = Math.max(0, crB.w - bw);
+      const x = bubs.length === 1 ? free * 0.5 : (i % 2 ? free * 0.92 : free * 0.08);
+      b.bub.style.left = f1(x) + 'px'; b.bub.style.top = f1(y) + 'px';
+      const rr2 = Math.min(Math.round(0.4 * f), bh / 2);
+      const bx = Math.min(bw * 0.2, Math.round(110 * st.U));
+      b.bub.insertAdjacentHTML('afterbegin', bongSvg(bw, bh, rr2, b.last ? { bx, bw: Math.round(56 * st.U), tx: bx - Math.round(46 * st.U), ty: bh + tail } : null, Math.max(3, Math.round(st.bw * 0.85))));
+      y += bh + gap;
+    });
+    m.bubs = bubs;
+    // the ten (kaiwa) — chi khi <= 2 hang (khong vuot ngan sach mat do)
+    if (kw && A && tt && (tt.jp || tt.la) && nR <= 2) {
+      const crA = crOf(A.poly, Math.round(pd * 0.7));
+      const bx = nhet(A, { x: crA.x, y: crA.y, w: crA.w, h: crA.h }, 'j-ghi-anh');
+      bx.style.justifyContent = 'flex-end'; bx.style.alignItems = 'flex-start';
+      const roleOk = d.speakerRole && !/^person/i.test(d.speakerRole);
+      h('div', 'j-plate j-tx', bx, `<b lang="ja">${esc(tt.jp)}</b>${tt.la ? `<i>${esc(tt.la)}</i>` : ''}${roleOk ? `<u>${esc(ngan(d.speakerRole, 20))}</u>` : ''}`).style.maxWidth = Math.floor(crA.w) + 'px';
+    }
     m.fase = 'cau';
-    camTuc(T, S.cx, S.cy);
-    if (!opt.ngay && chua) m.hNghia = api.hen(() => cueCau(m, kw ? 'F4' : 'E5', null), 4600);
-    // dat lai to sang neu dang giua karaoke
+    camTuc(T, B.cx, B.cy);
+    // bong + token hien theo thu tu (nay -> dap) sau nhan lon, khong cho cue (noi dung nhan dien)
+    nhanLonLich(m, nl, (S) => bubs.forEach((b, i) => {
+      const t0 = S + 0.4 + i * 0.35;
+      hienKhoa(m, 'B' + i, t0);
+      if (giam()) return;
+      const tks = [...b.toksBox.querySelectorAll('.j-tok')];
+      const buoc = Math.min(0.1, 0.9 / Math.max(1, tks.length));
+      tks.forEach((e, k) => {
+        const d0 = t0 + 0.15 + k * buoc;
+        G.fromTo(e, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.05, ease: 'none', delay: d0 });
+        G.fromTo(e, { scale: e.classList.contains('k') ? 1.7 : 1.35 }, { scale: 1, duration: 0.4, ease: 'expo.out', delay: d0, clearProps: 'transform' });
+      });
+    }));
+    if (opt.ngay) bubs.forEach((b, i) => { hienNgay(b.bub); m.rev.add('B' + i); });
+    if (!opt.ngay && chua) m.hNghia = m.hen(() => cueCau(m, khoaN, null), 3600);
     if (m.tokOn != null) batTok(m, m.tokOn, true);
+  }
+  /** Ten file nhan vat tu avatarUrl (assets/minh-hoa/nv/<id>/<cam xuc>.webp hoac nv-<id>.webp) */
+  function nhanVatId(url) {
+    const s = String(url || '');
+    let mm = /\/nv\/([^/]+)\//.exec(s);
+    if (mm) return mm[1];
+    mm = /nv-([^./]+)\.\w+$/.exec(s);
+    return mm ? mm[1] : '';
+  }
+  /** Gan avatar noi (nhep mieng / bieu cam / ky hieu) cho anh chan dung: chi nhan vat dang noi chuyen dong */
+  function ganAvatar(m, img, o) {
+    try {
+      const AV = window.SenseiAvatarNoi;
+      if (!AV || !AV.gan || !img || img.dataset.avn) return null;
+      img.dataset.avn = '1';
+      const ct = AV.gan(img, o);
+      (m.avs = m.avs || []).push(ct);
+      return ct;
+    } catch (e) { return null; }
   }
   function batTok(m, k, ngay) {
     if (!m.T) return;
@@ -1846,7 +2092,7 @@
       if (k == null) return;
       const t = api.treT(x.T);
       if (tl) tl.call(() => { if (m.vivo && m.T) batTok(m, k); }, null, t);
-      else api.hen(() => { if (m.vivo && m.T) batTok(m, k); }, Math.round(t * 1000));
+      else m.hen(() => { if (m.vivo && m.T) batTok(m, k); }, Math.round(t * 1000));
     });
   }
   function cueCau(m, id, tt) {
@@ -1855,19 +2101,20 @@
     const tre = tt ? m.api.tre(tt) : 0;
     const kw = m.nh.kind === 'kaiwa';
     let x;
-    if (id === 'E0' || id === 'F1') { nhan(T, 'S', tre, 1.012); return; }
-    if (id === 'E1' || id === 'E2' || id === 'E2b' || id === 'F2') { camDen(T, 'S', tre); nhan(T, 'S', tre, 1.012); return; }
+    chuoi(m, id === 'E0' || id === 'F1' ? tre : Math.max(0, tre - 0.35));
+    if (id === 'E0' || id === 'F1') { nhan(T, 'B', tre); return; }
+    if (id === 'E1' || id === 'E2' || id === 'E2b' || id === 'F2') { camDen(T, 'B', tre); nhan(T, 'B', tre); return; }
     if (id === 'E5' || id === 'F4') {
-      if (m.hNghia != null) m.api.huyHen(m.hNghia);
+      if (m.hNghia != null) m.huy(m.hNghia);
       hienKhoa(m, id, tre);
-      tieuDiem(T, 'M', tre, 1.02);
+      tieuDiem(T, 'B', tre);
       return;
     }
     if ((x = /^E4\.(\d+)$/.exec(id))) {
       const k = m.gOf ? m.gOf[+x[1]] : null;
       const e = k != null ? T.el.querySelector(`.j-tok[data-g="${k}"]`) : null;
       if (e) { batTok(m, k); tokDoc(m, e, m.gs[k], tre); }
-      camDen(T, 'S', tre);
+      camDen(T, 'B', tre);
       return;
     }
     if ((x = /^F3\.(\d+)$/.exec(id))) {
@@ -1875,81 +2122,125 @@
       const k = ks[+x[1]];
       const e = k != null ? T.el.querySelector(`.j-tok[data-g="${k}"]`) : null;
       if (e) { batTok(m, k); tokDoc(m, e, m.gs[k], tre); }
-      camDen(T, 'S', tre); nhan(T, 'S', tre, 1.01);
+      camDen(T, 'B', tre); nhan(T, 'B', tre);
       return;
     }
-    if (/^E3/.test(id)) { nhan(T, 'S', tre, 1.01); }
+    if (/^E3/.test(id)) { nhan(T, 'B', tre); }
   }
   /** Cach doc ("wa") hien tren dong furigana cua token tro tu: quet chu, khong de len chu khac */
   function tokDoc(m, e, g, tre) {
     const rt = e.querySelector('.j-rt-doc');
     if (!rt || rt.dataset.da) return;
     rt.dataset.da = '1';
-    const hien = () => { rt.style.visibility = 'visible'; if (!giam()) G.fromTo(rt, { clipPath: 'inset(-10% 100% -10% 0)' }, { clipPath: 'inset(-10% -10% -10% -10%)', duration: 0.22, ease: 'power3.out', clearProps: 'clipPath' }); };
-    if (tre > 0.02) m.api.hen(hien, Math.round(tre * 1000)); else hien();
+    const hien = () => { rt.style.visibility = 'visible'; if (!giam()) G.fromTo(rt, { clipPath: 'inset(-10% 100% -10% 0)' }, { clipPath: 'inset(-10% -10% -10% -10%)', duration: 0.3, ease: 'power3.inOut', clearProps: 'clipPath' }); };
+    if (tre > 0.02) m.hen(hien, Math.round(tre * 1000)); else hien();
   }
-  // ---- hoi thoai: gioi thieu (kaiwa-intro) + nghe tron doan (kaiwa-run)
+
+
+  // ---- hoi thoai: gioi thieu (kaiwa-intro) + nghe tron doan (kaiwa-run): A canh bai, B bong thoai luot dang noi + nghia, hang chan dung
   function vaiCua(ds) {
     const out = [];
     (ds || []).forEach((l) => {
       if (!l) return;
       const t = tachTen(l.speaker);
-      if (!out.find((x) => x.jp === t.jp)) out.push({ jp: t.jp, la: t.la, anh: l.avatarUrl || '', role: l.speakerRole || '' });
+      if (!out.find((x) => x.jp === t.jp)) out.push({ jp: t.jp, la: t.la, anh: l.avatarUrl || '', role: l.speakerRole || '', id: nhanVatId(l.avatarUrl) });
     });
     return out;
   }
   function layHoiThoai(n) {
-    const { W, Yb, Yc } = st;
-    const s = W * 0.02;
+    const { W, Yb } = st;
+    const s = W * 0.02, wob = W * 0.008;
     if (st.dt) {
-      const yA = Math.round(Yb * 0.2), yB = Math.round(Yb * 0.74), t = Math.round(W * 0.026);
+      const yA = Math.round(Yb * 0.2), yB = Math.round(Yb * 0.7), t = Math.round(W * 0.026);
       const l1 = dN(yA - t, yA + t), l2 = dN(yB + t * 0.6, yB - t * 0.6);
       const o = { A: cell([l1], [W / 2, 10], Yb), B: cell([l1, l2], [W / 2, (yA + yB) / 2], Yb) };
       const cols = Math.min(4, n);
-      const y0 = yB;
       for (let p = 0; p < cols; p++) {
         const xl = W * p / cols, xr = W * (p + 1) / cols, sl = W * 0.02;
         const cuts = [l2];
         if (p > 0) cuts.push([xl + sl, 0, xl - sl, Yb]);
         if (p < cols - 1) cuts.push([xr + sl, 0, xr - sl, Yb]);
-        o['P' + p] = cell(cuts, [(xl + xr) / 2, y0 + (Yb - y0) / 2], Yb);
+        o['P' + p] = cell(cuts, [(xl + xr) / 2, yB + (Yb - yB) / 2], Yb);
       }
       return o;
     }
-    const xa = W * 0.32, hB = Math.round(Yb * 0.64);
-    const l1 = dV(xa + s, xa - s), l2 = [xa - s, hB + W * 0.008, W, hB - W * 0.008];
-    const o = { A: cell([l1], [10, 10], Yb), B: cell([l1, l2], [W - 10, 10], Yb) };
-    // hang nhan vat duoi: toi da 4; o thu 4 (neu co) o cot meo
-    const wRow = Xc0() - xa;
-    const nTrong = Math.min(n, 3);
+    const xa = W * 0.3, hB = Math.round(Yb * 0.66);
+    const l1 = dV(xa + s, xa - s), l2 = [xa - s, hB + wob, W, hB - wob];
+    const o = { A: cell([l1], [10, 10]), B: cell([l1, l2], [W - 10, 10]) };
+    const wRow = W - xa;
+    const nTrong = Math.min(n, 4);
     for (let p = 0; p < nTrong; p++) {
       const xl = xa + wRow * p / nTrong, xr = xa + wRow * (p + 1) / nTrong, sl = W * 0.012;
       const cuts = [l1, l2];
       if (p > 0) cuts.push([xl + sl, 0, xl - sl, Yb]);
-      if (p < nTrong - 1) cuts.push([xr + sl, 0, xr - sl, Yb]); else cuts.push(dCot());
+      if (p < nTrong - 1) cuts.push([xr + sl, 0, xr - sl, Yb]);
       o['P' + p] = cell(cuts, [(xl + xr) / 2, Yb - 20], Yb);
     }
-    // cot meo: nhan vat thu 4 hoac tieu de
-    o.K = cell([l1, l2, dCot()], [W - 10, Yc - 10], Yc);
     return o;
   }
-  const Xc0 = () => st.Xc;
+  /** O chan dung nhan vat: anh (nhep mieng qua SenseiAvatarNoi) + the ten (hien khi dang noi / duoc goi ten) */
   function veNhanVat(m, c, v, gan) {
-    const cr = crOf(c.poly, Math.round(pad0() * 0.7));
+    const cr = crOf(c.poly, Math.round(pad0() * 0.5));
     veLopNet(c, cr, 60 + gan, 40);
-    const w = nhet(c, cr, 'j-p');
-    const hAv = Math.floor(Math.min(cr.h, cr.w * 0.62));
+    const w = nhet(c, { x: c.bb.x0, y: c.bb.y0, w: c.bw, h: c.bh }, 'j-p');
+    w.style.left = '0px'; w.style.top = '0px'; w.style.width = c.bw + 'px'; w.style.height = c.bh + 'px';
+    const va = Math.max(0, c.bb.x0), vy = Math.max(0, c.bb.y0);
+    const vw = Math.min(st.W, c.bb.x1) - va, vh = Math.min(st.Yb, c.bb.y1) - vy;
     const av = h('div', 'j-p-av', w);
-    av.style.width = hAv + 'px'; av.style.height = hAv + 'px';
-    if (v.anh) av.innerHTML = `<img src="${esc(v.anh)}" alt="" decoding="async" draggable="false" onerror="this.remove()">`;
-    else av.innerHTML = `<span lang="ja">${esc(kyTu(v.jp)[0] || '?')}</span>`;
-    const tn = h('div', 'j-p-ten', w, `<b lang="ja">${esc(v.jp)}</b>${v.la ? `<i>${esc(v.la)}</i>` : ''}`);
-    const wTen = Math.max(40, cr.w - hAv - sz(14, 8));
-    if (!st.dt && cr.w - hAv > Math.max(150, cr.w * 0.42)) { w.style.flexDirection = 'row'; w.style.gap = sz(14, 8) + 'px'; fitBox(tn, wTen, cr.h, sz(44, 20), sz(20, 13)); }
-    else { w.style.flexDirection = 'column'; w.style.gap = '4px'; const hAv2 = Math.floor(Math.min(cr.h * 0.62, cr.w)); av.style.width = hAv2 + 'px'; av.style.height = hAv2 + 'px'; tn.style.textAlign = 'center'; tn.style.alignItems = 'center'; tn.style.whiteSpace = 'nowrap'; fitBox(tn, cr.w, cr.h - hAv2 - 6, sz(40, 20), sz(18, 14)); }
-    return w;
+    av.style.left = f1(va - c.bx) + 'px'; av.style.top = f1(vy - c.by) + 'px'; av.style.width = f1(vw) + 'px'; av.style.height = f1(vh) + 'px';
+    if (v.anh) {
+      av.innerHTML = `<img src="${esc(v.anh)}" alt="" decoding="async" draggable="false" onerror="this.remove()"/>`;
+      const im = av.firstChild;
+      if (im && im.tagName === 'IMG') {
+        ganAvatar(m, im, { nhanVat: v.id || nhanVatId(v.anh) });
+        // moi cau thoai cua nhan vat nay: mot bo dieu khien theo lineId (engine chi dung avatar khop lineId khi co) — chi nhan vat dang noi chuyen dong
+        (m.ds || []).forEach((l) => { if (l && l.id && tachTen(l.speaker).jp === v.jp) { try { const AV = window.SenseiAvatarNoi; if (AV && AV.gan) (m.avs = m.avs || []).push(AV.gan(im, { lineId: l.id, nhanVat: v.id || nhanVatId(v.anh) })); } catch (e) {} } });
+      }
+    } else av.innerHTML = `<span lang="ja">${esc(kyTu(v.jp)[0] || '?')}</span>`;
+    h('i', 'j-ht ht-duoi', av);
+    const tn = h('div', 'j-p-ten j-tx', w, `<b lang="ja">${esc(v.jp)}</b>${v.la ? `<i>${esc(v.la)}</i>` : ''}`);
+    tn.style.left = f1(Math.max(cr.x, va + 6 * st.U) - c.bx) + 'px';
+    tn.style.bottom = f1(c.by + c.bh - Math.min(Math.min(st.Yb, c.bb.y1) - 6 * st.U, cr.y + cr.h)) + 'px';
+    tn.style.maxWidth = Math.max(40, Math.floor(Math.min(cr.w, vw) - 8)) + 'px';
+    tn.style.fontSize = tk(6) + 'px';
+    return { w, tn };
   }
-  /** Hien mot luot thoai trong bong thoai o B (tokens + nghia); bien doi khi doi luot */
+  /** Bong thoai don (nhieu dong) trong hop cr cua o c: tra { wrap, toks, f } */
+  function bongDon(c, cr, gs, hTrong, opts) {
+    opts = opts || {};
+    const wrap = nhet(c, cr, 'j-luot');
+    const bub = h('div', 'j-bub j-bub-don', wrap);
+    const bpx = Math.round((st.dt ? 12 : 20) * st.U);
+    const inn = h('div', 'j-bub-in', bub);
+    const duoi = Math.round(tk(5) * 0.7);
+    bub.style.padding = `${Math.round(8 * st.U)}px ${bpx}px ${Math.round(6 * st.U)}px`;
+    const wIn = cr.w - 2 * bpx - Math.round(8 * st.U);
+    const hIn = hTrong - duoi - Math.round(14 * st.U);
+    const bac = [tk(3), st.san.cau, st.san.bong * 1.25, st.san.bong, st.san.bong * 0.85, st.san.nghia].filter((v, i, a) => i === 0 || v < a[i - 1] - 0.4);
+    const M = doTok(gs);
+    let f = bac[bac.length - 1], rr = chiaHang(M, f, wIn);
+    for (const b of bac) { const r = chiaHang(M, b, wIn); if (r.ok && r.hLines <= hIn + 0.6) { f = b; rr = r; break; } }
+    if (!(rr.ok && rr.hLines <= hIn + 0.6)) {   // cau cuc dai: khong bac nao vua chieu cao -> ha lien tuc (toi 15 px dt / 28 px may) de con cho cho nghia
+      const sanThap = st.dt ? 15 : st.san.nghia;
+      let lo = Math.min(sanThap, f), hi = f;
+      const vua = (x) => { const r = chiaHang(M, x, wIn); return r.ok && r.hLines <= hIn + 0.6; };
+      if (vua(lo)) { for (let i = 0; i < 8 && hi - lo > 0.5; i++) { const mid = (lo + hi) / 2; if (vua(mid)) lo = mid; else hi = mid; } }
+      f = Math.round(lo * 10) / 10; rr = chiaHang(M, f, wIn);
+    }
+    const toksBox = h('div', 'j-toks j-tx', inn);
+    toksBox.style.fontSize = f + 'px';
+    toksBox.innerHTML = rr.rows.map((r) => `<div class="j-hang">${r.map((k) => tokSpan(gs[k], k)).join('')}</div>`).join('');
+    vuaKhung(toksBox, bub, st.san.nghia * 0.5);
+    const hh = Math.min(hTrong - duoi, toksBox.offsetHeight + Math.round(14 * st.U));
+    bub.style.width = (Math.min(cr.w, toksBox.offsetWidth + 2 * bpx + Math.round(8 * st.U))) + 'px';
+    bub.style.minHeight = hh + 'px';
+    bub.style.left = '0px'; bub.style.top = '0px';
+    const bw = bub.offsetWidth, bh = bub.offsetHeight;
+    bub.style.left = f1((cr.w - bw) * 0.5) + 'px';
+    bub.insertAdjacentHTML('afterbegin', bongSvg(bw, bh, Math.min(Math.round(0.4 * f), bh / 2), { bx: Math.min(bw * 0.16, 110 * st.U), bw: Math.round(54 * st.U), tx: -Math.round(60 * st.U), ty: bh + duoi }, Math.max(3, Math.round(st.bw * 0.85))));
+    return { wrap, bub, toksBox, f, h: bh + duoi };
+  }
+  /** Hien mot luot thoai trong o B (bong thoai + nghia); thay luot truoc */
   function hienLuot(m, line, i, tre, ngay) {
     const T = m.T;
     if (!T || !T.cells.B || !line) return;
@@ -1961,37 +2252,45 @@
     m.gs = gs; m.gOf = {};
     gs.forEach((g, k) => g.idx.forEach((ii) => { m.gOf[ii] = k; }));
     m.tokOn = null;
-    const wrap = nhet(B, { x: cr.x, y: cr.y, w: cr.w, h: cr.h }, 'j-luot');
-    const duoi = sz(30, 14);
-    const bh = Math.floor(cr.h - duoi);
-    const bong = h('div', 'j-bong-x', wrap);
-    bong.style.width = Math.floor(cr.w) + 'px'; bong.style.height = bh + 'px';
-    bong.innerHTML = bongSvg(cr.w, bh, sz(56, 24), { bx: Math.min(cr.w * 0.2, sz(150, 60)), bw: sz(64, 30), tx: Math.max(0, Math.min(cr.w * 0.2, sz(150, 60)) - sz(60, 20)), ty: bh + duoi }, Math.max(3, Math.round(st.bw * 0.85)));
-    const bpad = sz(22, 10);
-    const inn = h('div', 'j-bong-in', bong);
-    inn.style.left = bpad + 'px'; inn.style.top = bpad * 0.5 + 'px'; inn.style.width = f1(cr.w - bpad * 2) + 'px'; inn.style.height = f1(bh - bpad) + 'px';
-    if (m.tagEl) m.tagEl.textContent = 'HỘI THOẠI  ' + (i != null ? (i + 1) : '') + (m.tong ? '/' + m.tong : '');
-    const tb = h('div', 'j-toks', inn, gs.map((g, k) => tokSpan(g, k)).join(''));
-    const ng = h('div', 'j-luot-nghia', inn, jp(ngan(line.meaningVi || '', 120)));
-    const wIn2 = inn.clientWidth || (cr.w - bpad * 2);
-    fitStack([{ el: tb, fmax: sz(110, 44), fmin: sz(60, 26) }, { el: ng, fmax: sz(38, 18), fmin: sz(20, 13) }], wIn2, (inn.clientHeight || (bh - bpad)), sz(8, 4));
-    canBang(tb, wIn2);
-    vuaKhung(tb, inn, sz(36, 18));
+    const fN = tk(4);
+    const nMean = Math.max(1, Math.ceil(em(line.meaningVi || '') * fN / Math.max(60, cr.w * 0.9)));
+    const hMean = Math.min(Math.round(cr.h * 0.36), Math.round(Math.min(2, nMean) * fN * 1.22 + 26 * st.U));
+    const bd = bongDon(B, { x: cr.x, y: cr.y, w: cr.w, h: cr.h - hMean - Math.round(8 * st.U) }, gs, cr.h - hMean - Math.round(8 * st.U));
+    const wrap = bd.wrap;
+    wrap.style.height = Math.floor(cr.h) + 'px';
+    const mhop = h('div', 'j-hop j-hop-dich', wrap);
+    const ng = h('div', 'j-nghia j-tx', mhop, jp(String(line.meaningVi || '')));
+    mhop.style.position = 'absolute'; mhop.style.right = '0px';
+    const padHop = Math.round(18 * st.U) * 2;
+    {   // nghia: vua phan con lai cua o sau bong thoai (that), gom ca the + le; khong vua thi cat bot chu (khong de tran xuong o duoi)
+      const gapM0 = Math.round(10 * st.U);
+      const wN = Math.floor(cr.w * 0.94) - padHop;
+      ng.style.fontSize = fN + 'px';
+      const them = Math.max(0, mhop.offsetHeight - ng.offsetHeight);
+      const maxH = Math.max(st.san.nghia * 1.1, cr.h - bd.h - gapM0 - 2 - them);
+      fitBacMax(ng, wN, maxH, bacTu(4, 4), st.san.nghia);
+      if (ng.offsetHeight > maxH + 0.6) catDeVua(ng, String(line.meaningVi || ''), wN, maxH, parseFloat(ng.style.fontSize) || st.san.nghia);
+    }
+    {
+      const gapM = Math.round(10 * st.U), hM2 = mhop.offsetHeight;
+      const off = Math.max(0, (cr.h - (bd.h + gapM + hM2)) / 2);
+      bd.bub.style.top = f1(off) + 'px';
+      mhop.style.top = f1(off + bd.h + gapM) + 'px';
+    }
+    if (m.tagEl) m.tagEl.querySelector('i').textContent = (i != null ? (i + 1) : '') + '/' + (m.tong || '');
     m.luot = wrap;
     G.delayedCall((tre || 0) + 0.3, capKiemLai);
     if (!ngay && !giam()) {
       if (tre > 0.02) { wrap.style.visibility = 'hidden'; G.delayedCall(tre, () => { wrap.style.visibility = ''; }); }
-      G.fromTo(wrap, { clipPath: 'inset(-2% 100% -2% -2%)' }, { clipPath: 'inset(-6% -6% -6% -6%)', duration: 0.24, ease: 'power3.out', delay: tre || 0, clearProps: 'clipPath' });
+      G.fromTo(wrap, { clipPath: 'inset(-2% 100% -2% -2%)' }, { clipPath: 'inset(-6% -6% -6% -6%)', duration: 0.4, ease: 'power3.inOut', delay: tre || 0, clearProps: 'clipPath' });
     }
-    // nhan vat dang noi
+    // nhan vat dang noi: the ten + vien; cac nhan vat khac giu nguyen
     const p = (m.vai || []).findIndex((v) => v.jp === tt.jp);
     T.el.querySelectorAll('.j-p.on').forEach((e) => e.classList.remove('on'));
     if (p >= 0) {
       const cp = T.cells['P' + p];
-      if (cp) { cp.noi.querySelector('.j-p').classList.add('on'); if (!ngay) nhan(T, 'P' + p, tre, 1.04); }
-      else if (T.cells.K && m.vai && m.vai[3] && p === 3) { T.cells.K.noi.querySelector('.j-p').classList.add('on'); }
+      if (cp) { cp.noi.querySelector('.j-p').classList.add('on'); if (!ngay) tieuDiem(T, 'B', tre); }
     }
-    if (!ngay) camDen(T, 'B', tre);
     m.luotI = i;
   }
   function dungHoiThoai(nh, api, m, T, opt) {
@@ -2002,56 +2301,41 @@
     m.vai = vai; m.ds = ds; m.tong = ds.length;
     const pd = pad0();
     const lay = layHoiThoai(vai.length);
-    const A = addCell(T, 'A', lay.A, { bg: '#eee9e0' });
+    const A = addCell(T, 'A', lay.A);
     const B = addCell(T, 'B', lay.B);
-    datAnh(A, null, (nh.bai && nh.bai.sceneImageUrl) || (vai[0] && vai[0].anh) || null, { pos: '50% 40%', thay: vai.map((v) => v.jp).join('・'), ht: 'ht-duoi' });
+    datAnh(A, (nh.bai && nh.bai.sceneImageUrl) || (vai[0] && vai[0].anh) || null, { pos: '50% 40%', thay: vai.map((v) => v.jp).join('・'), ht: 'ht-duoi', kb: true });
     const crB = crOf(B.poly, pd);
     veLopNet(B, crB, 61, st.dt ? 50 : 100);
-    m.crB = { x: crB.x, y: crB.y + sz(50, 34), w: crB.w, h: crB.h - sz(50, 34) };
-    const wB = nhet(B, crB, 'j-hb');
-    m.tagEl = h('div', 'j-tagrow', wB, the(run ? 'HỘI THOẠI · NGHE TRỌN ĐOẠN' : 'HỘI THOẠI · BỐI CẢNH')).firstChild;
-    const ids = ['A', 'B'];
+    const nl = nhanLonTao(B, { x: crB.x, y: crB.y, w: crB.w, h: crB.h }, null, 'HỘI THOẠI', run ? '0/' + ds.length : vai.length + ' NHÂN VẬT');
+    m.tagEl = nl.el;
+    const tagH = Math.round(tk(5) * 1.55);
+    m.crB = { x: crB.x, y: crB.y + tagH, w: crB.w, h: crB.h - tagH };
     for (let p = 0; p < 4; p++) {
       const c = lay['P' + p] ? addCell(T, 'P' + p, lay['P' + p]) : null;
-      if (c && vai[p]) { veNhanVat(m, c, vai[p], p); ids.push('P' + p); }
-    }
-    if (lay.K) {
-      const K = addCell(T, 'K', lay.K);
-      if (vai[3] && !lay.P3) { veNhanVat(m, K, vai[3], 3); }
-      else {
-        const crK = crOf(K.poly, Math.round(pd * 0.7));
-        veLopNet(K, crK, 14, 60);
-        const wK = nhet(K, crK, 'j-vd');
-        h('div', 'j-dem-lon', wK, `<b>${ds.length}</b><i>lượt</i>`);
-        wK.firstElementChild.style.fontSize = f1(Math.min(crK.h * 0.8, sz(100, 40))) + 'px';
-      }
-      ids.push('K');
+      if (c && vai[p]) { const r = veNhanVat(m, c, vai[p], p); if (run) r.tn.classList.add('chi-khi-noi'); }
     }
     if (m.luotI != null && ds[m.luotI]) hienLuot(m, ds[m.luotI], m.luotI, 0, true);
     else {
-      // ban dau: tom tat bong thoai — "n nhan vat, n luot"
-      const tomTat = h('div', 'j-tomtat', wB);
-      tomTat.style.paddingTop = sz(54, 36) + 'px';
-      tomTat.style.height = Math.floor(crB.h) + 'px';
-      tomTat.style.width = Math.floor(crB.w) + 'px';
-      tomTat.style.boxSizing = 'border-box';
-      tomTat.innerHTML = `<div class="j-tt-l"><b>${vai.length}</b> nhân vật · <b>${ds.length}</b> lượt thoại</div>`;
-      fitDong(tomTat.firstChild, crB.w * 0.94, Math.min(sz(110, 44), (crB.h - sz(54, 36)) * 0.4), sz(30, 18));
+      // ban dau: tom tat — "n luot thoai"
+      const tomTat = h('div', 'j-tomtat j-tx', nhet(B, m.crB, 'j-hb'));
+      tomTat.innerHTML = `<b>${ds.length}</b><span> lượt thoại</span>`;
+      fitDong(tomTat, m.crB.w * 0.9, bacTu(2, 3), st.san.nghia);
       m.tomTat = tomTat;
     }
-    oVao(T, ids, opt.tre || 0, 0.06);
     m.fase = 'ht';
     camTuc(T, B.cx, B.cy);
+    nhanLonLich(m, nl);
   }
   function cueHoiThoai(m, id, tt) {
     const T = m.T;
     if (!T || m.fase !== 'ht') return;
     const tre = tt ? m.api.tre(tt) : 0;
+    chuoi(m, Math.max(0, tre - 0.35));
     let x;
     if ((x = /^C1\.(\d+)$/.exec(id))) {
       const p = +x[1];
-      const c = T.cells['P' + p] || (p === 3 ? T.cells.K : null);
-      if (c) { camDen(T, c.id, tre); nhan(T, c.id, tre, 1.05); }
+      const c = T.cells['P' + p];
+      if (c) { T.el.querySelectorAll('.j-p.on').forEach((e) => e.classList.remove('on')); c.noi.querySelector('.j-p').classList.add('on'); camDen(T, c.id, tre); nhan(T, c.id, tre); }
     } else if ((x = /^C2\.(\d+)$/.exec(id))) {
       const i = +x[1];
       const line = m.ds[i];
@@ -2062,23 +2346,34 @@
     }
   }
 
-  // ---- bai tap (quiz)
+
+  // ---- bai tap (quiz): ban mau trang 8 — Q bong cau hoi + hinh, R cot phai (dau ?, roi 4 o lua chon A-D, roi THE THAT)
   const RE_TRONG = /_{2,}|＿{2,}|＿|＿＿/;
   function layQuiz() {
-    const { W, Yb, Yc } = st;
-    const s = W * 0.02;
+    const { W, Yb } = st;
+    const wob = W * 0.008;
     if (st.dt) {
-      const yQ = Math.round(Yb * 0.36), t = Math.round(W * 0.026);
+      const yQ = Math.round(Yb * 0.4), t = Math.round(W * 0.026);
       const l1 = dN(yQ - t, yQ + t);
-      return { Q: cell([l1], [W / 2, 10], Yb), S: cell([l1], [W / 2, Yb - 10], Yb), Z: null };
+      const o = { Q: cell([l1], [W / 2, 10]), R: cell([l1], [W / 2, Yb - 10]), O: [] };
+      const ys = [0, 1, 2, 3, 4].map((k) => yQ + (Yb - yQ) * k / 4);
+      for (let k = 0; k < 4; k++) {
+        const cuts = [l1];
+        const lk = (kk) => { const sg = kk % 2 ? 1 : -1; return [0, ys[kk] + sg * t * 0.5, W, ys[kk] - sg * t * 0.5]; };
+        if (k > 0) cuts.push(lk(k));
+        if (k < 3) cuts.push(lk(k + 1));
+        o.O.push(cell(cuts, [W / 2, (ys[k] + ys[k + 1]) / 2]));
+      }
+      return o;
     }
-    const xq = W * 0.42;
-    const l1 = dV(xq + s, xq - s), l5 = [0, Yc, W, Yc];
-    return {
-      Q: cell([l1], [10, 10], Yb),
-      S: cell([l1, l5], [W - 10, 10], Yc - gapY()),
-      Z: cell([l1, l5, dCot()], [xq + 60, Yb - 10], Yb),
-    };
+    const lv1 = [px(920), 0, px(860), Yb], lv2 = [px(1440), 0, px(1420), Yb], lh = [px(880), py(380), W, py(400)];
+    const O = [
+      cell([lv1, lv2, lh], [px(1150), py(200)]),
+      cell([lv2, lh], [px(1700), py(200)]),
+      cell([lv1, lv2, lh], [px(1150), py(600)]),
+      cell([lv2, lh], [px(1700), py(600)]),
+    ];
+    return { Q: cell([lv1], [px(400), py(300)]), R: cell([lv1], [px(1400), py(300)]), O };
   }
   function dungQuiz(nh, api, m, T, opt) {
     opt = opt || {};
@@ -2086,112 +2381,135 @@
     const opts = Array.isArray(q.options) ? q.options.slice(0, 4) : [];
     const cauHoi = String(q.question || '').replace(/^\[(Dễ|Vừa|Khó)\]\s*/, '');
     const [goc, yc] = tachNgoac(cauHoi);
-    const c = nh.chuong || {};
     const pd = pad0();
     const lay = layQuiz();
-    const Q = addCell(T, 'Q', lay.Q, { bg: '#eee9e0' });
-    const S = addCell(T, 'S', lay.S);
-    const Z = lay.Z ? addCell(T, 'Z', lay.Z) : null;
-    // ---- Q: anh + bong thoai cau hoi
+    const Q = addCell(T, 'Q', lay.Q);
+    const R = addCell(T, 'R', lay.R);
+    const Os = lay.O.map((p, i) => addCell(T, 'O' + i, p, { z: 3 }));
+    // ---- Q: hinh + bong thoai cau hoi (ban mau: bong tren, nguoi ben duoi)
     const jpc = String(goc).match(/[぀-ヿ一-鿿々ー]+/g);
     const url = C.anhCau(jpc ? jpc.map((x) => ({ text: x, kanji: x })) : [], nh.bai) || (nh.bai && nh.bai.sceneImageUrl) || null;
     const crQ = crOf(Q.poly, Math.round(pd * 0.8));
-    const hBong = Math.floor(crQ.h * (st.dt ? 0.9 : 0.62));
-    {
-      const vx0 = Math.max(0, Q.bb.x0), vx1 = Math.min(st.W, Q.bb.x1);
-      const y0 = crQ.y + hBong - sz(20, 8);
-      datAnh(Q, null, url, { pos: '50% 40%', thay: '', ht: 'ht-duoi', chua: true, rect: { x: vx0, y: y0, w: vx1 - vx0, h: Math.min(st.Yb, Q.bb.y1) - y0 } });
-    }
+    const hBong = Math.floor(crQ.h * (st.dt ? 0.9 : 0.6));
     const wQ = nhet(Q, crQ, 'j-qq');
-    const duoi = sz(30, 14);
+    const duoi = Math.round(tk(5) * 0.8);
     const bong = h('div', 'j-bong-x', wQ);
     bong.style.width = Math.floor(crQ.w) + 'px'; bong.style.height = (hBong - duoi) + 'px';
-    bong.innerHTML = bongSvg(crQ.w, hBong - duoi, sz(56, 22), { bx: crQ.w * 0.5, bw: sz(70, 30), tx: crQ.w * 0.5 + sz(30, 12), ty: hBong - sz(4, 2) }, Math.max(3, Math.round(st.bw * 0.85)));
-    const bpad = sz(24, 10);
+    bong.innerHTML = bongSvg(crQ.w, hBong - duoi, Math.round(56 * st.U), { bx: crQ.w * 0.5, bw: Math.round(70 * st.U), tx: crQ.w * 0.5 + Math.round(30 * st.U), ty: hBong - Math.round(4 * st.U) }, Math.max(3, Math.round(st.bw * 0.85)));
+    const bpad = Math.round(24 * st.U);
     const inn = h('div', 'j-bong-in', bong);
-    inn.style.left = bpad + 'px'; inn.style.top = bpad * 0.5 + 'px'; inn.style.width = f1(crQ.w - bpad * 2) + 'px'; inn.style.height = f1(hBong - duoi - bpad) + 'px';
+    inn.style.left = bpad + 'px'; inn.style.top = bpad * 0.4 + 'px'; inn.style.width = f1(crQ.w - bpad * 2) + 'px'; inn.style.height = f1(hBong - duoi - bpad * 0.8) + 'px';
     const cauJp = RE_JP.test(goc);
-    const cauEl = h('div', 'j-qcau' + (cauJp ? '' : ' is-vn'), inn);
+    const cauEl = h('div', 'j-qcau j-tx' + (cauJp ? '' : ' is-vn'), inn);
     cauEl.innerHTML = esc(goc).replace(RE_TRONG, '<span class="j-trong"><span class="j-trong-d"></span></span>');
     if (cauJp) cauEl.lang = 'ja';
-    const ycEl = yc ? h('div', 'j-meo j-qyc', inn, jp(yc)) : null;
-    fitStack([{ el: cauEl, fmax: sz(84, 34), fmin: sz(22, 14) }, ycEl && { el: ycEl, fmax: sz(30, 15), fmin: sz(19, 13) }], inn.clientWidth || (crQ.w - bpad * 2), inn.clientHeight || (hBong - duoi - bpad), sz(10, 5));
-    vuaKhung(cauEl, inn, sz(24, 14));
+    const ycEl = yc ? h('div', 'j-qyc', inn, jp(yc)) : null;
+    {
+      const wIn = inn.clientWidth || (crQ.w - bpad * 2), hIn = inn.clientHeight || (hBong - duoi - bpad);
+      if (ycEl) ycEl.style.fontSize = tk(6) + 'px';
+      const hYc = ycEl ? ycEl.offsetHeight + Math.round(6 * st.U) : 0;
+      const bacQ = [tk(4), st.san.nghia, st.san.nghia * 0.8, st.san.phu].filter((v, i, a) => i === 0 || v < a[i - 1] - 0.4);
+      cauEl.style.whiteSpace = 'nowrap';   // thu mot dong truoc (khong ngat giua cum tu); khong vua o co >= san thi cho xuong dong
+      fitBac(cauEl, wIn, hIn - hYc, bacQ.filter((v) => v >= (st.dt ? 20 : st.san.nghia)), st.dt ? 20 : st.san.nghia);
+      if (cauEl.scrollWidth > wIn + 0.6) { cauEl.style.whiteSpace = ''; fitBac(cauEl, wIn, hIn - hYc, bacQ, st.dt ? 20 : st.san.phu); }
+      vuaKhung(cauEl, inn, st.dt ? 20 : st.san.phu * 0.8);
+    }
+    {   // bong om sat noi dung (ban mau: bong ~ 18% khung) — hinh nhan vat nam duoi bong
+      const hCont = cauEl.offsetHeight + (ycEl ? ycEl.offsetHeight + Math.round(6 * st.U) : 0);
+      const hReal = Math.min(hBong, Math.max(Math.round(crQ.h * 0.26), Math.round(hCont + bpad * 1.5 + duoi)));
+      bong.style.height = (hReal - duoi) + 'px';
+      bong.innerHTML = bongSvg(crQ.w, hReal - duoi, Math.round(56 * st.U), { bx: crQ.w * 0.5, bw: Math.round(70 * st.U), tx: crQ.w * 0.5 + Math.round(30 * st.U), ty: hReal - Math.round(4 * st.U) }, Math.max(3, Math.round(st.bw * 0.85)));
+      bong.appendChild(inn);
+      inn.style.height = f1(hReal - duoi - bpad * 0.8) + 'px';
+      const vx0 = Math.max(0, Q.bb.x0), vx1 = Math.min(st.W, Q.bb.x1);
+      const y0 = crQ.y + hReal - Math.round(20 * st.U);
+      const eImg = datAnh(Q, url, { pos: '50% 40%', thay: '', ht: 'ht-duoi', chua: true, rect: { x: vx0, y: y0, w: vx1 - vx0, h: Math.min(st.Yb, Q.bb.y1) - y0 } });
+      Q.noi.insertBefore(eImg, Q.noi.firstChild);   // anh nam duoi bong (nen trang cua anh khong che bong)
+    }
     m.trong = cauEl.querySelector('.j-trong-d');
     m.qDapAn = opts[q.correctIndex] ? tachNgoac(opts[q.correctIndex])[0] : '';
-    // ---- S: 4 dap an dang xem (Sensei doc) / cong the that (den luot hoc vien)
-    const crS = crOf(S.poly, pd);
-    veLopNet(S, crS, 71, st.dt ? 40 : 90);
-    m.crS = crS;
-    const wS = nhet(S, crS, 'j-qs');
-    m.wS = wS;
+    // ---- R: dau ? lon (ban mau) -> 4 o lua chon; the that vao R khi den luot hoc vien
+    const crR = crOf(R.poly, pd);
+    m.crR = crR;
+    veLopNet(R, crR, 71, st.dt ? 40 : 90, [crR.x + crR.w / 2, crR.y + crR.h / 2]);
+    const dauHoi = h('div', 'j-hoi', R.noi, `<span>?</span>`);
+    dauHoi.style.left = f1(crR.x - R.bx + crR.w / 2) + 'px'; dauHoi.style.top = f1(crR.y - R.by + crR.h / 2) + 'px';
+    dauHoi.style.fontSize = f1(Math.min(tk(1) * 1.5, crR.h * 0.9, crR.w * 0.5)) + 'px';
+    m.dauHoi = dauHoi;
+    // 4 o lua chon (xem): chu to chung mot co (min cua bon o)
     m.opts = opts;
-    if (m.choOn) taoKhungCho(m, wS);
-    else {
-      const gr = h('div', 'j-qopts', wS);
-      gr.innerHTML = opts.map((o, i) => { let [p, r] = tachNgoac(o); if (kyTu(o).length > 60) { p = o; r = ''; } return `<div class="j-qo" data-o="${i}"><b class="j-qk">${'ABCD'[i]}</b><span class="j-qo-t"${RE_JP.test(p) ? ' lang="ja"' : ''}>${esc(p)}</span>${r ? `<i class="j-qo-r">${esc(r)}</i>` : ''}</div>`; }).join('');
-      m.qopts = gr;
-      const dai = Math.max(...opts.map((o) => kyTu(tachNgoac(o)[0]).length), 1);
-      gr.classList.toggle('mot-cot', dai > 26 || st.dt);
-      const cols = gr.classList.contains('mot-cot') ? 1 : 2;
-      gr.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
-      const rowsN = Math.ceil(opts.length / cols);
-      const gap = sz(16, 8);
-      const hCell = (crS.h - gap * (rowsN - 1)) / rowsN, wCell = (crS.w - gap * (cols - 1)) / cols;
-      gr.style.gap = gap + 'px';
-      gr.style.height = crS.h + 'px';
-      gr.style.gridTemplateRows = `repeat(${rowsN}, 1fr)`;
-      // co chu chung cho 4 o: vua o dai nhat
-      let f = sz(84, 30);
-      const fminO = sz(20, 14);
-      const cs = [...gr.querySelectorAll('.j-qo-t')];
-      const inner = (el) => { el.style.fontSize = f + 'px'; };
-      const okAll = () => cs.every((el) => { const o = el.parentNode; return el.scrollWidth <= o.clientWidth - sz(50, 30) && o.scrollHeight <= hCell + 1; });
-      let it = 0;
-      gr.style.setProperty('--j-qf', f + 'px');
-      while (it++ < 14 && f > fminO) { cs.forEach(inner); gr.style.setProperty('--j-qf', f + 'px'); if (okAll()) break; f = Math.max(fminO, f * 0.88); }
-      cs.forEach(inner); gr.style.setProperty('--j-qf', f + 'px');
-      // van tran o co toi thieu: cat ve 3 dong o ranh gioi tu (khong vo chu), bo phan phu
-      // dap an cuc dai: cho ha nua (toi 15 px) de HIEN DU chu truoc khi phai cat
-      while (!okAll() && f > sz(15, 13)) { f = Math.max(sz(15, 13), f - 1); cs.forEach(inner); gr.style.setProperty('--j-qf', f + 'px'); }
-      if (!okAll()) { cs.forEach((el) => el.classList.add('cat')); gr.querySelectorAll('.j-qo-r').forEach((e) => e.remove()); }
-      m.qf = f;
-      void wCell;
-    }
-    // ---- Z: dem cau + goi y
-    if (Z) {
-      const crZ = crOf(Z.poly, Math.round(pd * 0.7));
-      veLopNet(Z, crZ, 15, 50);
-      const wZ = nhet(Z, crZ, 'j-qz');
-      h('div', 'j-tagrow', wZ, `${the('LUYỆN TẬP')}<b class="j-dem-nho">${String(c.i || 1).padStart(2, '0')}<i>/${String(c.n || nh.n).padStart(2, '0')}</i></b>`);
-      if (q.hint) {
-        const gy = h('div', 'j-qgy', wZ, `<span${ck(m, 'Q3', 'len')}>${jp(q.hint)}</span>`);
-        wZ.style.paddingTop = sz(48, 34) + 'px';
-        fitBox(gy, crZ.w, crZ.h - sz(48, 34), sz(32, 16), sz(19, 13));
-      }
-    }
-    oVao(T, ['Q', 'S'].concat(Z ? ['Z'] : []), opt.tre || 0, 0.06);
+    const bacO = [tk(1), tk(2), tk(3), tk(4)];
+    let fO = 1e9;
+    const oEls = Os.map((O, i) => {
+      O.el.classList.add('j-an');
+      O.pg.style.opacity = '0';
+      const crO = crOf(O.poly, Math.round(pd * 0.6));
+      const o = opts[i] != null ? opts[i] : '';
+      let [p, r] = tachNgoac(o);
+      if (kyTu(o).length > 60) { p = o; r = ''; }
+      const box = nhet(O, crO, 'j-qo');
+      box.innerHTML = `<b class="j-qk">${'ABCD'[i]}</b><span class="j-qo-t j-tx"${RE_JP.test(p) ? ' lang="ja"' : ''}>${esc(p)}${r ? ` <i class="j-qo-r">${esc(r)}</i>` : ''}</span>`;
+      const t = box.querySelector('.j-qo-t');
+      const wT = crO.w - Math.round(50 * st.U), hT = crO.h - Math.round(8 * st.U);
+      const f = fitBac(t, wT, hT, bacO, st.dt ? 15 : st.san.nhan);
+      fO = Math.min(fO, f);
+      return { box, t, wT, hT };
+    });
+    oEls.forEach((e) => { e.t.style.fontSize = f1(fO) + 'px'; });
+    m.qf = fO;
+    m.Os = Os;
+    // cac o luon trong DOM nhung an toi luc Sensei doc dap an (hoac den luot hoc vien)
     m.fase = 'qz';
     camTuc(T, Q.cx, Q.cy);
-    if (m.choOn) camReset(T, true);
+    if (m.choOn) { Os.forEach((O) => { O.el.style.display = 'none'; O.pg.style.display = 'none'; }); dauHoi.style.display = 'none'; taoKhungCho(m); camReset(T, true); }
+    else if (opt.ngay) lenOpts(m, true);
+    else {
+      // dau ? vao (nay), roi 4 o lua chon (hien vien + quet noi dung, so le .06 s) khi Sensei doc dap an / du phong
+      G.fromTo(dauHoi, { autoAlpha: 0, scale: 0.5 }, { autoAlpha: 1, scale: 1, duration: 0.55, ease: 'back.out(2.2)', delay: 0.15 });
+      m.hOpts = m.hen(() => lenOpts(m, false), 1800);
+    }
     if (m.ketQua) apKetQua(m, m.ketQua.dung, true);
+  }
+  /** 4 o lua chon hien (ban mau oHien): vien ve .3 s, noi dung truot .4 s expo.out; dau ? bien mat */
+  function lenOpts(m, ngay) {
+    if (m.optsHien || !m.Os) return;
+    m.optsHien = true;
+    if (m.hOpts != null) { m.huy(m.hOpts); m.hOpts = null; }
+    if (m.choOn) return;
+    if (m.dauHoi) {
+      if (ngay || giam()) m.dauHoi.style.display = 'none';
+      else G.to(m.dauHoi, { scale: 0, autoAlpha: 0, duration: 0.2, ease: 'back.in(2)' });
+    }
+    m.Os.forEach((O, i) => {
+      const t = i * 0.06;
+      O.el.classList.remove('j-an');
+      O.pg.style.opacity = '';
+      if (ngay || giam()) { O.pg.style.strokeDasharray = 'none'; return; }
+      G.fromTo(O.el, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.001, delay: t });
+      G.fromTo(O.noi, { xPercent: -6 }, { xPercent: 0, duration: 0.4, ease: 'expo.out', delay: t, clearProps: 'transform' });
+      G.fromTo(O.pg, { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.3, ease: 'power2.inOut', delay: t, onComplete: () => { O.pg.style.strokeDasharray = 'none'; } });
+    });
   }
   function camReset(T, ngay) {
     T.s = 1;
     if (ngay || giam()) G.set(T.cam, { x: 0, y: 0, scale: 1 });
     else G.to(T.cam, { x: 0, y: 0, scale: 1, duration: 0.3, ease: 'power2.inOut', overwrite: 'auto' });
   }
-  function taoKhungCho(m, wS) {
-    wS.textContent = '';
-    const slot = h('div', 'j-slot', wS);
-    // co chu dap an cua the that: dap an dai nhat vao <= 2 dong (mot cot neu dai / hep) — dap an ngan giu chu to
-    const cr = m.crS || { w: 400, h: 300 };
+  function taoKhungCho(m) {
+    const R = m.T && m.T.cells.R;
+    if (!R) return null;
+    if (m.slot && m.slot.isConnected) return m.slot;
+    const cr = m.crR;
+    const slot = nhet(R, cr, 'j-slot');
+    slot.style.display = 'flex'; slot.style.flexDirection = 'column'; slot.style.alignItems = 'stretch'; slot.style.justifyContent = 'flex-start';
+    // co chu dap an the that: 1 co chung (theo bac) — dap an dai -> 1 cot
     const dai = Math.max(1, ...(m.opts || []).map((o0) => em(tachNgoac(o0)[0])));
-    const motCot = dai > 28 || st.dt;
-    const wO = (cr.w - sz(16, 8) * (motCot ? 0 : 1)) / (motCot ? 1 : 2) - sz(120, 70);
+    const motCot = dai > 24 || st.dt;
+    const wO = (cr.w - Math.round(16 * st.U) * (motCot ? 0 : 1)) / (motCot ? 1 : 2) - Math.round(110 * st.U);
     const fRong = wO / Math.max(1, dai / 2);
-    const fCao = st.dt ? 22 : sz(46, 22);
-    slot.style.setProperty('--j-qf', f1(clamp(Math.min(fRong, fCao, m.qf || fCao), sz(16, 14), fCao)) + 'px');
+    const fCao = st.dt ? tk(4) * 0.8 : tk(3) * 0.7;
+    slot.style.setProperty('--j-qf', f1(clamp(Math.min(fRong, fCao, m.qf || fCao), st.dt ? 15 : st.san.nhan, fCao)) + 'px');
+    slot.classList.toggle('mot-cot', motCot);
     m.slot = slot;
     return slot;
   }
@@ -2200,28 +2518,33 @@
     if (!T || m.fase !== 'qz') return;
     const tre = tt ? m.api.tre(tt) : 0;
     let x;
-    if (id === 'Q1') { camDen(T, 'Q', tre); nhan(T, 'Q', tre, 1.015); if (!giam()) { const b = T.cells.Q.noi.querySelector('.j-bong-x'); if (b) G.fromTo(b, { scale: 0.92 }, { scale: 1, duration: 0.2, ease: 'expo.out', delay: tre }); } }
+    if (id === 'Q1') { camDen(T, 'Q', tre); nhan(T, 'Q', tre); if (!giam()) { const b = T.cells.Q.noi.querySelector('.j-bong-x'); if (b) G.fromTo(b, { scale: 0.92 }, { scale: 1, duration: 0.3, ease: 'expo.out', delay: tre, clearProps: 'transform' }); } }
     else if ((x = /^Q2\.(\d+)$/.exec(id))) {
-      const o = T.el.querySelector(`.j-qo[data-o="${x[1]}"]`);
-      if (!m.choOn) camDen(T, 'S', tre);
-      if (o) {
+      lenOpts(m, false);
+      const k = +x[1];
+      const o = m.Os && m.Os[k];
+      if (!m.choOn && o) {
+        camDen(T, 'O' + k, tre);
         T.el.querySelectorAll('.j-qo.on').forEach((e) => e.classList.remove('on'));
-        o.classList.add('on');
-        if (!giam()) G.fromTo(o, { scale: 1.06 }, { scale: 1, duration: 0.3, ease: 'elastic.out(1,.6)', delay: tre });
+        const bx = o.noi.querySelector('.j-qo');
+        if (bx) { bx.classList.add('on'); if (!giam()) G.fromTo(bx, { scale: 1.06 }, { scale: 1, duration: 0.3, ease: 'back.out(2.2)', delay: tre, clearProps: 'transform' }); }
+        nhan(T, 'O' + k, tre);
       }
-    } else if (id === 'Q3') { hienKhoa(m, 'Q3', tre); if (T.cells.Z) tieuDiem(T, 'Z', tre, 1.02); }
+    } else if (id === 'Q3') { /* goi y: the that hien o chan the */ }
   }
-  /** Den luot hoc vien: the that vao o S. Tra phan tu chua */
+  /** Den luot hoc vien: the that vao o R. Tra phan tu chua */
   function oBaiTapQuiz(m) {
     if (m.slot && m.slot.isConnected) return m.slot;
     const T = m.T;
-    if (!T || !m.wS) return null;
+    if (!T || !T.cells.R) return null;
     m.choOn = true;
-    const wS = m.wS;
-    const slot = taoKhungCho(m, wS);
+    if (m.hOpts != null) { m.huy(m.hOpts); m.hOpts = null; }
+    (m.Os || []).forEach((O) => { O.el.style.display = 'none'; O.pg.style.display = 'none'; });
+    if (m.dauHoi) m.dauHoi.style.display = 'none';
+    const slot = taoKhungCho(m);
     camReset(T, false);
-    nhan(T, 'S', 0, 1.01);
-    if (!giam()) G.fromTo(slot, { clipPath: 'inset(0% 100% 0% 0%)' }, { clipPath: 'inset(-4% -4% -4% -4%)', duration: 0.24, ease: 'power3.out', clearProps: 'clipPath' });
+    nhan(T, 'R', 0);
+    if (!giam()) G.fromTo(slot, { clipPath: 'inset(0% 100% 0% 0%)' }, { clipPath: 'inset(-4% -4% -4% -4%)', duration: 0.4, ease: 'power3.inOut', clearProps: 'clipPath' });
     return slot;
   }
   function apKetQua(m, dung, ngay) {
@@ -2236,16 +2559,15 @@
     }
     Q.noi.querySelectorAll('.j-dau-kq').forEach((e) => e.remove());
     const crQ = crOf(Q.poly, Math.round(pad0() * 0.8));
-    const bang = h('div', 'j-dau-kq ' + (dung ? 'dung' : 'sai'), Q.noi, dung ? '<span lang="ja">正解！</span> Chính xác!' : 'Chưa đúng!');
+    const bang = h('div', 'j-dau-kq j-tx ' + (dung ? 'dung' : 'sai'), Q.noi, dung ? '<span lang="ja">正解！</span> Chính xác!' : 'Chưa đúng!');
     bang.style.left = f1(crQ.x - Q.bx) + 'px';
     bang.style.bottom = f1(Q.by + Q.bh - (crQ.y + crQ.h)) + 'px';
     bang.style.maxWidth = f1(crQ.w) + 'px';
-    bang.style.fontSize = sz(44, 20) + 'px';
     if (!ngay) {
       if (giam()) G.fromTo(bang, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.12 });
       else {
-        G.fromTo(bang, { clipPath: 'inset(0% 100% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.3, ease: 'power3.inOut', clearProps: 'clipPath' });
-        if (dung) { camDen(T, 'Q', 0); nhan(T, 'Q', 0.05, 1.03); } else rung(T.cam, 0.02, 8 * st.U);
+        G.fromTo(bang, { clipPath: 'inset(0% 100% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.5, ease: 'power3.inOut', clearProps: 'clipPath' });
+        if (dung) { camDen(T, 'Q', 0); nhan(T, 'Q', 0.05); } else rung(T.cam, 0.02, 8 * st.U);
       }
     }
   }
@@ -2254,44 +2576,35 @@
     apKetQua(m, dung, false);
   }
 
-  // ---- the chuong / the ket bai (thay the the mac dinh)
-  function layThe(kieu) {
-    const { W, Yb, Yc } = st;
-    const s = W * 0.02;
-    if (kieu === 'chuong') {
-      if (st.dt) return layBia();
-      const xa = W * 0.45;
-      const l1 = dV(xa + s, xa - s), l4 = dN(Yc, Yc);
-      return { A: cell([l1], [10, 10], Yb), B: cell([l1], [W - 10, 10], Yc - gapY()), E: cell([l1, l4, dCot()], [xa + 60, Yb - 10], Yb) };
-    }
-    // xong
+
+  // ---- the chuong / the ket bai (thay the the mac dinh) — ban mau trang 0 (bia) va trang 9 (tom tat)
+  function layTheXong() {
+    const { W, Yb } = st;
     if (st.dt) {
       const yA = Math.round(Yb * 0.44), t = Math.round(W * 0.026);
       const l1 = dN(yA + t, yA - t);
       const x1 = W / 3, x2 = W * 2 / 3, sl = W * 0.03;
       const v1 = [x1 + sl, 0, x1 - sl, yA], v2 = [x2 + sl, 0, x2 - sl, yA];
-      return { R1: cell([l1, v1], [10, 10], Yb), R2: cell([l1, v1, v2], [W / 2, 10], Yb), R3: cell([l1, v2], [W - 10, 10], Yb), G: cell([l1], [W / 2, Yb - 10], Yb), K: null };
+      return { R1: cell([l1, v1], [10, 10]), R2: cell([l1, v1, v2], [W / 2, 10]), R3: cell([l1, v2], [W - 10, 10]), G: cell([l1], [W / 2, Yb - 10]) };
     }
-    const hT = Math.round(Yb * 0.47), t = W * 0.008;
+    const hT = Math.round(Yb * 0.56), t = W * 0.008;
     const l1 = dN(hT + t, hT - t);
     const x1 = W / 3, x2 = W * 2 / 3, sl = W * 0.03;
     const v1 = [x1 + sl, 0, x1 - sl, hT], v2 = [x2 + sl, 0, x2 - sl, hT];
-    return {
-      R1: cell([l1, v1], [10, 10], Yb), R2: cell([l1, v1, v2], [W / 2, 10], Yb), R3: cell([l1, v2], [W - 10, 10], Yb),
-      G: cell([l1, dCot()], [10, Yb - 10], Yb), K: cell([l1, dCot()], [W - 10, Yc - 10], Yc),
-    };
+    return { R1: cell([l1, v1], [10, 10]), R2: cell([l1, v1, v2], [W / 2, 10]), R3: cell([l1, v2], [W - 10, 10]), G: cell([l1], [W / 2, Yb - 10]) };
   }
   function veTheChuong(info, api) {
     const T = taoTrang();
-    const m = st.mThe = { T, rev: new Set(), api, vivo: true };
+    const m = st.mThe = ganHen({ T, rev: new Set(), api, vivo: true });
     st.rebuild = () => { doKhung(); const T2 = taoTrang(); m.T = T2; dungThe1(info, api, m, T2, true); xongAnim(T2); trangVao(T2, true); };
     dungThe1(info, api, m, T, false);
     trangVao(T, false);
     return true;
   }
   function dungThe1(info, api, m, T, ngay) {
+    m.ngay = ngay;
     const pd = pad0();
-    const lay = layThe('chuong');
+    const lay = layBia();
     const ds = info.ds || [];
     const ch = info.chuong;
     let muc = [];
@@ -2303,87 +2616,100 @@
     else if (ch === 'kaiwa') muc = vaiCua(ds.filter((b) => b.kind === 'kaiwa').map((b) => b.data)).map((v) => v.jp);
     else if (ch === 'quiz') muc = ds.filter((b) => b.kind === 'quiz').map((b, i) => 'Câu ' + (i + 1));
     const bai = (st.nh && st.nh.bai) || null;
-    const A = addCell(T, 'A', lay.A, { bg: '#eee9e0' });
+    const A = addCell(T, 'A', lay.A);
     const B = addCell(T, 'B', lay.B);
-    const E = addCell(T, 'E', lay.E);
-    datAnh(A, null, anh || (bai && bai.sceneImageUrl) || null, { pos: '50% 40%', thay: glyph || String(info.tenMoi || '').slice(0, 2), ht: 'ht-duoi' });
+    const E = lay.E ? addCell(T, 'E', lay.E) : null;
+    datAnh(A, anh || (bai && bai.sceneImageUrl) || null, { pos: '50% 40%', thay: glyph || String(info.tenMoi || '').slice(0, 2), ht: 'ht-duoi' });
     const crB = crOf(B.poly, pd);
     veLopNet(B, crB, 81, st.dt ? 60 : 130);
-    const wB = nhet(B, crB, 'j-bia-b');
-    const p2 = h('div', 'j-bia-2', wB);
-    h('div', 'j-tagrow', wB, the(info.tenCu ? 'XONG ' + chuHoa(info.tenCu) + ' ✓' : 'PHẦN TIẾP THEO'));
-    p2.style.paddingTop = sz(46, 30) + 'px';
-    const bW = Math.min(crB.w, sz(640, 330)), bH = Math.round(Math.min(bW * 0.34, crB.h * 0.4));
-    const bst = h('div', 'j-bia-bai', p2, burstSvg(bW, bH, 7, { n: 24, jit: 0.3 }) + `<b>${esc(chuHoa(info.tenMoi || ''))}</b>`);
-    bst.style.width = bW + 'px'; bst.style.height = bH + 'px';
-    fitDong(bst.lastChild, bW * 0.62, bH * 0.5, sz(24, 16));
-    const meta = h('div', 'j-bia-td', p2, jp(info.meta || ''));
-    meta.style.fontWeight = '800';
-    p2.style.gap = Math.round(pd * 0.5) + 'px';
-    fitBox(meta, crB.w, Math.max(30, crB.h - bH - pd - sz(46, 30)), sz(56, 26), sz(24, 15));
-    const crE = crOf(E.poly, Math.round(pd * 0.7));
-    const ew = nhet(E, crE, 'j-chips');
+    const nl = nhanLonTao(B, { x: crB.x, y: crB.y, w: crB.w, h: crB.h }, null, info.tenCu ? 'XONG ' + chuHoa(info.tenCu) : 'PHẦN TIẾP THEO', info.tenCu ? '✓' : '');
+    const tagH = Math.round(tk(5) * 1.55);
+    const p2 = nhet(B, { x: crB.x, y: crB.y + tagH, w: crB.w, h: crB.h - tagH }, 'j-bia-2');
     const toi = st.dt ? 6 : 10;
-    ew.innerHTML = muc.filter(Boolean).slice(0, toi).map((x) => `<span class="j-chip"${RE_JP.test(x) ? ' lang="ja"' : ''}>${esc(ngan(x, 14))}</span>`).join('') + (muc.length > toi ? `<span class="j-chip">+${muc.length - toi}</span>` : '');
-    fitChips(ew, crE.w, crE.h, sz(38, 20));
-    oVao(T, ['A', 'B', 'E'], 0, 0.07);
+    const items = muc.filter(Boolean).slice(0, toi);
+    const chipsH = items.length ? Math.round(tk(6) * 2.2) : 0;
+    const bW = Math.min(crB.w, Math.round(tk(1) * 3.1)), bH = Math.round(Math.min(bW * 0.34, (crB.h - tagH) * 0.34));
+    const bst = h('div', 'j-bia-bai j-tx', p2, burstSvg(bW, bH, 7, { n: 24, jit: 0.3 }) + `<b>${esc(chuHoa(info.tenMoi || ''))}</b>`);
+    bst.style.width = bW + 'px'; bst.style.height = bH + 'px';
+    fitDong(bst.lastChild, bW * 0.62, bacTu(2, 3), tk(4));
+    const meta = h('div', 'j-bia-td j-tx', p2, jp(info.meta || ''));
+    p2.style.gap = Math.round(pd * 0.5) + 'px';
+    fitBac(meta, crB.w, Math.max(30, crB.h - tagH - bH - chipsH - pd * 1.2), bacTu(3, 4), st.san.nghia);
+    let chips = null;
+    if (items.length) {
+      chips = h('div', 'j-chips j-tx', p2, items.map((x) => `<span class="j-chip"${RE_JP.test(x) ? ' lang="ja"' : ''}>${esc(ngan(x, 14))}</span>`).join('') + (muc.length > toi ? `<span class="j-chip">+${muc.length - toi}</span>` : ''));
+      chips.style.fontSize = tk(6) + 'px';
+      chips.style.maxWidth = Math.floor(crB.w) + 'px';
+      while (chips.children.length > 2 && chips.scrollHeight > chipsH * 1.4) chips.lastElementChild.remove();
+    }
+    if (E) E.noi.innerHTML = '';
     camTuc(T, B.cx, B.cy);
+    G.set([bst, meta], { autoAlpha: 0 });
+    if (chips) G.set(chips, { autoAlpha: 0 });
+    nhanLonLich(m, nl);
     if (!ngay) {
       capDat('Tiếp theo: ' + (info.tenMoi || '') + (info.meta ? ' · ' + info.meta : ''));
-      G.fromTo(bst, { scale: 0.4, rotation: -5 }, { scale: 1, rotation: 0, duration: giam() ? 0.01 : 0.42, ease: 'back.out(2)', delay: 0.05 });
-    }
+      if (giam()) G.set([bst, meta].concat(chips ? [chips] : []), { autoAlpha: 1 });
+      else {
+        G.fromTo(bst, { autoAlpha: 0, scale: 0.3 }, { autoAlpha: 1, scale: 1, duration: 0.55, ease: 'back.out(2.2)', delay: 0.75 });
+        G.fromTo(meta, { clipPath: 'inset(0% 100% 0% 0%)' }, { autoAlpha: 1, clipPath: 'inset(-4% -4% -4% -4%)', duration: 0.5, ease: 'power3.inOut', delay: 1.15, clearProps: 'clipPath' });
+        if (chips) G.fromTo(chips, { y: 20 * st.sx, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.6, ease: 'expo.out', delay: 1.5 });
+      }
+    } else G.set([bst, meta].concat(chips ? [chips] : []), { autoAlpha: 1 });
     st.the = { A, B, E };
   }
   function veTheXong(info, api) {
     const T = taoTrang();
-    const m = st.mThe = { T, rev: new Set(), api, vivo: true };
+    const m = st.mThe = ganHen({ T, rev: new Set(), api, vivo: true });
     st.rebuild = () => { doKhung(); const T2 = taoTrang(); m.T = T2; dungThe2(info, api, m, T2, true); xongAnim(T2); trangVao(T2, true); };
     dungThe2(info, api, m, T, false);
     trangVao(T, false);
     return true;
   }
   function dungThe2(info, api, m, T, ngay) {
+    m.ngay = ngay;
     const pd = pad0();
-    const lay = layThe('xong');
+    const lay = layTheXong();
     const bai = (st.nh && st.nh.bai) || {};
     const tu = (bai.vocabList || []).filter((v) => v && v.imageUrl).slice(0, 3);
-    const ids = ['R1', 'R2', 'R3'];
-    ids.forEach((id, i) => {
-      const c = addCell(T, id, lay[id], { bg: '#eee9e0' });
+    ['R1', 'R2', 'R3'].forEach((id, i) => {
+      const c = addCell(T, id, lay[id]);
       const v = tu[i];
-      if (!v) { datAnh(c, null, null, { thay: ['私', '学', '先'][i], ht: 'ht-duoi' }); return; }
-      datAnh(c, null, v.imageUrl, { pos: '50% 40%', thay: v.kanji || v.word, ht: 'ht-duoi' });
-      const cr = crOf(c.poly, Math.round(pd * 0.7));
+      if (!v) { datAnh(c, null, { thay: ['私', '学', '先'][i], ht: 'ht-duoi' }); return; }
+      datAnh(c, v.imageUrl, { pos: '50% 35%', thay: v.kanji || v.word, ht: 'ht-duoi', kb: true });
+      const cr = crOf(c.poly, Math.round(pd * 0.6));
       const bx = nhet(c, cr, 'j-ghi-anh');
       bx.style.justifyContent = 'flex-end'; bx.style.alignItems = 'flex-start';
-      const hop = h('div', 'j-tt-hop', bx, `<b lang="ja">${C.ruby(v.kanji || v.word, v.furigana || '')}</b><span>${esc(ngan(boNgoacCuoi(v.meaningVi), 22))}</span>`);
-      fitBox(hop, Math.min(cr.w, sz(300, 170)), Math.round(cr.h * 0.5), sz(90, 44), sz(26, 15));
+      const hop = h('div', 'j-tt-hop j-tx', bx, `<b lang="ja">${C.ruby(v.kanji || v.word, v.furigana || '')}</b><span>${esc(ngan(boNgoacCuoi(v.meaningVi), 22))}</span>`);
+      const wHop = Math.floor(Math.min(cr.w, st.W * (st.dt ? 0.45 : 0.3)));
+      hop.style.maxWidth = wHop + 'px';
+      hop.firstChild.style.whiteSpace = 'nowrap';
+      hop.querySelector('span').style.fontSize = (st.dt ? tk(6) : tk(5)) + 'px';
+      fitBacMax(hop.firstChild, wHop - Math.round(20 * st.U), cr.h * 0.5, st.dt ? [tk(4), tk(5), tk(6)] : bacTu(3, 4), st.dt ? st.san.nhan : st.san.nghia);
+      if (!ngay && !giam()) { hop.classList.add('j-cho'); hop.dataset.cho = 'R' + i; hop.dataset.fx = 'dap'; hop.dataset.s = '1.35'; m.hen(() => { if (m.vivo) hienKhoa(m, 'R' + i, 0); }, 650 + i * 300); }
     });
     const G_ = addCell(T, 'G', lay.G);
     const crG = crOf(G_.poly, pd);
     veLopNet(G_, crG, 91, st.dt ? 30 : 60);
     const wG = nhet(G_, crG, 'j-tk');
-    h('div', 'j-tagrow', wG, the('HÔM NAY MÌNH ĐÃ HỌC'));
     const hang = (info.hang || []).slice(0, 6);
-    const ul = h('div', 'j-tk-ds', wG, hang.map((r) => `<div class="j-tk-h"><span class="j-tk-n">${esc(r.nhan)}</span><b>${esc(r.so)}</b>${r.cham ? `<span class="j-tk-c">${r.cham.map((k) => `<i class="${esc(k || '')}"></i>`).join('')}</span>` : `${st.dt ? '' : `<span class="j-tk-m"${r.jp ? ' lang="ja"' : ''}>${esc(ngan(r.mau, 30))}</span>`}`}</div>`).join(''));
-    wG.style.paddingTop = sz(50, 34) + 'px';
-    fitBox(ul, crG.w, crG.h - sz(50, 34), sz(44, 20), sz(20, 14));
-    if (lay.K) {
-      const K = addCell(T, 'K', lay.K);
-      const crK = crOf(K.poly, Math.round(pd * 0.5));
-      const wK = nhet(K, crK, 'j-vd');
-      const bw = Math.floor(crK.w), bh = Math.floor(Math.min(crK.h, bw * 0.62));
-      const bs = h('div', 'j-loai-bst', wK, burstSvg(bw, bh, 12, { n: 18, jit: 0.3, trong: 0.8 }) + '<b lang="ja">またね！</b>');
-      bs.style.width = bw + 'px'; bs.style.height = bh + 'px';
-      bs.lastChild.style.fontFamily = '"Dela Gothic One", "Noto Sans JP", sans-serif';
-      bs.lastChild.style.fontStyle = 'normal';
-      fitDong(bs.lastChild, bw * 0.62, Math.min(sz(74, 30), bh * 0.5), sz(20, 14));
-      if (!ngay && !giam()) G.fromTo(bs, { scale: 0.3, rotation: -8 }, { scale: 1, rotation: 0, duration: 0.5, ease: 'back.out(2)', delay: 0.8 });
+    const bW = st.dt ? 0 : Math.round(Math.min(crG.w * 0.3, tk(1) * 2.1));
+    const ul = h('div', 'j-tk-ds j-tx', wG, `<div class="j-tk-t">HÔM NAY MÌNH ĐÃ HỌC</div>` + hang.map((r) => `<span class="j-tk-h"><span class="j-tk-n">${esc(r.nhan)}</span><b>${esc(r.so)}</b></span>`).join(''));
+    ul.style.width = Math.floor(crG.w - (bW ? bW + pd : 0)) + 'px';
+    ul.style.fontSize = tk(5) + 'px';
+    while (ul.scrollHeight > crG.h + 0.6 && ul.querySelectorAll('.j-tk-h').length > 2) ul.querySelector('.j-tk-h:last-child').remove();
+    if (bW) {
+      const bh = Math.round(Math.min(crG.h, bW * 0.62));
+      const bs = h('div', 'j-loai-bst j-tx', wG, burstSvg(bW, bh, 12, { n: 18, jit: 0.3, trong: 0.8 }) + '<b lang="ja">またね！</b>');
+      bs.style.width = bW + 'px'; bs.style.height = bh + 'px';
+      fitDong(bs.lastChild, bW * 0.62, bacTu(3, 3), tk(4));
+      bs.style.position = 'absolute'; bs.style.right = '0px'; bs.style.top = '50%'; bs.style.marginTop = (-bh / 2) + 'px';
+      if (!ngay && !giam()) G.fromTo(bs, { scale: 0.3, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: 0.55, ease: 'back.out(2.2)', delay: 1.0 });
     }
-    oVao(T, ['R1', 'R2', 'R3', 'G'].concat(lay.K ? ['K'] : []), 0, 0.07);
     camTuc(T, G_.cx, G_.cy);
     if (!ngay) capDat('Hẹn gặp lại ở bài sau nhé! またね！');
   }
+
   // ================================================================== HOP DONG CHE DO
   const DUNG = {
     vocab(nh, api, m, T, opt) {
@@ -2415,8 +2741,8 @@
     vocab(m, id, tt) {
       if (m.fase === 'bia') {
         const tre = m.api.tre(tt);
-        if (id === 'V0') { biaSangBai(m, tre); if (m.hChuyen != null) m.api.huyHen(m.hChuyen); m.hChuyen = m.api.hen(() => m.chuyen && m.chuyen(), 3300); return; }
-        if (m.hChuyen != null) m.api.huyHen(m.hChuyen);
+        if (id === 'V0') { biaSangBai(m, tre); if (m.hChuyen != null) m.huy(m.hChuyen); m.hChuyen = m.hen(() => m.chuyen && m.chuyen(), 3300); return; }
+        if (m.hChuyen != null) m.huy(m.hChuyen);
         if (m.chuyen) m.chuyen();
       }
       cueVocab(m, id, tt);
@@ -2435,15 +2761,24 @@
     if (m.fase === 'bia' && m.chuyen) { m.chuyen(); return; }
     if (nh.kind === 'kanji') veNetM(m, 0);
     if (nh.kind === 'grammar-intro') tilesDuPhong(m);
+    if (nh.kind === 'quiz') lenOpts(m, false);
+    chuoi(m, 0);
+    (m.nhanLons || []).forEach((nl) => nhanLonThu(nl, 0));
     hienHet(m);
-    [m.vc && m.vc.qm, m.qm].forEach((q) => { if (q) q.style.display = 'none'; });
     if (m.tlK) { try { m.tlK.kill(); } catch (e) {} m.tlK = null; }
     if (m.T) { m.T.el.querySelectorAll('.j-tok.on').forEach((e) => e.classList.remove('on')); m.T.el.querySelectorAll('.j-rt-doc').forEach((e) => { e.style.visibility = 'visible'; }); }
   }
 
+  /** Them hen / huy (dong ho GSAP: xac dinh, buoc duoc khi kiem thu; chet khi doi nhip / tam dung) vao doi tuong nhip m */
+  function ganHen(m) {
+    m.dcs = m.dcs || [];
+    m.hen = (fn, ms) => { const d = G.delayedCall(ms / 1000, () => { if (m.vivo && L) { try { fn(); } catch (e) {} } }); m.dcs.push(d); return d; };
+    m.huy = (d) => { try { if (d) d.kill(); } catch (e) {} };
+    return m;
+  }
   function taoM(nh, api) {
     const m = {
-      nh, api, T: null, rev: new Set(), fase: '', vivo: true, tlK: null,
+      nh, api, T: null, rev: new Set(), fase: '', vivo: true, tlK: null, ngay: false, dcs: [],
       cue(id, tt) { const f = CUE[nh.kind]; if (f && m.vivo) f(m, id, tt); },
       karaoke(ds) { if (m.vivo && (nh.kind === 'example' || nh.kind === 'kaiwa' || nh.kind === 'kaiwa-run')) karaokeCau(m, ds); },
       tro(idMuc, o) {
@@ -2463,9 +2798,17 @@
       traLoi(exId, dung) { if (nh.kind === 'quiz') traLoiQuiz(m, exId, dung); },
       vaoCho() {},
       raCho() {},
-      roi() { m.vivo = false; if (m.tlK) { try { m.tlK.kill(); } catch (e) {} } if (st.m === m) st.m = null; },
+      roi() {
+        m.vivo = false;
+        (m.dcs || []).forEach((d) => { try { d.kill(); } catch (e) {} });
+        m.dcs = [];
+        if (m.tlK) { try { m.tlK.kill(); } catch (e) {} }
+        (m.avs || []).forEach((a) => { try { a.go(); } catch (e) {} });
+        m.avs = [];
+        if (st.m === m) st.m = null;
+      },
     };
-    return m;
+    return ganHen(m);
   }
 
   // ---- phong chu: nap truoc bo chu hay dung; khi phong ve (do rong doi) thi dung lai trang hien tai khong hieu ung
@@ -2476,8 +2819,8 @@
     if (!F || !F.load) return;
     try {
       F.load('900 40px "Noto Sans JP"', MAU_JP); F.load('700 40px "Noto Sans JP"', MAU_JP); F.load('900 40px "Noto Serif JP"', MAU_JP);
-      F.load('800 40px "Be Vietnam Pro"', MAU_VI); F.load('900 40px "Be Vietnam Pro"', MAU_VI); F.load('italic 900 40px "Be Vietnam Pro"', MAU_VI);
-      F.load('400 40px "Dela Gothic One"', 'wa!ペコリ第話またね正解0123456789');
+      F.load('800 40px "Be Vietnam Pro"', MAU_VI); F.load('900 40px "Be Vietnam Pro"', MAU_VI); F.load('italic 900 40px "Be Vietnam Pro"', MAU_VI); F.load('italic 700 40px "Be Vietnam Pro"', MAU_VI);
+      F.load('400 40px "Dela Gothic One"', 'wa!ペコリ第話またね正解0123456789?');
     } catch (e) {}
     if (!st.onFont) {
       st.onFont = () => {
@@ -2496,8 +2839,11 @@
     batDau(lop0, ctx) {
       L = lop0; C = ctx; G = ctx.gsap;
       window.__cdJ = st;   // chan doan kiem thu (chi doc trang thai bo cuc, giong __motion.cheDo)
-      st.pages = []; st.T = null; st.dem = 0; st.cap = { luot: null, raw: '', off: 0, q: [], cur: null, tShow: 0, dwell: 1500, tm: null, tt: null }; st.probe = null; st.m = null; st.rebuild = null; st.tangKhoa = '';
+      st.pages = []; st.T = null; st.dem = 0; st.cap = { luot: null, raw: '', off: 0, q: [], cur: null, tShow: 0, dwell: 1500, tm: null, tt: null }; st.probe = null; st.m = null; st.rebuild = null; st.tangKhoa = ''; st.vet = null;
       L.classList.add('j-nen');
+      try {   // ky hieu truyen tranh cua avatar (? ! gan...) mot mau nhan do + vien trang: #avn-tang nam ngoai .cd-lop nen can quy tac rieng, go khi tat che do
+        if (!document.getElementById('cd-j-avn')) { const sy = document.createElement('style'); sy.id = 'cd-j-avn'; sy.textContent = 'html body #avn-tang { --avn-mau: ' + DO + '; --avn-vien: #ffffff; }'; document.head.appendChild(sy); }
+      } catch (e) {}
       st.vung = h('div', 'j-vung', L);
       napPhong();
       doKhung();
@@ -2507,8 +2853,9 @@
       if (G && L) { try { G.killTweensOf(L.querySelectorAll('*')); } catch (e) {} }
       if (st.cap) { try { if (st.cap.tm) st.cap.tm.kill(); if (st.cap.tt) st.cap.tt.kill(); } catch (e) {} st.cap = null; }
       if (st.onFont && document.fonts) { try { document.fonts.removeEventListener('loadingdone', st.onFont); } catch (e) {} }
+      try { const sy = document.getElementById('cd-j-avn'); if (sy) sy.remove(); } catch (e) {}
       st.onFont = null; st.hFont = null;
-      L = null; C = null; st.m = null; st.nh = null; st.T = null; st.pages = []; st.vung = null; st.tang = null; st.probe = null; st.rebuild = null; st.tangKhoa = '';
+      L = null; C = null; st.m = null; st.nh = null; st.T = null; st.pages = []; st.vung = null; st.tang = null; st.probe = null; st.rebuild = null; st.tangKhoa = ''; st.vet = null;
     },
     doiCo() {
       if (!L || !C) return;
@@ -2527,7 +2874,7 @@
       if (!f || !L) return null;
       doKhung();
       khoiTang();
-      st.nh = nh; st.api = api;
+      st.nh = nh; st.api = api; st.nhT = performance.now();
       const m = taoM(nh, api);
       st.m = m;
       const T = taoTrang();
@@ -2536,16 +2883,22 @@
         doKhung();
         const T2 = taoTrang();
         m.T = T2;
+        m.ngay = true;
         // cong the that (quiz): giu the + chan the khi dung lai trang
         const cu = m.slot && m.slot.isConnected ? { cong: m.slot.querySelector('.sk-cong'), chan: m.slot.querySelector('.cd-chan') } : null;
+        m.slot = null;
         f(nh, api, m, T2, { ngay: true });
         if (cu && m.slot) { if (cu.cong) m.slot.appendChild(cu.cong); if (cu.chan) m.slot.appendChild(cu.chan); }
         xongAnim(T2);
         trangVao(T2, true);
       };
+      const tb0 = performance.now();
       f(nh, api, m, T, {});
+      if (st.cap && !st.cap.cur) capVe('', true);
       trangVao(T, false);
-      if (st.khungLoi) m.hLai = api.hen(() => { if (m.vivo && L && st.rebuild) { try { doKhung(); st.tangKhoa = ''; khoiTang(); st.rebuild(); } catch (e) {} } }, 160);
+      (st.tb = st.tb || []).push({ kind: nh.kind, i: nh.i, ms: Math.round(performance.now() - tb0) });   // do thoi gian dung nhip (chan doan)
+      try { if (window.__cdJVao) window.__cdJVao(T, nh); } catch (e) {}   // moc kiem thu: harness dung dong ho GSAP de buoc tung khung chuyen canh
+      if (st.khungLoi) m.hLai = m.hen(() => { if (m.vivo && L && st.rebuild) { try { doKhung(); st.tangKhoa = ''; khoiTang(); st.rebuild(); } catch (e) {} } }, 160);
       return m;
     },
     theChuong(info, api) { return L ? veTheChuong(info, api) : false; },
