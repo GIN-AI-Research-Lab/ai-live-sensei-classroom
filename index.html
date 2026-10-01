@@ -411,6 +411,15 @@
     }
   </script>
 
+  <!-- Tao tieng Sensei cho video demo (cong cu chu bai): CHI nap khi co ?taoTiengDemo=1 tren dia chi trang (js/tao-tieng-demo.js). -->
+  <script>
+    if (/[?&]taoTiengDemo\b/i.test(location.search)) {
+      var sTaoTieng = document.createElement('script');
+      sTaoTieng.src = 'js/tao-tieng-demo.js';
+      document.body.appendChild(sTaoTieng);
+    }
+  </script>
+
   <!-- ====================================================================
        CANH GAC TRANG TRANG
 
