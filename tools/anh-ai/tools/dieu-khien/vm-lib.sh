@@ -7,7 +7,7 @@
 # P    = prompts/ trong kho (prompt-*.json, style-chung.json, tl/dot-*.json)
 # VMDIR= vm/ trong kho (script chay tren VM)
 # V/ZN = ten VM va zone; H = thu muc goc tren VM cho scp: "." = home cua nguoi dung SSH (pscp/scp hieu duong dan tuong doi, KHONG hieu ~)
-# can: gcloud config set project <PROJECT_ID>  (project cu: project-93de4fe7-4687-4925-a5f)
+# can: gcloud config set project <PROJECT_ID> 
 KHO=$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)
 S=${ANH_AI_WORK:-$HOME/anh-ai-work}
 P=$KHO/prompts; VMDIR=$KHO/vm

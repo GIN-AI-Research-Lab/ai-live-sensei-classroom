@@ -2,7 +2,7 @@
   "ghiChu": "Cau hinh may doc duoc de tai tao pipeline anh AI (Qwen-Image-2512 + Qwen-Image-Edit-2511). Gia tri lay tu VM thuc te ngay 2026-10-01 (gcloud describe, nvidia-smi, pip freeze, ~/hf/*/.cache) va tu script da chay. Muc 'chuaKiemChung' liet ke cho chi suy ra, khong co ghi chep lenh goc.",
   "ngayLuuTru": "2026-10-01",
   "gcp": {
-    "project": "project-93de4fe7-4687-4925-a5f",
+    "project": "<GCP_PROJECT_ID>",
     "zone": "us-central1-a",
     "instanceName": "a100-benchmark-runner",
     "taoLuc": "2026-09-23",

@@ -57,7 +57,7 @@ tools/anh-ai/
 | `ANH_AI_FONTS` | `C:/Windows/Fonts` | font cho tờ liên hệ (Segoe UI, Meiryo); đổi khi chạy Linux/Mac |
 | `VM_NAME` `VM_ZONE` `VM_HOME` | `a100-benchmark-runner` `us-central1-a` `.` | `tools/dieu-khien/vm-lib.sh` (`.` = home của user SSH; pscp không hiểu `~`) |
 
-Mọi lệnh `python tools/...`, `bash tools/...` trong tài liệu này chạy từ thư mục `tools/anh-ai` (trừ `tools/gan_anh.py` chạy từ gốc repo). Cần `gcloud config set project <PROJECT_ID>` (project cũ: `project-93de4fe7-4687-4925-a5f`). Máy local cần Python 3.12 + `numpy scipy pillow`, Git Bash (các `.sh`), và đặt `PYTHONIOENCODING=utf-8` khi in tiếng Việt trên Windows.
+Mọi lệnh `python tools/...`, `bash tools/...` trong tài liệu này chạy từ thư mục `tools/anh-ai` (trừ `tools/gan_anh.py` chạy từ gốc repo). Cần `gcloud config set project <PROJECT_ID>` (project cũ: `<GCP_PROJECT_ID>`). Máy local cần Python 3.12 + `numpy scipy pillow`, Git Bash (các `.sh`), và đặt `PYTHONIOENCODING=utf-8` khi in tiếng Việt trên Windows.
 
 ## 2. Tạo VM và cài driver GPU
 

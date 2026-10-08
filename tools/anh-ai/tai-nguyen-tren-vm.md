@@ -55,9 +55,9 @@ Chỉ **liệt kê tên, kích thước, ngày**, không chép và **không đ�
 
 ```bash
 # chỉ xóa VM (đĩa boot autoDelete = true nên bị xóa cùng VM)
-gcloud compute instances delete a100-benchmark-runner --zone us-central1-a --project project-93de4fe7-4687-4925-a5f
+gcloud compute instances delete a100-benchmark-runner --zone us-central1-a --project <GCP_PROJECT_ID>
 # kiểm tra không còn đĩa mồ côi
-gcloud compute disks list --project project-93de4fe7-4687-4925-a5f
+gcloud compute disks list --project <GCP_PROJECT_ID>
 ```
 
 Nếu muốn giữ khả năng quay lại đúng môi trường (kể cả 94 GB model và cloud_benchmark) mà không giữ VM, có thể tạo snapshot đĩa trước (tốn phí lưu trữ hằng tháng nhỏ hơn đĩa pd-ssd nhưng không bằng 0); nếu chỉ cần pipeline thì làm theo README và không cần snapshot.
