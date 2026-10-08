@@ -1,0 +1,366 @@
+/* Che do S - "Bang den lop hoc" (bang den lop hoc anime). Port tu ban mau E:/sensei-tam/demo2/s/s.css.
+   Moi quy tac duoi :is(.cd-lop, .s-hop)[data-che-do="s"]; khong :root, khong id. --s-u = he so khung (1 = lop 1440x776; dien thoai 1 = 390x679),
+   dat tu js/che-do/s.js. Toa do noi dung = toa do trong .s-bang (mat bang xanh). */
+/* phong chu (Yusei Magic, Mali, Zen Maru Gothic, Be Vietnam Pro) do js/che-do/s.js nap bang <link> (khong @import: mang chan / cham khong lam che do khong nap duoc) */
+
+:is(.cd-lop, .s-hop)[data-che-do="s"] {
+  --s-u: 1px;
+  --s-trang: #f8f6ef; --s-vang: #f7d76a; --s-hong: #f79cb8; --s-xanh: #95d0f4; --s-cam: #f7ae60; --s-la: #bde68f;
+  --s-muc: #2b2620; --s-muc-nhat: #6d5c49; --s-giay: #fbf8f1;
+  --s-jp: "Yusei Magic", "Zen Maru Gothic", var(--font-jp, "Yu Gothic"), sans-serif;
+  --s-vi: "Mali", "Be Vietnam Pro", "Segoe UI", sans-serif;
+  --s-in: "Be Vietnam Pro", "Segoe UI", sans-serif;
+  --s-in-jp: "Zen Maru Gothic", var(--font-jp, "Yu Gothic"), sans-serif;
+  /* chu dap an: chu Viet / Latin dung Be Vietnam Pro (du dau), chu Nhat roi xuong Zen Maru Gothic (Zen khong co chu Viet nhieu dau: ghep dau lech) */
+  --s-in-mix: "Be Vietnam Pro", "Zen Maru Gothic", "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", Meiryo, "Segoe UI", sans-serif;
+  background: #e8dcc4;
+  color: var(--s-trang);
+  font-family: var(--s-vi);
+  font-size: 16px;
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] * { box-sizing: border-box; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-an { opacity: 0; visibility: hidden; }
+
+/* ================================================================ lop hoc (tuong, cua so, ban) */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-tuong {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(calc(var(--s-u) * 900) calc(var(--s-u) * 520) at 92% 22%, rgba(255, 244, 214, .75), rgba(255, 244, 214, 0) 70%),
+    linear-gradient(180deg, #efe4cc 0%, #e6d8bb 62%, #dccba9 100%);
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-cua {
+  position: absolute; border-radius: calc(var(--s-u) * 5);
+  background: linear-gradient(90deg, #d9dde0, #f2f4f5 40%, #cfd4d8);
+  box-shadow: 0 calc(var(--s-u) * 8) calc(var(--s-u) * 18) rgba(80, 60, 30, .28), inset 0 0 0 calc(var(--s-u) * 2) #b9bfc4;
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-kinh { position: absolute; overflow: hidden; border-radius: 2px; box-shadow: inset 0 0 0 calc(var(--s-u) * 2) #aab1b7; background: linear-gradient(180deg, #9fd3f0 0%, #d7eef6 60%, #fbf1df 100%); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-kinh svg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-chieu { position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(118deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, .28) 38%, rgba(255, 255, 255, 0) 46%, rgba(255, 255, 255, 0) 58%, rgba(255, 255, 255, .18) 63%, rgba(255, 255, 255, 0) 68%); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-song-doc { position: absolute; background: linear-gradient(90deg, #c8cdd1, #f4f5f6, #bfc5ca); box-shadow: 0 0 3px rgba(0, 0, 0, .25); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-song-ngang { position: absolute; background: linear-gradient(180deg, #c8cdd1, #f4f5f6, #bfc5ca); box-shadow: 0 0 3px rgba(0, 0, 0, .25); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-bau { position: absolute; border-radius: 3px; background: linear-gradient(180deg, #f3f0ea, #cfc9bd); box-shadow: 0 calc(var(--s-u) * 5) calc(var(--s-u) * 8) rgba(80, 60, 30, .22); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-rem {
+  position: absolute; border-radius: calc(var(--s-u) * 5) calc(var(--s-u) * 5) calc(var(--s-u) * 14) calc(var(--s-u) * 14);
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0) 0 calc(var(--s-u) * 6), rgba(160, 130, 90, .18) calc(var(--s-u) * 6) calc(var(--s-u) * 8), rgba(255, 255, 255, .25) calc(var(--s-u) * 8) calc(var(--s-u) * 11), rgba(255, 255, 255, 0) calc(var(--s-u) * 11) calc(var(--s-u) * 13)),
+    linear-gradient(90deg, #f6efe0, #efe4cf 60%, #e2d4b8);
+  box-shadow: calc(var(--s-u) * -3) calc(var(--s-u) * 5) calc(var(--s-u) * 10) rgba(80, 60, 30, .25);
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-rem i { position: absolute; left: -3px; right: -3px; height: calc(var(--s-u) * 11); border-radius: 6px; background: #c96442; box-shadow: 0 2px 3px rgba(0, 0, 0, .3); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-thanh-rem { position: absolute; border-radius: 5px; background: linear-gradient(180deg, #c9c3b6, #9b9486); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-canh-hoa {
+  position: absolute; left: 0; top: 0; width: calc(var(--s-u) * 16); height: calc(var(--s-u) * 12); border-radius: 70% 0 70% 0;
+  background: radial-gradient(circle at 30% 30%, #fff1f5, #f7b9cb 55%, #ee9ab3); opacity: .95;
+  transform-origin: 50% 50%; will-change: transform; animation-timing-function: linear; animation-iteration-count: infinite; /* keyframes s-roi<i> + duration + delay: s.js dungLopHoc */
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-ban {
+  position: absolute; background: linear-gradient(180deg, #d9ad70, #c08a4c 55%, #a8743a);
+  clip-path: polygon(3% 0, 97% 0, 100% 100%, 0 100%); box-shadow: inset 0 3px 0 rgba(255, 236, 200, .55);
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-ban::after { content: ""; position: absolute; inset: 0;
+  background: repeating-linear-gradient(92deg, rgba(120, 70, 30, 0) 0 22px, rgba(120, 70, 30, .10) 22px 24px, rgba(120, 70, 30, 0) 24px 61px); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-but-chi { position: absolute; border-radius: 6px;
+  background: linear-gradient(90deg, #2f2a24 0 6%, #e9cf9a 6% 14%, #f2c230 14% 92%, #d76b6b 92%); box-shadow: 0 3px 4px rgba(0, 0, 0, .3); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-vo { position: absolute; background: #f7f3ea; border-radius: 3px;
+  background-image: repeating-linear-gradient(180deg, rgba(0, 0, 0, 0) 0 calc(var(--s-u) * 9), rgba(90, 130, 180, .35) calc(var(--s-u) * 9) calc(var(--s-u) * 10.5));
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .25); }
+
+/* ================================================================ bang den */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-khung {
+  position: absolute; border-radius: calc(var(--s-u) * 7);
+  background:
+    repeating-linear-gradient(90deg, rgba(60, 30, 10, 0) 0 7px, rgba(60, 30, 10, .10) 7px 9px, rgba(60, 30, 10, 0) 9px 18px),
+    linear-gradient(180deg, #a9743f, #8b5a2c 50%, #774a22);
+  box-shadow: 0 calc(var(--s-u) * 12) calc(var(--s-u) * 26) rgba(60, 40, 15, .38), inset 0 2px 0 rgba(255, 220, 170, .35), inset 0 -2px 0 rgba(0, 0, 0, .25);
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-bang {
+  position: absolute; overflow: hidden; z-index: 2;
+  background: #2c5240 url("../../assets/che-do/s/bang.webp") 0 0 / 100% 100% no-repeat;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .35), inset 0 calc(var(--s-u) * 5) calc(var(--s-u) * 12) rgba(0, 0, 0, .35);
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-nang { position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(228deg, rgba(255, 248, 220, .10) 0%, rgba(255, 248, 220, .04) 30%, rgba(255, 248, 220, 0) 55%); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-vet { position: absolute; inset: 0; opacity: 0; pointer-events: none;
+  background: url("../../assets/che-do/s/vet.webp") 0 0 / 100% 100% no-repeat; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-khay {
+  position: absolute; z-index: 3; border-radius: 4px;
+  background: linear-gradient(180deg, #d5d0c4 0%, #b3ad9f 40%, #8e887a 100%);
+  box-shadow: 0 calc(var(--s-u) * 6) calc(var(--s-u) * 10) rgba(60, 40, 15, .35), inset 0 2px 0 rgba(255, 255, 255, .5);
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-khay .s-bui-khay { position: absolute; left: 2%; right: 2%; top: 12%; height: 28%; border-radius: 4px; opacity: .7;
+  background: radial-gradient(ellipse at 30% 50%, rgba(255, 255, 255, .55), rgba(255, 255, 255, 0) 60%), radial-gradient(ellipse at 75% 50%, rgba(255, 255, 255, .45), rgba(255, 255, 255, 0) 55%); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-vien-phan { position: absolute; border-radius: 99px; box-shadow: 0 3px 3px rgba(0, 0, 0, .35); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-tay-khay { position: absolute; border-radius: calc(var(--s-u) * 5);
+  background: linear-gradient(180deg, #e9e2cf 0 30%, #2e3b55 30% 100%); box-shadow: 0 4px 5px rgba(0, 0, 0, .35); }
+
+/* ================================================================ lop canh (moi nhip) + phan */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-canh { position: absolute; left: 0; top: 0; contain: layout style; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-giay, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-phan { position: absolute; inset: 0; }
+/* giay (anh, the, cong bai tap) duoi, phan (chu, net, dau X / vong) tren: tao lop xep chong rieng -> the that khong de len net phan */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-giay { z-index: 1; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-phan { z-index: 2; pointer-events: none; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-phan {
+  -webkit-mask-image: url("../../assets/che-do/s/phan.webp"); -webkit-mask-size: calc(var(--s-u) * 300) calc(var(--s-u) * 300); -webkit-mask-repeat: repeat;
+  mask-image: url("../../assets/che-do/s/phan.webp"); mask-size: calc(var(--s-u) * 300) calc(var(--s-u) * 300); mask-repeat: repeat;
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-dau {
+  position: absolute; z-index: 1; pointer-events: none;
+  -webkit-mask-image: url("../../assets/che-do/s/phan.webp"); -webkit-mask-size: calc(var(--s-u) * 300) calc(var(--s-u) * 300);
+  mask-image: url("../../assets/che-do/s/phan.webp"); mask-size: calc(var(--s-u) * 300) calc(var(--s-u) * 300);
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-dau .s-doc {
+  position: absolute; writing-mode: vertical-rl; font-family: var(--s-jp); color: var(--s-trang); letter-spacing: .06em; line-height: 1;
+  -webkit-text-stroke: .018em currentColor; text-shadow: 0 0 1.5px rgba(255, 255, 255, .5); white-space: nowrap;
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-dau .s-doc.c-vang { color: var(--s-vang); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-dau .tcy { text-combine-upright: all; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-net-lop { position: absolute; left: 0; top: 0; overflow: visible; }
+
+/* chu phan */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c {
+  position: absolute; color: var(--s-trang); font-family: var(--s-vi); font-weight: 700; line-height: 1.22; padding: 0 .06em;
+  text-shadow: 0 0 1.5px rgba(255, 255, 255, .5), 0 0 8px rgba(255, 255, 255, .1); overflow-wrap: normal; word-break: normal; white-space: normal;
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c.giua { text-align: center; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c.jp, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-c [lang="ja"] { font-family: var(--s-jp); font-weight: 400; -webkit-text-stroke: .018em currentColor; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .k { display: inline-block; white-space: nowrap; clip-path: inset(0 100% 0 0); }
+/* da viet: .da tren khoi, tren mot phan con, hoac tren chinh don vi */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c.da .k, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .da .k, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .k.da { clip-path: none; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c.mot { white-space: nowrap; }
+/* canh moi dang cho cuc tay lau toi (chuyen canh): khoi chu chua hien (js dat visibility khi cuc tay toi mep trai) */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-canh.s-lau .s-c { visibility: hidden; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c.can { text-wrap: balance; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c.dep { text-wrap: pretty; }
+/* mot dong: text-wrap (balance / pretty) dat text-wrap-mode: wrap, de len white-space: nowrap -> ghi lai sau hai luat tren */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c.mot, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-c.mot.can, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-c.mot.dep { white-space: nowrap; text-wrap: nowrap; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c.s-o { display: flex; flex-direction: column; justify-content: center; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-nl { font-size: max(.5em, 14px); font-weight: 700; color: var(--s-vang); margin-right: .35em; font-family: var(--s-in-mix); -webkit-text-stroke: 0; }
+/* chu Viet co nho (< 22 / < 24 px): Mali mat net (c kin, o / u mat rau) -> font ro net; chu Nhat giu font rieng */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c.s-nho:not(.jp), :is(.cd-lop, .s-hop)[data-che-do="s"] .s-do-in.s-nho:not(.jp) { font-family: var(--s-in-mix); font-weight: 700; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-hd { font-family: var(--s-in-mix); }
+:is(.cd-lop, .s-hop)[data-che-do="s"][data-hep="1"] .s-nl { font-size: max(.56em, 13px); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-hd { font-size: max(.84em, 14px); line-height: 1.3; margin-bottom: .12em; }
+:is(.cd-lop, .s-hop)[data-che-do="s"][data-hep="1"] .s-c .s-hd { font-size: max(.84em, 13px); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-yc { display: block; margin-top: .3em; font-family: var(--s-in-mix); font-size: max(.62em, 14px); line-height: 1.3; }
+:is(.cd-lop, .s-hop)[data-che-do="s"][data-hep="1"] .s-c .s-yc { font-size: max(.66em, 13px); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-gy { margin-top: .35em; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-am { white-space: nowrap; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-am .s-nl { display: inline-block; min-width: 2.6em; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-tus-n { display: block; margin: 0 0 .1em; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-tu-d { display: grid; grid-template-columns: max-content 1fr; column-gap: .3em; align-items: baseline; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-tu-m { text-wrap: pretty; min-width: 0; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-eq { font-size: max(.72em, 14px); font-weight: 700; color: var(--s-vang); margin: 0 .35em 0 0; font-family: var(--s-in-mix); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-ten-la { font-weight: 600; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-muc { white-space: nowrap; margin: 0 .16em; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-muc .sep { margin: 0 .3em 0 0; }
+/* muc dai (ten mau cau dai trong the chuong): moi muc mot hang, xuong dong duoc, thut dong treo duoi dau cham */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-muc.s-muc-dai { display: block; white-space: normal; text-align: left; margin: .12em 0; padding-left: .95em; text-indent: -.95em; text-wrap: pretty; }
+/* text-indent ke thua xuong tung don vi inline-block (.k): dat lai 0 de cac tu khong chong len nhau */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-muc-dai .k { text-indent: 0; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-chip { white-space: nowrap; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-chip .sep { margin: 0 0 0 .3em; }
+/* bang chia / cong thuc nhieu menh: moi menh mot hang chu (atom Nhat, ky hieu Latin, dau noi, chu thich); cac hang xep chong hoac canh nhau tuy be ngang */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-bg { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: max(.34em, 20px) max(.6em, 34px); padding: max(.14em, 8px) 0; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-rw { display: block; max-width: 100%; padding: .1em .45em .16em; text-align: center; text-wrap: balance; line-height: 1.32; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-rw .s-cap, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-rw .s-gc, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-rw .s-ho, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-rw .s-ct { font-family: var(--s-in-mix); font-weight: 700; -webkit-text-stroke: 0; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-rw .s-cap { font-size: max(.46em, 14px); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-rw .s-gc, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-rw .s-ho { font-size: max(.5em, 14px); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-rw .s-ct { font-weight: 800; }
+:is(.cd-lop, .s-hop)[data-che-do="s"][data-hep="1"] .s-c .s-rw .s-cap { font-size: max(.5em, 13px); }
+:is(.cd-lop, .s-hop)[data-che-do="s"][data-hep="1"] .s-c .s-rw .s-gc, :is(.cd-lop, .s-hop)[data-che-do="s"][data-hep="1"] .s-c .s-rw .s-ho { font-size: max(.54em, 13px); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .c-vang { color: var(--s-vang); } :is(.cd-lop, .s-hop)[data-che-do="s"] .c-hong { color: var(--s-hong); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .c-xanh { color: var(--s-xanh); } :is(.cd-lop, .s-hop)[data-che-do="s"] .c-cam { color: var(--s-cam); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .c-la { color: var(--s-la); } :is(.cd-lop, .s-hop)[data-che-do="s"] .c-trang { color: var(--s-trang); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .p { margin: 0 .06em; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .sep { margin: 0 .22em; color: var(--s-vang); }
+
+/* net phan (SVG) */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .ln { fill: none; stroke: var(--s-trang); stroke-width: calc(var(--s-u) * 4.4); stroke-linecap: round; stroke-linejoin: round; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .ln.mong { stroke-width: calc(var(--s-u) * 2.8); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .ln.day { stroke-width: calc(var(--s-u) * 6.4); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .ln.mo { stroke: rgba(248, 246, 239, .45); stroke-width: calc(var(--s-u) * 2.2); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .ln.gach { stroke: rgba(248, 246, 239, .42); stroke-width: calc(var(--s-u) * 1.8); stroke-dasharray: 6 7; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .ln.vang { stroke: var(--s-vang); } :is(.cd-lop, .s-hop)[data-che-do="s"] .ln.hong { stroke: var(--s-hong); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .ln.xanh { stroke: var(--s-xanh); } :is(.cd-lop, .s-hop)[data-che-do="s"] .ln.cam { stroke: var(--s-cam); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .ln.la { stroke: var(--s-la); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-net { position: absolute; overflow: visible; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-net path { fill: none; stroke: #f9f7f0; stroke-width: 5.4; stroke-linecap: round; stroke-linejoin: round; }
+
+/* cau (token + furigana + nhan vai tro) */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-cau { line-height: 1.12; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-cau .s-tok { display: inline-flex; flex-direction: column; align-items: center; vertical-align: baseline; margin: .1em .09em; position: relative; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-cau .s-tok-c { white-space: nowrap; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-cau .s-tag { font-family: var(--s-in-mix); font-weight: 700; -webkit-text-stroke: 0; font-size: max(.26em, 14px); line-height: 1.25; margin-top: .3em; white-space: nowrap; }
+:is(.cd-lop, .s-hop)[data-che-do="s"][data-hep="1"] .s-cau .s-tag { font-size: max(.3em, 13px); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-cau .s-tag:empty::before { content: "\00a0"; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-cau .s-tag[lang="ja"] { font-family: var(--s-jp); font-weight: 400; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-cau ruby { ruby-position: over; }
+/* furigana dai hon chu goc khong choang sang token ben canh (5 px len "ち"): hop ruby = max(chu goc, furigana) */
+:is(.cd-lop, .s-hop)[data-che-do="s"] ruby { ruby-overhang: none; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-cau rt { font-size: max(.4em, 14px); color: var(--s-vang); -webkit-text-stroke: 0; font-family: var(--s-jp); }
+:is(.cd-lop, .s-hop)[data-che-do="s"][data-hep="1"] .s-cau rt { font-size: max(.42em, 13px); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-cau .s-nw { white-space: nowrap; display: inline-block; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-nw { white-space: nowrap; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-cho { position: absolute; height: calc(var(--s-u) * 3); border-radius: 2px; opacity: .75; pointer-events: none;
+  background: repeating-linear-gradient(90deg, var(--s-trang) 0 calc(var(--s-u) * 10), transparent calc(var(--s-u) * 10) calc(var(--s-u) * 19)); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-gach { position: absolute; border-radius: 99px; transform-origin: 0 50%; transform: scaleX(0); pointer-events: none; background: var(--s-vang); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-gach-2 { background: var(--s-hong); margin-top: .0em; transform-origin: 0 50%; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-c .s-hero { font-size: 1.75em; line-height: .95; vertical-align: -.08em; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-blank { display: inline-block; vertical-align: baseline; height: 1em; position: relative; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-blank::after { content: ""; position: absolute; left: .08em; right: .08em; bottom: -.08em; height: .07em; min-height: 2px; border-radius: 2px; background: var(--s-trang); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-cau-gt { border-radius: .12em; }
+
+/* ================================================================ giay: anh nam cham, the */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-anh {
+  position: absolute; padding: calc(var(--s-u) * 9); background: var(--s-giay); border-radius: 3px;
+  box-shadow: 0 calc(var(--s-u) * 10) calc(var(--s-u) * 16) rgba(0, 0, 0, .38), 0 2px 3px rgba(0, 0, 0, .3);
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"][data-hep="1"] .s-anh { padding: 5px; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-anh-o { position: relative; width: 100%; height: 100%; overflow: hidden; background: #f0ebe1; border-radius: 1px; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-anh-o img { display: block; width: 100%; height: 100%; object-fit: cover; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-anh-chu { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: var(--s-in-jp); font-weight: 900; color: var(--s-muc); line-height: 1; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-nc {
+  position: absolute; width: calc(var(--s-u) * 34); height: calc(var(--s-u) * 34); margin: calc(var(--s-u) * -17) 0 0 calc(var(--s-u) * -17); border-radius: 50%;
+  box-shadow: 0 calc(var(--s-u) * 4) calc(var(--s-u) * 6) rgba(0, 0, 0, .45), inset 0 calc(var(--s-u) * -3) calc(var(--s-u) * 4) rgba(0, 0, 0, .25);
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"][data-hep="1"] .s-nc { width: 18px; height: 18px; margin: -9px 0 0 -9px; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-nc.do, :is(.cd-lop, .s-hop)[data-che-do="s"] .nc-do { background: radial-gradient(circle at 35% 30%, #ffd6d0 0 8%, #e05a4f 30%, #a8322b 100%); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-nc.xanh, :is(.cd-lop, .s-hop)[data-che-do="s"] .nc-xanh { background: radial-gradient(circle at 35% 30%, #d6e8ff 0 8%, #3f7fd6 30%, #24508f 100%); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-nc.vang, :is(.cd-lop, .s-hop)[data-che-do="s"] .nc-vang { background: radial-gradient(circle at 35% 30%, #fff3c8 0 8%, #f0bd3a 30%, #b9861a 100%); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-nc.la, :is(.cd-lop, .s-hop)[data-che-do="s"] .nc-la { background: radial-gradient(circle at 35% 30%, #dcf5d0 0 8%, #4fae5a 30%, #2d7a37 100%); }
+
+/* the giay (dap an): o tinh cua che do va the that (.qz-opt) dung chung kieu */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-opts { position: absolute; display: flex; flex-wrap: wrap; justify-content: center; align-content: flex-start; gap: var(--s-og, 16px); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-the, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt {
+  position: relative; display: flex; align-items: center; justify-content: center; margin: 0;
+  padding: var(--s-py, 12px) var(--s-px, 16px); border: 0; border-radius: calc(var(--s-u) * 9);
+  background: linear-gradient(180deg, #fffaf0, #f4ebd8); color: var(--s-muc); text-align: center;
+  box-shadow: 0 calc(var(--s-u) * 9) calc(var(--s-u) * 16) rgba(0, 0, 0, .36), 0 2px 3px rgba(0, 0, 0, .28);
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-the::before, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt::before {
+  content: "" !important; display: block !important; position: absolute; left: 50%; top: calc(-1 * var(--s-po, 9px)); opacity: 1 !important; width: var(--s-ps, 26px); height: var(--s-ps, 26px); margin-left: calc(var(--s-ps, 26px) / -2); border-radius: 50%;
+  box-shadow: 0 calc(var(--s-u) * 3) calc(var(--s-u) * 5) rgba(0, 0, 0, .45), inset 0 calc(var(--s-u) * -2) calc(var(--s-u) * 3) rgba(0, 0, 0, .25);
+  background: radial-gradient(circle at 35% 30%, #ffd6d0 0 8%, #e05a4f 30%, #a8322b 100%);
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-the:nth-child(2)::before, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt:nth-child(2)::before { background: radial-gradient(circle at 35% 30%, #d6e8ff 0 8%, #3f7fd6 30%, #24508f 100%); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-the:nth-child(3)::before, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt:nth-child(3)::before { background: radial-gradient(circle at 35% 30%, #fff3c8 0 8%, #f0bd3a 30%, #b9861a 100%); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-the:nth-child(4)::before, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt:nth-child(4)::before { background: radial-gradient(circle at 35% 30%, #dcf5d0 0 8%, #4fae5a 30%, #2d7a37 100%); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-the:nth-child(1), :is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt:nth-child(1) { width: var(--s-w1, auto); rotate: -1deg; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-the:nth-child(2), :is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt:nth-child(2) { width: var(--s-w2, auto); rotate: .8deg; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-the:nth-child(3), :is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt:nth-child(3) { width: var(--s-w3, auto); rotate: -.7deg; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-the:nth-child(4), :is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt:nth-child(4) { width: var(--s-w4, auto); rotate: 1deg; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-the .s-so, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-key {
+  position: absolute; left: calc(-1 * var(--s-bo, 10px)); top: calc(-1 * var(--s-bo, 10px)); z-index: 2;
+  width: var(--s-kw, 30px); height: var(--s-kw, 30px); min-width: 0; padding: 0; border-radius: 50%; border: 0;
+  background: #3a332b; color: #fbf8f1; font: 800 var(--s-kf, 15px)/var(--s-kw, 30px) var(--s-in); text-align: center;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .35);
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-the .s-the-t, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-do .s-the-t, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt-text {
+  display: block; flex: 0 1 auto; min-width: 0; font-family: var(--s-in-mix); font-weight: 900; font-size: var(--s-fo, 32px); line-height: 1.16;
+  color: var(--s-muc); white-space: normal; overflow-wrap: normal; word-break: normal; text-wrap: balance; text-align: center; overflow: visible;
+}
+/* ngat dong chi o ranh gioi cum tu (auto-phrase, Chrome 119+; trinh duyet cu: keep-all = khong ngat giua tu). Khong con overflow-wrap: anywhere (no se ngat giua tu) */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-the .s-the-t, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-do .s-the-t, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt-text { word-break: keep-all; word-break: auto-phrase; overflow-wrap: normal; }
+/* dap an that co cum Nhat bi cat giua tu: giu nguyen cum (js giuCumNhat), chi ngat o khoang trang / dau cau */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt-text.s-giu { word-break: keep-all; overflow-wrap: anywhere; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-the-chan.cd-chan .sk-chan-tt { text-wrap: balance; }
+
+/* cong bai tap (the that): doi kieu, khong doi DOM */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot { position: absolute; display: flex; flex-direction: column; font-family: var(--s-vi); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong.cd-cong { flex: none; width: 100%; padding: 0; overflow: visible; display: block; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .sk-cong .qz-card { background: transparent; border: 0; box-shadow: none; padding: 0; margin: 0; width: 100%; max-width: none; display: block; color: var(--s-muc); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .sk-cong .qz-card .qz-q, :is(.cd-lop, .s-hop)[data-che-do="s"] .sk-cong .qz-card .qz-img, :is(.cd-lop, .s-hop)[data-che-do="s"] .sk-cong .qz-card .qz-jump { display: none !important; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .sk-cong .qz-card .qz-fb, :is(.cd-lop, .s-hop)[data-che-do="s"] .sk-cong .qz-card [id^="explain-"] { display: none !important; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opts { display: flex !important; flex-wrap: wrap; justify-content: center; align-content: flex-start; gap: var(--s-og, 16px); margin: 0; padding: 0; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-opts[data-c="1"], :is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot[data-c="1"] .sk-cong .qz-opts { flex-direction: column; flex-wrap: nowrap; align-items: center; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt { min-height: 0; cursor: pointer; transition: transform .14s ease-out; font-family: var(--s-in); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt:hover:not(:disabled) { transform: translateY(calc(var(--s-u) * -4)); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt:focus-visible { outline: calc(var(--s-u) * 4) solid var(--s-vang); outline-offset: calc(var(--s-u) * 3); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt:disabled,
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt.opt-locked,
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong > .qz-card.sk-da-cham.sk-bt-fb-hien .qz-opt { opacity: 1; cursor: default; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt > i, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt > .sk-bt-tick { display: none !important; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt.is-correct, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt.is-answer {
+  background: linear-gradient(180deg, #fffdf2, #f3efc9);
+  box-shadow: 0 calc(var(--s-u) * 9) calc(var(--s-u) * 16) rgba(0, 0, 0, .36), 0 2px 3px rgba(0, 0, 0, .28), 0 0 0 calc(var(--s-u) * 3) rgba(247, 215, 106, .9);
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-card .qz-opt { opacity: 1 !important; filter: none !important; color: var(--s-muc) !important; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-card .qz-opt:not(.is-correct):not(.is-answer):not(.is-wrong) { background: linear-gradient(180deg, #fffaf0, #f4ebd8) !important; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-card .qz-opt.is-wrong { background: linear-gradient(180deg, #f1ece2, #e2dbcc) !important; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt.is-wrong .qz-opt-text::after { display: none !important; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-card.roast-shake { animation: none !important; }
+/* the that: motion-hoi.css dung :is(#slideContent, ...) (do uu tien ID) cho ::before / lac / gach chu -> ghi de bang !important */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-card .qz-opt { animation: none !important; translate: none !important; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-card .qz-opt::before {
+  inset: auto !important; left: 50% !important; top: calc(-1 * var(--s-po, 9px)) !important; width: var(--s-ps, 26px) !important; height: var(--s-ps, 26px) !important;
+  margin-left: calc(var(--s-ps, 26px) / -2) !important; z-index: 3 !important; border-radius: 50% !important; animation: none !important;
+  box-shadow: 0 calc(var(--s-u) * 3) calc(var(--s-u) * 5) rgba(0, 0, 0, .45), inset 0 calc(var(--s-u) * -2) calc(var(--s-u) * 3) rgba(0, 0, 0, .25) !important;
+  background: radial-gradient(circle at 35% 30%, #ffd6d0 0 8%, #e05a4f 30%, #a8322b 100%) !important;
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-card .qz-opt:nth-child(2)::before { background: radial-gradient(circle at 35% 30%, #d6e8ff 0 8%, #3f7fd6 30%, #24508f 100%) !important; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-card .qz-opt:nth-child(3)::before { background: radial-gradient(circle at 35% 30%, #fff3c8 0 8%, #f0bd3a 30%, #b9861a 100%) !important; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-card .qz-opt:nth-child(4)::before { background: radial-gradient(circle at 35% 30%, #dcf5d0 0 8%, #4fae5a 30%, #2d7a37 100%) !important; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-card .qz-opt .qz-opt-text { margin: 0 !important; overflow: visible !important; position: static !important; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-card .qz-opt .qz-key { background: #3a332b !important; color: #fbf8f1 !important; }
+/* chan the: trang thai luot + nut; khong hien nhan xet dung / sai */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-the-chan.cd-chan {
+  flex: none; display: flex; align-items: center; justify-content: center; gap: calc(var(--s-u) * 16); margin-top: var(--s-cg, 14px);
+  min-height: var(--s-ch, 44px); padding: 0; background: none; border: 0;
+  font: 700 max(14px, calc(var(--s-u) * 20))/1.25 var(--s-vi); color: var(--s-vang); text-shadow: 0 0 1.5px rgba(255, 255, 255, .35);
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"][data-hep="1"] .s-slot .sk-the-chan.cd-chan { font-size: 13px; gap: 10px; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-the-chan.cd-chan .sk-chan-chu { flex: 0 1 auto; min-width: 0; text-align: center; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-the-chan.cd-chan .sk-chan-tt { color: var(--s-vang); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-the-chan.cd-chan.is-dung .sk-chan-chu, :is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-the-chan.cd-chan.is-sai .sk-chan-chu { display: none; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-the-chan.cd-chan .sk-nut { display: flex; align-items: center; gap: calc(var(--s-u) * 10); flex: none; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-the-chan.cd-chan button {
+  font: 800 max(14px, calc(var(--s-u) * 19))/1 var(--s-in); padding: calc(var(--s-u) * 9) calc(var(--s-u) * 18) calc(var(--s-u) * 10); border-radius: calc(var(--s-u) * 7);
+  border: 0; cursor: pointer; background: #fbf8f1; color: var(--s-muc); position: relative; overflow: hidden;
+  box-shadow: 0 calc(var(--s-u) * 5) calc(var(--s-u) * 9) rgba(0, 0, 0, .35), 0 2px 2px rgba(0, 0, 0, .25);
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"][data-hep="1"] .s-slot .sk-the-chan.cd-chan button { font-size: 13px; padding: 8px 12px; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-the-chan.cd-chan button.sk-btn-ma { background: #e7e1d3; color: var(--s-muc-nhat); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-the-chan.cd-chan button:focus-visible { outline: 3px solid var(--s-vang); outline-offset: 3px; }
+
+/* man hinh qua thap (dien thoai nam ngang): chi con luot hoc vien dang mo -> bang toi gian (cau hoi + the that + chan the), cuon duoc */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-ngan {
+  position: absolute; inset: 0; z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 10px 14px; overflow: auto; pointer-events: auto;
+  background: #2c5240 url("../../assets/che-do/s/bang.webp") 0 0 / 100% 100% no-repeat; color: var(--s-trang); font-family: var(--s-vi);
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-ngan-q { flex: none; max-width: 100%; text-align: center; font: 700 15px/1.3 var(--s-in-mix); color: var(--s-trang); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-ngan-q .k { clip-path: none; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot.s-slot-ngan { position: relative; flex: none; width: min(100%, 800px); margin: 0 auto; padding-top: 10px; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot-ngan .sk-cong.cd-cong { overflow: visible; }
+
+/* ================================================================ que phan, cuc tay, bui */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-que { position: absolute; left: 0; top: 0; width: 0; height: 0; opacity: 0; z-index: 50; pointer-events: none; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-que i {
+  position: absolute; left: -2px; top: calc(var(--s-u) * -6); width: calc(var(--s-u) * 64); height: calc(var(--s-u) * 12); border-radius: 3px 7px 7px 3px;
+  transform-origin: 2px calc(var(--s-u) * 6); transform: rotate(32deg);
+  background: linear-gradient(180deg, #ffffff, #ecebe4 55%, #cfcdc4); box-shadow: 4px 7px 7px rgba(0, 0, 0, .35);
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-tay { position: absolute; left: 0; top: 0; width: 0; height: 0; z-index: 60; pointer-events: none; opacity: 0; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-tay i {
+  position: absolute; left: calc(var(--s-u) * -36); top: calc(var(--s-u) * -86); width: calc(var(--s-u) * 72); height: calc(var(--s-u) * 172); border-radius: calc(var(--s-u) * 8);
+  background: linear-gradient(90deg, #2e3b55 0 34%, #e9e2cf 34% 100%); box-shadow: 7px 10px 12px rgba(0, 0, 0, .4);
+}
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-tay i::after { content: ""; position: absolute; top: 0; bottom: 0; right: 0; width: 22%; border-radius: 0 calc(var(--s-u) * 8) calc(var(--s-u) * 8) 0;
+  background: repeating-linear-gradient(180deg, #c96442 0 calc(var(--s-u) * 10), #e9e2cf calc(var(--s-u) * 10) calc(var(--s-u) * 20)); }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-bui { position: absolute; inset: 0; pointer-events: none; z-index: 55; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-hat { position: absolute; left: 0; top: 0; width: calc(var(--s-u) * 5); height: calc(var(--s-u) * 5); min-width: 3px; min-height: 3px; border-radius: 50%; background: #fbfaf5; opacity: 0; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-khoi { position: absolute; left: 0; top: 0; width: calc(var(--s-u) * 70); height: calc(var(--s-u) * 70); margin: calc(var(--s-u) * -35) 0 0 calc(var(--s-u) * -35); border-radius: 50%; opacity: 0;
+  background: radial-gradient(circle, rgba(250, 250, 244, .55), rgba(250, 250, 244, 0) 68%); }
+
+/* do chu (an) */
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-do { position: absolute; left: -30000px; top: 0; width: 12000px; height: 6000px; visibility: hidden; pointer-events: none; contain: strict; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-do > .s-do-in { position: absolute; left: 0; top: 0; display: inline-block; }
+/* hop do chu (.s-hop, nam ngoai <body> va ngoai .san-khau-giang): khong transition / animation. Luc "giam chuyen dong" styles.css dat transition-duration: .01ms !important cho MOI phan tu
+   (chi .san-khau-giang duoc motion.css tra ve 0s) -> doi font-size roi doc offsetWidth cung khung hinh tra ve co CU (transition bat dau, chua chay) -> do sai, canh xep hong (chong chu) */
+.s-hop, .s-hop * { transition: none !important; animation: none !important; }
+:is(.cd-lop, .s-hop)[data-che-do="s"] .s-do .k { clip-path: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  :is(.cd-lop, .s-hop)[data-che-do="s"] * { animation: none !important; }
+  :is(.cd-lop, .s-hop)[data-che-do="s"] .s-slot .sk-cong .qz-opt { transition: none; }
+}

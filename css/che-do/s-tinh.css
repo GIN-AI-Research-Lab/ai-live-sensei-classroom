@@ -1,0 +1,592 @@
+/* s-tinh.css (v4) - giao dien TINH cua che do S "Bang den lop hoc".
+   Nen (tuong, cua so, bang go, khay phan, ban) do js/che-do/s-tinh.js dung trong shadow root .s-tinh-host bang CHINH s.css cua san khau;
+   tep nay chi: (1) dat #slideContent len mat bang theo vung noi dung js tinh (--st-x/y/w/h tren .deck-stage), (2) kieu chu phan / the / nut ben trong.
+   QUY TAC: moi luat noi dung bat dau .deck-stage[data-s-tinh] #slideContent (thuoc tinh chi co khi lop nen da gan) -> tat ca bien mat khi
+   JS loi / doi che do, luoi thuong khong bi chu phan trang tren giay. Khong cham .cd-lop, #sanKhauGiang. Khong filter / bong lon.
+   v4: lop nen giu nguyen luc giang (chi dung canh hoa); man thap nam ngang = luoi mac dinh (data-s-nhan, khong thuoc tinh co gian); an khung luoi toi khi lop nen san sang;
+   hang cuoi le can giua; o khuyet cho meo; the dac (mat do 3) cao hon mot chut; thanh nut viet tay xuong dong duoc. */
+
+.s-tinh-host { position: absolute; inset: 0; z-index: 0; pointer-events: none; contain: layout paint; overflow: hidden; overflow: clip; --st-play: running; }
+/* tab an: canh hoa nen dung */
+.s-tinh-host[data-tam] { --st-play: paused; }
+/* luc giang: lop nen GIU NGUYEN (nam duoi san khau dac, y het nen san khau) chi tat canh hoa (display none: khong con lop ghep nao duoi san khau -> chu cua san khau giu nguyen cach ve
+   chu); khong an theo sk-vao (hen gio 260 ms, san khau con dang mo -> truoc day lo ra mot khoang trang ~120 ms) */
+body.dang-giang .s-tinh-host { --st-play: paused; --st-pd: none; }
+/* man thap nam ngang: san khau that khong ve bang -> khong co lop nen, luoi mac dinh */
+.s-tinh-host[data-ngan] { visibility: hidden; }
+/* chon S nhung lop nen chua san sang (s.css chua nap xong): an khung luoi toi khi js gan xong (data-s-tinh / data-s-nhan), de khong thay luoi mac dinh roi nhay sang bang.
+   An tren .deck-canvas (khong co animation rieng; #slideContent co sceneIn / cardIn rieng, ghi de animation se lam no chay lai); an toan: sau 2,5 s tu hien (js / css loi van dung duoc) */
+@keyframes st-hien { to { opacity: 1; } }
+html[data-che-do="s"] .deck-stage:not([data-s-tinh]):not([data-s-nhan]) > .deck-canvas:not(.san-khau-giang) { opacity: 0; animation: st-hien 0s linear 2.5s forwards; }
+
+/* khung noi dung = vung tren mat bang */
+.deck-stage[data-s-tinh] > .deck-canvas:not(.san-khau-giang) { max-width: none; margin: 0; padding: 0; }
+.deck-stage[data-s-tinh] #slideContent {
+  --s-trang: #f8f6ef; --s-vang: #f7d76a; --s-hong: #f79cb8; --s-xanh: #95d0f4; --s-cam: #f7ae60; --s-la: #bde68f;
+  --s-muc: #2b2620; --s-giay: #fbf8f1; --s-nhat: #cdd5c8;
+  --s-vien: rgba(248, 246, 239, .6);
+  --s-jp: "Yusei Magic", "Zen Maru Gothic", var(--font-jp, "Yu Gothic"), sans-serif;
+  --s-vi: "Mali", "Be Vietnam Pro", "Segoe UI", sans-serif;
+  --s-in: "Be Vietnam Pro", "Segoe UI", sans-serif;
+  --s-in-jp: "Zen Maru Gothic", var(--font-jp, "Yu Gothic"), sans-serif;
+  --s-in-mix: "Be Vietnam Pro", "Zen Maru Gothic", "Noto Sans JP", "Hiragino Sans", "Yu Gothic UI", Meiryo, "Segoe UI", sans-serif;
+  --s-phan: url("../../assets/che-do/s/phan.webp");
+  --ink: var(--s-trang); --ink-2: #ece9de; --muted: var(--s-nhat); --faint: #c3ccbf;
+  --paper-deep: rgba(255, 255, 255, .09); --surface: rgba(255, 255, 255, .06); --surface-hi: rgba(255, 255, 255, .13);
+  --line: rgba(248, 246, 239, .3); --line-strong: rgba(248, 246, 239, .55);
+  --accent: var(--s-vang); --accent-deep: var(--s-vang); --accent-strong: #e0b83a;
+  --sage: var(--s-la); --sage-deep: #2d7a37; --clay: var(--s-hong); --clay-deep: #a8322b; --gold: var(--s-vang);
+  --card: transparent;
+  --st-kh: min(max(var(--st-k, 1), .72), 1.12);
+  position: absolute; left: var(--st-x); top: var(--st-y); width: var(--st-w); height: var(--st-h);
+  display: flex; flex-direction: column; min-height: 0; overflow: hidden;
+  padding: 0; margin: 0; background: none; border: 0; box-shadow: none;
+  color: var(--s-trang);
+  font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 16px));
+}
+.deck-stage[data-s-tinh] > .deck-canvas > .deck-busy { left: var(--st-x); top: var(--st-y); right: auto; bottom: auto; width: var(--st-w); height: var(--st-h); }
+.deck-stage[data-s-tinh] #slideContent * { box-sizing: border-box; }
+.deck-stage[data-s-tinh] #slideContent ::selection { background: rgba(247, 215, 106, .4); color: #fff; }
+
+/* ================================================================ dau chuong (tieu de bang)
+   Chu vang trai hien o goc tren trai bang + net gach chan phan; dong phu (so tu, nut) cung hang. */
+.deck-stage[data-s-tinh] #slideContent .deck-head { position: relative; padding-bottom: calc(var(--st-kh, 1) * 10px); margin-bottom: calc(var(--st-kh, 1) * 14px); gap: calc(var(--st-kh, 1) * 4px) calc(var(--st-kh, 1) * 14px); align-items: baseline; }
+.deck-stage[data-s-tinh] #slideContent .deck-head::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; border-radius: 99px; background: var(--s-vang); opacity: .88;
+  -webkit-mask-image: var(--s-phan); -webkit-mask-size: 300px 300px; mask-image: var(--s-phan); mask-size: 300px 300px;
+}
+.deck-stage[data-s-tinh] #slideContent .deck-h2 {
+  font-family: var(--s-vi); font-weight: 700; font-size: max(14px, calc(var(--st-kh, 1) * 28px)); line-height: 1.25; letter-spacing: 0;
+  color: var(--s-vang); text-shadow: 0 0 1.5px rgba(255, 255, 255, .45), 0 0 8px rgba(247, 215, 106, .12);
+}
+.deck-stage[data-s-tinh] #slideContent .deck-h2.jp-keep { font-family: var(--s-in-mix); font-weight: 800; font-size: max(14px, calc(var(--st-kh, 1) * 24px)); }
+.deck-stage[data-s-tinh] #slideContent .deck-meta { font-family: var(--s-in-mix); font-size: max(12px, calc(var(--st-kh, 1) * 14px)); font-weight: 600; color: var(--s-xanh); }
+.deck-stage[data-s-tinh] #slideContent .deck-head > .ctl { margin-bottom: 2px; }
+
+/* ================================================================ chu Nhat, furigana
+   Chu Nhat dung font phan (Yusei Magic); furigana vang nhu tren san khau. */
+.deck-stage[data-s-tinh] #slideContent [lang="ja"], .deck-stage[data-s-tinh] #slideContent .jp { font-family: var(--s-jp); }
+.deck-stage[data-s-tinh] #slideContent .jp-sentence { font-family: var(--s-jp); font-weight: 400; color: var(--s-trang); -webkit-text-stroke: .015em currentColor; text-shadow: 0 0 1.5px rgba(255, 255, 255, .4); }
+.deck-stage[data-s-tinh] #slideContent .deck-content ruby rt,
+.deck-stage[data-s-tinh] #slideContent ruby rt {
+  font-family: var(--s-in-jp); font-weight: 700; font-size: max(12px, .46em); color: var(--s-vang); -webkit-text-stroke: 0; text-shadow: none;
+}
+.deck-stage[data-s-tinh] #slideContent .jp-tok { border-radius: 6px; }
+@media (hover: hover) {
+  .deck-stage[data-s-tinh] #slideContent .jp-tok:not(.hl-grammar, .hl-vocab, .hl-warning, .hl-reading-inline):hover { background: rgba(247, 215, 106, .16); color: #fff; }
+  .deck-stage[data-s-tinh] #slideContent .jp-tok.is-key:not(.hl-grammar, .hl-vocab, .hl-warning, .hl-reading-inline):hover { background: rgba(247, 174, 96, .26); color: var(--s-cam); }
+}
+.deck-stage[data-s-tinh] #slideContent .jp-tok.is-key:not(.hl-grammar, .hl-vocab, .hl-warning, .hl-reading-inline) { background: rgba(247, 174, 96, .14); color: var(--s-cam); }
+
+/* ================================================================ nut: loa, nut chu, doan
+   Loa = bieu tuong phan; nut .ctl = phan vien (ghost) hoac que phan vang (hanh dong chinh). */
+.deck-stage[data-s-tinh] #slideContent .icon-btn { color: var(--s-nhat); border-radius: 50%; }
+@media (hover: hover) {
+  .deck-stage[data-s-tinh] #slideContent .icon-btn:hover { background: rgba(247, 215, 106, .16); color: var(--s-vang); }
+}
+.deck-stage[data-s-tinh] #slideContent .icon-btn:focus-visible,
+.deck-stage[data-s-tinh] #slideContent .ctl:focus-visible,
+.deck-stage[data-s-tinh] #slideContent .deck-seg > button:focus-visible,
+.deck-stage[data-s-tinh] #slideContent .qz-opt:focus-visible,
+.deck-stage[data-s-tinh] #slideContent .qz-rec:focus-visible { outline: 3px solid var(--s-vang); outline-offset: 2px; }
+
+.deck-stage[data-s-tinh] #slideContent .ctl {
+  font-family: var(--s-in); font-size: max(14px, calc(var(--st-k, 1) * 14px)); font-weight: 800; padding: calc(var(--st-k, 1) * 8px) calc(var(--st-k, 1) * 15px); min-height: 40px; border-radius: 9px;
+  box-shadow: none;
+}
+.deck-stage[data-s-tinh] #slideContent .ctl-ghost, .deck-stage[data-s-tinh] #slideContent .ctl-warn {
+  background: rgba(255, 255, 255, .04); color: var(--s-trang); border: 2px solid var(--s-vien);
+}
+.deck-stage[data-s-tinh] #slideContent .ctl-ghost i, .deck-stage[data-s-tinh] #slideContent .ctl-warn i { color: var(--s-vang); }
+@media (hover: hover) {
+  .deck-stage[data-s-tinh] #slideContent .ctl-ghost:hover:not(:disabled), .deck-stage[data-s-tinh] #slideContent .ctl-warn:hover:not(:disabled) { background: rgba(247, 215, 106, .16); color: #fff; border-color: var(--s-vang); }
+}
+.deck-stage[data-s-tinh] #slideContent .ctl-connect, .deck-stage[data-s-tinh] #slideContent .ctl-go {
+  background: linear-gradient(180deg, #fbe28a, #f2c94a); color: var(--s-muc); border-color: transparent;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, .35), 0 1px 2px rgba(0, 0, 0, .3);
+}
+@media (hover: hover) {
+  .deck-stage[data-s-tinh] #slideContent .ctl-connect:hover:not(:disabled), .deck-stage[data-s-tinh] #slideContent .ctl-go:hover:not(:disabled) { background: linear-gradient(180deg, #fff0ad, #f7d76a); color: var(--s-muc); }
+}
+.deck-stage[data-s-tinh] #slideContent .ctl-connect.is-live { background: linear-gradient(180deg, #f0a49a, #e05a4f); color: #2b1412; }
+
+/* nut doan (Trac nghiem / Phat am / Viet tay, Viet nhanh / Noi nhanh): vien phan, tab dang chon = to giay */
+.deck-stage[data-s-tinh] #slideContent .deck-seg { background: rgba(255, 255, 255, .05); border: 2px solid var(--s-vien); border-radius: 12px; padding: 3px; }
+.deck-stage[data-s-tinh] #slideContent .deck-seg > button, .deck-stage[data-s-tinh] #slideContent .deck-seg > a {
+  font-family: var(--s-in); font-size: max(14px, calc(var(--st-k, 1) * 14px)); font-weight: 700; color: var(--s-trang); border-radius: 8px; min-height: 40px; padding: calc(var(--st-k, 1) * 6px) calc(var(--st-k, 1) * 14px);
+}
+@media (hover: hover) {
+  .deck-stage[data-s-tinh] #slideContent .deck-seg > button:hover, .deck-stage[data-s-tinh] #slideContent .deck-seg > a:hover { color: var(--s-vang); background: rgba(247, 215, 106, .1); }
+}
+.deck-stage[data-s-tinh] #slideContent .deck-seg > .is-active {
+  background: linear-gradient(180deg, #fffaf0, #f4ebd8); color: var(--s-muc); box-shadow: 0 3px 5px rgba(0, 0, 0, .35);
+}
+@media (hover: hover) {
+  .deck-stage[data-s-tinh] #slideContent .deck-seg > .is-active:hover { color: var(--s-muc); background: linear-gradient(180deg, #fffaf0, #f4ebd8); }
+}
+
+/* ================================================================ the = o phan ve tren bang
+   Vien phan nua trong (lop ::before co hat phan), nen mo nhe; ben trong chu phan. */
+.deck-stage[data-s-tinh] #slideContent .deck-card {
+  position: relative; background: rgba(255, 255, 255, .04); box-shadow: none; color: var(--s-trang);
+  border-radius: 14px 11px 15px 10px / 11px 14px 10px 15px;
+}
+.deck-stage[data-s-tinh] #slideContent .deck-card::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; border: 2.5px solid var(--s-vien); border-radius: inherit;
+  -webkit-mask-image: var(--s-phan); -webkit-mask-size: 300px 300px; mask-image: var(--s-phan); mask-size: 300px 300px;
+}
+@media (hover: hover) {
+  .deck-stage[data-s-tinh] #slideContent .deck-card:hover { border-color: transparent; background: rgba(255, 255, 255, .07); }
+  .deck-stage[data-s-tinh] #slideContent .deck-card:hover::before { border-color: var(--s-vang); }
+}
+/* noi dung the nam tren vien */
+.deck-stage[data-s-tinh] #slideContent .deck-card > * { position: relative; z-index: 1; }
+
+/* ghi chu: vach phan hong ben trai (giong hop "Luu y" tren san khau) */
+.deck-stage[data-s-tinh] #slideContent .deck-note {
+  max-width: 72ch; padding: calc(var(--st-k, 1) * 6px) 0 calc(var(--st-k, 1) * 6px) calc(var(--st-k, 1) * 14px); border-left: 3px solid var(--s-hong); border-radius: 2px;
+  font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 15px)); line-height: 1.65; color: var(--s-trang);
+}
+.deck-stage[data-s-tinh] #slideContent .deck-note b, .deck-stage[data-s-tinh] #slideContent .deck-note strong { color: var(--s-vang); font-weight: 800; }
+.deck-stage[data-s-tinh] #slideContent .deck-note.is-gold { border-left-color: var(--s-xanh); }
+.deck-stage[data-s-tinh] #slideContent .deck-note.is-accent { border-left-color: var(--s-vang); }
+
+/* ================================================================ anh: dinh nam cham
+   Moi anh = to giay (polaroid) hoi nghieng, dinh bang nam cham tron nhu tren san khau. */
+.deck-stage[data-s-tinh] #slideContent .vc-thumb,
+.deck-stage[data-s-tinh] #slideContent .vc-card .sensei-art-sm,
+.deck-stage[data-s-tinh] #slideContent .gp-ex-img,
+.deck-stage[data-s-tinh] #slideContent .qz-img,
+.deck-stage[data-s-tinh] #slideContent .kw-canh,
+.deck-stage[data-s-tinh] #slideContent .sensei-art-lg {
+  position: relative; overflow: visible; background: var(--s-giay); border: 0; border-radius: 3px; padding: calc(var(--st-k, 1) * 5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, .4), 0 1px 3px rgba(0, 0, 0, .3);
+  rotate: -2deg;
+}
+.deck-stage[data-s-tinh] #slideContent .vc-thumb, .deck-stage[data-s-tinh] #slideContent .vc-card .sensei-art-sm { width: calc(var(--st-k, 1) * 72px); height: calc(var(--st-k, 1) * 72px); padding: calc(var(--st-k, 1) * 5px); }
+.deck-stage[data-s-tinh] #slideContent .vc-thumb img, .deck-stage[data-s-tinh] #slideContent .gp-ex-img img, .deck-stage[data-s-tinh] #slideContent .kw-canh img,
+.deck-stage[data-s-tinh] #slideContent .qz-img img { border-radius: 1px; background: var(--anh-kem); }
+.deck-stage[data-s-tinh] #slideContent .vc-card .sensei-art-sm svg { border-radius: 1px; background: var(--anh-kem); }
+.deck-stage[data-s-tinh] #slideContent .vc-thumb::after, .deck-stage[data-s-tinh] #slideContent .vc-card .sensei-art-sm::after,
+.deck-stage[data-s-tinh] #slideContent .gp-ex-img::after, .deck-stage[data-s-tinh] #slideContent .kw-canh::after, .deck-stage[data-s-tinh] #slideContent .qz-img::after {
+  content: ""; position: absolute; left: 50%; top: -7px; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; z-index: 2; pointer-events: none;
+  background: radial-gradient(circle at 35% 30%, #ffd6d0 0 8%, #e05a4f 30%, #a8322b 100%);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .45), inset 0 -2px 3px rgba(0, 0, 0, .25);
+}
+.deck-stage[data-s-tinh] #slideContent .vc-card:nth-child(4n+2) .vc-thumb, .deck-stage[data-s-tinh] #slideContent .vc-card:nth-child(4n+2) .sensei-art-sm { rotate: 1.6deg; }
+.deck-stage[data-s-tinh] #slideContent .vc-card:nth-child(4n+3) .vc-thumb, .deck-stage[data-s-tinh] #slideContent .vc-card:nth-child(4n+3) .sensei-art-sm { rotate: -1deg; }
+.deck-stage[data-s-tinh] #slideContent .vc-card:nth-child(4n+4) .vc-thumb, .deck-stage[data-s-tinh] #slideContent .vc-card:nth-child(4n+4) .sensei-art-sm { rotate: 2.2deg; }
+.deck-stage[data-s-tinh] #slideContent .vc-card:nth-child(4n+2) .vc-thumb::after, .deck-stage[data-s-tinh] #slideContent .vc-card:nth-child(4n+2) .sensei-art-sm::after { background: radial-gradient(circle at 35% 30%, #d6e8ff 0 8%, #3f7fd6 30%, #24508f 100%); }
+.deck-stage[data-s-tinh] #slideContent .vc-card:nth-child(4n+3) .vc-thumb::after, .deck-stage[data-s-tinh] #slideContent .vc-card:nth-child(4n+3) .sensei-art-sm::after { background: radial-gradient(circle at 35% 30%, #fff3c8 0 8%, #f0bd3a 30%, #b9861a 100%); }
+.deck-stage[data-s-tinh] #slideContent .vc-card:nth-child(4n+4) .vc-thumb::after, .deck-stage[data-s-tinh] #slideContent .vc-card:nth-child(4n+4) .sensei-art-sm::after { background: radial-gradient(circle at 35% 30%, #dcf5d0 0 8%, #4fae5a 30%, #2d7a37 100%); }
+
+/* ================================================================ TU VUNG
+   Tu to nhu tren bang (Yusei Magic, trang), romaji xanh, nghia trang, ghi chu vach hong; anh dinh ben phai. */
+.deck-stage[data-s-tinh] #slideContent .vc-list { gap: calc(var(--st-k, 1) * 18px) calc(var(--st-k, 1) * 16px); padding: calc(var(--st-k, 1) * 10px) calc(var(--st-k, 1) * 8px) calc(var(--st-k, 1) * 12px) 2px; }
+.deck-stage[data-s-tinh] #slideContent .vc-card { gap: calc(var(--st-k, 1) * 14px); padding: calc(var(--st-k, 1) * 14px) calc(var(--st-k, 1) * 14px) calc(var(--st-k, 1) * 14px) calc(var(--st-k, 1) * 16px); }
+.deck-stage[data-s-tinh] #slideContent .vc-side { gap: calc(var(--st-k, 1) * 10px); }
+.deck-stage[data-s-tinh] #slideContent .vc-side > .icon-btn { margin: calc(var(--st-k, 1) * -4px) calc(var(--st-k, 1) * -4px) 0 0; }
+.deck-stage[data-s-tinh] #slideContent .vc-word { font-family: var(--s-jp); font-weight: 400; font-size: max(14px, calc(var(--st-k, 1) * 32px)); line-height: 1.3; color: var(--s-trang); -webkit-text-stroke: .015em currentColor; text-shadow: 0 0 1.5px rgba(255, 255, 255, .45); }
+.deck-stage[data-s-tinh] #slideContent .vc-meta { text-wrap: balance; margin-top: 2px; font-family: var(--s-in-mix); font-size: max(12px, calc(var(--st-k, 1) * 14px)); font-weight: 600; line-height: 1.4; color: var(--s-xanh); }
+.deck-stage[data-s-tinh] #slideContent .vc-mean { margin-top: calc(var(--st-k, 1) * 6px); font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 16px)); font-weight: 700; line-height: 1.45; color: var(--s-trang); }
+.deck-stage[data-s-tinh] #slideContent .vc-note {
+  display: block; overflow: visible; -webkit-line-clamp: unset; line-clamp: unset; margin-top: calc(var(--st-k, 1) * 8px); padding: 2px 0 2px calc(var(--st-k, 1) * 10px); border-left: 2px solid var(--s-hong);
+  font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 14px)); line-height: 1.5; color: var(--s-nhat);
+}
+
+/* ================================================================ CHU HAN
+   O chu vuong co net chia chu thap, Han Viet vang, On xanh / Kun la, tu ghep vach net dut. */
+.deck-stage[data-s-tinh] #slideContent .kj-list { gap: calc(var(--st-k, 1) * 20px) calc(var(--st-k, 1) * 18px); padding: calc(var(--st-k, 1) * 10px) calc(var(--st-k, 1) * 8px) calc(var(--st-k, 1) * 12px) 2px; }
+.deck-stage[data-s-tinh] #slideContent .kj-card { padding: calc(var(--st-k, 1) * 16px) calc(var(--st-k, 1) * 18px) calc(var(--st-k, 1) * 14px); gap: calc(var(--st-k, 1) * 14px); }
+.deck-stage[data-s-tinh] #slideContent .kj-top { gap: calc(var(--st-k, 1) * 16px); }
+.deck-stage[data-s-tinh] #slideContent .kj-glyph {
+  width: calc(var(--st-k, 1) * 76px); height: calc(var(--st-k, 1) * 76px); border-radius: 3px; font-family: var(--s-jp); font-weight: 400; font-size: max(14px, calc(var(--st-k, 1) * 46px)); color: var(--s-trang);
+  background:
+    repeating-linear-gradient(90deg, rgba(248, 246, 239, .4) 0 5px, transparent 5px 10px) center / 100% 1.5px no-repeat,
+    repeating-linear-gradient(180deg, rgba(248, 246, 239, .4) 0 5px, transparent 5px 10px) center / 1.5px 100% no-repeat,
+    rgba(255, 255, 255, .05);
+  box-shadow: inset 0 0 0 2px var(--s-vien);
+  -webkit-text-stroke: .015em currentColor; text-shadow: 0 0 1.5px rgba(255, 255, 255, .45);
+}
+.deck-stage[data-s-tinh] #slideContent .kj-glyph.is-ghep { font-size: max(14px, calc(var(--st-k, 1) * 32px)); }
+.deck-stage[data-s-tinh] #slideContent .kj-id { padding-top: calc(var(--st-k, 1) * 4px); }
+.deck-stage[data-s-tinh] #slideContent .kj-hv { font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 17px)); font-weight: 800; letter-spacing: .04em; color: var(--s-vang); }
+.deck-stage[data-s-tinh] #slideContent .kj-card:not(.is-kana) .kj-hv::before { content: "Hán Việt "; font-size: max(14px, calc(var(--st-k, 1) * 14px)); font-weight: 700; letter-spacing: 0; color: var(--s-nhat); }
+.deck-stage[data-s-tinh] #slideContent .kj-strokes { display: inline-block; margin-left: .35em; white-space: nowrap; font-size: max(12px, calc(var(--st-k, 1) * 14px)); font-weight: 600; color: var(--s-nhat); }
+.deck-stage[data-s-tinh] #slideContent .kj-mean { margin-top: 3px; font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 16px)); font-weight: 700; line-height: 1.45; color: var(--s-trang); }
+.deck-stage[data-s-tinh] #slideContent .kj-card.is-kana .kj-hv { font-size: max(14px, calc(var(--st-k, 1) * 22px)); letter-spacing: .02em; }
+.deck-stage[data-s-tinh] #slideContent .kj-read { gap: calc(var(--st-k, 1) * 5px) calc(var(--st-k, 1) * 14px); }
+.deck-stage[data-s-tinh] #slideContent .kj-read dt { font-family: var(--s-in-mix); font-size: max(12px, calc(var(--st-k, 1) * 14px)); font-weight: 800; color: var(--s-xanh); }
+.deck-stage[data-s-tinh] #slideContent .kj-read dt:nth-of-type(2) { color: var(--s-la); }
+.deck-stage[data-s-tinh] #slideContent .kj-read dd { font-family: var(--s-jp); font-size: max(14px, calc(var(--st-k, 1) * 17px)); color: var(--s-trang); }
+.deck-stage[data-s-tinh] #slideContent .kj-card.is-kana .kj-read dd { font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 15px)); color: var(--s-trang); }
+.deck-stage[data-s-tinh] #slideContent .kj-label { margin-bottom: calc(var(--st-k, 1) * 4px); font-family: var(--s-in-mix); font-size: max(12px, calc(var(--st-k, 1) * 14px)); font-weight: 800; color: var(--s-vang); }
+.deck-stage[data-s-tinh] #slideContent .kj-words > li { padding: calc(var(--st-k, 1) * 7px) 0; border-top: 2px dashed rgba(248, 246, 239, .3); }
+.deck-stage[data-s-tinh] #slideContent .kj-w { font-family: var(--s-jp); font-size: max(14px, calc(var(--st-k, 1) * 18px)); font-weight: 400; color: var(--s-trang); }
+.deck-stage[data-s-tinh] #slideContent .kj-r { font-family: var(--s-in-jp); font-size: max(12px, calc(var(--st-k, 1) * 14px)); font-weight: 700; color: var(--s-vang); }
+.deck-stage[data-s-tinh] #slideContent .kj-m { font-family: var(--s-in-mix); font-size: max(12px, calc(var(--st-k, 1) * 14px)); font-weight: 600; color: var(--s-trang); }
+
+/* ================================================================ NGU PHAP
+   Giai thich chu phan trang; cong thuc = khung phan vang "Mau cau"; vi du = the phan; ghi chu vach hong / xanh. */
+.deck-stage[data-s-tinh] #slideContent .gp-list { padding: calc(var(--st-k, 1) * 4px) calc(var(--st-k, 1) * 8px) calc(var(--st-k, 1) * 12px) 2px; }
+.deck-stage[data-s-tinh] #slideContent .gp-explain { max-width: 72ch; font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 16px)); font-weight: 600; line-height: 1.7; color: var(--s-trang); }
+.deck-stage[data-s-tinh] #slideContent .gp-formula {
+  position: relative; gap: calc(var(--st-k, 1) * 12px); padding: calc(var(--st-k, 1) * 10px) calc(var(--st-k, 1) * 18px) calc(var(--st-k, 1) * 11px); border-radius: 3px; background: rgba(247, 215, 106, .06); align-items: baseline;
+}
+.deck-stage[data-s-tinh] #slideContent .gp-formula::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; border: 2.5px solid var(--s-vang); border-radius: 3px;
+  -webkit-mask-image: var(--s-phan); -webkit-mask-size: 300px 300px; mask-image: var(--s-phan); mask-size: 300px 300px;
+}
+.deck-stage[data-s-tinh] #slideContent .gp-formula > * { position: relative; }
+.deck-stage[data-s-tinh] #slideContent .gp-formula-label { font-family: var(--s-in-mix); font-size: max(12px, calc(var(--st-k, 1) * 14px)); font-weight: 800; color: var(--s-vang); }
+.deck-stage[data-s-tinh] #slideContent .gp-formula-text { font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 18px)); font-weight: 800; color: var(--s-trang); line-height: 1.55; }
+.deck-stage[data-s-tinh] #slideContent .gp-formula-text [lang="ja"] { font-family: var(--s-jp); font-weight: 400; font-size: 1.1em; color: var(--s-xanh); }
+.deck-stage[data-s-tinh] #slideContent .gp-ex { gap: calc(var(--st-k, 1) * 14px); padding: calc(var(--st-k, 1) * 12px) calc(var(--st-k, 1) * 18px) calc(var(--st-k, 1) * 14px); max-width: 820px; }
+.deck-stage[data-s-tinh] #slideContent .gp-ex-img { width: calc(var(--st-k, 1) * 72px); height: calc(var(--st-k, 1) * 72px); margin-top: calc(var(--st-k, 1) * 8px); padding: calc(var(--st-k, 1) * 5px); }
+.deck-stage[data-s-tinh] #slideContent .gp-ex-img::after { background: radial-gradient(circle at 35% 30%, #d6e8ff 0 8%, #3f7fd6 30%, #24508f 100%); }
+.deck-stage[data-s-tinh] #slideContent .gp-ex-mean { margin-top: 2px; font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 15px)); font-weight: 700; line-height: 1.5; color: var(--s-la); }
+.deck-stage[data-s-tinh] #slideContent .gp-ex .jp-sentence { font-size: max(14px, calc(var(--st-k, 1) * clamp(22px, 1.1rem + .6vw, 28px))); line-height: 2; }
+
+/* ================================================================ HOI THOAI
+   Chan dung = anh dinh nam cham; ten vang; loi thoai trong khung phan (A trang, B xanh). */
+.deck-stage[data-s-tinh] #slideContent .kw-list { padding: calc(var(--st-k, 1) * 4px) calc(var(--st-k, 1) * 8px) calc(var(--st-k, 1) * 12px) 2px; }
+.deck-stage[data-s-tinh] #slideContent .kw-list > * + * { margin-top: calc(var(--st-k, 1) * 18px); }
+.deck-stage[data-s-tinh] #slideContent .kw-row { gap: calc(var(--st-k, 1) * 14px); align-items: flex-start; }
+.deck-stage[data-s-tinh] #slideContent .kw-ava { margin-top: calc(var(--st-k, 1) * 8px); font-family: var(--s-jp); font-size: max(14px, calc(var(--st-k, 1) * 18px)); font-weight: 400; }
+.deck-stage[data-s-tinh] #slideContent .kw-ava.is-chu { width: 40px; height: 40px; background: rgba(247, 215, 106, .12); color: var(--s-vang); box-shadow: inset 0 0 0 2px var(--s-vang); }
+.deck-stage[data-s-tinh] #slideContent .kw-row.is-b .kw-ava.is-chu { background: rgba(149, 208, 244, .12); color: var(--s-xanh); box-shadow: inset 0 0 0 2px var(--s-xanh); }
+.deck-stage[data-s-tinh] #slideContent .kw-ava.is-chu.is-vien, .deck-stage[data-s-tinh] #slideContent .kw-row.is-b .kw-ava.is-chu.is-vien { background: transparent; }
+.deck-stage[data-s-tinh] #slideContent .kw-ava.is-anh {
+  position: relative; width: calc(var(--st-k, 1) * 52px); height: calc(var(--st-k, 1) * 52px); padding: calc(var(--st-k, 1) * 4px); border-radius: 3px; overflow: visible; background: var(--s-giay);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, .4), 0 1px 3px rgba(0, 0, 0, .3); rotate: -2deg;
+}
+.deck-stage[data-s-tinh] #slideContent .kw-row.is-b .kw-ava.is-anh { rotate: 2deg; }
+.deck-stage[data-s-tinh] #slideContent .kw-ava.is-anh img { border-radius: 1px; background: var(--anh-kem); }
+.deck-stage[data-s-tinh] #slideContent .kw-ava.is-anh::after {
+  content: ""; position: absolute; left: 50%; top: -6px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle at 35% 30%, #ffd6d0 0 8%, #e05a4f 30%, #a8322b 100%); box-shadow: 0 2px 3px rgba(0, 0, 0, .45), inset 0 -2px 3px rgba(0, 0, 0, .25);
+}
+.deck-stage[data-s-tinh] #slideContent .kw-row.is-b .kw-ava.is-anh::after { background: radial-gradient(circle at 35% 30%, #d6e8ff 0 8%, #3f7fd6 30%, #24508f 100%); }
+.deck-stage[data-s-tinh] #slideContent .kw-ava.is-anh img { transform: scale(1.5); transform-origin: 50% 36%; }
+.deck-stage[data-s-tinh] #slideContent .kw-bubble { padding: calc(var(--st-k, 1) * 8px) calc(var(--st-k, 1) * 16px) calc(var(--st-k, 1) * 14px); border-top-left-radius: 14px 11px; }
+.deck-stage[data-s-tinh] #slideContent .kw-row.is-b .kw-bubble { background: rgba(149, 208, 244, .06); border-top-right-radius: 11px; }
+.deck-stage[data-s-tinh] #slideContent .kw-row.is-b .kw-bubble::before { border-color: rgba(149, 208, 244, .75); }
+.deck-stage[data-s-tinh] #slideContent .kw-name { font-family: var(--s-in-mix); font-size: max(12px, calc(var(--st-k, 1) * 14px)); font-weight: 800; color: var(--s-vang); }
+.deck-stage[data-s-tinh] #slideContent .kw-row.is-b .kw-name { color: var(--s-xanh); }
+.deck-stage[data-s-tinh] #slideContent .kw-mean { font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 15px)); font-weight: 700; line-height: 1.5; color: var(--s-la); }
+.deck-stage[data-s-tinh] #slideContent .kw-bubble .jp-sentence { font-size: max(14px, calc(var(--st-k, 1) * clamp(22px, 1.1rem + .5vw, 26px))); }
+.deck-stage[data-s-tinh] #slideContent .kw-canh { padding: calc(var(--st-k, 1) * 6px); }
+
+/* ================================================================ BAI TAP
+   Thanh nhay vien phan; cau hoi trong khung phan; dap an = the giay co nam cham mau (A do, B xanh, C vang, D la). */
+.deck-stage[data-s-tinh] #slideContent .qz-list { padding: 0 calc(var(--st-k, 1) * 8px) calc(var(--st-k, 1) * 12px) 2px; }
+.deck-stage[data-s-tinh] #slideContent .qz-jump { background: linear-gradient(180deg, #2a4e3f 0 7px, rgba(42, 78, 63, 0) 7px); padding-top: 0; padding-bottom: calc(var(--st-k, 1) * 12px); }
+.deck-stage[data-s-tinh] #slideContent .qz-jump > .deck-seg { background: #2a4e3f; box-shadow: 0 5px 8px rgba(0, 0, 0, .3); }
+.deck-stage[data-s-tinh] #slideContent .qz-sec-head { border-top: 2px dashed rgba(248, 246, 239, .35); padding-top: calc(var(--st-k, 1) * 16px); }
+.deck-stage[data-s-tinh] #slideContent .qz-h3 { font-family: var(--s-vi); font-size: max(14px, calc(var(--st-k, 1) * 21px)); font-weight: 700; color: var(--s-vang); text-shadow: 0 0 1.5px rgba(255, 255, 255, .4); }
+.deck-stage[data-s-tinh] #slideContent .qz-sec-meta, .deck-stage[data-s-tinh] #slideContent .qz-trong { font-family: var(--s-in-mix); font-size: max(12px, calc(var(--st-k, 1) * 14px)); font-weight: 600; color: var(--s-nhat); }
+.deck-stage[data-s-tinh] #slideContent .qz-card { padding: calc(var(--st-k, 1) * 16px) calc(var(--st-k, 1) * 18px) calc(var(--st-k, 1) * 18px); }
+.deck-stage[data-s-tinh] #slideContent .qz-card.is-target::before { border-color: var(--s-vang); }
+.deck-stage[data-s-tinh] #slideContent .qz-no, .deck-stage[data-s-tinh] #slideContent .qz-on { font-family: var(--s-in-mix); font-size: max(12px, calc(var(--st-k, 1) * 14px)); font-weight: 800; color: var(--s-vang); }
+.deck-stage[data-s-tinh] #slideContent .qz-text { font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 18px)); font-weight: 700; line-height: 1.6; color: var(--s-trang); }
+.deck-stage[data-s-tinh] #slideContent .qz-img { max-height: none; padding: calc(var(--st-k, 1) * 6px); width: fit-content; margin-inline: auto; }
+.deck-stage[data-s-tinh] #slideContent .qz-img img { max-height: 170px; }
+.deck-stage[data-s-tinh] #slideContent .qz-opts { gap: calc(var(--st-k, 1) * 16px) calc(var(--st-k, 1) * 18px); padding-top: calc(var(--st-k, 1) * 4px); }
+
+/* dap an: the giay */
+.deck-stage[data-s-tinh] #slideContent .qz-opt {
+  position: relative; gap: calc(var(--st-k, 1) * 12px); min-height: 52px; padding: calc(var(--st-k, 1) * 10px) calc(var(--st-k, 1) * 14px) calc(var(--st-k, 1) * 10px) calc(var(--st-k, 1) * 52px); border: 0; border-radius: 9px;
+  background: linear-gradient(180deg, #fffaf0, #f4ebd8); color: var(--s-muc);
+  font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 18px)); font-weight: 800; line-height: 1.4;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, .36), 0 1px 3px rgba(0, 0, 0, .28);
+}
+@media (hover: hover) {
+  .deck-stage[data-s-tinh] #slideContent .qz-opt:hover:not(:disabled) { background: linear-gradient(180deg, #fffdf6, #f9f0d9); color: var(--s-muc); box-shadow: 0 8px 12px rgba(0, 0, 0, .4), 0 0 0 3px rgba(247, 215, 106, .85); border-color: transparent; }
+  .deck-stage[data-s-tinh] #slideContent .qz-opt:hover:not(:disabled) .qz-key { transform: scale(1.06); }
+}
+.deck-stage[data-s-tinh] #slideContent .qz-opt-text { color: var(--s-muc); font-family: var(--s-in-mix); font-weight: 800; }
+.deck-stage[data-s-tinh] #slideContent .qz-key {
+  position: absolute; left: 12px; top: 50%; margin-top: calc(var(--st-k, 1) * -14px); width: 28px; height: 28px; border-radius: 50%; font-family: var(--s-in); font-size: max(14px, calc(var(--st-k, 1) * 14px)); font-weight: 800; color: #fff;
+  background: radial-gradient(circle at 30% 24%, #f4aaa1 0 4%, #c9433a 26%, #8f2620 100%); text-shadow: 0 1px 1px rgba(0, 0, 0, .35);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, .4), inset 0 -2px 3px rgba(0, 0, 0, .25);
+}
+.deck-stage[data-s-tinh] #slideContent .qz-opt:nth-child(2) .qz-key { background: radial-gradient(circle at 30% 24%, #cfe3ff 0 4%, #2f6ec4 26%, #1f4580 100%); }
+.deck-stage[data-s-tinh] #slideContent .qz-opt:nth-child(3) .qz-key { background: radial-gradient(circle at 30% 24%, #fff3c8 0 4%, #f0bd3a 26%, #c8921f 100%); color: var(--s-muc); text-shadow: none; }
+.deck-stage[data-s-tinh] #slideContent .qz-opt:nth-child(4) .qz-key { background: radial-gradient(circle at 30% 24%, #e4f8d8 0 4%, #6cc476 26%, #4aa656 100%); color: var(--s-muc); text-shadow: none; }
+.deck-stage[data-s-tinh] #slideContent .qz-opt > i { margin-left: auto; font-size: max(14px, calc(var(--st-k, 1) * 18px)); color: #2d7a37; }
+.deck-stage[data-s-tinh] #slideContent .qz-opt.is-wrong > i { color: #a8322b; }
+/* da chon: dap an khong chon mo nhe, dung = vien la, sai = vien do */
+.deck-stage[data-s-tinh] #slideContent .qz-opt:disabled:not(.is-correct):not(.is-wrong):not(.is-answer) { opacity: .78; }
+.deck-stage[data-s-tinh] #slideContent .qz-opt.is-correct { background: linear-gradient(180deg, #f4fbe8, #dcf0c0); color: #1f4a22; box-shadow: 0 6px 10px rgba(0, 0, 0, .36), 0 0 0 3px #4fae5a; }
+.deck-stage[data-s-tinh] #slideContent .qz-opt.is-correct .qz-opt-text { color: #1f4a22; }
+.deck-stage[data-s-tinh] #slideContent .qz-opt.is-wrong { background: linear-gradient(180deg, #f6e4df, #ebcdc6); color: #7a241d; box-shadow: 0 6px 10px rgba(0, 0, 0, .36), 0 0 0 3px #e05a4f; }
+.deck-stage[data-s-tinh] #slideContent .qz-opt.is-wrong .qz-opt-text { color: #7a241d; text-decoration: line-through; text-decoration-thickness: 2px; }
+.deck-stage[data-s-tinh] #slideContent .qz-opt.is-answer { background: linear-gradient(180deg, #f9fcee, #e6f3cf); box-shadow: 0 6px 10px rgba(0, 0, 0, .36), 0 0 0 3px rgba(79, 174, 90, .75); }
+
+/* nhan xet cua Sensei: khung phan (dung = la, sai = hong) */
+.deck-stage[data-s-tinh] #slideContent .qz-fb { position: relative; padding: calc(var(--st-k, 1) * 12px) calc(var(--st-k, 1) * 16px) calc(var(--st-k, 1) * 14px); border-radius: 3px; font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 15px)); line-height: 1.6; color: var(--s-trang); background: rgba(255, 255, 255, .05); }
+.deck-stage[data-s-tinh] #slideContent .qz-fb.is-cho { background: rgba(255, 255, 255, .05); color: var(--s-nhat); }
+.deck-stage[data-s-tinh] #slideContent .qz-fb.is-ok { background: rgba(189, 230, 143, .1); box-shadow: inset 0 0 0 2px rgba(189, 230, 143, .7); }
+.deck-stage[data-s-tinh] #slideContent .qz-fb.is-no { background: rgba(247, 156, 184, .1); box-shadow: inset 0 0 0 2px rgba(247, 156, 184, .7); }
+.deck-stage[data-s-tinh] #slideContent .qz-fb.is-gat { background: rgba(247, 156, 184, .16); box-shadow: inset 0 0 0 2px var(--s-hong); }
+.deck-stage[data-s-tinh] #slideContent .qz-fb.is-ok .qz-fb-nhan { color: var(--s-la); }
+.deck-stage[data-s-tinh] #slideContent .qz-fb.is-no .qz-fb-nhan { color: var(--s-hong); }
+.deck-stage[data-s-tinh] #slideContent .qz-fb-nhan { font-size: max(12px, calc(var(--st-k, 1) * 14px)); }
+.deck-stage[data-s-tinh] #slideContent .qz-fb-loi { color: var(--s-trang); font-size: max(14px, calc(var(--st-k, 1) * 16px)); }
+.deck-stage[data-s-tinh] #slideContent .qz-fb-tip { border-top: 2px dashed rgba(248, 246, 239, .3); font-size: max(12px, calc(var(--st-k, 1) * 14px)); }
+.deck-stage[data-s-tinh] #slideContent .qz-fb-tip b { color: var(--s-vang); }
+.deck-stage[data-s-tinh] #slideContent .qz-mean { font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 15px)); font-weight: 700; color: var(--s-la); }
+
+/* luyen phat am */
+.deck-stage[data-s-tinh] #slideContent .qz-pa { padding: calc(var(--st-k, 1) * 14px) calc(var(--st-k, 1) * 16px) calc(var(--st-k, 1) * 14px) calc(var(--st-k, 1) * 20px); }
+.deck-stage[data-s-tinh] #slideContent .qz-pa-cau { font-size: max(14px, calc(var(--st-k, 1) * clamp(22px, 1.1rem + .5vw, 26px))); }
+.deck-stage[data-s-tinh] #slideContent .qz-rec {
+  width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(180deg, #fbe28a, #f2c94a); color: var(--s-muc); font-size: max(14px, calc(var(--st-k, 1) * 15px));
+  box-shadow: 0 4px 6px rgba(0, 0, 0, .38), 0 1px 2px rgba(0, 0, 0, .3);
+}
+@media (hover: hover) {
+  .deck-stage[data-s-tinh] #slideContent .qz-rec:hover { background: linear-gradient(180deg, #fff0ad, #f7d76a); }
+}
+.deck-stage[data-s-tinh] #slideContent .qz-rec.is-rec, .deck-stage[data-s-tinh] #slideContent .qz-rec.is-rec:hover { background: radial-gradient(circle at 35% 30%, #ffd6d0 0 6%, #e05a4f 35%, #a8322b 100%); color: #fff; }
+
+/* luyen viet tay + khung ve: to giay trang dinh nam cham, net viet van muc den tren giay */
+.deck-stage[data-s-tinh] #slideContent .qz-vt { padding: calc(var(--st-k, 1) * 16px) calc(var(--st-k, 1) * 16px) calc(var(--st-k, 1) * 16px); }
+.deck-stage[data-s-tinh] #slideContent .qz-vt-de { font-family: var(--s-jp); font-size: max(14px, calc(var(--st-k, 1) * 21px)); color: var(--s-trang); }
+.deck-stage[data-s-tinh] #slideContent .qz-vt-hoi, .deck-stage[data-s-tinh] #slideContent .qz-vt-goiy { font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 15px)); font-weight: 600; color: var(--s-trang); }
+.deck-stage[data-s-tinh] #slideContent .qz-vt-nut { flex-wrap: wrap; }
+.deck-stage[data-s-tinh] #slideContent .qz-vt-kana { font-family: var(--s-jp); font-size: max(14px, calc(var(--st-k, 1) * 18px)); color: var(--s-vang); font-weight: 400; }
+.deck-stage[data-s-tinh] #slideContent .qz-timer { font-size: max(14px, calc(var(--st-k, 1) * 15px)); color: var(--s-nhat); }
+.deck-stage[data-s-tinh] #slideContent .qz-timer.is-chay { color: var(--s-trang); }
+.deck-stage[data-s-tinh] #slideContent .qz-timer.is-gap { color: var(--s-hong); }
+.deck-stage[data-s-tinh] #slideContent .qz-khung, .deck-stage[data-s-tinh] #slideContent .rx-khung {
+  border: 0; border-radius: 3px; box-shadow: 0 6px 10px rgba(0, 0, 0, .4), 0 1px 3px rgba(0, 0, 0, .3), 0 0 0 6px var(--s-giay); margin-top: calc(var(--st-k, 1) * 8px); margin-bottom: calc(var(--st-k, 1) * 8px);
+}
+
+/* ================================================================ PHAN XA */
+.deck-stage[data-s-tinh] #slideContent .rx-panel { padding: calc(var(--st-k, 1) * 22px) calc(var(--st-k, 1) * 24px) calc(var(--st-k, 1) * 24px); margin-block: auto; gap: calc(var(--st-k, 1) * 16px); }
+.deck-stage[data-s-tinh] #slideContent .rx-wrap { max-width: 820px; }
+.deck-stage[data-s-tinh] #slideContent .rx-giua { padding: calc(var(--st-k, 1) * 40px) calc(var(--st-k, 1) * 36px); gap: calc(var(--st-k, 1) * 18px); }
+.deck-stage[data-s-tinh] #slideContent .rx-cta { min-height: 56px; font-size: max(14px, calc(var(--st-k, 1) * 17px)); }
+.deck-stage[data-s-tinh] #slideContent .rx-mo-ta { font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 21px)); font-weight: 600; line-height: 1.65; color: var(--s-trang); }
+.deck-stage[data-s-tinh] #slideContent .rx-mo-ta b { color: var(--s-vang); font-weight: 800; }
+.deck-stage[data-s-tinh] #slideContent .rx-phu { font-family: var(--s-in-mix); font-size: max(12px, calc(var(--st-k, 1) * 14px)); font-weight: 600; color: var(--s-nhat); }
+.deck-stage[data-s-tinh] #slideContent .rx-diem { font-family: var(--s-vi); font-size: max(14px, calc(var(--st-k, 1) * 48px)); color: var(--s-vang); }
+.deck-stage[data-s-tinh] #slideContent .rx-tien-so { font-family: var(--s-in-mix); font-size: max(12px, calc(var(--st-k, 1) * 14px)); font-weight: 700; color: var(--s-nhat); }
+.deck-stage[data-s-tinh] #slideContent .rx-dem { font-family: var(--s-vi); color: var(--s-trang); }
+.deck-stage[data-s-tinh] #slideContent .rx-dem.is-gap { color: var(--s-hong); }
+.deck-stage[data-s-tinh] #slideContent .rx-de { font-family: var(--s-jp); color: var(--s-trang); }
+.deck-stage[data-s-tinh] #slideContent .rx-hoi, .deck-stage[data-s-tinh] #slideContent .rx-goiy { font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 15px)); font-weight: 600; color: var(--s-trang); }
+.deck-stage[data-s-tinh] #slideContent .rx-goiy [lang="ja"] { color: var(--s-vang); font-weight: 400; }
+.deck-stage[data-s-tinh] #slideContent .rx-nghia { font-family: var(--s-vi); font-size: max(14px, calc(var(--st-k, 1) * clamp(28px, 1.4rem + 1vw, 42px))); color: var(--s-vang); }
+.deck-stage[data-s-tinh] #slideContent .rx-noi { padding: calc(var(--st-k, 1) * 14px) 0; }
+.deck-stage[data-s-tinh] #slideContent .rx-song { height: 10px; background: rgba(255, 255, 255, .12); }
+.deck-stage[data-s-tinh] #slideContent .rx-song-trong { background: var(--s-vang); }
+.deck-stage[data-s-tinh] #slideContent .rx-kq { font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 15px)); font-weight: 600; border-radius: 3px; }
+.deck-stage[data-s-tinh] #slideContent .rx-kq.is-ok { background: rgba(189, 230, 143, .1); color: var(--s-la); box-shadow: inset 0 0 0 2px rgba(189, 230, 143, .7); }
+.deck-stage[data-s-tinh] #slideContent .rx-kq.is-no { background: rgba(247, 156, 184, .1); color: #ffd0de; box-shadow: inset 0 0 0 2px rgba(247, 156, 184, .7); }
+.deck-stage[data-s-tinh] #slideContent .rx-kq.is-cho, .deck-stage[data-s-tinh] #slideContent .rx-kq.is-tin { background: rgba(255, 255, 255, .06); color: var(--s-trang); }
+
+/* ================================================================ roi sang (Sensei boi / doc): vach phan, khong glow terracotta */
+.deck-stage[data-s-tinh] #slideContent .deck-card.reading-focus,
+.deck-stage[data-s-tinh] #slideContent .deck-card.hl-card-grammar,
+.deck-stage[data-s-tinh] #slideContent .deck-card.hl-card-vocab,
+.deck-stage[data-s-tinh] #slideContent .deck-card.hl-card-warning { border-color: transparent !important; box-shadow: none !important; }
+.deck-stage[data-s-tinh] #slideContent .deck-card.reading-focus { background: rgba(247, 215, 106, .1) !important; }
+.deck-stage[data-s-tinh] #slideContent .deck-card.reading-focus::before, .deck-stage[data-s-tinh] #slideContent .deck-card.hl-card-vocab::before { border-color: var(--s-vang); }
+.deck-stage[data-s-tinh] #slideContent .deck-card.hl-card-grammar::before { border-color: var(--s-la); }
+.deck-stage[data-s-tinh] #slideContent .deck-card.hl-card-warning::before { border-color: var(--s-hong); }
+.deck-stage[data-s-tinh] #slideContent .hl-grammar { background: rgba(189, 230, 143, .18); color: var(--s-la); box-shadow: 0 0 0 2px rgba(189, 230, 143, .7); }
+.deck-stage[data-s-tinh] #slideContent .hl-vocab, .deck-stage[data-s-tinh] #slideContent .hl-reading-inline { background: rgba(247, 215, 106, .2); color: var(--s-vang); box-shadow: 0 0 0 2px rgba(247, 215, 106, .7); }
+.deck-stage[data-s-tinh] #slideContent .hl-warning { background: rgba(247, 156, 184, .2); color: #ffd0de; box-shadow: 0 0 0 2px rgba(247, 156, 184, .75); }
+.deck-stage[data-s-tinh] #slideContent .reading-badge-indicator { background: var(--s-vang) !important; color: var(--s-muc) !important; }
+
+/* ================================================================ trang thai rong / dang nap, thanh cuon */
+.deck-stage[data-s-tinh] #slideContent .text-slate-400, .deck-stage[data-s-tinh] #slideContent .text-slate-300 { color: var(--s-nhat); }
+.deck-stage[data-s-tinh] #slideContent .text-indigo-400 { color: var(--s-vang); }
+.deck-stage[data-s-tinh] #slideContent .text-rose-400 { color: var(--s-hong); }
+.deck-stage[data-s-tinh] #slideContent > .text-center { margin-block: auto; font-family: var(--s-in-mix); font-size: max(14px, calc(var(--st-k, 1) * 17px)); font-weight: 600; line-height: 1.6; color: var(--s-trang); }
+.deck-stage[data-s-tinh] #slideContent > .text-center p { color: var(--s-trang); }
+.deck-stage[data-s-tinh] #slideContent > .text-center .text-sm { font-size: max(14px, calc(var(--st-k, 1) * 15px)); color: var(--s-nhat); }
+.deck-stage[data-s-tinh] #slideContent .deck-scroll, .deck-stage[data-s-tinh] #slideContent .custom-scrollbar { scrollbar-color: rgba(248, 246, 239, .45) transparent; }
+.deck-stage[data-s-tinh] #slideContent .custom-scrollbar::-webkit-scrollbar-thumb, .deck-stage[data-s-tinh] #slideContent .deck-scroll::-webkit-scrollbar-thumb { background: rgba(248, 246, 239, .42); }
+.deck-stage[data-s-tinh] #slideContent .custom-scrollbar::-webkit-scrollbar-thumb:hover, .deck-stage[data-s-tinh] #slideContent .deck-scroll::-webkit-scrollbar-thumb:hover { background: var(--s-vang); }
+
+/* ================================================================ dien thoai */
+@media (max-width: 640px) {
+  .deck-stage[data-s-tinh] #slideContent { }
+  .deck-stage[data-s-tinh] #slideContent .deck-h2 { font-size: max(14px, calc(var(--st-kh, 1) * 24px)); }
+  .deck-stage[data-s-tinh] #slideContent .deck-h2.jp-keep { font-size: max(14px, calc(var(--st-kh, 1) * 20px)); }
+  .deck-stage[data-s-tinh] #slideContent .deck-head { padding-bottom: calc(var(--st-kh, 1) * 8px); margin-bottom: calc(var(--st-kh, 1) * 10px); }
+  .deck-stage[data-s-tinh] #slideContent .vc-list, .deck-stage[data-s-tinh] #slideContent .kj-list { gap: calc(var(--st-k, 1) * 16px); padding: calc(var(--st-k, 1) * 8px) calc(var(--st-k, 1) * 6px) calc(var(--st-k, 1) * 10px) 2px; }
+  .deck-stage[data-s-tinh] #slideContent .vc-card { padding: calc(var(--st-k, 1) * 12px) calc(var(--st-k, 1) * 12px) calc(var(--st-k, 1) * 12px) calc(var(--st-k, 1) * 14px); gap: calc(var(--st-k, 1) * 10px); }
+  .deck-stage[data-s-tinh] #slideContent .vc-word { font-size: max(14px, calc(var(--st-k, 1) * 28px)); }
+  .deck-stage[data-s-tinh] #slideContent .qz-card { padding: calc(var(--st-k, 1) * 14px) calc(var(--st-k, 1) * 14px) calc(var(--st-k, 1) * 16px); }
+  /* the chu Han / chu cai: o chu + dong dau (Han Viet, so net) + loa cung hang, nghia xuong full be ngang */
+  .deck-stage[data-s-tinh] #slideContent .kj-card { padding: calc(var(--st-k, 1) * 14px) calc(var(--st-k, 1) * 14px) calc(var(--st-k, 1) * 12px); }
+  .deck-stage[data-s-tinh] #slideContent .kj-top { flex-wrap: wrap; align-items: center; gap: calc(var(--st-k, 1) * 10px) calc(var(--st-k, 1) * 12px); }
+  .deck-stage[data-s-tinh] #slideContent .kj-id { display: contents; }
+  .deck-stage[data-s-tinh] #slideContent .kj-line1 { flex: 1 1 0; min-width: 0; }
+  .deck-stage[data-s-tinh] #slideContent .kj-top > .icon-btn { order: 2; margin: 0; }
+  .deck-stage[data-s-tinh] #slideContent .kj-mean { order: 3; flex: 1 1 100%; margin-top: 0; }
+  .deck-stage[data-s-tinh] #slideContent .kj-glyph { width: calc(var(--st-k, 1) * 64px); height: calc(var(--st-k, 1) * 64px); font-size: max(14px, calc(var(--st-k, 1) * 40px)); }
+  .deck-stage[data-s-tinh] #slideContent .kj-glyph.is-ghep { font-size: max(14px, calc(var(--st-k, 1) * 27px)); }
+  /* thanh nhay Trac nghiem / Phat am / Viet tay: vua be ngang, nhan xuong dong khi can (khong cat chu) */
+  .deck-stage[data-s-tinh] #slideContent .qz-jump > .deck-seg { width: 100%; }
+  .deck-stage[data-s-tinh] #slideContent .deck-seg > button, .deck-stage[data-s-tinh] #slideContent .deck-seg > a { flex: 1 1 auto; white-space: normal; line-height: 1.25; padding: calc(var(--st-k, 1) * 6px) calc(var(--st-k, 1) * 5px); letter-spacing: -.015em; text-align: center; }
+  .deck-stage[data-s-tinh] #slideContent .qz-opt { padding-left: calc(var(--st-k, 1) * 50px); }
+  .deck-stage[data-s-tinh] #slideContent .gp-ex { padding: calc(var(--st-k, 1) * 10px) calc(var(--st-k, 1) * 12px) calc(var(--st-k, 1) * 12px); }
+  .deck-stage[data-s-tinh] #slideContent .rx-panel { padding: calc(var(--st-k, 1) * 16px) calc(var(--st-k, 1) * 14px) calc(var(--st-k, 1) * 18px); }
+  .deck-stage[data-s-tinh] #slideContent .rx-giua { padding: calc(var(--st-k, 1) * 22px) calc(var(--st-k, 1) * 16px); }
+}
+
+/* ================================================================ CO GIAN (js dat --st-k tren #slideContent; --st-cols / --st-rows / data-d / data-s-fit tren vung cuon)
+   Vua mat bang khi du cho (data-s-fit="1"): hang chia deu khoang con lai; khong du thi cuon TRONG bang (data-s-fit="0"), mep mo bao hieu con noi dung. */
+.deck-stage[data-s-tinh] #slideContent .deck-head { flex: 0 0 auto; }
+.deck-stage[data-s-tinh] #slideContent .deck-scroll {
+  position: relative; flex: 1 1 auto; min-height: 0; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin;
+}
+.deck-stage[data-s-tinh] #slideContent .deck-scroll[data-s-duoi="1"]:not([data-s-tren="1"]),
+.deck-stage[data-s-tinh] #slideContent[data-s-duoi="1"]:not([data-s-tren="1"]) {
+  -webkit-mask-image: linear-gradient(180deg, #000 calc(100% - 38px), transparent); mask-image: linear-gradient(180deg, #000 calc(100% - 38px), transparent);
+}
+.deck-stage[data-s-tinh] #slideContent .deck-scroll[data-s-tren="1"]:not([data-s-duoi="1"]),
+.deck-stage[data-s-tinh] #slideContent[data-s-tren="1"]:not([data-s-duoi="1"]) {
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 38px); mask-image: linear-gradient(180deg, transparent, #000 38px);
+}
+.deck-stage[data-s-tinh] #slideContent .deck-scroll[data-s-tren="1"][data-s-duoi="1"],
+.deck-stage[data-s-tinh] #slideContent[data-s-tren="1"][data-s-duoi="1"] {
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 38px, #000 calc(100% - 38px), transparent); mask-image: linear-gradient(180deg, transparent, #000 38px, #000 calc(100% - 38px), transparent);
+}
+
+/* luoi the (tu vung, chu Han): so cot do js chon */
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-s-fit],
+.deck-stage[data-s-tinh] #slideContent .kj-list[data-s-fit] {
+  display: grid; grid-template-columns: repeat(var(--st-cols, 1), minmax(0, 1fr)); align-content: start;
+}
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-s-fit="1"],
+.deck-stage[data-s-tinh] #slideContent .kj-list[data-s-fit="1"] {
+  grid-template-rows: repeat(var(--st-rows, 1), minmax(min-content, 1fr)); align-content: stretch;
+  padding-top: 4px; padding-bottom: 4px; gap: calc(var(--st-k, 1) * 10px);
+}
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-s-fit="1"][data-d="3"],
+.deck-stage[data-s-tinh] #slideContent .kj-list[data-s-fit="1"][data-d="3"] { padding-top: 2px; padding-bottom: 2px; gap: max(4px, calc(var(--st-k, 1) * 7px)); }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-s-fit="1"] > .vc-card { align-items: center; align-content: center; }
+.deck-stage[data-s-tinh] #slideContent .kj-list[data-s-fit="1"] > .kj-card { justify-content: center; }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-s-fit="1"] > .vc-card > .vc-side { align-self: stretch; justify-content: space-between; }
+
+/* hang cuoi le (fit): 2 x so cot, moi the chiem 2 vach, the dau hang cuoi lui vao -> can giua */
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-s-fit="1"][data-s-u],
+.deck-stage[data-s-tinh] #slideContent .kj-list[data-s-fit="1"][data-s-u] { grid-template-columns: repeat(var(--st-cols2, 2), minmax(0, 1fr)); }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-s-fit="1"][data-s-u] > *,
+.deck-stage[data-s-tinh] #slideContent .kj-list[data-s-fit="1"][data-s-u] > * { grid-column: span 2; }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-s-fit="1"][data-s-u] > [data-s-u1],
+.deck-stage[data-s-tinh] #slideContent .kj-list[data-s-fit="1"][data-s-u] > [data-s-u1] { grid-column: var(--st-off, 1) / span 2; }
+
+/* MAT DO the (js chon data-d tren vung cuon): 0 day du / 1 bo ghi chu, anh nho / 2 bo anh nho (the khoi) / 3 dac nhat (chu to nho lai, le hep)
+   Chu van >= san (max()); chi khoang cach / anh / tu ghep / ghi chu thu lai. */
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="1"] .vc-note,
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="2"] .vc-note,
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="3"] .vc-note { display: none; }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="1"] .vc-card { padding: calc(var(--st-k, 1) * 9px) calc(var(--st-k, 1) * 10px) calc(var(--st-k, 1) * 9px) calc(var(--st-k, 1) * 12px); gap: calc(var(--st-k, 1) * 8px); }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="1"] .vc-thumb,
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="1"] .vc-card .sensei-art-sm { width: calc(var(--st-k, 1) * 52px); height: calc(var(--st-k, 1) * 52px); padding: calc(var(--st-k, 1) * 3px); }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="2"] .vc-card,
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="3"] .vc-card { display: block; position: relative; padding: max(8px, calc(var(--st-k, 1) * 8px)) max(8px, calc(var(--st-k, 1) * 8px)) max(7px, calc(var(--st-k, 1) * 7px)) max(10px, calc(var(--st-k, 1) * 10px)); }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="3"] .vc-card { padding: 8px 8px 5px 10px; }
+/* mat do 3: tieu de gon (mot dong mong), khung luoi sat hon */
+.deck-stage[data-s-tinh] #slideContent[data-s-d="3"] .deck-head { padding-bottom: 5px; margin-bottom: 6px; }
+.deck-stage[data-s-tinh] #slideContent[data-s-d="3"] .deck-h2 { font-size: max(18px, calc(var(--st-kh, 1) * 24px)); line-height: 1.15; }
+.deck-stage[data-s-tinh] #slideContent[data-s-d="3"] .deck-head::after { height: 2px; }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="2"] .vc-thumb,
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="2"] .vc-card .sensei-art-sm,
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="3"] .vc-thumb,
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="3"] .vc-card .sensei-art-sm { display: none; }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="1"] .vc-word,
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="2"] .vc-word { font-size: max(14px, calc(var(--st-k, 1) * 26px)); }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="3"] .vc-word { font-size: max(18px, calc(var(--st-k, 1) * 21px)); line-height: 1.2; }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="3"] .vc-word[data-s-dai] { font-size: max(16px, calc(var(--st-k, 1) * 17px)); }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="1"] .vc-mean,
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="2"] .vc-mean { margin-top: calc(var(--st-k, 1) * 3px); }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="2"] .vc-side,
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="3"] .vc-side { position: absolute; top: 2px; right: 2px; }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="2"] .vc-side > .icon-btn,
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="3"] .vc-side > .icon-btn { margin: 0; }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="2"] .vc-word-row,
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="3"] .vc-word-row { padding-right: 30px; }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="2"] .vc-meta,
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="3"] .vc-meta { line-height: 1.3; margin-top: 0; }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="2"] .vc-mean { line-height: 1.35; }
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-d="3"] .vc-mean { line-height: 1.28; margin-top: 2px; font-weight: 600; }
+
+.deck-stage[data-s-tinh] #slideContent .kj-list[data-d="1"] .kj-words > li:nth-child(n+3) { display: none; }
+.deck-stage[data-s-tinh] #slideContent .kj-list[data-d="2"] .kj-words-box,
+.deck-stage[data-s-tinh] #slideContent .kj-list[data-d="3"] .kj-words-box { display: none; }
+.deck-stage[data-s-tinh] #slideContent .kj-list[data-d="1"] .kj-card,
+.deck-stage[data-s-tinh] #slideContent .kj-list[data-d="2"] .kj-card { padding: max(8px, calc(var(--st-k, 1) * 10px)) calc(var(--st-k, 1) * 12px) calc(var(--st-k, 1) * 9px); gap: calc(var(--st-k, 1) * 8px); }
+.deck-stage[data-s-tinh] #slideContent .kj-list[data-d="3"] .kj-card { padding: max(8px, calc(var(--st-k, 1) * 8px)) max(9px, calc(var(--st-k, 1) * 10px)) max(7px, calc(var(--st-k, 1) * 7px)); gap: calc(var(--st-k, 1) * 5px); }
+/* chu cai kana: d2 bo "De nham", d3 bo luon "Meo nho" (van doc duoc trong the roi khi bam the) */
+.deck-stage[data-s-tinh] #slideContent .kj-list[data-d="2"] .kj-card.is-kana .kj-read > :nth-child(n+3),
+.deck-stage[data-s-tinh] #slideContent .kj-list[data-d="3"] .kj-card.is-kana .kj-read { display: none; }
+.deck-stage[data-s-tinh] #slideContent .kj-list[data-d="3"] .kj-glyph { width: calc(var(--st-k, 1) * 60px); height: calc(var(--st-k, 1) * 60px); font-size: max(14px, calc(var(--st-k, 1) * 36px)); }
+.deck-stage[data-s-tinh] #slideContent .kj-list[data-d="3"] .kj-glyph.is-ghep { font-size: max(14px, calc(var(--st-k, 1) * 26px)); }
+
+/* the chu Han hep (cot nho): chu + dong dau cung hang, loa nam goc tren phai (khong chiem hang rieng) */
+.deck-stage[data-s-tinh] #slideContent .kj-card { container-type: inline-size; }
+@container (max-width: 330px) {
+  .deck-stage[data-s-tinh] #slideContent .kj-top { position: relative; padding-right: 20px; }
+  .deck-stage[data-s-tinh] #slideContent .kj-top > .icon-btn { position: absolute; right: -6px; top: -8px; margin: 0; }
+}
+
+/* cot doc (quiz, phan xa, ngu phap): can giua trong bang cho can bang le */
+.deck-stage[data-s-tinh] #slideContent .qz-list > * { margin-left: auto; margin-right: auto; min-width: 0; max-width: 100%; }
+.deck-stage[data-s-tinh] #slideContent .qz-list > .qz-jump { margin-left: 0; margin-right: 0; }
+
+/* cuoi vung cuon: meo da co lan rieng ngoai bang (khong de len noi dung) -> bo khoang chua cho meo cua .deck-scroll::after */
+.deck-stage[data-s-tinh] #slideContent .deck-scroll::after { height: 6px; }
+.deck-stage[data-s-tinh] #slideContent .deck-scroll[data-s-fit="1"]::after { display: none; }
+
+/* cot noi dung can giua, rong theo co chu (ngu phap, hoi thoai) */
+.deck-stage[data-s-tinh] #slideContent .gp-list,
+.deck-stage[data-s-tinh] #slideContent .kw-list { padding-left: max(2px, calc((100% - max(var(--st-k, 1), 1) * 920px) / 2)); padding-right: max(8px, calc((100% - max(var(--st-k, 1), 1) * 920px) / 2)); }
+/* hoi thoai hai cot: doc het cot trai roi sang cot phai */
+.deck-stage[data-s-tinh] #slideContent .kw-list[data-cols="2"] { columns: 2; column-gap: calc(var(--st-k, 1) * 28px); }
+.deck-stage[data-s-tinh] #slideContent .kw-list[data-cols="2"] > .kw-row { break-inside: avoid; max-width: none; }
+.deck-stage[data-s-tinh] #slideContent .kw-list[data-cols="2"] > .kw-canh { break-inside: avoid; }
+
+/* ngu phap hai cot: giai thich / cong thuc / ghi chu tran ca hang, vi du chia hai cot */
+.deck-stage[data-s-tinh] #slideContent .gp-list[data-cols="2"] { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: calc(var(--st-k, 1) * 16px); row-gap: calc(var(--st-k, 1) * 10px); align-content: start; }
+.deck-stage[data-s-tinh] #slideContent .gp-list[data-cols="2"] > * { margin-top: 0 !important; min-width: 0; }
+.deck-stage[data-s-tinh] #slideContent .gp-list[data-cols="2"] > .gp-explain,
+.deck-stage[data-s-tinh] #slideContent .gp-list[data-cols="2"] > .gp-formula,
+.deck-stage[data-s-tinh] #slideContent .gp-list[data-cols="2"] > .gp-note { grid-column: 1 / -1; max-width: none; }
+.deck-stage[data-s-tinh] #slideContent .gp-list[data-cols="2"] > .gp-ex { max-width: none; }
+
+.deck-stage[data-s-tinh] #slideContent .gp-list[data-cols="2"] > .gp-ex[data-s-le] { grid-column: 1 / -1; }
+/* mot cot: the vi du / cong thuc / giai thich dien day cot da can giua (khong lech trai so voi tieu de) */
+.deck-stage[data-s-tinh] #slideContent .gp-list:not([data-cols="2"]) > .gp-ex { max-width: none; width: 100%; }
+.deck-stage[data-s-tinh] #slideContent .gp-list:not([data-cols="2"]) > .gp-formula { width: 100%; }
+/* phan xa: panel to theo co chu (co gian toi 1,6) */
+.deck-stage[data-s-tinh] #slideContent .rx-wrap { max-width: calc(var(--st-k, 1) * 820px); }
+
+.deck-stage[data-s-tinh][data-s-tight] #slideContent { left: calc(var(--st-x) - var(--st-e, 0px)); top: calc(var(--st-y) - var(--st-e, 0px)); width: calc(var(--st-w) + 2 * var(--st-e, 0px)); height: calc(var(--st-h) + 2 * var(--st-e, 0px)); }
+
+@media (max-width: 400px) {
+  /* nut "Doi de khac" chi con bieu tuong (van 40 x 40) de tieu de bai tap nam mot hang */
+  .deck-stage[data-s-tinh] #slideContent #quizRegenBtn { font-size: 0; gap: 0; padding: 0; width: 40px; justify-content: center; }
+  .deck-stage[data-s-tinh] #slideContent #quizRegenBtn i { font-size: 16px; }
+}
+@media (max-width: 640px) and (max-height: 700px) {
+  /* dien thoai thap: tranh tinh huong thu nho de luot thoai dau hien tron */
+  .deck-stage[data-s-tinh] #slideContent .kw-canh { width: 88px; margin-bottom: 0; }
+}
+
+/* o khuyet cho meo (bang phan mo, meo dung nghi o goc duoi phai vung noi dung): the gia chiem cac o goc duoi phai, the that xep vong quanh (luoi vua, khong cuon) */
+.deck-stage[data-s-tinh] #slideContent .vc-list[data-s-hk]::after,
+.deck-stage[data-s-tinh] #slideContent .kj-list[data-s-hk]::after { display: block; content: ""; height: auto; grid-column: var(--st-n0c, 1) / -1; grid-row: var(--st-n0r, 1) / -1; pointer-events: none; }
+
+/* man thap nam ngang: luoi mac dinh (y nhu san khau, khong lop nen) - chi nang chu nho len san (furigana >= 12 px, ghi chu 14 px), khong doi nen / bo cuc */
+html[data-che-do="s"] .deck-stage[data-s-nhan] #slideContent rt { font-size: 12px; }
+html[data-che-do="s"] .deck-stage[data-s-nhan] #slideContent .vc-note { font-size: 14px; }
+
+/* dien thoai nho + the roi o day (vung noi dung < 230 px): bo dong tieu de de vung cuon du cho hien the dang mo */
+.deck-stage[data-s-nho] #slideContent .deck-head { display: none; }

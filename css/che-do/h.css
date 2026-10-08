@@ -1,0 +1,472 @@
+/* Che do H — "Giấy cắt lớp" (diorama giay nhieu lop). Port tu ban mau demo2/h/giay.css.
+   Moi quy tac duoi .cd-lop[data-che-do="h"]; khong :root, khong id. Don vi "Nu" = N * var(--hu) (1 px thiet ke 1920 x he so khung);
+   file nay duoc sinh tu h.src.css (tools/ khong can) — chinh thang file nay neu can. */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Zen+Maru+Gothic:wght@700;900&display=swap");
+
+@property --hu { syntax: "<length>"; inherits: true; initial-value: 0.75px; }
+@property --h-van { syntax: "<image>"; inherits: true; initial-value: none; }
+
+.cd-lop[data-che-do="h"] {
+  --h-kem: #fbf6ec; --h-kem2: #f3ead9; --h-nen-anh: #f0ebe1;
+  --h-dat: #c96442; --h-dat-dam: #a24c30;
+  --h-nghe: #d6a94a; --h-nghe-dam: #b58a2e;
+  --h-la: #6b8a5e; --h-la-dam: #4d6a43;
+  --h-muc: #2a2520; --h-muc-nhat: #574a3e;
+  --h-bong1: 0 calc(var(--hu) * 1) 0 rgba(255,255,255,.75) inset, 0 calc(var(--hu) * 2) calc(var(--hu) * 2) rgba(70,40,15,.20), 0 calc(var(--hu) * 10) calc(var(--hu) * 20) calc(var(--hu) * -6) rgba(70,40,15,.38), 0 calc(var(--hu) * 26) calc(var(--hu) * 44) calc(var(--hu) * -20) rgba(70,40,15,.40);
+  --h-bong-f: drop-shadow(0 calc(var(--hu) * 2) calc(var(--hu) * 1.5) rgba(70,40,15,.28)) drop-shadow(0 calc(var(--hu) * 14) calc(var(--hu) * 16) rgba(70,40,15,.30));
+  --h-van: none;
+  --cd-net: #2a2520; --cd-net-mo: rgba(42,37,32,.10); --cd-net-ke: rgba(162,76,48,.28);
+  background: #f5dcc0;
+  color: var(--h-muc);
+  font-family: "Nunito", "Segoe UI", sans-serif;
+  font-size: 16px;
+}
+.cd-lop[data-che-do="h"] * { box-sizing: border-box; }
+.cd-lop[data-che-do="h"] [lang="ja"], .cd-lop[data-che-do="h"] .h-jpf { font-family: "Zen Maru Gothic", var(--font-jp, "Yu Gothic"), sans-serif; }
+.cd-lop[data-che-do="h"] .h-an { opacity: 0; visibility: hidden; }
+
+/* ---------- troi + lop nen parallax + the gioi ---------- */
+.cd-lop[data-che-do="h"] .h-troi {
+  position: absolute; inset: 0; z-index: 1;
+  background-image: var(--h-van), radial-gradient(62.5% 65% at 82% 26%, rgba(255,236,190,.85), rgba(255,236,190,0) 70%),
+    linear-gradient(180deg, #efc39d 0%, #f4d6b6 34%, #f8e7d0 62%, #fbefdf 100%);
+  background-size: 256px 256px, auto, auto;
+}
+.cd-lop[data-che-do="h"] .h-lop {
+  position: absolute; left: 0; top: 0; height: 100%; opacity: 0;
+  background-repeat: repeat-x; background-position: 0 0;
+  will-change: transform; pointer-events: none;
+}
+.cd-lop[data-che-do="h"] .h-mundo { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 10; will-change: transform; }
+.cd-lop[data-che-do="h"] .h-canh { position: absolute; top: 0; }
+.cd-lop[data-che-do="h"] .h-vien-toi {
+  position: absolute; inset: 0; z-index: 25; pointer-events: none;
+  box-shadow: inset 0 0 calc(var(--hu) * 160) calc(var(--hu) * 20) rgba(90,45,15,.22), inset 0 0 calc(var(--hu) * 30) 0 rgba(60,30,10,.10);   /* mep mem (khong con vach cung 6-10 px sat mep man: thay nhu mot dai la khac tong) */
+}
+.cd-lop[data-che-do="h"] .h-mesur { position: absolute; left: -9999px; top: 0; visibility: hidden; pointer-events: none; white-space: normal; overflow: visible; }
+
+/* ---------- vai chu (font) — co chu do JS dat inline ---------- */
+.cd-lop[data-che-do="h"] .h-r-kanji, .cd-lop[data-che-do="h"] .h-r-tile, .cd-lop[data-che-do="h"] .h-r-ruby { font-family: "Zen Maru Gothic", var(--font-jp, "Yu Gothic"), sans-serif; font-weight: 900; font-feature-settings: "palt" 1; }
+.cd-lop[data-che-do="h"] .h-r-ruby { font-weight: 700; }
+.cd-lop[data-che-do="h"] .h-r-nghia { font-family: "Nunito", sans-serif; font-weight: 900; }
+.cd-lop[data-che-do="h"] .h-r-phu { font-family: "Nunito", sans-serif; font-weight: 700; }
+.cd-lop[data-che-do="h"] .h-r-dan { font-family: "Nunito", sans-serif; font-weight: 800; }
+.cd-lop[data-che-do="h"] .h-r-ro { font-family: "Nunito", sans-serif; font-weight: 800; letter-spacing: .06em; }
+.cd-lop[data-che-do="h"] .h-r-form { font-family: "Nunito", "Zen Maru Gothic", sans-serif; font-weight: 900; }
+.cd-lop[data-che-do="h"] .h-r-form.jpf, .cd-lop[data-che-do="h"] .h-r-form [lang="ja"] { font-family: "Zen Maru Gothic", sans-serif; }
+.cd-lop[data-che-do="h"] .h-r-cau { font-family: "Nunito", "Zen Maru Gothic", var(--font-jp, "Yu Gothic"), sans-serif; font-weight: 900; font-feature-settings: "palt" 1; }
+.cd-lop[data-che-do="h"] .h-r-tieude { font-family: "Nunito", sans-serif; font-weight: 900; }
+.cd-lop[data-che-do="h"] .h-r-bai { font-family: "Nunito", sans-serif; font-weight: 900; letter-spacing: -.01em; }
+.cd-lop[data-che-do="h"] .h-r-tt { font-family: "Zen Maru Gothic", var(--font-jp, "Yu Gothic"), sans-serif; font-weight: 900; }
+.cd-lop[data-che-do="h"] .h-r-chip, .cd-lop[data-che-do="h"] .h-r-chipv { font-family: "Nunito", "Zen Maru Gothic", sans-serif; font-weight: 700; }
+.cd-lop[data-che-do="h"] .h-r-ruyc, .cd-lop[data-che-do="h"] .h-ruyc { font-family: "Nunito", sans-serif; font-weight: 900; }
+.cd-lop[data-che-do="h"] .h-r-chips, .cd-lop[data-che-do="h"] .h-chips { font-family: "Nunito", "Zen Maru Gothic", sans-serif; font-weight: 900; }
+
+/* ---------- giay chung ---------- */
+.cd-lop[data-che-do="h"] .h-giay, .cd-lop[data-che-do="h"] .h-canh > .h-giay {
+  position: absolute; background-color: var(--h-kem); background-image: var(--h-van); background-size: 256px 256px; border-radius: calc(var(--hu) * 8); box-shadow: var(--h-bong1);
+}
+.cd-lop[data-che-do="h"] .h-bai { display: flex; flex-direction: column; align-items: center; justify-content: center; isolation: isolate; }
+.cd-lop[data-che-do="h"] .h-bai-sau { background-color: #d6a94a; background-image: none; }
+.cd-lop[data-che-do="h"] .h-bai-so { color: var(--h-dat); line-height: 1; margin-top: calc(var(--hu) * 10); white-space: nowrap; }
+.cd-lop[data-che-do="h"] .h-chip { display: flex; align-items: center; justify-content: center; background-color: #f6e7c8; padding: 0 calc(var(--hu) * 18); }
+.cd-lop[data-che-do="h"] .h-chiptxt { color: var(--h-muc); white-space: nowrap; }
+.cd-lop[data-che-do="h"] .h-chiptxt i { font-style: normal; color: var(--h-dat); margin: 0 calc(var(--hu) * 2); }
+.cd-lop[data-che-do="h"] .h-chao { font-weight: 900; line-height: 1.2; color: var(--h-muc); white-space: nowrap; }
+
+/* ---------- vom cua so (anh minh hoa) ---------- */
+.cd-lop[data-che-do="h"] .h-vom { position: absolute; }
+.cd-lop[data-che-do="h"] .h-vl { position: absolute; background-image: var(--h-van); background-size: 256px; }
+.cd-lop[data-che-do="h"] .h-vl1 { inset: 0; background-color: var(--h-dat); box-shadow: 0 calc(var(--hu) * 2) calc(var(--hu) * 2) rgba(70,40,15,.25), 0 calc(var(--hu) * 18) calc(var(--hu) * 34) calc(var(--hu) * -10) rgba(70,40,15,.45); }
+.cd-lop[data-che-do="h"] .h-vl2 { inset: calc(var(--hu) * 16); background-color: var(--h-nghe); box-shadow: 0 calc(var(--hu) * 2) calc(var(--hu) * 2) rgba(70,40,15,.25), 0 calc(var(--hu) * 8) calc(var(--hu) * 16) calc(var(--hu) * -4) rgba(70,40,15,.40); }
+.cd-lop[data-che-do="h"] .h-vl3 { inset: calc(var(--hu) * 32); background-color: var(--h-nen-anh); overflow: hidden; background-image: none; }
+.cd-lop[data-che-do="h"] .h-vanh, .cd-lop[data-che-do="h"] .h-vl3 img { position: absolute; max-width: none; }
+.cd-lop[data-che-do="h"] .h-bong-trong { position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 calc(var(--hu) * 14) calc(var(--hu) * 22) calc(var(--hu) * -6) rgba(70,40,15,.42), inset 0 0 0 calc(var(--hu) * 2) rgba(70,40,15,.12); pointer-events: none; }
+.cd-lop[data-che-do="h"] .h-khoa {
+  position: absolute; left: 50%; top: calc(var(--hu) * -34); width: calc(var(--hu) * 116); height: calc(var(--hu) * 116); margin-left: calc(var(--hu) * -58); border-radius: 50%;
+  background: var(--h-kem); background-image: var(--h-van); background-size: 256px;
+  box-shadow: var(--h-bong1), 0 0 0 calc(var(--hu) * 9) var(--h-la), 0 0 0 calc(var(--hu) * 11) rgba(70,40,15,.15);
+  display: flex; align-items: center; justify-content: center; flex-direction: column;
+  font: 900 calc(var(--hu) * 44)/1 "Nunito", sans-serif; color: var(--h-la-dam); z-index: 3; white-space: nowrap;
+}
+.cd-lop[data-che-do="h"] .h-khoa small { font: 800 max(14px, calc(var(--hu) * 15))/1 "Nunito"; letter-spacing: .14em; color: var(--h-muc-nhat); margin-bottom: calc(var(--hu) * 2); }
+.cd-lop[data-che-do="h"] .h-rem {
+  position: absolute; inset: 0; z-index: 1;
+  background-color: var(--h-la); background-image: var(--h-van), repeating-linear-gradient(180deg, rgba(255,255,255,.07) 0 calc(var(--hu) * 30), rgba(30,45,25,.22) calc(var(--hu) * 30) calc(var(--hu) * 34)); background-size: 256px, auto;
+}
+.cd-lop[data-che-do="h"] .h-rem-mep { position: absolute; left: 0; right: 0; top: 0; height: calc(var(--hu) * 30); background: var(--h-nghe-dam); box-shadow: 0 calc(var(--hu) * -4) calc(var(--hu) * 10) rgba(30,40,20,.35), inset 0 calc(var(--hu) * 3) 0 rgba(255,255,255,.25); }
+.cd-lop[data-che-do="h"] .h-rem-huy {
+  position: absolute; left: 50%; top: 44%; width: calc(var(--hu) * 190); height: calc(var(--hu) * 190); margin: calc(var(--hu) * -95) 0 0 calc(var(--hu) * -95); border-radius: 50%;
+  background: var(--h-kem); background-image: var(--h-van); background-size: 256px;
+  box-shadow: 0 0 0 calc(var(--hu) * 12) var(--h-nghe), 0 0 0 calc(var(--hu) * 14) rgba(40,30,10,.2), 0 calc(var(--hu) * 16) calc(var(--hu) * 26) rgba(20,30,10,.4);
+  display: flex; align-items: center; justify-content: center; font: 900 calc(var(--hu) * 82)/1 "Nunito"; color: var(--h-la-dam);
+}
+.cd-lop[data-che-do="h"] .h-vglyph { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--h-muc); font-weight: 900; line-height: 1.04; text-align: center; }
+.cd-lop[data-che-do="h"] .h-vglyph span { display: block; }
+.cd-lop[data-che-do="h"] .h-net-o { position: absolute; }
+.cd-lop[data-che-do="h"] .h-net { position: absolute; inset: 0; }
+.cd-lop[data-che-do="h"] .h-net-bong { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: rgba(42,37,32,.10); font-weight: 900; line-height: 1; white-space: nowrap; }
+
+/* ---------- nhan treo ---------- */
+.cd-lop[data-che-do="h"] .h-treo { position: absolute; filter: var(--h-bong-f); }
+.cd-lop[data-che-do="h"] .h-day { position: absolute; left: 50%; width: calc(var(--hu) * 4); margin-left: calc(var(--hu) * -2); bottom: 100%; height: calc(var(--hu) * 700); background: linear-gradient(90deg, #8a6848, #b89572 50%, #7a5a3c); }
+.cd-lop[data-che-do="h"] .h-day-noi { position: absolute; left: 50%; top: 0; width: calc(var(--hu) * 4); margin-left: calc(var(--hu) * -2); height: calc(var(--hu) * 44); background: #8a6848; z-index: 2; }
+.cd-lop[data-che-do="h"] .h-sau, .cd-lop[data-che-do="h"] .h-than {
+  position: absolute; inset: 0;
+  clip-path: polygon(calc(var(--hu) * 56) 0, calc(100% - calc(var(--hu) * 56)) 0, 100% calc(var(--hu) * 56), 100% 100%, 0 100%, 0 calc(var(--hu) * 56));
+}
+.cd-lop[data-che-do="h"] .h-sau { background: var(--h-dat); transform: translate(calc(var(--hu) * 10), calc(var(--hu) * 10)) rotate(1.4deg); }
+.cd-lop[data-che-do="h"] .h-than { background-color: var(--h-kem); background-image: var(--h-van), linear-gradient(180deg, #fffaf1, #f6eddd); background-size: 256px, auto; }
+.cd-lop[data-che-do="h"] .h-lo { position: absolute; left: 50%; top: calc(var(--hu) * 30); width: calc(var(--hu) * 30); height: calc(var(--hu) * 30); margin-left: calc(var(--hu) * -15); border-radius: 50%; background: #6a4c33; box-shadow: 0 0 0 calc(var(--hu) * 7) #e2c47d, 0 0 0 calc(var(--hu) * 9) rgba(70,40,15,.25), inset 0 calc(var(--hu) * 3) calc(var(--hu) * 4) rgba(0,0,0,.5); z-index: 3; }
+.cd-lop[data-che-do="h"] .h-noi { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; }
+.cd-lop[data-che-do="h"] .h-nhan { font: 900 max(11px, calc(var(--hu) * 21))/1 "Nunito"; letter-spacing: .2em; text-transform: uppercase; color: var(--h-dat-dam); white-space: nowrap; }
+.cd-lop[data-che-do="h"] .h-nhan b { color: var(--h-muc-nhat); font-weight: 800; }
+.cd-lop[data-che-do="h"] .h-dau-chu { position: relative; display: flex; align-items: flex-end; justify-content: center; }
+.cd-lop[data-che-do="h"] .h-kanji-to { color: var(--h-muc); line-height: 1; letter-spacing: .02em; white-space: nowrap; }
+.cd-lop[data-che-do="h"] .h-rb { position: relative; display: inline-block; }
+.cd-lop[data-che-do="h"] .h-rt { position: absolute; left: 50%; bottom: 100%; width: 0; display: flex; justify-content: center; white-space: nowrap; font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; color: var(--h-dat-dam); letter-spacing: 0; }
+.cd-lop[data-che-do="h"] .h-romaji { font-family: "Nunito"; font-weight: 800; letter-spacing: .08em; color: #fff; background: var(--h-la); padding: .3em .78em .36em; border-radius: calc(var(--hu) * 6); box-shadow: 0 calc(var(--hu) * 2) 0 var(--h-la-dam), 0 calc(var(--hu) * 8) calc(var(--hu) * 12) calc(var(--hu) * -4) rgba(40,50,20,.4); line-height: 1; white-space: nowrap; }
+
+/* ---------- ghi chu gap ---------- */
+.cd-lop[data-che-do="h"] .h-gap { position: absolute; }
+.cd-lop[data-che-do="h"] .h-dai { position: absolute; left: 0; right: 0; top: 0; height: calc(var(--hu) * 52); background: var(--h-dat); border-radius: calc(var(--hu) * 8) calc(var(--hu) * 8) 0 0; color: #fff; font: 900 max(11px, calc(var(--hu) * 21))/calc(var(--hu) * 52) "Nunito"; letter-spacing: .2em; text-transform: uppercase; padding: 0 calc(var(--hu) * 22); transform-origin: 0 50%; box-shadow: 0 calc(var(--hu) * 2) calc(var(--hu) * 2) rgba(70,40,15,.22), 0 calc(var(--hu) * 8) calc(var(--hu) * 14) calc(var(--hu) * -6) rgba(70,40,15,.4); z-index: 2; white-space: nowrap; overflow: hidden; }
+.cd-lop[data-che-do="h"] .h-dai.la { background: var(--h-la); }
+.cd-lop[data-che-do="h"] .h-dai.nghe { background: var(--h-nghe-dam); }
+.cd-lop[data-che-do="h"] .h-gt {
+  position: absolute; left: 0; right: 0; top: calc(var(--hu) * 52); bottom: 0; border-radius: 0 0 calc(var(--hu) * 8) calc(var(--hu) * 8); overflow: hidden;
+  background-color: var(--h-kem); background-image: var(--h-van), linear-gradient(180deg, #f1e7d4 0, #fbf6ec calc(var(--hu) * 16)); background-size: 256px, auto; box-shadow: var(--h-bong1);
+}
+.cd-lop[data-che-do="h"] .h-toi { position: absolute; inset: 0; background: #5a3a1c; opacity: 0; pointer-events: none; }
+.cd-lop[data-che-do="h"] .h-gn { position: absolute; inset: 0; padding: calc(var(--hu) * 12) calc(var(--hu) * 20); display: flex; flex-direction: column; justify-content: center; }   /* dem nho gon: o ghi chu om chu (h.js omRong), chu khong troi trong o rong */
+/* noi dung dai hon o (da toi co toi thieu): bat dau tu tren, mo dan phan cuoi bi cat */
+.cd-lop[data-che-do="h"] .h-gn:has(> .h-gn-tran), .cd-lop[data-che-do="h"] .h-gn.is-tran { justify-content: flex-start; -webkit-mask-image: linear-gradient(180deg, #000 78%, transparent 98%); mask-image: linear-gradient(180deg, #000 78%, transparent 98%); }
+.cd-lop[data-che-do="h"] .h-nghia { color: var(--h-muc); line-height: 1.05; overflow-wrap: anywhere; }
+.cd-lop[data-che-do="h"] .h-phu { color: var(--h-muc-nhat); line-height: 1.42; margin-top: calc(var(--hu) * 10); }
+.cd-lop[data-che-do="h"] .h-phu.dam { color: var(--h-muc); font-weight: 800; }
+.cd-lop[data-che-do="h"] .h-phu [lang="ja"], .cd-lop[data-che-do="h"] .h-nghia [lang="ja"] { color: var(--h-dat-dam); font-weight: 700; }
+.cd-lop[data-che-do="h"] .h-am-hang { display: flex; align-items: center; gap: calc(var(--hu) * 12); margin: calc(var(--hu) * 2) 0; }
+.cd-lop[data-che-do="h"] .h-am-khoi { display: flex; flex-direction: column; align-items: flex-start; }
+.cd-lop[data-che-do="h"] .h-am-tag { flex: none; width: calc(var(--hu) * 62); box-sizing: border-box; text-align: left; padding: 0 0 calc(var(--hu) * 1); border-bottom: calc(var(--hu) * 3) solid var(--h-la); color: var(--h-la-dam); font: 900 max(12px, calc(var(--hu) * 22))/1.25 "Nunito"; letter-spacing: .1em; }   /* nhan ON / KUN: chu co gach chan (khong phai the nen) — chu cua nhan cung tinh vao the am doc */
+.cd-lop[data-che-do="h"] .h-gt-text { color: var(--h-muc); line-height: 1.42; overflow-wrap: anywhere; }
+.cd-lop[data-che-do="h"] .h-cau-gt { border-radius: calc(var(--hu) * 4); padding: 0 calc(var(--hu) * 2); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.cd-lop[data-che-do="h"] .h-gt-giai { color: var(--h-muc); line-height: 1.42; }
+.cd-lop[data-che-do="h"] .h-gt-goiy { color: var(--h-muc-nhat); line-height: 1.42; margin-top: calc(var(--hu) * 8); }
+.cd-lop[data-che-do="h"] .h-gt-goiy b { color: var(--h-la-dam); }
+
+/* ---------- nhan dan (sticker) ---------- */
+.cd-lop[data-che-do="h"] .h-dan {
+  position: absolute; background-color: var(--h-dat); color: #fff; border-radius: calc(var(--hu) * 6); padding: calc(var(--hu) * 12) calc(var(--hu) * 26); box-shadow: var(--h-bong1);
+  background-image: var(--h-van); background-size: 256px; rotate: var(--goc, 0deg);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.cd-lop[data-che-do="h"] .h-dan::before, .cd-lop[data-che-do="h"] .h-dan::after { content: ""; position: absolute; top: calc(var(--hu) * -21); width: calc(var(--hu) * 86); height: calc(var(--hu) * 26); background: rgba(247,236,210,.82); box-shadow: 0 calc(var(--hu) * 1) calc(var(--hu) * 2) rgba(0,0,0,.12); }
+.cd-lop[data-che-do="h"] .h-dan::before { left: calc(var(--hu) * 18); transform: rotate(-6deg); }
+.cd-lop[data-che-do="h"] .h-dan::after { right: calc(var(--hu) * 18); transform: rotate(5deg); }
+.cd-lop[data-che-do="h"] .h-dan.la { background-color: var(--h-la); }
+.cd-lop[data-che-do="h"] .h-dan.h-nho { padding: calc(var(--hu) * 6) calc(var(--hu) * 22); }
+.cd-lop[data-che-do="h"] .h-dan .h-r-dan { line-height: 1.42; display: block; }
+.cd-lop[data-che-do="h"] .h-dan-nhan { font: 900 max(11px, calc(var(--hu) * 18))/1 "Nunito"; letter-spacing: .18em; text-transform: uppercase; opacity: .9; margin-bottom: calc(var(--hu) * 6); }
+.cd-lop[data-che-do="h"] .h-dan b { font-weight: 900; }
+
+/* ---------- bang + o chu ---------- */
+.cd-lop[data-che-do="h"] .h-bang { position: absolute; border-radius: calc(var(--hu) * 10); background-color: #efe3cd; background-image: var(--h-van); background-size: 256px; box-shadow: var(--h-bong1), inset 0 0 0 calc(var(--hu) * 10) #f8efe0; }
+.cd-lop[data-che-do="h"] .h-hang { position: absolute; }
+.cd-lop[data-che-do="h"] .h-khe { position: relative; border-radius: calc(var(--hu) * 10); background: rgba(120,80,40,.10); box-shadow: inset 0 calc(var(--hu) * 6) calc(var(--hu) * 12) calc(var(--hu) * -4) rgba(90,50,20,.35), inset 0 0 0 calc(var(--hu) * 3) rgba(120,80,40,.10); }
+.cd-lop[data-che-do="h"] .h-khe-b { position: absolute; }
+.cd-lop[data-che-do="h"] .h-o {
+  position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; border-radius: calc(var(--hu) * 10);
+  background-color: var(--h-kem); background-image: var(--h-van), linear-gradient(180deg, #fffaf2, #f4ead8); background-size: 256px, auto;
+  box-shadow: 0 calc(var(--hu) * 1) 0 rgba(255,255,255,.8) inset, 0 calc(var(--hu) * 5) 0 #d9c7a7, 0 calc(var(--hu) * 7) calc(var(--hu) * 2) rgba(70,40,15,.22), 0 calc(var(--hu) * 18) calc(var(--hu) * 24) calc(var(--hu) * -8) rgba(70,40,15,.42);
+}
+.cd-lop[data-che-do="h"] .h-o.tro { background-color: var(--h-dat); background-image: var(--h-van), linear-gradient(180deg, #d4724f, #bf5a39); box-shadow: 0 calc(var(--hu) * 1) 0 rgba(255,255,255,.3) inset, 0 calc(var(--hu) * 5) 0 #8e3f26, 0 calc(var(--hu) * 7) calc(var(--hu) * 2) rgba(70,40,15,.25), 0 calc(var(--hu) * 18) calc(var(--hu) * 24) calc(var(--hu) * -8) rgba(70,40,15,.45); }
+.cd-lop[data-che-do="h"] .h-o .chu { color: var(--h-muc); line-height: 1.12; white-space: nowrap; font-family: "Zen Maru Gothic", "Nunito", sans-serif; font-weight: 900; }
+.cd-lop[data-che-do="h"] .h-o.tro .chu { color: #fff; }
+.cd-lop[data-che-do="h"] .h-o .ro { font-family: "Nunito"; font-weight: 800; letter-spacing: .06em; color: var(--h-muc-nhat); margin-top: .04em; white-space: nowrap; font-size: max(.26em, 13px); line-height: 1.15; }
+.cd-lop[data-che-do="h"] .h-o.tro .ro { color: #ffe9d8; }
+.cd-lop[data-che-do="h"] .h-hang .h-khe > .h-o { position: absolute; inset: 0; padding: 0 0 max(.16em, 11px); }
+.cd-lop[data-che-do="h"] .h-hang .h-o .ruby { font-size: max(.39em, 13px); height: max(1.28em, 16px); display: flex; align-items: center; white-space: nowrap; color: var(--h-dat-dam); font-family: "Zen Maru Gothic"; font-weight: 700; }
+.cd-lop[data-che-do="h"] .h-hang .h-o.tro .ruby { color: transparent; }
+.cd-lop[data-che-do="h"] .h-vien { position: absolute; inset: calc(var(--hu) * -9); border-radius: calc(var(--hu) * 16); border: calc(var(--hu) * 6) solid var(--h-dat); opacity: 0; pointer-events: none; }
+/* khoi cong thuc (mau cau) */
+.cd-lop[data-che-do="h"] .h-khoi { position: absolute; }
+.cd-lop[data-che-do="h"] .h-khoi .h-o { position: absolute; inset: 0; padding: 0; justify-content: center; }
+.cd-lop[data-che-do="h"] .h-khoi .h-o .chu { line-height: 1; font-family: "Nunito"; font-weight: 900; }
+.cd-lop[data-che-do="h"] .h-khoi .h-o.tro .chu, .cd-lop[data-che-do="h"] .h-khoi .h-o .chu[lang="ja"] { font-family: "Zen Maru Gothic"; }
+.cd-lop[data-che-do="h"] .h-khoi .h-o .ro { position: absolute; bottom: calc(var(--hu) * 14); margin: 0; }
+.cd-lop[data-che-do="h"][data-hep="1"] .h-khoi .h-o { gap: 2px; }
+.cd-lop[data-che-do="h"][data-hep="1"] .h-khoi .h-o .chu { margin-bottom: .2em; }   /* line-height 1: vung chu Zen Maru (1,45 em) lo xuong dong ro ben duoi */
+.cd-lop[data-che-do="h"][data-hep="1"] .h-khoi .h-o .ro { position: static; margin: 0; max-width: 94%; white-space: normal; text-align: center; line-height: 1.1; }
+.cd-lop[data-che-do="h"] .h-formula { color: var(--h-muc); line-height: 1.1; white-space: nowrap; }
+.cd-lop[data-che-do="h"] .h-formula .p { color: var(--h-dat); font-family: "Zen Maru Gothic"; }
+
+/* ---------- chan dung (rosette) + coc + ruy bang ---------- */
+.cd-lop[data-che-do="h"] .h-hoa { position: absolute; }
+.cd-lop[data-che-do="h"] .h-hoa svg { position: absolute; inset: 0; overflow: visible; filter: var(--h-bong-f); }
+.cd-lop[data-che-do="h"] .h-tron { position: absolute; border-radius: 50%; overflow: hidden; background: var(--h-nen-anh); box-shadow: inset 0 calc(var(--hu) * 10) calc(var(--hu) * 18) calc(var(--hu) * -6) rgba(70,40,15,.45); }
+.cd-lop[data-che-do="h"] .h-tron::after { content: ""; position: absolute; inset: 0; border-radius: 50%; box-shadow: inset 0 calc(var(--hu) * 12) calc(var(--hu) * 20) calc(var(--hu) * -8) rgba(70,40,15,.45); pointer-events: none; }
+.cd-lop[data-che-do="h"] .h-hanh { position: absolute; max-width: none; }
+.cd-lop[data-che-do="h"] .h-hchu { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-weight: 900; color: var(--h-dat-dam); line-height: 1; }
+.cd-lop[data-che-do="h"] .h-coc { position: absolute; background: linear-gradient(90deg, #8a6243, #b48a62 45%, #7c5537); border-radius: calc(var(--hu) * 4); box-shadow: 0 calc(var(--hu) * 6) calc(var(--hu) * 10) rgba(60,30,10,.35); }
+.cd-lop[data-che-do="h"] .h-ruy-wrap { position: absolute; filter: var(--h-bong-f); }
+.cd-lop[data-che-do="h"] .h-ruy {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #fff;
+  background-color: var(--h-la); background-image: var(--h-van); background-size: 256px;
+  clip-path: polygon(0 0, 100% 0, calc(100% - calc(var(--hu) * 34)) 50%, 100% 100%, 0 100%, calc(var(--hu) * 34) 50%);
+}
+.cd-lop[data-che-do="h"] .h-ruyc { line-height: 1.08; text-align: center; padding: 0 calc(var(--hu) * 44); white-space: normal; overflow-wrap: anywhere; }
+.cd-lop[data-che-do="h"] .h-ruyc em { font-style: normal; color: rgba(255,255,255,.88); font-weight: 800; font-size: .72em; margin-left: .3em; }
+.cd-lop[data-che-do="h"] .h-mini { position: absolute; border-radius: 50%; overflow: hidden; background: var(--h-nen-anh); box-shadow: 0 0 0 calc(var(--hu) * 4) var(--h-kem), 0 0 0 calc(var(--hu) * 5) rgba(70,40,15,.2), 0 calc(var(--hu) * 6) calc(var(--hu) * 10) rgba(70,40,15,.35); display: flex; align-items: center; justify-content: center; font-weight: 900; color: var(--h-dat-dam); }
+.cd-lop[data-che-do="h"] .h-mini img { width: 118%; height: 118%; object-fit: cover; object-position: 50% 22%; max-width: none; }
+
+/* ---------- dau X, vong khoanh, hoa giay ---------- */
+.cd-lop[data-che-do="h"] .h-dau-x { position: absolute; z-index: 30; pointer-events: none; }
+.cd-lop[data-che-do="h"] .h-dau-x::before, .cd-lop[data-che-do="h"] .h-dau-x::after { content: ""; position: absolute; left: -6%; top: 50%; width: 112%; height: 26%; margin-top: -13%; background: #c8412c; border-radius: calc(var(--hu) * 4); box-shadow: 0 calc(var(--hu) * 3) 0 #8e2a1b, 0 calc(var(--hu) * 8) calc(var(--hu) * 12) rgba(80,20,10,.35); }
+.cd-lop[data-che-do="h"] .h-dau-x::before { transform: rotate(45deg); }
+.cd-lop[data-che-do="h"] .h-dau-x::after { transform: rotate(-45deg); }
+.cd-lop[data-che-do="h"] .h-vong { position: absolute; overflow: visible; visibility: hidden; z-index: 1; pointer-events: none; }   /* duoi the that (.h-slot z 2): vong khong de len huy hieu A-D */
+.cd-lop[data-che-do="h"] .h-vun { position: absolute; width: calc(var(--hu) * 18); height: calc(var(--hu) * 12); border-radius: calc(var(--hu) * 2); box-shadow: 0 calc(var(--hu) * 2) calc(var(--hu) * 3) rgba(70,40,15,.3); z-index: 6; }
+
+/* ---------- bai tap: o dap an tinh (Sensei doc) ---------- */
+.cd-lop[data-che-do="h"] .h-lc { position: absolute; }
+.cd-lop[data-che-do="h"] .h-lc .h-o { position: absolute; inset: 0; flex-direction: row; justify-content: flex-start; align-items: center; gap: calc(var(--hu) * 22); padding: 0 calc(var(--hu) * 28); }
+.cd-lop[data-che-do="h"] .h-lc .ky { width: calc(var(--hu) * 48); height: calc(var(--hu) * 48); border-radius: 50%; background: var(--h-la); color: #fff; font: 900 max(14px, calc(var(--hu) * 26))/calc(var(--hu) * 48) "Nunito"; text-align: center; box-shadow: 0 calc(var(--hu) * 3) 0 var(--h-la-dam); flex: none; }
+.cd-lop[data-che-do="h"] .h-lc .h-o .chu { line-height: 1.1; white-space: normal; overflow-wrap: anywhere; min-width: 0; flex: 1 1 auto; }
+.cd-lop[data-che-do="h"] .h-lc .h-o .ro { margin: 0; font-size: calc(var(--hu) * 34); }
+.cd-lop[data-che-do="h"] .h-lc .chon { position: absolute; inset: calc(var(--hu) * -9); border-radius: calc(var(--hu) * 16); border: calc(var(--hu) * 6) solid var(--h-dat); opacity: 0; }
+.cd-lop[data-che-do="h"] .h-cau-hoi { color: var(--h-muc); display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0 .22em; text-align: center; line-height: 1.25; overflow: hidden; }
+.cd-lop[data-che-do="h"] .h-blank { display: inline-block; position: relative; width: var(--h-bw); height: var(--h-bh); vertical-align: middle; flex: none; }
+.cd-lop[data-che-do="h"] .h-blank > .h-o { position: absolute; inset: 0; }
+
+/* ---------- the that (cong): doi kieu bang CSS, khong doi DOM ---------- */
+.cd-lop[data-che-do="h"] .h-slot { position: absolute; z-index: 2; display: flex; flex-direction: column; font-family: "Nunito", sans-serif; }
+.cd-lop[data-che-do="h"] .h-slot .sk-cong.cd-cong { flex: 1 1 auto; min-height: 0; width: 100%; padding: 0; overflow: visible; display: block; justify-content: flex-start; }
+.cd-lop[data-che-do="h"] .sk-cong .qz-card { background: transparent; border: 0; box-shadow: none; padding: 0; margin: 0; width: 100%; max-width: none; display: block; font-family: "Nunito", sans-serif; }
+.cd-lop[data-che-do="h"] .sk-cong .qz-card .qz-q, .cd-lop[data-che-do="h"] .sk-cong .qz-card .qz-img, .cd-lop[data-che-do="h"] .sk-cong .qz-card .qz-jump { display: none !important; }
+/* khong co nhan xet / loi binh cua Sensei trong the: chi dau dap an dung, giai thich + goi y (tam giay cua che do) */
+.cd-lop[data-che-do="h"] .sk-cong .qz-card .qz-fb, .cd-lop[data-che-do="h"] .sk-cong .qz-card [id^="explain-"] { display: none !important; }
+.cd-lop[data-che-do="h"] .sk-cong .qz-opts { display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: minmax(var(--h-oh, 150px), auto); gap: var(--h-og, 20px); margin: 0; }
+.cd-lop[data-che-do="h"] .h-slot.is-mot .sk-cong .qz-opts { grid-template-columns: 1fr; }
+/* o dap an OM theo chu (h.js dungQuiz: --h-w1..4 = be ngang tung o, --h-py = dem doc): cot max-content, o khong gian ra het cot */
+.cd-lop[data-che-do="h"] .h-slot[style*="--h-w1"] .sk-cong .qz-opts { grid-template-columns: max-content max-content; justify-content: start; justify-items: start; }
+.cd-lop[data-che-do="h"] .h-slot.is-mot[style*="--h-w1"] .sk-cong .qz-opts { grid-template-columns: max-content; }
+.cd-lop[data-che-do="h"] .h-slot[style*="--h-w1"] .sk-cong .qz-opt { padding-top: var(--h-py, 0px); padding-bottom: var(--h-py, 0px); }
+.cd-lop[data-che-do="h"] .h-slot[style*="--h-w1"] .sk-cong .qz-opt:nth-child(1) { width: var(--h-w1); }
+.cd-lop[data-che-do="h"] .h-slot[style*="--h-w1"] .sk-cong .qz-opt:nth-child(2) { width: var(--h-w2); }
+.cd-lop[data-che-do="h"] .h-slot[style*="--h-w1"] .sk-cong .qz-opt:nth-child(3) { width: var(--h-w3); }
+.cd-lop[data-che-do="h"] .h-slot[style*="--h-w1"] .sk-cong .qz-opt:nth-child(4) { width: var(--h-w4); }
+/* o dap an OM NET CHU (h.js xepInk: dap an rat ngan): moi o co be ngang + chieu cao rieng (--h-wN / --h-hN), can giua trong o luoi; net chu can giua o theo net (--h-dyN) */
+.cd-lop[data-che-do="h"] .h-slot.is-ink[style*="--h-w1"] .sk-cong .qz-opts { justify-items: center; align-items: center; }
+.cd-lop[data-che-do="h"] .h-slot.is-ink .sk-cong .qz-opt { box-sizing: border-box; padding-top: 0; padding-bottom: 0; }
+.cd-lop[data-che-do="h"] .h-slot.is-ink .sk-cong .qz-opt:nth-child(1) { height: var(--h-h1); }
+.cd-lop[data-che-do="h"] .h-slot.is-ink .sk-cong .qz-opt:nth-child(2) { height: var(--h-h2); }
+.cd-lop[data-che-do="h"] .h-slot.is-ink .sk-cong .qz-opt:nth-child(3) { height: var(--h-h3); }
+.cd-lop[data-che-do="h"] .h-slot.is-ink .sk-cong .qz-opt:nth-child(4) { height: var(--h-h4); }
+.cd-lop[data-che-do="h"] .h-slot.is-ink .sk-cong .qz-opt-text { position: relative; }
+.cd-lop[data-che-do="h"] .h-slot.is-ink .sk-cong .qz-opt:nth-child(1) .qz-opt-text { top: var(--h-dy1, 0px); }
+.cd-lop[data-che-do="h"] .h-slot.is-ink .sk-cong .qz-opt:nth-child(2) .qz-opt-text { top: var(--h-dy2, 0px); }
+.cd-lop[data-che-do="h"] .h-slot.is-ink .sk-cong .qz-opt:nth-child(3) .qz-opt-text { top: var(--h-dy3, 0px); }
+.cd-lop[data-che-do="h"] .h-slot.is-ink .sk-cong .qz-opt:nth-child(4) .qz-opt-text { top: var(--h-dy4, 0px); }
+.cd-lop[data-che-do="h"] .sk-cong .qz-opt {
+  position: relative; display: flex; flex-direction: row; align-items: center; justify-content: flex-start; gap: calc(var(--hu) * 22); width: 100%; height: 100%; margin: 0; padding: 0 calc(var(--hu) * 28);
+  border: 0; border-radius: calc(var(--hu) * 10); text-align: left; cursor: pointer; color: var(--h-muc); font-family: "Nunito", sans-serif;
+  background-color: var(--h-kem); background-image: var(--h-van), linear-gradient(180deg, #fffaf2, #f4ead8); background-size: 256px, auto;
+  box-shadow: 0 calc(var(--hu) * 1) 0 rgba(255,255,255,.8) inset, 0 calc(var(--hu) * 5) 0 #d9c7a7, 0 calc(var(--hu) * 7) calc(var(--hu) * 2) rgba(70,40,15,.22), 0 calc(var(--hu) * 18) calc(var(--hu) * 24) calc(var(--hu) * -8) rgba(70,40,15,.42);
+  transition: transform .14s ease-out;
+}
+.cd-lop[data-che-do="h"] .sk-cong .qz-opt:hover:not(:disabled) { transform: translateY(calc(var(--hu) * -3)); }
+.cd-lop[data-che-do="h"] .sk-cong .qz-opt:focus-visible { outline: calc(var(--hu) * 5) solid var(--h-dat); outline-offset: calc(var(--hu) * 3); }
+.cd-lop[data-che-do="h"] .sk-cong .qz-opt:disabled { opacity: 1; cursor: default; }
+/* dap an khong chon sau khi tra loi: van doc ro (lesson.css lam mo .72) */
+.cd-lop[data-che-do="h"] .sk-cong .qz-opt:disabled:not(.is-correct):not(.is-wrong):not(.is-answer),
+.cd-lop[data-che-do="h"] .sk-cong .qz-opt.opt-locked:not(.is-correct):not(.is-wrong):not(.is-answer),
+.cd-lop[data-che-do="h"] .sk-cong > .qz-card.sk-da-cham.sk-bt-fb-hien .qz-opt:not(.is-correct):not(.is-wrong):not(.is-answer) { opacity: .9; }   /* motion-hoi.css lam mo .5 */
+.cd-lop[data-che-do="h"] .sk-cong .qz-key { flex: none; width: calc(var(--hu) * 48); height: calc(var(--hu) * 48); min-width: 0; border-radius: 50%; background: var(--h-la); color: #fff; font: 900 max(14px, calc(var(--hu) * 26))/calc(var(--hu) * 48) "Nunito"; text-align: center; box-shadow: 0 calc(var(--hu) * 3) 0 var(--h-la-dam); border: 0; padding: 0; }
+.cd-lop[data-che-do="h"] .sk-cong .qz-opt, .cd-lop[data-che-do="h"] .sk-cong .qz-opt-text { white-space: normal; }
+.cd-lop[data-che-do="h"] .sk-cong .qz-opt-text { flex: 1 1 auto; min-width: 0; font-family: "Nunito", "Zen Maru Gothic", var(--font-jp, sans-serif), sans-serif; font-weight: 900; font-size: var(--h-fo, 40px); line-height: 1.1; color: var(--h-muc); overflow-wrap: anywhere; }
+.cd-lop[data-che-do="h"] .sk-cong .qz-opt > i { display: none; }
+.cd-lop[data-che-do="h"] .h-slot:not(.is-mot) .sk-cong .qz-opt-text { white-space: normal; overflow-wrap: anywhere; overflow: visible; }   /* khong tran khoi khung: xuong dong neu uoc be ngang sai */
+.cd-lop[data-che-do="h"] .sk-cong .qz-opt.is-correct, .cd-lop[data-che-do="h"] .sk-cong .qz-opt.is-answer { box-shadow: 0 calc(var(--hu) * 1) 0 rgba(255,255,255,.8) inset, 0 calc(var(--hu) * 5) 0 var(--h-la-dam), 0 calc(var(--hu) * 7) calc(var(--hu) * 2) rgba(70,40,15,.22), 0 calc(var(--hu) * 18) calc(var(--hu) * 24) calc(var(--hu) * -8) rgba(70,40,15,.42), 0 0 0 calc(var(--hu) * 6) var(--h-la); }
+.cd-lop[data-che-do="h"] .sk-cong .qz-opt.is-wrong { filter: saturate(.8); box-shadow: 0 calc(var(--hu) * 1) 0 rgba(255,255,255,.8) inset, 0 calc(var(--hu) * 5) 0 #d9c7a7, 0 calc(var(--hu) * 7) calc(var(--hu) * 2) rgba(70,40,15,.22); }
+.cd-lop[data-che-do="h"] .sk-cong .qz-card.roast-shake { animation: none !important; }
+/* chan the: trang thai luot + nut (khong hien "Dung roi / Chua dung" cua Sensei) */
+.cd-lop[data-che-do="h"] .sk-the-chan.cd-chan { flex: none; display: flex; align-items: center; justify-content: space-between; gap: calc(var(--hu) * 14); margin-top: calc(var(--hu) * 12); padding: 0 var(--h-cm, 0px) 0 calc(var(--hu) * 6); min-height: calc(var(--hu) * 56); font: 800 max(13px, calc(var(--hu) * 22))/1.25 "Nunito", sans-serif; color: var(--h-muc-nhat); background: none; border: 0; }
+.cd-lop[data-che-do="h"] .sk-the-chan.cd-chan .sk-chan-chu { flex: 1 1 auto; min-width: 0; }
+.cd-lop[data-che-do="h"] .sk-the-chan.cd-chan.is-dung .sk-chan-chu, .cd-lop[data-che-do="h"] .sk-the-chan.cd-chan.is-sai .sk-chan-chu { display: none; }
+.cd-lop[data-che-do="h"] .sk-the-chan.cd-chan.is-dung, .cd-lop[data-che-do="h"] .sk-the-chan.cd-chan.is-sai { justify-content: flex-end; }
+.cd-lop[data-che-do="h"] .sk-the-chan.cd-chan .sk-nut { display: flex; align-items: center; gap: calc(var(--hu) * 10); flex: none; }
+.cd-lop[data-che-do="h"] .sk-the-chan.cd-chan button { font: 900 max(13px, calc(var(--hu) * 22))/1 "Nunito", sans-serif; padding: calc(var(--hu) * 10) calc(var(--hu) * 22) calc(var(--hu) * 12); border-radius: calc(var(--hu) * 8); border: 0; cursor: pointer; background: var(--h-dat); color: #fff; box-shadow: 0 calc(var(--hu) * 4) 0 var(--h-dat-dam), 0 calc(var(--hu) * 8) calc(var(--hu) * 12) calc(var(--hu) * -4) rgba(70,40,15,.4); position: relative; overflow: hidden; }
+.cd-lop[data-che-do="h"] .sk-the-chan.cd-chan button.sk-btn-ma { background: var(--h-kem); color: var(--h-muc-nhat); box-shadow: 0 calc(var(--hu) * 4) 0 #d9c7a7, 0 calc(var(--hu) * 8) calc(var(--hu) * 12) calc(var(--hu) * -4) rgba(70,40,15,.3); }
+.cd-lop[data-che-do="h"] .sk-the-chan.cd-chan button:focus-visible { outline: calc(var(--hu) * 4) solid var(--h-nghe); outline-offset: calc(var(--hu) * 3); }
+
+/* ---------- the on tap / chuong / ket bai ---------- */
+.cd-lop[data-che-do="h"] .h-tt { position: absolute; }
+.cd-lop[data-che-do="h"] .h-tt .h-giay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; padding-top: calc(var(--hu) * 22); }
+.cd-lop[data-che-do="h"] .h-tt.mau .h-giay { background-color: #f6ead2; justify-content: center; padding-top: 0; }
+.cd-lop[data-che-do="h"] .h-tron-nho { position: relative; border-radius: 50%; overflow: hidden; background: var(--h-nen-anh); flex: none; box-shadow: 0 0 0 calc(var(--hu) * 8) var(--h-nghe), 0 0 0 calc(var(--hu) * 10) rgba(70,40,15,.18), inset 0 calc(var(--hu) * 8) calc(var(--hu) * 14) calc(var(--hu) * -6) rgba(70,40,15,.4); }
+.cd-lop[data-che-do="h"] .h-tron-nho img { position: absolute; max-width: none; }
+.cd-lop[data-che-do="h"] .h-tt-kj { color: var(--h-muc); line-height: 1; white-space: nowrap; position: relative; }
+.cd-lop[data-che-do="h"] .h-tt-kj .h-rt { font-size: max(.33em, 14px);   /* tu dai -> chu nho: furigana khong duoi 14 px (13 px dien thoai) */ bottom: calc(100% + calc(var(--hu) * 6)); }
+.cd-lop[data-che-do="h"] .h-tt-ng { margin-top: calc(var(--hu) * 14); color: var(--h-dat-dam); white-space: nowrap; font-weight: 800; }
+.cd-lop[data-che-do="h"] .h-tt.mau .ct { text-align: center; color: var(--h-muc); line-height: 1.2; }
+.cd-lop[data-che-do="h"] .h-tt.mau .ct .p { color: var(--h-dat); }
+.cd-lop[data-che-do="h"] .h-tt .h-mat-sau {
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: calc(var(--hu) * 22); padding: 0;
+  background-color: var(--h-la); background-image: var(--h-van), repeating-linear-gradient(45deg, rgba(255,255,255,.08) 0 calc(var(--hu) * 14), rgba(0,0,0,0) calc(var(--hu) * 14) calc(var(--hu) * 28)); background-size: 256px, auto; box-shadow: var(--h-bong1), inset 0 0 0 calc(var(--hu) * 12) rgba(255,255,255,.12);
+}
+.cd-lop[data-che-do="h"] .h-mat-sau .huy { width: calc(var(--hu) * 150); height: calc(var(--hu) * 150); border-radius: 50%; background: var(--h-kem); color: var(--h-la-dam); display: flex; align-items: center; justify-content: center; font: 900 calc(var(--hu) * 74)/1 "Nunito"; box-shadow: 0 0 0 calc(var(--hu) * 10) var(--h-nghe), 0 calc(var(--hu) * 12) calc(var(--hu) * 20) rgba(20,30,10,.4); }
+.cd-lop[data-che-do="h"] .h-tcard { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: calc(var(--hu) * 8) calc(var(--hu) * 14); text-align: center; }
+.cd-lop[data-che-do="h"] .h-tt-w { color: var(--h-muc); line-height: 1.5; white-space: nowrap; }
+.cd-lop[data-che-do="h"] .h-tt-n { color: var(--h-muc-nhat); margin-top: calc(var(--hu) * 4); line-height: 1.15; }
+.cd-lop[data-che-do="h"] .h-matane { position: absolute; border-radius: 50%; display: flex; align-items: center; justify-content: center; background-color: var(--h-nghe); background-image: var(--h-van); background-size: 256px; box-shadow: 0 0 0 calc(var(--hu) * 12) var(--h-kem), 0 0 0 calc(var(--hu) * 14) rgba(70,40,15,.2), 0 calc(var(--hu) * 22) calc(var(--hu) * 30) calc(var(--hu) * -8) rgba(70,40,15,.45); }
+.cd-lop[data-che-do="h"] .h-matane span { font-weight: 900; color: var(--h-muc); white-space: nowrap; }
+.cd-lop[data-che-do="h"] .h-chips { display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: .3em .4em; }
+.cd-lop[data-che-do="h"] .h-chip2 { display: inline-block; padding: .2em .5em .2em; border-radius: .28em; background: var(--h-kem2); color: var(--h-muc); line-height: 1.2; box-shadow: 0 .06em 0 #d9c7a7; white-space: normal; max-width: 100%; overflow-wrap: anywhere; }   /* mau cau dai: xuong dong trong khung, khong tran (vong co chu do chieu cao) */
+/* chip MOT chu (chu Han / kana): dem hep + dong thap, de net chu chiem ~40 % chip (dem .5 em hai ben + dong 1,2 chi chiem 26 %) */
+.cd-lop[data-che-do="h"] .h-chip2.h-chip1 { padding: .1em .26em .16em; line-height: 1.1; }
+.cd-lop[data-che-do="h"] .h-chip2.them { background: var(--h-dat); color: #fff; }
+.cd-lop[data-che-do="h"] .h-kq { display: flex; flex-direction: column; justify-content: center; height: 100%; gap: .3em; }
+.cd-lop[data-che-do="h"] .h-kq-hang { display: flex; align-items: baseline; justify-content: space-between; gap: .6em; border-bottom: calc(var(--hu) * 2) dashed rgba(120,90,60,.25); padding-bottom: .1em; }
+.cd-lop[data-che-do="h"] .h-kq-n { color: var(--h-muc-nhat); font-weight: 800; }
+.cd-lop[data-che-do="h"] .h-kq-v { color: var(--h-dat-dam); font-weight: 900; white-space: nowrap; }
+.cd-lop[data-che-do="h"] .h-chipv { display: flex; align-items: center; justify-content: center; padding: 0 calc(var(--hu) * 12); }
+.cd-lop[data-che-do="h"] .h-chipv b { color: var(--h-la); }
+.cd-lop[data-che-do="h"] .h-luot { background-color: var(--h-kem); }
+.cd-lop[data-che-do="h"] .h-cau-bai { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--h-muc); line-height: 1.75; overflow: hidden; }
+.cd-lop[data-che-do="h"] .h-cau-in { max-width: 100%; text-align: center; position: relative; word-break: normal; }   /* ngat dong chi giua cac token (h.js veLuot dinh tro tu bang WORD JOINER); auto-phrase be sai 'cau 1 chi con 雨にも' */
+/* gach chan lien chay theo giong (gachLuot): moi dong chu mot thanh, dai dan theo chu dang doc */
+.cd-lop[data-che-do="h"] .h-gach { position: absolute; border-radius: 99px; background: linear-gradient(90deg, rgba(201,100,66,.55), rgba(201,100,66,.9)); pointer-events: none; }
+.cd-lop[data-che-do="h"] .h-tk { border-radius: .1em; padding: 0 .04em; white-space: nowrap; }   /* mot tu khong bi be xuong hai dong (gach chan tinh theo hop tu) */
+.cd-lop[data-che-do="h"] .h-cau-bai ruby { ruby-position: over; }
+.cd-lop[data-che-do="h"] .h-cau-bai rt { font-size: max(.38em, 9.5px); color: var(--h-dat-dam); font-weight: 700; }
+
+/* ---------- the bai (goc tren phai) ---------- */
+.cd-lop[data-che-do="h"] .h-the-bai { position: absolute; right: calc(var(--hu) * 32); top: calc(var(--hu) * -8); width: calc(var(--hu) * 392); height: calc(var(--hu) * 150); z-index: 40; filter: var(--h-bong-f); pointer-events: none; }
+.cd-lop[data-che-do="h"] .h-the-bai .nen { position: absolute; inset: 0; background-color: var(--h-dat); background-image: var(--h-van); background-size: 256px; clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 84%, 0 100%); }
+.cd-lop[data-che-do="h"] .h-the-bai .dong1 { position: absolute; left: 0; right: 0; top: calc(var(--hu) * 26); text-align: center; font: 900 max(10.5px, calc(var(--hu) * 19))/1 "Nunito"; letter-spacing: .26em; color: #ffe3cf; white-space: nowrap; }
+.cd-lop[data-che-do="h"] .h-the-bai .ten { position: absolute; left: 0; right: 0; top: calc(var(--hu) * 52); height: calc(var(--hu) * 40); text-align: center; font: 900 max(14px, calc(var(--hu) * 32))/calc(var(--hu) * 40) "Nunito"; color: #fff; }
+.cd-lop[data-che-do="h"] .h-the-bai .ten span { position: absolute; left: 0; right: 0; white-space: nowrap; }
+.cd-lop[data-che-do="h"] .h-the-bai .cham { position: absolute; left: 0; right: 0; top: calc(var(--hu) * 100); display: flex; justify-content: center; gap: calc(var(--hu) * 10); }
+.cd-lop[data-che-do="h"] .h-the-bai .cham i { width: calc(var(--hu) * 14); height: calc(var(--hu) * 14); min-width: 7px; min-height: 7px; border-radius: 50%; background: rgba(255,240,225,.35); box-shadow: inset 0 calc(var(--hu) * 1) calc(var(--hu) * 2) rgba(0,0,0,.25); }
+
+/* dien thoai: the bai nho gon (px that) */
+.cd-lop[data-che-do="h"][data-hep="1"] .h-the-bai { right: 6px; top: -4px; width: 190px; height: 64px; }
+.cd-lop[data-che-do="h"][data-hep="1"] .h-the-bai .nen { clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 88%, 0 100%); }
+.cd-lop[data-che-do="h"][data-hep="1"] .h-the-bai .dong1 { top: 8px; font-size: 10.5px; letter-spacing: .2em; }
+.cd-lop[data-che-do="h"][data-hep="1"] .h-the-bai .ten { top: 21px; height: 20px; font: 900 15px/20px "Nunito"; }
+.cd-lop[data-che-do="h"][data-hep="1"] .h-the-bai .cham { top: 45px; gap: 6px; }
+.cd-lop[data-che-do="h"][data-hep="1"] .h-the-bai .cham i { width: 8px; height: 8px; }
+
+/* ---------- nut nhac nen (nho, trong che do) ---------- */
+.cd-lop[data-che-do="h"] .h-am-nut {
+  position: absolute; left: 12px; top: 10px; z-index: 60; width: 34px; height: 34px; padding: 6px; border-radius: 50%;
+  border: 0; cursor: pointer; pointer-events: auto !important; color: var(--h-dat-dam); background: rgba(251,246,236,.92);
+  box-shadow: 0 2px 6px rgba(70,40,15,.3); opacity: .85;
+}
+.cd-lop[data-che-do="h"] .h-am-nut:hover, .cd-lop[data-che-do="h"] .h-am-nut:focus-visible { opacity: 1; outline: 2px solid var(--h-dat); outline-offset: 2px; }
+.cd-lop[data-che-do="h"] .h-am-nut .h-am-gach { opacity: 0; }
+.cd-lop[data-che-do="h"] .h-am-nut.is-tat .h-am-gach { opacity: 1; }
+.cd-lop[data-che-do="h"] .h-am-nut.is-tat { color: var(--h-muc-nhat); }
+
+@media (prefers-reduced-motion: reduce) {
+  .cd-lop[data-che-do="h"] * { animation: none !important; }
+  .cd-lop[data-che-do="h"] .sk-cong .qz-opt { transition: none; }
+}
+
+/* ---------- chu de doc: khong de chu mo coi / be giua tu ---------- */
+.cd-lop[data-che-do="h"][data-hep="1"] .h-tt-kj .h-rt { font-size: max(.33em, 13px); }
+/* chu Nhat xuong dong theo CUM TU (Chrome: word-break auto-phrase), khong be giua tu (研究 / 者); tu dai hon dong van xuong dong (overflow-wrap) */
+.cd-lop[data-che-do="h"] [lang="ja"], .cd-lop[data-che-do="h"] .h-jpf { word-break: auto-phrase; }
+.cd-lop[data-che-do="h"] .h-jw { white-space: nowrap; }
+.cd-lop[data-che-do="h"] :is(.h-cau-hoi, .h-nghia, .h-phu, .h-r-dan, .h-gt-text, .h-gt-giai, .h-gt-goiy, .h-r-tieude, .h-tt-n) { text-wrap: pretty; }
+.cd-lop[data-che-do="h"] :is(.sk-chan-tt, .h-ruyc, .h-nhan) { text-wrap: balance; }
+/* khoi chu ngan (<= 6 dong): can deu cac dong -> khong con dong cuoi mot chu ("tế", ")", "が") */
+.cd-lop[data-che-do="h"] :is(.sk-cong .qz-opt-text, .h-lc .chu, .h-tt .ct, .h-cau-in, .h-cau-hoi, .h-khoi .chu, .h-o .ro, .h-nghia, .h-tt-n, .h-tt-ng, .h-chiptxt) { text-wrap: balance; }
+.cd-lop[data-che-do="h"] .h-ruyc { overflow-wrap: normal; word-break: keep-all; }   /* ten nguoi noi (せんせい) khong be giua ten */
+/* dau tick cua the that chen vao nut (flex) lam chu dap an xuong dong: che do h da co vong khoanh but do + vien xanh cho dap an dung */
+.cd-lop[data-che-do="h"] .sk-cong .qz-opt > .sk-bt-tick { display: none; }
+/* chu dap an: vung chu (1,36-1,45 em) cao hon line-height 1.1 -> khong cat (overflow) o mep duoi */
+.cd-lop[data-che-do="h"] .sk-cong .qz-opt-text { overflow: visible; }
+/* nhan nho tren nhan treo (dien thoai hep): xuong dong trong nhan, khong tran ra ngoai mep */
+.cd-lop[data-che-do="h"] .h-treo .h-nhan { max-width: calc(100% - 24px); white-space: normal; text-align: center; }
+/* dap an SAI: the that cat chu (overflow hidden, de gach ngang truot vao) theo hop dong 1.1 -> vung chu 1,45 em bi xen day: noi hop cat
+   theo chieu doc (dem + am le, bo cuc khong doi), lop gach giu dung hop dong chu */
+.cd-lop[data-che-do="h"] .sk-cong .qz-opt.is-wrong .qz-opt-text { padding-block: .2em; margin-block: -.2em; }
+.cd-lop[data-che-do="h"] .sk-cong .qz-opt.is-wrong .qz-opt-text::after { inset: .2em 0 !important; }
+/* o dap an GON (dap an rat ngan, h.js dungQuiz): nut A-D thanh huy hieu nho tren goc trai, chu can giua, dem ngang = --h-px */
+.cd-lop[data-che-do="h"] .h-lc.is-gon .h-o { justify-content: center; padding: 0 var(--h-px, 20px) 0 var(--h-pl, var(--h-px, 20px)); }
+.cd-lop[data-che-do="h"] .h-lc.is-gon .h-o .chu { flex: 0 1 auto; text-align: center; }
+.cd-lop[data-che-do="h"] .h-lc.is-gon .ky,
+.cd-lop[data-che-do="h"] .h-slot.is-gon .sk-cong .qz-key { position: absolute; left: calc(var(--hu) * -14); top: calc(var(--hu) * -14); width: calc(var(--hu) * 40); height: calc(var(--hu) * 40); font-size: max(13px, calc(var(--hu) * 22)); line-height: calc(var(--hu) * 40); z-index: 2; }
+.cd-lop[data-che-do="h"] .h-slot.is-gon .sk-cong .qz-opt { justify-content: center; padding-left: var(--h-pl, var(--h-px, 20px)); padding-right: var(--h-px, 20px); }
+.cd-lop[data-che-do="h"] .h-slot.is-gon .sk-cong .qz-opt-text { flex: 0 1 auto; text-align: center; }
+.cd-lop[data-che-do="h"] .h-slot[style*="--h-w1"] .sk-cong .qz-opts { justify-content: center; }
+/* may tinh: ruby / ro cua o chu toi thieu 14 px (dien thoai 13) */
+.cd-lop[data-che-do="h"]:not([data-hep="1"]) .h-hang .h-o .ruby { font-size: max(.39em, 14px); }
+.cd-lop[data-che-do="h"]:not([data-hep="1"]) .h-o .ro { font-size: max(.26em, 14px); }
+/* chip (the chuong): xuong dong dep nhung khong co hop (balance de trong ben phai) */
+.cd-lop[data-che-do="h"] .h-chip2 { text-wrap: pretty; }
+/* nhan dan nhieu dong: can deu (khong con dong cuoi mot chu "a-b-c.") */
+.cd-lop[data-che-do="h"] .h-dan .h-r-dan { text-wrap: balance; }
+/* cau thoai: furigana rong hon chu goc lan sang token ben canh -> chua le hai ben ruby */
+.cd-lop[data-che-do="h"] .h-cau-bai ruby { margin-inline: .14em; }
+/* the mau cau (ket bai): chu khong sat mep the */
+.cd-lop[data-che-do="h"] .h-tt .ct { padding: 0 calc(var(--hu) * 18); max-width: 100%; }
+/* o dap an om chu: bo min-height 64 px cua the that (o tinh cung cao theo chu + --h-py) */
+.cd-lop[data-che-do="h"] .h-slot .sk-cong .qz-opt { min-height: 0; }
+/* o chu: le duoi chu .14 em (h.js xepO caoO), chip the chuong can giua (xuong dong khong lech trai), ruby the tu ghep chua le */
+.cd-lop[data-che-do="h"] .h-hang .h-o .chu { margin-bottom: .14em; }
+.cd-lop[data-che-do="h"] .h-chip2 { text-align: center; }
+.cd-lop[data-che-do="h"] .h-tt-w ruby { ruby-overhang: none; margin-inline: .06em; }   /* furigana (3 kana) rong hon chu goc: KHONG de rt tran sang kana ben canh (お客さん: rt きゃく de len お) — hop ruby om ca rt */
+.cd-lop[data-che-do="h"] .h-tt-w rt { font-size: max(.5em, 12px); }   /* furigana the tu ghep (dien thoai) */
+/* o chu (vi du): bo hang ruby / nghia ro khi o khong co noi dung (h.js dungViDu: xepO cat tung o theo hang) — o om chu; hang khong co ruby lan gloss: chu can giua o */
+.cd-lop[data-che-do="h"] .h-hang .h-o.h-no-rb .ruby { display: none; }
+.cd-lop[data-che-do="h"] .h-hang .h-o.h-no-ro .ro { display: none; }
+.cd-lop[data-che-do="h"] .h-hang .h-khe > .h-o.h-c { justify-content: center; padding-bottom: 0; }
+.cd-lop[data-che-do="h"] .h-hang .h-o.h-c .chu { margin-bottom: 0; }
+/* o om net (h.js xepO: chu det nhu っ / つ): chu dich theo --h-dy de cac chu trong hang cung mot duong co so */
+.cd-lop[data-che-do="h"] .h-hang .h-o.h-ink .chu { position: relative; top: var(--h-dy, 0px); }
+/* o ghi chu: chu ngan hep hon o (dai nhan rong hon chu) -> can giua chu (h.js omRong) */
+.cd-lop[data-che-do="h"] .h-gn.h-gn-ctr { align-items: center; text-align: center; }
+.cd-lop[data-che-do="h"] .h-hc .h-gn { align-items: center; text-align: center; }   /* tu vung 2 cot (khong anh): o nghia rong het cot, chu can giua */
+/* cau hoi bai tap: mot khoi chu (h.js dungQuiz) — o trong chen giua chu, khong bi tach thanh item flex rieng */
+.cd-lop[data-che-do="h"] .h-cau-w { display: block; max-width: 100%; }
+.cd-lop[data-che-do="h"] .h-cau-w .h-blank { margin: 0 .14em; }
+/* cong thuc (tieu de mau cau): moi phan la mot cum, chi xuong dong giua cac phan (khong be 'と | いうことになる') */
+.cd-lop[data-che-do="h"] .h-r-form .p { white-space: nowrap; }
+/* the mau cau (ket bai): moi phan cong thuc la mot cum, khong be giua tu (かねな | い) */
+.cd-lop[data-che-do="h"] .h-r-tt .p { white-space: nowrap; }
+
+/* placeholder "…" cua dem nguoc (director chen khi cho loi cham): khong co y nghia trong che do nay -> an */
+.cd-lop[data-che-do="h"] .sk-dem-cho { display: none; }
+
+/* o dap an tinh (Sensei doc) co chu Viet: Nunito truoc (Zen Maru thieu ầ ấ ề ế ồ ố -> dau roi sang ben); chu Nhat roi xuong Zen Maru */
+.cd-lop[data-che-do="h"] .h-lc .h-o .chu, .cd-lop[data-che-do="h"] .h-lc .h-o .chu[lang="vi"] { font-family: "Nunito", "Zen Maru Gothic", sans-serif; }
+.cd-lop[data-che-do="h"] .h-lc .h-o .chu [lang="ja"] { font-family: "Zen Maru Gothic", sans-serif; }
+
+/* dau ゛ / ゜ (SVG do h.js daku()): to + dam nhu mot chu, can giua dong chu (glyph goc chi la cham nho o goc o em-box) */
+.cd-lop[data-che-do="h"] .h-daku { display: inline-block; width: .85em; height: .85em; vertical-align: -.12em; margin: 0 .04em; overflow: visible; flex: none; }
+
+/* chan the (dong 'Den luot ban' + Bo qua / Tiep tuc): giay kem rieng — khong in chu thang len cay / doi cua canh nen (do tuong phan) */
+.cd-lop[data-che-do="h"] .sk-the-chan.cd-chan {
+  margin-top: calc(var(--hu) * 14); padding: calc(var(--hu) * 10) calc(var(--h-cm, 0px) + calc(var(--hu) * 20)) calc(var(--hu) * 10) calc(var(--hu) * 20); min-height: calc(var(--hu) * 56);
+  background-color: var(--h-kem); background-image: var(--h-van); background-size: 256px; color: var(--h-muc); border-radius: calc(var(--hu) * 8);
+  box-shadow: 0 calc(var(--hu) * 1) 0 rgba(255,255,255,.8) inset, 0 calc(var(--hu) * 4) 0 #d9c7a7, 0 calc(var(--hu) * 8) calc(var(--hu) * 12) calc(var(--hu) * -4) rgba(70,40,15,.3);
+  font-size: max(15px, calc(var(--hu) * 22));
+}
+
+/* chu dap an cua the that: khong dong cuoi mot dau ")" (text-wrap: pretty tranh dong cuoi qua ngan; balance khong tranh duoc) — DOM the that giu nguyen */
+.cd-lop[data-che-do="h"] .sk-cong .qz-opt-text { text-wrap: pretty; }
+
+/* chan the that: chua co trang thai luot (dong 'Sensei ghi' cu cua canh mac dinh con trong chan luc the that vua vao) -> an, khong lo loi nhan xet cua Sensei / khung trong */
+.cd-lop[data-che-do="h"] .sk-the-chan.cd-chan:not(.is-luot-ban):not(.is-goi-y):not(.is-dung):not(.is-sai) { visibility: hidden; }
+.cd-lop[data-che-do="h"] .sk-the-chan.cd-chan :is(.sk-ghi-nhan, .sk-ghi-chu) { display: none; }
+/* da tra loi: loi nhan xet bi an -> chan the chi con nut 'Tiep tuc': khong giu mot dai giay trong rong, nut tu nam goc phai duoi */
+.cd-lop[data-che-do="h"] .sk-the-chan.cd-chan:is(.is-dung, .is-sai) { background: none; box-shadow: none; padding: 0; min-height: 0; align-self: flex-end; width: auto; margin-left: auto; margin-top: calc(var(--hu) * 10); }
+
+/* bang cua Sensei mo (body.co-bang, bang 320 px o goc phai): san khau thu hep nhu san khau mac dinh (styles.css: .deck-canvas padding-right) —
+   khong de bang + meo (nam sat trai bang) che noi dung; h.js doKhung / ResizeObserver dung lai canh theo be rong moi */
+@media (min-width: 1280px) { body.co-bang:not(.co-the-trai) .san-khau-giang[data-cd-phu="1"] > .cd-lop[data-che-do="h"] { right: calc(350px + var(--sensei-rong, 0px)); } }
+@media (min-width: 861px) and (max-width: 1279px) { body.co-bang .san-khau-giang[data-cd-phu="1"] > .cd-lop[data-che-do="h"] { right: calc(320px + 26px + 44px); } }
+
+/* nen du phong: lop nen (canvas, dung dan theo F_LOP) chua ve xong thi khung dau van la phong canh giay (troi - nui - doi), khong phai mot khoang be phang */
+.cd-lop[data-che-do="h"] { background-image: linear-gradient(180deg, #f6dcbc 0%, #f1c3a3 34%, #d9a08f 52%, #a9b27b 68%, #7a9a62 84%, #658650 100%); }

@@ -1,0 +1,73 @@
+{
+ "mode": "h",
+ "cap": "KANA",
+ "bai": 5,
+ "hash": "f4b1255d",
+ "tao": "2026-10-01T10:34:42.046Z",
+ "profiles": {
+  "1440x900": {
+   "beats": {
+    "13:vocab": {
+     "fs": {
+      "nghia": 26
+     }
+    },
+    "15:vocab": {
+     "fs": {
+      "phu": 12
+     }
+    },
+    "19:vocab": {
+     "fs": {
+      "nghia": 26
+     }
+    }
+   }
+  },
+  "390x844": {
+   "beats": {
+    "5:vocab": {
+     "fs": {
+      "dan": 8
+     }
+    },
+    "23:kanji": {
+     "fs": {
+      "nghia": 13,
+      "phu": 8
+     }
+    },
+    "24:kanji": {
+     "fs": {
+      "nghia": 13,
+      "phu": 8
+     }
+    },
+    "25:kanji": {
+     "fs": {
+      "nghia": 13,
+      "phu": 8
+     }
+    },
+    "44:kanji": {
+     "fs": {
+      "nghia": 13,
+      "phu": 8
+     }
+    },
+    "45:kanji": {
+     "fs": {
+      "nghia": 13,
+      "phu": 8
+     }
+    },
+    "46:kanji": {
+     "fs": {
+      "nghia": 13,
+      "phu": 8
+     }
+    }
+   }
+  }
+ }
+}

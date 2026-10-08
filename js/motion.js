@@ -84,6 +84,8 @@
     rJ: 0.15, rL: 0.17,    // giay co tieng / don vi: chu Nhat / chu Viet (can chinh moc cum, §1.5.4 ban 3)
     soHoc: 0,              // so luot da hoc L / r trong phien trang (hai luot dau hoc nhanh hon)
     doNhip: [],            // do thoi gian batDauNhip (chan doan T8)
+    cdGiu: 0,              // che do san khau: luc (perf) bat dau GIU luoi cu cho toi khi lop che do co noi dung dau tien (0 = khong giu)
+    cheoLog: [],           // nhat ky cac lan giu + cheo (epoch ms) — do-bo-cuc.mjs dung de khong tinh luc luoi cu con thay la khung trong
     truoc: null,           // canh dung san cho nhip ke tiep (dung trong khoang nghi, §T8)
     builders: Object.create(null),
     canh: null,            // canh dang song (w)
@@ -1211,23 +1213,58 @@
     }
     return true;
   }
+  /**
+   * Khop MO cho khoa Nhat (ban ghi Live hay rot / ghi sai mot kana: "そんなと" cho "そんなこと"): khoa >= 4 chu
+   * -> bien the bo MOT chu kana (con >= 3 chu); khoa >= 5 chu -> cho phep sai dung MOT chu cung do dai.
+   * Truoc day khoa chi khop dung tung chu: mot kana roi la cue khong bao gio khop, va moi cue `sau` no (vd
+   * E3 / E5 sau E2) bi chan ca luot roi ve du phong 2-5 s sau luc Sensei noi.
+   */
+  const RE_HIRA = /[ぁ-ゟ]/;
+  function bienTheJP(n) {
+    const a = Array.from(n);
+    if (a.length < 4) return null;
+    const ds = new Set();
+    for (let i = 0; i < a.length; i++) if (RE_HIRA.test(a[i])) ds.add(a.slice(0, i).join('') + a.slice(i + 1).join(''));
+    ds.delete(n);
+    return { bo: [...ds].filter((x) => Array.from(x).length >= 3), sai: a.length >= 5 };
+  }
+  /** Vi tri p >= p0 trong hay ma doan [p, p + k.length) khac k dung MOT chu kana (khong tinh chu Han) */
+  function timSaiMot(hay, k, p0) {
+    const out = [];
+    const L = k.length;
+    for (let p = Math.max(0, p0); p + L <= hay.length; p++) {
+      let sai = 0, j = 0;
+      for (; j < L; j++) {
+        if (hay.charCodeAt(p + j) !== k.charCodeAt(j)) { if (++sai > 1 || !RE_HIRA.test(k[j])) break; }
+      }
+      if (j === L && sai === 1) out.push(p);
+    }
+    return out;
+  }
   /** Moi lan khop (R index [s, e)) tu vi tri tu tro di, sap theo vi tri, bo chong lan */
   function timHits(w, kh, tu, het) {
     const hits = [];
     if (kh.jp.length && w.jv.length) {
       const p0 = dauTu(w.jvM, tu);
+      const them = (p, len, k) => {
+        const s = w.jvM[p], e = w.jvM[p + len - 1] + 1;
+        let ok = lienMach(w, s, e, true), cho = false;
+        if (ok && k.rieng) {
+          if (s > 0 && laJP(w.R[s - 1])) ok = false;
+          if (ok) { if (e >= w.R.length) { if (!het) cho = true; } else if (laJP(w.R[e])) ok = false; }
+        }
+        if (ok && !cho) hits.push({ s, e });
+      };
       for (const k of kh.jp) {
         let p = w.jv.indexOf(k.n, p0);
-        while (p >= 0) {
-          const s = w.jvM[p], e = w.jvM[p + k.n.length - 1] + 1;
-          let ok = lienMach(w, s, e, true), cho = false;
-          if (ok && k.rieng) {
-            if (s > 0 && laJP(w.R[s - 1])) ok = false;
-            if (ok) { if (e >= w.R.length) { if (!het) cho = true; } else if (laJP(w.R[e])) ok = false; }
-          }
-          if (ok && !cho) hits.push({ s, e });
-          p = w.jv.indexOf(k.n, p + 1);
+        while (p >= 0) { them(p, k.n.length, k); p = w.jv.indexOf(k.n, p + 1); }
+        if (k.mo === undefined) k.mo = bienTheJP(k.n);
+        if (!k.mo) continue;
+        for (const v of k.mo.bo) {
+          let q = w.jv.indexOf(v, p0);
+          while (q >= 0) { them(q, v.length, k); q = w.jv.indexOf(v, q + 1); }
         }
+        if (k.mo.sai) timSaiMot(w.jv, k.n, p0).forEach((q) => them(q, k.n.length, k));
       }
     }
     if (kh.vn.length && w.vv.length) {
@@ -1666,6 +1703,22 @@
     else st.timer = henThe(() => { st.timer = null; thucThi(w, st); }, msHen(con));
   }
   const viaBan = (st) => (st.keo ? 'thuTu' : (st.viaO || 'tiLe'));
+  /**
+   * Cue nhan / doc biet khop TRE (> 0.4 s sau luc tu vang): con ban duoc neu chu khop van DANG duoc noi.
+   * Dau luot, ban ghi Live toi sau tieng 0.4-0.8 s (tieng phat ngay goi dau, chu theo sau) -> F2 (doc lai cau
+   * thoai), Q1 (doc cau hoi), E1 (doc cau vi du) truoc day gan nhu luon bi bo: mat ca karaoke / con tro cua
+   * muc dau luot. doc: con trong cau (T + dur, tru 0.3 s); nhan: con trong cum khop (+ 0.15 s).
+   */
+  function conDangNoi(w, st, now) {
+    if (st.viaO !== 'khop' || st.khopS == null || st.khopE == null) return false;
+    if (st.loai === 'doc') {
+      const To = st.To != null ? st.To : st.Teff;
+      const dur = tinhDur(w, st, To) / 1000;
+      return now < To + dur - 0.3;
+    }
+    const Te = viTriT(w, st.khopE - 1, true, true);
+    return Te != null && now < Te + 0.15;
+  }
   function thucThi(w, st) {
     if (!conSong(st) || w !== S.canh) return;
     const now = dongHo();
@@ -1676,10 +1729,10 @@
     }
     if (st.loai === 'nhan' || st.loai === 'doc') {
       const To = st.To != null ? st.To : st.Teff;
-      if (now - To > 0.40) { boCue(w, st); return; }
+      if (now - To > 0.40 && !conDangNoi(w, st, now)) { boCue(w, st); return; }
       if (st.loai === 'nhan' && S.nhanLuc && now < S.nhanLuc + 0.6) {
         const t2 = S.nhanLuc + 0.6;
-        if (t2 - To > 0.40) { boCue(w, st); return; }
+        if (t2 - To > 0.40 && !conDangNoi(w, st, t2)) { boCue(w, st); return; }
         st.Teff = t2 + S.LEAD;
         st.henT = st.Teff;
         st.timer = henThe(() => { st.timer = null; thucThi(w, st); }, (t2 - now) * 1000);
@@ -1718,6 +1771,8 @@
     if (S.nhatKy.length >= MAX_NHAT_KY) S.nhatKy.splice(0, 500);
     S.nhatKy.push(x);
   }
+  /** Khoa khop (da chuan hoa) cua cue cho nhat ky: harness tim luc Sensei noi that cua cue khong khop chu */
+  const khoaNk = (st) => (st.kh ? { jp: st.kh.jp.map((k) => k.n), vn: st.kh.vn.slice() } : null);
   function banCue(w, st, via) {
     if (st.tt === 'da' || st.tt === 'bo') return;
     if (st.timer != null) { huyHen(st.timer); st.timer = null; }
@@ -1743,6 +1798,7 @@
       lead: S.LEAD,
       leadThuc: via === 'dauTien' && w.denCtx != null && w.Tfirst != null ? Math.min(S.LEAD, w.Tfirst - w.denCtx) : null,
       treBan: via === 'dauTien' && w.denCtx != null ? firedCtx - w.denCtx : null,
+      khoa: khoaNk(st), sau: st.cue.sau || null,
     });
     sauKhiBan(w, st);
     kiemXong(w);
@@ -1756,6 +1812,7 @@
     ghiNhatKy({
       nhip: w.beat.index, kind: w.kind, id: st.id, loai: st.loai, via: 'bo', T: st.To, firedCtx: null, firedPerf: null,
       luot: st.luot, viTri: st.viTri, msLam: 0, canh: w.so, the: w.the, epoch: S.epoch, boCtx: dongHo(), khopPerf: st.khopPerf || null,
+      khoa: khoaNk(st), sau: st.cue.sau || null,
     });
   }
   const dieuKien = (k, ref) => !k.neuVia || ref.via === k.neuVia;
@@ -1803,10 +1860,27 @@
     if (!id) return 0;
     const ref = w.byId[id];
     if (!ref || ref === st) return 0;
-    if (ref.khopE != null) return ref.khopE;
+    if (ref.khopE != null) return cuoiDoc(w, ref);
     if (conSong(ref)) return null;
     if (ref.rMoc == null) ref.rMoc = ref.mocT != null ? rTaiT(w, ref.mocT) : 0;
     return ref.rMoc;
+  }
+  /**
+   * Cuoi lan khop cua cue tham chieu. Cue DOC co khoa cuoi (khopCuoi: hai token cuoi cau — E2 doc lai cau vi du,
+   * F2 doc lai cau thoai): cuoi CA CAU dang doc, khong phai cuoi hai token dau. Truoc day cue `sau` no (E3.k chip
+   * vai tro, F3.k cho trong tam) tim tu sau hai token dau -> token nam sau trong cau khop NGAY TRONG lan doc
+   * (som), token dau cau thi phai cho toi phan tach cau, roi luat thu tu keo no len truoc 2-3 s. Khoa cuoi chua
+   * nghe thay: cho (null) toi khi ban ghi qua do dai mot cau (1.5 x don vi cua cau, >= 24 chu) thi lui ve khopE.
+   */
+  function cuoiDoc(w, ref) {
+    if (ref.loai !== 'doc' || !ref.kc || !(ref.kc.jp.length || ref.kc.vn.length) || ref.khopS == null) return ref.khopE;
+    if (ref.cuoiR != null) return ref.cuoiR;
+    const dv = Number(ref.cue.donVi) || 12;
+    const xa = Math.max(24, dv * 1.5);
+    // khoa cuoi trong tam mot cau tinh tu dau lan doc (cau ngan: khoa dau = khoa cuoi -> chinh lan khop dau)
+    const h = timHits(w, ref.kc, ref.khopS, false).find((x) => x.e >= ref.khopE && x.s - ref.khopE <= xa);
+    if (h) return (ref.cuoiR = h.e);
+    return w.R.length - ref.khopE > xa ? (ref.cuoiR = ref.khopE) : null;
   }
   function timKhopCanh(w, het) {
     let doi = false;
@@ -2595,6 +2669,7 @@
   }
   /** Bat dau / giang tiep: luoi (van thay, inert) mo di trong khi san khau hien — cheo mo, khong khung trang */
   function cheoVao() {
+    if (S.cdGiu && cdGiuVao()) return;   // che do san khau: giu luoi cu toi khi lop co noi dung dau tien
     const ms = S.giam ? 120 : VAO_CHEO;
     chay(dom.san, [{ opacity: 0, offset: 0 }], { duration: ms, easing: S.giam ? 'linear' : E.out }, 'cheo');
     const sc = slideContent();
@@ -2611,6 +2686,7 @@
   function ketCheo() {
     clearTimeout(S.henCheo);
     S.henCheo = null;
+    S.cdGiu = 0;
     document.body.classList.remove('sk-vao');
     const sc = slideContent();
     if (sc && sc.style.opacity) sc.style.opacity = '';
@@ -2688,6 +2764,8 @@
     LEAD: LEAD_CD,
     bayGio: () => dongHo(),
     meo: () => cdMeo(),
+    /** coMeo(k): xin co meo k (1 = chuan; > 1 khi goc phai duoi con trong). Tra ve hop meo moi (nhu meo()) */
+    coMeo: (k) => { cdCoMeo(k); return cdMeo(); },
     khung: () => { const l = CD.lop; return l ? { w: l.clientWidth, h: l.clientHeight } : { w: 0, h: 0 }; },
     esc,
     /** Doan chu co tieng Nhat: boc moi cum Nhat trong <span lang="ja"> (da escape) */
@@ -2823,8 +2901,125 @@
     chay(lop, [{ opacity: 1 }, { opacity: 0 }], { duration: ms, easing: E.in, fill: 'forwards' }, 'cd');
     henDon(() => lop.remove(), ms + 20);
   }
+  /**
+   * Ty le o luoi (24x16) cua lop che do co chu / hinh nhin thay (op >= .25, o phu >= 18 %) — cung cach do voi
+   * tools/che-do/bo-cuc-mau.mjs (cover). 0..1. Chi dung luc mo san khau (cdGiuVao), vai chuc khung hinh.
+   */
+  function cdPhuNoiDung(lop) {
+    const lr = lop.getBoundingClientRect();
+    if (!(lr.width > 8 && lr.height > 8)) return 0;
+    const C = 24, R = 16, cw = lr.width / C, ch = lr.height / R, cell = new Float32Array(C * R);
+    const memo = new Map();
+    const dac = (el) => {
+      if (!el || el === lop) return 1;
+      let v = memo.get(el);
+      if (v !== undefined) return v;
+      const cs = getComputedStyle(el);
+      v = cs.display === 'none' || cs.visibility === 'hidden' ? 0 : dac(el.parentElement) * (parseFloat(cs.opacity) || 0);
+      memo.set(el, v);
+      return v;
+    };
+    const danh = (l, t, r, b) => {
+      l = Math.max(l, lr.left); t = Math.max(t, lr.top); r = Math.min(r, lr.right); b = Math.min(b, lr.bottom);
+      if (r <= l || b <= t) return;
+      const x0 = Math.floor((l - lr.left) / cw), x1 = Math.min(C - 1, Math.floor((r - lr.left - 0.01) / cw));
+      const y0 = Math.floor((t - lr.top) / ch), y1 = Math.min(R - 1, Math.floor((b - lr.top - 0.01) / ch));
+      for (let y = y0; y <= y1; y++) for (let x = x0; x <= x1; x++) {
+        const ix = Math.min(r, lr.left + (x + 1) * cw) - Math.max(l, lr.left + x * cw), iy = Math.min(b, lr.top + (y + 1) * ch) - Math.max(t, lr.top + y * ch);
+        if (ix > 0 && iy > 0) cell[y * C + x] += (ix * iy) / (cw * ch);
+      }
+    };
+    const tw = document.createTreeWalker(lop, NodeFilter.SHOW_TEXT);
+    const rg = document.createRange();
+    let n;
+    while ((n = tw.nextNode())) {
+      const el = n.parentElement;
+      if (!el || !n.nodeValue || !n.nodeValue.trim() || dac(el) < 0.25) continue;
+      rg.selectNodeContents(n);
+      Array.prototype.forEach.call(rg.getClientRects(), (r) => { if (r.width >= 1 && r.height >= 1) danh(r.left, r.top - 4, r.right, r.bottom + 4); });
+    }
+    lop.querySelectorAll('img,video,canvas,picture').forEach((e) => {
+      if (dac(e) < 0.25) return;
+      const r = e.getBoundingClientRect();
+      if (r.width * r.height > 16) danh(r.left, r.top, r.right, r.bottom);
+    });
+    let phu = 0;
+    for (let i = 0; i < cell.length; i++) if (cell[i] >= 0.18) phu++;
+    return phu / cell.length;
+  }
+  /** Nguoi hoc dang chon mot che do san khau (khac 'Mac dinh'): san khau co the tran lop che do */
+  function cdMuon() {
+    try { const SC = window.SenseiCheDo; const k = SC && typeof SC.muon === 'function' ? SC.muon() : null; return !!k && k !== 'mac-dinh'; } catch (e) { return false; }
+  }
+  const CD_GIU_TOI_DA = 900;   // ms: giu luoi cu toi da bay nhieu (noi dung dau cham: van cheo mo, khong ket)
+  const CD_GIU_PHU = 0.06;     // ty le o co noi dung de coi la "da ve canh dau" (nho hon 0,4 x muc on dinh thap nhat cua cac nhip)
+  /**
+   * Che do san khau vua mo (tu luc dung): lop che do da dung nhung chua co chu / hinh -> man hinh giu NGUYEN luoi cu
+   * (giao dien tinh cung nen, inert); san khau opacity 0 cho toi khi lop co noi dung dau tien (hoac het CD_GIU_TOI_DA),
+   * roi moi cheo mo san khau len. Khong co khung nao chi con nen / nen trong. Tra true neu da tiep quan cheo mo.
+   */
+  function cdGiuVao() {
+    const lop = CD.lop;
+    if (!lop || !CD.canh || !dom.san || !lop.isConnected || !document.body.classList.contains('sk-vao')) { S.cdGiu = 0; return false; }
+    const the0 = S.the, t0 = performance.now(), epoch = () => performance.timeOrigin + performance.now();
+    // t0 cua nhat ky = luc batDauNhip dung lop che do (S.cdGiu) — tu day luoi cu da la thu duy nhat nhin thay
+    const log = { t0: performance.timeOrigin + (S.cdGiu || t0), t1: null, t2: null, phu: 0, lyDo: '' };
+    S.cheoLog.push(log);
+    if (S.cheoLog.length > 40) S.cheoLog.splice(0, 10);
+    clearTimeout(S.henCheo);
+    S.henCheo = null;
+    dom.san.style.opacity = '0';
+    let xong = false, raf = 0, hen = 0, lanDo = 0;
+    const cheo = (lyDo) => {
+      if (xong) return;
+      xong = true;
+      cancelAnimationFrame(raf);
+      clearTimeout(hen);
+      log.t1 = epoch(); log.lyDo = lyDo;
+      if (the0 !== S.the || S.che === 'tat' || dom.san.hidden || !lop.isConnected) {
+        // nhip khac / tam dung chen ngang: nguoi do (batDauNhip moi, tatSan) lo san khau; chi tra luoi ve trang thai binh thuong
+        log.lyDo = 'huy';
+        if (S.che !== 'tat') { if (dom.san.style.opacity === '0') dom.san.style.opacity = ''; ketCheo(); }
+        return;
+      }
+      const ms = S.giam ? 120 : VAO_CHEO;
+      dom.san.style.opacity = '';
+      chay(dom.san, [{ opacity: 0, offset: 0 }], { duration: ms, easing: S.giam ? 'linear' : E.out }, 'cheo');
+      const sc = slideContent();
+      if (sc) {
+        sc.style.opacity = '0';
+        chay(sc, [{ opacity: 1, offset: 0 }], { duration: ms, easing: S.giam ? 'linear' : E.in }, 'cheo');
+      }
+      S.cdGiu = 0;   // het giu (cheo mo da chay): ketCheo o cuoi cheo mo
+      clearTimeout(S.henCheo);
+      S.henCheo = henDon(() => { log.t2 = epoch(); ketCheo(); }, ms + 40);
+    };
+    const doLai = () => {
+      if (xong) return;
+      raf = requestAnimationFrame(() => {
+        if (xong) return;
+        if (the0 !== S.the || S.che === 'tat') { cheo('huy'); return; }
+        const n = performance.now();
+        if (n - lanDo >= 40) {
+          lanDo = n;
+          let p = 0;
+          try { p = cdPhuNoiDung(lop); } catch (e) { p = 1; }
+          log.phu = +p.toFixed(3);
+          if (p >= CD_GIU_PHU) { cheo('noi-dung'); return; }
+        }
+        if (n - t0 >= CD_GIU_TOI_DA) { cheo('het-gio'); return; }
+        doLai();
+      });
+    };
+    hen = setTimeout(() => cheo('het-gio'), CD_GIU_TOI_DA + 150);   // trang nen (rAF dung): van cheo mo
+    doLai();
+    return true;
+  }
+  /** Co meo do che do xin (api.coMeo); ve 1 o dau moi nhip va khi tat che do */
+  function cdCoMeo(k) { try { window.SenseiAvatar && window.SenseiAvatar.datCo && window.SenseiAvatar.datCo(k); } catch (e) {} }
   function cdTat(ms) {
     const def = CD.def, lop = CD.lop;
+    cdCoMeo(1);
     if (CD.canh) { cdBao('roi'); CD.canh = null; }
     CD.def = null; CD.lop = null;
     if (dom.san) { delete dom.san.dataset.cheDo; dom.san.dataset.cdPhu = ''; }
@@ -2864,6 +3059,7 @@
     let m = null;
     // dat truoc [data-cd-phu]: san khau tran het be ngang -> che do do khung dung kich thuoc that
     datThuocTinh(dom.san, 'cdPhu', '1');
+    cdCoMeo(1);   // nhip moi: co chuan; che do tu xin lai neu canh con cho (api.coMeo)
     try { m = CD.def.dungNhip(cdNhipInfo(beat, ctx, w), cdApi(w)); } catch (e) { canhBao('che-do dungNhip ' + (beat && beat.kind), e); m = null; }
     CD.canh = m && typeof m === 'object' ? m : null;
     datThuocTinh(dom.san, 'cdPhu', CD.canh ? '1' : '');
@@ -2894,26 +3090,35 @@
   }
   /** Bat san khau (luoi an nhung giu bo cuc, inert). Tra ve true neu san khau vua tu an chuyen sang hien */
   function hienSan() {
+    // san khau dang mo di vi tam dung (tatSan, 160 ms) ma giang tiep ngay: voi che do san khau van tinh la "vua mo" (luoi cu hien lai
+    // o day) de cdGiuVao giu luoi toi khi lop moi co noi dung — khong de lop moi (con trong) trum len khung cu dang mo di
+    const dangAn = !!(S.henAn || S.anAnim);
     clearTimeout(S.henAn);
     S.henAn = null;
     if (S.anAnim) { try { S.anAnim.cancel(); } catch (e) {} S.anAnim = null; }
     const moi = !!dom.san.hidden;
+    const moiNhin = moi || (dangAn && cdMuon());
     if (moi) dom.san.hidden = false;
     if (dom.san.style.opacity) dom.san.style.opacity = '';
     // Luoi dang thay (bat dau / giang tiep): giu no thay (inert) toi luc cheo mo xong (cheoVao) — khong co khung
     // giay trang giua luoi va the. Chan an toan: toi da 260 ms (T1: luoi an han truoc mau 300 ms dau).
-    if (moi && !document.body.classList.contains('dang-giang')) {
+    if (moiNhin && !document.body.classList.contains('dang-giang')) {
       document.body.classList.add('sk-vao');
       clearTimeout(S.henCheo);
       S.cheoDen = performance.now() + 260;
-      S.henCheo = henDon(ketCheo, 260);
+      // che do san khau dang giu luoi cu (S.cdGiu, dat sau cdChuanBi) thi chan an toan nay khong go luoi: toi da 2,5 s
+      const henAn = () => {
+        if (S.cdGiu && performance.now() < S.cdGiu + 2500) { S.henCheo = henDon(henAn, 400); return; }
+        ketCheo();
+      };
+      S.henCheo = henDon(henAn, 260);
     }
     // chi ghi khi doi: ghi lai cung gia tri van lam mat hieu luc kieu cua ca cay (T8)
     // (giam chuyen dong: luoi khong co transition nao — css/motion.css, T3 — nen an / hien ngay khung sau)
     if (!document.body.classList.contains('dang-giang')) document.body.classList.add('dang-giang');
     const sc = slideContent();
     if (sc && !sc.inert) sc.inert = true;
-    return moi;
+    return moiNhin;
   }
   const datThuocTinh = (el, k, v) => { if (el && el.dataset[k] !== v) el.dataset[k] = v; };
   /** Do thoi gian batDauNhip (chan doan T8, __motion.doNhip()) */
@@ -2995,6 +3200,11 @@
     w.the.setAttribute('aria-hidden', 'true');
     dom.oThe.prepend(w.the);
     S.truoc = { w, beat: tiep, ctx, giam, kho, cu, hen: null };
+    // che do san khau (tuy chon): cho che do dung truoc canh cua nhip ke tiep ngay trong khoang nghi (dungTruoc), de luc nhip
+    // bat dau chi con truot may quay + hieu ung — khong dung / gan DOM trong khung hinh dau nhip. Che do khong khai bao: khong doi gi.
+    if (CD.def && typeof CD.def.dungTruoc === 'function' && CD.canh && dom.san && dom.san.dataset.cdPhu === '1') {
+      try { CD.def.dungTruoc(cdNhipInfo(tiep, ctx, w), cdApi(w)); } catch (e) { canhBao('che-do dungTruoc', e); }
+    }
     // vua khung o tac vu sau (tach khoi tac vu dung)
     S.truoc.hen = henDon(() => { if (S.truoc && S.truoc.w === w) { try { vuaKhung(w); } catch (e) {} } }, 0);
     ghiDo({ nhip: tiep.index, kind: w.kind, truoc: true, ms: +(performance.now() - m0).toFixed(2) });
@@ -3043,6 +3253,9 @@
     const cu = tuTat ? null : cu0;
     const sanMoi = hienSan();
     cdChuanBi(tuTat);                      // che do san khau: doi (neu dang cho) chi o ranh gioi nhip
+    // san khau vua mo ma che do ve nhip nay: luoi cu (giao dien tinh cua che do) o lai tren man hinh toi khi lop che do
+    // co noi dung dau tien (cdGiuVao, luc cheoVao) — khong nhay qua khung chi co nen
+    S.cdGiu = sanMoi && CD.def ? performance.now() : 0;
     if (document.body.classList.contains('sk-cho')) document.body.classList.remove('sk-cho');
     datThuocTinh(dom.san, 'che', 'giang');
     datThuocTinh(dom.san, 'kho', S.kho);
@@ -3403,14 +3616,25 @@
       }, 12000);
     }
   }
-  function luotSong() {
+  /** coAm: goi tieng (khong phai chu) — chi tieng moi mo luot noi tiep; chu tre sau turnComplete thi bo nhu cu */
+  function luotSong(coAm) {
     const w = S.canh;
     if (!w || (S.che !== 'giang' && S.che !== 'chuyen')) return null;
     const t = w.luot;
-    return t && !t.xong ? { w, t } : null;
+    if (t && !t.xong) return { w, t };
+    // Luot NOI TIEP: tieng toi sau turnComplete ma app khong gui gi (model noi tiep sau toolResponse —
+    // luot truoc chi co tool goi). Khong mo luot moi thi tieng / chu nay vo hinh voi dao dien -> moi cue
+    // con lai roi ve du phong (tiLe / nen) thay vi khop dung luc Sensei noi.
+    if (coAm && t && t.xong && S.che === 'giang' && w.turns.length < 12) {
+      const t2 = luotMoi(w);
+      t2.tam = false; t2.giu = false; t2.noiTiep = true;
+      S.dangSinh = true;
+      return { w, t: t2 };
+    }
+    return null;
   }
   function khiCoAmThanh(b64, t0, t1) {
-    const x = luotSong();
+    const x = luotSong(true);
     if (!x) return;
     const { w, t } = x;
     const dur = Math.max(0, (Number(t1) || 0) - (Number(t0) || 0));
@@ -3434,7 +3658,7 @@
     giaiLai(w);
   }
   function khiMatAmThanh(b64, lyDo) {
-    const x = luotSong();
+    const x = luotSong(true);
     if (!x) return;
     const { w, t } = x;
     const s = String(b64 || '');
@@ -3468,12 +3692,33 @@
     // Sau interrupted cua luot cu, moi goi / chu deu la cua luot moi
     if (t.giu) { t.giu = false; nhaGiu(w, t); }
   }
+  /**
+   * Client Live BIET CHAC su kien ket thuc vua toi (interrupted / turnComplete) la cua luot CU (gui luot moi
+   * khi luot cu con mo): moi du lieu luot dang theo doi da nhan tu luc gui la duoi cua luot cu -> bo, bat ke
+   * da qua 500 ms giu tam hay chua; luot moi van dang sinh.
+   */
+  function khiLuotCuHet() {
+    const w = S.canh;
+    const t = w && w.luot;
+    if (!t || t.xong || (S.che !== 'giang' && S.che !== 'chuyen')) return;
+    boLuotTam(w, t);
+    t.giu = false;
+    S.dangSinh = true;
+  }
   function khiXaHang() {
     const x = luotSong();
     if (x) x.t.xa++;
   }
-  function khiLuotXong(tEnd) {
+  /**
+   * o.conNua: app da biet luot nay CHUA du noi dung cua muc (rong / chi tool / lan man / dut som) va se nhac
+   * lai hoac cho Sensei noi tiep -> KHONG ap du phong 3 (khong don moi cue con lai vao cuoi luot nay) va khong
+   * bo cue nhan / doc: chung cho khop o luot sau, dung luc Sensei that su noi toi.
+   */
+  function khiLuotXong(tEnd, o) {
     S.dangSinh = false;
+    const w0 = S.canh, t0 = w0 && w0.luot;
+    // turnComplete khong kem noi dung nao sau luot da xong: khong mo luot noi tiep rong
+    if (t0 && t0.xong) return;
     const x = luotSong();
     if (!x) return;
     const { w, t } = x;
@@ -3492,6 +3737,7 @@
     giaiLai(w);
     // Du phong 3 (§1.6.4.3): chi khi nhip co tieng (khong thi cho luot noi tiep / nen)
     const tongAm = w.turns.reduce((a, x2) => a + x2.A, 0);
+    if (o && o.conNua) { lapLich(w); return; }
     if (w.Tfirst != null && tongAm >= 2) {
       const now = dongHo();
       const han = t.Tend - 0.3;
@@ -3734,6 +3980,7 @@
     khiMatAmThanh: boc('khiMatAmThanh', khiMatAmThanh),
     khiCoLoi: boc('khiCoLoi', khiCoLoi),
     khiTuNgat: boc('khiTuNgat', khiTuNgat),
+    khiLuotCuHet: boc('khiLuotCuHet', khiLuotCuHet),
     khiXaHang: boc('khiXaHang', khiXaHang),
     khiLuotXong: boc('khiLuotXong', khiLuotXong),
     khiCongCu: boc('khiCongCu', (name, args) => {
@@ -3807,6 +4054,8 @@
     luot: () => (S.canh ? S.canh.turns.map((t) => ({ id: t.id, raw: t.raw, A: t.A, Tfirst: t.Tfirst, Tend: t.Tend, soManh: t.frags.length, soGoi: t.chunks.length, xong: t.xong })) : []),
     thamSo: () => ({ L: S.L, r: S.r, rV: S.rV, rJ: S.rJ, rL: S.rL, LEAD: S.LEAD }),
     doNhip: () => S.doNhip.slice(),
+    // che do san khau: cac lan giu luoi cu luc mo san khau {t0 giu, t1 bat dau cheo, t2 het cheo (epoch ms), phu, lyDo}
+    cheoGiu: () => S.cheoLog.map((x) => Object.assign({}, x)),
     // chan doan mo hinh thoi gian (kiem thu): chup luot + khoang lang + vi tri moc cua cue khop
     chupLuot: () => {
       const w = S.canh;

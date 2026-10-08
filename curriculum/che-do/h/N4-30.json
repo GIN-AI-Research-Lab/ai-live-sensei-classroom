@@ -1,0 +1,57 @@
+{
+ "mode": "h",
+ "cap": "N4",
+ "bai": 30,
+ "hash": "09b04872",
+ "tao": "2026-10-01T10:20:01.451Z",
+ "profiles": {
+  "1440x900": {
+   "beats": {
+    "34:grammar-intro": {
+     "fs": {
+      "form": 60
+     }
+    }
+   }
+  },
+  "390x844": {
+   "beats": {
+    "19:vocab": {
+     "fs": {
+      "dan": 16
+     }
+    },
+    "21:kanji": {
+     "fs": {
+      "nghia": 25
+     }
+    },
+    "22:kanji": {
+     "fs": {
+      "nghia": 25
+     }
+    },
+    "23:kanji": {
+     "fs": {
+      "nghia": 25
+     }
+    },
+    "24:kanji": {
+     "fs": {
+      "nghia": 25
+     }
+    },
+    "28:grammar-intro": {
+     "fs": {
+      "form": 26
+     }
+    },
+    "34:grammar-intro": {
+     "fs": {
+      "form": 20
+     }
+    }
+   }
+  }
+ }
+}

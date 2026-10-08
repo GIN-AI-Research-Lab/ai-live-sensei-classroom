@@ -1,0 +1,262 @@
+/* giay.css - phong cach (h) "Giay cat lop" (diorama giay nhieu lop) */
+:root {
+  --kem: #fbf6ec;
+  --kem2: #f3ead9;
+  --nen-anh: #f0ebe1;
+  --dat: #c96442;      /* terracotta */
+  --dat-dam: #a24c30;
+  --nghe: #d6a94a;     /* mustard */
+  --nghe-dam: #b58a2e;
+  --la: #6b8a5e;       /* sage */
+  --la-dam: #4d6a43;
+  --muc: #2a2520;      /* ink */
+  --muc-nhat: #6d5f52;
+  --bong1: 0 1px 0 rgba(255,255,255,.75) inset, 0 2px 2px rgba(70,40,15,.20), 0 10px 20px -6px rgba(70,40,15,.38), 0 26px 44px -20px rgba(70,40,15,.40);
+  --bong-f: drop-shadow(0 2px 1.5px rgba(70,40,15,.28)) drop-shadow(0 14px 16px rgba(70,40,15,.30));
+  --van: none;
+}
+
+#san { background: #f5dcc0; font-family: "Nunito", "Segoe UI", sans-serif; color: var(--muc); }
+.jp, .jpf { font-family: "Zen Maru Gothic", "Yu Gothic", sans-serif; }
+
+/* ---------- lop diorama ---------- */
+.lop { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; will-change: transform; }
+.lop > svg { position: absolute; top: 0; overflow: visible; }
+#troi {
+  position: absolute; inset: 0;
+  background-image: var(--van), radial-gradient(1200px 700px at 82% 26%, rgba(255,236,190,.85), rgba(255,236,190,0) 70%),
+    linear-gradient(180deg, #efc39d 0%, #f4d6b6 34%, #f8e7d0 62%, #fbefdf 100%);
+  background-blend-mode: multiply, normal, normal;
+  background-size: 256px 256px, auto, auto;
+}
+#vien-toi { position: absolute; inset: 0; pointer-events: none; z-index: 25;
+  box-shadow: inset 0 0 160px 20px rgba(90,45,15,.22), inset 0 0 0 10px rgba(60,30,10,.10); }
+
+/* ---------- giay chung ---------- */
+.giay {
+  position: absolute; background-color: var(--kem); background-image: var(--van);
+  background-blend-mode: multiply; background-size: 256px 256px; border-radius: 8px; box-shadow: var(--bong1);
+}
+.an { opacity: 0; }
+.canh { position: absolute; top: 0; width: 1920px; height: 1080px; }
+
+/* ---------- vom cua so (anh minh hoa) ---------- */
+.vom { position: absolute; }
+.vom .l { position: absolute; background-image: var(--van); background-blend-mode: multiply; background-size: 256px; }
+.vom .l1 { inset: 0; background-color: var(--dat); box-shadow: 0 2px 2px rgba(70,40,15,.25), 0 18px 34px -10px rgba(70,40,15,.45); }
+.vom .l2 { inset: 16px; background-color: var(--nghe); box-shadow: 0 2px 2px rgba(70,40,15,.25), 0 8px 16px -4px rgba(70,40,15,.40); }
+.vom .l3 { inset: 32px; background-color: var(--nen-anh); overflow: hidden; background-image: none; }
+.vom .l3 img { position: absolute; }
+.vom .l3 .bong-trong { position: absolute; inset: 0; border-radius: inherit;
+  box-shadow: inset 0 14px 22px -6px rgba(70,40,15,.42), inset 0 0 0 2px rgba(70,40,15,.12); }
+.vom .khoa {
+  position: absolute; left: 50%; top: -34px; width: 116px; height: 116px; margin-left: -58px; border-radius: 50%;
+  background: var(--kem); background-image: var(--van); background-blend-mode: multiply; background-size: 256px;
+  box-shadow: var(--bong1), 0 0 0 9px var(--la), 0 0 0 11px rgba(70,40,15,.15);
+  display: flex; align-items: center; justify-content: center; flex-direction: column;
+  font: 900 44px/1 "Nunito", sans-serif; color: var(--la-dam); z-index: 3;
+}
+.vom .khoa small { font: 800 15px/1 "Nunito"; letter-spacing: .14em; color: var(--muc-nhat); margin-bottom: 2px; }
+.cua { position: absolute; transform-style: preserve-3d; z-index: 2; }
+.cua .mat, .cua .lung { position: absolute; inset: 0; border-radius: inherit; backface-visibility: hidden; }
+.cua .mat {
+  background-color: var(--la); background-image: var(--van), repeating-linear-gradient(90deg, rgba(0,0,0,0) 0 38px, rgba(40,60,30,.16) 38px 41px);
+  background-blend-mode: multiply, normal; background-size: 256px, auto;
+  box-shadow: inset 0 0 0 14px rgba(255,255,255,.10), inset 0 0 0 17px rgba(40,60,30,.25), inset 0 -30px 40px -20px rgba(30,40,20,.3);
+}
+.cua .lung { background: #3f5838; transform: rotateY(180deg); }
+.cua .num { position: absolute; top: 50%; width: 30px; height: 30px; margin-top: -15px; border-radius: 50%;
+  background: var(--nghe); box-shadow: 0 3px 4px rgba(0,0,0,.3), inset 0 -3px 0 rgba(0,0,0,.18); }
+.cua.trai .num { right: 26px; }
+.cua.phai .num { left: 26px; }
+.cua .hoa-van { position: absolute; left: 50%; top: 42%; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%;
+  border: 6px solid rgba(255,255,255,.22); }
+.cua.trai .hoa-van { left: 60%; } .cua.phai .hoa-van { left: 40%; }
+
+/* ---------- nhan treo ---------- */
+.treo { position: absolute; filter: var(--bong-f); }
+.treo .day { position: absolute; left: 50%; width: 4px; margin-left: -2px; bottom: 100%; height: 700px;
+  background: linear-gradient(90deg, #8a6848, #b89572 50%, #7a5a3c); }
+.treo .day-noi { position: absolute; left: 50%; top: 0; width: 4px; margin-left: -2px; height: 44px; background: #8a6848; z-index: 2; }
+.treo .sau, .treo .than { position: absolute; inset: 0;
+  clip-path: polygon(56px 0, calc(100% - 56px) 0, 100% 56px, 100% 100%, 0 100%, 0 56px); }
+.treo .sau { background: var(--dat); transform: translate(10px, 10px) rotate(1.4deg); }
+.treo .than { background-color: var(--kem); background-image: var(--van), linear-gradient(180deg, #fffaf1, #f6eddd);
+  background-blend-mode: multiply, normal; background-size: 256px, auto; }
+.treo .lo { position: absolute; left: 50%; top: 30px; width: 30px; height: 30px; margin-left: -15px; border-radius: 50%;
+  background: #6a4c33; box-shadow: 0 0 0 7px #e2c47d, 0 0 0 9px rgba(70,40,15,.25), inset 0 3px 4px rgba(0,0,0,.5); z-index: 3; }
+.treo .noi { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; }
+
+.nhan-nho { font: 900 21px/1 "Nunito"; letter-spacing: .2em; text-transform: uppercase; color: var(--dat-dam); }
+.nhan-nho b { color: var(--muc-nhat); font-weight: 800; }
+
+/* chu kanji tren nhan */
+.dau-chu { position: relative; display: flex; align-items: flex-end; justify-content: center; }
+.kanji-to { font: 900 220px/1 "Zen Maru Gothic", sans-serif; color: var(--muc); letter-spacing: .02em; }
+.rb { position: relative; display: inline-block; }
+.rt { position: absolute; left: 50%; bottom: 100%; width: 0; display: flex; justify-content: center; white-space: nowrap;
+  font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; color: var(--dat-dam); }
+.romaji { font: 800 34px/1 "Nunito"; letter-spacing: .08em; color: #fff; background: var(--la); padding: 10px 26px 12px; border-radius: 6px;
+  box-shadow: 0 2px 0 var(--la-dam), 0 8px 12px -4px rgba(40,50,20,.4); }
+
+/* ---------- ghi chu gap ---------- */
+.gap { position: absolute; }
+.gap .dai { position: absolute; left: 0; right: 0; top: 0; height: 52px; background: var(--dat); border-radius: 8px 8px 0 0;
+  color: #fff; font: 900 21px/52px "Nunito"; letter-spacing: .2em; text-transform: uppercase; padding: 0 22px; transform-origin: 0 50%;
+  box-shadow: 0 2px 2px rgba(70,40,15,.22), 0 8px 14px -6px rgba(70,40,15,.4); z-index: 2; }
+.gap .dai.la { background: var(--la); }
+.gap .dai.nghe { background: var(--nghe-dam); }
+.gap .than { position: absolute; left: 0; right: 0; top: 52px; bottom: 0; border-radius: 0 0 8px 8px; overflow: hidden;
+  background-color: var(--kem); background-image: var(--van), linear-gradient(180deg, #f1e7d4 0, #fbf6ec 16px);
+  background-blend-mode: multiply, normal; background-size: 256px, auto; box-shadow: var(--bong1); }
+.gap .than .toi { position: absolute; inset: 0; background: #5a3a1c; opacity: 0; pointer-events: none; }
+.gap .noi { position: absolute; inset: 0; padding: 18px 26px; display: flex; flex-direction: column; justify-content: center; }
+.nghia-to { font: 900 60px/1.05 "Nunito"; color: var(--muc); }
+.nghia-to.vua { font-size: 50px; }
+.nghia-phu { font: 700 27px/1.25 "Nunito"; color: var(--muc-nhat); margin-top: 10px; }
+
+/* ---------- nhan dan (sticker) ---------- */
+.dan { position: absolute; background: var(--dat); color: #fff; border-radius: 6px; padding: 14px 26px; box-shadow: var(--bong1);
+  font: 800 30px/1.2 "Nunito"; background-image: var(--van); background-blend-mode: multiply; background-size: 256px; }
+.dan::before, .dan::after { content: ""; position: absolute; top: -14px; width: 86px; height: 30px; background: rgba(247,236,210,.82);
+  box-shadow: 0 1px 2px rgba(0,0,0,.12); }
+.dan::before { left: 18px; transform: rotate(-6deg); }
+.dan::after { right: 18px; transform: rotate(5deg); }
+.dan.la { background-color: var(--la); }
+.dan small { display: block; font: 700 24px/1.25 "Nunito"; opacity: .92; }
+
+/* ---------- bang + o chu ---------- */
+.bang { position: absolute; border-radius: 10px; background-color: #efe3cd; background-image: var(--van);
+  background-blend-mode: multiply; background-size: 256px; box-shadow: var(--bong1), inset 0 0 0 10px #f8efe0; }
+.hang { position: absolute; display: flex; justify-content: center; align-items: center; gap: 22px; }
+.khe { position: relative; border-radius: 10px; background: rgba(120,80,40,.10);
+  box-shadow: inset 0 6px 12px -4px rgba(90,50,20,.35), inset 0 0 0 3px rgba(120,80,40,.10); }
+.o { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; border-radius: 10px;
+  padding: 0 26px 14px; background-color: var(--kem); background-image: var(--van), linear-gradient(180deg, #fffaf2, #f4ead8);
+  background-blend-mode: multiply, normal; background-size: 256px, auto;
+  box-shadow: 0 1px 0 rgba(255,255,255,.8) inset, 0 5px 0 #d9c7a7, 0 7px 2px rgba(70,40,15,.22), 0 18px 24px -8px rgba(70,40,15,.42); }
+.o.tro { background-color: var(--dat); background-image: var(--van), linear-gradient(180deg, #d4724f, #bf5a39);
+  box-shadow: 0 1px 0 rgba(255,255,255,.3) inset, 0 5px 0 #8e3f26, 0 7px 2px rgba(70,40,15,.25), 0 18px 24px -8px rgba(70,40,15,.45); }
+.o .ruby { font: 700 36px/1 "Zen Maru Gothic"; color: var(--dat-dam); height: 46px; display: flex; align-items: center; white-space: nowrap; }
+.o .chu { font: 900 92px/1.12 "Zen Maru Gothic"; color: var(--muc); white-space: nowrap; }
+.o.tro .chu { color: #fff; }
+.o .ro { font: 800 24px/1 "Nunito"; letter-spacing: .06em; color: var(--muc-nhat); margin-top: 4px; white-space: nowrap; }
+.o.tro .ro { color: #ffe9d8; }
+.o.tro .ruby { color: transparent; }
+
+/* khoi cong thuc (mau cau) */
+.khoi { position: absolute; }
+.khoi .o { position: absolute; inset: 0; padding: 0; justify-content: center; }
+.khoi .o .chu { font-size: 132px; line-height: 1; font-family: "Nunito"; font-weight: 900; }
+.khoi .o.tro .chu { font-family: "Zen Maru Gothic"; }
+.khoi .o .ro { position: absolute; bottom: 18px; font-size: 24px; }
+
+/* ---------- rosette chan dung ---------- */
+.hoa { position: absolute; }
+.hoa svg { position: absolute; inset: 0; overflow: visible; filter: var(--bong-f); }
+.hoa .tron { position: absolute; border-radius: 50%; overflow: hidden; background: var(--nen-anh);
+  box-shadow: inset 0 10px 18px -6px rgba(70,40,15,.45); }
+.hoa .tron img { position: absolute; }
+.hoa .tron::after { content: ""; position: absolute; inset: 0; border-radius: 50%; box-shadow: inset 0 12px 20px -8px rgba(70,40,15,.45); }
+.coc { position: absolute; background: linear-gradient(90deg, #8a6243, #b48a62 45%, #7c5537); border-radius: 4px;
+  box-shadow: 0 6px 10px rgba(60,30,10,.35); }
+
+/* ruy bang */
+.ruy { position: absolute; display: flex; align-items: center; justify-content: center; color: #fff;
+  background-color: var(--la); background-image: var(--van); background-blend-mode: multiply; background-size: 256px;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 34px) 50%, 100% 100%, 0 100%, 34px 50%); }
+.ruy-wrap { position: absolute; filter: var(--bong-f); }
+
+/* dau X + vong dung */
+.dau-x { position: absolute; width: 150px; height: 150px; }
+.dau-x::before, .dau-x::after { content: ""; position: absolute; left: -6%; top: 50%; width: 112%; height: 26px; margin-top: -13px;
+  background: #c8412c; border-radius: 4px; box-shadow: 0 3px 0 #8e2a1b, 0 8px 12px rgba(80,20,10,.35); }
+.dau-x::before { transform: rotate(45deg); } .dau-x::after { transform: rotate(-45deg); }
+.vong { position: absolute; overflow: visible; }
+
+/* hoa giay (confetti) */
+.vun { position: absolute; width: 18px; height: 12px; border-radius: 2px; }
+
+/* ---------- lua chon trac nghiem ---------- */
+.lc { position: absolute; }
+.lc .o { position: absolute; inset: 0; flex-direction: row; justify-content: flex-start; gap: 22px; padding: 0 28px; }
+.lc .ky { width: 58px; height: 58px; border-radius: 50%; background: var(--la); color: #fff; font: 900 30px/58px "Nunito"; text-align: center;
+  box-shadow: 0 3px 0 var(--la-dam); flex: none; }
+.lc .o .chu { font-size: 88px; line-height: 1; }
+.lc .o .ro { font-size: 34px; margin: 0; }
+.lc .chon { position: absolute; inset: -9px; border-radius: 16px; border: 6px solid var(--dat); opacity: 0; }
+
+/* ---------- the tom tat ---------- */
+.tt { position: absolute; }
+.tt .giay { inset: 0; display: flex; flex-direction: column; align-items: center; padding-top: 22px; }
+.tt .tron-nho { width: 200px; height: 200px; border-radius: 50%; overflow: hidden; background: var(--nen-anh); position: relative;
+  box-shadow: 0 0 0 8px var(--nghe), 0 0 0 10px rgba(70,40,15,.18), inset 0 8px 14px -6px rgba(70,40,15,.4); }
+.tt .tron-nho img { position: absolute; }
+.tt .kj { margin-top: 44px; font: 900 84px/1 "Zen Maru Gothic"; color: var(--muc); }
+.tt .kj .rt { font-size: 28px; bottom: calc(100% + 6px); }
+.tt .ng { margin-top: 14px; font: 800 30px/1 "Nunito"; color: var(--dat-dam); }
+.tt.mau .giay { justify-content: center; padding-top: 0; background-color: #f6ead2; }
+.tt.mau .ct { font: 900 60px/1.2 "Zen Maru Gothic"; text-align: center; color: var(--muc); }
+.tt.mau .ct .p { color: var(--dat); }
+
+/* ---------- bang ten (tab goc tren phai) ---------- */
+#the-bai { position: absolute; left: 1488px; top: -8px; width: 392px; height: 150px; z-index: 40; filter: var(--bong-f); }
+#the-bai .nen { position: absolute; inset: 0; background-color: var(--dat); background-image: var(--van); background-blend-mode: multiply;
+  background-size: 256px; clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 84%, 0 100%); }
+#the-bai .nen2 { position: absolute; inset: 0 14px 10px; background: var(--dat-dam); opacity: .0; }
+#the-bai .dong1 { position: absolute; left: 0; right: 0; top: 26px; text-align: center; font: 900 19px/1 "Nunito"; letter-spacing: .26em; color: #ffe3cf; }
+#the-bai .ten { position: absolute; left: 0; right: 0; top: 52px; height: 40px; text-align: center; font: 900 32px/40px "Nunito"; color: #fff; }
+#the-bai .ten span { position: absolute; left: 0; right: 0; opacity: 0; }
+#the-bai .cham { position: absolute; left: 0; right: 0; top: 100px; display: flex; justify-content: center; gap: 10px; }
+#the-bai .cham i { width: 14px; height: 14px; border-radius: 50%; background: rgba(255,240,225,.35); box-shadow: inset 0 1px 2px rgba(0,0,0,.25); }
+
+/* ---------- Sensei ---------- */
+#meo { position: absolute; left: 1384px; top: 614px; width: 540px; height: 494px; z-index: 20; }
+#meo .khung-meo { position: absolute; inset: 0;
+  filter: drop-shadow(4px 0 0 #fffaf0) drop-shadow(-4px 0 0 #fffaf0) drop-shadow(0 -4px 0 #fffaf0) drop-shadow(0 4px 0 #fffaf0) drop-shadow(0 14px 14px rgba(70,40,15,.35)); }
+#meo img { position: absolute; left: 0; top: 0; width: 540px; height: 494px; opacity: 0; }
+#bui { position: absolute; left: 1330px; top: 930px; width: 620px; height: 170px; z-index: 21; overflow: visible; }
+
+/* ---------- phu de: dai giay ---------- */
+#ban-phu-de { position: absolute; left: 60px; top: 936px; width: 1300px; height: 112px; z-index: 30; filter: var(--bong-f); }
+#ban-phu-de .nen { position: absolute; inset: 0; background-color: var(--kem); background-image: var(--van), linear-gradient(180deg, #fffaf1, #f4ead9);
+  background-blend-mode: multiply, normal; background-size: 256px, auto; }
+#ban-phu-de .tab { position: absolute; left: 0; top: 0; bottom: 0; width: 196px; background-color: var(--dat); background-image: var(--van);
+  background-blend-mode: multiply; background-size: 256px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; }
+#ban-phu-de .tab b { font: 900 30px/1 "Nunito"; }
+#ban-phu-de .tab small { font: 800 15px/1 "Nunito"; letter-spacing: .24em; margin-bottom: 6px; color: #ffdcc6; }
+#san #phu-de { left: 290px; right: 590px; bottom: 32px; height: 112px; align-items: center; justify-content: flex-start; z-index: 31; }
+#san #phu-de .phu-de-dong { background: none; border-radius: 0; padding: 0 8px; color: var(--muc); text-align: left; max-width: none;
+  font: 800 38px/1.22 "Nunito", sans-serif; }
+#san #phu-de .phu-de-dong.dai { font-size: 31px; }
+#san #phu-de .phu-de-dong .jp { font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; color: var(--dat-dam); }
+#san #phu-de .phu-de-dong::after { content: ""; position: absolute; left: -2px; bottom: 16px; height: 5px; border-radius: 3px;
+  width: calc(var(--tien, 0) * 1020px); background: rgba(201,100,66,.55); }
+
+/* rem cuon (che anh truoc khi Sensei noi tu) */
+.vom .rem { position: absolute; inset: 0; z-index: 1;
+  background-color: var(--la); background-image: var(--van), repeating-linear-gradient(180deg, rgba(255,255,255,.07) 0 30px, rgba(30,45,25,.22) 30px 34px);
+  background-blend-mode: multiply, normal; background-size: 256px, auto; }
+.vom .rem-mep { position: absolute; left: 0; right: 0; top: 0; height: 30px; background: var(--nghe-dam);
+  box-shadow: 0 -4px 10px rgba(30,40,20,.35), inset 0 3px 0 rgba(255,255,255,.25); }
+.vom .rem-huy { position: absolute; left: 50%; top: 44%; width: 190px; height: 190px; margin: -95px 0 0 -95px; border-radius: 50%;
+  background: var(--kem); background-image: var(--van); background-blend-mode: multiply; background-size: 256px;
+  box-shadow: 0 0 0 12px var(--nghe), 0 0 0 14px rgba(40,30,10,.2), 0 16px 26px rgba(20,30,10,.4);
+  display: flex; align-items: center; justify-content: center; font: 900 82px/1 "Nunito"; color: var(--la-dam); }
+.gach-ha { position: relative; display: inline-block; }
+.gach-ha::after { content: ""; position: absolute; left: -6px; right: -6px; top: 52%; height: 5px; background: #fff; border-radius: 3px; transform: rotate(-8deg); }
+
+/* kana ty le (palt) cho gon, chuyen nghiep hon */
+.jp, .jpf, .o .chu, .o .ruby, .rt, .lc .chu, .kanji-to, .tt .kj, .tt.mau .ct { font-feature-settings: "palt" 1; }
+.hang.nho .o .ruby { height: 38px; font-size: 30px; }
+.hang.nho .o { padding-bottom: 12px; }
+/* lop noi dung khong composited: ve lai dung vi tri le tung khung (tranh raster cu lech pixel khi tua) */
+#l-noidung { will-change: auto; }
+
+/* mat sau the on tap */
+.tt .giay.mat-sau, .tt.mau .giay.mat-sau { inset: 0; padding-top: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px;
+  background-color: var(--la); background-image: var(--van), repeating-linear-gradient(45deg, rgba(255,255,255,.08) 0 14px, rgba(0,0,0,0) 14px 28px);
+  background-blend-mode: multiply, normal; background-size: 256px, auto; box-shadow: var(--bong1), inset 0 0 0 12px rgba(255,255,255,.12); }
+.tt .mat-sau .huy { width: 150px; height: 150px; border-radius: 50%; background: var(--kem); color: var(--la-dam);
+  display: flex; align-items: center; justify-content: center; font: 900 74px/1 "Nunito";
+  box-shadow: 0 0 0 10px var(--nghe), 0 12px 20px rgba(20,30,10,.4); }

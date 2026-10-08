@@ -2,12 +2,12 @@
    Che do san khau giang (window.SenseiCheDo) — so dang ky + bo nap + nut chon "Chế độ" tren thanh tren.
    Khong con phong cach theo bai (N5 bai 1-7) va khong con phong cach cu nao: lua chon cua nguoi hoc ap cho
    MOI bai, luu localStorage 'sensei_che_do'.
-   ?phongCach=<id> (hoac ?cheDo=<id>) ghi de khi kiem thu (khong luu); chi nhan 'mac-dinh' va a..j.
+   ?phongCach=<id> (hoac ?cheDo=<id>) ghi de khi kiem thu (khong luu); chi nhan 'mac-dinh' va cac id trong DS (a..j, s).
    Gia tri da luu khong nam trong danh muc (id cu tu ban truoc, hong) = "Mặc định". Huong dan viet che do moi: HUONG-DAN.md.
 
    Hai loai muc:
      - 'mac-dinh'  : san khau mac dinh cua dao dien (js/motion.js), khong nap gi them.
-     - 'a'..'j'    : CHE DO MOI — js/che-do/<id>.js + css/che-do/<id>.css, dang ky SenseiCheDo.dangKy(def).
+     - 'b'..'s'    : CHE DO MOI — js/che-do/<id>.js + css/che-do/<id>.css, dang ky SenseiCheDo.dangKy(def).
                      Che do chiem ca san khau (lop .cd-lop), dao dien chuyen tiep su kien nhip (motion.js).
    Doi lua chon luc DANG GIANG: chi ap o ranh gioi nhip ke tiep (dao dien goi nhipMoi); san khau tat: ap ngay.
 
@@ -28,7 +28,6 @@
   const CHO_TOI_DA = 2500;   // startLecture khong doi lau hon (mang cham): che do bat tu nhip sau khi nap xong
   const DS = [
     { id: 'mac-dinh', ten: 'Mặc định', nhom: 'goc', mau: ['#fffdf9', '#c96442'] },
-    { id: 'a', ten: 'Bento động', nhom: 'moi', mau: ['#e6dfd2', '#c96442'] },
     { id: 'b', ten: 'Điện ảnh', nhom: 'moi', mau: ['#0b0907', '#dcb65e'] },
     { id: 'c', ten: 'Bản đồ tư duy', nhom: 'moi', mau: ['#fffcf6', '#1f1d19'] },
     { id: 'd', ten: 'Vui nhộn game', nhom: 'moi', mau: ['#fff3da', '#6c4dff'] },
@@ -37,8 +36,9 @@
     { id: 'g', ten: 'Poster Nhật Bản', nhom: 'moi', mau: ['#f2ebdc', '#c8322b'] },
     { id: 'h', ten: 'Giấy cắt lớp', nhom: 'moi', mau: ['#f5dcc0', '#a24c30'] },
     { id: 'i', ten: 'Chương trình TV', nhom: 'moi', mau: ['#0b2461', '#ffc21a'] },
-    { id: 'j', ten: 'Truyện tranh manga', nhom: 'moi', mau: ['#fbfaf6', '#e3261b'] },
+    { id: 's', ten: 'Bảng đen lớp học', nhom: 'moi', mau: ['#2f4a3c', '#f4efe0'] },
   ];
+  const CO_TINH = new Set(['h', 's']);   // che do co giao dien tinh (css/che-do/<k>-tinh.css) cho luc chua giang
   const THEO_ID = Object.create(null);
   DS.forEach((m) => { THEO_ID[m.id] = m; });
   const THU_VIEN = { gsap: 'gsap.min.js', CustomEase: 'CustomEase.min.js', SplitText: 'SplitText.min.js', Flip: 'Flip.min.js', DrawSVGPlugin: 'DrawSVGPlugin.min.js' };
@@ -119,7 +119,11 @@
     if (!k) return Promise.resolve(false);
     if (k === 'mac-dinh') return Promise.resolve(true);
     if (napTep[k]) return napTep[k];
-    const p = Promise.all([napCss('css/che-do/' + k + '.css', k), napScript('js/che-do/' + k + '.js')])
+    // <k>-tinh.css: giao dien TINH (luc chua giang) theo phong cach che do; tuy chon, thieu/loi khong lam hong che do
+    const tinh = CO_TINH.has(k)
+      ? Promise.all([napCss('css/che-do/' + k + '-tinh.css', k + '-tinh'), napScript('js/che-do/' + k + '-tinh.js')]).then(() => true, () => true)
+      : Promise.resolve(true);
+    const p = Promise.all([napCss('css/che-do/' + k + '.css', k), napScript('js/che-do/' + k + '.js'), tinh])
       .then(([a, b]) => {
         const def = DEF[k];
         if (!(a && b && def)) return false;
@@ -183,7 +187,16 @@
       <div class="cd-cuon">${DS.filter((m) => m.nhom === 'goc').map(muc).join('')}${nhom('Chế độ mới', 'moi')}</div>
       <p class="cd-tb" aria-live="polite"></p>`;
   }
+  /** <html data-che-do="<id>">: id dang CHON (ap ngay ca luc chua giang) — CSS tinh <k>-tinh.css bam vao day */
+  function datDauTinh() {
+    try {
+      const k = CO_TINH.has(st.muon) ? st.muon : '';
+      if (k) document.documentElement.setAttribute('data-che-do', k);
+      else document.documentElement.removeAttribute('data-che-do');
+    } catch (e) {}
+  }
   function capNhatMenu() {
+    datDauTinh();
     if (!ui.menu) return;
     ui.menu.querySelectorAll('.cd-muc').forEach((b) => {
       const k = b.dataset.id;
@@ -312,7 +325,13 @@
   };
 
   // Nap truoc lua chon da luu (khong chan trang); tao nut khi DOM san
-  const khoi = () => { taoNut(); if (st.muon !== 'mac-dinh') nap(st.muon); };
+  const khoi = () => {
+    taoNut(); datDauTinh();
+    if (st.muon === 'mac-dinh') return;
+    // nap loi (thieu tep): giu che do dang chay cho phien nay (khong ghi lai localStorage), dau tinh theo che do that su nap duoc
+    nap(st.muon).then((ok) => { if (!ok && st.muon !== 'mac-dinh') { st.muon = st.dang; datDauTinh(); capNhatMenu(); } });
+  };
+  datDauTinh();
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', khoi, { once: true });
   else khoi();
 })();
