@@ -1,130 +1,155 @@
 # AI Live Sensei Classroom
 
-**Lớp học tiếng Nhật có giáo viên AI nói chuyện thật, từ nhập môn đến N1.**
+**A live, voice-first AI language classroom — a teacher you can talk to, interrupt, and learn from.**
 
-Người học nghe Sensei (một chú mèo giáo viên) giảng bằng giọng nói, tự do ngắt lời để hỏi, luyện nói qua micro và được sửa lỗi ngay. Bài giảng chạy trên một "sân khấu" trực quan: chữ, furigana, hình minh họa và hiệu ứng xuất hiện đúng lúc Sensei nhắc tới, giống một video bài học nhưng tương tác được.
+Learners listen to a friendly AI teacher (a cat named *Sensei*) deliver structured lessons by voice, interrupt at any moment to ask questions, practise speaking into the microphone, and get corrected on the spot. Each lesson plays out on a visual "stage" where words, furigana, stroke-by-stroke characters and illustrations appear in sync with the teacher's speech — like a polished video lesson, but fully interactive.
 
-> Trạng thái: **bản thử nghiệm đang phát triển tích cực** (prototype chạy được trên máy cá nhân). Chưa phải sản phẩm phát hành đại trà. Mục “Kế hoạch & kinh phí” bên dưới nói rõ cần gì để đi tiếp.
+> **Status: working prototype under active development.** Today the product teaches **Japanese to Vietnamese speakers** (beginner to JLPT N1). Our direction is to grow it into a **multi-language platform** (English, Japanese, Korean and more, for learners of many native languages). See [Vision](#vision) and [Roadmap](#roadmap).
 
 ---
 
-## Xem thử
+## See it in action
 
-Bài giảng **N5 – Bài 1** chạy ở hai chế độ sân khấu. Sensei (mèo giáo viên) giảng bằng giọng nói; từ đang đọc sáng lên, chữ Hán được viết từng nét, hình minh họa xuất hiện đúng nhịp.
+Lesson **N5 – Unit 1** running in two of the available stage styles. The teacher speaks; the word being read lights up, characters are drawn stroke by stroke, and illustrations arrive on cue.
 
-| Chế độ *Bảng đen lớp học* | Chế độ *Giấy cắt lớp* |
+| *Classroom Chalkboard* style | *Layered Paper-Cut* style |
 |:---:|:---:|
-| ![Bảng đen lớp học](docs/demo/demo-s.gif) | ![Giấy cắt lớp](docs/demo/demo-h.gif) |
+| ![Classroom Chalkboard](docs/demo/demo-s.gif) | ![Layered Paper-Cut](docs/demo/demo-h.gif) |
 
-**Video có tiếng** (45 giây, giọng Sensei thật): [Bảng đen lớp học](docs/demo/demo-s.mp4) · [Giấy cắt lớp](docs/demo/demo-h.mp4)
+**Videos with sound** (45 seconds each, with the teacher's synthesised voice): [Classroom Chalkboard](docs/demo/demo-s.mp4) · [Layered Paper-Cut](docs/demo/demo-h.mp4)
 
-**Các phần của một bài học** (từ trên xuống: từ vựng, chữ Hán, mẫu câu, ví dụ, hội thoại, bài tập):
+**The parts of a lesson** — vocabulary, kanji, grammar pattern, example sentence, dialogue, exercise:
 
-| Bảng đen lớp học | Giấy cắt lớp |
+| Classroom Chalkboard | Layered Paper-Cut |
 |:---:|:---:|
-| ![Từ vựng](docs/demo/s-1-tu-vung.jpg) | ![Từ vựng](docs/demo/h-1-tu-vung.jpg) |
-| ![Chữ Hán](docs/demo/s-2-chu-han.jpg) | ![Chữ Hán](docs/demo/h-2-chu-han.jpg) |
-| ![Mẫu câu](docs/demo/s-3-mau-cau.jpg) | ![Mẫu câu](docs/demo/h-3-mau-cau.jpg) |
-| ![Ví dụ](docs/demo/s-4-vi-du.jpg) | ![Ví dụ](docs/demo/h-4-vi-du.jpg) |
-| ![Hội thoại](docs/demo/s-5-hoi-thoai.jpg) | ![Hội thoại](docs/demo/h-5-hoi-thoai.jpg) |
-| ![Bài tập](docs/demo/s-6-bai-tap.jpg) | ![Bài tập](docs/demo/h-6-bai-tap.jpg) |
+| ![Vocabulary](docs/demo/s-1-tu-vung.jpg) | ![Vocabulary](docs/demo/h-1-tu-vung.jpg) |
+| ![Kanji](docs/demo/s-2-chu-han.jpg) | ![Kanji](docs/demo/h-2-chu-han.jpg) |
+| ![Grammar](docs/demo/s-3-mau-cau.jpg) | ![Grammar](docs/demo/h-3-mau-cau.jpg) |
+| ![Example](docs/demo/s-4-vi-du.jpg) | ![Example](docs/demo/h-4-vi-du.jpg) |
+| ![Dialogue](docs/demo/s-5-hoi-thoai.jpg) | ![Dialogue](docs/demo/h-5-hoi-thoai.jpg) |
+| ![Exercise](docs/demo/s-6-bai-tap.jpg) | ![Exercise](docs/demo/h-6-bai-tap.jpg) |
 
-> Các hình và clip trên được quay từ chính bài giảng của ứng dụng ở chế độ mô phỏng, với giọng Sensei và giọng nhân vật hội thoại là giọng AI thật. Đây là bản thử nghiệm.
-
----
-
-## Vấn đề dự án giải quyết
-
-- Người Việt học tiếng Nhật thường phải chọn giữa **giáo trình tĩnh** (rẻ nhưng không có người nói, không sửa lỗi) và **lớp học với giáo viên** (hiệu quả nhưng đắt, khó sắp lịch).
-- Ứng dụng học ngôn ngữ phổ biến thiên về trắc nghiệm, ít cho người học **nói và được phản hồi tức thì**.
-- Nội dung tiếng Nhật giải thích bằng tiếng Việt, có Hán Việt, có mẹo nhớ cho người Việt còn rất ít.
-
-## Giải pháp
-
-Một lớp học trực tuyến trong đó **AI giọng nói trực tiếp (live voice AI)** đóng vai giáo viên:
-
-1. **Trò chuyện giảng dạy hai chiều bằng giọng nói.** Sensei giảng, người học nói chen vào bất cứ lúc nào; Sensei dừng ngay, trả lời, rồi quay lại bài.
-2. **Giảng theo giáo án có cấu trúc.** Sensei đi lần lượt qua từ vựng, chữ Hán, mẫu câu, ví dụ, hội thoại và bài tập, không nói lan man ngoài chủ đề.
-3. **Sân khấu bài giảng đồng bộ với lời nói.** Từ nào đang được đọc thì sáng lên; chữ Hán được viết từng nét; hình minh họa và hiệu ứng theo nhịp giảng.
-4. **Hội thoại nhiều nhân vật có giọng riêng.** 28 nhân vật trong bài hội thoại, mỗi người một giọng cố định (14 nam, 14 nữ), chân dung nhép miệng theo âm thanh và đổi biểu cảm theo cảm xúc câu thoại.
-5. **Luyện nói và sửa lỗi.** Người học nói vào micro, Sensei nhận ra lỗi ngữ pháp/phát âm và hiện bảng sửa lỗi ngay trên bài.
+*All images and clips were recorded from the application's own lesson playback (simulation mode, so no live service was used for the picture), with the teacher and dialogue characters voiced by AI speech synthesis. This is a prototype.*
 
 ---
 
-## Tính năng đã có
+## The problem
 
-| Mảng | Nội dung |
+- **Self-study materials are silent.** Textbooks and most apps are cheap but offer no one to talk to and no one to correct pronunciation or grammar in the moment.
+- **Human tutors are expensive and hard to schedule.** They work, but they do not scale to the millions of people who want to learn a language.
+- **Most apps are quiz-first.** Speaking and listening — the skills learners most want and most lack — get the least attention.
+- **Localised, high-quality explanations are scarce** for many learner groups (for example, Vietnamese speakers learning Japanese, with Sino-Vietnamese readings and memory aids that exploit their native language).
+
+## The solution
+
+A classroom in which a **real-time conversational AI voice** plays the teacher:
+
+1. **Two-way spoken teaching.** The teacher lectures; the learner can speak over it at any time. The teacher stops immediately, answers, and returns to the lesson.
+2. **Structured, curriculum-driven lessons.** The teacher walks through vocabulary, characters, grammar patterns, examples, dialogues and exercises in order, and stays on topic.
+3. **A stage synchronised with speech.** Highlights, stroke order, illustrations and effects follow the teacher's words with sub-second timing.
+4. **Multi-character dialogues.** Each dialogue character has a fixed, distinct voice, a lip-synced portrait and emotion-dependent expressions and intonation.
+5. **Speaking practice with instant correction.** Learners speak into the microphone; the teacher detects errors and shows the correction directly on the lesson.
+
+---
+
+## What is built today
+
+| Area | Details |
 |---|---|
-| **Giáo án** | 110 bài từ **Nhập môn (bảng chữ kana, 10 bài)** đến **N5 (25), N4 (25), N3 (20), N2 (15), N1 (15)**. Từ vựng, chữ Hán (Hán Việt, âm On/Kun, thứ tự nét), mẫu câu, ví dụ, hội thoại và bài tập. Mỗi từ trong câu có `id` riêng để AI trỏ chính xác. |
-| **Giảng bằng giọng nói** | Hai chiều, ngắt lời tự nhiên, Sensei điều khiển slide và đánh dấu từ đang nói. Tiếng Việt xen tiếng Nhật đọc đúng ngôn ngữ từng câu. |
-| **Hình minh họa** | Hơn **1.500 ảnh** minh họa từ vựng và cảnh bài học do mô hình ảnh mã nguồn mở tạo (giấy phép Apache-2.0), cùng bộ chân dung 28 nhân vật × 8 biểu cảm. |
-| **Chân dung nhép miệng** | Miệng nhân vật khớp âm thanh thật, biểu cảm và ngữ điệu theo cảm xúc câu. |
-| **Chế độ sân khấu** | Chọn giao diện giảng bài: *Mặc định*, *Giấy cắt lớp* (phong cảnh giấy cắt nhiều lớp) và *Bảng đen lớp học*. Mỗi chế độ có cả màn hình chờ cùng phong cách. |
-| **Công cụ dựng video bài học** | Chạy cùng sân khấu ở chế độ mô phỏng và ghép tiếng thật để xuất **video bài giảng đầy đủ** (ví dụ N5 bài 1, khoảng 30 phút, 1080p) — dùng làm nội dung YouTube, còn web là phần học tương tác đi kèm. |
-| **Bộ kiểm thử bố cục tự động** | Đo tự động chữ bị cắt, chồng chữ, chữ quá nhỏ, khoảng trống, độ khựng; quét toàn bộ 110 bài ở màn hình máy tính và điện thoại. |
+| **Curriculum** | **110 lessons**, from a beginner kana course (10 lessons) through **N5 (25), N4 (25), N3 (20), N2 (15) and N1 (15)**. Vocabulary, kanji (readings, stroke order, mnemonics), grammar patterns, examples, dialogues and exercises. Every token carries a unique ID so the AI can point at exact words on screen. |
+| **Live voice teaching** | Bidirectional streaming audio, natural barge-in, and teacher-controlled slides and highlights. Mixed-language speech (the learner's language plus the target language) is pronounced correctly sentence by sentence. |
+| **Illustrations** | **1,500+** images for vocabulary and scenes, generated with an open-source image model (Apache-2.0), plus a cast of 28 characters × 8 facial expressions. |
+| **Character voices and lip-sync** | 28 dialogue characters, each with a fixed voice (14 male, 14 female); mouth shapes follow the actual audio; expression and intonation follow the emotion of each line. |
+| **Stage styles** | Selectable lesson looks — *Default*, *Layered Paper-Cut* and *Classroom Chalkboard* — each with a matching idle screen. |
+| **Video lesson pipeline** | The same stage can be rendered with real synthesised speech into a **full-length lesson video** (for example, Unit 1 of N5 in roughly 30 minutes at 1080p) — so the same content powers both an interactive web classroom and a video channel. |
+| **Automated layout QA** | A test harness that checks every lesson on desktop and phone for clipped or overlapping text, small type, empty space and animation hitches. |
 
-## Điểm khác biệt
+## Why it is different
 
-- **Dành riêng cho người Việt học tiếng Nhật**: giải thích bằng tiếng Việt, Hán Việt, mẹo nhớ.
-- **Nói và nghe là trung tâm**, không chỉ trắc nghiệm.
-- **Một nguồn nội dung, hai kênh**: cùng giáo án tạo ra buổi học tương tác trên web và video bài giảng cho kênh nội dung.
-- **Chi phí nội dung thấp**: hình minh họa dùng mô hình mã nguồn mở, giáo án sinh theo dữ liệu có cấu trúc.
+- **Speaking and listening first**, not just quizzes.
+- **One content source, two channels:** the same lesson drives the interactive web classroom *and* long-form video for a content channel.
+- **Low content cost:** open-source image generation and structured, data-driven lessons keep the cost of adding material low.
+- **Built around the learner's own language:** explanations, memory aids and examples are written for a specific audience rather than translated generically.
 
 ---
 
-## Kế hoạch & kinh phí
+## Vision
 
-Đây là dự án cá nhân đang ở giai đoạn thử nghiệm. Các hạng mục cần nguồn lực để tiến tới bản người dùng thật:
+Language learning should feel like sitting in a class with a patient teacher who speaks *your* language — in any direction.
 
-| Hạng mục | Mô tả |
+Today the platform covers one pair: **Japanese for Vietnamese speakers**. The lesson format, the stage engine, the character and voice system, and the QA tooling are content-driven, so they are designed to extend to other pairs. The plan is to broaden along two axes:
+
+- **Target languages:** English, Japanese, Korean first, then further languages (for example Chinese, Spanish, French, Thai, Indonesian).
+- **Learner languages:** instead of only Vietnamese, explanations and coaching in the learner's own language, starting with the largest learner communities in Asia and growing from there.
+
+Extending to a new language is not just translation. It needs a curriculum written for that language pair, casting and testing of voices, script-aware rendering (for example Hangul, or romanisation and pitch for tonal languages), and review by native teachers. Those are the items sponsorship would fund.
+
+## Roadmap
+
+| Phase | Goal |
 |---|---|
-| **Hạ tầng và chi phí AI giọng nói** | Mỗi giờ học trực tiếp tiêu tốn dịch vụ AI giọng nói theo thời gian thực; cần ngân sách để thử nghiệm với nhóm người học đầu tiên. |
-| **Máy chủ và bảo mật** | Chuyển từ máy chủ phát triển (chỉ chạy trên máy cá nhân) sang dịch vụ triển khai thật: tài khoản người dùng, giới hạn sử dụng, không để lộ khóa dịch vụ. |
-| **Nội dung** | Hoàn thiện, kiểm duyệt giáo án với giáo viên tiếng Nhật; mở rộng bài luyện nghe/nói và bộ đề theo JLPT. |
-| **Hình ảnh và video** | Tạo và kiểm duyệt thêm hình minh họa; sản xuất loạt video bài giảng cho cả 110 bài. |
-| **Thử nghiệm với người học** | Chạy thử với nhóm nhỏ, đo mức độ học được và điều chỉnh. |
-| **Thiết bị di động** | Hoàn thiện trải nghiệm trên điện thoại (đã có bố cục điện thoại, cần thử trên nhiều máy). |
+| **1 — Harden the core** *(in progress)* | Finish the layout-quality pass across all 110 lessons on desktop and phone; improve stage performance; stabilise the voice pipeline. |
+| **2 — Pilot with learners** | Deploy a hosted version with accounts and usage limits; run a pilot with a small group of Vietnamese learners of Japanese; measure learning outcomes and retention; review content with native teachers. |
+| **3 — Video channel** | Produce the lesson video series for all levels from the same curriculum and publish it alongside the interactive classroom. |
+| **4 — Second and third language** | Add **English** and **Korean** courses (learner languages to be chosen from pilot demand), including voices, script rendering and teacher review. |
+| **5 — Open the platform** | A documented content format and tooling so teachers and communities can author lessons for new language pairs. |
 
-Nếu bạn muốn tài trợ, hợp tác nội dung hoặc thử nghiệm với học viên, vui lòng liên hệ qua GitHub của dự án: [github.com/trituenguyen97](https://github.com/trituenguyen97).
+## How sponsorship helps
+
+This is an independent project. Support would be used for:
+
+| Area | What it funds |
+|---|---|
+| **AI voice usage** | Real-time voice sessions are billed by usage; budget is needed for the pilot and for generating lesson audio at scale. |
+| **Hosting and security** | Moving from a local development server to a hosted service with accounts, usage limits and proper secret handling. |
+| **Content and review** | Native-speaker teachers to review and extend curricula, and to write new language pairs. |
+| **Images and video** | Generating and reviewing more illustrations; producing the video lesson series. |
+| **Devices and testing** | Testing on a range of phones, browsers and network conditions. |
+
+A detailed budget and milestone plan are available on request.
+
+**Want to sponsor, collaborate on content, or pilot with learners?** Please get in touch via the maintainer's GitHub profile: [github.com/trituenguyen97](https://github.com/trituenguyen97).
 
 ---
 
-## Chạy thử trên máy của bạn
+## Try it locally
 
-Yêu cầu: Python 3, trình duyệt Chrome/Edge hiện đại, micro (nếu muốn nói).
+Requirements: Python 3, a modern Chrome or Edge browser, and a microphone if you want to speak.
 
 ```bash
-# 1) Tải thư viện giao diện (chỉ làm một lần sau khi clone)
+# 1) Download the front-end libraries (one time, after cloning)
 python tools/setup_vendor.py
 
-# 2) Tạo file cấu hình chứa khóa dịch vụ AI giọng nói
+# 2) Create the configuration file that holds the voice-service key
 cp .env.example .env
-#   mở .env và điền khóa theo chú thích trong file
+#   open .env and fill in the key as described in the comments
 
-# 3) Chạy máy chủ phát triển
+# 3) Start the development server
 python server.py
-#   rồi mở http://localhost:3000
+#   then open http://localhost:3000
 ```
 
-Hoặc trên Windows: bấm đúp `start.bat`.
+On Windows you can double-click `start.bat` instead.
 
-**Xem thử không cần khóa và không tốn chi phí**: mở `http://localhost:3000/?noLive&moPhong` để chạy bài giảng ở chế độ mô phỏng (tiếng tổng hợp giả, không gọi dịch vụ AI). Thêm `&phongCach=h` (Giấy cắt lớp) hoặc `&phongCach=s` (Bảng đen) để chọn chế độ sân khấu.
+**Preview without a key and at no cost:** open `http://localhost:3000/?noLive&moPhong` to play a lesson in simulation mode (synthetic placeholder audio, no external service). Add `&phongCach=h` for the *Layered Paper-Cut* style or `&phongCach=s` for the *Classroom Chalkboard* style.
 
-> ⚠️ Máy chủ này chỉ để phát triển, mặc định chỉ nghe trên `127.0.0.1`. **Không** mở ra internet và **không** dùng các máy chủ tĩnh phục vụ cả thư mục dự án (sẽ lộ file `.env`). `.env` và `env.js` luôn nằm ngoài git.
+> ⚠️ This is a development server. By default it listens on `127.0.0.1` only. **Do not** expose it to the internet, and **do not** use static file servers that serve the whole project folder (they would expose your `.env`). `.env` and `env.js` are never committed to git.
 
-## Cấu trúc thư mục
+## Repository layout
 
 ```
-index.html            Giao diện lớp học
-css/  js/             Giao diện, bộ điều khiển bài giảng, âm thanh, sân khấu (js/che-do/ = các chế độ sân khấu)
-curriculum/           Giáo án: kana, n5 … n1 (mỗi bài một tệp JSON), nhân vật và giọng hội thoại
-assets/               Hình minh họa, chân dung nhân vật, nền chế độ sân khấu
-tools/                Công cụ dựng giáo án, kiểm thử bố cục (tools/che-do/), dựng video bài học (tools/che-do/video/), quy trình tạo ảnh (tools/anh-ai/)
-docs/che-do/          Tài liệu thiết kế và quy trình phát triển chế độ sân khấu
-server.py  start.bat  Máy chủ phát triển và lệnh chạy nhanh trên Windows
+index.html            Classroom interface
+css/  js/             UI, lesson controller, audio, and the stage (js/che-do/ = stage styles)
+curriculum/           Lessons: kana, n5 … n1 (one JSON file per lesson), plus characters and voices
+assets/               Illustrations, character portraits, stage backgrounds
+tools/                Curriculum builders, layout QA (tools/che-do/), lesson-video pipeline (tools/che-do/video/), image-generation pipeline (tools/anh-ai/)
+docs/demo/            Demo images and clips used in this README
+docs/che-do/          Design notes and development process for the stage styles
+server.py  start.bat  Development server and Windows quick-start
 ```
 
-## Giấy phép và ghi chú
+## License and notes
 
-- Hình minh họa do mô hình mã nguồn mở (Apache-2.0) tạo; chi tiết quy trình ở `tools/anh-ai/`.
-- Dự án chưa kèm tệp giấy phép phần mềm; liên hệ tác giả nếu muốn sử dụng lại mã nguồn.
+- Illustrations are generated with an open-source model (Apache-2.0); the pipeline is documented in `tools/anh-ai/`.
+- No software license file is included yet. Please contact the maintainer if you would like to reuse the source code.
+- Source code comments and some internal documentation are written in Vietnamese.
