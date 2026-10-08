@@ -1,117 +1,105 @@
-# AI Live Sensei Classroom (N5–N1)
+# AI Live Sensei Classroom
 
-Hệ thống lớp học tiếng Nhật tương tác thời gian thực ứng dụng **Gemini Live (Interleaved Reasoning & Bidirectional Audio Streaming)** trên **Antigravity IDE**.
+**Lớp học tiếng Nhật có giáo viên AI nói chuyện thật, từ nhập môn đến N1.**
 
-Hệ thống kết hợp trình diễn bài giảng trực quan (Slide & Ruby Furigana) với khả năng AI Sensei tự động điều khiển giáo án, highlight từ vựng/ngữ pháp và sửa lỗi ngữ pháp phát âm khi học viên đàm thoại hoặc ngắt lời (Barge-in VAD).
+Người học nghe Sensei (một chú mèo giáo viên) giảng bằng giọng nói, tự do ngắt lời để hỏi, luyện nói qua micro và được sửa lỗi ngay. Bài giảng chạy trên một "sân khấu" trực quan: chữ, furigana, hình minh họa và hiệu ứng xuất hiện đúng lúc Sensei nhắc tới, giống một video bài học nhưng tương tác được.
 
----
-
-## 🌟 Tính Năng Nổi Bật
-
-1. **Live Audio Streaming hai chiều:**
-   - **Audio In:** Thu âm Microphone $\to$ Downsample thành PCM 16-bit Mono, 16kHz $\to$ Stream liên tục qua WebSocket `realtimeInput.mediaChunks`.
-   - **Audio Out:** Nhận luồng PCM 24kHz Native từ Gemini $\to$ Chuyển đổi Float32 $\to$ Phát liên tục không ngắt quãng qua Web Audio API buffer scheduling.
-2. **Barge-in Tức Thì (Ngắt lời tự nhiên):**
-   - Khi học viên phát biểu, Gemini kích hoạt VAD và trả về `serverContent.interrupted: true`.
-   - Client lập tức hủy toàn bộ buffer đang phát của Sensei, đặt lại timeline để đón nhận câu nói của học viên.
-3. **Interleaved Reasoning:**
-   - Hiển thị suy luận ngầm (`parts[].thought`) của Sensei trước khi đưa ra câu trả lời, giúp người học thấy được phân tích sư phạm chuyên sâu.
-4. **Bộ 3 Công cụ Function Calling:**
-   - `change_slide(level, lesson_id, slide_index)`: Chuyển slide theo lộ trình N5 $\to$ N1.
-   - `highlight_element(target_id, style_type, comment)`: Rọi sáng từ vựng (vàng), ngữ pháp (xanh neon), hoặc cảnh báo (đỏ) bằng CSS glow.
-   - `mark_error(wrong_phrase, corrected_phrase, explanation)`: Ghi nhận câu sai của học viên, mở bảng sửa lỗi và hiển thị câu mẫu chuẩn xác.
-5. **Cơ sở dữ liệu bài học N5–N1 hoàn chỉnh:**
-   - Toàn bộ từ vựng, Kanji, Furigana và trợ từ đều được gắn `id` duy nhất (`tok-*`, `ex-*`) giúp AI định vị và trỏ chính xác từng token trong DOM.
+> Trạng thái: **bản thử nghiệm đang phát triển tích cực** (prototype chạy được trên máy cá nhân). Chưa phải sản phẩm phát hành đại trà. Mục “Kế hoạch & kinh phí” bên dưới nói rõ cần gì để đi tiếp.
 
 ---
 
-## 📂 Cấu Trúc Dự Án
+## Vấn đề dự án giải quyết
 
-```
-f:\Project Ai\TecherAiJapanese\
-├── index.html                  # Giao diện chính lớp học
-├── css/
-│   └── styles.css              # Hiệu ứng Neon Highlights, Ruby Furigana, Waveform
-├── js/
-│   ├── app.js                  # Bộ điều khiển chính (Controller & UI Bindings)
-│   ├── gemini-live.js          # Client WebSocket Gemini Live BidiGenerateContent
-│   ├── audio-engine.js         # Xử lý Web Audio API (PCM 16kHz In & PCM 24kHz Out)
-│   ├── slide-engine.js         # Render Slide tương tác & Dynamic DOM Highlighting
-│   └── curriculum-loader.js    # Quản lý & nạp giáo án N5 -> N1
-├── curriculum/                 # Dữ liệu bài giảng gán ID token
-│   ├── n5.json                 # Bài học N5 (Bài 1: Khẳng định/Trợ từ は/です, Bài 2: Chỉ thị từ, ...)
-│   ├── n4.json                 # Bài học N4 (Thể て, Yêu cầu, Cho phép, ...)
-│   ├── n3.json                 # Bài học N3 (わけがない, ようにする, ...)
-│   ├── n2.json                 # Bài học N2 (に際して, ざるを得ない, ...)
-│   └── n1.json                 # Bài học N1 (極まりない, にたえない, ...)
-├── server.py                   # Local HTTP server (CORS & chuẩn MIME types)
-├── start.bat                   # File kích hoạt 1-click trên Windows
-├── package.json                # Cấu hình Node.js / scripts
-└── README.md                   # Tài liệu hướng dẫn
-```
+- Người Việt học tiếng Nhật thường phải chọn giữa **giáo trình tĩnh** (rẻ nhưng không có người nói, không sửa lỗi) và **lớp học với giáo viên** (hiệu quả nhưng đắt, khó sắp lịch).
+- Ứng dụng học ngôn ngữ phổ biến thiên về trắc nghiệm, ít cho người học **nói và được phản hồi tức thì**.
+- Nội dung tiếng Nhật giải thích bằng tiếng Việt, có Hán Việt, có mẹo nhớ cho người Việt còn rất ít.
+
+## Giải pháp
+
+Một lớp học trực tuyến trong đó **AI giọng nói trực tiếp (live voice AI)** đóng vai giáo viên:
+
+1. **Trò chuyện giảng dạy hai chiều bằng giọng nói.** Sensei giảng, người học nói chen vào bất cứ lúc nào; Sensei dừng ngay, trả lời, rồi quay lại bài.
+2. **Giảng theo giáo án có cấu trúc.** Sensei đi lần lượt qua từ vựng, chữ Hán, mẫu câu, ví dụ, hội thoại và bài tập, không nói lan man ngoài chủ đề.
+3. **Sân khấu bài giảng đồng bộ với lời nói.** Từ nào đang được đọc thì sáng lên; chữ Hán được viết từng nét; hình minh họa và hiệu ứng theo nhịp giảng.
+4. **Hội thoại nhiều nhân vật có giọng riêng.** 28 nhân vật trong bài hội thoại, mỗi người một giọng cố định (14 nam, 14 nữ), chân dung nhép miệng theo âm thanh và đổi biểu cảm theo cảm xúc câu thoại.
+5. **Luyện nói và sửa lỗi.** Người học nói vào micro, Sensei nhận ra lỗi ngữ pháp/phát âm và hiện bảng sửa lỗi ngay trên bài.
 
 ---
 
-## 🚀 Hướng Dẫn Khởi Động Nhanh
+## Tính năng đã có
 
-### Bước 0 (bắt buộc, chỉ làm 1 lần sau khi clone): tải thư viện frontend
-Thư mục `vendor/` (Tailwind CSS, Font Awesome) **không được commit vào git**
-(theo `.gitignore`, đúng thông lệ). Nếu thiếu thư mục này, trang sẽ **vỡ layout
-hoàn toàn** — không có style, icon hiện thành ô trống. Chạy lệnh sau một lần
-duy nhất sau khi clone:
+| Mảng | Nội dung |
+|---|---|
+| **Giáo án** | 110 bài từ **Nhập môn (bảng chữ kana, 10 bài)** đến **N5 (25), N4 (25), N3 (20), N2 (15), N1 (15)**. Từ vựng, chữ Hán (Hán Việt, âm On/Kun, thứ tự nét), mẫu câu, ví dụ, hội thoại và bài tập. Mỗi từ trong câu có `id` riêng để AI trỏ chính xác. |
+| **Giảng bằng giọng nói** | Hai chiều, ngắt lời tự nhiên, Sensei điều khiển slide và đánh dấu từ đang nói. Tiếng Việt xen tiếng Nhật đọc đúng ngôn ngữ từng câu. |
+| **Hình minh họa** | Hơn **1.500 ảnh** minh họa từ vựng và cảnh bài học do mô hình ảnh mã nguồn mở tạo (giấy phép Apache-2.0), cùng bộ chân dung 28 nhân vật × 8 biểu cảm. |
+| **Chân dung nhép miệng** | Miệng nhân vật khớp âm thanh thật, biểu cảm và ngữ điệu theo cảm xúc câu. |
+| **Chế độ sân khấu** | Chọn giao diện giảng bài: *Mặc định*, *Giấy cắt lớp* (phong cảnh giấy cắt nhiều lớp) và *Bảng đen lớp học*. Mỗi chế độ có cả màn hình chờ cùng phong cách. |
+| **Công cụ dựng video bài học** | Chạy cùng sân khấu ở chế độ mô phỏng và ghép tiếng thật để xuất **video bài giảng đầy đủ** (ví dụ N5 bài 1, khoảng 30 phút, 1080p) — dùng làm nội dung YouTube, còn web là phần học tương tác đi kèm. |
+| **Bộ kiểm thử bố cục tự động** | Đo tự động chữ bị cắt, chồng chữ, chữ quá nhỏ, khoảng trống, độ khựng; quét toàn bộ 110 bài ở màn hình máy tính và điện thoại. |
+
+## Điểm khác biệt
+
+- **Dành riêng cho người Việt học tiếng Nhật**: giải thích bằng tiếng Việt, Hán Việt, mẹo nhớ.
+- **Nói và nghe là trung tâm**, không chỉ trắc nghiệm.
+- **Một nguồn nội dung, hai kênh**: cùng giáo án tạo ra buổi học tương tác trên web và video bài giảng cho kênh nội dung.
+- **Chi phí nội dung thấp**: hình minh họa dùng mô hình mã nguồn mở, giáo án sinh theo dữ liệu có cấu trúc.
+
+---
+
+## Kế hoạch & kinh phí
+
+Đây là dự án cá nhân đang ở giai đoạn thử nghiệm. Các hạng mục cần nguồn lực để tiến tới bản người dùng thật:
+
+| Hạng mục | Mô tả |
+|---|---|
+| **Hạ tầng và chi phí AI giọng nói** | Mỗi giờ học trực tiếp tiêu tốn dịch vụ AI giọng nói theo thời gian thực; cần ngân sách để thử nghiệm với nhóm người học đầu tiên. |
+| **Máy chủ và bảo mật** | Chuyển từ máy chủ phát triển (chỉ chạy trên máy cá nhân) sang dịch vụ triển khai thật: tài khoản người dùng, giới hạn sử dụng, không để lộ khóa dịch vụ. |
+| **Nội dung** | Hoàn thiện, kiểm duyệt giáo án với giáo viên tiếng Nhật; mở rộng bài luyện nghe/nói và bộ đề theo JLPT. |
+| **Hình ảnh và video** | Tạo và kiểm duyệt thêm hình minh họa; sản xuất loạt video bài giảng cho cả 110 bài. |
+| **Thử nghiệm với người học** | Chạy thử với nhóm nhỏ, đo mức độ học được và điều chỉnh. |
+| **Thiết bị di động** | Hoàn thiện trải nghiệm trên điện thoại (đã có bố cục điện thoại, cần thử trên nhiều máy). |
+
+Nếu bạn muốn tài trợ, hợp tác nội dung hoặc thử nghiệm với học viên, vui lòng liên hệ qua GitHub của dự án: [github.com/trituenguyen97](https://github.com/trituenguyen97).
+
+---
+
+## Chạy thử trên máy của bạn
+
+Yêu cầu: Python 3, trình duyệt Chrome/Edge hiện đại, micro (nếu muốn nói).
+
 ```bash
+# 1) Tải thư viện giao diện (chỉ làm một lần sau khi clone)
 python tools/setup_vendor.py
-```
 
-### Bước 0b (bắt buộc, chỉ làm 1 lần): tạo file `.env` chứa API key
-Sao chép `.env.example` thành `.env` rồi điền Gemini API key vào (lấy tại
-[aistudio.google.com/apikey](https://aistudio.google.com/apikey)). File `.env`
-**không được commit** — server.py tự sinh `env.js` từ đó cho trình duyệt đọc,
-nên không cần nhập key thủ công trên UI mỗi lần mở trang.
-```bash
+# 2) Tạo file cấu hình chứa khóa dịch vụ AI giọng nói
 cp .env.example .env
-```
-Sau đó mở `.env` và điền `GEMINI_KEY1` / `GEMINI_KEY2` (xem chú thích trong
-file để biết vai trò của từng key).
+#   mở .env và điền khóa theo chú thích trong file
 
-### Cách 1: Chạy bằng file Batch (Windows)
-Click đúp vào file **`start.bat`**. Trình duyệt sẽ tự động mở `http://localhost:3000`.
-
-### Cách 2: Chạy bằng Python Server
-Mở terminal tại thư mục dự án và chạy:
-```bash
+# 3) Chạy máy chủ phát triển
 python server.py
+#   rồi mở http://localhost:3000
 ```
-Sau đó truy cập: [http://localhost:3000](http://localhost:3000)
 
-Mặc định server **chỉ nghe trên máy này** (127.0.0.1) và chỉ phục vụ các thư mục
-app cần (`css/`, `js/`, `curriculum/`, `vendor/`, `assets/`). Muốn mở cho điện
-thoại trong cùng mạng LAN (mic qua HTTPS cổng 3443) thì chạy `python server.py --lan`
-— khi đó mọi máy trong mạng đều đọc được `env.js` (API key), nên chỉ bật trên mạng
-tin cậy.
+Hoặc trên Windows: bấm đúp `start.bat`.
 
-> ⚠️ **Không** mở server này ra internet (Tailscale Funnel, ngrok, mở cổng router…)
-> và **không** dùng các server tĩnh khác kiểu `npx serve .`: chúng phục vụ cả thư mục
-> dự án, kể cả `.env`. Đây là server để phát triển, không phải để chạy production.
+**Xem thử không cần khóa và không tốn chi phí**: mở `http://localhost:3000/?noLive&moPhong` để chạy bài giảng ở chế độ mô phỏng (tiếng tổng hợp giả, không gọi dịch vụ AI). Thêm `&phongCach=h` (Giấy cắt lớp) hoặc `&phongCach=s` (Bảng đen) để chọn chế độ sân khấu.
 
----
+> ⚠️ Máy chủ này chỉ để phát triển, mặc định chỉ nghe trên `127.0.0.1`. **Không** mở ra internet và **không** dùng các máy chủ tĩnh phục vụ cả thư mục dự án (sẽ lộ file `.env`). `.env` và `env.js` luôn nằm ngoài git.
 
-## 🎧 Cách Thao Tác & Kiểm Thử
+## Cấu trúc thư mục
 
-1. **Kết nối:**
-   - Nhập **Gemini API Key** vào ô input trên thanh header.
-   - Chọn mô hình (mặc định: `models/gemini-3.8-live` hoặc `models/gemini-2.0-flash-exp`).
-   - Chọn giọng đọc (Aoede, Puck, Charon, Kore, Fenrir).
-   - Bấm nút **"Bắt đầu phiên"**.
-2. **Kích hoạt Mic:**
-   - Bấm nút **"Bật Mic để đàm thoại"**. Khi nút chuyển màu đỏ và nhấp nháy, Mic đang truyền âm thanh 16kHz.
-3. **Thử nghiệm Kịch bản Barge-in & Sửa lỗi:**
-   - Khi Sensei đang giảng bài bằng âm thanh, hãy nói vào mic:
-     > *"Sensei ơi, watashi wa gakusei ja arimasen ka?"*
-   - Bạn sẽ thấy:
-     1. Giọng Sensei dừng ngay lập tức (`interrupted: true`).
-     2. Tab **Interleaved Reasoning** xuất hiện phân tích lý do sai trợ từ/kính ngữ.
-     3. Bảng đỏ **SENSEI GHI CHÚ SỬA LỖI** xuất hiện trên slide so sánh câu sai và câu đúng.
-     4. Sensei giải thích ngắn gọn rồi tiếp tục bài học.
-4. **Thử nghiệm Đổi Slide & Highlight:**
-   - Bạn có thể dùng các nút mẫu bên dưới slide (Quick Test Scenarios) như *"Dạy bài 1 N5"*, *"Highlight từ vựng"*, *"Đổi sang bài N3"*, *"Đổi sang bài N1"*.
+```
+index.html            Giao diện lớp học
+css/  js/             Giao diện, bộ điều khiển bài giảng, âm thanh, sân khấu (js/che-do/ = các chế độ sân khấu)
+curriculum/           Giáo án: kana, n5 … n1 (mỗi bài một tệp JSON), nhân vật và giọng hội thoại
+assets/               Hình minh họa, chân dung nhân vật, nền chế độ sân khấu
+tools/                Công cụ dựng giáo án, kiểm thử bố cục (tools/che-do/), dựng video bài học (tools/che-do/video/), quy trình tạo ảnh (tools/anh-ai/)
+docs/che-do/          Tài liệu thiết kế và quy trình phát triển chế độ sân khấu
+server.py  start.bat  Máy chủ phát triển và lệnh chạy nhanh trên Windows
+```
+
+## Giấy phép và ghi chú
+
+- Hình minh họa do mô hình mã nguồn mở (Apache-2.0) tạo; chi tiết quy trình ở `tools/anh-ai/`.
+- Dự án chưa kèm tệp giấy phép phần mềm; liên hệ tác giả nếu muốn sử dụng lại mã nguồn.
