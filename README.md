@@ -8,6 +8,31 @@ Người học nghe Sensei (một chú mèo giáo viên) giảng bằng giọng 
 
 ---
 
+## Xem thử
+
+Bài giảng **N5 – Bài 1** chạy ở hai chế độ sân khấu. Sensei (mèo giáo viên) giảng bằng giọng nói; từ đang đọc sáng lên, chữ Hán được viết từng nét, hình minh họa xuất hiện đúng nhịp.
+
+| Chế độ *Bảng đen lớp học* | Chế độ *Giấy cắt lớp* |
+|:---:|:---:|
+| ![Bảng đen lớp học](docs/demo/demo-s.gif) | ![Giấy cắt lớp](docs/demo/demo-h.gif) |
+
+**Video có tiếng** (45 giây, giọng Sensei thật): [Bảng đen lớp học](docs/demo/demo-s.mp4) · [Giấy cắt lớp](docs/demo/demo-h.mp4)
+
+**Các phần của một bài học** (từ trên xuống: từ vựng, chữ Hán, mẫu câu, ví dụ, hội thoại, bài tập):
+
+| Bảng đen lớp học | Giấy cắt lớp |
+|:---:|:---:|
+| ![Từ vựng](docs/demo/s-1-tu-vung.jpg) | ![Từ vựng](docs/demo/h-1-tu-vung.jpg) |
+| ![Chữ Hán](docs/demo/s-2-chu-han.jpg) | ![Chữ Hán](docs/demo/h-2-chu-han.jpg) |
+| ![Mẫu câu](docs/demo/s-3-mau-cau.jpg) | ![Mẫu câu](docs/demo/h-3-mau-cau.jpg) |
+| ![Ví dụ](docs/demo/s-4-vi-du.jpg) | ![Ví dụ](docs/demo/h-4-vi-du.jpg) |
+| ![Hội thoại](docs/demo/s-5-hoi-thoai.jpg) | ![Hội thoại](docs/demo/h-5-hoi-thoai.jpg) |
+| ![Bài tập](docs/demo/s-6-bai-tap.jpg) | ![Bài tập](docs/demo/h-6-bai-tap.jpg) |
+
+> Các hình và clip trên được quay từ chính bài giảng của ứng dụng ở chế độ mô phỏng, với giọng Sensei và giọng nhân vật hội thoại là giọng AI thật. Đây là bản thử nghiệm.
+
+---
+
 ## Vấn đề dự án giải quyết
 
 - Người Việt học tiếng Nhật thường phải chọn giữa **giáo trình tĩnh** (rẻ nhưng không có người nói, không sửa lỗi) và **lớp học với giáo viên** (hiệu quả nhưng đắt, khó sắp lịch).
