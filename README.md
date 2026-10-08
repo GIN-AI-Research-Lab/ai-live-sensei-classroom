@@ -1,6 +1,6 @@
 # AI Live Sensei Classroom
 
-> **Autonomous, Real-Time Multimodal Voice AI Sensei & Interactive Classroom (Introductory Kana → N1)**  
+> **Autonomous Real-Time Multimodal Voice AI Sensei & Interactive Classroom (Introductory Kana → N1)**  
 > *A grant-seeking, open-source EdTech initiative bringing synchronous 1-on-1 human-grade language tutoring to millions.*
 
 [![GitHub license](https://img.shields.io/badge/license-MIT_/_Custom-blue.svg)](LICENSE)
@@ -12,9 +12,11 @@
 
 ## 🌟 Executive Summary & Pitch
 
-Traditional language acquisition suffers from a stark market dilemma: **static self-study apps** (gamified quizzes, flashcards) lack authentic conversational immersion, cannot evaluate pronunciation in real conversational context, and cannot handle fluid questions; conversely, **private 1-on-1 native tutors** cost \$30–\$60 per hour, rendering fluent conversational training inaccessible to most students.
+Traditional language acquisition suffers from a stark market dilemma: **static self-study apps** (gamified quizzes, flashcards) lack authentic conversational immersion, cannot evaluate speech in conversational context, and cannot handle fluid questions; conversely, **private 1-on-1 native tutors** cost $30–$60 per hour, rendering fluent conversational training inaccessible to most students.
 
 **AI Live Sensei Classroom** bridges this chasm by delivering an **autonomous, full-duplex interactive classroom** right in the browser. Powered by Google Gemini Live's bidirectional multimodal audio streaming, an AI teacher avatar ("Sensei") leads structured lessons with live voice synthesis, synchronizes visual slides and Kanji stroke orders in real time, allows students to interrupt naturally via voice (sub-second barge-in VAD), and dynamically detects and corrects grammatical errors on the fly.
+
+> **Status:** Active prototype running locally. A working end-to-end implementation with 110 structured lessons, live voice interaction, and multi-character roleplay. Seeking grant funding and educational partnerships to advance to hosted multi-tenant deployment.
 
 ```
        ┌────────────────────────────────────────────────────────┐
@@ -41,13 +43,13 @@ Traditional language acquisition suffers from a stark market dilemma: **static s
 
 Lessons run on an interactive visual stage where spoken words light up in sync, Kanji strokes render stroke-by-stroke, and contextual illustrations animate seamlessly with Sensei's voice.
 
-| Classroom Blackboard Engine (*Bảng đen lớp học*) | Paper Cutout Multi-Layer Engine (*Giấy cắt lớp*) |
+| Classroom Blackboard Engine (*Bảng đen lớp học*) | Layered Paper-Cut Engine (*Giấy cắt lớp*) |
 |:---:|:---:|
 | ![Classroom Blackboard](docs/demo/demo-s.gif) | ![Paper Cutout Stage](docs/demo/demo-h.gif) |
 | [Watch Video Demo with Voice (45s)](docs/demo/demo-s.mp4) | [Watch Video Demo with Voice (45s)](docs/demo/demo-h.mp4) |
 
-### 6-Stage Structured Lesson Flow
-Every lesson is systematically broken down into pedagogical stages:
+### 6-Stage Structured Pedagogical Flow
+Every lesson systematically guides the learner through 6 structured learning sections:
 
 | 1. Vocabulary (*Từ vựng*) | 2. Kanji Stroke Order (*Chữ Hán*) | 3. Sentence Patterns (*Mẫu câu*) |
 |:---:|:---:|:---:|
@@ -65,7 +67,7 @@ Every lesson is systematically broken down into pedagogical stages:
 
 ### 2. Sub-Second Conversational Barge-In (Natural Interruption)
 - When the learner speaks while Sensei is talking, Gemini's Voice Activity Detection triggers an immediate `serverContent.interrupted: true` signal.
-- The client-side audio engine instantly cancels queued audio buffers and resets playback timelines, allowing zero-latency natural conversational turn-taking.
+- The client-side audio engine instantly cancels queued audio buffers and resets playback timelines, enabling natural, human-like turn-taking.
 
 ### 3. Interleaved Pedagogical Reasoning
 - Displays Sensei's internal pedagogical analysis (`parts[].thought`) in real-time before spoken answers are formulated, clarifying *why* a particular correction or teaching strategy was chosen.
