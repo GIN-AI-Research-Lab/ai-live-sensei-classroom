@@ -95,6 +95,7 @@
   const bayGio = () => performance.now() / 1000;
   const ngauNhien = (a, b) => a + Math.random() * (b - a);
   const S = {
+    heSo: 1,      // he so co meo do che do san khau xin (datCo): > 1 khi canh con trong goc phai duoi
     san: false, tat: false, tinh: false, dung: true, daKhoi: false, khongGL: false, nghiHong: false, anhHong: false,
     giang: !!(hub && hub.giang), noi: false, hetNoi: -1e9, hoatDong: bayGio(), mocKhac: bayGio(), henLiem: 0,
     gatMoc: -1, daChao: false, xoay: 0, i: -1, sau: null, muc: null, cho: null, chi: null, lanPhat: 0, daVe: false, imTu: null, lich: 0,
@@ -131,8 +132,10 @@
   // dang noi / chi / dien thi nho len noiLen (lo vai + tay).
   function kichThuoc() {
     const W = innerWidth, H = innerHeight;
-    const cao = W < 700 ? Math.min(150, Math.max(120, H * .17))
-      : H < 500 ? Math.min(130, Math.max(96, H * .26)) : Math.min(300, Math.max(150, Math.min(H * .32, W * .24)));
+    // theo do phan giai: man lon meo lon theo (tran 420 px thay vi 300); he so che do chi ap dung man rong (>= 1000)
+    const goc = W < 700 ? Math.min(150, Math.max(120, H * .17))
+      : H < 500 ? Math.min(130, Math.max(96, H * .26)) : Math.min(420, Math.max(150, Math.min(H * .32, W * .24)));
+    const cao = W >= 1000 && H >= 500 && S.heSo !== 1 ? Math.round(Math.min(goc * S.heSo, H * .46, W * .34)) : goc;
     const day = H - (document.querySelector('.deck-bottom')?.offsetHeight || 64);
     const lun = W < 700 && H >= 500 ? Math.round(cao * .36) : 0;
     return { W, H, cao, rong: cao * TI_LE, day, chan: day + lun, lun, noiLen: lun ? Math.round(cao * .2) : 0 };
@@ -1262,6 +1265,14 @@
     get san() { return S.san; },
     get tat() { return S.tat; },
     rongHienTai: () => kichThuoc().rong,
+    /** datCo(k): che do san khau xin phong / thu meo (k 0,8..1,35; 1 = co chuan theo man). Doi co muot .35 s. */
+    datCo(k) {
+      k = Math.max(0.8, Math.min(1.35, Number(k) || 1));
+      if (Math.abs(k - S.heSo) < 0.01) return false;
+      S.heSo = k;
+      if (hop) doiCo();
+      return true;
+    },
     an(anDi = true) {
       S.tat = !!anDi;
       if (!hop) return;
@@ -1354,7 +1365,7 @@
         O.forEach((o) => o.v.pause());
       }
     }
-    hop.style.transition = mqGiam.matches ? 'opacity .2s ease-out' : 'transform .35s ease-out, opacity .2s ease-out';
+    hop.style.transition = mqGiam.matches ? 'opacity .2s ease-out' : 'transform .35s ease-out, width .35s ease-out, height .35s ease-out, opacity .2s ease-out';
     hienKhung();
     datChoTrong();
     nhip(true);

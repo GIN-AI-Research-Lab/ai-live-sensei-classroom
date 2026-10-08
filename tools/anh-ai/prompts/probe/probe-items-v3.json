@@ -1,0 +1,101 @@
+{
+ "styleRef": "style-chung.json",
+ "items": [
+  {
+   "ten": "toi",
+   "nghia": "watashi - toi",
+   "prompt": "A friendly young person smiling and pointing a finger at their own chest to indicate themselves.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, crowd, extra people"
+  },
+  {
+   "ten": "benh-vien",
+   "nghia": "byouin - benh vien",
+   "prompt": "A clean white hospital building with a red cross emblem above the entrance and an ambulance parked in front.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, printed headlines, readable text, title lettering"
+  },
+  {
+   "ten": "bac-si",
+   "nghia": "isha - bac si",
+   "prompt": "A doctor in a white coat with a stethoscope around the neck holding a clipboard and smiling.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, crowd, extra people"
+  },
+  {
+   "ten": "an",
+   "nghia": "tabemasu - an",
+   "prompt": "A person eating a bowl of rice with chopsticks.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, crowd, extra people"
+  },
+  {
+   "ten": "dat",
+   "nghia": "takai - dat (vs re)",
+   "prompt": "Only one person in the picture: a single shopper in front of a shop counter recoils backwards in shock with both hands raised and wide eyes, a single bold exclamation mark popping above the head. On the counter sits one small gold luxury wristwatch on a velvet cushion with an enormous blank price tag hanging from it, the empty tag far bigger than the watch. A round thought bubble from the shopper's head shows a towering pile of banknotes and gold coins, meaning it costs a huge amount. The only symbol is that one exclamation mark; the price tag, banknotes and coins carry no numbers, letters or words.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, numbers on price tags, second person, two people, shop assistant, seller, numbers on price tag, currency symbols, digits"
+  },
+  {
+   "ten": "nhan-vien-ngan-hang",
+   "nghia": "ginkouin - nhan vien ngan hang",
+   "prompt": "A bank teller in a neat uniform behind a counter handing coins to a customer, a sturdy safe in the background.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face"
+  },
+  {
+   "ten": "nha-nghien-cuu",
+   "nghia": "kenkyuusha - nha nghien cuu",
+   "prompt": "A researcher in a white lab coat and safety glasses looking into a microscope beside glass flasks and test tubes.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, crowd, extra people"
+  },
+  {
+   "ten": "han-hanh",
+   "nghia": "hajimemashite - lan dau gap",
+   "prompt": "Two office workers meeting for the first time, facing each other and bowing politely at the waist with warm smiles, one offering a blank business card with both hands. Only these two people.",
+   "negative": "crowd, extra people"
+  },
+  {
+   "ten": "den-dien",
+   "nghia": "denki - den dien",
+   "prompt": "A glowing light bulb hanging from a ceiling cord, radiating warm light with a tiny electric spark inside.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face"
+  },
+  {
+   "ten": "dai-hoc",
+   "nghia": "daigaku - dai hoc",
+   "prompt": "A stately brick university main building with a tower behind a wide open gate and golden ginkgo trees, a large black graduation mortarboard cap with a gold tassel floating in the foreground.",
+   "negative": "clock face, students"
+  },
+  {
+   "ten": "canh-san-ga-buoi-sang",
+   "nghia": "canh: san ga buoi sang",
+   "prompt": "On a Japanese train station platform in soft early-morning light, a Japanese woman around thirty with black hair in a low ponytail wearing a sky-blue blouse and a cheerful American man in his early thirties with short sandy-blond hair wearing a mustard-yellow sweater greet each other with a small wave, a green-striped commuter train arriving behind them. Draw the whole scene as one compact isolated vignette in the middle of the square with a soft rounded edge, the setting reduced to a few simple props and a small patch of floor, surrounded on all sides by a wide empty margin of plain light warm cream; it does not fill the frame edge to edge. Warm sunny tones of terracotta, sage and muted gold, no cool grey or blue-grey backdrop. Only the characters described appear, no crowd and no extra background people, all drawn as simple rounded cartoon characters with dot eyes.",
+   "negative": "destination boards with writing, station name signs, crowd, background people, extra people, full-bleed background, edge-to-edge scene, cool grey tones, blue-grey backdrop"
+  },
+  {
+   "ten": "nv-sato",
+   "nghia": "Sato (nhan vat)",
+   "prompt": "Head-and-shoulders bust of a Japanese woman around thirty with black hair tied in a low ponytail, wearing a soft sky-blue blouse and a small ID lanyard with a blank card, gentle and polite, drawn as a simple rounded mascot-like cartoon character exactly like the vocabulary pictures: a round head, two small solid black dot eyes, a small curved line smile with the mouth closed, no teeth, no freckles, no wrinkles, only a tiny simple nose or none, flat even skin colour with no skin shading, simple smooth hair shape. Only one person, facing front with a slight turn, centered with plain empty cream space all around.",
+   "negative": "multiple people, busy background, props, full-body scene, cropped face, realistic face, detailed eyes, eyelashes, teeth, open mouth, freckles, wrinkles, skin texture, realistic nose, anime"
+  },
+  {
+   "ten": "nv-miller",
+   "nghia": "Miller (nhan vat)",
+   "prompt": "Head-and-shoulders bust of a cheerful American man in his early thirties with short sandy-blond hair, wearing a mustard-yellow sweater over a collared shirt, drawn as a simple rounded mascot-like cartoon character exactly like the vocabulary pictures: a round head, two small solid black dot eyes, a small curved line smile with the mouth closed, no teeth, no freckles, no wrinkles, only a tiny simple nose or none, flat even skin colour with no skin shading, simple smooth hair shape. Only one person, facing front with a slight turn, centered with plain empty cream space all around.",
+   "negative": "multiple people, busy background, props, full-body scene, cropped face, realistic face, detailed eyes, eyelashes, teeth, open mouth, freckles, wrinkles, skin texture, realistic nose, anime"
+  },
+  {
+   "ten": "nv-yamada",
+   "nghia": "Yamada (nhan vat)",
+   "prompt": "Head-and-shoulders bust of a Japanese man in his mid-forties with short neat black hair, a kind face and a mature grown-up look, wearing a navy-blue suit, white shirt and simple tie, polite, drawn as a simple rounded mascot-like cartoon character exactly like the vocabulary pictures: a round head, two small solid black dot eyes, a small curved line smile with the mouth closed, no teeth, no freckles, no wrinkles, only a tiny simple nose or none, flat even skin colour with no skin shading, simple smooth hair shape. Only one person, facing front with a slight turn, centered with plain empty cream space all around.",
+   "negative": "multiple people, busy background, props, full-body scene, cropped face, realistic face, detailed eyes, eyelashes, teeth, open mouth, freckles, wrinkles, skin texture, realistic nose, anime"
+  },
+  {
+   "ten": "re",
+   "nghia": "yasui - re",
+   "prompt": "Only one person in the picture: a single happy shopper at a market stall holds a big overflowing bag of fresh vegetables in one arm and with the other hand hands over one single tiny coin, beaming with a relaxed smile. A tiny blank price tag hangs on the bag. A round thought bubble from the shopper's head shows one small coin with sparkles and a thumbs-up, meaning it costs almost nothing. No seller is visible; there are no numbers, letters or words anywhere.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, second person, two people, seller, shopkeeper, numbers on price tag, currency symbols, digits"
+  },
+  {
+   "ten": "tren",
+   "nghia": "ue - tren",
+   "prompt": "A small terracotta-orange cat sitting on top of a wooden box.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face"
+  }
+ ]
+}

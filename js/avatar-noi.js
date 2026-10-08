@@ -961,6 +961,11 @@
     if (!SVG_KH[kind] || !this.canvas) return;
     var lop = tangKyHieu(), r = this.canvas.getBoundingClientRect();
     if (r.width < 2 || r.bottom < 0 || r.top > g.innerHeight) return;
+    // chan dung dang an / mo dan (lop cu cua o san khau dang thoat, the bi an): khong ve ky hieu lac giua o khac
+    for (var el = this.canvas, i = 0; el && el.nodeType === 1 && i < 12; el = el.parentElement, i++) {
+      var cs = g.getComputedStyle(el);
+      if (cs.display === 'none' || cs.visibility === 'hidden' || parseFloat(cs.opacity) < 0.35) return;
+    }
     var W = this.canvas.width, H = this.canvas.height;
     var e0 = rg && rg.eyes ? rg.eyes : [{ x: 0.42, y: 0.37, r: 0.02 }, { x: 0.58, y: 0.37, r: 0.02 }];
     var mx = (e0[0].x + e0[1].x) / 2, my = (e0[0].y + e0[1].y) / 2, E = Math.abs(e0[1].x - e0[0].x) || 0.14;

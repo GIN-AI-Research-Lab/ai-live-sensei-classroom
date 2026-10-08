@@ -1,0 +1,187 @@
+{
+ "styleRef": "../style-chung.json",
+ "items": [
+  {
+   "cap": "n2n1",
+   "ten": "kinh-te",
+   "prompt": "Stacks of plain gold coins without any symbols, a small factory with a chimney, a cargo ship and a rising arrow chart grouped together, the coins and notes carrying no symbols or numbers.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, printed numbers on banknotes, denominations, currency symbols",
+   "vat": true
+  },
+  {
+   "cap": "n2n1",
+   "ten": "giai-thich",
+   "prompt": "A person explaining with open hand gestures while pointing at a simple step-by-step picture diagram on a whiteboard to a nodding listener. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "sat-lo",
+   "prompt": "A hillside collapsing in a landslide, rocks and mud sliding down onto a mountain road. Show only the key object or objects, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene",
+   "vat": true
+  },
+  {
+   "cap": "n2n1",
+   "ten": "lo-lang",
+   "prompt": "A worried parent standing at a dark window at night with hands clasped, anxiously waiting for someone to come home. A tangled scribble cloud floats above the person's head with one sweat drop on the brow, cartoon symbols for worry. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "lai-xe",
+   "prompt": "A person driving a small car with both hands on the steering wheel, seen through the side window. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "con-duong",
+   "prompt": "A short winding country road curving between two small green grassy mounds and a little tree, drawn as one compact isolated patch of landscape.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts",
+   "vat": true
+  },
+  {
+   "cap": "n2n1",
+   "ten": "den-gan",
+   "prompt": "A train pulling closer to a platform where a person waits, with motion lines behind the train. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "quy-tac",
+   "prompt": "A school noticeboard showing simple pictogram rules such as no running, no phones and put trash in the bin, with a teacher pointing at it. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "tuan-theo",
+   "prompt": "Pedestrians patiently stopping at a crosswalk and obeying a crossing guard's raised hand signal. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "nuoc-ngoai",
+   "prompt": "An airplane flying across a wide ocean from a small Japanese island toward a distant foreign land with unfamiliar landmarks. Show only the key object or objects, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene",
+   "vat": true
+  },
+  {
+   "cap": "n2n1",
+   "ten": "tiep-tuc",
+   "prompt": "A determined marathon runner continuing to run steadily along a long road through the rain, the start far behind. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "pho-bien",
+   "prompt": "A crowd of people on a street who all hold and use the same kind of smartphone, showing something that has spread widely. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "khap-noi",
+   "prompt": "A wide illustrated landscape with a mountain village, a seaside town and a city, each marked with a small map pin. Show only the key object or objects, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene",
+   "vat": true
+  },
+  {
+   "cap": "n2n1",
+   "ten": "moi-truong",
+   "prompt": "A clean green landscape with trees, a clear river, birds and wind turbines under a blue sky. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "tan-thanh",
+   "prompt": "A group of people in a meeting all raising their hands and giving thumbs up in agreement. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "ke-hoach",
+   "prompt": "A person drawing a flowchart of boxes and arrows on a whiteboard, planning steps with colorful sticky notes. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "y-kien",
+   "prompt": "A person standing up at a meeting table to voice an opinion with a raised hand while colleagues listen. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "xa-hoi",
+   "prompt": "A lively town square filled with many kinds of people, workers, students, families and elderly people, living and interacting together. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "tien-hanh",
+   "prompt": "A team of workers pushing a large wooden cart loaded with materials steadily forward along a path toward a building under construction. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "dai-hoi",
+   "prompt": "A big stadium full of cheering spectators with athletes marching in and colorful flags flying at a tournament. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "thong-ke",
+   "prompt": "A board showing a bar chart, a pie chart and a line chart with no numbers or labels. Show only the key object or objects, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, axis labels, numbers on chart, legend text, percentages, room interior, wall, window frame, backdrop panel, scenery card, framed scene",
+   "vat": true
+  },
+  {
+   "cap": "n2n1",
+   "ten": "que-nha",
+   "prompt": "A small hometown street with a local family shop, a rice field behind and neighbors greeting each other warmly. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "tham-quan",
+   "prompt": "A group of tourists taking photos in front of a famous temple with a red pagoda. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "mon-an",
+   "prompt": "A table set with Japanese dishes: a bowl of rice, miso soup, grilled fish and pickles with chopsticks.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts",
+   "vat": true
+  },
+  {
+   "cap": "n2n1",
+   "ten": "ky-niem",
+   "prompt": "A group of people posing together for a commemorative photo in front of a monument, a camera on a tripod in front of them. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "chuc-mung",
+   "prompt": "Friends raising glasses in a toast with confetti and party poppers bursting around them. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "that-le",
+   "prompt": "A person talking loudly on a phone in a quiet train carriage while other passengers glare disapprovingly. A red anger vein mark pops beside the offended person's head, the cartoon symbol for being offended by rudeness. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "tran-dau",
+   "prompt": "Two soccer teams in different colored uniforms competing for the ball on a field. Show only the key object or objects, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene",
+   "vat": true
+  },
+  {
+   "cap": "n2n1",
+   "ten": "phong-canh",
+   "prompt": "A person on a lookout point admiring a wide landscape of mountains, a lake and Mount Fuji in the distance. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "style": "flat minimal vector illustration, soft rounded shapes, simple cartoon characters with round faces, small black dot eyes, a tiny simple mouth and no realistic facial detail, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone flat shading, low detail, single clear centered subject drawn as an isolated vignette that does not touch the image edges, plain flat solid warm beige background #f0ebe1 filling the whole canvas, generous empty margin, no text, no letters, no numbers, no signs or screens with writing, no watermark, square 1:1 composition",
+ "items": [
+  {
+   "ten": "nhan-vien-ngan-hang",
+   "nghia": "ginkouin - nhan vien ngan hang",
+   "prompt": "A friendly bank teller in a neat sage-green uniform standing behind a small rounded counter, handing a few gold coins to a customer, a small safe beside the counter, the whole group floating as a compact vignette.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  },
+  {
+   "ten": "canh-san-ga-buoi-sang",
+   "nghia": "canh: san ga buoi sang",
+   "prompt": "On a Japanese train station platform in soft early-morning light, a Japanese woman around thirty with black hair in a low ponytail wearing a sky-blue blouse and a cheerful American man in his late twenties with short sandy-blond hair wearing a mustard-yellow sweater greet each other with a small wave, a green-striped commuter train arriving behind them on a simplified platform made of a few large flat pale shapes, no crowd, the two characters are the only people.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, destination boards with writing, station name signs",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  },
+  {
+   "ten": "nv-miller",
+   "nghia": "Miller (nhan vat)",
+   "prompt": "Half-body character portrait of a cheerful American man in his late twenties with short sandy-blond hair and light freckles, wearing a mustard-yellow sweater over a collared shirt, smiling in three-quarter view.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, multiple people, busy background, props, full-body scene, cropped face",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  },
+  {
+   "ten": "nv-yamada",
+   "nghia": "Yamada (nhan vat)",
+   "prompt": "Half-body character portrait of a Japanese man in his late thirties with short neat black hair and a kind face, wearing a navy-blue suit, white shirt and simple tie, with a polite smile in three-quarter view.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, multiple people, busy background, props, full-body scene, cropped face",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  }
+ ]
+}

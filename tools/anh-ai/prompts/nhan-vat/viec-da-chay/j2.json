@@ -1,0 +1,128 @@
+[
+ {
+  "ten": "miller__binh_thuong",
+  "ref": "/home/thaovyh2t_gmail_com/nv/miller.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Calm neutral face: level relaxed eyebrows, simple small dot eyes, the mouth a short gentle closed line.",
+  "seed": 7
+ },
+ {
+  "ten": "miller__vui",
+  "ref": "/home/thaovyh2t_gmail_com/nv/miller.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Happy warm face: the eyes are cheerful smiling arcs curving upward, relaxed slightly raised eyebrows, the mouth a soft closed smile curve.",
+  "seed": 7
+ },
+ {
+  "ten": "miller__hoi",
+  "ref": "/home/thaovyh2t_gmail_com/nv/miller.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Curious questioning face: one eyebrow raised high and arched while the other eyebrow stays level, simple dot eyes glancing slightly upward, the head tilted very slightly to one side, the mouth a small closed slightly crooked line.",
+  "seed": 7
+ },
+ {
+  "ten": "miller__gian",
+  "ref": "/home/thaovyh2t_gmail_com/nv/miller.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Angry face: eyebrows pulled low, squeezed together and slanted sharply downward toward the nose, narrowed glaring dot eyes, the mouth a tight short closed frowning line curving downward.",
+  "seed": 7
+ },
+ {
+  "ten": "miller__ngac_nhien",
+  "ref": "/home/thaovyh2t_gmail_com/nv/miller.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Surprised face: eyebrows raised very high in tall arches, the eyes are larger round dots with thin white rings around them, the mouth a short thin closed line.",
+  "seed": 7
+ },
+ {
+  "ten": "miller__hao_hung",
+  "ref": "/home/thaovyh2t_gmail_com/nv/miller.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Excited delighted face: eyebrows raised, large round bright eyes with a white highlight, the mouth a broad closed smile curve with lips together.",
+  "seed": 7
+ },
+ {
+  "ten": "miller__buon",
+  "ref": "/home/thaovyh2t_gmail_com/nv/miller.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Sad apologetic face: eyebrows tilted with the inner ends high and the outer ends low in a worried shape, slightly lowered drooping eyes, the mouth a small closed curve turned downward.",
+  "seed": 7
+ },
+ {
+  "ten": "sato__binh_thuong",
+  "ref": "/home/thaovyh2t_gmail_com/nv/sato.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Calm neutral face: level relaxed eyebrows, simple small dot eyes, the mouth a short gentle closed line.",
+  "seed": 7
+ },
+ {
+  "ten": "sato__vui",
+  "ref": "/home/thaovyh2t_gmail_com/nv/sato.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Happy warm face: the eyes are cheerful smiling arcs curving upward, relaxed slightly raised eyebrows, the mouth a soft closed smile curve.",
+  "seed": 7
+ },
+ {
+  "ten": "sato__hoi",
+  "ref": "/home/thaovyh2t_gmail_com/nv/sato.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Curious questioning face: one eyebrow raised high and arched while the other eyebrow stays level, simple dot eyes glancing slightly upward, the head tilted very slightly to one side, the mouth a small closed slightly crooked line.",
+  "seed": 7
+ },
+ {
+  "ten": "sato__gian",
+  "ref": "/home/thaovyh2t_gmail_com/nv/sato.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Angry face: eyebrows pulled low, squeezed together and slanted sharply downward toward the nose, narrowed glaring dot eyes, the mouth a tight short closed frowning line curving downward.",
+  "seed": 7
+ },
+ {
+  "ten": "sato__ngac_nhien",
+  "ref": "/home/thaovyh2t_gmail_com/nv/sato.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Surprised face: eyebrows raised very high in tall arches, the eyes are larger round dots with thin white rings around them, the mouth a short thin closed line.",
+  "seed": 7
+ },
+ {
+  "ten": "sato__hao_hung",
+  "ref": "/home/thaovyh2t_gmail_com/nv/sato.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Excited delighted face: eyebrows raised, large round bright eyes with a white highlight, the mouth a broad closed smile curve with lips together.",
+  "seed": 7
+ },
+ {
+  "ten": "sato__buon",
+  "ref": "/home/thaovyh2t_gmail_com/nv/sato.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Sad apologetic face: eyebrows tilted with the inner ends high and the outer ends low in a worried shape, slightly lowered drooping eyes, the mouth a small closed curve turned downward.",
+  "seed": 7
+ },
+ {
+  "ten": "hyoronka__binh_thuong",
+  "ref": "/home/thaovyh2t_gmail_com/nv/hyoronka.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Calm neutral face: level relaxed eyebrows, simple small dot eyes, the mouth a short gentle closed line.",
+  "seed": 7
+ },
+ {
+  "ten": "hyoronka__vui",
+  "ref": "/home/thaovyh2t_gmail_com/nv/hyoronka.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Happy warm face: the eyes are cheerful smiling arcs curving upward, relaxed slightly raised eyebrows, the mouth a soft closed smile curve.",
+  "seed": 7
+ },
+ {
+  "ten": "hyoronka__hoi",
+  "ref": "/home/thaovyh2t_gmail_com/nv/hyoronka.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Curious questioning face: one eyebrow raised high and arched while the other eyebrow stays level, simple dot eyes glancing slightly upward, the head tilted very slightly to one side, the mouth a small closed slightly crooked line.",
+  "seed": 7
+ },
+ {
+  "ten": "hyoronka__gian",
+  "ref": "/home/thaovyh2t_gmail_com/nv/hyoronka.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Angry face: eyebrows pulled low, squeezed together and slanted sharply downward toward the nose, narrowed glaring dot eyes, the mouth a tight short closed frowning line curving downward.",
+  "seed": 7
+ },
+ {
+  "ten": "hyoronka__ngac_nhien",
+  "ref": "/home/thaovyh2t_gmail_com/nv/hyoronka.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Surprised face: eyebrows raised very high in tall arches, the eyes are larger round dots with thin white rings around them, the mouth a short thin closed line.",
+  "seed": 7
+ },
+ {
+  "ten": "hyoronka__hao_hung",
+  "ref": "/home/thaovyh2t_gmail_com/nv/hyoronka.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Excited delighted face: eyebrows raised, large round bright eyes with a white highlight, the mouth a broad closed smile curve with lips together.",
+  "seed": 7
+ },
+ {
+  "ten": "hyoronka__buon",
+  "ref": "/home/thaovyh2t_gmail_com/nv/hyoronka.png",
+  "prompt": "Change only the facial expression of this flat vector cartoon character. Everything else stays identical: the same hair, the same skin colour, the same clothes and accessories, the same pose, the same size and position in the frame, the same thin dark outline, and the same plain cream background with no border and no sticker outline. Clean flat colours with perfectly smooth skin and smooth clothes. The lips stay closed: the mouth is one simple thin line or curve at the same place as the original mouth. Sad apologetic face: eyebrows tilted with the inner ends high and the outer ends low in a worried shape, slightly lowered drooping eyes, the mouth a small closed curve turned downward.",
+  "seed": 7
+ }
+]

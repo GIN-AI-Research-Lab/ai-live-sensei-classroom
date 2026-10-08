@@ -1,0 +1,59 @@
+{
+ "styleRef": "style-chung-v3b.json",
+ "items": [
+  {
+   "ten": "toi",
+   "nghia": "watashi - toi",
+   "prompt": "A friendly young person smiling and pointing a finger at their own chest to indicate themselves.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, crowd, extra people"
+  },
+  {
+   "ten": "dat",
+   "nghia": "takai - dat (vs re)",
+   "prompt": "Only one person in the picture: a single shopper in front of a shop counter recoils backwards in shock with both hands raised and wide eyes, a single bold exclamation mark popping above the head. On the counter sits one small gold luxury wristwatch on a velvet cushion with an enormous blank price tag hanging from it, the empty tag far bigger than the watch. A round thought bubble from the shopper's head shows a towering pile of banknotes and gold coins, meaning it costs a huge amount. The only symbol is that one exclamation mark; the price tag, banknotes and coins carry no numbers, letters or words.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, numbers on price tags, second person, two people, shop assistant, seller, numbers on price tag, currency symbols, digits"
+  },
+  {
+   "ten": "canh-san-ga-buoi-sang",
+   "nghia": "canh: san ga buoi sang",
+   "prompt": "On a Japanese train station platform in soft early-morning light, a Japanese woman around thirty with black hair in a low ponytail wearing a sky-blue blouse and a cheerful American man in his early thirties with short sandy-blond hair wearing a mustard-yellow sweater greet each other with a small wave, a green-striped commuter train arriving behind them. Draw the scene small and compact in the middle: the characters and only a few simple props of the setting standing on a small soft patch of floor, drawn directly on the plain flat light warm cream background with generous empty cream margin on all sides; the setting does not fill the frame, and there is no frame, no card, no rounded rectangle and no window-like panel. Warm sunny tones of terracotta, sage and muted gold, no cool grey or blue-grey backdrop. Only the characters described appear, no crowd and no extra background people, all drawn as simple rounded cartoon characters with dot eyes.",
+   "negative": "destination boards with writing, station name signs, crowd, background people, extra people, full-bleed background, edge-to-edge scene, card, rounded rectangle, framed picture, cool grey tones, blue-grey backdrop"
+  },
+  {
+   "ten": "nv-sato",
+   "nghia": "Sato (nhan vat)",
+   "prompt": "Head-and-shoulders bust of a Japanese woman around thirty with black hair tied in a low ponytail, wearing a soft sky-blue blouse and a small ID lanyard with a blank card, gentle and polite, drawn as a simple rounded mascot-like cartoon character exactly like the vocabulary pictures: a round head, two small solid black dot eyes, a small curved line smile with the mouth closed, no teeth, no freckles, no wrinkles, only a tiny simple nose or none, flat even skin colour with no skin shading, simple smooth hair shape. Only one person, facing front with a slight turn, drawn directly on the plain cream background with empty space all around, no card or box behind the head.",
+   "negative": "multiple people, busy background, props, full-body scene, cropped face, realistic face, detailed eyes, eyelashes, teeth, open mouth, freckles, wrinkles, skin texture, realistic nose, anime"
+  },
+  {
+   "ten": "nv-miller",
+   "nghia": "Miller (nhan vat)",
+   "prompt": "Head-and-shoulders bust of a cheerful American man in his early thirties with short sandy-blond hair, wearing a mustard-yellow sweater over a collared shirt, drawn as a simple rounded mascot-like cartoon character exactly like the vocabulary pictures: a round head, two small solid black dot eyes, a small curved line smile with the mouth closed, no teeth, no freckles, no wrinkles, only a tiny simple nose or none, flat even skin colour with no skin shading, simple smooth hair shape. Only one person, facing front with a slight turn, drawn directly on the plain cream background with empty space all around, no card or box behind the head.",
+   "negative": "multiple people, busy background, props, full-body scene, cropped face, realistic face, detailed eyes, eyelashes, teeth, open mouth, freckles, wrinkles, skin texture, realistic nose, anime"
+  },
+  {
+   "ten": "nv-yamada",
+   "nghia": "Yamada (nhan vat)",
+   "prompt": "Head-and-shoulders bust of a Japanese man in his mid-forties with short neat black hair, a kind face and a mature grown-up look, wearing a navy-blue suit, white shirt and simple tie, polite, drawn as a simple rounded mascot-like cartoon character exactly like the vocabulary pictures: a round head, two small solid black dot eyes, a small curved line smile with the mouth closed, no teeth, no freckles, no wrinkles, only a tiny simple nose or none, flat even skin colour with no skin shading, simple smooth hair shape. Only one person, facing front with a slight turn, drawn directly on the plain cream background with empty space all around, no card or box behind the head.",
+   "negative": "multiple people, busy background, props, full-body scene, cropped face, realistic face, detailed eyes, eyelashes, teeth, open mouth, freckles, wrinkles, skin texture, realistic nose, anime"
+  },
+  {
+   "ten": "re",
+   "nghia": "yasui - re",
+   "prompt": "Only one person in the picture: a single happy shopper at a market stall holds a big overflowing bag of fresh vegetables in one arm and with the other hand hands over one single tiny coin, beaming with a relaxed smile. A tiny blank price tag hangs on the bag. A round thought bubble from the shopper's head shows one small coin with sparkles and a thumbs-up, meaning it costs almost nothing. No seller is visible; there are no numbers, letters or words anywhere.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, second person, two people, seller, shopkeeper, numbers on price tag, currency symbols, digits"
+  },
+  {
+   "ten": "ban-ron",
+   "nghia": "isogashii - ban ron (v3b)",
+   "prompt": "An office worker juggling a ringing phone, a stack of papers and a laptop all at once, looking hurried. Several big blue sweat drops fly off the person's head and curved motion lines swirl around the busy hands, cartoon symbols for being very busy. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, printed headlines, readable text, title lettering"
+  },
+  {
+   "ten": "understand",
+   "nghia": "wakaru - hieu (v3b)",
+   "prompt": "A person nodding with a bright lightbulb shining above the head and a happy aha expression. Above the person's head floats a single bright glowing yellow lightbulb with short radiating lines, the cartoon symbol for understanding. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": ""
+  }
+ ]
+}

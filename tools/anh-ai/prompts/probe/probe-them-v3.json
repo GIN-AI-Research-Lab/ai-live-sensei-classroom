@@ -1,0 +1,43 @@
+{
+ "styleRef": "style-chung.json",
+ "items": [
+  {
+   "ten": "dat-s22",
+   "seed": 22,
+   "nghia": "takai - dat (seed 22)",
+   "prompt": "Only one person in the picture: a single shopper in front of a shop counter recoils backwards in shock with both hands raised and wide eyes, a single bold exclamation mark popping above the head. On the counter sits one small gold luxury wristwatch on a velvet cushion with an enormous blank price tag hanging from it, the empty tag far bigger than the watch. A round thought bubble from the shopper's head shows a towering pile of banknotes and gold coins, meaning it costs a huge amount. The only symbol is that one exclamation mark; the price tag, banknotes and coins carry no numbers, letters or words.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, numbers on price tags, second person, two people, shop assistant, seller, numbers on price tag, currency symbols, digits"
+  },
+  {
+   "ten": "re-s22",
+   "seed": 22,
+   "nghia": "yasui - re (seed 22)",
+   "prompt": "Only one person in the picture: a single happy shopper at a market stall holds a big overflowing bag of fresh vegetables in one arm and with the other hand hands over one single tiny coin, beaming with a relaxed smile. A tiny blank price tag hangs on the bag. A round thought bubble from the shopper's head shows one small coin with sparkles and a thumbs-up, meaning it costs almost nothing. No seller is visible; there are no numbers, letters or words anywhere.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, second person, two people, seller, shopkeeper, numbers on price tag, currency symbols, digits"
+  },
+  {
+   "ten": "understand",
+   "nghia": "wakaru - hieu",
+   "prompt": "A person nodding with a bright lightbulb shining above the head and a happy aha expression. Above the person's head floats a single bright glowing yellow lightbulb with short radiating lines, the manga symbol for understanding. These are simple flat manga-style icons in the same style; there are no letters, words or numbers anywhere.",
+   "negative": ""
+  },
+  {
+   "ten": "kho",
+   "nghia": "muzukashii - kho",
+   "prompt": "A student scratching their head in confusion in front of a huge tangled maze puzzle. Big blue sweat drops fly off the person's head and a single large question mark floats above it, manga symbols for something hard; the only symbol besides the sweat drops is that one question mark. These are simple flat manga-style icons in the same style; there are no letters, words or numbers anywhere.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face"
+  },
+  {
+   "ten": "nong",
+   "nghia": "atsui - nong",
+   "prompt": "A person sweating under a blazing summer sun, fanning themselves with a round paper fan. A huge blazing sun with wavy heat-haze lines fills the space above and big sweat drops fly off the person, manga symbols for hot weather. These are simple flat manga-style icons in the same style; there are no letters, words or numbers anywhere.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, crowd, extra people"
+  },
+  {
+   "ten": "ban-ron",
+   "nghia": "isogashii - ban ron",
+   "prompt": "An office worker juggling a ringing phone, a stack of papers and a laptop all at once, looking hurried. Several big blue sweat drops fly off the person's head and curved motion lines swirl around the busy hands, manga symbols for being very busy. These are simple flat manga-style icons in the same style; there are no letters, words or numbers anywhere.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, printed headlines, readable text, title lettering"
+  }
+ ]
+}

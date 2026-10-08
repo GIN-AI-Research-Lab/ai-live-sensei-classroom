@@ -1,0 +1,510 @@
+{
+ "canh/canh-giam-doc-nghi-huu": {
+  "chon": "s22"
+ },
+ "n4/oversleep": {
+  "chon": "s33"
+ },
+ "n4/meeting-room": {
+  "chon": "s22"
+ },
+ "n4/can-see-view": {
+  "chon": "s22"
+ },
+ "n4/conversation": {
+  "chon": "s22"
+ },
+ "n4/university-student": {
+  "chon": "giu-svg",
+  "ghiChu": "ca 2 seed van la canh o vuong"
+ },
+ "n4/enter-school": {
+  "chon": "s33"
+ },
+ "n4/disappointing": {
+  "chon": "s22"
+ },
+ "n4/go-on-continue": {
+  "chon": "giu-svg",
+  "ghiChu": "ca 2 seed van la o bo goc"
+ },
+ "n4/walk-stroll": {
+  "chon": "giu-svg",
+  "ghiChu": "ca 2 seed van la canh o vuong"
+ },
+ "n4/music": {
+  "chon": "s22"
+ },
+ "n4/close-by-itself": {
+  "chon": "s22"
+ },
+ "n4/begin": {
+  "chon": "giu-svg",
+  "ghiChu": "san khau van lap day o vuong"
+ },
+ "n4/light-comes-on": {
+  "chon": "s22"
+ },
+ "n4/beautiful": {
+  "chon": "s22"
+ },
+ "n4/party": {
+  "chon": "s22"
+ },
+ "n3/rules": {
+  "chon": "s22"
+ },
+ "n3/university": {
+  "chon": "s22"
+ },
+ "n3/retire": {
+  "chon": "s22"
+ },
+ "n3/weather": {
+  "chon": "s22"
+ },
+ "n3/city": {
+  "chon": "s22"
+ },
+ "n3/countryside": {
+  "chon": "s22"
+ },
+ "n3/inconvenient": {
+  "chon": "s22"
+ },
+ "n3/long-ago": {
+  "chon": "s22"
+ },
+ "n3/average": {
+  "chon": "s22"
+ },
+ "n3/tournament": {
+  "chon": "giu-svg",
+  "ghiChu": "san van dong van cat vien thang o ca 2 seed"
+ },
+ "n3/held-event": {
+  "chon": "s33",
+  "ghiChu": "canh pho hoi cat vien nhe"
+ },
+ "n3/half-done": {
+  "chon": "s33"
+ },
+ "n3/nutrition": {
+  "chon": "s22"
+ },
+ "n3/complaint": {
+  "chon": "s22"
+ },
+ "n3/poor": {
+  "chon": "giu-svg",
+  "ghiChu": "van la hop can phong o ca 2 seed"
+ },
+ "n3/cancel": {
+  "chon": "giu-svg",
+  "ghiChu": "san bong van la o vuong o ca 2 seed"
+ },
+ "canh/canh-mua-ruou-vang-bach-hoa": {
+  "chon": "s33",
+  "ghiChu": "con ke/thang cuon phia sau nhung khong con o vuong"
+ },
+ "canh/canh-giup-be-thung-do": {
+  "chon": "s22",
+  "ghiChu": "con goc tuong mo, khong con o vuong"
+ },
+ "canh/canh-qua-sinh-nhat-duoi-hoa-anh-dao": {
+  "chon": "s33"
+ },
+ "canh/canh-san-pham-cho-noi-tro": {
+  "chon": "s33"
+ },
+ "canh/canh-gio-manh-dan-khi-bao-den": {
+  "chon": "s33"
+ },
+ "canh/canh-cuoc-doi-vuot-kho": {
+  "chon": "s33"
+ },
+ "n4/lets-eat": {
+  "chon": "s33"
+ },
+ "n4/future": {
+  "chon": "s22"
+ },
+ "n4/university": {
+  "chon": "s22"
+ },
+ "n4/match-game": {
+  "chon": "s33"
+ },
+ "n4/worry": {
+  "chon": "giu-svg",
+  "ghiChu": "o cua so toi van con o ca 2 seed"
+ },
+ "n4/cheer-on": {
+  "chon": "giu-svg",
+  "ghiChu": "nen dai cat vien thang o ca 2 seed"
+ },
+ "n4/recipe": {
+  "chon": "s22"
+ },
+ "n4/cooking-dish": {
+  "chon": "s22"
+ },
+ "n4/class-lesson": {
+  "chon": "s22"
+ },
+ "n4/countryside": {
+  "chon": "s22"
+ },
+ "n4/city": {
+  "chon": "s22"
+ },
+ "n4/inconvenient": {
+  "chon": "s22"
+ },
+ "n4/can-hear": {
+  "chon": "s22"
+ },
+ "n4/can-be-seen": {
+  "chon": "s22"
+ },
+ "n4/ear": {
+  "chon": "s22"
+ },
+ "n4/skillful": {
+  "chon": "s22"
+ },
+ "n4/foot-leg": {
+  "chon": "s22"
+ },
+ "n4/song": {
+  "chon": "s22"
+ },
+ "n4/traffic": {
+  "chon": "s22"
+ },
+ "n4/hanami": {
+  "chon": "s22"
+ },
+ "n4/cut": {
+  "chon": "s22"
+ },
+ "n4/happy": {
+  "chon": "s22"
+ },
+ "n4/make-help": {
+  "chon": "s22"
+ },
+ "n4/let-rest": {
+  "chon": "s22"
+ },
+ "n4/lecture": {
+  "chon": "s22"
+ },
+ "n3/regret-pity": {
+  "chon": "giu-svg",
+  "ghiChu": "o cua so mua van con o ca 2 seed"
+ },
+ "n3/explain": {
+  "chon": "s33"
+ },
+ "n3/daily-life": {
+  "chon": "s33"
+ },
+ "n3/habit": {
+  "chon": "s33"
+ },
+ "n3/decide": {
+  "chon": "s22"
+ },
+ "n3/prohibit": {
+  "chon": "s33"
+ },
+ "n5/dai-hoc": {
+  "chon": "s22"
+ },
+ "n5/tap-chi": {
+  "chon": "s22"
+ },
+ "n5/phia-kia": {
+  "chon": "s22"
+ },
+ "n5/thuy-si": {
+  "chon": "s22",
+  "ghiChu": "day nui cat thang nhe (nho)"
+ },
+ "n5/buoi-sang": {
+  "chon": "s33"
+ },
+ "n5/buoi-chieu": {
+  "chon": "s33"
+ },
+ "n5/ngan-hang": {
+  "chon": "s22"
+ },
+ "n5/nhin": {
+  "chon": "s33"
+ },
+ "n5/xau-te": {
+  "chon": "s22",
+  "ghiChu": "chi con ban tay ngon cai xuong + may"
+ },
+ "n5/gan": {
+  "chon": "s22"
+ },
+ "n5/mua-he": {
+  "chon": "s22"
+ },
+ "n5/mua-dong": {
+  "chon": "s22"
+ },
+ "n5/thi-tran": {
+  "chon": "s22"
+ },
+ "n5/nuoc-ngoai": {
+  "chon": "s22"
+ },
+ "n5/muon-co": {
+  "chon": "s22"
+ },
+ "n5/bien": {
+  "chon": "s22"
+ },
+ "n5/dung-day": {
+  "chon": "s22"
+ },
+ "n5/dung-do-xe": {
+  "chon": "s22"
+ },
+ "n5/khuon-mat": {
+  "chon": "s22"
+ },
+ "n5/mat": {
+  "chon": "giu-svg",
+  "ghiChu": "mui ten xuyen qua mat, vong tron nhu kinh - kho hieu o ca 2 seed"
+ },
+ "n5/mieng": {
+  "chon": "s33"
+ },
+ "n5/chan": {
+  "chon": "s22"
+ },
+ "n5/kyoto": {
+  "chon": "s22"
+ },
+ "n5/tuyet": {
+  "chon": "s22"
+ },
+ "n5/deo-kinh": {
+  "chon": "s22"
+ },
+ "n5/con-duong": {
+  "chon": "s22"
+ },
+ "n4/useful": {
+  "chon": "giu-svg",
+  "ghiChu": "can phong toi (o vuong den) o ca 2 seed - ban chat canh mat dien"
+ },
+ "n3/match-game": {
+  "chon": "s33"
+ },
+ "n3/tears": {
+  "chon": "s22"
+ },
+ "n3/worry": {
+  "chon": "giu-svg",
+  "ghiChu": "o cua so toi van con o ca 2 seed"
+ },
+ "n3/want-to-eat": {
+  "chon": "s22",
+  "ghiChu": "quay hang nho phia sau, nhe"
+ },
+ "n3/prove": {
+  "chon": "s33"
+ },
+ "n3/skilful": {
+  "chon": "s33"
+ },
+ "n3/company-president": {
+  "chon": "giu-svg",
+  "ghiChu": "cua so kinh lon phia sau o ca 2 seed"
+ },
+ "n3/present-announce": {
+  "chon": "s22"
+ },
+ "n3/politics": {
+  "chon": "s22"
+ },
+ "n3/japan": {
+  "chon": "s33"
+ },
+ "n3/end": {
+  "chon": "giu-svg",
+  "ghiChu": "san khau van la o vuong o ca 2 seed"
+ },
+ "n3/nuisance": {
+  "chon": "s22"
+ },
+ "n2n1/loi-chao-phat-bieu": {
+  "chon": "s22"
+ },
+ "n2n1/kinh-te": {
+  "chon": "s22"
+ },
+ "n2n1/giai-thich": {
+  "chon": "s33"
+ },
+ "n2n1/sat-lo": {
+  "chon": "s22",
+  "ghiChu": "khoi dat cat ngang (dang so do, nhe)"
+ },
+ "n2n1/lo-lang": {
+  "chon": "giu-svg",
+  "ghiChu": "o cua so toi van con o ca 2 seed"
+ },
+ "n2n1/lai-xe": {
+  "chon": "s33"
+ },
+ "n2n1/con-duong": {
+  "chon": "s22"
+ },
+ "n2n1/den-gan": {
+  "chon": "s22"
+ },
+ "n2n1/quy-tac": {
+  "chon": "s22"
+ },
+ "n2n1/tuan-theo": {
+  "chon": "s33"
+ },
+ "n2n1/nuoc-ngoai": {
+  "chon": "s22"
+ },
+ "n2n1/tiep-tuc": {
+  "chon": "s33",
+  "ghiChu": "mep duong cat thang nhe"
+ },
+ "n2n1/pho-bien": {
+  "chon": "s22"
+ },
+ "n2n1/khap-noi": {
+  "chon": "s22"
+ },
+ "n2n1/moi-truong": {
+  "chon": "giu-svg",
+  "ghiChu": "van la o vuong phong canh o ca 2 seed"
+ },
+ "n2n1/tan-thanh": {
+  "chon": "s33"
+ },
+ "n2n1/ke-hoach": {
+  "chon": "s22"
+ },
+ "n2n1/y-kien": {
+  "chon": "s33"
+ },
+ "n2n1/xa-hoi": {
+  "chon": "s33"
+ },
+ "n2n1/tien-hanh": {
+  "chon": "s33"
+ },
+ "n2n1/dai-hoi": {
+  "chon": "s22",
+  "ghiChu": "khan dai san van dong cat nhe"
+ },
+ "n2n1/thong-ke": {
+  "chon": "s22"
+ },
+ "n2n1/que-nha": {
+  "chon": "s33"
+ },
+ "n2n1/tham-quan": {
+  "chon": "s22"
+ },
+ "n2n1/mon-an": {
+  "chon": "s22"
+ },
+ "n2n1/ky-niem": {
+  "chon": "s22"
+ },
+ "n2n1/chuc-mung": {
+  "chon": "s33"
+ },
+ "n2n1/that-le": {
+  "chon": "s22"
+ },
+ "n2n1/tran-dau": {
+  "chon": "s22"
+ },
+ "n2n1/phong-canh": {
+  "chon": "s33",
+  "ghiChu": "dai phong canh ngang, nhe"
+ },
+ "n2n1/vu-viec": {
+  "chon": "s22"
+ },
+ "n2n1/nuoc-mat": {
+  "chon": "s33"
+ },
+ "n2n1/xem-nhin": {
+  "chon": "s22"
+ },
+ "n2n1/nghe": {
+  "chon": "s22"
+ },
+ "n2n1/cuoc-doi": {
+  "chon": "s22"
+ },
+ "n2n1/cuoc-song": {
+  "chon": "s33",
+  "ghiChu": "goc bep mo, khong con o vuong"
+ },
+ "n2n1/thu-pham": {
+  "chon": "s33"
+ },
+ "n2n1/biet-on": {
+  "chon": "s33"
+ },
+ "n2n1/tot-nghiep": {
+  "chon": "s22",
+  "ghiChu": "cong truong phia sau, nhe"
+ },
+ "n2n1/hanh-phuc": {
+  "chon": "s33"
+ },
+ "n2n1/dai-hoc": {
+  "chon": "s33"
+ },
+ "n2n1/tuong-lai": {
+  "chon": "s22"
+ },
+ "n2n1/tra-loi": {
+  "chon": "s22"
+ },
+ "n2n1/vu-kien": {
+  "chon": "s33"
+ },
+ "n2n1/an-hue": {
+  "chon": "s22"
+ },
+ "n2n1/tan-binh": {
+  "chon": "giu-svg",
+  "ghiChu": "khung cua so van con o ca 2 seed"
+ },
+ "n2n1/phan-boi": {
+  "chon": "s22"
+ },
+ "n2n1/ti-mi": {
+  "chon": "s33"
+ },
+ "n2n1/giao-su": {
+  "chon": "s22"
+ },
+ "n2n1/nghi-huu-giang-duong": {
+  "chon": "s22"
+ },
+ "n2n1/dien-thuyet": {
+  "chon": "s22",
+  "ghiChu": "mep duoi khan gia cat thang, nhe"
+ }
+}

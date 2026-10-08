@@ -71,6 +71,8 @@
     dienDongTac: moiCai('dienDongTac'),
     camXuc: moiCai('camXuc'),
     khiRoiMuc: (...a) => { dangHien().forEach((x) => x.khiRoiMuc?.(...a)); },
+    /** datCo(k) — che do san khau xin co meo (1 = chuan theo man hinh) */
+    datCo: (k) => { dangHien().forEach((x) => x.datCo?.(k)); },
     /** trangThai({ giang }) — bai giang dang chay hay khong (meo chi ngu gat / ngu khi khong giang). Tra ve trang thai meo. */
     trangThai(o) {
       if (o && 'giang' in o) giang = !!o.giang;

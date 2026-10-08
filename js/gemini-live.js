@@ -57,6 +57,14 @@ class GeminiLiveClient {
     this._choTraLoi = false;
     this._coNoiDungMoi = false;
     this._micDangThu = false;       // da activityStart, chua activityEnd
+    // Luot model dang MO phia server: da co noi dung (tieng / chu / tool), chua turnComplete / interrupted
+    this._mayDangNoi = false;
+    this._lucNoiDung = 0;           // luc noi dung gan nhat cua model toi
+    // Luc gui luot moi ma luot model CU con mo: su kien ket thuc dau tien (interrupted HOAC turnComplete)
+    // toi sau do la cua luot cu, va moi noi dung toi truoc no cung la cua luot cu (tieng con bay tren mang,
+    // hoac luot cu vua xong dung luc server nhan luot moi). Khong tach ra thi turnComplete cua luot cu bi
+    // tinh la "Sensei da giang xong muc moi" -> app nhac / sang nhip khi muc moi chua duoc noi gi.
+    this._conLuotCu = false;
   }
 
   connect(apiKey, model, voiceName) {
@@ -109,6 +117,8 @@ class GeminiLiveClient {
     this._choTraLoi = false;
     this._coNoiDungMoi = false;
     this._micDangThu = false;
+    this._mayDangNoi = false;       // ket noi moi: khong con luot model nao mo
+    this._conLuotCu = false;
     clearTimeout(this._henHandover);
 
     ws.onopen = () => {
@@ -149,10 +159,15 @@ class GeminiLiveClient {
       // Server tu choi setup -> thu lai MOT lan, app khong can biet
       if (this.ws === ws && !this.isSetupComplete && this._thuLaiSetup(e)) return;
       if (this.ws === ws) this.ws = null;
+      // Server cat ket noi SAU khi da bao goAway (het ~10 phut / ket noi, luot dai qua chua kip handover):
+      // khong phai loi — app noi lai (giu handle ngu canh) va hoc tiep nhip dang do, khong bat hoc vien bam
+      this.dongSauGoAway = !!this.goAwayPending;
       this.isConnected = false;
       this.isSetupComplete = false;
       this.pendingQueue = [];
       this.goAwayPending = false;
+      this._mayDangNoi = false;
+      this._conLuotCu = false;
       this._xongHandover(false);
       this.onClose(e);
       this.onLog("System", `Đã đóng phiên kết nối (Mã: ${e.code}, Lý do: ${e.reason || 'Bình thường'})`);
@@ -278,6 +293,18 @@ class GeminiLiveClient {
   _daGuiLuot() {
     this._choTraLoi = true;
     this._coNoiDungMoi = false;
+    // Luot model cu con mo -> chot "cua luot cu" cho toi su kien ket thuc cua no. Noi dung cuoi da > 8 s
+    // ma van chua thay ket thuc: coi la luot chet (server bo khong bao), khong cho no nuot luot moi.
+    this._conLuotCu = this._mayDangNoi && (Date.now() - this._lucNoiDung) < 8000;
+    if (!this._conLuotCu) this._mayDangNoi = false;
+  }
+
+  /**
+   * Noi dung dang toi (tieng / chu / tool trong handleMessage) la DUOI cua luot model cu (luot moi da gui
+   * nhung server chua ket thuc luot cu). App doc luc nhan tieng / chu de khong tinh vao nhip dang giang.
+   */
+  laNoiDungLuotCu() {
+    return !!this._conLuotCu;
   }
 
   /**
@@ -419,6 +446,12 @@ C. NGỮ ĐIỆU (INTONATION):
 8. Nghỉ hơi ngắn giữa phần tiếng Việt và phần tiếng Nhật để học viên nghe tách bạch được hai thứ tiếng.
 
 QUY TRÌNH DẠY BÀI HỌC CHUẨN SƯ PHẠM (PEDAGOGICAL LESSON FLOW):
+0. 🎬 MỞ BÀI & DẪN CHUYỂN PHẦN KIỂU MC (chỉ khi lời dặn có ghi):
+   - Lời dặn có mục "MỞ BÀI" (lượt đầu tiên của buổi): mở bài 3–5 câu ngắn — chào lớp, bài hôm nay học gì, học xong dùng vào việc gì ngoài đời, một cú móc cho tò mò — theo đúng "Kiểu mở bài" được giao (mỗi buổi một kiểu, đừng lặp lại câu cũ), rồi dẫn mượt vào mục đầu tiên và dạy luôn trong cùng lượt đó.
+   - Lời dặn có "CẦU NỐI KIỂU MC" (đầu một phần mới): mở lượt bằng ĐÚNG MỘT câu dẫn 1–2 câu như MC truyền hình — chốt phần vừa xong, nhá hàng phần sắp tới, móc vào câu chuyện / nhân vật của bài nếu được. "MỞ MÀN PHẦN MỚI": một câu giới thiệu phần đó, không tổng kết gì.
+   - Lời dặn có "CHÊM MỘT CÂU": giảng xong mục thì thêm đúng một câu nối mục đó với câu chuyện của bài hoặc một cảnh đời thường vui.
+   - Mở bài, câu dẫn, câu chêm chỉ là lời dẫn chuyện: KHÔNG dạy trước mục nào khác. Lời dặn không ghi thì KHÔNG tự chèn — vào thẳng mục được giao.
+   - Kiểu "bản tin", "bình luận viên", "game show", "nhân vật"... chỉ đổi LỜI VĂN, không đổi chất giọng — luật giọng đọc bên trên vẫn đứng trên hết.
 1. 📚 PHẦN 1: TỪ VỰNG TRỌNG TÂM (VOCABULARY)
    - Giảng giải chi tiết, hài hước, phát âm chuẩn Tokyo từng từ 2 lần, chỉ ra mẹo nhớ và ngữ cảnh dùng thực tế.
 2. 🈸 PHẦN 2: CHỮ HÁN KANJI (KANJI)
@@ -465,15 +498,14 @@ QUY TẮC TỰ ĐỘNG FOCUS & HIGHLIGHT THEO BÀI HỌC (AUTO-FOCUS & ACTIVE HI
 - Nếu học viên phát âm sai hoặc nói sai câu tiếng Nhật, BẮT BUỘC gọi tool mark_error(wrong_phrase, corrected_phrase, explanation) để giao diện bật ngay bảng cảnh báo và hướng dẫn sửa lỗi!
 - KHI ĐƯỢC YÊU CẦU GIẢNG BÀI: Hãy giảng bài đầy đủ, sôi nổi, độc thoại liên tục các ý trong danh sách được giao, không ngắt quãng giữa chừng.
 
-QUY TẮC BẮT BUỘC VỀ NHỊP GIẢNG VÀ TÍN HIỆU KẾT THÚC (RẤT QUAN TRỌNG):
-1. MỖI KHI chuẩn bị đọc / giảng MỘT mục cụ thể (một từ vựng, một chữ Hán, một câu ví dụ, một lượt thoại),
-   BẠN PHẢI gọi highlight_element(target_id) VỚI ĐÚNG id của mục đó NGAY TRƯỚC khi nói về nó.
-   Màn hình sẽ phóng to mục đó ra giữa cho học viên nhìn rõ. Mỗi lần CHỈ một mục.
-2. Giảng xong mục này mới gọi highlight_element cho mục tiếp theo. Tuyệt đối không gọi dồn một lúc nhiều mục.
-3. TUYỆT ĐỐI KHÔNG tự chuyển sang phân môn khác. Khi và CHỈ KHI đã giảng HẾT mọi mục
-   trong danh sách được giao, hãy gọi tool section_complete(section) để báo hệ thống.
-   Nếu chưa gọi section_complete thì hệ thống hiểu là bạn còn đang giảng dở và sẽ nhắc bạn nói tiếp.
-4. Nếu lượt nói bị ngắt giữa chừng, hãy nói TIẾP từ mục đang dở, không quay lại từ đầu.
+QUY TẮC BẮT BUỘC VỀ NHỊP GIẢNG (RẤT QUAN TRỌNG):
+1. Trong giờ giảng, MỖI lời dặn "[LỚP …] [<mục>]" là ĐÚNG MỘT mục của giáo án (một từ, một chữ, một mẫu câu, một câu ví dụ, một câu thoại, một câu hỏi).
+   Màn hình đã tự phóng to đúng mục đó và mở từng phần của thẻ theo lời mày nói — nên giảng đúng nội dung và đúng THỨ TỰ ghi trong lời dặn,
+   không bịa thêm mục khác, không đọc trước mục sau. KHÔNG cần gọi highlight_element hay section_complete trong giờ giảng.
+2. Giảng xong mục đó thì DỪNG hẳn lượt nói — hệ thống tự chuyển sang mục kế tiếp. Lời dặn có "NHẮC LẠI" = lượt trước chưa nghe thấy mục này: giảng lại đầy đủ ngay, không xin lỗi dài dòng.
+3. TUYỆT ĐỐI KHÔNG tự chuyển sang phân môn khác (câu dẫn kiểu MC khi lời dặn có "CẦU NỐI" thì được — hệ thống đã tự chuyển phần, mày chỉ dẫn lời).
+4. Ngoài giờ giảng (học viên hỏi qua mic / ô chữ): được dùng highlight_element(target_id) để chỉ đúng mục đang nói, mỗi lần một mục.
+5. Nếu lượt nói bị ngắt giữa chừng, hãy nói TIẾP từ mục đang dở, không quay lại từ đầu.
 PHẠM VI ĐƯỢC PHÉP TRẢ LỜI (ÁP DỤNG CHO MỌI CÂU HỎI QUA MIC LẪN Ô GÕ CHỮ — RẤT QUAN TRỌNG):
 
 Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái niệm nào khác về bản thân.
@@ -779,9 +811,12 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
     // Đó KHÔNG phải học viên ngắt lời, không được tạm dừng bài giảng.
     if (msg.serverContent?.interrupted) {
       this.isModelTurnActive = false;
+      this._mayDangNoi = false;
       this._coNoiDungMoi = false;   // noi dung ve truoc do la cua luot vua bi ngat
-      if ((Date.now() - this.lastClientSendTime) < 2000) {
-        this.onSelfInterrupt();
+      const cu = this._conLuotCu;   // ket thuc cua luot cu (ta vua gui luot moi) — khong phai hoc vien noi chen
+      this._conLuotCu = false;
+      if (cu || (Date.now() - this.lastClientSendTime) < 2000) {
+        this.onSelfInterrupt({ cu });
       } else {
         this.onBargeIn();
       }
@@ -822,17 +857,40 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
     }
 
     // Co noi dung ve sau lan gui gan nhat -> turnComplete cua luot nay moi la
-    // luot dang cho (turnComplete tre cua luot cu bi ngat thi khong tinh)
-    if (msg.serverContent?.modelTurn || outTx || toolCalls.length) this._coNoiDungMoi = true;
+    // luot dang cho (turnComplete tre cua luot cu bi ngat thi khong tinh).
+    // Noi dung cua luot CU (con bay toi sau lan gui) khong tinh.
+    if (msg.serverContent?.modelTurn || outTx || toolCalls.length) {
+      this._mayDangNoi = true;
+      this._lucNoiDung = Date.now();
+      if (!this._conLuotCu) this._coNoiDungMoi = true;
+    }
 
     // 4. Kiểm tra lượt nói kết thúc (turnComplete)
+    // onTurnComplete(info): info.cu = turnComplete cua luot CU (no vua xong dung luc ta gui luot moi — loi
+    // cua luot moi chua toi); info.rong = luot cua lan gui gan nhat xong ma KHONG co noi dung nao (luot rong,
+    // hoac turnComplete tre cua mot luot da bi ngat) — app tu quyet (cho them / nhac lai).
     if (msg.serverContent?.turnComplete) {
       this.isModelTurnActive = false;
-      if (this._coNoiDungMoi) this._choTraLoi = false;
-      this.onTurnComplete();
+      this._mayDangNoi = false;
+      let info;
+      if (this._conLuotCu) {
+        this._conLuotCu = false;
+        this._coNoiDungMoi = false;
+        info = { cu: true, rong: false };
+      } else {
+        info = { cu: false, rong: !this._coNoiDungMoi };
+        if (this._coNoiDungMoi) this._choTraLoi = false;
+      }
+      this.onTurnComplete(info);
       // Luot vua xong ma server da bao goAway -> chuyen ket noi luc nay (neu app chua gui luot moi)
       this._thuHandoverTuDong();
     }
+  }
+
+  /** App da xu ly xong luot rong (nhac lai / bo qua): thoi cho tra loi cho lan gui truoc */
+  boChoTraLoi() {
+    this._choTraLoi = false;
+    this._coNoiDungMoi = false;
   }
 
   isTurnActive() {
@@ -1066,6 +1124,8 @@ Mày là thầy dạy tiếng Nhật. Hết. Trong đầu mày không có khái 
     this.isSetupComplete = false;
     this.pendingQueue = [];
     this.goAwayPending = false;
+    this._mayDangNoi = false;
+    this._conLuotCu = false;
   }
 }
 

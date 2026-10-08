@@ -1,0 +1,4042 @@
+{
+ "level": "n3",
+ "nguon": "curriculum/n3/{1..20}.json vocabList[]",
+ "style": "flat minimal vector illustration of an isolated subject on a plain flat light warm cream background, soft rounded shapes, thin dark charcoal-ink outlines, gentle two-to-three tone flat shading, low detail, warm muted palette of terracotta orange-red, sage green, muted mustard gold and warm cream. A single clear centered subject with generous empty cream margin on all sides; the background is one uniform cream colour right up to all four edges of the square, with at most a small soft shadow under the subject and no backdrop shape behind it. Objects, tools, food, buildings and vehicles are inanimate and look like simple real everyday things, with nobody drawn on them unless people are described. When people appear they are simple friendly cartoon characters with natural light peach skin tone (unless another skin tone is described) and simple solid hair shapes (dark brown or black unless another hair colour is described), small solid black dot eyes and a tiny curved line mouth, no realistic facial detail; terracotta is used on clothing and objects, never on skin. No text, no letters, no numbers, no sound-effect lettering, no signs or screens with writing, no watermark, square 1:1 composition",
+ "negativeBase": "text, letters, words, numbers, digits, captions, labels, readable signage, kanji, hiragana, katakana, latin alphabet, watermark, logo, signature, photorealistic, 3d render, glossy plastic look, busy cluttered background, comic panel grid, frame border, dark background, harsh shadows, neon colors, blurry, deformed hands, extra fingers, distorted face",
+ "cachGhep": "prompt_cuoi = item.prompt + ' ' + style; negative_cuoi = negativeBase + (item.negative ? ', ' + item.negative : ''). Chi sinh 1 anh cho moi 'ten'; muc co dungLai dung lai anh cua ten do.",
+ "thongKe": {
+  "tong": 400,
+  "coAnh": 340,
+  "anhDuyNhat": 232,
+  "dungLai": 108,
+  "boQua": 60
+ },
+ "items": [
+  {
+   "id": "voc-n3-1-1",
+   "word": "信じます",
+   "meaningVi": "Tin tưởng",
+   "ten": "trust",
+   "prompt": "A young woman leaning backwards with closed eyes and a calm smile while her friend stands behind her with open arms ready to catch her in a trust fall. A small warm heart floats between the two people, the symbol for trust. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "falling injury, fear",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A young woman leaning backwards with closed eyes and a calm smile while her friend stands behind her with open arms ready to catch her in a trust fall.",
+   "bieuTuong": "tin"
+  },
+  {
+   "id": "voc-n3-1-2",
+   "word": "誤解します",
+   "meaningVi": "Hiểu lầm",
+   "ten": "misunderstand",
+   "prompt": "A man proudly handing a small gift box to a woman who frowns and turns away offended, while the man looks confused with a puzzled sweat drop, showing a misunderstanding between them. Above the person's head floats a single large question mark, the cartoon symbol for not knowing; the only symbol is that one question mark. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "romance kiss",
+   "loai": "canh",
+   "kho": 3,
+   "promptCu": "A man proudly handing a small gift box to a woman who frowns and turns away offended, while the man looks confused with a puzzled sweat drop, showing a misunderstanding between them.",
+   "bieuTuong": "khong-hieu"
+  },
+  {
+   "id": "voc-n3-1-3",
+   "word": "勘違いします",
+   "meaningVi": "Nhầm lẫn, hiểu sai",
+   "ten": "mistaken-identity",
+   "prompt": "A cheerful man tapping the shoulder of a stranger from behind thinking it is his friend, the stranger turning around surprised and the man freezing in embarrassment. Above the person's head pops a single bold exclamation mark with short burst lines, the cartoon symbol for a sudden realisation; the only symbol is that one exclamation mark. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "fight, violence",
+   "loai": "canh",
+   "kho": 2,
+   "promptCu": "A cheerful man tapping the shoulder of a stranger from behind thinking it is his friend, the stranger turning around surprised and the man freezing in embarrassment.",
+   "bieuTuong": "nhan-ra"
+  },
+  {
+   "id": "voc-n3-1-4",
+   "word": "上達します",
+   "meaningVi": "Tiến bộ, tiến triển",
+   "ten": "improve-skill",
+   "prompt": "A young student painter standing beside three easels in a row whose paintings of the same apple go from clumsy scribble to rough sketch to a beautiful finished apple, showing clear progress.",
+   "negative": "text on canvas",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-1-5",
+   "word": "専門です",
+   "meaningVi": "Là chuyên môn (thể thông thường: 専門だ)",
+   "ten": "specialty",
+   "prompt": "A young researcher in a white lab coat standing proudly in front of a shelf of thick medical books and a human anatomy model, holding a stethoscope as her field of expertise.",
+   "negative": "blood, surgery",
+   "loai": "nhanvat",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-1-6",
+   "word": "専門",
+   "meaningVi": "Chuyên môn, ngành học",
+   "ten": "specialty",
+   "prompt": "A young researcher in a white lab coat standing proudly in front of a shelf of thick medical books and a human anatomy model, holding a stethoscope as her field of expertise.",
+   "negative": "blood, surgery",
+   "loai": "nhanvat",
+   "kho": 3,
+   "dungLai": "specialty"
+  },
+  {
+   "id": "voc-n3-1-7",
+   "word": "詳しい",
+   "meaningVi": "Rành, tường tận, chi tiết",
+   "ten": "knowledgeable",
+   "prompt": "An elderly guide confidently pointing at tiny details on a large unfolded map with a magnifying glass while a young tourist listens amazed, showing deep detailed knowledge. Above the person's head floats a single bright glowing yellow lightbulb with short radiating lines, the cartoon symbol for understanding. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "readable map labels",
+   "loai": "canh",
+   "kho": 3,
+   "promptCu": "An elderly guide confidently pointing at tiny details on a large unfolded map with a magnifying glass while a young tourist listens amazed, showing deep detailed knowledge.",
+   "bieuTuong": "hieu"
+  },
+  {
+   "id": "voc-n3-1-8",
+   "word": "苦手",
+   "meaningVi": "Kém, không giỏi (tính từ な)",
+   "ten": "bad-at",
+   "prompt": "A young man awkwardly flailing in a swimming pool with a panicked sweaty face while others around him swim easily, showing something he is bad at. A single sweat drop on the brow and wobbly shaky lines around the result, symbols for being unskilled. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "drowning, danger",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A young man awkwardly flailing in a swimming pool with a panicked sweaty face while others around him swim easily, showing something he is bad at.",
+   "bieuTuong": "kem"
+  },
+  {
+   "id": "voc-n3-1-9",
+   "word": "自信",
+   "meaningVi": "Sự tự tin",
+   "ten": "confidence",
+   "prompt": "A young woman standing tall with chest out, hands on hips and a bright self-assured smile, a small glow of confidence around her. Sparkle stars and a small bright starburst shine around the person, symbols for confidence. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "arrogant sneer",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A young woman standing tall with chest out, hands on hips and a bright self-assured smile, a small glow of confidence around her.",
+   "bieuTuong": "tu-tin"
+  },
+  {
+   "id": "voc-n3-1-10",
+   "word": "経験",
+   "meaningVi": "Kinh nghiệm, trải nghiệm",
+   "ten": "experience",
+   "prompt": "An elderly sushi chef with calm expert hands showing a nervous young apprentice how to slice fish at a wooden counter, a lifetime of experience in his posture.",
+   "negative": "raw blood",
+   "loai": "canh",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-1-11",
+   "word": "性格",
+   "meaningVi": "Tính cách",
+   "ten": "personality",
+   "prompt": "Three friends sitting on one bench with clearly different personalities: one laughing loudly with arms wide, one shyly reading a book, one grumpy with crossed arms.",
+   "negative": "identical faces",
+   "loai": "canh",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-1-13",
+   "word": "結果",
+   "meaningVi": "Kết quả",
+   "ten": "result",
+   "prompt": "A student holding up a graded test sheet covered in big red circle marks with a relieved happy face, the teacher smiling beside her.",
+   "negative": "readable writing on paper, numbers on paper",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-1-14",
+   "word": "偶然",
+   "meaningVi": "Ngẫu nhiên, tình cờ (danh từ/tính từ な)",
+   "ten": "coincidence",
+   "prompt": "Two old friends turning a street corner from opposite sides and bumping into each other by chance, both with wide surprised delighted eyes. A single exclamation mark pops above each of the two heads, the cartoon symbol for a surprise meeting; the only symbols are those exclamation marks. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "collision injury",
+   "loai": "canh",
+   "kho": 2,
+   "promptCu": "Two old friends turning a street corner from opposite sides and bumping into each other by chance, both with wide surprised delighted eyes.",
+   "bieuTuong": "tinh-co"
+  },
+  {
+   "id": "voc-n3-1-15",
+   "word": "得意",
+   "meaningVi": "Giỏi, sở trường",
+   "ten": "good-at",
+   "prompt": "A proud boy juggling five balls effortlessly with a confident grin while classmates watch in admiration. Sparkle stars and a small gold star badge shine around the person's work, symbols for being skilled. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "circus clown",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A proud boy juggling five balls effortlessly with a confident grin while classmates watch in admiration.",
+   "bieuTuong": "gioi"
+  },
+  {
+   "id": "voc-n3-1-16",
+   "word": "参加",
+   "meaningVi": "Sự tham gia",
+   "ten": "join",
+   "prompt": "A smiling newcomer stepping into a circle of people holding hands at a community dance, the group opening the circle to welcome him in.",
+   "negative": "crowd chaos",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-1-17",
+   "word": "賛成",
+   "meaningVi": "Sự tán thành, đồng ý",
+   "ten": "agree",
+   "prompt": "A group of colleagues around a table all raising their hands and giving thumbs up in agreement with a smiling presenter.",
+   "negative": "angry faces",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-1-18",
+   "word": "記録",
+   "meaningVi": "Kỷ lục, ghi chép",
+   "ten": "record",
+   "prompt": "A sprinter bursting through the finish-line tape with a stopwatch icon glowing above and a gold trophy waiting, breaking a record.",
+   "negative": "numbers on stopwatch, scoreboard digits",
+   "loai": "vocab",
+   "kho": 2,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-1-19",
+   "word": "残念",
+   "meaningVi": "Đáng tiếc, tiếc nuối",
+   "ten": "regret-pity",
+   "prompt": "A family standing at a window in raincoats looking sadly at heavy rain pouring on their packed picnic basket, disappointed that the outing is ruined. Vertical gloomy blue lines hang over the person and a small sigh puff drifts from the mouth, cartoon symbols for disappointment. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "storm damage",
+   "loai": "canh",
+   "kho": 2,
+   "promptCu": "A family standing at a window in raincoats looking sadly at heavy rain pouring on their packed picnic basket, disappointed that the outing is ruined.",
+   "bieuTuong": "tiec"
+  },
+  {
+   "id": "voc-n3-1-20",
+   "word": "説明",
+   "meaningVi": "Lời giải thích",
+   "ten": "explain",
+   "prompt": "A teacher pointing at a simple diagram of arrows and circles on a whiteboard while explaining to two attentive students.",
+   "negative": "writing on whiteboard, formulas",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-2-1",
+   "word": "努力します",
+   "meaningVi": "Nỗ lực, cố gắng",
+   "ten": "effort",
+   "prompt": "A determined student studying late at night at a desk lamp with a headband, sweat drop on the forehead and a tall stack of textbooks, putting in great effort.",
+   "negative": "readable book titles",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-2-2",
+   "word": "意識します",
+   "meaningVi": "Ý thức, chú tâm tới",
+   "ten": "mindful",
+   "prompt": "A woman in a supermarket pausing thoughtfully to compare a salad and a greasy burger in her hands, consciously choosing the healthy one.",
+   "negative": "brand packaging",
+   "loai": "vocab",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-2-3",
+   "word": "気を付けます",
+   "meaningVi": "Cẩn thận, lưu ý",
+   "ten": "be-careful",
+   "prompt": "A waiter walking very carefully on tiptoe while balancing a tray of brimming full teacups, eyes focused on not spilling.",
+   "negative": "spilled mess",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-2-4",
+   "word": "心掛けます",
+   "meaningVi": "Luôn để tâm, chú tâm thực hiện",
+   "ten": "make-a-point-of",
+   "prompt": "A man in a business suit deliberately choosing the stairs beside an escalator, climbing with a small determined smile as his daily habit.",
+   "negative": "crowded station",
+   "loai": "vocab",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-2-5",
+   "word": "運動します",
+   "meaningVi": "Vận động, tập thể dục",
+   "ten": "exercise",
+   "prompt": "A young woman jogging happily along a riverside path in sportswear and sneakers.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-2-6",
+   "word": "食べます",
+   "meaningVi": "Ăn",
+   "ten": "eat",
+   "prompt": "A young person eating a bowl of rice with chopsticks at a small table, happily taking a bite.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-2-7",
+   "word": "寝ます",
+   "meaningVi": "Đi ngủ",
+   "ten": "sleep",
+   "prompt": "A person sleeping peacefully on a futon, tucked under a blanket with eyes closed and a small moon outside the window.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-2-8",
+   "word": "起きます",
+   "meaningVi": "Thức dậy",
+   "ten": "wake-up",
+   "prompt": "A person sitting up in bed stretching arms and yawning as morning sunlight streams through the window and an alarm clock rings.",
+   "negative": "numbers on clock",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-2-9",
+   "word": "健康",
+   "meaningVi": "Sức khỏe, khỏe mạnh",
+   "ten": "health",
+   "prompt": "A glowing healthy young man with rosy cheeks flexing an arm happily next to a fresh apple and a glass of water. Sparkles and a small red heart float around the person, symbols for health. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "bodybuilder, oiled muscles",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A glowing healthy young man with rosy cheeks flexing an arm happily next to a fresh apple and a glass of water.",
+   "bieuTuong": "khoe"
+  },
+  {
+   "id": "voc-n3-2-10",
+   "word": "生活",
+   "meaningVi": "Cuộc sống, sinh hoạt",
+   "ten": "daily-life",
+   "prompt": "A cozy apartment scene showing everyday life: a person cooking breakfast, laundry drying by the window, and a cat on a cushion.",
+   "negative": "mess",
+   "loai": "canh",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-2-11",
+   "word": "習慣",
+   "meaningVi": "Thói quen",
+   "ten": "habit",
+   "prompt": "A woman doing her morning stretches by the window next to a wall calendar grid filled entirely with identical check marks, a daily habit.",
+   "negative": "numbers on calendar, writing",
+   "loai": "vocab",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-2-12",
+   "word": "野菜",
+   "meaningVi": "Rau",
+   "ten": "vegetables",
+   "prompt": "A woven basket full of fresh vegetables: carrots, a daikon radish, cabbage, tomatoes and green onions.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-2-13",
+   "word": "体重",
+   "meaningVi": "Cân nặng",
+   "ten": "body-weight",
+   "prompt": "A person standing on a bathroom scale looking down anxiously at the needle dial.",
+   "negative": "numbers on scale",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-2-14",
+   "word": "意識",
+   "meaningVi": "Ý thức",
+   "ten": "mindful",
+   "prompt": "A woman in a supermarket pausing thoughtfully to compare a salad and a greasy burger in her hands, consciously choosing the healthy one.",
+   "negative": "brand packaging",
+   "loai": "vocab",
+   "kho": 3,
+   "dungLai": "mindful"
+  },
+  {
+   "id": "voc-n3-2-15",
+   "word": "努力",
+   "meaningVi": "Sự nỗ lực, sự cố gắng",
+   "ten": "effort",
+   "prompt": "A determined student studying late at night at a desk lamp with a headband, sweat drop on the forehead and a tall stack of textbooks, putting in great effort.",
+   "negative": "readable book titles",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "effort"
+  },
+  {
+   "id": "voc-n3-2-16",
+   "word": "病気",
+   "meaningVi": "Bệnh, ốm",
+   "ten": "sick",
+   "prompt": "A sick child lying in bed with a flushed face, a thermometer in the mouth and a cold towel on the forehead.",
+   "negative": "blood, hospital gore",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-2-17",
+   "word": "仕事",
+   "meaningVi": "Công việc",
+   "ten": "work",
+   "prompt": "An office worker typing busily at a desk with a laptop, documents and a cup of coffee.",
+   "negative": "readable screen",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-2-18",
+   "word": "時間",
+   "meaningVi": "Thời gian",
+   "ten": "time",
+   "prompt": "A large brass hourglass with flowing sand standing beside a round wall clock with hands but no numerals.",
+   "negative": "numbers on clock face",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-2-19",
+   "word": "体",
+   "meaningVi": "Cơ thể, sức khỏe",
+   "ten": "body",
+   "prompt": "A simple friendly full-body figure of a person standing in a relaxed pose with arms slightly out, like a gentle anatomy chart without labels.",
+   "negative": "labels, nudity, organs",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-3-1",
+   "word": "決まります",
+   "meaningVi": "Được quyết định, được ấn định (tự động từ)",
+   "ten": "decide",
+   "prompt": "A young woman at a fork in a forest path firmly pointing down one path with a decisive expression.",
+   "negative": "readable signposts",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-3-2",
+   "word": "決めます",
+   "meaningVi": "Quyết định (tha động từ)",
+   "ten": "decide",
+   "prompt": "A young woman at a fork in a forest path firmly pointing down one path with a decisive expression.",
+   "negative": "readable signposts",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "decide"
+  },
+  {
+   "id": "voc-n3-3-3",
+   "word": "守ります",
+   "meaningVi": "Tuân thủ, giữ gìn",
+   "ten": "obey-rules",
+   "prompt": "A pedestrian patiently waiting at a crosswalk under a red walking-man traffic signal even though the road is empty.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-3-4",
+   "word": "禁止します",
+   "meaningVi": "Cấm chỉ",
+   "ten": "prohibit",
+   "prompt": "A red circle-and-slash prohibition sign over a camera icon mounted on a museum wall beside a framed painting.",
+   "negative": "any writing on the sign",
+   "loai": "vocab",
+   "kho": 1,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-3-5",
+   "word": "決心します",
+   "meaningVi": "Quyết tâm",
+   "ten": "resolve",
+   "prompt": "A young man tying a white headband around his forehead with clenched fist and fiery determined eyes.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-3-6",
+   "word": "卒業します",
+   "meaningVi": "Tốt nghiệp",
+   "ten": "graduate",
+   "prompt": "A smiling student in a graduation gown and cap holding a rolled diploma tube under blooming cherry blossoms.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-3-7",
+   "word": "規則",
+   "meaningVi": "Quy tắc, nội quy",
+   "ten": "rules",
+   "prompt": "A notice board with a row of simple pictogram icons: a crossed-out cigarette, a crossed-out phone, a trash bin and a quiet finger-to-lips symbol, the rules of a place.",
+   "negative": "any writing on the board",
+   "loai": "vocab",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-3-8",
+   "word": "決まり",
+   "meaningVi": "Quy định, lệ thường",
+   "ten": "rules",
+   "prompt": "A notice board with a row of simple pictogram icons: a crossed-out cigarette, a crossed-out phone, a trash bin and a quiet finger-to-lips symbol, the rules of a place.",
+   "negative": "any writing on the board",
+   "loai": "vocab",
+   "kho": 3,
+   "dungLai": "rules"
+  },
+  {
+   "id": "voc-n3-3-10",
+   "word": "決心",
+   "meaningVi": "Quyết tâm",
+   "ten": "resolve",
+   "prompt": "A young man tying a white headband around his forehead with clenched fist and fiery determined eyes.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "resolve"
+  },
+  {
+   "id": "voc-n3-3-11",
+   "word": "大学",
+   "meaningVi": "Trường đại học",
+   "ten": "university",
+   "prompt": "A grand university campus building with a clock tower, green lawn and students walking with backpacks.",
+   "negative": "numbers on clock",
+   "loai": "canh",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-3-12",
+   "word": "会社",
+   "meaningVi": "Công ty",
+   "ten": "company",
+   "prompt": "A modern mid-size office building with glass windows and office workers in suits walking in through the entrance.",
+   "negative": "company logo, sign text",
+   "loai": "canh",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-3-13",
+   "word": "規定",
+   "meaningVi": "Quy định (chính thức, văn bản)",
+   "ten": "regulation",
+   "prompt": "A thick official bound binder of regulations lying open next to a round red hanko seal stamp and a pen on a desk.",
+   "negative": "readable text on pages",
+   "loai": "vocab",
+   "kho": 3,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-3-14",
+   "word": "社員",
+   "meaningVi": "Nhân viên công ty",
+   "ten": "employee",
+   "prompt": "A young office employee in a navy suit with a staff ID badge on a lanyard, holding a briefcase and bowing slightly.",
+   "negative": "readable badge",
+   "loai": "nhanvat",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-3-15",
+   "word": "学生",
+   "meaningVi": "Học sinh, sinh viên",
+   "ten": "student",
+   "prompt": "A Japanese student with a school backpack and books under the arm walking to school.",
+   "negative": "",
+   "loai": "nhanvat",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-3-16",
+   "word": "制服",
+   "meaningVi": "Đồng phục",
+   "ten": "school-uniform",
+   "prompt": "A Japanese school uniform, a navy sailor-collar blouse and pleated skirt, neatly hung on a hanger next to a boy's black gakuran jacket.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-3-17",
+   "word": "会議",
+   "meaningVi": "Cuộc họp",
+   "ten": "meeting",
+   "prompt": "Several colleagues sitting around a conference table with laptops and documents, one person presenting a simple chart on a screen.",
+   "negative": "readable screen",
+   "loai": "canh",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-3-19",
+   "word": "留学",
+   "meaningVi": "Du học",
+   "ten": "study-abroad",
+   "prompt": "A young student with a big suitcase and backpack stepping out of an airport toward a Japanese city with a torii gate and cherry blossoms, beginning study abroad.",
+   "negative": "flags with text",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-3-20",
+   "word": "退職",
+   "meaningVi": "Nghỉ hưu, thôi việc",
+   "ten": "retire",
+   "prompt": "An older office worker leaving the office holding a big bouquet of flowers while colleagues clap and bow to see him off on his last day.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-4-1",
+   "word": "助かります",
+   "meaningVi": "Được giúp đỡ, đỡ vất vả hơn",
+   "ten": "grateful-relief",
+   "prompt": "A woman struggling with heavy shopping bags looking relieved and grateful as a kind passerby takes one of the bags to help carry it.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-4-2",
+   "word": "成功します",
+   "meaningVi": "Thành công",
+   "ten": "success",
+   "prompt": "A businesswoman jumping for joy holding a golden trophy high as confetti bursts around her.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-4-3",
+   "word": "失敗します",
+   "meaningVi": "Thất bại, mắc lỗi",
+   "ten": "failure",
+   "prompt": "A person in an apron staring in dismay at a burnt, collapsed cake smoking on a plate in the kitchen.",
+   "negative": "fire, disaster",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-4-4",
+   "word": "遅刻します",
+   "meaningVi": "Đến muộn, trễ giờ",
+   "ten": "late",
+   "prompt": "A panicked student with toast in the mouth running toward a school gate that is closing, a wall clock with hands pointing late above the gate.",
+   "negative": "numbers on clock",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-4-5",
+   "word": "忘れます",
+   "meaningVi": "Quên",
+   "ten": "forget",
+   "prompt": "A man at his front door slapping his forehead as he realizes he forgot his umbrella, which leans against the wall inside. Above the person's head pops a single bold exclamation mark with short burst lines, the cartoon symbol for a sudden realisation; the only symbol is that one exclamation mark. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "promptCu": "A man at his front door slapping his forehead as he realizes he forgot his umbrella, which leans against the wall inside.",
+   "bieuTuong": "nhan-ra"
+  },
+  {
+   "id": "voc-n3-4-6",
+   "word": "助けます",
+   "meaningVi": "Giúp đỡ, cứu giúp",
+   "ten": "help-rescue",
+   "prompt": "A person reaching down and pulling a fallen friend up by the hand from the ground.",
+   "negative": "injury, blood",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-4-8",
+   "word": "所為",
+   "meaningVi": "Tại vì, lỗi tại (nguyên nhân TIÊU CỰC, đổ lỗi)",
+   "ten": "blame",
+   "prompt": "A boy pointing an accusing finger at his little brother beside a broken vase on the floor, shifting the blame.",
+   "negative": "violence",
+   "loai": "canh",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-4-9",
+   "word": "成功",
+   "meaningVi": "Sự thành công",
+   "ten": "success",
+   "prompt": "A businesswoman jumping for joy holding a golden trophy high as confetti bursts around her.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "success"
+  },
+  {
+   "id": "voc-n3-4-10",
+   "word": "失敗",
+   "meaningVi": "Sự thất bại, sai lầm",
+   "ten": "failure",
+   "prompt": "A person in an apron staring in dismay at a burnt, collapsed cake smoking on a plate in the kitchen.",
+   "negative": "fire, disaster",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "failure"
+  },
+  {
+   "id": "voc-n3-4-11",
+   "word": "渋滞",
+   "meaningVi": "Kẹt xe, ùn tắc giao thông",
+   "ten": "traffic-jam",
+   "prompt": "A long line of cars and a bus bumper to bumper on a city road, drivers looking bored and frustrated in a traffic jam.",
+   "negative": "license plate text",
+   "loai": "canh",
+   "kho": 1,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-4-12",
+   "word": "遅刻",
+   "meaningVi": "Sự đến muộn, sự trễ giờ",
+   "ten": "late",
+   "prompt": "A panicked student with toast in the mouth running toward a school gate that is closing, a wall clock with hands pointing late above the gate.",
+   "negative": "numbers on clock",
+   "loai": "canh",
+   "kho": 2,
+   "dungLai": "late"
+  },
+  {
+   "id": "voc-n3-4-13",
+   "word": "うっかり",
+   "meaningVi": "Lỡ, vô ý, bất cẩn",
+   "ten": "carelessly",
+   "prompt": "A person absentmindedly knocking over a cup of tea with an elbow while looking at a phone, with an oops expression.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-4-14",
+   "word": "努力",
+   "meaningVi": "Sự nỗ lực, sự cố gắng",
+   "ten": "effort",
+   "prompt": "A determined student studying late at night at a desk lamp with a headband, sweat drop on the forehead and a tall stack of textbooks, putting in great effort.",
+   "negative": "readable book titles",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "effort"
+  },
+  {
+   "id": "voc-n3-4-15",
+   "word": "先生",
+   "meaningVi": "Thầy/cô giáo",
+   "ten": "teacher",
+   "prompt": "A kind Japanese teacher standing in front of a blackboard holding a textbook and a pointer.",
+   "negative": "writing on blackboard",
+   "loai": "nhanvat",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-4-16",
+   "word": "天気",
+   "meaningVi": "Thời tiết",
+   "ten": "weather",
+   "prompt": "A weather presenter pointing at a map of Japan decorated with simple sun, cloud and rain icons.",
+   "negative": "text, numbers, temperatures",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-4-17",
+   "word": "試験",
+   "meaningVi": "Kỳ thi",
+   "ten": "exam",
+   "prompt": "Students sitting in neat rows of desks writing an exam silently while a proctor watches.",
+   "negative": "readable papers",
+   "loai": "canh",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-4-18",
+   "word": "事故",
+   "meaningVi": "Tai nạn",
+   "ten": "accident",
+   "prompt": "Two small cars that have bumped into each other at an intersection with dented fronts, drivers stepping out shocked.",
+   "negative": "blood, injury, fire",
+   "loai": "canh",
+   "kho": 1,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-4-19",
+   "word": "電車",
+   "meaningVi": "Tàu điện",
+   "ten": "train",
+   "prompt": "A Japanese JR commuter train with a green stripe arriving at a station platform.",
+   "negative": "text on train, logo",
+   "loai": "vocab",
+   "kho": 1,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-4-20",
+   "word": "大変",
+   "meaningVi": "Vất vả, nghiêm trọng",
+   "ten": "hard-tough",
+   "prompt": "A person staggering under an enormous tower of cardboard boxes, sweating and exhausted. Big blue sweat drops fly off the person's head and short strain lines surround the load, cartoon symbols for hard effort. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A person staggering under an enormous tower of cardboard boxes, sweating and exhausted.",
+   "bieuTuong": "vat-va"
+  },
+  {
+   "id": "voc-n3-5-1",
+   "word": "比べます",
+   "meaningVi": "So sánh",
+   "ten": "compare",
+   "prompt": "A person holding two different apples, one in each hand, looking back and forth to compare them.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-5-3",
+   "word": "変化します",
+   "meaningVi": "Thay đổi, biến đổi",
+   "ten": "change",
+   "prompt": "A single tree whose leaves shift gradually from fresh green on the left side to red autumn and bare branches on the right, showing change.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-5-4",
+   "word": "上昇します",
+   "meaningVi": "Tăng lên, đi lên",
+   "ten": "rise",
+   "prompt": "A simple upward line chart with a bold terracotta arrow climbing steeply to the top right, a small figure cheering beside it.",
+   "negative": "numbers on axes, labels",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-5-5",
+   "word": "減少します",
+   "meaningVi": "Giảm xuống",
+   "ten": "decrease",
+   "prompt": "Stacks of coins shrinking shorter from left to right with a downward arrow above them, the last stack only one coin.",
+   "negative": "numbers, currency symbols",
+   "loai": "vocab",
+   "kho": 2,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-5-8",
+   "word": "環境",
+   "meaningVi": "Môi trường",
+   "ten": "environment",
+   "prompt": "A small globe covered in green forests, clean blue rivers and tiny animals, cradled by two gentle hands.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-5-9",
+   "word": "都会",
+   "meaningVi": "Thành thị, đô thị",
+   "ten": "city",
+   "prompt": "A busy Japanese city with tall buildings, a crossing full of people and a train passing on an elevated track.",
+   "negative": "billboard text",
+   "loai": "canh",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-5-10",
+   "word": "田舎",
+   "meaningVi": "Vùng quê, nông thôn",
+   "ten": "countryside",
+   "prompt": "A peaceful Japanese countryside with green rice paddies, a wooden farmhouse and mountains in the distance.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 1,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-5-11",
+   "word": "物価",
+   "meaningVi": "Vật giá, giá cả sinh hoạt",
+   "ten": "cost-of-living",
+   "prompt": "A shopper at a supermarket checkout staring shocked at a very long receipt while holding a small basket of groceries.",
+   "negative": "readable receipt, numbers",
+   "loai": "canh",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-5-12",
+   "word": "人口",
+   "meaningVi": "Dân số",
+   "ten": "population",
+   "prompt": "A map shape of Japan densely filled with many tiny people standing shoulder to shoulder.",
+   "negative": "text",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-5-13",
+   "word": "関心",
+   "meaningVi": "Sự quan tâm, hứng thú",
+   "ten": "interest",
+   "prompt": "A child leaning forward with sparkling eyes pressing the face to the glass of a museum case holding a dinosaur fossil.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-5-14",
+   "word": "態度",
+   "meaningVi": "Thái độ",
+   "ten": "attitude",
+   "prompt": "A shop clerk slouching lazily behind a counter with arms crossed and bored eyes while a customer waits, showing a bad attitude.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-5-15",
+   "word": "意見",
+   "meaningVi": "Ý kiến, quan điểm",
+   "ten": "opinion",
+   "prompt": "A person in a meeting confidently raising a hand to share an idea with a lightbulb above, others turning to listen.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-5-16",
+   "word": "便利",
+   "meaningVi": "Tiện lợi",
+   "ten": "convenient",
+   "prompt": "A smiling person easily handling several tasks with one compact multi-tool that has a knife, scissors and a screwdriver unfolded. Bright sparkles and a thumbs-up make it obvious that this is handy and convenient. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "weapon",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A smiling person easily handling several tasks with one compact multi-tool that has a knife, scissors and a screwdriver unfolded.",
+   "bieuTuong": "tien-loi"
+  },
+  {
+   "id": "voc-n3-5-17",
+   "word": "不便",
+   "meaningVi": "Bất tiện",
+   "ten": "inconvenient",
+   "prompt": "A tired person walking a long empty road carrying heavy bags toward a single tiny bus stop far away in the countryside. Big sweat drops fly off the person and a long dotted path line shows the tiring distance, symbols for inconvenience. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 2,
+   "promptCu": "A tired person walking a long empty road carrying heavy bags toward a single tiny bus stop far away in the countryside.",
+   "bieuTuong": "bat-tien"
+  },
+  {
+   "id": "voc-n3-5-18",
+   "word": "昔",
+   "meaningVi": "Ngày xưa, thuở xưa",
+   "ten": "long-ago",
+   "prompt": "An old Edo-period Japanese village street with thatched-roof houses, people in kimono and a wooden cart.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-5-19",
+   "word": "生活",
+   "meaningVi": "Cuộc sống, sinh hoạt",
+   "ten": "daily-life",
+   "prompt": "A cozy apartment scene showing everyday life: a person cooking breakfast, laundry drying by the window, and a cat on a cushion.",
+   "negative": "mess",
+   "loai": "canh",
+   "kho": 3,
+   "dungLai": "daily-life"
+  },
+  {
+   "id": "voc-n3-6-4",
+   "word": "商品",
+   "meaningVi": "Hàng hóa, sản phẩm thương mại",
+   "ten": "product",
+   "prompt": "Neat rows of colorful packaged products on store shelves with blank price tags.",
+   "negative": "text on packaging, brand logos",
+   "loai": "vocab",
+   "kho": 1,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-6-5",
+   "word": "製品",
+   "meaningVi": "Sản phẩm, hàng chế tạo",
+   "ten": "manufactured-goods",
+   "prompt": "Shiny manufactured goods like rice cookers and headphones moving along a factory conveyor belt.",
+   "negative": "logos",
+   "loai": "vocab",
+   "kho": 2,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-6-6",
+   "word": "販売します",
+   "meaningVi": "Bán hàng, kinh doanh bán",
+   "ten": "sell",
+   "prompt": "A shop clerk handing a wrapped product across the counter to a customer who gives money in return.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-6-7",
+   "word": "企業",
+   "meaningVi": "Doanh nghiệp, xí nghiệp",
+   "ten": "enterprise",
+   "prompt": "A cluster of large corporate skyscrapers with many tiny workers streaming in, representing a big enterprise.",
+   "negative": "logos",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-6-8",
+   "word": "工場",
+   "meaningVi": "Nhà máy, xí nghiệp sản xuất",
+   "ten": "factory",
+   "prompt": "A factory building with sawtooth roof and chimneys, trucks loading boxes at the gate.",
+   "negative": "sign text",
+   "loai": "canh",
+   "kho": 1,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-6-9",
+   "word": "目的",
+   "meaningVi": "Mục đích",
+   "ten": "purpose",
+   "prompt": "An arrow striking the exact center of a red and cream bullseye target.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-6-10",
+   "word": "サービス",
+   "meaningVi": "Dịch vụ",
+   "ten": "service",
+   "prompt": "A polite waiter bowing and serving a steaming dish to a smiling customer in a restaurant.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-6-11",
+   "word": "主婦",
+   "meaningVi": "Người nội trợ",
+   "ten": "housewife",
+   "prompt": "A cheerful housewife in an apron carrying a shopping basket full of groceries on her arm.",
+   "negative": "",
+   "loai": "nhanvat",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-6-12",
+   "word": "海外",
+   "meaningVi": "Nước ngoài, hải ngoại",
+   "ten": "overseas",
+   "prompt": "An airplane flying across the ocean from a small island of Japan toward a distant continent on a simple globe.",
+   "negative": "map labels",
+   "loai": "vocab",
+   "kho": 2,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-6-13",
+   "word": "子供",
+   "meaningVi": "Trẻ em",
+   "ten": "child",
+   "prompt": "A happy little child with a yellow school hat and red randoseru backpack.",
+   "negative": "",
+   "loai": "nhanvat",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-6-14",
+   "word": "会社",
+   "meaningVi": "Công ty",
+   "ten": "company",
+   "prompt": "A modern mid-size office building with glass windows and office workers in suits walking in through the entrance.",
+   "negative": "company logo, sign text",
+   "loai": "canh",
+   "kho": 1,
+   "dungLai": "company"
+  },
+  {
+   "id": "voc-n3-6-15",
+   "word": "若い",
+   "meaningVi": "Trẻ, còn trẻ tuổi",
+   "ten": "young",
+   "prompt": "An energetic young man jumping with a skateboard next to a slow elderly man with a cane who smiles at him, emphasizing youth. Bright sparkles and bouncy motion lines surround the young energetic person, symbols for youth and energy. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "An energetic young man jumping with a skateboard next to a slow elderly man with a cane who smiles at him, emphasizing youth.",
+   "bieuTuong": "tre"
+  },
+  {
+   "id": "voc-n3-6-16",
+   "word": "人",
+   "meaningVi": "Người",
+   "ten": "person",
+   "prompt": "A single friendly person standing in a neutral relaxed pose, simple clothes, facing forward.",
+   "negative": "crowd",
+   "loai": "nhanvat",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-6-17",
+   "word": "使います",
+   "meaningVi": "Sử dụng, dùng",
+   "ten": "use",
+   "prompt": "A person using a pair of scissors to cut colored paper at a table.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-6-18",
+   "word": "作ります",
+   "meaningVi": "Làm, chế tạo",
+   "ten": "make",
+   "prompt": "A person shaping rice balls with their hands in a kitchen, a plate of finished onigiri beside them.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-6-19",
+   "word": "新しい",
+   "meaningVi": "Mới",
+   "ten": "new",
+   "prompt": "A pair of shiny brand-new sneakers with sparkles next to a pair of old worn-out torn sneakers. Bright four-point sparkle stars twinkle around the new clean object, the cartoon symbol for brand new and clean. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "brand logos",
+   "loai": "vocab",
+   "kho": 1,
+   "promptCu": "A pair of shiny brand-new sneakers with sparkles next to a pair of old worn-out torn sneakers.",
+   "bieuTuong": "moi",
+   "vat": true
+  },
+  {
+   "id": "voc-n3-6-20",
+   "word": "安い",
+   "meaningVi": "Rẻ",
+   "ten": "cheap",
+   "prompt": "Only one person in the picture: a single happy shopper at a market stall holds a big overflowing bag of fresh vegetables in one arm and with the other hand hands over one single tiny coin, beaming with a relaxed smile. A tiny blank price tag hangs on the bag. A round thought bubble from the shopper's head shows one small coin with sparkles and a thumbs-up, meaning it costs almost nothing. No seller is visible; there are no numbers, letters or words anywhere.",
+   "negative": "numbers, percent signs, text on tags, second person, two people, seller, shopkeeper, numbers on price tag, currency symbols, digits",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A bargain bin overflowing with items marked by bright red blank discount tags, a happy shopper grabbing a deal.",
+   "bieuTuong": "re"
+  },
+  {
+   "id": "voc-n3-7-6",
+   "word": "期間",
+   "meaningVi": "Thời hạn, giai đoạn",
+   "ten": "period",
+   "prompt": "A wall calendar grid without numbers where a block of consecutive days is highlighted by a terracotta bracket from start to end.",
+   "negative": "numbers, text, month names",
+   "loai": "vocab",
+   "kho": 3,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-7-7",
+   "word": "全国",
+   "meaningVi": "Toàn quốc",
+   "ten": "nationwide",
+   "prompt": "A map of Japan with colorful pins placed in every region from Hokkaido to Okinawa.",
+   "negative": "place names, text",
+   "loai": "vocab",
+   "kho": 2,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-7-9",
+   "word": "範囲",
+   "meaningVi": "Phạm vi",
+   "ten": "range-scope",
+   "prompt": "An open textbook with a section of pages marked by a colored bracket and sticky tabs, showing the range to study.",
+   "negative": "readable text",
+   "loai": "vocab",
+   "kho": 3,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-7-11",
+   "word": "地域",
+   "meaningVi": "Khu vực, vùng",
+   "ten": "region-area",
+   "prompt": "A small neighborhood of houses, a park and a shrine outlined by a dashed boundary line on a simple map.",
+   "negative": "place names",
+   "loai": "vocab",
+   "kho": 3,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-7-12",
+   "word": "平均",
+   "meaningVi": "Trung bình",
+   "ten": "average",
+   "prompt": "A simple bar chart with bars of different heights and a dashed horizontal line running through the middle height.",
+   "negative": "numbers, axis labels",
+   "loai": "vocab",
+   "kho": 3,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-7-13",
+   "word": "大会",
+   "meaningVi": "Đại hội, giải đấu lớn",
+   "ten": "tournament",
+   "prompt": "A big sports tournament stadium with colorful pennant flags, a trophy on a podium and teams lining up.",
+   "negative": "text on banners",
+   "loai": "canh",
+   "kho": 2,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-7-14",
+   "word": "雨",
+   "meaningVi": "Mưa",
+   "ten": "rain",
+   "prompt": "Rain falling from a gray cloud onto a person holding a red umbrella on a wet street.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-7-15",
+   "word": "友達",
+   "meaningVi": "Bạn bè",
+   "ten": "friend",
+   "prompt": "Two friends walking side by side laughing with arms around each other's shoulders.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-7-16",
+   "word": "忙しい",
+   "meaningVi": "Bận rộn",
+   "ten": "busy",
+   "prompt": "A frazzled office worker juggling a ringing phone, a stack of papers and a laptop with sweat drops flying. Several big blue sweat drops fly off the person's head and curved motion lines swirl around the busy hands, cartoon symbols for being very busy; a ringing phone shows only small curved vibration arcs. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "promptCu": "A frazzled office worker juggling a ringing phone, a stack of papers and a laptop with sweat drops flying.",
+   "bieuTuong": "ban-ron"
+  },
+  {
+   "id": "voc-n3-7-17",
+   "word": "電話",
+   "meaningVi": "Điện thoại",
+   "ten": "telephone",
+   "prompt": "A smartphone and a classic desk telephone side by side, the smartphone ringing with sound waves.",
+   "negative": "screen text",
+   "loai": "vocab",
+   "kho": 1,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-7-18",
+   "word": "情報",
+   "meaningVi": "Thông tin",
+   "ten": "information",
+   "prompt": "A person surrounded by floating icons of a newspaper, a TV, a smartphone and a radio streaming information toward them.",
+   "negative": "readable text",
+   "loai": "vocab",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-7-20",
+   "word": "行われます",
+   "meaningVi": "Được tổ chức, được tiến hành",
+   "ten": "held-event",
+   "prompt": "A lively festival being held in a town square with a stage, lanterns, food stalls and a crowd gathering.",
+   "negative": "text on lanterns",
+   "loai": "canh",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-8-2",
+   "word": "成功します",
+   "meaningVi": "Thành công",
+   "ten": "success",
+   "prompt": "A businesswoman jumping for joy holding a golden trophy high as confetti bursts around her.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "success"
+  },
+  {
+   "id": "voc-n3-8-3",
+   "word": "当たります",
+   "meaningVi": "Trúng, đúng (trúng số, trúng thưởng)",
+   "ten": "win-lottery",
+   "prompt": "A person jumping for joy holding a winning lottery ticket up high with gold confetti falling around them.",
+   "negative": "numbers on ticket",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-8-5",
+   "word": "合格します",
+   "meaningVi": "Đậu, đỗ (thi cử)",
+   "ten": "pass-exam",
+   "prompt": "A student jumping for joy with fists in the air under cherry blossoms, holding an acceptance envelope, after passing an exam.",
+   "negative": "text",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-8-6",
+   "word": "努力します",
+   "meaningVi": "Nỗ lực, cố gắng",
+   "ten": "effort",
+   "prompt": "A determined student studying late at night at a desk lamp with a headband, sweat drop on the forehead and a tall stack of textbooks, putting in great effort.",
+   "negative": "readable book titles",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "effort"
+  },
+  {
+   "id": "voc-n3-8-8",
+   "word": "留学します",
+   "meaningVi": "Du học",
+   "ten": "study-abroad",
+   "prompt": "A young student with a big suitcase and backpack stepping out of an airport toward a Japanese city with a torii gate and cherry blossoms, beginning study abroad.",
+   "negative": "flags with text",
+   "loai": "canh",
+   "kho": 2,
+   "dungLai": "study-abroad"
+  },
+  {
+   "id": "voc-n3-8-9",
+   "word": "優勝します",
+   "meaningVi": "Vô địch, giành chức quán quân",
+   "ten": "win-championship",
+   "prompt": "An athlete standing on the top step of a podium lifting a huge golden championship trophy above the head.",
+   "negative": "numbers on podium",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-8-11",
+   "word": "資格",
+   "meaningVi": "Tư cách, chứng chỉ",
+   "ten": "qualification",
+   "prompt": "A proud person holding a framed certificate decorated with a gold seal and ribbon, no writing on it.",
+   "negative": "readable text on certificate",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-8-12",
+   "word": "宝くじ",
+   "meaningVi": "Xổ số",
+   "ten": "lottery",
+   "prompt": "A small Japanese lottery ticket booth with a person buying a colorful lottery ticket.",
+   "negative": "numbers, text",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-8-13",
+   "word": "失敗します",
+   "meaningVi": "Thất bại",
+   "ten": "failure",
+   "prompt": "A person in an apron staring in dismay at a burnt, collapsed cake smoking on a plate in the kitchen.",
+   "negative": "fire, disaster",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "failure"
+  },
+  {
+   "id": "voc-n3-8-14",
+   "word": "試験",
+   "meaningVi": "Kỳ thi",
+   "ten": "exam",
+   "prompt": "Students sitting in neat rows of desks writing an exam silently while a proctor watches.",
+   "negative": "readable papers",
+   "loai": "canh",
+   "kho": 1,
+   "dungLai": "exam"
+  },
+  {
+   "id": "voc-n3-8-15",
+   "word": "お金",
+   "meaningVi": "Tiền",
+   "ten": "money",
+   "prompt": "A neat pile of Japanese yen coins and banknotes next to a coin purse.",
+   "negative": "readable numbers on notes, portraits",
+   "loai": "vocab",
+   "kho": 1,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-8-16",
+   "word": "時間",
+   "meaningVi": "Thời gian",
+   "ten": "time",
+   "prompt": "A large brass hourglass with flowing sand standing beside a round wall clock with hands but no numerals.",
+   "negative": "numbers on clock face",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "time"
+  },
+  {
+   "id": "voc-n3-8-17",
+   "word": "頑張ります",
+   "meaningVi": "Cố gắng, nỗ lực",
+   "ten": "effort",
+   "prompt": "A determined student studying late at night at a desk lamp with a headband, sweat drop on the forehead and a tall stack of textbooks, putting in great effort.",
+   "negative": "readable book titles",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "effort"
+  },
+  {
+   "id": "voc-n3-8-18",
+   "word": "決めます",
+   "meaningVi": "Quyết định",
+   "ten": "decide",
+   "prompt": "A young woman at a fork in a forest path firmly pointing down one path with a decisive expression.",
+   "negative": "readable signposts",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "decide"
+  },
+  {
+   "id": "voc-n3-8-19",
+   "word": "将来",
+   "meaningVi": "Tương lai",
+   "ten": "future-personal",
+   "prompt": "A little boy looking up dreamily at a thought bubble showing himself grown up as a doctor, imagining his future.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-9-3",
+   "word": "掛けます",
+   "meaningVi": "Bắt đầu làm dở, chưa hoàn thành (gắn sau V-stem)",
+   "ten": "half-done",
+   "prompt": "A half-eaten sandwich with a big bite missing left abandoned on a plate beside a half-drunk glass of milk.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 3,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-9-4",
+   "word": "欠席します",
+   "meaningVi": "Vắng mặt, nghỉ (học/họp)",
+   "ten": "absent",
+   "prompt": "A classroom full of students at desks with one empty desk and chair in the middle, showing someone is absent.",
+   "negative": "writing on board",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-9-5",
+   "word": "健康",
+   "meaningVi": "Sức khỏe",
+   "ten": "health",
+   "prompt": "A glowing healthy young man with rosy cheeks flexing an arm happily next to a fresh apple and a glass of water. Sparkles and a small red heart float around the person, symbols for health. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "bodybuilder, oiled muscles",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "health",
+   "promptCu": "A glowing healthy young man with rosy cheeks flexing an arm happily next to a fresh apple and a glass of water.",
+   "bieuTuong": "khoe"
+  },
+  {
+   "id": "voc-n3-9-6",
+   "word": "遅刻します",
+   "meaningVi": "Đi trễ, đến muộn",
+   "ten": "late",
+   "prompt": "A panicked student with toast in the mouth running toward a school gate that is closing, a wall clock with hands pointing late above the gate.",
+   "negative": "numbers on clock",
+   "loai": "canh",
+   "kho": 2,
+   "dungLai": "late"
+  },
+  {
+   "id": "voc-n3-9-7",
+   "word": "疲れ",
+   "meaningVi": "Sự mệt mỏi",
+   "ten": "fatigue",
+   "prompt": "An exhausted office worker slumped over a desk with heavy eyelids and a drooping posture. Vertical gloomy blue shading lines hang above the person's head and a small sigh puff drifts from the mouth, cartoon symbols for exhaustion. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "promptCu": "An exhausted office worker slumped over a desk with heavy eyelids and a drooping posture.",
+   "bieuTuong": "met"
+  },
+  {
+   "id": "voc-n3-9-9",
+   "word": "不足",
+   "meaningVi": "Sự thiếu hụt, thiếu",
+   "ten": "shortage",
+   "prompt": "A supermarket shelf that is almost completely empty with only one lonely item left, a worried shopper looking at it.",
+   "negative": "text",
+   "loai": "vocab",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-9-10",
+   "word": "睡眠",
+   "meaningVi": "Giấc ngủ",
+   "ten": "sleep",
+   "prompt": "A person sleeping peacefully on a futon, tucked under a blanket with eyes closed and a small moon outside the window.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "sleep"
+  },
+  {
+   "id": "voc-n3-9-11",
+   "word": "飽きます",
+   "meaningVi": "Chán, mất hứng thú",
+   "ten": "bored",
+   "prompt": "A person yawning with a bored flat face resting the chin on a hand in front of a monotonous pile of identical papers. A thought bubble above the head shows only a plain clock face with no numbers, and a small sigh puff drifts from the mouth, symbols for having nothing to do. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A person yawning with a bored flat face resting the chin on a hand in front of a monotonous pile of identical papers.",
+   "bieuTuong": "ranh"
+  },
+  {
+   "id": "voc-n3-9-12",
+   "word": "栄養",
+   "meaningVi": "Dinh dưỡng",
+   "ten": "nutrition",
+   "prompt": "A balanced meal plate with grilled fish, rice, vegetables, miso soup and fruit.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-9-13",
+   "word": "休みます",
+   "meaningVi": "Nghỉ",
+   "ten": "rest",
+   "prompt": "A person relaxing on a park bench with eyes closed and a canned drink, taking a break.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-9-14",
+   "word": "忘れます",
+   "meaningVi": "Quên",
+   "ten": "forget",
+   "prompt": "A man at his front door slapping his forehead as he realizes he forgot his umbrella, which leans against the wall inside. Above the person's head pops a single bold exclamation mark with short burst lines, the cartoon symbol for a sudden realisation; the only symbol is that one exclamation mark. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "forget",
+   "promptCu": "A man at his front door slapping his forehead as he realizes he forgot his umbrella, which leans against the wall inside.",
+   "bieuTuong": "nhan-ra"
+  },
+  {
+   "id": "voc-n3-9-15",
+   "word": "忙しい",
+   "meaningVi": "Bận rộn",
+   "ten": "busy",
+   "prompt": "A frazzled office worker juggling a ringing phone, a stack of papers and a laptop with sweat drops flying. Several big blue sweat drops fly off the person's head and curved motion lines swirl around the busy hands, cartoon symbols for being very busy; a ringing phone shows only small curved vibration arcs. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "busy",
+   "promptCu": "A frazzled office worker juggling a ringing phone, a stack of papers and a laptop with sweat drops flying.",
+   "bieuTuong": "ban-ron"
+  },
+  {
+   "id": "voc-n3-9-16",
+   "word": "食べます",
+   "meaningVi": "Ăn",
+   "ten": "eat",
+   "prompt": "A young person eating a bowl of rice with chopsticks at a small table, happily taking a bite.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "eat"
+  },
+  {
+   "id": "voc-n3-9-17",
+   "word": "言います",
+   "meaningVi": "Nói",
+   "ten": "say",
+   "prompt": "A person speaking with an open mouth and a small empty speech bubble coming out.",
+   "negative": "text in bubble",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-9-18",
+   "word": "止めます",
+   "meaningVi": "Dừng lại, từ bỏ",
+   "ten": "quit",
+   "prompt": "A determined man snapping a cigarette in half and dropping it into a trash can, quitting smoking.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-9-20",
+   "word": "病気",
+   "meaningVi": "Bệnh, ốm",
+   "ten": "sick",
+   "prompt": "A sick child lying in bed with a flushed face, a thermometer in the mouth and a cold towel on the forehead.",
+   "negative": "blood, hospital gore",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "sick"
+  },
+  {
+   "id": "voc-n3-10-1",
+   "word": "才能",
+   "meaningVi": "Tài năng, năng khiếu",
+   "ten": "talent",
+   "prompt": "A small child playing the violin brilliantly with sparkles and musical notes flowing around while adults watch amazed.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-10-2",
+   "word": "文句",
+   "meaningVi": "Lời phàn nàn, ca thán",
+   "ten": "complaint",
+   "prompt": "An angry customer complaining loudly at a counter, waving a hand at a broken toaster, while a clerk bows apologetically.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-10-3",
+   "word": "不満",
+   "meaningVi": "Sự bất mãn, không hài lòng",
+   "ten": "discontent",
+   "prompt": "A person pouting with arms crossed and a sulky face in front of a tiny portion of food on a large plate. A red cross-shaped anger vein mark pops beside the person's head and little puffs of steam rise from it, cartoon symbols for anger. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A person pouting with arms crossed and a sulky face in front of a tiny portion of food on a large plate.",
+   "bieuTuong": "gian"
+  },
+  {
+   "id": "voc-n3-10-4",
+   "word": "貧しい",
+   "meaningVi": "Nghèo",
+   "ten": "poor",
+   "prompt": "A family in patched clothes sharing a single small bowl of rice in a bare room with a leaky roof. A thought bubble shows an empty wallet with a small moth flying out of it, the symbol for having no money. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 2,
+   "promptCu": "A family in patched clothes sharing a single small bowl of rice in a bare room with a leaky roof.",
+   "bieuTuong": "ngheo"
+  },
+  {
+   "id": "voc-n3-10-5",
+   "word": "参加します",
+   "meaningVi": "Tham gia",
+   "ten": "join",
+   "prompt": "A smiling newcomer stepping into a circle of people holding hands at a community dance, the group opening the circle to welcome him in.",
+   "negative": "crowd chaos",
+   "loai": "canh",
+   "kho": 2,
+   "dungLai": "join"
+  },
+  {
+   "id": "voc-n3-10-6",
+   "word": "優秀",
+   "meaningVi": "Xuất sắc, ưu tú",
+   "ten": "excellent",
+   "prompt": "A proud student receiving a shiny gold medal on stage while classmates applaud. Gold star sparkles shine around the person, the symbol for excellence. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A proud student receiving a shiny gold medal on stage while classmates applaud.",
+   "bieuTuong": "xuat-sac"
+  },
+  {
+   "id": "voc-n3-10-7",
+   "word": "中止します",
+   "meaningVi": "Hủy bỏ, dừng lại",
+   "ten": "cancel",
+   "prompt": "An outdoor sports match called off in heavy rain, a referee crossing both arms in a big X while players walk off the field.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-10-8",
+   "word": "態度",
+   "meaningVi": "Thái độ",
+   "ten": "attitude",
+   "prompt": "A shop clerk slouching lazily behind a counter with arms crossed and bored eyes while a customer waits, showing a bad attitude.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 3,
+   "dungLai": "attitude"
+  },
+  {
+   "id": "voc-n3-10-9",
+   "word": "努力します",
+   "meaningVi": "Nỗ lực, cố gắng",
+   "ten": "effort",
+   "prompt": "A determined student studying late at night at a desk lamp with a headband, sweat drop on the forehead and a tall stack of textbooks, putting in great effort.",
+   "negative": "readable book titles",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "effort"
+  },
+  {
+   "id": "voc-n3-10-10",
+   "word": "試合",
+   "meaningVi": "Trận đấu",
+   "ten": "match-game",
+   "prompt": "Two soccer teams in different colored jerseys competing for the ball on a green field.",
+   "negative": "numbers on jerseys",
+   "loai": "canh",
+   "kho": 1,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-10-11",
+   "word": "雨",
+   "meaningVi": "Mưa",
+   "ten": "rain",
+   "prompt": "Rain falling from a gray cloud onto a person holding a red umbrella on a wet street.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "rain"
+  },
+  {
+   "id": "voc-n3-10-12",
+   "word": "子供",
+   "meaningVi": "Trẻ em",
+   "ten": "child",
+   "prompt": "A happy little child with a yellow school hat and red randoseru backpack.",
+   "negative": "",
+   "loai": "nhanvat",
+   "kho": 1,
+   "dungLai": "child"
+  },
+  {
+   "id": "voc-n3-10-13",
+   "word": "言います",
+   "meaningVi": "Nói",
+   "ten": "say",
+   "prompt": "A person speaking with an open mouth and a small empty speech bubble coming out.",
+   "negative": "text in bubble",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "say"
+  },
+  {
+   "id": "voc-n3-10-14",
+   "word": "大会",
+   "meaningVi": "Đại hội",
+   "ten": "tournament",
+   "prompt": "A big sports tournament stadium with colorful pennant flags, a trophy on a podium and teams lining up.",
+   "negative": "text on banners",
+   "loai": "canh",
+   "kho": 2,
+   "dungLai": "tournament",
+   "vat": true
+  },
+  {
+   "id": "voc-n3-10-15",
+   "word": "頑張ります",
+   "meaningVi": "Cố gắng, nỗ lực",
+   "ten": "effort",
+   "prompt": "A determined student studying late at night at a desk lamp with a headband, sweat drop on the forehead and a tall stack of textbooks, putting in great effort.",
+   "negative": "readable book titles",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "effort"
+  },
+  {
+   "id": "voc-n3-10-16",
+   "word": "お金",
+   "meaningVi": "Tiền",
+   "ten": "money",
+   "prompt": "A neat pile of Japanese yen coins and banknotes next to a coin purse.",
+   "negative": "readable numbers on notes, portraits",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "money",
+   "vat": true
+  },
+  {
+   "id": "voc-n3-10-17",
+   "word": "若い",
+   "meaningVi": "Trẻ, còn trẻ tuổi",
+   "ten": "young",
+   "prompt": "An energetic young man jumping with a skateboard next to a slow elderly man with a cane who smiles at him, emphasizing youth. Bright sparkles and bouncy motion lines surround the young energetic person, symbols for youth and energy. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "young",
+   "promptCu": "An energetic young man jumping with a skateboard next to a slow elderly man with a cane who smiles at him, emphasizing youth.",
+   "bieuTuong": "tre"
+  },
+  {
+   "id": "voc-n3-10-18",
+   "word": "会社",
+   "meaningVi": "Công ty",
+   "ten": "company",
+   "prompt": "A modern mid-size office building with glass windows and office workers in suits walking in through the entrance.",
+   "negative": "company logo, sign text",
+   "loai": "canh",
+   "kho": 1,
+   "dungLai": "company"
+  },
+  {
+   "id": "voc-n3-10-19",
+   "word": "仕事",
+   "meaningVi": "Công việc",
+   "ten": "work",
+   "prompt": "An office worker typing busily at a desk with a laptop, documents and a cup of coffee.",
+   "negative": "readable screen",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "work"
+  },
+  {
+   "id": "voc-n3-10-20",
+   "word": "忙しい",
+   "meaningVi": "Bận rộn",
+   "ten": "busy",
+   "prompt": "A frazzled office worker juggling a ringing phone, a stack of papers and a laptop with sweat drops flying. Several big blue sweat drops fly off the person's head and curved motion lines swirl around the busy hands, cartoon symbols for being very busy; a ringing phone shows only small curved vibration arcs. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "busy",
+   "promptCu": "A frazzled office worker juggling a ringing phone, a stack of papers and a laptop with sweat drops flying.",
+   "bieuTuong": "ban-ron"
+  },
+  {
+   "id": "voc-n3-11-1",
+   "word": "羨ましい",
+   "meaningVi": "Ghen tị, ao ước (thấy người khác có điều mình muốn)",
+   "ten": "envy",
+   "prompt": "A boy looking enviously with longing eyes at his friend proudly riding a shiny new bicycle. A thought bubble from the envious person shows the thing they want, with a small green scribble cloud above the head. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 2,
+   "promptCu": "A boy looking enviously with longing eyes at his friend proudly riding a shiny new bicycle.",
+   "bieuTuong": "ghen"
+  },
+  {
+   "id": "voc-n3-11-2",
+   "word": "悔しい",
+   "meaningVi": "Tiếc nuối, cay cú (vì thất bại/thua kém)",
+   "ten": "frustrated-loss",
+   "prompt": "A young athlete kneeling on the field clenching fists and biting the lip with tears after losing a match. A small dark storm cloud hangs over the person's head and a red anger vein mark pops beside it, symbols for bitter frustration. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A young athlete kneeling on the field clenching fists and biting the lip with tears after losing a match.",
+   "bieuTuong": "cay-cu"
+  },
+  {
+   "id": "voc-n3-11-3",
+   "word": "不安",
+   "meaningVi": "Sự bất an, lo lắng",
+   "ten": "anxiety",
+   "prompt": "A person hugging their knees under a small gray storm cloud with nervous eyes and a trembling mouth. A tangled scribble cloud floats above the person's head with one sweat drop on the brow, cartoon symbols for worry. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A person hugging their knees under a small gray storm cloud with nervous eyes and a trembling mouth.",
+   "bieuTuong": "lo"
+  },
+  {
+   "id": "voc-n3-11-4",
+   "word": "辛い",
+   "meaningVi": "Đau khổ, vất vả",
+   "ten": "painful-hardship",
+   "prompt": "A person crying alone at a desk late at night under a lamp, head in hands with a heavy burden of work. A small grey storm cloud with rain drops hangs over the person's head, the cartoon symbol for sadness. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A person crying alone at a desk late at night under a lamp, head in hands with a heavy burden of work.",
+   "bieuTuong": "buon"
+  },
+  {
+   "id": "voc-n3-11-5",
+   "word": "恐ろしい",
+   "meaningVi": "Đáng sợ, khủng khiếp",
+   "ten": "frightening",
+   "prompt": "A person trembling in terror as a huge dark looming shadow with glowing eyes stretches across the wall behind them. Short zigzag shivering lines surround the person and vertical blue gloom lines fall over the face, cartoon symbols for fear. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "gore, blood",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A person trembling in terror as a huge dark looming shadow with glowing eyes stretches across the wall behind them.",
+   "bieuTuong": "so"
+  },
+  {
+   "id": "voc-n3-11-6",
+   "word": "感動します",
+   "meaningVi": "Cảm động, xúc động",
+   "ten": "moved",
+   "prompt": "A person in a movie theater seat wiping happy tears with a handkerchief, deeply moved by the film. Small hearts and sparkles float around the teary person, symbols for being deeply moved. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "screen text",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A person in a movie theater seat wiping happy tears with a handkerchief, deeply moved by the film.",
+   "bieuTuong": "cam-dong"
+  },
+  {
+   "id": "voc-n3-11-7",
+   "word": "涙",
+   "meaningVi": "Nước mắt",
+   "ten": "tears",
+   "prompt": "A close-up of a gentle face with a single large glistening tear rolling down the cheek.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-11-8",
+   "word": "気になります",
+   "meaningVi": "Bận tâm, để ý, thắc mắc",
+   "ten": "bothered",
+   "prompt": "A woman at her desk distracted, repeatedly glancing over her shoulder at a closed door with a curious worried look.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-11-9",
+   "word": "心配",
+   "meaningVi": "Sự lo lắng",
+   "ten": "worry",
+   "prompt": "A mother standing at a window at night with hands clasped anxiously, waiting for her child to come home. A tangled scribble cloud floats above the person's head with one sweat drop on the brow, cartoon symbols for worry. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A mother standing at a window at night with hands clasped anxiously, waiting for her child to come home.",
+   "bieuTuong": "lo"
+  },
+  {
+   "id": "voc-n3-11-10",
+   "word": "会いたい",
+   "meaningVi": "Muốn gặp",
+   "ten": "want-to-meet",
+   "prompt": "A young woman holding a framed photo of a distant friend, with a thought bubble of the two of them hugging, longing to see her.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-11-11",
+   "word": "家族",
+   "meaningVi": "Gia đình",
+   "ten": "family",
+   "prompt": "A happy Japanese family of grandparents, parents and two children standing together smiling.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-11-12",
+   "word": "暑い",
+   "meaningVi": "Nóng",
+   "ten": "hot",
+   "prompt": "A person sweating heavily under a blazing summer sun, fanning themselves with a paper uchiwa fan. A huge blazing sun with wavy heat-haze lines fills the space above and big sweat drops fly off the person, cartoon symbols for hot weather. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "promptCu": "A person sweating heavily under a blazing summer sun, fanning themselves with a paper uchiwa fan.",
+   "bieuTuong": "nong"
+  },
+  {
+   "id": "voc-n3-11-13",
+   "word": "電車",
+   "meaningVi": "Tàu điện",
+   "ten": "train",
+   "prompt": "A Japanese JR commuter train with a green stripe arriving at a station platform.",
+   "negative": "text on train, logo",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "train",
+   "vat": true
+  },
+  {
+   "id": "voc-n3-11-14",
+   "word": "止まります",
+   "meaningVi": "Dừng lại",
+   "ten": "stop",
+   "prompt": "A bus coming to a stop at a roadside bus stop with its brake lights on and doors opening.",
+   "negative": "text",
+   "loai": "vocab",
+   "kho": 1,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-11-15",
+   "word": "仕事",
+   "meaningVi": "Công việc",
+   "ten": "work",
+   "prompt": "An office worker typing busily at a desk with a laptop, documents and a cup of coffee.",
+   "negative": "readable screen",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "work"
+  },
+  {
+   "id": "voc-n3-11-16",
+   "word": "忙しい",
+   "meaningVi": "Bận rộn",
+   "ten": "busy",
+   "prompt": "A frazzled office worker juggling a ringing phone, a stack of papers and a laptop with sweat drops flying. Several big blue sweat drops fly off the person's head and curved motion lines swirl around the busy hands, cartoon symbols for being very busy; a ringing phone shows only small curved vibration arcs. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "busy",
+   "promptCu": "A frazzled office worker juggling a ringing phone, a stack of papers and a laptop with sweat drops flying.",
+   "bieuTuong": "ban-ron"
+  },
+  {
+   "id": "voc-n3-11-17",
+   "word": "試合",
+   "meaningVi": "Trận đấu",
+   "ten": "match-game",
+   "prompt": "Two soccer teams in different colored jerseys competing for the ball on a green field.",
+   "negative": "numbers on jerseys",
+   "loai": "canh",
+   "kho": 1,
+   "dungLai": "match-game",
+   "vat": true
+  },
+  {
+   "id": "voc-n3-11-18",
+   "word": "食べたい",
+   "meaningVi": "Muốn ăn",
+   "ten": "want-to-eat",
+   "prompt": "A hungry person pressing their face against a restaurant window, drooling at a steaming bowl of ramen inside.",
+   "negative": "text",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-11-19",
+   "word": "人",
+   "meaningVi": "Người",
+   "ten": "person",
+   "prompt": "A single friendly person standing in a neutral relaxed pose, simple clothes, facing forward.",
+   "negative": "crowd",
+   "loai": "nhanvat",
+   "kho": 1,
+   "dungLai": "person"
+  },
+  {
+   "id": "voc-n3-11-20",
+   "word": "将来",
+   "meaningVi": "Tương lai",
+   "ten": "future-personal",
+   "prompt": "A little boy looking up dreamily at a thought bubble showing himself grown up as a doctor, imagining his future.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 3,
+   "dungLai": "future-personal"
+  },
+  {
+   "id": "voc-n3-12-1",
+   "word": "証明します",
+   "meaningVi": "Chứng minh",
+   "ten": "prove",
+   "prompt": "A detective holding up a magnified fingerprint card as evidence in front of a surprised crowd, proving the truth.",
+   "negative": "text",
+   "loai": "canh",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-12-2",
+   "word": "確かめます",
+   "meaningVi": "Xác nhận, kiểm chứng",
+   "ten": "confirm-check",
+   "prompt": "A person double-checking that the front door is locked by pulling the handle and pointing at the lock.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-12-3",
+   "word": "犯人",
+   "meaningVi": "Thủ phạm, tội phạm",
+   "ten": "culprit",
+   "prompt": "A sneaky masked burglar tiptoeing away in a striped shirt carrying a sack of stolen loot.",
+   "negative": "weapon",
+   "loai": "nhanvat",
+   "kho": 1,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-12-4",
+   "word": "間違い",
+   "meaningVi": "Sai lầm, lỗi",
+   "ten": "mistake",
+   "prompt": "A person buttoning a shirt into the wrong buttonholes so it hangs lopsided, looking down at the mistake in surprise.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-12-5",
+   "word": "現場",
+   "meaningVi": "Hiện trường",
+   "ten": "crime-scene",
+   "prompt": "A scene cordoned off with yellow police tape where investigators in gloves examine footprints on the ground.",
+   "negative": "text on tape",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-12-6",
+   "word": "捜査します",
+   "meaningVi": "Điều tra (hình sự)",
+   "ten": "investigate",
+   "prompt": "A police detective in a trench coat crouching with a magnifying glass to examine footprints and clues.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-12-7",
+   "word": "財布",
+   "meaningVi": "Ví tiền",
+   "ten": "wallet",
+   "prompt": "A brown leather wallet slightly open showing yen banknotes and cards inside.",
+   "negative": "numbers, text",
+   "loai": "vocab",
+   "kho": 1,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-12-8",
+   "word": "鍵",
+   "meaningVi": "Chìa khóa",
+   "ten": "key",
+   "prompt": "A single brass door key on a small key ring.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-12-9",
+   "word": "忘れ物",
+   "meaningVi": "Đồ bỏ quên",
+   "ten": "lost-item",
+   "prompt": "A folded umbrella and a bag left behind on an empty train seat after passengers have left.",
+   "negative": "text",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-12-10",
+   "word": "犬",
+   "meaningVi": "Chó",
+   "ten": "dog",
+   "prompt": "A friendly Shiba Inu dog sitting with its curled tail.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-12-11",
+   "word": "着きます",
+   "meaningVi": "Đến nơi",
+   "ten": "arrive",
+   "prompt": "A traveler with a suitcase stepping off a train onto the platform with a happy relieved face, arriving at the destination.",
+   "negative": "station name text",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-12-12",
+   "word": "結果",
+   "meaningVi": "Kết quả",
+   "ten": "result",
+   "prompt": "A student holding up a graded test sheet covered in big red circle marks with a relieved happy face, the teacher smiling beside her.",
+   "negative": "readable writing on paper, numbers on paper",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "result"
+  },
+  {
+   "id": "voc-n3-12-13",
+   "word": "気を付けます",
+   "meaningVi": "Cẩn thận, chú ý",
+   "ten": "be-careful",
+   "prompt": "A waiter walking very carefully on tiptoe while balancing a tray of brimming full teacups, eyes focused on not spilling.",
+   "negative": "spilled mess",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "be-careful"
+  },
+  {
+   "id": "voc-n3-12-14",
+   "word": "人",
+   "meaningVi": "Người",
+   "ten": "person",
+   "prompt": "A single friendly person standing in a neutral relaxed pose, simple clothes, facing forward.",
+   "negative": "crowd",
+   "loai": "nhanvat",
+   "kho": 1,
+   "dungLai": "person"
+  },
+  {
+   "id": "voc-n3-12-15",
+   "word": "彼",
+   "meaningVi": "Anh ấy",
+   "ten": "he",
+   "prompt": "A friendly young man pointed at by a hand from the side of the frame, presenting him as that guy.",
+   "negative": "",
+   "loai": "nhanvat",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-12-17",
+   "word": "物",
+   "meaningVi": "Vật, đồ vật",
+   "ten": "thing",
+   "prompt": "An assorted group of everyday objects on a table: a cup, a book, a pair of glasses, a pen and a small plant.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-12-20",
+   "word": "分かります",
+   "meaningVi": "Hiểu, biết",
+   "ten": "understand",
+   "prompt": "A person nodding with a bright lightbulb shining above the head and a happy aha expression. Above the person's head floats a single bright glowing yellow lightbulb with short radiating lines, the cartoon symbol for understanding. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A person nodding with a bright lightbulb shining above the head and a happy aha expression.",
+   "bieuTuong": "hieu"
+  },
+  {
+   "id": "voc-n3-13-2",
+   "word": "想像します",
+   "meaningVi": "Tưởng tượng",
+   "ten": "imagine",
+   "prompt": "A dreamy child sitting on the grass with a big thought bubble showing a flying castle among clouds.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-13-3",
+   "word": "予想します",
+   "meaningVi": "Dự đoán",
+   "ten": "predict",
+   "prompt": "A person looking up at gathering clouds and confidently opening an umbrella just before the first raindrops fall, predicting rain.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-13-4",
+   "word": "未来",
+   "meaningVi": "Tương lai (nói chung, vĩ mô)",
+   "ten": "future",
+   "prompt": "A futuristic city with sleek round towers, flying cars and robots helping people.",
+   "negative": "text",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-13-7",
+   "word": "変化",
+   "meaningVi": "Sự thay đổi, biến đổi",
+   "ten": "change",
+   "prompt": "A single tree whose leaves shift gradually from fresh green on the left side to red autumn and bare branches on the right, showing change.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "change",
+   "vat": true
+  },
+  {
+   "id": "voc-n3-13-8",
+   "word": "事故",
+   "meaningVi": "Tai nạn",
+   "ten": "accident",
+   "prompt": "Two small cars that have bumped into each other at an intersection with dented fronts, drivers stepping out shocked.",
+   "negative": "blood, injury, fire",
+   "loai": "canh",
+   "kho": 1,
+   "dungLai": "accident",
+   "vat": true
+  },
+  {
+   "id": "voc-n3-13-9",
+   "word": "地震",
+   "meaningVi": "Động đất",
+   "ten": "earthquake",
+   "prompt": "A room shaking in an earthquake with a lamp swinging, books falling off shelves and a person crouching under a table.",
+   "negative": "injury",
+   "loai": "canh",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-13-10",
+   "word": "危険",
+   "meaningVi": "Nguy hiểm",
+   "ten": "danger",
+   "prompt": "A person stepping dangerously close to a crumbling cliff edge beside a yellow triangle warning sign with an exclamation mark. A plain yellow warning triangle containing a single exclamation mark floats nearby; the only symbol is that one exclamation mark. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "text",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A person stepping dangerously close to a crumbling cliff edge beside a yellow triangle warning sign with an exclamation mark.",
+   "bieuTuong": "nguy-hiem"
+  },
+  {
+   "id": "voc-n3-13-11",
+   "word": "安全",
+   "meaningVi": "An toàn",
+   "ten": "safe",
+   "prompt": "A child in a yellow helmet crossing the street safely at a crosswalk, guided by a crossing guard holding a flag. A small round sage-green shield icon with a sparkle floats nearby, the symbol for safety. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "text",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A child in a yellow helmet crossing the street safely at a crosswalk, guided by a crossing guard holding a flag.",
+   "bieuTuong": "an-toan"
+  },
+  {
+   "id": "voc-n3-13-13",
+   "word": "話します",
+   "meaningVi": "Nói chuyện",
+   "ten": "talk",
+   "prompt": "Two people sitting face to face at a cafe table chatting happily, one gesturing with an empty speech bubble.",
+   "negative": "text in bubble",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-13-14",
+   "word": "機械",
+   "meaningVi": "Máy móc",
+   "ten": "machine",
+   "prompt": "A big industrial machine with interlocking gears, levers and pipes working steadily.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-13-15",
+   "word": "問題",
+   "meaningVi": "Vấn đề",
+   "ten": "problem",
+   "prompt": "A person scratching their head in confusion in front of a huge tangled knot of rope.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-13-16",
+   "word": "言います",
+   "meaningVi": "Nói",
+   "ten": "say",
+   "prompt": "A person speaking with an open mouth and a small empty speech bubble coming out.",
+   "negative": "text in bubble",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "say"
+  },
+  {
+   "id": "voc-n3-13-17",
+   "word": "将来",
+   "meaningVi": "Tương lai (cá nhân, gần)",
+   "ten": "future-personal",
+   "prompt": "A little boy looking up dreamily at a thought bubble showing himself grown up as a doctor, imagining his future.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 3,
+   "dungLai": "future-personal"
+  },
+  {
+   "id": "voc-n3-13-19",
+   "word": "彼",
+   "meaningVi": "Anh ấy",
+   "ten": "he",
+   "prompt": "A friendly young man pointed at by a hand from the side of the frame, presenting him as that guy.",
+   "negative": "",
+   "loai": "nhanvat",
+   "kho": 1,
+   "dungLai": "he"
+  },
+  {
+   "id": "voc-n3-14-1",
+   "word": "増加します",
+   "meaningVi": "Tăng lên, gia tăng",
+   "ten": "increase",
+   "prompt": "Stacks of coins growing taller and taller from left to right, the last stack overflowing.",
+   "negative": "numbers, currency symbols",
+   "loai": "vocab",
+   "kho": 2,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-14-2",
+   "word": "失業",
+   "meaningVi": "Sự thất nghiệp",
+   "ten": "unemployment",
+   "prompt": "A man in a suit sitting dejected on a park bench holding a cardboard box of his office belongings.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-14-3",
+   "word": "進歩します",
+   "meaningVi": "Tiến bộ",
+   "ten": "technological-progress",
+   "prompt": "A row showing the evolution of telephones from an old rotary dial phone to a flip phone to a modern smartphone, with an arrow of progress.",
+   "negative": "numbers on dial",
+   "loai": "vocab",
+   "kho": 2,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-14-4",
+   "word": "拡大します",
+   "meaningVi": "Mở rộng",
+   "ten": "expand",
+   "prompt": "A tiny food stall on the left growing into a bigger shop and then a large store on the right, with an arrow showing expansion.",
+   "negative": "shop sign text",
+   "loai": "vocab",
+   "kho": 3,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-14-5",
+   "word": "発展します",
+   "meaningVi": "Phát triển",
+   "ten": "develop",
+   "prompt": "A small village of wooden houses on the left growing into a modern skyline of tall buildings on the right, showing development.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 3,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-14-6",
+   "word": "減ります",
+   "meaningVi": "Giảm xuống, giảm đi",
+   "ten": "decrease",
+   "prompt": "Stacks of coins shrinking shorter from left to right with a downward arrow above them, the last stack only one coin.",
+   "negative": "numbers, currency symbols",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "decrease",
+   "vat": true
+  },
+  {
+   "id": "voc-n3-14-7",
+   "word": "増えます",
+   "meaningVi": "Tăng lên",
+   "ten": "increase",
+   "prompt": "Stacks of coins growing taller and taller from left to right, the last stack overflowing.",
+   "negative": "numbers, currency symbols",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "increase",
+   "vat": true
+  },
+  {
+   "id": "voc-n3-14-8",
+   "word": "減少",
+   "meaningVi": "Sự giảm sút",
+   "ten": "decrease",
+   "prompt": "Stacks of coins shrinking shorter from left to right with a downward arrow above them, the last stack only one coin.",
+   "negative": "numbers, currency symbols",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "decrease",
+   "vat": true
+  },
+  {
+   "id": "voc-n3-14-9",
+   "word": "人口",
+   "meaningVi": "Dân số",
+   "ten": "population",
+   "prompt": "A map shape of Japan densely filled with many tiny people standing shoulder to shoulder.",
+   "negative": "text",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "population"
+  },
+  {
+   "id": "voc-n3-14-10",
+   "word": "物価",
+   "meaningVi": "Vật giá",
+   "ten": "cost-of-living",
+   "prompt": "A shopper at a supermarket checkout staring shocked at a very long receipt while holding a small basket of groceries.",
+   "negative": "readable receipt, numbers",
+   "loai": "canh",
+   "kho": 3,
+   "dungLai": "cost-of-living"
+  },
+  {
+   "id": "voc-n3-14-11",
+   "word": "環境",
+   "meaningVi": "Môi trường",
+   "ten": "environment",
+   "prompt": "A small globe covered in green forests, clean blue rivers and tiny animals, cradled by two gentle hands.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "environment"
+  },
+  {
+   "id": "voc-n3-14-12",
+   "word": "経済",
+   "meaningVi": "Kinh tế",
+   "ten": "economy",
+   "prompt": "Coins, a factory, a shopping cart and a rising chart arrow circling around a globe, representing the economy.",
+   "negative": "numbers",
+   "loai": "vocab",
+   "kho": 3,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-14-13",
+   "word": "悪い",
+   "meaningVi": "Xấu, tệ",
+   "ten": "bad",
+   "prompt": "A person grimacing with a thumbs down at a rotten brown apple with flies, next to a fresh shiny apple for contrast. A thumbs-down and a tiny dark scribble cloud make the bad judgement obvious. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A person grimacing with a thumbs down at a rotten brown apple with flies, next to a fresh shiny apple for contrast.",
+   "bieuTuong": "xau"
+  },
+  {
+   "id": "voc-n3-14-14",
+   "word": "太ります",
+   "meaningVi": "Béo lên",
+   "ten": "gain-weight",
+   "prompt": "A person looking shocked as their belt strains and a shirt button pops off from their round belly.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-14-15",
+   "word": "続けます",
+   "meaningVi": "Tiếp tục",
+   "ten": "keep-going",
+   "prompt": "A tired marathon runner pushing on with determination, still running forward despite heavy sweat.",
+   "negative": "numbers on bib",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-14-16",
+   "word": "上がります",
+   "meaningVi": "Tăng lên, đi lên",
+   "ten": "rise",
+   "prompt": "A simple upward line chart with a bold terracotta arrow climbing steeply to the top right, a small figure cheering beside it.",
+   "negative": "numbers on axes, labels",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "rise"
+  },
+  {
+   "id": "voc-n3-14-17",
+   "word": "会社",
+   "meaningVi": "Công ty",
+   "ten": "company",
+   "prompt": "A modern mid-size office building with glass windows and office workers in suits walking in through the entrance.",
+   "negative": "company logo, sign text",
+   "loai": "canh",
+   "kho": 1,
+   "dungLai": "company"
+  },
+  {
+   "id": "voc-n3-14-19",
+   "word": "問題",
+   "meaningVi": "Vấn đề",
+   "ten": "problem",
+   "prompt": "A person scratching their head in confusion in front of a huge tangled knot of rope.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 3,
+   "dungLai": "problem"
+  },
+  {
+   "id": "voc-n3-15-1",
+   "word": "性格",
+   "meaningVi": "Tính cách",
+   "ten": "personality",
+   "prompt": "Three friends sitting on one bench with clearly different personalities: one laughing loudly with arms wide, one shyly reading a book, one grumpy with crossed arms.",
+   "negative": "identical faces",
+   "loai": "canh",
+   "kho": 3,
+   "dungLai": "personality"
+  },
+  {
+   "id": "voc-n3-15-2",
+   "word": "礼儀",
+   "meaningVi": "Lễ nghi, phép tắc",
+   "ten": "manners",
+   "prompt": "A young person bowing politely at a deep angle to greet an elderly guest at the entrance of a Japanese home.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-15-3",
+   "word": "知識",
+   "meaningVi": "Kiến thức",
+   "ten": "knowledge",
+   "prompt": "A person sitting on a tall stack of books with a glowing lightbulb and small icons of a globe, an atom and a leaf around their head.",
+   "negative": "readable book titles",
+   "loai": "vocab",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-15-4",
+   "word": "能力",
+   "meaningVi": "Năng lực",
+   "ten": "ability",
+   "prompt": "A confident person surrounded by floating icons of a hammer, a paintbrush, a laptop and a chef's knife, showing many abilities.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-15-5",
+   "word": "家事",
+   "meaningVi": "Việc nhà",
+   "ten": "housework",
+   "prompt": "A person vacuuming the floor while laundry dries on a line and dishes sit in a drying rack at home.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-15-6",
+   "word": "経験",
+   "meaningVi": "Kinh nghiệm",
+   "ten": "experience",
+   "prompt": "An elderly sushi chef with calm expert hands showing a nervous young apprentice how to slice fish at a wooden counter, a lifetime of experience in his posture.",
+   "negative": "raw blood",
+   "loai": "canh",
+   "kho": 3,
+   "dungLai": "experience"
+  },
+  {
+   "id": "voc-n3-15-7",
+   "word": "料理",
+   "meaningVi": "Nấu ăn, món ăn",
+   "ten": "cooking",
+   "prompt": "A person in an apron stir-frying vegetables in a pan on a stove with steam rising.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-15-9",
+   "word": "上手",
+   "meaningVi": "Giỏi",
+   "ten": "skilful",
+   "prompt": "A painter confidently brushing a beautiful landscape on a canvas with praised sparkles around it. Sparkle stars and a small gold star badge shine around the person's work, symbols for being skilled. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "promptCu": "A painter confidently brushing a beautiful landscape on a canvas with praised sparkles around it.",
+   "bieuTuong": "gioi"
+  },
+  {
+   "id": "voc-n3-15-12",
+   "word": "話せます",
+   "meaningVi": "Có thể nói (chuyện)",
+   "ten": "can-speak",
+   "prompt": "A young Asian person chatting fluently and cheerfully with a foreign tourist, both laughing with empty speech bubbles.",
+   "negative": "text in bubbles",
+   "loai": "canh",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-15-13",
+   "word": "高い",
+   "meaningVi": "Cao",
+   "ten": "tall-high",
+   "prompt": "A very tall slender tower beside a small low house, a tiny person looking up at the tower. A bold upward arrow beside the tall subject stresses its height. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "promptCu": "A very tall slender tower beside a small low house, a tiny person looking up at the tower.",
+   "bieuTuong": "cao"
+  },
+  {
+   "id": "voc-n3-15-15",
+   "word": "彼女",
+   "meaningVi": "Cô ấy",
+   "ten": "she",
+   "prompt": "A friendly young woman pointed at by a hand from the side of the frame, presenting her as that woman.",
+   "negative": "",
+   "loai": "nhanvat",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-15-16",
+   "word": "いい",
+   "meaningVi": "Tốt",
+   "ten": "good",
+   "prompt": "A smiling person giving a big thumbs up with a sparkle. A big thumbs-up and bright sparkle stars make the good judgement obvious. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "promptCu": "A smiling person giving a big thumbs up with a sparkle.",
+   "bieuTuong": "tot"
+  },
+  {
+   "id": "voc-n3-15-17",
+   "word": "頭",
+   "meaningVi": "Đầu, đầu óc",
+   "ten": "head",
+   "prompt": "A side view of a person's head with the head clearly marked by a bold terracotta outline glow and a small terracotta arrow pointing at it, while the skin itself stays natural light peach, a hand gently touching the top of it.",
+   "negative": "brain, organs",
+   "loai": "vocab",
+   "kho": 1,
+   "promptCu": "A side view of a person's head with the head clearly highlighted in terracotta, a hand gently touching the top of it."
+  },
+  {
+   "id": "voc-n3-15-20",
+   "word": "正しい",
+   "meaningVi": "Đúng đắn, đúng mực",
+   "ten": "correct",
+   "prompt": "A student pointing at the right answer on a board marked with a big red circle while a wrong one beside it has a red cross.",
+   "negative": "writing, numbers",
+   "loai": "vocab",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-16-1",
+   "word": "代表",
+   "meaningVi": "Đại diện",
+   "ten": "representative",
+   "prompt": "One person stepping forward from a group to speak on behalf of everyone, the group standing behind nodding.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-16-2",
+   "word": "代理",
+   "meaningVi": "Thay mặt, ủy quyền",
+   "ten": "proxy",
+   "prompt": "A young deputy sitting in the boss's big chair and signing a document on his behalf while the empty coat rack shows the boss is away.",
+   "negative": "readable document",
+   "loai": "canh",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-16-3",
+   "word": "担当",
+   "meaningVi": "Phụ trách",
+   "ten": "in-charge",
+   "prompt": "A staff member at a help desk pointing to herself with a smile as the person in charge, wearing a lanyard badge.",
+   "negative": "readable badge",
+   "loai": "nhanvat",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-16-4",
+   "word": "支払います",
+   "meaningVi": "Thanh toán, chi trả",
+   "ten": "pay",
+   "prompt": "A customer handing yen banknotes to a cashier at a register in a shop.",
+   "negative": "numbers on notes",
+   "loai": "canh",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-16-5",
+   "word": "署名",
+   "meaningVi": "Chữ ký, việc ký tên",
+   "ten": "signature",
+   "prompt": "A hand signing a document with a fountain pen, drawing a flowing abstract squiggle line.",
+   "negative": "letters, readable writing",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-16-6",
+   "word": "代金",
+   "meaningVi": "Tiền hàng, giá tiền",
+   "ten": "pay",
+   "prompt": "A customer handing yen banknotes to a cashier at a register in a shop.",
+   "negative": "numbers on notes",
+   "loai": "canh",
+   "kho": 1,
+   "dungLai": "pay"
+  },
+  {
+   "id": "voc-n3-16-7",
+   "word": "部長",
+   "meaningVi": "Trưởng phòng",
+   "ten": "department-manager",
+   "prompt": "A middle-aged manager in a suit and tie standing in front of a team of desks, holding a folder and directing staff.",
+   "negative": "",
+   "loai": "nhanvat",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-16-8",
+   "word": "社長",
+   "meaningVi": "Giám đốc",
+   "ten": "company-president",
+   "prompt": "A senior company president in a fine suit sitting behind a large wooden desk in a spacious office with a city view.",
+   "negative": "nameplate text",
+   "loai": "nhanvat",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-16-9",
+   "word": "会議",
+   "meaningVi": "Cuộc họp",
+   "ten": "meeting",
+   "prompt": "Several colleagues sitting around a conference table with laptops and documents, one person presenting a simple chart on a screen.",
+   "negative": "readable screen",
+   "loai": "canh",
+   "kho": 1,
+   "dungLai": "meeting"
+  },
+  {
+   "id": "voc-n3-16-10",
+   "word": "出席します",
+   "meaningVi": "Tham dự",
+   "ten": "attend",
+   "prompt": "A participant signing in at a reception desk and taking a seat at a meeting where all chairs are filled.",
+   "negative": "text",
+   "loai": "canh",
+   "kho": 2,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-16-11",
+   "word": "電話",
+   "meaningVi": "Điện thoại",
+   "ten": "telephone",
+   "prompt": "A smartphone and a classic desk telephone side by side, the smartphone ringing with sound waves.",
+   "negative": "screen text",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "telephone",
+   "vat": true
+  },
+  {
+   "id": "voc-n3-16-12",
+   "word": "連絡します",
+   "meaningVi": "Liên lạc",
+   "ten": "contact",
+   "prompt": "A person sending a message on a smartphone as small envelope icons fly toward a friend's phone.",
+   "negative": "readable text",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-16-13",
+   "word": "お金",
+   "meaningVi": "Tiền",
+   "ten": "money",
+   "prompt": "A neat pile of Japanese yen coins and banknotes next to a coin purse.",
+   "negative": "readable numbers on notes, portraits",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "money",
+   "vat": true
+  },
+  {
+   "id": "voc-n3-16-14",
+   "word": "会社",
+   "meaningVi": "Công ty",
+   "ten": "company",
+   "prompt": "A modern mid-size office building with glass windows and office workers in suits walking in through the entrance.",
+   "negative": "company logo, sign text",
+   "loai": "canh",
+   "kho": 1,
+   "dungLai": "company"
+  },
+  {
+   "id": "voc-n3-16-15",
+   "word": "仕事",
+   "meaningVi": "Công việc",
+   "ten": "work",
+   "prompt": "An office worker typing busily at a desk with a laptop, documents and a cup of coffee.",
+   "negative": "readable screen",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "work"
+  },
+  {
+   "id": "voc-n3-16-16",
+   "word": "休みます",
+   "meaningVi": "Nghỉ",
+   "ten": "rest",
+   "prompt": "A person relaxing on a park bench with eyes closed and a canned drink, taking a break.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "rest"
+  },
+  {
+   "id": "voc-n3-16-19",
+   "word": "説明します",
+   "meaningVi": "Giải thích",
+   "ten": "explain",
+   "prompt": "A teacher pointing at a simple diagram of arrows and circles on a whiteboard while explaining to two attentive students.",
+   "negative": "writing on whiteboard, formulas",
+   "loai": "canh",
+   "kho": 2,
+   "dungLai": "explain"
+  },
+  {
+   "id": "voc-n3-16-20",
+   "word": "言います",
+   "meaningVi": "Nói",
+   "ten": "say",
+   "prompt": "A person speaking with an open mouth and a small empty speech bubble coming out.",
+   "negative": "text in bubble",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "say"
+  },
+  {
+   "id": "voc-n3-17-1",
+   "word": "議論します",
+   "meaningVi": "Tranh luận, thảo luận",
+   "ten": "debate",
+   "prompt": "Two people across a table debating passionately with raised hands and gestures while a moderator listens.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-17-2",
+   "word": "発表します",
+   "meaningVi": "Phát biểu, công bố",
+   "ten": "present-announce",
+   "prompt": "A person presenting at a podium with a simple chart on a screen behind them, the audience listening.",
+   "negative": "readable screen",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-17-3",
+   "word": "報告します",
+   "meaningVi": "Báo cáo",
+   "ten": "report",
+   "prompt": "An employee handing a report folder to a boss who reviews it at a desk.",
+   "negative": "readable document",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-17-4",
+   "word": "文化",
+   "meaningVi": "Văn hóa",
+   "ten": "culture",
+   "prompt": "A Japanese tea ceremony with a woman in kimono whisking matcha on tatami mats beside an ikebana arrangement.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-17-5",
+   "word": "歴史",
+   "meaningVi": "Lịch sử",
+   "ten": "history",
+   "prompt": "An ancient Japanese castle beside a samurai armor, an old scroll and a clay haniwa figure, representing history.",
+   "negative": "text on scroll",
+   "loai": "vocab",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-17-6",
+   "word": "調査",
+   "meaningVi": "Khảo sát, điều tra",
+   "ten": "survey",
+   "prompt": "A surveyor with a clipboard interviewing a passerby on the street, marking a checklist.",
+   "negative": "readable text",
+   "loai": "canh",
+   "kho": 2,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-17-7",
+   "word": "意見",
+   "meaningVi": "Ý kiến",
+   "ten": "opinion",
+   "prompt": "A person in a meeting confidently raising a hand to share an idea with a lightbulb above, others turning to listen.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 2,
+   "dungLai": "opinion"
+  },
+  {
+   "id": "voc-n3-17-8",
+   "word": "政治",
+   "meaningVi": "Chính trị",
+   "ten": "politics",
+   "prompt": "Politicians in suits debating in a parliament chamber in front of a domed government building.",
+   "negative": "text",
+   "loai": "canh",
+   "kho": 2,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-17-9",
+   "word": "経済",
+   "meaningVi": "Kinh tế",
+   "ten": "economy",
+   "prompt": "Coins, a factory, a shopping cart and a rising chart arrow circling around a globe, representing the economy.",
+   "negative": "numbers",
+   "loai": "vocab",
+   "kho": 3,
+   "dungLai": "economy",
+   "vat": true
+  },
+  {
+   "id": "voc-n3-17-10",
+   "word": "環境",
+   "meaningVi": "Môi trường",
+   "ten": "environment",
+   "prompt": "A small globe covered in green forests, clean blue rivers and tiny animals, cradled by two gentle hands.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "environment"
+  },
+  {
+   "id": "voc-n3-17-11",
+   "word": "会議",
+   "meaningVi": "Cuộc họp",
+   "ten": "meeting",
+   "prompt": "Several colleagues sitting around a conference table with laptops and documents, one person presenting a simple chart on a screen.",
+   "negative": "readable screen",
+   "loai": "canh",
+   "kho": 1,
+   "dungLai": "meeting"
+  },
+  {
+   "id": "voc-n3-17-12",
+   "word": "質問",
+   "meaningVi": "Câu hỏi",
+   "ten": "question",
+   "prompt": "A curious student raising a hand in class with a speech bubble containing only a big question mark.",
+   "negative": "letters",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-17-13",
+   "word": "日本",
+   "meaningVi": "Nhật Bản",
+   "ten": "japan",
+   "prompt": "Mount Fuji with a red torii gate and cherry blossoms in the foreground.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-17-15",
+   "word": "大学",
+   "meaningVi": "Đại học",
+   "ten": "university",
+   "prompt": "A grand university campus building with a clock tower, green lawn and students walking with backpacks.",
+   "negative": "numbers on clock",
+   "loai": "canh",
+   "kho": 1,
+   "dungLai": "university"
+  },
+  {
+   "id": "voc-n3-17-16",
+   "word": "学生",
+   "meaningVi": "Học sinh, sinh viên",
+   "ten": "student",
+   "prompt": "A Japanese student with a school backpack and books under the arm walking to school.",
+   "negative": "",
+   "loai": "nhanvat",
+   "kho": 1,
+   "dungLai": "student"
+  },
+  {
+   "id": "voc-n3-17-17",
+   "word": "先生",
+   "meaningVi": "Giáo viên",
+   "ten": "teacher",
+   "prompt": "A kind Japanese teacher standing in front of a blackboard holding a textbook and a pointer.",
+   "negative": "writing on blackboard",
+   "loai": "nhanvat",
+   "kho": 1,
+   "dungLai": "teacher"
+  },
+  {
+   "id": "voc-n3-17-18",
+   "word": "話します",
+   "meaningVi": "Nói chuyện",
+   "ten": "talk",
+   "prompt": "Two people sitting face to face at a cafe table chatting happily, one gesturing with an empty speech bubble.",
+   "negative": "text in bubble",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "talk"
+  },
+  {
+   "id": "voc-n3-17-19",
+   "word": "聞きます",
+   "meaningVi": "Nghe, hỏi",
+   "ten": "listen",
+   "prompt": "A person cupping a hand behind their ear and leaning in to listen carefully.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-17-20",
+   "word": "書きます",
+   "meaningVi": "Viết",
+   "ten": "write",
+   "prompt": "A hand holding a pencil writing on lined paper with only wavy scribble lines.",
+   "negative": "letters, readable writing",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-18-1",
+   "word": "知らせ",
+   "meaningVi": "Tin báo, thông báo",
+   "ten": "notice",
+   "prompt": "A smartphone screen showing a notification bell icon and a sealed envelope icon popping up.",
+   "negative": "text",
+   "loai": "vocab",
+   "kho": 2,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-18-2",
+   "word": "延期します",
+   "meaningVi": "Hoãn lại",
+   "ten": "postpone",
+   "prompt": "A hand moving a sticky note with a meeting icon from one square to a later square on a wall calendar without numbers, with a curved arrow.",
+   "negative": "numbers, text",
+   "loai": "vocab",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-18-3",
+   "word": "決定します",
+   "meaningVi": "Quyết định",
+   "ten": "decide",
+   "prompt": "A young woman at a fork in a forest path firmly pointing down one path with a decisive expression.",
+   "negative": "readable signposts",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "decide"
+  },
+  {
+   "id": "voc-n3-18-4",
+   "word": "変更します",
+   "meaningVi": "Thay đổi",
+   "ten": "reschedule",
+   "prompt": "A person rearranging colorful sticky notes on a weekly planner board, swapping their places.",
+   "negative": "text on notes",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-18-5",
+   "word": "承認します",
+   "meaningVi": "Phê duyệt, chấp thuận",
+   "ten": "approve",
+   "prompt": "A manager pressing a red hanko seal stamp onto a document with a satisfied nod.",
+   "negative": "readable text",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-18-6",
+   "word": "命令します",
+   "meaningVi": "Ra lệnh",
+   "ten": "command",
+   "prompt": "A stern boss pointing forward and giving an order to a worker who stands straight and salutes.",
+   "negative": "military weapon",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-18-7",
+   "word": "中止",
+   "meaningVi": "Hủy bỏ",
+   "ten": "cancel",
+   "prompt": "An outdoor sports match called off in heavy rain, a referee crossing both arms in a big X while players walk off the field.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 2,
+   "dungLai": "cancel"
+  },
+  {
+   "id": "voc-n3-18-8",
+   "word": "会議",
+   "meaningVi": "Cuộc họp",
+   "ten": "meeting",
+   "prompt": "Several colleagues sitting around a conference table with laptops and documents, one person presenting a simple chart on a screen.",
+   "negative": "readable screen",
+   "loai": "canh",
+   "kho": 1,
+   "dungLai": "meeting"
+  },
+  {
+   "id": "voc-n3-18-9",
+   "word": "計画",
+   "meaningVi": "Kế hoạch",
+   "ten": "plan",
+   "prompt": "A person drawing a plan on a large sheet with boxes connected by arrows and a small map route.",
+   "negative": "text",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-18-10",
+   "word": "準備",
+   "meaningVi": "Sự chuẩn bị",
+   "ten": "prepare",
+   "prompt": "A person packing a suitcase with folded clothes, a passport and toiletries on the bed, preparing for a trip.",
+   "negative": "text",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-18-12",
+   "word": "終わります",
+   "meaningVi": "Kết thúc",
+   "ten": "end",
+   "prompt": "A stage curtain closing at the end of a play while the actors take a final bow.",
+   "negative": "text",
+   "loai": "canh",
+   "kho": 2,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-18-13",
+   "word": "社長",
+   "meaningVi": "Giám đốc",
+   "ten": "company-president",
+   "prompt": "A senior company president in a fine suit sitting behind a large wooden desk in a spacious office with a city view.",
+   "negative": "nameplate text",
+   "loai": "nhanvat",
+   "kho": 2,
+   "dungLai": "company-president"
+  },
+  {
+   "id": "voc-n3-18-16",
+   "word": "電話",
+   "meaningVi": "Điện thoại",
+   "ten": "telephone",
+   "prompt": "A smartphone and a classic desk telephone side by side, the smartphone ringing with sound waves.",
+   "negative": "screen text",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "telephone",
+   "vat": true
+  },
+  {
+   "id": "voc-n3-18-17",
+   "word": "連絡します",
+   "meaningVi": "Liên lạc",
+   "ten": "contact",
+   "prompt": "A person sending a message on a smartphone as small envelope icons fly toward a friend's phone.",
+   "negative": "readable text",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "contact"
+  },
+  {
+   "id": "voc-n3-18-18",
+   "word": "決まります",
+   "meaningVi": "Được quyết định",
+   "ten": "decide",
+   "prompt": "A young woman at a fork in a forest path firmly pointing down one path with a decisive expression.",
+   "negative": "readable signposts",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "decide"
+  },
+  {
+   "id": "voc-n3-18-20",
+   "word": "問題",
+   "meaningVi": "Vấn đề",
+   "ten": "problem",
+   "prompt": "A person scratching their head in confusion in front of a huge tangled knot of rope.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 3,
+   "dungLai": "problem"
+  },
+  {
+   "id": "voc-n3-19-1",
+   "word": "従います",
+   "meaningVi": "Tuân theo, phục tùng",
+   "ten": "obey-follow",
+   "prompt": "A line of tourists following a guide's raised flag in orderly single file.",
+   "negative": "text on flag",
+   "loai": "canh",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-19-2",
+   "word": "責任",
+   "meaningVi": "Trách nhiệm",
+   "ten": "responsibility",
+   "prompt": "A ship captain firmly holding the wheel in a storm while the crew behind relies on him, bearing responsibility.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-19-5",
+   "word": "守ります",
+   "meaningVi": "Bảo vệ, tuân thủ",
+   "ten": "protect",
+   "prompt": "A parent shielding a small child under a big umbrella from heavy rain.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-19-6",
+   "word": "尊重します",
+   "meaningVi": "Tôn trọng",
+   "ten": "respect",
+   "prompt": "A young person listening attentively and nodding respectfully to an elderly person who is speaking.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 3
+  },
+  {
+   "id": "voc-n3-19-7",
+   "word": "迷惑",
+   "meaningVi": "Sự phiền hà, làm phiền",
+   "ten": "nuisance",
+   "prompt": "A man talking loudly on a phone in a quiet train carriage while other passengers frown and cover their ears. A single sweat drop and a small grey scribble cloud float above the bothered person's head, symbols for annoyance. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "text",
+   "loai": "canh",
+   "kho": 2,
+   "promptCu": "A man talking loudly on a phone in a quiet train carriage while other passengers frown and cover their ears.",
+   "bieuTuong": "kho-chiu"
+  },
+  {
+   "id": "voc-n3-19-8",
+   "word": "ルール",
+   "meaningVi": "Quy tắc, luật lệ",
+   "ten": "rules",
+   "prompt": "A notice board with a row of simple pictogram icons: a crossed-out cigarette, a crossed-out phone, a trash bin and a quiet finger-to-lips symbol, the rules of a place.",
+   "negative": "any writing on the board",
+   "loai": "vocab",
+   "kho": 3,
+   "dungLai": "rules"
+  },
+  {
+   "id": "voc-n3-19-9",
+   "word": "規則",
+   "meaningVi": "Quy tắc",
+   "ten": "rules",
+   "prompt": "A notice board with a row of simple pictogram icons: a crossed-out cigarette, a crossed-out phone, a trash bin and a quiet finger-to-lips symbol, the rules of a place.",
+   "negative": "any writing on the board",
+   "loai": "vocab",
+   "kho": 3,
+   "dungLai": "rules"
+  },
+  {
+   "id": "voc-n3-19-10",
+   "word": "約束",
+   "meaningVi": "Lời hứa",
+   "ten": "promise",
+   "prompt": "Two hands linking pinky fingers in a pinky promise.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-19-11",
+   "word": "考えます",
+   "meaningVi": "Suy nghĩ",
+   "ten": "think",
+   "prompt": "A person with a hand on the chin looking up thoughtfully with small swirls of thought above. The idea is shown inside a round thought bubble made of small circles rising from the person's head, as a simple picture. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "promptCu": "A person with a hand on the chin looking up thoughtfully with small swirls of thought above.",
+   "bieuTuong": "nghi"
+  },
+  {
+   "id": "voc-n3-19-13",
+   "word": "決定します",
+   "meaningVi": "Quyết định",
+   "ten": "decide",
+   "prompt": "A young woman at a fork in a forest path firmly pointing down one path with a decisive expression.",
+   "negative": "readable signposts",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "decide"
+  },
+  {
+   "id": "voc-n3-19-14",
+   "word": "人",
+   "meaningVi": "Người",
+   "ten": "person",
+   "prompt": "A single friendly person standing in a neutral relaxed pose, simple clothes, facing forward.",
+   "negative": "crowd",
+   "loai": "nhanvat",
+   "kho": 1,
+   "dungLai": "person"
+  },
+  {
+   "id": "voc-n3-19-15",
+   "word": "私",
+   "meaningVi": "Tôi",
+   "ten": "i-me",
+   "prompt": "A young person smiling and pointing to their own chest to indicate themselves.",
+   "negative": "",
+   "loai": "nhanvat",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-19-16",
+   "word": "みんな",
+   "meaningVi": "Mọi người",
+   "ten": "everyone",
+   "prompt": "A diverse group of people of all ages standing together smiling and waving.",
+   "negative": "",
+   "loai": "nhanvat",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-19-18",
+   "word": "問題",
+   "meaningVi": "Vấn đề",
+   "ten": "problem",
+   "prompt": "A person scratching their head in confusion in front of a huge tangled knot of rope.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 3,
+   "dungLai": "problem"
+  },
+  {
+   "id": "voc-n3-19-20",
+   "word": "掛けます",
+   "meaningVi": "Gây ra, treo lên",
+   "ten": "hang",
+   "prompt": "A person hanging a coat on a wall hook in a genkan entryway.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-20-1",
+   "word": "改善します",
+   "meaningVi": "Cải thiện",
+   "ten": "improve",
+   "prompt": "A wilted drooping plant on the left and the same plant standing tall and blooming on the right after being cared for with a watering can.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 3,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-20-2",
+   "word": "反省します",
+   "meaningVi": "Rút kinh nghiệm, phản tỉnh",
+   "ten": "reflect",
+   "prompt": "A person sitting quietly with bowed head and folded hands, reflecting on a mistake shown by a spilled cup beside them. Vertical gloomy blue lines hang over the person and a small sigh puff drifts from the mouth, cartoon symbols for disappointment. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 3,
+   "promptCu": "A person sitting quietly with bowed head and folded hands, reflecting on a mistake shown by a spilled cup beside them.",
+   "bieuTuong": "tiec"
+  },
+  {
+   "id": "voc-n3-20-3",
+   "word": "評価します",
+   "meaningVi": "Đánh giá",
+   "ten": "evaluate",
+   "prompt": "A panel of three judges holding up cards with star symbols while a performer waits on stage.",
+   "negative": "numbers on cards",
+   "loai": "canh",
+   "kho": 3,
+   "vat": true
+  },
+  {
+   "id": "voc-n3-20-4",
+   "word": "目標",
+   "meaningVi": "Mục tiêu",
+   "ten": "goal",
+   "prompt": "A hiker climbing toward a red flag planted on the peak of a mountain.",
+   "negative": "text on flag",
+   "loai": "vocab",
+   "kho": 2
+  },
+  {
+   "id": "voc-n3-20-5",
+   "word": "チーム",
+   "meaningVi": "Đội nhóm",
+   "ten": "team",
+   "prompt": "A sports team in matching jerseys huddling together with hands stacked in the center.",
+   "negative": "numbers on jerseys",
+   "loai": "canh",
+   "kho": 1
+  },
+  {
+   "id": "voc-n3-20-6",
+   "word": "努力",
+   "meaningVi": "Nỗ lực",
+   "ten": "effort",
+   "prompt": "A determined student studying late at night at a desk lamp with a headband, sweat drop on the forehead and a tall stack of textbooks, putting in great effort.",
+   "negative": "readable book titles",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "effort"
+  },
+  {
+   "id": "voc-n3-20-7",
+   "word": "準備",
+   "meaningVi": "Sự chuẩn bị",
+   "ten": "prepare",
+   "prompt": "A person packing a suitcase with folded clothes, a passport and toiletries on the bed, preparing for a trip.",
+   "negative": "text",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "prepare"
+  },
+  {
+   "id": "voc-n3-20-8",
+   "word": "結果",
+   "meaningVi": "Kết quả",
+   "ten": "result",
+   "prompt": "A student holding up a graded test sheet covered in big red circle marks with a relieved happy face, the teacher smiling beside her.",
+   "negative": "readable writing on paper, numbers on paper",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "result"
+  },
+  {
+   "id": "voc-n3-20-9",
+   "word": "会議",
+   "meaningVi": "Cuộc họp",
+   "ten": "meeting",
+   "prompt": "Several colleagues sitting around a conference table with laptops and documents, one person presenting a simple chart on a screen.",
+   "negative": "readable screen",
+   "loai": "canh",
+   "kho": 1,
+   "dungLai": "meeting"
+  },
+  {
+   "id": "voc-n3-20-10",
+   "word": "責任",
+   "meaningVi": "Trách nhiệm",
+   "ten": "responsibility",
+   "prompt": "A ship captain firmly holding the wheel in a storm while the crew behind relies on him, bearing responsibility.",
+   "negative": "",
+   "loai": "canh",
+   "kho": 3,
+   "dungLai": "responsibility"
+  },
+  {
+   "id": "voc-n3-20-11",
+   "word": "規則",
+   "meaningVi": "Quy tắc",
+   "ten": "rules",
+   "prompt": "A notice board with a row of simple pictogram icons: a crossed-out cigarette, a crossed-out phone, a trash bin and a quiet finger-to-lips symbol, the rules of a place.",
+   "negative": "any writing on the board",
+   "loai": "vocab",
+   "kho": 3,
+   "dungLai": "rules"
+  },
+  {
+   "id": "voc-n3-20-13",
+   "word": "問題",
+   "meaningVi": "Vấn đề",
+   "ten": "problem",
+   "prompt": "A person scratching their head in confusion in front of a huge tangled knot of rope.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 3,
+   "dungLai": "problem"
+  },
+  {
+   "id": "voc-n3-20-14",
+   "word": "成功します",
+   "meaningVi": "Thành công",
+   "ten": "success",
+   "prompt": "A businesswoman jumping for joy holding a golden trophy high as confetti bursts around her.",
+   "negative": "",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "success"
+  },
+  {
+   "id": "voc-n3-20-15",
+   "word": "失敗します",
+   "meaningVi": "Thất bại",
+   "ten": "failure",
+   "prompt": "A person in an apron staring in dismay at a burnt, collapsed cake smoking on a plate in the kitchen.",
+   "negative": "fire, disaster",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "failure"
+  },
+  {
+   "id": "voc-n3-20-16",
+   "word": "計画",
+   "meaningVi": "Kế hoạch",
+   "ten": "plan",
+   "prompt": "A person drawing a plan on a large sheet with boxes connected by arrows and a small map route.",
+   "negative": "text",
+   "loai": "vocab",
+   "kho": 2,
+   "dungLai": "plan"
+  },
+  {
+   "id": "voc-n3-20-18",
+   "word": "会社",
+   "meaningVi": "Công ty",
+   "ten": "company",
+   "prompt": "A modern mid-size office building with glass windows and office workers in suits walking in through the entrance.",
+   "negative": "company logo, sign text",
+   "loai": "canh",
+   "kho": 1,
+   "dungLai": "company"
+  },
+  {
+   "id": "voc-n3-20-19",
+   "word": "みんな",
+   "meaningVi": "Mọi người",
+   "ten": "everyone",
+   "prompt": "A diverse group of people of all ages standing together smiling and waving.",
+   "negative": "",
+   "loai": "nhanvat",
+   "kho": 1,
+   "dungLai": "everyone"
+  },
+  {
+   "id": "voc-n3-20-20",
+   "word": "話します",
+   "meaningVi": "Nói chuyện",
+   "ten": "talk",
+   "prompt": "Two people sitting face to face at a cafe table chatting happily, one gesturing with an empty speech bubble.",
+   "negative": "text in bubble",
+   "loai": "vocab",
+   "kho": 1,
+   "dungLai": "talk"
+  }
+ ],
+ "skipped": [
+  {
+   "id": "voc-n3-1-12",
+   "word": "理由",
+   "meaningVi": "Lý do",
+   "reason": "Danh tu truu tuong (ly do), khong co vat the nao day nghia ro"
+  },
+  {
+   "id": "voc-n3-2-20",
+   "word": "毎日",
+   "meaningVi": "Mỗi ngày, hằng ngày",
+   "reason": "Pho tu tan suat (moi ngay), anh khong the hien duoc lap lai ma khong dung so/chu"
+  },
+  {
+   "id": "voc-n3-3-9",
+   "word": "義務",
+   "meaningVi": "Nghĩa vụ, trách nhiệm",
+   "reason": "Danh tu truu tuong (nghia vu), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-3-18",
+   "word": "毎週",
+   "meaningVi": "Mỗi tuần",
+   "reason": "Pho tu tan suat (moi tuan), anh khong the hien duoc lap lai ma khong dung so/chu"
+  },
+  {
+   "id": "voc-n3-4-7",
+   "word": "お陰",
+   "meaningVi": "Nhờ có, nhờ ơn (nguyên nhân TÍCH CỰC)",
+   "reason": "Danh tu ngu phap (おかげ = nho co), chi co nghia trong cau"
+  },
+  {
+   "id": "voc-n3-5-2",
+   "word": "対します",
+   "meaningVi": "Đối với, hướng tới (thường dùng dạng に対して)",
+   "reason": "Tu chuc nang/ngu phap, khong co hinh anh day duoc nghia"
+  },
+  {
+   "id": "voc-n3-5-6",
+   "word": "以前",
+   "meaningVi": "Trước đây, ngày xưa",
+   "reason": "Tu chi thoi gian/truu tuong, anh khong phan biet duoc voi tu gan nghia (khong duoc dung chu/so)"
+  },
+  {
+   "id": "voc-n3-5-7",
+   "word": "現在",
+   "meaningVi": "Hiện tại, bây giờ",
+   "reason": "Tu chi thoi gian/truu tuong, anh khong phan biet duoc voi tu gan nghia (khong duoc dung chu/so)"
+  },
+  {
+   "id": "voc-n3-5-20",
+   "word": "社会",
+   "meaningVi": "Xã hội",
+   "reason": "Danh tu truu tuong (xa hoi), anh quang truong de hieu nham thanh 'thi tran'"
+  },
+  {
+   "id": "voc-n3-6-1",
+   "word": "向け",
+   "meaningVi": "Dành cho, nhắm đến (hậu tố gắn sau danh từ đối tượng)",
+   "reason": "Hau to ngu phap (向け = danh cho), nghia nam o danh tu di kem"
+  },
+  {
+   "id": "voc-n3-6-2",
+   "word": "向けます",
+   "meaningVi": "Hướng về, nhắm tới (động từ gốc của 向け)",
+   "reason": "Dong tu goc cua mau ngu phap (向けます), nghia truu tuong 'huong ve'"
+  },
+  {
+   "id": "voc-n3-6-3",
+   "word": "対象",
+   "meaningVi": "Đối tượng, mục tiêu (của nghiên cứu/dịch vụ)",
+   "reason": "Danh tu truu tuong (doi tuong nghien cuu/dich vu), anh de bi hieu nham thanh 'nham ban'"
+  },
+  {
+   "id": "voc-n3-7-1",
+   "word": "通して",
+   "meaningVi": "Suốt (một khoảng thời gian), thông qua (một phương tiện)",
+   "reason": "Tu chuc nang/ngu phap, khong co hinh anh day duoc nghia"
+  },
+  {
+   "id": "voc-n3-7-2",
+   "word": "通します",
+   "meaningVi": "Cho đi qua, tiếp tục xuyên suốt",
+   "reason": "Dong tu goc cua mau ngu phap (通します), nghia 'cho di qua/xuyen suot' qua truu tuong"
+  },
+  {
+   "id": "voc-n3-7-3",
+   "word": "渡って",
+   "meaningVi": "Trải dài, kéo dài suốt (một phạm vi rộng)",
+   "reason": "Tu chuc nang/ngu phap, khong co hinh anh day duoc nghia"
+  },
+  {
+   "id": "voc-n3-7-4",
+   "word": "限って",
+   "meaningVi": "Chỉ riêng, chỉ trong trường hợp (thường mang sắc thái trớ trêu)",
+   "reason": "Tu chuc nang/ngu phap, khong co hinh anh day duoc nghia"
+  },
+  {
+   "id": "voc-n3-7-5",
+   "word": "限ります",
+   "meaningVi": "Giới hạn, hạn chế",
+   "reason": "Dong tu truu tuong (gioi han), anh de hieu nham thanh 'cam' hoac 'rao chan'"
+  },
+  {
+   "id": "voc-n3-7-8",
+   "word": "全体",
+   "meaningVi": "Toàn thể, toàn bộ",
+   "reason": "Danh tu truu tuong (toan the), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-7-10",
+   "word": "全て",
+   "meaningVi": "Tất cả, toàn bộ",
+   "reason": "Pho tu so luong (tat ca), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-7-19",
+   "word": "続きます",
+   "meaningVi": "Tiếp tục, kéo dài",
+   "reason": "Dong tu truu tuong (keo dai), anh mua keo dai de hieu nham thanh 'mua'"
+  },
+  {
+   "id": "voc-n3-8-1",
+   "word": "条件",
+   "meaningVi": "Điều kiện",
+   "reason": "Danh tu truu tuong (dieu kien), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-8-4",
+   "word": "仮定",
+   "meaningVi": "Giả định",
+   "reason": "Danh tu truu tuong (gia dinh), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-8-7",
+   "word": "万一",
+   "meaningVi": "Vạn nhất, lỡ như (điều rất hiếm xảy ra)",
+   "reason": "Tu chuc nang/ngu phap, khong co hinh anh day duoc nghia"
+  },
+  {
+   "id": "voc-n3-8-10",
+   "word": "チャンス",
+   "meaningVi": "Cơ hội",
+   "reason": "Danh tu truu tuong (co hoi), hinh canh cua sang de hieu nham thanh 'cua'/'anh sang'"
+  },
+  {
+   "id": "voc-n3-8-20",
+   "word": "もし",
+   "meaningVi": "Nếu (như)",
+   "reason": "Tu chuc nang/ngu phap, khong co hinh anh day duoc nghia"
+  },
+  {
+   "id": "voc-n3-9-1",
+   "word": "〜がち",
+   "meaningVi": "Hay có xu hướng, thường xuyên (thường mang sắc thái tiêu cực)",
+   "reason": "Tu chuc nang/ngu phap, khong co hinh anh day duoc nghia"
+  },
+  {
+   "id": "voc-n3-9-2",
+   "word": "気味",
+   "meaningVi": "Có vẻ hơi, dấu hiệu nhẹ của (chủ quan)",
+   "reason": "Tu chuc nang/ngu phap, khong co hinh anh day duoc nghia"
+  },
+  {
+   "id": "voc-n3-9-8",
+   "word": "傾向",
+   "meaningVi": "Xu hướng, khuynh hướng",
+   "reason": "Danh tu truu tuong (xu huong), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-9-19",
+   "word": "最近",
+   "meaningVi": "Gần đây",
+   "reason": "Tu chi thoi gian/truu tuong, anh khong phan biet duoc voi tu gan nghia (khong duoc dung chu/so)"
+  },
+  {
+   "id": "voc-n3-12-16",
+   "word": "何時も",
+   "meaningVi": "Luôn luôn",
+   "reason": "Pho tu tan suat (luon luon), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-12-18",
+   "word": "これ",
+   "meaningVi": "Cái này",
+   "reason": "Dai tu chi dinh (cai nay), SVG chi tay hien tai ro hon"
+  },
+  {
+   "id": "voc-n3-12-19",
+   "word": "あの",
+   "meaningVi": "Kia, đó",
+   "reason": "Tu chi dinh (kia/do), SVG chi tay hien tai ro hon"
+  },
+  {
+   "id": "voc-n3-13-1",
+   "word": "状況",
+   "meaningVi": "Tình huống, tình hình",
+   "reason": "Danh tu truu tuong (tinh huong), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-13-5",
+   "word": "可能",
+   "meaningVi": "Khả thi, có thể",
+   "reason": "Tinh tu truu tuong (kha thi), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-13-6",
+   "word": "起こります",
+   "meaningVi": "Xảy ra",
+   "reason": "Dong tu truu tuong (xay ra), nghia phu thuoc chu ngu"
+  },
+  {
+   "id": "voc-n3-13-12",
+   "word": "出来ます",
+   "meaningVi": "Có thể làm được (khả năng thực tế)",
+   "reason": "Dong tu kha nang (co the lam duoc), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-13-18",
+   "word": "日本語",
+   "meaningVi": "Tiếng Nhật",
+   "reason": "Ten ngon ngu: muon day nghia phai ve chu viet, ma anh cam chu"
+  },
+  {
+   "id": "voc-n3-13-20",
+   "word": "どんな",
+   "meaningVi": "Loại nào, như thế nào",
+   "reason": "Tu nghi van (loai nao), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-14-18",
+   "word": "状況",
+   "meaningVi": "Tình huống",
+   "reason": "Danh tu truu tuong (tinh huong), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-14-20",
+   "word": "成ります",
+   "meaningVi": "Trở thành, trở nên",
+   "reason": "Dong tu truu tuong (tro thanh), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-15-8",
+   "word": "外国語",
+   "meaningVi": "Ngoại ngữ",
+   "reason": "Ten ngon ngu: muon day nghia phai ve chu viet, ma anh cam chu"
+  },
+  {
+   "id": "voc-n3-15-10",
+   "word": "日本語",
+   "meaningVi": "Tiếng Nhật",
+   "reason": "Ten ngon ngu: muon day nghia phai ve chu viet, ma anh cam chu"
+  },
+  {
+   "id": "voc-n3-15-11",
+   "word": "英語",
+   "meaningVi": "Tiếng Anh",
+   "reason": "Ten ngon ngu: muon day nghia phai ve chu viet, ma anh cam chu"
+  },
+  {
+   "id": "voc-n3-15-14",
+   "word": "全然",
+   "meaningVi": "Hoàn toàn không",
+   "reason": "Pho tu phu dinh (hoan toan khong), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-15-18",
+   "word": "全く",
+   "meaningVi": "Hoàn toàn",
+   "reason": "Pho tu muc do (hoan toan), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-15-19",
+   "word": "本当に",
+   "meaningVi": "Thật sự",
+   "reason": "Pho tu nhan manh (that su), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-16-17",
+   "word": "今日",
+   "meaningVi": "Hôm nay",
+   "reason": "Tu chi thoi gian/truu tuong, anh khong phan biet duoc voi tu gan nghia (khong duoc dung chu/so)"
+  },
+  {
+   "id": "voc-n3-16-18",
+   "word": "明日",
+   "meaningVi": "Ngày mai",
+   "reason": "Tu chi thoi gian/truu tuong, anh khong phan biet duoc voi tu gan nghia (khong duoc dung chu/so)"
+  },
+  {
+   "id": "voc-n3-17-14",
+   "word": "社会",
+   "meaningVi": "Xã hội",
+   "reason": "Danh tu truu tuong (xa hoi), anh quang truong de hieu nham thanh 'thi tran'"
+  },
+  {
+   "id": "voc-n3-18-11",
+   "word": "必要",
+   "meaningVi": "Cần thiết",
+   "reason": "Tinh tu truu tuong (can thiet), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-18-14",
+   "word": "来週",
+   "meaningVi": "Tuần sau",
+   "reason": "Tu chi thoi gian/truu tuong, anh khong phan biet duoc voi tu gan nghia (khong duoc dung chu/so)"
+  },
+  {
+   "id": "voc-n3-18-15",
+   "word": "今日",
+   "meaningVi": "Hôm nay",
+   "reason": "Tu chi thoi gian/truu tuong, anh khong phan biet duoc voi tu gan nghia (khong duoc dung chu/so)"
+  },
+  {
+   "id": "voc-n3-18-19",
+   "word": "まだ",
+   "meaningVi": "Vẫn chưa",
+   "reason": "Pho tu (van chua), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-19-3",
+   "word": "義務",
+   "meaningVi": "Nghĩa vụ",
+   "reason": "Danh tu truu tuong (nghia vu), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-19-4",
+   "word": "権利",
+   "meaningVi": "Quyền lợi",
+   "reason": "Danh tu truu tuong (quyen loi), anh de bi hieu nham thanh 'bo phieu'"
+  },
+  {
+   "id": "voc-n3-19-12",
+   "word": "早く",
+   "meaningVi": "Sớm",
+   "reason": "Pho tu (som), anh van phong luc binh minh khong phan biet voi 'buoi sang'"
+  },
+  {
+   "id": "voc-n3-19-17",
+   "word": "社会",
+   "meaningVi": "Xã hội",
+   "reason": "Danh tu truu tuong (xa hoi), anh quang truong de hieu nham thanh 'thi tran'"
+  },
+  {
+   "id": "voc-n3-19-19",
+   "word": "します",
+   "meaningVi": "Làm",
+   "reason": "Dong tu chung chung (lam), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-20-12",
+   "word": "状況",
+   "meaningVi": "Tình huống",
+   "reason": "Danh tu truu tuong (tinh huong), khong co hinh day nghia ro"
+  },
+  {
+   "id": "voc-n3-20-17",
+   "word": "来年",
+   "meaningVi": "Năm sau",
+   "reason": "Tu chi thoi gian/truu tuong, anh khong phan biet duoc voi tu gan nghia (khong duoc dung chu/so)"
+  }
+ ],
+ "styleCu": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, one clear subject centered with generous empty margin, plain light warm paper background #f0ebe1, friendly simple faces, Japanese everyday-life context, no text, no letters, no numbers, no watermark, square 1:1 composition",
+ "styleRef": "style-chung.json",
+ "cachGhepMoi": "gen.py doc styleRef: prompt = item.prompt + \" \" + style-chung.style ; negative = hop (khong trung) cua style-chung.negativeBase + item.negative"
+}

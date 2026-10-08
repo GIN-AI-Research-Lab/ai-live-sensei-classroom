@@ -19,3 +19,6 @@ assets/sensei-meo/video/goc/
 # Tep ca nhan / nhap — khong bao gio de trong thu muc duoc phuc vu hay commit
 Image/
 private/
+
+# Video concept nang (giu tren may, khong dua len git)
+docs/concept-moi/*.mp4

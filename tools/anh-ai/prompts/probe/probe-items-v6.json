@@ -1,0 +1,65 @@
+{
+ "styleRef": "style-chung.json",
+ "items": [
+  {
+   "ten": "but-chi",
+   "nghia": "n5",
+   "prompt": "A yellow wooden pencil with a sharpened graphite tip and a pink eraser on the end.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face"
+  },
+  {
+   "ten": "cap-tui",
+   "nghia": "n5",
+   "prompt": "A leather bag with a top handle and a shoulder strap.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face"
+  },
+  {
+   "ten": "radio",
+   "nghia": "n5",
+   "prompt": "A retro portable radio with a round speaker grille, a tuning dial and an extended antenna.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, numerals on clock face, numbers on dial"
+  },
+  {
+   "ten": "o-to",
+   "nghia": "n5",
+   "prompt": "A small rounded family car seen from the side.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, license plate numbers"
+  },
+  {
+   "ten": "ca-phe",
+   "nghia": "n5",
+   "prompt": "A cup of hot black coffee on a saucer with steam rising.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face"
+  },
+  {
+   "ten": "qua-luu-niem",
+   "nghia": "n5",
+   "prompt": "A neatly wrapped box of local sweets tied in a furoshiki cloth, brought back as a souvenir, resting on a small travel suitcase.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, printed headlines, readable text, title lettering"
+  },
+  {
+   "ten": "dai-hoc",
+   "nghia": "n5",
+   "prompt": "A large university campus with a stately brick main building behind a wide gate, golden ginkgo trees and students walking in.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, printed headlines, readable text, title lettering"
+  },
+  {
+   "ten": "toi",
+   "nghia": "n5",
+   "prompt": "A friendly young person smiling and pointing a finger at their own chest to indicate themselves.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, crowd, extra people"
+  },
+  {
+   "ten": "tren",
+   "nghia": "n5",
+   "prompt": "A small terracotta-orange cat sitting on top of a wooden box.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face"
+  },
+  {
+   "ten": "den-dien",
+   "nghia": "n5",
+   "prompt": "A glowing light bulb hanging from a ceiling cord, radiating warm light with a tiny electric spark inside.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face"
+  }
+ ]
+}

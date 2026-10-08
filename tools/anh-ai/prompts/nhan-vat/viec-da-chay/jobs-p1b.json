@@ -1,0 +1,44 @@
+[
+ {
+  "ten": "hyoronka__binh_thuong",
+  "ref": "/home/thaovyh2t_gmail_com/nv/hyoronka.png",
+  "prompt": "Edit this flat vector cartoon portrait of one person. Keep the identical character: exactly the same hair shape and colour, same skin colour, same clothes and accessories, same head size and position, same shoulders, same outline style and same plain cream background. Change ONLY the eyebrows and eyes (and the head tilt only where stated). The mouth must stay a single small closed line or curve (never an open mouth, no teeth, no tongue), at exactly the same position and size as in the original. Do not draw any extra marks: no text, no question mark, no exclamation mark, no sweat drops, no anger veins, no sparkles, no hearts, no blush marks. Expression: neutral and calm. Eyebrows relaxed and level, eyes relaxed small dots, the mouth a small gentle closed line.",
+  "seed": 7
+ },
+ {
+  "ten": "hyoronka__vui",
+  "ref": "/home/thaovyh2t_gmail_com/nv/hyoronka.png",
+  "prompt": "Edit this flat vector cartoon portrait of one person. Keep the identical character: exactly the same hair shape and colour, same skin colour, same clothes and accessories, same head size and position, same shoulders, same outline style and same plain cream background. Change ONLY the eyebrows and eyes (and the head tilt only where stated). The mouth must stay a single small closed line or curve (never an open mouth, no teeth, no tongue), at exactly the same position and size as in the original. Do not draw any extra marks: no text, no question mark, no exclamation mark, no sweat drops, no anger veins, no sparkles, no hearts, no blush marks. Expression: happy and warm. The eyes become cheerful smiling arcs curving upward, eyebrows relaxed and slightly raised, the mouth a slightly wider closed smile curve.",
+  "seed": 7
+ },
+ {
+  "ten": "hyoronka__hoi",
+  "ref": "/home/thaovyh2t_gmail_com/nv/hyoronka.png",
+  "prompt": "Edit this flat vector cartoon portrait of one person. Keep the identical character: exactly the same hair shape and colour, same skin colour, same clothes and accessories, same head size and position, same shoulders, same outline style and same plain cream background. Change ONLY the eyebrows and eyes (and the head tilt only where stated). The mouth must stay a single small closed line or curve (never an open mouth, no teeth, no tongue), at exactly the same position and size as in the original. Do not draw any extra marks: no text, no question mark, no exclamation mark, no sweat drops, no anger veins, no sparkles, no hearts, no blush marks. Expression: curious and questioning. One eyebrow raised high and arched while the other eyebrow stays level, eyes open and looking slightly upward, the head tilted very slightly to one side, the mouth a small closed slightly crooked line.",
+  "seed": 7
+ },
+ {
+  "ten": "hyoronka__gian",
+  "ref": "/home/thaovyh2t_gmail_com/nv/hyoronka.png",
+  "prompt": "Edit this flat vector cartoon portrait of one person. Keep the identical character: exactly the same hair shape and colour, same skin colour, same clothes and accessories, same head size and position, same shoulders, same outline style and same plain cream background. Change ONLY the eyebrows and eyes (and the head tilt only where stated). The mouth must stay a single small closed line or curve (never an open mouth, no teeth, no tongue), at exactly the same position and size as in the original. Do not draw any extra marks: no text, no question mark, no exclamation mark, no sweat drops, no anger veins, no sparkles, no hearts, no blush marks. Expression: angry. Eyebrows pulled low, squeezed together and slanted sharply downward toward the nose, eyes narrowed into a hard glare, the mouth a tight short closed frowning line curving downward. Skin colour unchanged.",
+  "seed": 7
+ },
+ {
+  "ten": "hyoronka__ngac_nhien",
+  "ref": "/home/thaovyh2t_gmail_com/nv/hyoronka.png",
+  "prompt": "Edit this flat vector cartoon portrait of one person. Keep the identical character: exactly the same hair shape and colour, same skin colour, same clothes and accessories, same head size and position, same shoulders, same outline style and same plain cream background. Change ONLY the eyebrows and eyes (and the head tilt only where stated). The mouth must stay a single small closed line or curve (never an open mouth, no teeth, no tongue), at exactly the same position and size as in the original. Do not draw any extra marks: no text, no question mark, no exclamation mark, no sweat drops, no anger veins, no sparkles, no hearts, no blush marks. Expression: surprised. Eyebrows lifted very high in tall arches, eyes wide open and round, bigger than before, the mouth a small short closed line.",
+  "seed": 7
+ },
+ {
+  "ten": "hyoronka__hao_hung",
+  "ref": "/home/thaovyh2t_gmail_com/nv/hyoronka.png",
+  "prompt": "Edit this flat vector cartoon portrait of one person. Keep the identical character: exactly the same hair shape and colour, same skin colour, same clothes and accessories, same head size and position, same shoulders, same outline style and same plain cream background. Change ONLY the eyebrows and eyes (and the head tilt only where stated). The mouth must stay a single small closed line or curve (never an open mouth, no teeth, no tongue), at exactly the same position and size as in the original. Do not draw any extra marks: no text, no question mark, no exclamation mark, no sweat drops, no anger veins, no sparkles, no hearts, no blush marks. Expression: excited and interested. Eyebrows raised, eyes big, round and bright with small white highlight spots inside, the mouth a big wide closed smile curve.",
+  "seed": 7
+ },
+ {
+  "ten": "hyoronka__buon",
+  "ref": "/home/thaovyh2t_gmail_com/nv/hyoronka.png",
+  "prompt": "Edit this flat vector cartoon portrait of one person. Keep the identical character: exactly the same hair shape and colour, same skin colour, same clothes and accessories, same head size and position, same shoulders, same outline style and same plain cream background. Change ONLY the eyebrows and eyes (and the head tilt only where stated). The mouth must stay a single small closed line or curve (never an open mouth, no teeth, no tongue), at exactly the same position and size as in the original. Do not draw any extra marks: no text, no question mark, no exclamation mark, no sweat drops, no anger veins, no sparkles, no hearts, no blush marks. Expression: sad and apologetic. Eyebrows tilted with the inner ends high and the outer ends low in a worried shape, eyes slightly lowered and drooping, the mouth a small closed curve turned downward.",
+  "seed": 7
+ }
+]

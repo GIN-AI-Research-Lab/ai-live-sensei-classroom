@@ -1,0 +1,7005 @@
+{
+ "ghiChu": "QA anh Qwen: co = ly do bi gan co (xem tay + loi tu dong nang); canhBaoTuDong = canh bao tu dong (da xem tay tren to lien he); trangThai ok | tao-lai | giu-svg; nguon = seed cua anh duoc dung (s11 goc, s22/s33 tao lai)",
+ "dem": {
+  "ok": 1249,
+  "tao-lai": 0,
+  "giu-svg": 18,
+  "ok-sau-tao-lai": 141
+ },
+ "muc": {
+  "n5/toi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/chung-toi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ban-anh-chi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nguoi-kia": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/moi-nguoi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/giao-vien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/hoc-sinh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nhan-vien-cong-ty": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nhan-vien-ngan-hang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/bac-si": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nha-nghien-cuu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ky-su": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/dai-hoc": {
+   "canhBaoTuDong": [],
+   "co": "khung/the trang co bong phia sau canh truong",
+   "promptMoi": "A stately red-brick university main building with a central tower, a black graduation mortarboard cap resting in front of it and two small golden ginkgo trees beside it, standing alone as a compact isolated building.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/benh-vien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/den-dien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/vang-dong-y": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/khong-phu-dinh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cai-nay": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cai-do": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cai-kia": {
+   "canhBaoTuDong": [
+    "da-go-khung 46%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/sach": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tu-dien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tap-chi": {
+   "canhBaoTuDong": [],
+   "co": "bia tap chi ve nguoi mau kieu anh chup (lech phong cach, gan anh that)",
+   "promptMoi": "A thin magazine lying slightly open and curled, its cover showing only simple flat colour blocks and a small flat drawing of a flower, with no title printed.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/to-bao": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/quyen-vo": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/so-tay": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/danh-thiep": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/the": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (4 canh thang)"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/but-chi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/but-bi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/but-chi-kim": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/chia-khoa": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/dong-ho": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cai-o": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cap-tui": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/dia-cd": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tivi": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 91% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/radio": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/may-anh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/may-tinh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/o-to": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ban": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ghe": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/socola": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ca-phe": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/qua-luu-niem": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cho-nay": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cho-do": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cho-kia": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/phia-nay": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/phia-do": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/phia-kia": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 95% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "o hanh lang chu nhat (khung) phia sau hai nguoi",
+   "promptMoi": "A polite receptionist in a terracotta uniform gesturing with an open palm toward a small doorway standing far off to the side, while a guest beside her looks that way; only the two people and the small distant doorway.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/phong-hoc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nha-an": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/van-phong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/phong-hop": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/quay-le-tan": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/can-phong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nha-ve-sinh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cau-thang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/thang-may": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/thang-cuon": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/dat-nuoc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cong-ty": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nha": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/dien-thoai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/doi-giay": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ca-vat": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ruou-vang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/quay-ban-hang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tang-ham": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tang-lau": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/sanh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nuoc-y": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/thuy-si": {
+   "canhBaoTuDong": [],
+   "co": "the/anh in co vien bong (khung)",
+   "promptMoi": "The snowy Matterhorn mountain peak with a small wooden chalet and a tiny grazing cow at its foot, drawn as one compact isolated mountain shape.",
+   "trangThai": "ok",
+   "nguon": "s22",
+   "ghiChuTaoLai": "day nui cat thang nhe (nho)"
+  },
+  "n5/dong-yen": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/thuoc-la": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/mot-nua": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/buoi-sang": {
+   "canhBaoTuDong": [],
+   "co": "o cua so vuong kin (tile)",
+   "promptMoi": "A person stretching happily beside an open curtain as a big bright morning sun rises just above a few small rooftops.",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n5/buoi-chieu": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 100% bbox)"
+   ],
+   "co": "canh o vuong dac (tile)",
+   "promptMoi": "Two children with school backpacks walking home side by side, a large low orange afternoon sun behind them and long soft shadows on a small patch of path.",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n5/ngan-hang": {
+   "canhBaoTuDong": [],
+   "co": "ky hieu $ tren phu hieu (ky tu tien te)",
+   "promptMoi": "A classic bank building with stone columns and a triangular roof, a small plain round gold medallion emblem without any symbol above the entrance, and a small closed vault door icon beside it.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/thu-vien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/phim": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nghi-ngoi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/thuc-day": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/di-ngu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/lam-viec": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/hoc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ket-thuc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/di": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/den": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ve-nha": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/len-xe": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/xuong-xe": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nha-ga": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tau-dien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/xe-dap": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/xe-buyt": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/taxi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/may-bay": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ban-be": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cung-nhau": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/mot-minh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/sinh-nhat": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/du-lich": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/an": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/uong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nhin": {
+   "canhBaoTuDong": [
+    "da-go-khung 33%"
+   ],
+   "co": "vien khung con sot ben phai (sau khi go khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n5/nghe": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/doc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/viet": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/mua-hang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/chup-anh": {
+   "canhBaoTuDong": [
+    "da-go-khung 34%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/lam-che-tao": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/gap": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/hut-thuoc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/banh-mi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/thit": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ca": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/rau": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/trai-cay": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/la-thu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/buc-anh": {
+   "canhBaoTuDong": [
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/am-nhac": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/hoa": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cong-vien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/quan-ca-phe": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nha-bep": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tang-qua": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nhan-qua": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cho-muon": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/muon": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/day": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/hoc-ky-nang": {
+   "canhBaoTuDong": [
+    "da-go-khung 26%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/noi-chuyen": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cho-xem": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/but": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ban-do": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/bai-tap-ve-nha": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/to-lon": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nho-be": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/moi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tot": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/xau-te": {
+   "canhBaoTuDong": [],
+   "co": "sai nghia: gio ngon cai LEN (tot) thay vi xuong",
+   "promptMoi": "A frowning person holding one fist out with the thumb pointing straight DOWN toward the ground in a clear thumbs-down gesture, a tiny dark scribble cloud floating above the head. The thumb points downward, never upward. There are no letters, words or numbers anywhere.",
+   "trangThai": "ok",
+   "nguon": "s22",
+   "ghiChuTaoLai": "chi con ban tay ngon cai xuong + may"
+  },
+  "n5/nong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/lanh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/kho": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/de": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cao": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/re": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/thu-vi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/vui-ve": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ban-ron": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ngon": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/dep-sach": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/khoe-manh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/yen-tinh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/noi-tieng": {
+   "canhBaoTuDong": [
+    "da-go-khung 32%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tien-loi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/thich": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/rat-thich": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ghet": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/gioi": {
+   "canhBaoTuDong": [
+    "da-go-khung 27%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/kem": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/the-thao": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/bai-hat": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/buc-tranh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/mon-an": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/dan-guitar": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ruou-sake": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tra-xanh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tren": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/duoi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/truoc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/sau": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/trong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ngoai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ben-canh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/gan": {
+   "canhBaoTuDong": [],
+   "co": "kho hieu: khong thay nha ga, khong ro nghia gan",
+   "promptMoi": "A small house and a small train station building with a platform roof standing right next to each other, almost touching, with a tiny curved double-headed arrow between them showing the very short distance.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/giua": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/hop": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/binh-hoa": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cay": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/con-cho": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/con-meo": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/con-chim": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/mot-cai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/hai-cai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nam-cai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/luong-tu-vat-tron": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/luong-tu-vat-mong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/luong-tu-may-moc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/luong-tu-sach": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/luong-tu-nguoi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/to-giay": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tem-thu": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 96% bbox)"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/phong-bi": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (4 canh thang)"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ve-tau": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cai-dia": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/qua-trung": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nguoi-nuoc-ngoai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nguoi-lon": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cau-hoi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/so-mot": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/mua-trong-nam": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/mua-xuan": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/mua-he": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 97% bbox)"
+   ],
+   "co": "canh o vuong bo goc (tile)",
+   "promptMoi": "A small group of summer things standing together: two tall sunflowers, a glass wind chime hanging from a short wooden stand and a slice of watermelon, with a small bright sun above them.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/mua-thu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/mua-dong": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 94% bbox)"
+   ],
+   "co": "canh o vuong bo goc (tile)",
+   "promptMoi": "A cheerful snowman with a red scarf standing on a small round mound of snow beside one bare little tree, a few snowflakes falling around them.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/thi-tran": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 91% bbox)"
+   ],
+   "co": "canh o vuong bo goc (tile)",
+   "promptMoi": "A compact cluster of three small Japanese town buildings side by side, a little shop with an awning, a house and a utility pole with wires, standing together on a short strip of street.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/dong-vat": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nuoc-ngoai": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (4 canh thang)"
+   ],
+   "co": "khung cua so vuong bao ca canh (khung)",
+   "promptMoi": "A traveler with a rolling suitcase standing and looking toward a small foreign city skyline with a round-domed tower and a faraway palm tree across a short strip of blue sea, with a small airplane flying above.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/the-gioi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nghi-he": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/muon-co": {
+   "canhBaoTuDong": [],
+   "co": "o cua kinh vuong phia sau (khung)",
+   "promptMoi": "A child standing with both hands clasped, gazing longingly at a toy robot sitting on a small low shelf, a round thought bubble above the child's head showing the same toy robot with a small red heart.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/mua-sam": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/choi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/boi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/bien": {
+   "canhBaoTuDong": [],
+   "co": "canh o vuong bo goc (tile)",
+   "promptMoi": "A small curved sandy beach with gentle blue waves rolling in, a beach umbrella and a seashell, drawn as one compact isolated island-like patch of shore.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/nui": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ho-boi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/rap-chieu-phim": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/vi-tien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nhieu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/shinkansen": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/suoi-nuoc-nong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cho-doi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/chet": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/song-cu-tru": {
+   "canhBaoTuDong": [
+    "da-go-khung 15%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/voi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/dung-day": {
+   "canhBaoTuDong": [],
+   "co": "sai nghia: nguoi ngoi co chan, khong thay dung day",
+   "promptMoi": "A person pushing up from a chair and standing up, halfway between sitting and standing, knees straightening, one hand on the armrest, the body clearly rising upward with a small upward curved motion arrow beside.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/ngoi-xuong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cam-mang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/biet": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/mo": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 95% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/dong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tat": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/giup-do": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ket-hon": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/su-dung": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/vao": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ra": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/coi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/dung-do-xe": {
+   "canhBaoTuDong": [],
+   "co": "kho hieu: chi co chiec xe, khong ro dung/do",
+   "promptMoi": "A small car parked neatly inside a painted parking space marked by white lines on a small patch of asphalt, with a tall round red stop sign without any writing standing beside it.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/cua-so": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/bai-kiem-tra": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/on-khong-sao": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/danh-rang": {
+   "canhBaoTuDong": [
+    "da-go-khung 24%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tam-voi-sen": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ra-ngoai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/khuon-mat": {
+   "canhBaoTuDong": [],
+   "co": "dau troi hoi khong toc (bong tron), vien cam loang",
+   "promptMoi": "Head-and-shoulders of a smiling young person with short dark brown hair, natural light peach skin, the whole face outlined by a thin bold terracotta ring, and a small terracotta arrow pointing at the face.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/mat": {
+   "canhBaoTuDong": [],
+   "co": "dau troi hoi khong toc, mat bi ve nhu kinh (kho hieu)",
+   "promptMoi": "Head-and-shoulders of a friendly young person with short dark brown hair and natural light peach skin, both eyes circled by thin terracotta rings, and a small terracotta arrow pointing at the eyes. No glasses.",
+   "trangThai": "giu-svg",
+   "ghiChuTaoLai": "mui ten xuyen qua mat, vong tron nhu kinh - kho hieu o ca 2 seed"
+  },
+  "n5/tai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/mieng": {
+   "canhBaoTuDong": [],
+   "co": "dau troi hoi khong toc (bong tron)",
+   "promptMoi": "Head-and-shoulders of a friendly young person with short dark brown hair and natural light peach skin, smiling, the mouth circled by a thin terracotta ring, and a small terracotta arrow pointing at the mouth.",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n5/ban-tay": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/chan": {
+   "canhBaoTuDong": [],
+   "co": "nguoi khong quan ao, than hong phat sang (la mat)",
+   "promptMoi": "A standing child wearing a terracotta T-shirt and sage-green shorts, bare legs and feet with natural light peach skin, the legs and feet outlined by a thin terracotta line, and a small terracotta arrow pointing at the feet.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/dau": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/co-the": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/chieu-cao": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/toc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/vui-ve-coi-mo": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tot-bung": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/diu-dang": {
+   "canhBaoTuDong": [
+    "da-go-khung 27%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/bo-vest": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/loi-vao": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/quen": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/thuoc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/benh-om": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cuoc-hop": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ho-chieu": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (4 canh thang)"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/lai-xe": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/bang-lai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/lo-lang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/choi-dan": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/di-dao": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/vao-bon-tam": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/so-thich": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/piano": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/bon-tam": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/mot-chut": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/leo-nui": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tro-thanh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/du-hoc-sinh": {
+   "canhBaoTuDong": [
+    "da-go-khung 45%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nui-phu-si": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/kyoto": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 97% bbox)"
+   ],
+   "co": "canh o vuong bo goc (tile)",
+   "promptMoi": "The Golden Pavilion temple of Kyoto with two small pine trees beside it, standing on a small curved patch of pond water, drawn as one compact isolated landmark.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/ngoi-chua": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/gia-dinh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cha-me": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/bo": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/me": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/anh-chi-em": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/anh-trai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/chi-gai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/em-trai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/em-gai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nghi-rang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/noi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/suy-nghi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/thoi-tiet": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/mua-roi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tuyet": {
+   "canhBaoTuDong": [],
+   "co": "canh o vuong bo goc (tile)",
+   "promptMoi": "A small snow-covered house roof and a little snow-topped pine tree standing on a small round mound of snow, big soft snowflakes falling around them.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/bao-to": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tin-tuc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/quan-trong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/vat-va": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/mac-ao": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/deo-kinh": {
+   "canhBaoTuDong": [
+    "da-go-khung 30%"
+   ],
+   "co": "vien khung con sot ben phai (sau khi go khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/doi-mu": {
+   "canhBaoTuDong": [
+    "da-go-khung 37%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/xay-dung": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/kinh-mat": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/mu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/quan-ao": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/do-tay": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/toa-nha": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cua-hang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nha-hang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nguoi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/an-nhan": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/bang-qua": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/re-queo": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/mo-tu-dong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cai-nut": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ben-phai": {
+   "canhBaoTuDong": [
+    "da-go-khung 41%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ben-trai": {
+   "canhBaoTuDong": [
+    "da-go-khung 39%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/den-giao-thong": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 98% bbox)"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tre-con": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/ranh-roi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/cho-toi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/rua": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/hanh-ly": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/nang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/con-duong": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 96% bbox)"
+   ],
+   "co": "canh o vuong bo goc (tile)",
+   "promptMoi": "A short winding country road curving between two small green grassy mounds and a little tree, drawn as one compact isolated patch of landscape.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n5/do-vat-va": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/met-moi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/co-gang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/tien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n5/dat": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/nv-santos": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/nv-wang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/nv-tanaka": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/nv-yamada": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/nv-miller": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/nv-sato": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/nv-gupta": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/nv-karina": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/nv-maria": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/nv-yamamoto": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/nv-suzuki": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/nv-sensei": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/nv-tenin": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/nv-uketsuke": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/nv-shacho": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/nv-kyoju": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/nv-senshu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-gioi-thieu-dong-nghiep-moi": {
+   "canhBaoTuDong": [
+    "da-go-khung 41%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-tang-qua-hang-xom": {
+   "canhBaoTuDong": [
+    "da-go-khung 28%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-mua-ruou-vang-bach-hoa": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 95% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "tam nen cua hang hinh chu nhat phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s33",
+   "ghiChuTaoLai": "con ke/thang cuon phia sau nhung khong con o vuong"
+  },
+  "canh/canh-hoi-gio-o-ngan-hang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-di-hoc-bang-tau-va-xe-dap": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-an-trua-o-can-tin": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-muon-tu-dien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-dao-pho-nho-yen-tinh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-so-thich-choi-guitar": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-con-cho-trong-cong-vien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-mua-tem-buu-dien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-mua-xuan-va-mua-thu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-len-ke-hoach-nghi-he": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-giup-be-thung-do": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 92% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "tam nen can phong hinh chu nhat phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s22",
+   "ghiChuTaoLai": "con goc tuong mo, khong con o vuong"
+  },
+  "canh/canh-xin-phep-trong-gio-kiem-tra": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-buoi-sang-danh-rang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-kham-benh-uong-thuoc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-choi-dan-va-doc-sach": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-ke-chuyen-leo-nui-phu-si": {
+   "canhBaoTuDong": [
+    "da-go-khung 18%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-xem-anh-gia-dinh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-bao-sap-toi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-thay-giao-doi-mu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-chi-duong-den-ngan-hang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-hoi-duong-nguoi-qua-duong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-mua-may-anh-moi": {
+   "canhBaoTuDong": [
+    "da-go-khung 24%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-dong-nghiep-bi-sot": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-boi-gioi-o-ho-boi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-di-dao-ngay-mua": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-den-tat-cua-so-mo": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-chuan-bi-bua-tiec": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-uoc-mo-du-hoc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-khuyen-di-benh-vien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-huan-luyen-vien-ra-lenh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-doc-sach-huong-dan": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-que-hay-thanh-pho": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-doc-bao-noi-to": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-buoi-sang-xui-xeo": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-hat-karaoke": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-den-muon-vi-tau-dung": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-thu-mon-an-moi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-qua-sinh-nhat-duoi-hoa-anh-dao": {
+   "canhBaoTuDong": [
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "canh o vuong (tile) hoa anh dao",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "canh/canh-hoc-tu-va-tiet-kiem": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-troi-sap-mua": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-dau-dau-vi-uong-qua-nhieu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-dien-tap-dong-dat": {
+   "canhBaoTuDong": [
+    "da-go-khung 14%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-goi-dien-luc-sap-ra-ngoai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-tin-don-dam-cuoi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-bat-con-an-rau": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-le-tan-va-thu-ky": {
+   "canhBaoTuDong": [
+    "da-go-khung 42%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-tham-quan-cong-ty-ngay-dau": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-pha-ky-luc-bat-ngo": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-thoi-quen-song-khoe": {
+   "canhBaoTuDong": [
+    "da-go-khung 34%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-quy-dinh-truong-dai-hoc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-den-muon-vi-ket-xe": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-vat-gia-tang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-san-pham-cho-noi-tro": {
+   "canhBaoTuDong": [
+    "da-go-khung 22%"
+   ],
+   "co": "vien khung mong con sot quanh canh",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "canh/canh-dai-hoi-ngay-mua": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-gia-su-trung-xo-so": {
+   "canhBaoTuDong": [
+    "da-go-khung 25%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-thieu-ngu-met-moi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-bat-man-luong-thap": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-nong-khong-chiu-noi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-dieu-tra-vu-mat-vi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-an-toan-nha-may": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-xu-huong-xa-hoi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-nhan-vien-moi-da-tai": {
+   "canhBaoTuDong": [
+    "da-go-khung 27%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-ky-thay-giam-doc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-thuyet-trinh-van-hoa-nhat": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-cuoc-hop-bi-hoan": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-tuan-thu-quy-tac-xa-hoi": {
+   "canhBaoTuDong": [
+    "da-go-khung 25%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-hop-tong-ket-du-an": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-le-khai-mac-nham-chuc": {
+   "canhBaoTuDong": [
+    "da-go-khung 30%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-bat-dac-di-nhap-vien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-may-hong-khong-sua-duoc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-duong-nui-sat-lo": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-gio-manh-dan-khi-bao-den": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 98% bbox)",
+    "nghi-khung-chu-nhat (4 canh thang)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "canh/canh-chi-nhanh-lan-tu-tokyo": {
+   "canhBaoTuDong": [
+    "da-go-khung 21%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-cong-nghe-lan-khap-the-gioi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-tranh-chap-dat-dai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-van-dong-vien-bat-chap-benh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-dua-tren-luat-va-so-lieu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-dac-san-dia-phuong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-quyet-dinh-ket-hon": {
+   "canhBaoTuDong": [
+    "da-go-khung 26%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-tin-tai-nan-kho-tin": {
+   "canhBaoTuDong": [
+    "da-go-khung 24%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-ky-niem-thanh-lap-cong-ty": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-vdv-cai-trong-tai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-tin-tham-kich-gay-soc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-san-pham-hoan-hao": {
+   "canhBaoTuDong": [
+    "da-go-khung 26%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-cuoc-doi-vuot-kho": {
+   "canhBaoTuDong": [],
+   "co": "tam nen/o vuong phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "canh/canh-cong-ty-pha-san": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-be-boi-nghi-si": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-chung-cu-thu-pham": {
+   "canhBaoTuDong": [
+    "da-go-khung 29%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-le-tot-nghiep-tri-an-thay": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-hop-bao-xin-loi": {
+   "canhBaoTuDong": [
+    "da-go-khung 34%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-giam-doc-nghi-huu": {
+   "canhBaoTuDong": [
+    "vung-toi-lon (6.0%)",
+    "nghi-the-khung (vung sang 26%)",
+    "nghi-o-vuong (lap 95% bbox)"
+   ],
+   "co": "tam nen/o vuong phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "canh/canh-luat-su-tuyen-an": {
+   "canhBaoTuDong": [
+    "da-go-khung 25%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-phong-van-nha-vo-dich": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-binh-luan-thanh-tra-bi-bat": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-gop-y-luan-van": {
+   "canhBaoTuDong": [
+    "da-go-khung 24%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "canh/canh-bai-giang-nghi-huu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/oversleep": {
+   "canhBaoTuDong": [],
+   "co": "can phong o vuong (tile)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n4/be-late": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/broken": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/get-well": {
+   "canhBaoTuDong": [
+    "da-go-khung 27%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/accident": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/fever": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/meeting": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/meeting-room": {
+   "canhBaoTuDong": [],
+   "co": "can phong hop dong hop (tile)",
+   "promptMoi": "A long meeting table with office chairs around it and a small blank whiteboard on a stand at one end, drawn as a compact isolated group of furniture.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/train": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/work-job": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/hospital": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/cold-flu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/opinion": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/its-okay": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/can-speak": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/can-write": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/can-swim": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/can-see-view": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (4 canh thang)"
+   ],
+   "co": "khung cua so bao ca canh (khung)",
+   "promptMoi": "A person pointing happily at a small snowy Mount Fuji rising in the distance, both standing on a small patch of grass.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/can-do": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/drive": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/conversation": {
+   "canhBaoTuDong": [
+    "nghi-the-khung (vung sang 28%)",
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "tam nen o vuong phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/swimming": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/exercise": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/piano": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/driver-job": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/university-student": {
+   "canhBaoTuDong": [],
+   "co": "canh truong o vuong (tile)",
+   "trangThai": "giu-svg",
+   "ghiChuTaoLai": "ca 2 seed van la canh o vuong"
+  },
+  "n4/enter-school": {
+   "canhBaoTuDong": [],
+   "co": "canh o vuong (tile) co hoa anh dao",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n4/license": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/disappointing": {
+   "canhBaoTuDong": [
+    "nghi-the-khung (vung sang 25%)",
+    "nghi-o-vuong (lap 98% bbox)"
+   ],
+   "co": "tam nen/o vuong phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/continue": {
+   "canhBaoTuDong": [
+    "da-go-khung 33%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/go-on-continue": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 96% bbox)"
+   ],
+   "co": "canh o vuong bo goc (tile)",
+   "promptMoi": "A long winding stone path that keeps curving on and on across a few small green hills into the distance, drawn as one compact isolated ribbon of landscape.",
+   "trangThai": "giu-svg",
+   "ghiChuTaoLai": "ca 2 seed van la o bo goc"
+  },
+  "n4/commute": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/tidy-up": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/daily-life": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/hobby": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/habit": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/rules": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 95% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/walk-stroll": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 93% bbox)",
+    "nghi-khung-chu-nhat (4 canh thang)"
+   ],
+   "co": "canh o vuong (tile)",
+   "trangThai": "giu-svg",
+   "ghiChuTaoLai": "ca 2 seed van la canh o vuong"
+  },
+  "n4/music": {
+   "canhBaoTuDong": [],
+   "co": "mat kawaii tren tai nghe (do vat co mat)",
+   "promptMoi": "A pair of headphones with colorful musical notes floating out of the ear cups.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/newspaper": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/coffee": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/school": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/company": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/room": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/alone": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/open-by-itself": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/open-window": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/close-by-itself": {
+   "canhBaoTuDong": [],
+   "co": "mat kawaii tren cua tau (do vat co mat)",
+   "promptMoi": "The two sliding doors of a train car closing on their own, the gap between the doors narrowing, with two small inward arrows showing the doors moving, no one touching the doors.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/close-door": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/go-out-light": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/turn-off": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/begin": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "san khau lap day o vuong (tile)",
+   "trangThai": "giu-svg",
+   "ghiChuTaoLai": "san khau van lap day o vuong"
+  },
+  "n4/start-something": {
+   "canhBaoTuDong": [
+    "da-go-khung 27%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/light-comes-on": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 100% bbox)",
+    "nghi-khung-chu-nhat (4 canh thang)"
+   ],
+   "co": "tam tuong o vuong phia sau den (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/break-something": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/stop-park": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/quit-habit": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/electric-light": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/window": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 93% bbox)"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/door": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/movie": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/beautiful": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 98% bbox)",
+    "nghi-khung-chu-nhat (4 canh thang)"
+   ],
+   "co": "canh o vuong bo goc (tile)",
+   "promptMoi": "A small mountain lake with one snowy peak and two red autumn maple trees reflected in the still water, drawn as one compact isolated island-like landscape, soft sparkle stars twinkling around it.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/recall": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/suddenly": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/prepare": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/decorate": {
+   "canhBaoTuDong": [
+    "da-go-khung 38%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/write": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/buy": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/look-up": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/reserve": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/party": {
+   "canhBaoTuDong": [
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/drinks": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/food": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/flower": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/photo": {
+   "canhBaoTuDong": [
+    "nghi-the-khung (vung sang 31%)",
+    "nghi-o-vuong (lap 94% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/wall": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/map": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/restaurant": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/lets-go": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/lets-eat": {
+   "canhBaoTuDong": [],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n4/decide": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/think": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/plan": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/future": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "canh o vuong (tile)",
+   "promptMoi": "A young person standing on a small hilltop looking toward a bright rising sun and a tiny faraway city skyline, a winding path leading from their feet toward it, drawn as one compact isolated patch of landscape.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/dream": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/university": {
+   "canhBaoTuDong": [
+    "nghi-the-khung (vung sang 23%)",
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "promptMoi": "A stately red-brick university main building with a clock-less central tower, a black graduation mortarboard cap resting in front of it and two small trees beside it, standing alone as a compact isolated building.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/teacher": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/travel": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/study-abroad": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/graduate": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/work-hard-labor": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/do-ones-best": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/gain-weight": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/lose-weight": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/treat-cure": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/be-careful": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/dentist": {
+   "canhBaoTuDong": [
+    "da-go-khung 26%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/doctor": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/sick": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/health": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/body-weight": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 98% bbox)",
+    "nghi-khung-chu-nhat (4 canh thang)"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/medicine": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/cigarette": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/run-command": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/wait-command": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/hurry-command": {
+   "canhBaoTuDong": [
+    "da-go-khung 30%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/eat-command": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/come-here": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/no-entry": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/dangerous": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/caution-sign": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/match-game": {
+   "canhBaoTuDong": [],
+   "co": "canh o vuong (tile)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n4/hurry": {
+   "canhBaoTuDong": [
+    "da-go-khung 14%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/run": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/manga": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/study": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/child": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/worry": {
+   "canhBaoTuDong": [],
+   "co": "o cua so toi phia sau (khung)",
+   "trangThai": "giu-svg",
+   "ghiChuTaoLai": "o cua so toi van con o ca 2 seed"
+  },
+  "n4/cheer-on": {
+   "canhBaoTuDong": [
+    "nghi-the-khung (vung sang 19%)",
+    "nghi-o-vuong (lap 98% bbox)"
+   ],
+   "co": "canh o vuong (tile)",
+   "trangThai": "giu-svg",
+   "ghiChuTaoLai": "nen dai cat vien thang o ca 2 seed"
+  },
+  "n4/watch-out": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/explain": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/make": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/teach": {
+   "canhBaoTuDong": [
+    "da-go-khung 25%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/look-watch": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/manual": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/way-of-doing": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/recipe": {
+   "canhBaoTuDong": [
+    "da-go-khung 49%"
+   ],
+   "co": "vien the/khung con sot (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/cooking-dish": {
+   "canhBaoTuDong": [],
+   "co": "mat kawaii tren bat com",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/class-lesson": {
+   "canhBaoTuDong": [
+    "nghi-the-khung (vung sang 20%)",
+    "nghi-o-vuong (lap 100% bbox)",
+    "nghi-khung-chu-nhat (4 canh thang)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/meal": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/tv": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/homework": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/countryside": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 95% bbox)"
+   ],
+   "co": "canh o vuong bo goc (tile)",
+   "promptMoi": "A small Japanese farmhouse with a tiled roof beside a few terraced green rice paddies and one small mountain behind, drawn as one compact isolated island-like patch of countryside.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/city": {
+   "canhBaoTuDong": [
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "promptMoi": "A compact cluster of tall city skyscrapers of different heights with a few small cars on a short street in front, drawn as one compact isolated group of buildings.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/population": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/inconvenient": {
+   "canhBaoTuDong": [
+    "da-go-khung 24%"
+   ],
+   "co": "canh o vuong (tile)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/convenient": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/quiet": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/weather": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/money": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/time": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/dont-understand": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/can-hear": {
+   "canhBaoTuDong": [
+    "da-go-khung 35%"
+   ],
+   "co": "vien khung con sot ben phai",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/can-be-seen": {
+   "canhBaoTuDong": [],
+   "co": "canh o vuong (tile)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/forget": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/speak": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/practice": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/glasses": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/ear": {
+   "canhBaoTuDong": [],
+   "co": "dau khong toc (troc)",
+   "promptMoi": "Side profile head-and-shoulders of a friendly young person with short dark brown hair and natural light peach skin, the ear circled by a thin terracotta ring and a small terracotta arrow pointing at the ear.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/eye": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/voice": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/serious-diligent": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/skillful": {
+   "canhBaoTuDong": [
+    "da-go-khung 28%",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "vien khung con sot ben phai",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/be-scolded": {
+   "canhBaoTuDong": [
+    "da-go-khung 38%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/be-praised": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/be-stolen": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/be-stepped-on": {
+   "canhBaoTuDong": [
+    "da-go-khung 37%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/cried-on": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/surprise-people": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/be-built": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/be-invited": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/be-made": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/thief": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/wallet": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/rain": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/foot-leg": {
+   "canhBaoTuDong": [],
+   "co": "chan mau cam/vang (da terracotta), khong tu nhien",
+   "promptMoi": "A standing child seen from the knees down wearing sage-green shorts, bare lower legs and feet with natural light peach skin and the toes clearly visible, the feet outlined by a thin terracotta line.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/all-over-world": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/famous": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/factory": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/dance": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/sing": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/bring": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/contact": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/picture": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/song": {
+   "canhBaoTuDong": [],
+   "co": "mat kawaii tren radio",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/umbrella": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/promise": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/listen": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/take-day-off": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/in-trouble": {
+   "canhBaoTuDong": [
+    "da-go-khung 33%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/come-to-stop": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/typhoon": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/traffic": {
+   "canhBaoTuDong": [],
+   "co": "the/anh in co vien bong (khung)",
+   "promptMoi": "A busy crossroads intersection with a traffic light, a few small cars and a bus, and two pedestrians on a zebra crossing, drawn as one compact isolated patch of street.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/deep-apology": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/tough-hard": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/try-eating": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/try-on": {
+   "canhBaoTuDong": [
+    "da-go-khung 23%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/give-it-a-try": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/ask": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/taste": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/interest": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/exam": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/pass-exam": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/clothes": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/size": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/fit": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/phone-call": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/feed-animal": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/give": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/present-humbly": {
+   "canhBaoTuDong": [
+    "da-go-khung 29%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/receive-humbly": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/kindly-give": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/receive": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/give-to-me": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/present-gift": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/hanami": {
+   "canhBaoTuDong": [],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/company-president": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/parents": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/birthday": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/book": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/dog": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/water": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/company-employee": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/customer": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/grateful": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/use": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/save-money": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/useful": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "o vuong toi phia sau (tile)",
+   "trangThai": "giu-svg",
+   "ghiChuTaoLai": "can phong toi (o vuong den) o ca 2 seed - ban chat canh mat dien"
+  },
+  "n4/tools": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/rich-person": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/scissors": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/paper": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/cut": {
+   "canhBaoTuDong": [],
+   "co": "mat kawaii tren to giay",
+   "promptMoi": "Two hands cutting a plain sheet of paper in half with a pair of scissors, a thin dashed cut line across the blank paper.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/fall-rain-snow": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/fall-over": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/cry": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/drop-fall": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/tired": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/sleepy": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/delicious": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/bitter": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/fun": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/busy": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/energetic": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/kind": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/cloud": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/tree": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/chair": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/eat": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/drink": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/walk": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/read": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/tall": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/cheap": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/big": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/difficult": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/shoes": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/fail": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/go-out": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/earthquake": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/fire": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/all-out": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/elevator": {
+   "canhBaoTuDong": [
+    "da-go-khung 26%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/stairs": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/telephone": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/finish": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/come": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/go-home": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/arrive": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/wake-up": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/station": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/move-house": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/marry": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/quit-job": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/weather-forecast": {
+   "canhBaoTuDong": [
+    "da-go-khung 42%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/rumor": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/news": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/happy": {
+   "canhBaoTuDong": [],
+   "co": "tam nen o vuong phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/make-go": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/make-eat": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/make-come": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/make-help": {
+   "canhBaoTuDong": [],
+   "co": "the/khung co bong phia sau",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/make-tidy": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/let-rest": {
+   "canhBaoTuDong": [],
+   "co": "sai nghia: nguoi lo lang nam cua, khong thay cho nghi",
+   "promptMoi": "A kind boss gently guiding a tired young worker toward a comfortable sofa to lie down and rest, the tired worker smiling with relief.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/make-study": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/make-exercise": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/student": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/vegetables": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/honorific-eat": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/honorific-see": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/dept-manager": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/section-chief": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/principal": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/your-home": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/lecture": {
+   "canhBaoTuDong": [],
+   "co": "hoi truong o vuong (tile)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n4/green-tea": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/self-introduce-humbly": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/humble-see": {
+   "canhBaoTuDong": [
+    "da-go-khung 51%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/guide": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/letter": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/thank-you-gift": {
+   "canhBaoTuDong": [
+    "da-go-khung 33%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/question": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n4/documents": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/trust": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/misunderstand": {
+   "canhBaoTuDong": [
+    "da-go-khung 46%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/mistaken-identity": {
+   "canhBaoTuDong": [
+    "da-go-khung 35%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/improve-skill": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/specialty": {
+   "canhBaoTuDong": [
+    "da-go-khung 23%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/knowledgeable": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/bad-at": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/confidence": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/experience": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/personality": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/result": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/coincidence": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/good-at": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/join": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/agree": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/record": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/regret-pity": {
+   "canhBaoTuDong": [],
+   "co": "o cua so mua phia sau (khung)",
+   "trangThai": "giu-svg",
+   "ghiChuTaoLai": "o cua so mua van con o ca 2 seed"
+  },
+  "n3/explain": {
+   "canhBaoTuDong": [
+    "nghi-the-khung (vung sang 27%)",
+    "nghi-o-vuong (lap 95% bbox)"
+   ],
+   "co": "the/khung co bong phia sau",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n3/effort": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/mindful": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/be-careful": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/make-a-point-of": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/exercise": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/eat": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/sleep": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/wake-up": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/health": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/daily-life": {
+   "canhBaoTuDong": [],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n3/habit": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 93% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "tam nen can phong phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n3/vegetables": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/body-weight": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/sick": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/work": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/time": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/body": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/decide": {
+   "canhBaoTuDong": [],
+   "co": "canh rung o vuong (tile)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n3/obey-rules": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/prohibit": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 91% bbox)"
+   ],
+   "co": "tam tuong o vuong phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n3/resolve": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/graduate": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/rules": {
+   "canhBaoTuDong": [
+    "da-go-khung 64%"
+   ],
+   "co": "gan nhu trong, vien khung con sot",
+   "promptMoi": "A notice board on a stand showing a neat row of four simple pictogram icons in circles: a crossed-out cigarette, a crossed-out phone, a trash can and a finger-to-lips quiet sign, no words.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n3/university": {
+   "canhBaoTuDong": [
+    "nghi-the-khung (vung sang 23%)",
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "promptMoi": "A stately red-brick university main building with a clock-less central tower, a black graduation mortarboard cap resting in front of it and two small trees beside it, standing alone as a compact isolated building.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n3/company": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/regulation": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/employee": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/student": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/school-uniform": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/meeting": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/study-abroad": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/retire": {
+   "canhBaoTuDong": [],
+   "co": "canh cat vien thang (tile)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n3/grateful-relief": {
+   "canhBaoTuDong": [
+    "da-go-khung 40%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/success": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/failure": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/late": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/forget": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/help-rescue": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/blame": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/traffic-jam": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/carelessly": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/teacher": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/weather": {
+   "canhBaoTuDong": [],
+   "co": "vien khung con sot ben phai",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n3/exam": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/accident": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/train": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/hard-tough": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/compare": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/change": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/rise": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/decrease": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/environment": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/city": {
+   "canhBaoTuDong": [
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "promptMoi": "A compact cluster of tall city skyscrapers of different heights with a few small cars on a short street in front, drawn as one compact isolated group of buildings.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n3/countryside": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 96% bbox)"
+   ],
+   "co": "canh o vuong bo goc (tile)",
+   "promptMoi": "A small Japanese farmhouse with a tiled roof beside a few terraced green rice paddies and one small mountain behind, drawn as one compact isolated island-like patch of countryside.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n3/cost-of-living": {
+   "canhBaoTuDong": [
+    "da-go-khung 33%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/population": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/interest": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/attitude": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/opinion": {
+   "canhBaoTuDong": [
+    "da-go-khung 35%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/convenient": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/inconvenient": {
+   "canhBaoTuDong": [
+    "da-go-khung 21%"
+   ],
+   "co": "canh o vuong (tile)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n3/long-ago": {
+   "canhBaoTuDong": [
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n3/product": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/manufactured-goods": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/sell": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/enterprise": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/factory": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/purpose": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/service": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/housewife": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/overseas": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/child": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/young": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/person": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/use": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/make": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/new": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/cheap": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/period": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 96% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/nationwide": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/range-scope": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 91% bbox)"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/region-area": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/average": {
+   "canhBaoTuDong": [],
+   "co": "bieu do tren the co bong (khung)",
+   "promptMoi": "A simple bar chart of five plain bars of different heights standing on a baseline, with one dashed horizontal line across the middle marking the average, no numbers.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n3/tournament": {
+   "canhBaoTuDong": [],
+   "co": "san van dong o vuong (tile)",
+   "trangThai": "giu-svg",
+   "ghiChuTaoLai": "san van dong van cat vien thang o ca 2 seed"
+  },
+  "n3/rain": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/friend": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/busy": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/telephone": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/information": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/held-event": {
+   "canhBaoTuDong": [
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s33",
+   "ghiChuTaoLai": "canh pho hoi cat vien nhe"
+  },
+  "n3/win-lottery": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/pass-exam": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/win-championship": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/qualification": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/lottery": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/money": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/future-personal": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/half-done": {
+   "canhBaoTuDong": [],
+   "co": "sai nghia: banh sandwich con nguyen, khong thay do dang",
+   "promptMoi": "A half-eaten sandwich with one big bite clearly missing from its corner, left on a plate beside a glass of milk that is only half full.",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n3/absent": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/fatigue": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/shortage": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/bored": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/nutrition": {
+   "canhBaoTuDong": [],
+   "co": "mat kawaii tren com",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n3/rest": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/say": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/quit": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/talent": {
+   "canhBaoTuDong": [
+    "da-go-khung 54%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/complaint": {
+   "canhBaoTuDong": [
+    "da-go-khung 36%"
+   ],
+   "co": "vien khung con sot ben phai",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n3/discontent": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/poor": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "can phong o vuong (tile)",
+   "trangThai": "giu-svg",
+   "ghiChuTaoLai": "van la hop can phong o ca 2 seed"
+  },
+  "n3/excellent": {
+   "canhBaoTuDong": [
+    "da-go-khung 38%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/cancel": {
+   "canhBaoTuDong": [
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "canh san o vuong (tile)",
+   "trangThai": "giu-svg",
+   "ghiChuTaoLai": "san bong van la o vuong o ca 2 seed"
+  },
+  "n3/match-game": {
+   "canhBaoTuDong": [],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n3/envy": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/frustrated-loss": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/anxiety": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/painful-hardship": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/frightening": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/moved": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/tears": {
+   "canhBaoTuDong": [],
+   "co": "dau troi khong toc (bong tron)",
+   "promptMoi": "Head-and-shoulders of a sad young person with short dark brown hair and natural light peach skin, one big clear teardrop rolling down the cheek from one eye.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n3/bothered": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/worry": {
+   "canhBaoTuDong": [],
+   "co": "o cua so toi phia sau (khung)",
+   "trangThai": "giu-svg",
+   "ghiChuTaoLai": "o cua so toi van con o ca 2 seed"
+  },
+  "n3/want-to-meet": {
+   "canhBaoTuDong": [
+    "da-go-khung 38%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/family": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/hot": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/stop": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 90% bbox)"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/want-to-eat": {
+   "canhBaoTuDong": [],
+   "co": "tam nen o vuong phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s22",
+   "ghiChuTaoLai": "quay hang nho phia sau, nhe"
+  },
+  "n3/prove": {
+   "canhBaoTuDong": [
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "the canh dam dong cat vien thang (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n3/confirm-check": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/culprit": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/mistake": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/crime-scene": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/investigate": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/wallet": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/key": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/lost-item": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/dog": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/arrive": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/he": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/thing": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/understand": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/imagine": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/predict": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/future": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/earthquake": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/danger": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/safe": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/talk": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/machine": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/problem": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/increase": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/unemployment": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/technological-progress": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/expand": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/develop": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/economy": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/bad": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/gain-weight": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/keep-going": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/manners": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/knowledge": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/ability": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/housework": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/cooking": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/skilful": {
+   "canhBaoTuDong": [],
+   "co": "the/tranh co bong phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n3/can-speak": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/tall-high": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/she": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/good": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/head": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/correct": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/representative": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/proxy": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/in-charge": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/pay": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/signature": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/department-manager": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/company-president": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 91% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "o cua so vuong phia sau (khung)",
+   "trangThai": "giu-svg",
+   "ghiChuTaoLai": "cua so kinh lon phia sau o ca 2 seed"
+  },
+  "n3/attend": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/contact": {
+   "canhBaoTuDong": [
+    "da-go-khung 31%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/debate": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/present-announce": {
+   "canhBaoTuDong": [],
+   "co": "canh cat vien thang (tile)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n3/report": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/culture": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/history": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/survey": {
+   "canhBaoTuDong": [
+    "da-go-khung 31%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/politics": {
+   "canhBaoTuDong": [],
+   "co": "toa Capitol cua My (lech nghia/van hoa: can quoc hoi Nhat)",
+   "promptMoi": "The National Diet Building of Japan, a symmetrical pale stone building with a tall stepped central tower, standing alone as a compact isolated landmark with two small trees in front.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n3/question": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/japan": {
+   "canhBaoTuDong": [],
+   "co": "hinh o bo goc (tile)",
+   "promptMoi": "A red torii gate standing in front of a small snow-capped Mount Fuji with one small cherry blossom tree beside it, drawn as one compact isolated group.",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n3/listen": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/write": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/notice": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/postpone": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/reschedule": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/approve": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/command": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/plan": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/prepare": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/end": {
+   "canhBaoTuDong": [],
+   "co": "san khau lap day o vuong (tile)",
+   "promptMoi": "Red stage curtains drawn closed on a small stage, a few small audience members clapping in front, drawn as one compact isolated stage.",
+   "trangThai": "giu-svg",
+   "ghiChuTaoLai": "san khau van la o vuong o ca 2 seed"
+  },
+  "n3/obey-follow": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/responsibility": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/protect": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/respect": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/nuisance": {
+   "canhBaoTuDong": [
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "the/canh co bong phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n3/promise": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/think": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/i-me": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/everyone": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/hang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/improve": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/reflect": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/evaluate": {
+   "canhBaoTuDong": [
+    "da-go-khung 44%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/goal": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n3/team": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/nham-chuc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/khai-mac": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/be-mac": {
+   "canhBaoTuDong": [
+    "da-go-khung 18%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/ket-thuc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/nghi-le": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/loi-chao-phat-bieu": {
+   "canhBaoTuDong": [
+    "da-go-khung 42%"
+   ],
+   "co": "vien the/khung ben phai",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/loi-cam-on-qua": {
+   "canhBaoTuDong": [
+    "da-go-khung 33%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/quy-vi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/kinh-nghiem": {
+   "canhBaoTuDong": [
+    "da-go-khung 15%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/cong-ty": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/giam-doc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/chuan-bi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/bao-cao": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/bat-dau": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/thu-nho": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/danh-chiu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/nhap-vien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tu-bo": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/bi-benh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tai-nan": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/du-lich": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/bao": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/huy-bo": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/ky-nghi": {
+   "canhBaoTuDong": [
+    "da-go-khung 32%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/ban-ron": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/cuoc-hop": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tro-thanh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/kinh-te": {
+   "canhBaoTuDong": [],
+   "co": "ky hieu $ tren dong xu va tien giay (ky tu tien te)",
+   "promptMoi": "Stacks of plain gold coins without any symbols, a small factory with a chimney, a cargo ship and a rising arrow chart grouped together, the coins and notes carrying no symbols or numbers.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/cong-viec": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/gia-dinh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/dap-an": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/giai-thich-chi-tiet": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/chan-doan": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/dang-tin-cay": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/dap-ung": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/yeu-cau": {
+   "canhBaoTuDong": [
+    "da-go-khung 30%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/giai-quyet": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/sua-chua": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/giai-thich": {
+   "canhBaoTuDong": [
+    "nghi-the-khung (vung sang 21%)",
+    "nghi-o-vuong (lap 93% bbox)"
+   ],
+   "co": "bang/the co bong phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n2n1/tin-tuong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/den": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/anh-ay": {
+   "canhBaoTuDong": [
+    "da-go-khung 28%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/khach-hang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/hieu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/khong-the-lam-duoc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/lien-lac": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/nguy-cap": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/hiem-tro": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/sat-lo": {
+   "canhBaoTuDong": [],
+   "co": "canh cat vien thang (tile)",
+   "trangThai": "ok",
+   "nguon": "s22",
+   "ghiChuTaoLai": "khoi dat cat ngang (dang so do, nhe)"
+  },
+  "n2n1/pha-vo": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/qua-suc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/can-than": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/vach-da": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/nguy-hiem": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/lo-lang": {
+   "canhBaoTuDong": [
+    "vung-toi-lon (6.4%)"
+   ],
+   "co": "o cua so toi phia sau (khung)",
+   "trangThai": "giu-svg",
+   "ghiChuTaoLai": "o cua so toi van con o ca 2 seed"
+  },
+  "n2n1/dong-dat": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/lai-xe": {
+   "canhBaoTuDong": [],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n2n1/con-duong": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 96% bbox)"
+   ],
+   "co": "canh o vuong bo goc (tile)",
+   "promptMoi": "A short winding country road curving between two small green grassy mounds and a little tree, drawn as one compact isolated patch of landscape.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/thoi-tiet": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/moi-nguoi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/nguoi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tang-cuong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tu-tin": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/do-tuoi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/thay-doi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/thoi-gian-troi-qua": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/manh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/den-gan": {
+   "canhBaoTuDong": [],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/mua": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/nhiet-do": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/nam-tuoi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/gioi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/thoi-gian": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/gio": {
+   "canhBaoTuDong": [
+    "da-go-khung 36%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/quy-tac": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "the/bang co bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/tuan-theo": {
+   "canhBaoTuDong": [
+    "nghi-the-khung (vung sang 30%)",
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (4 canh thang)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n2n1/quen": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/khoi-dau-man": {
+   "canhBaoTuDong": [
+    "da-go-khung 46%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/con-duong-tuong-lai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/chi-nhanh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/hoat-dong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/du-hoc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/nuoc-ngoai": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 98% bbox)"
+   ],
+   "co": "canh o vuong bo goc (tile)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/tiep-tuc": {
+   "canhBaoTuDong": [
+    "da-go-khung 37%"
+   ],
+   "co": "vien khung con sot ben phai",
+   "trangThai": "ok",
+   "nguon": "s33",
+   "ghiChuTaoLai": "mep duong cat thang nhe"
+  },
+  "n2n1/toan-quoc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tokyo": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/pho-bien": {
+   "canhBaoTuDong": [
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/khap-noi": {
+   "canhBaoTuDong": [],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/moi-ca-nhan": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/vang-len": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/the-gioi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/ky-thuat": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/moi-truong": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 91% bbox)"
+   ],
+   "co": "canh o vuong bo goc (tile)",
+   "trangThai": "giu-svg",
+   "ghiChuTaoLai": "van la o vuong phong canh o ca 2 seed"
+  },
+  "n2n1/gia-tang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/mo-rong-phong-to": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/phat-trien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/nhat-ban": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/khap-the-gioi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/quoc-gia": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/doi-lap": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/dat-dai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tranh-luan": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tan-thanh": {
+   "canhBaoTuDong": [],
+   "co": "dam dong cat vien thang (tile)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n2n1/phan-doi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/ke-hoach": {
+   "canhBaoTuDong": [
+    "nghi-the-khung (vung sang 18%)",
+    "nghi-o-vuong (lap 98% bbox)"
+   ],
+   "co": "bang/the co bong phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/y-kien": {
+   "canhBaoTuDong": [],
+   "co": "dam dong cat vien thang (tile)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n2n1/chinh-tri": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/xa-hoi": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 92% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n2n1/kho-tam": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/phan-nan": {
+   "canhBaoTuDong": [
+    "da-go-khung 32%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tien-hanh": {
+   "canhBaoTuDong": [],
+   "co": "canh cat vien thang (tile)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n2n1/xung-quanh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/chi-trich": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/co-gang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/that-bai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/luyen-tap": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/thanh-cong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/van-dong-vien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/dai-hoi": {
+   "canhBaoTuDong": [
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "san van dong o vuong (tile)",
+   "trangThai": "ok",
+   "nguon": "s22",
+   "ghiChuTaoLai": "khan dai san van dong cat nhe"
+  },
+  "n2n1/vo-dich": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/no-luc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/thong-ke": {
+   "canhBaoTuDong": [
+    "nghi-the-khung (vung sang 32%)"
+   ],
+   "co": "bieu do tren the co bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/tai-lieu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/phap-luat": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/phan-doan": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tieu-thuyet": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/thong-tin": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/phim": {
+   "canhBaoTuDong": [
+    "nghi-the-khung (vung sang 24%)",
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/dung-len": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/lam-tao-ra": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/viet": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/suy-nghi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/giao-vien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/dac-san": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/truyen-thong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/que-nha": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 93% bbox)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n2n1/tham-quan": {
+   "canhBaoTuDong": [],
+   "co": "tam nen o vuong phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/chung-chi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/van-hoa": {
+   "canhBaoTuDong": [
+    "da-go-khung 31%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/thi-tran": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/thai-do": {
+   "canhBaoTuDong": [
+    "da-go-khung 39%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/mon-an": {
+   "canhBaoTuDong": [],
+   "co": "mat kawaii tren bat com",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/cao": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tran-tro": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/ban-bac": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/lam-lai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/quyet-dinh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/met-moi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/dai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/o-giua": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/ket-hon": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/mo-rong-them": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tha-thu": {
+   "canhBaoTuDong": [
+    "da-go-khung 30%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/thau-hieu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/chiu-dung": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/cong-nhan": {
+   "canhBaoTuDong": [
+    "da-go-khung 29%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/ky-niem": {
+   "canhBaoTuDong": [
+    "da-go-khung 36%"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/chuc-mung": {
+   "canhBaoTuDong": [],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n2n1/sang-lap": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/kinh-doanh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/vo-le": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/ngu-ngoc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tao-bao": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/bi-tham": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/vinh-du": {
+   "canhBaoTuDong": [
+    "da-go-khung 36%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/hanh-dong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/that-le": {
+   "canhBaoTuDong": [
+    "nghi-the-khung (vung sang 24%)",
+    "nghi-o-vuong (lap 98% bbox)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/dang-tiec": {
+   "canhBaoTuDong": [
+    "da-go-khung 42%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tran-dau": {
+   "canhBaoTuDong": [
+    "da-go-khung 47%"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/phong-canh": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 91% bbox)",
+    "nghi-khung-chu-nhat (4 canh thang)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s33",
+   "ghiChuTaoLai": "dai phong canh ngang, nhe"
+  },
+  "n2n1/dep": {
+   "canhBaoTuDong": [
+    "da-go-khung 14%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/dat-den": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/chan-dong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/dong-cam": {
+   "canhBaoTuDong": [
+    "da-go-khung 27%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tham-nhung": {
+   "canhBaoTuDong": [
+    "da-go-khung 30%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tieng-thet": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/xuc-dong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/ngac-nhien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/noi-buon": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/vu-viec": {
+   "canhBaoTuDong": [],
+   "co": "canh pho o vuong phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/gian-du": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/nuoc-mat": {
+   "canhBaoTuDong": [],
+   "co": "dau troi khong toc (bong tron)",
+   "promptMoi": "Head-and-shoulders of a sad young person with short dark brown hair and natural light peach skin, one big clear teardrop rolling down the cheek from one eye.",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n2n1/niem-vui": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tin-tuc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/xem-nhin": {
+   "canhBaoTuDong": [
+    "da-go-khung 26%"
+   ],
+   "co": "kho hieu: nhin vao tam bang trong (khung)",
+   "promptMoi": "A person holding a pair of binoculars up to the eyes and looking far into the distance at a small bird perched on a branch.",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/nghe": {
+   "canhBaoTuDong": [
+    "da-go-khung 28%"
+   ],
+   "co": "vien the/khung ben phai",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/huong-vi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/chat-luong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/vi-giac": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/cua-cai": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/trieu-phu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/chuc-nang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/hoan-hao": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/chinh-tri-gia": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/nhan-vien-cong-ty": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tuyet-voi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/ngheo": {
+   "canhBaoTuDong": [
+    "da-go-khung 34%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/hang-hoa": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/bao-ve": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/giong-nhau": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/san-pham": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/ngheo-doi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/co-don": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/cuoc-doi": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 94% bbox)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/cuoc-song": {
+   "canhBaoTuDong": [],
+   "co": "tam nen can phong phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s33",
+   "ghiChuTaoLai": "goc bep mo, khong con o vuong"
+  },
+  "n2n1/bua-an": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/sach": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/bat-chap-kho-khan": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/xau-di": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/nghiem-trong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/pha-san": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/bo-mac": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/bien-minh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/noi-doi": {
+   "canhBaoTuDong": [
+    "da-go-khung 35%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/nghiem-tuc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/xau": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/phat-ngon": {
+   "canhBaoTuDong": [
+    "da-go-khung 34%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/nghi-si": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/toi-ac": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/gian-lan": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/danh-mat": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/noi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/chung-cu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/suy-luan": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/bat-giu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/nghi-ngo": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/thu-pham": {
+   "canhBaoTuDong": [
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "tam nen den chieu o vuong (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n2n1/hien-truong": {
+   "canhBaoTuDong": [
+    "da-go-khung 46%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/biet-on": {
+   "canhBaoTuDong": [
+    "nghi-the-khung (vung sang 30%)",
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (4 canh thang)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n2n1/kinh-trong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/yeu": {
+   "canhBaoTuDong": [
+    "da-go-khung 27%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/cau-mong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tot-nghiep": {
+   "canhBaoTuDong": [],
+   "co": "canh cat vien thang (tile)",
+   "trangThai": "ok",
+   "nguon": "s22",
+   "ghiChuTaoLai": "cong truong phia sau, nhe"
+  },
+  "n2n1/day": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/suc-khoe": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/hanh-phuc": {
+   "canhBaoTuDong": [
+    "nghi-khung-chu-nhat (4 canh thang)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n2n1/nghi-huu-thoi-viec": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/dai-hoc": {
+   "canhBaoTuDong": [],
+   "co": "the/anh in co vien bong (khung)",
+   "promptMoi": "A stately red-brick university main building with a clock-less central tower, a black graduation mortarboard cap resting in front of it and two small trees beside it, standing alone as a compact isolated building.",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n2n1/hoc-sinh-sinh-vien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tuong-lai": {
+   "canhBaoTuDong": [
+    "nghi-the-khung (vung sang 29%)",
+    "nghi-o-vuong (lap 96% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/uoc-mo": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/ban-be": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/xin-loi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/dong-tinh-hieu-ra": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/phong-vien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/lay": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/hop-bao": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tra-loi": {
+   "canhBaoTuDong": [
+    "da-go-khung 32%"
+   ],
+   "co": "vien khung con sot ben phai",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/cam-dong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/cau-hoi": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/lan-rong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tu-chuc": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/cua-hang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tap-quan": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/phan-quyet": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/vu-kien": {
+   "canhBaoTuDong": [
+    "nghi-the-khung (vung sang 27%)",
+    "nghi-o-vuong (lap 91% bbox)"
+   ],
+   "co": "tam nen o vuong phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n2n1/phien-toa": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/luat-su": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/thoi-quen": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/quy-dinh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/hy-sinh": {
+   "canhBaoTuDong": [
+    "da-go-khung 32%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/giup-do": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/an-hue": {
+   "canhBaoTuDong": [],
+   "co": "canh o vuong bo goc (tile)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/nang-do": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/dong-doi": {
+   "canhBaoTuDong": [
+    "da-go-khung 27%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/co-vu": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tan-binh": {
+   "canhBaoTuDong": [],
+   "co": "o cua so vuong phia sau (khung)",
+   "trangThai": "giu-svg",
+   "ghiChuTaoLai": "khung cua so van con o ca 2 seed"
+  },
+  "n2n1/xau-ho": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/tin-nhiem": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/phan-boi": {
+   "canhBaoTuDong": [
+    "nghi-the-khung (vung sang 30%)",
+    "nghi-o-vuong (lap 99% bbox)",
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "the/anh in co vien bong (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/ky-vong": {
+   "canhBaoTuDong": [
+    "da-go-khung 28%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/thanh-tra": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/ly-thuyet": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/thuc-hanh": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/co-chap": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/ti-mi": {
+   "canhBaoTuDong": [
+    "nghi-khung-chu-nhat (3 canh thang)"
+   ],
+   "co": "vien the/khung ben phai",
+   "trangThai": "ok",
+   "nguon": "s33"
+  },
+  "n2n1/than-trong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/khuyet-diem": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/luan-van": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/giao-su": {
+   "canhBaoTuDong": [],
+   "co": "ke sach o vuong phia sau (khung)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/xu-huong": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/nghi-huu-giang-duong": {
+   "canhBaoTuDong": [],
+   "co": "canh cat vien thang (tile)",
+   "trangThai": "ok",
+   "nguon": "s22"
+  },
+  "n2n1/cong-lao": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/phat-hien": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/an-su": {
+   "canhBaoTuDong": [
+    "da-go-khung 27%"
+   ],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/buc-giang": {
+   "canhBaoTuDong": [],
+   "trangThai": "ok",
+   "nguon": "s11"
+  },
+  "n2n1/dien-thuyet": {
+   "canhBaoTuDong": [
+    "da-go-khung 16%",
+    "nghi-the-khung (vung sang 21%)"
+   ],
+   "co": "dam dong cat vien thang (tile)",
+   "trangThai": "ok",
+   "nguon": "s22",
+   "ghiChuTaoLai": "mep duoi khan gia cat thang, nhe"
+  }
+ }
+}

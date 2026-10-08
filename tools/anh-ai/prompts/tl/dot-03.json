@@ -1,0 +1,133 @@
+{
+ "styleRef": "../style-chung.json",
+ "items": [
+  {
+   "cap": "n2n1",
+   "ten": "vu-viec",
+   "prompt": "Police officers standing beside yellow tape that blocks off a street at night, a patrol car's lights flashing. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, blood, gore, weapons, guns, knives, injury, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "nuoc-mat",
+   "prompt": "Head-and-shoulders of a sad young person with short dark brown hair and natural light peach skin, one big clear teardrop rolling down the cheek from one eye.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "xem-nhin",
+   "prompt": "A person holding a pair of binoculars up to the eyes and looking far into the distance at a small bird perched on a branch.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "nghe",
+   "prompt": "A person cupping a hand to their ear, listening closely to a songbird singing on a branch. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "cuoc-doi",
+   "prompt": "A winding path through a landscape where the same person appears along the way as a baby, a child, a young adult, a parent and an elderly person. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "cuoc-song",
+   "prompt": "A cozy small Japanese apartment where a person cooks at the stove, laundry hangs by the window and a futon lies folded in the corner. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "thu-pham",
+   "prompt": "A culprit in a striped shirt caught in a spotlight, surrounded by police officers pointing at him. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, blood, gore, weapons, guns, knives, injury, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "biet-on",
+   "prompt": "A person with hands pressed together, gratefully thanking a neighbor who has just helped carry their heavy bags. Small hearts and tiny flowers float between them, symbols for gratitude and kindness. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "tot-nghiep",
+   "prompt": "A graduate in a traditional hakama holding a diploma tube in front of a school gate with cherry blossoms. Show only the key object or objects, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene",
+   "vat": true
+  },
+  {
+   "cap": "n2n1",
+   "ten": "hanh-phuc",
+   "prompt": "A smiling family having a picnic in a flower field under a warm sun, everyone laughing together. Small musical notes, sparkles and tiny flowers float around, cartoon symbols for joy and fun. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "dai-hoc",
+   "prompt": "A stately red-brick university main building with a clock-less central tower, a black graduation mortarboard cap resting in front of it and two small trees beside it, standing alone as a compact isolated building.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, numerals on the clock face, roman numerals"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "tuong-lai",
+   "prompt": "A child on a hilltop looking through a telescope toward a bright futuristic city on the horizon. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "tra-loi",
+   "prompt": "An interviewee confidently answering as a reporter holds a microphone out toward them. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "vu-kien",
+   "prompt": "Two people in suits pointing angrily at each other in front of a judge's bench, each backed by a lawyer holding documents. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "an-hue",
+   "prompt": "Farmers joyfully harvesting abundant golden rice under warm sunshine and gentle rain clouds, receiving nature's blessings. Show only the key object or objects, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene",
+   "vat": true
+  },
+  {
+   "cap": "n2n1",
+   "ten": "tan-binh",
+   "prompt": "A nervous new employee in a crisp new suit bowing stiffly on the first day, clutching a new bag, cherry blossoms outside the window. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "phan-boi",
+   "prompt": "A person smiling and shaking hands with a friend while secretly passing the friend's treasure map to a shady rival behind their back. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "ti-mi",
+   "prompt": "A meticulous person using a ruler to line up pencils, papers and objects on a desk in perfectly straight rows. A single sweat drop and short focus lines around the careful hands show careful concentration. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "giao-su",
+   "prompt": "An elderly professor with glasses and a tweed jacket holding a book in front of a library bookshelf. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "nghi-huu-giang-duong",
+   "prompt": "An elderly professor bowing at a lecture hall podium as students give a standing ovation and present flowers at the final lecture. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  },
+  {
+   "cap": "n2n1",
+   "ten": "dien-thuyet",
+   "prompt": "A lecturer speaking at a podium to a large, packed auditorium audience, a big blank screen behind. Show only the people and the one or two key objects of the action, standing on a small soft shadow, with no walls, no windows, no room, no backdrop and no landscape behind them; the plain cream background stays empty all around.",
+   "negative": "text, letters, words, numbers, digits, kanji, hiragana, katakana, captions, labels, signage text, writing on paper, speech bubble text, watermark, logo, signature, frame, border, multiple panels, comic layout, photorealistic, photo, 3d render, glossy plastic look, harsh shadows, neon colors, cold blue palette, cluttered background, busy pattern, dark background, deformed hands, extra fingers, extra limbs, distorted face, blurry, low quality, jpeg artifacts, room interior, wall, window frame, backdrop panel, scenery card, framed scene"
+  }
+ ]
+}

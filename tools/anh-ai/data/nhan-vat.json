@@ -1,0 +1,532 @@
+{
+ "phienBan": 1,
+ "giongSensei": "Charon",
+ "nhanVat": [
+  {
+   "id": "miller",
+   "ten": "Mike Miller",
+   "ten_ja": "ミラー",
+   "biDanh": [
+    "ミラー",
+    "ミラー (Miller)",
+    "マイク・ミラー",
+    "Miller",
+    "ミラーさん"
+   ],
+   "gioiTinh": "m",
+   "giong": "Fenrir",
+   "anh": "assets/minh-hoa/nv-miller.webp",
+   "vaiTro": "Nhân viên công ty người ngoại quốc mới đến Nhật; nhân vật chính bài 1 Minna no Nihongo",
+   "soLuot": 54,
+   "xuatHien": [
+    "kana: bài 1,2,3,4,5,6,8 (19 lượt)",
+    "n5: bài 1,4,7,9,11,14,17 (35 lượt)"
+   ],
+   "lyDoGioiTinh": "portrait"
+  },
+  {
+   "id": "sato",
+   "ten": "Satou Keiko",
+   "ten_ja": "佐藤",
+   "biDanh": [
+    "佐藤",
+    "佐藤 (Satou)",
+    "さとう",
+    "さとう (Satou)",
+    "佐藤けい子",
+    "けい子",
+    "Satou",
+    "Sato"
+   ],
+   "gioiTinh": "f",
+   "giong": "Zephyr",
+   "anh": "assets/minh-hoa/nv-sato.webp",
+   "vaiTro": "Nhân viên người Nhật, chào đón Miller",
+   "soLuot": 20,
+   "xuatHien": [
+    "kana: bài 1,2,3,4,7,8 (16 lượt)",
+    "n5: bài 1 (4 lượt)"
+   ],
+   "lyDoGioiTinh": "portrait"
+  },
+  {
+   "id": "yamada",
+   "ten": "Yamada Ichirō",
+   "ten_ja": "山田",
+   "biDanh": [
+    "山田",
+    "山田 (Yamada)",
+    "山田一郎",
+    "山田 一郎",
+    "Yamada"
+   ],
+   "gioiTinh": "m",
+   "giong": "Achird",
+   "anh": "assets/minh-hoa/nv-yamada.webp",
+   "vaiTro": "Đồng nghiệp/bạn/hàng xóm người Nhật; cặp với Tanaka ở N4",
+   "soLuot": 96,
+   "xuatHien": [
+    "n5: bài 1,2,6,13,20 (21 lượt)",
+    "n4: bài 26,28,30,32,33,36,37,39,42,44,46,47,48,50 (65 lượt)",
+    "n3: bài 2,4 (10 lượt)"
+   ],
+   "lyDoGioiTinh": "portrait+van-ban"
+  },
+  {
+   "id": "wang",
+   "ten": "Wang",
+   "ten_ja": "ワン",
+   "biDanh": [
+    "ワン",
+    "Wang"
+   ],
+   "gioiTinh": "m",
+   "giong": "Puck",
+   "anh": "assets/minh-hoa/nv-wang.webp",
+   "vaiTro": "Du học sinh, bạn cùng lớp của Santos",
+   "soLuot": 116,
+   "xuatHien": [
+    "n5: bài 5,8,10,12,15,16,18,19,21,22,23,24,25 (62 lượt)",
+    "n4: bài 27,29,31,34,35,38,40,41,43,45 (49 lượt)",
+    "n3: bài 3 (5 lượt)"
+   ],
+   "lyDoGioiTinh": "portrait"
+  },
+  {
+   "id": "santos",
+   "ten": "José Santos",
+   "ten_ja": "サントス",
+   "biDanh": [
+    "サントス",
+    "Santos"
+   ],
+   "gioiTinh": "m",
+   "giong": "Orus",
+   "anh": "assets/minh-hoa/nv-santos.webp",
+   "vaiTro": "Nhân vật xuyên suốt N5-N1: du học sinh rồi nhân viên/giám đốc",
+   "soLuot": 293,
+   "xuatHien": [
+    "n5: bài 2,5,8,10,12,16,18,19,20,21,22,23,24,25 (66 lượt)",
+    "n4: bài 27,29,34,35,38,40,41,43,45 (42 lượt)",
+    "n3: bài 1,3,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 (90 lượt)",
+    "n2: bài 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 (75 lượt)",
+    "n1: bài 1,2,3,4 (20 lượt)"
+   ],
+   "lyDoGioiTinh": "portrait"
+  },
+  {
+   "id": "tanaka",
+   "ten": "Tanaka",
+   "ten_ja": "田中",
+   "biDanh": [
+    "田中",
+    "Tanaka"
+   ],
+   "gioiTinh": "f",
+   "giong": "Kore",
+   "anh": "assets/minh-hoa/nv-tanaka.webp",
+   "vaiTro": "Bạn học/đồng nghiệp/phóng viên xuyên suốt N4-N1; nữ (Yamada gọi là \"chị Tanaka\")",
+   "soLuot": 300,
+   "xuatHien": [
+    "n4: bài 26,28,30,31,32,33,36,37,39,42,44,46,47,48,50 (70 lượt)",
+    "n3: bài 1,2,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 (95 lượt)",
+    "n2: bài 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 (75 lượt)",
+    "n1: bài 1,2,3,4,5,6,7,8,10,11,12,13 (60 lượt)"
+   ],
+   "lyDoGioiTinh": "portrait+van-ban"
+  },
+  {
+   "id": "gupta",
+   "ten": "Gupta",
+   "ten_ja": "グプタ",
+   "biDanh": [
+    "グプタ",
+    "Gupta"
+   ],
+   "gioiTinh": "m",
+   "giong": "Sadaltager",
+   "anh": "assets/minh-hoa/nv-gupta.webp",
+   "vaiTro": "Đồng nghiệp của Miller ở công ty",
+   "soLuot": 18,
+   "xuatHien": [
+    "n5: bài 4,7,9,14 (18 lượt)"
+   ],
+   "lyDoGioiTinh": "portrait"
+  },
+  {
+   "id": "karina",
+   "ten": "Karina",
+   "ten_ja": "カリナ",
+   "biDanh": [
+    "カリナ",
+    "Karina"
+   ],
+   "gioiTinh": "f",
+   "giong": "Leda",
+   "anh": "assets/minh-hoa/nv-karina.webp",
+   "vaiTro": "Sinh viên Indonesia",
+   "soLuot": 10,
+   "xuatHien": [
+    "n5: bài 6,13 (10 lượt)"
+   ],
+   "lyDoGioiTinh": "portrait"
+  },
+  {
+   "id": "maria",
+   "ten": "Maria",
+   "ten_ja": "マリア",
+   "biDanh": [
+    "マリア",
+    "Maria"
+   ],
+   "gioiTinh": "f",
+   "giong": "Aoede",
+   "anh": "assets/minh-hoa/nv-maria.webp",
+   "vaiTro": "Khách mua hàng",
+   "soLuot": 5,
+   "xuatHien": [
+    "n5: bài 3 (5 lượt)"
+   ],
+   "lyDoGioiTinh": "portrait"
+  },
+  {
+   "id": "yamamoto",
+   "ten": "Yamamoto",
+   "ten_ja": "山本",
+   "biDanh": [
+    "山本",
+    "Yamamoto"
+   ],
+   "gioiTinh": "m",
+   "giong": "Schedar",
+   "anh": "assets/minh-hoa/nv-yamamoto.webp",
+   "vaiTro": "Chuyên gia kinh tế / thám tử (N1)",
+   "soLuot": 15,
+   "xuatHien": [
+    "n1: bài 5,6,7 (15 lượt)"
+   ],
+   "lyDoGioiTinh": "portrait"
+  },
+  {
+   "id": "suzuki",
+   "ten": "Suzuki",
+   "ten_ja": "鈴木",
+   "biDanh": [
+    "鈴木",
+    "Suzuki"
+   ],
+   "gioiTinh": "m",
+   "giong": "Umbriel",
+   "anh": "assets/minh-hoa/nv-suzuki.webp",
+   "vaiTro": "Giáo viên sắp nghỉ hưu (N1)",
+   "soLuot": 5,
+   "xuatHien": [
+    "n1: bài 8 (5 lượt)"
+   ],
+   "lyDoGioiTinh": "portrait"
+  },
+  {
+   "id": "giao-vien",
+   "ten": "Giáo viên",
+   "ten_ja": "先生",
+   "biDanh": [
+    "先生",
+    "せんせい",
+    "せんせい (Sensei)",
+    "先生 (Sensei)",
+    "Sensei"
+   ],
+   "gioiTinh": "m",
+   "giong": "Algieba",
+   "anh": "assets/minh-hoa/nv-sensei.webp",
+   "vaiTro": "Giáo viên trong hội thoại (kana, N5, N4); khác Sensei mèo chỉ dẫn (Charon)",
+   "soLuot": 37,
+   "xuatHien": [
+    "kana: bài 3,4,5,7,8,10 (23 lượt)",
+    "n5: bài 15,19 (10 lượt)",
+    "n4: bài 45 (4 lượt)"
+   ],
+   "lyDoGioiTinh": "portrait"
+  },
+  {
+   "id": "shacho",
+   "ten": "Giám đốc",
+   "ten_ja": "社長",
+   "biDanh": [
+    "社長"
+   ],
+   "gioiTinh": "m",
+   "giong": "Algenib",
+   "anh": "assets/minh-hoa/nv-shacho.webp",
+   "vaiTro": "Giám đốc sáng lập/giám đốc (N1)",
+   "soLuot": 10,
+   "xuatHien": [
+    "n1: bài 9,10 (10 lượt)"
+   ],
+   "lyDoGioiTinh": "portrait"
+  },
+  {
+   "id": "kyoju",
+   "ten": "Giáo sư",
+   "ten_ja": "教授",
+   "biDanh": [
+    "教授"
+   ],
+   "gioiTinh": "m",
+   "giong": "Rasalgethi",
+   "anh": "assets/minh-hoa/nv-kyoju.webp",
+   "vaiTro": "Giáo sư (N1)",
+   "soLuot": 10,
+   "xuatHien": [
+    "n1: bài 14,15 (10 lượt)"
+   ],
+   "lyDoGioiTinh": "portrait"
+  },
+  {
+   "id": "senshu",
+   "ten": "Vận động viên",
+   "ten_ja": "選手",
+   "biDanh": [
+    "選手"
+   ],
+   "gioiTinh": "m",
+   "giong": "Sadachbia",
+   "anh": "assets/minh-hoa/nv-senshu.webp",
+   "vaiTro": "Vận động viên (N4, N1)",
+   "soLuot": 8,
+   "xuatHien": [
+    "n4: bài 33 (3 lượt)",
+    "n1: bài 12 (5 lượt)"
+   ],
+   "lyDoGioiTinh": "portrait"
+  },
+  {
+   "id": "coach",
+   "ten": "Huấn luyện viên",
+   "ten_ja": "コーチ",
+   "biDanh": [
+    "コーチ"
+   ],
+   "gioiTinh": "m",
+   "giong": "Alnilam",
+   "anh": "assets/minh-hoa/nv-coach.webp",
+   "vaiTro": "Huấn luyện viên (N4)",
+   "soLuot": 3,
+   "xuatHien": [
+    "n4: bài 33 (3 lượt)"
+   ],
+   "lyDoGioiTinh": "can-bang"
+  },
+  {
+   "id": "bengoshi",
+   "ten": "Luật sư",
+   "ten_ja": "弁護士",
+   "biDanh": [
+    "弁護士"
+   ],
+   "gioiTinh": "m",
+   "giong": "Iapetus",
+   "anh": "assets/minh-hoa/nv-bengoshi.webp",
+   "vaiTro": "Luật sư (N1)",
+   "soLuot": 5,
+   "xuatHien": [
+    "n1: bài 11 (5 lượt)"
+   ],
+   "lyDoGioiTinh": "can-bang"
+  },
+  {
+   "id": "hisho",
+   "ten": "Thư ký",
+   "ten_ja": "秘書",
+   "biDanh": [
+    "秘書"
+   ],
+   "gioiTinh": "m",
+   "giong": "Enceladus",
+   "anh": "assets/minh-hoa/nv-hisho.webp",
+   "vaiTro": "Thư ký (N4); nam để tách khỏi Lễ tân (nữ) trong cùng bài",
+   "soLuot": 5,
+   "xuatHien": [
+    "n4: bài 49 (5 lượt)"
+   ],
+   "lyDoGioiTinh": "can-bang"
+  },
+  {
+   "id": "nguyen",
+   "ten": "Nguyễn",
+   "ten_ja": "グエン",
+   "biDanh": [
+    "グエン",
+    "グエン (Nguyễn)",
+    "Nguyễn",
+    "Nguyen"
+   ],
+   "gioiTinh": "f",
+   "giong": "Laomedeia",
+   "anh": "assets/minh-hoa/nv-nguyen.webp",
+   "vaiTro": "Học viên Việt Nam trong bài kana",
+   "soLuot": 8,
+   "xuatHien": [
+    "kana: bài 9,10 (8 lượt)"
+   ],
+   "lyDoGioiTinh": "can-bang"
+  },
+  {
+   "id": "tenin",
+   "ten": "Nhân viên cửa hàng",
+   "ten_ja": "店員",
+   "biDanh": [
+    "店員",
+    "てんいん",
+    "てんいん (Nhân viên)"
+   ],
+   "gioiTinh": "f",
+   "giong": "Autonoe",
+   "anh": "assets/minh-hoa/nv-tenin.webp",
+   "vaiTro": "Nhân viên cửa hàng (kana, N5)",
+   "soLuot": 17,
+   "xuatHien": [
+    "kana: bài 6,9 (7 lượt)",
+    "n5: bài 3,11 (10 lượt)"
+   ],
+   "lyDoGioiTinh": "portrait"
+  },
+  {
+   "id": "uketsuke",
+   "ten": "Lễ tân",
+   "ten_ja": "受付",
+   "biDanh": [
+    "受付"
+   ],
+   "gioiTinh": "f",
+   "giong": "Despina",
+   "anh": "assets/minh-hoa/nv-uketsuke.webp",
+   "vaiTro": "Lễ tân (N5, N4)",
+   "soLuot": 7,
+   "xuatHien": [
+    "n5: bài 4 (2 lượt)",
+    "n4: bài 49 (5 lượt)"
+   ],
+   "lyDoGioiTinh": "portrait"
+  },
+  {
+   "id": "joshi",
+   "ten": "Cấp trên",
+   "ten_ja": "上司",
+   "biDanh": [
+    "上司"
+   ],
+   "gioiTinh": "f",
+   "giong": "Gacrux",
+   "anh": "assets/minh-hoa/nv-joshi.webp",
+   "vaiTro": "Cấp trên (N4); giọng chín chắn",
+   "soLuot": 4,
+   "xuatHien": [
+    "n4: bài 39 (4 lượt)"
+   ],
+   "lyDoGioiTinh": "can-bang"
+  },
+  {
+   "id": "hyoronka",
+   "ten": "Nhà bình luận",
+   "ten_ja": "評論家",
+   "biDanh": [
+    "評論家"
+   ],
+   "gioiTinh": "f",
+   "giong": "Erinome",
+   "anh": "assets/minh-hoa/nv-hyoronka.webp",
+   "vaiTro": "Nhà bình luận (N1)",
+   "soLuot": 5,
+   "xuatHien": [
+    "n1: bài 13 (5 lượt)"
+   ],
+   "lyDoGioiTinh": "can-bang"
+  },
+  {
+   "id": "isha",
+   "ten": "Bác sĩ",
+   "ten_ja": "医者",
+   "biDanh": [
+    "医者"
+   ],
+   "gioiTinh": "f",
+   "giong": "Vindemiatrix",
+   "anh": "assets/minh-hoa/nv-isha.webp",
+   "vaiTro": "Bác sĩ (N5)",
+   "soLuot": 5,
+   "xuatHien": [
+    "n5: bài 17 (5 lượt)"
+   ],
+   "lyDoGioiTinh": "can-bang"
+  },
+  {
+   "id": "tsukonin",
+   "ten": "Người qua đường",
+   "ten_ja": "通行人",
+   "biDanh": [
+    "通行人"
+   ],
+   "gioiTinh": "f",
+   "giong": "Callirrhoe",
+   "anh": "assets/minh-hoa/nv-tsukonin.webp",
+   "vaiTro": "Người qua đường (N5)",
+   "soLuot": 2,
+   "xuatHien": [
+    "n5: bài 24 (2 lượt)"
+   ],
+   "lyDoGioiTinh": "can-bang"
+  },
+  {
+   "id": "gakusei",
+   "ten": "Nghiên cứu sinh",
+   "ten_ja": "学生",
+   "biDanh": [
+    "学生"
+   ],
+   "gioiTinh": "f",
+   "giong": "Achernar",
+   "anh": "assets/minh-hoa/nv-gakusei.webp",
+   "vaiTro": "Nghiên cứu sinh trước giáo sư (N1)",
+   "soLuot": 5,
+   "xuatHien": [
+    "n1: bài 14 (5 lượt)"
+   ],
+   "lyDoGioiTinh": "can-bang"
+  },
+  {
+   "id": "shikai",
+   "ten": "Người dẫn chương trình",
+   "ten_ja": "司会",
+   "biDanh": [
+    "司会"
+   ],
+   "gioiTinh": "f",
+   "giong": "Sulafat",
+   "anh": "assets/minh-hoa/nv-shikai.webp",
+   "vaiTro": "Người dẫn chương trình (N1)",
+   "soLuot": 5,
+   "xuatHien": [
+    "n1: bài 15 (5 lượt)"
+   ],
+   "lyDoGioiTinh": "can-bang"
+  },
+  {
+   "id": "kisha",
+   "ten": "Phóng viên",
+   "ten_ja": "記者",
+   "biDanh": [
+    "記者"
+   ],
+   "gioiTinh": "f",
+   "giong": "Pulcherrima",
+   "anh": "assets/minh-hoa/nv-kisha.webp",
+   "vaiTro": "Phóng viên họp báo (N1)",
+   "soLuot": 5,
+   "xuatHien": [
+    "n1: bài 9 (5 lượt)"
+   ],
+   "lyDoGioiTinh": "can-bang"
+  }
+ ]
+}

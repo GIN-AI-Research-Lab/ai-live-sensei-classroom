@@ -1,0 +1,193 @@
+{
+  "ghiChu": "Cau hinh may doc duoc de tai tao pipeline anh AI (Qwen-Image-2512 + Qwen-Image-Edit-2511). Gia tri lay tu VM thuc te ngay 2026-10-01 (gcloud describe, nvidia-smi, pip freeze, ~/hf/*/.cache) va tu script da chay. Muc 'chuaKiemChung' liet ke cho chi suy ra, khong co ghi chep lenh goc.",
+  "ngayLuuTru": "2026-10-01",
+  "gcp": {
+    "project": "project-93de4fe7-4687-4925-a5f",
+    "zone": "us-central1-a",
+    "instanceName": "a100-benchmark-runner",
+    "taoLuc": "2026-09-23",
+    "machineType": "a2-highgpu-1g",
+    "vCPU": 12,
+    "ramGiB": 83,
+    "accelerator": {"type": "nvidia-tesla-a100", "count": 1, "model": "NVIDIA A100-SXM4-40GB", "vramMiB": 40960},
+    "provisioningModel": "SPOT",
+    "instanceTerminationAction": "STOP",
+    "onHostMaintenance": "TERMINATE",
+    "automaticRestart": false,
+    "bootDisk": {
+      "imageFamily": "ubuntu-2204-lts",
+      "imageProject": "ubuntu-os-cloud",
+      "imageDaDung": "ubuntu-2204-jammy-v20260918",
+      "type": "pd-ssd",
+      "sizeGbDaDung": 150,
+      "sizeGbKhuyenNghi": 200,
+      "sizeGbToiThieuLyThuyet": 130,
+      "lyDo": "150 GB day 100% (con 1.2 GB). Qwen-Image-2512 54 GB + Edit-2511 39 GB + LoRA 1.6 GB + venv 5.3 GB + he thong ~18 GB = ~118 GB, chua tinh ban chep PNG/log va cap nhat kernel (dkms can cho trong)."
+    },
+    "network": {"network": "default", "externalIp": "ephemeral (external-nat, PREMIUM)"},
+    "serviceAccountScopes": ["https://www.googleapis.com/auth/cloud-platform"],
+    "shieldedVm": {"secureBoot": false, "vtpm": true, "integrityMonitoring": true},
+    "giaSpotUsdMoiGio": 2.20,
+    "giaSpotGhiChu": "Gia do chu du an cung cap (A100 spot, uoc luong, chua gom dia). pd-ssd tinh them theo GB-thang ke ca khi VM tat.",
+    "quota": "can quota GPU A100 (preemptible/spot) >= 1 trong region us-central1",
+    "stockout": {"cachXuLy": "thu start lai moi ~3 phut, toi da ~30-60 phut roi doi zone", "script": "tools/dieu-khien/vm-lib.sh (ham bat)"},
+    "watchdog": "sudo shutdown -h +90 (gia han moi ~5 phut khi con giam sat) hoac +45 khi chi chep tai nguyen"
+  },
+  "os": {"name": "Ubuntu 22.04.5 LTS (jammy)", "kernel": "6.8.0-1069-gcp", "python": "3.10.12 (python3 he thong; venv ~/venv-qi)"},
+  "gpuDriver": {
+    "driver": "nvidia-driver-580-server 580.178.04 (kernel module qua dkms: nvidia-srv/580.178.04)",
+    "goiDaCaiTrenVm": ["nvidia-driver-580-server", "nvidia-dkms-580-server", "nvidia-kernel-source-580-server", "nvidia-utils-580-server", "linux-headers-6.8.0-1069-gcp", "dkms"],
+    "cuDaCoSan": ["nvidia-driver-535-server", "cuda-toolkit-12-4 (cuda-keyring_1.1) - khong can cho PyTorch wheel, la di san cua benchmark LLM truoc"],
+    "nvidiaSmi": "Driver 580.178.04, CUDA 13.0 (header)",
+    "yeuCau": "driver >= 550 cho torch cu124",
+    "chuaKiemChung": "Lenh apt cai driver khong duoc ghi lai; README.md muc 2 dung lai tu dpkg -l"
+  },
+  "python": {
+    "venv": "~/venv-qi",
+    "tepFreeze": "vm/requirements-venv-qi.txt",
+    "cai": "pip install -r vm/requirements-venv-qi.txt --extra-index-url https://download.pytorch.org/whl/cu124",
+    "phienBan": {
+      "torch": "2.6.0+cu124",
+      "torchvision": "0.21.0+cu124",
+      "diffusers": "0.40.0",
+      "transformers": "5.17.0",
+      "accelerate": "1.15.0",
+      "peft": "0.21.0",
+      "safetensors": "0.8.0",
+      "sentencepiece": "0.2.2",
+      "huggingface_hub": "1.33.0",
+      "tokenizers": "0.23.2",
+      "numpy": "2.2.6",
+      "pillow": "12.3.0",
+      "triton": "3.2.0"
+    },
+    "maySuCucBo": {"python": "3.12 (Windows)", "goi": ["numpy", "scipy", "pillow"], "dungCho": "lam-nen.py, tools/qa/*, tools/nhan-vat/*", "luuY": "dat PYTHONIOENCODING=utf-8 khi in tieng Viet tren Windows"}
+  },
+  "models": [
+    {
+      "vaiTro": "anh tu vung / canh (vocab, scene, ban goc nhan vat)",
+      "repo": "Qwen/Qwen-Image-2512",
+      "revision": "25468b98e3276ca6700de15c6628e51b7de54a26",
+      "licence": "Apache-2.0",
+      "pipeline": "diffusers.QwenImagePipeline",
+      "thuMucTrenVm": "~/hf/Qwen-Image-2512",
+      "dungLuong": "54 GB (text_encoder 4 shard ~16.6 GB, transformer 9 shard ~41 GB, vae 0.25 GB)",
+      "thoiGianTai": "262 s (setup.log, ~54 GB)"
+    },
+    {
+      "vaiTro": "bien the bieu cam nhan vat (image edit)",
+      "repo": "Qwen/Qwen-Image-Edit-2511",
+      "revision": "6f3ccc0b56e431dc6a0c2b2039706d7d26f22cb9",
+      "licence": "Apache-2.0",
+      "pipeline": "diffusers.QwenImageEditPlusPipeline",
+      "thuMucTrenVm": "~/hf/Qwen-Image-Edit-2511",
+      "tai": "chi transformer (5 shard ~41 GB) + processor + scheduler + model_index.json; text_encoder, tokenizer, vae la symlink sang ~/hf/Qwen-Image-2512/",
+      "dungLuong": "39 GB",
+      "luuY": "khong xoa Qwen-Image-2512/{text_encoder,tokenizer,vae} neu con dung Edit"
+    }
+  ],
+  "loras": [
+    {
+      "dungCho": "Edit-2511 (dang dung)",
+      "repo": "lightx2v/Qwen-Image-Edit-2511-Lightning",
+      "revision": "d74eba145674fd7e31b949324e148e21e7118abd",
+      "tep": "Qwen-Image-Edit-2511-Lightning-8steps-V1.0-bf16.safetensors",
+      "sha256": "a9e81a58a78f260f67b337a6f615e8fa4cd3bc79847c77b7d61a581b789b1ba8",
+      "kichThuocByte": 849608296,
+      "tepPhu": {"tep": "Qwen-Image-Edit-2511-Lightning-4steps-V1.0-bf16.safetensors", "sha256": "22226e8d05d354bb356627d428809f5afd7819399b077238a2b70a82883a904f", "ghiChu": "da tai, khong dung"},
+      "cachDung": "load_lora_weights + fuse_lora(lora_scale=1.0) + unload_lora_weights; scheduler FlowMatchEulerDiscrete cau hinh Lightning (exponential time shift, base_shift = max_shift = ln 3)"
+    },
+    {
+      "dungCho": "Qwen-Image-2512 che do 'light' (chi dung khi thu, KHONG dung o ban cuoi)",
+      "repo": "lightx2v/Qwen-Image-2512-Lightning",
+      "tep": "Qwen-Image-2512-Lightning-8steps-V1.0-bf16.safetensors",
+      "kichThuocMiB": 811,
+      "revision": "khong ghi lai (da xoa khoi VM)"
+    }
+  ],
+  "giaiDoan": {
+    "vocabVaCanh": {
+      "script": "vm/gen.py (chay boi vm/chay-full.sh va vm/chay-tao-lai.sh)",
+      "mode": "base",
+      "steps": 20,
+      "cfg": 4.0,
+      "cfgGhiChu": "true_cfg_scale = 4.0 (co negative prompt). gen.py mac dinh --steps 50 cho mode base, nen PHAI truyen --steps 20 --cfg 4",
+      "kichThuoc": "1024x1024",
+      "storage": "bf16",
+      "vaeTiling": true,
+      "seed": {"lanDau": 11, "tuongDoiTaoLai": [22, 33]},
+      "tepPrompt": ["prompts/prompt-n5.json", "prompts/prompt-canh.json", "prompts/prompt-n4.json", "prompts/prompt-n3.json", "prompts/prompt-n2n1.json"],
+      "thuTuChay": ["n5", "canh", "n4", "n3", "n2n1"],
+      "styleRef": "prompts/style-chung.json (style, negativeBase, styleVat, negativeVat)",
+      "soAnhDuyNhat": {"n5": 338, "canh": 116, "n4": 293, "n3": 232, "n2n1": 288, "tong": 1267},
+      "taoLai": {"soMuc": 159, "soAnh": 318, "dot": ["prompts/tl/dot-01.json (109)", "prompts/tl/dot-02.json (29)", "prompts/tl/dot-03.json (21)"], "ketQua": "99 chon s22, 42 chon s33, 18 giu SVG cu"},
+      "giayMoiAnh": 19.6,
+      "vramDinhGiB": 38.7,
+      "nap": "pipeline len CPU ~4 phut, ma hoa prompt bang text encoder tren GPU roi giai phong, transformer bf16 + vae len GPU"
+    },
+    "nhanVatGoc": {
+      "script": "vm/gen.py voi prompts/nhan-vat/base-items.json (tao boi prompts/nhan-vat/tao-base.py)",
+      "launcher": "vm/chay-base.sh",
+      "mode": "base", "steps": 20, "cfg": 4.0, "kichThuoc": "1024x1024", "seeds": [11, 22, 33],
+      "soNhanVat": 11,
+      "giayMoiAnh": 20.4,
+      "vramDinhGiB": 38.7,
+      "ghiChu": "17 nhan vat con lai da co anh chan dung tu truoc; tong 28 (prompts/nhan-vat/ids28.json)"
+    },
+    "bieuCam": {
+      "script": "vm/gen-edit2.py (may chu nap 1 lan, doc ~/nv/inbox/*.json)",
+      "pipeline": "QwenImageEditPlusPipeline",
+      "steps": 8, "cfgTrue": 1.0, "kichThuoc": "1024x1024",
+      "seedMacDinh": 7,
+      "seedTaoLai": [13, 21],
+      "storage": "float8_e4m3fn layerwise casting (transformer), compute bf16",
+      "textEncoderTrenGpu": true,
+      "anhDieuKienPixels": 147456,
+      "anhDieuKienGhiChu": "384*384 pixel, lam tron boi 32, dua vao text encoder qua pipe.image_processor.resize",
+      "negativeMacDinh": "chi dung khi cfg > 1 (that su khong dung vi cfg = 1): text, symbols, sweat drops, sparkles, open mouth, teeth, white dots, speckles, sticker outline, different clothes",
+      "khoa": ["binh_thuong", "vui", "hoi", "gian", "ngac_nhien", "hao_hung", "buon"],
+      "khoaXuatApp": ["binh_thuong (anh goc)", "binh_thuong_kin (mieng kin, tu Edit)", "vui", "hoi", "gian", "ngac_nhien", "hao_hung", "buon"],
+      "soNhanVat": 28,
+      "giayMoiAnh": 11.1,
+      "vramDinhGiB": 35.6,
+      "tongJobDaChay": 439,
+      "inbox": {"thuMuc": "~/nv/inbox", "tepJob": "{out, steps, cfg, size, jobs:[{ten, ref, prompt, seed}]}", "uuTien": "ten tep bat dau bang 'p-' chay truoc", "xong": "tep .json doi thanh .xong", "dung": "tao tep STOP"}
+    }
+  },
+  "xuLySau": {
+    "lamNen": {
+      "script": "vm/lam-nen.py (chay o may local, can numpy + scipy + pillow)",
+      "mauNen": "#f0ebe1", "rgb": [240, 235, 225],
+      "tol": 2.5, "chuyen": 6.0, "mem": 14.0, "lech": 25.0, "lo": 900,
+      "coVocab": "--khung --moi", "coNhanVat": "--moi",
+      "luuY": "KHONG dua ma hex vao prompt; mau nen chi duoc ep sau khi sinh"
+    },
+    "xuatWebp": {"dinhDang": "webp", "kichThuoc": "512x512", "chatLuong": 82, "method": 6, "resample": "LANCZOS", "script": "tools/qa/webp-chi-muc.py (vocab/canh), tools/nhan-vat/xuat.py (nhan vat)"}
+  },
+  "kiemTra": {
+    "tuDong": "tools/qa/tu-dong.py: gan-nhu-trong >97% nen; vung-toi-lon >4%; nghi-the-khung vung sang >18%; nghi-khung-chu-nhat >=3 canh thang; nghi-o-vuong lap >90% bbox va >15% anh; nen-chua-phang",
+    "to": "tools/qa/to-lien-he.py: to 8x6 = 48 o; tools/qa/to-tao-lai.py: 3 o [s11|s22|s33]",
+    "tuChoi": "xem README.md muc 6",
+    "ketQua": {"ok": 1249, "giuSvg": 18, "taoLaiDuocChon": 141, "gocS11Giu": 1108}
+  },
+  "dauRa": {
+    "vocab": "assets/minh-hoa/*.webp (1261 tep) + tools/minh_hoa_chi_muc.json (id -> ten, cap, webp, trangThai, nguon)",
+    "nhanVat": "assets/minh-hoa/nv/<id>/<khoa>.webp (28 x 8) + assets/minh-hoa/nv/chi-muc.json; chan dung goc assets/minh-hoa/nv-<id>.webp",
+    "gan": "tools/gan_anh.py (chay lai sau moi lan build lai curriculum)"
+  },
+  "chiPhi": {
+    "gpuUsdMoiGio": 2.20,
+    "baseUsdMoiAnh": 0.012,
+    "editUsdMoiAnh": 0.0068,
+    "uocTinhLanChayDaQua": {"vocab1267AnhGio": 6.9, "taoLai318AnhGio": 1.7, "bieuCam439AnhGio": 1.35, "tongUsdXapXi": 22, "tongGhiChu": "GPU thuan sinh anh, chua gom thu style, nap model, cho doi va dia"},
+    "diaPdSsdUsdMoiGbThang": "~0.17 (theo bang gia cong khai, chua doi chieu); 200 GB ~ 34 USD/thang ke ca khi VM tat",
+    "khuyenNghi": "xoa VM va dia khi khong dung; tao lai theo README mat ~25-30 phut truoc anh dau tien (~1 USD)"
+  },
+  "chuaKiemChung": [
+    "Lenh apt cai driver NVIDIA that su da dung (chi co ket qua dpkg).",
+    "Co --accelerator trong lenh create: A2 gan san A100 theo machine type, neu gcloud bao trung thi bo co nay.",
+    "setup-edit.sh la ghi chep cac lenh chay tay, chua chay lai nguyen van.",
+    "Revision cua lightx2v/Qwen-Image-2512-Lightning (khong con tren VM, khong dung o ban cuoi).",
+    "Gia pd-ssd va quota/stockout tai thoi diem tao lai."
+  ]
+}

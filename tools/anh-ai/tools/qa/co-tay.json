@@ -1,0 +1,540 @@
+{
+ "n5/dai-hoc": {
+  "lyDo": "khung/the trang co bong phia sau canh truong",
+  "promptMoi": "A stately red-brick university main building with a central tower, a black graduation mortarboard cap resting in front of it and two small golden ginkgo trees beside it, standing alone as a compact isolated building."
+ },
+ "n5/tap-chi": {
+  "lyDo": "bia tap chi ve nguoi mau kieu anh chup (lech phong cach, gan anh that)",
+  "promptMoi": "A thin magazine lying slightly open and curled, its cover showing only simple flat colour blocks and a small flat drawing of a flower, with no title printed."
+ },
+ "n5/phia-kia": {
+  "lyDo": "o hanh lang chu nhat (khung) phia sau hai nguoi",
+  "promptMoi": "A polite receptionist in a terracotta uniform gesturing with an open palm toward a small doorway standing far off to the side, while a guest beside her looks that way; only the two people and the small distant doorway."
+ },
+ "n5/thuy-si": {
+  "lyDo": "the/anh in co vien bong (khung)",
+  "promptMoi": "The snowy Matterhorn mountain peak with a small wooden chalet and a tiny grazing cow at its foot, drawn as one compact isolated mountain shape."
+ },
+ "n5/buoi-sang": {
+  "lyDo": "o cua so vuong kin (tile)",
+  "promptMoi": "A person stretching happily beside an open curtain as a big bright morning sun rises just above a few small rooftops."
+ },
+ "n5/buoi-chieu": {
+  "lyDo": "canh o vuong dac (tile)",
+  "promptMoi": "Two children with school backpacks walking home side by side, a large low orange afternoon sun behind them and long soft shadows on a small patch of path."
+ },
+ "n5/ngan-hang": {
+  "lyDo": "ky hieu $ tren phu hieu (ky tu tien te)",
+  "promptMoi": "A classic bank building with stone columns and a triangular roof, a small plain round gold medallion emblem without any symbol above the entrance, and a small closed vault door icon beside it."
+ },
+ "n5/nhin": {
+  "lyDo": "vien khung con sot ben phai (sau khi go khung)"
+ },
+ "n5/xau-te": {
+  "lyDo": "sai nghia: gio ngon cai LEN (tot) thay vi xuong",
+  "promptMoi": "A frowning person holding one fist out with the thumb pointing straight DOWN toward the ground in a clear thumbs-down gesture, a tiny dark scribble cloud floating above the head. The thumb points downward, never upward. There are no letters, words or numbers anywhere."
+ },
+ "n5/gan": {
+  "lyDo": "kho hieu: khong thay nha ga, khong ro nghia gan",
+  "promptMoi": "A small house and a small train station building with a platform roof standing right next to each other, almost touching, with a tiny curved double-headed arrow between them showing the very short distance."
+ },
+ "n5/mua-he": {
+  "lyDo": "canh o vuong bo goc (tile)",
+  "promptMoi": "A small group of summer things standing together: two tall sunflowers, a glass wind chime hanging from a short wooden stand and a slice of watermelon, with a small bright sun above them."
+ },
+ "n5/mua-dong": {
+  "lyDo": "canh o vuong bo goc (tile)",
+  "promptMoi": "A cheerful snowman with a red scarf standing on a small round mound of snow beside one bare little tree, a few snowflakes falling around them."
+ },
+ "n5/thi-tran": {
+  "lyDo": "canh o vuong bo goc (tile)",
+  "promptMoi": "A compact cluster of three small Japanese town buildings side by side, a little shop with an awning, a house and a utility pole with wires, standing together on a short strip of street."
+ },
+ "n5/nuoc-ngoai": {
+  "lyDo": "khung cua so vuong bao ca canh (khung)",
+  "promptMoi": "A traveler with a rolling suitcase standing and looking toward a small foreign city skyline with a round-domed tower and a faraway palm tree across a short strip of blue sea, with a small airplane flying above."
+ },
+ "n5/muon-co": {
+  "lyDo": "o cua kinh vuong phia sau (khung)",
+  "promptMoi": "A child standing with both hands clasped, gazing longingly at a toy robot sitting on a small low shelf, a round thought bubble above the child's head showing the same toy robot with a small red heart."
+ },
+ "n5/bien": {
+  "lyDo": "canh o vuong bo goc (tile)",
+  "promptMoi": "A small curved sandy beach with gentle blue waves rolling in, a beach umbrella and a seashell, drawn as one compact isolated island-like patch of shore."
+ },
+ "n5/dung-day": {
+  "lyDo": "sai nghia: nguoi ngoi co chan, khong thay dung day",
+  "promptMoi": "A person pushing up from a chair and standing up, halfway between sitting and standing, knees straightening, one hand on the armrest, the body clearly rising upward with a small upward curved motion arrow beside."
+ },
+ "n5/khuon-mat": {
+  "lyDo": "dau troi hoi khong toc (bong tron), vien cam loang",
+  "promptMoi": "Head-and-shoulders of a smiling young person with short dark brown hair, natural light peach skin, the whole face outlined by a thin bold terracotta ring, and a small terracotta arrow pointing at the face."
+ },
+ "n5/mat": {
+  "lyDo": "dau troi hoi khong toc, mat bi ve nhu kinh (kho hieu)",
+  "promptMoi": "Head-and-shoulders of a friendly young person with short dark brown hair and natural light peach skin, both eyes circled by thin terracotta rings, and a small terracotta arrow pointing at the eyes. No glasses."
+ },
+ "n5/mieng": {
+  "lyDo": "dau troi hoi khong toc (bong tron)",
+  "promptMoi": "Head-and-shoulders of a friendly young person with short dark brown hair and natural light peach skin, smiling, the mouth circled by a thin terracotta ring, and a small terracotta arrow pointing at the mouth."
+ },
+ "n5/chan": {
+  "lyDo": "nguoi khong quan ao, than hong phat sang (la mat)",
+  "promptMoi": "A standing child wearing a terracotta T-shirt and sage-green shorts, bare legs and feet with natural light peach skin, the legs and feet outlined by a thin terracotta line, and a small terracotta arrow pointing at the feet."
+ },
+ "n5/kyoto": {
+  "lyDo": "canh o vuong bo goc (tile)",
+  "promptMoi": "The Golden Pavilion temple of Kyoto with two small pine trees beside it, standing on a small curved patch of pond water, drawn as one compact isolated landmark."
+ },
+ "n5/dung-do-xe": {
+  "lyDo": "kho hieu: chi co chiec xe, khong ro dung/do",
+  "promptMoi": "A small car parked neatly inside a painted parking space marked by white lines on a small patch of asphalt, with a tall round red stop sign without any writing standing beside it."
+ },
+ "n5/tuyet": {
+  "lyDo": "canh o vuong bo goc (tile)",
+  "promptMoi": "A small snow-covered house roof and a little snow-topped pine tree standing on a small round mound of snow, big soft snowflakes falling around them."
+ },
+ "n5/con-duong": {
+  "lyDo": "canh o vuong bo goc (tile)",
+  "promptMoi": "A short winding country road curving between two small green grassy mounds and a little tree, drawn as one compact isolated patch of landscape."
+ },
+ "n5/deo-kinh": {
+  "lyDo": "vien khung con sot ben phai (sau khi go khung)"
+ },
+ "canh/canh-mua-ruou-vang-bach-hoa": {
+  "lyDo": "tam nen cua hang hinh chu nhat phia sau (khung)"
+ },
+ "canh/canh-giup-be-thung-do": {
+  "lyDo": "tam nen can phong hinh chu nhat phia sau (khung)"
+ },
+ "canh/canh-qua-sinh-nhat-duoi-hoa-anh-dao": {
+  "lyDo": "canh o vuong (tile) hoa anh dao"
+ },
+ "canh/canh-gio-manh-dan-khi-bao-den": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "canh/canh-san-pham-cho-noi-tro": {
+  "lyDo": "vien khung mong con sot quanh canh"
+ },
+ "canh/canh-cuoc-doi-vuot-kho": {
+  "lyDo": "tam nen/o vuong phia sau (khung)"
+ },
+ "canh/canh-giam-doc-nghi-huu": {
+  "lyDo": "tam nen/o vuong phia sau (khung)"
+ },
+ "n4/oversleep": {
+  "lyDo": "can phong o vuong (tile)"
+ },
+ "n4/meeting-room": {
+  "lyDo": "can phong hop dong hop (tile)",
+  "promptMoi": "A long meeting table with office chairs around it and a small blank whiteboard on a stand at one end, drawn as a compact isolated group of furniture."
+ },
+ "n4/can-see-view": {
+  "lyDo": "khung cua so bao ca canh (khung)",
+  "promptMoi": "A person pointing happily at a small snowy Mount Fuji rising in the distance, both standing on a small patch of grass."
+ },
+ "n4/conversation": {
+  "lyDo": "tam nen o vuong phia sau (khung)"
+ },
+ "n4/university-student": {
+  "lyDo": "canh truong o vuong (tile)"
+ },
+ "n4/enter-school": {
+  "lyDo": "canh o vuong (tile) co hoa anh dao"
+ },
+ "n4/disappointing": {
+  "lyDo": "tam nen/o vuong phia sau (khung)"
+ },
+ "n4/go-on-continue": {
+  "lyDo": "canh o vuong bo goc (tile)",
+  "promptMoi": "A long winding stone path that keeps curving on and on across a few small green hills into the distance, drawn as one compact isolated ribbon of landscape."
+ },
+ "n4/walk-stroll": {
+  "lyDo": "canh o vuong (tile)"
+ },
+ "n4/music": {
+  "lyDo": "mat kawaii tren tai nghe (do vat co mat)",
+  "promptMoi": "A pair of headphones with colorful musical notes floating out of the ear cups.",
+  "vat": true
+ },
+ "n4/close-by-itself": {
+  "lyDo": "mat kawaii tren cua tau (do vat co mat)",
+  "promptMoi": "The two sliding doors of a train car closing on their own, the gap between the doors narrowing, with two small inward arrows showing the doors moving, no one touching the doors.",
+  "vat": true
+ },
+ "n4/begin": {
+  "lyDo": "san khau lap day o vuong (tile)"
+ },
+ "n4/light-comes-on": {
+  "lyDo": "tam tuong o vuong phia sau den (khung)"
+ },
+ "n4/beautiful": {
+  "lyDo": "canh o vuong bo goc (tile)",
+  "promptMoi": "A small mountain lake with one snowy peak and two red autumn maple trees reflected in the still water, drawn as one compact isolated island-like landscape, soft sparkle stars twinkling around it."
+ },
+ "n4/party": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n4/lets-eat": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n4/future": {
+  "lyDo": "canh o vuong (tile)",
+  "promptMoi": "A young person standing on a small hilltop looking toward a bright rising sun and a tiny faraway city skyline, a winding path leading from their feet toward it, drawn as one compact isolated patch of landscape."
+ },
+ "n4/university": {
+  "lyDo": "the/anh in co vien bong (khung)",
+  "promptMoi": "A stately red-brick university main building with a clock-less central tower, a black graduation mortarboard cap resting in front of it and two small trees beside it, standing alone as a compact isolated building."
+ },
+ "n4/match-game": {
+  "lyDo": "canh o vuong (tile)"
+ },
+ "n4/worry": {
+  "lyDo": "o cua so toi phia sau (khung)"
+ },
+ "n4/cheer-on": {
+  "lyDo": "canh o vuong (tile)"
+ },
+ "n4/recipe": {
+  "lyDo": "vien the/khung con sot (khung)"
+ },
+ "n4/class-lesson": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n4/inconvenient": {
+  "lyDo": "canh o vuong (tile)"
+ },
+ "n4/can-hear": {
+  "lyDo": "vien khung con sot ben phai"
+ },
+ "n4/can-be-seen": {
+  "lyDo": "canh o vuong (tile)"
+ },
+ "n4/skillful": {
+  "lyDo": "vien khung con sot ben phai"
+ },
+ "n4/countryside": {
+  "lyDo": "canh o vuong bo goc (tile)",
+  "promptMoi": "A small Japanese farmhouse with a tiled roof beside a few terraced green rice paddies and one small mountain behind, drawn as one compact isolated island-like patch of countryside."
+ },
+ "n4/city": {
+  "lyDo": "the/anh in co vien bong (khung)",
+  "promptMoi": "A compact cluster of tall city skyscrapers of different heights with a few small cars on a short street in front, drawn as one compact isolated group of buildings."
+ },
+ "n4/ear": {
+  "lyDo": "dau khong toc (troc)",
+  "promptMoi": "Side profile head-and-shoulders of a friendly young person with short dark brown hair and natural light peach skin, the ear circled by a thin terracotta ring and a small terracotta arrow pointing at the ear."
+ },
+ "n4/foot-leg": {
+  "lyDo": "chan mau cam/vang (da terracotta), khong tu nhien",
+  "promptMoi": "A standing child seen from the knees down wearing sage-green shorts, bare lower legs and feet with natural light peach skin and the toes clearly visible, the feet outlined by a thin terracotta line."
+ },
+ "n4/cooking-dish": {
+  "lyDo": "mat kawaii tren bat com",
+  "vat": true
+ },
+ "n4/song": {
+  "lyDo": "mat kawaii tren radio",
+  "vat": true
+ },
+ "n4/traffic": {
+  "lyDo": "the/anh in co vien bong (khung)",
+  "promptMoi": "A busy crossroads intersection with a traffic light, a few small cars and a bus, and two pedestrians on a zebra crossing, drawn as one compact isolated patch of street."
+ },
+ "n4/hanami": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n4/useful": {
+  "lyDo": "o vuong toi phia sau (tile)"
+ },
+ "n4/cut": {
+  "lyDo": "mat kawaii tren to giay",
+  "promptMoi": "Two hands cutting a plain sheet of paper in half with a pair of scissors, a thin dashed cut line across the blank paper."
+ },
+ "n4/happy": {
+  "lyDo": "tam nen o vuong phia sau (khung)"
+ },
+ "n4/make-help": {
+  "lyDo": "the/khung co bong phia sau"
+ },
+ "n4/lecture": {
+  "lyDo": "hoi truong o vuong (tile)"
+ },
+ "n4/let-rest": {
+  "lyDo": "sai nghia: nguoi lo lang nam cua, khong thay cho nghi",
+  "promptMoi": "A kind boss gently guiding a tired young worker toward a comfortable sofa to lie down and rest, the tired worker smiling with relief."
+ },
+ "n3/regret-pity": {
+  "lyDo": "o cua so mua phia sau (khung)"
+ },
+ "n3/explain": {
+  "lyDo": "the/khung co bong phia sau"
+ },
+ "n3/daily-life": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n3/habit": {
+  "lyDo": "tam nen can phong phia sau (khung)"
+ },
+ "n3/decide": {
+  "lyDo": "canh rung o vuong (tile)"
+ },
+ "n3/prohibit": {
+  "lyDo": "tam tuong o vuong phia sau (khung)"
+ },
+ "n3/rules": {
+  "lyDo": "gan nhu trong, vien khung con sot",
+  "promptMoi": "A notice board on a stand showing a neat row of four simple pictogram icons in circles: a crossed-out cigarette, a crossed-out phone, a trash can and a finger-to-lips quiet sign, no words."
+ },
+ "n3/university": {
+  "lyDo": "the/anh in co vien bong (khung)",
+  "promptMoi": "A stately red-brick university main building with a clock-less central tower, a black graduation mortarboard cap resting in front of it and two small trees beside it, standing alone as a compact isolated building."
+ },
+ "n3/retire": {
+  "lyDo": "canh cat vien thang (tile)"
+ },
+ "n3/weather": {
+  "lyDo": "vien khung con sot ben phai"
+ },
+ "n3/city": {
+  "lyDo": "the/anh in co vien bong (khung)",
+  "promptMoi": "A compact cluster of tall city skyscrapers of different heights with a few small cars on a short street in front, drawn as one compact isolated group of buildings."
+ },
+ "n3/countryside": {
+  "lyDo": "canh o vuong bo goc (tile)",
+  "promptMoi": "A small Japanese farmhouse with a tiled roof beside a few terraced green rice paddies and one small mountain behind, drawn as one compact isolated island-like patch of countryside."
+ },
+ "n3/inconvenient": {
+  "lyDo": "canh o vuong (tile)"
+ },
+ "n3/long-ago": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n3/average": {
+  "lyDo": "bieu do tren the co bong (khung)",
+  "promptMoi": "A simple bar chart of five plain bars of different heights standing on a baseline, with one dashed horizontal line across the middle marking the average, no numbers."
+ },
+ "n3/tournament": {
+  "lyDo": "san van dong o vuong (tile)"
+ },
+ "n3/held-event": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n3/half-done": {
+  "lyDo": "sai nghia: banh sandwich con nguyen, khong thay do dang",
+  "promptMoi": "A half-eaten sandwich with one big bite clearly missing from its corner, left on a plate beside a glass of milk that is only half full."
+ },
+ "n3/nutrition": {
+  "lyDo": "mat kawaii tren com",
+  "vat": true
+ },
+ "n3/complaint": {
+  "lyDo": "vien khung con sot ben phai"
+ },
+ "n3/poor": {
+  "lyDo": "can phong o vuong (tile)"
+ },
+ "n3/cancel": {
+  "lyDo": "canh san o vuong (tile)"
+ },
+ "n3/match-game": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n3/tears": {
+  "lyDo": "dau troi khong toc (bong tron)",
+  "promptMoi": "Head-and-shoulders of a sad young person with short dark brown hair and natural light peach skin, one big clear teardrop rolling down the cheek from one eye."
+ },
+ "n3/worry": {
+  "lyDo": "o cua so toi phia sau (khung)"
+ },
+ "n3/want-to-eat": {
+  "lyDo": "tam nen o vuong phia sau (khung)"
+ },
+ "n3/prove": {
+  "lyDo": "the canh dam dong cat vien thang (khung)"
+ },
+ "n3/skilful": {
+  "lyDo": "the/tranh co bong phia sau (khung)"
+ },
+ "n3/company-president": {
+  "lyDo": "o cua so vuong phia sau (khung)"
+ },
+ "n3/present-announce": {
+  "lyDo": "canh cat vien thang (tile)"
+ },
+ "n3/japan": {
+  "lyDo": "hinh o bo goc (tile)",
+  "promptMoi": "A red torii gate standing in front of a small snow-capped Mount Fuji with one small cherry blossom tree beside it, drawn as one compact isolated group."
+ },
+ "n3/politics": {
+  "lyDo": "toa Capitol cua My (lech nghia/van hoa: can quoc hoi Nhat)",
+  "promptMoi": "The National Diet Building of Japan, a symmetrical pale stone building with a tall stepped central tower, standing alone as a compact isolated landmark with two small trees in front."
+ },
+ "n3/end": {
+  "lyDo": "san khau lap day o vuong (tile)",
+  "promptMoi": "Red stage curtains drawn closed on a small stage, a few small audience members clapping in front, drawn as one compact isolated stage.",
+  "khongVat": true
+ },
+ "n3/nuisance": {
+  "lyDo": "the/canh co bong phia sau (khung)"
+ },
+ "n2n1/loi-chao-phat-bieu": {
+  "lyDo": "vien the/khung ben phai"
+ },
+ "n2n1/kinh-te": {
+  "lyDo": "ky hieu $ tren dong xu va tien giay (ky tu tien te)",
+  "promptMoi": "Stacks of plain gold coins without any symbols, a small factory with a chimney, a cargo ship and a rising arrow chart grouped together, the coins and notes carrying no symbols or numbers."
+ },
+ "n2n1/giai-thich": {
+  "lyDo": "bang/the co bong phia sau (khung)"
+ },
+ "n2n1/sat-lo": {
+  "lyDo": "canh cat vien thang (tile)"
+ },
+ "n2n1/lo-lang": {
+  "lyDo": "o cua so toi phia sau (khung)"
+ },
+ "n2n1/lai-xe": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n2n1/con-duong": {
+  "lyDo": "canh o vuong bo goc (tile)",
+  "promptMoi": "A short winding country road curving between two small green grassy mounds and a little tree, drawn as one compact isolated patch of landscape."
+ },
+ "n2n1/den-gan": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n2n1/quy-tac": {
+  "lyDo": "the/bang co bong (khung)"
+ },
+ "n2n1/tuan-theo": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n2n1/nuoc-ngoai": {
+  "lyDo": "canh o vuong bo goc (tile)"
+ },
+ "n2n1/tiep-tuc": {
+  "lyDo": "vien khung con sot ben phai"
+ },
+ "n2n1/pho-bien": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n2n1/khap-noi": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n2n1/moi-truong": {
+  "lyDo": "canh o vuong bo goc (tile)"
+ },
+ "n2n1/tan-thanh": {
+  "lyDo": "dam dong cat vien thang (tile)"
+ },
+ "n2n1/ke-hoach": {
+  "lyDo": "bang/the co bong phia sau (khung)"
+ },
+ "n2n1/y-kien": {
+  "lyDo": "dam dong cat vien thang (tile)"
+ },
+ "n2n1/xa-hoi": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n2n1/tien-hanh": {
+  "lyDo": "canh cat vien thang (tile)"
+ },
+ "n2n1/dai-hoi": {
+  "lyDo": "san van dong o vuong (tile)"
+ },
+ "n2n1/thong-ke": {
+  "lyDo": "bieu do tren the co bong (khung)"
+ },
+ "n2n1/que-nha": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n2n1/tham-quan": {
+  "lyDo": "tam nen o vuong phia sau (khung)"
+ },
+ "n2n1/mon-an": {
+  "lyDo": "mat kawaii tren bat com",
+  "vat": true
+ },
+ "n2n1/ky-niem": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n2n1/chuc-mung": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n2n1/that-le": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n2n1/tran-dau": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n2n1/phong-canh": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n2n1/vu-viec": {
+  "lyDo": "canh pho o vuong phia sau (khung)"
+ },
+ "n2n1/nuoc-mat": {
+  "lyDo": "dau troi khong toc (bong tron)",
+  "promptMoi": "Head-and-shoulders of a sad young person with short dark brown hair and natural light peach skin, one big clear teardrop rolling down the cheek from one eye."
+ },
+ "n2n1/xem-nhin": {
+  "lyDo": "kho hieu: nhin vao tam bang trong (khung)",
+  "promptMoi": "A person holding a pair of binoculars up to the eyes and looking far into the distance at a small bird perched on a branch."
+ },
+ "n2n1/nghe": {
+  "lyDo": "vien the/khung ben phai"
+ },
+ "n2n1/cuoc-doi": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n2n1/cuoc-song": {
+  "lyDo": "tam nen can phong phia sau (khung)"
+ },
+ "n2n1/thu-pham": {
+  "lyDo": "tam nen den chieu o vuong (khung)"
+ },
+ "n2n1/biet-on": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n2n1/tot-nghiep": {
+  "lyDo": "canh cat vien thang (tile)"
+ },
+ "n2n1/hanh-phuc": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n2n1/dai-hoc": {
+  "lyDo": "the/anh in co vien bong (khung)",
+  "promptMoi": "A stately red-brick university main building with a clock-less central tower, a black graduation mortarboard cap resting in front of it and two small trees beside it, standing alone as a compact isolated building."
+ },
+ "n2n1/tuong-lai": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n2n1/tra-loi": {
+  "lyDo": "vien khung con sot ben phai"
+ },
+ "n2n1/vu-kien": {
+  "lyDo": "tam nen o vuong phia sau (khung)"
+ },
+ "n2n1/an-hue": {
+  "lyDo": "canh o vuong bo goc (tile)"
+ },
+ "n2n1/tan-binh": {
+  "lyDo": "o cua so vuong phia sau (khung)"
+ },
+ "n2n1/phan-boi": {
+  "lyDo": "the/anh in co vien bong (khung)"
+ },
+ "n2n1/ti-mi": {
+  "lyDo": "vien the/khung ben phai"
+ },
+ "n2n1/giao-su": {
+  "lyDo": "ke sach o vuong phia sau (khung)"
+ },
+ "n2n1/nghi-huu-giang-duong": {
+  "lyDo": "canh cat vien thang (tile)"
+ },
+ "n2n1/dien-thuyet": {
+  "lyDo": "dam dong cat vien thang (tile)"
+ }
+}

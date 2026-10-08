@@ -1,0 +1,525 @@
+#L 26 Bài 26: Giải thích lý do & Nhấn mạnh (〜んです)
+voc-n4-26-1|ねぼうします|寝坊します|verb|Ngủ quên, dậy muộn||
+voc-n4-26-2|おくれます|遅れます|verb|Đến muộn, trễ||
+voc-n4-26-3|こわれます|壊れます|verb|Bị hỏng, bị vỡ||
+voc-n4-26-4|なおります|治ります|verb|Khỏi bệnh, lành lại||
+voc-n4-26-5|じこ|事故|noun|Tai nạn|buon|
+voc-n4-26-6|りゆう|理由|noun|Lý do||
+voc-n4-26-7|ぐあい|具合|noun|Tình trạng (sức khỏe, máy móc)||
+voc-n4-26-8|ねつ|熱|noun|Sốt, nhiệt độ||
+voc-n4-26-9|かいぎ|会議|noun|Cuộc họp||N5:voc-n5-17-14
+voc-n4-26-10|かいぎしつ|会議室|noun|Phòng họp||N5:voc-n5-3-12
+voc-n4-26-11|でんしゃ|電車|noun|Tàu điện||N5:voc-n5-5-7
+voc-n4-26-12|しごと|仕事|noun|Công việc||N5:voc-n5-9-18
+voc-n4-26-13|びょういん|病院|noun|Bệnh viện||N5:voc-n5-1-20
+voc-n4-26-14|かぜ|風邪|noun|Cảm lạnh, cảm cúm|buon|
+voc-n4-26-15|たいてい|大抵|adverb|Thường thì, đại khái||
+voc-n4-26-16|やはり／やっぱり||adverb|Quả nhiên, đúng như dự đoán||
+voc-n4-26-17|とうとう||adverb|Cuối cùng thì, rốt cuộc||
+voc-n4-26-18|いけん|意見|noun|Ý kiến, quan điểm||
+voc-n4-26-19|しっかり||adverb|Chắc chắn, kỹ càng||
+voc-n4-26-20|だいじょうぶ|大丈夫|adjective|Ổn, không sao||N5:voc-n5-15-17
+#L 27 Bài 27: Động từ thể khả năng (可能形)
+voc-n4-27-1|はなせます|話せます|verb|Nói được (thể khả năng của 話します)||
+voc-n4-27-2|かけます|書けます|verb|Viết được (thể khả năng của 書きます)||N5:voc-n5-22-2
+voc-n4-27-3|およげます|泳げます|verb|Bơi được||
+voc-n4-27-4|のめます|飲めます|verb|Uống được||
+voc-n4-27-5|たべられます|食べられます|verb|Ăn được (thể khả năng của 食べます)||
+voc-n4-27-6|みられます|見られます|verb|Xem được, nhìn thấy được||
+voc-n4-27-7|こられます|来られます|verb|Đến được||
+voc-n4-27-8|できます||verb|Làm được||
+voc-n4-27-9|うんてんします|運転します|verb|Lái xe||N5:voc-n5-18-6
+voc-n4-27-10|かいわ|会話|noun|Hội thoại, đàm thoại||
+voc-n4-27-11|すいえい|水泳|noun|Môn bơi lội||
+voc-n4-27-12|うんどう|運動|noun|Vận động, thể dục||
+voc-n4-27-13|ピアノ||noun|Đàn piano||N5:voc-n5-18-11
+voc-n4-27-14|うんてんしゅ|運転手|noun|Tài xế (nghề)||
+voc-n4-27-15|だいがくせい|大学生|noun|Sinh viên đại học||
+voc-n4-27-16|にゅうがくします|入学します|verb|Nhập học||
+voc-n4-27-17|いじょう|以上|noun|Trên, từ ~ trở lên||
+voc-n4-27-18|いか|以下|noun|Dưới, từ ~ trở xuống||
+voc-n4-27-19|めんきょ|免許|noun|Bằng lái, giấy phép||N5:voc-n5-17-17
+voc-n4-27-20|ざんねん|残念|adjective|Tiếc, đáng tiếc|that_vong|
+#L 28 Bài 28: Hành động đồng thời (〜ながら) & Thói quen (〜ています)
+voc-n4-28-1|つづけます|続けます|verb|Tiếp tục, duy trì||
+voc-n4-28-2|つづきます|続きます|verb|Kéo dài, tiếp diễn (tự động từ)||
+voc-n4-28-3|かよいます|通います|verb|Đi lại thường xuyên (đi làm, đi học)||
+voc-n4-28-4|かたづけます|片付けます|verb|Dọn dẹp, sắp xếp||
+voc-n4-28-5|きまります|決まります|verb|Được quyết định, được ấn định||
+voc-n4-28-6|せいかつします|生活します|verb|Sinh sống, sinh hoạt||
+voc-n4-28-7|しゅみ|趣味|noun|Sở thích||N5:voc-n5-18-10
+voc-n4-28-8|しゅうかん|習慣|noun|Thói quen, tập quán||
+voc-n4-28-9|きそく|規則|noun|Quy tắc, nội quy||
+voc-n4-28-10|せいかつ|生活|noun|Cuộc sống, sinh hoạt||
+voc-n4-28-11|うんどう|運動|noun|Vận động, thể dục||
+voc-n4-28-12|さんぽ|散歩|noun|Việc đi dạo||N5:voc-n5-18-16
+voc-n4-28-13|おんがく|音楽|noun|Âm nhạc||N5:voc-n5-6-21
+voc-n4-28-14|しんぶん|新聞|noun|Báo, tờ báo||N5:voc-n5-2-12
+voc-n4-28-15|コーヒー||noun|Cà phê||N5:voc-n5-2-33
+voc-n4-28-16|がっこう|学校|noun|Trường học||
+voc-n4-28-17|かいしゃ|会社|noun|Công ty||N5:voc-n5-3-20
+voc-n4-28-18|へや|部屋|noun|Căn phòng||N5:voc-n5-3-14
+voc-n4-28-19|まいあさ|毎朝|adverb|Mỗi sáng||N5:voc-n5-4-19
+voc-n4-28-20|ひとりで|一人で|adverb|Một mình||
+#L 29 Bài 29: Tự động từ & Tha động từ, Trạng thái (V-ています)
+voc-n4-29-1|あきます|開きます|verb|Mở ra (tự động từ)||N5:voc-n5-23-4
+voc-n4-29-2|あけます|開けます|verb|Mở (tha động từ)||N5:voc-n5-14-13
+voc-n4-29-3|しまります|閉まります|verb|Đóng lại (tự động từ)||
+voc-n4-29-4|しめます|閉めます|verb|Đóng (tha động từ)||N5:voc-n5-14-14
+voc-n4-29-5|きえます|消えます|verb|Tắt đi, biến mất (tự động từ)||
+voc-n4-29-6|けします|消します|verb|Tắt, xóa (tha động từ)||N5:voc-n5-14-15
+voc-n4-29-7|はじまります|始まります|verb|Bắt đầu (tự động từ)||
+voc-n4-29-8|はじめます|始めます|verb|Bắt đầu (tha động từ)||
+voc-n4-29-9|つきます|点きます|verb|Được bật lên, sáng lên (tự động từ)||
+voc-n4-29-10|こわれます|壊れます|verb|Bị hỏng (tự động từ)||
+voc-n4-29-11|こわします|壊します|verb|Làm hỏng (tha động từ)||
+voc-n4-29-12|とめます|止めます|verb|Dừng lại, đỗ (tha động từ)||N5:voc-n5-15-6
+voc-n4-29-13|やめます|止めます／辞めます|verb|Dừng hẳn, từ bỏ (thói quen/công việc)||
+voc-n4-29-14|でんき|電気|noun|Điện, đèn điện||N5:voc-n5-1-21
+voc-n4-29-15|まど|窓|noun|Cửa sổ||N5:voc-n5-15-9
+voc-n4-29-16|ドア||noun|Cửa (kiểu phương Tây)||
+voc-n4-29-17|えいが|映画|noun|Phim, điện ảnh||N5:voc-n5-4-26
+voc-n4-29-18|うつくしい|美しい|adjective|Đẹp, tráng lệ||
+voc-n4-29-19|おもいだします|思い出します|verb|Nhớ lại, hồi tưởng|suy_nghi|
+voc-n4-29-20|きゅうに|急に|adverb|Đột ngột, bỗng nhiên||
+#L 30 Bài 30: Trạng thái có chủ đích (てあります) & Chuẩn bị (ておきます)
+voc-n4-30-1|じゅんびします|準備します|verb|Chuẩn bị||
+voc-n4-30-2|ようい|用意|noun|Sự chuẩn bị||
+voc-n4-30-3|かざります|飾ります|verb|Trang trí, bày biện||
+voc-n4-30-4|かたづけます|片付けます|verb|Dọn dẹp, sắp xếp||
+voc-n4-30-5|あけます|開けます|verb|Mở (tha động từ)||N5:voc-n5-14-13
+voc-n4-30-6|しめます|閉めます|verb|Đóng (tha động từ)||N5:voc-n5-14-14
+voc-n4-30-7|かきます|書きます|verb|Viết||N5:voc-n5-6-6
+voc-n4-30-8|かいます|買います|verb|Mua||N5:voc-n5-6-7
+voc-n4-30-9|しらべます|調べます|verb|Tra cứu, kiểm tra||
+voc-n4-30-10|よやくします|予約します|verb|Đặt trước, đặt chỗ||
+voc-n4-30-11|パーティー||noun|Bữa tiệc||
+voc-n4-30-12|のみもの|飲み物|noun|Đồ uống||
+voc-n4-30-13|たべもの|食べ物|noun|Đồ ăn||
+voc-n4-30-14|はな|花|noun|Hoa||N5:voc-n5-6-22
+voc-n4-30-15|しゃしん|写真|noun|Bức ảnh||N5:voc-n5-6-20
+voc-n4-30-16|かべ|壁|noun|Bức tường||
+voc-n4-30-17|ちず|地図|noun|Bản đồ||N5:voc-n5-7-19
+voc-n4-30-18|レストラン||noun|Nhà hàng||N5:voc-n5-22-13
+voc-n4-30-19|らいしゅう|来週|noun|Tuần sau||N5:voc-n5-4-23
+voc-n4-30-20|もう||adverb|Đã, rồi||N5:voc-n5-7-13
+#L 31 Bài 31: Thể ý chí (意向形) & Dự định (〜と思っています)
+voc-n4-31-1|いこう|行こう|verb|Sẽ đi, thôi đi thôi (thể ý chí của 行きます)||
+voc-n4-31-2|たべよう|食べよう|verb|Sẽ ăn (thể ý chí của 食べます)||
+voc-n4-31-3|しよう||verb|Sẽ làm (thể ý chí của します)||
+voc-n4-31-4|こよう|来よう|verb|Sẽ đến (thể ý chí của 来ます)||
+voc-n4-31-5|きめます|決めます|verb|Quyết định|suy_nghi|
+voc-n4-31-6|かんがえます|考えます|verb|Suy nghĩ, cân nhắc|suy_nghi|N5:voc-n5-21-3
+voc-n4-31-7|けいかくします|計画します|verb|Lập kế hoạch||
+voc-n4-31-8|しょうらい|将来|noun|Tương lai||
+voc-n4-31-9|ゆめ|夢|noun|Giấc mơ, ước mơ||
+voc-n4-31-10|けいかく|計画|noun|Kế hoạch||
+voc-n4-31-11|だいがく|大学|noun|Trường đại học||N5:voc-n5-1-19
+voc-n4-31-12|だいがくせい|大学生|noun|Sinh viên đại học||
+voc-n4-31-13|かいしゃ|会社|noun|Công ty||N5:voc-n5-3-20
+voc-n4-31-14|しごと|仕事|noun|Công việc||N5:voc-n5-9-18
+voc-n4-31-15|せんせい|先生|noun|Thầy/cô giáo||N5:voc-n5-1-10
+voc-n4-31-16|りょこう|旅行|noun|Du lịch||N5:voc-n5-5-20
+voc-n4-31-17|りゅうがく|留学|noun|Du học||
+voc-n4-31-18|そつぎょうします|卒業します|verb|Tốt nghiệp||
+voc-n4-31-19|はたらきます|働きます|verb|Làm việc, đi làm||N5:voc-n5-4-31
+voc-n4-31-20|がんばります|頑張ります|verb|Cố gắng, nỗ lực||N5:voc-n5-25-5
+#L 32 Bài 32: Lời khuyên (〜ほうがいい) & Dự đoán (〜でしょう / かもしれません)
+voc-n4-32-1|やめます|止めます|verb|Dừng hẳn, từ bỏ (thói quen)||N5:voc-n5-15-6
+voc-n4-32-2|ふとります|太ります|verb|Tăng cân, béo lên||
+voc-n4-32-3|やせます|痩せます|verb|Giảm cân, gầy đi||
+voc-n4-32-4|なおします|治します|verb|Chữa trị (tha động từ)||
+voc-n4-32-5|きをつけます|気を付けます|verb|Cẩn thận, lưu ý||
+voc-n4-32-6|はいしゃ|歯医者|noun|Nha sĩ, phòng khám răng||
+voc-n4-32-7|いしゃ|医者|noun|Bác sĩ||N5:voc-n5-1-16
+voc-n4-32-8|びょうき|病気|noun|Bệnh, ốm|buon|N5:voc-n5-17-10
+voc-n4-32-9|けんこう|健康|adjective|Sức khỏe, khỏe mạnh||
+voc-n4-32-10|たいじゅう|体重|noun|Cân nặng||
+voc-n4-32-11|しゅうかん|習慣|noun|Thói quen||
+voc-n4-32-12|だいたい|大体|adverb|Đại khái, khoảng chừng||
+voc-n4-32-13|たぶん|多分|adverb|Có lẽ, chắc là|suy_nghi|N5:voc-n5-21-15
+voc-n4-32-14|もしかしたら||adverb|Biết đâu, có thể là|suy_nghi|
+voc-n4-32-15|ぜったい|絶対|adverb|Tuyệt đối, chắc chắn||
+voc-n4-32-16|ねつ|熱|noun|Sốt|buon|
+voc-n4-32-17|くすり|薬|noun|Thuốc||N5:voc-n5-17-9
+voc-n4-32-18|びょういん|病院|noun|Bệnh viện||N5:voc-n5-1-20
+voc-n4-32-19|うんどう|運動|noun|Vận động, thể dục||
+voc-n4-32-20|たばこ|煙草|noun|Thuốc lá||N5:voc-n5-3-40
+#L 33 Bài 33: Thể mệnh lệnh (命令形) & Cấm chỉ (禁止形)
+voc-n4-33-1|はしれ|走れ|verb|Chạy đi! (thể mệnh lệnh của 走る)||
+voc-n4-33-2|まて|待て|verb|Đợi đã! (thể mệnh lệnh của 待つ)||
+voc-n4-33-3|いそげ|急げ|verb|Nhanh lên! (thể mệnh lệnh của 急ぐ)||
+voc-n4-33-4|たべろ|食べろ|verb|Ăn đi! (thể mệnh lệnh của 食べる)||
+voc-n4-33-5|こい|来い|verb|Đến đây! (thể mệnh lệnh của 来る)||
+voc-n4-33-6|しろ||verb|Làm đi! (thể mệnh lệnh của する)||
+voc-n4-33-7|はいるな|入るな|verb|Cấm vào! (thể cấm chỉ của 入る)|gian|
+voc-n4-33-8|とまるな|止まるな|verb|Cấm dừng lại! (thể cấm chỉ)|gian|
+voc-n4-33-9|きけん|危険|adjective|Nguy hiểm||
+voc-n4-33-10|ちゅうい|注意|noun|Sự chú ý, cảnh báo||
+voc-n4-33-11|しあい|試合|noun|Trận đấu, cuộc thi đấu||
+voc-n4-33-12|いそぎます|急ぎます|verb|Vội, gấp||N5:voc-n5-14-7
+voc-n4-33-13|はしります|走ります|verb|Chạy||
+voc-n4-33-14|まんが|漫画|noun|Truyện tranh||
+voc-n4-33-15|べんきょう|勉強|noun|Việc học||N5:voc-n5-9-17
+voc-n4-33-16|せんせい|先生|noun|Thầy/cô giáo||N5:voc-n5-1-10
+voc-n4-33-17|こども|子供|noun|Trẻ con||N5:voc-n5-23-17
+voc-n4-33-18|しんぱいします|心配します|verb|Lo lắng||
+voc-n4-33-19|がんばれ|頑張れ|phrase|Cố lên! (thể mệnh lệnh của 頑張る, dùng riêng làm câu cổ vũ)|vui|
+voc-n4-33-20|あぶない|危ない|adjective|Nguy hiểm, coi chừng!||
+#L 34 Bài 34: Làm theo mẫu (〜とおりに) & Sau khi (〜あとで)
+voc-n4-34-1|せつめいします|説明します|verb|Giải thích||
+voc-n4-34-2|やります||verb|Làm (thân mật hơn します)||
+voc-n4-34-3|つくります|作ります|verb|Làm, nấu||N5:voc-n5-6-9
+voc-n4-34-4|おしえます|教えます|verb|Dạy, chỉ bảo||N5:voc-n5-7-5
+voc-n4-34-5|かきます|書きます|verb|Viết||N5:voc-n5-6-6
+voc-n4-34-6|みます|見ます|verb|Xem, nhìn||N5:voc-n5-6-3
+voc-n4-34-7|せつめい|説明|noun|Lời giải thích||
+voc-n4-34-8|せつめいしょ|説明書|noun|Sách hướng dẫn sử dụng||
+voc-n4-34-9|やりかた|やり方|noun|Cách làm||
+voc-n4-34-10|つくりかた|作り方|noun|Cách làm/nấu||
+voc-n4-34-11|りょうり|料理|noun|Món ăn, nấu ăn||N5:voc-n5-9-10
+voc-n4-34-12|せんせい|先生|noun|Thầy/cô giáo||N5:voc-n5-1-10
+voc-n4-34-13|しあい|試合|noun|Trận đấu||
+voc-n4-34-14|かいぎ|会議|noun|Cuộc họp||N5:voc-n5-17-14
+voc-n4-34-15|じゅぎょう|授業|noun|Buổi học, tiết học||
+voc-n4-34-16|しょくじ|食事|noun|Bữa ăn||
+voc-n4-34-17|べんきょう|勉強|noun|Việc học||N5:voc-n5-9-17
+voc-n4-34-18|テレビ||noun|Ti vi||N5:voc-n5-2-25
+voc-n4-34-19|しゅくだい|宿題|noun|Bài tập về nhà||N5:voc-n5-7-20
+voc-n4-34-20|とおり|通り|noun|Đúng như, giống như (danh từ hình thức)||
+#L 35 Bài 35: Thể điều kiện (〜ば / 〜なら)
+voc-n4-35-1|いけば|行けば|verb|Nếu đi (thể ば của 行きます)||
+voc-n4-35-2|たべれば|食べれば|verb|Nếu ăn (thể ば của 食べます)||
+voc-n4-35-3|すれば||verb|Nếu làm (thể ば của します)||
+voc-n4-35-4|くれば|来れば|verb|Nếu đến (thể ば của 来ます)||
+voc-n4-35-5|やすければ|安ければ|adjective|Nếu rẻ (thể ば của tính từ い)||
+voc-n4-35-6|げんきなら|元気なら|adjective|Nếu khỏe (thể なら của tính từ な)||
+voc-n4-35-7|いなか|田舎|noun|Vùng quê, nông thôn||
+voc-n4-35-8|とかい|都会|noun|Thành thị, đô thị||
+voc-n4-35-9|じんこう|人口|noun|Dân số||
+voc-n4-35-10|ふべん|不便|adjective|Bất tiện||
+voc-n4-35-11|べんり|便利|adjective|Tiện lợi||N5:voc-n5-8-21
+voc-n4-35-12|しずか|静か|adjective|Yên tĩnh||N5:voc-n5-8-19
+voc-n4-35-13|てんき|天気|noun|Thời tiết||N5:voc-n5-21-4
+voc-n4-35-14|おかね|お金|noun|Tiền||N5:voc-n5-25-6
+voc-n4-35-15|じかん|時間|noun|Thời gian||
+voc-n4-35-16|りょこう|旅行|noun|Du lịch||N5:voc-n5-5-20
+voc-n4-35-17|しごと|仕事|noun|Công việc||N5:voc-n5-9-18
+voc-n4-35-18|にほんご|日本語|noun|Tiếng Nhật||N5:voc-n5-2-36
+voc-n4-35-19|わかりません|分かりません|phrase|Không hiểu, không biết|suy_nghi|
+voc-n4-35-20|せんせい|先生|noun|Thầy/cô giáo||N5:voc-n5-1-10
+#L 36 Bài 36: Mục đích (〜ように) & Biến đổi (〜ようになる)
+voc-n4-36-1|きこえます|聞こえます|verb|Nghe được, nghe thấy (tự nhiên, không chủ ý)||
+voc-n4-36-2|みえます|見えます|verb|Nhìn thấy được, trông thấy (tự nhiên)||
+voc-n4-36-3|わすれます|忘れます|verb|Quên||N5:voc-n5-17-6
+voc-n4-36-4|つづけます|続けます|verb|Tiếp tục, duy trì||
+voc-n4-36-5|はなします|話します|verb|Nói, trò chuyện||N5:voc-n5-7-7
+voc-n4-36-6|うんどうします|運動します|verb|Vận động, tập thể dục||
+voc-n4-36-8|せつめいします|説明します|verb|Giải thích||
+voc-n4-36-9|れんしゅうします|練習します|verb|Luyện tập||
+voc-n4-36-10|めがね|眼鏡|noun|Kính mắt||N5:voc-n5-22-7
+voc-n4-36-11|みみ|耳|noun|Tai||N5:voc-n5-16-8
+voc-n4-36-12|め|目|noun|Mắt||N5:voc-n5-16-7
+voc-n4-36-13|こえ|声|noun|Giọng nói, âm thanh||
+voc-n4-36-14|かんじ|漢字|noun|Chữ Hán||N5:voc-n5-7-10
+voc-n4-36-15|にほんご|日本語|noun|Tiếng Nhật||N5:voc-n5-2-36
+voc-n4-36-16|まじめ|真面目|adjective|Chăm chỉ, nghiêm túc||
+voc-n4-36-17|じょうず|上手|adjective|Giỏi|vui|N5:voc-n5-9-4
+voc-n4-36-18|しんぶん|新聞|noun|Báo, tờ báo||N5:voc-n5-2-12
+voc-n4-36-19|びょうき|病気|noun|Bệnh, ốm|buon|N5:voc-n5-17-10
+voc-n4-36-20|けんこう|健康|adjective|Sức khỏe, khỏe mạnh||
+voc-n4-36-21|しゅうかん|習慣|noun|Thói quen||
+#L 37 Bài 37: Thể bị động (受身形)
+voc-n4-37-1|しかられます|叱られます|verb|Bị mắng (thể bị động của 叱る)|gian|
+voc-n4-37-2|ほめられます|褒められます|verb|Được khen (thể bị động của 褒める)|vui|
+voc-n4-37-3|ぬすまれます|盗まれます|verb|Bị trộm mất (thể bị động của 盗む)||
+voc-n4-37-4|ふまれます|踏まれます|verb|Bị giẫm phải (thể bị động của 踏む)||
+voc-n4-37-5|なかれます|泣かれます|verb|Bị (ai đó) khóc (bị động PHIỀN TOÁI)|buon|
+voc-n4-37-6|おどろかれます|驚かれます|verb|Khiến ai đó ngạc nhiên (bị động)|ngac_nhien|
+voc-n4-37-7|たてられます|建てられます|verb|Được xây dựng (thể bị động của 建てる)||
+voc-n4-37-8|しょうたいされます|招待されます|verb|Được mời||
+voc-n4-37-9|つくられます|作られます|verb|Được làm ra, được chế tạo||
+voc-n4-37-10|よばれます|呼ばれます|verb|Được gọi là||
+voc-n4-37-11|せんせい|先生|noun|Thầy/cô giáo||N5:voc-n5-1-10
+voc-n4-37-12|どろぼう|泥棒|noun|Kẻ trộm||
+voc-n4-37-13|さいふ|財布|noun|Ví tiền||N5:voc-n5-13-12
+voc-n4-37-14|あめ|雨|noun|Mưa||N5:voc-n5-21-5
+voc-n4-37-15|でんしゃ|電車|noun|Tàu điện||N5:voc-n5-5-7
+voc-n4-37-16|あし|足|noun|Chân, bàn chân||N5:voc-n5-16-11
+voc-n4-37-17|パーティー||noun|Bữa tiệc||
+voc-n4-37-18|せかいじゅう|世界中|noun|Khắp thế giới||
+voc-n4-37-19|ゆうめい|有名|adjective|Nổi tiếng||N5:voc-n5-8-20
+voc-n4-37-20|こうじょう|工場|noun|Nhà máy||
+#L 38 Bài 38: Danh từ hóa (V-るのは, V-るのが, V-るのを忘れました)
+voc-n4-38-1|およぐ|泳ぐ|verb|Bơi (thể từ điển)||
+voc-n4-38-2|おどります|踊ります|verb|Nhảy múa||
+voc-n4-38-3|うたいます|歌います|verb|Hát||N5:voc-n5-18-1
+voc-n4-38-4|しめます|閉めます|verb|Đóng (tha động từ)||N5:voc-n5-14-14
+voc-n4-38-5|けします|消します|verb|Tắt, xóa||N5:voc-n5-14-15
+voc-n4-38-6|もってきます|持って来ます|verb|Mang theo, đem đến||
+voc-n4-38-7|れんらくします|連絡します|verb|Liên lạc||
+voc-n4-38-8|しゅみ|趣味|noun|Sở thích||N5:voc-n5-18-10
+voc-n4-38-9|すいえい|水泳|noun|Môn bơi lội||
+voc-n4-38-10|しゅうかん|習慣|noun|Thói quen||
+voc-n4-38-11|え|絵|noun|Tranh, hình vẽ||N5:voc-n5-9-9
+voc-n4-38-12|うた|歌|noun|Bài hát||N5:voc-n5-9-8
+voc-n4-38-13|まど|窓|noun|Cửa sổ||N5:voc-n5-15-9
+voc-n4-38-14|かさ|傘|noun|Cái ô, cái dù||N5:voc-n5-2-22
+voc-n4-38-15|でんき|電気|noun|Điện, đèn điện||N5:voc-n5-1-21
+voc-n4-38-16|やくそく|約束|noun|Lời hứa, cuộc hẹn||
+voc-n4-38-17|しゅくだい|宿題|noun|Bài tập về nhà||N5:voc-n5-7-20
+voc-n4-38-18|きく|聞く|verb|Nghe (thể từ điển)||
+voc-n4-38-19|みる|見る|verb|Xem (thể từ điển)||
+voc-n4-38-20|はなす|話す|verb|Nói (thể từ điển)||
+#L 39 Bài 39: Nguyên nhân lý do khách quan (〜ので / V-て)
+voc-n4-39-1|やすみます|休みます|verb|Nghỉ (làm/học)||N5:voc-n5-4-32
+voc-n4-39-2|おくれます|遅れます|verb|Đến muộn, trễ||
+voc-n4-39-3|こまります|困ります|verb|Khó xử, gặp khó khăn|that_vong|
+voc-n4-39-4|とまります|止まります|verb|Ngừng lại, dừng (tự động từ)||
+voc-n4-39-5|よういします|用意します|verb|Chuẩn bị||
+voc-n4-39-6|たいふう|台風|noun|Bão (bão nhiệt đới)||N5:voc-n5-21-7
+voc-n4-39-7|ようじ|用事|noun|Việc bận, việc riêng||
+voc-n4-39-8|じこ|事故|noun|Tai nạn||
+voc-n4-39-9|こうつう|交通|noun|Giao thông||
+voc-n4-39-10|でんしゃ|電車|noun|Tàu điện||N5:voc-n5-5-7
+voc-n4-39-11|びょうき|病気|noun|Bệnh, ốm|buon|N5:voc-n5-17-10
+voc-n4-39-12|しごと|仕事|noun|Công việc||N5:voc-n5-9-18
+voc-n4-39-13|がっこう|学校|noun|Trường học||
+voc-n4-39-14|かいぎ|会議|noun|Cuộc họp||N5:voc-n5-17-14
+voc-n4-39-15|もうしわけありません|申し訳ありません|phrase|Thành thật xin lỗi (trang trọng)|cui_chao|
+voc-n4-39-16|しつれいします|失礼します|phrase|Xin phép (khi rời đi/vào phòng)|cui_chao|
+voc-n4-39-17|きゅうに|急に|adverb|Đột ngột, bỗng nhiên||
+voc-n4-39-18|たいへん|大変|adjective|Vất vả, khó khăn||N5:voc-n5-21-11
+voc-n4-39-19|しんぱいします|心配します|verb|Lo lắng||
+voc-n4-39-20|だいじょうぶ|大丈夫|adjective|Ổn, không sao||N5:voc-n5-15-17
+#L 40 Bài 40: Nghi vấn lồng (〜か, 〜かどうか) & Thử làm (〜てみます)
+voc-n4-40-1|しらべます|調べます|verb|Tra cứu, kiểm tra||
+voc-n4-40-2|たべてみます|食べてみます|verb|Thử ăn xem sao||
+voc-n4-40-3|きてみます|着てみます|verb|Thử mặc xem sao||
+voc-n4-40-4|やってみます|やってみます|verb|Thử làm xem sao||
+voc-n4-40-5|ききます|聞きます|verb|Hỏi, nghe||N5:voc-n5-6-4
+voc-n4-40-6|わかりません|分かりません|phrase|Không biết, không hiểu||
+voc-n4-40-7|あじ|味|noun|Hương vị, mùi vị||
+voc-n4-40-8|きょうみ|興味|noun|Sự hứng thú, quan tâm||
+voc-n4-40-9|しゅみ|趣味|noun|Sở thích||N5:voc-n5-18-10
+voc-n4-40-10|てんき|天気|noun|Thời tiết||N5:voc-n5-21-4
+voc-n4-40-11|しけん|試験|noun|Kỳ thi||
+voc-n4-40-12|ごうかくします|合格します|verb|Đậu, đỗ (kỳ thi)||
+voc-n4-40-13|りょうり|料理|noun|Món ăn, nấu ăn||N5:voc-n5-9-10
+voc-n4-40-14|ふく|服|noun|Quần áo||N5:voc-n5-22-9
+voc-n4-40-15|サイズ||noun|Kích cỡ||
+voc-n4-40-16|あいます|合います|verb|Vừa vặn, phù hợp||N5:voc-n5-6-10
+voc-n4-40-17|でんわします|電話します|verb|Gọi điện thoại||
+voc-n4-40-18|ほんとう|本当|noun|Sự thật, thật||
+voc-n4-40-19|せんせい|先生|noun|Thầy/cô giáo||N5:voc-n5-1-10
+voc-n4-40-20|だいじょうぶ|大丈夫|adjective|Ổn, không sao||N5:voc-n5-15-17
+#L 41 Bài 41: Kính ngữ cho nhận (やる / あげる / さしあげる, いただく, くださる)
+voc-n4-41-1|やります||verb|Cho, tặng (cho vật/động thực vật, dưới mình)||
+voc-n4-41-2|あげます|上げます|verb|Cho, tặng (ngang hàng)||N5:voc-n5-7-1
+voc-n4-41-3|さしあげます|差し上げます|verb|Kính biếu, kính tặng (cho người trên)||
+voc-n4-41-4|いただきます|頂きます|verb|Được nhận (khiêm nhường, từ người trên)||
+voc-n4-41-5|くださいます|下さいます|verb|Được ban cho (tôn kính, từ người trên)||
+voc-n4-41-6|もらいます||verb|Nhận, được (trung tính)||N5:voc-n5-7-2
+voc-n4-41-7|くれます|呉れます|verb|Cho (người khác làm cho mình, trung tính)||N5:voc-n5-24-1
+voc-n4-41-8|プレゼント||noun|Món quà||
+voc-n4-41-9|はなみ|花見|noun|Ngắm hoa anh đào||
+voc-n4-41-10|せんせい|先生|noun|Thầy/cô giáo||N5:voc-n5-1-10
+voc-n4-41-11|しゃちょう|社長|noun|Giám đốc công ty||
+voc-n4-41-12|りょうしん|両親|noun|Cha mẹ||N5:voc-n5-20-6
+voc-n4-41-13|たんじょうび|誕生日|noun|Sinh nhật||N5:voc-n5-5-19
+voc-n4-41-14|はな|花|noun|Hoa||N5:voc-n5-6-22
+voc-n4-41-15|ほん|本|noun|Quyển sách||N5:voc-n5-2-9
+voc-n4-41-16|いぬ|犬|noun|Con chó||N5:voc-n5-10-17
+voc-n4-41-17|みず|水|noun|Nước||
+voc-n4-41-18|しゃいん|社員|noun|Nhân viên công ty||N5:voc-n5-1-14
+voc-n4-41-19|おきゃくさん|お客さん|noun|Vị khách||
+voc-n4-41-20|ありがたい|有難い|adjective|Đáng quý, biết ơn|vui|
+#L 42 Bài 42: Mục đích vì ai/cái gì (〜ために) & Dùng vào việc gì (〜のに)
+voc-n4-42-1|つかいます|使います|verb|Sử dụng, dùng||N5:voc-n5-15-1
+voc-n4-42-2|ためます|貯めます|verb|Tích lũy, để dành (tiền)||
+voc-n4-42-3|はたらきます|働きます|verb|Làm việc, đi làm||N5:voc-n5-4-31
+voc-n4-42-4|べんきょうします|勉強します|verb|Học, học tập||N5:voc-n5-4-33
+voc-n4-42-5|やくにたちます|役に立ちます|verb|Có ích, hữu dụng||
+voc-n4-42-6|りゅうがくします|留学します|verb|Đi du học||
+voc-n4-42-7|しょうらい|将来|noun|Tương lai||
+voc-n4-42-8|どうぐ|道具|noun|Dụng cụ, công cụ||
+voc-n4-42-9|おかね|お金|noun|Tiền||N5:voc-n5-25-6
+voc-n4-42-10|おかねもち|お金持ち|noun|Người giàu có||
+voc-n4-42-11|りょうり|料理|noun|Món ăn, nấu ăn||N5:voc-n5-9-10
+voc-n4-42-12|じかん|時間|noun|Thời gian||
+voc-n4-42-13|けんこう|健康|adjective|Sức khỏe, khỏe mạnh||
+voc-n4-42-14|しけん|試験|noun|Kỳ thi||
+voc-n4-42-15|ごうかくします|合格します|verb|Đậu, đỗ (kỳ thi)||
+voc-n4-42-16|だいがく|大学|noun|Trường đại học||N5:voc-n5-1-19
+voc-n4-42-17|はさみ|鋏|noun|Cái kéo||
+voc-n4-42-18|かみ|紙|noun|Giấy||N5:voc-n5-11-13
+voc-n4-42-19|きります|切ります|verb|Cắt||
+voc-n4-42-20|べんり|便利|adjective|Tiện lợi||N5:voc-n5-8-21
+#L 43 Bài 43: Dự đoán sắp xảy ra (V-そう) & Trông có vẻ (A-そう)
+voc-n4-43-1|ふります|降ります|verb|Rơi, đổ xuống (mưa, tuyết)||N5:voc-n5-5-5
+voc-n4-43-2|たおれます|倒れます|verb|Ngã, sụp đổ||
+voc-n4-43-3|こわれます|壊れます|verb|Bị hỏng, bị vỡ||
+voc-n4-43-4|なきます|泣きます|verb|Khóc|buon|
+voc-n4-43-5|おちます|落ちます|verb|Rơi, rớt xuống||
+voc-n4-43-6|つかれます|疲れます|verb|Mệt, mệt mỏi||N5:voc-n5-25-1
+voc-n4-43-7|ねむい|眠い|adjective|Buồn ngủ||
+voc-n4-43-8|おいしい|美味しい|adjective|Ngon|vui|N5:voc-n5-8-16
+voc-n4-43-9|にがい|苦い|adjective|Đắng||
+voc-n4-43-10|たのしい|楽しい|adjective|Vui vẻ|vui|N5:voc-n5-8-14
+voc-n4-43-11|いそがしい|忙しい|adjective|Bận rộn||N5:voc-n5-8-15
+voc-n4-43-12|げんき|元気|adjective|Khỏe mạnh||N5:voc-n5-8-18
+voc-n4-43-13|しんせつ|親切|adjective|Tốt bụng, ân cần||N5:voc-n5-16-17
+voc-n4-43-14|あめ|雨|noun|Mưa||N5:voc-n5-21-5
+voc-n4-43-15|くも|雲|noun|Mây||
+voc-n4-43-16|き|木|noun|Cây||N5:voc-n5-10-16
+voc-n4-43-17|いす|椅子|noun|Cái ghế||N5:voc-n5-2-31
+voc-n4-43-18|こども|子供|noun|Trẻ con||N5:voc-n5-23-17
+voc-n4-43-19|くすり|薬|noun|Thuốc||N5:voc-n5-17-9
+voc-n4-43-20|てんき|天気|noun|Thời tiết||N5:voc-n5-21-4
+#L 44 Bài 44: Quá mức (〜すぎます) & Dễ/Khó làm (〜やすい / 〜にくい)
+voc-n4-44-1|たべます|食べます|verb|Ăn||N5:voc-n5-6-1
+voc-n4-44-2|のみます|飲みます|verb|Uống||N5:voc-n5-6-2
+voc-n4-44-3|はたらきます|働きます|verb|Làm việc, đi làm||N5:voc-n5-4-31
+voc-n4-44-4|つかいます|使います|verb|Sử dụng, dùng||N5:voc-n5-15-1
+voc-n4-44-5|あるきます|歩きます|verb|Đi bộ||
+voc-n4-44-6|よみます|読みます|verb|Đọc||N5:voc-n5-6-5
+voc-n4-44-7|かきます|書きます|verb|Viết||N5:voc-n5-6-6
+voc-n4-44-8|うんてんします|運転します|verb|Lái xe||N5:voc-n5-18-6
+voc-n4-44-9|ふとります|太ります|verb|Tăng cân, béo lên||
+voc-n4-44-10|せつめいします|説明します|verb|Giải thích||
+voc-n4-44-11|たかい|高い|adjective|Cao, đắt||N5:voc-n5-8-11
+voc-n4-44-12|やすい|安い|adjective|Rẻ||N5:voc-n5-8-12
+voc-n4-44-13|おおきい|大きい|adjective|To, lớn||N5:voc-n5-8-1
+voc-n4-44-14|むずかしい|難しい|adjective|Khó||N5:voc-n5-8-9
+voc-n4-44-15|げんき|元気|adjective|Khỏe mạnh||N5:voc-n5-8-18
+voc-n4-44-16|しずか|静か|adjective|Yên tĩnh||N5:voc-n5-8-19
+voc-n4-44-17|くつ|靴|noun|Giày||N5:voc-n5-3-23
+voc-n4-44-18|じ|字|noun|Chữ viết||
+voc-n4-44-19|せつめいしょ|説明書|noun|Sách hướng dẫn sử dụng||
+voc-n4-44-20|びょうき|病気|noun|Bệnh, ốm|buon|N5:voc-n5-17-10
+#L 45 Bài 45: Trường hợp (〜場合は) & Mặc dù (〜のに)
+voc-n4-45-1|がんばります|頑張ります|verb|Cố gắng, nỗ lực||N5:voc-n5-25-5
+voc-n4-45-2|しっぱいします|失敗します|verb|Thất bại, mắc lỗi|that_vong|
+voc-n4-45-3|ごうかくします|合格します|verb|Đậu, đỗ (kỳ thi)||
+voc-n4-45-4|でかけます|出かけます|verb|Ra ngoài, đi ra||N5:voc-n5-16-4
+voc-n4-45-5|れんらくします|連絡します|verb|Liên lạc||
+voc-n4-45-6|ばあい|場合|noun|Trường hợp||
+voc-n4-45-7|じしん|地震|noun|Động đất||
+voc-n4-45-8|かじ|火事|noun|Vụ hỏa hoạn, cháy nhà||
+voc-n4-45-9|たいふう|台風|noun|Bão (bão nhiệt đới)||N5:voc-n5-21-7
+voc-n4-45-10|いっしょうけんめい|一生懸命|adverb|Hết mình, hết sức||
+voc-n4-45-11|ざんねん|残念|adjective|Đáng tiếc, tiếc nuối|that_vong|
+voc-n4-45-12|しけん|試験|noun|Kỳ thi||
+voc-n4-45-13|てんき|天気|noun|Thời tiết||N5:voc-n5-21-4
+voc-n4-45-14|あめ|雨|noun|Mưa||N5:voc-n5-21-5
+voc-n4-45-15|びょういん|病院|noun|Bệnh viện||N5:voc-n5-1-20
+voc-n4-45-16|エレベーター||noun|Thang máy||N5:voc-n5-3-17
+voc-n4-45-17|かいだん|階段|noun|Cầu thang bộ||N5:voc-n5-3-16
+voc-n4-45-18|でんわ|電話|noun|Điện thoại, cuộc gọi||N5:voc-n5-3-22
+voc-n4-45-19|やくそく|約束|noun|Lời hứa, cuộc hẹn||
+voc-n4-45-20|しゅくだい|宿題|noun|Bài tập về nhà||N5:voc-n5-7-20
+#L 46 Bài 46: Thời điểm chính xác (V-ところ) & Vừa mới (〜たばかり)
+voc-n4-46-1|たべます|食べます|verb|Ăn||N5:voc-n5-6-1
+voc-n4-46-2|でかけます|出かけます|verb|Ra ngoài, đi ra||N5:voc-n5-16-4
+voc-n4-46-3|はじまります|始まります|verb|Bắt đầu (tự động từ)||
+voc-n4-46-4|おわります|終わります|verb|Kết thúc, xong||N5:voc-n5-4-34
+voc-n4-46-5|きます|来ます|verb|Đến||N5:voc-n5-5-2
+voc-n4-46-6|かえります|帰ります|verb|Về nhà||N5:voc-n5-5-3
+voc-n4-46-7|つきます|着きます|verb|Đến nơi, tới nơi||
+voc-n4-46-8|おきます|起きます|verb|Thức dậy||N5:voc-n5-4-29
+voc-n4-46-9|べんきょうします|勉強します|verb|Học, học tập||N5:voc-n5-4-33
+voc-n4-46-10|でんわします|電話します|verb|Gọi điện thoại||
+voc-n4-46-11|ちょうど|丁度|adverb|Vừa đúng, vừa vặn||
+voc-n4-46-12|いま|今|noun|Bây giờ||N5:voc-n5-4-1
+voc-n4-46-13|えき|駅|noun|Nhà ga||N5:voc-n5-5-6
+voc-n4-46-14|かいぎ|会議|noun|Cuộc họp||N5:voc-n5-17-14
+voc-n4-46-15|じゅぎょう|授業|noun|Buổi học, tiết học||
+voc-n4-46-16|しごと|仕事|noun|Công việc||N5:voc-n5-9-18
+voc-n4-46-17|えいが|映画|noun|Phim, điện ảnh||N5:voc-n5-4-26
+voc-n4-46-18|しゃしん|写真|noun|Bức ảnh||N5:voc-n5-6-20
+voc-n4-46-19|でんしゃ|電車|noun|Tàu điện||N5:voc-n5-5-7
+voc-n4-46-20|たんじょうび|誕生日|noun|Sinh nhật||N5:voc-n5-5-19
+#L 47 Bài 47: Nghe nói (〜そうです) & Dường như (〜ようです)
+voc-n4-47-1|ひっこします|引っ越します|verb|Chuyển nhà, dọn nhà||
+voc-n4-47-2|けっこんします|結婚します|verb|Kết hôn||N5:voc-n5-14-17
+voc-n4-47-3|やめます|止めます|verb|Nghỉ (việc), từ bỏ||N5:voc-n5-15-6
+voc-n4-47-4|びょうきです|病気です|phrase|Bị bệnh (thể thông thường: 病気だ)||
+voc-n4-47-5|ふります|降ります|verb|Rơi, đổ xuống (mưa, tuyết)||N5:voc-n5-5-5
+voc-n4-47-6|つかれます|疲れます|verb|Mệt, mệt mỏi||N5:voc-n5-25-1
+voc-n4-47-7|げんきです|元気です|phrase|Khỏe mạnh (thể thông thường: 元気だ)||
+voc-n4-47-8|てんきよほう|天気予報|noun|Dự báo thời tiết||
+voc-n4-47-9|うわさ|噂|noun|Tin đồn||
+voc-n4-47-10|にほんご|日本語|noun|Tiếng Nhật||N5:voc-n5-2-36
+voc-n4-47-11|せんせい|先生|noun|Thầy/cô giáo||N5:voc-n5-1-10
+voc-n4-47-12|しんぶん|新聞|noun|Báo, tờ báo||N5:voc-n5-2-12
+voc-n4-47-13|ニュース||noun|Tin tức||N5:voc-n5-21-8
+voc-n4-47-14|かいしゃ|会社|noun|Công ty||N5:voc-n5-3-20
+voc-n4-47-15|びょういん|病院|noun|Bệnh viện||N5:voc-n5-1-20
+voc-n4-47-16|たいふう|台風|noun|Bão (bão nhiệt đới)||N5:voc-n5-21-7
+voc-n4-47-17|らいしゅう|来週|noun|Tuần sau||N5:voc-n5-4-23
+voc-n4-47-18|らいげつ|来月|noun|Tháng sau||N5:voc-n5-5-22
+voc-n4-47-19|しあわせ|幸せ|adjective|Hạnh phúc|vui|
+voc-n4-47-20|ほんとう|本当|noun|Sự thật, thật||
+#L 48 Bài 48: Thể sai khiến (使役形: V-させる)
+voc-n4-48-1|いかせます|行かせます|verb|Bắt/cho đi (thể sai khiến của 行きます)||
+voc-n4-48-2|たべさせます|食べさせます|verb|Bắt/cho ăn (thể sai khiến của 食べます)||
+voc-n4-48-3|させます||verb|Bắt/cho làm (thể sai khiến của します)||
+voc-n4-48-4|こさせます|来させます|verb|Bắt/cho đến (thể sai khiến của 来ます)||
+voc-n4-48-5|てつだわせます|手伝わせます|verb|Bắt/cho giúp đỡ||
+voc-n4-48-6|かたづけさせます|片付けさせます|verb|Bắt/cho dọn dẹp||
+voc-n4-48-7|やすませます|休ませます|verb|Cho phép nghỉ (thể sai khiến của 休みます)||
+voc-n4-48-8|べんきょうさせます|勉強させます|verb|Bắt/cho học||
+voc-n4-48-9|うんどうさせます|運動させます|verb|Bắt/cho tập thể dục||
+voc-n4-48-10|こども|子供|noun|Trẻ con, con cái||N5:voc-n5-23-17
+voc-n4-48-11|おや|親|noun|Cha mẹ, bố mẹ||
+voc-n4-48-12|せんせい|先生|noun|Thầy/cô giáo||N5:voc-n5-1-10
+voc-n4-48-13|がくせい|学生|noun|Học sinh, sinh viên||N5:voc-n5-1-12
+voc-n4-48-14|やさい|野菜|noun|Rau||N5:voc-n5-6-16
+voc-n4-48-15|しゃちょう|社長|noun|Giám đốc công ty||
+voc-n4-48-16|しゃいん|社員|noun|Nhân viên công ty||N5:voc-n5-1-14
+voc-n4-48-17|びょうき|病気|noun|Bệnh, ốm||N5:voc-n5-17-10
+voc-n4-48-18|しゅくだい|宿題|noun|Bài tập về nhà||N5:voc-n5-7-20
+voc-n4-48-19|へや|部屋|noun|Căn phòng||N5:voc-n5-3-14
+voc-n4-48-20|きもち|気持ち|noun|Cảm giác, tâm trạng||
+#L 49 Bài 49: Kính ngữ tôn kính (尊敬語 - Sonkeigo)
+voc-n4-49-1|いらっしゃいます||verb|Là/có/đến/đi (tôn kính của です/います/来ます/行きます)||
+voc-n4-49-2|おっしゃいます||verb|Nói (tôn kính của 言います)||
+voc-n4-49-3|なさいます||verb|Làm (tôn kính của します)||
+voc-n4-49-4|めしあがります|召し上がります|verb|Ăn/uống (tôn kính của 食べます/飲みます)||
+voc-n4-49-5|ごらんになります|ご覧になります|verb|Xem (tôn kính của 見ます)||
+voc-n4-49-6|くださいます|下さいます|verb|Ban cho (tôn kính của くれます)||
+voc-n4-49-7|およみになります|お読みになります|verb|Đọc (tôn kính, mẫu お+gốc+になります)||
+voc-n4-49-8|おかきになります|お書きになります|verb|Viết (tôn kính, mẫu お+gốc+になります)||
+voc-n4-49-9|しゃちょう|社長|noun|Giám đốc công ty||
+voc-n4-49-10|ぶちょう|部長|noun|Trưởng phòng||
+voc-n4-49-11|かちょう|課長|noun|Trưởng ban, tổ trưởng||
+voc-n4-49-12|こうちょう|校長|noun|Hiệu trưởng||
+voc-n4-49-13|おきゃくさん|お客さん|noun|Vị khách||
+voc-n4-49-14|おたく|お宅|noun|Nhà (của người khác, tôn kính)||
+voc-n4-49-15|せんせい|先生|noun|Thầy/cô giáo||N5:voc-n5-1-10
+voc-n4-49-16|しんぶん|新聞|noun|Báo, tờ báo||N5:voc-n5-2-12
+voc-n4-49-17|しゃしん|写真|noun|Bức ảnh||N5:voc-n5-6-20
+voc-n4-49-18|こうえん|講演|noun|Bài diễn thuyết||N5:voc-n5-6-23
+voc-n4-49-19|しょくじ|食事|noun|Bữa ăn||
+voc-n4-49-20|おちゃ|お茶|noun|Trà (xanh)||N5:voc-n5-9-13
+#L 50 Bài 50: Khiêm nhường ngữ (謙譲語 - Kenjougo)
+voc-n4-50-1|まいります|参ります|verb|Đi/đến (khiêm nhường của 行きます/来ます)||
+voc-n4-50-2|もうします|申します|verb|Tên là, nói (khiêm nhường của 言います, dùng khi tự giới thiệu)||
+voc-n4-50-3|もうしあげます|申し上げます|verb|Kính thưa, xin nói (khiêm nhường trang trọng hơn của 言います)||
+voc-n4-50-4|いたします|致します|verb|Làm (khiêm nhường của します)||
+voc-n4-50-5|いただきます|頂きます|verb|Nhận/ăn/uống (khiêm nhường của もらいます/食べます/飲みます)||
+voc-n4-50-6|はいけんします|拝見します|verb|Xem (khiêm nhường của 見ます)||
+voc-n4-50-7|ぞんじます|存じます|verb|Biết/nghĩ (khiêm nhường của 知っています/思います)||
+voc-n4-50-8|おります|居ります|verb|Có/ở (khiêm nhường của います)||N5:voc-n5-5-5
+voc-n4-50-9|ごあんないいたします|ご案内いたします|phrase|Để tôi hướng dẫn (お/ご+gốc+いたします)||
+voc-n4-50-10|あんない|案内|noun|Sự hướng dẫn, chỉ dẫn||
+voc-n4-50-11|かいぎしつ|会議室|noun|Phòng họp||N5:voc-n5-3-12
+voc-n4-50-12|しゃちょう|社長|noun|Giám đốc công ty||
+voc-n4-50-13|おきゃくさま|お客様|noun|Quý khách (trang trọng hơn お客さん)||
+voc-n4-50-14|てがみ|手紙|noun|Lá thư||N5:voc-n5-6-19
+voc-n4-50-15|おれい|お礼|noun|Lời cảm ơn, lễ vật cảm ơn|cui_chao|
+voc-n4-50-16|しつもん|質問|noun|Câu hỏi||N5:voc-n5-11-22
+voc-n4-50-17|せつめい|説明|noun|Lời giải thích||
+voc-n4-50-18|でんわ|電話|noun|Điện thoại, cuộc gọi||N5:voc-n5-3-22
+voc-n4-50-19|しりょう|資料|noun|Tài liệu||
+voc-n4-50-20|なまえ|名前|noun|Tên||

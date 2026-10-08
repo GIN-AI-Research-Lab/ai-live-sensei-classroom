@@ -1,0 +1,113 @@
+{
+ "styleRef": "style-chung.json",
+ "items": [
+  {
+   "ten": "but-bi",
+   "nghia": "n5",
+   "prompt": "A click ballpoint pen with a pocket clip lying at an angle.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face"
+  },
+  {
+   "ten": "but-chi",
+   "nghia": "n5",
+   "prompt": "A yellow wooden pencil with a sharpened graphite tip and a pink eraser on the end.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face"
+  },
+  {
+   "ten": "sach",
+   "nghia": "n5",
+   "prompt": "A single hardcover book with a plain cover standing slightly open to show its pages.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, printed headlines, readable text, title lettering"
+  },
+  {
+   "ten": "den-dien",
+   "nghia": "n5",
+   "prompt": "A glowing light bulb hanging from a ceiling cord, radiating warm light with a tiny electric spark inside.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face"
+  },
+  {
+   "ten": "the",
+   "nghia": "n5",
+   "prompt": "A single plain plastic card with rounded corners and a small gold chip, completely blank.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, printed headlines, readable text, title lettering"
+  },
+  {
+   "ten": "tap-chi",
+   "nghia": "n5",
+   "prompt": "A glossy thin magazine with a colorful photo cover of a smiling model, slightly curled, with no title printed.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, printed headlines, readable text, title lettering"
+  },
+  {
+   "ten": "quyen-vo",
+   "nghia": "n5",
+   "prompt": "A spiral-bound notebook lying open with blank ruled pages.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, printed headlines, readable text, title lettering"
+  },
+  {
+   "ten": "dai-hoc",
+   "nghia": "n5",
+   "prompt": "A large university campus with a stately brick main building behind a wide gate, golden ginkgo trees and students walking in.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, printed headlines, readable text, title lettering"
+  },
+  {
+   "ten": "khong-phu-dinh",
+   "nghia": "n5",
+   "prompt": "A person politely waving one open hand side to side in front of their face, the Japanese gesture for no.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, crowd, extra people"
+  },
+  {
+   "ten": "nguoi-kia",
+   "nghia": "n5",
+   "prompt": "Two friends in the foreground, one discreetly gesturing with an open hand toward a third person standing further away who wears terracotta clothing.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face"
+  },
+  {
+   "ten": "nhan-vien-ngan-hang",
+   "nghia": "n5",
+   "prompt": "A bank teller in a neat uniform behind a counter handing coins to a customer, a sturdy safe in the background.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face"
+  },
+  {
+   "ten": "tren",
+   "nghia": "n5",
+   "prompt": "A small terracotta-orange cat sitting on top of a wooden box.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face"
+  },
+  {
+   "ten": "toi",
+   "nghia": "n5",
+   "prompt": "A friendly young person smiling and pointing a finger at their own chest to indicate themselves.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, crowd, extra people"
+  },
+  {
+   "ten": "ban-ron",
+   "nghia": "n5",
+   "prompt": "An office worker juggling a ringing phone, a stack of papers and a laptop all at once, looking hurried. Several big blue sweat drops fly off the person's head and curved motion lines swirl around the busy hands, cartoon symbols for being very busy; a ringing phone shows only small curved vibration arcs. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, printed headlines, readable text, title lettering"
+  },
+  {
+   "ten": "understand",
+   "nghia": "n3",
+   "prompt": "A person nodding with a bright lightbulb shining above the head and a happy aha expression. Above the person's head floats a single bright glowing yellow lightbulb with short radiating lines, the cartoon symbol for understanding. These are simple flat cartoon icons in the same style; there are no letters, words, numbers or sound-effect lettering anywhere.",
+   "negative": ""
+  },
+  {
+   "ten": "nv-sato",
+   "nghia": "canh",
+   "prompt": "Head-and-shoulders bust of a Japanese woman around thirty with black hair tied in a low ponytail, wearing a soft sky-blue blouse and a small ID lanyard with a blank card, gentle and polite, drawn as a simple flat cartoon character exactly like the vocabulary pictures: natural skin colour (light peach unless another skin tone is described), a full simple solid hair shape covering the top of the head, two small solid black dot eyes, a small curved line smile with the mouth closed, no teeth, no freckles, no wrinkles, only a tiny simple nose or none, flat even skin colour with no skin shading. Only one person, facing front with a slight turn, drawn directly on the plain cream background, which stays completely empty and uniform right up to all four edges of the image.",
+   "negative": "multiple people, card, tile, frame, rounded square backdrop, portrait frame, bald head, terracotta skin, orange skin, busy background, props, full-body scene, cropped face, realistic face, detailed eyes, eyelashes, teeth, open mouth, freckles, wrinkles, skin texture, realistic nose, anime"
+  },
+  {
+   "ten": "canh-gioi-thieu-dong-nghiep-moi",
+   "nghia": "canh",
+   "prompt": "In a bright Japanese office, a Japanese man in his mid-forties with short neat black hair wearing a navy-blue suit introduces a sandy-haired American man in his early thirties wearing a mustard-yellow sweater, who bows politely to a Japanese woman around thirty with black hair in a low ponytail wearing a sky-blue blouse, all three smiling at their first meeting. Draw the scene small and compact in the middle: the characters and only a few simple props of the setting standing on a small soft patch of floor, drawn directly on the plain flat light warm cream background, which stays completely empty and uniform around the scene right up to all four edges of the image; the setting does not fill the image and nothing encloses it. Warm sunny tones of terracotta, sage and muted gold on clothing and props, no cool grey or blue-grey backdrop. Only the characters described appear, no crowd and no extra background people, all drawn as simple flat cartoon characters with natural skin tones, solid hair shapes and dot eyes.",
+   "negative": "name tags with writing, business cards with text, tile, framed window view, rounded square backdrop, crowd, background people, extra people, full-bleed background, edge-to-edge scene, card, rounded rectangle, framed picture, cool grey tones, blue-grey backdrop"
+  },
+  {
+   "ten": "dau",
+   "nghia": "n5",
+   "prompt": "A standing person with the head marked by a bold terracotta outline glow and a small terracotta arrow pointing at it, while the skin itself stays natural light peach.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, crowd, extra people"
+  }
+ ]
+}

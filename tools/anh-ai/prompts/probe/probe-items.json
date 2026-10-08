@@ -1,0 +1,117 @@
+{
+ "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition",
+ "items": [
+  {
+   "ten": "toi",
+   "nghia": "watashi - toi",
+   "prompt": "A friendly young person smiling and pointing a finger at their own chest to indicate themselves.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, crowd, extra people",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  },
+  {
+   "ten": "benh-vien",
+   "nghia": "byouin - benh vien",
+   "prompt": "A clean white hospital building with a red cross emblem above the entrance and an ambulance parked in front.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, printed headlines, readable text, title lettering",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  },
+  {
+   "ten": "bac-si",
+   "nghia": "isha - bac si",
+   "prompt": "A doctor in a white coat with a stethoscope around the neck holding a clipboard and smiling.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, crowd, extra people",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  },
+  {
+   "ten": "an",
+   "nghia": "tabemasu - an",
+   "prompt": "A person eating a bowl of rice with chopsticks.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, crowd, extra people",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  },
+  {
+   "ten": "dat",
+   "nghia": "takai - dat (vs re)",
+   "prompt": "A shopper with wide surprised eyes comparing two wristwatches on a shop counter: on the left a big sparkling gold luxury watch on a velvet cushion with a tall stack of banknotes beside it, highlighted in terracotta; on the right a plain simple plastic watch with a single small coin beside it.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, price tags with numbers",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  },
+  {
+   "ten": "nhan-vien-ngan-hang",
+   "nghia": "ginkouin - nhan vien ngan hang",
+   "prompt": "A bank teller in a neat uniform behind a counter handing coins to a customer, a sturdy safe in the background.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  },
+  {
+   "ten": "nha-nghien-cuu",
+   "nghia": "kenkyuusha - nha nghien cuu",
+   "prompt": "A researcher in a white lab coat and safety glasses looking into a microscope beside glass flasks and test tubes.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, crowd, extra people",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  },
+  {
+   "ten": "han-hanh",
+   "nghia": "hajimemashite - lan dau gap",
+   "prompt": "Two office workers meeting for the first time, facing each other and bowing politely at the waist with warm smiles, one offering a blank business card with both hands.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, crowd, extra people",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  },
+  {
+   "ten": "den-dien",
+   "nghia": "denki - den dien",
+   "prompt": "A glowing light bulb hanging from a ceiling cord, radiating warm light with a tiny electric spark inside.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  },
+  {
+   "ten": "dai-hoc",
+   "nghia": "daigaku - dai hoc",
+   "prompt": "A stately brick university main building with a tower behind a wide open gate and golden ginkgo trees, a large black graduation mortarboard cap with a gold tassel floating in the foreground.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, clock face",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  },
+  {
+   "ten": "canh-san-ga-buoi-sang",
+   "nghia": "canh: san ga buoi sang",
+   "prompt": "On a Japanese train station platform in soft early-morning light, a Japanese woman around thirty with black hair in a low ponytail wearing a sky-blue blouse and a cheerful American man in his late twenties with short sandy-blond hair wearing a mustard-yellow sweater greet each other with a small wave, a green-striped commuter train arriving behind them and a few commuters waiting in line.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, destination boards with writing, station name signs",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  },
+  {
+   "ten": "nv-sato",
+   "nghia": "Sato (nhan vat)",
+   "prompt": "Half-body character portrait of a Japanese woman around thirty with black hair tied in a low ponytail, wearing a soft sky-blue blouse and a small ID lanyard, with a gentle polite smile in three-quarter view.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, multiple people, busy background, props, full-body scene, cropped face",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  },
+  {
+   "ten": "nv-miller",
+   "nghia": "Miller (nhan vat)",
+   "prompt": "Half-body character portrait of a cheerful American man in his late twenties with short sandy-blond hair and light freckles, wearing a mustard-yellow sweater over a collared shirt, smiling in three-quarter view.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, multiple people, busy background, props, full-body scene, cropped face",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  },
+  {
+   "ten": "nv-yamada",
+   "nghia": "Yamada (nhan vat)",
+   "prompt": "Half-body character portrait of a Japanese man in his late thirties with short neat black hair and a kind face, wearing a navy-blue suit, white shirt and simple tie, with a polite smile in three-quarter view.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face, multiple people, busy background, props, full-body scene, cropped face",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  },
+  {
+   "ten": "re",
+   "nghia": "yasui - re",
+   "prompt": "A delighted shopper paying a single small coin for a big bag overflowing with vegetables.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  },
+  {
+   "ten": "tren",
+   "nghia": "ue - tren",
+   "prompt": "A small terracotta-orange cat sitting on top of a wooden box.",
+   "negative": "text, letters, words, numbers, digits, captions, labels, writing on signs, kanji, hiragana, katakana, latin alphabet, watermark, signature, logo, photorealistic, photo, 3d render, glossy plastic, harsh shadows, dark background, busy patterned background, cluttered scene, multiple panels, comic panel borders, frame border, neon colors, oversaturated, blurry, low quality, jpeg artifacts, deformed hands, extra fingers, extra limbs, distorted face",
+   "style": "flat minimal vector illustration, soft rounded shapes, warm muted palette of terracotta #c96442, sage green #6b8a5e, muted gold and cream, thin dark ink #1f1d19 outlines, gentle two-to-three tone shading, people drawn as friendly simple characters with round faces and dot eyes, single clear centered subject, plain light warm off-white background #f0ebe1, generous empty margin, no text, no letters, no numbers, no watermark, square 1:1 composition"
+  }
+ ]
+}
