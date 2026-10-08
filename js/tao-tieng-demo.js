@@ -224,7 +224,7 @@
     const cu = new Map(dong.map(d => [d.id, d]));
     kichBan = kb;
     dong = kb.dong.map((l) => {
-      const d = { id: l.id, text: l.text, doc: l.doc || '', t: l.t, dur: l.dur, tt: 'cho', pcm: null, giay: 0, dinhDB: 0, goc: null, catDau: 0, catDuoi: 0, gainDB: 0, quaDai: false, tyLe: 0, tuBoNho: false, model: '', loi: '', lan: 0 };
+      const d = { id: l.id, text: l.text, doc: l.doc || '', voice: l.voice || '', style: l.style || '', t: l.t, dur: l.dur, tt: 'cho', pcm: null, giay: 0, dinhDB: 0, goc: null, catDau: 0, catDuoi: 0, gainDB: 0, quaDai: false, tyLe: 0, tuBoNho: false, model: '', loi: '', lan: 0 };
       const c = cu.get(l.id);
       if (giuDaXong && c && c.tt === 'xong' && c.text === d.text && c.doc === d.doc) Object.assign(d, c, { t: l.t, dur: l.dur, tr: null, o: null });
       return d;
@@ -243,7 +243,7 @@
     try { phien.pool.closeAll(); } catch (e) {}
     phien = null;
   }
-  async function tongHopThat(van, lan) {
+  async function tongHopThat(van, lan, voice, style) {
     const keys = layKhoa();
     if (!keys.length) throw new Error('Không thấy khóa API trong env.js (trang chưa nạp được env.js).');
     if (!window.VoiceActorPool) throw new Error('Thiếu js/voice-actors.js.');
@@ -255,11 +255,11 @@
       if (huy) throw new Error('đã dừng');
       if (phien && (phien.key !== key || phien.model !== model)) dongPhien();
       if (!phien) phien = { pool: new window.VoiceActorPool({ apiKey: key, model }), key, model };
-      const r = await phien.pool.speak(SENSEI_VOICE, van, '');
+      const r = await phien.pool.speak(voice || SENSEI_VOICE, van, style || '');
       if (r && r.ok) { thuTuModel = [model].concat(mac.filter(m => m !== model)); return { pcm: r.pcm, model: String(model).replace(/^models\//, '') }; }
       const loi = (r && r.reason) || 'không rõ';
       loiDs.push(String(model).replace(/^models\//, '') + ': ' + loi);
-      try { phien.pool.close(SENSEI_VOICE); } catch (e) {}   // bo phien hong, lan sau mo lai
+      try { phien.pool.close(voice || SENSEI_VOICE); } catch (e) {}   // bo phien hong, lan sau mo lai
       if (/quota|RESOURCE_EXHAUSTED|\b429\b/i.test(loi)) break;
     }
     throw new Error(che(loiDs.join(' · ') || 'không rõ'));
@@ -270,17 +270,17 @@
     const D = window.SenseiDoc;
     if (!fake && !boQuaBoNho && D && D.layBoNho) {
       try {
-        const hit = await D.layBoNho(SENSEI_VOICE, '', van);
+        const hit = await D.layBoNho(d.voice || SENSEI_VOICE, d.style || '', van);
         if (hit && hit.length > 1000) return { pcm: hit, tuBoNho: true, model: 'bộ nhớ' };
       } catch (e) {}
     }
     if (fake) {
-      const pcm = await fake({ voice: SENSEI_VOICE, text: van, id: d.id, lan: d.lan });
+      const pcm = await fake({ voice: d.voice || SENSEI_VOICE, style: d.style || '', text: van, id: d.id, lan: d.lan });
       if (!pcm || !pcm.length) throw new Error('bộ tổng hợp giả trả về rỗng');
       return { pcm: pcm instanceof Uint8Array ? pcm : new Uint8Array(pcm.buffer || pcm), tuBoNho: false, model: 'tong-hop-gia' };
     }
-    const kq = await tongHopThat(van, d.lan);
-    if (D && D.luuBoNho) { try { D.luuBoNho(SENSEI_VOICE, '', van, kq.pcm); } catch (e) {} }
+    const kq = await tongHopThat(van, d.lan, d.voice, d.style);
+    if (D && D.luuBoNho) { try { D.luuBoNho(d.voice || SENSEI_VOICE, d.style || '', van, kq.pcm); } catch (e) {} }
     return { pcm: kq.pcm, tuBoNho: false, model: kq.model };
   }
 
@@ -438,9 +438,9 @@
   // ---------------------------------------------------------------- doc kich ban khac
   function phanTichKichBan(j, tenTep) {
     let ds = [];
-    if (Array.isArray(j)) ds = j.map((l, i) => ({ id: String(l.id || ('dong-' + (i + 1))), t: +l.t || 0, dur: +l.dur || 0, text: String(l.text || ''), doc: l.doc ? String(l.doc) : '' }));
+    if (Array.isArray(j)) ds = j.map((l, i) => ({ id: String(l.id || ('dong-' + (i + 1))), t: +l.t || 0, dur: +l.dur || 0, text: String(l.text || ''), doc: l.doc ? String(l.doc) : '', voice: l.voice ? String(l.voice) : '', style: l.style ? String(l.style) : '' }));
     else if (j && Array.isArray(j.beats)) {
-      j.beats.forEach((b) => (b.loi || []).forEach((l, i) => ds.push({ id: String(b.id || 'beat') + '-' + (i + 1), t: +l.t || 0, dur: +l.dur || 0, text: String(l.text || ''), doc: l.doc ? String(l.doc) : '' })));
+      j.beats.forEach((b) => (b.loi || []).forEach((l, i) => ds.push({ id: String(b.id || 'beat') + '-' + (i + 1), t: +l.t || 0, dur: +l.dur || 0, text: String(l.text || ''), doc: l.doc ? String(l.doc) : '', voice: l.voice ? String(l.voice) : '', style: l.style ? String(l.style) : '' })));
     } else throw new Error('Không đúng định dạng kich-ban.json (cần beats[].loi[] có t, dur, text).');
     ds = ds.filter(l => l.text.trim());
     if (!ds.length) throw new Error('Kịch bản không có dòng lời nào.');
@@ -633,6 +633,14 @@
     datTongHop(fn) { fake = fn || null; if (ui.btnTatCa) { capNhatNut(); dong.forEach(d => d.o && veHang(d)); } },
     chayTatCa, dung, taiZip,
     zipBlob: dungZip,
+    /** Quay video bai giang: PCM da xu ly (24 kHz mono 16-bit LE) cua mot dong, base64; null neu chua xong */
+    pcmB64(id) {
+      const d = dong.find(x => x.id === id);
+      if (!d || d.tt !== 'xong' || !d.pcm) return null;
+      let sx = '';
+      for (let i = 0; i < d.pcm.length; i += 0x8000) sx += String.fromCharCode.apply(null, d.pcm.subarray(i, i + 0x8000));
+      return btoa(sx);
+    },
     docKichBan(j, ten) { datKichBan(phanTichKichBan(j, ten), true); if (ui.tbody) dungBang(); return dong.length; },
     cauHinh: CAU_HINH,
     giong: SENSEI_VOICE,
