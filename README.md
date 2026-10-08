@@ -4,7 +4,7 @@
 > *A grant-seeking, open-source EdTech initiative bringing synchronous 1-on-1 human-grade language tutoring to millions.*
 
 [![GitHub license](https://img.shields.io/badge/license-MIT_/_Custom-blue.svg)](LICENSE)
-[![Gemini Live API](https://img.shields.io/badge/Powered%20By-Google%20Gemini%20Live-4285F4.svg?logo=google)](https://ai.google.dev/)
+[![Multimodal AI](https://img.shields.io/badge/AI%20Engine-Real--Time%20Multimodal%20Voice%20Stream-4285F4.svg)](README.md)
 [![JLPT Curriculum](https://img.shields.io/badge/Curriculum-Kana%20to%20N1%20(110%20Lessons)-success.svg)](curriculum/)
 [![Stage Engines](https://img.shields.io/badge/UI-Chalkboard%20%7C%20PaperCut%20%7C%20Default-purple.svg)](docs/che-do/)
 
@@ -14,7 +14,7 @@
 
 Traditional language acquisition suffers from a stark market dilemma: **static self-study apps** (gamified quizzes, flashcards) lack authentic conversational immersion, cannot evaluate speech in conversational context, and cannot handle fluid questions; conversely, **private 1-on-1 native tutors** cost $30–$60 per hour, rendering fluent conversational training inaccessible to most students.
 
-**AI Live Sensei Classroom** bridges this chasm by delivering an **autonomous, full-duplex interactive classroom** right in the browser. Powered by Google Gemini Live's bidirectional multimodal audio streaming, an AI teacher avatar ("Sensei") leads structured lessons with live voice synthesis, synchronizes visual slides and Kanji stroke orders in real time, allows students to interrupt naturally via voice (sub-second barge-in VAD), and dynamically detects and corrects grammatical errors on the fly.
+**AI Live Sensei Classroom** bridges this chasm by delivering an **autonomous, full-duplex interactive classroom** right in the browser. Powered by low-latency bidirectional multimodal audio streaming, an AI teacher avatar ("Sensei") leads structured lessons with live voice synthesis, synchronizes visual slides and Kanji stroke orders in real time, allows students to interrupt naturally via voice (sub-second barge-in VAD), and dynamically detects and corrects grammatical errors on the fly.
 
 > **Status:** Active prototype running locally. A working end-to-end implementation with 110 structured lessons, live voice interaction, and multi-character roleplay. Seeking grant funding and educational partnerships to advance to hosted multi-tenant deployment.
 
@@ -24,10 +24,10 @@ Traditional language acquisition suffers from a stark market dilemma: **static s
        │  Microphone (PCM 16kHz) ◄───► Audio Output (PCM 24kHz) │
        │  Dynamic Canvas / DOM    │    Chalkboard / PaperCut    │
        └───────────▲────────────────────────────▲───────────────┘
-                   │  Bidi WebSocket            │
+                   │  Bidi WebSocket Stream     │
                    ▼                            │ DOM Action Dispatches
        ┌────────────────────────────────────────┴───────────────┐
-       │             Gemini Live Multimodal Engine              │
+       │             Real-Time Multimodal Voice Engine          │
        │  • Sub-second Barge-in Voice Activity Detection (VAD)  │
        │  • Interleaved Pedagogical Reasoning (Thinking Stream) │
        │  • Autonomous Tool Calling:                            │
@@ -63,10 +63,10 @@ Every lesson systematically guides the learner through 6 structured learning sec
 
 ### 1. Bidirectional Real-Time Audio Streaming (Full-Duplex)
 - **Audio Capture:** Downsamples browser microphone input into mono 16-bit PCM at 16kHz, streaming binary chunks over persistent WebSocket via `realtimeInput.mediaChunks`.
-- **Audio Playback:** Consumes native 24kHz PCM audio chunks from Gemini Live, converted to Float32 and scheduled without gaps or clicks via Web Audio API.
+- **Audio Playback:** Consumes native 24kHz PCM audio chunks from the voice engine, converted to Float32 and scheduled without gaps or clicks via Web Audio API.
 
 ### 2. Sub-Second Conversational Barge-In (Natural Interruption)
-- When the learner speaks while Sensei is talking, Gemini's Voice Activity Detection triggers an immediate `serverContent.interrupted: true` signal.
+- When the learner speaks while Sensei is talking, the Voice Activity Detection engine triggers an immediate `serverContent.interrupted: true` signal.
 - The client-side audio engine instantly cancels queued audio buffers and resets playback timelines, enabling natural, human-like turn-taking.
 
 ### 3. Interleaved Pedagogical Reasoning
@@ -104,7 +104,7 @@ ai-live-sensei-classroom/
 │   └── styles.css               # Neon glows, Ruby Furigana, waveform animations
 ├── js/
 │   ├── app.js                   # Main application controller & UI orchestrator
-│   ├── gemini-live.js           # BidiGenerateContent WebSocket client
+│   ├── live-client.js           # Full-duplex WebSocket voice streaming client
 │   ├── audio-engine.js          # Web Audio API 16kHz In / 24kHz Out pipeline
 │   ├── slide-engine.js          # Interactive slide rendering & token DOM highlighter
 │   ├── curriculum-loader.js     # Structured curriculum loader (Kana -> N1)
@@ -130,7 +130,7 @@ ai-live-sensei-classroom/
 - Python 3.10+
 - Modern Web Browser (Google Chrome or Microsoft Edge recommended)
 - Microphone (for real-time speech input)
-- Google Gemini API Key (obtain from [Google AI Studio](https://aistudio.google.com/apikey))
+- AI API Access Key (configured via `AI_API`)
 
 ### Installation & Launch
 
@@ -144,7 +144,8 @@ python tools/setup_vendor.py
 
 # 3. Configure environment
 cp .env.example .env
-# Edit .env and insert your GEMINI_API_KEY
+# Edit .env and set your AI_API key:
+# AI_API=your_api_key_here
 
 # 4. Start local development server
 python server.py
@@ -188,9 +189,9 @@ We are seeking **grant funding, compute sponsorship, and academic research partn
 4. **Mobile Optimization & PWA (15%):** Finalizing responsive mobile touchscreen interactions for learning on Android & iOS devices.
 
 ### Grant Fit
-- **Google for Startups Cloud Program / AI Developer Grants** (Gemini Live API showcase)
-- **EdTech & Open Educational Resources (OER) Grants**
+- **EdTech AI Innovation & Open Educational Resources (OER) Grants**
 - **AI Accessibility & Cross-Cultural Language Learning Funds**
+- **Cloud Infrastructure & AI Research Acceleration Grants**
 
 ---
 
