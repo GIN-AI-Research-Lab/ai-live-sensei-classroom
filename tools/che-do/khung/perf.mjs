@@ -1,8 +1,30 @@
 // perf.mjs — do khung hinh (rAF) + long task trong luc giang. node perf.mjs --bai N5-1 --tu 0 --giay 60 --cpu 1 --them "&phongCach=h" [--w 1440 --h 900] [--ra file.json] [--trace file.json]
+// CONG CHAT LUONG (P2): sau khi do, in them dong "PERF PASS"/"PERF FAIL ..." va dat exit code (0 = dat, 1 = vuot nguong).
+//   Nguong mac dinh: p95 frame time <= 20 ms VA long-task <= 5/phut (chuan hoa tu cua so do --giay).
+//   Chinh nguong qua bien moi truong: PERF_P95_MAX (ms), PERF_LONGTASK_MAX (so/phut).
+// Kiem tra logic nguong khong can Chrome: node perf.mjs --kiem-nguong file-so-lieu.json [--giay 60]
+//   file JSON can co truong p95 (ms) va longtask (tong so trong cua so do); exit 0/1 nhu khi do that.
 import { moServer, moChrome, Trang, donDep, sleep } from './cdp-lib.mjs';
 import fs from 'node:fs';
 const A = {}; const av = process.argv.slice(2);
 for (let i = 0; i < av.length; i += 2) A[av[i].replace(/^--/, '')] = av[i + 1];
+// --- nguong pass/fail (ham thuan, tach rieng de kiem chung bang --kiem-nguong) ---
+const NGUONG = { p95Max: +(process.env.PERF_P95_MAX || 20), ltMax: +(process.env.PERF_LONGTASK_MAX || 5) };
+function danhGiaPerf(p95, longtask, giayDo) {
+  const ltPhut = giayDo > 0 ? (longtask * 60) / giayDo : longtask;
+  const loi = [];
+  if (p95 > NGUONG.p95Max) loi.push(`p95=${p95}ms > ${NGUONG.p95Max}ms`);
+  if (ltPhut > NGUONG.ltMax) loi.push(`longtask=${+ltPhut.toFixed(2)}/phut > ${NGUONG.ltMax}/phut`);
+  return { dat: !loi.length, ltPhut: +ltPhut.toFixed(2), loi };
+}
+const dongVerdict = (v, p95) => `PERF ${v.dat ? 'PASS' : 'FAIL'}: p95=${p95}ms (nguong <= ${NGUONG.p95Max}ms), longtask=${v.ltPhut}/phut (nguong <= ${NGUONG.ltMax}/phut)${v.loi.length ? ' — vuot: ' + v.loi.join('; ') : ''}`;
+if (A['kiem-nguong']) {
+  let d; try { d = JSON.parse(fs.readFileSync(A['kiem-nguong'], 'utf8')); } catch (e) { console.error('khong doc duoc file so lieu: ' + e.message); process.exit(2); }
+  if (typeof d.p95 !== 'number') { console.error('file so lieu thieu truong p95 (so, ms)'); process.exit(2); }
+  const v = danhGiaPerf(d.p95, d.longtask || 0, +(A.giay || d.giay || 60));
+  console.log(dongVerdict(v, d.p95));
+  process.exit(v.dat ? 0 : 1);
+}
 const them = A.them || '&phongCach=h', [cap, so] = (A.bai || 'N5-1').split('-');
 const tu = +(A.tu || 0), giay = +(A.giay || 60), cpu = +(A.cpu || 1), w = +(A.w || 1440), h = +(A.h || 900);
 const goc = await moServer(); const ch = await moChrome({ w, h });
@@ -33,6 +55,10 @@ try {
       tren20_moiPhut: Math.round(d.filter((x) => x > 20).length * 60000 / tot), tren33_moiPhut: Math.round(d.filter((x) => x > 33).length * 60000 / tot),
       longtask: window.__pf.lt.length, longtaskMax: window.__pf.lt.reduce((a, b) => Math.max(a, b[1]), 0), lopDOM: document.querySelectorAll('.cd-lop *').length, spikes: (window.__pf.sp || []).slice(0, 40), tm: window.__cdH ? window.__cdH.tm.slice(-14) : null, dn: (__motion.doNhip ? __motion.doNhip() : []).filter((x) => !x.truoc).slice(-6).map((x) => [x.nhip, x.dau, x.dung, x.gan, x.ms, x.vaoSau]) }; })()`);
   r.cfg = { bai: A.bai || 'N5-1', w, h, cpu, them, giay };
+  const v = danhGiaPerf(r.p95, r.longtask, giay);
+  r.verdict = { dat: v.dat, p95Max: NGUONG.p95Max, longtaskPhut: v.ltPhut, longtaskMax: NGUONG.ltMax, loi: v.loi };
+  console.log(dongVerdict(v, r.p95));
+  process.exitCode = v.dat ? 0 : 1;
   console.log(JSON.stringify(r));
   if (A.ra) fs.writeFileSync(A.ra, JSON.stringify(r, null, 1));
   if (A.trace) {

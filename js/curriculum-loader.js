@@ -82,7 +82,10 @@ class CurriculumLoader {
       let loiCuoi = null;
       for (let lan = 1; lan <= 3; lan++) {
         try {
-          const res = await fetch(`curriculum/${lvl}/index.json`, { cache: 'no-store' });
+          // Khong dung cache:'no-store' nua: de trinh duyet dung HTTP cache +
+          // ETag cua server (server.py cap max-age cho curriculum/) — giao trinh
+          // gan nhu khong doi, tai lai tu dau moi lan chi ton bang thong.
+          const res = await fetch(`curriculum/${lvl}/index.json`);
           if (!res.ok) throw new Error(`HTTP ${res.status}`);
           const data = await res.json();
           if (!Array.isArray(data) || !data.length) throw new Error('tep rong hoac sai dinh dang');
@@ -151,7 +154,7 @@ class CurriculumLoader {
         // Van hong thi entry khong co vocabList — ben goi tu nhan ra va bao loi.
         for (let lan = 1; lan <= 3; lan++) {
           try {
-            const res = await fetch(`curriculum/${lvl.toLowerCase()}/${no}.json`, { cache: 'no-store' });
+            const res = await fetch(`curriculum/${lvl.toLowerCase()}/${no}.json`);
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
             const full = await res.json();
             Object.assign(entry, full);   // giu nguyen object entry, chi bom them khoa

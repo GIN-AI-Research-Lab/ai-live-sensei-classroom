@@ -265,9 +265,14 @@ class CORSAndMimeHandler(http.server.SimpleHTTPRequestHandler):
         etag = '"%x-%x%s"' % (fs.st_mtime_ns, size, '-gz' if gz else '')
         last_mod = self.date_time_string(fs.st_mtime)
         # vendor/ la thu vien tai ve, khong doi: cho giu 1 ngay khoi hoi lai.
-        # KHONG ap cho assets/: glb/png bi ghi de cung ten khi lam mo hinh.
-        if os.path.relpath(path, DIRECTORY).split(os.sep)[0].lower() == 'vendor':
+        # assets/ (anh/webp/mp4 tinh) cung giu 1 ngay; curriculum/ (JSON bai hoc,
+        # hiem khi doi) giu 1 gio. Ca hai van kem ETag nen het han la hoi lai duoc
+        # 304. Code app (index.html, js/, css/) giu nguyen no-cache de sua la thay ngay.
+        phan_dau = os.path.relpath(path, DIRECTORY).split(os.sep)[0].lower()
+        if phan_dau in ('vendor', 'assets'):
             self._cc = 'public, max-age=86400'
+        elif phan_dau == 'curriculum':
+            self._cc = 'public, max-age=3600'
 
         if self._khong_doi(etag, fs.st_mtime):
             f.close()

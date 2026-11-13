@@ -142,6 +142,10 @@ cd ai-live-sensei-classroom
 # 2. Download and verify frontend vendor assets
 python tools/setup_vendor.py
 
+# Note: Tailwind is pre-built static CSS (css/tailwind-built.css, committed).
+# After adding new Tailwind utility classes in index.html / js, rebuild it:
+#   npm run build:css        (uses tailwind.config.js + css/tailwind-input.css)
+
 # 3. Configure environment
 cp .env.example .env
 # Edit .env and set your AI_API key:

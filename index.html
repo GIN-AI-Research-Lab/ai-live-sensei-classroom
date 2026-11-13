@@ -6,7 +6,7 @@
   <title>AI Live Sensei Classroom - Lộ trình Nhập môn → N1</title>
 
   <!-- Tailwind CSS & FontAwesome -->
-  <!-- Tailwind ban LOCAL.
+  <!-- Tailwind ban LOCAL (gio la CSS bien dich tinh, khong con phu thuoc CDN luc chay).
        Truoc day nap tu https://cdn.tailwindcss.com: may nao khong ra duoc Internet
        (vao qua LAN/Tailscale, mang cong ty chan CDN) la MAT TOAN BO class Tailwind
        -> layout vo tan, va ca class .hidden cung bien mat nen moi lop phu
@@ -28,84 +28,18 @@
     });
   </script>
 
-  <script src="vendor/tailwind.js"></script>
+  <!-- Tailwind CSS da bien dich TINH (P0-2a): css/tailwind-built.css.
+       Build lai bang `npm run build:css` (tailwind.config.js + css/tailwind-input.css)
+       moi khi them class utility moi trong index.html / js.
+       Truoc day dung ban Play (vendor/tailwind.js): bien dich CSS ngay tren
+       trinh duyet va gan MutationObserver quet lai DOM moi lan app doi
+       innerHTML — ton main thread va la mot nguon long-task luc chuyen chuong. -->
+  <link rel="stylesheet" href="css/tailwind-built.css" />
   <script>
-    /* ------------------------------------------------------------------
-       Bang mau "giay be" (Paper Deck).
-
-       Giao dien goc la dark theme, nen thang do slate duoc DAO NGUOC:
-         slate-950/900 -> giay sang (nen trang, mat the)
-         slate-100/200 -> muc dam (chu)
-       Cac mau nhan giu nguyen quy uoc: 100-400 = chu dam,
-       500-700 = nen dac (chu trang), 800-950 = nen nhat.
-       Nho vay toan bo class Tailwind san co doi tong ma khong phai viet lai.
-       ------------------------------------------------------------------ */
-    /* Thieu vendor/tailwind.js thi bo qua phan chinh mau, dung de no nem
-       ReferenceError — loi o day lam chet not nhung script chay sau.
-       Ghi nho TRUOC khi tao vo rong, khong thi phep thu ben duoi luon dung. */
-    window.__coTailwind = (typeof window.tailwind !== 'undefined');
-    window.tailwind = window.tailwind || {};
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ink: '#1f1d19',
-            paper: '#f0ebe1',
-
-            /* Cau truc: giay & muc */
-            slate: {
-              50:  '#14120f', 100: '#1f1d19', 200: '#2e2a24', 300: '#453e34',
-              400: '#6b6355', 500: '#70675a', 600: '#b3a794', 700: '#d3c5af',
-              800: '#e5dbcb', 900: '#faf7f2', 950: '#f0ebe1',
-            },
-            /* Nhan chinh: terracotta */
-            indigo: {
-              50:  '#fdf9f7', 100: '#5f2715', 200: '#7a331c', 300: '#964126',
-              400: '#a9492b', 500: '#c96442', 600: '#b4543a', 700: '#9b4530',
-              800: '#f2e0d7', 900: '#f6e7df', 950: '#fbf2ec',
-            },
-            /* Dung / thanh cong: xanh reu */
-            emerald: {
-              50:  '#f7faf5', 100: '#1e2b18', 200: '#2a3b22', 300: '#3e5c35',
-              400: '#4c7040', 500: '#6b8a5e', 600: '#4f6d45', 700: '#3e5836',
-              800: '#e3ecdd', 900: '#eaf0e5', 950: '#f3f7ef',
-            },
-            /* Sai / canh bao: dat nung */
-            rose: {
-              50:  '#fdf7f5', 100: '#3a1713', 200: '#4a1e18', 300: '#8b3628',
-              400: '#a54331', 500: '#c25a4c', 600: '#ac4739', 700: '#913a2e',
-              800: '#f3ddd7', 900: '#f7e5e0', 950: '#fcf3f0',
-            },
-            red: {
-              50:  '#fdf7f5', 100: '#3a1713', 200: '#4a1e18', 300: '#8b3628',
-              400: '#a54331', 500: '#c2503f', 600: '#ac4739', 700: '#913a2e',
-              800: '#f3ddd7', 900: '#f7e5e0', 950: '#fcf3f0',
-            },
-            /* Luu y: vang nghe */
-            amber: {
-              50:  '#fdfaf2', 100: '#332510', 200: '#42300f', 300: '#7a5a18',
-              400: '#8f6a1c', 500: '#c0952f', 600: '#9a7726', 700: '#7e611f',
-              800: '#f2ecda', 900: '#f6eedc', 950: '#fbf6eb',
-            },
-            purple: {
-              50:  '#fbf7fb', 100: '#3a2840', 200: '#4a3450', 300: '#5e3f63',
-              400: '#6f4a74', 500: '#8a5e90', 600: '#744e79', 700: '#5e3f63',
-              800: '#ece2ee', 900: '#f2eaf3', 950: '#f8f4f9',
-            },
-            /* Nhan tu loai trong the tu vung */
-            blue:   { 300: '#33507a', 400: '#3d5c8a', 500: '#4a6fa5', 600: '#3d5c8a' },
-            cyan:   { 300: '#1f5c5c', 400: '#24706e', 500: '#2f8a87' },
-            teal:   { 300: '#1f5c5c', 400: '#24706e', 500: '#2f8a87' },
-            pink:   { 300: '#8a3a5c', 400: '#9c4368', 500: '#b05078' },
-            orange: { 300: '#8a4a1c', 400: '#a25a20', 500: '#c07a32' },
-          },
-          fontFamily: {
-            sans:  ['Inter', 'Noto Sans JP', 'system-ui', 'Segoe UI', 'sans-serif'],
-            serif: ['Noto Serif JP', 'Yu Mincho', 'Georgia', 'serif'],
-          },
-        }
-      }
-    }
+    /* Co cho canh gac khoi dong o cuoi trang: Tailwind gio la CSS tinh nen
+       khong con window.tailwind luc chay nua; co nay chi de canh gac biet
+       phan giao dien nen da duoc nap theo kieu moi. */
+    window.__coTailwind = true;
   </script>
   <link rel="stylesheet" href="vendor/fontawesome/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -347,28 +281,12 @@
   <!-- Sinh tu .env boi server.py -->
   <script src="env.js"></script>
   <script src="js/illustrations.js"></script>
-  <!-- Lo minh hoa bo sung N5 — moi tep do mot dot soan rieng, tu goi SenseiArt.extend() -->
-  <script src="js/illustrations-n5-batch1.js"></script>
-  <script src="js/illustrations-n5-batch2.js"></script>
-  <script src="js/illustrations-n5-batch3.js"></script>
-  <script src="js/illustrations-n5-batch4.js"></script>
-  <script src="js/illustrations-n5-batch5.js"></script>
-  <!-- Lo minh hoa bo sung N4 -->
-  <script src="js/illustrations-n4-batch1.js"></script>
-  <script src="js/illustrations-n4-batch2a.js"></script>
-  <script src="js/illustrations-n4-batch2b.js"></script>
-  <script src="js/illustrations-n4-batch3.js"></script>
-  <!-- Lo minh hoa bo sung N3 -->
-  <script src="js/illustrations-n3-batch1.js"></script>
-  <script src="js/illustrations-n3-batch2.js"></script>
-  <script src="js/illustrations-n3-batch3.js"></script>
-  <script src="js/illustrations-n3-batch4.js"></script>
-  <script src="js/illustrations-n3-batch5.js"></script>
-  <script src="js/illustrations-n3-batch6.js"></script>
-  <!-- Duong net chu Han (KanjiVG, CC BY-SA 3.0) + lop bang phan -->
-  <script src="js/kanji-strokes.js"></script>
-  <!-- Net chu kana (hiragana, katakana, ー) cho cap Nhap mon: SenseiStrokes.get() tu tra sang day -->
-  <script src="js/kana-strokes.js"></script>
+  <!-- Cac lo minh hoa bo sung N5/N4/N3 (moi tep tu goi SenseiArt.extend()) va
+       du lieu net chu (js/kanji-strokes.js + js/kana-strokes.js) KHONG con nap
+       eager o day nua (P0-2b): tong ~830 KB chi can theo cap dang hoc / khi mo
+       chuong Chu Han. Bo nap dong SenseiLazy (js/lazy-load.js) nap chung truoc
+       khi ve bai — xem _renderTabContentWhenReady trong js/slide-engine.js. -->
+  <script src="js/lazy-load.js"></script>
   <script src="js/board.js"></script>
   <script src="js/voices.js"></script>
   <script src="js/voice-actors.js"></script>
@@ -382,6 +300,8 @@
   <!-- Doc duy nhat cho moi nut loa / vung boi den: cau thoai = giong nhan vat, con lai = giong Sensei; cache IndexedDB -->
   <script src="js/sensei-doc.js"></script>
   <script src="js/audio-engine.js"></script>
+  <!-- Hang doi hanh dong DOM neo theo moc tieng cho duong truc tiep (P1b) — app.js dung qua window.SenseiActionQueue -->
+  <script src="js/action-queue.js"></script>
   <script src="js/gemini-live.js"></script>
   <script src="js/app.js"></script>
   <!-- Vo giao dien: do chieu cao thanh tren / duoi, dong bo trang thai nut, phim ← → -->
@@ -393,7 +313,19 @@
   <!-- Che do san khau (nut "Chế độ" tren thanh tren): 10 che do moi a..j, luu cho moi bai;
        ?phongCach=<id>|mac-dinh ghi de khi kiem thu. Nap tep che do (va vendor/gsap) khi can -->
   <script src="js/che-do/che-do.js"></script>
-  <script src="js/mo-phong.js"></script>
+  <!-- Mo phong bai giang (js/mo-phong.js): CHI nap khi co ?moPhong tren dia chi trang
+       (dung cung bieu thuc kiem tra co ma chinh tep do va app.js dang dung).
+       async=false de tep chay theo dung thu tu nap dong; app.js chi khoi tao
+       GeminiLiveClient sau DOMContentLoaded + await tai muc luc giao trinh nen
+       lop gia lap kip boc truoc khi client dau tien duoc tao. -->
+  <script>
+    if (/[?&]moPhong\b/i.test(location.search)) {
+      var sMoPhong = document.createElement('script');
+      sMoPhong.src = 'js/mo-phong.js';
+      sMoPhong.async = false;
+      document.body.appendChild(sMoPhong);
+    }
+  </script>
 
   <!-- Sensei hoat hinh: meo clip nua than (js/sensei-cat-video.js).
        js/sensei-avatar-hub.js nap meo va chuyen lenh window.SenseiAvatar toi no;
@@ -434,14 +366,13 @@
   <script>
     (function () {
       var CAN = [
-        ['__coTailwind',     'vendor/tailwind.js',      'bang mau & class giao dien'],
+        ['__coTailwind',     'css/tailwind-built.css',  'bang mau & class giao dien'],
         ['CurriculumLoader', 'js/curriculum-loader.js', 'giao trinh Nhap mon, N5-N1'],
         ['SlideEngine',      'js/slide-engine.js',      'bo dung man hinh bai hoc'],
         ['AudioEngine',      'js/audio-engine.js',      'am thanh'],
         ['GeminiLiveClient', 'js/gemini-live.js',       'phien hoc truc tuyen'],
         ['SenseiVoices',     'js/voices.js',            'giong nhan vat'],
         ['SenseiBoard',      'js/board.js',             'bang phan'],
-        ['SenseiStrokes',    'js/kanji-strokes.js',     'net viet chu Han'],
       ];
 
       function coBaiHoc() {

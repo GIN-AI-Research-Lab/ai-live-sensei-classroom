@@ -825,8 +825,9 @@
   .rx-panel { padding: 14px; }
   .rx-dem { font-size: 24px; }
 }
-/* Man thap (dien thoai co thanh trinh duyet): khung ve + nut nop van vua mot man */
-@media (max-height: 720px) {
+/* Man thap (dien thoai co thanh trinh duyet): khung ve + nut nop van vua mot man.
+   P2: align 720 -> 700 theo thang moc chuan (xem css/styles.css dau file). */
+@media (max-height: 700px) {
   .deck-head:has(+ .rx-scroll) { margin-bottom: 8px; }
   .rx-seg { margin-bottom: 10px; }
   .rx-panel { gap: 8px; }

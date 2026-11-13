@@ -1,0 +1,4 @@
+/* Dau vao build Tailwind tinh (P0-2a) — sua file nay + tailwind.config.js roi chay: npm run build:css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

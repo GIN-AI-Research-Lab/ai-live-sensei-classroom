@@ -310,6 +310,9 @@
     vietChuHan(ch, opts = {}) {
       // Chu kana va am ghep (きゃ, ファ) cung di qua day: SenseiStrokes.get da ghep san cac chu
       // canh nhau trong cung khung. Loi bat ky -> false (ben goi tu lui ve chu tinh), khong nem.
+      // P0-2b: du lieu net gio nap dong — chua co thi kich nap nen (SenseiLazy
+      // tu khong trung), lan viet nay van lui ve chu tinh nhu cu, lan sau co net.
+      if (!window.SenseiStrokes && window.SenseiLazy) window.SenseiLazy.napNetChu();
       let net = null;
       try { net = window.SenseiStrokes ? window.SenseiStrokes.get(ch) : null; } catch (e) { net = null; }
       if (!net || !net.length) return false;

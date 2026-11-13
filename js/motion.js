@@ -75,7 +75,7 @@
   const S = {
     bat: !TAT_HAN,
     daInit: false,
-    ae: null, se: null, khiTiepTuc: null, khiBoQua: null,
+    ae: null, se: null, khiTiepTuc: null, khiBoQua: null, thiHanhCongCu: null,
     che: 'tat', epoch: 0, the: 0,
     hen: new Set(),
     giam: false, kho: 'rong', wall: false,
@@ -3903,6 +3903,24 @@
         const cung = !s || (lvl === String(s.currentLevel || '').toUpperCase() && no === Number(s.currentLesson));
         return cung ? { success: true } : null;
       }
+      case 'mark_error':
+      case 'set_emotion':
+      case 'act_out': {
+        // Ba tool nay san khau khong tu ve duoc (bang loi o slideEngine, mat meo o
+        // app): truoc day roi thang qua default xuong app nen chay NGAY khi nhan
+        // message — som hon tieng di kem ca hang doi am thanh. Nay hen theo dung
+        // moc tool nhu highlight/ghi chu (henCongCu): toi moc moi goi lai duong
+        // thi hanh goc cua app qua callback thiHanhCongCu (app truyen vao init).
+        // Dang cho hoc vien / chua co callback -> tra null, app xu ly nhu cu.
+        if (cho || typeof S.thiHanhCongCu !== 'function') return null;
+        henCongCu(w, c, () => {
+          const r = S.thiHanhCongCu(name, args);
+          if (r && r.success === false) canhBao('thiHanhCongCu ' + name, r.error || 'that bai');
+        });
+        // Ack tach khoi perform: bao thanh cong ngay de model noi tiep; ket qua
+        // that cua handler chi biet luc thi hanh o moc tieng (loi thi canhBao o tren).
+        return { success: true, choTieng: true };
+      }
       default:
         if (w) ganCongCu(w, name, args, c);
         return null;
@@ -3936,6 +3954,7 @@
     S.se = o.slideEngine || S.se;
     if (typeof o.khiTiepTuc === 'function') S.khiTiepTuc = o.khiTiepTuc;
     if (typeof o.khiBoQua === 'function') S.khiBoQua = o.khiBoQua;
+    if (typeof o.thiHanhCongCu === 'function') S.thiHanhCongCu = o.thiHanhCongCu;
     if (S.daInit) return;
     S.daInit = true;
     napThamSo();
