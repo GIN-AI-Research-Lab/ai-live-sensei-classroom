@@ -125,6 +125,14 @@
   const RE_NGAT = /[、。，．,.！？!?…‥:;：；—–\n]/;
   const laJP = (ch) => !!ch && RE_JP.test(ch);
   const laLatin = (ch) => !!ch && RE_LATIN.test(ch);
+  // [PATCH sync-real] cong tac thu nghiem, MAC DINH TAT: ?gaAmTruoc=1 / ?khopTienTo=1 (0 = tat) hoac localStorage 'sk.<ten>' = '1'
+  function coCo(ten) {
+    try { const q = new URLSearchParams(location.search); if (q.has(ten)) return q.get(ten) !== '0'; } catch (e) {}
+    try { return localStorage.getItem('sk.' + ten) === '1'; } catch (e) {}
+    return false;
+  }
+  // gaChiChu (v2): GA chi dung moc khoang lang cua cum DA HIEN trong ban ghi (nguon 'am-chu'), khong doan thuan tu am thanh
+  const CO = { gaAmTruoc: coCo('gaAmTruoc'), khopTienTo: coCo('khopTienTo'), gaChiChu: coCo('gaChiChu') };
   const coJP = (s) => RE_JP.test(String(s || ''));
   const slideContent = () => $id('slideContent');
   const ae = () => S.ae || window.__audioEngine || null;
@@ -768,6 +776,14 @@
     dom.phimRay = s.querySelector('.sk-phim-ray');
     dom.sr = s.querySelector('.sk-sr');
     s.addEventListener('pointerdown', () => { if (S.che === 'giang' || S.che === 'chuyen') nhacKhoa(); });
+    // (hieu nang) body.sk-the-that thay cho body.dang-giang:has(.san-khau-giang .qz-card.sk-bt-that): :has() cap body bat trinh duyet tinh lai style ca trang
+    // moi lan do chu / doi DOM. Observer chi nghe doi lop cua .qz-card trong san khau (microtask: lop sang truoc khi ve, nhu :has())
+    if (window.MutationObserver) {
+      new MutationObserver((ds) => {
+        if (!ds.some((r) => r.target.classList && r.target.classList.contains('qz-card'))) return;
+        document.body.classList.toggle('sk-the-that', !!s.querySelector('.qz-card.sk-bt-that'));
+      }).observe(s, { subtree: true, attributes: true, attributeFilter: ['class'] });
+    }
     if (window.ResizeObserver) {
       let hr = null;
       new ResizeObserver(() => {
@@ -1242,22 +1258,28 @@
     return out;
   }
   /** Moi lan khop (R index [s, e)) tu vi tri tu tro di, sap theo vi tri, bo chong lan */
-  function timHits(w, kh, tu, het) {
+  function timHits(w, kh, tu, het, khongPre) {
     const hits = [];
     if (kh.jp.length && w.jv.length) {
       const p0 = dauTu(w.jvM, tu);
-      const them = (p, len, k) => {
+      const them = (p, len, k, pre) => {
         const s = w.jvM[p], e = w.jvM[p + len - 1] + 1;
         let ok = lienMach(w, s, e, true), cho = false;
         if (ok && k.rieng) {
           if (s > 0 && laJP(w.R[s - 1])) ok = false;
           if (ok) { if (e >= w.R.length) { if (!het) cho = true; } else if (laJP(w.R[e])) ok = false; }
         }
-        if (ok && !cho) hits.push({ s, e });
+        if (ok && !cho) hits.push(pre ? { s, e, pre: true } : { s, e });
       };
       for (const k of kh.jp) {
         let p = w.jv.indexOf(k.n, p0);
         while (p >= 0) { them(p, k.n.length, k); p = w.jv.indexOf(k.n, p + 1); }
+        // [PATCH sync-real] CO.khopTienTo: khoa Nhat >= 6 chu cung khop theo 4 chu dau (hit.pre; chi Nhat) -> cue ban som hon do dai khoa
+        if (CO.khopTienTo && !khongPre && k.n.length >= 6) {
+          const pf = Array.from(k.n).slice(0, 4).join('');
+          let q = w.jv.indexOf(pf, p0);
+          while (q >= 0) { them(q, pf.length, k, true); q = w.jv.indexOf(pf, q + 1); }
+        }
         if (k.mo === undefined) k.mo = bienTheJP(k.n);
         if (!k.mo) continue;
         for (const v of k.mo.bo) {
@@ -1283,6 +1305,7 @@
           if (ok && !cho) hits.push({ s, e });
           p = w.vv.indexOf(k, p + 1);
         }
+        // [PATCH sync-real] khop tien to chi cho khoa NHAT (khoa Viet: 7% khop tien to nham cho, vd 'nghia' o cho khac -> khong lam)
       }
     }
     hits.sort((a, b) => a.s - b.s || b.e - a.e);
@@ -1357,7 +1380,8 @@
   //   - chu giua cum noi suy tren thoi gian co tieng giua hai moc (theo don vi tung loai chu);
   //   - L, rJ, rL hoc cuoi luot tu chinh can chinh (hocLuot).
   const LANG_MIN = 0.12;
-  const CC = { sc0: 0.08, sc: 0.15, sl: 0.35, bDoi: 4, bNgat: 0.6, bKhac: 0.3, pLang: 2.5, cuaB: 10, cuaR: 5, xa: 1.2, bam: 0.35 };
+  // [PATCH sync-real] bNgat 0.6 -> 3, pLang 2.5 -> 4, sc0 0.08 -> 0.15 (chia chat DEV/TEST tren 3 kich ban, voi / khong GA: TEST loss -18%)
+  const CC = { sc0: 0.15, sc: 0.15, sl: 0.35, bDoi: 4, bNgat: 3, bKhac: 0.3, pLang: 4, cuaB: 10, cuaR: 5, xa: 1.2, bam: 0.35 };
   /** Cac khoang lang >= 120 ms cua luot (giay am thanh trong luot), bo nho dem theo so khung + nguong */
   function langCua(t) {
     const nguong = Math.max(-50, p90(t) - 28);
@@ -1641,6 +1665,324 @@
     return t.rStart + Math.max(0, lo - 1);
   }
 
+  // ------------------------------------------------------------------ [PATCH sync-real] chan doan, hoc L som, GA "am thanh truoc"
+  // Chan doan (khong doi hanh vi): lead = am thanh da nhan truoc luc dang nghe; L / r theo luot; log gioi han.
+  const MAX_CHAN_DOAN = 2000;
+  S.chanDoan = { lead: [], luot: [], ga: [] };
+  // tat = tat ca phien (datCo); k[kind] = { hist: 20 quyet dinh gan nhat (1 = mau thuan), tat } THEO LOAI NHIP (vocab dung ban ky vong tot, kanji lech -> chi tat kanji)
+  S.ga = { tat: false, hist: [], ly: {}, k: {} };   // ly: dem ly do bo qua cua gaUoc (chan doan)
+  const gaKind = (kind) => S.ga.k[kind] || (S.ga.k[kind] = { hist: [], tat: false });
+  const gaTat = (kind) => S.ga.tat || gaKind(kind).tat;
+  const huyGa = (ly) => { S.ga.ly[ly] = (S.ga.ly[ly] || 0) + 1; return null; };   // GA: tat = da tat do mau thuan; hist = 20 quyet dinh gan nhat (1 = mau thuan)
+  S.leadNow = null;                   // lead am thanh hien tai (giay): am thanh da nhan - am thanh da nghe
+  function ghiChanDoan(ds, x) {
+    const a = S.chanDoan[ds];
+    if (a.length >= MAX_CHAN_DOAN) a.splice(0, 500);
+    a.push(x);
+  }
+
+  /**
+   * Hoc L NGAY TRONG luot dau cua phien (S.soHoc === 0): lap lai phan uocL cua hocLuot moi 4 manh chu (>= 6 manh).
+   * Truoc day L = 0 toi het luot dau -> chuan tho pL lech 0.5-0.9 s -> DP gan ranh gioi vao khoang lang KE TIEP
+   * (62-65% cue luot 1-2 lech > 150 ms). Chi luot dau: ap dung moi luot lam xau ket qua cac luot sau.
+   */
+  function hocLSom(w, t) {
+    void w;
+    if (S.soHoc > 0 || t.xong || t.frags.length < 6 || t.frags.length % 4 !== 0) return false;
+    const med = (Lx) => {
+      const cc = canChinh(t, Lx);
+      const tot = [], moi = [];
+      for (const f of t.frags) {
+        if (!(f.off > 0)) continue;
+        const x = aKyTu(t, f.off - 1, true, cc);
+        if (!x) continue;
+        moi.push(f.A - x.a);
+        if (x.nguon !== 'uoc') tot.push(f.A - x.a);
+      }
+      const a = tot.length >= 5 ? tot : moi;
+      if (!a.length) return null;
+      a.sort((p, q) => p - q);
+      return a[a.length >> 1];
+    };
+    let Lt = S.L;
+    for (let k = 0; k < 3; k++) {
+      const x = med(clamp(Lt, -1.5, 1.5));
+      if (x == null) break;
+      const xong = Math.abs(x - Lt) < 0.02;
+      Lt = x;
+      if (xong) break;
+    }
+    const nL = clamp(0.5 * S.L + 0.5 * Lt, -1.5, 1.5);
+    const doi = Math.abs(nL - S.L) > 1e-6;
+    S.L = nL;
+    return doi;
+  }
+
+  // ---- GA "am thanh truoc, kich ban dan duong" (MAC DINH TAT: CO.gaAmTruoc) ------------------------------------
+  // Cue khop chu phai cho chu toi (tre L + do dai khoa). Khoang lang truoc cum thuong da co trong am thanh: ranh gioi
+  // ky vong KE TIEP sau moc da xac nhan bang chu duoc gan vao khoang lang quan sat tiep theo, neu do dai khop kich ban.
+  const GA = {
+    loai: new Set(['hien', 'doc']),   // KHONG 'nhan' (nhan manh mot chu: som = sai chu) cho toi khi log chung minh
+    zmax: 2.5, margin: 1.0, sig0: 0.07, sig1: 0.12,   // do lech do dai ky vong cho phep (sigma = sig0 + sig1 * giay ky vong)
+    cua: 4,                                            // cua so tim ranh gioi ky vong cho moc ban ghi
+    bien: 0.15,                                        // bu chunk khi dang trong khoang lang mo
+  };
+  // do dai nghi trung binh (s) theo lop dau ngat, do tren 853 cap that (xem REPORT)
+  const NGHI = { S: 0.64, 'S/d': 0.62, C: 0.46, 'C/d': 0.46, M: 0.58, 'M/d': 0.58, P: 0.28, 'P/d': 0.42, 'N/d': 0.26, D: 0.46, 'D/d': 0.46 };
+  /** Lop dau ngat cua moc cum i (S . ? ! | C : | M ; | P , | D khac | N khong dau) + '/d' neu doi chu */
+  function lopNgat(t, i) {
+    const off = t.bien[i];
+    let p = null;
+    for (let k = off - 1; k >= 0; k--) {
+      const ch = t.raw[k];
+      if (RE_NGAT.test(ch)) { p = ch; break; }
+      if (/\s|[()（）~「」『』"'“”]/.test(ch)) continue;
+      break;
+    }
+    let c = 'N';
+    if (p) c = /[.。!！?？…‥]/.test(p) ? 'S' : /[:：]/.test(p) ? 'C' : /[;；]/.test(p) ? 'M' : /[,，、]/.test(p) ? 'P' : p === '\n' ? 'S' : 'D';
+    if (t.bienLoai[i] === 'doi') c += '/d';
+    return c;
+  }
+  /**
+   * Hoc so lan Sensei doc lap lai tu / cau o dau luot (cum dau tieng Nhat giong het nhau lien tiep: 'X. X. X,'):
+   * loi dan noi '2 lan' nhung mo hinh hay doc 3 -> kich ban ky vong lech 1 cum, GA ban nham som ~1 s (16% cue GA sai, 4% khi dung so lan).
+   */
+  function hocDocLan(t) {
+    try {
+      let n = 0, sn0 = null;
+      for (let i = 1; i < t.bien.length; i++) {
+        const sn = dauChu(t.raw, t.bien[i]);
+        if (sn.charAt(0) !== 'j') { if (n) break; else continue; }
+        if (sn0 == null) { sn0 = sn; n = 1; } else if (lcp(sn, sn0) >= Math.min(sn.length, sn0.length, 4)) n++; else break;
+      }
+      if (n >= 2 && n <= 4) S.docLanHoc = n;
+    } catch (e) {}
+  }
+  /** Ban ky vong cua nhip dang song (null = nhip chua ho tro) */
+  function mongTuBeat(w) {
+    const tx = kichBanNhip(w.beat);
+    return tx ? mongTuChu(tx) : null;
+  }
+  /** Ban ky vong: mot luot gia dung bang chinh themChuoi (moc cum, don vi, view tim khoa) tu van ban ky vong */
+  function mongTuChu(text) {
+    const we = { R: '', rT: [], rO: [], jv: '', jvM: [], vv: '', vvM: [], turns: [], luot: null };
+    const te = luotMoi(we);
+    themChuoi(we, te, String(text || ''));
+    return we;
+  }
+  const phVn = (n) => new Array(Math.max(0, n | 0)).fill('zq').join(' ');   // cho trong tieng Viet n am tiet (khong khop khoa nao)
+  const phJp = (n) => 'ゐ'.repeat(Math.max(0, n | 0));                       // cho trong tieng Nhat n kana
+  const sach = (s) => String(s == null ? '' : s).replace(/\s+/g, ' ').trim();
+  const cham = (s) => { s = sach(s); return s && !/[.!?。！？]$/.test(s) ? s + '.' : s; };
+  /**
+   * Van ban KY VONG cua mot nhip, suy ra tu THE (beat.data) va THU TU trong buildBeatPromptMuc (app.js): Sensei chi nhan
+   * du lieu the + thu tu, KHONG nhan van ban nguyen van. Phan model tu bia (cau noi dau, meo, vi du) la cho trong
+   * (zq / ゐ) voi so don vi uoc luong; phan doc tu the (tu, nghia, ghi chu, cau, dich) lay nguyen van. '' = chua ho tro.
+   * opt.docLan: so lan doc tu / cau (mac dinh 2 theo loi dan).
+   */
+  function kichBanNhip(beat, opt) {
+    opt = opt || {};
+    const d = beat && beat.data;
+    if (!d) return '';
+    const lan = opt.docLan || S.docLanHoc || 2;   // so lan doc tu / cau: hoc tu cac luot truoc (hocDocLan), mac dinh 2 theo loi dan
+    const lap = (s, n) => new Array(n).fill(cham(s)).join(' ');
+    if (beat.kind === 'vocab') {
+      const w = sach(d.word || d.kanji);
+      const gc = sach(d.accentNote);
+      return [phVn(4), lap(w, lan), 'nghĩa là ' + cham(d.meaningVi), gc ? 'Lưu ý: ' + cham(gc) : 'Mẹo nhớ: ' + cham(phVn(10)), 'Ví dụ: ' + cham(phJp(9)), phVn(7) + '.'].join(' ');
+    }
+    if (beat.kind === 'kanji' && d.character && !d.kana) {
+      const on = (d.onyomi || []).map((x) => sach(String(x).replace(/\(.*?\)/g, ''))).join(', ');
+      const kun = (d.kunyomi || []).map((x) => sach(String(x).replace(/\(.*?\)/g, ''))).join(', ');
+      const tg = (d.commonWords || []).map((c) => `${sach(c.furigana || c.word)}, nghĩa là ${sach(c.meaningVi)}`).join('; ');
+      return [`Chữ ${d.character}, Hán Việt là ${sach(d.hanViet)}, nghĩa là ${sach(d.meaningVi)}, ${d.strokeCount || ''} nét.`, cham(phVn(25)), on ? `Âm On là ${on}.` : '', kun ? `Âm Kun là ${kun}.` : '', tg ? 'Từ ghép: ' + tg + '.' : ''].filter(Boolean).join(' ');
+    }
+    if (beat.kind === 'grammar-intro') {
+      const ct = sach(d.grammarFormula).replace(/[\[\]]/g, ' ').replace(/\s*\+\s*/g, ' ');
+      const y = sach(d.explanation).split(/(?<=[.!?])\s+/).filter(Boolean);
+      return ['Mẫu câu: ' + cham(d.title), 'Công thức: ' + cham(sach(ct)), y.map(cham).join(' '), d.teacherTips ? 'Lưu ý: ' + cham(d.teacherTips) : '', d.culturalNotes ? 'Về văn hoá, ' + cham(d.culturalNotes) : ''].filter(Boolean).join(' ');
+    }
+    if (beat.kind === 'example') {
+      const tk = d.tokens || [];
+      const s = tk.map((x) => x.text).join('');
+      const parts = tk.map((x) => (x.isKeyGrammar ? `trợ từ ${x.text} đọc là ${phVn(1)}` : `${x.text} là một thành phần`)).join('; ');
+      return ['Câu ví dụ: ' + lap(s, lan), 'Tách ra: ' + parts + '.', 'Dịch: ' + cham(d.meaningVi)].join(' ');
+    }
+    return '';
+  }
+  /** "Dau van tay" cua cum tai off: kana / Han chuan hoa (j...) hoac chu Latin bo dau lien nhau (v...), toi da ~10 ky tu */
+  function dauChu(raw, off) {
+    let i = off;
+    while (i < raw.length && !(laJP(raw[i]) || laLatin(raw[i]) || (raw[i] >= '0' && raw[i] <= '9'))) i++;
+    if (i >= raw.length) return '';
+    if (laJP(raw[i])) {
+      let o = '';
+      for (let k = i; k < raw.length && o.length < 6; k++) {
+        const c = raw[k];
+        if (laJP(c)) o += jpChu(c); else if (/\s/.test(c)) continue; else break;
+      }
+      return 'j' + o;
+    }
+    return 'v' + chuanVN(raw.slice(i, i + 20)).replace(/ /g, '').slice(0, 10);
+  }
+  const lcp = (a, b) => { let n = 0; while (n < a.length && n < b.length && a[n] === b[n]) n++; return n; };
+  /**
+   * Anh xa moc cum cua ban ghi THUC -> chi so moc cum cua kich ban KY VONG, theo CHU (dau van tay), don dieu tang,
+   * trong cua so GA.cua; khong khop -> null. KHONG BAO GIO ghep theo chi so (loi noi lech kich ban lam som sai 4.6%).
+   */
+  function anhXa(w, t) {
+    const we = w.mong;
+    if (!we) return null;
+    const te = we.luot;
+    if (!te.snip) te.snip = te.bien.map((o) => dauChu(te.raw, o));
+    const a = t.anhXa || (t.anhXa = { n: 0, ds: [], cuoi: -1 });
+    const khop = (sn, q, chat) => {
+      const sq = te.snip[q];
+      const can = sn.charAt(0) === 'j' ? 4 : 6;
+      const l = lcp(sn, sq);
+      if (chat) return l >= can || (l >= 2 && l === sn.length && l === sq.length);
+      return l >= Math.min(can, 3) && l === sn.length;   // dau van tay moi co mot phan (chu van dang toi): chi can phan co khop het
+    };
+    for (let i = a.n; i < t.bien.length; i++) {
+      const xong = t.xong || t.raw.length - t.bien[i] >= 16 || i + 1 < t.bien.length;
+      let j = null;
+      if (i === 0 && w.turns[0] === t) j = 0;
+      else {
+        const sn = dauChu(t.raw, t.bien[i]);
+        const hi = a.cuoi < 0 ? te.bien.length : Math.min(te.bien.length, a.cuoi + 1 + GA.cua);
+        if (xong) {
+          for (let q = a.cuoi + 1; q < hi; q++) if (khop(sn, q, true)) { j = q; break; }
+        } else {
+          // moc o ngay bien gioi chu (dau van tay moi co mot phan): chi chap nhan tam thoi (khong ghi nho) khi ung vien dau tien
+          // la moc KE NGAY sau moc truoc (khong nhay coc); cum lap lai ('X. X. X,') anh xa dung theo thu tu
+          let qq = null;
+          for (let q = a.cuoi + 1; q < hi; q++) if (khop(sn, q, false)) { qq = q; break; }
+          const out = a.ds.slice();
+          out[i] = qq != null && qq === a.cuoi + 1 ? qq : null;
+          return out;
+        }
+      }
+      a.ds[i] = j;
+      if (j != null) a.cuoi = j;
+      a.n = i + 1;
+    }
+    return a.ds;
+  }
+  /** Chi so moc cum ky vong cua cue (khoa tim trong VAN BAN KY VONG, cung timHits / sau / lan nhu tren ban ghi); null = khong co */
+  function eViTri(w, st) {
+    if (st.eK !== undefined) return st.eK;
+    st.eK = null;
+    const we = w.mong;
+    if (!we || !st.kh) return null;
+    let tu = 0;
+    const id = st.cue && st.cue.sau;
+    if (id && w.byId && w.byId[id] && w.byId[id] !== st) {
+      const ref = w.byId[id];
+      if (eViTri(w, ref) == null && ref.eE == null) return (st.eK = null);
+      tu = ref.eE != null ? ref.eE : 0;
+    }
+    const h = timHits(we, st.kh, tu, true, true)[((st.khi && st.khi.lan) || 1) - 1];
+    if (!h) return null;
+    st.eS = h.s; st.eE = h.e;
+    const te = we.luot;
+    const k = laBien(te, we.rO[h.s]);
+    return (st.eK = k >= 1 ? k : null);
+  }
+  /**
+   * Uoc luong thoi diem (giay am thanh trong luot) cua cum ky vong cua cue TU AM THANH + kich ban, khi chu chua toi.
+   * Nhan: w.mong (ban ky vong), t = luot dang song. Tra { t, a, nguon } hoac null (bo qua = khong chac).
+   */
+  function gaUoc0(w, st) {
+    const t = w.luot;
+    if (!t || t.giu || !t.chunks.length || !w.mong) return huyGa('khong-luot');
+    // nhip dau chuong / dau bai co LOI DAN chen (loiCauNoi / loiMoBai trong app.js): cau dan khong co trong ban ky vong -> khong ap dung
+    const bt = w.beat;
+    if (bt && (bt.isChapterStart || bt.index === 0 || (w.ctx && (w.ctx.moBai || w.ctx.laBatDau)))) return huyGa('nhip-co-loi-dan');
+    const k = eViTri(w, st);
+    if (k == null) return huyGa('khong-co-ky-vong');
+    const te = w.mong.luot;
+    const Lc = langCua(t), R = Lc.runs;
+    const r0 = R[0] && R[0].s <= 0.03 && !R[0].mo ? R[0] : null;
+    if (R.length && R[0].s <= 0.03 && R[0].mo) return huyGa('lang-dau-luot');   // van trong khoang lang dau luot
+    if (!r0 && t.A < 0.3) return huyGa('chua-co-am');
+    // moc da xac nhan bang chu: moc ban ghi CUOI CUNG co khoang lang trong canChinh
+    let m = 0, jm = r0 ? 0 : -1, vm = 0;
+    const cc = t.bien.length ? canChinh(t) : null;
+    let ic = -1;
+    if (cc) for (let i = t.bien.length - 1; i >= 1; i--) if (cc.j[i] >= 0) { ic = i; break; }
+    // moc ky vong DA co trong ban ghi (chu moi toi dau cum, chua du khoa) va da co khoang lang: dung chinh khoang lang do
+    if (cc) {
+      const ds0 = anhXa(w, t);
+      if (ds0) for (let i = t.bien.length - 1; i >= 1; i--) if (ds0[i] === k && cc.j[i] >= 0 && !R[cc.j[i]].mo) return { t, a: R[cc.j[i]].e, nguon: 'am-chu', z: 0 };
+    }
+    if (ic >= 0) {
+      const ds = anhXa(w, t);
+      const si = ds ? ds[ic] : null;
+      if (si == null) return huyGa('khong-anh-xa');   // moc xac nhan khong anh xa duoc vao kich ban -> bo qua (tranh gan nham)
+      m = si; jm = cc.j[ic]; vm = Lc.vr[jm];
+      // kiem tra THOI GIAN cua anh xa: khoang tu moc xac nhan truoc (hoac dau luot) den moc nay phai khop do dai ky vong,
+      // neu khong (cum lap lai / dien dat lai lam anh xa nhay sai) -> bo qua. Bat duoc cac loi "som hang giay".
+      let ip = -1;
+      for (let i = ic - 1; i >= 1; i--) if (cc.j[i] >= 0 && ds[i] != null) { ip = i; break; }
+      let mp = null, vp = 0;
+      if (ip >= 0) { mp = ds[ip]; vp = Lc.vr[cc.j[ip]]; } else if (w.turns[0] === t) { mp = 0; vp = 0; }
+      if (mp != null) {
+        const b1 = te.bien[mp], b2 = te.bien[m];
+        const j1 = te.cumJ[b2] - te.cumJ[b1];
+        const D1 = S.rJ * j1 + S.rL * ((te.uP[b2] - te.uP[b1]) - j1);
+        if (m <= mp || Math.abs((vm - vp) - D1) / (GA.sig0 + GA.sig1 * D1) > GA.zmax + 1) return huyGa('anh-xa-lech');
+      }
+    } else if (w.turns[0] !== t) return huyGa('luot-sau-khong-moc');
+    if (k - m !== 1) return huyGa(k - m < 1 ? 'k-truoc-moc' : 'cach-xa');
+    // [v2] ban ghi DA di qua cum ky vong va LECH kich ban (moc cum hoan chinh khong anh xa duoc: tu bi ghi sai / dien dat khac):
+    // khong doan thuan tu am thanh (am thanh co the la lan doc khac); cue se do chu quyet dinh
+    if (t.anhXa) { let ult = -1; for (let i = 0; i < t.anhXa.n; i++) if (t.anhXa.ds[i] != null) ult = i; for (let i = ult + 1; i < t.anhXa.n; i++) if (t.anhXa.ds[i] === null && t.bien[i] > 0) return huyGa('ban-ghi-lech'); }
+    // thoi gian co tieng ky vong giua moc m va k
+    const bm = te.bien[m], bk = te.bien[k];
+    const jj = te.cumJ[bk] - te.cumJ[bm];
+    const Dexp = S.rJ * jj + S.rL * ((te.uP[bk] - te.uP[bm]) - jj);
+    const sig = GA.sig0 + GA.sig1 * Dexp;
+    const cands = [];
+    for (let j = jm + 1; j < R.length && cands.length < 3; j++) {
+      if (R[j] === r0) continue;
+      cands.push({ j, z: Math.abs((Lc.vr[j] - vm) - Dexp) / sig });
+    }
+    if (!cands.length) return huyGa('chua-co-khoang-lang');
+    const best = cands.reduce((x, y) => (y.z < x.z ? y : x));
+    if (best !== cands[0] || best.z > GA.zmax) return huyGa('do-dai-lech');
+    if (cands.length > 1 && cands[1].z - best.z < GA.margin && cands[1].z <= GA.zmax + 1) return huyGa('mo-ho');   // mo ho
+    const run = R[best.j];
+    if (run.mo) return huyGa('lang-dang-mo');   // [v2] khong doan thoi diem cat tieng (doan som neu nghi that dai hon trung binh)
+    return { t, a: run.e, nguon: 'am', z: best.z };
+  }
+
+  /**
+   * [v2] gaUoc0 + CHOT AN TOAN: cue noi tiep (`sau`) khong duoc dat truoc cue tham chieu + nua do dai ky vong giua hai cum
+   * (toi thieu 0.25 s); cue tham chieu chua co thoi diem (chua ban, khong co uoc luong) -> bo qua. Chan GA gan hai cue vao CUNG
+   * khoang lang (cue 2 trung cue 1: som ~1 doan lap).
+   */
+  function gaUoc(w, st) {
+    const x = gaUoc0(w, st);
+    if (!x) return null;
+    if (CO.gaChiChu && x.nguon !== 'am-chu') return huyGa('can-chu-xac-nhan');
+    const id = st.cue && st.cue.sau;
+    const ref = id && w.byId ? w.byId[id] : null;
+    if (!ref || ref === st) return x;
+    const T = tTuA(x.t, x.a);
+    if (T == null) return x;
+    const Tref = ref.tt === 'da' && ref.T != null ? ref.T : (ref.Tp != null ? ref.Tp : (ref.Tga != null ? ref.Tga : null));
+    if (Tref == null) return huyGa('ref-chua-co-T');
+    let D = 0;
+    const te = w.mong && w.mong.luot;
+    if (te && ref.eK != null && st.eK != null && st.eK > ref.eK) {
+      const b1 = te.bien[ref.eK], b2 = te.bien[st.eK], j = te.cumJ[b2] - te.cumJ[b1];
+      D = S.rJ * j + S.rL * ((te.uP[b2] - te.uP[b1]) - j);
+    }
+    if (T < Tref + Math.max(0.25, 0.5 * D)) return huyGa('truoc-cue-tham-chieu');
+    return x;
+  }
+
   // ------------------------------------------------------------------ cue (§1.6)
   function taoCue(cue, i) {
     const khi = (cue && cue.khi) || {};
@@ -1660,7 +2002,8 @@
   }
   const conSong = (st) => st.tt === 'cho' || st.tt === 'hen';
   function ownT(st) {
-    if (st.Tp != null) return { T: st.Tp, via: st.viaP };
+    if (st.Tp != null) return { T: st.Tp, via: st.viaP };   // [v2] uoc luong dung chu luon thang GA (GA chi khi chu chua khop)
+    if (st.Tga != null) return { T: st.Tga, via: 'amTruoc' };   // [PATCH sync-real] GA: am thanh truoc (chi khi CO.gaAmTruoc)
     if (st.Td != null) return { T: st.Td, via: st.viaD };
     if (st.Tf != null) return { T: st.Tf, via: 'tiLe' };
     if (st.Tdu != null) return { T: st.Tdu, via: 'tiLe' };
@@ -1787,7 +2130,8 @@
     if (CD.canh) cdBao('cue', st.id, { T, via, dur, nen: via === 'nen', con: T - firedCtx });
     const msLam = performance.now() - m0;
     Object.assign(st, { via, firedCtx, firedPerf, T, dur: dur == null ? null : dur, mocT: via === 'khop' ? null : firedCtx + S.LEAD });
-    ghiNhatKy({
+    const gaBan = st.viaO === 'amTruoc' && via !== 'nen';
+    const nk = {
       nhip: w.beat.index, kind: w.kind, id: st.id, loai: st.loai, via, T, firedCtx, firedPerf,
       luot: st.luot, viTri: st.viTri, msLam, canh: w.so, the: w.the, epoch: S.epoch, dur: st.dur, khopPerf: st.khopPerf || null,
       khopCtx: st.khopCtx != null ? st.khopCtx : null, giaiCtx: st.giaiCtx != null ? st.giaiCtx : null,
@@ -1799,7 +2143,13 @@
       leadThuc: via === 'dauTien' && w.denCtx != null && w.Tfirst != null ? Math.min(S.LEAD, w.Tfirst - w.denCtx) : null,
       treBan: via === 'dauTien' && w.denCtx != null ? firedCtx - w.denCtx : null,
       khoa: khoaNk(st), sau: st.cue.sau || null,
-    });
+      // [PATCH sync-real] chan doan: han ban (T - LEAD), ban tre so voi han, luc chu khop so voi han (am = chu toi MUON), leadAm = am thanh da nhan truoc luc dang nghe (giay), nguon GA
+      moc: T - S.LEAD, treMoc: firedCtx - (T - S.LEAD),
+      khopSom: st.khopCtx != null && via !== 'nen' ? (T - S.LEAD) - st.khopCtx : null,
+      leadAm: S.leadNow != null ? +S.leadNow.toFixed(3) : null, Lhoc: +S.L.toFixed(3), nguonGa: st.nguonGa || null,
+    };
+    ghiNhatKy(nk);
+    if (gaBan && st.kh) { st.gaT = T; st.nk = nk; (w.gaCho || (w.gaCho = [])).push(st); }
     sauKhiBan(w, st);
     kiemXong(w);
   }
@@ -1815,7 +2165,8 @@
       khoa: khoaNk(st), sau: st.cue.sau || null,
     });
   }
-  const dieuKien = (k, ref) => !k.neuVia || ref.via === k.neuVia;
+  // [PATCH sync-real v2] cue tham chieu ban bang GA ('amTruoc') coi nhu da khop chu: du phong neuVia:'khop' (V2b) van chay
+  const dieuKien = (k, ref) => !k.neuVia || ref.via === k.neuVia || (k.neuVia === 'khop' && ref.via === 'amTruoc');
   function sauKhiBan(w, st) {
     const goc = st.firedCtx + S.LEAD;
     let doi = false;
@@ -1862,6 +2213,7 @@
     if (!ref || ref === st) return 0;
     if (ref.khopE != null) return cuoiDoc(w, ref);
     if (conSong(ref)) return null;
+    if (ref.viaO === 'amTruoc' && ref.kh && ref.tt === 'da') return null;   // [PATCH sync-real] cue tham chieu ban bang GA: cho chu that gan vi tri (khong doan tu thoi diem ban)
     if (ref.rMoc == null) ref.rMoc = ref.mocT != null ? rTaiT(w, ref.mocT) : 0;
     return ref.rMoc;
   }
@@ -1884,13 +2236,20 @@
   }
   function timKhopCanh(w, het) {
     let doi = false;
+    kiemGa(w, het);   // [PATCH sync-real] cue da ban bang GA: gan khop chu that khi toi (con tro cho cue `sau`) + dem mau thuan
     for (const st of w.cues) {
       if (!conSong(st)) continue;
+      // [PATCH sync-real] khop theo tien to roi: khi ca khoa toi thi nang khopE len het khoa (con tro cho cue `sau` / doc)
+      if (st.pre && st.khopS != null && st.kh) {
+        const h2 = timHits(w, st.kh, st.khopS, false, true).find((x) => x.s === st.khopS);
+        if (h2) { st.khopE = h2.e; st.pre = false; doi = true; }
+      }
       if (st.kh && st.khopS == null && (st.kh.jp.length || st.kh.vn.length)) {
         const tu = tuCua(w, st);
         const h = tu == null ? null : timHits(w, st.kh, tu, het)[(st.khi.lan || 1) - 1];
         if (h) {
           st.khopS = h.s; st.khopE = h.e; st.viaP = 'khop'; st.khopPerf = performance.now(); st.khopCtx = dongHo();
+          st.pre = !!h.pre;
           const t = w.turns[w.rT[h.s]];
           st.luot = t ? t.id : null;
           st.viTri = w.rO[h.s];
@@ -1919,6 +2278,39 @@
     }
     if (doi) giaiLai(w);
   }
+  /**
+   * [PATCH sync-real] Doi chieu cue da ban bang GA (via 'amTruoc') voi uoc luong DUNG CHU khi chu toi: ghi vao nhat ky
+   * (gaTextT, gaSai) va dem MAU THUAN (|T_ga - T_chu| > 0.4 s). Tu 3 mau thuan trong 20 quyet dinh gan nhat: tat GA ca phien.
+   */
+  function kiemGa(w, het) {
+    if (!w.gaCho || !w.gaCho.length) return;
+    const con = [];
+    for (const st of w.gaCho) {
+      const tu = tuCua(w, st);
+      const h = tu == null ? null : timHits(w, st.kh, tu, !!het, true)[((st.khi && st.khi.lan) || 1) - 1];
+      const x = h ? viTriA(w, h.s, true, false) : null;
+      if (!x || (x.nguon === 'uoc' && !het)) { con.push(st); continue; }
+      const Tt = tTuA(x.t, x.a);
+      if (Tt == null) { con.push(st); continue; }
+      const sai = st.gaT - Tt;
+      const mau = Math.abs(sai) > 0.4;
+      if (st.khopS == null) { st.khopS = h.s; st.khopE = h.e; st.luot = x.t.id; st.viTri = w.rO[h.s]; st.khopCtx = dongHo(); }   // con tro cho cue `sau` / karaoke
+      if (st.nk) { st.nk.viTri = st.viTri; st.nk.luot = st.luot; st.nk.gaTextT = Tt; st.nk.gaSai = +sai.toFixed(3); st.nk.gaTextNguon = x.nguon; }
+      const gk = gaKind(w.kind);
+      // [v2] trong so: GA som 0.4-2 s so voi chu = thuong la lan doc dau bi ghi sai (cue khop lan doc sau) -> 0.5; GA tre > 0.4 s hoac som > 2 s -> 1
+      const trongSo = !mau ? 0 : (sai > 0 || sai < -2 ? 1 : 0.5);
+      gk.hist.push(trongSo);
+      if (gk.hist.length > 20) gk.hist.shift();
+      S.ga.hist.push(trongSo);
+      if (S.ga.hist.length > 20) S.ga.hist.shift();
+      ghiChanDoan('ga', { nhip: w.beat.index, id: st.id, T: st.gaT, Ttext: Tt, sai, mau, nguonGa: st.nguonGa || null, nguonText: x.nguon });
+      if (!gk.tat && gk.hist.reduce((a, b) => a + b, 0) >= 3) {
+        gk.tat = true;
+        ghiChanDoan('ga', { tat: true, kind: w.kind, ly: 'mau thuan >= 3 / 20 quyet dinh', nhip: w.beat.index });
+      }
+    }
+    w.gaCho = con;
+  }
   /** Tinh lai thoi diem cho moi cue da khop chu nhung chua ban (co goi am moi / L moi) */
   function giaiLai(w) {
     for (const st of w.cues) {
@@ -1929,6 +2321,13 @@
         if (st.Tp != null && st.giaiCtx == null) st.giaiCtx = dongHo();   // chan doan: luc biet T lan dau
       }
       else if (st.cumI != null) st.Tp = viTriT(w, st.cumI, true, true);
+      // [PATCH sync-real] GA: chu chua toi -> uoc luong tu am thanh + kich ban ky vong (CO.gaAmTruoc, mac dinh tat)
+      if (CO.gaAmTruoc && !gaTat(w.kind) && st.cumI == null && st.kh && GA.loai.has(st.loai) && S.che === 'giang' && st.khopS == null) {
+        let x = null;
+        try { if (w.mong === undefined) w.mong = mongTuBeat(w); x = w.mong ? gaUoc(w, st) : null; } catch (e) { canhBao('gaUoc', e); }
+        const T = x ? tTuA(x.t, x.a) : null;
+        if (T != null) { if (st.Tga == null) st.giaiGa = dongHo(); st.Tga = T; st.nguonGa = x.nguon; } else st.Tga = null;
+      }
       if (st.dpS != null && st.khopS == null) {
         const T = viTriT(w, st.dpS, true, false);
         st.Td = T != null ? T + ((st.dp && st.dp.ms) || 0) / 1000 : null;
@@ -2744,9 +3143,13 @@
     if (!lop || !document.body.classList.contains('co-meo')) return null;
     let sr = 0, sc = 0;
     try {
-      const cs = getComputedStyle(document.documentElement);
-      sr = parseFloat(cs.getPropertyValue('--sensei-rong')) || 0;
-      sc = parseFloat(cs.getPropertyValue('--sensei-cao')) || 0;
+      // (hieu nang) doc bien do meo (sensei-cat-video.js datChoTrong) tu style INLINE cua <html>: khong ep tinh lai style ca trang
+      // (getComputedStyle sau khi doi bien tren :root = ~50 ms / lan o may yeu); giu getComputedStyle khi inline trong (bien khai bao noi khac)
+      const ro = document.documentElement.style;
+      let vr = ro.getPropertyValue('--sensei-rong'), vc = ro.getPropertyValue('--sensei-cao');
+      if (!vr || !vc) { const cs = getComputedStyle(document.documentElement); vr = cs.getPropertyValue('--sensei-rong'); vc = cs.getPropertyValue('--sensei-cao'); }
+      sr = parseFloat(vr) || 0;
+      sc = parseFloat(vc) || 0;
     } catch (e) {}
     if (!sr || !sc) return null;
     const r = lop.getBoundingClientRect();
@@ -2764,8 +3167,11 @@
     LEAD: LEAD_CD,
     bayGio: () => dongHo(),
     meo: () => cdMeo(),
-    /** coMeo(k): xin co meo k (1 = chuan; > 1 khi goc phai duoi con trong). Tra ve hop meo moi (nhu meo()) */
-    coMeo: (k) => { cdCoMeo(k); return cdMeo(); },
+    /** coMeo(k): xin co meo k (1 = chuan; > 1 khi goc phai duoi con trong). KHONG tra gia tri: (hieu nang) cdMeo() ep style + bo cuc ca trang
+     *  ngay sau khi doi bien :root (~50 ms x 2-3 lan / nhip o may yeu) va khong che do nao dung hop tra ve. Can hop meo moi: meo() sau khi bo cuc on dinh,
+     *  hoac coMeoDo(k) (hanh vi cu: dat co roi tra ve hop meo, ep bo cuc) */
+    coMeo: (k) => { cdCoMeo(k); },
+    coMeoDo: (k) => { cdCoMeo(k); return cdMeo(); },
     khung: () => { const l = CD.lop; return l ? { w: l.clientWidth, h: l.clientHeight } : { w: 0, h: 0 }; },
     esc,
     /** Doan chu co tieng Nhat: boc moi cum Nhat trong <span lang="ja"> (da escape) */
@@ -3646,6 +4052,13 @@
     if (typeof b64 === 'string' && b64) t.env.push({ t0: T0, a0: t.A, a1: t.A + dur, db: baoHinh(t, b64) });
     t.A += dur;
     if (t.Tfirst == null) t.Tfirst = T0;
+    // [PATCH sync-real] chan doan lead: am thanh da nhan - am thanh da nghe (giay); gioi han, khong anh huong hanh vi
+    try {
+      const lead = t.A - (dongHo() - t.Tfirst);
+      S.leadNow = lead;
+      (t.leadDs || (t.leadDs = [])).push(lead);
+      ghiChanDoan('lead', [t.id, +t.A.toFixed(3), +lead.toFixed(3)]);
+    } catch (e) {}
     if (t.giu) return;   // tam: chua biet cua luot nao -> chua giai cue (§1.5.2)
     if (w.Tfirst == null) { w.Tfirst = T0; khiAmDau(w); }
     giaiLai(w);
@@ -3682,7 +4095,9 @@
     t.frags.push({ u1: t.uP[t.uP.length - 1], A: t.A, qEnd: Number(qEnd) || 0, perf: performance.now(), off: t.raw.length });
     if (CD.canh) cdBao('loi', String(doan), t.raw, { luot: t.id });
     if (t.giu) return;
+    const doiL = hocLSom(w, t);   // [PATCH sync-real] hoc L ngay trong luot dau cua phien
     timKhopCanh(w, false);
+    if (doiL) giaiLai(w);
   }
   function khiTuNgat() {
     const w = S.canh;
@@ -3732,7 +4147,21 @@
     t.xong = true;
     const cuoi = t.chunks[t.chunks.length - 1];
     t.Tend = S.wall ? (cuoi ? cuoi.t1 : dongHo()) : (Number(tEnd) > 0 ? Number(tEnd) : (cuoi ? cuoi.t1 : dongHo()));
+    const dLtruoc = S.L, soHocTruoc = S.soHoc;
     hocLuot(w, t);
+    if (w.kind === 'vocab') hocDocLan(t);   // [PATCH sync-real] GA: hoc so lan doc lap lai
+    // [PATCH sync-real] chan doan moi luot: L / r hoc duoc, lead (min / trung vi / max), do tre dau ra, so manh / goi
+    try {
+      const ld = (t.leadDs || []).slice().sort((a, b) => a - b);
+      const a0 = ae(), c0 = a0 && a0.outCtx;
+      ghiChanDoan('luot', {
+        nhip: w.beat.index, kind: w.kind, luot: t.id, A: +t.A.toFixed(3), Tfirst: t.Tfirst, soManh: t.frags.length, soGoi: t.chunks.length,
+        hocLan: soHocTruoc, Ltruoc: +dLtruoc.toFixed(3), L: +S.L.toFixed(3), r: +S.r.toFixed(4), rV: +S.rV.toFixed(4), rJ: +S.rJ.toFixed(4), rL: +S.rL.toFixed(4),
+        leadMin: ld.length ? +ld[0].toFixed(3) : null, leadMed: ld.length ? +ld[ld.length >> 1].toFixed(3) : null, leadMax: ld.length ? +ld[ld.length - 1].toFixed(3) : null,
+        outLat: c0 && c0.outputLatency != null ? +c0.outputLatency.toFixed(4) : null, baseLat: c0 && c0.baseLatency != null ? +c0.baseLatency.toFixed(4) : null,
+        denTreAm: w.denCtx != null && w.Tfirst != null ? +(w.Tfirst - w.denCtx).toFixed(4) : null, wall: !!S.wall, ga: gaTat(w.kind) ? 'tat' : (CO.gaAmTruoc ? 'bat' : 'khong'),
+      });
+    } catch (e) {}
     timKhopCanh(w, true);
     giaiLai(w);
     // Du phong 3 (§1.6.4.3): chi khi nhip co tieng (khong thi cho luot noi tiep / nen)
@@ -4026,6 +4455,11 @@
   window.SenseiMotion = API;
   window.__motion = {
     nhatKy: () => S.nhatKy.slice(),
+    // [PATCH sync-real] chan doan dong bo: lead theo goi [luot, A, lead], tong ket theo luot, quyet dinh GA; co thu nghiem
+    chanDoan: () => ({ lead: S.chanDoan.lead.slice(), luot: S.chanDoan.luot.slice(), ga: S.chanDoan.ga.slice(), co: Object.assign({}, CO), gaTat: S.ga.tat, gaTatLoai: Object.keys(S.ga.k).filter((k) => S.ga.k[k].tat), gaHist: S.ga.hist.slice(), gaLy: Object.assign({}, S.ga.ly), leadNow: S.leadNow }),
+    datCo(o) { o = o || {}; if ('gaAmTruoc' in o) CO.gaAmTruoc = !!o.gaAmTruoc; if ('khopTienTo' in o) CO.khopTienTo = !!o.khopTienTo; if ('gaChiChu' in o) CO.gaChiChu = !!o.gaChiChu; if (o.gaBat) { S.ga.tat = false; S.ga.hist.length = 0; S.ga.k = {}; } return Object.assign({}, CO); },
+    kichBanNhip: (beat, opt) => kichBanNhip(beat, opt),
+    xoaChanDoan() { S.chanDoan.lead.length = 0; S.chanDoan.luot.length = 0; S.chanDoan.ga.length = 0; },
     cues: () => {
       const w = S.canh;
       if (!w) return [];

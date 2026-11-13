@@ -300,7 +300,7 @@
     const kh = tinhKhung(W, H);
     m.kh = kh; m.W = W; m.H = H;
     const k = H / 1080;                            // thang thong nhat theo chieu cao (khong meo hinh) - nhu h.js dungNen
-    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    const dpr = Math.min(window.devicePixelRatio || 1, window.SenseiLite && window.SenseiLite.on ? 1 : 1.5);   // che do nhe: ha DPR lop nen (cung quy tac voi h.js dprNen)
     const key = Math.round(k * 1000) + ':' + dpr;
     if (CACHE.key !== key) { xoaCache(); CACHE.key = key; }
     const tilePx = Math.round(TILE_D * k);
