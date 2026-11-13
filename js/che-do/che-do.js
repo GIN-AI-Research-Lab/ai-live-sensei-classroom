@@ -24,6 +24,89 @@
 (function () {
   'use strict';
 
+  // ---- Tailwind (vendor/tailwind.js, ban Play CDN): sau MOI dot doi DOM / lop no quet lai moi phan tu [class] cua trang, va gap ten lop moi
+  // thi chay lai ca duong ong sinh CSS roi ghi lai <style> -> trinh duyet tinh lai style CA TRANG (do: perf.mjs + trace, ~12 lan / 45 s giang,
+  // moi lan 50-250 ms tren may yeu; ngat quan sat cua no luc giang: tac vu dai giam 30-45 %). San khau giang (#sanKhauGiang, gom lop che do)
+  // chi dung lop tu viet (giao cua ten lop san khau voi CSS Tailwind da sinh = rong, do tren N5-1 o ca hai che do), nen loai no khoi lan quet
+  // [class] cua Tailwind; phan con lai cua trang (thanh, luoi bai, thong bao) van duoc quet nhu cu. Chi tac dong len querySelectorAll('[class]') cua document.
+  try {
+    const qsGoc = Document.prototype.querySelectorAll;
+    Document.prototype.querySelectorAll = function (s) {
+      const r = qsGoc.apply(this, arguments);
+      if (s !== '[class]' || this !== document) return r;
+      const san = document.getElementById('sanKhauGiang');
+      return san ? Array.prototype.filter.call(r, (e) => !san.contains(e)) : r;
+    };
+  } catch (e) { /* khong chan viec nap che do */ }
+
+  // ---- CHE DO NHE (window.SenseiLite, <html class="lite">): may yeu / man dpi cao cpu nho tu bo cac hieu ung ton kem (bong do, DPR cao cua meo va lop nen,
+  // hat bui, do chu chinh xac toi tung px...) — KHONG doi bo cuc / noi dung. Tren may khoe khong doi gi.
+  //   ?lite=1 / ?lite=0 ep bat / tat (khong do tu dong). Mac dinh: (1) goi y thiet bi luc tai trang (deviceMemory <= 2, hardwareConcurrency <= 2,
+  //   hoac dpr >= 2.5 ma cpu <= 4 nhan) bat ngay; (2) khong thi do CHI PHI MOI KHUNG cua luong chinh trong luc giang: tu rAF den tac vu ke tiep
+  //   (MessageChannel) = thoi gian render + cac tac vu chen vao khung (khong phu thuoc tan so quet man hinh: man 30 Hz khong bi coi la cham).
+  //   Do tren harness: cpu x1 p75 0,8-2,4 ms; cpu x4 mac dinh 5,9 / bang den 12,4 / giay cat 17,2 ms. p75 cua 4 s gan nhat > 7 ms, 3 lan lien tiep
+  //   (moi giay mot lan, bo 3 s dau cua buoi giang) -> bat; hoac khung hinh tre (p95 khoang cach rAF > 28 ms) kem p75 chi phi > 4 ms.
+  //   Da bat thi giu den khi tai lai trang (khong nhap nhay). Chan doan: window.SenseiLite.stats(), window.__motion.lite.
+  const LITE = (() => {
+    const L = { on: false, lyDo: '', ep: null, batLuc: 0, p95: 0, p75: 0, mau: 0, lienTiep: 0, vong: false };
+    try { const v = new URLSearchParams(location.search).get('lite'); if (v === '1' || v === 'true') L.ep = true; else if (v === '0' || v === 'false') L.ep = false; } catch (e) { /* bo qua */ }
+    const bat = (lyDo) => {
+      if (L.on) return;
+      L.on = true; L.lyDo = lyDo; L.batLuc = Math.round(performance.now());
+      try { document.documentElement.classList.add('lite'); } catch (e) { /* bo qua */ }
+      try { window.dispatchEvent(new CustomEvent('sensei-lite', { detail: { lyDo } })); } catch (e) { /* bo qua */ }
+    };
+    const NGUONG_CHI_PHI_MS = 7, NGUONG_TRE_MS = 28, NGUONG_CHI_PHI_PHU_MS = 4, CUA_SO_MS = 4000, BO_QUA_DAU_MS = 3000, LAN_LIEN_TIEP = 3;
+    const dangGiangNay = () => !!(document.body && document.body.classList.contains('dang-giang')) && !document.hidden;
+    // vong rAF chi chay luc dang giang (ngoai ra khong ton gi); tu dung khi het giang / da bat nhe
+    function vongDo() {
+      if (L.vong || L.on) return;
+      L.vong = true;
+      const ring = [];   // [thoi diem rAF, khoang cach tu rAF truoc, chi phi khung]
+      let truoc = 0, danh = 0, bd = 0, t0 = 0, cuoi = null;
+      const mc = new MessageChannel();
+      mc.port1.onmessage = () => { if (cuoi) cuoi[2] = performance.now() - t0; };
+      const q = (a, p) => { const b = a.slice().sort((x, y) => x - y); return b[Math.min(b.length - 1, Math.floor(b.length * p))]; };
+      const tick = (t) => {
+        if (L.on || !dangGiangNay()) { L.vong = false; L.lienTiep = 0; try { mc.port1.close(); } catch (e) { /* bo qua */ } return; }
+        requestAnimationFrame(tick);
+        if (!bd) bd = t;
+        const dt = truoc ? t - truoc : 0;
+        truoc = t;
+        cuoi = [t, dt, 0];
+        if (dt < 2000) ring.push(cuoi); else cuoi = null;
+        t0 = performance.now(); mc.port2.postMessage(0);
+        while (ring.length && t - ring[0][0] > CUA_SO_MS) ring.shift();
+        if (t - danh < 1000) return;
+        danh = t;
+        if (t - bd < BO_QUA_DAU_MS || ring.length < 50) return;
+        const cp = ring.map((x) => x[2]), kc = ring.map((x) => x[1]);
+        L.p75 = q(cp, 0.75); L.p95 = q(kc, 0.95); L.mau = ring.length;
+        if (L.p75 > NGUONG_CHI_PHI_MS || (L.p95 > NGUONG_TRE_MS && L.p75 > NGUONG_CHI_PHI_PHU_MS)) L.lienTiep++; else L.lienTiep = 0;
+        if (L.lienTiep >= LAN_LIEN_TIEP) bat('chi phi khung cao: p75 ' + L.p75.toFixed(1) + ' ms, khoang cach p95 ' + Math.round(L.p95) + ' ms / ' + ring.length + ' khung');
+      };
+      requestAnimationFrame(tick);
+    }
+    if (L.ep === true) bat('url ?lite=1');
+    else if (L.ep === null) {
+      const hc = navigator.hardwareConcurrency || 0, mem = navigator.deviceMemory || 0, dpr = window.devicePixelRatio || 1;
+      if (mem && mem <= 2) bat('deviceMemory ' + mem + ' GB');
+      else if (hc && hc <= 2) bat('hardwareConcurrency ' + hc);
+      else if (dpr >= 2.5 && hc && hc <= 4) bat('dpr ' + dpr + ' + ' + hc + ' nhan cpu');
+      else setInterval(() => { if (!L.on && !L.vong && dangGiangNay()) vongDo(); }, 1000);
+    }
+    const api = {
+      get on() { return L.on; },
+      get lyDo() { return L.lyDo; },
+      bat,
+      stats: () => ({ on: L.on, lyDo: L.lyDo, ep: L.ep, batLuc: L.batLuc, chiPhiP75: Math.round(L.p75 * 10) / 10, treP95: Math.round(L.p95 * 10) / 10, mau: L.mau, lienTiep: L.lienTiep,
+        cpu: navigator.hardwareConcurrency || 0, ram: navigator.deviceMemory || 0, dpr: window.devicePixelRatio || 1 }),
+    };
+    window.SenseiLite = api;
+    try { if (window.__motion && !('lite' in window.__motion)) Object.defineProperty(window.__motion, 'lite', { get: () => api.stats(), enumerable: true, configurable: true }); } catch (e) { /* bo qua */ }
+    return L;
+  })();
+
   const KHOA_LUU = 'sensei_che_do';
   const CHO_TOI_DA = 2500;   // startLecture khong doi lau hon (mang cham): che do bat tu nhip sau khi nap xong
   const DS = [
@@ -314,9 +397,37 @@
   };
   window.SenseiCheDo = API;
 
+  // ---- Phong chu CHUNG (Noto Serif / Sans JP, Inter: luoi bai + san khau mac dinh, van dung duoi moi che do): nap truoc moi manh unicode-range
+  // cua bai ngay khi mo bai. Khong nap thi tung manh tai GIUA buoi giang, moi manh tai xong = trinh duyet tinh lai style + bo cuc ca trang
+  // (do: tools/che-do/khung/perf.mjs, khung tre 0,3-1,3 s tren may yeu, trung khit thoi diem su kien fonts loading / loadingdone).
+  const FONT_CHUNG = new Set();
+  const FONT_KY_HIEU = '✓✗⚠∧';   // dau tich / sai / canh bao trong giao dien (khong nam trong json bai): chung mot manh Noto Sans JP voi chu Han hiem
+  function napFontChung() {
+    try {
+      const se = window.__slideEngine, F = document.fonts;
+      if (!se || !se.loader || !F || !F.load || !se.currentLevel || typeof se.loader.ensureLessonLoaded !== 'function') return;
+      const lvl = se.currentLevel, no = se.currentLesson, key = lvl + '-' + no;
+      if (FONT_CHUNG.has(key)) return;
+      FONT_CHUNG.add(key);
+      se.loader.ensureLessonLoaded(lvl, no).then(() => {
+        const bai = se.loader.getLesson(lvl, no);
+        if (!bai) return;
+        let s = '';
+        try { s = JSON.stringify([bai.title, bai.vocabList, bai.kanjiList, bai.slides, bai.dialogue, bai.exercises]); } catch (e) { return; }
+        const jp = Array.from(new Set(s.match(/[　-ヿ㐀-鿿豈-﫿＀-￯]/g) || [])).join('') + 'Aa' + FONT_KY_HIEU;
+        const la = Array.from(new Set(s.match(/[^\u0000-\u007f　-ヿ㐀-鿿豈-﫿＀-￯]/g) || [])).join('') + 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const lay = (f, t) => { try { F.load(f, t).catch(() => {}); } catch (e) {} };
+        lay('700 32px "Noto Serif JP"', jp);
+        ['400', '500', '700'].forEach((w) => lay(w + ' 32px "Noto Sans JP"', jp));
+        ['400', '500', '600', '700'].forEach((w) => lay(w + ' 32px "Inter"', la));
+      }).catch(() => { FONT_CHUNG.delete(key); });
+    } catch (e) { canhBao('napFontChung', e); }
+  }
+
   /** app.js (openLesson / startLecture): nap tep cua lua chon hien tai (toi da 2,5 s, khong bao gio reject) —
    *  nhip dau tien cua bai giang dung che do do. Tra Promise<id | null> (null = mac dinh). */
   API.apDung = function () {
+    napFontChung();
     try {
       const p = nap(st.muon).then((ok) => { if (ok && !dangGiang()) apLuaChon(); return st.dang === 'mac-dinh' ? null : st.dang; });
       const han = new Promise((r) => setTimeout(() => r(null), CHO_TOI_DA));

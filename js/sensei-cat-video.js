@@ -1102,7 +1102,9 @@
     if (x instanceof Element) return x;
     return window.__slideEngine?.resolveElement?.(x) || document.getElementById(x);
   }
-  const dprLaser = () => Math.min(devicePixelRatio || 1, 1.5);
+  // Che do nhe (window.SenseiLite, js/che-do/che-do.js): may yeu / dpi cao cpu nho -> ha DPR canvas meo + laser (khong doi bo cuc)
+  const nhe = () => !!(window.SenseiLite && window.SenseiLite.on);
+  const dprLaser = () => Math.min(devicePixelRatio || 1, nhe() ? 1 : 1.5);
   function xoaLaser() {
     if (!laserBan) return;
     ctx2d.clearRect(0, 0, laser.width, laser.height);
@@ -1376,7 +1378,7 @@
     hop.style.width = rong + 'px'; hop.style.height = cao + 'px';
     if (gl) {
       // Khong ve net hon clip goc (540 px): may tu phong to phan con lai
-      const cw = Math.min(540, Math.round(rong * Math.min(devicePixelRatio || 1, 2)));
+      const cw = Math.min(540, Math.round(rong * Math.min(devicePixelRatio || 1, nhe() ? 1.25 : 2)));
       const ch = Math.round(cw / TI_LE);
       if (khung.width !== cw || khung.height !== ch) { khung.width = cw; khung.height = ch; S.veLai = true; henVe(); }
     }
@@ -1414,6 +1416,7 @@
       document.head.appendChild(st);
     }
     addEventListener('resize', doiCo);
+    addEventListener('sensei-lite', doiCo);   // vua chuyen sang che do nhe: ha DPR canvas ngay
     const theoDpr = () => matchMedia(`(resolution: ${devicePixelRatio}dppx)`)
       .addEventListener?.('change', () => { doiCo(); theoDpr(); }, { once: true });
     theoDpr();

@@ -3202,6 +3202,8 @@ Mặt mèo tự đổi sang ${matCham} lúc bắt đầu nói — không cần g
 
   function setWaveformActive(active) {
     const bars = document.querySelectorAll('.wave-bar');
+    // .deck-wave.is-song: CSS an song am khi im (thay :has(.wave-bar.active) — :has() lam trinh duyet tinh lai style nhieu hon can)
+    document.querySelectorAll('.deck-wave').forEach(w => w.classList.toggle('is-song', !!active));
     bars.forEach(b => {
       if (active) {
         b.classList.add('active');
@@ -3523,7 +3525,7 @@ Mặt mèo tự đổi sang ${matCham} lúc bắt đầu nói — không cần g
     const timer = setTimeout(() => ctrl.abort(), 30000);
     try {
       const res = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/${model}:generateContent?key=${apiKey}`,
+        `${(window.SENSEI_ENV && window.SENSEI_ENV.restBase || 'https://generativelanguage.googleapis.com')}/v1beta/${model}:generateContent?key=${apiKey}`,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -4282,7 +4284,7 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
         const timer = setTimeout(() => ctrl.abort(), 30000);
         try {
           const res = await fetch(
-            'https://generativelanguage.googleapis.com/v1beta/' + model + ':generateContent?key=' + key,
+            (window.SENSEI_ENV && window.SENSEI_ENV.restBase || 'https://generativelanguage.googleapis.com') + '/v1beta/' + model + ':generateContent?key=' + key,
             {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
@@ -4942,7 +4944,7 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     const timer = setTimeout(() => ctrl.abort(), 45000);
     try {
       const res = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/${model}:generateContent?key=${apiKey}`,
+        `${(window.SENSEI_ENV && window.SENSEI_ENV.restBase || 'https://generativelanguage.googleapis.com')}/v1beta/${model}:generateContent?key=${apiKey}`,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -5431,6 +5433,13 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
   };
 
   const pickerEl = document.getElementById('lessonPicker');
+  // body.picker-mo = man chon bai dang mo (styles.css: thong bao xuong day). Thay body:has(#lessonPicker:not(.hidden)) — :has() cap body
+  // bat trinh duyet tinh lai style ca trang moi lan do chu trong san khau. Observer chay microtask -> lop sang truoc khi ve.
+  if (pickerEl && window.MutationObserver) {
+    const dongBoPicker = () => document.body.classList.toggle('picker-mo', !pickerEl.classList.contains('hidden'));
+    dongBoPicker();
+    new MutationObserver(dongBoPicker).observe(pickerEl, { attributes: true, attributeFilter: ['class'] });
+  }
   const pickerBody = document.getElementById('pickerBody');
   const pickerBtn = document.getElementById('pickerBtn');
   const pickerCloseBtn = document.getElementById('pickerCloseBtn');

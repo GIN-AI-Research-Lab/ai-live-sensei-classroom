@@ -194,7 +194,7 @@ ruby rt {
   background: var(--paper-deep);
   transition: opacity .2s var(--ease-out);
 }
-.deck-wave:not(:has(.wave-bar.active)) { opacity: 0; }
+.deck-wave:not(.is-song) { opacity: 0; }   /* .is-song: do setWaveformActive (app.js), thay :has(.wave-bar.active) */
 /* Vach cao co dinh, chi co gian bang transform: khong tinh lai bo cuc moi khung hinh */
 .wave-bar {
   width: 3px; height: 18px;
@@ -622,7 +622,7 @@ body:not([data-tab="grammar"]) .deck-nav { display: none; }
   pointer-events: none;
 }
 /* Man chon bai dang mo: thong bao xuong day, khong de len o tim bai */
-body:has(#lessonPicker:not(.hidden)) .deck-toasts {
+body.picker-mo .deck-toasts {   /* body.picker-mo: do app.js (thay :has() — :has() cap body lam tinh lai style ca trang moi lan do chu) */
   top: auto; bottom: calc(16px + env(safe-area-inset-bottom, 0px));
   flex-direction: column-reverse;
 }

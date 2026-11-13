@@ -604,7 +604,11 @@
   }
 
   const QS = (() => { try { return new URLSearchParams(location.search); } catch (e) { return new URLSearchParams(''); } })();
-  const DRIFT = QS.get('hDrift') !== '0';
+  const DRIFT0 = QS.get('hDrift') !== '0';
+  // Che do nhe (window.SenseiLite, js/che-do/che-do.js): may yeu / dpi cao cpu nho -> bo troi may quay lien tuc (moi khung ghi transform 8 lop nen), ha DPR lop nen
+  const nhe = () => !!(window.SenseiLite && window.SenseiLite.on);
+  const DRIFT = () => DRIFT0 && !nhe();
+  const dprNen = () => Math.min(window.devicePixelRatio || 1, nhe() ? 1 : 1.5);
   // ================================================================== DIORAMA (lop nen parallax, ve 1 lan bang canvas -> anh lap)
   function rng(seed) {
     let a = seed | 0;
@@ -852,15 +856,23 @@
     def(g, tmp, k * dpr);
     return new Promise((ok) => main.toBlob((b) => ok(b ? URL.createObjectURL(b) : null), 'image/png'));
   }
+  // nen idle (js/che-do/h-tinh.js) da ve san 7 lop cung khoa -> dung lai: khong ve lai, khong "troi phang" luc bat dau giang
+  function muonTinh(key) {
+    try {
+      const ti = window.SenseiCheDoTinh && window.SenseiCheDoTinh.h && window.SenseiCheDoTinh.h.anh && window.SenseiCheDoTinh.h.anh();
+      if (ti && ti.key === key) Object.keys(ti.url).forEach((t) => { if (ti.url[t] && !LOP_ANH.url[t]) LOP_ANH.url[t] = ti.url[t]; });
+    } catch (e) { /* bo qua */ }
+  }
   function dungNen() {
     const k = st.H / 1080;                       // thang thong nhat theo chieu cao (khong meo hinh)
-    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    const dpr = dprNen();
     const key = Math.round(k * 1000) + ':' + dpr;
     if (LOP_ANH.key !== key) {
       // doi co: thu hoi cac blob PNG cua co cu (truoc day moi co moi giu them ~7 blob / 0,9 MB cho toi khi tai lai trang)
       Object.keys(LOP_ANH.url).forEach((t) => { const u = LOP_ANH.url[t]; if (u) { try { URL.revokeObjectURL(u); } catch (e) { /* bo qua */ } } });
       LOP_ANH.key = key; LOP_ANH.url = Object.create(null); LOP_ANH.cho = Object.create(null);
     }
+    muonTinh(key);
     const tilePx = Math.round(TILE_D * k);
     const out = [];
     const them = (ten, f, z) => {
@@ -870,8 +882,8 @@
       el.style.width = (tilePx + st.W + 4) + 'px';
       el.style.backgroundSize = tilePx + 'px ' + st.H + 'px';
       const info = { el, f, tile: tilePx, ten };
-      const gan = (u) => { if (u && info.el.isConnected) { info.el.style.backgroundImage = 'url(' + u + ')'; G.to(info.el, { opacity: 1, duration: giam() ? 0.01 : 0.35, ease: 'none', overwrite: 'auto' }); } };
-      if (LOP_ANH.url[ten]) gan(LOP_ANH.url[ten]);
+      const gan = (u, ngay) => { if (u && info.el.isConnected) { info.el.style.backgroundImage = 'url(' + u + ')'; G.to(info.el, { opacity: 1, duration: giam() || ngay ? 0.01 : 0.35, ease: 'none', overwrite: 'auto' }); } };
+      if (LOP_ANH.url[ten]) gan(LOP_ANH.url[ten], true);
       else if (LOP_ANH.cho[ten]) LOP_ANH.cho[ten].then(gan);      // dang ve san luc ranh (veSanNen): gan ngay khi xong, khong doi them
       else {
         // moi lop ve o mot khung rieng (cach nhau 0.25 s): khong don mot cu giat o nhip dau
@@ -896,11 +908,12 @@
     if (QS.get('hLop') === '0' || document.hidden || L) return;     // L: san khau dang chay (dungNen lo)
     const dc = document.querySelector('.deck-canvas'), H = dc ? dc.clientHeight : 0;
     if (!(H > 200)) { if (PRE.n++ < 6) setTimeout(veSanNen, 3000); return; }
-    const k = H / 1080, dpr = Math.min(window.devicePixelRatio || 1, 1.5), key = Math.round(k * 1000) + ':' + dpr;
+    const k = H / 1080, dpr = dprNen(), key = Math.round(k * 1000) + ':' + dpr;
     if (LOP_ANH.key !== key) {
       Object.keys(LOP_ANH.url).forEach((t) => { const u = LOP_ANH.url[t]; if (u) { try { URL.revokeObjectURL(u); } catch (e) { /* bo qua */ } } });
       LOP_ANH.key = key; LOP_ANH.url = Object.create(null); LOP_ANH.cho = Object.create(null);
     }
+    muonTinh(key);
     const ds = F_LOP.map((x) => x[0]).concat(['truoc']).filter((t) => !LOP_ANH.cho[t] && !LOP_ANH.url[t]);
     const ranh = (f) => { try { if (window.requestIdleCallback) window.requestIdleCallback(f, { timeout: 2000 }); else setTimeout(f, 150); } catch (e) { setTimeout(f, 150); } };
     let i = 0;
@@ -943,7 +956,7 @@
     if (nhanh || giam()) {
       st.cam.x = x1 - troiPx(); st.cam.y = 0;
       apCam();
-      if (!giam() && DRIFT) {
+      if (!giam() && DRIFT()) {
         G.to(st.cam, { x: x1 + troiPx(), duration: 14, ease: 'none', onUpdate: camSujo });
         G.fromTo(st.cam, { y: 0 }, { y: -9, duration: 12, ease: 'sine.inOut', onUpdate: camSujo });
       }
@@ -954,14 +967,14 @@
       st.cam.x = x1 - troiPx(); st.cam.y = CAM.crane;
       apCam();
       G.to(st.cam, { y: 0, duration: CAM.craneDur, ease: 'power2.out', onUpdate: camSujo });
-      if (DRIFT) G.to(st.cam, { x: x1 + troiPx(), duration: 14, ease: 'none', onUpdate: camSujo });
-      if (DRIFT) G.to(st.cam, { y: -9, duration: 12, ease: 'sine.inOut', delay: CAM.craneDur, onUpdate: camSujo });
+      if (DRIFT()) G.to(st.cam, { x: x1 + troiPx(), duration: 14, ease: 'none', onUpdate: camSujo });
+      if (DRIFT()) G.to(st.cam, { y: -9, duration: 12, ease: 'sine.inOut', delay: CAM.craneDur, onUpdate: camSujo });
       return;
     }
     G.to(st.cam, { x: x1 - troiPx(), duration: CAM.dur, ease: CAM.ease, onUpdate: camSujo });
     G.to(st.cam, { y: 0, duration: CAM.dur, ease: CAM.ease, onUpdate: camSujo });
-    if (DRIFT) G.to(st.cam, { x: x1 + troiPx(), duration: 14, ease: 'none', delay: CAM.dur, onUpdate: camSujo });
-    if (DRIFT) G.to(st.cam, { y: -9, duration: 12, ease: 'sine.inOut', delay: CAM.dur, onUpdate: camSujo });
+    if (DRIFT()) G.to(st.cam, { x: x1 + troiPx(), duration: 14, ease: 'none', delay: CAM.dur, onUpdate: camSujo });
+    if (DRIFT()) G.to(st.cam, { y: -9, duration: 12, ease: 'sine.inOut', delay: CAM.dur, onUpdate: camSujo });
   }
   /** Canh moi o toa do the gioi k*W; canh cu go sau khi may quay da roi di */
   function canhMoi(nh, opt) {

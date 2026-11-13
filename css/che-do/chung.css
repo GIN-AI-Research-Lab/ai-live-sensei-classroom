@@ -103,3 +103,7 @@
 @media (max-width: 640px) {
   .cd-menu .cd-muc { min-height: 40px; }
 }
+
+/* ---------------------------------------------------------------- CHE DO NHE (html.lite, bat boi js/che-do/che-do.js LITE: may yeu / dpi cao cpu nho) */
+/* Giay cat lop: bo bong do drop-shadow hai tang cua nhan treo / hoa / ruy (filter ton kem khi ve lai moi khung may quay troi) */
+html.lite .cd-lop[data-che-do="h"] { --h-bong-f: none; }
