@@ -31,8 +31,11 @@ MAX_BODY = 4 * 1024 * 1024
 WS_MAX_SECONDS = 30 * 60
 WS_PER_IP = 3
 LIMITS = {                       # (so yeu cau, cua so giay)
-    'rest_ip': (40, 60), 'ws_ip': (8, 60),
-    'rest_all': (240, 60), 'ws_all': (40, 60),
+    # ws_ip 8/phut qua chat: app noi lai phien + xoay key khi rot mang de dang
+    # cham nguong -> bat tay bi 429, app bao nham "API Key va mang" (13/11/2026).
+    # 30/phut van du chan quet ket noi, du rong cho hanh vi noi lai hop le.
+    'rest_ip': (40, 60), 'ws_ip': (30, 60),
+    'rest_all': (240, 60), 'ws_all': (120, 60),
 }
 _lich_su = collections.defaultdict(collections.deque)
 _ws_dang_mo = collections.Counter()
