@@ -820,7 +820,7 @@
     cv.style.borderRadius = cs.borderRadius;
     this.fit = cs.objectFit || 'fill';
     var r = cv.getBoundingClientRect(), k = im.offsetWidth ? r.width / im.offsetWidth : 1;
-    var dpr = Math.min(g.devicePixelRatio || 1, 2);
+    var dpr = Math.min(g.devicePixelRatio || 1, 1.5);   // chan dung ve lai moi khung: DPR 2 -> 1.5 cat ~44% pixel ma mat thuong khong nhan ra
     var bw = Math.round(kep(im.offsetWidth * k * dpr, 48, 1000)), bh = Math.round(kep(im.offsetHeight * k * dpr, 48, 1000));
     if (cv.width !== bw || cv.height !== bh) { cv.width = bw; cv.height = bh; }
     this.k = k;
@@ -835,6 +835,7 @@
     this.p = p;
     this.P = this.P || null;
     this.tilt = 0; this.amt = 0; this.suDa = {};
+    this._sigVe = null; this._veLuc = 0;   // cau moi: khong dung lai chu ky bo-khung cua cau truoc
     this.chop = { t0: 0, tiep: performance.now() / 1000 + 1.0 + Math.random() * 1.5 };
     this.cur = this.cur || { emo: 'binh_thuong', path: this.basePath };
     ['binh_thuong', p.emotion].forEach(function (e) { taiAnh(self.duongAnh(e)); });
@@ -884,6 +885,17 @@
     this.doiAnh(emo);
     if (this.fade < 1) this.fade = Math.min(1, this.fade + dt / 0.11);
     this.amt += (amt - this.amt) * (1 - Math.exp(-dt / 0.06));
+    // Bo qua khung ve trung het: mieng + cam xuc khong doi (khoang lang trong cau,
+    // het tieng...) thi dung ve lai toan bo chan dung — moi khung la mot lan ve
+    // full-canvas rat ton tren may yeu. Van ve lai toi thieu 4 lan/giay de hoi tho
+    // va nghieng dau khong dung im; chop mat / ky hieu sap dien ra thi khong bo.
+    var fm = p.mieng(T);
+    var chopDang = !!(this.chop && (this.chop.t0 || now >= this.chop.tiep - dt));
+    var suCho = false;
+    for (var ei = 0; ei < p.ev.length; ei++) { if (!this.suDa[ei] && p.ev[ei].t <= T && p.ev[ei].kind !== 'rung') { suCho = true; break; } }
+    var sig = fm.a + '|' + fm.b + '|' + Math.round(fm.t * 24) + '|' + Math.round(fm.mo * 24) + '|' + emo + '|' + Math.round(this.amt * 24);
+    if (!chopDang && !suCho && this.fade >= 1 && this._sigVe === sig && now - (this._veLuc || 0) < 0.25) return;
+    this._sigVe = sig; this._veLuc = now;
     var cam = MIENG_CAM[emo] || MIENG_CAM.binh_thuong, A = this.amt * p.cuongDo;
     if (laAnhBieuCam(this.cur && this.cur.path)) cam = camTheoAnh(cam);   // anh bieu cam da co khoe mieng / do rong rieng
     // ---- nen + anh
@@ -916,7 +928,7 @@
     try { c.drawImage(im, fr.dx, fr.dy, fr.dw, fr.dh); } catch (e) {}
     if (rg && rg.mouth) xoaMieng(c, rig[this.cur.path] ? this.cur.path : this.basePath, im, rg, fr, W, H);
     c.globalAlpha = 1;
-    if (rg && rg.mouth) this.veKhuonMat(c, rg, fr, T, p, cam, A, dt, now);
+    if (rg && rg.mouth) this.veKhuonMat(c, rg, fr, T, p, cam, A, dt, now, fm);
     c.restore();
     // ---- ky hieu
     p.ev.forEach(function (e, i) {
@@ -926,12 +938,12 @@
       self.kyHieu(e.kind, rg, fr, p);
     });
   };
-  Avatar.prototype.veKhuonMat = function (c, rg, fr, T, p, cam, A, dt, now) {
+  Avatar.prototype.veKhuonMat = function (c, rg, fr, T, p, cam, A, dt, now, fCoSan) {
     var m = rg.mouth, skin = hexRgb(rg.skin || rg.daMat), eyeCol = rg.eye || '#2a2a2a';
     var lw = Math.max(1.0, 0.0062 * fr.dw);
     var geo = hinhHocMieng(m, fr);
     // 1. tham so muc tieu tu nguyen am
-    var f = p.mieng(T);
+    var f = fCoSan || p.mieng(T);
     var tgt = mucTieu(f, cam, A, fr.dw, (m.curve || 0) / Math.max(1e-6, m.w));
     if (!this.P) this.P = { sw: 1, h: 0, up: 0.3, rd: 0, luoi: 0, rang: 0, cur: tgt.cur };
     // Lam muot (<= 60 ms de chuyen hinh): mo nhanh hon mot chut (16 ms), khep nhanh (10 ms) de m b p thay ro

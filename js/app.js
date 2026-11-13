@@ -3785,6 +3785,7 @@ Mặt mèo tự đổi sang ${matCham} lúc bắt đầu nói — không cần g
             const hit = await SenseiDoc.layBoNho(voice, kieu ? kieu.key : '', jp).catch(() => null);
             if (hit && hit.length) {
               dialogueAudio[line.id] = hit; dialogueAudioVoice[line.id] = voice; dialogueAudioStyle[line.id] = kieu ? kieu.key : '';
+              xepPhanTichAvatar(line, hit);
               made++;
               continue;
             }
@@ -3839,6 +3840,7 @@ Mặt mèo tự đổi sang ${matCham} lúc bắt đầu nói — không cần g
             dialogueAudio[line.id] = res.pcm;
             dialogueAudioVoice[line.id] = voice;   // ghi nhan de audio khong song sot khi doi giong
             dialogueAudioStyle[line.id] = kieuDaDung;   // ... va khi doi kieu doc (cong tac giong cam xuc)
+            xepPhanTichAvatar(line, res.pcm);
             if (window.SenseiDoc && res.pcm && res.pcm.length) SenseiDoc.luuBoNho(voice, kieuDaDung, jp, res.pcm);
             made++;
             continue;
@@ -4886,6 +4888,33 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
     return { kind: 'nhan-vat', lineId: line.id, nhanVat: nv, text: (line.tokens || []).map(t => t.kanji || t.text).join(''), the: line.emotion || '' };
   }
 
+  // Phan tich khau hinh avatar TRUOC cho clip thoai vua dung xong, chay vao luc
+  // ranh (requestIdleCallback), moi lan mot cau: phan tich dong bo o avatar-noi
+  // ton ~100-300 ms/cau — de den luc phat moi tinh thi main thread khựng ngay
+  // dau cau (lag) va cau ngan bi nuot mat phan dau chua kip nhep mieng.
+  // khiClip dung lai dung khoa cache cua chuanBi (lineId + do dai PCM + text)
+  // nen luc phat chi con viec lay ket qua co san.
+  const hangPhanTichAvatar = [];
+  let dangPhanTichAvatar = false;
+  function xepPhanTichAvatar(line, clip) {
+    if (!line || !clip || !window.SenseiAvatarNoi || !window.SenseiAvatarNoi.chuanBi) return;
+    hangPhanTichAvatar.push({ line, clip });
+    if (dangPhanTichAvatar) return;
+    dangPhanTichAvatar = true;
+    const buoc = () => {
+      const muc = hangPhanTichAvatar.shift();
+      if (!muc) { dangPhanTichAvatar = false; return; }
+      try {
+        const m = metaThoai(muc.line);
+        window.SenseiAvatarNoi.chuanBi(m.lineId, muc.clip, { nhanVat: m.nhanVat, text: m.text, the: m.the });
+      } catch (e) {}
+      if (window.requestIdleCallback) requestIdleCallback(buoc, { timeout: 2000 });
+      else setTimeout(buoc, 150);
+    };
+    if (window.requestIdleCallback) requestIdleCallback(buoc, { timeout: 2000 });
+    else setTimeout(buoc, 150);
+  }
+
   async function playDialogueLine(line) {
     dangPhatGiongNhanVat = true;
     try {
@@ -4936,9 +4965,11 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
         if (pick.voice) u.voice = pick.voice;
 
         let done = false;
+        let daBaoAvatar = false;   // da bao avatar-noi nhep mieng theo kana cho cau nay chua
         const finish = (ok) => {
           if (done) return;
           done = true;
+          if (daBaoAvatar) { try { window.SenseiAvatarNoi.khiDung(); } catch (e) {} }
           sk()?.khiGiongMay(line.id, 'xong');
           resolve(ok);
         };
@@ -4949,6 +4980,17 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
         u.onerror = () => finish(false);
         // Luoi an toan: speechSynthesis thinh thoang khong ban onend
         setTimeout(() => finish(true), Math.max(3000, jp.length * 260));
+
+        // Giong trinh duyet khong co PCM that, nhung avatar van phai nhep mieng
+        // (theo kana, nhu duong SenseiDoc.phatPlan) — thieu doan nay thi moi cau
+        // fallback la mieng nhan vat dung yen trong khi van co tieng doc.
+        try {
+          if (window.SenseiAvatarNoi && window.SenseiAvatarNoi.phatGia && line.id) {
+            const m = metaThoai(line);
+            window.SenseiAvatarNoi.phatGia({ lineId: line.id, nhanVat: m.nhanVat, text: jp, the: m.the });
+            daBaoAvatar = true;
+          }
+        } catch (e) {}
 
         speechSynthesis.speak(u);
       } catch (e) {
@@ -4981,7 +5023,7 @@ Nói ngắn thôi, dưới 45 giây. Đừng đọc lại phần nghĩa tiếng 
       senseiVoice: SENSEI_VOICE,
       timDong: timDongThoaiTheoId,
       clipSan: (line) => (audioDongConDung(line) ? dialogueAudio[line.id] : null),
-      luuClip: (line, pcm, voice, key) => { dialogueAudio[line.id] = pcm; dialogueAudioVoice[line.id] = voice; dialogueAudioStyle[line.id] = key || ''; },
+      luuClip: (line, pcm, voice, key) => { dialogueAudio[line.id] = pcm; dialogueAudioVoice[line.id] = voice; dialogueAudioStyle[line.id] = key || ''; xepPhanTichAvatar(line, pcm); },
       toast: showToast,
       batCo: (b) => { dangPhatGiongNhanVat = !!b; },   // dang doc thoai qua loa: tam ngung gui mic len Sensei (xem onAudioChunk)
     });
