@@ -54,27 +54,47 @@ class AudioEngine {
     this._dungClip = null;      // ket thuc clip dang phat (playPcmClip), stopPlayback goi
   }
 
-  ensureOutContext() {
-    if (!this.outCtx) {
-      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-      if (!AudioContextClass) {
-        console.error("Trình duyệt không hỗ trợ Web Audio API!");
-        return;
-      }
+  /** Tao AudioContext dau ra (chua resume). Tach rieng de taoSan() tao luc ranh — new AudioContext ~60 ms tren may yeu. */
+  _taoOutCtx() {
+    if (this.outCtx) return true;
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContextClass) {
+      console.error("Trình duyệt không hỗ trợ Web Audio API!");
+      return false;
+    }
+    try {
+      // Thử khởi tạo AudioContext 24kHz
+      this.outCtx = new AudioContextClass({ sampleRate: 24000 });
+    } catch (err) {
+      // iOS Safari và nhiều thiết bị Android/PC không cho phép tạo AudioContext 24000Hz trực tiếp
+      console.warn("AudioContext 24kHz không được hỗ trợ bởi phần cứng, chuyển về tần số mặc định:", err);
       try {
-        // Thử khởi tạo AudioContext 24kHz
-        this.outCtx = new AudioContextClass({ sampleRate: 24000 });
-      } catch (err) {
-        // iOS Safari và nhiều thiết bị Android/PC không cho phép tạo AudioContext 24000Hz trực tiếp
-        console.warn("AudioContext 24kHz không được hỗ trợ bởi phần cứng, chuyển về tần số mặc định:", err);
-        try {
-          this.outCtx = new AudioContextClass();
-        } catch (err2) {
-          console.error("Không thể khởi tạo AudioContext:", err2);
-          return;
-        }
+        this.outCtx = new AudioContextClass();
+      } catch (err2) {
+        console.error("Không thể khởi tạo AudioContext:", err2);
+        return false;
       }
     }
+    return true;
+  }
+
+  /**
+   * Tao san AudioContext (o trang thai 'suspended', khong resume, khong hien loi nhac cham) luc ranh sau khi tai trang:
+   * cu cham dau tien (bam "Giang bai") chi con resume() thay vi them ~60 ms tao context ngay trong startLecture (do: perf.mjs, may yeu x4).
+   * Khong co hieu ung gi khac: context 'suspended' khong phat gi, ngoai le dong ho (cac noi doc outCtx deu xet state === 'running').
+   */
+  warmUp() {
+    if (this.outCtx || this._daHenWarm) return;
+    this._daHenWarm = true;
+    const tao = () => { try { if (!this.outCtx) this._taoOutCtx(); } catch (e) { /* bo qua: ensureOutContext se tao lai o cu cham */ } };
+    try {
+      if (window.requestIdleCallback) window.requestIdleCallback(tao, { timeout: 5000 });
+      else setTimeout(tao, 1500);
+    } catch (e) { setTimeout(tao, 1500); }
+  }
+
+  ensureOutContext() {
+    if (!this.outCtx && !this._taoOutCtx()) return;
 
     if (this.outCtx && this.outCtx.state === 'suspended') {
       // KHONG duoc tin vao viec resume() co bi tu choi hay khong. Tren dien
@@ -165,6 +185,7 @@ class AudioEngine {
 
     ['pointerdown', 'touchend', 'click', 'keydown'].forEach(
       ten => document.addEventListener(ten, moKhoa, true));
+    this.warmUp();   // tao san AudioContext (suspended) luc ranh — cu cham dau tien chi con resume()
   }
 
   /** Xem nhanh tinh trang am thanh — go window.__amThanh() trong Console */

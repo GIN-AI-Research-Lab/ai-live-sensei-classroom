@@ -18,8 +18,7 @@
 (function () {
   'use strict';
 
-  const ENDPOINT = 'wss://generativelanguage.googleapis.com/ws/'
-    + 'google.ai.generativelanguage.v1alpha.GenerativeService.BidiGenerateContent';
+  const ENDPOINT = (window.SENSEI_ENV && window.SENSEI_ENV.wsBase || 'wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1alpha.GenerativeService.BidiGenerateContent');
 
   const ACTOR_BRIEF =
     'Bạn là diễn viên lồng tiếng cho giáo trình tiếng Nhật. '

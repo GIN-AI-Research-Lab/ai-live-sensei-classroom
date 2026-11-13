@@ -105,7 +105,7 @@ class GeminiLiveClient {
    * -> InvalidStateError, onclose cu reset isSetupComplete cua phien dang song).
    */
   _moSocket() {
-    const endpoint = `wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1alpha.GenerativeService.BidiGenerateContent?key=${this.apiKey}`;
+    const endpoint = `${(window.SENSEI_ENV && window.SENSEI_ENV.wsBase || 'wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1alpha.GenerativeService.BidiGenerateContent')}?key=${this.apiKey}`;
     this.onLog("System", `Đang thiết lập WebSocket BidiGenerateContent tới Gemini Live (${this.model})...`);
 
     const ws = this.ws = new WebSocket(endpoint);

@@ -4,9 +4,11 @@ AI Live Sensei Classroom - Local Development Server
 Phục vụ các tệp tĩnh (HTML, CSS, JS, JSON) trên localhost để đảm bảo quyền Microphone và Web Audio API.
 """
 
+import base64
 import datetime
 import email.utils
 import gzip
+import hmac
 import http.server
 import io
 import ipaddress
@@ -181,7 +183,29 @@ class CORSAndMimeHandler(http.server.SimpleHTTPRequestHandler):
         self.send_error(404, 'File not found')
         return None
 
+    def _chua_dang_nhap(self):
+        """BASIC_AUTH=user:pass trong .env -> bat buoc mat khau (dung khi mo ra internet,
+        vi env.js chua key API). True = da tra 401, dung xu ly tiep."""
+        cau_hinh = read_env().get('BASIC_AUTH', '')
+        if not cau_hinh:
+            return False
+        gui = self.headers.get('Authorization', '')
+        if gui.startswith('Basic '):
+            try:
+                if hmac.compare_digest(base64.b64decode(gui[6:]), cau_hinh.encode('utf-8')):
+                    return False
+            except Exception:
+                pass
+        self._rieng = True
+        self.send_response(401)
+        self.send_header('WWW-Authenticate', 'Basic realm="Sensei", charset="UTF-8"')
+        self.send_header('Content-Length', '0')
+        self.end_headers()
+        return True
+
     def do_GET(self):
+        if self._chua_dang_nhap():
+            return
         # Sinh env.js tu .env de trinh duyet doc duoc key ma khong phai nhap tay
         if self.path.split('?')[0] in ENV_PATHS:
             self._rieng = True  # end_headers: khong CORS, khong luu dia
@@ -196,18 +220,30 @@ class CORSAndMimeHandler(http.server.SimpleHTTPRequestHandler):
                 self.send_error(403, 'Forbidden', 'env.js chi phuc vu cung nguon. Neu day la '
                                 'may cua ban, them ten mien vao ALLOWED_HOSTS trong .env')
                 return
-            body = (
-                '/* Sinh tu .env boi server.py — dung sua tay, dung commit. */\n'
-                'window.SENSEI_ENV = {\n'
-                '  key1: %s,\n'
-                '  key2: %s,\n'
-                '  key3: %s,\n'
-                '  key4: %s,\n'
-                '};\n'
-            ) % (json.dumps(env.get('GEMINI_KEY1', '')),
-                 json.dumps(env.get('GEMINI_KEY2', '')),
-                 json.dumps(env.get('GEMINI_KEY3', '')),
-                 json.dumps(env.get('GEMINI_KEY4', '')))
+            if env.get('PROXY_MODE', '').strip() in ('1', 'true', 'yes'):
+                # Ban cong khai: KHONG bao gio phat key that. Trinh duyet chi nhan 'o' @1..@4,
+                # gl_proxy.py doi o -> key that o phia may chu.
+                body = (
+                    '/* Sinh tu server.py (PROXY_MODE) - key that nam o may chu. */\n'
+                    'window.SENSEI_ENV = {\n'
+                    '  key1: "@1", key2: "@2", key3: "@3", key4: "@4",\n'
+                    '  restBase: "/gl",\n'
+                    "  wsBase: (location.protocol === 'https:' ? 'wss:' : 'ws:') + '//' + location.host + '/glws',\n"
+                    '};\n'
+                )
+            else:
+                body = (
+                    '/* Sinh tu .env boi server.py — dung sua tay, dung commit. */\n'
+                    'window.SENSEI_ENV = {\n'
+                    '  key1: %s,\n'
+                    '  key2: %s,\n'
+                    '  key3: %s,\n'
+                    '  key4: %s,\n'
+                    '};\n'
+                ) % (json.dumps(env.get('GEMINI_KEY1', '')),
+                     json.dumps(env.get('GEMINI_KEY2', '')),
+                     json.dumps(env.get('GEMINI_KEY3', '')),
+                     json.dumps(env.get('GEMINI_KEY4', '')))
             data = body.encode('utf-8')
             self.send_response(200)
             self.send_header('Content-Type', 'application/javascript; charset=utf-8')
@@ -227,6 +263,8 @@ class CORSAndMimeHandler(http.server.SimpleHTTPRequestHandler):
         return os.path.join(DIRECTORY, '<bi-chan>') if self._bi_chan else fs
 
     def send_head(self):
+        if self._chua_dang_nhap():
+            return None
         path = self.translate_path(self.path)
         if self._bi_chan:
             self.send_error(404, 'File not found')

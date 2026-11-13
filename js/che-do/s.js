@@ -237,7 +237,9 @@
   /** Co chu nho: duoi nguong nay chu Viet doi sang font ro net (class s-nho): do va chu that dung CHUNG mot font */
   const nguongNho = () => (st.dt ? 24 : 22);
   function datCo(e, fs) { e.style.fontSize = fs + 'px'; e.classList.toggle('s-nho', fs < nguongNho()); }
-  function doCo(m, fs) { datCo(m, fs); return { w: m.offsetWidth, h: m.offsetHeight, sw: m.scrollWidth }; }
+  // MD: dem so lan do chu va thoi gian (ms) — chan doan hieu nang (window.__cdS.md khi ?moPhong)
+  const MD = { n: 0, ms: 0 };
+  function doCo(m, fs) { const t0 = performance.now(); datCo(m, fs); const r = { w: m.offsetWidth, h: m.offsetHeight, sw: m.scrollWidth }; MD.n++; MD.ms += performance.now() - t0; return r; }
   /** Co chu lon nhat trong [mn, mx] de html (lop cls) vua w x h */
   function fit(html, cls, w, h, mx, mn, css) {
     const m = doBat(0, html, cls, w, css);
@@ -291,15 +293,36 @@
    * Xep DOC cac khoi trong chieu cao H: he so chung s (co = max(mn, mx*s)), lon nhat de vua; phan thua chia deu khoang cach (toi da gMax), con lai can giua.
    * ds: [{ html, cls, w, mx, mn, css }] hoac { ham(fs) -> {w,h}, mx, mn, w }. Tra { ds: [{fs,w,h,y}], tran }
    */
+  /**
+   * So nguyen lon nhat trong [lo, hi] thoa ok(f) (ok don dieu: dung toi mot nguong roi sai), biet ok(lo) = true, uoc luong gan dung est.
+   * Phi thuong: tim cap (dung, sai) lien ke quanh est bang cac buoc 1, 2, 4... roi chia doi trong cap do — thuong 2-3 lan thu thay vi log2(hi - lo)
+   * cua chia doi tu dau. Cung ket qua voi chia doi tu dau khi ok don dieu (kiem: ?moPhong, window.__cdS.kiemDon).
+   */
+  function lonNhatOk(lo, hi, ok, est) {
+    if (lo >= hi) return lo;
+    const g = Math.max(lo, Math.min(hi, Math.round(est)));
+    let a, b;   // a: dung, b: sai (b = hi + 1 neu chua gap sai)
+    if (g > lo && !ok(g)) {
+      b = g; a = lo;
+      for (let buoc = 1; ; buoc *= 2) { const t = b - buoc; if (t <= lo) break; if (ok(t)) { a = t; break; } b = t; }
+    } else {
+      a = g; b = hi + 1;
+      for (let buoc = 1; a < hi; buoc *= 2) { const t = Math.min(hi, a + buoc); if (ok(t)) { a = t; } else { b = t; break; } }
+    }
+    while (b - a > 1) { const mid = (a + b) >> 1; if (ok(mid)) a = mid; else b = mid; }
+    return a;
+  }
   /** Co chu lon nhat de html nam trong <= n dong o be ngang w */
   function fitDong(html, cls, w, n, mx, mn, css) {
     const a = doBat(30, html, cls, w, css), b = doBat(31, html, cls + ' mot', 20000, css);
     const mb = new Map();
-    const ok = (f) => { const ra = doCo(a, f); let hb = mb.get(f); if (hb == null) { hb = doCo(b, f).h; mb.set(f, hb); } return ra.sw <= w + 1 && ra.h <= hb * n + 2; };
-    let lo = Math.max(1, Math.floor(mn)), hi = Math.max(lo, Math.floor(mx));
+    const mot = (f) => { let r = mb.get(f); if (!r) { r = doCo(b, f); mb.set(f, r); } return r; };
+    const ok = (f) => { const ra = doCo(a, f); return ra.sw <= w + 1 && ra.h <= mot(f).h * n + 2; };
+    const lo = Math.max(1, Math.floor(mn)), hi = Math.max(lo, Math.floor(mx));
     if (!ok(lo)) return lo;
-    while (lo < hi) { const mid = (lo + hi + 1) >> 1; if (ok(mid)) lo = mid; else hi = mid - 1; }
-    return lo;
+    // be ngang tu nhien cua mot dong ti le voi co chu -> co de vua n dong o be ngang w ~ lo * n * w / (be ngang mot dong o co lo) (n >= 2: tru ~10 % hao hut xuong dong)
+    const w0 = Math.max(1, mot(lo).sw);
+    return lonNhatOk(lo, hi, ok, lo * (n > 1 ? 0.9 : 1) * n * w / w0);
   }
   function xepDoc(ds, H, gMin, gMax) {
     // khoi uu tien it dong (d.dong = so dong, d.san = ti le co toi thieu de giu so dong do): ha co lon nhat cho vua so dong
@@ -325,9 +348,16 @@
     const vua = (rs) => tong(rs) <= H + 0.5 && rs.every((r, i) => r.sw <= ds[i].w + 1);
     let rs = tai(1), tran = false;
     if (!vua(rs)) {
-      let lo = 0.02, hi = 1, tot = null;
-      for (let k = 0; k < 9; k++) { const mid = (lo + hi) / 2; const r = tai(mid); if (vua(r)) { lo = mid; tot = r; } else hi = mid; }
-      if (tot) rs = tot; else { rs = tai(0.02); tran = true; }
+      // (hieu nang) he so s lon nhat tren luoi chia doi 9 buoc (diem s_K, K = 1..511; s_K tinh bang CUNG phep (lo + hi) / 2 cua chia doi cu -> cung floor(mx * s))
+      // ma xep van vua: tim quanh gia tri uoc luong theo chieu cao (thuong 2-4 lan tai() thay vi 9), cung ket qua khi vua() don dieu theo s
+      const sK = (K) => { let l = 0.02, h = 1, idx = 256, st = 128; for (;;) { const m = (l + h) / 2; if (idx === K) return m; if (K > idx) { l = m; idx += st; } else { h = m; idx -= st; } st >>= 1; } };
+      const kq = new Map();
+      const okK = (K) => { const r = tai(sK(K)); const v = vua(r); if (v) kq.set(K, r); return v; };
+      const co = tong(rs) - tThem - gMin * Math.max(0, rs.length - 1);
+      const s0 = co > 0 ? (H - tThem - gMin * Math.max(0, rs.length - 1)) / co : 0.02;
+      const K0 = Math.max(1, Math.min(511, Math.round((Math.max(0.02, Math.min(1, s0)) - 0.02) / 0.98 * 512)));
+      const K = lonNhatOk(0, 511, okK, K0);
+      if (K >= 1) rs = kq.get(K); else { rs = tai(0.02); tran = true; }
     }
     rs.forEach((r, i) => { if (ms[i]) { doCo(ms[i], r.fs); r.wt = rongThat(ms[i]) || r.w; } else r.wt = r.w; });
     const n = rs.length, du = Math.max(0, H - tong(rs));
@@ -458,7 +488,7 @@
     tl.to(q, { x: '+=' + Math.round(34 * u), y: '+=' + Math.round(26 * u), opacity: 0, duration: 0.16, ease: 'power1.in' }, het);
   }
   function bui(x, y, t, n) {
-    if (giam() || !st.bui) return;
+    if (giam() || !st.bui || (window.SenseiLite && window.SenseiLite.on)) return;   // che do nhe: bo hat bui
     const r = rand(Math.round(x * 7 + y * 13 + t * 100));
     for (let i = 0; i < n; i++) {
       const h = mk('div', 's-hat', st.bui);
@@ -470,7 +500,7 @@
     }
   }
   function khoi(x0, y0, x1, y1, t, a) {
-    if (!st.bui) return;
+    if (!st.bui || (window.SenseiLite && window.SenseiLite.on)) return;   // che do nhe: bo khoi bui
     const kh = mk('div', 's-khoi', st.bui);
     G.set(kh, { x: x0, y: y0, scale: 0.6, opacity: 0 });
     G.to(kh, { x: x1, y: y1, scale: 1.6, duration: 0.75, ease: 'power1.out', delay: t });
@@ -3453,7 +3483,7 @@
         }
       } catch (e) {}
       // tay cam thu nghiem (chi trang mo phong / debug): khong lo ra trong buoi hoc that
-      try { if (/[?&](moPhong|debug)\b/.test(location.search)) window.__cdS = { st, fit, xepDoc, canh: () => st.canh, m: () => st.m, het: () => { if (st.m) st.m.het(); } }; } catch (e) {}
+      try { if (/[?&](moPhong|debug)\b/.test(location.search)) window.__cdS = { st, md: MD, fit, xepDoc, canh: () => st.canh, m: () => st.m, het: () => { if (st.m) st.m.het(); } }; } catch (e) {}
     },
     ketThuc() {
       try { if (st.ro) st.ro.disconnect(); } catch (e) {}
