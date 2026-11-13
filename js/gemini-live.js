@@ -212,6 +212,11 @@ class GeminiLiveClient {
     if (this._setupCoHandle) {
       this.resumeHandle = null;   // handle het han / khong hop le -> vao phien moi
       viec = 'bỏ handle nối phiên cũ';
+    } else if (this._setupCoThinking) {
+      // Dong cam (1000, khong ly do) ngay sau setup: kha nang cao server khong
+      // nhan thinkingConfig (model Live doi hanh vi) — bo han roi thu lai.
+      this.thinkingBudget = 0;
+      viec = 'bỏ thinkingConfig';
     } else if (this._setupCoQuanLyPhien && GeminiLiveClient.laLoiTruongSetup(lyDo)) {
       this.dungQuanLyPhien = false;
       this._tatQuanLyPhienTam = true;   // chot khi lan thu lai toi setupComplete
@@ -341,6 +346,11 @@ class GeminiLiveClient {
    */
   static supportsThinking(model) {
     const m = String(model || "");
+    // Model Live (native audio): server tu quan ly thinking — gui thinkingConfig
+    // la phien bi dong NGAY, ma 1000, khong setupComplete, khong kem ly do.
+    // Da do bang thuc nghiem tren production 13/11/2026: gemini-3.8-live +
+    // thinkingConfig {thinkingBudget: 1024} -> dong cam; bo truong nay -> setupComplete.
+    if (/live/i.test(m)) return false;
     return /gemini-3/.test(m) || /thinking/i.test(m);
   }
 
@@ -350,6 +360,7 @@ class GeminiLiveClient {
     const quanLyPhien = this.dungQuanLyPhien;
     this._setupCoQuanLyPhien = quanLyPhien;
     this._setupCoHandle = !!(quanLyPhien && this.resumeHandle);
+    this._setupCoThinking = GeminiLiveClient.supportsThinking(this.model) && this.thinkingBudget > 0;
     const setupPayload = {
       setup: {
         model: this.model,
