@@ -1,12 +1,28 @@
 // so-bo-cuc.mjs — bang do lech bo cuc: ban mau (demo2/h, __seek) vs song (che do h) tai cac khoanh tuong ung.
-//   node so-bo-cuc.mjs [--w 1440 --h 900] [--ra file.json]
+//   node so-bo-cuc.mjs [--w 1440 --h 900] [--ra file.json] [--mau DIR]
+// Thu muc ban mau (chua h/index.html cua ban mau): lay theo thu tu --mau DIR > bien moi truong SO_MAU_DIR >
+//   <goc repo>/demo2 > <canh repo>/demo2 > ./demo2. Khong tim thay -> in huong dan va exit 2 (khong crash).
 // Moi vung (vom, treo, gap, dan, bang, hoa, ruy, giay, the-bai) -> hinh chu nhat chuan hoa theo khung (x,y,w,h tinh bang % chieu rong/cao khung);
 // ghep theo thu tu (y, x) trong cung loai; lech = max(|dx|,|dy|,|dw|,|dh|) tinh bang % khung. Dat neu <= 10.
 import { moServer, moChrome, Trang, donDep, sleep } from './cdp-lib.mjs';
 import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 const A = {}; const av = process.argv.slice(2);
 for (let i = 0; i < av.length; i += 2) A[av[i].replace(/^--/, '')] = av[i + 1];
 const w = +(A.w || 1440), h = +(A.h || 900);
+// --- thu muc ban mau: khong con hard-code duong dan Windows (P2) ---
+const GOC_DU_AN = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
+const MAU_UNG = [A.mau || process.env.SO_MAU_DIR, path.join(GOC_DU_AN, 'demo2'), path.join(GOC_DU_AN, '..', 'demo2'), path.resolve('demo2')].filter(Boolean);
+const coMau = (d) => { try { return fs.existsSync(path.join(d, 'h', 'index.html')); } catch { return false; } };
+const MAU_DIR = MAU_UNG.find(coMau);
+if (!MAU_DIR) {
+  console.error('Khong tim thay thu muc ban mau (can co h/index.html ben trong). Da thu:');
+  MAU_UNG.forEach((d) => console.error('  - ' + d));
+  console.error('Cach chi dinh: node so-bo-cuc.mjs --mau <thu-muc-demo2>   hoac   SO_MAU_DIR=<thu-muc-demo2> node so-bo-cuc.mjs');
+  process.exit(2);
+}
+console.log('ban mau:', MAU_DIR);
 const LOAI = ['vom', 'treo', 'gap', 'dan', 'bang', 'hoa', 'ruy-wrap', 'the-bai'];
 // bieu thuc do: tien to '' (ban mau) hoac 'h-' (song); goc = vung khung
 const DO = (tt, goc) => `(() => {
@@ -36,7 +52,7 @@ const KHOANH = [
   { ten: 'vi-du', t: 35.9, live: { kind: 'example', n: 0 } },
   { ten: 'bai-tap', t: 46.9, live: { kind: 'quiz', n: 0 } },
 ];
-const goc = await moServer('E:/sensei-tam/demo2');
+const goc = await moServer(MAU_DIR);
 const ch = await moChrome({ w: 1920, h: 1080 });
 const mau = {};
 try {

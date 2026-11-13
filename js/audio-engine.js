@@ -18,6 +18,16 @@ class AudioEngine {
     this.activeSources = [];
     this.leftoverBytes = null; // Lưu byte lẻ giữa các gói để tránh lệch pha âm thanh
 
+    // Truc audio cua LUOT Sensei hien tai (P1a): tong so mau PCM 24kHz da xep
+    // lich trong luot — app dung lam moc "goi am thanh da nhan toi dau" khi
+    // neo hanh dong DOM theo tieng. Reset o stopPlayback va dau luot moi.
+    this._turnSamples = 0;
+    // Do sau hang doi phat trong luot (scheduledTime - currentTime): theo doi
+    // de DO va canh bao, xem _doSauHangDoi — tran MEM, khong cat tieng.
+    this._qMaxDepth = 0;        // do sau lon nhat cua luot nay
+    this._qOverCap = 0;         // so goi xep lich luc hang doi da vuot nguong
+    this._qLucCanhBao = 0;      // performance.now() cua lan canh bao gan nhat
+
     // Audio Input (16kHz PCM In)
     this.inCtx = null;
     this.micStream = null;
@@ -311,6 +321,9 @@ class AudioEngine {
       // Mieng meo theo tieng (js/khau-hinh.js): phan tich goi nay truoc khi no phat
       this._napKhauHinh(float32Array, this.scheduledTime);
       this.scheduledTime += audioBuffer.duration;
+      // Truc luot + do sau hang doi (P1a): chi DO va ghi nhan, khong dung vao lich phat
+      this._turnSamples += sampleCount;
+      this._doSauHangDoi(now);
 
       this.activeSources.push(source);
       if (this.idleTimeout) {
@@ -490,6 +503,72 @@ class AudioEngine {
   }
 
   /**
+   * Dong ho "luc dang NGHE THAY" dung chung cho duong truc tiep (P1a): thoi
+   * diem tren truc AudioContext cua mau am thanh dang thuc su ra loa.
+   * Cung cong thuc voi dongHoAm (motion.js) / bayGio (khau-hinh.js) — hai bo
+   * do giu nguyen, ham nay chi la ban dung chung nam o engine cho app/ActionQueue.
+   * Chua co context thi tra ve dong ho tuong (performance.now()/1000) — truc
+   * RIENG, khong tron duoc voi moc ctx: ben goi phai tu biet (co danh dau qua
+   * viec outCtx === null), dung lay no de so voi scheduledTime.
+   */
+  heardTime() {
+    const ctx = this.outCtx;
+    if (!ctx) return performance.now() / 1000;
+    try {
+      if (ctx.getOutputTimestamp) {
+        const ts = ctx.getOutputTimestamp();
+        if (ts && ts.contextTime > 0 && ts.performanceTime > 0) {
+          const t = ts.contextTime + (performance.now() - ts.performanceTime) / 1000;
+          if (t >= ctx.currentTime - 0.5 && t <= ctx.currentTime + 0.01) return t;
+        }
+      }
+    } catch (e) {}
+    return ctx.currentTime - (ctx.outputLatency || 0) - (ctx.baseLatency || 0);
+  }
+
+  /** Tong giay am thanh da xep lich trong luot Sensei hien tai (truc luot, P1a) */
+  getTurnAudioSec() {
+    return this._turnSamples / 24000;
+  }
+
+  /** Dua truc luot + thong ke hang doi ve 0 (dau luot moi / dung phat) */
+  resetTurnAudio() {
+    this._turnSamples = 0;
+    this._qMaxDepth = 0;
+    this._qOverCap = 0;
+  }
+
+  /**
+   * Do do sau hang doi sau khi xep lich mot goi (P1a) — TRAN MEM: chi ghi
+   * nhan va canh bao, TUYET DOI khong drop goi / khong doi playbackRate.
+   * Ly do: timeline khau hinh (khau-hinh.js) neo theo duration GOC cua tung
+   * goi tren truc AudioContext; doi toc do phat se lech lip-sync ngay. Tran
+   * cung nam o tang DOM (ActionQueue, js/action-queue.js): hanh dong cho
+   * dung moc tieng du hang doi sau bao nhieu, tieng thi cu phat nguyen ven.
+   */
+  _doSauHangDoi(nowCtx) {
+    const depth = Math.max(0, this.scheduledTime - nowCtx);
+    if (depth > this._qMaxDepth) this._qMaxDepth = depth;
+    if (depth > 3) {
+      this._qOverCap++;
+      const bay = performance.now();
+      if (bay - this._qLucCanhBao > 5000) {
+        this._qLucCanhBao = bay;
+        console.warn(`[AudioEngine] Hàng đợi phát sâu ${depth.toFixed(2)}s (lượt tối đa ${this._qMaxDepth.toFixed(2)}s, ${this._qOverCap} gói xếp lúc vượt ngưỡng 3s) — DOM neo theo ActionQueue, tiếng không bị cắt.`);
+      }
+    }
+  }
+
+  /** Thong ke hang doi phat cua luot hien tai (P1a) */
+  getQueueStats() {
+    return {
+      depth: this.getPlaybackQueueLatency(),
+      maxDepth: this._qMaxDepth,
+      overCapCount: this._qOverCap,
+    };
+  }
+
+  /**
    * Hủy toàn bộ âm thanh đang phát ngay lập tức (Barge-in)
    */
   stopPlayback(isManual = true) {
@@ -510,6 +589,7 @@ class AudioEngine {
     this.activeSources = [];
     this.scheduledTime = 0;
     this.leftoverBytes = null;
+    this.resetTurnAudio();   // luot da bi cat: truc audio + thong ke hang doi lam lai tu dau (P1a)
     // Tieng da cat -> bo dong thoi gian khau hinh, meo khong mep tiep loi da bo
     try { if (window.SenseiKhauHinh) window.SenseiKhauHinh.xoa(); } catch (e) {}
     this._ketThucLoiThoai();

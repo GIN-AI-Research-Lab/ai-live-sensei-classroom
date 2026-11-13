@@ -446,6 +446,18 @@ class SlideEngine {
         return;
       }
     }
+    // P0-2b: nap kho phu THEO CAP truoc khi ve — batch minh hoa SVG cua cap
+    // nay (SenseiArt) va, neu la chuong Chu Han, du lieu net chu. Ca hai deu
+    // duoc SenseiLazy khong trung + ghi nho theo cap/tep nen cac lan chuyen
+    // tab sau gan nhu tuc thi. Loi nap thi cu ve nhu cu: hinh/net tu lui ve
+    // dang tinh, khong duoc vi the ma chan ca bai hoc.
+    if (window.SenseiLazy) {
+      const viec = [window.SenseiLazy.napMinhHoa(lvl)];
+      if (tabName === 'kanji') viec.push(window.SenseiLazy.napNetChu());
+      await Promise.all(viec);
+      // Trong luc cho nap, hoc vien da chuyen bai/tab khac -> bo, dung ve de.
+      if (this.currentLevel !== lvl || this.currentLesson !== baiSo || this.activeTab !== tabName) return;
+    }
     this._renderTabContentNow(tabName, subIndex);
   }
 
@@ -2476,6 +2488,20 @@ class SlideEngine {
     this.spotOpenId = targetId;
     // Hoc vien tu bam mo the: dong the thi tra focus ve dung the do (bai giang tu roi den thi khong)
     this._spotMoTu = opts.doBam ? src : null;
+
+    // P0-2b: spotlight cua mot chu mo ra khi du lieu net CHUA nap (nap dong
+    // theo cap/chuong) -> the dang hien dang tinh, chua co o viet net. Nap
+    // nen, xong ma spotlight van mo dung muc nay thi dung lai the mot lan de
+    // co o viet net. Co _spotNetDangCho chan dung lai vo han.
+    if (!window.SenseiStrokes && window.SenseiLazy && found.data && found.data.character
+        && this._spotNetDangCho !== targetId) {
+      this._spotNetDangCho = targetId;
+      window.SenseiLazy.napNetChu().then((ok) => {
+        const dungMuc = this._spotNetDangCho === targetId;
+        this._spotNetDangCho = null;
+        if (ok && dungMuc && this.spotOpenId === targetId) this.openSpotlight(targetId, found, opts);
+      });
+    }
 
     // Lan dau mo thi the truot vao tu trai. Doi muc thi KHONG truot lai —
     // giang lien mach vai chuc muc ma the cu truot ra truot vao thi chong mat.

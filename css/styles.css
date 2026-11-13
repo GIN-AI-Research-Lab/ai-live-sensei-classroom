@@ -13,6 +13,17 @@
      - Thẻ nội dung vào sân khấu theo bậc thang ~45ms.
    ========================================================================== */
 
+/* ==========================================================================
+   THANG MOC RESPONSIVE CHUAN (P2 — nguon chuan tu nay, moi file CSS dung chung)
+     Moc rong : 640 / 860 / 980 / 1200
+     Moc cao  : 500 / 700
+   Moc moi PHAI dung thang nay — khong tu invent moc le (768, 999, 1100...)
+   tru khi ghi ro ly do ngay tai cho. Cac moc le con ton tai trong code cu
+   (999/1000 la cap bien khop nhau giua motion/motion-hoi/styles, 641/861 la
+   moc +1 bu tru cua 640/860, 768/1100/1500 la nguong rieng da co chu dich)
+   duoc giu nguyen co chu dich — xem bao cao P2 truoc khi doi chung.
+   ========================================================================== */
+
 :root {
   --paper:        #f0ebe1;
   --paper-deep:   #e7dfd1;

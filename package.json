@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "start": "python server.py",
-    "start:lan": "python server.py --lan"
+    "start:lan": "python server.py --lan",
+    "build:css": "npx -y tailwindcss@3 -i css/tailwind-input.css -o css/tailwind-built.css --minify"
   },
   "keywords": [
     "gemini-live",

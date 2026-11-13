@@ -312,6 +312,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       // Trước khi gửi bất kỳ tin nhắn mới nào, lập tức ngắt toàn bộ âm thanh đang phát dở
       if (audioEngine) {
         audioEngine.stopPlayback();
+        audioEngine.resetTurnAudio();   // luot Sensei moi: truc audio cua luot lam lai tu 0 (P1a)
         // Luot moi (go chat, nhip giang, cham bai, anh viet tay) luon phai nghe
         // duoc: tam dung / huy cau hoi truoc do co the dang dong cong am thanh.
         audioEngine.setSuppressed(false);
@@ -440,6 +441,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     },
     onBargeIn: () => {
       addLog("Barge-in", "Phát hiện học viên lên tiếng! Đã dừng ngay âm thanh giảng bài của Sensei.");
+      // Huy cac hen roi den dang cho cua luot vua bi ngat: khong huy thi den cua
+      // cau cu van ban len sau khi luot moi da bat dau. CHI huy hen — den dang
+      // sang van giu nguyen (hoc vien ngat loi de hoi ve dung muc dang sang).
+      clearPendingFocus();
+      window.SenseiActionQueue?.huyLuot();   // (P1b) tool trinh dien dang cho moc tieng cua luot cu chet cung luot
       audioEngine.stopPlayback();
       cancelStepTransition();
       // Giu nguyen den roi: hoc vien ngat loi la de hoi ve DUNG muc dang sang
@@ -451,6 +457,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Trước đây bị hiểu nhầm là học viên ngắt lời -> bài giảng tự tắt ngay sau Phần 1.
     // o.cu: client biet chac day la ket thuc cua luot CU (luot moi da gui) -> san khau bo het duoi cua no.
     onSelfInterrupt: (o) => {
+      // Tuong tu barge-in: hen roi den cua luot cu phai chet cung luot cu,
+      // khong de no ban len giua luot moi (truoc day nhanh nay khong don).
+      clearPendingFocus();
+      window.SenseiActionQueue?.huyLuot();   // (P1b) huy ca tool dang cho trong ActionQueue cua luot cu
       audioEngine.stopPlayback();
       if (o && o.cu) SK()?.khiLuotCuHet();
       else SK()?.khiTuNgat();   // goi / chu cua luot cu con bay toi trong 500 ms dau -> bo
@@ -662,6 +672,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   // trong khi âm thanh còn nằm trong hàng đợi phát — thường trễ vài giây.
   // Muốn đèn rọi đúng lúc Sensei đọc tới thì phải hoãn đúng bằng độ trễ đó.
   let pendingFocusTimers = [];
+  // (P1b) Id cac muc focus dang nam trong ActionQueue (neo truc AudioContext).
+  // clearPendingFocus huy theo id nay — thay cho setTimeout gio tuong truoc day.
+  let pendingFocusIds = new Set();
+  let _focusSeq = 0;
   let lastFocusAt = 0;
   // Mốc lần cuối Sensei tự gọi highlight_element.
   // Trong lúc Sensei đang tự điều khiển, bộ bám theo lời giảng phải đứng yên,
@@ -673,30 +687,46 @@ document.addEventListener('DOMContentLoaded', async () => {
   function clearPendingFocus() {
     pendingFocusTimers.forEach(t => clearTimeout(t));
     pendingFocusTimers = [];
+    // (P1b) Don ca cac muc focus dang cho trong ActionQueue (theo id cua chung)
+    if (pendingFocusIds.size && window.SenseiActionQueue) {
+      pendingFocusIds.forEach(id => window.SenseiActionQueue.huyTheoId(id));
+    }
+    pendingFocusIds.clear();
   }
 
   function triggerSyncedFocus(targetId, dismissMs = 5000) {
     if (!targetId || !slideEngine) return;
-
-    const queueLatencySec = window.__audioEngine ? window.__audioEngine.getPlaybackQueueLatency() : 0;
-    // Trừ 120ms để đèn sáng ngay trước khi phát âm — mắt kịp bắt vào đúng chỗ.
-    // Trần 9s thay vì 2.5s: khi Sensei giảng dài, hàng đợi âm thanh dài hơn nhiều.
-    const delayMs = Math.min(9000, Math.max(0, Math.round((queueLatencySec - 0.12) * 1000)));
 
     const fire = () => {
       lastFocusAt = Date.now();
       slideEngine.focusReadingElement(targetId);
     };
 
-    if (delayMs > 60) {
-      const t = setTimeout(() => {
-        pendingFocusTimers = pendingFocusTimers.filter(x => x !== t);
-        fire();
-      }, delayMs);
-      pendingFocusTimers.push(t);
-    } else {
-      fire();
+    // (P1b) Neo theo TRUC AudioContext qua ActionQueue, thay cho setTimeout
+    // gio tuong + cong thuc (queueLatency - 0.12) + tran cung 9s truoc day.
+    // Moc neo = scheduledTime HIEN TAI (cuoi hang doi phat). Vi sao khong neo
+    // theo ti le vi tri chu: ham nay chi nhan targetId — vi tri ky tu cua muc
+    // trong luot noi khong duoc truyen vao (autoTrackSenseiSpeech chi biet muc
+    // khop MUON NHAT cua doan loi vua toi), khong co du lieu ti le dang tin.
+    // Neo cuoi hang doi = luc doan loi vua sinh ra duoc nghe thay; dispatcher
+    // tu chay som LEAD 60ms. Loi hon cong thuc cu: hang doi sau them thi moc
+    // tu truot theo tieng that (het dinh tran 9s), tab bi throttle cung khong
+    // lech vi dispatcher doc dong ho ctx chu khong doc gio tuong.
+    const ae = window.__audioEngine;
+    const Q = window.SenseiActionQueue;
+    if (ae && Q && ae.outCtx && ae.scheduledTime > ae.outCtx.currentTime + 0.05) {
+      const fid = 'focus-' + targetId + '-' + (++_focusSeq);
+      let daChayNgay = false;   // push() chay dong bo ngay neu moc da qua (nghe thay gan sat cuoi hang doi)
+      const vao = Q.push({
+        id: fid,
+        atCtx: ae.scheduledTime,
+        via: 'qEnd',
+        run: () => { daChayNgay = true; pendingFocusIds.delete(fid); fire(); },
+      });
+      if (vao) { if (!daChayNgay) pendingFocusIds.add(fid); return; }
     }
+    // Khong co tieng dang xep lich (hoac chua co engine/hang doi) -> sang ngay nhu cu
+    fire();
   }
 
   // Chan viec nhay muc lien tuc: giua hai lan roi den phai cach nhau du lau
@@ -891,6 +921,24 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   // 5. Xử lý Function Calling (Tool Calls)
+  // Thi hanh TRE theo moc tieng: co HAI duong hen gio goi lai ham nay de chay
+  // handler goc ben duoi — (P0-1) san khau motion.js khiCongCu hen toi moc tieng
+  // khi dang giang; (P1b) ActionQueue (js/action-queue.js) hen toi cuoi hang doi
+  // phat khi NGOAI gio giang. Co dangThiHanhTre de lan goi lai KHONG vong vao
+  // cac cong hen gio lan nua (se bi hen lai mai mai) — vao thang nhanh xu ly.
+  let dangThiHanhTre = false;
+  function thiHanhCongCuTre(name, args) {
+    dangThiHanhTre = true;
+    try { return handleToolCall({ name, args: args || {}, id: null }); }
+    finally { dangThiHanhTre = false; }
+  }
+
+  // (P1b) Tool TRINH DIEN: tac dong truc tiep len man hinh theo loi noi — nhom
+  // duy nhat phai cho tieng; tool thuan logic (section_complete...) chay ngay.
+  const TOOL_TRINH_DIEN = ['highlight_element', 'change_slide', 'change_section', 'mark_error',
+    'draw_on_board', 'write_kanji', 'write_on_board', 'clear_board', 'set_emotion', 'act_out', 'open_exercise'];
+  let lucLogHangDoiTool = 0;   // throttle log debug ActionQueue (toi da 1 dong / 2s)
+
   function handleToolCall(call) {
     const { name, args, id } = call;
     addLog("Tool", `Gọi công cụ [${name}]: ${JSON.stringify(args)}`);
@@ -898,7 +946,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (boQuaLuotHuy) return { success: false, error: 'hoc vien da huy luot nay' };
     // San khau dang giang: bang / chu Han / roi den di vao san khau (xem motion.js khiCongCu).
     // null = san khau khong lo tool nay, app xu ly nhu cu.
-    const skr = SK()?.dangGiang() ? SK().khiCongCu(name, args || {}) : null;
+    const skr = !dangThiHanhTre && SK()?.dangGiang() ? SK().khiCongCu(name, args || {}) : null;
     if (skr) return skr;
     // Dang CHO hoc vien chon: chinh the bai tap cua luoi dang nam tren san khau (portal, motion-spec bo sung C).
     // Doi chuong / mo bai tap / doi slide cung bai / roi den se ve lai luoi (hoac doi chuong) -> the tren
@@ -909,6 +957,38 @@ document.addEventListener('DOMContentLoaded', async () => {
         || (Number(a.lesson_id) || 1) !== Number(slideEngine.currentLesson));
       if (['change_section', 'open_exercise', 'highlight_element'].includes(name) || (name === 'change_slide' && !doiBaiKhac)) {
         return { success: true, ghiChu: 'học viên đang chọn đáp án — màn hình giữ nguyên' };
+      }
+    }
+
+    // (P1b) Duong truc tiep NGOAI gio giang: tool trinh dien ma tieng cua cau
+    // lien quan con xep hang sau > 0.25s thi KHONG chay ngay (chay ngay la hinh
+    // di truoc tieng 1-4s) — dua vao ActionQueue neo vao CUOI hang doi phat:
+    // scheduledTime luc nhan = diem bat dau doan noi TIEP THEO ma tool thuoc
+    // ve (Gemini khong cap timestamp cho tool). Ack lac quan {queued:true}
+    // ngay nhu mau P0-1 de model noi tiep; toi moc, thiHanhCongCuTre chay
+    // handler goc o duoi. Dieu kien gom KHONG dang giang: dang giang la
+    // phan cua motion (cong o tren) — tool nao motion tra null luc dang
+    // giang van chay ngay nhu cu, khong doi hanh vi do trong dot nay.
+    // Hang doi nong (<= 0.25s) hoac khong co ActionQueue thi cung chay ngay.
+    if (!dangThiHanhTre && TOOL_TRINH_DIEN.includes(name) && window.SenseiActionQueue && !SK()?.dangGiang()) {
+      const qst = audioEngine.getQueueStats ? audioEngine.getQueueStats()
+                                            : { depth: audioEngine.getPlaybackQueueLatency() };
+      if (qst.depth > 0.25) {
+        const atCtx = audioEngine.scheduledTime;
+        const vaoHang = window.SenseiActionQueue.push({
+          id: 'tool-' + name + '-' + (id || Date.now()),
+          atCtx,
+          via: 'qEnd',
+          run: () => thiHanhCongCuTre(name, args || {}),
+        });
+        if (vaoHang) {
+          const bayLog = Date.now();
+          if (bayLog - lucLogHangDoiTool > 2000) {
+            lucLogHangDoiTool = bayLog;
+            addLog("Sync", `⏳ [ActionQueue] Tool [${name}] chờ mốc tiếng: hàng đợi phát sâu ${qst.depth.toFixed(2)}s, sẽ chạy ở ${atCtx.toFixed(2)}s (trục ctx).`);
+          }
+          return { success: true, queued: true };
+        }
       }
     }
 
@@ -1735,7 +1815,7 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
   };
   // San khau giang: khiTiepTuc / khiBoQua = nut "Tiếp tục ▸" / "Bỏ qua" o thanh ray khi cho hoc vien.
   // khiKetBai(dich): nut tren the ket bai (dich 'phat-am' | 'xem-lai') -> xong bai ngay, khong doi het gio
-  SK()?.init({ audioEngine, slideEngine, khiTiepTuc: tiepSauCho, khiBoQua: tiepSauCho, khiKetBai: ketBaiNgay });
+  SK()?.init({ audioEngine, slideEngine, khiTiepTuc: tiepSauCho, khiBoQua: tiepSauCho, khiKetBai: ketBaiNgay, thiHanhCongCu: thiHanhCongCuTre });
 
   /**
    * opts.dich: 'phat-am' (mac dinh: dang o chuong Bai tap thi nhay xuong Phat am) | 'xem-lai' (o yen luoi).
@@ -2252,6 +2332,11 @@ Khích lệ học viên tự bấm chọn trên màn hình.${common}`;
     await Promise.all([
       curriculumLoader.ensureLessonLoaded(lvl, lessonNum),
       window.SenseiCheDo ? window.SenseiCheDo.apDung() : null,
+      // P0-2b: nap truoc du lieu net chu + minh hoa cua cap nay — trong luc
+      // giang Sensei viet chu/goi hinh ngay theo nhip, khong cho nap dong duoc.
+      // SenseiLazy khong bao gio nem loi (hong thi tra false, giang van chay).
+      window.SenseiLazy ? window.SenseiLazy.napNetChu() : null,
+      window.SenseiLazy ? window.SenseiLazy.napMinhHoa(lvl) : null,
     ]);
     if (slideEngine.currentLevel !== lvl || slideEngine.currentLesson !== lessonNum) return;
 
@@ -5791,6 +5876,8 @@ Mã ngẫu nhiên để tránh trùng đề với lần trước: ${Math.random(
   if (boardToggleBtn) {
     boardToggleBtn.addEventListener('click', () => {
       if (!window.SenseiBoard) return;
+      // P0-2b: mo bang la tin hieu sap viet chu — nap nen du lieu net ngay.
+      if (window.SenseiLazy) window.SenseiLazy.napNetChu();
       const dangMo = SenseiBoard.trangThai().bangDangMo;
       if (dangMo) {
         SenseiBoard.dongBang();
